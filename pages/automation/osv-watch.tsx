@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
-import data from '../../data/security/osv-report.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/security/osv-report.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/security/osv-report.json',
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
@@ -32,16 +20,11 @@ export default function OsvWatchPage() {
                 <div className="font-medium">{r.name} — {r.versionRange}</div>
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
-<<<<<<< HEAD
-                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary |''}</li>
-                    <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
-=======
 
 
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </ul>
               </li>
@@ -50,11 +33,6 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  )
-  );
-};
-=======
 
 =======
 }
@@ -89,14 +67,12 @@ function OsvWatchPage() {
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
   );
 };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -123,13 +99,7 @@ function OsvWatchPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

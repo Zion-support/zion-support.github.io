@@ -1,21 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
-<<<<<<< HEAD
-type UserRole = "talent" | "client" | null;
-=======
 
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -29,37 +20,21 @@ type UserRole = "talent" | "client" | null;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
   on_select: (role: UserRole) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function RolePicker({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role)
@@ -113,13 +88,6 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-        <Card
-        <Card 
-=======
 
             </div>;
           </CardContent>;
@@ -132,7 +100,6 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
         <Card 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
@@ -237,9 +204,5 @@ interface RolePickerProps {;
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

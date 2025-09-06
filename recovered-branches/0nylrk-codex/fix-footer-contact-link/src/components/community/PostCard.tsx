@@ -1,33 +1,8 @@
 
-<<<<<<< HEAD
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {ForumPost} from "@/types/community";
-import {ProfileBadge} from "@/components/profile/ProfileBadge";
-import { formatDistanceToNow } from "date-fns",
-import { Link } from "react-router-dom",
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
-import { ForumPost } from "@/types/community",
-import { ProfileBadge } from "@/components/profile/ProfileBadge",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PostCardProps {
 
   post: ForumPost
@@ -120,12 +95,9 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {tag}
               </Badge>
             ))}
@@ -169,10 +141,7 @@ export default PostCard;
     </Card>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default PostCard;

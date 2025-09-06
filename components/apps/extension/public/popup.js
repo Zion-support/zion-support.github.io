@@ -4,7 +4,6 @@ const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:40
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -111,16 +110,4 @@ document && document.getElementById('viewNotifications').addEventListener('click
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
-}),
-<<<<<<< HEAD
-document && document.getElementById('signIn').addEventListener('click', async () => {
-  // Placeholder sign-in: generate a random user id and store it.
-  const id = crypto.randomUUID()
-  setUserId(id)
-document.getElementById('result').textContent = 'Signed in (local).';
-})
-
-  const id = crypto.randomUUID(),
-  setUserId(id),
-  document.getElementById('result').textContent = 'Signed in (local).';
 }),

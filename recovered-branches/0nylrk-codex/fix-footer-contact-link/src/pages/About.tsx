@@ -1,21 +1,8 @@
 
-<<<<<<< HEAD
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function About() {
   return (
     <>
@@ -126,9 +113,6 @@ export default function About() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
-=======
 
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -138,7 +122,6 @@ import {GradientHeading} from "@/components/GradientHeading";
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -366,14 +349,6 @@ function About() {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
-;
-}
-;
-=======
 
     </>);
 =======
@@ -382,4 +357,3 @@ function About() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

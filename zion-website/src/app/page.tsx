@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import {
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-import React from 'react';
-=======
 
 
 import React from 'react';
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -22,19 +10,12 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-
-=======
 =======
 import React from 'react';
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const features = [
   {
     name: 'AI-Powered Research'
@@ -127,12 +108,8 @@ import {
 } from '@heroicons/react/24/outline';
 =======
 import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     name: 'AI - Powered Research',
     description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
@@ -230,12 +207,9 @@ function HomePage() {
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         </div>
@@ -268,12 +242,9 @@ function HomePage() {
                       Learn more <span aria-hidden="true">→</span>
                     </a>
                     </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </p>
                 </dd>
               </div>
@@ -284,12 +255,9 @@ function HomePage() {
           </dl>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -308,67 +276,6 @@ function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
-<<<<<<< HEAD
-          </dl>
-        </div>
-      </div>
-          </dl>;
-        </div>;
-      </div>;
-      {/* Solutions showcase */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Flagship AI and Technology Platforms
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Discover how our innovative solutions are transforming industries and driving unprecedented growth.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
-            {solutions.map((solution) => (
-              <article
-                key={solution.name}
-                className="flex flex-col items-start group bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105"
-              >
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time dateTime="2024" className="text-gray-400">
-                    2024
-                  </time>
-                  <span className="relative z-10 rounded-full bg-gray-800 px-3 py-1.5 font-medium text-gray-300 hover:bg-gray-700 transition-colors duration-200">
-                    AI Platform
-                  </span>
-                </div>
-                <div className="group relative">
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
-                    <a href={solution.href}>
-                      <span className="absolute inset-0" />
-                      {solution.name}
-                    </a>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
-                </div>
-                <div className="relative mt-8 flex items-center gap-x-4">
-                  <div className="text-sm leading-6">
-                    <p className="font-semibold text-white">
-                      <a href={solution.href} className="hover:text-blue-400 transition-colors duration-200">
-                        <span className="absolute inset-0" />
-                        Learn more
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-          </div>;
-        </div>;
-      </div>;
-=======
 
               <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
                 AI & Technology;
@@ -451,7 +358,6 @@ function HomePage() {
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
@@ -492,7 +398,6 @@ function HomePage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -516,19 +421,8 @@ function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
                     </a>;
@@ -590,19 +484,9 @@ function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-=======
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -618,35 +502,17 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-<<<<<<< HEAD
-            </a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </a>
-=======
             </Link>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          </div>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 =======
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -103,21 +103,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta property="og:site_name" content="Zion Tech Group" />;
       <meta property="og:locale" content="en_US" />;
       {/* Twitter Card Tags */}
-<<<<<<< HEAD
-      <meta name="twitter:card" content={twitterCard} />;
-      <meta name="twitter:title" content={fullTitle} />;
-      <meta name="twitter:description" content={description} />;
-      <meta name="twitter:image" content={imageUrl} />;
-      <meta name="twitter:site" content="@ziontechgroup" />;
-      <meta name="twitter:creator" content="@ziontechgroup" />;
-=======
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Additional Meta Tags */}
       <meta name="theme-color" content="#2563eb" />;
       <meta name="msapplication-TileColor" content="#2563eb" />;
@@ -148,13 +139,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
       {/* Additional SEO */}
-<<<<<<< HEAD
-      <meta name="theme-color" content="#1e40af" />;
-      <meta name="msapplication-TileColor" content="#1e40af" />;
-      <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
-
-
-=======
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',

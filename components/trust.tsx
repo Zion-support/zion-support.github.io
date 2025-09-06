@@ -18,44 +18,21 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import TrustBadge from '../components/ui/TrustBadge';
-import TrustRadar from '../components/ui/TrustRadar';
-import RiskIndicator from '../components/ui/RiskIndicator';
-export default function TrustPage() {
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [data, setData] = useState<any>(null),
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
-=======
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
-export default function TrustPage() {
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [data, setData] = useState<any>(null),
-=======
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
@@ -63,7 +40,6 @@ export default function TrustPage() {;
   useEffect(() => {
     async function load() {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
@@ -88,7 +64,6 @@ export default function TrustPage() {;
       );
       const json = await res.json();
       setData(json);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setLoading(false);
     }
     load();
@@ -110,36 +85,14 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form && form.reset();  }
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-
-    form.reset()
-    <EnhancedLayout>
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
-
-<<<<<<< HEAD
-    form.reset()
-<<<<<<< HEAD
-=======
 =======
     <EnhancedLayout>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
     form && form.reset();
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
     <EnhancedLayout>
@@ -182,7 +135,6 @@ export default function TrustPage() {;
                 <RiskIndicator status={data.riskLevel} />
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -231,47 +183,21 @@ export default function TrustPage() {;
                       </li>;
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
     <EnhancedLayout>
 
 
-<<<<<<< HEAD
-
-=======
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
 =======
-<<<<<<< HEAD
-  }
-
-  return (
-    <EnhancedLayout>
 
                       </li>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-
-                      </li>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
@@ -283,7 +209,6 @@ export default function TrustPage() {;
               )}
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </ul>
                 </div>
@@ -357,20 +282,12 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       </div>;
     </EnhancedLayout>;
   );
 }
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   );
 }
@@ -583,11 +500,5 @@ function submit_appeal() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

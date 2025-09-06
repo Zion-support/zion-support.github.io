@@ -1,51 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([])
-  const [userId, setUserId] = useState("")
-  const [amount, setAmount] = useState(100)
-  const [reason, setReason] = useState("admin_action")
-  const [config, setConfig] = useState<any>(null)
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
-import React, { useEffect, useState } from "react",;
-import EnhancedLayout from "../../components/layout/EnhancedLayout",;
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout",
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]),
-  const [userId, setUserId] = useState(""),
-  const [amount, setAmount] = useState(100),
-  const [reason, setReason] = useState("admin_action"),
-  const [config, setConfig] = useState<any>(null),
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json())
       fetch("/api/admin/tokens/config").then((r) => r.json())])
     setTransactions(txRes.transactions |[])
 
-<<<<<<< HEAD
-    setConfig(cfgRes)
-  }
-  useEffect(() => {
-    load()
-  }, [])
-  async function issue() {
-
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 =======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
@@ -72,7 +34,6 @@ export default function AdminTokens() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   useEffect(() => {
@@ -113,27 +74,6 @@ export default function AdminTokens() {
 }
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
-<<<<<<< HEAD
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(config)})
-    const data = await res.json()
-
-    setConfig(data)
-  }
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(config)}),
-    const data = await res.json(),
-    setConfig(data)
-  }
-
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -142,7 +82,6 @@ export default function AdminTokens() {
     setConfig(data)
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -187,34 +126,8 @@ export default function AdminTokens() {
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
-<<<<<<< HEAD
-                <div className="font-medium">{t.type === "earn" |t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
-              </div>
-            ))}
-            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
-          </div>
-        </div>
-      </div>
-    </EnhancedLayout>
-  );
-};
-;
-  async function saveConfig() {;
-    const res = await fetch("/api/admin/tokens/config", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON.stringify(config)});
-    const data = await res.json();
-    setConfig(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -324,20 +237,9 @@ function save_config() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
                 <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
@@ -346,4 +248,3 @@ function save_config() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

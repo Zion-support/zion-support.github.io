@@ -1,20 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
-<<<<<<< HEAD
- canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-if (ctx) {;
-export default function UltraFuturisticBackground2035(): any ({;
-  children,;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -25,7 +12,6 @@ interface UltraFuturisticBackground2035Props {;
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -188,7 +174,6 @@ if ( {) {
         default: return '#8b5cf6'
       }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     // Get color based on particle type;
@@ -199,7 +184,6 @@ if ( {) {
             Math && Math.floor(Math && Math.random() * 3);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           ];
         case 'hologram':;
           return ['#10b981', '#f59e0b', '#ef4444'][;
@@ -318,7 +302,6 @@ if ( {) {
 =======
         cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -332,432 +315,6 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
-<<<<<<< HEAD
-      max_life: number;
-    // Initialize particles with enhanced types;
-    const init_particles = () =>: any {
-      particles = [];
-      const isSmallScreen = window.inner_width < 768;
-      const particle_count = prefersReducedMotion;
-        ? 15;
-        : isSmallScreen;
-          ? 60;
-          : 150;
-;
-      for (let index = 0; i < particle_count; i++) {
-        const type = ['quantum', 'hologram', 'neon', 'energy'][;
-          Math.floor (Math.random () * 4);
-        ] as any;
-        const max_life = Math.random () * 200 + 100;
-;
-        particles.push ({
-          coordinate_x: (Math.random () * canvas.width) / (window.devicePixelRatio || 1),
-          coordinate_y: (Math.random () * canvas.height) / (window.devicePixelRatio || 1),          vx: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.6,        const max_life = Math.random () * 200 + 100;
-;
-        particles.push ({
-          coordinate_x: Math.random () * canvas.width / (window.devicePixelRatio || 1),
-          coordinate_y: Math.random () * canvas.height / (window.devicePixelRatio || 1),
-          vx: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.6,
-          vy: prefersReducedMotion ? 0 : (Math.random () - 0.5) * 0.6,
-          size: Math.random () * (isSmallScreen ? 2 : 3) + 1,
-          opacity: Math.random () * 0.5 + 0.1,
-          color: getColorForType (type),
-          type,
-          life: max_life,
-          max_life,
-        });      }          type;
-          life: max_life,
-          max_life;
-        });
-    }
-;
-    // Get color based on particle type;
-    const getColorForType = (type: string) =>: any {
-      switch (type) {
-        case 'quantum':;
-          return ['#8b5cf6', '#06b6d4', '#ec4899'][;
-            Math.floor (Math.random () * 3);
-          ];
-        case 'hologram':;
-          return ['#10b981', '#f59e0b', '#ef4444'][;
-            Math.floor (Math.random () * 3);
-          ];
-        case 'neon':;
-          return ['#f97316', '#eab308', '#a855f7'][;
-            Math.floor (Math.random () * 3);
-          ];
-        case 'energy':;
-          return ['#dc2626', '#7c3aed', '#059669'][;
-            Math.floor (Math.random () * 3);
-          ];
-        default:;
-          return '#8b5cf6';      }        case 'hologram':;
-          return ['#10b981#f59e0b#ef4444'][Math.floor (Math.random () * 3)];
-        case 'neon':;
-          return ['#f97316#eab308#a855f7'][Math.floor (Math.random () * 3)];
-        case 'energy':;
-          return ['#dc2626#7c3aed#059669'][Math.floor (Math.random () * 3)];
-        default: return '#8b5cf6';
-      }
-    }
-;
-    // Update and draw particles with enhanced effects;
-    const update_particles = () =>: any {
-      ctx.clear_rect (0, 0, canvas.width, canvas.height);
-;
-      particles.for_each ((particle, index) => {
-        // Update particle life;
-        particle.life--;
-        // Check condition
-if ( {) {
-  $2
-}
-          particle.life = particle.max_life;
-          particle.coordinate_x =;
-            (Math.random () * canvas.width) / (window.devicePixelRatio || 1);
-          particle.coordinate_y =;
-            (Math.random () * canvas.height) / (window.devicePixelRatio || 1);        }          particle.coordinate_x = Math.random () * canvas.width / (window.devicePixelRatio || 1);
-          particle.coordinate_y = Math.random () * canvas.height / (window.devicePixelRatio || 1);
-        }
-        // Update position;
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-;
-        // Wrap around edges;
-        if (
-          particle.coordinate_x = canvas.width / (window.devicePixelRatio || 1)) {
-  $2
-}
-        if ()) {
-  $2
-}
-          particle.coordinate_x = 0;
-        if (
-          particle.coordinate_y = canvas.height / (window.devicePixelRatio || 1)) {
-  $2
-}
-        if ()) {
-  $2
-}
-          particle.coordinate_y = 0;        if (particle.coordinate_x = canvas.width / (window.devicePixelRatio || 1)) {
-  $2
-}
-        if () particle.coordinate_x = 0) {
-  $2
-}
-        if (particle.coordinate_y = canvas.height / (window.devicePixelRatio || 1)) {
-  $2
-}
-        if () particle.coordinate_y = 0) {
-  $2
-}
-        // Calculate opacity based on life;
-        const life_ratio = particle.life / particle.max_life;
-        const current_opacity = particle.opacity * life_ratio;
-;
-        // Draw particle based on type;
-        draw_particle (ctx, particle, current_opacity);
-;
-        // Draw connections with enhanced effects;
-        const max_distance = prefersReducedMotion;
-          ? 0;
-          : window.inner_width < 768;
-            ? 120;
-            : 180;
-        // Check condition
-if ( {) {
-  $2
-}
-          draw_connections (ctx, particles, index, max_distance, current_opacity);        }
-      });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        animationFrameId = requestAnimationFrame (update_particles);      }
-    }
-;
-    // Enhanced particle drawing with different types        const max_distance = prefersReducedMotion ? 0 : (window.inner_width < 768 ? 120 : 180);
-        // Check condition
-if ( {) {
-  $2
-}
-          draw_connections (ctx, particles, index, max_distance, current_opacity);
-        }
-      });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        animationFrameId = requestAnimationFrame (update_particles);        animationFrameId = requestAnimationFrame (update_particles);
-      }
-    }
-;
-    // Enhanced particle drawing with different types;
-    const draw_particle = (
-      ctx: CanvasRenderingContext2D,
-      particle: any,
-      opacity: number) =>: any {      ctx.save ();    const draw_particle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) =>: any {
-      ctx.save ();
-      ctx.global_alpha = opacity;
-;
-      switch (particle.type) {
-        case 'quantum':;
-          drawQuantumParticle (ctx, particle);
-          break;
-        case 'hologram':;
-          drawHologramParticle (ctx, particle);
-          break;
-        case 'neon':;
-          drawNeonParticle (ctx, particle);
-          break;
-        case 'energy':;
-          drawEnergyParticle (ctx, particle);
-          break;
-      }
-      ctx.restore ();
-    }
-;
-    // Quantum particle with wave - like effects;
-    const drawQuantumParticle = (
-      ctx: CanvasRenderingContext2D,
-      particle: any) =>: any {
-      const time = Date.now () * 0.001;
-      const wave = Math.sin (time + particle.x * 0.01) * 0.5;      }
-      ctx.restore ();
-    }
-;
-    // Quantum particle with wave - like effects;
-    const drawQuantumParticle = (ctx: CanvasRenderingContext2D, particle: any) =>: any {
-      const time = Date.now () * 0.001;
-      const wave = Math.sin (time + particle.x * 0.01) * 0.5;
-;
-      ctx.begin_path ();
-      ctx.arc (particle.x, particle.y + wave, particle.size, 0, Math.PI * 2);
-      ctx.fill_style = particle.color;
-      ctx.fill ();
-;
-      // Add quantum glow effect;
-      ctx.shadow_color = particle.color;
-      ctx.shadow_blur = 10;
-      ctx.begin_path ();
-      ctx.arc (
-        particle.x,
-        particle.y + wave,
-        particle.size * 0.5,
-        0,
-        Math.PI * 2);
-      ctx.fill ();
-      ctx.shadow_blur = 0;
-    }
-;
-    // Hologram particle with transparency and distortion;
-    const drawHologramParticle = (
-      ctx: CanvasRenderingContext2D,
-      particle: any) =>: any {
-      const time = Date.now () * 0.002;
-      const distortion = Math.sin (time + particle.y * 0.02) * 2;
-;
-      ctx.global_alpha *= 0.7;
-      ctx.begin_path ();
-      ctx.arc (
-        particle.x + distortion,
-        particle.y,
-        particle.size,
-        0,
-        Math.PI * 2);      ctx.fill_style = particle.color;      ctx.fill ();
-      ctx.shadow_blur = 0;
-    }
-;
-    // Hologram particle with transparency and distortion;
-    const drawHologramParticle = (ctx: CanvasRenderingContext2D, particle: any) =>: any {
-      const time = Date.now () * 0.002;
-      const distortion = Math.sin (time + particle.y * 0.02) * 2;
-;
-      ctx.global_alpha *= 0.7;
-      ctx.begin_path ();
-      ctx.arc (particle.x + distortion, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fill_style = particle.color;
-      ctx.fill ();
-;
-      // Add holographic effect;
-      ctx.global_alpha *= 0.5;
-      ctx.begin_path ();
-      ctx.arc (
-        particle.x + distortion,
-        particle.y,
-        particle.size * 1.5,
-        0,
-        Math.PI * 2);
-      ctx.stroke_style = particle.color;
-      ctx.line_width = 1;
-      ctx.stroke ();    }      ctx.arc (particle.x + distortion, particle.y, particle.size * 1.5, 0, Math.PI * 2);
-      ctx.stroke_style = particle.color;
-      ctx.line_width = 1;
-      ctx.stroke ();
-    // Neon particle with bright glow;
-    const drawNeonParticle = (ctx: CanvasRenderingContext2D, particle: any) =>: any {
-      // Bright core;
-      ctx.begin_path (),
-      ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-      ctx.fill_style = '#ffffff';
-      ctx.fill ();
-;
-      // Neon glow;
-      ctx.shadow_color = particle.color;
-      ctx.shadow_blur = 15;
-      ctx.begin_path ();
-      ctx.arc (particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2);
-      ctx.fill_style = particle.color;
-      ctx.fill ();
-      ctx.shadow_blur = 0;
-    }
-;
-    // Energy particle with pulsing effect;
-    const drawEnergyParticle = (
-      ctx: CanvasRenderingContext2D,
-      particle: any) =>: any {
-      const time = Date.now () * 0.003;
-      const pulse = Math.sin (time) * 0.3 + 0.7;
-      const size = particle.size * pulse;    }
-;
-    // Energy particle with pulsing effect;
-    const drawEnergyParticle = (ctx: CanvasRenderingContext2D, particle: any) =>: any {
-      const time = Date.now () * 0.003;
-      const pulse = Math.sin (time) * 0.3 + 0.7;
-      const size = particle.size * pulse;
-;
-      ctx.begin_path ();
-      ctx.arc (particle.x, particle.y, size, 0, Math.PI * 2);
-      ctx.fill_style = particle.color;
-      ctx.fill ();
-;
-      // Energy field effect;
-      ctx.global_alpha *= 0.3;
-      ctx.begin_path ();
-      ctx.arc (particle.x, particle.y, size * 2, 0, Math.PI * 2);
-      ctx.fill_style = particle.color;
-      ctx.fill ();
-    }
-;
-    // Enhanced connection drawing with different effects;
-    const draw_connections = (
-      ctx: CanvasRenderingContext2D,
-      particles: any[],
-      current_index: number,
-      max_distance: number,
-      opacity: number) =>: any {      particles.for_each ((other_particle, other_index) => {      ctx.fill ();
-    }
-;
-    // Enhanced connection drawing with different effects;
-    const draw_connections = (ctx: CanvasRenderingContext2D, particles: any[], current_index: number, max_distance: number, opacity: number) =>: any {
-        // Check condition
-if ( {) {
-  $2
-}
-          const dx = particles[current_index].x - other_particle.x;
-          const dy = particles[current_index].y - other_particle.y;
-          const distance = Math.sqrt (dx * dx + dy * dy);
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            const connection_opacity =;
-              ((max_distance - distance) / max_distance) * 0.15 * opacity;            const connection_opacity = (max_distance - distance) / max_distance * 0.15 * opacity;
-;
-            // Different connection styles based on particle types;
-            // Check condition
-if ( {) {
-  $2
-}
-              // Same type - stronger connection;
-              ctx.global_alpha = connection_opacity * 1.5;
-              ctx.stroke_style = particles[current_index].color;
-              ctx.line_width = 2;            } else {
-              // Different types - weaker connection;
-              ctx.global_alpha = connection_opacity * 0.7;
-              ctx.stroke_style = '#ffffff';
-              ctx.line_width = 1;            }              ctx.line_width = 2;
-            } else {
-              // Different types - weaker connection;
-              ctx.global_alpha = connection_opacity * 0.7;
-              ctx.stroke_style = '#ffffff';
-              ctx.line_width = 1;              ctx.line_width = 1;
-            }
-            ctx.begin_path ();
-            ctx.move_to (particles[current_index].x, particles[current_index].y);
-            ctx.line_to (other_particle.x, other_particle.y);
-            ctx.stroke ();
-          }
-        }
-      });    }            ctx.stroke ();
-          }
-        }
-      });
-    // Handle window resize;
-    const handle_resize = () =>: any {
-      canvas.width = window.inner_width * (window.devicePixelRatio || 1);
-      canvas.height = window.inner_height * (window.devicePixelRatio || 1);
-      // Check condition
-if ( {) {
-  $2
-}
-        ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-      init_particles ();    }        ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-      init_particles ();
-    }
-;
-    window.addEventListener ('resize', handle_resize);
-    init_particles ();
-    update_particles ();
-;
-    return () => {
-      window.removeEventListener ('resize', handle_resize);
-      // Check condition
-if ( {) {
-  $2
-}
-        cancelAnimationFrame (animationFrameId);
-      }
-    }  }, []);
-;
-  return (
-    <>;
-      <div className='fixed inset - 0 z - 0 overflow - hidden'>        cancelAnimationFrame (animationFrameId);
-      }
-    }
-  }, []);
-;
-  return (
-    <>;
-      <div className='fixed inset - 0 z - 0 overflow - hidden'>;
-        {/* Enhanced background layers */}
-        <div className='absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black' />;
-        {/* Animated gradient overlay */}
-        <motion.div;
-          className='absolute inset - 0 opacity - 30';
-          animate={{
-            background: [;
-              'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)',
-            ],          }}        {/* Enhanced background layers */}
-        <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black" />;
-        {/* Animated gradient overlay */}
-        <motion.div;
-          className="absolute inset - 0 opacity - 30";
-          animate={{
-            background: [;
-              'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
-            ];
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 8
@@ -783,15 +340,10 @@ if ( {) {
             `,
               backgroundSize: '50px 50px',
 =======
-<<<<<<< HEAD
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-=======
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
@@ -803,7 +355,6 @@ if ( {) {
         <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full" style={{
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
@@ -832,12 +383,8 @@ if ( {) {
 
         />
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating neon orbs */}
 
         />;
@@ -923,17 +470,10 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-            duration: 8,
-            repeat: Infinity,
-=======
 
             duration: 8
             repeat: Infinity
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -961,12 +501,6 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-<<<<<<< HEAD
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-            animate={{
-              y: [-100, 100, -100];
-              opacity: [0, 0.3, 0]
-=======
 =======
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
@@ -975,20 +509,13 @@ if ( {) {
               repeat: Infinity,
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             duration: 8,
             repeat: Infinity,
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }}
             transition={{
               duration: 4
@@ -1004,7 +531,6 @@ if ( {) {
             animate={{
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
             transition={{
               duration: 4,
@@ -1057,9 +583,5 @@ if ( {) {
     </>);
 }
       </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

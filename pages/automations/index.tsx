@@ -24,14 +24,6 @@ const AutomationsIndex: NextPage = () => {
 }
 export default AutomationsIndex;
 
-<<<<<<< HEAD
-export default AutomationsIndex,;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 =======
 import type { NextPage } from 'next',
@@ -52,17 +44,13 @@ const AutomationsIndex: NextPage = () => {
               <p className="text - sm text - gray - 600 mt - 1">{it.desc}</p>;
             </div>;
           </Link>))}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
 
     </main>;
   );
 },;
 export default AutomationsIndex;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

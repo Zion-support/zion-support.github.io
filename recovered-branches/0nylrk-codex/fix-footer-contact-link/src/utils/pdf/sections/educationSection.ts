@@ -1,24 +1,6 @@
 
-<<<<<<< HEAD
-import { jsPDF  } from 'jspdf';
-import { Education  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addEducationSection(
-import {jsPDF} from 'jspdf';
-import {Education} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-import {formatDate} from '../formatters';
-export function addEducationSection(;
-  doc: jsPDF;
-  education: Education[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-=======
   if (education && education.length === 0) return startY;
   
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   let yPos = startY;
   // Check if we need to add a new page
@@ -148,12 +130,8 @@ export function addEducationSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return yPos + 5

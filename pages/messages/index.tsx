@@ -12,8 +12,6 @@ const Messages: NextPage = () => {
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -30,7 +28,6 @@ const Messages: NextPage = () => {
       <EmptyState;
         title="No messages yet";
         description="Start a conversation by requesting a quote or responding to an existing one.";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         icon={<span>📫</span>}
         primaryAction={{ label: 'Explore talent', href: '/talent' }}
         secondaryAction={{ label: 'Browse services', href: '/services' }}
@@ -62,10 +59,7 @@ export default Messages,;
   );
 },;
 export default Messages;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

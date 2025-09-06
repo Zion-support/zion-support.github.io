@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-export default function AutomationsPage() {
 import React from 'react';
 import Link from 'next/link';
 
-
-=======
-<<<<<<< HEAD
-import React from "react";
-import Link from "next/link";
-export default function AutomationsPage() {
-=======
-import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <main className='mx-auto max-w-5xl px-4 py-12'>;
@@ -139,7 +116,6 @@ import Link from 'next / link';
         </div>
       </div>
     </main>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
 }

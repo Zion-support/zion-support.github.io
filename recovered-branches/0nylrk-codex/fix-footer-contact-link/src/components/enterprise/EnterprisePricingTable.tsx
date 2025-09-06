@@ -1,37 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Check, X} from "lucide-react";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button",
-import { Check, X } from "lucide-react",
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -53,23 +24,12 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false }
         { name: "Dedicated success manager", included: false }]}
     {
-<<<<<<< HEAD
-      name: "Business"
-      price: "$1,999";
-      billing: "/month"
-      description: "Ideal for growing companies"
-      users: "Up to 50 users"
-      popular: true
-      name: "Business",;
-      price: "$1,999";
-=======
 
 
       name: "Business",;
       price: "$1,999";
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       name: "Business",
       price: "$1,999",
       billing: "/month",
@@ -209,13 +169,10 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan && plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;

@@ -135,12 +135,9 @@ const EnhancedNavigation: React.FC = () => {;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
               
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {activeDropdown === 'services' && (
                 <motion.div
 =======
@@ -180,8 +177,6 @@ const EnhancedNavigation: React.FC = () => {;
               )}
             </div>
 
-<<<<<<< HEAD
-=======
             </div>;
 
 
@@ -189,9 +184,7 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -241,16 +234,12 @@ const EnhancedNavigation: React.FC = () => {;
             </Link>
           </div>
 
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -260,8 +249,6 @@ const EnhancedNavigation: React.FC = () => {;
           </button>
         </div>
 
-<<<<<<< HEAD
-=======
           </button>;
         </div>;
 
@@ -270,9 +257,7 @@ const EnhancedNavigation: React.FC = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -554,16 +539,7 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnhancedNavigation;
 export default EnhancedNavigation;
-<<<<<<< HEAD
-export default EnhancedNavigation;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

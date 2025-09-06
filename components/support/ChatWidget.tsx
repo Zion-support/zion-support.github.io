@@ -4,7 +4,6 @@ useEffect ( () => {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
@@ -12,7 +11,6 @@ type ChatMessage = {
 }
 function generateSessionId(): string {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,93 +60,25 @@ function generateSessionId(): any (): string {;
 
 
   useEffect(() => {
-<<<<<<< HEAD
-    sessionIdRef.current = generateSessionId()
-
-  }, []);
-  useEffect(() => {
-    if (!isOpen && messages.length === 0) {
-      // Seed greeting
-      setMessages([
-
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
-
-    }
-  }, [isOpen, messages.length]);
-  useEffect(() => {
-
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-
-  }, [messages]);
-  const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?Billing help'];
-
-    []
-
-  );
-  async function logEvent(eventType: string, payload: any) {
-    try {
-      await fetch('/api/support/session', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          eventType
-          payload
-        })
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-          sessionId: sessionIdRef.current,
-          eventType,
-          payload,
-        }),
-<<<<<<< HEAD
       });    } catch {}
 
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-      });    } catch {}
-
-=======
-<<<<<<< HEAD
-      });    } catch {}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-=======
-      });    } catch {}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch {}
   }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
-<<<<<<< HEAD
-=======
       setShowEscalation(true);    } catch {}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
 =======
@@ -160,11 +90,6 @@ function generateSessionId(): any (): string {;
           tag: 'escalate'
         })
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 =======
@@ -174,16 +99,11 @@ function generateSessionId(): any (): string {;
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch {}
   }
 
@@ -324,17 +244,9 @@ function generateSessionId(): any (): string {;
     } finally {;
       setIsLoading(false);    }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
-<<<<<<< HEAD
-
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
-=======
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
@@ -351,32 +263,19 @@ function generateSessionId(): any (): string {;
     } catch (e) {;
       setMessages((prev) => [;
         ...prev;
-<<<<<<< HEAD
-        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
-    } finally {
-      setIsLoading(false)
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
 
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   return (
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
@@ -389,13 +288,10 @@ function generateSessionId(): any (): string {;
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   }
                 >
                   {m.content}
@@ -421,29 +317,7 @@ function generateSessionId(): any (): string {;
 =======
             <div className="px-3 pb-2">
 =======
-<<<<<<< HEAD
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              <div className="flex flex-wrap gap-2 mb-2">
-                {quickReplies.map((q) => (
-                  <button
-                    key={q}
-                    onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
-                  >
-
-<<<<<<< HEAD
-                    {q}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {q}
                   </button>;
@@ -455,7 +329,6 @@ function generateSessionId(): any (): string {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
@@ -472,10 +345,7 @@ function generateSessionId(): any (): string {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
 =======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -485,7 +355,6 @@ function generateSessionId(): any (): string {;
                   onKeyDown={e => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onSend();
                     }
                   }}
@@ -494,14 +363,10 @@ function generateSessionId(): any (): string {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-<<<<<<< HEAD
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
-=======
 
 
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex gap-2">
 
                 <input
@@ -514,16 +379,11 @@ function generateSessionId(): any (): string {;
 =======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-<<<<<<< HEAD
-                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
-
-=======
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 />
                 <button
                   onClick={() => onSend()}
@@ -542,7 +402,6 @@ function generateSessionId(): any (): string {;
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         </div>;
@@ -560,25 +419,15 @@ function generateSessionId(): any (): string {;
   );
 }
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 useEffect ( () => {
   // Check condition
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-  );
-}
-=======
   //Seed greeting set_messages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 type ChatMessage = {
@@ -948,4 +797,3 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

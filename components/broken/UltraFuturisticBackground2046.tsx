@@ -144,28 +144,17 @@ max_life: number,
           case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
             break;
-<<<<<<< HEAD
-          case 'energy':
-            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
-            break;        }            break
-        }
-      }
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             break;        }
 
         }
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       update() {
@@ -326,7 +315,6 @@ max_life: number,
 =======
                   Math.pow(this.x - particle.x, 2) +
                     Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 );
                 if (distance < 100) {
                   ctx.beginPath();
@@ -442,7 +430,6 @@ if ( {) {
             });
             break;                  ctx.stroke ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 }
               }
             });
@@ -850,11 +837,7 @@ if ( {) {
         }}
       />
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -1051,12 +1034,6 @@ export default UltraFuturisticBackground2046;  );
 
 
 export default UltraFuturisticBackground2046;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </div>
-    </div>
-=======
 
 
 =======
@@ -1087,4 +1064,3 @@ export default UltraFuturisticBackground2046);
 export default UltraFuturisticBackground2046;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

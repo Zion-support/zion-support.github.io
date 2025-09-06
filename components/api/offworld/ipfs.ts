@@ -1,21 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   addJSON,
   publishManifesto,
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   addJSON
@@ -23,22 +16,14 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-  req: NextApiRequest,
-  res: NextApiResponse;
-=======
 
 
   req: NextApiRequest,
   res: NextApiResponse;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
 =======
@@ -61,7 +46,6 @@ import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipf
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   try {
     if (req.method === 'POST' && action === 'json') {
@@ -70,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
       return res.status(200).json({ cid, provider })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(

@@ -11,10 +11,7 @@ import {
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -44,29 +41,7 @@ export function EnterpriseTestimonials() {
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
                       <img
-<<<<<<< HEAD
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        className='h-full w-full object-cover'
-                        loading='lazy'                      />
-                    </div>
-                    <div>
-                      <p className='font-bold'>{testimonial.author}</p>
-                      <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CarouselNext />
           </div>
         </Carousel>
@@ -75,10 +50,6 @@ export function EnterpriseTestimonials() {
   );
 };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       />
@@ -237,8 +208,6 @@ export function EnterpriseTestimonials() {;
                       <p className='font-bold'>{testimonial && testimonial.author}</p>;
                       <p className='text-sm text-muted-foreground'>                        {testimonial && testimonial.title}, {testimonial && testimonial.company}                      <p className="font-bold">{testimonial && testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-=======
                         {testimonial && testimonial.title}, {testimonial && testimonial.company}
                       </p>;
                     </div>;
@@ -248,7 +217,6 @@ export function EnterpriseTestimonials() {;
             ))}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CarouselNext />
           </div>
         </Carousel>

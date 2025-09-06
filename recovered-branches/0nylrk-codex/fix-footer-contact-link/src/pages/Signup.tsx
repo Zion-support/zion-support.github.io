@@ -11,14 +11,6 @@ import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -33,7 +25,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -339,36 +330,10 @@ if ( {) {
                 </Link>;
               </p>;
             </div>;
-<<<<<<< HEAD
-            <div className="bg-zion-blue-dark rounded-lg p-6">;
-              <Form {...form}>;
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>;
-                  <FormField;
-                    control={form.control}
-                    name="displayName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
-                        <FormControl>
-                          <div className="relative">
-                            <Input
-                              placeholder="John Doe"
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
-                              aria-autocomplete="none";
-                              autoComplete="off";
-                            />;
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                          </div>;
-                        </FormControl>;
-                        <FormMessage className="text-red-400" />;
-                      </FormItem>;
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
 
                   />;

@@ -1,12 +1,6 @@
 export const metadata = { 
-<<<<<<< HEAD
-  title: 'Data Analytics Services | Zion Tech Group',
-  description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
-  keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
-=======
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 export default function DataAnalyticsPage() {
@@ -157,57 +151,12 @@ export default function DataAnalyticsPage() {
       </section>
 
       <Pricing />
-<<<<<<< HEAD
-      
-      <section className="mt-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Data Analytics Services?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <DataAnalyticsBenefitCard
-            title="Expert Data Scientists"
-            description="PhD-level data scientists with deep industry experience"
-            icon="👨‍🔬"
-          />
-          <DataAnalyticsBenefitCard
-            title="Actionable Insights"
-            description="Transform complex data into clear, actionable business recommendations"
-            icon="💡"
-          />
-          <DataAnalyticsBenefitCard
-            title="Scalable Solutions"
-            description="Analytics solutions that grow with your business and data volume"
-            icon="📈"
-          />
-          <DataAnalyticsBenefitCard
-            title="Real-time Processing"
-            description="Process and analyze data in real-time for immediate insights"
-            icon="⚡"
-          />
-          <DataAnalyticsBenefitCard
-            title="Custom Dashboards"
-            description="Tailored visualizations that match your business needs and KPIs"
-            icon="📊"
-          />
-          <DataAnalyticsBenefitCard
-            title="Ongoing Support"
-            description="Continuous monitoring, optimization, and support for your analytics"
-            icon="🛠️"
-          />
-        </div>
-      </section>
-
-      <CTASection />
-=======
       <ContactSection />
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>
   );
 }
 
-<<<<<<< HEAD
-function DataAnalyticsServiceCard({ title, description, features, price, icon }: { 
-=======
 function DataServiceCard({ title, description, features, price, icon }: { 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string; 
   description: string; 
   features: string[]; 
@@ -218,23 +167,6 @@ function DataServiceCard({ title, description, features, price, icon }: {
     <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-<<<<<<< HEAD
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <div className="mb-4">
-        <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
-        <div className="text-sm text-gray-500">Starting price</div>
-      </div>
-      <ul className="text-gray-600 space-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-=======
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-2">
@@ -336,7 +268,6 @@ function Plan({ name, price, duration, features }: {
       <a 
         href="tel:+13024640950" 
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       >
         Get Started
       </a>
@@ -344,15 +275,7 @@ function Plan({ name, price, duration, features }: {
   );
 }
 
-<<<<<<< HEAD
-function DataAnalyticsProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
-}) {
-=======
 function ContactSection() {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="text-center p-6">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -443,75 +366,5 @@ function Pricing() {
         />
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
-
-function Plan({ name, price, features, popular }: { 
-  name: string; 
-  price: string; 
-  features: string[]; 
-  popular: boolean; 
-}) {
-  return (
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-        </div>
-      )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
-      <ul className="space-y-3 mb-6">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-3">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-      <a 
-        href="tel:+13024640950" 
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </a>
-    </div>
-  );
-}
-
-function CTASection() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Unlock the Power of Your Data?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Transform your data into competitive advantage with our comprehensive analytics solutions. 
-        Let's discuss your data challenges and create a strategy that drives real business value.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
-      </div>
-      <div className="mt-6 text-sm text-gray-600">
-        <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-      </div>
-    </div>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }

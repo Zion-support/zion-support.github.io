@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -47,12 +42,8 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -121,12 +112,9 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -153,8 +141,6 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
@@ -172,8 +158,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Check condition
 if (return result, ) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   return result;
 },
@@ -228,8 +212,6 @@ function Funnel() {
 
   return (
 
-<<<<<<< HEAD
-=======
 =======
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
@@ -237,17 +219,13 @@ function Funnel() {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         </div>;
       ))  } catch (error) {
@@ -333,12 +311,9 @@ export default function UsageAnalytics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </ul>
             </div>
           </div>
@@ -368,17 +343,6 @@ export default function UsageAnalytics(req, res) {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-  );
-};
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
 
 =======
 }
@@ -450,9 +414,7 @@ export default function UsageAnalytics(req, res) {
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

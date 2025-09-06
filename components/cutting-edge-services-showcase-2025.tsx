@@ -21,42 +21,11 @@ import React, { useState } from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-  Brain
-  Atom
-  Shield
-  Rocket
-  Star
-  Award
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Zap
-  Target
-  Microscope
-  Lock
-  Cloud
-  BarChart3
-  Settings
-  Eye
-  Code
-  Palette
-  Search
-  Filter
-  Grid
-  List
-  ExternalLink
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';import {
-=======
 
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain,
   Atom,
   Shield,
@@ -85,11 +54,8 @@ import {
 
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
@@ -99,7 +65,6 @@ import {
 =======
 } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
@@ -241,14 +206,8 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
-<<<<<<< HEAD
-];
-export default function CuttingEdgeServicesShowcase2025() {
-export default function CuttingEdgeServicesShowcase2025() {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -456,11 +415,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
   };
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <Head>
@@ -521,17 +477,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </span>
               </motion.h1>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -543,16 +491,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025
                 </span>
               </motion.h1>
-<<<<<<< HEAD
-              <motion.p
-              <motion.p 
-=======
 
 
               <motion.p 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -609,17 +552,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -629,7 +563,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
               {/* CTA Buttons */}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-4 justify-center"
 =======
                   <div key={index} className='text-center'>
@@ -641,26 +574,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.value}
                     </div>
-<<<<<<< HEAD
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
-                        {stat.icon}
-                      </div>
-                    </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-white/70">{stat.label}</div>
-                ))}
-              </motion.div>
-              {/* CTA Buttons */}
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-=======
 
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
@@ -673,13 +589,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -711,18 +623,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              initial={{ opacity: 0, y: 20 }}
-
-
-              initial={{ opacity: 0, y: 20 }}
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -730,11 +632,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='relative flex-1 max-w-md'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -769,7 +668,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
               <div className='flex flex-wrap gap-2'>                <button
 
@@ -780,22 +678,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                 <button
 
-<<<<<<< HEAD
-                  onClick={() => setSelectedCategory('all')}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === 'all'
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                >
-                  All ({allServices.length})
-                </button>
-                {serviceCategories.map(category => (                  <button                {serviceCategories.map((category) => (
-                  <button
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -811,7 +694,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -842,16 +724,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* View Mode Toggle */}
               <div className="flex items-center gap-2">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -883,9 +761,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               variants={containerVariants}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -903,11 +779,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -964,25 +837,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
-<<<<<<< HEAD
-                        >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
-<<<<<<< HEAD
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
@@ -993,7 +853,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
@@ -1004,24 +863,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                         >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {tag}
                         </span>;
                       ))}
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
@@ -1155,12 +1001,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                   {/* Service Details */}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>
                     </div>
                     </div>;
@@ -1222,12 +1064,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
             </motion.div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1235,17 +1073,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity: 1 }}
                 className='text-center py-20'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1272,7 +1102,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -1286,8 +1115,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </section>;
 
@@ -1296,9 +1123,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
@@ -1307,28 +1132,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1372,7 +1186,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">;
@@ -1417,13 +1230,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-<<<<<<< HEAD
-);
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-  );
-  );
-<<<<<<< HEAD
-=======
 
 
   );
@@ -1432,7 +1238,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
   );
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
@@ -1703,21 +1508,12 @@ visible: {;
 ;
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
 =======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-=======
   );
 =======
 =======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   hidden: {
   opacity: 0;
 }
@@ -1730,21 +1526,8 @@ const item_variants = {
   coordinate_y: 20, opacity: 0;
 }
 visible: {
-<<<<<<< HEAD
-  coordinate_y: 0, opacity: 1, transition: {
-  duration: 0.5;
-}}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   duration: 0.5 
 
-<<<<<<< HEAD
-};
-};}
-};
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

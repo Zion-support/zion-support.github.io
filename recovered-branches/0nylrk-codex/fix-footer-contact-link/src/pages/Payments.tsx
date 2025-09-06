@@ -1,26 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {TransactionHistory} from "@/components/transactions/TransactionHistory";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { TransactionHistory } from "@/components/transactions/TransactionHistory",
-import { GradientHeading } from "@/components/GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { GradientHeading } from "@/components/GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Payments() {
   return (
     <>
@@ -108,38 +90,15 @@ export default function Payments() {
     </>
   )
 }
-<<<<<<< HEAD
-// Import UI components for Payment Settings tab
-
-// Import UI components for Payment Settings tab;
-=======
 
 
 
 // Import UI components for Payment Settings tab;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Import UI components for Payment Settings tab
-import { Button } from "@/components/ui/button",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Checkbox } from "@/components/ui/checkbox",
-import React from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-export default function Payments() {;
-  return (;
-=======
 
 =======
 import React from './react';
@@ -153,7 +112,6 @@ export default /**
  */
 function Payments() {
   return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <Header />;
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
@@ -238,12 +196,6 @@ function Payments() {
     </>);
 }
 // Import UI components for Payment Settings tab;
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",;
-import { Switch } from "@/components/ui/switch",;
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-=======
 import { Button } from '@/components / ui / button';
 import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
@@ -254,4 +206,3 @@ import { Checkbox } from '@/components / ui / checkbox';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

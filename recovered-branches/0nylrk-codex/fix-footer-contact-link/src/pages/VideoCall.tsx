@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -20,11 +9,8 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -97,9 +83,6 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-<<<<<<< HEAD
-  ]),
-=======
 
 
   const handleJoinCall = () => {;
@@ -123,7 +106,6 @@ export default function VideoCall() {;
       description: "You have left the meeting";
     });
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -173,56 +155,8 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
-    }
-  };
-  ]),;
-  const handleJoinCall = () => {;
-    setIsJoining(true),;
-    // Simulate connection delay;
-    setTimeout(() => {;
-      setHasJoined(true),;
-      setIsJoining(false),;
-      toast.success("Call joined", {;
-        description: `You have joined meeting room ${roomId}`;
-      });
-    }, 1500);
-  },;
-  const handleLeaveCall = () => {;
-    setHasJoined(false),;
-    toast.info("Call ended", {;
-      description: "You have left the meeting";
-    }),;
-    // Navigate back after a short delay;
-    setTimeout(() => {;
-      navigate(-1);
-    }, 1500);
-  },;
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ],;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    if (!participants.find(p => p.id === randomUser.id)) {;
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);
-    }
-  },
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -260,18 +194,10 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </>
-  )
-}
-=======
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </main>;
       <Footer />;
     </>;
@@ -285,9 +211,6 @@ export default function VideoCall() {;
     }
   ]);
 ;
-<<<<<<< HEAD
-;
-=======
   const handleJoinCall = () =>: any {
     setIsJoining (true);
     // Simulate connection delay;
@@ -373,6 +296,4 @@ export default function VideoCall() {;
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

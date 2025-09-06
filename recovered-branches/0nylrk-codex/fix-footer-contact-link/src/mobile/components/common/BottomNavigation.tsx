@@ -1,37 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
 import {cn} from "@/lib/utils";
 export function BottomNavigation() {;
   const location = useLocation();
-<<<<<<< HEAD
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
-import { cn } from "@/lib/utils";
-export function BottomNavigation() {
-import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",
-import { cn } from "@/lib/utils",
-export function BottomNavigation() {
-  const location = useLocation(),
-  
-  const navItems = [
-    { path: "/mobile", icon: <Home />, label: "Home" },
-    { path: "/mobile/browse", icon: <Search />, label: "Browse" },
-    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
-    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
-    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
-=======
 
   const navItems = [;
     { path: "/mobile", icon: <Home />, label: "Home" },;
@@ -44,7 +17,6 @@ export function BottomNavigation() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const location = useLocation();
   const navItems = [
@@ -119,13 +91,10 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       })}
 
     </div>;

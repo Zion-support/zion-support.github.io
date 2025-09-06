@@ -27,14 +27,6 @@ const PopoverContent = React.forwardRef<
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
-<<<<<<< HEAD
-export { Popover, PopoverTrigger, PopoverContent }
-export { Popover, PopoverTrigger, PopoverContent }
-;
-export { Popover, PopoverTrigger, PopoverContent };
-export { Popover, PopoverTrigger, PopoverContent }
-;
-=======
 
 import * as React from &quot;react & quot;
 import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
@@ -72,4 +64,3 @@ const PopoverContent = React.forward_ref<;
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { Popover, PopoverTrigger, PopoverContent }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

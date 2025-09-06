@@ -1,20 +1,8 @@
 
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {AvailabilityFilterProps} from "@/types/filters";
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { AvailabilityFilterProps } from "@/types/filters";
-
-import { Checkbox } from "@/components/ui/checkbox",
-import { AvailabilityFilterProps } from "@/types/filters",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -96,11 +84,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {option.label}
               </label>
             </div>
@@ -108,12 +93,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-=======
 
     </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
   )
@@ -130,9 +111,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

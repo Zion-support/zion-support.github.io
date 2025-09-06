@@ -25,7 +25,6 @@ import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
 
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
@@ -36,7 +35,6 @@ import { motion } from 'framer-motion';
   enableNeonEffects?: boolean;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'medium';
   colorScheme = 'quantum-fusion';
   particleCount = 200;
@@ -208,7 +206,6 @@ import { motion } from 'framer-motion';
         });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     initParticles();
@@ -384,7 +381,6 @@ import { motion } from 'framer-motion';
       ctx.beginPath();
 
       ctx.moveTo(x, 0);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke()
     }
@@ -417,7 +413,6 @@ import { motion } from 'framer-motion';
     
 
     // Neon orbs
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     for (let i = 0, i < 3, i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
@@ -879,7 +874,6 @@ if ( {) {
               animate={{
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -917,24 +911,10 @@ if ( {) {
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
 
 =======
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
@@ -945,32 +925,15 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               transition={{
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-                ease: 'easeInOut',              }}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
 
           ))}
@@ -991,41 +954,23 @@ if ( {) {
 =======
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ease: 'easeInOut',              }}
 
               }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
 
 
 };
 export default UltraFuturisticBackground2035;  );
 };
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraFuturisticBackground2035;
 
 
@@ -1053,10 +998,4 @@ export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
-<<<<<<< HEAD
-export default UltraFuturisticBackground2035;
-export default UltraFuturisticBackground2035;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
-import { ResumeBasicInfo } from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-<<<<<<< HEAD
-=======
 import { ResumeBasicInfo  } from '@/types / resume';
 
 interface ResumeBasicInfoSectionProps {
   basic_info: ResumeBasicInfo;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function ResumeBasicInfoSection({
   basicInfo
@@ -26,8 +16,6 @@ export function ResumeBasicInfoSection({
     </div>
 interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
-<<<<<<< HEAD
-=======
 }
 
 export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSectionProps) {;
@@ -58,7 +46,6 @@ function ResumeBasicInfoSection() {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
@@ -68,19 +55,10 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-<<<<<<< HEAD
-    </div>;
-  );
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>
   )
 }
 ;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 export default async function handler(
@@ -10,26 +7,16 @@ export default async function handler(
   const { id } = req && req.query;
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-=======
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { id } = req.query;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (typeof id !== "string")
@@ -52,84 +39,6 @@ export default async function handler(
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
-<<<<<<< HEAD
-    ((dispute.status = status |"Resolved")
-      (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
-    dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth';
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const dispute = await getDisputeById(id);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const { resolutionSummary, status } = req.body || {};
-    const now = new Date().toISOString();
-    if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {;
-      return res.status(400).json({ error: 'Invalid status' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    dispute.status = status || 'Resolved';
-    dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
-    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
-    dispute.updatedAt = now;
-    await upsertDispute(dispute);
-    return res.status(200).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  res.setHeader("Allow", "POST");
-  return res.status(405).end("Method Not Allowed");
-}
-
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
     }
 
@@ -155,7 +64,6 @@ export default async function handler(req, res) {
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export default async /**
  * handler - Function description
@@ -172,8 +80,6 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
     try {
       ensure_admin (user);
     } catch (e: any) {
@@ -207,4 +113,3 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

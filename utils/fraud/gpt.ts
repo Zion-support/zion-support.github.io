@@ -56,8 +56,6 @@ if ( {) {
     } as GptClassification;
   } catch {
     return {
-<<<<<<< HEAD
-=======
 
 =======
 // GPT-based fraud classification utilities
@@ -67,32 +65,23 @@ export interface GptClassification {
 
   reasoning: string;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   label: string;
   confidence: number;
   reasoning: string
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -106,8 +95,6 @@ export interface GptClassification {
   }
 
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -117,14 +104,6 @@ export interface GptClassification {
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-
-}
-
-
-}
-
 =======
 export async function analyzeWithGpt (data: any): Promise < GptResult> {
   // Mock implementation - in production, this would call OpenAI API;
@@ -137,5 +116,3 @@ export async function analyzeWithGpt (data: any): Promise < GptResult> {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

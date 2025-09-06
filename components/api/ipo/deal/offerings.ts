@@ -37,12 +37,7 @@ if ( {) {
     return res && res.status(200).json(offerings);
 
   }
-<<<<<<< HEAD
-  return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -99,28 +94,15 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings);
     return res.status (200).json (offerings);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-return res.status (405).json ({ error: 'Method not allowed' });
-
-}
-<<<<<<< HEAD
-=======
 return res.status (405).json ({ error: 'Method not allowed' });
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
-<<<<<<< HEAD
-}
-=======
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-=======
 
 import Head from 'next / head',
 import React, { useMemo, useState } from 'react',
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 type RoadmapInputs = {
 
@@ -109,20 +104,12 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 
-<<<<<<< HEAD
-import Head from 'next/head',;
-import React, { useMemo, useState } from 'react',;
-;
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-=======
 =======
 function defaultOperatorPrompt (): string {
 =======
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -207,7 +194,6 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
@@ -268,11 +254,8 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -292,11 +275,7 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -316,12 +295,8 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -340,12 +315,9 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -393,45 +365,8 @@ Validation:;
                     </ul>
                   </div>
                 </article>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
-  );
-};
-  };
-  return (;
-    <>;
-      <Head>;
-        <title>Zion Roadmap</title>;
-        <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />;
-      </Head>;
-      <main className="min-h-screen bg-white text-gray-900">;
-        <div className="mx-auto w-full max-w-6xl px-6 py-12">;
-          <header className="mb-8">;
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>;
-            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>;
-          </header>;
-          <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">;
-            <div className="md:col-span-1">;
-              <h2 className="text-xl font-semibold">Generator Inputs</h2>;
-              <p className="mt-1 text-sm text-gray-600">Tune the roadmap with current context and focus.</p>;
-            </div>;
-            <div className="md:col-span-2 grid gap-4">;
-              <div>;
-                <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>;
-                <textarea;
-                  value={milestones  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -537,22 +472,10 @@ Validation:;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

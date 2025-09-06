@@ -11,10 +11,6 @@ const options: RequestInit = {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-<<<<<<< HEAD
-      signal: AbortSignal.timeout(15000)},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       try {
         options.body = JSON.stringify (JSON.parse (body));
@@ -175,10 +171,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -189,14 +181,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         placeholder='API Key'
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-<<<<<<< HEAD
-      />
-      {params.map(p => (
-        <Input
-          key={p.name}
-          value={paramValues[p.name] |''}
-          value={paramValues[p.name] || ''}
-=======
 
 
       />
@@ -207,7 +191,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
           value={paramValues[p.name] || ''}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
@@ -286,13 +269,6 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-<<<<<<< HEAD
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </div>;
@@ -335,10 +311,6 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}

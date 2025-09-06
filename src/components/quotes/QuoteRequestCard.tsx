@@ -12,23 +12,14 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-<<<<<<< HEAD
-  quote
-  onViewDetails
-  onMarkAsResponded
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   quote,
   onViewDetails,
   quote,
   onViewDetails,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onMarkAsResponded,
   onToggleArchive
 },) => {
@@ -63,10 +54,6 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -91,10 +78,6 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
@@ -105,11 +88,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
         
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -121,10 +101,6 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
             View Details
           </Button>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
@@ -149,48 +125,17 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
-<<<<<<< HEAD
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-"}
-}
-
-=======
-<<<<<<< HEAD
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
-  )
-}
-"}
-}
-
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 };
 "};
 };
-<<<<<<< HEAD
-
-=======
 
   );
 };
 "};
 };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -297,10 +242,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       return date_string;
     }

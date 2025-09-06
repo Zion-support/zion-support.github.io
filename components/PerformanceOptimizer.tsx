@@ -19,22 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 import {
-<<<<<<< HEAD
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
-=======
   Zap,
   Clock,
   TrendingUp,
@@ -43,12 +28,10 @@ import {
   Cpu,
   Database,;
   Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
@@ -65,10 +48,6 @@ interface PerformanceMetrics {;
 
   Database,;
   Network,;
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 } from 'lucide-react';
@@ -531,7 +510,6 @@ if ( {) {
     } finally {
       setIsOptimizing(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
 
@@ -602,7 +580,6 @@ if ( {) {
           }
         }
       });      // Monitor for performance issues
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -699,7 +676,6 @@ if ( { // LCP should be under 2.5s) {
 }
               console.warn ('LCP is too slow:', lcp);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
         }
@@ -752,7 +728,6 @@ if ( { // LCP should be under 2.5s) {
     
     return Math.max(0, score)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
   const getPerformanceGrade = (score: number): string => {;
 =======
@@ -760,7 +735,6 @@ if ( { // LCP should be under 2.5s) {
     return Math.max(0, score)
   }
   const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -799,15 +773,6 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
-          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
-        >;
-          {showMetrics ? 'Hide' : 'Show'} Metrics;
-        </button>;
-      </div>;
-      {/* Performance Score */}
-
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -826,7 +791,6 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
@@ -846,12 +810,8 @@ if ( { // LCP should be under 2.5s) {
 
       </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -860,11 +820,7 @@ if ( { // LCP should be under 2.5s) {
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 
-<<<<<<< HEAD
-        >
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -971,20 +927,6 @@ if ( { // LCP should be under 2.5s) {
           </div>
         </motion.div>
       )}
-<<<<<<< HEAD
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-
-
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-      <div className='space-y-3'>        <button
-
-        <button
-
-=======
 
         <button
 =======
@@ -994,7 +936,6 @@ if ( { // LCP should be under 2.5s) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1089,11 +1030,6 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
@@ -1104,11 +1040,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         )}
       </div>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -1119,12 +1052,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className="text-xs text-white/60 space-y-1">
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1334,34 +1263,11 @@ if (return 'D') {
 }export default PerformanceOptimizer;}
 =======
   );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Preload critical resources;
-      preloadImages.forEach(image => {addResourceHint(image, 'image');
-'      });';
-      preloadFonts.forEach(font => {addResourceHint(font, 'style');
-'      });'    }}, [preloadImages, preloadFonts]);
-  return (;
-    <Head>;
-<<<<<<< HEAD
-      {/* Critical CSS inlined for above - the - fold content */}
-      {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-<<<<<<< HEAD
-=======
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1494,9 +1400,6 @@ export default PerformanceOptimizer;
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
-export default PerformanceOptimizer;
-=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1505,4 +1408,3 @@ export default PerformanceOptimizer;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -4,20 +4,6 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Code
-  Database
-  Shield
-  Zap
-  Globe
-  Cpu
-  BookOpen
-  CheckCircle
-  ArrowRight
-  BarChart3
-  Lock
-  Brain;
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -74,7 +60,6 @@ import {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Code,
   Database,
   Shield,
@@ -107,18 +92,11 @@ import {
 =======
   Lock,;
   Brain,;
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function APIDocumentation() {
-	return (
-=======
   Lock,;
   Brain,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 
 export default function APIDocumentation() {

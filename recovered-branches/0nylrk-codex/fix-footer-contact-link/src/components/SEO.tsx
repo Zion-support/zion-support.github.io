@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
 import { Helmet } from './react - helmet - async';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SEOProps {
 
   title: string
@@ -17,11 +13,7 @@ interface SEOProps {
 import { Helmet } from "react-helmet-async",
 import {Helmet} from "react-helmet-async";
 import { Helmet } from "react-helmet-async",
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SEOProps {
   title: string,
   description: string,
@@ -31,22 +23,9 @@ interface SEOProps {
   canonical?: string,
   noindex?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function SEO({;
-  title;
-  description;
-  keywords;
-export function SEO({
-  title,
-  description,
-  keywords,
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Default to the Google Drive image URL
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
@@ -107,18 +86,12 @@ function SEO() {
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
-<<<<<<< HEAD
-    </Helmet>
-  )
-}
-=======
 
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -169,13 +142,10 @@ export function SEO({;
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-=======
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -19,9 +7,7 @@ import { Link } from './react-router-dom';
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -347,28 +333,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             <ProductListingCard
               key={listing.id}
               listing={listing}
-<<<<<<< HEAD
-              view="grid"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              onRequestQuote={() => {}}
-            />
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-            asChild
-          >
-            <Link to="/marketplace">View All Listings</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
@@ -377,7 +342,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
 
         <div className="mt-10 text-center">;
@@ -397,15 +361,10 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

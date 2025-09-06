@@ -12,10 +12,6 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react',;
 import { X } from 'lucide-react';
@@ -28,12 +24,9 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -198,17 +191,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   }
   return (
-<<<<<<< HEAD
-    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
-      {activeFilters.map(filter => (
-        <Badge
-          key = {filter.key,}
-          variant="secondary"
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Badge 
           key = {filter.key,}
 
@@ -216,12 +200,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -245,11 +226,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             className="h-4 w-4 p-0 hover:bg-transparent"
             onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -261,10 +239,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         size="sm"
         onClick = {onClearAll,}
         onClick={onClearAll}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         className="text-xs h-6 px-2"
@@ -273,12 +247,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       </Button>
     </div>
   )
-<<<<<<< HEAD
-}
-export default ActiveFiltersBar
-},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default ActiveFiltersBar,
 interface Filter {
@@ -434,10 +402,6 @@ if ( {) {
 },
 
 export default ActiveFiltersBar,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         className="text-xs h-6 px-2">;
         Clear all;
@@ -458,29 +422,10 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
   filters: Filter[];
   onRemoveFilter: key: string void;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface Filter {
-  key: string
-  value: string
-  label: string
-}
-interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
-  filters: Filter[]
-  onRemoveFilter: key: string void
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </button>
     </div>
   )}

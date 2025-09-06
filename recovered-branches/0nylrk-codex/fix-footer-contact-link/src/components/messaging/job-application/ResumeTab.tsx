@@ -1,53 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react',
-import React from "react";
-import { ResumeSelector, ResumeOption } from "../resume-selector";
-import { Button } from "@/components/ui/button";
-export interface ResumeTabProps {;
-  selectedResumeId?: string | null;
-  onSelectResume?: (resumeId: string) => void;
-  onResumeSelected?: (resume: ResumeOption) => void;
-  onApply?: () => Promise<void>;
-  isSubmitting?: boolean
-}
-
-export function ResumeTab({
-  selectedResumeId
-  onSelectResume
-  onResumeSelected
-  onApply
-  isSubmitting = false
-}: ResumeTabProps) {
-  const handleResumeSelected = (resume: ResumeOption) => {
-    if (onResumeSelected) {;
-      onResumeSelected(resume);
-    }
-    if (onSelectResume) {
-      onSelectResume(resume.id);
-    }
-  }
-
-  return (
-    <div className="space-y-4">
-      <ResumeSelector onResumeSelected={handleResumeSelected} />
-      {onApply && (
-        <div className="mt-6">
-          <Button
-            onClick={onApply}
-            disabled={!selectedResumeId |isSubmitting}
-
-import React from 'react',
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { Button } from "@/components/ui/button",
-=======
 
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
@@ -86,12 +41,9 @@ export function ResumeTab(): any ({;
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
           
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
@@ -119,12 +71,9 @@ export function ResumeTab(): any ({;
       )}
     </div>
     </div>;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
   on_apply?: () => Promise < void>;

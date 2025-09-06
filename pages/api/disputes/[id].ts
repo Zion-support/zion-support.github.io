@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getDisputeById } from "../../../utils/fsdb";
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from "../../../utils/auth";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-=======
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -35,7 +14,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -55,76 +33,8 @@ export default async function handler(
     }
     return res && res.status(200).json({ dispute });
   }
-<<<<<<< HEAD
-
-
-  res && res.setHeader("Allow", "GET");
-  return res && res.status(405).end("Method Not Allowed");
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['GET']);
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById } from '../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../utils/auth';
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return res.status(200).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { id } = req.query;
-  if (
-    return res.status (400).json ({ error: "Invalid id" })) {
-  $2
-}
-  const user = parseUserFromRequest (req);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

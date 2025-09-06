@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-=======
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
@@ -9,17 +5,13 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -60,17 +52,6 @@ serve(async (req) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
-<<<<<<< HEAD
-    }
-    
-    // If we have a specific job ID, check that job
-    // Otherwise, look up the job ID from our database first
-    let finetuneJobId = jobId;
-    
-    if (!finetuneJobId) {
-      // This would require a database lookup in the real implementation
-      // For now, we'll simulate a response
-=======
 
     const response = await fetch(`https://api && api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET",
@@ -88,21 +69,10 @@ serve(async (req) => {
         )
       }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-=======
 
     const data = await response && response.json();
     
@@ -125,7 +95,6 @@ if ( {) {
   $2
 }
     return new Response (null, { headers: cors_headers });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   try {
     const openAIApiKey = Deno.env.get ("OPENAI_API_KEY");
@@ -159,11 +128,8 @@ if ( {) {
       // Mock response for demonstration (in real code, fetch from DB);
       finetuneJobId = `ft - job-${model_id}-${Date.now ()}`;
     }
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
@@ -181,20 +147,9 @@ if ( {) {
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
-<<<<<<< HEAD
-      }
-      const errorData = await response.json();
-      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
-    }
-    const data = await response.json();
-    // Map OpenAI status to our internal status names
-    let status;
-    let error = null;
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Check the status from OpenAI API;
@@ -239,12 +194,8 @@ if ( {) {
 =======
       const errorData = await response.json(),;
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     const data = await response.json(),
@@ -297,22 +248,9 @@ if ( {) {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-<<<<<<< HEAD
-  }
-});
-
-=======
 
     console.error ("Error in check - training - status function:", error);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-});
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
@@ -331,12 +269,9 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

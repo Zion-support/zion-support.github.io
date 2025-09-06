@@ -12,24 +12,17 @@ interface MilestoneCreatorProps {
   projectEndDate?: string | null;
   projectType?: string;
 }
-<<<<<<< HEAD
-export function MilestoneCreator({
-=======
 
 
 export function MilestoneCreator(): any ({;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export function MilestoneCreator({;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onSubmit;
   isSubmitting;
   onCancel;
@@ -40,15 +33,10 @@ export function MilestoneCreator({;
   projectType
 }: MilestoneCreatorProps) {
   return (
-<<<<<<< HEAD
-    <AddMilestoneForm
-    <AddMilestoneForm 
-=======
 
     <AddMilestoneForm 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -72,13 +60,10 @@ export function MilestoneCreator({;
 }: MilestoneCreatorProps) {;
   return (;
     <AddMilestoneForm;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}

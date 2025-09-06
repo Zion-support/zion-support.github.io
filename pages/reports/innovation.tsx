@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -13,7 +8,6 @@ import Link from 'next / link';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const InnovationPage: React.FC = () => {
   const innovation_areas = [;
     {
@@ -95,16 +89,7 @@ const InnovationPage: React.FC = () => {
         { name: 'Content Generation', status: 'active', impact: 'high', description: 'Automated content creation and optimization' },
         { name: 'SEO Automation', status: 'active', impact: 'high', description: 'Intelligent search engine optimization' },
         { name: 'Performance Monitoring', status: 'active', impact: 'medium', description: 'Real-time system health tracking' },
-<<<<<<< HEAD
-        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero-downtime deployments' }
-        { name: 'Deployment Automation', status: 'active', impact: 'high', description: 'Zero-downtime deployments'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ]
     },
     {
@@ -113,17 +98,8 @@ const InnovationPage: React.FC = () => {
         { name: 'Multi-Region Redundancy', status: 'active', impact: 'high', description: 'Geographic failover systems' },
         { name: 'Auto-Scaling', status: 'active', impact: 'medium', description: 'Dynamic resource allocation' },
         { name: 'Load Balancing', status: 'active', impact: 'high', description: 'Intelligent traffic distribution' },
-<<<<<<< HEAD
-        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery' }
-        { name: 'Disaster Recovery', status: 'active', impact: 'critical', description: 'Automated backup and recovery'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ]
     },
     {
@@ -132,58 +108,6 @@ const InnovationPage: React.FC = () => {
         { name: 'Continuous Integration', status: 'active', impact: 'high', description: 'Automated testing and deployment' },
         { name: 'Code Quality Gates', status: 'active', impact: 'medium', description: 'Automated code review and standards' },
         { name: 'Performance Budgets', status: 'active', impact: 'high', description: 'Automated performance monitoring' },
-<<<<<<< HEAD
-        { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection' }
-      ]
-    }
-  ];
-
-        { name: 'Security Scanning', status: 'active', impact: 'critical', description: 'Automated vulnerability detection'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-  const recentInnovations = [
-    {
-      id: 'ai-content-factory-2025-01-17',
-      title: 'AI Content Factory Launch',
-      date: '2025-01-17',
-      summary: 'Automated content generation system with AI-powered optimization',
-      status: 'launched',
-      impact: 'high'
-    },
-    {
-      id: 'comprehensive-redundancy-2025-01-16',
-      title: 'Comprehensive Redundancy System',
-      date: '2025-01-16',
-      summary: 'Multi-layer redundancy architecture for maximum uptime',
-      status: 'deployed',
-      impact: 'critical'
-    },
-    {
-      id: 'github-actions-automation-2025-01-15',
-      title: 'GitHub Actions Automation Suite',
-      date: '2025-01-15',
-      summary: 'Complete CI/CD automation with self-healing capabilities',
-      status: 'operational',
-      impact: 'high'
-    }
-  ];
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
 
 
   const recentInnovations = [
@@ -214,7 +138,6 @@ const InnovationPage: React.FC = () => {
       impact: 'high'
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const upcomingInnovations = [
 
     {
@@ -235,24 +158,12 @@ const InnovationPage: React.FC = () => {
       timeline: 'Q4 2025',
 
       status: 'development'
-<<<<<<< HEAD
-    }
-  ];
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
 
 
   ];
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -263,31 +174,20 @@ const InnovationPage: React.FC = () => {
       case 'planning': return 'text-purple-400';
       case 'development': return 'text-orange-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-    }
-  }
-  };
-
-=======
 
   };
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getImpactColor = (impact: string) => {
 =======
 ;
@@ -300,31 +200,21 @@ const InnovationPage: React.FC = () => {
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-blue-500/20 text-blue-400';
       default: return 'bg-gray-500/20 text-gray-400';
-<<<<<<< HEAD
-    }
-  }
-  };
-
-=======
 
   };
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -339,12 +229,9 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -362,12 +249,9 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-purple-400">Active Innovations</h3>
@@ -391,11 +275,8 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Areas</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -414,11 +295,7 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </span>
                       </div>
                       <p className="text-gray-300 text-sm">{innovation.description}</p>
@@ -462,11 +339,7 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Innovations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -481,11 +354,7 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{innovation.summary}</p>
@@ -520,11 +389,7 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Upcoming Innovations</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -563,12 +428,8 @@ const InnovationPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Innovation Metrics</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -576,16 +437,10 @@ const InnovationPage: React.FC = () => {
               <div className="text-6xl font-bold text-purple-400 mb-4">🚀</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Innovation Pipeline</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Our continuous innovation pipeline ensures we stay ahead of technological trends
-                Our continuous innovation pipeline ensures we stay ahead of technological trends 
-                Our continuous innovation pipeline ensures we stay ahead of technological trends
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 and deliver cutting-edge solutions to our users.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -609,18 +464,12 @@ const InnovationPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Navigation */}
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-=======
 
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -628,43 +477,27 @@ const InnovationPage: React.FC = () => {
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
             All Reports
           </Link>
-<<<<<<< HEAD
-          <Link
-          <Link 
-          <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             Performance
           </Link>
-<<<<<<< HEAD
-          <Link
-          <Link 
-          <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/automation"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -675,10 +508,6 @@ const InnovationPage: React.FC = () => {
     </div>
   );
 }
-<<<<<<< HEAD
-};
-
-=======
 ;
 
 =======
@@ -686,5 +515,4 @@ const InnovationPage: React.FC = () => {
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default InnovationPage;

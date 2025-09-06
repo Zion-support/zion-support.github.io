@@ -31,12 +31,9 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EmptyFraudStateProps {
 
   hasFilters: boolean
@@ -57,17 +54,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-}
 
 
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
@@ -146,10 +134,6 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 }) => {
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-=======
 };
 '";
 
@@ -160,7 +144,6 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
     </div>;
   );
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
     <div className="text - center py - 12">;

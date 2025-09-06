@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -20,41 +11,12 @@ import {Steps, Step} from "@/components/ui/steps";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
-<<<<<<< HEAD
-  const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
-  const navigate = useNavigate();
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
-import { Steps, Step } from "@/components/ui/steps",
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-export default function Onboarding() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth(),
-  const [currentStep, setCurrentStep] = useState(0),
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
-  const navigate = useNavigate(),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
@@ -339,13 +301,10 @@ export default function Onboarding() {;
                       : currentStep === index;
                       ? "current";
                       : "incomplete";
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   }
                   label={step && step.label}
                   description={step && step.description}
@@ -369,20 +328,6 @@ export default function Onboarding() {;
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
-<<<<<<< HEAD
-                >
-                  Back to Role Selection
-                </Button>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
 
 =======
 
@@ -543,7 +488,6 @@ if ( {) {
                   variant="outline";
                   className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light";
                   on_click={() => setCurrentStep (0)}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >;
                   Back to Role Selection;
                 </Button>;
@@ -553,15 +497,10 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

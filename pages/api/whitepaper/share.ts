@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { randomUUID } from 'crypto',;
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { randomUUID } from 'crypto';
 
@@ -23,46 +15,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return store[id]
 
 =======
 }
-<<<<<<< HEAD
-  return store[id];
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-// In-memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { markdown, publicPreview } = req.body || {};
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
-  res.status(200).json({ id, url });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export function getShared(id: string) {;
-  return store[id];
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -93,9 +49,7 @@ function get_shared() {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

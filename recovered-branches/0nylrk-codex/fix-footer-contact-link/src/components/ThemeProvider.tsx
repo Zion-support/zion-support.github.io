@@ -21,20 +21,11 @@ const initialState: ThemeProviderState = {
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
-<<<<<<< HEAD
-  children
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(&quot;theme&quot;) as Theme) |defaultTheme
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-=======
 
   children,;
   defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
@@ -121,10 +112,6 @@ if ( {) {
       {children}
     </ThemeProviderContext.Provider>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const use_theme = () =>: any {
   const context = useContext (ThemeProviderContext);
@@ -134,30 +121,14 @@ if (
   $2
 }use_theme must be used within a ThemeProvider & quot);
   return context;
-<<<<<<< HEAD
-=======
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
-<<<<<<< HEAD
-  if (context === undefined);
-    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (context === undefined)
-<<<<<<< HEAD
-    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
-  return context
-}
-=======
     throw new Error("useTheme must be used within a ThemeProvider")
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }

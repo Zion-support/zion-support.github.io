@@ -27,21 +27,6 @@ origin/automation-improvements-final
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Eye
-  Ear
-  Hand
-  Brain
-  CheckCircle
-  AlertTriangle
-  Globe
-  Users
-  Shield
-  Zap
-  FileText
-  Settings
-=======
 
   Eye,
   Ear,
@@ -50,7 +35,6 @@ import {
   CheckCircle,
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Eye, 
   Ear, 
   Hand, 
@@ -64,12 +48,9 @@ import {
   Zap,
   FileText,
   Settings;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 const accessibility_features = [;
   {
@@ -488,7 +469,6 @@ origin/automation-improvements-final
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>

@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
-<<<<<<< HEAD
-  updateArtifacts
-  getProposal
-  savePdf
-  updateArtifacts,
-  getProposal,
-  savePdf,;
-=======
 
 
   updateArtifacts,
@@ -23,7 +11,6 @@ import {
   savePdf,;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -43,50 +30,20 @@ function buildIpfsClient() {
   return createIpfsClient({
     url: apiUrl
     headers: { authorization: auth } as any
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ export: 'PDF export' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
-import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
-import { create as createIpfsClient } from 'ipfs-http-client';
-import { ethers } from 'ethers';
-import fs from 'fs';
-import path from 'path';
-function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
-  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
-}
-async function generatePdfFromMarkdown(markdown: string, title: string) {
-=======
   const pdfDoc = await PDFDocument && PDFDocument.create();
   const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
   const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -94,11 +51,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
@@ -135,7 +88,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
@@ -171,11 +123,6 @@ export default async function handler(
     page.drawText(line, { x: margin, y, size: fontSize, font });
     y -= 14
   }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default async function handler(
   req: NextApiRequest,
@@ -187,26 +134,8 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-;
-  return pdfDoc.save();
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default async function handler(req, res) {
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
 
     const { id } = req && req.body || {};
@@ -249,17 +178,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
         const { cid } = await ipfs.add(markdown);
-<<<<<<< HEAD
-        ipfsCid = cid.toString()
-        ipfsCid = cid.toString();
-=======
 
         ipfsCid = cid.toString();
 
@@ -328,7 +252,6 @@ if ( {) {
       try {
         const { cid } = await ipfs.add (markdown);
         ipfs_cid = cid.to_string ();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch {}
     }
     const updated = updateArtifacts(id, {
@@ -338,54 +261,6 @@ if ( {) {
     });
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: error?.message |"Export failed" });
-
-    return res.status(500).json({ error: error?.message || "Export failed" });
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Export failed' })
-  }
-}
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-=======
-<<<<<<< HEAD
-    return res.status(500).json({ error: error?.message |"Export failed" });
-=======
 
 =======
     return res.status(500).json({ error: error?.message || "Export failed" });
@@ -402,13 +277,6 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-
-  }
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   }
 }
       } catch (error) {
@@ -425,16 +293,11 @@ if ( {) {
   }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
-}
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -443,11 +306,9 @@ if ( {) {
 }
 =======
     return res.status (500).json ({ error: error?.message || "Export failed" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -461,8 +322,5 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,8 +1,6 @@
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-<<<<<<< HEAD
-=======
 
 
 import React, { useEffect, useState } from 'react';
@@ -282,7 +280,6 @@ function InterviewsContent() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>;
 
@@ -316,11 +313,8 @@ function InterviewsContent() {;
               Upcoming
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -330,10 +324,6 @@ function InterviewsContent() {;
               {pendingInterviews.length > 0 && (
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   {pendingInterviews.length}
                 </span>
@@ -344,10 +334,6 @@ function InterviewsContent() {;
           <TabsContent value='upcoming' className='space-y-6'>
           
           <TabsContent value="upcoming" className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {isLoading ? (
@@ -367,10 +353,6 @@ function InterviewsContent() {;
           <TabsContent value='pending' className='space-y-6'>
           
           <TabsContent value="pending" className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {isLoading ? (
@@ -390,10 +372,6 @@ function InterviewsContent() {;
           <TabsContent value='past' className='space-y-6'>
           
           <TabsContent value="past" className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {isLoading ? (
@@ -452,91 +430,3 @@ export default function Interviews() {;
     </ProtectedRoute>;
   );
 }
-<<<<<<< HEAD
-
-}
-
-        <Tabs;
-          default_value={active_tab}
-          onValueChange={setActiveTab}
-          className='space - y-8';
-        >;
-          <TabsList className='mb - 6'>;
-            <TabsTrigger value='upcoming' className='flex items - center'>;
-              <Clock className='h - 4 w - 4 mr - 2' />;
-              Upcoming;
-              {upcoming_interviews.length > 0 && (
-                <span className='ml - 2 bg - primary rounded - full px - 2 py - 0.5 text - xs'>;
-                  {upcoming_interviews.length}
-                </span>)}
-            </TabsTrigger>;
-            <TabsTrigger value='pending'>;
-              Pending;
-              {pending_interviews.length > 0 && (
-                <span className='ml - 2 bg - amber - 500 rounded - full px - 2 py - 0.5 text - xs'>;
-                  {pending_interviews.length}
-                </span>)}
-            </TabsTrigger>;
-            <TabsTrigger value='past'>Past</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value='upcoming' className='space - y-6'>;
-            {is_loading ? (
-              <div className='flex justify - center py - 12'>;
-                <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
-              </div>) : upcoming_interviews.length > 0 ? (
-              renderInterviewGroups (upcoming_grouped)) : (
-              <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
-                <Video className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
-                <h3 className='text - xl font - medium mb - 2'>;
-                  No upcoming interviews;
-                </h3>;
-                <p className='text - muted - foreground mb - 6'>;
-                  You don't have any scheduled interviews coming up.;
-                </p>;
-              </div>)}
-          </TabsContent>;
-          <TabsContent value='pending' className='space - y-6'>;
-            {is_loading ? (
-              <div className='flex justify - center py - 12'>;
-                <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
-              </div>) : pending_interviews.length > 0 ? (
-              renderInterviewGroups (pending_grouped)) : (
-              <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
-                <Clock className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
-                <h3 className='text - xl font - medium mb - 2'>;
-                  No pending interviews;
-                </h3>;
-                <p className='text - muted - foreground mb - 6'>;
-                  You don't have any interview requests that need your;
-                  attention.;
-                </p>;
-              </div>)}
-          </TabsContent>;
-          <TabsContent value='past' className='space - y-6'>;
-            {is_loading ? (
-              <div className='flex justify - center py - 12'>;
-                <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full'></div>;
-              </div>) : past_interviews.length > 0 ? (
-              renderInterviewGroups (past_grouped)) : (
-              <div className='text - center py - 12 bg - zion - blue - dark / 40 rounded - lg border border - zion - blue - light'>;
-                <Calendar className='h - 12 w - 12 mx - auto text - muted - foreground mb - 4' />;
-                <h3 className='text - xl font - medium mb - 2'>No past interviews</h3>;
-                <p className='text - muted - foreground'>;
-                  Your interview history will appear here.;
-                </p>;
-              </div>)}
-          </TabsContent>;
-        </Tabs>;
-      </main>;
-    </>);
-export default /**
- * Interviews - Function description
- */
-function Interviews() {
-  return (
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>);
-}
-}
-;

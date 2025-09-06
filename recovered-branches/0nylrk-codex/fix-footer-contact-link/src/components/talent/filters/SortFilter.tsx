@@ -3,20 +3,8 @@ import {
 
 import { SortFilterProps } from "@/types/filters";
 
-<<<<<<< HEAD
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-import { SortFilterProps } from "@/types/filters",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -36,26 +24,11 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
-  );
-}
-  )
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { SortFilterProps } from "@/types/filters";
-export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
-  return (;
-=======
 
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {SortFilterProps} from "@/types/filters";
 export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
   return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -74,13 +47,6 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
       </Select>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-;
-}
-;
-=======
 }
 
 =======
@@ -120,4 +86,3 @@ function SortFilter() {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

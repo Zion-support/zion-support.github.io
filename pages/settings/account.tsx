@@ -22,20 +22,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -43,22 +35,16 @@ export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -406,8 +392,6 @@ if (return) {
   }
 }
       setStatus('Profile restored from backup');
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -515,7 +499,6 @@ if ( {) {
         set_farcaster (did.farcaster || '');
       }
       set_status ('Profile restored from backup');
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (e: any) {
       set_status (e?.message || 'Restore failed');    }
   }
@@ -625,19 +608,7 @@ if ( {) {
         </section>;
 
 
-<<<<<<< HEAD
-    } catch (error) {
-      setStatus(e?.message || 'Restore failed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  return (
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -738,33 +709,21 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
-<<<<<<< HEAD
-        {status && <div className='text-sm text-gray-600'>{status}</div>}
-      </div>
-    </>
-);
-
-}
-=======
 
 
 
 }
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -775,18 +734,13 @@ if ( {) {
     </>
   )
 }
-<<<<<<< HEAD
-=======
 
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

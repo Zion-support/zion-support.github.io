@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-=======
 
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 =======
@@ -190,13 +183,10 @@ if ( {) {
             .single(),;
           if (!subdomainResult.error) {;
             tenantInfo = subdomainResult.data as TenantInfo;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       } else // Check condition
@@ -206,14 +196,10 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return new Response(
 
@@ -282,13 +268,10 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
 

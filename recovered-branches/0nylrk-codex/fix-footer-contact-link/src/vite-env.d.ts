@@ -79,18 +79,10 @@ declare let process: {;
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
-<<<<<<< HEAD
-  export interface BadgeProps {
-  }
-  export interface BadgeProps {};
-;
-  export const Badge: React.FC<BadgeProps>;
-=======
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface ImportMeta {
   readonly env: ImportMetaEnv;
@@ -111,22 +103,6 @@ declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
 }
-<<<<<<< HEAD
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
-    onDisconnect?: () => void;
-    className?: string;
-  export interface BadgeProps {
-    className?: string,
-    variant?: "default" | "secondary" | "destructive" | "outline",
-    children?: React.ReactNode,
-    key?: string | number
-},;
-=======
 declare module 'path' {
   export function resolve (...paths: string[]): string,
   export function join (...paths: string[]): string,
@@ -145,7 +121,6 @@ declare let process: {
     PORT?: string;
   }
 },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
   export interface BadgeProps {
@@ -190,9 +165,6 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     timestamp?: Date,
 
     key?: string | number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
 }
 // ProductListingCard type fixes;
@@ -200,25 +172,14 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
-<<<<<<< HEAD
-declare module '@livekit/components-styles' {// Empty stub for the styles;
-}
-;
-// ProductListingCard type fixes;
-declare module '@/components/ProductListingCard' {;
-  export interface ProductListingCardProps {;
-    listing: any,;
-=======
 
 declare module '@/components / ProductListingCard' {
   export interface ProductListingCardProps {
     listing: any,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
@@ -239,10 +200,7 @@ declare module '@livekit / components - react' {
   export const LiveKitRoom: React.FC < any>;
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }

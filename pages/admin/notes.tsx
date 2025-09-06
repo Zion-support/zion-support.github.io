@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
@@ -14,11 +10,6 @@ import { useEffect, useState } from 'react';
       try {
 
 
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',;
-;
-import { useEffect, useState } from 'react';
-=======
 =======
   id: string,
   target_type: string,
@@ -57,7 +48,6 @@ if (return, ) {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Note = {
   id: string;
   targetType: string;
@@ -114,21 +104,8 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         </div>;
       )  } catch (error) {
@@ -136,16 +113,6 @@ export default function AdminNotesConsole(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
   }, [is_admin]),
   return (
     <div className="space - y-4">;
@@ -170,9 +137,7 @@ export default function AdminNotesConsole(req, res) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

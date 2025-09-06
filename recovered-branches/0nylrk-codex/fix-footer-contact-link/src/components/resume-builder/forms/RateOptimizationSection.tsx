@@ -1,21 +1,13 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -41,10 +33,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -53,23 +42,8 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
-  control;
-  setValue;
-  skills;
-  yearsExperience;
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control;
-  setValue;
-  skills;
-  yearsExperience;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   location
   control,
@@ -192,12 +166,9 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 step="0.01";
 
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {...field}
               />;
             </FormControl>;
@@ -223,33 +194,19 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-<<<<<<< HEAD
-            rateType={rateType}
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-
-=======
 
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
         </CardContent>;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

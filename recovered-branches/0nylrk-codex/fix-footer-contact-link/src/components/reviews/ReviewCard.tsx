@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -12,7 +10,6 @@ interface ReviewCardProps {
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {Star, Flag, User} from "lucide-react";
@@ -22,21 +19,6 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { Star, Flag, User } from "lucide-react",
-import { Review } from "@/types/reviews",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-
-
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-=======
 interface ReviewCardProps {;
   review: Review,;
   onReport: (reviewId: string, reason: string) => Promise<boolean>;
@@ -103,7 +85,6 @@ import { Review  } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Dialog,
   DialogContent,
@@ -111,38 +92,13 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
-  DialogTrigger} from "@/components/ui/dialog",
-import { Textarea } from "@/components/ui/textarea",
-=======
   DialogTrigger,
 } from '@/components / ui / dialog';
 import { Textarea  } from '@/components / ui / textarea';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewCardProps {
   review: Review;
   on_report: (review_id: string, reason: string) => Promise < boolean>;
 }
-<<<<<<< HEAD
-
-export function ReviewCard({ review, onReport }: ReviewCardProps) {;
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-
-  const handleReport = async () => {
-    if (!reportReason.trim()) return;
-    setIsReporting(true);
-    const success = await onReport(review.id, reportReason);
-    setIsReporting(false);
-    if (success) {
-      setReportReason("");
-      setIsReportDialogOpen(false);
-=======
 export /**
  * ReviewCard - Function description
  */
@@ -165,7 +121,6 @@ if ( {) {
 }
       setReportReason ("");
       setIsReportDialogOpen (false);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   const renderStars = (rating?: number) => {
@@ -241,83 +196,7 @@ if ( {) {
                     : "??"}
                 </AvatarFallback>
                   {review.reviewer_profile?.display_name ? 
-<<<<<<< HEAD
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from "lucide-react",;
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger} from "@/components/ui/dialog",;
-import { Textarea } from "@/components/ui/textarea",;
-interface ReviewCardProps {;
-  review: Review,;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}
-;
-export function ReviewCard({ review, onReport }: ReviewCardProps) {;
-  const [reportReason, setReportReason] = useState(""),;
-  const [isReporting, setIsReporting] = useState(false),;
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),;
-  const handleReport = async () => {;
-    if (!reportReason.trim()) return,;
-    setIsReporting(true),;
-    const success = await onReport(review.id, reportReason),;
-    setIsReporting(false),;
-    if (success) {;
-      setReportReason(""),;
-      setIsReportDialogOpen(false);
-    }
-  },;
-  const renderStars = (rating?: number) => {;
-    if (!rating) return null,;
-    return (;
-      <div className="flex">;
-        {[1, 2, 3, 4, 5].map((star) => (;
-          <Star;
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />;
-        ))}
-      </div>;
-    );
-  };
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase();
-      .substring(0, 2);
-  };
-  return (;
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className="bg-muted">;
-                <User className="h-4 w-4" />;
-              </AvatarFallback>;
-            </Avatar>;
-          ) : (;
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
-                  {review.reviewer_profile?.display_name ?;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
@@ -332,30 +211,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 : review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-              {formatDistanceToNow(new Date(review.created_at), {
-                addSuffix: true
-              })}
-            </div>
-          </div>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
           </div>;
         </div>;
         <div className="flex">;
-<<<<<<< HEAD
-        </div>
-        <div className="flex">
-=======
 =======
         </div>
         <div className="flex">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {renderStars(review.rating)}
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
@@ -363,13 +229,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-      {(review.communication_rating |
-        review.quality_rating |
-        review.timeliness_rating |
-        review.would_work_again !== undefined) && (
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
-=======
 
                 </AvatarFallback>)}
             </Avatar>)}
@@ -402,7 +261,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -467,10 +325,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
 
             {review && review.quality_rating && (;
               <Badge variant="outline" className="flex gap-1 items-center">;
@@ -505,57 +359,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
           </div>;
-<<<<<<< HEAD
-        </div>;
-          </div>;
-        </div>;
-      )}
-      
-      <div className="mt-3 flex justify-end">
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-          <DialogTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-muted-foreground">
-              <Flag className="h-3 w-3 mr-1" />
-              Report
-            </Button>
-          </DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Report Review</DialogTitle>
-              <DialogDescription>
-                If you believe this review violates our community guidelines
-                please provide details below.
-              </DialogDescription>
-            </DialogHeader>
-            <Textarea
-              placeholder="Why are you reporting this review?"
-              value={reportReason}
-              onChange={(e) => setReportReason(e.target.value)}
-              className="min-h-[100px]"
-            />
-            <DialogFooter>
-              <Button
-                variant="outline"
-                onClick={() => setIsReportDialogOpen(false)}
-              >
-                Cancel
-              </Button>
-              <Button
-                onClick={handleReport}
-                disabled={!reportReason.trim() |isReporting}
-              >
-                {isReporting ? "Submitting..." : "Submit Report"}
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
-    </div>
-  );
-=======
         </div>)}
       <div className="mt - 3 flex justify - end">;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
@@ -601,14 +406,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       </div>;
 
     </div>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   )
 }
-<<<<<<< HEAD
-;
-;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

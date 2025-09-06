@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-export interface ShortUrl {
-export interface ShortUrl {;
-  id: string;
-  originalUrl: string;
-  shortCode: string;
-  shortUrl: string;
-  createdAt: Date;
-  expiresAt?: Date;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   original_url: string;
   short_code: string;
@@ -19,18 +8,9 @@ export interface ShortUrl {;
   user_id?: string;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface UrlAnalytics {
-
-export interface UrlAnalytics {;
-  totalClicks: number;
-  uniqueVisitors: number;
-=======
 export interface UrlAnalytics {
   total_clicks: number;
   unique_visitors: number;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -40,14 +20,7 @@ export interface UrlAnalytics {
   click_history: ClickEvent[];
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ClickEvent {
-
-export interface ClickEvent {;
-=======
-export interface ClickEvent {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   timestamp: Date;
   ip_address: string;
@@ -61,29 +34,6 @@ export interface ClickEvent {
     
     if (this && this.urls.has(shortCode)) {
 
-<<<<<<< HEAD
-  os: string
-}
-export interface CreateShortUrlRequest {
-
-export interface CreateShortUrlRequest {;
-  originalUrl: string;
-  customCode?: string;
-
-  expiresAt?: Date
-
-  userId?: string
-}
-class UrlShortenerService {
-  private urls: Map<string, ShortUrl> = new Map();
-  private analytics: Map<string, UrlAnalytics> = new Map();
-  private clicks: Map<string, ClickEvent[]> = new Map();
-  async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
-
-    const shortCode = request.customCode |this.generateShortCode()
-    if (this.urls.has(shortCode)) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -160,91 +110,6 @@ class UrlShortenerService {
       url && url.isActive = false,
 
       return null
-<<<<<<< HEAD
-export interface ShortUrl {;
-  id: string,;
-  originalUrl: string,;
-  shortCode: string,;
-  shortUrl: string,;
-  createdAt: Date,;
-  expiresAt?: Date,;
-  isActive: boolean,;
-  userId?: string;
-}
-;
-export interface UrlAnalytics {;
-  totalClicks: number,;
-  uniqueVisitors: number,;
-  referrers: string[],;
-  countries: string[],;
-  devices: string[],;
-  browsers: string[],;
-  lastClicked: Date,;
-  clickHistory: ClickEvent[];
-}
-;
-export interface ClickEvent {;
-  id: string,;
-  timestamp: Date,;
-  ipAddress: string,;
-  userAgent: string,;
-  referrer: string,;
-  country: string,;
-  city: string,;
-  device: string,;
-  browser: string,;
-  os: string;
-}
-;
-export interface CreateShortUrlRequest {;
-  originalUrl: string,;
-  customCode?: string,;
-  expiresAt?: Date,;
-  userId?: string;
-}
-;
-class UrlShortenerService {;
-  private urls: Map<string ShortUrl> = new Map(),;
-  private analytics: Map<string UrlAnalytics> = new Map(),;
-  private clicks: Map<string ClickEvent[]> = new Map(),;
-  async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {;
-    const shortCode = request.customCode || this.generateShortCode(),;
-    if (this.urls.has(shortCode)) {;
-      throw new Error('Short code already exists');
-    }
-;
-    const shortUrl: ShortUrl = {;
-      id: this.generateId(),;
-      originalUrl: request.originalUrl,;
-      shortCode,;
-      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`,;
-      createdAt: new Date(),;
-      expiresAt: request.expiresAt,;
-      isActive: true,;
-      userId: request.userId;
-    },;
-    this.urls.set(shortCode, shortUrl),;
-    this.analytics.set(shortCode, {;
-      totalClicks: 0,;
-      uniqueVisitors: 0,;
-      referrers: [],;
-      countries: [],;
-      devices: [],;
-      browsers: [],;
-      lastClicked: new Date(),;
-      clickHistory: [];
-    }),;
-    this.clicks.set(shortCode, []),;
-    return shortUrl;
-  }
-;
-  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {;
-    const url = this.urls.get(shortCode),;
-    if (!url || !url.isActive) return null,;
-    if (url.expiresAt && url.expiresAt < new Date()) {;
-      url.isActive = false,;
-      return null;
-=======
     }
     return url
   }
@@ -252,56 +117,20 @@ class UrlShortenerService {;
 
 export interface ShortUrl {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return url
   }
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
-<<<<<<< HEAD
-      id: this.generateId()
-      ...clickData
-    }
-    const urlClicks = this.clicks.get(shortCode) |[];
-    urlClicks.push(clickEvent);
-    this.clicks.set(shortCode, urlClicks);
-    const analytics = this.analytics.get(shortCode);
-    if (analytics) {
-      analytics.totalClicks++;
-      analytics.lastClicked = new Date();
-      if (!analytics.referrers.includes(clickData.referrer)) {
-        analytics.referrers.push(clickData.referrer)
-;
-  async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
-    const url = this.urls.get(shortCode),;
-    if (!url) return,;
-    const clickEvent: ClickEvent = {;
-      id: this.generateId(),;
-      ...clickData;
-    },;
-    const urlClicks = this.clicks.get(shortCode) || [],;
-    urlClicks.push(clickEvent),;
-    this.clicks.set(shortCode, urlClicks),;
-    const analytics = this.analytics.get(shortCode),;
-    if (analytics) {;
-      analytics.totalClicks++,;
-      analytics.lastClicked = new Date(),;
-      if (!analytics.referrers.includes(clickData.referrer)) {;
-        analytics.referrers.push(clickData.referrer);
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -322,14 +151,10 @@ export interface ShortUrl {;
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
 
@@ -371,20 +196,7 @@ export interface ShortUrl {;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
-<<<<<<< HEAD
-    }
-    return result
-  }
-  private generateId(): string {
-    return Math.random().toString(36).substr(2, 9)
-  }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -475,7 +287,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -513,11 +324,8 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const urlShortenerService = new UrlShortenerService();

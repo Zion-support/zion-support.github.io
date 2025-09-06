@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useState, useEffect } from 'react';
 
@@ -69,40 +65,13 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
-  useEffect(() => {
-    // Simulate loading partners
-    setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ code, ...updates })
-    });
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners |[]);  }
-  async function viewFlags(code: string) {
-    setSelected(code)
-    const res = await fetch(
-      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
-    );
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const json = await res.json();
     setFlags(json.flags |[]);
 
-<<<<<<< HEAD
-  }
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -164,82 +133,15 @@ export default function AdminPartners() {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-
-}
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
-      <div className="overflow-auto">
-        <table className="min-w-full text-sm">
-          <thead>
-            <tr className="text-left border-b">
-              <th className="py-2 pr-4">Code</th>
-              <th className="py-2 pr-4">Name</th>
-              <th className="py-2 pr-4">Status</th>
-              <th className="py-2 pr-4">Commission</th>
-              <th className="py-2 pr-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {partners.map((p) => (
-              <tr key={p.code} className="border-b">
-                <td className="py-2 pr-4">{p.code}</td>
-                <td className="py-2 pr-4">{p.name}</td>
-                <td className="py-2 pr-4">{p.status}</td>
-                <td className="py-2 pr-4">
-                  <input
-                    type='number'                    defaultValue={p.commission_rate}
-                    min={0}
-                    max={1}
-                    step={0.01}
-                    onBlur={e =>
-                      updatePartner(p.code, {
-                        commission_rate: Number(e.target.value)
-                      })
-                    }
-                    className='w-24 border rounded px-2 py-1'
-                    type="number"
-                    defaultValue={p.commission_rate  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    min={0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    max={1  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    step={0.01  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className="w-24 border rounded px-2 py-1"
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -292,7 +194,6 @@ export default function AdminPartners() {
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }
                   >;
                     Approve;
@@ -305,7 +206,6 @@ export default function AdminPartners() {
                   </button>;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -649,8 +549,6 @@ export default function AdminPartners() {
       </main>
     </>
   );
-<<<<<<< HEAD
-=======
 
 =======
                     </tr>))}
@@ -662,19 +560,14 @@ export default function AdminPartners() {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
 }
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -687,10 +580,6 @@ export default function AdminPartners() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

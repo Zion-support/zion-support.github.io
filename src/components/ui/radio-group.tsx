@@ -33,10 +33,6 @@ const RadioGroup = React.forward_ref<;
     />;
   );
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -46,10 +42,6 @@ const RadioGroup = React.forward_ref<;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         className
@@ -63,8 +55,6 @@ const RadioGroup = React.forward_ref<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
-=======
 
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
 const RadioGroupItem = React.forward_ref<;
@@ -86,15 +76,8 @@ className={cn (
 });
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { RadioGroup, RadioGroupItem }
 
-
-export { RadioGroup, RadioGroupItem }
-;
-<<<<<<< HEAD
-
-export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
 ;

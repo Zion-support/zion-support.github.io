@@ -24,13 +24,6 @@ function CybersecurityPage() {
   return (
     <div className="min - h-screen">;
 =======
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
-export default function CybersecurityPage() {return (;
-=======
 import Link from "next/link",;
 export const metadata = {;
   title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
@@ -38,9 +31,7 @@ export const metadata = {;
   keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
 export default function CybersecurityPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
@@ -180,13 +171,8 @@ export default function CybersecurityPage() {;
 =======
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
-<<<<<<< HEAD
-                Ensure compliance with industry standards including SOC2, ISO 27001;
-=======
                 Ensure compliance with industry standards including SOC2, ISO 27001,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 GDPR, and industry-specific regulations.;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
                 <li>• SOC2 compliance</li>;

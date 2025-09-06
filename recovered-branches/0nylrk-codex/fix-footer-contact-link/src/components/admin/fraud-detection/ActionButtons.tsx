@@ -22,16 +22,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ActionButtonsProps {
   flagId: string,
   status: string,
@@ -118,25 +109,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         <Button
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
-          onClick={() => onAction(flagId, "ignore")}
-        >
-          Ignore
-        </Button>
-      )}
-    </div>
-  );
-}
-
-    </div>;
-);
-=======
 
     </div>;
 );
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
@@ -197,8 +174,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
-<<<<<<< HEAD
-=======
 
   on_action: (
     flag_id: string,
@@ -262,6 +237,4 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

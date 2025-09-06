@@ -6,10 +6,6 @@
   }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -21,36 +17,11 @@
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-<<<<<<< HEAD
-<<<<<<< HEAD
-            value = {bulkSkills,}
-            onChange = {(e,) => setBulkSkills(e.target.value),}
-          />
-        </div>
-        <Button
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing |!bulkSkills.trim(),}
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
-          <Textarea 
-            className="min-h-24"
-            placeholder="Python, React, TypeScript, Project Management, Communication..."
-        <Button 
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills.trim(),}
-            value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
-          />;
-        </div>;
-        <Button;
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills.trim()}
-=======
             value = {bulkSkills,}
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="gap-2"
         >
           {isEnhancing ? (
@@ -60,11 +31,6 @@
           )}
           Categorize with AI
         </Button>
-<<<<<<< HEAD
-        <p className="text-xs text-muted-foreground mt-1">
-          AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
-=======
 
       set_error (err.message || 'Failed to categorize skills');
     }
@@ -96,7 +62,6 @@
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
@@ -123,18 +88,10 @@
         </p>;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-};
-<<<<<<< HEAD
-=======
       </div>;
     </div>;
   );
 };
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '"
 

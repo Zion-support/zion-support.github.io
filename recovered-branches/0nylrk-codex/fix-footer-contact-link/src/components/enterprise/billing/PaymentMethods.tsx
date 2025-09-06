@@ -1,27 +1,15 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -29,32 +17,9 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 export function PaymentMethods() {
   // Mock payment methods
 
-<<<<<<< HEAD
-  const paymentMethods = [
-    {
-      id: "pm-1"
-      type: "credit_card"
-      brand: "Visa"
-      last4: "4242"
-      expMonth: 12
-      expYear: 2025
-      isDefault: true
-    }
-    {
-      id: "pm-2"
-      type: "credit_card"
-      brand: "Mastercard"
-      last4: "8888"
-      expMonth: 4
-      expYear: 2026
-      isDefault: false
-    }
-  ];
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -63,24 +28,17 @@ export function PaymentMethods() {
       expYear: 2025,
       isDefault: true,
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: "pm-2",
       type: "credit_card",
@@ -93,12 +51,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
   ];
       isDefault: false}
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <Card>
@@ -150,14 +103,9 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  );
-}
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -284,13 +232,6 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
-<<<<<<< HEAD
-    </Card>;
-  );
-}
-;
-=======
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -36,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
@@ -73,11 +59,6 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
       </div>;
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -177,9 +158,7 @@ function QuantumBioComputingPlatformPage() {
     </UltraFuturisticBackground>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

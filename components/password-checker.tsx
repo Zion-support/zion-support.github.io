@@ -1,9 +1,5 @@
 
 
-<<<<<<< HEAD
-export default function PasswordCheckerPage() {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Lock,
   Shield,
   Eye,
@@ -12,32 +8,6 @@ export default function PasswordCheckerPage() {
   RefreshCw,
   CheckCircle,
   XCircle,
-<<<<<<< HEAD
-  AlertTriangle,
-  ArrowRight,
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-export default /**
- * PasswordCheckerPage - Function description
- */
-function PasswordCheckerPage() {
-  const [password, set_password] = useState ('');
-  const [show_password, setShowPassword] = useState (false);
-  const [strength, set_strength] = useState (0);
-  const [strength_text, setStrengthText] = useState ('');
-  const [strength_color, setStrengthColor] = useState ('');
-  const [checks, set_checks] = useState ({
-    length: false,
-    uppercase: false,
-    lowercase: false,
-    numbers: false,
-    symbols: false,
-
-  useEffect(() => {
-    if (password) {
-      analyzePassword(password)
-    } else {
-      resetAnalysis()
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,76 +25,26 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     return this.props.children;
   }
 }
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 
-import {
-  Lock
-  Shield
-  Eye
-  EyeOff
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  AlertTriangle
-  ArrowRight;
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-
-export default function PasswordCheckerPage() {
-  Lock,
-  Shield,
-  Eye,
-  EyeOff,
-  Copy,
-  RefreshCw,
-  CheckCircle,
-  XCircle,
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AlertTriangle,;
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 =======
 import {
-<<<<<<< HEAD
-  Lock
-  Shield
-  Eye
-  EyeOff
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  AlertTriangle
-  ArrowRight;
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-
-export default function PasswordCheckerPage() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PasswordCheckerPage() {;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -167,189 +87,6 @@ export default function PasswordCheckerPage() {;
     setStrength(score);
     // Set strength text and color
     if (score >= 90) {
-<<<<<<< HEAD
-  const analyzePassword = (pass: string) => {;
-    const newChecks = {;
-      length: pass && pass.length >= 8,;
-      uppercase: /[A-Z]/.test(pass),;
-      lowercase: /[a-z]/.test(pass),;
-      numbers: /\d/.test(pass),;
-      symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),;
-      noCommon: !isCommonPassword(pass),;
-      noSequential: !hasSequentialChars(pass),    };      symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
-      noCommon: !isCommonPassword(pass),;
-      noSequential: !hasSequentialChars(pass);
-    };
-    setChecks(newChecks);
-    // Calculate strength score;
-    let score = 0;
-    score += newChecks && newChecks.length ? 15 : 0;
-    score += newChecks && newChecks.uppercase ? 15 : 0;
-    score += newChecks && newChecks.lowercase ? 15 : 0;
-    score += newChecks && newChecks.numbers ? 15 : 0;
-    score += newChecks && newChecks.symbols ? 20 : 0;
-    score += newChecks && newChecks.noCommon ? 10 : 0;
-    score += newChecks && newChecks.noSequential ? 10 : 0;
-    // Bonus for length;
-    if (pass && pass.length >= 12) score += 10;
-    if (pass && pass.length >= 16) score += 5;
-    setStrength(score);
-    // Set strength text and color;
-    if (score >= 90) {;
-      setStrengthText('Very Strong');
-
-
-      setStrengthText('Strong');
-      setStrengthColor('text-green-400');
-    } else if (score >= 50) {
-      setStrengthText('Moderate');
-      setStrengthColor('text-yellow-400');
-    } else if (score >= 30) {
-      setStrengthText('Weak');
-      setStrengthColor('text-orange-400');
-    } else {
-      setStrengthText('Very Weak');
-      setStrengthColor('text-red-400');
-    }
-
-  };
-
-  const isCommonPassword = (pass: string) => {
-    const commonPasswords = [
-      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhello'
-    ];
-    return commonPasswords.includes(pass.toLowerCase())
-  };
-
-  const hasSequentialChars = (pass: string) => {
-    const sequences = ['123abcqweasdzxc789456'];
-    return sequences.some(seq => pass.toLowerCase().includes(seq))
-  };
-
-  const generateSuggestions = (checks: any, pass: string) => {
-    const suggestions: string[] = [];
-    
-    if (!checks.length) suggestions.push('Make your password at least 8 characters long');
-    if (!checks.uppercase) suggestions.push('Add at least one uppercase letter (A-Z)');
-    if (!checks.lowercase) suggestions.push('Add at least one lowercase letter (a-z)');
-    if (!checks.numbers) suggestions.push('Add at least one number (0-9)');
-    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
-
-    if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"');
-    if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"');
-    if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
-    if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
-    setSuggestions(suggestions)
-
-  };
-
-
-  const resetAnalysis = () => {
-    setStrength(0);
-    setStrengthText('');
-    setStrengthColor('');
-    setChecks({
-
-
-    // Generate suggestions;
-    generateSuggestions(newChecks, pass);
-    // Generate suggestions;
-    generate_suggestions (new_checks, pass);
-  }
-;
-  const isCommonPassword = (pass: string) =>: any {
-    const common_passwords = [;
-      'password',
-      '123456',
-      '123456789',
-      'qwerty',
-      'abc123',
-      'password123',
-      'admin',
-      'letmein',
-      'welcome',
-      'monkey',
-      'dragon',
-      'master',
-      'hello',
-    ];
-    return common_passwords.includes (pass.toLowerCase ());
-  }
-;
-  const hasSequentialChars = (pass: string) =>: any {
-    const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
-    return sequences.some (seq => pass.toLowerCase ().includes (seq));  }
-;
-  const generate_suggestions = (checks: any, pass: string) =>: any {
-    const suggestions: string[] = [];
-;
-    if (
-      suggestions.push ('Make your password at least 8 characters long')) {
-  $2
-}
-    if (
-      suggestions.push ('Add at least one uppercase letter (A - Z)')) {
-  $2
-}
-    if (
-      suggestions.push ('Add at least one lowercase letter (a - z)')) {
-  $2
-}
-    if (suggestions.push ('Add at least one number (0 - 9)')) {
-  $2
-}
-    if (
-      suggestions.push ('Add at least one special character (!@#$%^&*)')) {
-  $2
-}
-    if (
-      suggestions.push ('Avoid common passwords like "password" or "123456"')) {
-  $2
-}
-    if (
-      suggestions.push ('Avoid sequential characters like "123" or "abc"')) {
-  $2
-}
-    // Check condition
-if (
-      suggestions.push () {
-  $2
-}
-        'Consider making your password 12+ characters for better security');
-    if (
-      suggestions.push ('For maximum security, use 16+ characters')) {
-  $2
-}
-    set_suggestions (suggestions);  }    if (suggestions.push ('Add at least one special character (!@#$%^&*)')) {
-  $2
-}
-    if (suggestions.push ('Avoid common passwords like "password" or "123456"')) {
-  $2
-}
-    if (suggestions.push ('Avoid sequential characters like "123" or "abc"')) {
-  $2
-}
-    if (suggestions.push ('Consider making your password 12+ characters for better security')) {
-  $2
-}
-    if (suggestions.push ('For maximum security, use 16+ characters')) {
-  $2
-}
-    set_suggestions (suggestions);
-  const reset_analysis = () =>: any {
-    set_strength (0);
-    setStrengthText ('');
-    setStrengthColor ('');
-    set_checks ({
-
-      length: false,
-      uppercase: false,
-      lowercase: false,
-      numbers: false,
-      symbols: false,
-
-
-=======
       no_common: false,
       no_sequential: false,
 =======
@@ -360,7 +97,6 @@ if (
       symbols: false
       noCommon: false
       noSequential: false
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     });
     set_suggestions ([]);  }
 ;
@@ -387,17 +123,10 @@ if (
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
     result += '0123456789'[Math.floor(Math.random() * 10)], // Number
     result += '!@#$%^&*'[Math.floor(Math.random() * 8)], // Symbol
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-<<<<<<< HEAD
-// Shuffle the password
-=======
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join('');
     setGeneratedPassword(result);
@@ -449,16 +178,11 @@ if (
 =======
   }
   const getStrengthBarColor = () => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   };
 
@@ -489,14 +213,11 @@ if (
         />
       </Head>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -624,9 +345,6 @@ if (
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
-<<<<<<< HEAD
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -847,16 +565,12 @@ if (return 'bg - orange - 400') {
                   </label>;
                   <div className="relative">;
 
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -870,28 +584,16 @@ if (return 'bg - orange - 400') {
                   </Button>
                 </div>
 
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Generated Password Display */}
 
 =======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
@@ -899,8 +601,6 @@ if (return 'bg - orange - 400') {
                       <span className="text-sm text-gray-300">Generated Password:</span>
                       <Button
                         onClick={() => copyToClipboard(generatedPassword)}
-<<<<<<< HEAD
-=======
                         variant='outline'
                         size='sm'
                         className='border-gray-600 text-gray-300 hover:bg-gray-600'
@@ -909,31 +609,7 @@ if (return 'bg - orange - 400') {
                         Copy
                       </Button>
                     </div>
-<<<<<<< HEAD
-                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
-                        onClick={() => copyToClipboard(generatedPassword)}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                        variant="outline"
-                        size="sm"
-                        className="border-gray-600 text-gray-300 hover:bg-gray-600"
-                      >
-                        <Copy className="w-4 h-4 mr-2" />
-                        Copy
-                      </Button>
-                    </div>
-                    <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                      {generatedPassword}
-                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
-
-                      {generatedPassword}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -986,7 +662,6 @@ if (return 'bg - orange - 400') {
 =======
               {password ? (
                 <div className='space-y-6'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {/* Strength Score */}
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;
@@ -1016,25 +691,7 @@ if (return 'bg - orange - 400') {
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
-<<<<<<< HEAD
-                    <div className='w-full bg-gray-700 rounded-full h-3'>
-                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
-                  {/* Strength Score */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-gray-300">Password Strength:</span>
-                        {strengthText} ({strength}/100)
-                      </span>
-                    </div>
-                    <div className='w-full bg-gray-700 rounded-full h-3'>
-                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">
-                      <div
 
-                      <div 
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 
@@ -1043,16 +700,12 @@ if (return 'bg - orange - 400') {
 
                       <div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
 
-<<<<<<< HEAD
-=======
                   <div>;
                     <div className="flex items-center justify-between mb-2">;
                       <span className="text-sm text-gray-300">Password Strength:</span>;
@@ -1073,9 +726,7 @@ if (return 'bg - orange - 400') {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -1093,12 +744,8 @@ if (return 'bg - orange - 400') {
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -1110,8 +757,6 @@ if (return 'bg - orange - 400') {
                     </div>
                   </div>
 
-<<<<<<< HEAD
-=======
                     </div>;
                   </div>;
 
@@ -1120,9 +765,7 @@ if (return 'bg - orange - 400') {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -1148,31 +791,7 @@ if (return 'bg - orange - 400') {
 
                           </div>
 
-<<<<<<< HEAD
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
-                  <div className='text-6xl mb-4'>🔒</div>
-                  <p className='text-gray-400'>
-                    Enter a password above to see the security analysis and get
-                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
-                  <div className="text-6xl mb-4">🔒</div>
-                  <p className="text-gray-400">
-                    Enter a password above to see the security analysis and get personalized suggestions.
-                </div>
-              )}
-            </Card>
-          </div>
-        </div>
-      </section>
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         ))}
                       </div>;
@@ -1187,7 +806,6 @@ if (return 'bg - orange - 400') {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1636,11 +1254,8 @@ if (return 'bg - orange - 400') {
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
             Ready to Secure Your Passwords?
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1659,27 +1274,8 @@ if (return 'bg - orange - 400') {
               href='/pricing'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-indigo-600"
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-  );
-}
-}
-  );
-}
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1695,4 +1291,3 @@ if (return 'bg - orange - 400') {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

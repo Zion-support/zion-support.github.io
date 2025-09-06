@@ -1,24 +1,16 @@
-<<<<<<< HEAD
-=======
 
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
-<<<<<<< HEAD
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
-};
-=======
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -399,17 +391,10 @@ launch_date: '2024 - 03 - 10';
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
-<<<<<<< HEAD
-benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
-capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
-marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
-}];
-=======
 
 =======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',
 
 
@@ -707,31 +692,12 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
 capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 }];
-<<<<<<< HEAD
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

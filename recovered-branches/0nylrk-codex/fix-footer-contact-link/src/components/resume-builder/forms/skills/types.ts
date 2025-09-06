@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-import { Skill } from '@/types/resume';
-export interface SkillsFormProps {
-import {Skill} from '@/types/resume';
-export interface SkillsFormProps {;
-=======
 import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
@@ -14,7 +8,6 @@ export interface SkillsFormProps {
 import {Skill} from '@/types/resume';
 export interface SkillsFormProps {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resumeId: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[];
@@ -23,12 +16,6 @@ export interface SkillsFormProps {;
   on_back: () => void;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface SkillItemProps {
-
-export interface SkillItemProps {;
-=======
 export interface SkillItemProps {
   skill: Skill;
   category: string;
@@ -43,23 +30,10 @@ export interface SkillCategoryProps {
 
 export interface SkillItemProps {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   skill: Skill;
   category: string;
   onDelete: (id: string, category: string) => Promise<void>
 }
-<<<<<<< HEAD
-export interface SkillCategoryProps {
-
-export interface SkillCategoryProps {;
-  category: string;
-  skills: Skill[];
-  onDelete: (id: string, category: string) => Promise<void>
-}
-export interface AddSkillFormProps {
-
-export interface AddSkillFormProps {;
-=======
 
 
 export interface SkillCategoryProps {;
@@ -72,7 +46,6 @@ export interface SkillCategoryProps {;
 
 export interface AddSkillFormProps {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
@@ -100,25 +73,16 @@ export interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export interface BulkAddSkillsProps {
   resumeId: string;
 
   onSuccess: () => Promise<void>;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-;
-=======
 
   on_delete: (id: string, category: string) => Promise < void>;
 }
@@ -138,6 +102,4 @@ export interface BulkAddSkillsProps {
 
 =======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

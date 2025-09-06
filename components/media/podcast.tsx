@@ -172,18 +172,11 @@ export default function PodcastIndexPage() {
                   <a href={ep.audio.mp3Url} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; download>
 
 =======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
@@ -257,15 +250,10 @@ useEffect ( () => {
             </div>
           </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
-}
-;
-=======
 
 }
 
@@ -273,7 +261,6 @@ useEffect ( () => {
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   return (
     <div className='space - y-6'>;
@@ -363,13 +350,9 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
-<<<<<<< HEAD
-}
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

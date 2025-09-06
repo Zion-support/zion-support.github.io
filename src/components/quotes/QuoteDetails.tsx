@@ -2,57 +2,6 @@ interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
-<<<<<<< HEAD
-}
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
-  if (!quote) return null
-  const formatDate = (dateString?: string) => {
-}
-
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {
-      return format(new Date(dateString), 'PPP')
-    } catch (e) {
-      return dateString
-    }
-  }
-import React from "react",
-import { 
-  Dialog,
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
-import { QuoteStatusBadge } from "./QuoteStatusBadge",
-import type { QuoteRequest } from "@/types/quotes",
-import { format } from "date-fns",
-interface QuoteDetailsProps {
-  quote: QuoteRequest | null,
-  isOpen: boolean,
-  onClose: () => void
-import React from "react",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription;
-} from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card",;
-import { Separator } from "@/components/ui/separator",;
-import { QuoteStatusBadge } from "./QuoteStatusBadge",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { format } from "date-fns",;
-=======
 
 
 };
@@ -70,7 +19,6 @@ import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -88,37 +36,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl flex items-center justify-between">
-            <span>{quote.project_name}</span>
-            <QuoteStatusBadge status={quote.status} />
-          </DialogTitle>
-          <DialogDescription>
-            Quote request submitted on {formatDate(quote.created_at)}
-          </DialogDescription>
-        </DialogHeader>
-        <Separator className="my-4" />
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-=======
 
   return (
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -137,10 +62,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -160,10 +81,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <Card className="mt-6">
@@ -171,10 +88,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {quote.project_description && (
@@ -197,10 +110,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </CardContent>
         </Card>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div className="mt-6 flex justify-end">
@@ -209,10 +118,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;

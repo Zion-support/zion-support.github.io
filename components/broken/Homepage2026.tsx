@@ -6,24 +6,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Star
-  Brain
-  Atom
-  Shield
-  Zap
-  TrendingUp
-  Globe
-  MapPin
-  Users
-  Building
-  Rocket
-  CheckCircle
-  Phone
-  Mail;} from 'lucide-react';import {
-  ArrowRight, Star
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -80,7 +62,6 @@ const Homepage2026: React.FC = () => {;
               className="space-y-6"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Company Badge */}
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -89,7 +70,6 @@ import {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Star,
   Brain,
@@ -107,21 +87,14 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Star, ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
 const Homepage2026: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
-<<<<<<< HEAD
-      <main className='relative z-10'>
-
-=======
 
       <main className='relative z-10'>
 
@@ -129,7 +102,6 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -159,13 +131,10 @@ const Homepage2026: React.FC = () => {
               className='space-y-6'              className="space-y-6"
             >
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -173,17 +142,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -367,27 +328,13 @@ const Homepage2026: React.FC = () => {
 =======
               
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -403,7 +350,6 @@ const Homepage2026: React.FC = () => {
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
           <div className='max-w-6xl mx-auto relative z-10'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -596,7 +542,6 @@ const Homepage2026: React.FC = () => {
         {/* Service Categories */}
         <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -642,17 +587,12 @@ const Homepage2026: React.FC = () => {
             </motion && motion.div>;
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* AI Automation Services */}
 
 
               {/* AI Automation Services */}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, x: -20 }}
@@ -660,17 +600,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -697,7 +629,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -725,10 +656,6 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
@@ -925,16 +852,8 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* IT Infrastructure Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -942,17 +861,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -979,7 +890,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -1007,8 +917,6 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
-<<<<<<< HEAD
-=======
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'>;
@@ -1069,9 +977,7 @@ const Homepage2026: React.FC = () => {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -1079,17 +985,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1116,7 +1014,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
@@ -1144,10 +1041,6 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
@@ -1278,16 +1171,8 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -1295,17 +1180,9 @@ const Homepage2026: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1332,7 +1209,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
                   <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>                    Learn More              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -1427,7 +1303,6 @@ const Homepage2026: React.FC = () => {
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1468,325 +1343,8 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-className="space-y-6"
-            >
-
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Get in touch with our team to discuss how our innovative services can drive your success
-              </p>
-                        href='https://ziontechgroup && ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'>                        ziontechgroup && ziontechgroup.com;
-                      </a>;
-                    </div>;
-                  </div>            >;
-              <h2 className="text-4xl font-bold text-white mb-6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Get in touch with our team to discuss how our innovative services can drive your success;
-              </p>;
-              {/* Contact Information */}
-
-              <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
-                <div className="grid md: grid-cols-2 gap-6 text-left">
-                  <div className="flex items-center space-x-3">
-                    <Globe className="w-5 h-5 text-blue-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Website</div>
-                      <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-                        ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-green-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Phone</div>
-                      <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-                        +1 302 464 0950
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-
-                    <Mail className="w-5 h-5 text-yellow-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Email</div>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-
-                        kleber@ziontechgroup.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-3">
-
-                    <MapPin className="w-5 h-5 text-purple-400" />
-                    <div>
-                      <div className="text-sm text-gray-400">Address</div>
-                      <div className="text-white font-medium">
-                        364 E Main St STE 1008<br />
-
-                        Middletown DE 19709
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                        href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-                        className='text-cyan-400 hover:underline font-medium'>                        kleber@ziontechgroup && ziontechgroup.com;
-                      </a>;
-                    </div>;
-                  </div>                  <div className="flex items-center space-x-3">;
-                    <Mail className="w-5 h-5 text-yellow-400" />;
-                    <div>;
-                      <div className="text-sm text-gray-400">Email</div>;
-                      <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">;
-                      </a>;
-                    </div>;
-                  </div>;
-                  <div className='flex items-center space-x-3'>;
-                    <MapPin className='w-5 h-5 text-purple-400' />;
-                    <div>;
-                      <div className='text-sm text-gray-400'>Address</div>;
-                      <div className='text-white font-medium'>;
-                        364 E Main St STE 1008;
-                        <br />                        Middletown DE 19709                  <div className="flex items-center space-x-3">;
-                    <MapPin className="w-5 h-5 text-purple-400" />;
-                    <div>;
-                      <div className="text-sm text-gray-400">Address</div>;
-                      <div className="text-white font-medium">;
-                        364 E Main St STE 1008<br />;
-                <div className='space - y-3 mb - 6'>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > AI Email Automation - $99 / month</span>;
-                  </div>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > Smart Inventory Management - $149 / month</span>;
-                  </div>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > Smart Appointment Scheduler - $69 / month</span>;
-                  </div>;
-                </div>;
-                <Link href='/comprehensive - 2025 - services - showcase'>;
-                  <button className='w - full px - 6 py - 3 bg - purple - 600 text - white font - semibold rounded - lg hover:bg - purple - 700 transition - colors'>                    Learn More              >;
-                <div className="text - 5xl mb - 6">🚀</div>;
-                <h3 className="text - 2xl font - semibold text - white mb - 4">Micro SAAS Solutions</h3>;
-                <p className="text - gray - 300 mb - 6">;
-                  Specialized software solutions for specific business needs.;
-                  Affordable, focused solutions that solve real problems and drive growth.;
-                </p>;
-                <div className="space - y-3 mb - 6">;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > AI Email Automation - $99 / month</span>;
-                  </div>;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > Smart Inventory Management - $149 / month</span>;
-                  </div>;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > Smart Appointment Scheduler - $69 / month</span>;
-                  </div>;
-                </div>;
-                <Link href="/comprehensive - 2025 - services - showcase">;
-                  <button className="w - full px - 6 py - 3 bg - purple - 600 text - white font - semibold rounded - lg hover:bg - purple - 700 transition - colors">;
-                    Learn More;
-                  </button>;
-                </Link>;
-              </motion.div>;
-              {/* Cutting - Edge AI Services */}
-              <motion.div;
-                initial={{ opacity: 0, coordinate_x: 20 }}
-                whileInView={{ opacity: 1, coordinate_x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className='bg - gradient - to - br from - orange - 600 / 20 to - red - 600 / 20 border border - orange - 500 / 30 rounded - lg p - 8 hover:border - orange - 400 / 50 transition - all duration - 300';
-              >;
-                <div className='text - 5xl mb - 6'>🧠</div>;
-                <h3 className='text - 2xl font - semibold text - white mb - 4'>;
-                  Cutting - Edge AI Services;
-                </h3>;
-                <p className='text - gray - 300 mb - 6'>;
-                  Next - generation AI solutions for competitive advantage. Video;
-                  generation, code assistance, and data analysis powered by;
-                  advanced AI.;
-                </p>;
-                <div className='space - y-3 mb - 6'>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > AI Video Generation - $199 / month</span>;
-                  </div>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > AI Code Generation - $299 / month</span>;
-                  </div>;
-                  <div className='flex items - center space - x-2 text - sm text - gray - 300'>;
-                    <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-                    <span > AI Data Analysis - $399 / month</span>;
-                  </div>;
-                </div>;
-                <Link href='/comprehensive - 2025 - services - showcase'>;
-                  <button className='w - full px - 6 py - 3 bg - orange - 600 text - white font - semibold rounded - lg hover:bg - orange - 700 transition - colors'>                    Learn More              >;
-                <div className="text - 5xl mb - 6">🧠</div>;
-                <h3 className="text - 2xl font - semibold text - white mb - 4">Cutting - Edge AI Services</h3>;
-                <p className="text - gray - 300 mb - 6">;
-                  Next - generation AI solutions for competitive advantage.;
-                  Video generation, code assistance, and data analysis powered by advanced AI.;
-                </p>;
-                <div className="space - y-3 mb - 6">;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > AI Video Generation - $199 / month</span>;
-                  </div>;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > AI Code Generation - $299 / month</span>;
-                  </div>;
-                  <div className="flex items - center space - x-2 text - sm text - gray - 300">;
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />;
-                    <span > AI Data Analysis - $399 / month</span>;
-                  </div>;
-                </div>;
-                <Link href="/comprehensive - 2025 - services - showcase">;
-                  <button className="w - full px - 6 py - 3 bg - orange - 600 text - white font - semibold rounded - lg hover:bg - orange - 700 transition - colors">;
-                    Learn More;
-                  </button>;
-                </Link>;
-              </motion.div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Section */}
-        <section className='py - 20 px - 4 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10'>;
-          <div className='max - w-4xl mx - auto text - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='space - y-6'        <section className="py - 20 px - 4 bg - gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='space - y-6';
-            >;
-              <h2 className='text - 4xl font - bold text - white mb - 6'>;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Get in touch with our team to discuss how our innovative;
-                services can drive your success;
-              </p>;
-              {/* Contact Information */}
-              <div className='bg - black / 30 backdrop - blur - sm border border - gray - 700 rounded - lg p - 8 mb - 8'>;
-                <h3 className='text - 2xl font - semibold text - cyan - 400 mb - 6'>;
-                  Contact Information;
-                </h3>;
-                <div className='grid md:grid - cols - 2 gap - 6 text - left'>;
-                  <div className='flex items - center space - x-3'>;
-                    <Globe className='w - 5 h - 5 text - blue - 400' />;
-                    <div>;
-                      <div className='text - sm text - gray - 400'>Website</div>;
-                      <a;
-                        href='https://ziontechgroup.com';
-                        className='text - cyan - 400 hover:underline font - medium';
-                      >                        ziontechgroup.com;
-                      </a>;
-                    </div>;
-                  </div>            >;
-              <h2 className="text - 4xl font - bold text - white mb - 6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Get in touch with our team to discuss how our innovative services can drive your success;
-              </p>;
-              {/* Contact Information */}
-              <div className="bg - black / 30 backdrop - blur - sm border border - gray - 700 rounded - lg p - 8 mb - 8">;
-                <h3 className="text - 2xl font - semibold text - cyan - 400 mb - 6">Contact Information</h3>;
-                <div className="grid md: grid - cols - 2 gap - 6 text - left">;
-                  <div className="flex items - center space - x-3">;
-                    <Globe className="w - 5 h - 5 text - blue - 400" />;
-                    <div>;
-                      <div className="text - sm text - gray - 400">Website</div>;
-                      <a href="https://ziontechgroup.com" className="text - cyan - 400 hover:underline font - medium">;
-                        ziontechgroup.com;
-                      </a>;
-                    </div>;
-                  </div>;
-                  <div className='flex items - center space - x-3'>;
-                    <Phone className='w - 5 h - 5 text - green - 400' />;
-                    <div>;
-                      <div className='text - sm text - gray - 400'>Phone</div>;
-                      <a;
-                        href='tel:+13024640950';
-                        className='text - cyan - 400 hover:underline font - medium';
-                      >                        +1 302 464 0950;
-                      </a>;
-                    </div>;
-                  </div>                  <div className="flex items - center space - x-3">;
-                    <Phone className="w - 5 h - 5 text - green - 400" />;
-                    <div>;
-                      <div className="text - sm text - gray - 400">Phone</div>;
-                      <a href="tel:+13024640950" className="text - cyan - 400 hover:underline font - medium">;
-                      </a>;
-                    </div>;
-                  </div>;
-                  <div className='flex items - center space - x-3'>;
-                    <Mail className='w - 5 h - 5 text - yellow - 400' />;
-                    <div>;
-                      <div className='text - sm text - gray - 400'>Email</div>;
-                      <a;
-                        href='mailto:kleber@ziontechgroup.com';
-                        className='text - cyan - 400 hover:underline font - medium';
-                      >                        kleber@ziontechgroup.com;
-                      </a>;
-                    </div>;
-                  </div>                  <div className="flex items - center space - x-3">;
-                    <Mail className="w - 5 h - 5 text - yellow - 400" />;
-                    <div>;
-                      <div className="text - sm text - gray - 400">Email</div>;
-                      <a href="mailto:kleber@ziontechgroup.com" className="text - cyan - 400 hover:underline font - medium">;
-                      </a>;
-                    </div>;
-                  </div>;
-                  <div className='flex items - center space - x-3'>;
-                    <MapPin className='w - 5 h - 5 text - purple - 400' />;
-                    <div>;
-                      <div className='text - sm text - gray - 400'>Address</div>;
-                      <div className='text - white font - medium'>;
-                        364 E Main St STE 1008;
-                        <br />                        Middletown DE 19709                  <div className="flex items - center space - x-3">;
-                    <MapPin className="w - 5 h - 5 text - purple - 400" />;
-                    <div>;
-                      <div className="text - sm text - gray - 400">Address</div>;
-                      <div className="text - white font - medium">;
-                        364 E Main St STE 1008 < br />;
-
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-
-
-};
-export default Homepage2026;  );
-};
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Homepage2026;
 
 
@@ -1837,10 +1395,4 @@ export default Homepage2026;  )
 }
 export default Homepage2026;
 
-<<<<<<< HEAD
-export default Homepage2026;
-export default Homepage2026;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

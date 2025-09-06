@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -71,13 +61,10 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -148,16 +135,11 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
-    }
-    };
-=======
 
 
     };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -190,22 +172,11 @@ export const useTalentQuotes = () => {;
     error;
     statusFilter;
     setStatusFilter;
-<<<<<<< HEAD
-    archiveFilter;
-    setArchiveFilter
-    markAsViewed: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) =>
-    toggleArchive: (id: string, isArchived: boolean) => 
-=======
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     onError: (error: Error) => {
       toast({
@@ -277,13 +248,10 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
- 
- 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
 ...innovative2035ITServices;
@@ -89,19 +80,12 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service.id
 }initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: 50
-}whileInView= {
-  {
-  opacity: 1, y: 0
-=======
   opacity: 0, y: 50 
 
 }whileInView= {
   {
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8, delay: index * 0.1
@@ -142,9 +126,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 }initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: 50
-=======
 
   opacity: 0, y: 50 
 
@@ -270,8 +251,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
-<<<<<<< HEAD
-=======
 
 
   duration: 0 && 0.8 
@@ -301,17 +280,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }export default Homepage2025;export default Homepage2025;
-<<<<<<< HEAD
-
-
-export default Homepage2025;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 }export default Homepage2025;export default Homepage2025;
 
 
@@ -322,21 +291,6 @@ export default Homepage2025;
 }
 }
 }
-<<<<<<< HEAD
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-=======
 {
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) );
@@ -344,5 +298,3 @@ export default Homepage2025;
 }export default Homepage2025;export default Homepage2025;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

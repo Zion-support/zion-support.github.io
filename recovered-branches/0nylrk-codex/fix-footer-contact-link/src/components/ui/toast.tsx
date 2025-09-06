@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as ToastPrimitives from '@radix-ui/react-toast';
-import {cva, type, VariantProps} from 'class-variance-authority';
-import {X} from 'lucide-react';
-import {cn} from '@/lib/utils';
-const ToastProvider = ToastPrimitives.Provider;
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -89,15 +76,11 @@ const Toast = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVa</typeof>riants>
 >(({ className, variant, ...props }, ref) => {
-<<<<<<< HEAD
-  
-=======
 
 
   
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     />
   );
 });
@@ -107,11 +90,6 @@ const ToastAction = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPr</typeof>imitives.Action>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Action
-<<<<<<< HEAD
-    ref={ref}
-    className={cn(
-      'inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive'
-=======
 
 ToastViewport && ToastViewport.displayName = ToastPrimitives && ToastPrimitives.Viewport.displayName;
 
@@ -142,7 +120,6 @@ const Toast = React && React.forwardRef<;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <ToastPrimitives.Root
       ref={ref}
@@ -160,13 +137,10 @@ const ToastAction = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
   <ToastPrimitives.Action;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn(
       "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
@@ -175,16 +149,8 @@ const ToastAction = React && React.forwardRef<;
     {...props}
   />;
 ));
-<<<<<<< HEAD
 ToastAction.displayName = ToastPrimitives.Action.displayName;
 
-=======
-ToastAction.displayName = ToastPrimitives.Action.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -192,17 +158,11 @@ ToastAction.displayName = ToastPrimitives.Action.displayName;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ToastClose = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Close>
   React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives.Close>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Close
-<<<<<<< HEAD
-    ref={ref}
-    className={cn(
-      'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
-=======
 
 ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;
 
@@ -219,18 +179,13 @@ const ToastClose = React && React.forwardRef<;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ToastClose = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Close>,;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Close>;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives.Close;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn(
       "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
@@ -241,16 +196,8 @@ const ToastClose = React.forwardRef<;
     <X className='h-4 w-4' />;
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
-<<<<<<< HEAD
 ToastClose.displayName = ToastPrimitives.Close.displayName;
 
-=======
-ToastClose.displayName = ToastPrimitives.Close.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -258,7 +205,6 @@ ToastClose.displayName = ToastPrimitives.Close.displayName;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>
   React.ComponentPropsWithou</typeof>tRef<typeof ToastPrimitives.Title>
@@ -269,63 +215,24 @@ const ToastTitle = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Title>;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives.Title;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn('text-sm font-semibold', className)}
     {...props}
   />
 ));
 ToastTitle.displayName = ToastPrimitives.Title.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ToastDescription = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Description>
   React.ComponentPropsWit</typeof>houtRef<typeof ToastPrimitives.Description>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Description
-<<<<<<< HEAD
-const ToastDescription = React.forwardRef<;
-  React.ElementRef<typeof ToastPrimitives.Description>,;
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>;
->(({ className, ...props }, ref) => (;
-  <ToastPrimitives.Description;
-    ref={ref}
-    className={cn('text-sm opacity-90', className)}
-    {...props}
-  />
-));
-ToastDescription.displayName = ToastPrimitives.Description.displayName;
-
-type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
-// Older React type definitions may not support generics on `ReactElement`.
-// Using the base `ReactElement` type here avoids compilation errors while
-// still representing a valid React element returned by `ToastAction`.
-type ToastActionElement = React.ReactElement;
-;
-export {
-  type ToastProps
-  type ToastActionElement
-  ToastProvider
-  ToastViewport
-  Toast
-  ToastTitle
-  ToastDescription
-  ToastClose
-  ToastAction
-}
-=======
 =======
 
   />));
@@ -352,7 +259,6 @@ type ToastProps = React.ComponentPropsWithoutRef < typeof Toast>;
 type ToastActionElement = React.ReactElement;
 ;
 export {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   type ToastProps,
   type ToastActionElement,
   ToastProvider,
@@ -361,11 +267,6 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
-<<<<<<< HEAD
-  ToastAction,;
-};
-type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
-=======
   ToastAction,
 }
 ;
@@ -383,7 +284,6 @@ ToastDescription && ToastDescription.displayName = ToastPrimitives && ToastPrimi
 
 type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Older React type definitions may not support generics on `ReactElement`.;
 // Using the base `ReactElement` type here avoids compilation errors while;
 // still representing a valid React element returned by `ToastAction`.;
@@ -396,52 +296,17 @@ export {;
   ToastViewport,;
   Toast,;
   ToastTitle,;
-<<<<<<< HEAD
-  ToastDescription;
-  ToastClose;
-  ToastAction}
-
-// Add useToast hook export
-export function useToast() {
-  return {
-    // Accept a loosely typed props object to allow custom fields like `description`
-    toast: (props: any) => {
-      // Implementation of toast functionality
-      console.log('Toast:', props);
-    }
-  }
-
-// Add useToast hook export export function useToast() {
-  return {
-    // Accept a loosely typed props object to allow custom fields like `description`
-    toast: (props: any) => {
-      // Implementation of toast functionality;
-      console.log('Toast:', props);
-    },
-  };
-
-}
-      // Implementation of toast functionality
-      // // // console.log("Toast:", props)
-;
-=======
   ToastDescription,;
   ToastClose,;
   ToastAction,;
 };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Add useToast hook export;
 export function useToast() {;
   return {;
     // Accept a loosely typed props object to allow custo</typeof>m fields like `description`;
     toast: (props: any) => {;
       // Implementation of toast functionality;
-<<<<<<< HEAD
-      // // // console.log("Toast:", props);
-    }}
-}
-=======
       console && console.log('Toast:', props);
     },;
   };
@@ -461,7 +326,6 @@ const ToastDescription = React.forwardRef<;
   <ToastPrimitives.Description;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn('text-sm opacity-90', className)}
     {...props}
@@ -471,4 +335,3 @@ ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

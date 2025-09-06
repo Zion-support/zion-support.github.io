@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-=======
 
 
 import {;
@@ -22,23 +6,14 @@ import {;
   CardTitle,;
   CardDescription,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
-<<<<<<< HEAD
-
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
-import { FraudStats } from "@/types/fraud",
-=======
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface FraudStatsCardsProps {
   stats: FraudStats
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -52,12 +27,9 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -68,12 +40,9 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -86,12 +55,9 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -104,12 +70,9 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -119,12 +82,9 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -133,25 +93,8 @@ interface FraudStatsCardsProps {
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-    </div>
-  );
-}
-
-  )
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
-import { FraudStats } from "@/types/fraud",;
-interface FraudStatsCardsProps {;
-  stats: FraudStats;
-}
-;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
@@ -224,9 +167,5 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 };
 
 export default FraudStatsCards;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

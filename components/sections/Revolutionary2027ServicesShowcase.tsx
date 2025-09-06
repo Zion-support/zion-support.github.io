@@ -20,178 +20,12 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud
-  Atom
-  Microscope
-  Satellite
-  DollarSign
-  Factory
-  Earth
-  TestTube
-  Megaphone
-  Scale
-  Network;
-  ArrowRight,
-  Brain,
-  Zap,
-  Shield,
-  Rocket,
-  Sparkles,
-  Star,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Lock,
-  Cloud,
-  Atom,
-  Microscope,
-  Satellite,
-  DollarSign,
-  Factory,
-  Earth,
-  TestTube,
-  Megaphone,
-  Scale,;
-  Network,;
-} from 'lucide-react';
-import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
-import Link from 'next/link';
-const Revolutionary2027ServicesShowcase = () => {
-  const featuredServices = [
-    {
-      id: 'quantum-ai-consciousness-platform'
-      name: 'Quantum AI Consciousness Platform'
-      description:
-        'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.'
-      price: '$9,999'
-      icon: Brain
-      color: 'from-purple-600 to-indigo-700'
-      category: 'Quantum AI & Neuroscience'
-      features: [
-        'Quantum consciousness simulation'
-        'Neural pattern recognition'
-        'Emotional intelligence modeling'
-        'Real-time brain-computer interface'
-      ]
-      marketSize: '$15B research market'
-      growthRate: '300% annual growth'
-    }
-    {
-      id: 'autonomous-space-mining-ai'
-      name: 'Autonomous Space Mining AI'
-      description:
-        'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.'
-      price: '$15,999'
-      period: '/month'
-      icon: Rocket
-      color: 'from-blue-600 to-cyan-700'
-      category: 'Space Technology & AI'
-      features: [
-        'Autonomous mining operations'
-        'Resource detection algorithms'
-        'Risk assessment AI'
-        'Mission planning automation'
-      ]
-      marketSize: '$3.8T space economy'
-      growthRate: '400% annual growth'
-    }
-    {
-      id: 'dna-computing-platform'
-      name: 'DNA Computing Platform'
-      description:
-        'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.'
-      price: '$7,999'
-      period: '/month'
-      icon: TestTube
-      color: 'from-green-600 to-emerald-700'
-      category: 'Biotechnology & Computing'
-      features: [
-        'DNA-based computation'
-        'Molecular algorithm optimization'
-        'Real-time molecular analysis'
-        'Algorithm library (100+ algorithms)'
-      ]
-      marketSize: '$2.1T biotechnology market'
-      growthRate: '250% annual growth'
-    }
-    {
-      id: 'holographic-metaverse-platform'
-      name: 'Holographic Metaverse Platform'
-      description:
-        'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.'
-      price: '$3,999'
-      period: '/month'
-      icon: Globe
-      color: 'from-pink-600 to-rose-700'
-      category: 'Metaverse & Holographics'
-      features: [
-        '3D holographic rendering'
-        'Real-time 3D modeling'
-        'Holographic projection systems'
-        'AI-powered content generation'
-      ]
-      marketSize: '$800B metaverse market'
-      growthRate: '350% annual growth'
-    }
-    {
-      id: 'autonomous-healthcare-ai'
-      name: 'Autonomous Healthcare AI'
-      description:
-        'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.'
-      price: '$5,999'
-      period: '/month'
-      icon: Microscope
-      color: 'from-red-600 to-orange-700'
-      category: 'Healthcare & AI'
-      features: [
-        'Autonomous diagnosis'
-        'Treatment recommendation AI'
-        'Continuous learning algorithms'
-        'Predictive health analytics'
-      ]
-      marketSize: '$4.1T healthcare market'
-      growthRate: '280% annual growth'
-    }
-    {
-      id: 'quantum-internet-security-gateway'
-      name: 'Quantum Internet Security Gateway'
-      description:
-        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.'
-      price: '$8,999'
-      period: '/month'
-      icon: Lock
-      color: 'from-indigo-600 to-purple-700'
-      category: 'Quantum Security'
-      features: [
-        'Quantum key distribution'
-        'Unbreakable encryption'
-        'Real-time threat detection'
-        'Zero-trust architecture'
-      ]
-      marketSize: '$500B cybersecurity market'
-      growthRate: '500% annual growth'
-    }
-=======
 
 
       icon: Brain,
       color: 'from - purple - 600 to - indigo - 700',
       category: 'Quantum AI & Neuroscience',
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
 
 
@@ -404,7 +238,6 @@ const Revolutionary2027ServicesShowcase = () => {;
         duration: 0.6,
         ease: "easeOut" as const
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -421,24 +254,15 @@ const Revolutionary2027ServicesShowcase = () => {;
         <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-20'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -463,8 +287,6 @@ const Revolutionary2027ServicesShowcase = () => {;
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-=======
 
           className='text-center mb-20'>;
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>;
@@ -492,9 +314,7 @@ const Revolutionary2027ServicesShowcase = () => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
@@ -543,17 +363,8 @@ const Revolutionary2027ServicesShowcase = () => {;
           ))}
         </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -900,17 +711,8 @@ stagger_children: 0.1,
 
                     ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -934,7 +736,6 @@ stagger_children: 0.1,
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
                         <span className="text-sm text-gray-400">{feature}</span>
                       </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </div>
                   {/* Market Info */}
@@ -977,8 +778,6 @@ stagger_children: 0.1,
           ))}
         </motion.div>
 
-<<<<<<< HEAD
-=======
                       href={`/services/${service && service.id}`}
                       className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25'>;
                       <span>Explore</span>;
@@ -995,7 +794,6 @@ stagger_children: 0.1,
                 </div>;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1004,21 +802,7 @@ stagger_children: 0.1,
           viewport={{ once: true }}
           className='text-center'
 
-<<<<<<< HEAD
-        >
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join the future of technology with our revolutionary 2027
-              services. Get in touch to discover how we can accelerate your
-              digital transformation.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href='https://ziontechgroup.com/contact'
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
@@ -1037,7 +821,6 @@ stagger_children: 0.1,
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Join the future of technology with our revolutionary 2027 services.
               Get in touch to discover how we can accelerate your digital transformation.
             </p>
@@ -1078,26 +861,16 @@ stagger_children: 0.1,
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default Revolutionary2027ServicesShowcase;  );
 };
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;
-<<<<<<< HEAD
-export default Revolutionary2027ServicesShowcase;
-=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1106,6 +879,4 @@ export default Revolutionary2027ServicesShowcase;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

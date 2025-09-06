@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
-import {Review} from "@/types/reviews";
-import {ReviewCard} from "./ReviewCard";
-import { Review } from "@/types/reviews",
-import { ReviewCard } from "./ReviewCard",
-=======
 
 
 import { Review } from "@/types/reviews",
@@ -21,9 +11,7 @@ import {ReviewCard} from "./ReviewCard";
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -59,39 +47,9 @@ if ( {) {
           .map ((_, i) => (
             <div;
               key={i}
-<<<<<<< HEAD
-              className="border rounded-lg p-4 bg-card animate-pulse"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <div className="h-10 w-10 rounded-full bg-muted"></div>
-                <div>
-                  <div className="h-4 w-24 bg-muted rounded mb-2"></div>
-                  <div className="h-3 w-16 bg-muted rounded"></div>
-                </div>
-              </div>
-              <div className="h-20 bg-muted rounded mb-3"></div>
-              <div className="flex gap-2">
-                <div className="h-6 w-16 bg-muted rounded"></div>
-                <div className="h-6 w-16 bg-muted rounded"></div>
-              </div>
-            </div>
-          ))}
-      </div>
-    );
-  }
-            <div className="h-20 bg-muted rounded mb-3"></div>
-            <div className="flex gap-2">
-              <div className="h-6 w-16 bg-muted rounded"></div>
-              <div className="h-6 w-16 bg-muted rounded"></div>
-            </div>
-          </div>
-import { Review } from "@/types/reviews",;
-import { ReviewCard } from "./ReviewCard",;
-=======
 
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewsListProps {;
   reviews: Review[],;
   isLoading: boolean,;
@@ -117,8 +75,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
 =======
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
@@ -144,7 +100,6 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
           </div>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ))}
       </div>;
     );
@@ -193,17 +148,9 @@ if ( {) {
         />
       ))}
     </div>
-<<<<<<< HEAD
-  );
-}
-  )
-}
-;
-=======
 
   )
 }
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

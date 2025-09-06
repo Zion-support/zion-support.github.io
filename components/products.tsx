@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
 
 =======
 export default function Placeholder() {
@@ -11,8 +9,6 @@ export default function Placeholder() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -63,12 +59,6 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
-<<<<<<< HEAD
-}
-}
-
-}
-=======
 
 }
 
@@ -119,6 +109,4 @@ function Placeholder() {
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

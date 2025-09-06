@@ -30,20 +30,9 @@ function Badge({ className, variant, ...props }: BadgeProps) {return (;
     <span className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
 }
-<<<<<<< HEAD
-export { Badge, badgeVariants }
-;
-
-;
-export { Badge, badgeVariants };
-export { Badge, badgeVariants }
-;
-;
-=======
 
 ;
 
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

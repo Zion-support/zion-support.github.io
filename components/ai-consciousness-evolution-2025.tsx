@@ -22,68 +22,7 @@ import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-  Brain
-  Star
-  Users
-  TrendingUp
-  Zap
-  Shield
-  CheckCircle
-  Clock
-  Award
-  Target
-  Globe
-  Sparkles
-  Cpu
-  Lock
-  Cloud
-  BarChart3
-  Eye
-  Heart
-  Lightbulb
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Globe as GlobeIcon;} from 'lucide-react';import {
-  Brain, Star, Users, TrendingUp, Zap, Shield
-  Brain,
-  Star,
-  Users,
-  TrendingUp,
-  Zap,
-  Shield,
-  CheckCircle,
-  Clock,
-  Award,
-  Target,
-  Globe,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  BarChart3,
-  Eye,
-  Heart,
-  Lightbulb,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,;
-  Globe as GlobeIcon,;} from 'lucide-react';import { 
-  Brain, Star, Users, TrendingUp, Zap, Shield, ;
-  CheckCircle, Clock, Award, Target, Globe, Sparkles;
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
-  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   website: 'https://ziontechgroup.com'
 }
 const features = [
@@ -135,7 +74,6 @@ const integrations = [
   'Meditation apps',];}
 const features = [
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Brain,;
   Star,;
@@ -286,37 +224,12 @@ const testimonials = [
     role: 'CEO',
     company: 'InnovateTech Solutions',
 
-<<<<<<< HEAD
-  {
-    name: 'Michael Rodriguez',
-    role: 'CEO',
-    company: 'InnovateTech Solutions',
-
-  {
-    name: 'Dr. Emily Watson',
-    role: 'Research Director',
-    company: 'Consciousness Research Institute',
-
-const integrations = [;
-  'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
-  'Fitness trackersMeditation apps';
-];
-    content:
-      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
-    rating: 5,
-    avatar: '👩‍🔬',
-  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
-    rating: 5,
-    avatar: '👩‍🔬'
-  }
-=======
 
 const integrations = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   Brain,
   Star,
@@ -365,8 +278,6 @@ const features = [;
   'Spiritual growth pathways',
   'Personal transformation tracking',
 ];
-<<<<<<< HEAD
-=======
 ;
 const use_cases = [;
   'Personal development and growth',
@@ -433,7 +344,6 @@ const testimonials = [;
     name: 'Dr. Sarah Chen',
     role: 'Clinical Psychologist',
     company: 'Mindful Wellness Center',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function AIConsciousnessEvolution2025() {
   return (
@@ -498,17 +408,11 @@ export default function AIConsciousnessEvolution2025() {
                 delay: i * 0.3
               }}
               style={{
-<<<<<<< HEAD
-                left: `${Math.random() * 100}%`
-                top: `${Math.random() * 100}%`
-              }}            />
-=======
 
 
                 left: `${Math && Math.random() * 100}%`,
                 top: `${Math && Math.random() * 100}%`,
               }}            />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>;
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
@@ -519,21 +423,12 @@ export default function AIConsciousnessEvolution2025() {
           <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <motion.div
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -544,11 +439,7 @@ export default function AIConsciousnessEvolution2025() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6'
 
-<<<<<<< HEAD
-            >
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
@@ -683,20 +574,13 @@ export default function AIConsciousnessEvolution2025() {
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className='text-center'
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -720,45 +604,20 @@ export default function AIConsciousnessEvolution2025() {
               ))}
             </div>
 
-<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-=======
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -815,70 +674,25 @@ label: 'Success Rate',
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'              >            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'                className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105";
-              >;
-                Start Free Trial;
-              </motion.button>;
-              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
-                Start Free Trial;
-              </motion && motion.button>;
-              <motion&& motion.button
-                initial={{ opacity: 0, scale: 0 && 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-
-
-      {/* Features Section */}
-      <section className='py-20 bg-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
@@ -925,7 +739,6 @@ label: 'Success Rate',
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -933,44 +746,15 @@ label: 'Success Rate',
                 viewport={{ once: true }}
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300'
 
-<<<<<<< HEAD
-              >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <Brain className='w-8 h-8 text-purple-400' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-                  {feature}
-                </h3>
-                <p className='text-gray-400'>
-                  Advanced AI algorithms guide you through personalized
-                  consciousness development exercises.                </p>              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
-                  {feature}
-                </h3>
-                <p className="text-gray-400">
-                  Advanced AI algorithms guide you through personalized consciousness development exercises.
-                </p>
-                  consciousness development exercises.                </p>
-
-                </p>
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -980,9 +764,7 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -993,46 +775,26 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               How AI Consciousness Evolution
@@ -1054,98 +816,14 @@ label: 'Success Rate',
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-<<<<<<< HEAD
-                className='border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200'              >                className="border - 2 border - purple - 500 / 50 text - purple - 300 hover:text - white hover:bg - gradient - to - r hover:from - purple - 500 / 20 hover:to - pink - 500 / 20 font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200";
-              >;
-                Watch Demo;
-              </motion.button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
-      {/* Features Section */}
-      <section className='py - 20 bg - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Revolutionary Features for;
-              <span className='bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                {' '}
-                Consciousness Evolution;
-              </span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Our AI - powered platform combines cutting - edge technology with;
-              ancient wisdom to create the most advanced consciousness;
-              development experience ever created.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {features.map ((feature, index) => (          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Revolutionary Features for;
-              <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent"> Consciousness Evolution</span>;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Our AI - powered platform combines cutting - edge technology with ancient wisdom to create;
-              the most advanced consciousness development experience ever created.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {features.map ((feature, index) => (
-              <motion.div;
-                key={feature}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
               {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                step: '01'
-                title: 'AI Assessment'
-=======
                 step: '01',
                 title: 'AI Assessment',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                description:
-                  'Our AI analyzes your current consciousness level and creates a personalized development plan.'
-                icon: <Brain className='w-12 h-12' />
-              }
-              {
-                step: '02'
-                title: 'Personalized Training'
-                description:
-                  'AI-generated exercises and experiences tailored to your specific needs and goals.'
-                icon: <Target className='w-12 h-12' />
-              }
-              {
-                step: '03'
-                title: 'Continuous Evolution'
-                description:
-                  'Real-time feedback and adaptation ensure continuous growth and development.'
-                icon: <TrendingUp className='w-12 h-12' />
-              },            ].map((step, index) => (              {
-<<<<<<< HEAD
-                step: '02'
-                title: 'Personalized Training'
-                description: 'AI-generated exercises and experiences tailored to your specific needs and goals.'
-                icon: <Target className="w-12 h-12" />
-              }
-=======
                 step: '02',
                 title: 'Personalized Training',
                 description: 'AI-generated exercises and experiences tailored to your specific needs and goals.',
                 icon: <Target className="w-12 h-12" />;
               };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {
                 step: '03'
                 title: 'Continuous Evolution'
@@ -1153,15 +831,7 @@ label: 'Success Rate',
                 icon: <TrendingUp className="w-12 h-12" />
               }
 =======
-<<<<<<< HEAD
-                step: '01',
-                title: 'AI Assessment',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -1220,11 +890,6 @@ label: 'Success Rate',
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {[;
               {
-<<<<<<< HEAD
-                step: '01'
-                title: 'AI Assessment'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 step: '01',
                 title: 'AI Assessment',          >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -1299,18 +964,6 @@ label: 'Success Rate',
                 step: '01',
                 title: 'AI Assessment',
 
-<<<<<<< HEAD
-
-            ].map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className='text-center'
-
-=======
                 key={step.step}
 
 
@@ -1319,8 +972,6 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -1355,19 +1006,13 @@ label: 'Success Rate',
 
               </motion.div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -1377,9 +1022,7 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -1390,46 +1033,26 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Use Cases Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Transform Your Life with
@@ -1475,7 +1098,6 @@ label: 'Success Rate',
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={useCase}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1483,44 +1105,15 @@ label: 'Success Rate',
                 viewport={{ once: true }}
                 className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300'
 
-<<<<<<< HEAD
-              >
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  <Lightbulb className='w-8 h-8 text-purple-400' />
-                </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
-                  {useCase}
-                </h3>
-                <p className='text-gray-400'>
-                  Leverage AI-powered consciousness development for enhanced
-                  personal and professional growth.                </p>              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Lightbulb className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
-                  {useCase}
-                </h3>
-                <p className="text-gray-400">
-                  Leverage AI-powered consciousness development for enhanced personal and professional growth.
-                </p>
-                  personal and professional growth.                </p>
-
-                </p>
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -1530,9 +1123,7 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -1543,46 +1134,26 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Cutting-Edge
@@ -1739,7 +1310,6 @@ label: 'Success Rate',
             </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={tech}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -1778,10 +1348,6 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className='text-center group'
-
-=======
 
                 className='text-center group'
 
@@ -1789,7 +1355,6 @@ label: 'Success Rate',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
                   <Cpu className="w-10 h-10 text-purple-400" />
@@ -1797,21 +1362,16 @@ label: 'Success Rate',
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -1821,9 +1381,7 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Testimonials Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -1832,14 +1390,7 @@ label: 'Success Rate',
 
 =======
                 className='text-center group'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
                   <Cpu className='w-10 h-10 text-purple-400' />
@@ -1850,58 +1401,31 @@ label: 'Success Rate',
                 </div>
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
@@ -1947,24 +1471,15 @@ label: 'Success Rate',
                 key={testimonial && testimonial.name}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -2009,19 +1524,13 @@ label: 'Success Rate',
 
               </motion.div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -2031,9 +1540,7 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -2044,46 +1551,26 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Pricing Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Choose Your
@@ -2144,10 +1631,6 @@ label: 'Success Rate',
                 price: '$299',;
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
                 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 popular: false;
               };
                 name: 'Professional',;
@@ -2188,21 +1671,6 @@ label: 'Success Rate',
                 name: 'Enterprise',
                 price: '$799',
                 period: '/month',
-<<<<<<< HEAD
-                description:
-                  'Advanced features for serious consciousness development'
-                features: [
-                  'Advanced AI assessment'
-                  'Unlimited exercises'
-                  'Personalized coaching'
-                  'Priority support'
-                  'Advanced analytics'
-                  'Integration with wearables'
-                  'Group sessions'
-                ]
-                popular: true
-              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
-=======
                 description: 'Complete solution for organizations and teams',
 
                 features: [;
@@ -2217,7 +1685,6 @@ label: 'Success Rate',
                 popular: false,
               },            ].map ((plan, index) => (                  'Everything in ProfessionalTeam management_custom integrations_dedicated support_white - label options_advanced reportingAPI access';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ];
                 popular: false;
               }
@@ -2232,79 +1699,13 @@ label: 'Success Rate',
               <motion.div;
 =======
                 popular: false
-<<<<<<< HEAD
-<<<<<<< HEAD
-              }
-                name: 'Professional'
-                price: '$299'
-                period: '/month'
-=======
               };
                 name: 'Professional',
                 price: '$299',
                 period: '/month',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                description:
-                  'Advanced features for serious consciousness development'
-                features: [
-                  'Advanced AI assessment'
-                  'Unlimited exercises'
-                  'Personalized coaching'
-                  'Priority support'
-                  'Advanced analytics'
-                  'Integration with wearables'
-                  'Group sessions'
-                ]
-                popular: true
-              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
-                ];
-                popular: true
-              }
-                name: 'Enterprise'
-                price: '$799'
-                period: '/month'
-                description: 'Complete solution for organizations and teams'
-                features: [
-                  'Everything in Professional'
-                  'Team management'
-                  'Custom integrations'
-                  'Dedicated support'
-                  'White-label options'
-                  'Advanced reporting'
-                  'API access'
-                ]
-                popular: false
-              },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access'
-                ];
-                popular: false
-              }
-              <motion.div
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-                key={plan.name}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-<<<<<<< HEAD
-                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
-                  plan.popular
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
-              };
-
-              {
-                name: 'Professional',
-                price: '$299',
-                period: '/month',
-
-                    : 'border-purple-500/20'
-
-                    : 'border-purple-500/20'
-=======
                 className={`relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border rounded - 2xl p - 8 ${
                   plan.popular;
                     ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20'                    : 'border - purple - 500 / 20';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 }`}
               >;
                 {plan.popular && (
@@ -2325,12 +1726,6 @@ label: 'Success Rate',
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-=======
 
                   <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                     <span className='bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold'>                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
@@ -2341,7 +1736,6 @@ label: 'Success Rate',
                 <div className='text - center mb - 8'>;
                   <h3 className='text - 2xl font - bold text - white mb - 2'>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {plan.name}
                   </h3>;
                   <div className='mb - 4'>;
@@ -2362,79 +1756,15 @@ label: 'Success Rate',
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-
-              >;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                    <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )}
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-4'>;
-                    <span className='text-4xl font-bold text-purple-400'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-300'>{plan && plan.description}</p>;
-                </div>;
-                <ul className='space-y-3 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-300">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-3 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />;
-=======
-                      {feature}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-                      {feature}
-                    </li>;
-                  ))}
-
-                </ul>;
-
-
-                <button
-                  className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-                    plan && plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
-                  }`}>                  Get Started                <buttonclassName={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-                  plan && plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
-                }`}>;
-                </button>;
-              </motion && motion.div>;
-
                       {feature}
 =======
 
-<<<<<<< HEAD
-=======
 
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </li>
                   ))}
                 </ul>
@@ -2448,14 +1778,11 @@ label: 'Success Rate',
                 </button>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </section>;
@@ -2470,21 +1797,14 @@ label: 'Success Rate',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -2496,27 +1816,12 @@ label: 'Success Rate',
                 {' '}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -2540,28 +1845,6 @@ label: 'Success Rate',
               </button>
             </div>
             {/* Contact Info */}
-<<<<<<< HEAD
-            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
-              {[
-                {
-                  icon: <Phone className='w-6 h-6' />
-                  label: 'Call Us'
-                  value: contactInfo.mobile
-                }
-                {
-                  icon: <Mail className='w-6 h-6' />
-                  label: 'Email Us'
-                  value: contactInfo.email
-                }
-                {
-                  icon: <MapPin className='w-6 h-6' />
-                  label: 'Visit Us'
-                  value: contactInfo.address
-                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
-                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
-=======
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
 
@@ -2575,7 +1858,6 @@ label: 'Success Rate',
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
@@ -2644,24 +1926,15 @@ label: 'Success Rate',
                   key={contact && contact.label}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className='text-center'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {contact.icon}
@@ -2680,12 +1953,8 @@ label: 'Success Rate',
 
                 </motion.div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>
           </motion.div>
@@ -2829,9 +2098,5 @@ label: 'Success Rate',
 =======
 
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

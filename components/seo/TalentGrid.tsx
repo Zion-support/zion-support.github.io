@@ -92,7 +92,6 @@ export default function TalentGrid({ region, service }: Props) {
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       ))}
     </div>;
   );
@@ -134,19 +133,6 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
-<<<<<<< HEAD
-
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () =>
-      TALENT_PROFILES.filter(
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],;
-=======
 export default /**
  * TalentGrid - Function description
  */
@@ -157,7 +143,6 @@ function TalentGrid() {
         (p) => matches_region (p, region) && matches_service (p, service),
       ),
     [region, service],
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 ;
   // Check condition

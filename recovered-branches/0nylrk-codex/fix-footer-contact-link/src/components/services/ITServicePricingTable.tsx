@@ -1,31 +1,4 @@
 
-<<<<<<< HEAD
-import { useState, useMemo } from "react";
-import {
-  onsiteServicePricing
-  CountryPricing
-} from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from "@/components/ui/table";
-
-import { Globe, Search, ArrowUpDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {useState, useMemo} from "react";
-import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
-import {Input} from "@/components/ui/input";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Globe, Search, ArrowUpDown} from "lucide-react";
-import {Button} from "@/components/ui/button";
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState("");
-=======
 
 
 import {useState, useMemo} from "react";
@@ -38,19 +11,15 @@ export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
@@ -359,13 +328,10 @@ export function ITServicePricingTable() {;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
           </TableBody>;
         </Table>;

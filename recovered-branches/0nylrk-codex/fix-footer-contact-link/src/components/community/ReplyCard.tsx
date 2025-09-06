@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -16,40 +7,17 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns",
-import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ForumReply } from "@/types/community";
-import { cn } from "@/lib/utils";
-interface ReplyCardProps {
-
-  reply: ForumReply
-=======
 interface ReplyCardProps {;
   reply: ForumReply,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
 
-<<<<<<< HEAD
-export const ReplyCard = ({
-  reply;
-  onMarkAnswer
-  canMarkAnswer = false;
-import { ForumReply } from "@/types/community",
-import { cn } from "@/lib/utils",
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -129,12 +97,9 @@ export const ReplyCard = ({;
             </span>;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {reply.authorRole}
               </Badge>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -181,10 +146,7 @@ export default ReplyCard;
     </Card>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ReplyCard;

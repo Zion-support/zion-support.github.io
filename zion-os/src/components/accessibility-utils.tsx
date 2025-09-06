@@ -290,95 +290,20 @@ export function useFocusTrap(enabled: boolean = true) {;
     ),;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-<<<<<<< HEAD
-            e.preventDefault();
-            lastElement.focus();
-          }
-        } else {if (document.activeElement === lastElement) {;
-            e.preventDefault();
-=======
             e.preventDefault(),;
             lastElement.focus();
           }
         } else {;
           if (document.activeElement === lastElement) {;
             e.preventDefault(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             firstElement.focus();
           }
         }
       }
-<<<<<<< HEAD
-    }
-    container.addEventListener("keydown", handleKeyDown);
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]);
-  return containerRef;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-// Keyboard navigation hook;
-export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
-  const [selected_index, setSelectedIndex] = useState (-1),
-  const handleKeyDown = (e: KeyboardEvent) =>: any {
-    switch (e.key) {
-      case "ArrowDown": e.prevent_default (),
-        setSelectedIndex (prev => (prev + 1) % items.length),
-        break,
-      case "ArrowUp":;
-        e.prevent_default (),
-        setSelectedIndex (prev => (prev - 1 + items.length) % items.length),
-        break,
-      case "Enter":;
-      case " ":;
-        e.prevent_default (),
-        // Check condition
-if ( {) {
-  $2
-}
-          on_select (items[selected_index]);
-        }
-        break,
-      case "Escape": setSelectedIndex (-1),
-        break;
-    }
-  },
-  useEffect (() => {
-    document.addEventListener ("keydown", handleKeyDown),
-    return () => document.removeEventListener ("keydown", handleKeyDown);
-  }, [items, selected_index, on_select]),
-  return { selected_index, setSelectedIndex }
-}
-// Announcement component for screen readers;
-export /**
- * Announcement - Function description
- */
-function Announcement() {
-  const [announcements, set_announcements] = useState < string[]>([]),
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_announcements (prev => [...prev, message]),
-      // Clear announcement after a delay;
-      const timer = set_timeout (() => {
-        set_announcements (prev => prev.slice (1));
-      }, 1000),
-      return () => clear_timeout (timer);
-    }
-<<<<<<< HEAD
-  }, [message]),
-  return (
-    <div aria - live={priority} aria - atomic="true" className="sr - only">;
-      {announcements.map ((announcement, index) => (
-        <div key={index}>{announcement}</div>))}
-    </div>);
-=======
   }, [message]);
 =======
     },;
@@ -437,7 +362,6 @@ export function Announcement({;
       return () => clearTimeout(timer);
     }
   }, [message]),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -445,20 +369,7 @@ export function Announcement({;
       ))}
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
-<<<<<<< HEAD
-// Progress indicator component;
-<<<<<<< HEAD
-export /**
- * ProgressIndicator - Function description
- */
-function ProgressIndicator() {
-  const percentage = Math.round ((value / max) * 100),
-  return (
-    <div className="space - y-2">;
-      <div className="flex justify - between text - sm">;
-=======
 export function ProgressIndicator({value;
   max;
   label;
@@ -479,11 +390,9 @@ export function ProgressIndicator({;
   label: string;
 }) {;
   const percentage = Math.round((value / max) * 100),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -556,10 +465,8 @@ export function CollapsibleSection({;
 }) {;
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
   const contentRef = useRef<HTMLDivElement>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -634,10 +541,6 @@ function Tooltip() {
     left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
     right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
   }
-<<<<<<< HEAD
-  return (
-    <div className="relative inline - block">;
-=======
 =======
 ;
 // Tooltip component with proper accessibility;
@@ -658,10 +561,8 @@ export function Tooltip({;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="relative inline-block">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

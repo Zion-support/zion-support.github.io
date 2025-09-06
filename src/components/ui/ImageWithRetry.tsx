@@ -9,16 +9,9 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
 
   src: string,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  alt?: string;
-  /** Source to use if the main src fails */
-  fallbackSrc?: string
-=======
   alt?: string;
   /** Source to use if the main src fails */
   fallbackSrc?: string;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   /** CSS class for the retry button */
 
   retryClassName?: string;  retryClassName?: string
@@ -33,10 +26,6 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   fallbackSrc?: string,;
   /** CSS class for the retry button */;
   retryClassName?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -59,26 +48,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  src
-  alt = ''
-  fallbackSrc = '/images/image-placeholder.svg'
-  className
-  retryClassName
-  src,
-  alt = '',
-  fallbackSrc = '/images/image-placeholder.svg',
-  className,
-  retryClassName,
-}: ImageWithRetryProps) {
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const [failed, setFailed] = useState(false)
-  const handleError = () => {
-    setFailed(true)
-    setCurrentSrc(fallbackSrc) }
-=======
 
 import React, { useState } from 'react';
 import Image, { type ImageProps } from 'next / image';
@@ -180,7 +149,6 @@ export function ImageWithRetry(): any ({;
     setFailed(true);
     setCurrentSrc(fallbackSrc);  };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleRetry = () => {;
     setFailed(false);
     setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
@@ -212,10 +180,6 @@ export function ImageWithRetry(): any ({;
 
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 
 }
@@ -223,38 +187,7 @@ export function ImageWithRetry(): any ({;
 
 export default ImageWithRetry;
 
-<<<<<<< HEAD
-=======
   )
-<<<<<<< HEAD
-export default ImageWithRetry
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-  const fill = !('width' in props) && !('height' in props);
-  return (
-    <div className="relative inline-block">
-      <Image
-        {...props}
-        src={currentSrc}
-        alt={alt}
-        onError={handleError}
-        className={cn(className)}
-        fill={fill}
-      />
-      {failed && (
-        <button
-          type="button"
-          onClick={handleRetry}
-          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
-        >;
-          Retry;
-        </button>;
-      )}
-    </div>;
-  );
-}
-;
-=======
 
   const fill = !('width' in props) && !('height' in props);
   return (
@@ -282,7 +215,6 @@ export default ImageWithRetry
           Retry;
         </button>)}
     </div>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ImageWithRetry;
 
   src,

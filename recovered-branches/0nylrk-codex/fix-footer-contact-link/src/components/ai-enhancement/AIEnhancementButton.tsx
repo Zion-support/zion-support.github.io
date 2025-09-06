@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
-import { toast } from '@/hooks/use-toast';
-interface AIEnhancementButtonProps {
-=======
 =======
 
 
@@ -16,22 +8,10 @@ import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
 import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 import {toast} from '@/hooks/use-toast';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
 
-<<<<<<< HEAD
-  buttonText?: string;
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Sparkles, Loader2, RefreshCw, Check, X} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-import {toast} from '@/hooks/use-toast';
-=======
 export function AIEnhancementButton(): any ({;
 
   options;
@@ -49,18 +29,14 @@ export function AIEnhancementButton(): any ({;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -70,47 +46,10 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function AIEnhancementButton({;
-  options;
-  onEnhanced;
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-export function AIEnhancementButton({
-  options;
-  onEnhanced;
-
-  buttonText = "Enhance with AI";
-  className;
-  variant = "ghost";
-  size = "sm";
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-  
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -118,18 +57,6 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-<<<<<<< HEAD
-      });
-      return
-    }
-    const enhancedContent = await enhanceContent(options);
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent);
-      setShowActions(true)
-    }
-  }
-  };
-=======
 
 
 =======
@@ -137,7 +64,6 @@ export function AIEnhancementButton({
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }),
       return
 import { useState } from 'react',;
@@ -190,12 +116,9 @@ export function AIEnhancementButton({;
     }
 
   },
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const handleAccept = () => {
     if (generatedContent) {
@@ -445,13 +368,10 @@ if ( {) {
   return (
     <Button;
       type="button";
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { PerformanceMetrics } from '../types';
-export const measurePerformance = (): PerformanceMetrics | null => {
-  if (typeof window === 'undefined' |!('performance' in window)) {
-  if (typeof window === 'undefined' || !('performance' in window)) {;
-=======
 
 
 =======
@@ -12,7 +6,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
   if () {) {
   $2
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return null;
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -48,13 +41,6 @@ export const measure_performance = (): PerformanceMetrics | null => {
     console.warn('Error measuring performance:', error);
     return null;
   }
-<<<<<<< HEAD
-}
-export const getPerformanceScore = (metrics: PerformanceMetrics): {
-};
-
-export const getPerformanceScore = (metrics: PerformanceMetrics): {;
-=======
 
 }
 ;
@@ -72,7 +58,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -91,7 +76,6 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   }
   const getScore = (value: number | undefined, threshold: { good: number; needsImprovement: number }, reverse = false): 'good' | 'needs-improvement' | 'poor' => {
     if (value === undefined) return 'poor';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     const compareValue = reverse ? threshold.good / value : value / threshold.good;
     if (compareValue <= 1) return 'good';
     if (compareValue <= (reverse ? threshold.needsImprovement / threshold.good : threshold.needsImprovement / threshold.good)) return 'needs-improvement';
@@ -116,34 +100,21 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
   } else {
     overall = 'good';
   }
-<<<<<<< HEAD
-  return { overall, scores }
-}
-export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return { overall, scores };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
 =======
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -151,10 +122,6 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { PerformanceMetrics } from '../types'; export const measurePerformance = (): PerformanceMetrics | null = > { if (typeof window = = = 'undefined' || !('performance' in window)) { return null} try { const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; const paintEntries = performance && performance.getEntriesByType('paint'); const fcp = paintEntries && paintEntries.find(entry = > entry && entry.name = = = 'first-contentful-paint'); const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry; const cls = performance && performance.getEntriesByType('layout-shift').reduce((acc, entry) = > { return acc + (entry as any).value}, 0); const fid = performance && performance.getEntriesByType('first-input')[0] as PerformanceEventTiming; return { loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart firstContentfulPaint: fcp ? fcp && fcp.startTime: 0 largestContentfulPaint: lcp ? lcp && lcp.startTime: 0 cumulativeLayoutShift: cls firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime: 0 }} catch (error) { console && console.warn('Error measuring performance: ', error); return null}
@@ -173,11 +140,6 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 =======
   return { overall, scores }
 }
-<<<<<<< HEAD
-
-};
-
-=======
 ;
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
   console.group (`🚀 ${label}`);
@@ -199,5 +161,3 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   console.group_end ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

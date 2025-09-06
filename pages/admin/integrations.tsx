@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   id: string;
@@ -28,8 +23,6 @@ function StatusIcon(): any ({;
     </span>;
   );
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
@@ -43,14 +36,10 @@ interface ConnectionMap {;
 
 import { useEffect, useMemo, useState } from 'react';
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -182,70 +171,9 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-<<<<<<< HEAD
-    } finally {
-      setLoading(false);
-    }  }
 
 
 
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm'),
-      ats: providers.filter(p => p.category === 'ats'),
-    }),
-    [providers]
-  );
-
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  async function disconnect(providerId: string) {
-    setLoading(true);
-    try {
-      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  async function resync(providerId: string) {
-    setLoading(true);
-    try {
-      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
-      await refresh();
-    } finally { setLoading(false);   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const grouped = useMemo(() => ({
-    crm: providers.filter(p => p.category === 'crm'),
-    ats: providers.filter(p => p.category === 'ats')
-  }), [providers]);
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -268,57 +196,6 @@ export default function AdminIntegrationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-          {isConnected && (
-            <>
-              <button
-                onClick={() => resync(p.id)}
-                disabled={loading}
-                className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'
-              >
-                Resync Now
-              </button>
-              <button
-                onClick={() => setSelected(p.id)}
-                className='px-3 py-1.5 rounded border text-sm'
-              >
-                Configure
-              </button>
-              <button
-                onClick={() => disconnect(p.id)}
-                disabled={loading}
-                className='px-3 py-1.5 rounded border text-sm'
-              >
-                Disconnect
-              </button>            </>
-          )}
-        </div>
-      </div>
-    );  }
-
-              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
-              <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
-              <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
-            </>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>
-      </div>
-    ),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  function RulesModal() {
-    if (!selected) return null,
-    const provider = providers.find(p => p.id === selected)!,
-    const isCrm = provider.category === 'crm',
-=======
 
   async function resync(providerId: string) {
     setLoading(true);
@@ -341,7 +218,6 @@ export default function AdminIntegrationsPage() {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
@@ -494,92 +370,8 @@ export default function AdminIntegrationsPage() {
             </li>;
             <li>;
               Talent Matched → GET{' '}
-<<<<<<< HEAD
-              <code>
-                /api/integrations/zapier/talent-matched?since=TIMESTAMP
-              </code>
-            </li>          </ul>
-    ),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return (
-    <>
-      <Head>
-        <title>Admin Integrations • Zion</title>
-      </Head>
-      <main className='container mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Connect your CRM and ATS to sync contacts, applicants, and activity.
-        </p>
-        <section className='mb-8'>
-          <h2 className='text-lg font-semibold mb-3'>CRM</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {grouped.crm.map(p => (
-              <Card key={p.id} p={p} />
-            ))}
-          </div>
-        </section>
-        <section className='mb-10'>
-          <h2 className='text-lg font-semibold mb-3'>ATS</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {grouped.ats.map(p => (
-              <Card key={p.id} p={p} />
-            ))}
-          </div>
-        </section>
-        <section className='mb-10'>
-          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
-          <div className='text-sm text-gray-600'>Polling endpoints:</div>
-          <ul className='list-disc pl-6 text-sm mt-2'>
-            <li>
-              New Zion Job Posted → GET{' '}
-              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
-            </li>
-            <li>
-              Talent Matched → GET{' '}
-              <code>
-                /api/integrations/zapier/talent-matched?since=TIMESTAMP
-              </code>
-            </li>          </ul>
-      <Head><title>Admin Integrations • Zion</title></Head>
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
-        <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
-        <section className="mb-8">
-          <h2 className="text-lg font-semibold mb-3">CRM</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {grouped.crm.map(p => <Card key={p.id} p={p} />)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold mb-3">ATS</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {grouped.ats.map(p => <Card key={p.id} p={p} />)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </section>
-        <section className="mb-10">
-          <h2 className="text-lg font-semibold mb-2">Zapier</h2>
-          <div className="text-sm text-gray-600">Polling endpoints: </div>
-          <ul className="list-disc pl-6 text-sm mt-2">
-            <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
-            <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
-          </ul>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </section>
 
         <section>
@@ -609,30 +401,6 @@ function ManualOverrideForm() {;
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-function ManualOverrideForm() {
-  const [jobId, setJobId] = useState(''),
-  const [disableCrmSync, setDisableCrmSync] = useState(false),
-  const [disableAtsSync, setDisableAtsSync] = useState(false),
-  const [message, setMessage] = useState(''),
-  async function save() {
-    setMessage(''),
-    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
-    if (res.ok) setMessage('Saved'), else setMessage('Error'),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
   }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
@@ -676,7 +444,6 @@ function ManualOverrideForm() {
   );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -691,14 +458,6 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -813,10 +572,8 @@ function save() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
@@ -824,21 +581,14 @@ function save() {
 }
 }
 }
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

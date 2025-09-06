@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-let pool: Pool | null = null;
-}return pool
- let pool: Pool | null = null;
-let pool: Pool | null = null;
- let pool: Pool | null = null;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }return pool 
 export async function withUser<T>(
   userId: string
@@ -54,7 +44,6 @@ import { Pool, PoolClient } from 'pg';
 
 =======
     client.release ();
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 let pool: Pool | null = null

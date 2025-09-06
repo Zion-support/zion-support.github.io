@@ -11,23 +11,6 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-:src.pages.disabled/EducationSolutions.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-:src.pages.disabled/EducationSolutions.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/EducationSolutions.jsx
-=======
 
 
 
@@ -36,4 +19,3 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

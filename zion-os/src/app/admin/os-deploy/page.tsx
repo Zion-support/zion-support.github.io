@@ -1,27 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-export default function OSDeployPage() {
-
-export default function OSDeployPage() {;
-const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    // Simulate deployment
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }
-  const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-  // Mock feature keys and functions
-  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  const labelFor = (key: string) => {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -213,7 +191,6 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -932,13 +909,10 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {message}
               </div>;
             )}
@@ -995,9 +969,6 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

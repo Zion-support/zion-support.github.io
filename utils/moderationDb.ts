@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-export interface ModerationFlag {
-export interface ModerationFlag {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   contentId: string;
   contentType: string;
@@ -14,8 +9,6 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-<<<<<<< HEAD
-=======
 =======
 export interface ModerationFlag {
   id: string;
@@ -27,7 +20,6 @@ export interface ModerationFlag {
   created_at: string;
   admin_notes?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 ;
@@ -50,8 +42,6 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
-<<<<<<< HEAD
-=======
 =======
 // Moderation database utilities
 export interface ModerationFlag {
@@ -63,7 +53,6 @@ export interface ModerationFlag {
   notes?: string;
 }
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 
@@ -105,7 +94,6 @@ export async function updateFlagStatus(
   if (!flag) return undefined;
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();

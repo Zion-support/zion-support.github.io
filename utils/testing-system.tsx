@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// Testing system utilities
-export const testingSystem = {
-  // Add testing utilities here
-};
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 };
@@ -163,13 +156,6 @@ export const testingSystem = {
 origin/main
 origin/automation-improvements-final
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-}};
-},;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 // Testing system utilities
 export const testingSystem = {
@@ -183,4 +169,3 @@ export const testing_system = {
   // Add testing utilities here;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

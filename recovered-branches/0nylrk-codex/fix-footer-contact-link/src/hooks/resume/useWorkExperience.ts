@@ -1,25 +1,13 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { WorkExperience  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useWorkExperience() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,16 +16,10 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -51,12 +33,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -103,21 +82,9 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not add work experience')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update work experience')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -147,12 +114,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -199,21 +163,9 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not update work experience')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const deleteWorkExperience = async (workId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete work experience')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -243,12 +195,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -297,11 +246,6 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
 
-<<<<<<< HEAD
-    deleteWorkExperience
-  }
-}
-=======
     deleteWorkExperience;
 
 =======
@@ -309,7 +253,6 @@ if (throw error) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -332,13 +275,9 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;

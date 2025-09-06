@@ -13,40 +13,6 @@ import {
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
-} from 'lucide-react';
-export default function FuturisticFooter() {;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export default function FuturisticFooter() {;
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function FuturisticFooter() {
@@ -62,7 +28,6 @@ export default function FuturisticFooter() {;
 export default function FuturisticFooter() {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -270,18 +235,11 @@ import Link from 'next/link';
           </div>
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Quick Links */}
 
@@ -305,7 +263,6 @@ import Link from 'next/link';
                   <a
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -448,10 +405,6 @@ import Link from 'next/link';
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
@@ -483,12 +436,8 @@ import Link from 'next/link';
 
 }
 }
-<<<<<<< HEAD
-=======
 
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

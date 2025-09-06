@@ -24,13 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function ApiPerformanceTestingPage() {
 
@@ -53,10 +46,6 @@ export default function ApiPerformanceTestingPage() {
   ];
 ;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="API Performance Testing";
@@ -112,8 +101,6 @@ export default function ApiPerformanceTestingPage() {
 
 return (
   return (
-<<<<<<< HEAD
-=======
     <>;
       <SEO;
         title="API Performance Testing";
@@ -132,7 +119,6 @@ return (
             {features.map ((f) => (
               <div;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <SEO
         title="API Performance Testing"

@@ -11,19 +11,7 @@ import { motion } from "framer-motion";
 origin/main
 origin/automation-improvements-final
 import {
-<<<<<<< HEAD
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Code,
   Check,
   Globe,
@@ -33,11 +21,8 @@ import {
   Cpu,
   Cloud,
   XCircle,;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -89,12 +74,6 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-<<<<<<< HEAD
-  }'`
-        }
-      ]
-    }
-=======
 
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
@@ -170,16 +149,12 @@ function APIPage() {
     },
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }'`,
         },
       ],
     },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
 ;
   const response_examples = {

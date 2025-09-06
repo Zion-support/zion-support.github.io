@@ -1,38 +1,13 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Star} from "lucide-react";
-import React from 'react',
-import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
-interface SaveTalentButtonProps {
-  talentId: string;
-  onSave: (talentId: string) => void;
-  isSaved: boolean
-import { Button } from "@/components/ui/button",
-import { Star } from "lucide-react",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
   isSaved: boolean
-<<<<<<< HEAD
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Star } from "lucide-react",;
-interface SaveTalentButtonProps {;
-  talentId: string,;
-  onSave: (talentId: string) => void;
-  isSaved: boolean;
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function SaveTalentButton({
   talentId
@@ -69,15 +44,5 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
     >
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
-<<<<<<< HEAD
-    </Button>;
-  );
-}
-    </Button>
-  )
-}
-;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next / head';
 import {
@@ -10,16 +7,8 @@ import {
   PieChart,
   Activity,
   ArrowRight,
-<<<<<<< HEAD
-  Check,;
-  Eye,;
-} from 'lucide-react';
-import React from 'react',
-import Head from 'next/head';
-=======
   Check,
   Eye,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 } from 'lucide-react';
 export default /**
@@ -60,10 +49,6 @@ export default function AnalyticsPage() {
   ];
   const benefits = [
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react',
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -124,7 +109,6 @@ export default function AnalyticsPage() {;
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AnalyticsPage() {
   const features = [
     {
@@ -169,40 +153,11 @@ export default function AnalyticsPage() {
         <title>Analytics - Zion Tech Group</title>
         <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
       </Head>
-<<<<<<< HEAD
-      <div className='min-h-screen bg-black'>
-        {/* Hero Section */}
-        <section className='pt-32 pb-20 relative overflow-hidden'>
-          <div className='absolute inset-0'>
-            <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
-            <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
-          </div>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-            <div className='mb-8'>
-              <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
-                <BarChart3 className='w-4 h-4 mr-2' />
-                Data-Driven Insights
-              </div>
-            </div>
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
-              Analytics Platform
-            </h1>
-            <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-              Comprehensive analytics platform with real-time insights
-              predictive analytics, and custom reporting capabilities.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-              <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
-                Start Analyzing
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </a>
-=======
 
 
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 relative overflow-hidden">
@@ -231,13 +186,10 @@ export default function AnalyticsPage() {
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
                 Start Analyzing
@@ -266,13 +218,10 @@ export default function AnalyticsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Analytics Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -281,13 +230,10 @@ export default function AnalyticsPage() {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -348,13 +294,10 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Data into Action
@@ -384,13 +327,10 @@ export default function AnalyticsPage() {
                   <div className="text-center">
                     <Eye className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Visual Insights
                     </h3>
                     <p className="text-gray-300 mb-6">
@@ -419,11 +359,8 @@ export default function AnalyticsPage() {
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Ready to Unlock Your Data?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -443,17 +380,11 @@ export default function AnalyticsPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-);
-
-}
-=======
 
 
 }
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -615,7 +546,6 @@ export default function AnalyticsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href='/contact'
                 className='bg-white text-blue-600 hover:bg-gray-100'>;
@@ -635,17 +565,12 @@ export default function AnalyticsPage() {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

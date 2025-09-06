@@ -17,166 +17,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import {
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,;
-  ShieldCheck as ShieldCheckIcon,;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
-import {
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories
-  getRevolutionaryServicesByCategory
-  getPopularRevolutionaryServices
-  getRevolutionaryServicesByPriceRange;
-  revolutionaryMicroSaasServices,
-  revolutionaryServiceCategories,
-  getRevolutionaryServicesByCategory,
-  getPopularRevolutionaryServices,;
-  getRevolutionaryServicesByPriceRange,;
-=======
 
 import {;
   revolutionaryMicroSaasServices,;
@@ -185,7 +31,6 @@ import {;
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
@@ -193,7 +38,6 @@ import { motion, AnimatePresence } from 'framer-motion';import Button from '../c
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
@@ -508,17 +352,7 @@ if ( {) {
     }
 
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -642,28 +476,12 @@ if ( {) {
       },
     },
 
-<<<<<<< HEAD
   };
 
-  };
-
-=======
-<<<<<<< HEAD
-  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  };
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -795,7 +613,6 @@ if ( {) {
 
 =======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -877,13 +694,9 @@ if ( {) {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -902,11 +715,8 @@ if ( {) {
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -970,7 +780,6 @@ if ( {) {
                   </div>
                   <div className='text-gray-400'>Average ROI</div>                </div>
               </motion.div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1115,11 +924,7 @@ if ( {) {
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -1159,14 +964,11 @@ if ( {) {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -1177,17 +979,13 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
-=======
 =======
 
 
               initial={{ opacity: 0, y: 20 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1225,18 +1023,6 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
-<<<<<<< HEAD
-                </span>
-                <br />
-                <span className="text-white">Revolutionary Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
-              </p>
-            </motion.div>
-            <motion.div
-            <motion.div 
-=======
 
 
 =======
@@ -1244,7 +1030,6 @@ if ( {) {
             <motion.div 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -1262,17 +1047,9 @@ if ( {) {
                     size='large'
                     className='h-full cursor-pointer'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     onClick={() => setSelectedService(service)}
 
                   variants={item_variants}
@@ -1280,95 +1057,7 @@ if ( {) {
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
-<<<<<<< HEAD
-                    size='large';
-                    className='h - full cursor - pointer';
-                    on_click={() => setSelectedService (service)}
-                  >;
-                    <div className='text - center mb - 6'>;
-                      <div className='text - 4xl mb - 4'>{service.icon}</div>;
-                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
-
-                        {service.name}
-                      </h3>;
-                      <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
-                      <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
-                        {service.price}
-                      </div>;
-                      <div className='text - sm text - gray - 400'>;
-                        {service.period}
-
-                  >;
-                    <div className='text-center mb-6'>;
-                      <div className='text-4xl mb-4'>{service && service.icon}</div>;
-                      <h3 className='text-2xl font-bold text-white mb-2'>;
-                        {service && service.name}
-                      </h3>;
-                      <p className='text-gray-300 mb-4'>{service && service.tagline}</p>;
-                      <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                        {service && service.price}
-                      </div>;
-                      <div className='text-sm text-gray-400'>;
-                        {service && service.period}
-                      </div>;
-                    </div>;
-                    <div className='space-y-3 mb-6'>;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className='flex items-center gap-2'>;
-                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                          <span className='text-sm text-gray-300'>;
-
-                            {feature}
-                          </span>                        </div>;
-
-                      ))}
-                    </div>;
-                    variant={service.variant as any}
-                    size="large"
-                    className="h-full cursor-pointer"
-
-                    onClick={() => setSelectedService(service)}
-
-                  >;
-                    <div className="text-center mb-6">;
-                      <div className="text-4xl mb-4">{service && service.icon}</div>;
-                      <h3 className="text-2xl font-bold text-white mb-2">{service && service.name}</h3>;
-                      <p className="text-gray-300 mb-4">{service && service.tagline}</p>;
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
-                      <div className="text-sm text-gray-400">{service && service.period}</div>;
-                    </div>;
-                    <div className="space-y-3 mb-6">;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className="flex items-center gap-2">;
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />;
-                          <span className="text-sm text-gray-300">{feature}</span>;
-                        </div>;
-                      ))}
-<<<<<<< HEAD
-                    </div>;
-                    <div className='text-center'>;
-=======
                     </div>
-<<<<<<< HEAD
-                    <div className='text-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      <Button
-                        variant='primary'
-                        size='md'
-                        onClick={() => window && window.open(service && service.link, '_blank')}
-                        className='w-full';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml-2 w-4 h-4' />;
-                      </Button>                    </div>                    <div className="text-center">;
-                                                 <Button
-                    <div className="text-center">
-                                                 <Button 
-
-                             variant="primary" 
-                             size="md"
-
-=======
                              onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
                            >
@@ -1379,7 +1068,6 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
@@ -1397,7 +1085,6 @@ if ( {) {
             </motion.div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -1412,10 +1099,7 @@ if ( {) {
               className="mb-8"
 
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1490,31 +1174,8 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
-                    >
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            {/* Services Display */}
-            <motion.div
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
@@ -1529,7 +1190,6 @@ if ( {) {
               className={viewMode === 'grid' 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1539,23 +1199,13 @@ if ( {) {
               whileInView='visible'              viewport={{ once: true }}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1604,7 +1254,6 @@ if ( {) {
             </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
@@ -1612,56 +1261,6 @@ if ( {) {
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text-gray-400 mb-6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
-                <Button
-                  variant='primary'
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setSelectedCategory('All');
-                    setPriceRange('All');
-                  }}
-
-
-                >;
-                  Clear Filters;
-                </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                                         <Button
-                           variant="primary"
-                           onClick={() => {;
-                             setSearchQuery('');
-                             setSelectedCategory('All');
-
-                             setPriceRange('All');
-
-                           }}
-
-
-            )}
-
-          </div>;
-        </section>;
-
-
-        {/* Service Details Modal */}
-        <AnimatePresence>;
-          {selectedService && (;
-            <motion&& motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
-=======
 
         {/* Service Details Modal */}
         <AnimatePresence>
@@ -1669,16 +1268,11 @@ if ( {) {
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1686,100 +1280,6 @@ if ( {) {
 
 
                             ))}
-<<<<<<< HEAD
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.features.map((feature, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{feature}</span>;
-                              </div>;
-                            ))}
-
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                            Benefits;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
-
-                              <div
-                                key={idx}
-                                className='flex items-center gap-2 text-sm'>;
-                                <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
-                                <span className='text-gray-300'>{benefit}</span>                              </div>;
-                        <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
-                          <div className="space-y-2">
-                            {selectedService.benefits.map((benefit, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                                <span className="text-gray-300">{benefit}</span>
-                              </div>
-                            ))}
-<<<<<<< HEAD
-                          </div>;
-                        </div>                        <div>;
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{benefit}</span>;
-                              </div>;
-                            ))}
-
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                            Capabilities;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.capabilities.map(;
-                              (capability, idx) => (;
-
-                                <div
-                                  key={idx}
-                                  className='flex items-center gap-2 text-sm'>;
-                                  <Zap className='w-3 h-3 text-cyan-400 flex-shrink-0' />;
-                                  <span className='text-gray-300'>;
-                                    {capability}
-                                  </span>;
-                                </div>;
-                              );
-                            )}                          </div>                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.capabilities.map((capability, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{capability}</span>;
-                              </div>;
-                            ))}
-
-                        
-                        <div>
-                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
-                          <div className="space-y-2">
-                            {selectedService.capabilities.map((capability, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{capability}</span>
-                              </div>
-                            ))}
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-=======
                   <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
                       <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
                         Service Details;
@@ -2058,11 +1558,8 @@ if ( {) {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </motion.div>
           </div>
@@ -2305,9 +1802,5 @@ if ( {) {
 =======
 
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

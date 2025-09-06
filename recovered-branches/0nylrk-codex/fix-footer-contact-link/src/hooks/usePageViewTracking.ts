@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-import { useEffect  } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react',
-import { useLocation } from 'react-router-dom',
-import {useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-import { useEffect } from 'react',
-import { useLocation } from 'react-router-dom',
-=======
 
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
@@ -20,9 +10,7 @@ import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -30,13 +18,9 @@ import { useLocation } from 'react-router-dom',
 export function usePageViewTracking() {;
   const location = useLocation();
 export function usePageViewTracking() {
-<<<<<<< HEAD
-  const location = useLocation(),
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const location = useLocation();
   useEffect(() => {
@@ -67,13 +51,6 @@ export function usePageViewTracking() {
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-<<<<<<< HEAD
-    // // // console.log('Page view:', location.pathname)
-  }, [location.pathname])
-}
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
-=======
 
     console && console.log('Page view:', location && location.pathname)
   }, [location && location.pathname])
@@ -86,7 +63,6 @@ import { useLocation } from 'react-router-dom',;
 =======
 import {useEffect} from 'react';
 import {use_location} from 'react-router-dom';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**;
 * Custom hook to track page views for analytics purposes;
 * Attaches event listeners to track route changes and logs page views;
@@ -118,12 +94,9 @@ function usePageViewTracking() {
   useEffect(() => {;
     // // // console.log('Page view:', location.pathname);
   }, [location.pathname]);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

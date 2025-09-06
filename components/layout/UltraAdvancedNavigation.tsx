@@ -20,44 +20,11 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Brain
-  Rocket
-  Dna
-  Globe
-  Shield
-  Wifi
-  Package
-  Bot
-  Car
-  Building2
-  DollarSign
-  Monitor
-  Users
-  Cpu
-  Zap
-  Atom
-  Database
-  Cloud
-  Lock
-  Code;
-} from 'lucide-react';
-import Link from 'next/link';import {
-=======
 
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -83,14 +50,6 @@ import Link from 'next/link';import {
   Atom,
   Database,
   Cloud,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Lock,
-  Code,
-} from 'lucide-react';
-
-import Link from 'next/link';import { ;
-=======
   Lock,
   Code,
 } from 'lucide-react';
@@ -98,7 +57,6 @@ import Link from 'next/link';import { ;
 import Link from 'next/link';import { ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -134,371 +92,9 @@ import Link from 'next/link';
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
-<<<<<<< HEAD
-  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
-} from 'lucide-react';
-import Link from 'next / link';
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const navigation_items = [;
-    {
-      name: 'Home',
-      href: '/',
-      icon: null,
-    },    {      icon: null;
-    }
-    {
-      name: 'AI Services',
-      href: '#',
-      icon: Brain,
-      description: 'Cutting - edge AI solutions',
-      dropdown: [;
-        {
-
-          name: 'AI Agent Orchestrator',
-          href: '/ai - agents',
-          icon: Bot,
-
-      description: 'Benchmarks & vendor references'
-    }
-    {
-      name: 'About'
-      href: '/about',          price: '$7,999/month'
-        }
-      ]
-    }
-      name: 'Micro SaaS'
-      href: '/services'
-      icon: Monitor
-      description: '300+ micro SaaS services'
-    },      description: '300+ micro SaaS services'
-    }
-    {
-      name: 'Market Pricing'
-      href: '/market-pricing'
-      icon: DollarSign
-      description: 'Benchmarks & vendor references'
-    },    {
-
-      name: 'About',
-      href: '/about',
-      icon: null;
-    }
-
-    {
-      name: 'Contact'
-      href: '/contact'
-      icon: null
-    }
-    {
-
-      name: 'Contact',
-      href: '/contact',
-      icon: null,
-    },  ];      icon: null;
-
-    }
-  ];
-
-
-
-
-
-  const contactInfo = {
-
-
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 50);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 50);
-    };
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  const navigationItems = [;
-    {;
-      name: 'Home',;
-      href: '/',;
-      icon: null,;
-    },    {      icon: null;
-    };
-    {;
-      name: 'AI Services',;
-      href: '#',;
-      icon: Brain,;
-      description: 'Cutting-edge AI solutions',;
-      dropdown: [;
-        {;
-          name: 'AI Agent Orchestrator',;
-          href: '/ai-agents',;
-          icon: Bot,;
-          description: 'Multi-agent workflow automation',;
-          price: '$2,999/month',;
-        },        {          price: '$2,999/month';
-        };
-        {;
-          name: 'AI Cybersecurity',;
-          href: '/security',;
-          icon: Shield,;
-          description: 'AI-powered threat detection',;
-          price: '$4,999/month',;
-        },        {          price: '$4,999/month';
-        };
-        {;
-          name: 'AI Healthcare Analytics',;
-          href: '/ai-data-analytics',;
-          icon: Dna,;
-          description: 'Patient outcome prediction',;
-          price: '$3,999/month',;
-        },        {          price: '$3,999/month';
-        };
-        {;
-          name: 'AI Supply Chain',;
-          href: '/quantum-logistics',;
-          icon: Package,;
-          description: 'End-to-end optimization',;
-          price: '$2,499/month',;
-        },        {          price: '$2,499/month';
-        };
-        {;
-          name: 'AI Financial Risk',;
-          href: '/ai-financial-risk',;
-          icon: DollarSign,;
-          description: 'Advanced risk management',;
-          price: '$5,999/month',;
-        },;
-      ],;
-    },    {          price: '$5,999/month';
-        }
-      ];
-    };
-      name: 'Quantum Computing',;
-      href: '#',;
-      icon: Atom,;
-      description: 'Quantum-powered solutions',;
-      dropdown: [;
-        {;
-          name: 'Quantum AI Supercomputer',;
-          href: '/quantum-ai-cognitive',;
-          icon: Cpu,;
-          description: 'Enterprise quantum computing',;
-          price: '$15,999/month',;
-        },        {          price: '$15,999/month';
-        };
-        {;
-          name: 'Quantum Internet Security',;
-          href: '/quantum-internet-security-platform',;
-          icon: Lock,;
-          description: 'Future-proof encryption',;
-          price: '$8,999/month',;
-        },        {          price: '$8,999/month';
-        };
-        {;
-          name: 'Quantum Drug Discovery',;
-          href: '/biotech-ai',;
-          icon: Dna,;
-          description: 'Accelerated drug development',;
-          price: '$12,999/month',;
-        },        {          price: '$12,999/month';
-        };
-        {;
-          name: 'Quantum Financial Trading',;
-          href: '/quantum-financial-trading',;
-          icon: DollarSign,;
-          description: 'Nanosecond precision trading',;
-          price: '$19,999/month',;
-        },        {          price: '$19,999/month';
-        };
-        {;
-          name: 'Quantum IoT Platform',;
-          href: '/quantum-iot',;
-          icon: Wifi,;
-          description: 'Quantum-secured IoT',;
-          price: '$4,999/month',;
-        },;
-      ],;
-    },    {          price: '$4,999/month';
-        }
-      ];
-    };
-      name: 'Space Technology',;
-      href: '#',;
-      icon: Rocket,;
-      description: 'Space mission management',;
-      dropdown: [;
-        {;
-          name: 'Space Mission Control',;
-          href: '/space-technology',;
-          icon: Rocket,;
-          description: 'Complete mission management',;
-          price: '$25,999/month',;
-        },        {          price: '$25,999/month';
-        };
-        {;
-          name: 'Space Debris Cleanup',;
-          href: '/space-technology',;
-          icon: Package,;
-          description: 'AI-powered debris removal',;
-          price: '$35,999/month',;
-        },;
-      ],;
-    },    {          price: '$35,999/month';
-        }
-      ];
-    };
-      name: 'Enterprise IT',;
-      href: '#',;
-      icon: Building2,;
-      description: 'Enterprise solutions',;
-      dropdown: [;
-        {;
-          name: 'Cloud Migration',;
-          href: '/cloud-platform',;
-          icon: Cloud,;
-          description: 'Zero-downtime migration',;
-          price: '$8,999/month',;
-        },        {          price: '$8,999/month';
-        };
-        {;
-          name: 'DevOps Automation',;
-          href: '/automation',;
-          icon: Code,;
-          description: 'AI-powered automation',;
-          price: '$5,999/month',;
-        },        {          price: '$5,999/month';
-        };
-        {;
-          name: 'Data Analytics',;
-          href: '/ai-data-analytics',;
-          icon: Database,;
-          description: 'AI-powered insights',;
-          price: '$6,999/month',;
-        },        {          price: '$6,999/month';
-        };
-        {;
-          name: 'Security Operations',;
-          href: '/security',;
-          icon: Shield,;
-          description: '24/7 security monitoring',;
-          price: '$12,999/month',;
-        },        {          price: '$12,999/month';
-        };
-        {;
-          name: 'API Management',;
-          href: '/api-observability',;
-          icon: Code,;
-          description: 'Complete lifecycle management',;
-          price: '$4,999/month',;
-        },        {          price: '$4,999/month';
-        };
-        {;
-          name: 'Digital Transformation',;
-          href: '/solutions',;
-          icon: Zap,;
-          description: 'AI-powered transformation',;
-          price: '$15,999/month',;
-        },        {          price: '$15,999/month';
-        };
-        {;
-          name: 'IoT Management',;
-          href: '/it-asset-discovery-agent',;
-          icon: Wifi,;
-          description: 'AI-powered device management',;
-          price: '$7,999/month',;
-        },;
-      ],;
-    },    {;
-      name: 'Micro SaaS',;
-      href: '/services',;
-      icon: Monitor,;
-      description: '300+ micro SaaS services',;
-    },    {;
-      name: 'Market Pricing',;
-      href: '/market-pricing',;
-      icon: DollarSign,;
-      description: 'Benchmarks & vendor references',;
-    },;
-    {;
-      name: 'About',;
-      href: '/about',          price: '$7,999/month';
-        }
-      ];
-    };
-      name: 'Micro SaaS',;
-      href: '/services',;
-      icon: Monitor,;
-      description: '300+ micro SaaS services',;
-    },      description: '300+ micro SaaS services';
-    };
-    {;
-      name: 'Market Pricing',;
-      href: '/market-pricing',;
-      icon: DollarSign,;
-      description: 'Benchmarks & vendor references',;
-    },    {;
-      name: 'About',;
-      href: '/about',;
-      icon: null;
-    };
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: null,;
-    },;
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: null,;
-    },  ];      icon: null;
-    }
-  ];
-  const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-
-  };
-    >;
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-        <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
-    <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className='flex items-center'
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -511,7 +107,6 @@ import Link from 'next / link';
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
                 </div>              </div>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-white" />
@@ -606,63 +201,6 @@ import Link from 'next / link';
             {navigation_items.map ((item, index) => (
               <div key={item.name} className='relative group'>;
                 {item.dropdown ? (
-<<<<<<< HEAD
-                  <button;
-                    on_click={() =>;
-                      setActiveDropdown (
-                        active_dropdown === item.name ? null : item.name);
-                    }
-                    className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2';
-                  >;
-                    {item.icon && <item.icon className='w - 4 h - 4' />}
-                    <span>{item.name}</span>;
-                    <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 300 ${
-                        active_dropdown === item.name ? 'rotate - 180' : '';
-                      }`}
-                    />                  </button>) : (
-                  <Link;
-                    href={item.href}
-                    className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2';
-                  >;
-                    {item.icon && <item.icon className='w - 4 h - 4' />}                    <span>{item.name}</span>            {navigation_items.map ((item, index) => (
-              <div key={item.name} className="relative group">;
-
-                {item.dropdown ? (
-                  <button;
-                    on_click={() => setActiveDropdown (active_dropdown === item.name ? null : item.name)}
-                    className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 py - 2";
-                  >;
-                    {item.icon && <item.icon className="w - 4 h - 4" />}
-                    <span>{item.name}</span>;
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
-                    }`} />;
-                  </button>) : (
-                  <Link;
-                    href={item.href}
-
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                  >
-                    {item.icon && <item.icon className='w-4 h-4' />}                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.name}</span>
-<<<<<<< HEAD
-                  </Link>
-                )}
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -672,7 +210,6 @@ import Link from 'next / link';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </Link>
                 )}
 
@@ -687,17 +224,9 @@ import Link from 'next / link';
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
@@ -738,21 +267,13 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </Link>
-                )}
-=======
 
 =======
 =======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </Link>
                 )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -763,14 +284,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <div className='p-4'>
                           <div className='text-sm text-gray-400 mb-3'>
@@ -794,12 +308,10 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                     {dropdownItem.description}                                  </div>
                                 </div>
                                 <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                   {dropdownItem.price}
                                 </div>
                               </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
@@ -811,8 +323,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
           </div>;
 
 
@@ -820,9 +330,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -834,12 +342,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </a>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
@@ -897,11 +402,8 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -924,7 +426,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -935,8 +436,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
 
             </button>;
           </div>;
@@ -948,9 +447,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1002,14 +499,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       {activeDropdown === item.name && (
                         <div className="ml-8 mt-2 space-y-2">
 =======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1054,17 +544,12 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
                               className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                            >                        <div className="ml-8 mt-2 space-y-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
-=======
                               className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             >
                               {dropdownItem.name}
                             </Link>
@@ -1083,19 +568,11 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
                     >
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{item.name}</span>
-<<<<<<< HEAD
-=======
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
                       <span>{item.name}</span>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Link>
 
                   )}
@@ -1165,26 +642,16 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
       </AnimatePresence>;
     </nav>;
   );
-<<<<<<< HEAD
-}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default UltraAdvancedNavigation;  );
 };
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
-<<<<<<< HEAD
-export default UltraAdvancedNavigation;
-=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1193,6 +660,4 @@ export default UltraAdvancedNavigation;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

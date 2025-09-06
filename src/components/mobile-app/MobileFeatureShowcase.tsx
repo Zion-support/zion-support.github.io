@@ -4,10 +4,6 @@
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -16,10 +12,6 @@
       description: "Monitor project progress and approve milestones directly from your phone."
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -28,10 +20,6 @@
       description: "Chat with candidates or clients and receive notifications in real-time."
     }
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -98,10 +86,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
   ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -112,10 +96,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
           {features.map((feature, index) => (
             <div 
               key={index} 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div className="mb-4">
@@ -141,17 +121,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-'"}
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '"},
 ;
@@ -217,10 +186,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

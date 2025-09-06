@@ -28,19 +28,6 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
-<<<<<<< HEAD
-  Cpu,
-  Globe,;} from 'lucide-react';import { 
-  Cpu,;
-  Globe,;} from 'lucide-react';import { ;
-  Code;
-  GitBranch
-  Database
-  Cloud
-  Shield
-  Zap
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -68,165 +55,6 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-<<<<<<< HEAD
-        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
-Globe;
-export default /**
- * DeveloperToolsPage - Function description
- */
-function DeveloperToolsPage() {
-  const developer_tools = [;
-    {
-      icon: <Code className='w - 8 h - 8 text - white' />,
-      title: 'GitHub Copilot',
-      description:;
-        'AI - powered code completion and generation that understands your codebase and suggests intelligent solutions.',
-      features: [;
-        'Intelligent code completion',
-        'Multi - language support',
-        'IDE integration',
-        'Code explanation',
-        'Security vulnerability detection',
-      ],      pricing: '$10 / month',      title: 'GitHub Copilot',
-      description: 'AI - powered code completion and generation that understands your codebase and suggests intelligent solutions.',
-      features: [;
-        'Intelligent code completion_multi - language supportIDE integration_code explanation_security vulnerability detection';
-
-      ];
-      pricing: '$10/month'
-      marketPrice: '$10-20/month'
-      website: 'https://github.com/features/copilot'
-      color: 'bg-gradient-to-br from-gray-500 to-black'
-      textColor: 'text-gray-400'
-      gradient: 'from-gray-400 to-black'
-      popular: true
-      category: 'Code Generation'
-    }
-      icon: <GitBranch className='w-8 h-8 text-white' />
-      title: 'GitHub Pro'
-      description:
-        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.'
-      features: [
-        'Unlimited private repositories'
-        'Advanced code review tools'
-        'Priority support'
-        'Advanced insights'
-        'Team management features'
-      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
-      ];
-      pricing: '$4/month'
-      marketPrice: '$4/month'
-      website: 'https://github.com/pricing'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      textColor: 'text-green-400'
-      gradient: 'from-green-400 to-emerald-500'
-      popular: true
-      category: 'Version Control'
-    }
-      icon: <Database className='w-8 h-8 text-white' />
-      title: 'MongoDB Atlas'
-      description:
-        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.'
-      features: [
-        'Fully managed MongoDB'
-        'Auto-scaling & optimization'
-        'Global distribution'
-        'Advanced security'
-        'Real-time analytics'
-      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
-      ];
-      pricing: '$9/month'
-      marketPrice: '$9-57/month'
-      website: 'https://www.mongodb.com/atlas'
-      color: 'bg-gradient-to-br from-green-500 to-blue-600'
-      textColor: 'text-green-400'
-      gradient: 'from-green-400 to-blue-500'
-      popular: false
-      category: 'Database'
-    }
-      icon: <Cloud className='w-8 h-8 text-white' />
-      title: 'Vercel Pro'
-      description:
-        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.'
-      features: [
-        'Zero-config deployments'
-        'Preview deployments'
-        'Advanced analytics'
-        'Team collaboration'
-        'Custom domains'
-      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
-      ];
-      pricing: '$20/month'
-      marketPrice: '$20/month'
-      website: 'https://vercel.com/pricing'
-      color: 'bg-gradient-to-br from-black to-gray-600'
-      textColor: 'text-gray-400'
-      gradient: 'from-black to-gray-500'
-      popular: false
-      category: 'Deployment'
-    }
-      icon: <Shield className='w-8 h-8 text-white' />
-      title: 'Snyk'
-      description:
-        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.'
-      features: [
-        'Vulnerability scanning'
-        'Dependency monitoring'
-        'Container security'
-        'Infrastructure as Code'
-        'CI/CD integration'
-      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
-      ];
-      pricing: '$25/month'
-      marketPrice: '$25-100/month'
-      website: 'https://snyk.io/pricing'
-      color: 'bg-gradient-to-br from-red-500 to-pink-600'
-      textColor: 'text-red-400'
-      gradient: 'from-red-400 to-pink-500'
-      popular: false
-      category: 'Security'
-    }
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Postman'
-      description:
-        'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
-      features: [
-        'API design & testing'
-        'Team collaboration'
-        'API documentation'
-        'Mock servers'
-        'Monitoring & analytics'
-      ],      pricing: '$12/month',        'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics'
-      ];
-      pricing: '$12/month'
-      marketPrice: '$12-99/month'
-      website: 'https://www.postman.com/pricing'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      textColor: 'text-orange-400'
-      gradient: 'from-orange-400 to-red-500'
-      popular: false
-      category: 'API Development'
-    },  ];      category: 'API Development'
-    }
-        'API design & testing',
-        'Team collaboration',
-        'API documentation',
-        'Mock servers',
-        'Monitoring & analytics',
-      ],      pricing: '$12 / month',        'API design & testing_team collaborationAPI documentation_mock servers_monitoring & analytics';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      ];
-      pricing: '$12 / month',
-      market_price: '$12 - 99 / month',
-      website: 'https://www.postman.com / pricing',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      text_color: 'text - orange - 400',
-      gradient: 'from - orange - 400 to - red - 500',
-      popular: false,
-
-      category: 'API Development',
-
-=======
     },  ];
 
   ];
@@ -600,7 +428,6 @@ export default function DeveloperToolsPage() {;
                     {stat.growth}
                   </div>
                   <p className='text-sm text-gray-400'>{stat.description}</p>                </div>                <div className="p-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
@@ -608,34 +435,27 @@ export default function DeveloperToolsPage() {;
                 </div>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -645,7 +465,6 @@ export default function DeveloperToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map((tool, index) => (              Curated Developer Tools & Services
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world developer usage.
             </p>
@@ -677,7 +496,6 @@ export default function DeveloperToolsPage() {;
             {developerTools && developerTools.map((tool, index) => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
@@ -804,7 +622,6 @@ export default function DeveloperToolsPage() {;
                     <div className="flex items-center justify-between">
                       <Button
                         href={tool.website}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -821,34 +638,27 @@ export default function DeveloperToolsPage() {;
                 </div>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -947,28 +757,13 @@ export default function DeveloperToolsPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               Complete Developer Workflow
 
             </h2>
@@ -989,22 +784,8 @@ export default function DeveloperToolsPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Cpu className="w-8 h-8 text-cursor-blue" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
-                  <p className="text-gray-400 mb-4">{phase.description}</p>
-                  <div className="space-y-1">
-                    {phase.tools.map((tool, toolIndex) => (
-                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {tool}
                       </div>
                     ))}
@@ -1016,14 +797,11 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1031,12 +809,9 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Developer Tool Categories
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -1141,28 +916,14 @@ export default function DeveloperToolsPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
               Developer Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -1189,7 +950,6 @@ export default function DeveloperToolsPage() {;
                     <span className='text-cursor-blue font-semibold'>
                       {category.avgPrice}
                     </span>                  </div>                <div className="p-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
                   <p className="text-gray-400 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
@@ -1198,23 +958,12 @@ export default function DeveloperToolsPage() {;
                   </div>
                 </div>
               </Card>
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           </div>;
@@ -1234,18 +983,13 @@ export default function DeveloperToolsPage() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
             Ready to Level Up Your Development?
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool
@@ -1298,7 +1042,6 @@ href="/contact"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get Dev Consultation
 
 =======
@@ -1350,25 +1093,5 @@ href="/contact"
               Explore AI Tools
             </Button>
             <Button
-<<<<<<< HEAD
-              href='/contact'
-              variant='outline'
-              size='lg'
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
-              Get Dev Consultation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-}
-            <Button
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

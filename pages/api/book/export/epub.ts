@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
@@ -15,19 +11,8 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
-<<<<<<< HEAD
-      sizeLimit: "10mb"
-    }
-  }
-}
-      sizeLimit: "10mb",
-    },
-  },;
-};
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function escapeHtml(s: string): string {
   return s
@@ -123,12 +108,9 @@ export default async function handler(req, res) {
     res.setHeader('Content-Typeapplication/epub+zip'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
     res.status(200).send(buf)
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
@@ -253,10 +235,7 @@ if ( {) {
     } catch {}
   }
 }
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

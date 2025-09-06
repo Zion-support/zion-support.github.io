@@ -1,29 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-=======
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -35,7 +14,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -52,7 +30,6 @@ export default async function handler(
 
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (e: any) {
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -74,8 +51,6 @@ export default async function handler(
       body
       createdAt: now
     });
-<<<<<<< HEAD
-=======
 
 
   res && res.setHeader("Allow", "POST");
@@ -144,7 +119,6 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -153,11 +127,8 @@ if ( {) {
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -226,9 +197,5 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

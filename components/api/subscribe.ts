@@ -1,24 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {;
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body |{}
-  if (!email |typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string')
-    return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body |{}
-  if (!email |typeof email !== 'string') return res.status(400).send('Invalid email');
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     // Basic validation
     const normalized = email && email.trim().toLowerCase();
@@ -120,12 +102,7 @@ if ( {) {
     }
     return res.status (200).json ({ ok: true, data });
   } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(500).send(e?.message |'Unexpected error');
-    return res.status(500).send(e?.message || 'Unexpected error');
-=======
     return res.status (500).send (e?.message || 'Unexpected error');
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }      }
       return res.status (500).send (error.message || 'Database error');
     }
@@ -133,17 +110,7 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).send (e?.message || 'Unexpected error');
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     return res.status(500).send(e?.message || 'Unexpected error');
-<<<<<<< HEAD
-  }
-  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -45,31 +45,6 @@ import { ServiceVariant } from '../types/service-variants';
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] =;
   [;
     {
-<<<<<<< HEAD
-      id: 'ai - powered - supply - chain - optimization',
-      name: 'AI - Powered Supply Chain Optimization',
-      tagline: 'Intelligent supply chain planning and optimization',
-      price: '$1, 299',
-      period: '/month',
-      description:;
-        'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
-      features: [;
-
-        'Demand forecasting',
-        'Inventory optimization',
-        'Route optimization',
-        'Supplier management',
-        'Risk assessment',
-        'Performance analytics',
-        'Real - time monitoring',
-        'API integration',
-        'Custom algorithms',
-        'Compliance tools',
-      ],
-      popular: true,
-      icon: '📦',
-
-=======
       id: 'ai-powered-supply-chain-optimization'
       name: 'AI-Powered Supply Chain Optimization'
       tagline: 'Intelligent supply chain planning and optimization'
@@ -376,15 +351,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-      launchDate: '2025-02-18'
-      customers: 178
-      rating: 4.8
-      reviews: 112
-    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -633,70 +599,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 56,
     },
     {
-<<<<<<< HEAD
-      id: 'ai-powered-warehouse-automation'
-      name: 'AI-Powered Warehouse Automation Platform'
-      tagline: 'Intelligent warehouse automation and optimization'
-      price: '$1,099'
-      period: '/month'
-      description:
-        'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
-      features: [
-        'Automated picking'
-        'Smart routing'
-        'Inventory optimization'
-        'Performance analytics'
-        'Predictive maintenance'
-        'Real-time monitoring'
-        'Mobile integration'
-        'API access'
-        'Custom workflows'
-        'Compliance tools'
-      ]
-      popular: true
-      icon: '🏭'
-      color: 'from-orange-600 via-amber-600 to-yellow-600'
-      textColor: 'text-orange-400'
-      link: 'https://ziontechgroup.com/ai-powered-warehouse-automation'
-      marketPosition:
-        'Leading AI warehouse automation platform with intelligent optimization'
-      targetAudience:
-        'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
-      trialDays: 21
-      setupTime: '10-15 days'
-      category: 'Logistics & Supply Chain'
-      realService: true
-      technology: [
-        'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI/ML'
-      ]
-      integrations: [
-        'WMS platforms, Robotics systems, Conveyor systems, Mobile devices, Analytics tools'
-      ]
-      useCases: [
-        'Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'
-      ]
-      roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.'
-      competitors: [
-        'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
-      ]
-      marketSize: '$28B warehouse automation market'
-      growthRate: '38% annual growth'
-      variant: 'ai-supply-chain-enterprise'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-      launchDate: '2025-02-18'
-      customers: 178
-      rating: 4.8
-      reviews: 112
-    }
-=======
 
 =======
       id: 'ai - powered - warehouse - automation',
@@ -763,7 +665,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       launch_date: '2025 - 02 - 18',
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -772,11 +673,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 112,
 
     },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -813,20 +711,13 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
-<<<<<<< HEAD
-  ];    features: [;
-      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
-      'Custom algorithms_compliance tools';
-=======
 =======
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
 
     popular: true, icon: '📦',
@@ -845,53 +736,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     ];
 
-<<<<<<< HEAD
-    reviews: 112
-  }
-];
-import { ServiceVariant } from '../types/service-variants',;
-export interface AdvancedLogisticsSupplyChainSolution2025 {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-=======
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
@@ -904,11 +748,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
     rating: 4.8
 
     reviews: 112
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
@@ -1167,15 +1006,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     customers: 178,;
     rating: 4.8;
     reviews: 112;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 =======
     popular: true, icon: '🏭',
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

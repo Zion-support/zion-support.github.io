@@ -197,20 +197,6 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "api_logs_api_key_id_fkey"
-            columns: ["api_key_id"]
-            isOneToOne: false
-            referencedRelation: "api_keys"
-            referencedColumns: ["id"];
-          };
-            referencedColumns: ["id"]
-          }
-          },
-=======
 
 
 
@@ -230,9 +216,7 @@ export type Database = {
 
             referencedColumns: ["id"]
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -1470,13 +1454,10 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
         Relationships: [;
           {
@@ -1709,13 +1690,10 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
         Relationships: [;
           {
@@ -2401,13 +2379,10 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2429,12 +2404,9 @@ export type Database = {
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: undefined;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       flag_suspicious_content: {
         Args: {
@@ -2472,12 +2444,9 @@ export type Database = {
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2497,12 +2466,9 @@ export type Database = {
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2546,13 +2512,8 @@ export type Tables<
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-<<<<<<< HEAD
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2578,12 +2539,6 @@ export type Tables<
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-=======
 
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2606,7 +2561,6 @@ export type TablesInsert<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2628,12 +2582,6 @@ export type TablesInsert<
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-=======
 
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2656,7 +2604,6 @@ export type TablesUpdate<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2677,153 +2624,7 @@ export type TablesUpdate<
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-<<<<<<< HEAD
-    | keyof DefaultSchema["Enums"];
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Enums"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-    : never
-export type CompositeTypes<
-  PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"];
-    | { schema: keyof Database };
-    | keyof DefaultSchema["CompositeTypes"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
-export const Constants = {
-  public: {
-    Enums: {
-      api_key_scope: [;
-        "jobs:read";
-        "jobs:write";
-        "talent:read";
-        "quotes:write";
-      api_key_scope: [
-        "jobs:read";
-        "jobs:write";
-        "talent:read";
-        "quotes:write";
-        "webhooks:manage"]
-      fraud_severity: ["safe", "suspicious", "dangerous"];
-      quote_request_status: [
-        "new";
-        "in_review";
-        "accepted";
-        "responded";
-        "closed";
-        "archived"]
 
-      referral_status: ["pending", "completed", "expired"]}}} as const
-;
-        "jobs:read",
-        "jobs:write",
-        "talent:read",
-        "quotes:write",
-        "webhooks:manage"],
-      fraud_severity: ["safe", "suspicious", "dangerous"],
-      quote_request_status: [
-        "new";
-        "in_review";
-        "accepted";
-        "responded";
-        "closed";
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const
-;
-        "new",
-        "in_review",
-        "accepted",
-        "responded",
-        "closed",
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const
-;
-type DefaultSchema = Database[Extract<keyof Database, "public">];
-export type Tables<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-    | { schema: keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema: keyof Database;
-  }
-    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
-        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
-      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
-      Row: infer R;
-    }
-    ? R;
-    : never;
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
-        DefaultSchema["Views"]);
-    ? (DefaultSchema["Tables"] &;
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
-        Row: infer R;
-      }
-      ? R;
-      : never;
-    : never;
-export type TablesInsert<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-    | { schema: keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema: keyof Database;
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
-      Insert: infer I;
-    }
-    ? I;
-    : never;
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
-        Insert: infer I;
-      }
-      ? I;
-      : never;
-    : never;
-export type TablesUpdate<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-    | { schema: keyof Database },;
-  TableName extends DefaultSchemaTableNameOrOptions extends {;
-    schema: keyof Database;
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
-      Update: infer U;
-    }
-    ? U;
-    : never;
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
-        Update: infer U;
-      }
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ? U;
       : never;
     : never;
@@ -2911,8 +2712,6 @@ export const Constants = {
 
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
-<<<<<<< HEAD
-=======
 
 ;
 =======
@@ -2923,4 +2722,3 @@ export const Constants = {
       api_key_scope: [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

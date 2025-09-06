@@ -46,68 +46,7 @@ const pricingRanges = [
   '$800+',];
 export default function ComprehensiveServicesShowcase2025() {
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import {motion, AnimatePresence} from 'framer-motion';
-import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Customer Success',
-  'Supply Chain',
-  'Financial Planning',
-  'Sales Intelligence',
-  'HR Analytics',
-  'Decision Intelligence',
-  'Content Marketing',
-  'CRM & Customer Intelligence',
-  'Business Intelligence',
-];
-
-const pricingRanges = [
-  'All Prices',
-  'Under $300',
-  '$300 - $500',
-  '$500 - $800',
-  '$800+',];
-
-export default function ComprehensiveServicesShowcase2025() {;
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
-} from 'lucide-react',;
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
-const contactInfo = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
-const categories = [;
-  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence';
-  'Content MarketingCRM & Customer IntelligenceBusiness Intelligence';
-];
-const pricingRanges = [;
-  'All PricesUnder $300$300 - $500$500 - $800$800+';
-];
-export default function ComprehensiveServicesShowcase2025(req, res) {
-  try {
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -135,51 +74,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
           break;
         case '$800+':;
           priceMatch = price > 800;
-<<<<<<< HEAD
-          break;
-      }
-    }
-    const searchMatch =
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return categoryMatch && priceMatch && searchMatch;  });
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'price':
-        return (
-          parseInt(a.price.replace('$', '')) -
-          parseInt(b.price.replace('$', ''))
-        );      case 'rating':
-        return b.rating - a.rating;
-      case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;    }
-  });
-  const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  }
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  }
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-
-=======
 
 
   return (
@@ -239,7 +133,6 @@ import Link from 'next/link';
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -294,12 +187,9 @@ import Link from 'next/link';
   }
 }
   }),
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -429,11 +319,7 @@ import Link from 'next/link';
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -1515,11 +1401,8 @@ if (return '$500 - $800') {
   }
 }
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -1823,11 +1706,7 @@ if (return '$500 - $800') {
                 cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
                 <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
@@ -1843,12 +1722,6 @@ if (return '$500 - $800') {
 );
 export default ComprehensiveServicesShowcase2025;
 
-<<<<<<< HEAD
-}
-  )
-},
-export default ComprehensiveServicesShowcase2025,
-=======
         {/* Filters and Search Section */}
         <section className="py-12 bg-gray-900 border-b border-gray-800">
           <div className="container mx-auto px-4">
@@ -2019,7 +1892,6 @@ export default ComprehensiveServicesShowcase2025,
                         </div>
                       </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
             <div className='text-center text-gray-400'>;
               <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
@@ -2029,4 +1901,3 @@ export default ComprehensiveServicesShowcase2025,
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

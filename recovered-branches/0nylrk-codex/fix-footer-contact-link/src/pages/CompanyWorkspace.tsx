@@ -1,47 +1,7 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate, useParams} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
-import {useWhitelabel} from "@/context/WhitelabelContext";
-export default function CompanyWorkspace() {;
-  const { companySlug } = useParams() as { companySlug?: string };
-  const { user } = useAuth();
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-  const { isWhitelabel, tenant, brandName } = useWhitelabel();
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate, useParams } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string }
-  const { user } = useAuth();
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-  const { isWhitelabel, tenant, brandName } = useWhitelabel();
-import { useWhitelabel } from "@/context/WhitelabelContext",
-export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string },
-  const { user } = useAuth(),
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug),
-  const { isWhitelabel, tenant, brandName } = useWhitelabel(),
-  
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
 
@@ -65,12 +25,6 @@ export default function CompanyWorkspace() {
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
   }
-<<<<<<< HEAD
-  return (
-    <ProtectedRoute>
-      <SEO
-      <SEO 
-=======
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -104,7 +58,6 @@ import {useWhitelabel} from "@/context/WhitelabelContext";
       <SEO 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -153,13 +106,10 @@ export default function CompanyWorkspace() {;
   return (;
     <ProtectedRoute>;
       <SEO;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -176,9 +126,6 @@ export default function CompanyWorkspace() {;
 }
 }
 ;
-<<<<<<< HEAD
-;
-=======
   // Check condition
 if ( {) {
   $2
@@ -231,4 +178,3 @@ if ( {) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

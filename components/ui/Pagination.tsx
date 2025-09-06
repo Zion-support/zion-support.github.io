@@ -19,33 +19,15 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-export type PaginationProps = {;
-=======
 
 
   page: number;
   page_size: number;
   total: number;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type PaginationProps = {
   on_change: (next_page: number) => void;
 }
-<<<<<<< HEAD
-export default function Pagination({
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
 ;
 export default /**
  * Pagination - Function description
@@ -57,7 +39,6 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
   total: number,
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   page,
   pageSize,
   total,
@@ -70,11 +51,8 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -98,34 +76,14 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
 =======
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-<<<<<<< HEAD
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
   page,
   pageSize,
   total,
@@ -138,9 +96,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
@@ -174,7 +130,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     if (p >= 1 && p <= totalPages) onChange(p)
   };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -457,39 +412,16 @@ if ( {) {
 export default Pagination;
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
-<<<<<<< HEAD
-        Next
-      </EnhancedButton>
-    </div>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

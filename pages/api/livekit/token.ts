@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
@@ -78,51 +74,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-<<<<<<< HEAD
-      canPublishData: true,
-      canSubscribe: true
-    });
-
-    const token = await at.toJwt();
-
-    return res.status(200).json({
-      token,
-      url: LIVEKIT_HOST
-    });
-  } catch (err: any) {
-    console.error("Token error", err);
-    return res.status(500).json({ error: "Failed to create token" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from 'livekit-server-sdk';
-const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
-const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
-const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -158,24 +112,6 @@ if ( {) {
       identity: String (identity),
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
-<<<<<<< HEAD
-    }),;
-    at.addGrant({;
-      roomJoin: true,;
-      room: String(roomName);
-      canPublish: audioOnly ? false : true,;
-      canPublishData: true,;
-      canSubscribe: true}),;
-    const token = await at.toJwt();
-    return res.status(200).json({;
-      token;
-      url: LIVEKIT_HOST});
-  } catch (error) {
-    console.error('Token error', err);
-    return res.status(500).json({ error: 'Failed to create token' });
-  }
-}
-=======
     });
 
 ;
@@ -204,7 +140,6 @@ if ( {) {
       canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     const token = await at && at.toJwt();
 
@@ -222,7 +157,6 @@ if ( {) {
 
   }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -243,13 +177,5 @@ if ( {) {
 
   }
 }
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

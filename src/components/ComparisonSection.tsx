@@ -201,10 +201,6 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
                   </TableRow>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   </TableRow>
 
@@ -228,10 +224,6 @@ export function ComparisonSection() {
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
               Calculate Your Savings
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               Calculate Your Savings
 
@@ -239,17 +231,6 @@ export function ComparisonSection() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>;
-  );
-};
-}
-    </section>
-  )
-}
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-=======
 
 
 
@@ -258,7 +239,6 @@ import { Button } from "./ui/button",;
 
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -413,10 +393,6 @@ export function ComparisonSection() {;
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </section>);
 }

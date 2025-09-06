@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,;
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
@@ -92,14 +67,10 @@ import {;
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
-<<<<<<< HEAD
-=======
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -124,11 +95,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       <FormField
       />;
       <FormField;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
@@ -216,11 +183,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         <FormField
         />;
         <FormField;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
@@ -245,27 +208,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
-<<<<<<< HEAD
-                    selected={field.value |undefined}
-                    onSelect={field.onChange}
-                    disabled={(date) => date < form.getValues("startDate")}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormDescription>
-                Leave empty if the end date is flexible
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-    </>
-        />;
-      </div>;
-    </>;
-=======
 
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
@@ -355,7 +297,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
             </FormItem>)}

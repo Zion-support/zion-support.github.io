@@ -23,15 +23,7 @@ import React from "react";
 export type EmptyStateProps = {;
 import React from './react';
 =======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
-<<<<<<< HEAD
-export type EmptyStateProps = {;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export type EmptyStateProps = {
   emoji?: string;
   title: string;

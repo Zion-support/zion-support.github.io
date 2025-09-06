@@ -30,7 +30,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   children,}) => {const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity = 'high';
   colorScheme = 'neural-network';
   particleCount = 300;
@@ -76,7 +75,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;        canvas && canvas.height = rect && rect.height;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     resizeCanvas();
@@ -219,11 +217,8 @@ if ( {) {
         ctx.restore();      }        ctx.restore()
         ctx.restore();      }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
 
@@ -277,25 +272,13 @@ if ( {) {
     // Neural network node class;
     class NeuralNode {;
 =======
-<<<<<<< HEAD
-        ctx.restore();      }        ctx.restore()
-=======
         ctx.restore();      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Neural network node class
     class NeuralNode {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       x: number;
       y: number;
       connections: NeuralNode[];
@@ -313,27 +296,15 @@ if ( {) {
             ctx.stroke();
           }
         });
-<<<<<<< HEAD
-        ctx.restore();      }            ctx.stroke()
-          }
-        });
-        ctx.restore()
-    }
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -363,15 +334,8 @@ if ( {) {
           }
         });
         ctx && ctx.restore();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
 
@@ -415,33 +379,12 @@ if ( {) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-          ctx.stroke()
-
-        ctx.restore();      }          ctx.stroke()
-        }
-        ctx.restore()
-    }
-
-=======
           ctx.stroke();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-        ctx.restore();      }          ctx.stroke()
-        }
-        ctx.restore()
-<<<<<<< HEAD
-    }
-=======
 
 =======
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           ctx.stroke()
@@ -460,15 +403,10 @@ if ( {) {
 =======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // Holographic layer class
     class HolographicLayer {
@@ -699,40 +637,23 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
-<<<<<<< HEAD
-        ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
-        ctx.stroke();
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         
-<<<<<<< HEAD
-        ctx.restore()
-        ctx.restore();      }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         ctx.restore()
     }
 
       }
 
-<<<<<<< HEAD
-    }
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -1459,24 +1380,11 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }
           });
         });
@@ -1516,8 +1424,6 @@ if ( {) {
         style={{ zIndex: -1 }}
       />
 
-<<<<<<< HEAD
-=======
       />;
 
 
@@ -1525,9 +1431,7 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1586,7 +1490,6 @@ if ( {) {
   }, [intensity, colorScheme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralNetworks, enableMultidimensional]);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
       />;
@@ -1609,39 +1512,11 @@ if ( {) {
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
             animate={{
-<<<<<<< HEAD
-              scale: [1.2, 1, 1.2]
-              rotate: [360, 180, 0]
-              opacity: [0.1, 0.3, 0.1],            }}
-            transition={{
-              duration: 10
-              repeat: Infinity
-              ease: 'easeInOut',            }}
-          />
-        </div>
-      )}
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
-            animate={{
-              scale: [1.2, 1, 1.2];
-              rotate: [360, 180, 0];
-              opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
-              duration: 10
-              repeat: Infinity
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',              ease: "easeInOut"
-=======
 
 
             animate={{
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }}
           />;
         </div>;
@@ -1650,17 +1525,6 @@ if ( {) {
 
 };
 export default UltraAdvancedFuturisticBackground2026;
-<<<<<<< HEAD
-
-              duration: 10,
-              repeat: Infinity,
-<<<<<<< HEAD
-
-            }}
-          />
-        </div>
-      )}
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
               ease: 'easeInOut',              ease: "easeInOut";
@@ -1684,4 +1548,3 @@ export default UltraAdvancedFuturisticBackground2026;
               repeat: Infinity,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -20,23 +20,16 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
-<<<<<<< HEAD
-export function AIMilestoneGenerator({
-=======
 
 export function AIMilestoneGenerator(): any ({;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export function AIMilestoneGenerator({;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   scope;
   startDate;
   endDate;
@@ -51,52 +44,10 @@ export function AIMilestoneGenerator({;
     if (!scope |!startDate |!projectType) {
       return
     }
-<<<<<<< HEAD
-    const input: MilestoneInput = {
-      scope;
-      startDate;
-      endDate
-      projectType
-    }
-    await generateMilestones(input);
-    // Initially select all milestones
-    const initialSelection = {}
-    generatedMilestones.forEach((_, index) => {
-      initialSelection[index] = true
-    });
-    setSelectedMilestones(initialSelection)
-  }
-  const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
-      selectedMilestones[index]
-    );
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({})
-  }
-  const toggleMilestoneSelection = (index: number) => {
-    setSelectedMilestones(prev => ({
-      ...prev
-      [index]: !prev[index]
-    }))
-  }
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone)
-  }
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  }
-  };
-=======
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -180,17 +131,11 @@ export function AIMilestoneGenerator({;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;

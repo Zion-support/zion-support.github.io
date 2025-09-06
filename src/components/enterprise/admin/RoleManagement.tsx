@@ -2,31 +2,17 @@ export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
-<<<<<<< HEAD
-=======
 =======
 import React from 'react'
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -36,10 +22,6 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components / ui / tooltip';
 export /**
  * RoleManagement - Function description
@@ -272,30 +254,6 @@ export function RoleManagement() {;
         createJobs: false,
         manageTeam: false,
         viewBilling: false,
-<<<<<<< HEAD
-        manageBilling: false,
-      },
-    },
-  ]
-  const handlePermissionChange = (
-    _memberId: number,
-    permission: string,
-    value: boolean
-  ) => {    // In a real app, this would make an API call to update permissions
-    toast({
-      title: 'Permission updated',
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
-    })
-  }
-  const roleDescriptions: Record<string, string> = {
-    Admin: 'Full access to all features and settings',
-    Recruiter: 'Can manage candidates and job postings',
-    Manager: 'Can view candidates and create jobs',
-    Viewer: 'Read-only access to candidates',
-  }
-        manageBilling: false}}],
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const roleDescriptions: Record<string string> = {
@@ -304,17 +262,10 @@ export function RoleManagement() {;
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div>
@@ -338,10 +289,6 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </div>
           ))}
@@ -350,10 +297,6 @@ export function RoleManagement() {;
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <Table>
@@ -442,10 +385,6 @@ export function RoleManagement() {;
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <TableCell>
@@ -465,11 +404,8 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
@@ -827,10 +763,6 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     checked={member.permissions.viewCandidates}
@@ -895,33 +827,11 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View billing'
-<<<<<<< HEAD
 
-                    checked={member.permissions.viewBilling}
-<<<<<<< HEAD
-                    onCheckedChange={checked =>
-                      handlePermissionChange(member.id, 'viewBilling', checked)
-                    }                  />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  )
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
@@ -938,61 +848,3 @@ export function RoleManagement() {;
   );
 
 }
-<<<<<<< HEAD
-
-
-
-
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='View candidates';
-                    checked={member.permissions.view_candidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (
-                        member.id,
-                        'view_candidates',
-                        checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Edit candidates';
-                    checked={member.permissions.edit_candidates}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (
-                        member.id,
-                        'edit_candidates',
-                        checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Create jobs';
-                    checked={member.permissions.create_jobs}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'create_jobs', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='Manage team';
-                    checked={member.permissions.manage_team}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'manage_team', checked);
-                    }                  />;
-                </TableCell>;
-                <TableCell className='text - center'>;
-                  <Switch;
-                    aria - label='View billing';
-                    checked={member.permissions.view_billing}
-                    onCheckedChange={checked =>;
-                      handlePermissionChange (member.id, 'view_billing', checked);
-                    }                  />;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-}
-;

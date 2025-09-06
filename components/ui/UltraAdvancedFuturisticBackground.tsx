@@ -52,7 +52,6 @@ const UltraAdvancedFuturisticBackground: React.FC<;
   enableQuantumEffects = true,
   children, }) => {interface UltraAdvancedFuturisticBackgroundProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   intensity?: 'low' | 'medium' | 'high';
   color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic' | 'quantum - ai';
   particle_count?: number;
@@ -141,7 +140,6 @@ if (return) {
         canvas && canvas.width = rect && rect.width;
         canvas && canvas.height = rect && rect.height;      }        canvas && canvas.height = rect && rect.height;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     resizeCanvas();
@@ -294,9 +292,6 @@ if ( {) {
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-<<<<<<< HEAD
-            ctx.stroke();          }            ctx.stroke()
-=======
 
         holographic: '#ff0088',
       },    }        holographic: '#ff0088';
@@ -380,7 +375,6 @@ if ( {) {
     }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ctx.stroke();          }
 
           }
@@ -457,7 +451,6 @@ if ( {) {
 =======
             ctx.stroke()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }
         }
       }
@@ -558,17 +551,13 @@ if (return) {
         ctx && ctx.lineTo(canvas && canvas.width, y);
         ctx && ctx.stroke();      }        ctx && ctx.stroke();
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
 
 
             ctx.stroke();          }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
@@ -859,22 +848,6 @@ if (return) {
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
-<<<<<<< HEAD
-                animationDuration: '15s'
-                animationDirection: 'reverse'
-              }}
-            ></div>
-          </>
-        )}
-      </div>
-      {children}
-    </div>
-  );
-<<<<<<< HEAD
-}
-};
-
-=======
 
                 animationDuration: '15s',
                 animationDirection: 'reverse',
@@ -887,8 +860,6 @@ if (return) {
     </div>;
   );
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
@@ -938,9 +909,6 @@ export default UltraAdvancedFuturisticBackground;
 export default UltraAdvancedFuturisticBackground;
 
 export default UltraAdvancedFuturisticBackground;
-<<<<<<< HEAD
-export default UltraAdvancedFuturisticBackground;
-=======
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
       <canvas;
@@ -983,6 +951,4 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

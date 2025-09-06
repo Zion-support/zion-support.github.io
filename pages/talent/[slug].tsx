@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,15 +27,12 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
-<<<<<<< HEAD
-=======
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -48,7 +41,6 @@ import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
@@ -69,17 +61,6 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
-const TalentProfile: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query,
-=======
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -111,7 +92,6 @@ const TalentProfile: NextPage = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -236,9 +216,6 @@ export default TalentProfile;
       </section>;
 
 },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default TalentProfile;

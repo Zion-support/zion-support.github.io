@@ -1,21 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function TalentPool() {
   // Mock talent data
 
@@ -241,11 +228,8 @@ function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Badge key={index} variant="secondary" className="text-xs">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}

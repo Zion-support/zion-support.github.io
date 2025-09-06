@@ -1,36 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-import {Calendar, RefreshCw} from "@/components/icons";
-import {Card, CardContent} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {Button} from "@/components/ui/button";
-import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
-import {format} from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-import React from "react",
-import { Calendar, RefreshCw } from "@/components/icons",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Button } from "@/components/ui/button",
-import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-import { format } from "date-fns",
-import type { DateRange } from "@/types/dateRange",
-import type { QuoteStatus } from "@/types/quotes",
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -44,11 +16,6 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
@@ -119,7 +86,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   setDateRange
   searchQuery,
@@ -268,68 +234,15 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
-<<<<<<< HEAD
-          <div>;
-            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
-            <Popover>;
-              <PopoverTrigger asChild>;
-                <Button;
-                  variant="outline";
-                  className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white";
-                >;
-                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />;
-                  {dateRange?.from ? (;
-                    dateRange.to ? (;
-                      <>;
-                        {format(dateRange.from, "LLL dd, y")} -{" "}
-                        {format(dateRange.to, "LLL dd, y")}
-                      </>;
-                    ) : (;
-                      format(dateRange.from, "LLL dd, y");
-                    );
-                  ) : (;
-                    <span>Date range</span>;
-                  )}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
-                <CalendarComponent
-                  initialFocus
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
-<<<<<<< HEAD
-                />
-              </PopoverContent>
-            </Popover>
-          </div>
-        </div>
-        <div className="mt-4 flex justify-end">
-          <Button
-            variant="outline"
-            onClick={onReset}
-            className="border-zion-blue-light text-zion-slate-light"
-          >
-            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-
-},
-};
-},
-=======
 
 =======
 
@@ -385,4 +298,3 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
 }
 ;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

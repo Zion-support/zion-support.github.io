@@ -63,10 +63,6 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         single: () => null;
       });
     });
@@ -75,14 +71,5 @@ export const supabase = createSupabaseClient(supabaseConfig);
         single: () => null
       })
     })
-<<<<<<< HEAD
-  })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-  });
-};
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

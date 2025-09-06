@@ -6,21 +6,6 @@ const images = document && document.querySelectorAll('img');
     if (!img.decoding) {
       img.decoding = 'async'
     }
-<<<<<<< HEAD
-  });
-};
-
-export const preloadCriticalResources = null;
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-=======
 
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
@@ -63,7 +48,6 @@ export const preloadCriticalResources = () =>: any {
     link.href = resource;
     link.as = resource.ends_with ('.css') ? 'style' : 'font';
     document.head.append_child (link);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
 }
 export const optimizeBundleSize = () =>: any {
@@ -92,10 +76,7 @@ export const lazyLoadComponents = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -104,9 +85,5 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

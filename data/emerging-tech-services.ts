@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -295,44 +291,7 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechService {
-=======
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -341,7 +300,6 @@ export interface EmergingTechService {;
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   reviews: number
 }
 export const emergingTechServices: EmergingTechService[] = [
@@ -370,108 +328,11 @@ export const emergingTechServices: EmergingTechService[] = [
     marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',
     growthRate: '400% annual growth', variant: 'quantum-advanced',
     contactInfo: {
-<<<<<<< HEAD
-=======
       
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-    reviews: 28
-  }
-];
-export interface EmergingTechService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk',;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const emergingTechServices: EmergingTechService[] = [;
-  // Quantum Internet & Communication Services;
-  {;
-    id: 'quantum-internet-security-platform',;
-    name: 'Quantum Internet Security Platform',;
-    tagline: 'Unhackable quantum-secured internet infrastructure',;
-    price: '$12,999',;
-    period: '/month',;
-    description: 'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',;
-    features: [;
-      'Quantum key distribution (QKD)Post-quantum cryptography algorithmsQuantum entanglement-based securityReal-time quantum threat detectionMulti-node quantum networkQuantum-resistant encryptionGovernment compliance (FIPS 140-3)Quantum network monitoring',;
-      'API for enterprise integration24/7 quantum security operations';
-    ],;
-    popular: true,;
-    icon: '🌐',;
-    color: 'from-indigo-600 to-purple-700',;
-    textColor: 'text-indigo-400',;
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform',;
-    marketPosition: 'First-to-market quantum internet security platform. Competes with traditional cybersecurity but offers quantum-level protection.',;
-    targetAudience: 'Government agencies, Military organizations, Financial institutions, Healthcare providers, Energy companies, Defense contractors',;
-    trialDays: 7,;
-    setupTime: '2-4 weeks',;
-    category: 'Quantum Internet & Security',;
-    realService: true,;
-    technology: ['Quantum computingQKD protocolsPost-quantum cryptographyQuantum entanglementQuantum networksAWS QuantumIBM Quantum'],;
-    integrations: ['Government systemsMilitary networksFinancial platformsHealthcare systemsEnergy gridsDefense systems'],;
-    useCases: ['Secure government communicationsMilitary command systemsFinancial transactionsHealthcare data exchangeCritical infrastructure protectionDefense intelligence'],;
-    roi: 'Prevents cyber attacks worth $6M+ annually, 500% ROI through security cost avoidance',;
-    competitors: ['Traditional cybersecurity (Palo Alto, CrowdStrike)No direct quantum internet competitors'],;
-    marketSize: '$150B cybersecurity market, quantum segment growing 400% annually',;
-    growthRate: '400% annual growth',;
-    variant: 'quantum-advanced',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
-    }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.';
-    launch_date: '2024 - 09 - 01';
-    customers: 35;
-    rating: 4.8,
-    reviews: 28;
-  }
-
-=======
 
 export interface EmergingTechService {;
 
@@ -1237,21 +1098,12 @@ export interface EmergingTechService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
-    launchDate: '2024-09-01'
-    customers: 35
-    rating: 4.8
-    reviews: 28
-  }
-=======
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01',
     customers: 35,
     rating: 4.8,
     reviews: 28,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1264,14 +1116,9 @@ export interface EmergingTechService {;
     rating: 4.8
 
     reviews: 28
-<<<<<<< HEAD
-  }
-];
-=======
 export interface EmergingTechService {;
 =======
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1349,7 +1196,6 @@ export const emergingTechServices: EmergingTechService[] = [;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1795,15 +1641,7 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

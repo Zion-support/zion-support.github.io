@@ -4,16 +4,8 @@ import type { GrantApplication, Milestone } from '../../types/grants';
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function GrantsAdminPage() {;
-
-export default function GrantsAdminPage() {
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
@@ -218,84 +210,6 @@ if (return) {
               placeholder='Admin Token';
 =======
     <EnhancedLayout>
-<<<<<<< HEAD
-      <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
-      <div className='grid md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2'>
-          <div className='mb-3 flex items-center gap-2'>
-            <input
-              className='border rounded p-2'
-              placeholder='Admin Token'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              value={token}
-              on_change={e => set_token (e.target.value)}
-            />;
-          </div>;
-          <div className='grid gap - 3'>;
-            {items.map (g => (
-              <div;
-                key={g.id}
-                className={`border rounded p - 3 ${selected?.id === g.id ? 'ring - 2 ring - blue - 500' : ''}`}
-              >;
-                <div className='flex items - center justify - between'>;
-                  <div>;
-                    <div className='font - medium'>{g.project_name}</div>;
-                    <div className='text - xs text - gray - 600'>;
-                      {g.sector} • {g.region} • {g.program}
-                    </div>;
-                  </div>;
-                  <div className='flex gap - 2'>;
-                    <button;
-                      className='px - 2 py - 1 border rounded';
-                      on_click={() => set_status (g.id, 'Under Review')}
-                    >;
-                      Under Review;
-                    </button>;
-                    <button;
-                      className='px - 2 py - 1 bg - emerald - 600 text - white rounded';
-                      on_click={() => set_status (g.id, 'Approved')}
-                    >;
-                      Approve;
-                    </button>;
-                    <button;
-                      className='px - 2 py - 1 bg - red - 600 text - white rounded';
-                      on_click={() => set_status (g.id, 'Rejected')}
-                    >;
-                      Reject;
-                    </button>;
-                    <button;
-                      className='px - 2 py - 1 border rounded';
-                      on_click={() => set_selected (g)}
-
-                    >;
-                      Milestones;
-                    </button>                  </div>;
-                </div>;
-
-          </div>;
-        </div>;
-        <div>;
-          <div className='border rounded p-3'>;
-            <h2 className='font-medium mb-2'>Milestone Planner</h2>;
-            {selected ? (;
-              <div className='space-y-2'>;
-                {(milestones && milestones.length === 0;
-                  ? selected && selected.milestones || [];
-                  : milestones;
-                ).map((m, idx) => (;
-                  <div key={m && m.id || idx} className='border rounded p-2'>;
-                    <input
-                      className='w-full border rounded p-2 mb-2'
-                      placeholder='Title'
-                      value={m && m.title}
-                      onChange={e =>;
-                        setMilestones(ms => {;
-                          const copy = ms && ms.length;
-                            ? [...ms];
-                            : [...(selected && selected.milestones || [])];
-                          copy[idx] = { ...copy[idx], title: e && e.target.value };
-
-=======
               </div>))}                  <div className="flex gap - 2">;
                     <button className="px - 2 py - 1 border rounded" on_click={() => set_status (g.id, 'Under Review')}>Under Review</button>;
                     <button className="px - 2 py - 1 bg - emerald - 600 text - white rounded" on_click={() => set_status (g.id, 'Approved')}>Approve</button>;
@@ -526,20 +440,12 @@ if (return) {
 
             )}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     onClick={saveMilestones}>;
                     Save Milestones;
@@ -582,10 +488,6 @@ if (return) {
       </div>;
     </EnhancedLayout>;
 =======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
@@ -594,18 +496,12 @@ if (return) {
 
 }
 =======
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   );
 }
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <button;
                     className='px - 2 py - 1 bg - blue - 600 text - white rounded';
                     on_click={save_milestones}
@@ -646,9 +542,4 @@ if (return) {
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-  );
-}
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

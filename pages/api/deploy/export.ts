@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
@@ -18,20 +11,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
-<<<<<<< HEAD
-    id
-    exportedAt: new Date().toISOString()
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'}
-  res.setHeader('Content-Typeapplication/json')
-
-  return res.status(200).json(fake)
-    id,
-
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
-  res.setHeader('Content-Typeapplication/json'),
-  return res.status(200).json(fake);
-};
-=======
 
 =======
 
@@ -44,7 +23,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -87,13 +65,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

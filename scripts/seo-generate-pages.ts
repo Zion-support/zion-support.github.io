@@ -47,17 +47,11 @@ async function main() {
   }
 }
 main().catch((e) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   console && console.error(e);
   process && process.exit(1)
 });
 
-<<<<<<< HEAD
-=======
 =======
 ;
 async function post_json (url: string, body: any): Promise < any> {
@@ -77,7 +71,6 @@ async function post_json (url: string, body: any): Promise < any> {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -134,11 +127,8 @@ main ().catch ((e) => {
   console.error (e);
   process.exit (1);
 });
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

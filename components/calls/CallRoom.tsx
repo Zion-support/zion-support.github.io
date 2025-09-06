@@ -19,30 +19,17 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-import {
-  Room
-  RoomEvent
-  RemoteParticipant
-  LocalParticipant
-  createLocalTracks
-  VideoPresets;
-=======
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,;
   VideoPresets,;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -59,10 +46,6 @@ type Props = {;
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 export default function CallRoom(): any ({;
@@ -76,21 +59,6 @@ export default function CallRoom(): any ({;
   onLeave,;
 }: Props) {;
 
-=======
-<<<<<<< HEAD
-}
-export default function CallRoom({
-<<<<<<< HEAD
-  projectId
-  userId
-  displayName
-  roomName
-  serverUrl
-  token
-  startMode
-  onLeave
-}: Props) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   projectId,
@@ -115,7 +83,6 @@ export default function CallRoom({
 }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -125,25 +92,8 @@ export default function CallRoom({
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
-<<<<<<< HEAD
-type Props = {
-  projectId: string
-  userId: string
-  displayName: string
-  roomName: string
-  serverUrl: string
-  token: string
-  startMode: StartMode
-  onLeave?: (durationSec: number) => void
-}
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-};
-
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-=======
 
 
 };
@@ -151,7 +101,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -188,15 +137,9 @@ type Props = {
   token: string
   startMode: StartMode
   onLeave?: (durationSec: number) => void
-<<<<<<< HEAD
-}
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
-=======
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -226,7 +169,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
     // publish local tracks;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setRoom(r);
     setConnectedAt(Date && Date.now());
     rebuild(r);
@@ -291,15 +233,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
 
-<<<<<<< HEAD
-  };
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
   const gridCols = useMemo(() => {;
@@ -328,14 +265,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     </div>);
 }
 
-<<<<<<< HEAD
-        ))}
-      </div>
-    </div>
-  );
-=======
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

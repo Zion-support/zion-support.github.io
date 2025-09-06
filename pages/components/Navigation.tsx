@@ -618,15 +618,9 @@ const quickLinks = [;
   { title: "Quote", href: "/quote", icon: FileText },;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
-<<<<<<< HEAD
-export default function Navigation() {
-
-export default function Navigation() {;
-=======
 
 export default function Navigation() {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 

@@ -1,22 +1,11 @@
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
-<<<<<<< HEAD
-  skills: string[]
-  yearsExperience: number
-  location?: string
-  onSuggestionApplied: (value: number,) => void
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       // Track this suggestion application
       if (user && user.id) {
@@ -125,10 +114,6 @@ if ( {) {
   }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -161,10 +146,6 @@ if ( {) {
 };
 '"};
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             suggestion={suggestion}
             isLoading={isLoading}
@@ -177,10 +158,6 @@ if ( {) {
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -1,25 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC uploaded' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
-<<<<<<< HEAD
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -34,7 +20,6 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -132,7 +117,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
 
   const id = crypto.randomUUID();
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
     id,
@@ -165,10 +149,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -242,4 +222,3 @@ if (
 res.status (200).json ({ ok: true, profile });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

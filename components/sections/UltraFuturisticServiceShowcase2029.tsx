@@ -63,13 +63,8 @@ export default function UltraFuturisticServiceShowcase2029({
           transition={{ duration: 0.6 }}
           className='text-center mb-16'
 interface UltraFuturisticServiceShowcase2029Props {
-<<<<<<< HEAD
-  services: Service[]
-  services: Service[],;
-=======
   services: Service[],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title?: string;
   subtitle?: string;
 
@@ -88,9 +83,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   title?: string;
 =======
   services: Service[],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
@@ -121,7 +114,6 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {title}
           </h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
@@ -133,12 +125,9 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
           {services.slice(0, 6).map((service, index) => (
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               key={service.id}
 =======
@@ -154,12 +143,9 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
 
             >
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -289,8 +275,6 @@ function UltraFuturisticServiceShowcase2029() {
           ))}
         </div>
 
-<<<<<<< HEAD
-=======
               <Link
                 href={service && service.link}
                 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'>;
@@ -307,7 +291,6 @@ function UltraFuturisticServiceShowcase2029() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.div
 =======
         </div>;
@@ -317,17 +300,9 @@ function UltraFuturisticServiceShowcase2029() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className='text-center mt-12'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
@@ -402,96 +377,12 @@ function UltraFuturisticServiceShowcase2029() {
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-          className=&quot;text-center mt-12&quot;
-
-        >
-          <Link
-            href="/services"
-            className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
-          >
-            View All Services
-            <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </Link>
-        </motion.div>
-      </div>
-    </section>;
-  );
-
-              </p>;
-              <div className='flex items - center justify - between mb - 4'>;
-                <span className='text - 2xl font - bold text - cyan - 400'>;
-                  {service.price}
-                </span>;
-                <div className='flex items - center space - x-2'>;
-                  <Zap className='w - 4 h - 4 text - yellow - 400' />;
-                  <Shield className='w - 4 h - 4 text - green - 400' />;
-                  <Brain className='w - 4 h - 4 text - purple - 400' />                </div>              <div className="flex items - center justify - between mb - 4">;
-                <span className="text - 2xl font - bold text - cyan - 400">{service.price}</span>;
-                <div className="flex items - center space - x-2">;
-                  <Zap className="w - 4 h - 4 text - yellow - 400" />;
-                  <Shield className="w - 4 h - 4 text - green - 400" />;
-                  <Brain className="w - 4 h - 4 text - purple - 400" />;
-              </div>;
-              <Link;
-                href={service.link}
-                className='inline - flex items - center justify - center w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25';
-              >;
-                Get Started;
-                <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />              </Link>                className="inline - flex items - center justify - center w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - cyan - 500 / 25";
-              >;
-                Get Started;
-                <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
-            </motion.div>))}
-        </div>;
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className='text - center mt - 12';
-        >;
-          <Link;
-            href='/services';
-            className='inline - flex items - center justify - center bg - transparent border - 2 border - cyan - 500 text - cyan - 400 hover:bg - cyan - 500 hover:text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 transform hover:scale - 105';
-          >;
-            View All Services;
-            <ArrowRight className='w - 4 h - 4 ml - 2' />          </Link>        >;
-          <Link;
-            href="/services";
-            className="inline - flex items - center justify - center bg - transparent border - 2 border - cyan - 500 text - cyan - 400 hover: bg - cyan - 500 hover:text - white font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 transform hover:scale - 105";
-          >;
-            View All Services;
-            <ArrowRight className="w - 4 h - 4 ml - 2" />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-
-<<<<<<< HEAD
-}
-}
-}
-    </section>
-  );
-}
-=======
 =======
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

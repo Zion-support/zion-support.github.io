@@ -1,21 +1,11 @@
 import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function FuturisticHero() {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function FuturisticHero() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -79,7 +69,6 @@ export default function FuturisticHero() {
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
         </div>
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
           </p>
@@ -118,15 +107,6 @@ function FuturisticHero() {
     </section>);
 }
 
-<<<<<<< HEAD
-}
-    </section>
-  );
-}
-}
-=======
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

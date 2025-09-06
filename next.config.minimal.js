@@ -18,12 +18,5 @@ const next_config = {
   trailingSlash: false,
   distDir: '.next',
 };
-<<<<<<< HEAD
-module.exports = nextConfig;
-
-module.exports = nextConfig;
-module.exports = nextConfig;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

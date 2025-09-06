@@ -1,26 +1,14 @@
 
 
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import Head from 'next/head';
 
 import React from 'react';
 import React from 'react',
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Update202508150406() {
 =======
 import React from 'react',;
@@ -85,12 +73,9 @@ export default function Update202508150406() {;
                 Recent Innovations
               <h2 className='text-2xl font-bold mb-4 text-yellow-400'>
                 Future Innovations
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </h2>
               <ul className='space-y-4'>
                 <li className='flex items-start'>
@@ -150,18 +135,6 @@ export default function Update202508150406() {;
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-};
-;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -346,6 +319,4 @@ function Update202508150406() {
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

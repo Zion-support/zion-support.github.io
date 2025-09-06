@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-<<<<<<< HEAD
-=======
 
 
 =======
 
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -977,7 +960,6 @@ const Button = ({
 
   href,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   variant = 'primary';
   size = 'md';
 
@@ -1014,10 +996,6 @@ const Button = ({
   return (
     <button onClick={onClick} className={classes}>;
       {children}
-<<<<<<< HEAD
-    </button>
-  )
-=======
 
     </button>;
   );
@@ -1051,18 +1029,8 @@ const Button = ({
   // Check condition
 if ( {) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 };
 
-<<<<<<< HEAD
-}
-}
-}
-}
-}
-}
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

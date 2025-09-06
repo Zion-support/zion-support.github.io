@@ -118,13 +118,10 @@ const Features: React.FC<FeaturesProps> = ({
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {subtitle}
           </p>
         </div>
 
-<<<<<<< HEAD
-=======
           </p>;
         </div>;
 
@@ -133,9 +130,7 @@ const Features: React.FC<FeaturesProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;

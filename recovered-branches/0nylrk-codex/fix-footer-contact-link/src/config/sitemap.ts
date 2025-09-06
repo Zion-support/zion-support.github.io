@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-// Define the types for our sitemap structure
-
-export type SitemapItem = {
-export type SitemapItem = {;
-=======
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
@@ -14,7 +8,6 @@ export type SitemapItem = {
 export type SitemapItem = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   path: string;
   label: string;
   description?: string;
@@ -816,13 +809,10 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -831,10 +821,6 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-<<<<<<< HEAD
-  return accessibleRoutes
-}
-=======
 
     required_auth: true;
     required_roles: ['admin'];
@@ -843,7 +829,6 @@ export const getAccessibleRoutes = (;
     lastmod: current_date}];
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
   return accessibleRoutes;
@@ -852,9 +837,6 @@ export const getAccessibleRoutes = (;
 ;
 
   return accessibleRoutes;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

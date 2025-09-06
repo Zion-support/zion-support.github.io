@@ -1,22 +1,9 @@
 
-<<<<<<< HEAD
-// Content monitoring functionality
-import { FraudFlag, FraudSeverity  } from '@/types/fraud';
-import { analyzeContent  } from './analyzeContent';
-import { flagContent } from './flagContent';
-/**
- * Create a monitoring system helper to easily monitor any content
- */
-
-export const monitorContent = async (
-export const monitorContent = async (;
-=======
 
 
 export const monitorContent = async (;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -37,14 +24,10 @@ export const monitorContent = async (;
 
     )) {
       severity = 'dangerous'
-<<<<<<< HEAD
-    }
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -69,12 +52,9 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     await flagContent(
@@ -94,31 +74,6 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
-    }
-  }
-}
-
-;
-    await flagContent(;
-      userId,;
-      userEmail,;
-      contentType,;
-      contentId,;
-      content,;
-      severity,;
-      analysis.reasons.join(),;
-      undefined // IP address would be added in a real implementation;
-    ),;
-    // If this is a 'dangerous' flag, automatically hide content;
-    // This would be implemented in a real system with appropriate flags;
-    if (severity === 'dangerous') {;
-      // // // console.log('Auto-hiding dangerous content:', contentId);
-      // Code to hide content would go here;
-    }
-  }
-};
-=======
 
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
@@ -182,4 +137,3 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

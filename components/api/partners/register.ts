@@ -150,12 +150,7 @@ export default async function handler(
     }
     return res.status(500).json({ error: "Failed to create partner" });
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 

@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
-interface ProductListingCardProps {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface ProductListingCardProps {;
   listing: ProductListing,;
@@ -41,17 +29,10 @@ export function ProductListingCard(): any ({ ;
 import { ProductListing } from "@/types/listings",
 import { Star, DollarSign } from "lucide-react",
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -212,13 +193,10 @@ if ( {) {
 
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Image */}
 
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
@@ -259,57 +237,11 @@ if ( {) {
             )}
           </div>
           </div>;
-<<<<<<< HEAD
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
-              {listing.title}
-            </h3>
-          </div>
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
-            {listing.description}
-          </p>
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex-wrap gap-1 mb-4">
-              {listing.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
-          <div className="text-sm font-medium">
-            {listing.price !== null ? (
-              <div className="flex items-center text-zion-purple">
-                <DollarSign className="h-4 w-4 mr-1" />
-                {formatPrice()}
-              </div>
-            ) : (
-              <span className="text-zion-slate-light">
-                {formatPrice()}
-              </span>
-              </span>;
-            )}
-          </div>
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              onClick={(e) => {
-                e.stopPropagation();
-=======
 
 =======
 
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
@@ -368,7 +300,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 e.stopPropagation(),
                 navigate(`/listing/${listing.id}`)

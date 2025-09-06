@@ -20,15 +20,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-  ExternalLink
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { 
   X, 
   Building2, 
@@ -46,11 +39,8 @@ import {
   Phone,
   Mail,
   ExternalLink;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -373,24 +363,9 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
       )}
     </AnimatePresence>
   );
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-;
-export default Sidebar;
-<<<<<<< HEAD
-;
-
-=======
 
 };
 
 export default Sidebar;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -10,15 +7,10 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 import Head from 'next/head';
@@ -116,7 +108,6 @@ export default function CaseStudyPage() {
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -127,7 +118,6 @@ export default function CaseStudyPage() {
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -146,11 +136,6 @@ export default function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
-<<<<<<< HEAD
-  ]
-  const caseStudy = caseStudies.find(study => study.id === id)
-
-=======
 
 
 
@@ -158,15 +143,11 @@ export default function CaseStudyPage() {
 
 =======
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CaseStudyPage(req, res) {
   try {
   const router = useRouter();
@@ -290,12 +271,8 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
@@ -311,16 +288,10 @@ export default function CaseStudyPage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study you're looking for doesn't exist.
               </p>
-<<<<<<< HEAD
-              <Link
-              <Link 
-              <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -358,12 +329,9 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -494,12 +462,9 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>
                 </div>
 
@@ -522,32 +487,10 @@ export default function CaseStudyPage(req, res) {
 
 
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-<<<<<<< HEAD
-              <div 
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-              />
-            </div>
-            <div className="text-center">
-              <Link 
-              <div
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              />
-            </div>
-            <div className="text-center">
-              <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -558,16 +501,6 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  );
-};
-  )
-                  </ul>;
-                </div>;
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
-                  <div className="space-y-3">;
-=======
 
 =======
 }
@@ -664,7 +597,6 @@ if ( {) {
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
                   <h2 className="text - 2xl font - bold mb - 6 text - white">Overview</h2>;
                   <div className="space - y-6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div>;
                       <h3 className="font - semibold text - cyan - 400 text - lg mb - 2">Challenge</h3>;
                       <p className="text - white / 80">{case_study.challenge}</p>;
@@ -719,22 +651,10 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,50 +1,21 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button",
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
-
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function QuickActions() {
 
   const actions = [
     {
-<<<<<<< HEAD
-      id: "post-job"
-      label: "Post New Job"
-      icon: <FileText className="h-5 w-5 mr-2" />
-      description: "Create a new job posting"
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
-<<<<<<< HEAD
-      color: "bg-blue-100 dark:bg-blue-900/20";
-    };
-      color: "bg-blue-100 dark:bg-blue-900/20"
-    }
-    },
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: "add-member"
       label: "Add Team Member"
@@ -179,11 +150,8 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
       </CardContent>

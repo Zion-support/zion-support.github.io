@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  
 
 
@@ -38,13 +35,8 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
 }
 };
 
-<<<<<<< HEAD
-export default function TechRadar({ pypi, crates, github }: Props) {
-export default function TechRadar({ pypi, crates, github }: Props) {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const langs = Object.keys(github);
 
   return (
@@ -183,10 +175,6 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className=&quot;text-xs text-gray-500&quot;>Downloads: {it.downloads.toLocaleString()}</div>
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>
 );

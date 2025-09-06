@@ -12,10 +12,6 @@ import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 import { use_router } from 'next / router';
@@ -36,20 +32,6 @@ function SignUpForm() {
     email: "",
     password: "",
     name: ""}),
-<<<<<<< HEAD
-    }
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address'
-    }
-    if (!formData.password) {
-      errors.password = 'Password is required'
-    } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
-    }
-
-=======
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
 import React, { useState } from "react",;
@@ -92,11 +74,6 @@ export function SignUpForm() {;
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
     if (signupMode && !formData.name.trim()) {;
       errors.name = 'Full name is required';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (!formData.email.trim()) {
       errors.email = 'Email is required'
@@ -108,11 +85,7 @@ export function SignUpForm() {;
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   const [is_loading, setIsLoading] = useState (false);
@@ -171,7 +144,6 @@ export function SignUpForm() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
@@ -184,12 +156,9 @@ export function SignUpForm() {
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -204,12 +173,9 @@ export function SignUpForm() {
           name: formData.name}),;
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
 
         if (result?.emailVerificationRequired) {
@@ -233,20 +199,12 @@ export function SignUpForm() {
         router.push("/mobile")
 ;
         router.push("/mobile");
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
-<<<<<<< HEAD
-    } finally {
-      setIsLoading(false)
-    }
-=======
         router.push ("/mobile");
       }
     } catch (err: any) {
@@ -276,7 +234,6 @@ export function SignUpForm() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   const handleGoogleLogin = async () => {;
     try {;
@@ -287,10 +244,6 @@ export function SignUpForm() {
 
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -300,10 +253,6 @@ export function SignUpForm() {
         {signupMode ? "Create your account" : "Welcome back"}
       </h2>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <div className="space-y-2">
@@ -320,19 +269,12 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
-        <Button
-          variant="outline"
-        <Button 
-          variant="outline" 
-=======
 
 
         <Button 
           variant="outline" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -400,11 +342,8 @@ export function SignUpForm() {
 
 
       
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -412,30 +351,8 @@ export function SignUpForm() {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Verification Message */}
-      {showVerificationMessage && (
-        <Alert className="mb-4 border-blue-500 bg-blue-50">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            Please check your email and click the verification link before signing in.
-          </AlertDescription>
-        </Alert>
-;
-      {/* Verification Message */}
-      {showVerificationMessage && (;
-        <Alert className="mb-4 border-blue-500 bg-blue-50">;
-          <AlertCircle className="h-4 w-4" />;
-          <AlertDescription>;
-            Please check your email and click the verification link before signing in.;
-          </AlertDescription>;
-        </Alert>;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       
 
@@ -459,14 +376,6 @@ export function SignUpForm() {
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -474,11 +383,8 @@ export function SignUpForm() {
             )}
           </div>
         )}
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               placeholder="Enter your full name"
@@ -506,10 +412,6 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.email}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             placeholder="Enter your email"
@@ -535,10 +437,6 @@ export function SignUpForm() {
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             placeholder="Create a password"
@@ -553,10 +451,6 @@ export function SignUpForm() {
 
 
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <Button
           type="submit"
@@ -573,10 +467,6 @@ export function SignUpForm() {
         </Button>
       </form>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <p className="text-center text-sm">

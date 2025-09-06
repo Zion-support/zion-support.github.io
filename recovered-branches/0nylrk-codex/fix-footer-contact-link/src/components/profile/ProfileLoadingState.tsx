@@ -1,11 +1,8 @@
 
 import React from 'react';
 import React from 'react',
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ProfileLoadingState() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -19,8 +16,5 @@ export function ProfileLoadingState() {
   )
 }
 ;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

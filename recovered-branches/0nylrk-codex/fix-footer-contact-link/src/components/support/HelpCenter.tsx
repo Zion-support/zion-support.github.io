@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -31,40 +13,6 @@ import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-import React, { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { HelpCategoryList } from "./HelpCategoryList",
-import { HelpArticleList } from "./HelpArticleList",
-import { HelpArticleView } from "./HelpArticleView",
-import { HELP_CATEGORIES } from "./help-content",
-import { AppLayout } from "@/layout/AppLayout",
-import { Search } from "lucide-react",
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState(""),
-=======
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -75,7 +23,6 @@ export default function HelpCenter() {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
@@ -125,26 +72,7 @@ export default function HelpCenter() {
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
-<<<<<<< HEAD
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { Search } from "lucide-react",;
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -193,14 +121,6 @@ export default function HelpCenter() {;
 
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
-<<<<<<< HEAD
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES} ;
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-=======
                 <HelpCategoryList
                   categories={HELP_CATEGORIES} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -213,7 +133,6 @@ export default function HelpCenter() {;
                   onCategorySelect={handleCategorySelect}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               
               {selectedCategory && !selectedArticle && (
                 <>
@@ -249,21 +168,11 @@ export default function HelpCenter() {;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
-<<<<<<< HEAD
-            </TabsContent>
-            <TabsContent value="faq">
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-=======
 
 
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -395,16 +304,6 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
-<<<<<<< HEAD
-  );
-}
-  )
-;
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-=======
 
             </TabsContent>;
 
@@ -611,6 +510,5 @@ export default function HelpCenter() {;
   )
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

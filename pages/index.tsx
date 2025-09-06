@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-origin/main
-import Link from 'next/link';
-import Head from 'next/head';
-
-
-        {/* Features Section */}
-        <section className="py-20 bg-slate-900/50">
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect, Suspense  } from 'react';
-import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner';
-// import PerformanceMonitor from '../components/PerformanceMonitor';
-=======
 
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -28,16 +10,8 @@ import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-<<<<<<< HEAD
-export default function Home() {
-  const [animationState, setAnimationState] = useState<AnimationState>({
-
-    isLoaded: false
-    hasError: false
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -48,10 +22,6 @@ export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -72,14 +42,9 @@ export default function Home() {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-    )
-  }
-=======
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ),
   };
   return (;
@@ -1031,40 +996,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
           </div>
         </section>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-          </div>
-        </section>
-origin/main
-}
-          </div>
-}          </div>
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </section>
 
-<<<<<<< HEAD
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1091,14 +1034,9 @@ origin/automation-improvements-final
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -1150,75 +1088,17 @@ origin/automation-improvements-final
                   </Link>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-        {/* Featured Services */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver innovative solutions that drive business growth and technological advancement
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="card text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">AI-Powered Solutions</h3>
-                <p className="text-gray-300">
-                  Leverage cutting-edge artificial intelligence to automate processes and gain competitive advantages
-                </p>
-              </div>
-              
-              <div className="card text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Lightning Fast Performance</h3>
-                <p className="text-gray-300">
-                  Optimized solutions that deliver exceptional performance and scalability for your business needs
-                </p>
-              </div>
-              
-              <div className="card text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
-                <p className="text-gray-300">
-                  Bank-level security measures to protect your data and ensure compliance with industry standards
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {/* Services Preview */}
         <section className="py-20">
             </motion.div>
 
-<<<<<<< HEAD
-=======
 =======
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1235,12 +1115,8 @@ origin/automation-improvements-final
                 Our most popular and effective technology solutions
               </p>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
@@ -1316,16 +1192,6 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
                   </ul>;
                   <div className="mt-4">;
@@ -1343,12 +1209,10 @@ origin/automation-improvements-final
 =======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Why Choose Us */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 origin/automation-improvements-final
         {/* Why Choose Us */}
@@ -1496,30 +1360,7 @@ origin/main
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Why Choose Us */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-                We deliver exceptional results through innovation, expertise, and dedication
-              </p>
-                We deliver exceptional results through innovation, expertise, and dedication              </p>
-ursor/fix-lint-push-and-merge-to-main-ae4e
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
@@ -1672,7 +1513,6 @@ origin/automation-improvements-final
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
             </div>
           </div>
         </section>
@@ -1723,25 +1563,8 @@ origin/automation-improvements-final
                 </Link>;
                 <Link
                   href="tel:+13024640950"
-<<<<<<< HEAD
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Link>
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1779,15 +1602,11 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Learn More About Us
               </Link>
             </div>
-<<<<<<< HEAD
-origin/main
-=======
 
 
 >>>>>>> origin/automation-improvements-final
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 </Link>
     );
     } catch (error) {
@@ -2055,23 +1874,14 @@ origin/main
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </section>
           </div>
         </section>
 origin/automation-improvements-final
       </div>
-<<<<<<< HEAD
-    </>
-  );
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </MainLayout>
   );
 }
@@ -2088,10 +1898,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 </main>
     </>
-<<<<<<< HEAD
-origin/main
-=======
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 
 
 
@@ -2278,4 +2084,3 @@ We deliver exceptional results through innovation, expertise, and dedication;
 </main>;
     </>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

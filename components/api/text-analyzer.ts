@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>;
   }
@@ -38,7 +37,6 @@ export default async function handler(
 
     // Basic statistics
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
 
@@ -203,7 +201,6 @@ export default async function handler(
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
     // Keyword analysis
@@ -230,7 +227,6 @@ export default async function handler(
         count;
         frequency: Math.round((count / words) * 1000) / 10
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
@@ -276,44 +272,8 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-<<<<<<< HEAD
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-    const result: TextAnalysisResult = {
-      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-
-    const result: TextAnalysisResult = {
-      text
-        characters
-        charactersNoSpaces
-        words
-        sentences
-        paragraphs
-        syllables
-        readingTime
-        speakingTime
-      }
-      readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
-        gunningFog: Math.round(gunningFog * 100) / 100
-        smog: Math.round(smog * 100) / 100
-        colemanLiau: Math.round(colemanLiau * 100) / 100
-        automatedReadability: Math.round(automatedReadability * 100) / 100
-        averageGrade
-      }
-      sentiment: {
-        score: sentimentScore
-        label: sentimentLabel
-        positiveWords: textWords.filter(word => positiveWords.includes(word))
-        negativeWords: textWords.filter(word => negativeWords.includes(word))
-      }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       language: {
 
         topWords,
@@ -358,7 +318,6 @@ export default async function handler(
     },
     language: {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         detectedLanguage;
         confidence;
         isEnglish}
@@ -407,17 +366,9 @@ export default async function handler(
     console.error ('Text analysis error:', error);
     res.status (500).json ({ error: 'Internal server error' });
 
-<<<<<<< HEAD
-=======
     res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
-<<<<<<< HEAD
-
-    const result: TextAnalysisResult = {
-    const result: TextAnalysisResult = {
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -425,6 +376,4 @@ export default async function handler(
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

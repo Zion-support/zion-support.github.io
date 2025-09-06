@@ -27,11 +27,6 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
-<<<<<<< HEAD
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
-=======
 
 
 
@@ -40,7 +35,6 @@ class AggressiveSyntaxFixer {
         this.errors = []
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -69,12 +63,9 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 ;
     log(message) {;
@@ -228,18 +219,6 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    createValidFile(filePath) {
-
-        const ext = path.extname(filePath)
-        const fileName = path.basename(filePath, ext)
-        const dirName = path.dirname(filePath)
-        // Convert invalid characters to valid ones
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
-if (ext === '.tsx' |ext === '.jsx') {
-=======
 
 
 
@@ -247,16 +226,12 @@ if (ext === '.tsx' |ext === '.jsx') {
 
     createValidFile(filePath) {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
 if (ext === '.tsx' || ext === '.jsx') {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             return `import React from 'react';
 =======
         const ext = path && path.extname(filePath),
@@ -431,14 +406,11 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
 
             timestamp: new Date().toISOString(),
@@ -503,11 +475,6 @@ process.on('SIGTERM', () => {
   process && process.exit(0)
 }),
 
-<<<<<<< HEAD
-;
-;
-module.exports = AggressiveSyntaxFixer,;
-=======
 
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
@@ -568,7 +535,6 @@ if ( {) {
     main ();
 }
 module.exports = AggressiveSyntaxFixer,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n🛑 Received SIGINT, shutting down gracefully...'),
@@ -578,10 +544,6 @@ process.on ('SIGINT', () => {
 process.on ('SIGTERM', () => {
   console.log ('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here;
-<<<<<<< HEAD
-  process.exit(0);
-});
-=======
   process.exit (0);
 }),
 ;
@@ -589,4 +551,3 @@ process.on ('SIGTERM', () => {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Skill  } from '@/types/resume';
-import { SkillCategory } from './SkillCategory';
-import {useState, useEffect} from 'react';
-import {Skill} from '@/types/resume';
-import {SkillCategory} from './SkillCategory';
-=======
 import { useState, useEffect  } from './react';
 import { Skill  } from '@/types / resume';
 import { SkillCategory  } from './SkillCategory';
@@ -26,28 +18,17 @@ import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
 import {SkillCategory} from './SkillCategory';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
 
-<<<<<<< HEAD
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
-  const [skillsByCategory, setSkillsByCategory] = useState<
-    Record<string, Skill[]>
-  >({});
-export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
-  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
-  
-=======
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({});
   
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -70,23 +51,11 @@ if ( {) {
         }
         acc[category].push (skill);
         return acc;
-<<<<<<< HEAD
-      }
-      {} as Record<string, Skill[]>
-    );
-    setSkillsByCategory(grouped);
-  }, [skills]);
-  if (Object.keys(skillsByCategory).length === 0) {
-    return null;
-  }
-    return null
-=======
 
 
     return null
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -111,12 +80,9 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {;
     return null;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   
   return (
@@ -131,17 +97,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-
-  )
-      </div>;
-    </div>;
-  );
-=======
 
 import {useState, useEffect} from 'react';
 import {Skill} from '@/types/resume';
@@ -200,5 +155,4 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

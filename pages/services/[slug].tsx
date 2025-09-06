@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Button from '../../components/ui/Button',
-import Card from '../../components/ui/Card';
-
-import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
-import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
-import {extraServices} from '../../data/extra-services';
-import {additionalEnhancedServices} from '../../data/additional-real-services';
-import {newRealServices} from '../../data/new-real-services';
-import {marketReadyServices} from '../../data/market-ready-services';
-type Service = (typeof enhancedRealMicroSaasServices)[number];
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -41,7 +21,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 import React from 'react';
 
@@ -50,23 +29,13 @@ import React from 'react';
   } catch {;
     return null;
   }
-<<<<<<< HEAD
-export async function getStaticPaths() {
 
 export async function getStaticPaths() {;
-=======
-<<<<<<< HEAD
-export async function getStaticPaths() {
-=======
-
-export async function getStaticPaths() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 export async function getStaticPaths() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const services = getAllServices();
   const slugs = new Set<string>();
 
@@ -75,18 +44,6 @@ export async function getStaticPaths() {;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
-<<<<<<< HEAD
-  return {
-    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
-    fallback: false
-  }
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
-    fallback: false,
-  };
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {;
-=======
 
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
@@ -94,7 +51,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   };
 
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
@@ -336,31 +292,6 @@ function ServiceDetailPage() {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
-<<<<<<< HEAD
-                    className='text-xs hover:underline'
-                  >
-                    {contactInfo.address}
-                  </a>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </UltraFuturisticBackground>;
-  );
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Button from '../../components/ui/Button';
-import Card from '../../components/ui/Card';
-
-}
-}
-}
-}
-}
-=======
 
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
@@ -428,7 +359,6 @@ import Card from '../../components/ui/Card';
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -578,16 +508,12 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	)
 }
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </UltraFuturisticBackground>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -40,217 +37,6 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-interface PartnerProfile {
-
-  id: string
-  user_id: string
-  name: string
-  status: 'pending' | 'approved' | 'rejected'
-  created_at: string
-  niche: string
-  audience_size: string
-  social_media?: Record<string, string>;
-
-  website?: string;
-  bio?: string;
-  payout_method?: string;
-  fraud_flags?: number;
-import { Check, Flag, Search, Settings, X } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-interface PartnerProfile {
-  id: string,
-  user_id: string,
-  name: string,
-  status: 'pending' | 'approved' | 'rejected',
-  created_at: string,
-  niche: string,
-  audience_size: string,
-  social_media?: Record<string string>,
-  website?: string,
-  bio?: string,
-  payout_method?: string,
-  fraud_flags?: number,
-  commission_rate?: number
-}
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-
-export default function PartnerManager() {;
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-  const navigate = useNavigate();
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login");
-      return
-    }
-    fetchPartners()
-  }, [isAuthenticated, navigate]);
-  const fetchPartners = async () => {
-    try {
-      setIsLoading(true);
-      // In a real application, check admin permissions here
-      const { data, error } = await supabase
-        .from('partner_profiles')
-        .select('*')
-        .order('created_at', { ascending: false })
-      if (error) throw error;
-      // If no data is returned, use mock data
-      if (!data |data.length === 0) {
-        const mockData: PartnerProfile[] = [
-          {
-            id: '1'
-            user_id: 'user1'
-            name: 'AI Bytes'
-            status: 'pending'
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI Tutorials'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' }
-            website: 'aibytes.com'
-            bio: 'We create AI tutorials and insights for developers.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
-          }
-          {
-            id: '2'
-            user_id: 'user2'
-            name: 'ML Academy'
-            status: 'approved'
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Machine Learning Education'
-            audience_size: 'over100k'
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' }
-            website: 'mlacademy.edu'
-            bio: 'Premiere online academy for machine learning enthusiasts.'
-            payout_method: 'bank'
-            fraud_flags: 0
-            commission_rate: 30
-          }
-          {
-            id: '3'
-            user_id: 'user3'
-            name: 'Tech Insights'
-            status: 'rejected'
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Technology News'
-            audience_size: '1k-10k'
-            social_media: { twitter: '@techinsights' }
-            website: 'techinsights.io'
-            bio: 'We share insights about the latest in tech.'
-            payout_method: 'crypto'
-            fraud_flags: 2
-            commission_rate: 20
-          }
-          {
-            id: '4'
-            user_id: 'user4'
-            name: 'CodeMaster'
-            status: 'approved'
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'Coding Tutorials'
-            audience_size: '50k-100k'
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' }
-            website: 'codemaster.dev'
-            bio: 'Learn to code with our expert tutorials.'
-            payout_method: 'paypal'
-            fraud_flags: 0
-            commission_rate: 25
-          }
-          {
-            id: '5'
-            user_id: 'user5'
-            name: 'AI Daily'
-            status: 'pending'
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-            niche: 'AI News'
-            audience_size: '10k-50k'
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' }
-            website: 'aidaily.news'
-            bio: 'Daily updates on the world of artificial intelligence.'
-            payout_method: 'platform_credit'
-            fraud_flags: 1
-            commission_rate: 20
-          }
-        ];
-        setPartners(mockData);
-        filterPartners(mockData, activeTab, searchQuery)
-      } else {
-        setPartners(data as PartnerProfile[]);
-        filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login"),
-      return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -335,8 +121,6 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<< HEAD
-=======
 
 export default /**
  * PartnerManager - Function description
@@ -469,9 +253,7 @@ if ( {) {
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       console.error ("Error fetching partners:", error);
@@ -496,27 +278,11 @@ if ( {) {
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
-    }
-    // Filter by search query
-    if (query) {
-      const lowerQuery = query.toLowerCase();
-      filtered = filtered.filter(p =>
-        p.name.toLowerCase().includes(lowerQuery) |
-        p.niche.toLowerCase().includes(lowerQuery) |
-        p.bio?.toLowerCase().includes(lowerQuery) |
-        p.website?.toLowerCase().includes(lowerQuery)
-      )
-    }
-    setFilteredPartners(filtered)
-  }
-=======
 
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
       toast({;
@@ -546,13 +312,10 @@ if ( {) {
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     
     setFilteredPartners(filtered)
   },
@@ -655,21 +418,6 @@ if ( {) {
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-<<<<<<< HEAD
-    }
-  }
-  const getAudienceSizeLabel = (size: string) => {
-    switch (size) {
-      case 'under1k': return 'Under 1,000';
-      case '1k-10k': return '1,000 - 10,000';
-      case '10k-50k': return '10,000 - 50,000';
-      case '50k-100k': return '50,000 - 100,000';
-      case 'over100k': return 'Over 100,000';
-      default: return size
-    }
-  }
-  };
-=======
 
 
 =======
@@ -677,7 +425,6 @@ if ( {) {
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setFilteredPartners(filtered);
   },;
@@ -765,17 +512,11 @@ if ( {) {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -874,12 +615,9 @@ if ( {) {
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -1142,28 +880,6 @@ if ( {) {
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-<<<<<<< HEAD
-                  <Button
-                    variant="destructive"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-                  >
-                    <X className="h-4 w-4 mr-1" />
-                    Reject
-                  </Button>
-                  <Button
-                    className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
-                  >
-                    <Check className="h-4 w-4 mr-1" />
-                    Approve
-                  </Button>
-                </div>
-              )}
-            </div>
-                  <Button 
-                    variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
 
 
               <div className="grid grid-cols-2 gap-2">;
@@ -1266,7 +982,6 @@ if ( {) {
                   <Button;
                     variant="destructive";
                     on_click={() => handleUpdateStatus (selected_partner.id, 'rejected')}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >;
                     <X className="h - 4 w - 4 mr - 1" />;
                     Reject;
@@ -1278,19 +993,10 @@ if ( {) {
                     <Check className="h - 4 w - 4 mr - 1" />;
                     Approve;
                   </Button>;
-<<<<<<< HEAD
-                </div>;
-              )}
-            </div>;
-          )}
-        </DialogContent>
-      </Dialog>
-=======
                 </div>)}
             </div>)}
         </DialogContent>;
       </Dialog>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
@@ -1325,34 +1031,15 @@ if ( {) {
     </div>;
   );
 }
-<<<<<<< HEAD
-interface PartnerTableProps {
-  partners: PartnerProfile[]
-  isLoading: boolean
-  onViewDetails: (partner: PartnerProfile) => void
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void
-  onOpenSettings: (partner: PartnerProfile) => void
-  getStatusBadge: (status: string) => JSX.Element
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null
-}
-function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1382,13 +1069,10 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
@@ -1564,28 +1248,17 @@ if ( {) {
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
-<<<<<<< HEAD
-                  className="text-zion-slate-light hover:text-white"
-                >
-                  <Settings className="h-4 w-4" />
-                  <span className="sr-only">Settings</span>
-                </Button>
-=======
                   className="text-zion-slate-light hover:text-white";
                 >;
                   <Settings className="h-4 w-4" />;
                   <span className="sr-only">Settings</span>;
                 </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant="outline"
                 
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button 
 
                   variant="outline" 

@@ -1,19 +1,12 @@
 import React from 'react';
 import * as React from 'react';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {cn} from '@/lib/utils';
 import * as React from "react"
@@ -155,20 +148,5 @@ export {
 ))
 CardFooter.displayName = "CardFooter"
 
-<<<<<<< HEAD
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-;
-export {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
-  CardContent,;
-};
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

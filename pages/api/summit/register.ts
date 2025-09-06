@@ -1,28 +1,5 @@
 
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { supabase } from "../../../utils/supabase/client";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { supabase } from '../../../utils/supabase/client';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
 
-  }
-  try {
-  try {;
-    const { name, email, role, country, source } = req.body || {};
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -36,7 +13,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
@@ -70,15 +46,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .select('*')
       .single();
     if (error) {
-<<<<<<< HEAD
-      return res.status(500).json({ error: error.message });
-    }
-    return res.status(200).json({ ok: true, registration: data });
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message |"Unknown error" });
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
       return res.status(500).json({ error: error.message })
@@ -113,7 +81,6 @@ if ( {) {
     return res.status (200).json ({ ok: true, registration: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Unknown error" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -158,65 +125,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-;
-    const { data, error } = await supabase;
-      .from('summit_registrations');
-      .insert([;
-        {;
-          name;
-          email,;
-          role,;
-          country,;
-          source: source || 'zion-global-2025';
-          created_at: new Date().toISOString()}]);
-      .select('*');
-      .single();
-    if (error) {;
-      return res.status(500).json({ error: error.message });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    return res.status(200).json({ ok: true, registration: data });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message || 'Unknown error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -19,23 +10,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
-<<<<<<< HEAD
-  resumeId?: string;
-  initialData?: Partial<BasicInfoFormData>;
-import React, { useState, useEffect } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Button } from "@/components/ui/button",
-import { Form } from "@/components/ui/form",
-import { Card } from "@/components/ui/card",
-import { RateOptimizationSection } from "../RateOptimizationSection",
-import { basicInfoSchema, BasicInfoFormData } from "./schema",
-import { PersonalInfoFields } from "./PersonalInfoFields";
-import { ContactFields } from "./ContactFields";
-export interface BasicInfoFormProps {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
@@ -54,35 +29,16 @@ export interface BasicInfoFormProps {
   yearsExperience?: number,
   onComplete?: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function BasicInfoForm({;
-  resumeId;
-  initialData = {};
-  onSave;
-  skills = [];
-  yearsExperience = 0;
-export function BasicInfoForm({
-=======
 
 
 export function BasicInfoForm(): any ({;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
-<<<<<<< HEAD
-  resumeId,
-  initialData = {},
-  onSave,
-  skills = [],
-  yearsExperience = 0,
-=======
 
 
 
@@ -93,7 +49,6 @@ export function BasicInfoForm(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -173,19 +128,6 @@ export function BasicInfoForm({;
         if (value !== undefined) {;
 
           form.setValue(key as keyof BasicInfoFormData, value as any);
-<<<<<<< HEAD
-        }
-      });
-    }
-  }, [initialData, form]);
-  const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data)
-    if (onComplete) {
-      onComplete()
-    }
-  }
-  };
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -199,7 +141,6 @@ export function BasicInfoForm({;
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -210,14 +151,10 @@ export function BasicInfoForm({;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 

@@ -1,25 +1,13 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Skill  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useSkills() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,16 +16,10 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -51,12 +33,9 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -87,22 +66,10 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const deleteSkill = async (skillId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete skills')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -128,12 +95,9 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -161,11 +125,6 @@ export function useSkills() {;
     error;
     addSkill;
 
-<<<<<<< HEAD
-    deleteSkill
-  }
-}
-=======
 
 
 
@@ -182,7 +141,6 @@ function use_skills() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
     // Check condition
@@ -199,12 +157,9 @@ if ( {) {
     error;
     addSkill;
     deleteSkill;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

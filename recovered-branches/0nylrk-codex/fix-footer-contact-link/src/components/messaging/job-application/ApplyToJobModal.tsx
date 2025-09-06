@@ -1,25 +1,14 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -39,15 +28,6 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-<<<<<<< HEAD
-        <ApplyForm
-          job={job}
-          onClose={onClose}
-          onApplySuccess={onApplySuccess}
-        />
-      </DialogContent>
-    </Dialog>
-=======
 
 import {;
   Dialog,;
@@ -70,7 +50,6 @@ export function ApplyToJobModal(): any ({;
         <DialogHeader>;
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -108,12 +87,9 @@ function ApplyToJobModal() {
         />;
       </DialogContent>;
     </Dialog>;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
     </Dialog>);

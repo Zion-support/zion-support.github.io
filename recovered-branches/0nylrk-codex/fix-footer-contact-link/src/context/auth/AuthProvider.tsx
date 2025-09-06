@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
@@ -15,20 +11,12 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-<<<<<<< HEAD
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const {
-    user, setUser
-    isLoading, setIsLoading
-    onboardingStep, setOnboardingStep
-=======
 
 export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
   const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
     onboardingStep, setOnboardingStep ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } = useAuthState();
 
   const navigate = useNavigate();
@@ -47,24 +35,10 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
     loginWithTwitter;
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading);
-<<<<<<< HEAD
-  // Wrapper for login to match the AuthContextType interface
-  const login = async (email: string, password: string) => {
-    return loginImpl({ email, password })
-  }
-  // Wrapper for signup to match the AuthContextType interface
-  const signup = async (email: string, password: string, userData?: any) => {
-    return signupImpl({ email, password, display_name: userData })
-  }
-  useEffect(() => {
-    // Clean up any potential stale auth state before setting up listeners
-    cleanupAuthState();
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -74,12 +48,9 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -230,11 +201,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
         setIsLoading(false);
@@ -294,10 +262,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     onboardingStep;
   };
@@ -311,11 +275,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
 }
 
 };
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -348,10 +309,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     </AuthContext.Provider>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

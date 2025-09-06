@@ -1,14 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -21,25 +15,15 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-<<<<<<< HEAD
-export default function ProfilePage() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -224,10 +208,6 @@ if ( {) {
     if (profileId) {;
       fetchProfile();
     }
-<<<<<<< HEAD
-  }, [profileId]),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (isLoading) {
     return (
@@ -314,13 +294,10 @@ if ( {) {
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -402,12 +379,9 @@ if ( {) {
                     <Github className="h-6 w-6" />
                   </a>
                   </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -420,12 +394,9 @@ if ( {) {
                     <Twitter className="h-6 w-6" />
                   </a>
                   </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -438,12 +409,9 @@ if ( {) {
                     <Linkedin className="h-6 w-6" />
                   </a>
                   </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
 
               </div>;
@@ -460,18 +428,6 @@ if ( {) {
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
-<<<<<<< HEAD
-              }}
-            />
-            {/* Placeholder for other sidebar elements */}
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
 =======
     }
 ;
@@ -634,7 +590,6 @@ if ( {) {
                 hourly_rate: profile_data?.hourly_rate || 0;
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
@@ -652,14 +607,9 @@ if ( {) {
     </>);
 }
 ;
-<<<<<<< HEAD
-;
-=======
 
 =======
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

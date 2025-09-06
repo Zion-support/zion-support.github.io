@@ -11,66 +11,6 @@ if (?.error) {) {
         description: 'AI has created optimized listing content for you.',
       });
     } catch (error) {
-<<<<<<< HEAD
-      logErrorToProduction('Error generating content:', { data: error })
-      toast({
-        title: 'Generation Failed',
-        description:
-          error instanceof Error
-            ? error.message
-            : 'Failed to generate content. Please try again.',
-        variant: 'destructive',
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import Skeleton from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import Skeleton from "@/components/ui/skeleton",;
-import { Sparkles, ArrowRight } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client",;
-import { Badge } from "@/components/ui/badge",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  },;
-  keyPoints: string[];
-}
-;
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
-  }
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast(),
@@ -199,127 +139,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       })
     } finally {
       setIsLoading (false);
     }
-<<<<<<< HEAD
 
 
-import React, { useState, useMemo } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import Skeleton from '@/components/ui/skeleton';
-import { Sparkles, ArrowRight } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { Badge } from '@/components/ui/badge';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-interface GeneratedContent {;
-  description: string;
-tags: string[];
-suggestedPrice: {;
-  min: number;
-max: number ;
-};
-keyPoints: string[] ;
-}interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void;
-initialValues?: {;
-  title?: string;
-category?: string;
-keyFeatures?: string;
-targetAudience?: string ;
-
-export function AIListingGenerator(): any ({;
-  onApplyGenerated,;
-  initialValues = {},;
-}: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues && initialValues.title || '');
-  const [category, setCategory] = useState(initialValues && initialValues.category || '');
-  const [keyFeatures, setKeyFeatures] = useState(;
-    initialValues && initialValues.keyFeatures || '';
-  );
-  const [targetAudience, setTargetAudience] = useState(;
-    initialValues && initialValues.targetAudience || '';
-  );
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(;
-    null as GeneratedContent | null;
-  );
-
-  const handleInputChange = (;
-    e: { target: { value: string } },;
-    field: string;
-  ) => {;
-    switch (field) {      case 'title':;
-        setTitle(e && e.target.value);
-        break;
-      case 'category':;
-        setCategory(e && e.target.value);
-        break;
-      case 'keyFeatures':;
-        setKeyFeatures(e && e.target.value);
-        break;
-      case 'targetAudience':;
-        setTargetAudience(e && e.target.value);
-        break;
-  const handle_apply = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onApplyGenerated (generated_content);
-      toast ({
-        title: 'Content Applied',
-        description: 'The generated content has been applied to your listing.',
-      });
-    }
-  };
-
-  const handleGenerate = async () => {;
-    if (!title || !category) {;
-
-  }
-<<<<<<< HEAD
-
-  },
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent),
-      toast({
-        title: "Content Applied",
-        description: "The generated content has been applied to your listing."
-      })
-    }
-  },
-
-<<<<<<< HEAD
-  }
-}
-
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -352,10 +179,6 @@ if ( {) {
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>
           <div className="space-y-2">
@@ -374,10 +197,6 @@ if ( {) {
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>
           <div className="space-y-2">
@@ -396,10 +215,6 @@ if ( {) {
               className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
               disabled={isLoading}
             />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>
           <div className="space-y-2">
@@ -562,10 +377,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {isLoading ? (
@@ -720,12 +531,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
 
       {generatedContent && !isLoading && (
@@ -771,20 +579,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               <div className='flex flex-wrap gap-2'>;
                 {generatedContent && generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>;
             
-<<<<<<< HEAD
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {generatedContent.tags.map((tag, index) => (
-                  <Badge key={index}>{tag}</Badge>
-                ))}
-              </div>
-            </div>
-            
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div>
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
               <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
@@ -875,36 +671,19 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
               onClick={handleApply}
               className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
             >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </CardFooter>
         </Card>
       )}
-<<<<<<< HEAD
-    </div>
-  )
-  target: {
-  value: string
-}, field: string) => {
-  switch (field) {
-  case 'title': setTitle (e.target.value)
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   value: string ;
 }, field: string) => {;
   switch (field) {;
   case 'title': setTitle (e.target.value);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 break;'
 case 'category': setCategory (e.target.value)
@@ -942,10 +721,6 @@ if ( {) {
 }setIsLoading (true);
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>;
   );
@@ -1003,11 +778,6 @@ toast ({
 }finally {
   setIsLoading (false);
 }
-<<<<<<< HEAD
-const handleApply = () => {
-  if (generatedContent && onApplyGenerated) {
-  onApplyGenerated (generatedContent)
-=======
 
 const handle_apply = () =>: any {
   // Check condition
@@ -1015,7 +785,6 @@ if ( {) {
   $2
 }
   onApplyGenerated (generated_content);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 toast ({
 }
 

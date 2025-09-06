@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
-import Layout from '../components/Layout';
-import Head from 'next/head';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
-=======
 
 
 =======
@@ -15,8 +5,6 @@ origin/automation-improvements-final
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -28,9 +16,6 @@ origin/automation-improvements-final
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
-<<<<<<< HEAD
-    </Layout>
-=======
 
 
 
@@ -51,7 +36,6 @@ export default function TestPage() {;
 
 =======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 }
@@ -65,7 +49,6 @@ export default function TestPage() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -73,17 +56,9 @@ export default function TestPage() {;
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
-<<<<<<< HEAD
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-  );
-}
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </Layout>;
   );
@@ -104,12 +79,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   );
-<<<<<<< HEAD
 =======
 =======
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>;
 );
 origin/main
@@ -119,8 +91,6 @@ origin/main
       </div>
     </>
   )
-<<<<<<< HEAD
-=======
 
     <>;
       <Head>;
@@ -139,16 +109,12 @@ origin/main
 =======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }

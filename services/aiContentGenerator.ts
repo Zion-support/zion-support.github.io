@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-export interface ContentGenerationRequest {
-export interface ContentGenerationRequest {;
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
-  topic: string;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal';
-  length: 'short' | 'medium' | 'long';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   keywords?: string[],
   target_audience?: string;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ContentGenerationResponse {
-
-export interface ContentGenerationResponse {;
-=======
-export interface ContentGenerationResponse {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   content: string;
   word_count: number;
   seo_score: number;
@@ -33,14 +17,7 @@ export interface ContentGenerationResponse {
 
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ContentTemplate {
-
-export interface ContentTemplate {;
-=======
-export interface ContentTemplate {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   description: string;
@@ -50,90 +27,15 @@ export interface ContentTemplate {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
-  price: number
-}
-export class AIContentGeneratorService {
-
-export class AIContentGeneratorService {;
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
-export interface ContentGenerationRequest {;
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
-  topic: string,;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal',;
-  length: 'short' | 'medium' | 'long',;
-  keywords?: string[],;
-  targetAudience?: string;
-}
-;
-export interface ContentGenerationResponse {;
-  content: string,;
-  wordCount: number,;
-  seoScore: number,;
-  readabilityScore: number,;
-  suggestions: string[],;
-  metadata: {;
-    title: string,;
-    description: string,;
-    tags: string[];
-  }
-}
-;
-export interface ContentTemplate {;
-  id: string,;
-  name: string,;
-  description: string,;
-  type: string,;
-  preview: string,;
-  price: number;
-}
-;
-export class AIContentGeneratorService {;
-  private apiKey: string,;
-  private baseUrl: string,;
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
-    try {;
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch(`${this.baseUrl}/content/generate`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(request)}),;
-      if (!response.ok) {;
-        throw new Error(`Content generation failed: ${response.statusText}`);
-=======
 
 
 export interface ContentGenerationRequest {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       return await response.json()
 =======
@@ -155,14 +57,10 @@ export interface ContentGenerationRequest {;
       return this && this.generateMockContent(request)
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
@@ -274,14 +172,6 @@ if ( {) {
         type: 'landing-page',;
         preview: 'Turn visitors into customers with compelling copy...',;
         price: 59;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     ];
@@ -292,11 +182,7 @@ if ( {) {
 =======
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       }
@@ -307,7 +193,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -422,25 +307,17 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Pricing tiers for the AI Content Generator
 =======
@@ -470,22 +347,12 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-<<<<<<< HEAD
-    period: '/month'
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
-  }
-}
-
-=======
 
     period: '/month',
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -514,12 +381,9 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

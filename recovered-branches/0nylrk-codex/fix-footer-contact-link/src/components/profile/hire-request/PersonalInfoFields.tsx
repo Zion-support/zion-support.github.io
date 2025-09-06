@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { UseFormReturn } from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {UseFormReturn} from "react-hook-form";
-import {FormValues} from "./useHireRequestForm";
-
-interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>
-=======
 
   FormField,
   FormItem,
@@ -45,7 +26,6 @@ interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
@@ -58,13 +38,9 @@ import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
@@ -112,15 +88,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-    </>
-  );
-}
-  )
-}
-;
-=======
 
       />;
     </>;
@@ -177,4 +144,3 @@ function PersonalInfoFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

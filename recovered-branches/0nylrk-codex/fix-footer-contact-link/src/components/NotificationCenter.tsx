@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
-=======
 // Use the shared icon wrapper;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -31,11 +26,8 @@ export const NotificationCenter: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -136,16 +128,8 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleMarkAllAsRead = async () => {
     try {
@@ -199,12 +183,9 @@ export const NotificationCenter: React.FC = () => {;
           {unreadCount > 0 && (;
 
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -215,64 +196,38 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationHeader
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
-<<<<<<< HEAD
-        />
-        <NotificationFilter
-=======
         />;
         <NotificationFilter;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
         <NotificationList
         
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <NotificationList 
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-<<<<<<< HEAD
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
-        />
-        <NotificationFooter onClose={() => setOpen(false)} />
-      </PopoverContent>
-    </Popover>
-  )
-}
-
-=======
 
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

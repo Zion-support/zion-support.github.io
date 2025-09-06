@@ -9,16 +9,12 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 }
-<<<<<<< HEAD
-
-=======
 =======
 }
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
 document && document.addEventListener('DOMContentLoaded', () => {
@@ -27,18 +23,6 @@ document && document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('post-job')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'post-job' })
   })
-<<<<<<< HEAD
-  document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'resume-search' })
-  })
-  document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'view-notifications' })
-  })
-
-  })
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 async /**
@@ -69,10 +53,7 @@ document.addEventListener ('DOMContentLoaded', () => {
   });
 }),
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
   document.getElementById('resume-search')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'resume-search' })
@@ -80,18 +61,8 @@ document.addEventListener ('DOMContentLoaded', () => {
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
-<<<<<<< HEAD
-
-});
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-}),
-;
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -106,10 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

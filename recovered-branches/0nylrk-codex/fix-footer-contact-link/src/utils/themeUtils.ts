@@ -1,18 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-export interface ThemeColors {
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-
-export interface ThemeColors {;
-=======
 
 export interface ThemeColors {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -65,12 +55,6 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#f8fafc'}
   }
 }
-<<<<<<< HEAD
-// Apply theme colors to document CSS variables
-export function applyThemeColors(colors: ThemeColors) {
-  const root = document.documentElement
-  const root = document.documentElement,;
-=======
 // Define theme presets;
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -82,7 +66,6 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   const root = document.documentElement,;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -93,9 +76,6 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-<<<<<<< HEAD
-}
-=======
 
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
@@ -112,7 +92,6 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -178,12 +157,9 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

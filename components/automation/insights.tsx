@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
-}</ul> </div> </div>)
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-}</ul> </div> </div>) 
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function AutomationInsightsPage() {;
-=======
 =======
 import { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -35,17 +17,13 @@ export default function AutomationInsightsPage() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AutomationInsightsPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) ;
 }</ul> </div> </div>) ;
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {;
@@ -189,21 +167,14 @@ function AutomationInsightsPage() {
             <div className="mt-3">
               <h3 className="font-medium">Top Keywords</h3>
               <ul className="list-disc list-inside">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;mt-4&quot;>
-              <h3 className=&quot;font-medium&quot;>Top Languages</h3>
-              <ul className=&quot;list-disc list-inside&quot;>
-=======
             <div className="mt-4">
               <h3 className="font-medium">Top Languages</h3>
               <ul className="list-disc list-inside">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {intel.insights.topLanguages.map((l: any) => (
                   <li key={l.lang}>{l.lang}: {l.count}</li>
                 ))}
@@ -212,22 +183,6 @@ function AutomationInsightsPage() {
           </div>
         )}
       </section>
-<<<<<<< HEAD
-
-      <section id=&quot;talent&quot; className=&quot;mb-8&quot;>
-        <h2 className=&quot;font-medium&quot;>Talent Highlights</h2>
-        {!talentMd ? (
-          <div className=&quot;text-sm text-gray-500&quot;>Loading…</div>
-        ) : (
-          <pre className=&quot;mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800&quot;>{talentMd}</pre>
-        )}
-      </section>
-    </div>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }

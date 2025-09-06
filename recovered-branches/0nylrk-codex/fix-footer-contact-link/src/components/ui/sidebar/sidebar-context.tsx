@@ -11,12 +11,8 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-<<<<<<< HEAD
-;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -38,11 +34,6 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export const SidebarProvider = React.forwardRef<;
@@ -84,7 +75,6 @@ export const SidebarProvider = React && React.forwardRef<;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   SidebarProviderProps
 >(
   (
@@ -122,13 +112,10 @@ export const SidebarProvider = React && React.forwardRef<;
           _setOpen(openState)
         }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -149,15 +136,10 @@ export const SidebarProvider = React && React.forwardRef<;
         ) {
           event.preventDefault()
           toggleSidebar()
-<<<<<<< HEAD
-        }
-      }
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -179,12 +161,9 @@ export const SidebarProvider = React && React.forwardRef<;
         ) {;
           event.preventDefault();
           toggleSidebar();
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
 
@@ -328,12 +307,6 @@ if (
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
-<<<<<<< HEAD
-export { SidebarContext };
-;
-export { SidebarContext }
-;
-=======
 =======
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
@@ -366,6 +339,4 @@ export { SidebarContext }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

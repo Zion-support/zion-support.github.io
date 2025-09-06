@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -18,23 +9,6 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
-<<<<<<< HEAD
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
-import { Link } from "react-router-dom",
-import { StatusBadge } from "./StatusBadge",
-import { ApplicationProgress } from "./ApplicationProgress";
-import { toast } from "sonner";
-import { ApplicationProgress } from "./ApplicationProgress",
-import { toast } from "sonner",
-interface ApplicationCardProps {
-  application: JobApplication
-}
-=======
 interface ApplicationCardProps {;
   application: JobApplication;
 }
@@ -53,18 +27,12 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ApplicationCardProps {
   application: JobApplication
 }
 
-<<<<<<< HEAD
-export function ApplicationCard({ application }: ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false);
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
@@ -312,13 +280,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       </CardContent>;
@@ -332,29 +297,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
-<<<<<<< HEAD
-              variant="outline"
-              size="sm"
-              asChild
-            >
-              <Link to={`/jobs/${application.job_id}`}>
-                <ExternalLink className="h-4 w-4 mr-1" /> View Job
-              </Link>
-            </Button>
-          </div>
-        </div>
-        <Button
-          variant="secondary"
-        <Button 
-          variant="secondary" 
-=======
 
 
         <Button 
           variant="secondary" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           size="sm"
           className="w-full"
           asChild

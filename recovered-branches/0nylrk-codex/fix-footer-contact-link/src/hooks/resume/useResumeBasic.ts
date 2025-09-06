@@ -1,27 +1,4 @@
 
-<<<<<<< HEAD
-import { useFetchResume  } from './useFetchResume';
-import { useResumeActions } from './useResumeActions';
-export function useResumeBasic() {
-
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-export function useResumeBasic() {;
-  const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions();
-  return {
-    // From useFetchResume
-    isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
-    error: fetchResumeOperations.error |resumeActions.error;
-    resume: fetchResumeOperations.resume;
-    fetchResume: fetchResumeOperations.fetchResume;
-    // From useResumeActions
-    createResume: resumeActions.createResume;
-    updateBasicInfo: resumeActions.updateBasicInfo
-
-    updateBasicInfo: resumeActions.updateBasicInfo,
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -36,12 +13,9 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setActiveResume: resumeActions.setActiveResume}
 }
 =======

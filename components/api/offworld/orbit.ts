@@ -1,22 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   connectOrbit
@@ -25,27 +18,18 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-  req: NextApiRequest,
-  res: NextApiResponse;
-=======
 
 
   req: NextApiRequest,
   res: NextApiResponse;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 =======
   req: NextApiRequest,
   res: NextApiResponse;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();

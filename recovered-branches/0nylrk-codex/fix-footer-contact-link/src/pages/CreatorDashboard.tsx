@@ -1,30 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
-<<<<<<< HEAD
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",
-import { AppSidebar } from "@/components/creator/CreatorSidebar",
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-=======
 =======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -65,22 +47,9 @@ export default function CreatorDashboard() {
               <p className="text-zion-slate text-lg mb-2 max-w-prose">
                 Create new content, monitor your analytics, or manage your account using the sidebar menu.
               </p>
-<<<<<<< HEAD
-              {/* Placeholder for more creator-specific content */}
-            </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SidebarTrigger />
-    </SidebarProvider>
-  )
-}
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
@@ -97,12 +66,6 @@ export default function CreatorDashboard() {;
           <main className="flex-1 p-6 md:p-10 bg-zion-blue">;
             <h1 className="text-2xl font-bold text-white mb-8">Creator Dashboard</h1>;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">;
-<<<<<<< HEAD
-}
-;
-}
-;
-=======
 
 =======
 import { SidebarProvider, SidebarTrigger } from '@/components / ui / sidebar';
@@ -170,4 +133,3 @@ function CreatorDashboard() {
     </SidebarProvider>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

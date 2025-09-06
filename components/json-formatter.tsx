@@ -26,23 +26,10 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
-=======
 =======
 import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Code,
   Copy,
   RefreshCw,
@@ -54,11 +41,8 @@ import {
 
   Settings,;
   Eye,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -69,7 +53,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -91,7 +74,6 @@ export default function JSONFormatterPage() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('')
@@ -512,7 +494,6 @@ export default function JSONFormatterPage() {
                 <div className="flex items-center space-x-2">
                   <input
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     type="checkbox"
                     id="compactMode"
                     checked={compactMode}
@@ -597,22 +578,13 @@ export default function JSONFormatterPage() {
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
 =======
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
                       {getLineNumbers(inputJson)}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     </div>
                   }`}>;
                   </span>;
@@ -634,7 +606,6 @@ export default function JSONFormatterPage() {
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
@@ -654,8 +625,6 @@ export default function JSONFormatterPage() {
                 <div className='flex space-x-3'>
 
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <strong>Error:</strong> {errorMessage}
                   </div>;
@@ -757,7 +726,6 @@ export default function JSONFormatterPage() {
                     className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
                     className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   >;
                     Validate;
                   </Button>;
@@ -788,7 +756,6 @@ export default function JSONFormatterPage() {
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -850,10 +817,7 @@ export default function JSONFormatterPage() {
                     </p>                  </div>
 
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
               </div>
             </Card>
@@ -861,14 +825,11 @@ export default function JSONFormatterPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -876,12 +837,9 @@ export default function JSONFormatterPage() {
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Professional JSON Formatting Features
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -947,7 +905,6 @@ export default function JSONFormatterPage() {
               <p className='text-gray-400'>
                 Adjust indentation size, toggle compact mode, and customize
                 display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-4xl mb-4">⚙️</div>
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
@@ -968,7 +925,6 @@ export default function JSONFormatterPage() {
               Perfect For Every JSON Need
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
             </p>
@@ -1040,9 +996,6 @@ export default function JSONFormatterPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -1075,15 +1028,8 @@ export default function JSONFormatterPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;
@@ -1466,7 +1412,6 @@ export default function JSONFormatterPage() {
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
@@ -1477,14 +1422,8 @@ export default function JSONFormatterPage() {
 =======
   );
 }
-<<<<<<< HEAD
-}
-  );
-}
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

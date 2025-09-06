@@ -1,17 +1,10 @@
 
-<<<<<<< HEAD
-import { Education  } from '@/types/resume';
-import { EducationItem } from './EducationItem';
-import {Education} from '@/types/resume';
-import {EducationItem} from './EducationItem';
-=======
 
 
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
@@ -22,13 +15,10 @@ interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function EducationList({
   educationEntries
@@ -63,14 +53,6 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
           onDelete={onDelete} 
         />;
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-}
-  )
-}
-;
-=======
     </div>;
   );
 }
@@ -113,4 +95,3 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

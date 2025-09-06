@@ -1,26 +1,8 @@
 
-<<<<<<< HEAD
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "../components/ContractForm";
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "../components/ContractForm";
-interface Milestone {
-  title: string;
-  description: string;
-
-
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
-import { ContractFormValues } from "../components/ContractForm",
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Milestone {
   title: string,
   description: string,
@@ -92,57 +74,7 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-      milestones: milestoneData}
-  });
-  
-  if (error) {
-    throw error
-import { supabase } from "@/integrations/supabase/client",;
-import { TalentProfile } from "@/types/talent",;
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
-import { ContractFormValues } from "../components/ContractForm",;
-interface Milestone {;
-  title: string,;
-  description: string,;
-  dueDate: string,;
-  estimatedHours: number;
-}
-;
-export async function generateContract(;
-  values: ContractFormValues,;
-  talent: TalentProfile,;
-  clientName: string,;
-  generatedMilestones: GeneratedMilestone[];
-): Promise<string> {;
-  const additionalClauses = values.additionalClauses || [],;
-  // Prepare milestone data if we have AI-generated milestones;
-  const milestoneData = generatedMilestones.length > 0;
-    ? generatedMilestones.map(m => ({;
-        title: m.title,;
-        description: m.description,;
-        dueDate: m.dueDate,;
-        estimatedHours: m.estimatedHours;
-      }));
-    : [],;
-  const { data, error } = await supabase.functions.invoke("generate-contract", {;
-    body: {;
-      talentName: talent.full_name,;
-      clientName: clientName,;
-      projectName: values.projectName,;
-      scopeSummary: values.scopeSummary,;
-      startDate: values.startDate.toISOString(),;
-      endDate: values.endDate?.toISOString(),;
-      paymentTerms: values.paymentTerms,;
-      paymentAmount: values.paymentAmount,;
-      additionalClauses: additionalClauses;
-      milestones: milestoneData}
-  });
-  if (error) {;
-    throw error;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   
   if (data.success && data.contract) {
@@ -154,10 +86,6 @@ export async function generateContract(;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     throw new Error("Failed to generate contract")
-<<<<<<< HEAD
-  }
-}
-=======
 
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -180,7 +108,6 @@ export async function generate_contract (
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -220,13 +147,10 @@ if ( {) {
 
   } else {;
     throw new Error("Failed to generate contract");
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;

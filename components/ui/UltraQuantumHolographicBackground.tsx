@@ -24,10 +24,6 @@ canvas.height = dimensions.height;
   coordinate_x: number;
 coordinate_y: number;
 =======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
@@ -40,54 +36,11 @@ canvas.height = dimensions.height;
 // Particle system class Particle {
   x: number;
 y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
-<<<<<<< HEAD
-max_life: number;
-type: 'quantum' | 'holographic' | 'energy' | 'matrix';
-
-  // Bounce off edges // Check condition
-if (this.vx *= -1) {
-  $2
-}
-// Check condition
-if (this.vy *= -1) {
-  $2
-}
-// Quantum tunneling effect // Check condition
-if (< 0.001 * intensity_multiplier) {) {
-  $2
-}
-
-  switch (this.type) {
-  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.begin_path ();
-ctx.move_to (this.x - this.size, this.y);
-ctx.line_to (this.x + this.size, this.y);
-ctx.line_to (this.x, this.y - this.size);
-ctx.line_to (this.x - this.size, this.y);
-ctx.fill_style = this.color;
-ctx.fill ();
-// Holographic grid ctx.stroke_style = this.color;
-ctx.line_width = 0.5;
-ctx.global_alpha = alpha * 0.5;
-ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
-break;
-<<<<<<< HEAD
-case 'energy': // Energy field
-}ctx.restore ()
-export default function UltraQuantumHolographicBackground({
-  children
-  intensity = 'high'
-  colorScheme = 'quantum'
-  particleCount = 300
-  animationSpeed = 1.5
-  className = ''
-}: UltraQuantumHolographicBackgroundProps) {
-=======
 
 constructor () {;
   // Bounce off edges if (this && this.x <= 0 || this && this.x >= dimensions && dimensions.width) this && this.vx *= -1;
@@ -120,10 +73,8 @@ export default function UltraQuantumHolographicBackground(): any ({;
 }: UltraQuantumHolographicBackgroundProps) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -131,11 +82,8 @@ export default function UltraQuantumHolographicBackground(): any ({;
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
@@ -162,15 +110,6 @@ break;
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
-<<<<<<< HEAD
-  children
-  intensity = 'high'
-  colorScheme = 'quantum'
-  particleCount = 300
-  animationSpeed = 1.5
-  className = ''
-}: UltraQuantumHolographicBackgroundProps) {
-=======
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -178,96 +117,15 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground({;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   children;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
-<<<<<<< HEAD
-  animationSpeed = 1 && 1.5;
-  className = '';
-}: UltraQuantumHolographicBackgroundProps) {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-
-    quantum: {
-
-      
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      tertiary: '#ffff00',
-      accent: '#00ff00',
-
-  const colors = colorSchemes[colorScheme];
-
-
-    };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    updateDimensions();
-    window.addEventListener('resize', updateDimensions);
-    setIsVisible(true);
-
-
-
       x: number;
       y: number;
-      background: 'rgba (0, 0, 0, 0.93)',
-      overlay: 'rgba (0, 0, 0, 0.28)',
-    },
-  }
-;
-  const colors = color_schemes[color_scheme];
-  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[;
-    intensity;
-  ];      background: 'rgba (0, 0, 0, 0.93)';
-      overlay: 'rgba (0, 0, 0, 0.28)';
-    }
-  }
-;
-  const colors = color_schemes[color_scheme];
-  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity],
-    const update_dimensions = () =>: any {
-      set_dimensions ({
-        width: window.inner_width,
-        height: window.inner_height,
-      });    }        height: window.inner_height;
-      });
-    }
-;
-    update_dimensions ();
-    window.addEventListener ('resize', update_dimensions);
-    setIsVisible (true);
-;
-    return () => window.removeEventListener ('resize', update_dimensions);  }, []);    return () => window.removeEventListener ('resize', update_dimensions);
-  }, []);
-;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    const canvas = canvas_ref.current;
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    canvas.width = dimensions.width;
-    canvas.height = dimensions.height;
-;
-    // Particle system;
-    class Particle {
-      coordinate_x: number;
-      coordinate_y: number;
-=======
-      x: number;
-      y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
@@ -321,14 +179,10 @@ if (return) {
 
         }
         // Matrix rain effect
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         if (this.type === 'matrix') {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
-<<<<<<< HEAD
-            this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
-=======
 
             this.vy = Math.random() * 2 + 1
 
@@ -337,7 +191,6 @@ if (return) {
       }
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             this.vy = Math.random() * 2 + 1;          }
 
           }
@@ -360,7 +213,6 @@ if (return) {
             
 
             // Wave function rings
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size * i, 0, Math.PI * 2);
@@ -551,16 +403,6 @@ if (return) {
 
       }
     }
-<<<<<<< HEAD
-    // Create particles;
-    const particles: Particle[] = [];
-
-
-        0;
-        dimensions && dimensions.width / 2;
-        dimensions && dimensions.height / 2;
-
-=======
         dimensions.width / 2;
         dimensions.height / 2;
         0;
@@ -590,9 +432,6 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-<<<<<<< HEAD
-            ctx.stroke();          }            ctx.stroke()
-=======
             ctx.stroke()
 
           }
@@ -600,7 +439,6 @@ if (return) {
       }
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ctx.stroke();          }
 
           }
@@ -691,64 +529,16 @@ if (return) {
       if (animationId) {
         cancelAnimationFrame(animationId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
-      />
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{
-          background: colors.background
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
-      />
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>
 
 
-      {/* Holographic Overlay Effects */}
-
-          }}
-        />
-
-        {/* Holographic Scan Lines */}
-
-          }}
-
-        />
-      </div>
-
-      {/* Content Layer */}
-      <div className='relative z-20'>{children}</div>
-
-      {/* Quantum Noise Effect */}
-      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
-
-      {/* Holographic Overlay Effects */}
-      <div className='fixed inset-0 z-10 pointer-events-none'>
-        <motion.div
-          className='absolute inset-0'
-          animate={{
-            background: [
-              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`
-              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
-              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
-              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ],          }}
           transition={{
             duration: 8
@@ -834,7 +624,6 @@ if (return) {
           {Array.from ({ length: Math.ceil (dimensions.height / 4) }).map ((_, i) => (
             <motion.div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -855,54 +644,17 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
-<<<<<<< HEAD
-                duration: 2
-                delay: i * 0.1
-                repeat: Infinity
-                ease: "easeInOut"
-              }}
-            />
-          ))}
-        {/* Quantum Fluctuations */}
-        <motion.div
-          className='absolute inset-0'
-          animate={{
-            boxShadow: [
-              `inset 0 0 100px ${colors.primary}20`
-              `inset 0 0 200px ${colors.secondary}20`
-              `inset 0 0 150px ${colors.tertiary}20`
-              `inset 0 0 100px ${colors.primary}20`
-            ],          }}
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
-              `inset 0 0 200px ${colors.secondary}20`;
-              `inset 0 0 150px ${colors.tertiary}20`;
-              `inset 0 0 100px ${colors.primary}20`
-            ]
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 duration: 2,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
 =======
@@ -942,24 +694,5 @@ if (return) {
             ease: 'easeInOut',            ease: "easeInOut"
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />
-      </div>
-    </div>
-);  )
-}
 
-          }}
-        />
-      </div>
-    </div>
-);  )
-}
-    </div>
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

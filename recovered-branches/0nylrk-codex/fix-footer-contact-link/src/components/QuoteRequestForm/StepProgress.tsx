@@ -5,59 +5,14 @@ import {cn} from "@/lib/utils";
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-    { id: "service", label: "Service" }
-    { id: "details", label: "Details" }
-    { id: "timeline", label: "Timeline" }
-    { id: "budget", label: "Budget" }
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" };
-  ];
     { id: "summary", label: "Summary" }
-  ];
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current"
-    return "upcoming"
-  }
   ],
-
-=======
-<<<<<<< HEAD
-    { id: "summary", label: "Summary" };
-  ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    { id: "summary", label: "Summary" }
-<<<<<<< HEAD
-  ];
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current"
-    return "upcoming"
-  }
-=======
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -66,7 +21,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="relative">
@@ -106,35 +60,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
 
-<<<<<<< HEAD
-                  "text-zion-slate-light"
-                )}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-                  "text-xs mt-2 font-medium",
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
-                  "text-zion-slate-light"
-import { QuoteRequestSteps } from "../QuoteRequestForm",;
-import { CheckIcon } from "@/components/icons",;
-import { cn } from "@/lib/utils",;
-interface StepProgressProps {;
-  currentStep: QuoteRequestSteps;
-}
-;
-export function StepProgress({ currentStep }: StepProgressProps) {;
-=======
 
 export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -213,10 +140,7 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

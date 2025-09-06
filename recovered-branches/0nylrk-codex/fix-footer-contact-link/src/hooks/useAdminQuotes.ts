@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -15,11 +9,8 @@ import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
 export const useAdminQuotes = () => {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -61,13 +52,10 @@ export const useAdminQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -76,15 +64,11 @@ export const useAdminQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
-<<<<<<< HEAD
-    
-=======
 
 
     
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Search filter
     if (searchQuery) {
       const query = searchQuery && searchQuery.toLowerCase();
@@ -112,22 +96,12 @@ export const useAdminQuotes = () => {;
         return false
       }
     }
-<<<<<<< HEAD
-    return true
-  });
-  // Update quote status mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
-    
-=======
 
 =======
 
     
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Search filter;
     if (searchQuery) {;
@@ -159,12 +133,9 @@ export const useAdminQuotes = () => {;
       }
     }
     
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return true
   }),
 
@@ -242,19 +213,12 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
-<<<<<<< HEAD
-      }),
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-    }
-    };
-=======
       });
 
 
     };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -281,20 +245,11 @@ export const useAdminQuotes = () => {;
     setArchiveFilter;
     searchQuery;
     setSearchQuery;
-<<<<<<< HEAD
-    dateRange;
-    setDateRange
-    updateStatus: (id: string, status: QuoteStatus) =>
-      updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) =>
-    toggleArchive: (id: string, isArchived: boolean) => 
-=======
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     onError: (error: Error) => {
       toast({
@@ -378,13 +333,10 @@ export const useAdminQuotes = () => {;
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

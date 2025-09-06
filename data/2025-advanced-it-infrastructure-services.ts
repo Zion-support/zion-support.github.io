@@ -1067,10 +1067,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Multi-cloud orchestration and management',
     // Hybrid Cloud Orchestration Platform;
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 'hybrid - cloud - orchestration - platform',
       name: 'Hybrid Cloud Orchestration Platform',
       tagline: 'Seamless multi - cloud and hybrid cloud management',
@@ -1095,10 +1091,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '☁️',
 
         'Multi-cloud management',
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / hybrid - cloud - orchestration - platform',
@@ -1167,10 +1160,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 24,
 
     },;
-<<<<<<< HEAD
-  ];    features: [
-
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1280,19 +1269,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
-      launchDate: '2025-05-01'
-      customers: 32
-      rating: 4.7
-      reviews: 24
-    }
-=======
 
 
   ];    features: [
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
@@ -1300,11 +1280,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4.7,
       reviews: 24,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
@@ -1622,16 +1600,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
-<<<<<<< HEAD
-  }
-];
-=======
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -1719,14 +1692,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -1734,11 +1704,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 =======
 ;
 =======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
@@ -2368,11 +2333,5 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32,;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

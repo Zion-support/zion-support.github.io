@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import {X} from "lucide-react";
-import {useIsMobile} from "@/hooks/use-mobile";
-export const AppStoreBanner: React.FC = () => {;
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-import React, { useState, useEffect } from "react",
-import { X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,18 +68,9 @@ export const AppStoreBanner: React.FC = () => {
   );
 }
 
-<<<<<<< HEAD
-  )
-};
-},
-import React, { useState, useEffect } from "react",;
-import { X } from "lucide-react",;
-import { useIsMobile } from "@/hooks/use-mobile",;
-=======
 import React, { useState, useEffect } from "react";
 import {X} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -139,9 +118,6 @@ export const AppStoreBanner: React.FC = () => {;
   );
 };
 
-<<<<<<< HEAD
-export default AppStoreBanner;
-=======
 =======
 import React, { useState, useEffect } from './react';
 import { X  } from './lucide-react';
@@ -205,4 +181,3 @@ if (return null) {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

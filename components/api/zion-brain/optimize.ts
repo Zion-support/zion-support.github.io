@@ -14,7 +14,6 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
     return !superToken || token === superToken;
@@ -23,7 +22,6 @@ export default async function handler(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -35,26 +33,16 @@ export default async function handler(
   function isAuthorized(req: NextApiRequest): boolean {
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
-<<<<<<< HEAD
-    return !superToken |token === superToken;
-=======
     return !superToken || token === superToken;
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-<<<<<<< HEAD
-    if (req && req.method !== "POST")
-      return res && res.status(405).json({ error: "Method not allowed" });
-=======
     if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
@@ -150,12 +138,7 @@ function handler() {
       status: "error",
       payload: { error: e?.message || "unknown" },
     });
-<<<<<<< HEAD
-    return res.status (500).json ({ error: "Optimization failure" });
-
-=======
     return res.status(500).json({ error: "Optimization failure" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

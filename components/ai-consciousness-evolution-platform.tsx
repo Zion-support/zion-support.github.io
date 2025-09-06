@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const AIConsciousnessEvolutionPlatform: React.FC = () => {
- const AIConsciousnessEvolutionPlatform: React.FC = () => {
-const AIConsciousnessEvolutionPlatform: React.FC = () => {
- const AIConsciousnessEvolutionPlatform: React.FC = () => {
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -113,30 +104,6 @@ visible: {;
 export default AIConsciousnessEvolutionPlatform;
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
-}
-}
-}
-};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-
-  staggerChildren: 0.1 
-
-};
-
-};
-
-};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-
-}
-}
-}
-}
-}
-}
-=======
   opacity: 0, coordinate_y: 20;
 }animate= {
   {
@@ -204,8 +171,6 @@ visible: {
 }export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

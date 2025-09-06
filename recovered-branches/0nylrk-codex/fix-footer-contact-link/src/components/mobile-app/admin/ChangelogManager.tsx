@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Plus, Trash2 } from "lucide-react";
-import { AppPlatform } from "./MetadataManager";
-
-import React, { useState } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Plus, Trash2 } from "lucide-react";
-import { AppPlatform } from "./MetadataManager";
-import { Plus, Trash2 } from "lucide-react",
-import { AppPlatform } from "./MetadataManager",
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ChangelogManagerProps {
   platform: AppPlatform
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -141,19 +121,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
-<<<<<<< HEAD
-                value={newEntry.date}
-                onChange={handleInputChange}
-              />
-            </div>
-            <Button
-              onClick={handleAddEntry}
-              disabled={!newEntry.version |!newEntry.changes}
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -239,13 +209,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             </div>;
 
             <Button;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
             >
@@ -254,12 +221,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             </Button>
           </div>
           
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -268,12 +231,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             rows={3}
           />
           
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
 =======
@@ -304,24 +264,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
-<<<<<<< HEAD
-            {entries.length === 0 && (
-              <p className="text-center text-gray-400 py-4">
-                No changelog entries yet
-              </p>
-            )}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-
-            
-            {entries.length === 0 && (
-);
-              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
-=======
 
 
             {entries && entries.length === 0 && (;
@@ -329,15 +271,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 No changelog entries yet;
               </p>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
 }
 
 =======
@@ -458,5 +397,4 @@ if (return) {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

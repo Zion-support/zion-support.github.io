@@ -1,69 +1,6 @@
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',;
-;
-type Holder = { address: string, amount: string },
-
-import { useEffect, useState } from 'react';
-
-type Holder = { address: string, amount: string }
-type Metrics = {
-  updatedAt: number
-  tokenDistribution: { address: string, percent: number }[]
-  topHolders: Holder[]
-  activeProposals: any[]
-  governanceParticipationRate: number
-  cached?: boolean
-}
-export default function DaoMetrics() {
-  const [data, setData] = useState<Metrics | null>(null)
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    async function load() {
-      setLoading(true)
-      const resp = await fetch('/api/dao/metrics')
-      const json = await resp.json()
-      setData(json)
-      setLoading(false)
-    }
-    load()
-  }, [])
-  if (loading) return <div>Loading...</div>
-  if (!data) return <div>Error loading data</div>
-
-type Holder = { address: string, amount: string };
-type Metrics = {
-  updatedAt: number;
-  tokenDistribution: { address: string, percent: number }[],;
-  topHolders: Holder[];
-  activeProposals: any[];
-  governanceParticipationRate: number;
-  cached?: boolean;
-},;
-export default function DaoMetrics(req, res) {
-  try {
-  const [data, setData] = useState<Metrics | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true);
-      const resp = await fetch('/api/dao/metrics');
-      const json = await resp.json();
-      setData(json);
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    load()
-  }, []),
-  if (loading) return <div>Loading...</div>,
-  if (!data) return <div>Error loading data</div>,
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -130,12 +67,9 @@ export default function DaoMetrics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -147,17 +81,6 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-};
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
 
 =======
 }
@@ -266,9 +189,7 @@ if (return <div > Error loading data</div>, ) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

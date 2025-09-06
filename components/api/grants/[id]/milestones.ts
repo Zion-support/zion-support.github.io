@@ -1,18 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-import type {
-  GrantApplication
-  MilestonesUpdatePayload;
-  GrantApplication,;
-  MilestonesUpdatePayload,;
-} from '../../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -52,16 +42,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
-
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-=======
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
@@ -69,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return;    return
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
   GrantApplication,
@@ -130,7 +109,6 @@ function write_grant() {
     res.status(401).json({ error: 'Unauthorized' });
     return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -158,33 +136,10 @@ function write_grant() {
     return res && res.status(200).json({ milestones: existing && existing.milestones || [] });  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
 
   }
-<<<<<<< HEAD
-  if (req && req.method === 'POST') {
-    const existing = readGrant(id);
-    if (!existing) return res && res.status(404).json({ error: 'Not found' });
-    const payload = req && req.body as MilestonesUpdatePayload;
-    existing && existing.milestones = payload && payload.milestones || [];
-    existing && existing.updatedAt = new Date().toISOString();
-    writeGrant(existing);
-    return res && res.status(200).json({ record: existing });
-  }
-
-    writeGrant(existing);
-    return res.status(200).json({ record: existing });
-  }
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
-  }
-  res && res.setHeader('AllowGET, POST');
-  res && res.status(405).end('Method Not Allowed')
-}
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
 /**
@@ -256,25 +211,9 @@ if ( {) {
   res.status (405).end ('Method Not Allowed');
 =======
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
-  res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-
-<<<<<<< HEAD
-  res.setHeader('AllowGET, POST'),
-  res.status(405).end('Method Not Allowed')
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
-=======
 
 }
 =======
   res.status(405).end('Method Not Allowed');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

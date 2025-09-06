@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import {Badge} from "@/components/ui/badge";
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-=======
 
 
 import React from "react",
@@ -19,9 +10,7 @@ import {Badge} from "@/components/ui/badge";
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
@@ -30,14 +19,9 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4)
-<<<<<<< HEAD
-  const topSkills = skills.slice(0, 4) |[];
-  const topSkills = skills.slice(0, 4) || [],
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -69,12 +53,9 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {skill}
         </Badge>;
       ))}

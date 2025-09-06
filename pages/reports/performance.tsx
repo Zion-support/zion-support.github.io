@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -13,7 +8,6 @@ import Link from 'next / link';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
@@ -71,17 +65,8 @@ const PerformancePage: React.FC = () => {
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
         { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
-<<<<<<< HEAD
-        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%' }
-        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ]
 
     },
@@ -92,17 +77,8 @@ const PerformancePage: React.FC = () => {
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
 
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
-<<<<<<< HEAD
-        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%' }
-        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ]
 
     },
@@ -113,28 +89,8 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
-<<<<<<< HEAD
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
-      ]
-    }
-  ];
-
-        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      ]
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const recentReports = [
 
     {
@@ -158,24 +114,12 @@ const PerformancePage: React.FC = () => {
       summary: 'Stress testing results under high traffic conditions',
 
       status: 'completed'
-<<<<<<< HEAD
-    }
-  ];
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-=======
 
 
   ];
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-400';
@@ -183,21 +127,11 @@ const PerformancePage: React.FC = () => {
       case 'warning': return 'text-orange-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-    }
-  }
-  const getTrendColor = (trend: string) => {
-    return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
-  }
-  };
-
-=======
 
   };
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -207,13 +141,9 @@ const PerformancePage: React.FC = () => {
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -228,12 +158,9 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -251,12 +178,9 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -280,11 +204,8 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -345,11 +266,7 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -364,34 +281,18 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
-<<<<<<< HEAD
-                  <Link 
-                    href={`/reports/${report.id}`}
-                  <Link
-                    href={`/reports/${report.id}`}
-                    href={`/reports/${report.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
@@ -414,12 +315,9 @@ const PerformancePage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -427,24 +325,15 @@ const PerformancePage: React.FC = () => {
               <div className="text-6xl font-bold text-cyan-400 mb-4">📈</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Our automated systems continuously monitor and optimize performance
-                Our automated systems continuously monitor and optimize performance,
-=======
 
 
                 Our automated systems continuously monitor and optimize performance,
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Our automated systems continuously monitor and optimize performance, 
                 Our automated systems continuously monitor and optimize performance,
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -468,18 +357,12 @@ const PerformancePage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Navigation */}
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-=======
 
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -487,43 +370,27 @@ const PerformancePage: React.FC = () => {
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             All Reports
           </Link>
-<<<<<<< HEAD
-          <Link
-          <Link 
-          <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/reports/updates"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             Recent Updates
           </Link>
-<<<<<<< HEAD
-          <Link
-          <Link 
-          <Link
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -534,10 +401,6 @@ const PerformancePage: React.FC = () => {
     </div>
   );
 }
-<<<<<<< HEAD
-};
-
-=======
 ;
 
 =======
@@ -545,5 +408,4 @@ const PerformancePage: React.FC = () => {
 };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default PerformancePage;

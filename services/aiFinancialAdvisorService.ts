@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export interface InvestmentPortfolio {
-export interface InvestmentPortfolio {;
-  id: string;
-  userId: string;
-  name: string;
-  totalValue: number;
-  currency: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
@@ -21,14 +11,7 @@ export interface InvestmentPortfolio {;
   updated_at: Date;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface PortfolioAsset {
-
-export interface PortfolioAsset {;
-=======
-export interface PortfolioAsset {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   symbol: string;
   name: string;
@@ -49,18 +32,9 @@ export interface PortfolioAsset {
 
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface PortfolioPerformance {
-
-export interface PortfolioPerformance {;
-  totalReturn: number;
-  annualizedReturn: number;
-=======
 export interface PortfolioPerformance {
   total_return: number;
   annualized_return: number;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -72,14 +46,7 @@ export interface PortfolioPerformance {
   sortino_ratio: number;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface InvestmentRecommendation {
-
-export interface InvestmentRecommendation {;
-=======
-export interface InvestmentRecommendation {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -100,14 +67,7 @@ export interface InvestmentRecommendation {
   expires_at: Date;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface FinancialGoal {
-
-export interface FinancialGoal {;
-=======
-export interface FinancialGoal {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   name: string;
@@ -125,14 +85,7 @@ export interface FinancialGoal {
   updated_at: Date;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface MarketAnalysis {
-
-export interface MarketAnalysis {;
-=======
-export interface MarketAnalysis {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   market: string;
 
@@ -149,14 +102,7 @@ export interface MarketAnalysis {
   next_update: Date;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface FinancialPlan {
-
-export interface FinancialPlan {;
-=======
-export interface FinancialPlan {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   name: string;
@@ -198,19 +144,11 @@ export interface FinancialPlan {
   created_at: Date,
   updated_at: Date;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface FinancialRequest {
-
-export interface FinancialRequest {;
-  userId: string;
-=======
 export interface FinancialRequest {
   user_id: string;
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
@@ -218,11 +156,6 @@ export interface FinancialRequest {
   preferences?: Record<string, any>
 }
 export interface FinancialResponse {
-<<<<<<< HEAD
-
-export interface FinancialResponse {;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -233,20 +166,6 @@ export interface FinancialResponse {;
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-<<<<<<< HEAD
-  estimatedFees: number
-}
-export class AIFinancialAdvisorService {
-
-export class AIFinancialAdvisorService {;
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
@@ -646,22 +565,6 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-<<<<<<< HEAD
-export interface InvestmentPortfolio {;
-  id: string,;
-  userId: string,;
-  name: string,;
-  totalValue: number,;
-  currency: string,;
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive',;
-  investmentHorizon: number, // in years;
-  targetReturn: number,;
-  assets: PortfolioAsset[],;
-  lastRebalanced: Date,;
-  performance: PortfolioPerformance,;
-  createdAt: Date,;
-  updatedAt: Date;
-=======
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
@@ -680,7 +583,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
       // Check condition
 if ( {) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -723,12 +625,9 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface InvestmentPortfolio {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

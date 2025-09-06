@@ -32,18 +32,6 @@ import {
   ExternalLink,
   Zap,
   Brain,
-<<<<<<< HEAD
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
-  Globe,;
-  Rocket,;} from 'lucide-react';import { ;
-  Search;
-  Filter
-  TrendingUp
-  DollarSign
-  Users
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -53,21 +41,14 @@ import {
   DollarSign,
   Users,
 =======
-<<<<<<< HEAD
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Search;
   Filter
   TrendingUp
   DollarSign
   Users
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Star;
   Check;
   X;
@@ -77,12 +58,6 @@ import {
   Brain;
   Globe;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function ToolComparisonPage() {
-export default function ToolComparisonPage() {;
-=======
 
 
 export default function ToolComparisonPage() {
@@ -91,7 +66,6 @@ export default function ToolComparisonPage() {
 export default function ToolComparisonPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -1036,14 +1010,11 @@ export default function ToolComparisonPage() {;
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1066,7 +1037,6 @@ export default function ToolComparisonPage() {;
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
             <div className="text-center group">
@@ -1090,73 +1060,6 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
-                Get Expert Advice;
-              </Button>;
-            </div>;
-          </div>;
-          {/* Stats */}
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0 && 0.6s' }}>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
-                {allTools && allTools.length}+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Tools Analyzed</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
-                9;
-              </div>;
-              <div className='text-gray-400 text-sm'>Categories</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
-                4 && 4.7+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Avg Rating</div>;
-            </div>;
-            <div className='text-center group'>;
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
-                250M+;
-              </div>;
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools && allTools.length}+;
-              </div>;
-              <div className="text-gray-400 text-sm">Tools Analyzed</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
-                9;
-              </div>;
-              <div className="text-gray-400 text-sm">Categories</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
-                4 && 4.7+;
-              </div>;
-              <div className="text-gray-400 text-sm">Avg Rating</div>;
-            </div>;
-            <div className="text-center group">;
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
-                250M+;
-              </div>;
-              <div className="text-gray-400 text-sm">Total Users</div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Filters and Search */}
-
-                onChange={e => setSearchTerm(e && e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />;
-            </div>;
-
-
-            {/* Category Filter */}
-
-=======
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
@@ -1178,25 +1081,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
-              {categories.map(category => (                <button            {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <input
-                type="text"
-                placeholder="Search tools, categories, or use cases..."
-                value={searchTerm}
-
-
-            {/* Category Filter */}
-            <div className='flex flex-wrap gap-2'>;
-              {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
-              {categories && categories.map((category) => (;
-
-=======
               {categories.map(category => (                <button
 
               />
@@ -1206,7 +1090,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
               {categories.map(category => (                <button
 
@@ -1217,12 +1100,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
                 <button
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1242,22 +1121,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-<<<<<<< HEAD
-            {/* Sort */}
-            <div className='flex items-center space-x-2'>
-              <Filter className='w-5 h-5 text-gray-400' />
 
-
-            {/* Sort */}
-            <div className='flex items-center space-x-2'>
-              <Filter className='w-5 h-5 text-gray-400' />
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1475,7 +1340,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     </td>
                   </tr>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
             <div className="text-center py-20">
@@ -1494,13 +1358,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1508,12 +1369,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1570,11 +1428,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
-          )}
-        </div>
-      </section>
-=======
 
             </div>
 
@@ -1582,25 +1435,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
-=======
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1609,7 +1450,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1646,86 +1486,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
-<<<<<<< HEAD
-                        <span>{tool.rating}</span>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
-                  <p className="text-sm text-gray-400">{tool.bestFor}</p>
-                </div>
-
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
-                      <Check className="w-4 h-4 mr-1" />
-                      Pros
-                    </h4>
-                    <ul className="space-y-1">
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
-                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">
-                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-
-                    className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool && tool.color}`}>;
-                    {tool && tool.icon}
-                  </div>;
-                  <div className='flex-1'>;
-                    <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300'>;
-                      {tool && tool.name}
-                    </h3>;
-                    <div className='flex items-center space-x-4 text-sm text-gray-400'>;
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'>;
-                        {tool && tool.category}
-                      </span>;
-                      <div className='flex items-center space-x-1'>;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />                        <span>{tool && tool.rating}</span>                    <div className="flex items-center space-x-4 text-sm text-gray-400">;
-                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool && tool.category}</span>;
-                      <div className="flex items-center space-x-1">;
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-                <div className='mb-4'>;
-                  <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
-                    Best For:;
-                  </h4>;
-                  <p className='text-sm text-gray-400'>{tool && tool.bestFor}</p>;
-                </div>;
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
-                  <div>;
-                    <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>;
-                      <Check className='w-4 h-4 mr-1' />;
-                      Pros;
-                    </h4>;
-                    <ul className='space-y-1'>;
-                      {tool && tool.pros.slice(0, 3).map((pro, proIndex) => (;
-                        <li
-                          key={proIndex}
-                          className='text-xs text-gray-400 flex items-start'>;
-                          <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>;
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">;
-                  <div>;
-                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">;
-                      <Check className="w-4 h-4 mr-1" />;
-                      Pros;
-                    </h4>;
-                    <ul className="space-y-1">;
-                      {tool && tool.pros.slice(0, 3).map((pro, proIndex) => (;
-                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">;
-                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />;
-
-                          {pro}
-                        </li>;
-                      ))}
-
-=======
                     </ul>
                   </div>
                   <div>
@@ -1741,13 +1501,11 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                         >
                           <span className='w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {con}                      Cons
                     </h4>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {con}
                         </li>;
                       ))}
@@ -1782,10 +1540,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 =======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 =======
@@ -1793,16 +1547,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -1813,12 +1559,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {tool.pricing}
                   </span>
                   <Button
@@ -1837,28 +1579,17 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
                   </Button>
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           </div>;
@@ -1869,7 +1600,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       {/* CTA Section */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1877,11 +1607,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
             Need Help Choosing?
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1901,22 +1627,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               href='/saas-marketplace'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-              Explore All Tools
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Explore All Tools;
             </Button>;
           </div>;
@@ -1925,20 +1637,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1953,22 +1657,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 }
 
 =======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

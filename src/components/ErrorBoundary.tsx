@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Props {
   children: ReactNode;
 }
@@ -18,10 +13,6 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -77,12 +68,6 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-
-=======
 export default ErrorBoundary
     return { hasError: true, error };
   };
@@ -150,5 +135,4 @@ export { ErrorBoundary };
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ErrorBoundary;

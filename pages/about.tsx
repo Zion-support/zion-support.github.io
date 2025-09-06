@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import React from "react";
-import Layout from "../components/Layout";
-=======
 
 
 import React from "react";
 import Layout from "../components/Layout";
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -37,13 +32,10 @@ import {
   TrendingUp;
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -371,14 +363,11 @@ export default function AboutPage() {
   )
 },
 export default AboutPage,
-<<<<<<< HEAD
-=======
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
@@ -417,14 +406,11 @@ origin/automation-improvements-final
 
   );
 }
-<<<<<<< HEAD
-=======
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -722,10 +708,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
-<<<<<<< HEAD
-main
-main
-=======
 
 
 =======
@@ -733,7 +715,6 @@ main
 >>>>>>> origin/automation-improvements-final
 =======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 import React from './react';
 import Layout from "../components / Layout";
@@ -766,5 +747,3 @@ function About() {
     </Layout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

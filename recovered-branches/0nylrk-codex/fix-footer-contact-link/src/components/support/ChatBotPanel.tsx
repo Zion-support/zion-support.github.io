@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Separator} from "@/components/ui/separator";
-import {toast} from "@/components/ui/use-toast";
-import {cn} from "@/lib/utils";
-import {ChatMessage} from "./ChatMessage";
-import {QuickReplyButton} from "./QuickReplyButton";
-import {Send, Loader2} from "lucide-react";
-import {useTheme} from "@/hooks/useTheme";
-import React, { useState, useRef, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
-import { Send, Loader2 } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
-import { Send, Loader2 } from "lucide-react",
-import { useTheme } from "@/hooks/useTheme",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -138,14 +111,8 @@ export function ChatBotPanel() {;
       inputRef.current.focus();
     }
   }, []),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
@@ -199,37 +166,8 @@ export function ChatBotPanel() {;
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
-<<<<<<< HEAD
-  }, []),;
-  const handleSendMessage = async (text: string = inputValue) => {;
-    if (!text.trim()) return,;
-    const userMessage: Message = {;
-      id: `user-${Date.now()}`,;
-      content: text,;
-      sender: "user",;
-      timestamp: new Date()},;
-    setMessages((prev) => [...prev, userMessage]),;
-    setInputValue(""),;
-    setIsLoading(true),;
-    try {;
-      // Call the OpenAI-powered support function;
-      const response = await sendToAIAssistant(text),;
-      const botMessage: Message = {;
-        id: `bot-${Date.now()}`,;
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
-        sender: "bot",;
-        timestamp: new Date()},;
-      setMessages((prev) => [...prev, botMessage]),;
-      // Check if the request was successful;
-      if (!response.success) {;
-        setFailedAttempts((prev) => prev + 1),;
-        // After 3 failed attempts, suggest escalation;
-        if (failedAttempts >= 2) {;
-          suggestEscalation();
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       } else {
         // Reset failed attempts if successful;
@@ -265,44 +203,21 @@ export function ChatBotPanel() {;
       setFailedAttempts((prev) => prev + 1),
       if (failedAttempts >= 2) {
         suggestEscalation()
-<<<<<<< HEAD
-    } catch (error) {;
-      console.error("Error in AI chat:", error),;
-      toast({;
-        variant: "destructive",;
-        title: "Communication Error",;
-        description: "We're having trouble connecting to our support service."}),;
-      setFailedAttempts((prev) => prev + 1),;
-      if (failedAttempts >= 2) {;
-        suggestEscalation();
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  }
-  },
-=======
 
 
   },
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -323,15 +238,11 @@ export function ChatBotPanel() {;
           message: "I'm having trouble connecting to my knowledge base right now."
         }
       }
-<<<<<<< HEAD
-      
-=======
 
 
       
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const data = await response.json();
       return {
         success: true
@@ -360,45 +271,15 @@ if ( {) {
       return {
         success: true,
         message: data.message;
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (error) {
       console.error ("Error in AI chat:", error);
       return {
-<<<<<<< HEAD
-        success: false,
-        message: "I'm experiencing technical difficulties. Please try again later."
-      }
-      console.error("Error in AI chat:", error);
-      return {
-        success: false
-        message: "I'm experiencing technical difficulties. Please try again later."
-      }
-    }
-  }
-  const suggestEscalation = () => {
-    const escalationMessage: Message = {
-      id: `bot-escalation-${Date.now()}`
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
-      sender: "bot"
-      timestamp: new Date()}
-    setMessages((prev) => [...prev, escalationMessage]);
-    // Log this interaction for the support team
-    logSupportEscalation()
-  }
-  };
-      };
-    }
-  },
-<<<<<<< HEAD
-=======
 
 
   };
@@ -410,7 +291,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
@@ -629,11 +509,8 @@ if ( {) {
 
           {messages.map((message) => (;
             <ChatMessage;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}
@@ -745,9 +622,6 @@ if ( {) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
@@ -755,7 +629,6 @@ if ( {) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -816,14 +689,11 @@ if ( {) {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

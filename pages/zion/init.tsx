@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const InitPage: NextPage = () => {
-  const [state, setState] = useState<DeployFormState> ({
-  instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
-  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' }
-const defaultModules: DeployFormState['modules'] = {
-  marketplace: true
-  gpt: true
-  academy: true
-  token: true
-  dao: true
-  'nation-builder': true
-  'launch-kit': true
-  'book-builder': true
-  'roadmap-whitepaper': true
-  'api-docs-wiki': true
-  'zion-brain': true
-}
-const defaultBonus: DeployFormState['bonusModules'] = {
-  'global-map': false
-  'franchise-onboarding': false
-  'referral-ambassadors': false
-  'grant-portal': false
-  trailer: false
-  'book-store': false
-}
-const InitPage: NextPage = () => {
-  const [state, setState] = useState<DeployFormState>({
-    instanceName: ''
-    defaultLanguage: 'en'
-    deploymentRegion: 'us-east-1'
-    tokenActivation: true
-    governanceMode: 'Hybrid'
-    branding: {
-      logoUrl: ''
-      primaryColor: '#4f46e5'
-      secondaryColor: '#0ea5e9'
-      subdomain: ''
-    }
-    modules: defaultModules
-    bonusModules: defaultBonus
-  });  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
-  const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
-    setState(prev => ({
-      ...prev
-      [group]: { ...prev[group], [key]: !prev[group][key] }
-    }));  }
-=======
 
 
   marketplace: true,
@@ -64,7 +12,6 @@ const InitPage: NextPage = () => {
   };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -152,32 +99,6 @@ const InitPage: NextPage = () => {;
         headers: { 'Content-Type': 'application/json' },;
 
         body: JSON.stringify(state)}),;
-<<<<<<< HEAD
-      const json = await res.json();
-      if (!res.ok) throw new Error(json?.error |'Deployment failed');
-      setResult(json);
-    } catch (err: any) {
-      setError(err.message |'Unexpected error');
-    } finally {
-      setSubmitting(false);    }
-  }
-    } catch (error) {
-      setError(err.message || 'Unexpected error');
-    } catch (error) {
-      setError(err.message || 'Unexpected error');
-    } finally {
-      setSubmitting(false);    }
-  };
-
-    } finally {;
-      setSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-=======
 
 
 
@@ -192,7 +113,6 @@ const InitPage: NextPage = () => {;
       setError(err.message || 'Unexpected error');
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className='space-y-8'>;
@@ -382,10 +302,7 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.instanceName} onChange={(e) => setState({ ...state, instanceName: e.target.value })} required />
@@ -446,11 +363,6 @@ const InitPage: NextPage = () => {
             </select>
           </div>
         </section>
-<<<<<<< HEAD
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div>
-            <label className='block text-sm font-medium'>Logo URL</label>
-=======
 
               value={state && state.governanceMode}
               onChange={e =>;
@@ -470,7 +382,6 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Logo URL</label>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -481,7 +392,6 @@ const InitPage: NextPage = () => {
                 });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               }
             />;
           </div>;
@@ -514,7 +424,6 @@ const InitPage: NextPage = () => {
           <div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               }
             />;
           </div>;
@@ -525,9 +434,6 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state && state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
-<<<<<<< HEAD
-                  />                  <span>/{key}</span>
-=======
                   />                  <span>/{key}</span>;
                 </label>;
               ))}
@@ -551,7 +457,6 @@ const InitPage: NextPage = () => {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
@@ -589,13 +494,10 @@ const InitPage: NextPage = () => {
                 <label key={key} className="flex items-center gap-3 text-sm">
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </label>
               ))}
             </div>
@@ -621,31 +523,12 @@ const InitPage: NextPage = () => {
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
             {submitting ? 'Deploying…' : 'Deploy Genesis'}
-<<<<<<< HEAD
-          </button>
-          {error && <span className='text-sm text-red-500'>{error}</span>}        </div>
-      </form>
-      {result && (
-        <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-          <h3 className='font-semibold'>Deployment Result</h3>
-          <pre className='mt-2 text-xs whitespace-pre-wrap'>
-            {JSON.stringify(result, null, 2)}
-          </pre>
-        </div>
-      )}
-    </div>
-  );
-}
-export default InitPage;
-<<<<<<< HEAD
-=======
 
           </button>;
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -683,8 +566,6 @@ export default InitPage;
   );
 }
 export default InitPage;
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -754,6 +635,4 @@ export default InitPage;
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

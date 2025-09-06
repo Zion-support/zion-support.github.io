@@ -1,36 +1,7 @@
-<<<<<<< HEAD
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import { Resume } from "@/types/resume";
-
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
-  isLoading: boolean
-}
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react',
-import { Resume } from "@/types/resume",
-=======
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -122,39 +93,6 @@ function ResumePreviewCard() {
 
         {resume && resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
-<<<<<<< HEAD
-            {resume.basic_info.summary}
-          </p>
-        )}
-        
-
-        
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-              <Badge 
-                key={index} 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
-              >
-                {skill.name}
-              </Badge>
-            ))}
-            {resume.skills.length > 5 && (
-              <Badge 
-                variant="outline"
-                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
-              >
-                +{resume.skills.length - 5} more
-              </Badge>
-            )}
-          </div>
-        )}
-      </CardContent>
-    </Card>
-      </CardContent>;
-    </Card>;
-=======
             {resume && resume.basic_info.summary}
           </p>;
         )}
@@ -190,7 +128,6 @@ function ResumePreviewCard() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
           </p>)}

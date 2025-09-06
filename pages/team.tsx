@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react";
 import Head from "next/head";
@@ -14,25 +10,10 @@ import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Linkedin
-  Twitter
-  Github
-  Award
-  Users
-  Globe
-  Code
-  Shield
-=======
 =======
 import {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Phone,
   Mail,
@@ -44,19 +25,9 @@ import {
   Users,
   Globe,
   Code,
-<<<<<<< HEAD
-  Shield,;
-} from "lucide-react";
-import Layout from "../components/Layout";
-const teamMembers = [
-  {
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -638,51 +609,6 @@ origin/automation-improvements-final
             </Link>;
             <Link
               href="/contact"
-<<<<<<< HEAD
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Work with Our Expert Team?
-          </h2>
-          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
-            Let's discuss how our experienced team can help transform your
-            business with cutting-edge technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <Link
-              href="/contact"
-              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-=======
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
 =======
@@ -945,7 +871,6 @@ function TeamPage() {
 
 =======
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -959,49 +884,6 @@ function TeamPage() {
         </p>
       </div>
     </>
-<<<<<<< HEAD
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-    </Layout>;
-  );
-}
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Users } from "lucide-react";
-const teamMembers = [
-  {
-    name: "Dr. Sarah Johnson"
-    role: "Chief Technology Officer"
-    expertise: "AI & Machine Learning"
-    icon: Brain
-    description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
-  }
-  {
-    name: "Michael Chen"
-    role: "Cloud Solutions Architect"
-    expertise: "Cloud Infrastructure"
-    icon: Cloud
-    description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
-  }
-  {
-    name: "Emily Rodriguez"
-    role: "Security Specialist"
-    expertise: "Cybersecurity"
-    icon: Shield
-    description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
-  }
-  {
-    name: "David Thompson"
-    role: "Team Lead"
-    expertise: "Project Management"
-    icon: Users
-    description:
-      "Leading our development teams with agile methodologies and client-focused delivery."
-  }
-=======
 
 >>>>>>> origin/automation-improvements-final
 =======
@@ -1095,7 +977,6 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 
 export default function TeamPage() {;
@@ -1116,25 +997,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
-<<<<<<< HEAD
-    </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-    </>;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
   return (
     <>;
@@ -1152,17 +1023,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </>;
   );
 }
-<<<<<<< HEAD
-import SEO from '../components/SEO';
-export default function TeamPage() {	return (
-import React from 'react',
-import SEO from '../components/SEO',
-export default function TeamPage() {
-	return (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
 =======
@@ -1170,7 +1030,6 @@ import React from 'react',
 import SEO from '../components/SEO',
 export default function TeamPage() {
 	return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
@@ -1178,7 +1037,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -1189,9 +1047,6 @@ export default function TeamPage() {
 	)
 ursor/fix-lint-push-and-merge-to-main-ae4e
 }
-<<<<<<< HEAD
-;
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </Layout>);
@@ -1277,6 +1132,4 @@ function TeamPage() {
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

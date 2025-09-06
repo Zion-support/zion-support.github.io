@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
-
-import {z} from "zod";
-export const basicInfoSchema = z.object({
-import {z} from "zod";
-export const basicInfoSchema = z.object({;
-=======
 export const basicInfoSchema = z.object({;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -17,12 +9,6 @@ export const basicInfoSchema = z.object({;
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
-<<<<<<< HEAD
-  github: z.string().optional()
-  hourlyRate: z.number().positive().optional()});
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
-
-=======
 
 export const basicInfoSchema = z && z.object({
   fullName: z && z.string().min(1, "Full name is required");
@@ -57,7 +43,6 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { z } from "zod",
 export const basicInfoSchema = z.object({
   fullName: z.string().min(1, "Full name is required"),
@@ -70,21 +55,6 @@ export const basicInfoSchema = z.object({
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 
-<<<<<<< HEAD
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
-import { z } from "zod",;
-export const basicInfoSchema = z.object({;
-  fullName: z.string().min(1, "Full name is required"),;
-  title: z.string().min(1, "Professional title is required"),;
-  email: z.string().email("Invalid email address"),;
-  phone: z.string().optional(),;
-  location: z.string().optional(),;
-  website: z.string().url().optional().or(z.literal("")),;
-  linkedin: z.string().optional(),;
-  github: z.string().optional(),;
-  hourlyRate: z.number().positive().optional()});
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;

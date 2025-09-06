@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -24,24 +15,11 @@ export function ClickableBadge(): any ({;
   className;
   variant = "default";
   onRemove;
-<<<<<<< HEAD
-import React from "react",
-import { X } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { badgeVariants } from "@/components/ui/badge-variants";
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  onRemove?: () => void;
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  onRemove?: () => void,
-=======
   ...props;
 }: ClickableBadgeProps) {;
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
@@ -83,18 +61,6 @@ export function ClickableBadge({
         >
           <X className="h-3 w-3" />
         </button>
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-}
-import React from "react",;
-import { X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { badgeVariants } from "@/components/ui/badge-variants",;
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
-  onRemove?: () => void,;
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -105,7 +71,6 @@ import { cn } from '@/lib / utils';
 import { badge_variants } from '@/components / ui / badge - variants';
 export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
   on_remove?: () => void;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 export /**
@@ -138,12 +103,9 @@ function ClickableBadge() {
       )}
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

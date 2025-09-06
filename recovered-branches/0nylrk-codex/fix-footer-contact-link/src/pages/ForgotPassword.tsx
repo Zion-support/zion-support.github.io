@@ -1,51 +1,7 @@
 
-<<<<<<< HEAD
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {useForm, type, UseFormReturn} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Mail} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Mail } from "lucide-react",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
@@ -358,35 +314,10 @@ function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-              )}
-            </div>
-          </div>
-        </div>
-        <div className="hidden lg: block relative w-0 flex-1">
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
-            <div className="flex flex-col justify-center items-center h-full px-8">
-              <div className="max-w-md text-center">
-                <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>
-                <p className="text-lg text-white/80">
-                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-;
-=======
 
 ;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -459,10 +390,6 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -25,10 +25,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function BackupDROrchestratorPage() {
 
   const service = extraServices.find(s =>
@@ -36,7 +33,6 @@ export default function BackupDROrchestratorPage() {
   );  if (!service) return null;export default function BackupDROrchestratorPage() {
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function BackupDROrchestratorPage() {;
   const service = extraServices && extraServices.find(s =>;
@@ -235,30 +231,18 @@ if (return null) {
 =======
 export default function BackupDROrchestratorPage() {
 =======
-<<<<<<< HEAD
-import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function BackupDROrchestratorPage() {
 
   const service = extraServices.find(s =>
     s.link.endsWith('/backup-dr-orchestrator');
   );  if (!service) return null;export default function BackupDROrchestratorPage() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
   if (!service) return null;
 
@@ -365,7 +349,6 @@ export default function BackupDROrchestratorPage() {
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -380,10 +363,5 @@ export default function BackupDROrchestratorPage() {
 }
 }
 
-<<<<<<< HEAD
-;
-}
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

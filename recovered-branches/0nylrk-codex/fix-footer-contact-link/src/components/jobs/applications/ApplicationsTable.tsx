@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -13,7 +11,6 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {format} from "date-fns";
 import {JobApplication} from "@/types/jobs";
 import {Avatar} from "@/components/ui/avatar";
@@ -26,38 +23,6 @@ import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Badge } from "@/components/ui/badge",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-interface ApplicationsTableProps {
-
-  applications: JobApplication[]
-  processingId: string | null
-  onViewApplication: (applicationId: string) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-=======
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
   processingId: string | null,;
@@ -65,7 +30,6 @@ interface ApplicationsTableProps {;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
   onViewScore: (application: JobApplication) => void;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function ApplicationsTable({
   applications
@@ -322,15 +286,11 @@ export function ApplicationsTable({;
                       <Briefcase className="h - 3 w - 3 mr - 1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
-<<<<<<< HEAD
-=======
 
 =======
                     <ApplicationActions;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}

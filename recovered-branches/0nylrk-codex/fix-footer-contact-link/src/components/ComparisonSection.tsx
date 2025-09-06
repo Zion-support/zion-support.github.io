@@ -28,30 +28,10 @@ import {
   TableHeader,
   TableRow,;
 } from "./ui/table";
-<<<<<<< HEAD
-export function ComparisonSection() {
-  return (
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <GradientHeading>Compare & Save</GradientHeading>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
-            See how Zion can drastically reduce your IT costs compared to
-            traditional providers
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -113,28 +93,15 @@ export function ComparisonSection() {
               </p>
             </div>
             
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>
-  );
-}
-  )
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
-=======
 
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
@@ -148,7 +115,6 @@ import {;
   TableRow,;
 } from "./ui/table";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ComparisonSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark">;

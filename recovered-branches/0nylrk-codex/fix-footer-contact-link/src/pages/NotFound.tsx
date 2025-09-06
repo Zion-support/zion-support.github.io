@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
-const NotFound = () => {
-  const location = useLocation();
-import { useLocation } from "react-router-dom",
-import { useEffect } from "react",
-=======
 
 
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const NotFound = () => {
   const location = useLocation(),
 
@@ -54,14 +36,6 @@ export default NotFound;
 
 },
 
-<<<<<<< HEAD
-export default NotFound,
-import { useLocation } from "react-router-dom",;
-import { useEffect } from "react",;
-const NotFound = () => {;
-  const location = useLocation(),;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
     console && console.error(;
       "404 Error: User attempted to access non-existent route:",;
@@ -80,9 +54,6 @@ const NotFound = () => {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-},;
-=======
 };
 
 
@@ -116,5 +87,4 @@ const NotFound = () =>: any {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default NotFound;

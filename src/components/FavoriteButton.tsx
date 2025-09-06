@@ -2,24 +2,14 @@ return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
-<<<<<<< HEAD
-=======
 interface FavoriteButtonProps {
   itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-<<<<<<< HEAD
-
-  const { isWishlisted, toggle } = useWishlist()
-  const { isAuthenticated } = useAuth()
-  const [loginOpen, setLoginOpen] = React.useState(false)
-  const handleClick = (e: React.MouseEvent) => {
-=======
   const { isWishlisted, toggle } = useWishlist();
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
   const handleClick = (e: React.MouseEvent) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
       return;
@@ -36,10 +26,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   }
   const active = isWishlisted(itemId)
 =======
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -80,40 +67,12 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
 
   const active = isWishlisted(itemId),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-<<<<<<< HEAD
-              className = {cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
-                className
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              )}
-              onClick={handleClick}
-              aria-label={
-                active ? 'Remove from favorites' : 'Save to favorites'
-              }            >
-              <Heart
-                className = {cn(
-                  'h-4 w-4 transition-transform duration-200'
-                  active
-                    ? 'fill-red-500 text-red-500 scale-110'
-                    : 'text-zion-slate'
-                )}              />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 )}              />;
             </button>;
@@ -154,17 +113,12 @@ className: {`w-4 h-4 transition-all duration-300 ${
 }
 
           <TooltipTrigger as_child>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
               className={cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
 =======
 ;
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const wasWishlisted = isWishlisted(itemId),;
     toggle(itemId),;
@@ -183,7 +137,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
           <TooltipTrigger asChild>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <button;
               class_name = {cn (
                 'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
@@ -206,10 +159,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Add to favorites`;
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
   return ();

@@ -1,11 +1,7 @@
  password.toLowerCase () .includes (pattern) );
 password.toLowerCase () .includes (pattern) );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -53,7 +49,6 @@ if (feedback.push ('Password is too predictable')) {
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
@@ -131,7 +126,6 @@ export default async function handler(
     else if (score < 50) strength = 'weak';
     else if (score < 70) strength = 'medium';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     else if (score < 90) strength = 'strong';
     else strength = 'very-strong';
     // Generate feedback
@@ -306,15 +300,7 @@ if ( {) {
     res.status(500).json({ error: 'Internal server error' })
 
 =======
-<<<<<<< HEAD
- password.toLowerCase () .includes (pattern) );
-=======
 password.toLowerCase () .includes (pattern) );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -473,44 +459,5 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
-<<<<<<< HEAD
-  }      suggestions.push('Make it at least 12 characters long');
-      suggestions.push('Avoid personal information and common words')
-    }
-    if (hasCommonPatterns) {
-      suggestions.push('Replace common patterns with random characters');
-      suggestions.push('Consider using a passphrase instead')
-    }
-    if (entropy < 40) {
-      suggestions.push('Increase randomness by using more character types');
-      suggestions.push('Consider using a password generator')
-    }
-    const result: PasswordStrengthResult = {
-      password;
-      strength;
-      score: Math.max(0, Math.min(100, score));
-      feedback;
-      details: {
-        length;
-        hasUppercase;
-        hasLowercase;
-        hasNumbers;
-        hasSymbols;
-        hasCommonPatterns;
-        entropy: Math.round(entropy * 100) / 100}
-      suggestions}
-    res.status(200).json(result)
-  } catch (error) {
-    console.error('Password strength check error:', error);
 
-    res.status(500).json({ error: 'Internal server error' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

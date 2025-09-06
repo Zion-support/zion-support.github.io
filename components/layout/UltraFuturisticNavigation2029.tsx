@@ -4,64 +4,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Timer;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Briefcase
-
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -95,7 +37,6 @@ import {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -146,14 +87,6 @@ import {
   Wrench,
   Smartphone,
   BarChart3,
-<<<<<<< HEAD
-
-  Eye,;
-  Timer,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Briefcase, ;
-=======
 
   Eye,;
   Timer,;} from 'lucide-react';import {
@@ -162,7 +95,6 @@ import {
   Microscope, DollarSign, Home, Briefcase, ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -479,13 +411,6 @@ import {
       { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-];
-
-];
-=======
 
     title: '🏠 2029 Space Architecture & Energy',
     icon: Building,
@@ -559,7 +484,6 @@ import {
     color: 'from - orange - 600 to - red - 600',
     description: 'Decentralized and blockchain solutions',
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
@@ -572,11 +496,6 @@ const mainNavItems = [
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2029() {
-
-export default function UltraFuturisticNavigation2029() {;
-=======
 
 const mainNavItems = [
 =======
@@ -621,7 +540,6 @@ const mainNavItems = [;
 export default function UltraFuturisticNavigation2029() {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -635,7 +553,6 @@ export default function UltraFuturisticNavigation2029() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -649,8 +566,6 @@ const mainNavItems = [;
 ];
 
 export default function UltraFuturisticNavigation2029() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -666,7 +581,6 @@ export default function UltraFuturisticNavigation2029() {;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       {/* Top Contact Bar */}
@@ -678,17 +592,9 @@ export default function UltraFuturisticNavigation2029() {;
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -700,14 +606,7 @@ export default function UltraFuturisticNavigation2029() {;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -724,7 +623,6 @@ export default function UltraFuturisticNavigation2029() {;
           </div>              <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -744,161 +642,21 @@ export default function UltraFuturisticNavigation2029() {;
 
               {contactInfo.website.replace('https://', '')}
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </a>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-href={contactInfo && contactInfo.website}
-              className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
-            <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
-              {contactInfo && contactInfo.website.replace('https://', '')}
-  { name: 'Contact', href: '/contact', icon: Phone }, ];  { name: 'Contact', href: '/contact', icon: Phone }
-];
-;
-export default /**
- * UltraFuturisticNavigation2029 - Function description
- */
-function UltraFuturisticNavigation2029() {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_category, setActiveCategory] = useState < string | null>(null);
-  const [scrolled, set_scrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      set_scrolled (window.scroll_y > 50);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      set_scrolled (window.scroll_y > 50);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const toggle_menu = () =>: any setIsOpen (!is_open);
-  const close_menu = () =>: any setIsOpen (false);
-;
-  return (
-    <>;
-      {/* Top Contact Bar */}
-      <div className='bg - gradient - to - r from - cyan - 900 via - blue - 900 to - purple - 900 text - white text - sm py - 2 px - 4'>;
-        <div className='max - w-7xl mx - auto flex flex - wrap items - center justify - between'>;
-          <div className='flex items - center space - x-6'>;
-            <a;
-              href={`tel:${contact_info.mobile}`}
-              className='flex items - center space - x-2 hover:text - cyan - 300 transition - colors';
-            >;
-              <Phone size={14} />;
-              <span>{contact_info.mobile}</span>;
-            </a>;
-            <a;
-              href={`mailto:${contact_info.email}`}
-              className='flex items - center space - x-2 hover:text - cyan - 300 transition - colors';
-            >;
-              <Mail size={14} />;
-              <span>{contact_info.email}</span>;
-            </a>;
-            <div className='flex items - center space - x-2'>              <MapPin size={14} />;
-              <span>{contact_info.address}</span>;
-            </div>;
-          </div>              <Phone size={14} />;
-              <span>{contact_info.mobile}</span>;
-            </a>;
-            <a href={`mailto:${contact_info.email}`} className="flex items - center space - x-2 hover:text - cyan - 300 transition - colors">;
-              <Mail size={14} />;
-              <span>{contact_info.email}</span>;
-            </a>;
-            <div className="flex items - center space - x-2">;
-              <MapPin size={14} />;
-              <span>{contact_info.address}</span>;
-            </div>;
-          </div>;
-          <div className='flex items - center space - x-4'>;
-            <a;
-              href={contact_info.website}
-              className='hover:text - cyan - 300 transition - colors';
-            >              {contact_info.website.replace ('https://', '')}          <div className="flex items - center space - x-4">;
-            <a href={contact_info.website} className="hover:text - cyan - 300 transition - colors">;
-              {contact_info.website.replace ('https://', '')}
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div 
-
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            >
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-                <span className="text-xs text-gray-400">2029 Innovation Hub</span>
-              </div>
-            </motion.div>
-              className='flex items-center space-x-3'>;
-              <div className='relative'>;
-                <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
-                  <Rocket className='w-6 h-6 text-white' />;
-                </div>;
-                <div className='absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-75 animate-pulse'></div>;
-              </div>;
-              <div className='flex flex-col'>;
-                <span className='text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
-                  Zion Tech Group;
-                </span>;
-                <span className='text-xs text-gray-400'>;
-                  2029 Innovation Hub;
-                </span>              </div>;
-            </motion && motion.div>;
-            {/* Desktop Navigation */}
-
-            <div className="hidden lg:flex items-center space-x-8">
-              {mainNavItems.map((item) => (
-=======
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                <Link
-                  key={item.name}
-                  href={item.href}
-className="group relative text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <div className="flex items-center space-x-2">
-                    <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
-                    <span>{item.name}</span>
-                  </div>
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-=======
 
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
 
               ))}
@@ -915,11 +673,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   />
                 </button>
                 {/* Mega Menu */}
-<<<<<<< HEAD
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
-=======
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
                   <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories && serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -934,7 +687,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </div>
             </motion.div>
@@ -946,17 +698,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
               ))}
               {/* Services Dropdown */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -965,12 +711,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                         transition={{ delay: index * 0.1 }}
                         className='group'
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div
@@ -1184,36 +926,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                             <h3 className="font - semibold text - white group - hover:text - cyan - 300 transition - colors">;
 
                               {category.title}
-<<<<<<< HEAD
-                            </h3>;
-                          </div>;
-                          <p className="text - sm text - gray - 400 mb - 4">{category.description}</p>;
-                          <div className="space - y-2">;
-                            {category.services.slice (0, 3).map ((service) => (
-                              <Link;
-                                key={service.name}
-                                href={service.href}
-                                className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200 group";
-                              >;
-                                <div className="flex items - center justify - between">;
-                                  <span className="text - sm text - gray - 300 group - hover:text - white transition - colors">;
-                                    {service.name}
-                                  </span>;
-                                  <span className="text - xs text - cyan - 400 font - mono">;
-                                    {service.price}
-                                  </span>
-                                </div>
-                                <p className="text-xs text-gray-500 mt-1">{service.description}</p>
-                              </Link>
-
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             ))}
                           </div>;
                         </div>;
@@ -1223,14 +940,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>
               </div>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -1238,52 +952,13 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 Get Started
               </motion.button>
             </div>
-<<<<<<< HEAD
-</div>;
-                </div>;
-              </div>;
-              {/* CTA Button */}
-              <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40";
-              >;
-                Get Started;
-              </motion && motion.button>;
-            </div>;
-            {/* Mobile Menu Button */}
-            <div className='lg:hidden'>
-              <button
-                onClick={toggleMenu}
-                className='text-gray-300 hover:text-white transition-colors'              >            <div className="lg:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-300 hover:text-white transition-colors"
-                className='text-gray-300 hover:text-white transition-colors'              >
 
-              >
-
-<<<<<<< HEAD
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
@@ -1328,7 +1003,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1338,17 +1012,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             exit={{ opacity: 0, x: '100%' }}
             className='fixed inset-0 z-50 lg:hidden'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
@@ -1423,12 +1089,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   ))}
                 </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile Services */}
                 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -1477,20 +1139,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>;
                       </div>;
@@ -1498,8 +1150,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   </div>
                 </div>
 
-<<<<<<< HEAD
-=======
                   </div>;
                 </div>;
 
@@ -1508,9 +1158,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -1530,12 +1178,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         )}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
@@ -1562,10 +1204,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-<<<<<<< HEAD
-=======
 
 }
 
@@ -1710,6 +1349,4 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

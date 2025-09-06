@@ -15,10 +15,6 @@ export function UploadSection(): any ({;
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className='space-y-3'>;
@@ -75,10 +71,6 @@ function UploadSection() {
             </span>          </div>      {customFile && (
       
       {customFile && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       
@@ -93,10 +85,6 @@ function UploadSection() {
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -145,50 +133,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );
 };
 }
-<<<<<<< HEAD
-}
-}
-
-          <input;
-            type='file';
-            className='absolute inset - 0 w - full h - full opacity - 0 cursor - pointer';
-            accept='.pdf'            on_change={onFileUpload}
-          />;
-        </Button>;
-      </div>;
-            type="file";
-            className="absolute inset - 0 w - full h - full opacity - 0 cursor - pointer";
-            accept=".pdf";
-            on_change = {onFileUpload, }
-          />;
-        </Button>;
-      </div>;
-      {custom_file && (
-        <div className='p - 3 bg - zion - blue - dark / 30 rounded - md'>;
-          <div className='flex items - center justify - between'>;
-            <div className='flex items - center'>;
-              <FileText className='h - 4 w - 4 mr - 2 text - zion - cyan' />;
-              <span className='text - white'>{custom_file.name}</span>;
-            </div>;
-            <span className='text - xs text - zion - slate'>;
-              {Math.round (custom_file.size / 1024)} KB;
-            </span>          </div>      {custom_file && (
-        <div className="p - 3 bg - zion - blue - dark / 30 rounded - md">;
-          <div className="flex items - center justify - between">;
-            <div className="flex items - center">;
-              <FileText className="h - 4 w - 4 mr - 2 text - zion - cyan" />;
-              <span className="text - white">{custom_file.name}</span>;
-            </div>;
-            <span className="text - xs text - zion - slate">{Math.round (custom_file.size / 1024)} KB</span>;
-          </div>;
-        </div>)}
-    </div>);
-}
-
-;

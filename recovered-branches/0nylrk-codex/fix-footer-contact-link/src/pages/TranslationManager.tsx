@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -41,30 +38,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
-<<<<<<< HEAD
-  const { t, i18n } = useTranslation();
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
-import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { useTranslationService } from "@/hooks/useTranslationService";
-export default function TranslationManager() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -116,80 +90,9 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
-<<<<<<< HEAD
-            }
-            return acc
-          }, {} as Record<string, string>)
-        }
-        currentTranslations[lang.code] = flattenObject(res)
-      }
-    });
-    setTranslations(currentTranslations);
-    // Get all unique keys across all languages
-    const allKeys = new Set<string>();
-    Object.values(currentTranslations).forEach(langTranslations => {
-      Object.keys(langTranslations).forEach(key => allKeys.add(key))
-    });
-    setFilteredKeys(Array.from(allKeys))
-  }, [selectedNamespace, i18n]);
-  // Filter keys based on search query
-  useEffect(() => {
-    if (!searchQuery.trim()) {
-      // Get all unique keys across all languages
-      const allKeys = new Set<string>();
-      Object.values(translations).forEach(langTranslations => {
-        Object.keys(langTranslations).forEach(key => allKeys.add(key))
-      });
-      setFilteredKeys(Array.from(allKeys));
-      return
-    }
-    const query = searchQuery.toLowerCase().trim();
-    const filtered: string[] = []
-    // Search in keys and values
-    Object.values(translations).forEach(langTranslations => {
-      Object.entries(langTranslations).forEach(([key, value]) => {
-        if (
-          key.toLowerCase().includes(query) |
-          (typeof value === 'string' && value.toLowerCase().includes(query))
-        ) {
-          filtered.push(key)
-        }
-      })
-    });
-    setFilteredKeys([...new Set(filtered)])
-  }, [searchQuery, translations]);
-  const handleEdit = (key: string) => {
-    setEditingKey(key)
-    // Initialize edited translations for this key
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages.forEach(lang => {
-      initialEdits[lang.code] = translations[lang.code]?.[key] |''
-    });
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: initialEdits
-    })
-  }
-  const handleSave = (key: string) => {
-    setIsSaving(true)
-    // In a real application, you would save these to your backend
-    setTimeout(() => {
-      // Update translations with edited values
-      const updatedTranslations = { ...translations }
-      supportedLanguages.forEach(lang => {
-        if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      });
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -313,12 +216,9 @@ export default function TranslationManager() {;
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -509,20 +409,11 @@ export default function TranslationManager() {;
       .filter(lang => !translations[lang]?.[key])
   }
 
-<<<<<<< HEAD
-  return (
-    <>
-      <SEO
-        title={t('translation.manager_title')}
-      <SEO 
-        title={t('translation.manager_title')} 
-=======
 
       <SEO 
         title={t('translation.manager_title')} 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -604,13 +495,10 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description={t('translation.manager_description')}
       />
       <Header />
@@ -695,12 +583,9 @@ export default function TranslationManager() {;
                 </Tabs>
               </div>
               
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

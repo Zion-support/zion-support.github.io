@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-import React from "react",
-import { cn } from "@/lib/utils";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
-interface SeverityIndicatorProps {
-=======
 
 
 
@@ -15,7 +6,6 @@ interface SeverityIndicatorProps {
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
@@ -35,16 +25,8 @@ export function SeverityIndicator({
 import { cn } from "@/lib/utils",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean,
@@ -103,13 +85,9 @@ export function SeverityIndicator(): any ({ ;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -158,10 +136,7 @@ export function SeverityIndicator({;
 
     </div>;
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

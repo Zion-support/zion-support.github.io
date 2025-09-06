@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,14 +21,6 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -75,7 +63,6 @@ export default function WhitepaperBuilderPage() {
     return `/api/zion-whitepaper-pdf?edition=${edition}`
   }, [edition]);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
 

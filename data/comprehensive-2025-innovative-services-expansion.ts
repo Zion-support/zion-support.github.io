@@ -58,19 +58,8 @@ const contact = {
 
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
-<<<<<<< HEAD
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-}
-;
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
-  {
-    id: 'ai - content - generation - platform';
-=======
   {;
     id: 'ai-content-generation-platform';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
@@ -734,16 +723,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default comprehensiveInnovativeServices;
-<<<<<<< HEAD
-;
-=======
 
 =======
 import { ServiceVariant } from '../types/service-variants',;
@@ -1213,10 +1196,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketAdvantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default comprehensiveInnovativeServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

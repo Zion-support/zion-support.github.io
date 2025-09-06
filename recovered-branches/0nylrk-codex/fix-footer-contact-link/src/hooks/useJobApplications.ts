@@ -1,29 +1,18 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
-export const useJobApplications = (jobId?: string) => {
-export const useJobApplications = (jobId?: string) => {;
-=======
 
 
 export const useJobApplications = (jobId?: string) => {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -210,22 +199,6 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
-<<<<<<< HEAD
-        }
-        return false
-      }
-      // Add the new application to the local state
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      toast.success("Application submitted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
-      return false
-    }
-  }
-=======
 
 
         }
@@ -235,7 +208,6 @@ export const useJobApplications = (jobId?: string) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -273,13 +245,10 @@ if ( { // Unique violation) {
         }
         return false;
       }
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Add the new application to the local state
@@ -431,13 +400,6 @@ if ( {) {
     error;
     refetch: fetch_applications;
     applyToJob;
-<<<<<<< HEAD
-    updateApplicationStatus
-    markApplicationAsViewed
-  }
-}
-
-=======
 
     updateApplicationStatus,
     markApplicationAsViewed;
@@ -445,7 +407,6 @@ if ( {) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -514,12 +475,9 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

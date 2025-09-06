@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -37,30 +34,10 @@ import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysis
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",
-import { AnalyticsSummary } from "@/components/analytics/AnalyticsSummary",
-import { PageViewsTable } from "@/components/analytics/PageViewsTable",
-import { UserBehaviorStats } from "@/components/analytics/UserBehaviorStats",
-import { PageViewsChart } from "@/components/analytics/PageViewsChart",
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart";
-import { ExportPanel } from "@/components/analytics/ExportPanel";
-export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d');
-import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalysisChart",
-import { ExportPanel } from "@/components/analytics/ExportPanel",
-export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d'),
-  
-=======
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
@@ -161,12 +138,9 @@ export default function Analytics() {;
           result.push(viewsByDate[dateStr]);
         } else {;
           result.push({ date: dateStr, views: 0 });
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
@@ -211,26 +185,19 @@ export default function Analytics() {;
         const date = new Date(item.created_at).toISOString().split('T')[0],;
         const conversionType = item.metadata?.conversionType || 'unknown',;
         if (!conversionsByType[conversionType]) {;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
-<<<<<<< HEAD
-        
-=======
 
 
         
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -280,14 +247,10 @@ export default function Analytics() {;
     }
 
   }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -308,19 +271,6 @@ export default function Analytics() {;
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <ConversionAnalysisChart
-<<<<<<< HEAD
-          data={conversionData |[]}
-          timeRange={timeRange}
-          onTimeRangeChange={setTimeRange}
-        />
-        <ExportPanel />
-      </div>
-    </AnalyticsContainer>
-  )
-}
-        <ConversionAnalysisChart 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           data={conversionData || []} 
           timeRange={timeRange}
 =======
@@ -469,14 +419,6 @@ if ( {) {
           time_range={time_range}
 
           onTimeRangeChange={setTimeRange}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        />;
-        <ExportPanel />;
-      </div>;
-    </AnalyticsContainer>;
-  );
-=======
         />;
         <ExportPanel />;
       </div>;
@@ -484,6 +426,5 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

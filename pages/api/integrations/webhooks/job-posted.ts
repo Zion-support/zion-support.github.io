@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
@@ -105,9 +101,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-<<<<<<< HEAD
-res.status(200).json({ ok: true, results });
-=======
 
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
@@ -116,7 +109,6 @@ res.status(200).json({ ok: true, results });
 res.status(200).json({ ok: true, results });
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -150,7 +142,6 @@ export default async function handler(req, res) {
   });
 
   res.status(200).json({ ok: true, results })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
@@ -165,8 +156,6 @@ export default async function handler(req, res) {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
-<<<<<<< HEAD
-=======
   // record Zapier event;
   write_state ((s) => {
     s.events.push ({
@@ -187,5 +176,4 @@ export default async function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

@@ -1,26 +1,6 @@
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-import {
-  SERVICE_CATEGORIES
-  ALL_SERVICES
-  AI_SERVICES
-  IT_SERVICES
-  MICRO_SAAS_SERVICES
-  CYBERSECURITY_SERVICES
-  DATA_ANALYTICS_SERVICES
-  CLOUD_SOLUTIONS;} from '@/data/servicesData';import {
-  SERVICE_CATEGORIES,
-  ALL_SERVICES,
-  AI_SERVICES,
-  IT_SERVICES,
-  MICRO_SAAS_SERVICES,
-  CYBERSECURITY_SERVICES,
-  DATA_ANALYTICS_SERVICES,;
-  CLOUD_SOLUTIONS,;} from '@/data/servicesData';import { ;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
@@ -29,13 +9,6 @@ import {
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
-<<<<<<< HEAD
- } from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution  } from '@/types/services';
-export function ServicesPage() {
-import { ServiceCategory, ServiceSolution } from '@/types/services';
-export function ServicesPage() {;
-=======
 
 } from '@/data/servicesData';
 import { ServiceCategory, ServiceSolution } from '@/types/services';
@@ -48,7 +21,6 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
 export function ServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const filteredServices = ALL_SERVICES.filter(service => {
@@ -100,11 +72,7 @@ export function ServicesPage() {;
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
   }
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -130,11 +98,8 @@ export function ServicesPage() {;
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
@@ -246,13 +211,10 @@ export function ServicesPage() {;
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ✉️ Email Us
               </a>
             </div>
@@ -368,68 +330,15 @@ function ServicesPage() {
                 href='mailto:kleber@ziontechgroup.com';
                 className='bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors'              >    }
   }
-<<<<<<< HEAD
-;
-  const selected_services = selected_category === 'all' ? filtered_services : getServicesByCategory (selected_category);
-;
-=======
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="bg - gradient - to - r from - blue - 600 via - purple - 600 to - indigo - 600 text - white">;
-        <div className="container mx - auto px - 4 py - 20">;
-          <div className="text - center max - w-4xl mx - auto">;
-            <h1 className="text - 5xl font - bold mb - 6">;
-              Zion Tech Group Services;
-            </h1>;
-            <p className="text - xl mb - 8 text - blue - 100">;
-              Comprehensive IT, AI, and Micro SAAS solutions to transform your business.;
-              From cutting - edge artificial intelligence to robust infrastructure support.;
-            </p>;
-            <div className="flex flex - wrap justify - center gap - 4">;
-              <a;
-                href="tel:+13024640950";
-                className="bg - white text - blue - 600 px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors";
-              >;
-                📞 Call Now: +1 302 464 0950;
-              </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors";
-              >;
-
-                ✉️ Email Us;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-      {/* Contact Info Banner */}
-      <div className='bg-white border-b'>
-        <div className='container mx-auto px-4 py-4'>
-          <div className='flex flex-wrap justify-center items-center gap-8 text-gray-600'>
-            <div className='flex items-center gap-2'>
-              <span className='text-blue-600'>📍</span>
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📍</span>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -440,103 +349,24 @@ function ServicesPage() {
               <span className="text-blue-600">✉️</span>
               <span>kleber@ziontechgroup.com</span>
             </div>
-<<<<<<< HEAD
-            <div className='flex items-center gap-2'>
-              <span className='text-blue-600'>🌐</span>
-              <a
-                href='https://ziontechgroup.com'
-                className='text-blue-600 hover:underline'
-              >                ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📱</span>
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">✉️</span>
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
               </a>
               </Link>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-                href='https://ziontechgroup && ziontechgroup.com'
-                className='text-blue-600 hover:underline'>                ziontechgroup && ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-            </div>;
-            <div className="flex items-center gap-2">;
-              <span className="text-blue-600">📱</span>;
-              <span>+1 302 464 0950</span>;
-            </div>;
-            <div className="flex items-center gap-2">;
-              <span className="text-blue-600">✉️</span>;
-              <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-            </div>;
-            <div className="flex items-center gap-2">;
-              <span className="text-blue-600">🌐</span>;
-              <a href="https://ziontechgroup && ziontechgroup.com" className="text-blue-600 hover:underline">;
-                ziontechgroup && ziontechgroup.com;
-      {/* Contact Info Banner */}
-      <div className='bg - white border - b'>;
-        <div className='container mx - auto px - 4 py - 4'>;
-          <div className='flex flex - wrap justify - center items - center gap - 8 text - gray - 600'>;
-            <div className='flex items - center gap - 2'>;
-              <span className='text - blue - 600'>📍</span>;
-              <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <span className='text - blue - 600'>📱</span>;
-              <span>+1 302 464 0950</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <span className='text - blue - 600'>✉️</span>;
-              <span > kleber@ziontechgroup.com</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <span className='text - blue - 600'>🌐</span>;
-              <a;
-                href='https://ziontechgroup.com';
-                className='text - blue - 600 hover:underline';
-              >                ziontechgroup.com              <span > 364 E Main St STE 1008, Middletown DE 19709</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <span className="text - blue - 600">📱</span>;
-              <span>+1 302 464 0950</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <span className="text - blue - 600">✉️</span>;
-              <span > kleber@ziontechgroup.com</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <span className="text - blue - 600">🌐</span>;
-              <a href="https://ziontechgroup.com" className="text - blue - 600 hover:underline">;
-                ziontechgroup.com;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-=======
 =======
 
 
@@ -545,13 +375,10 @@ function ServicesPage() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <input
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -562,7 +389,6 @@ function ServicesPage() {
             <div className="flex gap-2">
               {SERVICE_CATEGORIES.map((category) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
                   key={category && category.id}
                   onClick={() => setSelectedCategory(category && category.id)}
@@ -585,11 +411,8 @@ function ServicesPage() {
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
           {selectedServices.map(service => (            <ServiceCard key={service.id} service={service} />        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -611,16 +434,12 @@ function ServicesPage() {
               Try adjusting your search or filter criteria
             </p>          </div>          <div className="text-center py-12">
           <div className="text-center py-12">
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 
           <div className="text-center py-12">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
           </div>
@@ -635,20 +454,12 @@ function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Why Choose Zion Tech Group?
             </h2>
 =======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -664,12 +475,9 @@ function ServicesPage() {
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
@@ -681,12 +489,9 @@ function ServicesPage() {
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛡️</span>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
@@ -698,12 +503,9 @@ function ServicesPage() {
             <div className="text-center">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
@@ -715,7 +517,6 @@ function ServicesPage() {
               <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
               <p className='text-gray-600'>Trusted by businesses nationwide</p>            </div>              Why Choose Zion Tech Group?
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
@@ -752,13 +553,10 @@ function ServicesPage() {
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
             </div>
@@ -791,11 +589,8 @@ function ServicesPage() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -1102,19 +897,9 @@ function ServiceCard({ service }: ServiceCardProps) {
 
           </h2>
 =======
-<<<<<<< HEAD
-      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
-        <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-4xl font-bold mb-6'>
-=======
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
@@ -1132,44 +917,13 @@ function ServiceCard({ service }: ServiceCardProps) {
               className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
             >
               ✉️ Get Free Consultation
-<<<<<<< HEAD
-            </a>
-            <a
-              href='https://ziontechgroup.com'
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
-          </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel: +13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-            >
-              📞 Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
-            >
-              ✉️ Get Free Consultation
-            </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a
-=======
             </Link>
 =======
 =======
             </Link>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <a 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
             <a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -1179,48 +933,13 @@ function ServiceCard({ service }: ServiceCardProps) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   )
 
 }
 interface ServiceCardProps {
   service: ServiceSolution
-<<<<<<< HEAD
-              href="tel: +13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">;
 =======
-<<<<<<< HEAD
-  );
-interface ServiceCardProps {
-  service: ServiceSolution;  )
-<<<<<<< HEAD
-}
-interface ServiceCardProps {
-  service: ServiceSolution
-}
-function ServiceCard({ service }: ServiceCardProps) {
-  const [showDetails, setShowDetails] = useState(false);
-  const getPopularPlan = () => {
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional
-  const popularPlan = getPopularPlan();
-
-  return (
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
       <div className="bg-white py-16">;
@@ -1302,10 +1021,6 @@ interface ServiceCardProps {;
 }
 interface ServiceCardProps {;
   service: ServiceSolution;
-<<<<<<< HEAD
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1318,15 +1033,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 =======
 
   const getPopularPlan = () => {
-<<<<<<< HEAD
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-=======
     if (service.pricing.professional.popular) return service.pricing.professional;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (service.pricing.basic.popular) return service.pricing.basic;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional
@@ -1344,15 +1051,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     return service && service.pricing.professional;
   const popularPlan = getPopularPlan();
   return (
-<<<<<<< HEAD
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-    if (service.pricing.professional.popular) return service.pricing.professional,
-    if (service.pricing.basic.popular) return service.pricing.basic,
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise,
-    return service.pricing.professional
-  },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             </span>;
@@ -1376,17 +1074,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
 
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <img 
@@ -1394,43 +1083,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           alt={service.title}
           className="w-full h-full object-cover"
         />
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
           </span>
         </div>
         {service.aiScore && (
-<<<<<<< HEAD
-          <div className="absolute bottom-4 left-4">
-=======
-<<<<<<< HEAD
-          <div className='absolute bottom-4 left-4'>
-            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>          <div className="absolute bottom-4 left-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              AI Score: {service.aiScore}
-            </span>
-          </div>
-=======
           <div className="absolute bottom-4 left-4">
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               AI Score: {service.aiScore}
             </span>;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {/* Service Content */}
@@ -1459,11 +1123,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               AI Score: {service.aiScore}
             </span>;
           </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
       </div>
       {/* Service Content */}
@@ -1506,13 +1166,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
 
         {/* Provider Info */}
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
@@ -1553,33 +1210,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
             <p className="font-medium text-gray-900">{service.provider.name}</p>
 =======
-<<<<<<< HEAD
-            <p className='font-medium text-gray-900'>{service.provider.name}</p>
-            <p className='text-sm text-gray-500'>{service.provider.location}</p>
-          </div>
-          {service.provider.verified && (
-            <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
-        </div>
-        {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <p className="text-sm text-gray-500">{service.provider.location}</p>
-          </div>
-          {service.provider.verified && (
-            <span className="text-blue-600 text-sm">✓ Verified</span>
-
-          )}
-
-        </div>
-        </div>;
-        {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;
-            <p className="text-sm text-gray-500">{service && service.provider.location}</p>;
-          </div>;
-          {service && service.provider.verified && (;
-            <span className="text-blue-600 text-sm">✓ Verified</span>;
-        </div>;
-        {/* Pricing */}
-
-=======
               <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
 =======
             <p className="font-medium text-gray-900">{service.provider.name}</p>
@@ -1600,14 +1230,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </div>
             {popularPlan.popular && (
               <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Most Popular
               </span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -1615,35 +1241,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
         {/* Features Preview */}
-<<<<<<< HEAD
-        <div className='mb-4'>
-          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
-          <div className='flex flex-wrap gap-2'>
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-          <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 3).map((feature, index) => (
-              <span 
-                key={index}
-                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map((feature, index) => (
-              <span
-                key={index}
-                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
-              >
-                {feature}
-              </span>
-            ))}
-            {service.features.length > 3 && (
-              <span className='text-gray-500 text-xs'>                +{service.features.length - 3} more              <span className="text-gray-500 text-xs">
-                +{service.features.length - 3} more
-              </span>
-                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
-              >
-                {feature}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </span>;
             </div>;
             {popular_plan.popular && (
@@ -1675,16 +1274,10 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 {feature}
               </span>))}
             {service.features.length > 3 && (
-<<<<<<< HEAD
-              <span className="text-gray-500 text-xs">
-                +{service.features.length - 3} more
-              </span>
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 
           </div>;
@@ -1692,40 +1285,17 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
         {/* Action Buttons */}
-<<<<<<< HEAD
-        <div className='flex gap-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-        <div className="flex gap-2">
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-<<<<<<< HEAD
-          >
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
-<<<<<<< HEAD
-            className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'          >            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
-            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             Call Now
           </Link>
@@ -1761,35 +1331,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Detailed Information */}
         {showDetails && (
           <div className="mt-6 pt-6 border-t border-gray-200">
-<<<<<<< HEAD
-=======
             <div className="space-y-4">
               {/* Benefits */}
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
-                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <div className="space-y-4">
-              {/* Benefits */}
-              <div>
-                <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
-                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">
-            <div className="space-y-4">
-              {/* Benefits */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                  {service.benefits.slice(0, 3).map((benefit, index) => (
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <li key={index}>{benefit}</li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </ul>;
@@ -1797,27 +1344,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Use Cases */}
-<<<<<<< HEAD
-              <div>
-                <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>
-                <div className='flex flex-wrap gap-2'>
-                <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.useCases.slice(0, 3).map((useCase, index) => (
-                    <span 
-                      key={index}
-                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
-                    <span
-                      key={index}
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {useCase}
                     </span>;
                   ))}
@@ -1827,29 +1359,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Technologies */}
-<<<<<<< HEAD
-              <div>
-                <h4 className='font-semibold text-gray-900 mb-2'>
-                  Technologies:
-                </h4>
-                <div className='flex flex-wrap gap-2'>
-                <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.technologies.slice(0, 4).map((tech, index) => (
-                    <span 
-                      key={index}
-                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
-                    <span
-                      key={index}
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {tech}
                     </span>;
                   ))}
@@ -1858,12 +1373,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               {/* Deployment & Support */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
               <div className="grid grid-cols-2 gap-4 text-sm">
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
@@ -1871,25 +1383,16 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 <div>
 
               <div className="grid grid-cols-2 gap-4 text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
 
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
-<<<<<<< HEAD
-=======
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -1922,28 +1425,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 <h4 className="font-semibold text-gray-900 mb-2">Pricing Plans:</h4>
                 <div className="space-y-2">
                   {Object.entries(service.pricing).map(([plan, details]) => (
-<<<<<<< HEAD
-                    <div
-                      key={plan}
-                      className='flex justify-between items-center text-sm'
-                    >
-                      <span className='capitalize font-medium'>{plan}</span>
-                      <span className='text-gray-600'>
-                        {details.currency}
-                        {details.price}/{details.period}                      </span>                    <div key={plan} className="flex justify-between items-center text-sm">
-                      <span className="capitalize font-medium">{plan}</span>
-                      <span className="text-gray-600">
-                        {details.currency}{details.price}/{details.period}
-                    </div>
-                    <div key={plan} className="flex justify-between items-center text-sm">
-                      <span className="capitalize font-medium">{plan}</span>
-                      <span className="text-gray-600">
-                        {details.currency}{details.price}/{details.period}
-                      </span>;
-                    </div>;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
 
                 </div>;
@@ -1951,33 +1433,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Contact CTA */}
-<<<<<<< HEAD
-              <div className='bg-blue-50 rounded-lg p-4 text-center'>
-                <p className='text-sm text-blue-800 mb-2'>
-              <div className="bg-blue-50 rounded-lg p-4 text-center">
-                <p className="text-sm text-blue-800 mb-2">
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
                   <a
                     href={`tel:+13024640950`}
-<<<<<<< HEAD
-                    className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'                  >                  Ready to get started with {service.title}?
-                </p>
-                <div className="flex gap-2 justify-center">
-                  <a
-                    href={`tel:+13024640950`}
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
@@ -1986,12 +1453,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                     className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'                  >                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -2000,16 +1464,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             </div>
           </div>
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-);  )
-}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
@@ -2021,18 +1477,13 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 }
 }
 }
-<<<<<<< HEAD
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
     </div>;
   );  );
 }
-<<<<<<< HEAD
-=======
 
   )
 }
@@ -2162,6 +1613,4 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

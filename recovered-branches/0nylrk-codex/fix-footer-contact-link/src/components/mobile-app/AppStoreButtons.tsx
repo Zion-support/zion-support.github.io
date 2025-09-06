@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-import React from "react";
-import {Apple, GithubIcon} from "lucide-react";
-import {cn} from "@/lib/utils";
-import React from "react",
-import { Apple, GithubIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Apple, GithubIcon } from "lucide-react",
-import { cn } from "@/lib/utils",
-=======
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -28,9 +12,7 @@ import { cn } from '@/lib / utils';
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AppStoreButtonsProps {
   class_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -85,29 +67,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 
 
   return (
-<<<<<<< HEAD
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
-      <a
-        href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleAppStoreClick}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Apple className="h-8 w-8 mr-3" />
-        <div>
-          <div className="text-xs">Download on the</div>
-          <div className="text-xl font-semibold">App Store</div>
-        </div>
-      </a>
-      <a
-        href={googlePlayUrl}
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </Link>
 
       <a 
@@ -134,18 +97,12 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
-<<<<<<< HEAD
-}
-
-};
-=======
 
 =======
 
 };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -220,10 +177,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 };
 
 export default AppStoreButtons;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

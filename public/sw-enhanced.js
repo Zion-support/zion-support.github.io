@@ -211,26 +211,7 @@ async: function handlePageRequest(request) {;
     if: (networkResponse.ok) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
-<<<<<<< HEAD
-  try {,
-    // Try network first for pages,
-    const networkResponse = await fetch(request),
-    i: f: (networkResponse.ok) {,
-      // Cache the response,
-      const cache = await caches.open(DYNAMIC_CACHE),
-      cache.put(request, networkResponse.clone())};
-};
-// "Handle": other requests (API calls, etc.),
-"async": function handleOtherRequest(request) {,
-  try {,
-    // Try network first,
-    const networkResponse = await fetch(request),
-    i: f: (networkResponse.ok) {,
-      // Cache successful responses,
-      const cache = await caches.open(DYNAMIC_CACHE),
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
@@ -344,7 +325,6 @@ self.addEventListener('notificationclick', (event) => {',
     event.waitUntil(,
       clients.openWindow('/'))}'}),
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   // In a real app, you would store these in IndexedDB;    event && event.waitUntil(,      self && self.registration.showNotification(data && data.title, options))}),
 // "Notification": click,
 self && self.addEventListener('notificationclick', (event) => {',
@@ -455,12 +435,6 @@ async: /**
  */
 function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-8ee2
-;  "return": []};
-origin/cursor/integrate-build-improve-and-re-verify-242d
-  "return": []};
-=======
 
 
 >>>>>>> origin/automation-improvements-final
@@ -470,7 +444,6 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 
   "return": []};
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
   "return": []}
@@ -513,12 +486,6 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
-<<<<<<< HEAD
-origin/main
-;  "return": []};
-  "return": []};
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -586,10 +553,7 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

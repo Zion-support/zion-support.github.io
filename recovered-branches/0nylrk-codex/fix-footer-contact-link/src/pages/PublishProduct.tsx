@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,22 +31,6 @@ import {Navigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-export default function PublishProduct() {
-  const { isAuthenticated, isLoading } = useAuth();
-import { Navigate } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-export default function PublishProduct() {
-  const { isAuthenticated, isLoading } = useAuth(),
-  
-=======
 
   // Show loading while checking authentication;
   if (isLoading) {;
@@ -57,7 +38,6 @@ export default function PublishProduct() {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -77,36 +57,11 @@ export default function PublishProduct() {
 
   }
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO
-        title="Publish Your Product"
-        description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
-        keywords="publish product, sell online, digital marketplace, AI tools, tech services"
-      />
-      <Header />
-      <main className="flex-1 p-6 md:p-10">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Publish on Zion</h1>
-          <p className="text-zion-slate mb-8">
-            Share your products, services, or digital assets with the Zion community.
-          </p>
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
-            <ProductSubmissionForm />
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-=======
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -203,15 +158,10 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

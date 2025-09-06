@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -30,7 +27,6 @@ class ErrorBoundary extends React.Component {
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -483,34 +479,12 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Contact Sales
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-};
-
-
-export default Index;
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const Index: NextPage = () => {
-  return (
-=======
 
 
 
 
 =======
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -535,17 +509,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 export default Index;
-<<<<<<< HEAD
-}
-export default ProductsIndex;
-origin/main
-  )
-}
-export default Index;
-
-},
-export default Index,
-=======
 
 
 
@@ -668,6 +631,4 @@ export default ProductsIndex;
 },
 export default Index,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

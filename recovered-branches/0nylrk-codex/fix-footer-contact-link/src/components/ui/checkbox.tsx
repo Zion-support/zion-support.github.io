@@ -1,17 +1,5 @@
 import React from 'react';
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import * as React from 'react';
-import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
-import {Check} from 'lucide-react';
-import {cn} from '@/lib/utils';
-
-"use client"
-"use client"
-<<<<<<< HEAD
-=======
 
 ;
 
@@ -30,7 +18,6 @@ import {Check} from 'lucide-react';
 "use client"
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -71,13 +58,5 @@ export { Checkbox }
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-<<<<<<< HEAD
-export { Checkbox }
-;
-export { Checkbox };
-export { Checkbox }
-;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

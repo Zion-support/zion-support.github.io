@@ -3,21 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-<<<<<<< HEAD
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-=======
 
 
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -130,14 +121,8 @@ createdAt: now
     certificationStatus: certificationStatus || 'pending',
 
     partnerId: auth.partner.id,
-<<<<<<< HEAD
-    createdAt: now,
-createdAt: now,
-    createdAt: now,
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
@@ -185,7 +170,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     id: uuidv4 (),

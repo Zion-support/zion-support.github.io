@@ -1,9 +1,5 @@
 if (!id) return;
       try {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         const res = await fetch(`/api/products/${id}`);
 
 
@@ -14,18 +10,12 @@ if (!id) return;
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
-<<<<<<< HEAD
-    }
-    };
-
-=======
 
 
     };
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
@@ -55,17 +45,8 @@ if (!id) return;
     // Only fetch if id is available (from router);
     if (id) {;
       fetchProduct();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }, [id]), // id is now from router && router.query;
 
@@ -127,36 +108,6 @@ if (!id) return;
         <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-<<<<<<< HEAD
-        </Button>
-      </div>
-    </>
-  );
-}
-//Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
-const handleAdd = () => {if (inCart) return;
-setAdding (true);
-dispatch ({;
-  type: 'ADD ITEM';
-payload: {;
-  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-});
-toast.success (`1× $ {product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
-}
-product.title ;
-}description= {product.description ;
-}ogImage= {product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
-}
-        <Button onClick={handleAdd} disabled={adding || inCart}>
-          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </Button>;
       </div>;
     </>;
@@ -196,8 +147,6 @@ if ( {) {
     }
   }, [id]);
 ;
-<<<<<<< HEAD
-=======
   useEffect (() => {
     const fetch_product = async () => {
       // Check condition
@@ -274,7 +223,6 @@ if (return) {
         <p className="mb - 6">{product.description}</p>;
         <Button on_click={handle_add} disabled={adding || in_cart}>;
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </Button>;
       </div>;
     </>;

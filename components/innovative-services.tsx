@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -25,7 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import Head from 'next/head';
 
@@ -33,99 +29,8 @@ import Head from 'next/head';
 
 =======
 import {
-<<<<<<< HEAD
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Target as TargetIcon
-  Zap as ZapIcon2
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Cpu as CpuIcon
-  Cloud as CloudIcon
-  Bot as BotIcon
-  Lock as LockIcon
-  BarChart3 as BarChart3Icon
-  TrendingUp as TrendingUpIcon
-  Users as UsersIcon
-  Award as AwardIcon
-  Star as StarIcon
-  Check as CheckIcon
-  ArrowRight as ArrowRightIcon
-  ExternalLink as ExternalLinkIcon
-  Phone as PhoneIcon
-  Mail as MailIcon
-  MapPin as MapPinIcon
-  Trophy
-  FlaskConical as FlaskConicalIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -139,21 +44,10 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 =======
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InnovativeServicesPage() {;
 =======
 import {
-<<<<<<< HEAD
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-export default function InnovativeServicesPage() {
-=======
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
   getPopularInnovativeServices,
@@ -161,8 +55,6 @@ export default function InnovativeServicesPage() {
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -266,10 +158,7 @@ export default function InnovativeServicesPage() {;
 
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -278,23 +167,6 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
-<<<<<<< HEAD
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
-export default function InnovativeServicesPage() {
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
-=======
 
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
@@ -304,7 +176,6 @@ export default function InnovativeServicesPage() {;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 export default function InnovativeServicesPage() {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -443,7 +314,6 @@ if ( {) {
 
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -541,12 +411,10 @@ if ( {) {
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
                         className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <input
                         type="text"
                         placeholder="Search innovative services..."
@@ -559,36 +427,16 @@ if ( {) {
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
-<<<<<<< HEAD
-=======
                       onChange={e => setSelectedCategory(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       <option value='All'>All Categories</option>
-<<<<<<< HEAD
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
-                      value={selectedCategory}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-                      <option value="All">All Categories</option>
-                      {categories.map((category) => (
-                        <option key={category.name} value={category.name}>
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>
-
-                        <option key={category.name} value={category.name}>
-
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -596,31 +444,11 @@ if ( {) {
                   <div className='flex-shrink-0'>
 
 
-<<<<<<< HEAD
-                    <select
-                      value={priceRange}
-                      onChange={e => setPriceRange(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                    >
-                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
-                      value={priceRange}
-                      onChange={(e) => setPriceRange(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-                      {priceRanges.map((range) => (
-                        <option key={range.value} value={range.value}>
-                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
-
-                        <option key={range.value} value={range.value}>
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -628,31 +456,11 @@ if ( {) {
                   <div className='flex-shrink-0'>
 
 
-<<<<<<< HEAD
-                    <select
-                      value={sortBy}
-                      onChange={e => setSortBy(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                    >
-                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
-                      value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-                      {sortOptions.map((option) => (
-                        <option key={option.value} value={option.value}>
-                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
-
-                        <option key={option.value} value={option.value}>
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
                     </select>
                   </div>
@@ -665,11 +473,6 @@ if ( {) {
 =======
                     </select>
                   </div>
-<<<<<<< HEAD
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
 
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
@@ -682,12 +485,8 @@ if ( {) {
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -712,149 +511,13 @@ if ( {) {
                       >
                         <List className="w-5 h-5" />
 
-<<<<<<< HEAD
-                      </button>
-
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-<<<<<<< HEAD
->;
-                        <List className="w-5 h-5" />;
-          {/* Filters and Search */}
-          <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
-            <div className='max - w-7xl mx - auto'>;
-              <div className='bg - black / 20 backdrop - blur - lg rounded - 2xl p - 6 border border - white / 10'>;
-                <div className='flex flex - col lg:flex - row gap - 6'>;
-                  {/* Search */}
-                  <div className='flex - 1'>;
-                    <div className='relative'>;
-                      <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
-                      <input;
-                        type='text';
-                        placeholder='Search innovative services...';
-                        value={search_query}
-                        on_change={e => setSearchQuery (e.target.value)}
-                        className='w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent'                      />                  {/* Search */}
-                  <div className="flex - 1">;
-                    <div className="relative">;
-                      <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-                      <input;
-                        type="text";
-                        placeholder="Search innovative services...";
-                        value={search_query}
-                        on_change={(e) => setSearchQuery (e.target.value)}
-                        className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                      />;
-                    </div>;
-                  </div>;
-                  {/* Category Filter */}
-                  <div className='flex - shrink - 0'>;
-                    <select;
-                      value={selected_category}
-                      on_change={e => setSelectedCategory (e.target.value)}
-                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
-                    >;
-                      <option value='All'>All Categories</option>;
-                      {categories.map (category => (                        <option key={category.name} value={category.name}>                    <select;
-                      value={selected_category}
-                      on_change={(e) => setSelectedCategory (e.target.value)}
-                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                    >;
-                      <option value="All">All Categories</option>;
-                      {categories.map ((category) => (
-                        <option key={category.name} value={category.name}>;
-                          {category.name} ({category.count});
-                        </option>))}
-                    </select>;
-                  </div>;
-                  {/* Price Range Filter */}
-                  <div className='flex - shrink - 0'>;
-                    <select;
-                      value={price_range}
-                      on_change={e => setPriceRange (e.target.value)}
-                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
-                    >;
-                      {price_ranges.map (range => (                        <option key={range.value} value={range.value}>                    <select;
-                      value={price_range}
-                      on_change={(e) => setPriceRange (e.target.value)}
-                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                    >;
-                      {price_ranges.map ((range) => (
-                        <option key={range.value} value={range.value}>;
-                          {range.label}
-                        </option>))}
-                    </select>;
-                  </div>;
-                  {/* Sort Options */}
-                  <div className='flex - shrink - 0'>;
-                    <select;
-                      value={sort_by}
-                      on_change={e => setSortBy (e.target.value)}
-                      className='px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
-                    >;
-                      {sort_options.map (option => (                        <option key={option.value} value={option.value}>                    <select;
-                      value={sort_by}
-                      on_change={(e) => setSortBy (e.target.value)}
-                      className="px - 4 py - 3 bg - white / 10 border border - white / 20 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                    >;
-                      {sort_options.map ((option) => (
-                        <option key={option.value} value={option.value}>;
-                          {option.value}
-                        </option>))}
-                    </select>;
-                  </div>;
-                  {/* View Mode Toggle */}
-                  <div className='flex - shrink - 0'>;
-                    <div className='flex bg - white / 10 rounded - xl p - 1 border border - white / 20'>;
-                      <button;
-                        on_click={() => setViewMode ('grid')}
-                        className={`px - 3 py - 2 rounded - lg transition - all ${
-                          view_mode === 'grid';
-                            ? 'bg - cyan - 500 text - white';
-                            : 'text - gray - 400 hover:text - white';
-                        }`}
-                      >;
-                        <Grid className='w - 5 h - 5' />                      </button>                      <button;
-                        on_click={() => setViewMode ('list')}
-                        className={`px - 3 py - 2 rounded - lg transition - all ${
-                          view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white';
-                        }`}
-                      >;
-                        <Grid className="w - 5 h - 5" />;
-                      </button>;
-                      <button;
-                        on_click={() => setViewMode ('list')}
-                        className={`px - 3 py - 2 rounded - lg transition - all ${
-                          view_mode === 'list';
-                            ? 'bg - cyan - 500 text - white';
-                            : 'text - gray - 400 hover:text - white';
-                        }`}
-                      >;
-                        <List className='w - 5 h - 5' />                      </button>                          view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'text - gray - 400 hover:text - white';
-                        }`}
-                      >;
-                        <List className="w - 5 h - 5" />;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </section>;
-
-
-                        </div>;
-                        {/* Tagline */}
-
-
-
-=======
                         <div className='flex items-start justify-between mb-4'>
                           <div className='flex items-center space-x-3'>
                             <div className='text-3xl'>{service.icon}</div>
@@ -904,23 +567,15 @@ if ( {) {
                           )}
                         </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -1002,7 +657,6 @@ if ( {) {
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             )}
                           </div>
                         </div>
@@ -1011,12 +665,9 @@ if ( {) {
 
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -1031,7 +682,6 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -1071,7 +721,6 @@ if ( {) {
                           <Button
                             href={service.link}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -1104,35 +753,28 @@ if ( {) {
                       </div>
                     </QuantumHolographicCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 </div>;
               )}
             </div>
           </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1162,27 +804,13 @@ if ( {) {
 =======
             </div>
           </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1193,7 +821,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Button
                     href={`tel:${contactInfo.mobile}`}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
@@ -1250,13 +877,10 @@ if ( {) {
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1264,10 +888,6 @@ if ( {) {
         </div>
       </QuantumHolographicBackground>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     className='px-8 py-4 text-lg'>;
                     <Mail className='w-5 h-5 mr-2' />;
@@ -1508,10 +1128,6 @@ if ( {) {
       </QuantumHolographicBackground>;
 
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
@@ -1519,32 +1135,17 @@ if ( {) {
 =======
 
   );
-<<<<<<< HEAD
-=======
 }
 
 =======
 
   );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     </>);
 =======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 }
-<<<<<<< HEAD
-}
-}
-  );
-}
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

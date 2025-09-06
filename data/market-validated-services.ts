@@ -561,33 +561,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
   }
   // Search and Knowledge
   {
-<<<<<<< HEAD
-    id: 'vector-search-starter'
-    name: 'Vector Search Starter'
-    tagline: 'Deploy a production-grade vector database and APIs'
-    price: '$89'
-    period: '/month'
-    description:
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
-    features: [
-      'Managed vector DB'
-      'Ingestion pipelines'
-      'Metadata filters'
-      'Access controls'
-    ]
-    category: 'AI & Search'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
-    rating: 4.6
-    customers: 410
-    trialDays: 14
-    setupTime: '2 hours'
-    contactInfo
-  }
-];import { ServiceVariant  } from "../types/service-variants";
-
-export interface MarketValidatedService {
-=======
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -600,7 +573,6 @@ export interface MarketValidatedService {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -621,15 +593,11 @@ export interface MarketValidatedService {
 
 =======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface MarketValidatedService {
 =======
 export interface MarketValidatedService {;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	id: string;
 	name: string;
 	tagline: string;
@@ -644,16 +612,6 @@ export interface MarketValidatedService {;
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-  mobile: "+1 302 464 0950",
-	email: "kleber@ziontechgroup && ziontechgroup.com",
-	address: "364 E Main St STE 1008 Middletown DE 19709";
-  website: "https://ziontechgroup && ziontechgroup.com";,
-=======
 	contactInfo: {
 		mobile: string;
 		email: string;
@@ -1682,10 +1640,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 	}
 ];
 
-<<<<<<< HEAD
-;
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,13 +1,6 @@
-<<<<<<< HEAD
- const ts = new Date () .toISOString () 
-const ts = new Date () .toISOString () 
- const ts = new Date () .toISOString () 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from 'fs';
 import path from 'path';
 
@@ -32,19 +24,12 @@ function ensureDir(dir: string) {
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
   const token = req && req.headers['x-admin-token'] as string | undefined;
@@ -53,14 +38,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     ensureDir(DOCS_DIR);

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Star
-  Users;
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -133,7 +119,6 @@ import Head from 'next/head';
 import {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -142,11 +127,8 @@ import {
 
   Star,;
   Users,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -260,13 +242,6 @@ if (return null) {
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-export default function AIHRRecruitmentPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-hr-recruitment');
-  );  if (!service) return null;
-
-=======
 
 
 
@@ -277,17 +252,13 @@ export default function AIHRRecruitmentPage() {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIHRRecruitmentPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'))
   if (!service) return null,
@@ -331,27 +302,6 @@ export default function AIHRRecruitmentPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="bg-teal-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Find the Right Talent</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Accelerate your recruitment process with AI-powered tools that help you find and hire the best candidates.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover: bg-teal-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-);
-
-}
-=======
 
 
 
@@ -359,21 +309,15 @@ export default function AIHRRecruitmentPage() {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </Layout>
   )
 }
-<<<<<<< HEAD
-=======
 
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

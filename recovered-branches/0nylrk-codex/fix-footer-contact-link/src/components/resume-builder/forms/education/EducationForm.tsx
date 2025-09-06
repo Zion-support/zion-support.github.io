@@ -1,13 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -16,16 +11,11 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-export function EducationForm({
-export function EducationForm({ ;
-=======
 
 
 export function EducationForm({ ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resumeId;
   educationEntries
   onComplete
@@ -95,15 +85,6 @@ export function EducationForm({;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
-    }
-    if (success) {
-      setEditingId(null)
-    }
-  }
-  };
-
-=======
 
 
 
@@ -116,7 +97,6 @@ export function EducationForm({;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -136,16 +116,11 @@ export function EducationForm({;
     if (success) {;
       setEditingId(null);
     }
-<<<<<<< HEAD
-  }
-  };
-=======
 
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -168,22 +143,6 @@ export function EducationForm({;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
-      <EducationList
-        educationEntries={educationEntries}
-      <EducationList 
-        educationEntries={educationEntries} 
-=======
 
 
 
@@ -195,18 +154,14 @@ export function EducationForm({;
       <EducationList 
         educationEntries={educationEntries} 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}

@@ -1,26 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 
-<<<<<<< HEAD
-export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
-  if (!labels || labels && labels.length === 0) return null;
-=======
 
 
 
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -53,17 +41,11 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
             <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06L11 13.17l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08-4.08Z" clipRule="evenodd" />
           </svg>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {label}
         </span>;
       ))}
     </div>;
   );
-<<<<<<< HEAD
-}
-}
-
-=======
 
 }
 
@@ -75,7 +57,6 @@ function VerifiedBadge() {
   // Check condition
 if (return null) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   return (
     <div className='flex gap - 2 items - center'>;
@@ -122,12 +103,6 @@ if (return null) {
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

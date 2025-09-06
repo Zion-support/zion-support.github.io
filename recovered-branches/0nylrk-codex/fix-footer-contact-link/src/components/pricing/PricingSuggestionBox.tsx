@@ -1,27 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Info, ThumbsUp } from "lucide-react";
-import { PricingSuggestion } from "@/services/pricingSuggestionService";
-import { Loader2, Info, ThumbsUp } from "lucide-react",
-import { PricingSuggestion } from "@/services/pricingSuggestionService",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -30,11 +11,6 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
@@ -55,7 +31,6 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   onApplySuggestion
   suggestion,
@@ -137,14 +112,6 @@ if ( {) {
             </p>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
-      </Card>;
-    );
-  }
-  if (!suggestion) {
-    return null
-  }
-=======
 
 
 
@@ -154,7 +121,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
@@ -205,11 +171,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-
-};
-=======
 
 
   if (!suggestion) {;
@@ -221,7 +182,6 @@ if ( {) {
 };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 ;
 
@@ -332,10 +292,6 @@ if ( {) {
 =======
 
 export default PricingSuggestionBox;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

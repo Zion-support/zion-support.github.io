@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -23,11 +15,8 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -47,14 +36,10 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -90,9 +75,6 @@ export function useMessaging(): MessagingContextType {
   }
   return context;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -148,7 +130,6 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -171,54 +152,9 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     create_conversation;
     markAsRead;
 
-<<<<<<< HEAD
-  return (
-    <MessagingContext.Provider value={contextValue}>
-      {children}
-    </MessagingContext.Provider>
-  )
-}
-;
-// Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth(),;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
-      setConversations([]),;
-=======
 
 
       setConversations([]);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
@@ -276,13 +212,8 @@ if ( {) {
     fetchConversations,;
     loadMessages;
   };
-<<<<<<< HEAD
-  return (;
-    <MessagingContext.Provider value={contextValue}>;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {children}
 
     </MessagingContext && MessagingContext.Provider>;

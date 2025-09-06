@@ -1,275 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
- } from 'lucide-react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function ExplorePage() {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const categories = [
-    {
-      id: 'ai'
-      name: 'AI & Machine Learning'
-      icon: Brain
-      description:
-        'Revolutionary AI consciousness and machine learning solutions'
-      color: 'from-purple-500 to-pink-500'
-      serviceCount: 25
-      featured: true
-    },    {
-      id: 'quantum'
-      name: 'Quantum Computing'
-      icon: Atom
-      description: 'Quantum-powered computing and consciousness simulation'
-      color: 'from-blue-500 to-cyan-500'
-      serviceCount: 18
-      featured: true
-    },    {
-      id: 'cybersecurity'
-      name: 'Cybersecurity'
-      icon: Shield
-      description: 'Quantum-resistant security and AI threat detection'
-      color: 'from-red-500 to-orange-500'
-      serviceCount: 22
-      featured: true
-    },    {
-      id: 'cloud'
-      name: 'Cloud & DevOps'
-      icon: Cloud
-      description: 'Autonomous DevOps and cloud infrastructure'
-      color: 'from-emerald-500 to-teal-500'
-      serviceCount: 20
-      featured: false
-    },    {
-      id: 'edge'
-      name: 'Edge Computing'
-      icon: Network
-      description: 'Edge computing orchestration and IoT management'
-      color: 'from-yellow-500 to-orange-500'
-      serviceCount: 15
-      featured: false
-    },    {
-      id: 'space'
-      name: 'Space Technology'
-      icon: Rocket
-      description: 'Space exploration and resource optimization'
-      color: 'from-indigo-500 to-purple-500'
-      serviceCount: 12
-      featured: true
-    },    {
-      id: 'biotech'
-      name: 'Biotechnology'
-      icon: ZapIcon
-      description: 'Neural interfaces and biomedical innovations'
-      color: 'from-pink-500 to-rose-500'
-      serviceCount: 16
-      featured: false
-    },    {
-      id: 'blockchain'
-      name: 'Blockchain'
-      icon: Code
-      description: 'AI-powered blockchain governance and DeFi'
-      color: 'from-green-500 to-emerald-500'
-      serviceCount: 14
-      featured: false
-    },    {
-      id: 'automation'
-      name: 'Automation'
-      icon: Zap
-      description: 'Business process automation and AI agents'
-      color: 'from-cyan-500 to-blue-500'
-      serviceCount: 19
-      featured: false
-    },    {
-      id: 'fintech'
-      name: 'Financial Technology'
-      icon: TrendingUp
-      description: 'Quantum financial trading and AI analytics'
-      color: 'from-emerald-500 to-green-500'
-      serviceCount: 17
-      featured: false
-    },  ];
-  const featuredServices = [
-    {
-      id: 'ai-consciousness-evolution'
-      title: 'AI Consciousness Evolution'
-      category: 'ai'
-      description:
-        'Revolutionary AI consciousness platform with emotional intelligence'
-      status: 'beta'
-      price: '$1,999/month'
-      icon: Brain
-      color: 'from-purple-500 to-pink-500'
-    },    {
-      id: 'quantum-neural-networks'
-      title: 'Quantum Neural Networks'
-      category: 'quantum'
-      description:
-        'Quantum-powered AI with advanced consciousness capabilities'
-      status: 'beta'
-      price: '$1,299/month'
-      icon: Atom
-      color: 'from-blue-500 to-cyan-500'
-    },    {
-      id: 'quantum-cybersecurity'
-      title: 'Quantum Cybersecurity'
-      category: 'cybersecurity'
-      description: 'Future-proof security with quantum-resistant encryption'
-      status: 'active'
-      price: '$799/month'
-      icon: Shield
-      color: 'from-red-500 to-orange-500'
-    },    {
-      id: 'space-technology'
-      title: 'Space Technology Innovation'
-      category: 'space'
-      description: 'AI-powered space exploration and resource optimization'
-      status: 'beta'
-      price: '$2,499/month'
-      icon: Rocket
-      color: 'from-indigo-500 to-purple-500'
-    },  ];
-  // Filter categories based on search
-  const filteredCategories = categories.filter(category => {
-    const matchesSearch =
-      category.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      category.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter =
-      selectedCategory === 'all' |category.id === selectedCategory;
-    return matchesSearch && matchesFilter;  });
-  // Sort categories
-  const sortedCategories = [...filteredCategories].sort((a, b) => {
-    switch (sortBy) {
-      case 'popularity':
-        return b.serviceCount - a.serviceCount;
-      case 'name':
-        return a.name.localeCompare(b.name);
-      case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      default:
-        return 0;    }
-  });
-import React, { useState } from 'react';
-import Head from 'next/head';
-
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
-  Search, Filter, Grid, List, ArrowRight, ChevronRight,;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-} from 'lucide-react',;
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function ExplorePage(req, res) {
-  try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const categories = [;
-    {;
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'Revolutionary AI consciousness and machine learning solutions';
-      color: 'from-purple-500 to-pink-500',;
-      serviceCount: 25,;
-      featured: true;
-    },;
-    {;
-      id: 'quantum',;
-      name: 'Quantum Computing',;
-      icon: Atom,;
-      description: 'Quantum-powered computing and consciousness simulation',;
-      color: 'from-blue-500 to-cyan-500',;
-      serviceCount: 18,;
-      featured: true;
-    },;
-    {;
-      id: 'cybersecurity',;
-      name: 'Cybersecurity',;
-      icon: Shield,;
-      description: 'Quantum-resistant security and AI threat detection',;
-      color: 'from-red-500 to-orange-500',;
-      serviceCount: 22,;
-      featured: true;
-    },;
-    {;
-      id: 'cloud',;
-      name: 'Cloud & DevOps',;
-      icon: Cloud,;
-      description: 'Autonomous DevOps and cloud infrastructure',;
-      color: 'from-emerald-500 to-teal-500',;
-      serviceCount: 20,;
-      featured: false;
-    },;
-    {;
-      id: 'edge',;
-      name: 'Edge Computing',;
-      icon: Network,;
-      description: 'Edge computing orchestration and IoT management',;
-      color: 'from-yellow-500 to-orange-500',;
-      serviceCount: 15,;
-      featured: false;
-    },;
-    {;
-      id: 'space',;
-      name: 'Space Technology',;
-      icon: Rocket,;
-      description: 'Space exploration and resource optimization',;
-      color: 'from-indigo-500 to-purple-500',;
-      serviceCount: 12,;
-      featured: true;
-    },;
-    {;
-      id: 'biotech',;
-      name: 'Biotechnology',;
-      icon: ZapIcon,;
-      description: 'Neural interfaces and biomedical innovations',;
-      color: 'from-pink-500 to-rose-500',;
-      serviceCount: 16,;
-      featured: false;
-    },;
-    {;
-      id: 'blockchain',;
-      name: 'Blockchain',;
-      icon: Code,;
-      description: 'AI-powered blockchain governance and DeFi',;
-      color: 'from-green-500 to-emerald-500',;
-      serviceCount: 14,;
-      featured: false;
-    },;
-    {;
-      id: 'automation',;
-      name: 'Automation',;
-      icon: Zap,;
-      description: 'Business process automation and AI agents',;
-      color: 'from-cyan-500 to-blue-500',;
-      serviceCount: 19,;
-      featured: false;
-    },;
-    {;
-      id: 'fintech',;
-      name: 'Financial Technology',;
-      icon: TrendingUp,;
-      description: 'Quantum financial trading and AI analytics',;
-      color: 'from-emerald-500 to-green-500',;
-      serviceCount: 17,;
-      featured: false;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -292,7 +20,6 @@ class ErrorBoundary extends React.Component {
     }
     
     return this.props.children;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 import React, { useState } from 'react';
@@ -362,22 +89,11 @@ import React, { useState } from 'react';
       case 'name':;
         return a && a.name.localeCompare(b && b.name);
       case 'featured':;
-<<<<<<< HEAD
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),;
-      default: return 0;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }),
-=======
         return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
       default:;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return 0;    }
   });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -407,7 +123,6 @@ import React, { useState } from 'react';
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <SmartHeader />
 
@@ -435,12 +150,9 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -486,13 +198,10 @@ import React, { useState } from 'react';
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -511,12 +220,9 @@ import React, { useState } from 'react';
   }
 }
               <div className="flex items-center gap-4">
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <select
                   value={sortBy}
 
@@ -556,13 +262,10 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -722,12 +425,9 @@ import React, { useState } from 'react';
   }
 }
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
@@ -760,11 +460,8 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -783,13 +480,10 @@ import React, { useState } from 'react';
                   
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   
                   <a
@@ -838,10 +532,7 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -853,13 +544,10 @@ import React, { useState } from 'react';
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.div
 =======
             transition={{ duration: 0 && 0.6 }}
@@ -1037,44 +725,7 @@ import React, { useState } from 'react';
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sortedCategories.map((category, index) => (
                   <motion.div
-<<<<<<< HEAD
-                    key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
-                    onClick={() =>
-                      (window.location.href = `/category/${category.id}`)
-                    }
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
-                    onClick={() => window.location.href = `/category/${category.id}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -1135,13 +786,10 @@ import React, { useState } from 'react';
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -1170,12 +818,9 @@ import React, { useState } from 'react';
 }
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -1223,29 +868,6 @@ import React, { useState } from 'react';
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
-=======
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1254,7 +876,6 @@ import React, { useState } from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -1263,65 +884,12 @@ import React, { useState } from 'react';
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
-              {
-                icon: Brain
-                title: 'AI Consciousness'
-                description:
-                  'The evolution of AI towards true consciousness and emotional intelligence'
-                trend: 'Rising'
-                color: 'from-purple-500 to-pink-500'
-              }
-              {
-                icon: Atom
-                title: 'Quantum Supremacy'
-                description:
-                  'Breakthroughs in quantum computing and quantum AI applications'
-                trend: 'Breakthrough'
-                color: 'from-blue-500 to-cyan-500'
-              }
-              {
-                icon: Shield
-                title: 'Quantum Security'
-                description:
-                  'Quantum-resistant cryptography and AI-powered threat detection'
-                trend: 'Critical'
-                color: 'from-red-500 to-orange-500'
-              }
-              {
-                icon: Rocket
-                title: 'Space Innovation'
-                description:
-                  'AI-powered space exploration and resource optimization'
-                trend: 'Emerging'
-                color: 'from-indigo-500 to-purple-500'
-              }
-              {
-                icon: ZapIcon
-                title: 'Neural Interfaces'
-                description:
-                  'Brain-computer interfaces and neural augmentation'
-                trend: 'Experimental'
-                color: 'from-pink-500 to-rose-500'
-              }
-              {
-                icon: TrendingUp
-                title: 'Autonomous Systems'
-                description:
-                  'Self-improving AI systems and autonomous business operations'
-                trend: 'Growing'
-                color: 'from-emerald-500 to-green-500'
-              },            ].map((trend, index) => (
-=======
 
             ].map((trend, index) => (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <motion.div
                 key={trend.title}
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
@@ -1385,142 +953,12 @@ import React, { useState } from 'react';
                 key={trend && trend.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Brain,
-                title: 'AI Consciousness',
-                description: 'The evolution of AI towards true consciousness and emotional intelligence',
-                trend: 'Rising',
-                color: 'from-purple-500 to-pink-500'
-              },
-              {
-                icon: Atom,
-                title: 'Quantum Supremacy',
-                description: 'Breakthroughs in quantum computing and quantum AI applications',
-                trend: 'Breakthrough',
-                color: 'from-blue-500 to-cyan-500'
-              },
-              {
-                icon: Shield,
-                title: 'Quantum Security',
-                description: 'Quantum-resistant cryptography and AI-powered threat detection',
-                trend: 'Critical',
-                color: 'from-red-500 to-orange-500'
-              },
-              {
-                icon: Rocket,
-                title: 'Space Innovation',
-                description: 'AI-powered space exploration and resource optimization',
-                trend: 'Emerging',
-                color: 'from-indigo-500 to-purple-500'
-              },
-              {
-                icon: ZapIcon,
-                title: 'Neural Interfaces',
-                description: 'Brain-computer interfaces and neural augmentation',
-                trend: 'Experimental',
-                color: 'from-pink-500 to-rose-500'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Autonomous Systems',
-                description: 'Self-improving AI systems and autonomous business operations',
-                trend: 'Growing',
-                color: 'from-emerald-500 to-green-500',
-              },            ].map((trend, index) => (
-              <motion.div
-                key={trend.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-                color: 'from-emerald-500 to-green-500'
-                } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            ].map((trend, index) => (;
-              <motion.div;
-                key={trend.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
-                  <trend.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className='flex items-center justify-between mb-3'>
-                  <h3 className='text-xl font-bold text-white'>
-                    {trend.title}
-                  </h3>
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      trend.trend === 'Rising'
-                        ? 'bg-green-500/20 text-green-300'
-                        : trend.trend === 'Breakthrough'
-                          ? 'bg-blue-500/20 text-blue-300'
-                          : trend.trend === 'Critical'
-                            ? 'bg-red-500/20 text-red-300'
-                            : trend.trend === 'Emerging'
-                              ? 'bg-yellow-500/20 text-yellow-300'
-                              : trend.trend === 'Experimental'
-                                ? 'bg-purple-500/20 text-purple-300'
-                                : 'bg-cyan-500/20 text-cyan-300'
-                    }`}
-                  >
-                    {trend.trend}
-                  </span>
-                </div>
-                <p className='text-white/70 leading-relaxed'>
-                  {trend.description}
-                </p>              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-white">{trend.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -1556,36 +994,6 @@ import React, { useState } from 'react';
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* CTA Section */}
@@ -1613,7 +1021,6 @@ import React, { useState } from 'react';
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -1642,12 +1049,6 @@ import React, { useState } from 'react';
       </section>
       <SmartFooter />
     </div>
-<<<<<<< HEAD
-);
-
-
-}
-=======
 
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
@@ -1669,7 +1070,6 @@ import React, { useState } from 'react';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1723,10 +1123,7 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

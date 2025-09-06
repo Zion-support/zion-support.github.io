@@ -12,12 +12,9 @@ className
             </span>;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {reply.authorRole}
               </Badge>
             )}
@@ -37,10 +34,6 @@ className
         <div>{reply.content}</div>
       </CardContent>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <CardFooter className="flex justify-between">
@@ -60,19 +53,6 @@ className
             Mark as Answer
           </Button>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-  )
-}
-export default ReplyCard
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>;
         </div>;
@@ -101,10 +81,6 @@ export default ReplyCard
           </Button>;
         )}
       </CardFooter>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </Card>;
   );
 };

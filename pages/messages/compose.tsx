@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter  } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage() {
-
-  const router = useRouter();
-  const {
-    type
-    recipientId
-    recipientName
-    jobId
-    jobTitle
-    talentId
-    talentName
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-import {useRouter} from 'next/router';
-import {useCurrentUser} from '../../hooks/useCurrentUser';
-export default function ComposePage() {;
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
-export default function ComposePage(req, res) {
-  try {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
@@ -100,19 +75,6 @@ export default function ComposePage(req, res) {
     if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
-<<<<<<< HEAD
-      const mime = file.type |'application/octet-stream';
-      attachmentBase64 = `data:${mime};base64,${base64}`;    }
-      const mime = file.type || 'application/octet-stream';
-      const mime = file.type || 'application/octet-stream';
-      attachmentBase64 = `data:${mime};base64,${base64}`;    }
-      attachmentBase64 = `data:${mime},base64,${base64}`;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
@@ -124,7 +86,6 @@ export default function ComposePage(req, res) {
       const mime = file.type || 'application/octet-stream';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -241,13 +202,6 @@ export default function ComposePage(req, res) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-
-}
-  )
-}
-=======
 
 
 
@@ -387,10 +341,7 @@ if ( {) {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

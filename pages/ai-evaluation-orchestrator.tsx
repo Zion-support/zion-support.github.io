@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-const AIEvaluationOrchestrator: React.FC = () => {
-import React from 'react',
-import Head from 'next/head';
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <Layout>;
@@ -17,12 +7,6 @@ import Head from 'next/head';
 
 
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-export default function AIEvaluationOrchestratorPage() {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <Head>
@@ -74,18 +58,6 @@ export default function AIEvaluationOrchestratorPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="text-center">
-          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90">
-            Talk to Sales
-          </a>
-        </div>
-      </main>
-    </Layout>
-  );
-
-}
-=======
 
 
 }
@@ -118,21 +90,15 @@ export default function AIEvaluationOrchestratorPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
           </div>
         </div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </>
   )
 }
-<<<<<<< HEAD
-=======
 
     </Layout>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

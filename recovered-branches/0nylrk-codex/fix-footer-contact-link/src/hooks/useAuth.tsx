@@ -1,85 +1,3 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {AuthContext} from "@/context/auth/AuthContext";
-import type { UserDetails as AuthUserDetails } from "@/types/auth";
-// Define types for our context
-export interface UserDetails {;
-  id?: string;
-  name?: string;
-  email?: string;
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-  permissions?: string[];
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { AuthContext } from "@/context/auth/AuthContext";
-import type { UserDetails as AuthUserDetails } from "@/types/auth";
-// Define types for our context
-export interface UserDetails {
-  id?: string;
-  name?: string;
-  email?: string;
-  userType?: string;
-  displayName?: string;
-  avatarUrl?: string;
-  headline?: string;
-  profileComplete?: boolean;
-  role?: string;
-  permissions?: string[],
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string
-}
-export interface AuthContextType {
-import { AuthContext } from "@/context/auth/AuthContext",
-import type { UserDetails as AuthUserDetails } from "@/types/auth",
-// Define types for our context
-export interface UserDetails {
-  id?: string,
-  name?: string,
-  email?: string,
-  userType?: string,
-  displayName?: string,
-  avatarUrl?: string,
-  headline?: string,
-  profileComplete?: boolean,
-  role?: string,
-  permissions?: string[],
-  companyId?: string,
-  bio?: string,
-  createdAt?: string,
-  updatedAt?: string
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AuthContext } from "@/context/auth/AuthContext",;
-import type { UserDetails as AuthUserDetails } from "@/types/auth",;
-// Define types for our context;
-export interface UserDetails {;
-  id?: string,;
-  name?: string,;
-  email?: string,;
-  userType?: string,;
-  displayName?: string,;
-  avatarUrl?: string,;
-  headline?: string,;
-  profileComplete?: boolean,;
-  role?: string,;
-  permissions?: string[],;
-  companyId?: string,;
-  bio?: string,;
-  createdAt?: string,;
-  updatedAt?: string;
-=======
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -100,7 +18,6 @@ export interface UserDetails {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface AuthContextType {;
@@ -262,71 +179,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
-<<<<<<< HEAD
-      console.warn("No wallet detected");
-      return
-    }
-    try {
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0];
-      await ethereum.request({
-        method: 'personal_sign'
-        params: [address, address]
-      });
-      setUser({
-        id: address
-        displayName: address
-        profileComplete: true
-      })
-    } catch (err) {
-      console.error('Web3 login failed', err)
-    }
-  }
-  // Check for existing session on mount
-  useEffect(() => {
-    // Mock loading state and then set a null user to simulate no session
-    setIsLoading(true);
-    setTimeout(() => {
-      setUser(null);
-      setIsLoading(false)
-    }, 100)
-  }, []);
-  const value = {
-    user;
-    isAuthenticated: !!user
-    isLoading;
-    signIn;
-    signOut;
-    signUp;
-    // Add aliases for compatibility
-    login: signIn
-    logout: signOut
-    signup: signUp
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3
-  }
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
-// Custom hook to use the auth context
-export function useAuth(): AuthContextType {
-  const context = useContext(AuthContext);
-
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-  }
-  return context
-}
-
-// Custom hook to use the auth context
-export function useAuth(): AuthContextType {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-=======
 
 
 // Custom hook to use the auth context
@@ -336,7 +188,6 @@ export function useAuth(): AuthContextType {;
     throw new Error("useAuth must be used within an AuthProvider")
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       console.warn("No wallet detected"),
       return
 ;
@@ -700,10 +551,7 @@ export function useAuth(): any (): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return context;
 }

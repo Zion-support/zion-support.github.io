@@ -31,19 +31,7 @@ import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
-<<<<<<< HEAD
-import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
-import {
-  createMilestone,
-  fetchMilestones,;
-  updateMilestoneStatus,;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -59,46 +47,7 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-    if (!role) return;
-    try {
-      const userId =
-        role === 'talent'
-          ? 'talent-1'
-          : role === 'client'
-            ? 'client-1'
-            : 'client-1';
-      document.cookie = `x-user-id=${userId}; path=/`;
-      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-  }, [role]);
-  useEffect(() => {
-    if (!projectId) return;
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import MilestoneForm from '../../../components/monetization/MilestoneForm';
-import MilestoneCard from '../../../components/monetization/MilestoneCard';
-import { Milestone } from '../../../utils/types/milestones';
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
-  if (typeof window === 'undefined') return 'client',;
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-export default function ProjectMilestonesPage(req, res) {
-  try {
-  const router = useRouter();
-  const { 'project-id': projectId } = router.query as any;
-  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
   }, []),;
@@ -116,9 +65,6 @@ export default function ProjectMilestonesPage(req, res) {
 }
   }, [role]),;
   useEffect(() => {;
-<<<<<<< HEAD
-    if (!projectId) return,;
-=======
 
     if (!projectId) return;
 =======
@@ -129,14 +75,12 @@ import { useRouter } from 'next/router';
 
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     let cancelled = false;
     (async () => {;
       setLoading(true);
@@ -234,16 +178,11 @@ if (return) {
     })();
     return () => {;
       cancelled = true;
-<<<<<<< HEAD
-    }
-    };
-=======
 
 
     };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [projectId]);
 
 
@@ -256,11 +195,6 @@ if (return) {
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
-<<<<<<< HEAD
-    setMilestones(prev => [res.milestone, ...prev]);  }
-    setMilestones(prev => [res.milestone, ...prev]);  };
-
-=======
 
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
@@ -280,7 +214,6 @@ if (return) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -294,13 +227,10 @@ if (return) {
     setMilestones((prev) => [res.milestone, ...prev])
 
   },
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -345,13 +275,10 @@ if (return) {
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
 
         {role !== 'talent' && (
@@ -365,10 +292,6 @@ if (return) {
           </div>
         )}
         {loading && <div>Loading milestones...</div>}
-<<<<<<< HEAD
-        {error && <div className='text-red-600'>{error}</div>}
-
-=======
 
   }, [project_id]);
 =======
@@ -376,7 +299,6 @@ if (return) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -404,8 +326,6 @@ if (return) {
 if (return, ) {
   $2
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -423,7 +343,6 @@ if (return, ) {
               <div className='text-gray-600'>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>;
@@ -468,7 +387,6 @@ if (return, ) {
 =======
         {error && <div className="text-red-600">{error}</div>}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -482,39 +400,7 @@ if (return, ) {
             ))}
           </div>
         )}
-<<<<<<< HEAD
-        <div className='mt-12 text-xs text-gray-500'>
-          Integration hooks ready: on Approved &rarr; trigger payout intent; on
-          Paid &rarr; capture via Stripe/PayPal/Escrow.
-        </div>
-      </div>
-    </div>
-);
 
-}
-}
-              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            {milestones.map((m) => (;
-              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>
@@ -538,10 +424,7 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

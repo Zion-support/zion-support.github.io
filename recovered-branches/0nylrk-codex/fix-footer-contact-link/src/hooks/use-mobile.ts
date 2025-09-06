@@ -1,13 +1,8 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import {useState, useEffect} from 'react';
-=======
 
 import {useState, useEffect} from 'react';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
@@ -28,9 +23,6 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
-<<<<<<< HEAD
-}
-=======
 
 import {useState, useEffect} from 'react';
 export /**
@@ -58,7 +50,6 @@ if ( {) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -75,12 +66,9 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

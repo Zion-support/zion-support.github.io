@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -14,16 +11,6 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-=======
 interface Message {;
   id: string,;
   content: string,;
@@ -41,7 +28,6 @@ import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Message {
   id: string,
   content: string,
@@ -54,79 +40,14 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
-<<<<<<< HEAD
-    status?: string
-  }
-  messages: Message[]
-  onBack: () => void
-import { useNavigate } from "react-router-dom",
-import { toast } from "sonner",
-interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
-<<<<<<< HEAD
-}
-
-
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
-  const [newMessage, setNewMessage] = useState("");
-  const navigate = useNavigate();
-  
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
-      onSendMessage(newMessage);
-      setNewMessage("")
-    }
-  };
-  
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault(),
-      handleSend()
-    }
-  };
-import React, { useState } from "react",;
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useNavigate } from "react-router-dom",;
-import { toast } from "sonner",;
-interface Message {;
-  id: string,;
-  content: string,;
-  timestamp: string,;
-  isMe: boolean,;
-  sender?: string,;
-  avatar?: string,;
-  status?: 'sent' | 'delivered' | 'read';
-}
-;
-interface MobileChatViewProps {;
-  contact: {;
-    id: string,;
-    name: string,;
-    avatar?: string,;
-    status?: string;
-  },;
-  messages: Message[],;
-  onBack: () => void,;
-  onSendMessage: (content: string) => void;
-}
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   onSendMessage: (content: string) => void
 }
@@ -172,10 +93,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
@@ -261,17 +179,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <div className={cn(
                 "text-xs mt-1 flex justify-end";
 
-<<<<<<< HEAD
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-                "text-xs mt-1 flex justify-end",
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-  },;
-  const startVideoCall = () => {;
-    const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-=======
     status?: string;
   }
   messages: Message[],
@@ -308,7 +215,6 @@ if ( {) {
   const startVideoCall = () =>: any {
     const room_id = `mobile-${contact.id}`;
     toast.success ("Starting video call", {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -464,8 +370,6 @@ if ( {) {
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
-<<<<<<< HEAD
-=======
               <p>{message && message.content}</p>;
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
@@ -483,7 +387,6 @@ if ( {) {
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">

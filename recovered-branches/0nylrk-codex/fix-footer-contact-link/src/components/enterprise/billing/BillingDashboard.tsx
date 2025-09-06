@@ -28,12 +28,9 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -63,41 +60,14 @@ import {
           <InvoiceHistory />
         </TabsContent>
         
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
-    </div>
-  );
-}
-    </div>;
-  );
-}
-    </div>
-  )
-import React from "react",;
-import { BillingHeader } from "./BillingHeader",;
-import { CurrentSubscription } from "./CurrentSubscription",;
-import { PaymentMethods } from "./PaymentMethods",;
-import { InvoiceHistory } from "./InvoiceHistory",;
-import { UsageOverview } from "./UsageOverview",;
-import {;
-  Tabs,;
-  TabsContent,;
-  TabsList,;
-  TabsTrigger} from "@/components/ui/tabs";
-export function BillingDashboard() {;
-  return (;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
       <BillingHeader />;
 
@@ -144,12 +114,8 @@ function BillingDashboard() {
     </div>);
 
 }
-<<<<<<< HEAD
-;
-=======
 =======
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

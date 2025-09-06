@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-origin/automation-improvements-final
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { motion } from 'framer-motion';
 import React from 'react';
 import Head from 'next/head';
@@ -13,28 +8,16 @@ import Head from 'next/head';
 
 
 import Link from 'next/link';
-<<<<<<< HEAD
-import {
-  ArrowRight
-  Server
-  Lock
-  Brain
-  Cloud
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { 
   ArrowRight,
   Server,
   Lock,
   Brain,
   Cloud;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -121,13 +104,6 @@ export default function APIDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
-<<<<<<< HEAD
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-origin/main
-origin/automation-improvements-final
-
-=======
 
 
 =======
@@ -142,8 +118,6 @@ export default function APIDocsPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
 
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -367,12 +341,6 @@ origin/automation-improvements-final
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react',
-import Head from 'next/head',
-=======
 
 
 
@@ -382,23 +350,12 @@ import Head from 'next/head',
 =======
 import React from 'react',
 import Head from 'next/head',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-        <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-=======
 
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
@@ -407,7 +364,6 @@ export default function ApiDocsPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
@@ -423,11 +379,6 @@ export default function ApiDocsPage() {
         </p>
 ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
-<<<<<<< HEAD
-    </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -442,7 +393,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>;
       </section>;
     </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
@@ -451,10 +401,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 origin/main
     </>
@@ -491,8 +438,6 @@ export default function ApiDocsPage(req, res) {
     </>;
   );
 }
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -583,6 +528,4 @@ function ApiDocsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

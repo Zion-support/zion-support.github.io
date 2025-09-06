@@ -51,21 +51,6 @@ export default function VendorsPage({ vendors }: Props) {
 
 
         ))}
-<<<<<<< HEAD
-      </div>
-      <div className='text-center text-xs text-gray-500'>
-        Powered by Zion • Co-brand available
-      </div>
-    </div>
-    </div>;
-  );
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-const { listVendors } = await import('../../utils/vendor-store');
-  const vendors = listVendors();
-  return { props: { vendors } }
-};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
-    </div>
-=======
       </div>;
       <div className='text-center text-xs text-gray-500'>;
         Powered by Zion • Co-brand available;
@@ -74,7 +59,6 @@ const { listVendors } = await import('../../utils/vendor-store');
   );
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
@@ -83,16 +67,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 
   return { props: { vendors } }
 };  return { props: { vendors } }
-<<<<<<< HEAD
-}
-
-};
-
-}
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../../utils/vendor-store');
-  const vendors = listVendors();
-=======
 
 =======
       {vendors.length === 0 && (
@@ -177,4 +151,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

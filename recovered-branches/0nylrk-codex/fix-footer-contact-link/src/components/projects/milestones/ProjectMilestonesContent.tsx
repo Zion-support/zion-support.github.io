@@ -1,28 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-import {useParams} from 'react-router-dom';
-import {useProjects} from '@/hooks/useProjects';
-import {useMilestones} from '@/hooks/useMilestones';
-import {useJobDetails} from '@/hooks/useJobDetails';
-import {useAuth} from '@/hooks/useAuth';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {useDisputeCheck} from '@/hooks/useDisputeCheck';
-import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
-export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string }
-
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?: string };
-=======
 
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -104,14 +88,11 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -137,62 +118,6 @@ export function ProjectMilestonesContent() {;
   }, [projectId, getProjectById, refetch]),
 
 
-<<<<<<< HEAD
-  // Determine project type based on job category or default to "Other"
-  const projectType = job?.category || "Other",
-
-  if (isLoading || !project) {
-    return (
-      <div className="container mx-auto py-8 px-4">
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-        </div>
-      </div>
-    )
-  }
-  const handleMilestoneSubmit = async (data: any) => {
-    if (!projectId) return
-    // Ensure all required fields are present
-    const milestoneData = {
-      project_id: projectId
-      title: data.title
-      description: data.description |""
-      amount: data.amount
-      status: "pending" as const
-      due_date: data.due_date ? data.due_date.toISOString() : undefined
-    }
-    await createMilestone(milestoneData);
-    setActiveTab('milestones');
-    await handleMilestoneCreated()
-  }
-    },
-    
-    await createMilestone(milestoneData),
-    setActiveTab('milestones'),
-    await handleMilestoneCreated()
-  },
-
-  return (
-    <div className="container mx-auto py-8 px-4">
-      <ProjectHeader title={project.job?.title |"Untitled Project"} />
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />
-      <div className="flex justify-between items-center my-6">
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>
-        <ProjectActions
-          projectId={projectId |''}
-        <ProjectActions 
-      } catch (error) {;
-        console.error("Error loading project:", error);
-      } finally {;
-        setIsLoading(false);
-      }
-    }
-;
-    loadProject(),;
-    refetch();
-  }, [projectId, getProjectById, refetch]),;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -239,9 +164,6 @@ export function ProjectMilestonesContent() {;
 
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-<<<<<<< HEAD
-        <ProjectActions;
-=======
         <ProjectActions
 =======
 
@@ -264,7 +186,6 @@ export function ProjectMilestonesContent() {;
         <ProjectActions 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}

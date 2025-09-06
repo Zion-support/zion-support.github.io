@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Button } from "@/components/ui/button";
-=======
 
 
 import { Button  } from '@/components / ui / button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Contract {
 
   id: string;
@@ -16,29 +10,6 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
-<<<<<<< HEAD
-interface RecentContractsTableProps {
-
-import { Button } from "@/components/ui/button",
-interface Contract {
-  id: string,
-  title: string,
-  client: string,
-  talent: string,
-  date: string,
-  isSmartContract: boolean
-import { Button } from "@/components/ui/button",;
-interface Contract {;
-  id: string,;
-  title: string,;
-  client: string,;
-  talent: string,;
-  date: string,;
-  isSmartContract: boolean;
-}
-;
-interface RecentContractsTableProps {;
-=======
 
 
 interface RecentContractsTableProps {;
@@ -48,7 +19,6 @@ interface RecentContractsTableProps {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -125,19 +95,6 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                   <Button
                     variant="ghost"
                     size="sm"
-<<<<<<< HEAD
-                    onClick={() => onViewContract(contract.id)}
-                  >
-                    View
-                  </Button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
-=======
                     onClick={() => onViewContract(contract && contract.id)}
 =======
 interface RecentContractsTableProps {
@@ -229,18 +186,14 @@ function RecentContractsTable() {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </tbody>;
         </table>;
       </div>;
     </>;
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
               </tr>))}

@@ -31,11 +31,6 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
 
@@ -66,44 +61,6 @@ interface AIListingFormProps {
     targetAudience: string
   }) => void;
   isLoading: boolean,
-<<<<<<< HEAD
-    title?: string
-    category?: string
-    keyFeatures?: string
-    targetAudience?: string
-  }
-export function AIListingForm({
-  onSubmit,
-  isLoading,
-  initialValues = {},
-}: AIListingFormProps) {
-  const { toast } = useToast()
-  const [title, setTitle] = useState(initialValues.title || '')
-  const [category, setCategory] = useState(initialValues.category || '')
-  const [keyFeatures, setKeyFeatures] = useState(
-    initialValues.keyFeatures || ''
-  )
-  const [targetAudience, setTargetAudience] = useState(
-    initialValues.targetAudience || ''
-  )
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title || "")
-  const [category, setCategory] = useState(initialValues.category || "")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "")
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-        title: 'Missing required fields',
-        description: 'Please provide at least a title and category.',
-        variant: 'destructive',
-      return;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   initialValues?: {
     title?: string;
     category?: string;
@@ -119,102 +76,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
-<<<<<<< HEAD
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
-  const [ title, setTitle ] = useState(initialValues.title || ""),
-  const [ category, setCategory ] = useState(initialValues.category || ""),
-  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
-  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
-
-
-  const handleSubmit = () => {
-    if (!title || !category) {
-      toast({
-<<<<<<< HEAD
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive',  const [title, setTitle] = useState(initialValues.title |"")
-  const [category, setCategory] = useState(initialValues.category |"")
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"")
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"")
-  const handleSubmit = () => {
-    if (!title |!category) {
-      toast({
-        title: 'Missing required fields'
-        description: 'Please provide at least a title and category.'
-        variant: 'destructive'
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      }),
-      return
-    }
-    onSubmit({
-      title
-      category
-      keyFeatures
-      targetAudience
-      title,
-      category,
-      keyFeatures,
-      targetAudience,
-    })
-  }
-
-  return (
-    <div className='space-y-4'>
-      <div className='space-y-2'>
-        <label
-          htmlFor='title'
-          className='text-sm font-medium text-zion-slate-light'
-        >
-          Title
-        </label>
-        <Input
-          id='title'
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          placeholder='Enter your product or service title'
-          className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}        />
-      </div>
-      <div className='space-y-2'>
-        <label
-          htmlFor='category'
-          className='text-sm font-medium text-zion-slate-light'
-        >
-          Category
-        </label>
-        <Input
-          id='category'
-          value={category}
-          onChange={e => setCategory(e.target.value)}
-          placeholder='e.g. AI Tool, Digital Product, Service'
-          className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}        />
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      }),
-=======
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
       });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return
     }
 
     onSubmit({
-<<<<<<< HEAD
-      title,
-      category,
-      keyFeatures,
-=======
       title;
       category;
       keyFeatures;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       targetAudience
     })
   };
@@ -223,32 +95,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   return (
     <div className="space-y-4">
         />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       <div className="space-y-2">
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
         <Input
-<<<<<<< HEAD
-          id='targetAudience'
-          value={targetAudience}
-          onChange={e => setTargetAudience(e.target.value)}
-          placeholder='e.g. Developers, Marketers, Startups'
-          className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}
-        />
-      </div>
-      <Button
-        onClick={handleSubmit}
-        disabled={isLoading |!title |!category}
-        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'      >        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
-          id="title"
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -286,10 +139,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <Input;
           id='category';
           value={category}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           on_change={e => set_category (e.target.value)}
           placeholder='e.g. AI Tool, Digital Product, Service';
           className='bg - zion - blue border border - zion - blue - light text - white';
@@ -441,13 +290,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-<<<<<<< HEAD
-        />
-      </div>
-      <Button
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />;
       </div>;
       <Button;
@@ -474,10 +317,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   toast ({
   return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
 }</Button> </div>)
 }'"
@@ -496,11 +335,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
             Generate Optimized Content;
           </>;
 
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
 }'";
@@ -508,10 +344,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content

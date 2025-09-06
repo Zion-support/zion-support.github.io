@@ -1,22 +1,8 @@
 
-<<<<<<< HEAD
-import {toast} from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import {checkNewRegistration} from "@/utils/authUtils";
-import {useNavigate} from 'react-router-dom';
-import { toast } from "@/hooks/use-toast",
-import type { UserProfile } from "@/types/auth";
-import { checkNewRegistration } from "@/utils/authUtils";
-import { useNavigate } from 'react-router-dom';
-import type { UserProfile } from "@/types/auth",
-import { checkNewRegistration } from "@/utils/authUtils",
-import { useNavigate } from 'react-router-dom',
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Custom hook for auth event handling
  */
@@ -62,21 +48,8 @@ export function useAuthEventHandlers(
   return {
     handleSignedIn;
 
-<<<<<<< HEAD
-    handleSignedOut
-  },
-
-  return {
-    handleSignedIn,
-    handleSignedOut
-import { toast } from "@/hooks/use-toast",;
-import type { UserProfile } from "@/types/auth",;
-import { checkNewRegistration } from "@/utils/authUtils",;
-import { useNavigate } from 'react-router-dom',;
-=======
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**;
  * Custom hook for auth event handling;
  */;
@@ -120,8 +93,6 @@ export function useAuthEventHandlers(): any (;
   return {;
     handleSignedIn;
     handleSignedOut;
-<<<<<<< HEAD
-=======
 
 =======
 import { toast } from '@/hooks / use - toast';
@@ -185,6 +156,5 @@ if ( {) {
     handleSignedOut
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

@@ -216,8 +216,6 @@ export default function QuantumServices() {;
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
             </div>;
           </div>;
         </section>;
@@ -227,9 +225,7 @@ export default function QuantumServices() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -518,18 +514,11 @@ function QuantumServices() {
                     ))}
 
                   </ul>
-<<<<<<< HEAD
-                  <a
-                    href="/contact"
-                  <a 
-                    href="/contact" 
-=======
 
                   <a 
                     href="/contact" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -540,8 +529,6 @@ function QuantumServices() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
                   </ul>;
 
                   <a
@@ -560,9 +547,7 @@ function QuantumServices() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -605,7 +590,6 @@ export default QuantumServicesPage;
 }
 =======
   )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 import React from 'react';
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
@@ -665,20 +649,9 @@ import React from 'react';
 }
 ;
 export default QuantumServicesPage;
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 export default QuantumServicesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default QuantumServicesPage;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

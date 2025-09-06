@@ -1,14 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -17,18 +11,12 @@ interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
 }
-<<<<<<< HEAD
-export function useTranslationService() {
-
-export function useTranslationService() {;
-=======
 
 
 
 export function useTranslationService() {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -95,12 +83,8 @@ export function useTranslationService() {;
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -156,12 +140,9 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {

@@ -2,18 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const id = String(req.query.id |"");
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const id = String(req.query.id || "");
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
@@ -45,7 +35,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).send(pixel);
 }

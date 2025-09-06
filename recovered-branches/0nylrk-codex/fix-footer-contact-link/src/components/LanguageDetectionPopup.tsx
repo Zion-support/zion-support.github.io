@@ -1,33 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage
-  SupportedLanguage
-  LanguageContextType
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-=======
 
 
 
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -41,11 +17,8 @@ import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
 =======
@@ -102,12 +75,6 @@ export function LanguageDetectionPopup() {;
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
-<<<<<<< HEAD
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  }
-=======
 
   const handleAccept = async () => {;
 
@@ -118,7 +85,6 @@ export function LanguageDetectionPopup() {;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -155,13 +121,8 @@ export function LanguageDetectionPopup() {;
   if (!detectedLanguage) return null,
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
@@ -186,18 +147,6 @@ export function LanguageDetectionPopup() {;
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
-<<<<<<< HEAD
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-          >
-            {t("general.yes")}
-          </AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
-  );
-}
-);
-=======
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
             {t("general && general.yes")}
 =======
@@ -205,7 +154,6 @@ export function LanguageDetectionPopup() {;
 );
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -219,8 +167,6 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>;
     </AlertDialog>;
   );
-<<<<<<< HEAD
-=======
 
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
@@ -261,5 +207,4 @@ if (return) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

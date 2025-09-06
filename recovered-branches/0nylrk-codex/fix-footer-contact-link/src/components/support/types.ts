@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import { ReactNode } from "react";
-=======
 import { ReactNode  } from './react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface HelpArticle {
   id: string;
   title: string;
@@ -15,11 +11,8 @@ export interface HelpArticle {
 
 }
 export interface HelpCategory {
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -30,29 +23,20 @@ export interface HelpArticle {;
 }
 
 export interface HelpCategory {;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
 }
-<<<<<<< HEAD
-export interface SupportTicket {
-
-export interface SupportTicket {;
-=======
 
 
 
 export interface SupportTicket {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   subject: string;
@@ -63,15 +47,10 @@ export interface SupportTicket {;
   created_at: string;
   updated_at: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 
 =======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -117,10 +96,6 @@ export interface SupportTicket {;
   updatedAt: string;
 }
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -12,20 +12,6 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function AIMatchingResults({
-
-  matches
-  onSelectMatch
-  isLoading = false
-  projectDescription = ''
-  serviceType: _serviceType = ''
-}: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState('all')
-  // Group matches by category
-=======
 
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
@@ -54,7 +40,6 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -324,37 +309,6 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
-<<<<<<< HEAD
-                              />
-                            ) : (
-                              <AvatarFallback className='bg-zion-purple/20'>
-                                <CategoryIcon className='h-6 w-6 text-zion-purple' />
-                              </AvatarFallback>
-                            )}
-                          </Avatar>
-                          <div className='flex-1'>
-                            <div className='flex justify-between'>
-                              <div>
-                                <h3 className='font-medium text-white'>
-                                  {match.title}
-                                </h3>
-                                <p className='text-zion-slate-light text-sm'>
-                                  {match.description}
-                                </p>
-                              </div>
-                              {match.price && (
-                                <div className='text-right ml-2'>
-                                  <div className='font-medium text-white'>
-                                    ${match.price}
-                                  </div>
-                                  <div className='text-xs text-zion-slate-light'>
-                                    {match.category
-                                      .toLowerCase()
-                                      .includes('talent')
-                                      ? '/hour'
-                                      : ''}
-<<<<<<< HEAD
-=======
                               />) : (
                               <AvatarFallback className='bg - zion - purple / 20'>;
                                 <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
@@ -400,7 +354,6 @@ if ( {) {
                                       ? '/hour';
 
                                       : ''}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   </div>;
                                 </div>;
                               )}
@@ -411,18 +364,9 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   </div>
                                 </div>
                               )}
@@ -493,39 +437,23 @@ if ( {) {
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
             )}
           </TabsContent>;
         ))}
-<<<<<<< HEAD
-      </Tabs>
-    </div>
-  )
-};
-;
-=======
 
 
 };
 ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
       </Tabs>;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

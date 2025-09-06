@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {
-
-export default function GlobalSearchBar() {;
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
-  useEffect(() => {
-    if (!query) {
-      setSuggestions([]);
-      return;      return
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -34,7 +17,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     return this.props.children;
@@ -80,7 +62,6 @@ export default function GlobalSearchBar() {;
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [query]);
 
     return () => clearTimeout(id)
@@ -177,13 +158,6 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-<<<<<<< HEAD
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
-    rec.start()
-  }
-  };
-
-=======
 
 
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
@@ -191,7 +165,6 @@ export default function GlobalSearchBar() {;
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -220,15 +193,6 @@ export default function GlobalSearchBar() {;
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
-<<<<<<< HEAD
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
-
-
-                >
-
-=======
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -240,7 +204,6 @@ export default function GlobalSearchBar() {;
       )}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {s}
                 </button>
               </li>
@@ -252,9 +215,5 @@ export default function GlobalSearchBar() {;
 );  )
 }
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,13 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -134,36 +129,22 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-<<<<<<< HEAD
-  }
-  },
-=======
 
 
   },
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -175,18 +156,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
-<<<<<<< HEAD
-            onChange={(e) => setBulkSkills(e.target.value)}
-          />
-        </div>
-        <Button
-        <Button 
-=======
 
 
         <Button 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
@@ -206,13 +179,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-
-},
-};
-},
-=======
 
             onChange={(e) => setBulkSkills(e && e.target.value)}
           />;
@@ -283,4 +249,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

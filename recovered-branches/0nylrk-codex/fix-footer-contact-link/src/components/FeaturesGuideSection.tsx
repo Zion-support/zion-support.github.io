@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
@@ -26,33 +22,18 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 
 export function FeaturesGuideSection() {
   const features = [
     {
-      id: "ai-matcher"
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
-=======
 
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export function FeaturesGuideSection() {
-  const features = [
-    {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         "Connect with matched talents or services directly"
@@ -68,7 +49,6 @@ export function FeaturesGuideSection() {;
       title: "AI Matcher",;
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
@@ -465,21 +445,7 @@ export function FeaturesGuideSection() {;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
             {features.slice (0, 4).map (feature => (
               <TabsTrigger;
-<<<<<<< HEAD
-                key={feature.id} ;
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-            {features.slice(4).map(feature => (
-              <TabsTrigger
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key={feature.id}
                 value={feature.id}
 
@@ -581,15 +547,11 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
-};
-=======
 
 };
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </Tabs>;
 
         <div className="mt-12 text-center">;
@@ -650,12 +612,6 @@ export function FeaturesGuideSection() {;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-}
-}
-=======
 
     </section>);
 
@@ -664,6 +620,4 @@ export function FeaturesGuideSection() {;
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

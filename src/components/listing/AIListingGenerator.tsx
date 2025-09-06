@@ -32,37 +32,6 @@ interface AIListingGeneratorProps {;
   }
 }
 
-<<<<<<< HEAD
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast()
-  const [isLoading, setIsLoading] = useState(false)
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null)
-  const handleGenerate = async ({
-    title
-    category
-    keyFeatures
-    targetAudience
-  }: {
-    title: string
-    category: string
-    keyFeatures: string
-    targetAudience: string
-  }) => {
-    setIsLoading(true)
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
-        body: { title, category, keyFeatures, targetAudience }
-      })
-      if (error) {
-        throw new Error(error.message)
-      }
-      if (data && (data as any).error) {
-        throw new Error((data as any).error)
-      }
-      setGeneratedContent((data as any)?.generated |null)
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
-=======
 
   onApplyGenerated?: (content: GeneratedContent, ) => void,
   initial_values?: {
@@ -102,7 +71,6 @@ if ( {) {
 }
         throw new Error (error.message);
       }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -148,10 +116,6 @@ if (.error) {) {
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       toast({
@@ -162,34 +126,6 @@ if (.error) {) {
   }
   },
 
-<<<<<<< HEAD
-  return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
-          </p>
-        </CardHeader>
-        <CardContent>
-          <AIListingForm
-          <AIListingForm 
-            onSubmit = {handleGenerate,}
-            isLoading = {isLoading,}
-            initialValues = {initialValues,}
-          />
-        </CardContent>
-      </Card>
-          <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-;
-      setGeneratedContent((data as any)?.generated || null),;
-=======
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -221,7 +157,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
       }
 
       setGeneratedContent((data as any)?.generated || null);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({;
         title: "Content Generated",;
         description: "AI has created optimized listing content for you.";
@@ -280,15 +215,6 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <AIListingForm;
-            onSubmit={handleGenerate} ;
-            isLoading={isLoading} ;
-            initialValues={initialValues}
-          />;
-        </CardContent>;
-      </Card>;
-=======
 
           <AIListingForm
             onSubmit = {handleGenerate,}
@@ -299,7 +225,6 @@ if ( {) {
           <AIListingForm 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
@@ -443,43 +368,14 @@ if ( {) {
   onApplyGenerated (generated_content);
 toast ({
 }
-<<<<<<< HEAD
-return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
-  handleGenerate
-}isLoading= {
-  isLoading
-}initialValues= {
-  initialValues
-}/> </CardContent> </Card> {
-  isLoading && <LoadingContentSkeleton />
-}{
-  generatedContent && !isLoading && (<GeneratedContentDisplay content= {
-  generatedContent
-}onApply= {
-  handleApply
-}/>)
-}</div>)
-}'"
-}
-  handleApply 
-}/>) 
-}</div>) 
-}'";
-};
-=======
 
 }'";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 }
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>;
   );

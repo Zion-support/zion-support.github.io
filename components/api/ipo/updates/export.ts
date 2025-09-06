@@ -1,43 +1,13 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import PDFDocument from "pdfkit";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import PDFDocument from "pdfkit";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const id = String(req.query.id || '');
@@ -56,14 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
-<<<<<<< HEAD
-  doc.fontSize(14).text("KPIs");
-  doc.fontSize(12).text(u.kpis |"");
-  doc.end();
-  doc.end();
-}
-
-=======
 
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
@@ -95,7 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
@@ -143,30 +104,12 @@ function handler() {
 }
 
 =======
-<<<<<<< HEAD
-  doc.fontSize(14).text("KPIs");
-  doc.fontSize(12).text(u.kpis |"");
-  doc.end();
-<<<<<<< HEAD
-  doc.end();
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 =======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   doc.end();
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

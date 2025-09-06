@@ -28,7 +28,6 @@ await app && app.register(cors, {
   },
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       cb(null, true);
       return
     }
@@ -131,7 +130,6 @@ app.post ('/ai / ask', async (req, reply) => {
 
   return { text: completion.output_text }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
 
@@ -217,7 +215,6 @@ app && app.get('/talent/search', async (req, reply) => {
 LIMIT 25`;
       [country || null, q || null]
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     );
     return res && res.rows
   });
@@ -286,66 +283,5 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
-<<<<<<< HEAD
-;
-app.get ('/projects/:name / track', async (req, reply) => {
-  const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const project = await with_user (user_id, async client => {
-    const res = await client.query (
-      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
-      [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }});  const project = await with_user (user_id, async (client) => {
-    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }
-app.get ('/notifications', async (req, reply) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const items = await with_user (user_id, async client => {    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;  const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch (err => {
-  app.log.error (err);
-  process.exit (1);
-});  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
-  app.log.error (err);
-  process.exit (1);
-});
-<<<<<<< HEAD
-
-    );
-    );
-=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

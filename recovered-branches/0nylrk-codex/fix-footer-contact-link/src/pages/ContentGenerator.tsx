@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -43,38 +40,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
-<<<<<<< HEAD
-  const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
-import React, { useState } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { Label } from "@/components/ui/label",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { toast } from "sonner",
-import { Loader2 } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
-export default function ContentGenerator() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user, isLoading } = useAuth();
 
   const navigate = useNavigate();
@@ -105,32 +71,12 @@ export default function ContentGenerator() {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
-<<<<<<< HEAD
-    }
-  }, [user, isLoading, navigate]);
-  const generateContent = async () => {
-    setIsGenerating(true);
-    setPreviewContent(null);
-    try {
-      const { data, error } = await supabase.functions.invoke('generate-content', {
-        body: {
-          contentType
-          prompt: customPrompt |undefined
-          topic: topic |undefined
-          autoPublish;
-          includeImage: contentType === 'blog' ? includeImage : false
-        }
-      });
-      if (error) throw error;
-      setPreviewContent(data);
-=======
 
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -197,12 +143,9 @@ export default function ContentGenerator() {;
     }
 
       }),
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       if (error) throw error,
       
@@ -225,20 +168,6 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return
-<<<<<<< HEAD
-    }
-    try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
-        body: {
-          subject: previewContent.subject
-          previewText: previewContent.previewText
-          body: previewContent.body
-          testMode: true
-          testEmail
-        }
-      });
-      if (error) throw error;
-=======
 
   };
 
@@ -246,7 +175,6 @@ export default function ContentGenerator() {;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -281,12 +209,9 @@ export default function ContentGenerator() {;
         }
 
       }),
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       if (error) throw error,
       
@@ -453,11 +378,8 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
                           id="includeImage";
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

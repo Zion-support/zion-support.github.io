@@ -1,45 +1,6 @@
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import {useInterviews} from "@/hooks/useInterviews";
-import {Interview} from "@/types/interview";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {InterviewCard} from "@/components/interviews/InterviewCard";
-import {Button} from "@/components/ui/button";
-import {Calendar, Clock, Video} from "lucide-react";
-import {format, isAfter, parseISO, startOfDay} from "date-fns";
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-import { Button } from "@/components/ui/button",
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-import { Calendar, Clock, Video } from "lucide-react",
-import { format, isAfter, parseISO, startOfDay } from "date-fns",
-
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
@@ -223,67 +184,8 @@ function InterviewsContent() {;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-<<<<<<< HEAD
-              <InterviewCard
-                key={interview.id}
-              <InterviewCard 
-                key={interview.id} 
-import React, { useEffect, useState } from "react",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { InterviewCard } from "@/components/interviews/InterviewCard",;
-import { Button } from "@/components/ui/button",;
-import { Calendar, Clock, Video } from "lucide-react",;
-import { format, isAfter, parseISO, startOfDay } from "date-fns",;
-function InterviewsContent() {;
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),;
-  const [activeTab, setActiveTab] = useState("upcoming"),;
-  useEffect(() => {;
-    // Modified to handle Promise<Interview[]> return type;
-    const loadInterviews = async () => {;
-      await fetchInterviews();
-    },;
-    loadInterviews();
-  }, []),;
-  // Filter interviews based on status and date;
-  const now = new Date(),;
-  const today = startOfDay(now),;
-  const upcomingInterviews = interviews;
-    .filter((interview) => {;
-      const interviewDate = parseISO(interview.scheduled_date),;
-      return isAfter(interviewDate, now) &&;
-        ['confirmedrequested'].includes(interview.status);
-    });
-    .sort((a, b) =>;
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
-    ),;
-  const pendingInterviews = interviews.filter(interview =>;
-    interview.status === 'requested';
-  ),;
-  const pastInterviews = interviews.filter(interview => {;
-    const interviewDate = parseISO(interview.scheduled_date),;
-    return !isAfter(interviewDate, now) ||;
-      ['completeddeclinedcancelled'].includes(interview.status);
-  }),;
-  // Group interviews by date;
-  const groupInterviewsByDate = (interviews: Interview[]) => {;
-    const grouped: Record<string Interview[]> = {},;
-    interviews.forEach((interview) => {;
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),;
-      if (!grouped[dateKey]) {;
-        grouped[dateKey] = [];
-      }
-      grouped[dateKey].push(interview);
-    }),;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return grouped;
   };
 
@@ -303,11 +205,6 @@ function InterviewsContent() {;
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
-<<<<<<< HEAD
-            {interviews.map((interview) => (;
-              <InterviewCard;
-                key={interview.id} ;
-=======
             {interviews && interviews.map((interview) => (;
               <InterviewCard
                 key={interview && interview.id} 
@@ -318,7 +215,6 @@ function InterviewsContent() {;
                 key={interview.id} 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
@@ -354,70 +250,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-<<<<<<< HEAD
-              )}
-            </TabsTrigger>
-            <TabsTrigger value="pending">
-              Pending
-              {pendingInterviews.length > 0 && (
-                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
-                  {pendingInterviews.length}
-                </span>
-              )}
-            </TabsTrigger>
-            <TabsTrigger value="past">Past</TabsTrigger>
-          </TabsList>
-          <TabsContent value="upcoming" className="space-y-6">
-            {isLoading ? (
-              <div className="flex justify-center py-12">
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
-              </div>
-            ) : upcomingInterviews.length > 0 ? (
-              renderInterviewGroups(upcomingGrouped)
-            ) : (
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
-                <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-xl font-medium mb-2">No upcoming interviews</h3>
-                <p className="text-muted-foreground mb-6">You don't have any scheduled interviews coming up.</p>
-              </div>
-            )}
-          </TabsContent>
-          <TabsContent value="pending" className="space-y-6">
-            {isLoading ? (
-              <div className="flex justify-center py-12">
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
-              </div>
-            ) : pendingInterviews.length > 0 ? (
-              renderInterviewGroups(pendingGrouped)
-            ) : (
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
-                <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-xl font-medium mb-2">No pending interviews</h3>
-                <p className="text-muted-foreground mb-6">You don't have any interview requests that need your attention.</p>
-              </div>
-            )}
-          </TabsContent>
-          <TabsContent value="past" className="space-y-6">
-            {isLoading ? (
-              <div className="flex justify-center py-12">
-                <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
-              </div>
-            ) : pastInterviews.length > 0 ? (
-              renderInterviewGroups(pastGrouped)
-            ) : (
-              <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">
-                <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                <h3 className="text-xl font-medium mb-2">No past interviews</h3>
-                <p className="text-muted-foreground">Your interview history will appear here.</p>
-              </div>
-            )}
-          </TabsContent>
-        </Tabs>
-      </main>
-      <Footer />
-    </>
-  )
-=======
 =======
           </div>;
         </div>;
@@ -678,23 +510,10 @@ if ( {) {
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
-export default function Interviews() {
-  return (
-    <ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>
-  )
-}
-=======
 
 
 
@@ -704,7 +523,6 @@ export default function Interviews() {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -723,9 +541,6 @@ export default function Interviews() {;
 }
 
 ;
-<<<<<<< HEAD
-;
-=======
 
 
 =======
@@ -741,4 +556,3 @@ function Interviews() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

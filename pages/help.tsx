@@ -8,13 +8,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 origin/automation-improvements-final
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Search
   HelpCircle
   BookOpen
@@ -27,14 +20,11 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-<<<<<<< HEAD
-=======
 =======
 
 
 import {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Search,
   HelpCircle,
   BookOpen,
@@ -47,11 +37,8 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const helpArticles = [
   {
@@ -169,33 +156,18 @@ const help_categories = [;
     color: "blue"
     articles: helpArticles
   }
-<<<<<<< HEAD
-];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-=======
 
 ];
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     color: 'blue',
     articles: helpArticles
   }
 ];
-<<<<<<< HEAD
-export default function HelpPage() {
 
 export default function HelpPage() {;
-=======
-<<<<<<< HEAD
-export default function HelpPage() {
-=======
-
-export default function HelpPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -283,7 +255,6 @@ const helpCategories = [;
 ];
 
 export default function HelpPage() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 

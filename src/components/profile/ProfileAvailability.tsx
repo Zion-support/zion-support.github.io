@@ -2,23 +2,12 @@ import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -56,32 +45,6 @@ function ProfileAvailability() {
       default:
         return '' }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
-      <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>
-      <div className='flex flex-col md:flex-row md:items-center md:gap-6 mb-4'>
-        <Badge
-          variant='outline'          className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
-        >
-          {getStatusText(availability.status)}
-        </Badge>
-        {availability.nextAvailable && availability.status !== 'available' && (
-          <div className='flex items-center gap-2 text-zion-slate-light'>
-            <Calendar className='h-4 w-4' />            <span>Next available: {availability.nextAvailable}</span>
-          </div>
-        )}
-      </div>
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
-      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-        <Badge
-          variant="outline"
-        <Badge 
-          variant="outline" 
-=======
 
 
 
@@ -93,7 +56,6 @@ function ProfileAvailability() {
           variant="outline" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -109,14 +71,10 @@ function ProfileAvailability() {
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
@@ -187,10 +145,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -202,10 +156,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
             {availability.availableHours.map((slot, index,) => (              <div key={index} className="flex items-center gap-2 text-zion-slate">
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
@@ -226,31 +176,13 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      )}
-
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       )};
 

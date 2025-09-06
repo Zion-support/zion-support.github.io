@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-origin/automation-improvements-final
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -35,34 +29,14 @@ import React from 'react';
 =======
 
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  CheckCircle
-  Users
-  Building
-  Globe
-  Award
-  Clock
-  BarChart3
-  Cloud
-  Shield
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Phone,
   Mail,
@@ -77,11 +51,8 @@ import {
   BarChart3,
   Cloud,
   Shield;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -225,10 +196,6 @@ const stats = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   { number: "24/7", label: "Support Available" }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
@@ -753,12 +720,6 @@ export default function CaseStudiesPage() {;
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/automation-improvements-final
 =======
@@ -775,21 +736,13 @@ import Head from 'next/head';
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
  </Head> </section> </Layout>
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-export default function CaseStudiesPage() {
-=======
 =======
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	return (
 		<Layout>
 			<Head>
@@ -803,16 +756,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
-}
-}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage(req, res) {
-  try {
-	return (;
-=======
 
         />;
       </Head>;
@@ -829,7 +772,6 @@ export default function CaseStudiesPage(req, res) {
 
  </Head> </section> </Layout> ;
 	return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 		<Layout>;
 			<Head>;
 				<title>Case Studies | Zion Tech Group</title>;
@@ -887,8 +829,6 @@ export default function CaseStudiesPage(req, res) {
 import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
-<<<<<<< HEAD
-=======
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -931,6 +871,4 @@ return (
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

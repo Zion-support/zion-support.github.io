@@ -6,26 +6,12 @@ import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
 
 
-<<<<<<< HEAD
-  markAsRead: (conversationId: string) => Promise<void>
-}
-export function ConversationsList({
-  conversations;
-
-  activeConversation
-  setActiveConversation
-  markAsRead
-
-export function ConversationsList({ ;
-  conversations;
-=======
 
 
 export function ConversationsList({ ;
   conversations;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -70,12 +56,8 @@ export function ConversationsList({
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
             />;
           ))}

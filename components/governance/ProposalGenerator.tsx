@@ -24,55 +24,20 @@ export type ProposalType =;
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export type ProposalForm = {;
 
 =======
-<<<<<<< HEAD
-export type ProposalForm = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 export type ProposalForm = {;
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  targetInstitution: string;
-;
-export type ProposalForm = {
-  target_institution: string;
-  type: ProposalType;
-  regionalScope: string;
-  budgetOrGoals: string;
-  supportingMultiverses: string;
-  language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
-<<<<<<< HEAD
-  language?: string;
-  customPrompt?: string
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   language?: string;
   customPrompt?: string
 }
@@ -85,16 +50,11 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
   language?: string;
   customPrompt?: string
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
@@ -126,24 +86,17 @@ export default function ProposalGenerator() {;
     language: 'English',;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-<<<<<<< HEAD
-=======
 
 =======
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
-<<<<<<< HEAD
-  const [exportLinks, setExportLinks] = useState<{;
-=======
   const [exportLinks, setExportLinks] = useState<{
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
@@ -162,7 +115,6 @@ export default function ProposalGenerator() {;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
@@ -183,10 +135,6 @@ export default function ProposalGenerator() {;
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 =======
@@ -224,26 +172,17 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   }
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setStatusMessage('Export failed');    }
 
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   async function handleSubmitBridge() {
@@ -314,39 +253,12 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
-
-      setStatusMessage('Submission failed')
-      setStatusMessage('Submission failed')
-        <div className='space-y-4'>
-
-=======
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
-    } catch (e) {
-      console.error(e);
-<<<<<<< HEAD
-
-      setStatusMessage('Submission failed')
-=======
       setStatusMessage('Submission failed')
 =======
         <div className='space-y-4'>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -358,7 +270,6 @@ export default function ProposalGenerator() {;
       console && console.error(e);
       setStatusMessage('Submission failed');
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return (
@@ -610,79 +521,6 @@ export default function ProposalGenerator() {;
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
-<<<<<<< HEAD
-              onClick={handleGenerate}
-              disabled={isGenerating}
-            >
-              {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>
-            <button
-              className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
-              onClick={handleExport}
-              disabled={!draftMarkdown}
-            >
-              Export (PDF/JSON/MD)
-            </button>
-            <button
-              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
-            >
-              Submit Bridge
-            </button>
-          </div>
-          {statusMessage && (
-            <p className='text-sm text-gray-600'>{statusMessage}</p>
-          )}
-          {exportLinks && (
-            <div className='text-sm space-y-1'>
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.pdfUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>                </div>
-              )}
-              {exportLinks.mdUrl && (
-                <div>          {exportLinks && (
-            <div className="text-sm space-y-1">
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-                </div>
-              )}
-              {exportLinks.mdUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.mdUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-                  </a>                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.jsonUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    JSON
-                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
-                </div>
-
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -701,7 +539,6 @@ export default function ProposalGenerator() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )}
             </div>;
           )}
@@ -714,10 +551,6 @@ export default function ProposalGenerator() {;
 
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
@@ -731,10 +564,6 @@ export default function ProposalGenerator() {;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
@@ -743,19 +572,10 @@ export default function ProposalGenerator() {;
 
 }
 =======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   );
 }
-<<<<<<< HEAD
-  custom_prompt?: string;
-}
-  );
-}
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   custom_prompt?: string;
@@ -1121,4 +941,3 @@ function handleSubmitBridge() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

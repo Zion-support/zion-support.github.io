@@ -34,7 +34,6 @@ import { randomUUID } from 'crypto';
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const { OpenAI } = await import('openai');
@@ -83,7 +82,6 @@ if (
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch (_) {
       // fall through to heuristic;
@@ -191,7 +189,6 @@ if ( {) {
       const filePath = path.join(uploadsDir, filename);
       const base64Data = cvFile.base64.split()[1];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
@@ -334,7 +331,6 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   $2
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       } catch (_) {
         // ignore;
       }
@@ -366,13 +362,5 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
-<<<<<<< HEAD
-  }
-
-}
-  }
-  }
-=======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

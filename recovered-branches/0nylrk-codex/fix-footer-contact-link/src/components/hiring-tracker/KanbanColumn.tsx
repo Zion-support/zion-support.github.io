@@ -1,23 +1,8 @@
 
-<<<<<<< HEAD
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
-import { Droppable } from "react-beautiful-dnd",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
-import { Badge } from "@/components/ui/badge",
-import { CandidateCard } from "./CandidateCard",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface KanbanColumnProps {
 
   id: string
@@ -27,11 +12,6 @@ interface KanbanColumnProps {
 
   count: number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -49,26 +29,17 @@ interface KanbanColumnProps {;
 }
 
 export function KanbanColumn(): any ({;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function KanbanColumn({;
   id;
   title;
   description;
   applications;
-<<<<<<< HEAD
-export function KanbanColumn({
-  id,
-  title,
-  description,
-  applications,
-=======
 
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -159,42 +130,7 @@ function KanbanColumn() {
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
-<<<<<<< HEAD
-                <CandidateCard
-                <CandidateCard 
-import { Droppable } from "react-beautiful-dnd",;
-import { JobApplication } from "@/types/jobs",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { CandidateCard } from "./CandidateCard",;
-interface KanbanColumnProps {;
-  id: string,;
-  title: string,;
-  description: string,;
-  applications: JobApplication[],;
-  count: number;
-}
-;
-export function KanbanColumn({;
-  id,;
-  title,;
-  description,;
-  applications,;
-  count;
-}: KanbanColumnProps) {;
-  // Add color based on column type;
-  const getBadgeVariant = (columnId: string) => {;
-    switch (columnId) {;
-      case "new": return "secondary",;
-      case "shortlisted":;
-        return "outline",;
-      case "interview":;
-        return "default",;
-      case "hired":;
-        return "success",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       case "rejected":;
         return "destructive",
       default:;
@@ -231,15 +167,12 @@ export function KanbanColumn({;
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
-<<<<<<< HEAD
-=======
 
 =======
 
                 <CandidateCard 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={application.id}
 =======
               ref={provided && provided.innerRef}

@@ -27,17 +27,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview",
-import { format, parseISO } from "date-fns",
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface InterviewResponseFormProps {
   interview: Interview,
   onConfirm: () => Promise<void>,
@@ -75,13 +65,9 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </p>
           Interview requested by {interview.client_name || 'Client'}
         </p>
-<<<<<<< HEAD
-        
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -266,9 +252,5 @@ function InterviewResponseForm() {
 =======
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -101,24 +101,6 @@ const contact = {
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
-<<<<<<< HEAD
-
-
-      'Consciousness simulation engine',
-      'Cognitive architecture modeling',
-      'Emotional intelligence algorithms',
-      'Self - awareness development',
-      'Memory and learning systems',
-      'Social interaction modeling',
-      'Research analytics tools',
-      'Collaborative research platform',
-      'API for research integration',
-      'Expert consultation services',
-    ],
-    popular: true,
-    icon: '🧠',
-
-=======
     id: 'ai-consciousness-research-platform'
     name: 'AI Consciousness Research Platform'
     tagline: 'Advanced AI consciousness simulation and research'
@@ -623,11 +605,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Advanced predictive analytics platform with custom ML model development'
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -1086,10 +1063,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   },
   // Advanced Analytics Services;
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -1113,8 +1086,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     popular: true,
     icon: '📊',
 
-<<<<<<< HEAD
-=======
     color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
@@ -1243,18 +1214,9 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Advanced predictive analytics platform with custom ML model development'
-  }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       'Advanced predictive analytics platform with custom ML model development',
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
 
 ];
@@ -1277,7 +1239,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -1604,12 +1565,5 @@ export default specializedEnterpriseServices;
 
 
 =======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default specializedEnterpriseServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

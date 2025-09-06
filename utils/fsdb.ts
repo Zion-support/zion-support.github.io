@@ -4,39 +4,6 @@
   } catch (error) {
     console.error('Error reading file:', error);
 =======
-<<<<<<< HEAD
-
-  await writeAllDisputes(all);
-  } catch (error) {
-    console.error('Error reading file:', error);
-
-  await writeAllDisputes(all);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
-
-export function writeJson<T>(filePath: string, data: T): void {
-  try {;
-    const fs = require('fs');
-    const path = require('path');
-    const dir = path.dirname(filePath)
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-
-}
-;
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
-  } catch (error) {
-=======
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
@@ -56,20 +23,13 @@ export function read_json < T>(file_path: string, default_value: T): T {
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
   }
 }
-<<<<<<< HEAD
-export async function createDispute(dispute: DisputeCase): Promise<void> {
 
-export async function createDispute(dispute: DisputeCase): Promise<void> {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -82,25 +42,10 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const all = await readAllDisputes();
   all.push(dispute);
   await writeAllDisputes(all);
 }
-<<<<<<< HEAD
-export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId);
-}
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
-  return dir;
-}
-
-
-
-}
-=======
 
 export function getDisputeUploadDir(caseId: string): string {;
   return path.join(UPLOADS_ROOT, caseId);
@@ -360,5 +305,3 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   return dir;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

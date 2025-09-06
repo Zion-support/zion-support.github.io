@@ -118,10 +118,6 @@ key={language.code}
               theme === 'light' 
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -142,44 +138,9 @@ key={language.code}
             className={`flex-1 cursor-pointer transition-all ${
             </CardContent>
           </Card>
-<<<<<<< HEAD
-          <Card
-            className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
-                ? 'border-primary bg-primary/5'
-                : 'border-border hover:border-primary/40'
-            }`}
-            onClick = {() => setTheme('dark'),}
-          >
-            <CardContent className='p-3 flex flex-col items-center justify-center'>
-              <Moon className='h-8 w-8 mb-2' />
-              <span>Dark</span>
-              {theme === 'dark' && (
-                <Check className='h-4 w-4 text-primary mt-2' />              )}              )}
-            </CardContent>
-          </Card>
-                <Check className="h-4 w-4 text-primary mt-2" />
-              )}
-            </CardContent>
-          </Card>
-          <Card
-            className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark'
-                ? "border-primary bg-primary/5"
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
-<<<<<<< HEAD
-
-          
-          <Card 
-            className={`flex-1 cursor-pointer transition-all ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -191,10 +152,6 @@ key={language.code}
 
 
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       </div>;
@@ -275,67 +232,3 @@ function LanguageThemeSelector() {
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD
-      <div className='space - y-2'>;
-        <h2 className='text - xl font - medium'>Choose theme</h2>;
-        <p className='text - muted - foreground'>;
-          Select your preferred appearance;
-        </p>;
-        <div className='flex gap - 3 mt - 4'>;
-          <Card;
-              theme === 'light';
-                ? 'border - primary bg - primary / 5';
-                : 'border - border hover:border - primary / 40';
-            }`}
-            on_click = {() => set_theme ('light'), }
-          >;
-            <CardContent className='p - 3 flex flex - col items - center justify - center'>;
-              <Sun className='h - 8 w - 8 mb - 2' />;
-              <span > Light</span>;
-              {theme === 'light' && (
-                <Check className='h - 4 w - 4 text - primary mt - 2' />)}
-            </CardContent>;
-          </Card>;
-          <Card;
-            className={`flex - 1 cursor - pointer transition - all ${
-              theme === 'dark';
-                ? 'border - primary bg - primary / 5';
-                : 'border - border hover:border - primary / 40';
-            }`}
-            on_click = {() => set_theme ('dark'), }
-          >;
-            <CardContent className='p - 3 flex flex - col items - center justify - center'>;
-              <Moon className='h - 8 w - 8 mb - 2' />;
-              <span > Dark</span>;
-              {theme === 'dark' && (
-                <Check className='h - 4 w - 4 text - primary mt - 2' />              )}              )}
-            </CardContent>;
-          </Card>;
-                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
-            </CardContent>;
-          </Card>;
-          <Card;
-            className={`flex - 1 cursor - pointer transition - all ${
-              theme === 'dark';
-                ? "border - primary bg - primary / 5";
-                : "border - border hover:border - primary / 40";
-            }`}
-            on_click={() => set_theme ('dark')}
-          >;
-            <CardContent className="p - 3 flex flex - col items - center justify - center">;
-              <Moon className="h - 8 w - 8 mb - 2" />;
-              <span > Dark</span>;
-              {theme === 'dark' && (
-                <Check className="h - 4 w - 4 text - primary mt - 2" />)}
-            </CardContent>;
-          </Card>;
-        </div>;
-      </div>;
-
-  );
-}
-<<<<<<< HEAD
-
-    </div>);
-}
-;

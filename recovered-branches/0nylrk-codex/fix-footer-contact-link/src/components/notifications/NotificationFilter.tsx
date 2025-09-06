@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-export type FilterType =
-  | "all"
-  | "unread"
-  | "onboarding"
-  | "messages"
-=======
 import React from './react';
 import { Tabs, TabsList, TabsTrigger  } from '@/components / ui / tabs';
 ;
@@ -14,7 +7,6 @@ export type FilterType =;
   | "unread";
   | "onboarding";
   | "messages";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   | "system";
 ;
 
@@ -22,11 +14,8 @@ interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -35,23 +24,17 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
@@ -83,9 +66,6 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
-<<<<<<< HEAD
-  );
-=======
 
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
@@ -95,16 +75,10 @@ export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system'
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
   )
 },
-<<<<<<< HEAD
-};
-  )
-},
-=======
 
 =======
 
@@ -143,4 +117,3 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,13 +1,8 @@
 
-<<<<<<< HEAD
-import { ReactNode } from 'react';
-import {ReactNode} from 'react';
-=======
 
 import {ReactNode} from 'react';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
 =======
@@ -108,10 +103,7 @@ declare module '@/components / ProductListingCard' {
     view: any;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

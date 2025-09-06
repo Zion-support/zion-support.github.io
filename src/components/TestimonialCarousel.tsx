@@ -33,10 +33,6 @@ export function TestimonialCarousel() {
             ecosystem
           </p>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {  Carousel,  Carousel,;
@@ -114,25 +110,11 @@ function TestimonialCarousel() {
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className='max-w-5xl mx-auto px-8'>
-<<<<<<< HEAD
-          <Carousel
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             opts={{
               align: 'start'
               loop: true
             }}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            className='w - full';
-=======
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
@@ -142,11 +124,9 @@ function TestimonialCarousel() {
                       <div className='flex-shrink-0 flex flex-col items-center'>
                         <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         
         <div className="max-w-5xl mx-auto px-8">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <Carousel
             opts={{
               align: "start",
@@ -155,25 +135,11 @@ function TestimonialCarousel() {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
-                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
-                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
-                      <div className='flex-shrink-0 flex flex-col items-center'>
-                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-<<<<<<< HEAD
-=======
                           <Image
 import {;
   Carousel,;
@@ -209,7 +175,6 @@ export function TestimonialCarousel() {;
 =======
 
             className='w - full';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >;
             <CarouselContent>;
               {testimonials.map ((testimonial, index) => (
@@ -238,20 +203,8 @@ export function TestimonialCarousel() {;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
-<<<<<<< HEAD
 
 
-                            width={80}
-                            height={80}
-
-                            loading="lazy"
-                          />
-                          <Image;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -259,10 +212,6 @@ export function TestimonialCarousel() {;
                             loading='lazy'
                             loading="lazy"
                           />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         </Avatar>
                         <div className="text-center md:text-left">
@@ -270,10 +219,6 @@ export function TestimonialCarousel() {;
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -285,48 +230,13 @@ export function TestimonialCarousel() {;
                             alt={`${testimonial && testimonial.company} logo`}
                             width={32}
                             height={32}
-<<<<<<< HEAD
-                            className='h-8 w-auto'
-                            loading='lazy'
-                          <span className='text-white font-semibold'>
-                            {testimonial.company}
-                          </span>
-                            className="h-8 w-auto"
-                            loading="lazy"
-                          />
-                          <span className="text-white font-semibold">{testimonial.company}</span>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
-<<<<<<< HEAD
-                    <CardFooter className='p-6 pt-0'>
-                      <Button
-                        variant='link'
-                        className='text-zion-cyan p-0'
-                        asChild
-                      >
-                        <Link href={`/case-studies/${testimonial.slug}`}>
-                          Read Case Study →
-                        </Link>                      </Button>
-                    <CardFooter className="p-6 pt-0">
-                      <Button variant="link" className="text-zion-cyan p-0" asChild>
-                        <Link href={`/case-studies/${testimonial.slug}`}>Read Case Study →</Link>
-                          />
-                          <span className="text-white font-semibold">{testimonial.company}</span>
-                        </div>
-                        <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
-                      </div>
-                    </CardContent>
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -344,10 +254,6 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
             <div className="flex justify-center mt-8 gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
@@ -361,10 +267,6 @@ export function TestimonialCarousel() {;
 };
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             </CarouselContent>;
@@ -383,22 +285,14 @@ export function TestimonialCarousel() {;
                           <p className='text - zion - slate - light text - sm'>;
                             {testimonial.role}
                           </p>;
-<<<<<<< HEAD
-=======
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             className="h-8 w-auto";
                             loading="lazy";
                           />;
                           <span className="text-white font-semibold">{testimonial.company}</span>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>;
                       </div>;
                       <div className='flex - 1'>;

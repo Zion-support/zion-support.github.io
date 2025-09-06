@@ -2,8 +2,6 @@
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
-<<<<<<< HEAD
-=======
 
 =======
 import fs from 'fs';
@@ -12,7 +10,6 @@ import { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
@@ -46,20 +43,11 @@ function ensureDataDir (): void {
   }
 }
 export function readState(): IntegrationsState {
-<<<<<<< HEAD
-
-export function readState(): IntegrationsState {;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
     return JSON && JSON.parse(raw) as IntegrationsState;
 =======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
@@ -74,7 +62,6 @@ function ensureDataDir(): void {
       connections: []
       logs: []
       overrides: []
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       events: []
     };
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
@@ -107,18 +94,11 @@ export function read_state (): IntegrationsState {
 }
 
 export function writeState(
-<<<<<<< HEAD
-  mutator: (state: IntegrationsState) => void
-): IntegrationsState {
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-=======
 
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ensureDataDir();
   const current = readState();
 

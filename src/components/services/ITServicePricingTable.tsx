@@ -24,16 +24,6 @@ export function ITServicePricingTable() {;
     direction: 'ascending',;
   });
 
-<<<<<<< HEAD
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing],
-    
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter(item => 
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-=======
   const sortedData = useMemo(() => {;
     let filteredData = [...onsiteServicePricing];
     // Filter by search query;
@@ -41,7 +31,6 @@ export function ITServicePricingTable() {;
       filteredData = filteredData && filteredData.filter(item =>;
         item && item.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     // Sort data
@@ -100,13 +89,10 @@ export function ITServicePricingTable() {;
           : "ascending"})
   },
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
@@ -129,10 +115,6 @@ export function ITServicePricingTable() {;
       </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <Table>
           <TableHeader className='bg-zion-blue'>
@@ -148,12 +130,6 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
-<<<<<<< HEAD
-                  <span>Country</span>
-                  <ArrowUpDown className="h-4 w-4" />
-                </Button>
-              </TableHead>
-=======
 
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
@@ -341,4 +317,3 @@ export function ITServicePricingTable() {;
     </div>);
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

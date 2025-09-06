@@ -1,27 +1,14 @@
 import type { GetServerSideProps } from 'next';
 
-<<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null };
-
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function VendorProfilePage({ vendor }: Props) {;
-type Props = { vendor: Vendor | null };
-
-export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
 =======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -205,12 +192,6 @@ function submit_lead() {
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
 
-<<<<<<< HEAD
-    }
-  }
-
-  return (
-
         </div>
       </div>
 
@@ -223,32 +204,6 @@ function submit_lead() {
 
                 </div>
 
-=======
-<<<<<<< HEAD
-    }
-  }
-
-  return (
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        </div>
-      </div>
-
-      <div>
-
-      </div>
-
-      {vendor.packages && vendor.packages.length > 0 && (
-        <div>
-
-                </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             ))}
@@ -256,9 +211,7 @@ function submit_lead() {
         </div>;
       )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -289,7 +242,6 @@ function submit_lead() {
             {loading ? 'Submitting...' : 'Send'}
           </button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
 
         </form>;
@@ -298,17 +250,6 @@ function submit_lead() {
     </div>;
   );
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
-  const slug = String(ctx && ctx.params?.slug || '');
-
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-
-};
-
-=======
       set_loading (false);
     }
   }
@@ -445,58 +386,12 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
       <div className="text - center text - xs text - gray - 500">Powered by Zion</div>;
     </div>);
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
-  const slug = String (ctx.params?.slug || '');
-  const { getVendorBySlug } = await import ('../../utils / vendor - store');
-  const vendor = slug ? getVendorBySlug (slug) || null : null;
-  return { props: { vendor } }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
 
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const slug = String(ctx.params?.slug |'');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
-  const slug = String(ctx.params?.slug || '');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};            {loading ? 'Submitting...' : 'Send'}
-          </button>
-          {message && <div className="text-sm">{message}</div>}
-        </form>
-      </div>
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
-    </div>
-  );
-}
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
-  const slug = String(ctx.params?.slug |'');
-
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
-  const slug = String(ctx.params?.slug || '');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-}
-
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};
-};
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

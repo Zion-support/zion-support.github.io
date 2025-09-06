@@ -1,21 +1,13 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -80,38 +72,15 @@ export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
       const result = await getTalentRateSuggestion(params);
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
   rateType: "hourly" | "fixed"
-<<<<<<< HEAD
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  getTalentRateSuggestion,;
-  PricingSuggestion,;
-  TalentRateParams,;
-  trackPricingSuggestion;
-} from "@/services/pricingSuggestionService",;
-import { PricingSuggestionBox } from "./PricingSuggestionBox",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Sparkles } from "lucide-react",;
-interface TalentRateRecommenderProps {;
-  skills: string[],;
-  yearsExperience: number,;
-  location?: string,;
-  onSuggestionApplied: (value: number) => void,;
-  rateType: "hourly" | "fixed";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
@@ -138,10 +107,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
       return;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     setIsLoading(true),
@@ -157,34 +123,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       console.error("Error generating rate suggestion:", error)
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
-      onSuggestionApplied(suggestedRate);
-      // Track this suggestion application
-      if (user) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: 'talent'
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          actualValue: suggestedRate
-          accepted: true
-        })
-      }
-    }
-  }
-  };
-=======
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     try {;
@@ -222,17 +164,11 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">;
       <div>;
@@ -241,29 +177,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-<<<<<<< HEAD
-            disabled={skills.length === 0 |yearsExperience <= 0}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
-          <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType={rateType}
-          />
-        )}
-      </div>
-    </div>
-  )
-}
-
-      </div>;
-    </div>;
-  );
-=======
 
             disabled={skills && skills.length === 0 || yearsExperience <= 0}
             className="w-full">;
@@ -359,5 +272,4 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

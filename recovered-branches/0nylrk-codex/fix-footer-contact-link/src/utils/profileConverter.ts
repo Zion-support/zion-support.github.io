@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-import { ProfileData } from "@/types/profile";
-import { TalentProfile } from "@/types/talent";
-import { ProfileData } from "@/types/profile",
-import { TalentProfile } from "@/types/talent",
-import {ProfileData} from "@/types/profile";
-import {TalentProfile} from "@/types/talent";
-import { ProfileData } from "@/types/profile",
-import { TalentProfile } from "@/types/talent",
-=======
 
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
@@ -20,9 +10,7 @@ import {TalentProfile} from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it
@@ -77,9 +65,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 
 }
 ;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

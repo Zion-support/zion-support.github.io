@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  };
-
-
-  }
-    ok: true,
-    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
-  };
-
-=======
 
 
   };
@@ -22,34 +9,13 @@
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-<<<<<<< HEAD
-      path: ''
-      filename: 'legal/terms-of-use.md'
-      type: 'text'
-      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/privacy-policy.md'
-      type: 'text'
-      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
-    }
-    {
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
-      type: 'text'
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
-    }
-=======
 
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       path: '',
 
       filename: 'legal / terms - of - use.md',
@@ -58,10 +24,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -95,13 +58,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
-<<<<<<< HEAD
-<<<<<<< HEAD
-  type: PressReleaseType
-  params: {
-  type: PressReleaseType,
-  params: {;
-=======
   type: PressReleaseType
 =======
 ;
@@ -122,7 +78,6 @@ export function buildPressRelease(
   type: PressReleaseType,
   params: {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -147,7 +102,6 @@ export function buildPressRelease(
 
 
 =======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
@@ -161,17 +115,11 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );}
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -190,7 +138,6 @@ function titleCase(s: string) {
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );}
 
 
@@ -199,7 +146,6 @@ function titleCase(s: string) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 }
@@ -233,11 +179,5 @@ function title_case() {
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

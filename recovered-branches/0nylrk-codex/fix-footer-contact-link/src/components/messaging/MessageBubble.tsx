@@ -1,21 +1,10 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import { format  } from 'date-fns';
-import { PaperclipIcon  } from 'lucide-react';
-import { cn  } from '@/lib/utils';
-import { Message } from '@/types/messaging';
-interface MessageBubbleProps {
-  message: Message,
-  isUserMessage: boolean
-=======
 
 
   message: Message,
   isUserMessage: boolean
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -24,12 +13,9 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
   message: Message
@@ -38,18 +24,9 @@ interface MessageBubbleProps {;
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <div className={cn(;
-      "flex";
-    <div className={cn(
-      "flex",
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(

@@ -18,23 +18,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import { TALENT_PROFILES } from '../data/talent';
-export default function RequestToHirePage() {
 
 
-export default function RequestToHirePage() {;
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string }
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent)
-    [talent]
-  );export default function RequestToHirePage() {;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
@@ -106,7 +91,6 @@ export default function RequestToHirePage() {;
       setError('Please fill in name, email, and description.');
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
           ...form;
@@ -160,7 +144,6 @@ export default function RequestToHirePage() {;
       setSubmitting(false);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   if (result) {;
@@ -247,7 +230,6 @@ export default function RequestToHirePage() {;
       </div>
     )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -477,11 +459,7 @@ if ( {) {
         <button disabled={submitting} className=&quot;px-4 py-2 rounded bg-black text-white&quot;>
 =======
     }
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (result) {
     return (
@@ -581,17 +559,10 @@ if ( {) {
         </div>
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }

@@ -1,22 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
-import {WebhooksManager} from "@/components/developers/WebhooksManager";
-import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
-import {ApiLogs} from "@/components/developers/ApiLogs";
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -28,13 +12,9 @@ import {
   Terminal, 
   Webhook 
 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -47,11 +27,6 @@ interface TabDefinition {
 
   icon: LucideIcon
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function DeveloperPortal() {;
@@ -78,7 +53,6 @@ export function DeveloperPortal() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
@@ -222,11 +196,8 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -248,20 +219,10 @@ export function DeveloperPortal() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-export default function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
-  )
-}
-=======
 
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -273,9 +234,6 @@ export default function ProtectedDeveloperPortal() {;
 }
 
 ;
-<<<<<<< HEAD
-;
-=======
 
 
 =======
@@ -313,4 +271,3 @@ function ProtectedDeveloperPortal() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

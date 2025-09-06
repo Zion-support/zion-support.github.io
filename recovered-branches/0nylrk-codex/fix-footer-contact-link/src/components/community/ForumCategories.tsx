@@ -1,38 +1,11 @@
 
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
-import {ForumCategory, ForumCategoryInfo} from "@/types/community";
-import { Link } from "react-router-dom",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
-import {
-  MessageSquare;
-  Briefcase;
-  Code;
-  FileText;
-  Megaphone
-} from "@/components/icons",
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
-const categories: ForumCategoryInfo[] = [
-  {
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -275,9 +248,6 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ForumCategories;

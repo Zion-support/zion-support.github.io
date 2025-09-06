@@ -1,41 +1,7 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Routes, Route, Navigate} from "react-router-dom";
-import {MobileThemeProvider} from "./theme/MobileThemeProvider";
-import {MobileOnboarding} from "./pages/MobileOnboarding";
-import {MobileHome} from "./pages/MobileHome";
-import {MobileBrowse} from "./pages/MobileBrowse";
-import {MobileProjects} from "./pages/MobileProjects";
-import {MobileMessages} from "./pages/MobileMessages";
-import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
-import {MobileJobPost} from "./pages/MobileJobPost";
-import {useAuth} from "@/hooks/useAuth";
-export function MobileApp() {;
-  const { isAuthenticated } = useAuth();
-import React from "react",
-import { Routes, Route, Navigate } from "react-router-dom",
-import { MobileThemeProvider } from "./theme/MobileThemeProvider",
-import { MobileOnboarding } from "./pages/MobileOnboarding",
-import { MobileHome } from "./pages/MobileHome",
-import { MobileBrowse } from "./pages/MobileBrowse",
-import { MobileProjects } from "./pages/MobileProjects",
-import { MobileMessages } from "./pages/MobileMessages",
-import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
-import { MobileJobPost } from "./pages/MobileJobPost";
-import { useAuth } from "@/hooks/useAuth";
-export function MobileApp() {
-  const { isAuthenticated } = useAuth();
-import { MobileJobPost } from "./pages/MobileJobPost",
-import { useAuth } from "@/hooks/useAuth",
-export function MobileApp() {
-  const { isAuthenticated } = useAuth(),
-  
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <MobileThemeProvider>
       <Routes>
@@ -56,9 +22,6 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
   )
-<<<<<<< HEAD
-}
-=======
 
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
@@ -75,7 +38,6 @@ import {useAuth} from "@/hooks/useAuth";
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -145,11 +107,6 @@ function MobileApp() {
         <Route path="/profile" element={<div > Profile page</div>} />;
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>;
-<<<<<<< HEAD
-    </MobileThemeProvider>;
-  );
-=======
     </MobileThemeProvider>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -18,9 +18,6 @@ export type AnalyzeRequestBody = {
 }
 export type AnalyzeResponse = {
   analysis: string
-<<<<<<< HEAD
-}
-=======
 
 };
 
@@ -31,7 +28,6 @@ export type AnalyzeResponse = {
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   role: 'system', content: system 
 };
 
@@ -47,11 +43,8 @@ export type AnalyzeResponse = {
   analysis: string;
 };
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<AnalyzeResponse | { error: string }>
@@ -73,7 +66,6 @@ export default async function handler(
     const fallback = `Analysis (fallback): Based on the provided prompt, doubling staking rewards for 6 months with a weekly emission cap may temporarily increase user participation and token velocity while moderately increasing inflation risk. Monitor treasury inflows from taxes/burns to offset emissions and adjust the cap if net inflation exceeds target bands.`;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
     const client = new OpenAI ({ api_key });
@@ -88,7 +80,6 @@ export default async function handler(
       `Operator Prompt: ${operatorPrompt}`;
       context ? `Context: ${JSON.stringify(context)}` : undefined]
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       .filter(Boolean)
       .join('\n');
 
@@ -124,29 +115,18 @@ export default async function handler(
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
     return res.status(500).json({ error: 'Failed to generate analysis' })
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' });
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const analysis = completion && completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
     return res && res.status(200).json({ analysis })
   } catch (error: any) {
     console && console.error('Analyze API error', error?.message || error);
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-<<<<<<< HEAD
-
-
-=======
 
   }
 
@@ -190,9 +170,4 @@ export default async function handler(
   }
 
 }
-<<<<<<< HEAD
-  }
-  }
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

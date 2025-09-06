@@ -161,11 +161,6 @@ console.log('🚀 Improved Deployment Automation Started')';class ImprovedDeploy
 
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      for (const step of deploymentSteps) {;
-        await this.executeStep(step)}
-=======
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -362,13 +357,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // "Run": the deployment automation;
 const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error: => {
@@ -475,13 +465,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run the deployment automation;
 const deployment = new ImprovedDeploymentAutomation();
 deployment.run().catch(error => {',

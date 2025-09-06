@@ -1,21 +1,11 @@
 
-<<<<<<< HEAD
-import { jsPDF  } from 'jspdf';
-import { PortfolioProject  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addPortfolioSection(
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -87,92 +77,17 @@ export function addPortfolioSection(;
         doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
         yPos += 4
       }
-<<<<<<< HEAD
-      if (project.demo_url) {
-        doc.text(`Demo: ${project.demo_url}`, 20, yPos);
-        yPos += 4
-import { jsPDF } from 'jspdf',;
-import { PortfolioProject } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-export function addPortfolioSection(;
-  doc: jsPDF,;
-  projects: PortfolioProject[],;
-  colors: PdfThemeColors,;
-  startY: number,;
-  maxProjects: number = 2;
-): number {;
-  if (projects.length === 0) return startY,;
-  let yPos = startY,;
-  // Check if we need to add a new page;
-  if (yPos > 250) {;
-    doc.addPage(),;
-    yPos = 20;
-  }
-;
-  doc.setFontSize(16),;
-  doc.setTextColor(colors.heading),;
-  doc.text('Portfolio Projects', 20, yPos),;
-  yPos += 8,;
-  doc.setDrawColor(colors.accent),;
-  doc.line(20, yPos, 100, yPos),;
-  yPos += 8,;
-  // Limit the number of projects shown based on maxProjects parameter;
-  const displayProjects = projects.slice(0, maxProjects),;
-  for (const project of displayProjects) {;
-    // Check if we need to add a new page;
-    if (yPos > 260) {;
-      doc.addPage(),;
-      yPos = 20;
-    }
-;
-    doc.setFontSize(14),;
-    doc.setTextColor(colors.subheading),;
-    doc.text(project.title, 20, yPos),;
-    yPos += 6,;
-    if (project.technologies && project.technologies.length > 0) {;
-      doc.setFontSize(10),;
-      doc.setTextColor(colors.text),;
-      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos),;
-      yPos += 5;
-    }
-;
-    if (project.description) {;
-      doc.setFontSize(10),;
-      const descriptionLines = doc.splitTextToSize(project.description, 170),;
-      doc.text(descriptionLines, 20, yPos),;
-      yPos += (descriptionLines.length * 5);
-    }
-;
-    // Add links if available;
-    if (project.github_url || project.demo_url) {;
-      yPos += 5,;
-      doc.setFontSize(9),;
-      doc.setTextColor(colors.accent),;
-      if (project.github_url) {;
-        doc.text(`GitHub: ${project.github_url}`, 20, yPos),;
-        yPos += 4;
-      }
-;
-      if (project.demo_url) {;
-        doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
-        yPos += 4;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     yPos += 10, // Add space between projects
   }
-<<<<<<< HEAD
-  
-=======
 
 
   
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // If there are more projects than we're displaying
 
   if (projects && projects.length > maxProjects) {
@@ -181,11 +96,6 @@ export function addPortfolioSection(;
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
-<<<<<<< HEAD
-  }
-  return yPos + 5
-}
-=======
 
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
@@ -213,7 +123,6 @@ if ( {) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -221,13 +130,10 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);

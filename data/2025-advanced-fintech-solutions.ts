@@ -45,31 +45,6 @@ export interface AdvancedFintechSolution2025 {
 ;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
-<<<<<<< HEAD
-    id: 'ai - powered - credit - risk - assessment',
-    name: 'AI - Powered Credit Risk Assessment',
-    tagline: 'Intelligent credit scoring with alternative data analysis',
-    price: '$1, 199',
-    period: '/month',
-    description:;
-      'Advanced AI - powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
-    features: [;
-
-      'Alternative data analysis',
-      'Machine learning models',
-      'Real - time scoring',
-      'Risk prediction',
-      'Fraud detection',
-      'Compliance reporting',
-      'API integration',
-      'Custom scoring models',
-      'Performance analytics',
-      'Regulatory compliance',
-    ],
-    popular: true,
-    icon: '💳',
-
-=======
     id: 'ai-powered-credit-risk-assessment'
     name: 'AI-Powered Credit Risk Assessment'
     tagline: 'Intelligent credit scoring with alternative data analysis'
@@ -372,15 +347,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -629,68 +595,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     reviews: 78,
   },
   {
-<<<<<<< HEAD
-    id: 'regtech-compliance-automation-platform'
-    name: 'RegTech Compliance Automation Platform'
-    tagline: 'Automated regulatory compliance and reporting'
-    price: '$699'
-    period: '/month'
-    description:
-      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
-    features: [
-      'Regulatory monitoring'
-      'Automated reporting'
-      'Compliance tracking'
-      'Risk assessment'
-      'Audit trails'
-      'Policy management'
-      'Training modules'
-      'API integration'
-      'Real-time updates'
-      'Performance analytics'
-    ]
-    popular: false
-    icon: '📋'
-    color: 'from-gray-600 via-slate-600 to-zinc-600'
-    textColor: 'text-gray-400'
-    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'
-    marketPosition:
-      'Leading RegTech platform with comprehensive compliance automation'
-    targetAudience:
-      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies'
-    trialDays: 14
-    setupTime: '7-10 days'
-    category: 'Fintech'
-    realService: true
-    technology: [
-      'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'
-    ]
-    integrations: [
-      'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'
-    ]
-    useCases: [
-      'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'
-    ]
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
-    marketSize: '$15B RegTech market'
-    growthRate: '40% annual growth'
-    variant: 'fintech'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
-=======
 
 =======
     id: 'regtech - compliance - automation - platform',
@@ -717,18 +621,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     icon: '📋',
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52,
   },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -831,22 +731,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
-=======
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -860,16 +750,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
     rating: 4 && 4.5,
     reviews: 52
-<<<<<<< HEAD
-  }
-];
-=======
 
 =======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -956,14 +841,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
@@ -971,11 +853,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 =======
 ;
 =======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
@@ -1234,11 +1111,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89,;
     rating: 4.5;
     reviews: 52;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

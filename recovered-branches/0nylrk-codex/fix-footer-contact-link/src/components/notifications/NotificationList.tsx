@@ -1,16 +1,6 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import { Skeleton  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-interface NotificationListProps {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -24,11 +14,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -111,16 +98,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />;
         ));
       )}
-<<<<<<< HEAD
-    </ScrollArea>
-  )
-}
-
-    </ScrollArea>;
-  );
-    </ScrollArea>;
-  );
-=======
 
 
 
@@ -134,5 +111,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

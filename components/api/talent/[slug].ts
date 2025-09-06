@@ -7,27 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req && req.method !== 'GET') {
-    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
-  }
-
-  const { slug, lang } = req && req.query as { slug: string, lang?: string };
-
-
-  try {
-    if (hasSupabase) {
-      const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
-      if (error) throw error;
-      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
-      return res && res.status(200).json({ item, translated })
-    }
-
-}
-
-
-
-=======
 
     const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
@@ -37,15 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: e && e.message })
   };
 }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -68,13 +38,10 @@ function apply_translations() {
   // Check condition
 if (return { item, translated: false }) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   }
 
 }
-<<<<<<< HEAD
-=======
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string; lang?: string }
@@ -143,4 +110,3 @@ if (throw error) {
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

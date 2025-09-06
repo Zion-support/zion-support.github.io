@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, Suspense } from 'react';
-=======
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
@@ -72,53 +68,10 @@ const HomePage = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-                
-                {/* Service pages */}
-                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/services/cloud-migration" element={<CloudMigration />} />
-                <Route path="/services/devops" element={<DevOps />} />
-                <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <PerformanceMonitor />
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

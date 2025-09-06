@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 };
@@ -15,7 +8,6 @@
 export default function InnovationDigest(): any ({ items }: Props) {;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-6">;
       <header className="space-y-2">;
@@ -36,28 +28,18 @@ export default function InnovationDigest(): any ({ items }: Props) {;
             {it && it.summary && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{it && it.summary}</p>}
           </li>;
         ))}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
  
  
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
-<<<<<<< HEAD
-}</ul> </div>) 
-}</ul> </div>)
-}</ul> </div>) 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -80,15 +62,10 @@ export default function InnovationDigest({ items }: Props) {
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
-    </div>
-    </div>;
-=======
 
     </div>;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 }
   );
@@ -148,8 +125,3 @@ export default function InnovationDigest({ items }: Props) {
             <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;mt-1 block font-medium text-blue-600 dark:text-cyan-400&quot;>{it.title}</a>
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import {MapPin} from "lucide-react";
-import {PaymentButton} from "@/components/transactions/PaymentButton";
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import {toast} from "@/hooks/use-toast";
-import { MapPin } from "lucide-react",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-=======
 import { MapPin  } from './lucide-react';
 import { PaymentButton  } from '@/components / transactions / PaymentButton';
 import { CountryPricing  } from '@/data / onsiteServicePricing';
@@ -19,9 +7,7 @@ import { toast  } from '@/hooks / use - toast';
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PaymentSectionProps {
   selected_country: CountryPricing;
 }
@@ -71,12 +57,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         {selectedCountry.country}
       </h4>;
       <p className="text-2xl font-bold text-zion-cyan mb-6">;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton

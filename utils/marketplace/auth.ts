@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-import { NextApiRequest } from 'next';
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-    return null;
-  }
-  const token = authHeader.substring(7);
-  if (token && token.length > 0) {
-    return {
-      id: 'user-1'
-      email: 'user@example.com'
-      role: 'client'
-      name: 'Test User'
-    }
-  }
-  return null;
-}
-export function assertTalentOrClientForOffer(
-  req: NextApiRequest
-  offer: { clientId: string; talentSlug: string }
-  req: NextApiRequest,;
-  offer: { clientId: string; talentSlug: string },
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -51,20 +25,12 @@ export function assertTalentOrClientForOffer(
   }
   return user;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 // Marketplace authentication utilities
 export interface MarketplaceUser {
@@ -390,7 +356,6 @@ export function canUserAccessProject(user: MarketplaceUser, project: any): boole
   return false;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 }
@@ -439,11 +404,5 @@ if ( {) {
   return user;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

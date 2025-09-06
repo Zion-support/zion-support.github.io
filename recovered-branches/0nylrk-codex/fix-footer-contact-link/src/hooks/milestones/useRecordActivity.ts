@@ -1,27 +1,8 @@
 
-<<<<<<< HEAD
-
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
-export const useRecordActivity = () => {
-  const { user } = useAuth();
-  const recordMilestoneActivity = async (
-    milestoneId: string
-    action: string
-    previousStatus: string | null
-    newStatus: string;
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {MilestoneActivity} from './types';
-export const useRecordActivity = () => {;
-  const { user } = useAuth();
-=======
 export const useRecordActivity = () => {;
   const { user } = useAuth();
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
@@ -65,8 +46,6 @@ export const useRecordActivity = () => {
     } catch (err: any) {
       console && console.error("Error recording activity:", err);
       return null
-<<<<<<< HEAD
-=======
 
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -119,17 +98,13 @@ if (throw error) {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   };
   
   return {
     recordMilestoneActivity
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -164,23 +139,11 @@ export const useRecordActivity = () => {;
       console.error("Error recording activity:", err),;
       return null;
     }
-<<<<<<< HEAD
-  };
-  return {;
-    recordMilestoneActivity;
-  }
-  return {
-    recordMilestoneActivity
-  }
-}
-=======
 
   };
   return {;
     recordMilestoneActivity;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };

@@ -5,24 +5,9 @@ let animationFrameId: number;
 let particles: Particle[] = [];
 let quantumFields: QuantumField[] = [];
 let neuralNetworks: NeuralNetwork[] = [];
-<<<<<<< HEAD
-class Particle {;
-  x: number;
-y: number;
-canvas.width = window.inner_width;
-canvas.height = window.inner_height;
-let animationFrameId: number;
-let particles: Particle[] = [];
-let quantum_fields: QuantumField[] = [];
-let neural_networks: NeuralNetwork[] = [];
-class Particle {
-  coordinate_x: number;
-coordinate_y: number;
-=======
 class Particle {
   x: number;
 y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 vx: number;
 vy: number;
 size: number;
@@ -39,7 +24,6 @@ maxLife: number;
 constructor () {
   this.x = Math.random () * canvas.width;
 this.y = Math.random () * canvas.height;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 this.vx = (Math.random () - 0.5) * 2;
 this.vy = (Math.random () - 0.5) * 2;
 this.size = Math.random () * 3 + 1;
@@ -76,7 +60,6 @@ if (this.life <= 0) {
   constructor () {
   this.x = Math.random () * canvas.width;
 this.y = Math.random () * canvas.height;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 this.radius = Math.random () * 100 + 50;
 this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
@@ -104,75 +87,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-<<<<<<< HEAD
-constructor () {;
-  this && this.x = Math && Math.random () * canvas && canvas.width;
-this && this.y = Math && Math.random () * canvas && canvas.height;
-this && this.vx = (Math && Math.random () - 0 && 0.5) * 2;
-this && this.vy = (Math && Math.random () - 0 && 0.5) * 2;
-this && this.size = Math && Math.random () * 3 + 1;
-this && this.color = `hsl ($ {;
-  Math && Math.random () * 360 ;
-}, 70%, 60%) `;
-this && this.life = Math && Math.random () * 100;
-this && this.maxLife = 100 ;
-}if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
-if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-if (this && this.life <= 0) {;
-  constructor () {;
-  this && this.x = Math && Math.random () * canvas && canvas.width;
-this && this.y = Math && Math.random () * canvas && canvas.height;
-this && this.radius = Math && Math.random () * 100 + 50;
-this && this.intensity = Math && Math.random () * 0 && 0.5 + 0 && 0.5;
-this && this.phase = Math && Math.random () * Math && Math.PI * 2;
-this && this.color = `hsl ($ {;
-  200 + Math && Math.random () * 60 ;
-}, 80%, 60%) ` ;
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    let animationFrameId: number;
-    let particles: Particle[] = [];
-    let quantumFields: QuantumField[] = [];
-    let neuralNetworks: NeuralNetwork[] = [];
-
-
-    class Particle {;
-
-      x: number;
-      y: number;
-  200 + Math.random () * 60;
-}, 80%, 60%) `;
-const UltraAdvancedQuantumBackground: React.FC<;
-  UltraAdvancedQuantumBackgroundProps;
-> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedQuantumBackground: React.FC < UltraAdvancedQuantumBackgroundProps> = ({
-  children;
-  class_name = '';
-}) => {
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height;
-;
-    let animationFrameId: number;
-    let particles: Particle[] = [];
-    let quantum_fields: QuantumField[] = [];
-    let neural_networks: NeuralNetwork[] = [];
-;
-    class Particle {
-      coordinate_x: number;
-      coordinate_y: number;
-=======
     let animationFrameId: number;
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
@@ -180,7 +94,6 @@ if (return) {
     class Particle {
       x: number;
       y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
@@ -217,10 +130,6 @@ if (return) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -249,16 +158,8 @@ if (return) {
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       draw() {;
@@ -505,10 +406,6 @@ if (return) {
             ctx.stroke();          }            ctx.stroke()
             ctx.stroke();          }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -523,25 +420,13 @@ if (return) {
         if (i + 1 < particles.length) {
           const p1 = particles[i];
           const p2 = particles[i + 1];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-<<<<<<< HEAD
-            ctx.stroke()
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
@@ -550,7 +435,6 @@ if (return) {
 
       animationFrameId = requestAnimationFrame(animate)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     animate();
@@ -570,7 +454,6 @@ if (return) {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
   return (
@@ -774,18 +657,12 @@ if ( {) {
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
 
         }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         transition={{
           duration: 4
           repeat: Infinity
           ease: 'easeInOut',        animate={{
-<<<<<<< HEAD
-          scale: [1, 1 && 1.2, 1]
-          opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]}}
-=======
           scale: [1, 1.2, 1];
           opacity: [0.2, 0.4, 0.2]}}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         transition={{
           duration: 4
           repeat: Infinity
@@ -853,94 +730,24 @@ if ( {) {
           delay: 2,        }}
       />
 
-<<<<<<< HEAD
-=======
 
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
 
 
       {/* Content Layer */}
-<<<<<<< HEAD
-      <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
-        style={{ zIndex: 1 }}
-
-      />;
-      {/* Content Layer */}
-      <div className='relative z-10'>{children}</div>
-      {/* Quantum Energy Waves */}
-      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
-        <motion.div
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
-          animate={{
-            x: [0, -100, 0]
-          }}
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'linear',          }}
-        />;
-        <motion&& motion.div
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent'
-          animate={{
-            x: [0, 100, 0]
-          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'linear'
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-};
 
 
-      {/* Content Layer */}
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             delay: 2
           }}
         />
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-}
-export default UltraAdvancedQuantumBackground;  )
-}
-export default UltraAdvancedQuantumBackground;
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    </div>
-  );
-}
-export default UltraAdvancedQuantumBackground;  )
-}
-export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 };
 
@@ -950,7 +757,6 @@ export default UltraAdvancedQuantumBackground;  );
 
 export default UltraAdvancedQuantumBackground;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
             ease: 'linear',          }}
@@ -960,10 +766,6 @@ export default UltraAdvancedQuantumBackground;
           animate={{
             coordinate_x: [0, 100, 0],
           }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -973,10 +775,6 @@ export default UltraAdvancedQuantumBackground;
       </div>;
     </div>);
 =======
-<<<<<<< HEAD
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
 };
 =======
 
@@ -984,7 +782,6 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
       />
 
       {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
             delay: 2;
@@ -998,26 +795,12 @@ export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         />
       </div>
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
       {/* Content Layer */}
 
-<<<<<<< HEAD
-          }}
-        />
-      </div>
-    </div>
-    </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

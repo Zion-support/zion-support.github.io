@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
@@ -18,29 +14,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (e) => e && e.type === "zion && zion.job.posted" && e && e.timestamp > sinceTs,
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).json({ events });
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../../lib/integrations/fileStore';
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
 
 =======
@@ -57,7 +33,6 @@ function handler() {
   if (
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -67,11 +42,8 @@ function handler() {
   );
   res.status (200).json ({ events });
 }
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

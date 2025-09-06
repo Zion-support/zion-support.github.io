@@ -1,27 +1,14 @@
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
-<<<<<<< HEAD
-import './video-call.css';
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
-import './video-call.css';
-=======
 import './video-call ;
 interface Participant {;
   id: string,;
@@ -35,7 +22,6 @@ import { Badge } from '@/components / ui / badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components / icons';
 import './video - call.css';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Participant {
   id: string,
   name: string,
@@ -106,17 +92,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
-<<<<<<< HEAD
-    if (onToggleVideo) {
-      onToggleVideo(newVideoState)
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
-import './video-call.css',
-=======
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Participant {
   id: string,
   name: string,
@@ -125,10 +103,6 @@ interface Participant {
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
-<<<<<<< HEAD
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -141,87 +115,6 @@ interface Participant {
     }
   };
 
-<<<<<<< HEAD
-  const handleToggleVideo = () => {
-    const newVideoState = !isVideoEnabled;
-    setIsVideoEnabled(newVideoState);
-    if (onToggleVideo) {
-      onToggleVideo(newVideoState)
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',;
-import './video-call.css',;
-interface Participant {;
-  id: string,;
-  name: string,;
-  avatar?: string,;
-  isMuted?: boolean,;
-  isVideoEnabled?: boolean,;
-  isScreenSharing?: boolean,;
-  isHost?: boolean;
-}
-;
-interface VideoCallRoomProps {;
-  roomId: string,;
-  participants?: Participant[],;
-  onLeave?: () => void,;
-  onToggleMute?: (isMuted: boolean) => void,;
-  onToggleVideo?: (isEnabled: boolean) => void,;
-  onToggleScreenShare?: (isSharing: boolean) => void,;
-  className?: string;
-}
-;
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
-  roomId,;
-  participants = [],;
-  onLeave,;
-  onToggleMute,;
-  onToggleVideo,;
-  onToggleScreenShare,;
-  className;
-}) => {;
-  const [isMuted, setIsMuted] = useState(false),;
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true),;
-  const [isScreenSharing, setIsScreenSharing] = useState(false),;
-  const [isAudioOnly, setIsAudioOnly] = useState(false),;
-  const [callDuration, setCallDuration] = useState(0),;
-  // Call duration timer;
-  React.useEffect(() => {;
-    const timer = setInterval(() => {;
-      setCallDuration(prevDuration => prevDuration + 1);
-    }, 1000),;
-    return () => clearInterval(timer);
-  }, []),;
-  const formatDuration = (seconds: number) => {;
-    const hrs = Math.floor(seconds / 3600),;
-    const mins = Math.floor((seconds % 3600) / 60),;
-    const secs = seconds % 60,;
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
-  },;
-  const handleToggleMute = () => {;
-    const newMuteState = !isMuted,;
-    setIsMuted(newMuteState),;
-    if (onToggleMute) {;
-      onToggleMute(newMuteState);
-    }
-  },;
-  const handleToggleVideo = () => {;
-    const newVideoState = !isVideoEnabled,;
-    setIsVideoEnabled(newVideoState),;
-    if (onToggleVideo) {;
-      onToggleVideo(newVideoState);
-    }
-    // If turning video back on, ensure we're not in audio-only mode
-    if (newVideoState) {
-      setIsAudioOnly(false)
-    }
-  }
-  };
-
-=======
   const handleToggleScreenShare = () => {;
 
     const newScreenShareState = !isScreenSharing;
@@ -231,7 +124,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -252,15 +144,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {
       onLeave()
     }
-<<<<<<< HEAD
-  }
-  };
-=======
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
@@ -291,17 +178,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
@@ -511,22 +392,15 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleMute}>;
             {isMuted ? <MicOff /> : <Mic />}
-<<<<<<< HEAD
-          </Button>
-=======
 
           </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
             size="icon"
           
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -534,21 +408,14 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
-<<<<<<< HEAD
-          </Button>
-=======
 
           </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
           
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -556,21 +423,14 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
-<<<<<<< HEAD
-          </Button>
-=======
 
           </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
           
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -580,18 +440,11 @@ if ( {) {
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
 
           </Button>
-<<<<<<< HEAD
-          <Button
-            variant="destructive"
-          <Button 
-            variant="destructive" 
-=======
 
           <Button 
             variant="destructive" 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -602,13 +455,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-
-},
-};
-},
-=======
 
           </Button>;
 
@@ -709,4 +555,3 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

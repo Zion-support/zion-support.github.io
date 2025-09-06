@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as SliderPrimitive from '@radix-ui/react-slider';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-<<<<<<< HEAD
-=======
 
 
 import * as React from "react"
@@ -18,7 +8,6 @@ import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -54,13 +43,5 @@ export { Slider }
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-<<<<<<< HEAD
-export { Slider }
-;
-export { Slider };
-export { Slider }
-;
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

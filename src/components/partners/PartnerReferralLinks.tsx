@@ -41,25 +41,6 @@ export function PartnerReferralLinks() {;
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
-<<<<<<< HEAD
-    { name: string; link: string }[]
-  >([])
-  // Get the base referral link
-  const baseLink = getReferralLink()
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link);    toast({
-      title: 'Link copied!'
-      description: 'The referral link has been copied to your clipboard'
-      variant: 'default'
-    })
-  }
-  const handleGenerateLink = () => {
-    if (baseLink) {
-      const url = new URL(baseLink)
-      // Add custom campaign parameter if selected
-      if (selectedCampaign !== 'default') {
-        url.searchParams.append('campaign', selectedCampaign)
-=======
     { name: string; link: string }[];
   >([]);
 
@@ -81,7 +62,6 @@ export function PartnerReferralLinks() {;
       // Add custom campaign parameter if selected;
       if (selectedCampaign !== 'default') {;
         url && url.searchParams.append('campaign', selectedCampaign);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Add custom parameter if provided;
@@ -145,10 +125,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -175,83 +152,13 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
-        url.searchParams.append("source", customParam)
-      }
-      
-      const newLink = {
-        url.searchParams.append('source', customParam)
-        url.searchParams.append("source", customParam)
-      }
-      
-      const newLink = {
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
-        link: url.toString(),
-      }
-      setGeneratedLinks(prev => [...prev, newLink])
-      setIsDialogOpen(false)
-      setCustomParam('')
-    }
-  }
-  const handleDownloadLinks = () => {
-    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
-    const csvContent = [
-      'Name,Link',
-      ...allLinks.map(l => `${l.name},${l.link}`),
-    ].join('\n')
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.setAttribute('href', url)
-    link.setAttribute('download', 'zion_referral_links.csv')
-    link.style.visibility = 'hidden'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
-        link: url.toString()
-      },
-      
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
-      setCustomParam("")
-    }
-  },
-  
-  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink },
-      ...generatedLinks
-    ],
-    
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-    ].join("\n"),
-    
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement("a"),
-    link.setAttribute("href", url),
-    link.setAttribute("download", "zion_referral_links.csv"),
-    link.style.visibility = 'hidden',
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link)
-  },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -433,11 +340,8 @@ export function PartnerReferralLinks() {;
 
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -469,10 +373,6 @@ export function PartnerReferralLinks() {;
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   </SelectTrigger>
                   <SelectContent>
@@ -521,10 +421,6 @@ export function PartnerReferralLinks() {;
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               >
                 Cancel
@@ -532,30 +428,8 @@ export function PartnerReferralLinks() {;
               <Button
                 type='button'
                 onClick={handleGenerateLink}
-<<<<<<< HEAD
-                className='bg-zion-purple hover:bg-zion-purple-dark'              >
-                Generate Link
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      </div>
-      <div className='grid gap-4'>
-        {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'
-            >
-              <CardHeader className='pb-2'>
-                <CardTitle className='text-base flex items-center justify-between'>
-                  <div className='flex items-center gap-2'>
-                    <Link className='h-4 w-4 text-zion-purple' />
-                    <span>{item.name |'Campaign Link'}</span>                  </div>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
 
@@ -569,10 +443,6 @@ export function PartnerReferralLinks() {;
                     <Link className="h-4 w-4 text-zion-purple" />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -622,11 +492,8 @@ export function PartnerReferralLinks() {;
                   >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </Button>
                 </div>
               </CardContent>

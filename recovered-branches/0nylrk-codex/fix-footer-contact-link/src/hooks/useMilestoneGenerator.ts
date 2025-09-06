@@ -1,57 +1,25 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-export interface MilestoneInput {
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from 'sonner';
-export interface MilestoneInput {;
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from 'sonner';
 export interface MilestoneInput {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   scope: string;
   start_date: string;
   end_date: string | null,
   project_type: string;
 
 }
-<<<<<<< HEAD
-export interface GeneratedMilestone {
-
-export interface GeneratedMilestone {;
-=======
 
 
 export interface GeneratedMilestone {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string;
   description: string;
 
       setIsGenerating(true),
 
-<<<<<<< HEAD
-  isAiGenerated: boolean
-}
-export function useMilestoneGenerator() {
-
-export function useMilestoneGenerator() {;
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
-  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
-    try {
-      setIsGenerating(true)
-      const { data, error } = await supabase.functions.invoke('generate-milestones', {
-=======
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         body: input
       });
       if (error) throw error;
@@ -152,12 +120,9 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     generatedMilestones;
     isGenerating;
 

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -12,7 +10,6 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
@@ -24,7 +21,7 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
-<<<<<<< HEAD
+=======
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -34,8 +31,6 @@ import { useMessaging } from "@/context/MessagingContext",
 import { toast } from "@/hooks/use-toast",
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
-import { ResumeTab } from "./ResumeTab";
-import { Job } from "./types";
 import { ResumeTab } from "./ResumeTab",
 import { Job } from "./types",
 interface ApplyFormProps {
@@ -45,38 +40,6 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Loader2 } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { useMessaging } from "@/context/MessagingContext",
-import { toast } from "@/hooks/use-toast",
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { MessageTab } from "./MessageTab",
-<<<<<<< HEAD
-import { ResumeTab } from "./ResumeTab";
-import { Job } from "./types";
-=======
-import { ResumeTab } from "./ResumeTab",
-import { Job } from "./types",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface ApplyFormProps {
-
-  job: Job
-  onClose: () => void
-
-  onApplySuccess?: (jobId: string) => Promise<void>
-}
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 interface ApplyFormProps {;
@@ -86,21 +49,12 @@ interface ApplyFormProps {;
 }
 
 export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
-<<<<<<< HEAD
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging(),
-  const { applyToJob } = useJobApplications(),
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-=======
   const [message, setMessage] = useState(;
     `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -169,90 +123,18 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
-<<<<<<< HEAD
-      }
-      
-      // Format message with proposal link if provided
-      let fullMessage = message;
-      
-      if (proposalLink) {
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
-import React, { useState } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Loader2 } from "lucide-react",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { useMessaging } from "@/context/MessagingContext",;
-import { toast } from "@/hooks/use-toast",;
-import { ResumeSelector, ResumeOption } from "../resume-selector",;
-import { MessageTab } from "./MessageTab",;
-import { ResumeTab } from "./ResumeTab",;
-import { Job } from "./types",;
-interface ApplyFormProps {;
-  job: Job,;
-  onClose: () => void,;
-  onApplySuccess?: (jobId: string) => Promise<void>;
-}
-;
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
-  const { createConversation } = useMessaging(),;
-  const { applyToJob } = useJobApplications(),;
-  const [message, setMessage] = useState(;
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
-  ),;
-  const [proposalLink, setProposalLink] = useState(''),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [activeTab, setActiveTab] = useState<string>("message"),;
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
-  const handleResumeSelected = (resume: ResumeOption) => {;
-    setSelectedResume(resume),;
-    setSelectedResumeId(resume.id);
-  },;
-  const handleApply = async () => {;
-    if (!message.trim()) {;
-      toast({;
-        title: "Message required",;
-        description: "Please enter a message before applying.",;
-        variant: "destructive";
-      }),;
-      return;
-    }
-;
-    try {;
-      setIsSubmitting(true),;
-      // First submit the application to the job applications table;
-      const applicationSuccess = await applyToJob(;
-        job.id,;
-        message,;
-        selectedResumeId;
-      ),;
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
-      }
-;
-      // Format message with proposal link if provided;
-      let fullMessage = message,;
-      if (proposalLink) {;
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
-<<<<<<< HEAD
-      
-=======
 
 
       
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -314,17 +196,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         job && job.id;
         contextData;
       );
-<<<<<<< HEAD
-      // Call onApplySuccess to update job status in the UI
-      if (onApplySuccess) {
-        await onApplySuccess(job.id)
-      }
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -347,12 +222,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       
       toast({
@@ -372,30 +244,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   }
   },
 
-<<<<<<< HEAD
-  return (
-    <>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="w-full mb-4 bg-zion-blue-dark/30">
-          <TabsTrigger value="message" className="flex-1">
-            Message
-          </TabsTrigger>
-          <TabsTrigger value="resume" className="flex-1">
-            Resume
-          </TabsTrigger>
-        </TabsList>
-        <TabsContent value="message">
-          <MessageTab
-          <MessageTab 
-;
-=======
 
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job && job.id);
       }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({;
         title: "Application sent",;
         description: `Your application for "${job && job.title}" has been sent.`}),;
@@ -569,15 +423,12 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
           <MessageTab 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}

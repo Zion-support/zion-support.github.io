@@ -35,14 +35,8 @@ import {
   Github,
   Linkedin,;
   ExternalLink,;
-<<<<<<< HEAD
-} from 'lucide-react';
-
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-=======
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -51,11 +45,8 @@ const contactInfo = {;
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function NeoFuturisticFooter() {;
   return (
 
@@ -149,10 +140,7 @@ export default function NeoFuturisticFooter() {;
     </footer>
 );
 }
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -169,14 +157,9 @@ export default function NeoFuturisticFooter() {;
               <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -288,17 +271,8 @@ export default function NeoFuturisticFooter() {;
     </footer>);
 }
 ;
-<<<<<<< HEAD
-  return (
-
-
-export default function NeoFuturisticFooter() {
-  return (
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

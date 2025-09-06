@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-import React from 'react',
-import React from 'react',
-=======
 
 
 import React from 'react',
@@ -12,9 +6,7 @@ import React from 'react',
 =======
 import React from 'react',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const EquipmentPage = () => {
 =======
 const EquipmentPage = () => {;
@@ -38,11 +30,5 @@ export default EquipmentPage;
 
 },
 
-<<<<<<< HEAD
-export default EquipmentPage,
-export default EquipmentPage;
-export default EquipmentPage,
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

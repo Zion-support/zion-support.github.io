@@ -8,10 +8,6 @@ return (
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -24,10 +20,6 @@ return (
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -40,10 +32,6 @@ return (
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -56,10 +44,6 @@ return (
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -69,10 +53,6 @@ return (
         </CardHeader>
       </Card>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -82,23 +62,8 @@ return (
         </CardHeader>
       </Card>
     </div>
-<<<<<<< HEAD
-  );
-};
-";
-  )
-}
-"
-
-},
-import React from "react",;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
-import { FraudStats } from "@/types/fraud",;
-=======
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
@@ -159,10 +124,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (

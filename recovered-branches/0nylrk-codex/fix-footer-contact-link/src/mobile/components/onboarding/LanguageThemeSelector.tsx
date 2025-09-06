@@ -1,24 +1,8 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {useTheme} from "@/hooks/useTheme";
-import {Moon, Sun, Check} from "lucide-react";
-import {Card, CardContent} from "@/components/ui/card";
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useTheme } from "@/hooks/useTheme",
-import { Moon, Sun, Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Moon, Sun, Check } from "lucide-react",
-import { Card, CardContent } from "@/components/ui/card",
-
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Language {
 
   code: string
@@ -27,13 +11,6 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
-<<<<<<< HEAD
-  { code: "en", name: "English", flag: "🇺🇸" }
-  { code: "es", name: "Español", flag: "🇪🇸" }
-  { code: "fr", name: "Français", flag: "🇫🇷" }
-  { code: "de", name: "Deutsch", flag: "🇩🇪" }
-  { code: "zh", name: "中文", flag: "🇨🇳" }]
-=======
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -61,28 +38,14 @@ export function LanguageThemeSelector() {;
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
-<<<<<<< HEAD
-export function LanguageThemeSelector() {;
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme();
 
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
-  const { theme, setTheme } = useTheme(),
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -144,11 +107,8 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Check className="h-4 w-4 text-primary" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
@@ -179,12 +139,6 @@ export function LanguageThemeSelector() {;
               {theme === 'light' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-<<<<<<< HEAD
-            </CardContent>
-          </Card>
-          <Card
-          <Card 
-=======
 
             </CardContent>;
           </Card>;
@@ -196,7 +150,6 @@ export function LanguageThemeSelector() {;
           <Card 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -210,15 +163,6 @@ export function LanguageThemeSelector() {;
               {theme === 'dark' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-<<<<<<< HEAD
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
 
 =======
 
@@ -308,20 +252,14 @@ function LanguageThemeSelector() {
               {theme === 'dark' && (
                 <Check className="h - 4 w - 4 text - primary mt - 2" />)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

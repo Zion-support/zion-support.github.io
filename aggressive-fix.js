@@ -112,18 +112,11 @@ function createValidReactComponent() {
 ;
 export default function ${component_name}() {
   return (
-<<<<<<< HEAD
-    <div>;
-      <h1>${component_name}</h1>;
-      <p > This is a valid React component.</p>;
-    </div>);
-=======
     <div>
       <h1>${componentName}</h1>
       <p>This is a valid React component.</p>
     </div>;
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }`;
 }
 

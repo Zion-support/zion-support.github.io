@@ -1,42 +1,8 @@
 
-<<<<<<< HEAD
-import {Fragment} from "react";
-import {Route, Routes, Navigate} from "react-router-dom";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
-import Careers from "@/pages/Careers";
-import SearchPage from "@/pages/SearchPage";
-import {SitemapPage} from "@/components/SitemapPage";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-import { Fragment } from "react",
-import { Route, Routes, Navigate } from "react-router-dom",
-import Home from "@/pages/Home",
-import About from "@/pages/About",
-import Blog from "@/pages/Blog",
-import BlogPost from "@/pages/BlogPost",
-import GreenIT from "@/pages/GreenIT",
-import Careers from "@/pages/Careers",
-import SearchPage from "@/pages/SearchPage",
-import { SitemapPage } from "@/components/SitemapPage",
-import HelpCenterPage from "@/pages/HelpCenterPage",
-import AccountSettings from "@/pages/AccountSettings",
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-
-import ProjectRoom from "@/pages/ProjectRoom",
-import VideoCall from "@/pages/VideoCall",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ContentRoutes = () => {
 =======
 const ContentRoutes = () => {;
@@ -82,27 +48,6 @@ const ContentRoutes = () => {;
 }
 export default ContentRoutes;
 
-<<<<<<< HEAD
-},
-
-export default ContentRoutes,
-import { Fragment } from "react",;
-import { Route, Routes, Navigate } from "react-router-dom",;
-import Home from "@/pages/Home",;
-import About from "@/pages/About",;
-import Blog from "@/pages/Blog",;
-import BlogPost from "@/pages/BlogPost",;
-import GreenIT from "@/pages/GreenIT",;
-import Careers from "@/pages/Careers",;
-import SearchPage from "@/pages/SearchPage",;
-import { SitemapPage } from "@/components/SitemapPage",;
-import HelpCenterPage from "@/pages/HelpCenterPage",;
-import AccountSettings from "@/pages/AccountSettings",;
-import ProjectRoom from "@/pages/ProjectRoom",;
-import VideoCall from "@/pages/VideoCall",;
-const ContentRoutes = () => {;
-  return (;
-=======
 =======
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
@@ -120,7 +65,6 @@ import ProjectRoom from "@/pages / ProjectRoom";
 import VideoCall from "@/pages / VideoCall";
 const ContentRoutes = () =>: any {
   return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <Routes>;
       {/* Content Routes */}
       <Route path="/" element={<Home />} />;
@@ -145,12 +89,6 @@ const ContentRoutes = () =>: any {
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />;
       {/* Sitemap Page */}
-<<<<<<< HEAD
-      <Route path="/sitemap-page" element={<SitemapPage />} />;
-    </Routes>;
-  );
-},;
-=======
       <Route path="/sitemap - page" element={<SitemapPage />} />;
     </Routes>);
 }
@@ -161,5 +99,4 @@ const ContentRoutes = () =>: any {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ContentRoutes;

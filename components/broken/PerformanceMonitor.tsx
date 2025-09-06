@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
@@ -92,8 +82,6 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-<<<<<<< HEAD
-=======
 
 =======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -114,20 +102,15 @@ interface PerformanceMetrics {
   memoryUsage?: number;
   networkLatency?: number
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default PerformanceMonitor;
 
 
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
-<<<<<<< HEAD
-=======
   //Wait for page to be fully loaded // Check condition
 if ( {) {
   $2
@@ -270,4 +253,3 @@ if (return 'Needs Improvement') {
 export default PerformanceMonitor;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

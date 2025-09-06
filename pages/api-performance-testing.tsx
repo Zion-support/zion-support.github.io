@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function ApiPerformanceTestingPage() {
-  const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',;
-  ];
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -72,10 +57,6 @@ import {Check, ExternalLink} from 'lucide-react';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -117,8 +98,6 @@ import {Check, ExternalLink} from 'lucide-react';
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-=======
               <a
                 className='underline hover:text-cyan-300'
                 href='https://k6.io/pricing/'
@@ -167,8 +146,6 @@ import {Check, ExternalLink} from 'lucide-react';
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -324,9 +301,7 @@ export default function ApiPerformanceTestingPage(req, res) {
     </div>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

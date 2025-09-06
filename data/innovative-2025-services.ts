@@ -45,29 +45,6 @@ export interface Innovative2025Service {
     description:
 
   {
-<<<<<<< HEAD
-
-      'Real-time emotion detection',
-    id: 'ai - emotional - intelligence - platform',
-    name: 'AI Emotional Intelligence Platform',
-    tagline: 'Advanced emotion recognition and response generation',
-    price: '$1, 799',
-    period: '/month',
-    description:;
-      'Cutting - edge platform that understands, analyzes, and responds to human emotions in real - time, enabling more empathetic and effective AI interactions.',
-    features: [;
-      'Real - time emotion detection',
-
-      'Sentiment analysis & mood tracking',
-      'Emotional response generation',
-      'Cultural context awareness',
-      'Privacy - preserving processing',
-      'Multi - language support',
-    ],
-    popular: true,
-    icon: '💝',
-
-=======
     color: 'from - pink - 500 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / ai - emotional - intelligence - platform',
@@ -554,76 +531,6 @@ export interface Innovative2025Service {
   }
   // Financial Technology Innovation Services
   {
-<<<<<<< HEAD
-    id: 'ai-financial-trading-platform'
-    name: 'AI Financial Trading Platform'
-    tagline: 'Intelligent algorithmic trading and portfolio management'
-    price: '$7,999'
-    period: '/month'
-    description:
-      'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.'
-    features: [
-      'AI market analysis'
-      'Algorithmic trading'
-      'Portfolio optimization'
-      'Risk management'
-      'Real-time monitoring'
-      'Regulatory compliance'
-    ]
-    popular: true
-    icon: '📈'
-    color: 'from-green-500 to-emerald-600'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-financial-trading-platform'
-    marketPosition:
-      'Leading AI financial trading. Competes with Alpaca ($0.01/share) and Interactive Brokers ($0.005/share) with superior AI algorithms.'
-    targetAudience:
-      'Hedge funds, Investment firms, Individual traders, Financial institutions, Asset managers'
-    trialDays: 30
-    setupTime: '2-3 weeks'
-    category: 'Financial Technology'
-    realService: true
-    technology: [
-      'Python'
-      'TensorFlow'
-      'Quantitative finance'
-      'Real-time data'
-      'Cloud computing'
-      'Blockchain'
-    ]
-    integrations: [
-      'Bloomberg'
-      'Reuters'
-      'Trading platforms'
-      'Brokerage accounts'
-      'Market data feeds'
-    ]
-    useCases: [
-      'Algorithmic trading'
-      'Portfolio management'
-      'Risk assessment'
-      'Market analysis'
-    ]
-    roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.'
-    competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E*TRADE']
-    marketSize: '$11.3B algorithmic trading market'
-    growthRate: '260% annual growth'
-    variant: 'quantum-cyberpunk'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Production financial AI platform with real-time trading and comprehensive risk management.'
-    launchDate: '2025-01-15'
-    customers: 45
-    rating: 4.8
-    reviews: 32
-  }
-=======
     id: 'ai - financial - trading - platform',
     name: 'AI Financial Trading Platform',
     tagline: 'Intelligent algorithmic trading and portfolio management',
@@ -644,18 +551,14 @@ export interface Innovative2025Service {
     icon: '📈',
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.8,
     reviews: 32,
   },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -732,10 +635,6 @@ export interface Innovative2025Service {
     rating: 4 && 4.8,
 
     reviews: 32
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   id: string, name: string,
   tagline: string, price: string,
@@ -1030,25 +929,10 @@ export const innovative2025Services: Innovative2025Service[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-    },
-    realImplementation: true, implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.',
-    launchDate: '2025-01-15', customers: 45,
-    rating: 4.8,
-    reviews: 32;
-=======
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
@@ -1477,12 +1361,8 @@ export const innovative2025Services: Innovative2025Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 32;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

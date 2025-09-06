@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import {ChevronDown} from 'lucide-react';
-import {cn} from '@/lib/utils';
-const Accordion = AccordionPrimitive.Root;
-import * as React from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
-<<<<<<< HEAD
-=======
 
 
 
@@ -19,7 +8,6 @@ import { ChevronDown } from "lucide-react"
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -71,18 +59,6 @@ const AccordionTrigger = React && React.forwardRef<;
     </AccordionPrimitive>  {...props}
     >;
       {children}
-<<<<<<< HEAD
-      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
-    </AccordionPrimitive.Trigger>
-  </AccordionPrimitive.Header>
-));
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
-const AccordionContent = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Content>
-  React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-=======
 
 
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
@@ -91,7 +67,6 @@ const AccordionContent = React.forwardRef<
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -125,13 +100,6 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ))
 
 
-<<<<<<< HEAD
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-;
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-;
-=======
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
 
@@ -176,4 +144,3 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

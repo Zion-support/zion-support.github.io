@@ -67,8 +67,6 @@ export default function HomePage() {
             href="/services/data-analytics"
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
-<<<<<<< HEAD
-=======
           />
           <Card
             title="Digital Transformation"
@@ -87,7 +85,6 @@ export default function HomePage() {
             href="/services/cloud-services"
             description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
             icon="☁️"
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
         </div>
       </section>

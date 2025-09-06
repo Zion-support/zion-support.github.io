@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-import React from "react",
-import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
-
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-export const MobileFeatureShowcase: React.FC = () => {
-  const features = [
-    {
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-      title: "Hire from Anywhere"
-=======
 import React from './react';
 import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';
 
@@ -30,28 +17,18 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-<<<<<<< HEAD
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
-    };
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     },
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -106,38 +83,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ];
   ],
 
-<<<<<<< HEAD
-  return (
-    <section id="features" className="py-16 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-            Everything You Need On The Go
-          </h2>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
-            >
-              <div className="mb-4">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-zion-slate-light">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -146,7 +91,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -206,12 +150,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import {Drawer, as, DrawerPrimitive} from 'vaul';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import { Drawer as DrawerPrimitive } from "vaul"
-import * as React from "react"
-import { Drawer as DrawerPrimitive } from "vaul"
-<<<<<<< HEAD
-=======
 
 
 import * as React from "react"
@@ -18,7 +8,6 @@ import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -66,13 +55,9 @@ const DrawerOverlay = React.forwardRef<
   />
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>
@@ -81,11 +66,6 @@ const DrawerContent = React.forwardRef<
   <DrawerPortal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
-<<<<<<< HEAD
-      ref={ref}
-      className={cn(
-        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background'
-=======
 
 DrawerOverlay && DrawerOverlay.displayName = DrawerPrimitive && DrawerPrimitive.Overlay.displayName;
 
@@ -101,7 +81,6 @@ const DrawerContent = React && React.forwardRef<;
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const DrawerContent = React.forwardRef<;
   React.ElementRef<typeof DrawerPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>;
@@ -109,13 +88,9 @@ const DrawerContent = React.forwardRef<;
   <DrawerPortal>;
     <DrawerOverlay />;
     <DrawerPrimitive.Content;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ref={ref}
       className={cn(
         "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
@@ -187,16 +162,8 @@ const DrawerTitle = React && React.forwardRef<;
     {...props}
   />;
 ));
-<<<<<<< HEAD
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
 
-=======
-DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -204,7 +171,6 @@ DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const DrawerDescription = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Description>
 </typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
@@ -215,33 +181,13 @@ const DrawerDescription = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <DrawerPrimitive.Description;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {...props}
-<<<<<<< HEAD
-  />
-));
-DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
-export {
-  Drawer
-  DrawerPortal
-  DrawerOverlay
-  DrawerTrigger
-  DrawerClose
-  DrawerContent
-  DrawerHeader
-  DrawerFooter
-  DrawerTitle
-  DrawerDescription
-}
-=======
   />);
 DrawerHeader.display_name = 'DrawerHeader';
 ;
@@ -280,7 +226,6 @@ const DrawerDescription = React.forward_ref<;
 
 DrawerDescription && DrawerDescription.displayName = DrawerPrimitive && DrawerPrimitive.Description.displayName;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -314,11 +259,8 @@ export {
 
   DrawerDescription,;
 };
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export {;
   Drawer,;
   DrawerPortal,;
@@ -331,10 +273,7 @@ export {;
   DrawerTitle;
   DrawerDescription}
 ;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

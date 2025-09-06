@@ -98,16 +98,6 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
-<<<<<<< HEAD
-quality={quality}
-      style={style}
-  );
-}
-export default OptimizedImage;
-      quality={quality}
-      style={style}
-
-=======
 
 
 
@@ -118,7 +108,6 @@ export default OptimizedImage;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
 
@@ -126,15 +115,10 @@ export default OptimizedImage;
 export default OptimizedImage;
 =======
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       quality={quality}
       style={style}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };
 

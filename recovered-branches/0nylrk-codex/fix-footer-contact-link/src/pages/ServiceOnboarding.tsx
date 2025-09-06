@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -33,20 +30,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
   const { user, isLoading } = useAuth();
-<<<<<<< HEAD
-import React from "react",
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth();
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth(),
-=======
 
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
@@ -54,7 +37,6 @@ export default function ServiceOnboarding() {
 
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
@@ -145,9 +127,5 @@ if ( {) {
     </>);
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

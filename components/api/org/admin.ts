@@ -9,25 +9,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
-  if (req.method !== 'POST') {;
-    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-=======
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -36,15 +27,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
-<<<<<<< HEAD
-;
-=======
 
 
 ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const key = req.headers['x-admin-key'];
 =======
 
@@ -72,7 +59,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (arr.some((p) => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section
@@ -117,7 +103,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }

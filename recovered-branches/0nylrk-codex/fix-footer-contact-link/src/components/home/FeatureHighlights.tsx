@@ -1,30 +1,12 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card",
-import { Check } from "lucide-react",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
-<<<<<<< HEAD
-      title: "For Talent Seekers"
-      title: "For Talent Seekers",
-      features: [;
-
-        "AI-powered talent matching based on your specific project requirements";
-=======
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -61,7 +43,6 @@ function FeatureHighlights() {
       title: "For Talent Seekers",
       features: [;
         "AI - powered talent matching based on your specific project requirements";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
@@ -200,13 +181,10 @@ export function FeatureHighlights() {;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </ul>;
               </CardContent>;

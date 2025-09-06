@@ -8,19 +8,6 @@ import { complete_sitemap, dynamic_paths } from '@/config / sitemap';
 import Link from 'next / link';
 import { ChevronRight } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
-import Link from 'next/link';
-import { ChevronRight } from 'lucide-react'
-import { SEO  } from './SEO';
-import React from 'react'
-import { SEO } from './SEO'
-// Map sitemap paths to their actual routes in the application
-// Note: This pathMap might need to be updated based on Next.js page structure
-const pathMap: Record<string, string> = {
-  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { SEO } from './SEO';
 // Map sitemap paths to their actual routes in the application;
 // Note: This path_map might need to be updated based on Next.js page structure;
@@ -41,10 +28,7 @@ import { SEO } from './SEO',
 const pathMap: Record<string string> = {
   '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'},
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
 export const SitemapPage: React.FC = () => {
@@ -72,10 +56,6 @@ export const SitemapPage: React.FC = () => {;
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -107,10 +87,6 @@ export const SitemapPage: React.FC = () => {;
           </div>
             </ul>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           {/* Talent Routes */}
@@ -132,10 +108,6 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
             </ul>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Talent Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Talent Pages</h2>;
@@ -182,10 +154,6 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
             </ul>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Client Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Client Pages</h2>;
@@ -232,10 +200,6 @@ export const SitemapPage: React.FC = () => {;
                       <ChevronRight className="h-4 w-4 mr-2" />
             </ul>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Shared Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">Authenticated User Pages</h2>;
@@ -310,41 +274,6 @@ export const SitemapPage: React.FC = () => {;
               }
             </ul>;
           </div>;
-<<<<<<< HEAD
-          {/* Dynamic Routes */}
-          <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
-            <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([key, path],) => (
-              {Object.entries(dynamicPaths).map(([key, path]) => (
-
-                <li key={key}>
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-'"}
-  const sitemapData = [{
-      title: 'Main Pages'
-      links: [
-        { name: 'Home', url: '/' }
-        { name: 'About', url: '/about' }
-        { name: 'Services', url: '/services' }
-        { name: 'Contact', url: '/contact' }
-        { name: 'Blog', url: '/blog' }
-        { name: 'Careers', url: '/careers' }
-      ]
-=======
 
 
             </ul>;
@@ -366,7 +295,6 @@ export const SitemapPage: React.FC = () => {;
         </div>;
       </div>;
     </>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     {
       title: 'Services'
@@ -392,60 +320,6 @@ export const SitemapPage: React.FC = () => {;
         { name: 'Documentation', url: '/docs' }
         { name: 'API Reference', url: '/api' }
       ]}
-<<<<<<< HEAD
-        { name: 'Case Studies', url: '/case-studies' },'
-        { name: 'White Papers', url: '/white-papers' },'
-        { name: 'Webinars', url: '/webinars' },'
-        { name: 'Documentation', url: '/docs' },'        { name: 'API Reference', url: '/api' }
-      ]}
-  ]
-  return (<div className="min - h-screen bg-slate - 900 text-white py-16">
-      <SEO
-        title="Sitemap - Zion Tech Group"
-        description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
-      />
-      <div className="container mx - auto px-4 max - w-6xl">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font - bold mb-6 bg-gradient - to - r from - cyan - 400 to - blue - 500 bg-clip - text text-transparent">            Sitemap
-          </h1>"
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-            Navigate through our comprehensive website structure to find the information and services you need.</p>
-        </div>
-"
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {sitemapData.map((section, sectionIndex)  => ("
-            <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">"
-              <h2 className="text-xl font-semibold mb-4 text-cyan-400">
-                {section.title}
-              </h2>
-              <ul className="space - y-2">
-                {section.links.map((link, linkIndex) => (<li key={linkIndex}>
-                    <a
-                      href={link.url}
-                      className="text-zinc - 300 hover:text-cyan - 400 transition - colors duration - 200 block py-1">
-                      {link.name}
-                    </a>
-                  </li>) ) }
-              </ul>
-            </div>) ) }
-        </div>
-"
-        <div className="mt-16 text-center">"
-          <p className="text-zinc-400">
-            Can't find what you're looking for?{' '}"
-            <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              Contact us
-            </a>{' '}
-            for assistance.;
-          </p>;
-        </div>;
-      </div>;
-    </div>;) }
-'"
-}
-
-
-=======
 
         { name: 'Case Studies', url: '/case - studies' }, ';
         { name: 'White Papers', url: '/white - papers' }, ';
@@ -498,7 +372,6 @@ export const SitemapPage: React.FC = () => {;
               ))}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </ul>;
           </div>;
         </div>;
@@ -506,10 +379,6 @@ export const SitemapPage: React.FC = () => {;
     </>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     </a>;
 

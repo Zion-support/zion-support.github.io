@@ -7,9 +7,7 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function useCounter(target: number, durationMs: number) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [value, setValue] = useState(0);
   useEffect(() => {;
 
@@ -18,47 +16,6 @@ function useCounter(target: number, durationMs: number) {
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
-<<<<<<< HEAD
-      if (start === null) start = ts;
-
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,;
-    let raf: number,;
-    const step = (ts: number) => {;
-      if (start === null) start = ts,;
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-
-      if (progress < 1) raf = requestAnimationFrame(step);
-    }
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;}
-
-    }
-
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [target, durationMs]);
-  return value;
-}
-
-      if (progress < 1) raf = requestAnimationFrame(step)
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf)
-  }, [target, durationMs]);
-  return value
-}
-<<<<<<< HEAD
-
-export default function InteractiveStats() {
-<<<<<<< HEAD
-
-export default function InteractiveStats() {;
-=======
 =======
 =======
 
@@ -67,7 +24,6 @@ export default function InteractiveStats() {;
 
 export default function InteractiveStats() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -147,12 +103,9 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
     </div>
 );
   );
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Stat({
   label
   value
@@ -202,11 +155,5 @@ function Stat() {
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-<<<<<<< HEAD
-}
-  );
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

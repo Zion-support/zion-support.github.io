@@ -20,7 +20,6 @@ export default function VerifyPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
@@ -152,7 +151,6 @@ export default function VerifyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
@@ -161,54 +159,6 @@ export default function VerifyPage() {
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-<<<<<<< HEAD
-      body: JSON.stringify({ userId })}),;
-    const data = await res.json();
-    if (data.ok) {;
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.');
-    } else {
-      setMessage(data.error |'Submit failed');
-    }
-    setBusy(false);  }
-  const labels = getBadgeLabels(profile |undefined);
-    } else {;
-      setMessage(data.error || 'Submit failed');
-    } else {;
-      setMessage(data.error || 'Submit failed');
-    }
-    setBusy(false);  }
-
-  const labels = getBadgeLabels(profile || undefined);
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const labels = getBadgeLabels(profile || undefined),
-  return (
-    <>
-      <Head>
-        <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className='max-w-3xl mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Guided step-by-step KYC/AML verification with progress tracking.
-        </p>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
-=======
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
     const data = await res && res.json();
@@ -334,7 +284,6 @@ if ( {) {
 
           )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
@@ -403,7 +352,6 @@ if ( {) {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
 
@@ -420,13 +368,10 @@ if ( {) {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
@@ -498,36 +443,10 @@ if ( {) {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-<<<<<<< HEAD
-                    );                  })}
-                </div>
-              </section>
-            )}
-            <div>
-              <button
-                disabled={
-                  busy |
-                  profile.status === 'submitted' |
-                  profile.status === 'approved'
-                }
-                onClick={submit}
-                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
-              >
-                Submit for review
-              </button>
-            </div>
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
-        )}
-      </main>
-    </>
-);
-
-=======
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -706,7 +625,6 @@ if ( {) {
     </>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
@@ -756,19 +674,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
-        )}
-      </main>
-    </>
-);
-=======
 
 
             <div>
@@ -776,7 +681,6 @@ if ( {) {
             </div>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -796,10 +700,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

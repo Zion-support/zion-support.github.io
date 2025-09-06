@@ -19,19 +19,9 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-import {
-  LineChart
-  BarChart
-  DonutChart;
-  LineChart,
-  BarChart,;
-  DonutChart,;
-=======
 
 type InsightResponse = {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   LineChart,;
   BarChart,;
@@ -39,7 +29,6 @@ import {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -48,14 +37,6 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
-<<<<<<< HEAD
-  trend_monthly: { label: string; value: number }[];
-  regional_comparison: { region: string; medianHourlyUsd: number }[];
-  tags: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = {
@@ -82,8 +63,6 @@ trend_monthly: { label: string, value: number }[],
   tags: string[],;
   gptRecommendation?: string;
 export default function SalaryInsightsPage() {;
-<<<<<<< HEAD
-=======
 
 =======
 
@@ -91,7 +70,6 @@ export default function SalaryInsightsPage() {;
 export default function SalaryInsightsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -99,7 +77,6 @@ export default function SalaryInsightsPage() {;
 =======
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
@@ -155,7 +132,6 @@ function SalaryInsightsPage() {
       }
     })()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
 
@@ -192,8 +168,6 @@ function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
-<<<<<<< HEAD
-=======
 
     } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
@@ -213,7 +187,6 @@ function SalaryInsightsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoading(false);    }
 
     }
@@ -232,7 +205,6 @@ function SalaryInsightsPage() {
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         const user = await supabase.auth.getUser();
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
@@ -365,7 +337,6 @@ if ( {) {
         // fall back      }          alert ('Insight saved to your profile');
           return;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       } catch {;
         // fall back;
@@ -373,35 +344,15 @@ if ( {) {
 
 
         alert('Insight saved locally');
-<<<<<<< HEAD
-      } catch {}
-    })();
-  }
-
-
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      } catch {}
-    })();
-  }
+
+
+
 =======
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-=======
-
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch {}
     })();
   }
@@ -519,7 +470,6 @@ if (return [] as { label: string, value: number }[], ) {
 
 
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
@@ -643,7 +593,6 @@ if (return [] as { label: string, value: number }[], ) {
 =======
             <button onClick={fetchInsights} disabled={loading} className="mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {loading ? 'Calculating…' : 'Update Insights'}
 
             </button>;
@@ -925,7 +874,6 @@ if (return [] as { label: string, value: number }[], ) {
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </tbody>;
                 </table>;
@@ -1038,20 +986,6 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
-<<<<<<< HEAD
-            </div>
-          </div>
-          {data?.gptRecommendation && (
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
-              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
-                {data.gptRecommendation}
-              </p>            </div>
-          )}
-
-          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
 
 
@@ -1065,7 +999,6 @@ if (return [] as { label: string, value: number }[], ) {
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -1119,7 +1052,6 @@ if (return [] as { label: string, value: number }[], ) {
               </div>
             </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </div>;
@@ -1127,9 +1059,6 @@ if (return [] as { label: string, value: number }[], ) {
     </div>;
   );
 }
-<<<<<<< HEAD
-
-=======
   );
 }
                       donut_data.map ((d, i) => ({
@@ -1173,11 +1102,7 @@ if (return [] as { label: string, value: number }[], ) {
             </div>
           )}
 
-<<<<<<< HEAD
-          {data && (
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -27,16 +27,11 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-<<<<<<< HEAD
-  }
-
-=======
 
 
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -77,12 +72,9 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ;
   return context as CarouselContextProps;
@@ -216,19 +208,9 @@ if ( {) {
 }
         return;
       }
-<<<<<<< HEAD
-onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
-
-      onSelect(api)
-      api.on("reInit", onSelect)
-      api.on("select", onSelect)
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       return () => {
         api?.off("select", onSelect)
@@ -279,12 +261,9 @@ className={cn(&quot;relative&quot;, className)}
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {...props}
         >;
           {children}
@@ -405,18 +384,6 @@ const CarouselPrevious = React.forward_ref<;
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
-    </Button>
-  )
-})
-CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-    >
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
-=======
 
 
 
@@ -427,7 +394,6 @@ CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </Button>
   )
 })
@@ -472,25 +438,6 @@ const CarouselNext = React.forward_ref<;
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowRight className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Next slide</span>
-    </Button>
-  )
-})
-CarouselNext.displayName = &quot;CarouselNext&quot;
-export {
-  type CarouselApi
-  Carousel
-  CarouselContent
-  CarouselItem
-  CarouselPrevious
-  CarouselNext}
-    >
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
-=======
 
 >;
       <ArrowRight className=&quot;h - 4 w - 4&quot; />;
@@ -509,7 +456,6 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </Button>
   )
 })
@@ -524,12 +470,7 @@ export {
   CarouselPrevious,
   CarouselNext};
   CarouselNext}
-<<<<<<< HEAD
-;
-;
-=======
 
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

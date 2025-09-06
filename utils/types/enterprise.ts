@@ -79,18 +79,6 @@ export interface InvoiceRecord {;
   periodStartIso: string;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
-<<<<<<< HEAD
-}
-export interface CompanyRecord {id: string;
-  name: string;
-  slug: string, // e.g. acme;
-  logoUrl?: string;
-  brandColor?: string;
-  plan: CompanyPlan;
-  members: CompanyMember[];
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-=======
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
@@ -100,7 +88,6 @@ export interface CompanyUsageLimits {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -154,11 +141,7 @@ export interface CompanyRecord {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-=======
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

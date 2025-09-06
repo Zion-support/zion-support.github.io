@@ -4,14 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import {
-<<<<<<< HEAD
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-=======
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -28,36 +20,12 @@ function LanguageSelector() {
 =======
 import {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
 DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-<<<<<<< HEAD
-export function LanguageSelector() {;
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-
-import React from 'react',
-import { useTranslation } from 'react-i18next',
-import { Button } from '@/components/ui/button',
-import { Globe } from 'lucide-react',
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
-
-export function LanguageSelector() {
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-  const { t } = useTranslation(),
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <DropdownMenu>;
@@ -84,11 +52,8 @@ export function LanguageSelector() {
                 : "text-white hover:bg-zion-purple/10"
             className={`cursor-pointer ${;
               currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -102,11 +67,7 @@ export function LanguageSelector() {
     </DropdownMenu>
       </DropdownMenuContent>;
     </DropdownMenu>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

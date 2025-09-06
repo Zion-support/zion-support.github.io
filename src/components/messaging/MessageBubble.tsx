@@ -2,10 +2,7 @@ import { Message } from '@/types/messaging';
 
 
 interface MessageBubbleProps {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   message: Message
   isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
@@ -50,24 +47,10 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
     )}>
       <div className={cn(
         "max-w-[75%] rounded-lg px-4 py-2"
-<<<<<<< HEAD
-import React from 'react',;
-import { format } from 'date-fns',;
-import { PaperclipIcon } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-import { Message } from '@/types/messaging',;
-interface MessageBubbleProps {;
-  message: Message,;
-  isUserMessage: boolean;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   message: Message
   isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
-<<<<<<< HEAD
-=======
 
   return (
     <div className={cn(
@@ -101,16 +84,11 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
 
         <div className='text-xs opacity-70 text-right mt-1'>          {format(new Date(message && message.created_at), 'h:mm a')}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleProps) {;
   return (

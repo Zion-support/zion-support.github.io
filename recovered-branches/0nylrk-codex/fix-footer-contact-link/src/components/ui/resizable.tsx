@@ -42,14 +42,6 @@ const ResizableHandle = ({
     )}
   </ResizablePrimitive.PanelResizeHandle>;
 );
-<<<<<<< HEAD
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
-;
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
-export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
-;
-=======
 
 import { GripVertical } from &quot;lucide-react & quot;
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
@@ -98,4 +90,3 @@ const ResizableHandle = ({
   </ResizablePrimitive.PanelResizeHandle>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

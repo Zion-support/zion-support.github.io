@@ -1,43 +1,25 @@
 
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link  } from 'lucide-react';
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types/resume';
-import { useState  } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
 =======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
-<<<<<<< HEAD
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-=======
 
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isPrinting, setIsPrinting] = useState(false);
 
   const isMobile = useIsMobile();
@@ -72,14 +54,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
-<<<<<<< HEAD
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         .print-section {
           position: absolute
           left: 0
@@ -136,22 +111,6 @@ function PreviewHeader() {
           display: none !important;
         }
       }
-<<<<<<< HEAD
-    `;
-    document.head.appendChild(style);
-    // Trigger print dialog
-    window.print();
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  }
-    `,
-    document.head.appendChild(style),
-    `,
-    document.head.appendChild(style),
-=======
 
 
     `,
@@ -162,7 +121,6 @@ function PreviewHeader() {
     document.head.appendChild(style),
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     
     // Trigger print dialog
     window.print(),
@@ -182,28 +140,15 @@ function PreviewHeader() {
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-<<<<<<< HEAD
-      <div
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
-      >
-        <PdfExportButton resume={resume} />
-        <Button
-          variant="outline"
-          onClick={handleBrowserPrint}
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
           onClick={handleBrowserPrint} 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           disabled={isPrinting}
           className="gap-2"
         >

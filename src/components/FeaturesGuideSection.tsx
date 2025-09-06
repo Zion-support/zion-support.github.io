@@ -25,10 +25,6 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         'Navigate to the AI Matcher page from the homepage or marketplace',
@@ -300,10 +296,7 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -1338,10 +1331,6 @@ function FeaturesGuideSection() {
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 {feature.title}
@@ -1364,10 +1353,6 @@ function FeaturesGuideSection() {
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
@@ -1539,8 +1524,6 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
-<<<<<<< HEAD
-=======
 
                     ))}
                   </ol>;
@@ -1560,7 +1543,6 @@ function FeaturesGuideSection() {
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </ol>
                 </div>
@@ -1571,10 +1553,6 @@ function FeaturesGuideSection() {
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Button
@@ -1594,10 +1572,6 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

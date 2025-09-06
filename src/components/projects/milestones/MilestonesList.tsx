@@ -30,26 +30,11 @@ if (isLoading) {
             onClick: () => setShowAddForm(true)
           } : undefined
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
       />;
     );
-=======
-<<<<<<< HEAD
-      />
-    )
-=======
-      />;
-    );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 
@@ -82,16 +67,6 @@ if (isLoading) {
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-<<<<<<< HEAD
-            <AddMilestoneForm
-            <AddMilestoneForm 
-              onSubmit = {handleSubmit,}
-              isSubmitting = {isSubmitting,}
-              onCancel = {(,) => setShowAddForm(false),}
-            />
-          </CardContent>
-        </Card>
-=======
 
 
       {showAddForm && (;
@@ -106,7 +81,6 @@ if (isLoading) {
             />;
           </CardContent>;
         </Card>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
 
 
@@ -114,19 +88,6 @@ if (isLoading) {
         {milestones && milestones.map((milestone,) => (;
 
           <MilestoneCard
-<<<<<<< HEAD
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
-          />
-=======
             key = {milestone && milestone.id,}
             id = {milestone && milestone.id,}
             projectId = {milestone && milestone.project_id,}
@@ -138,17 +99,12 @@ if (isLoading) {
             onApprove = {onApprove,}
             onReject = {onReject,}
           />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ))}
 
       </div>;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Check condition
 if ( {) {

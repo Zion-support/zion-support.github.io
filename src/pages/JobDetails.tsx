@@ -3,11 +3,8 @@ Calendar,
   DollarSign,
   Tag,;
   Users;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Briefcase;
 import {;
   Calendar,;
@@ -58,10 +55,6 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function JobDetails() {;
   const router = useRouter(); // Init router;
@@ -80,8 +73,6 @@ function JobDetails() {
   const job_id = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, is_loading, error } = useJobDetails (job_id) as {
     job: Job | undefined;
-<<<<<<< HEAD
-=======
     is_loading: boolean;
     error: any;
   }
@@ -95,15 +86,11 @@ export default function JobDetails() {;
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, isLoading, error } = useJobDetails(jobId) as {
     job: Job | undefined;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     isLoading: boolean;
     error: any;
   };
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -131,34 +118,16 @@ interface Job {;
   category: string,;
   deadline?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   deadline?: string;
 export default function JobDetails() {
 
 
 =======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  const isOwnJob = user?.id === job.client_id,
-=======
-<<<<<<< HEAD
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success('Application submitted successfully!');
-    setIsApplyModalOpen(false);
-  };
-  const isOwnJob = user?.id === job.client_id;
-=======
 
   const isOwnJob = user?.id === job.client_id,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
@@ -271,9 +240,7 @@ export default function JobDetails() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>
@@ -283,16 +250,6 @@ export default function JobDetails() {
       />
       <Header />
 
-<<<<<<< HEAD
-                
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>
-=======
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button 
@@ -462,7 +419,6 @@ export default function JobDetails() {;
                   <div className='ml-3'>
                     <p className='text-sm text-muted-foreground'>Budget</p>
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                 </div>
                 
@@ -483,10 +439,6 @@ export default function JobDetails() {;
                     Apply Now;
                   </Button>;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -520,10 +472,6 @@ export default function JobDetails() {;
                   </Button>;
                 )}
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -705,10 +653,6 @@ if ( {) {
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -716,20 +660,6 @@ if ( {) {
       {job && (
         <ApplyToJobModal
           job={{
-<<<<<<< HEAD
-            id: job.id
-            title: job.title
-            description: job.description
-            company_name: job.company_name ?? 'Company'
-            budget: formatBudget(job.budget)
-            client_id: job.client_id
-            id: job.id,
-            title: job.title,
-            description: job.description,
-            company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
-            client_id: job.client_id,
-=======
 
             id: job && job.id,
             title: job && job.title,
@@ -738,7 +668,6 @@ if ( {) {
             budget: formatBudget(job && job.budget),
             client_id: job && job.client_id,
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
 
           isOpen={isApplyModalOpen}

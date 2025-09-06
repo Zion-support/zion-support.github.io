@@ -1,17 +1,7 @@
 import type { GetServerSideProps } from 'next';
 
-<<<<<<< HEAD
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-type Props = { vendor: Vendor | null };
-
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function AgencyDashboardPage({ vendor }: Props) {;
-type Props = { vendor: Vendor | null };
-
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -59,19 +49,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-<<<<<<< HEAD
-  function addPackage() {
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [
-      ...(activeVendor.packages |[])
-      {
-        id: `pkg_${Date.now()}`
-        title: pkgTitle
-        description: pkgDesc
-        priceUsd: Number(pkgPrice)
-      }
-=======
 
 
   function addPackage() {;
@@ -85,16 +62,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         priceUsd: Number(pkgPrice),;
       },;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
-<<<<<<< HEAD
-
-=======
 =======
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
@@ -105,7 +78,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -184,42 +156,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('')
   }
   return (
-<<<<<<< HEAD
-    <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
-        {!activeVendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
-      </div>
-      <section className="space-y-4">
-        <h2 className="text-lg font-medium">Profile</h2>
-        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
-            <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1" htmlFor="input-About">About</label>
-            <textarea name="about" defaultValue={activeVendor.about |''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() |''} className="w-full border rounded px-3 py-2 bg-transparent" />
-          </div>
-          <div className="md:col-span-2">
-            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
-          </div>
-        </form>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Publish Packages</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-=======
 
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
@@ -252,7 +193,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -285,39 +225,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             />;
             <button
               onClick={addPackage}
-<<<<<<< HEAD
-              className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
-            >
-              Add
-            </button>          </div>
-        </div>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
-          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
-          <div className="flex gap-2">
-            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
-            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
-        </div>
-      </section>
-      <section className='space-y-3'>
-        <h2 className='text-lg font-medium'>Project Pipeline</h2>
-        <Pipeline vendorId={activeVendor.id} />
-      </section>
-      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
-    </div>
-  );        <Pipeline vendorId={activeVendor.id} />
-      </section>
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
-    </div>
-  );
-}
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-
-
-
-=======
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
             >
               Add
@@ -346,23 +253,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   );
 }
 =======
-<<<<<<< HEAD
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
-          </div>
-        </form>
-      </section>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -382,7 +277,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
   useEffect(() => {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
@@ -396,7 +290,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     fetchItems()
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
@@ -414,13 +307,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Pipeline({ vendorId }: { vendorId: string }) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {;
     const res = await fetch(;
@@ -438,22 +327,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
 
   }
 
-<<<<<<< HEAD
-  useEffect(() => {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fetchItems();
   }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -470,10 +350,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             </div>;
           </div>;
           <select
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
@@ -750,7 +626,6 @@ function change_status() {
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -770,22 +645,9 @@ function change_status() {
 
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null; // tie to auth later
-  return { props: { vendor } }
-};  )
-}
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
@@ -812,43 +674,18 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
             <option value="lost">Lost</option>
         </div>
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null, // tie to auth later;
-  return { props: { vendor } }
-<<<<<<< HEAD
-}
-
-    </div>
-};
-    </div>
-=======
 
 
     </div>
@@ -874,4 +711,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -2,27 +2,6 @@ const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-<<<<<<< HEAD
-        title: 'Email required'
-        description: 'Please enter an email address for the new team member.'
-        variant: 'destructive'
-      })
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
-      return
-        title: 'Email required',
-        description: 'Please enter an email address for the new team member.',
-        variant: 'destructive',
-      })
-      return;
-    }
-    toast({
-      title: 'Invitation sent'
-      description: `An invitation has been sent to ${newMemberEmail}`
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-=======
 
 
         title: "Email required",
@@ -39,7 +18,6 @@ const handleAddMember = () => {
       description: `An invitation has been sent to ${newMemberEmail}`,
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -162,13 +140,8 @@ if ( {) {
   }
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -176,10 +149,7 @@ if ( {) {
     }
 
     toast({
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -201,10 +171,6 @@ if ( {) {
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -245,10 +211,6 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
@@ -278,10 +240,6 @@ if ( {) {
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <Table>
           <TableHeader>
@@ -297,10 +255,6 @@ if ( {) {
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -314,10 +268,6 @@ if ( {) {
                           .map((n) => n[0])
                           .join("")}
                       </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     </div>
                     <div>
@@ -334,10 +284,6 @@ if ( {) {
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {member.status}
                   </Badge>
@@ -356,10 +302,6 @@ if ( {) {
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         Resend
                       </Button>
@@ -613,10 +555,6 @@ export function TeamManagement() {;
                     </div>;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

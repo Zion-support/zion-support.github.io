@@ -1,40 +1,9 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import { readJson  } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-export async function getStaticProps() {
 
 
-import {readJson} from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
 
-<<<<<<< HEAD
-export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {;
-  const categories = Array.from(new Set(articles.map(a => a.category)));
-import { readJson } from '../../utils/fsDb';
-import type { HelpArticle } from '../../utils/support';
-export async function getStaticProps() {;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
-  const categories = Array.from(new Set(articles.map((a) => a.category))),
-=======
 
               ))}
           </div>;
@@ -42,7 +11,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
       ))}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -64,12 +32,6 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
         </div>
       ))}
     </div>
-<<<<<<< HEAD
-);
-
-}
-}
-=======
   )
 }
 
@@ -111,7 +73,6 @@ function HelpIndex() {
     </div>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
@@ -119,7 +80,6 @@ function HelpIndex() {
 }
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -139,10 +99,6 @@ function HelpIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -31,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>;
@@ -72,53 +63,6 @@ import React from 'react';
                   className='text-cyan-300 underline'
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
-<<<<<<< HEAD
-                  rel='noopener noreferrer'
-                >
-                  AWS Config
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://azure.microsoft.com/pricing/details/monitor/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Azure Monitor
-                </a>
-              </li>
-              <li>
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://cloud.google.com/asset-inventory/pricing'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GCP Asset Inventory
-                </a>
-              </li>
-            </ul>
-          </Card>
-        </div>
-        <div className='mt-8'>
-          <a
-            href='/contact'
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-          >
-            Contact Sales
-          </a>
-        </div>
-      </div>
-    </UltraFuturisticBackground>;
-  );
-
-}
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Card from '../components/ui/Card',
-=======
                   rel='noopener noreferrer'>;
 =======
 import Head from 'next / head';
@@ -217,7 +161,6 @@ function ITAssetDiscoveryAgentPage() {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -252,8 +195,6 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-<<<<<<< HEAD
-=======
 }
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -261,9 +202,7 @@ export default function ITAssetDiscoveryAgentPage() {
     </UltraFuturisticBackground>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

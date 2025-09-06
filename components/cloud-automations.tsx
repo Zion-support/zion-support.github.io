@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 
 
 
@@ -14,7 +11,6 @@ export default function CloudAutomationsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CloudAutomationsPage() {
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -26,10 +22,7 @@ export default function CloudAutomationsPage() {;
       .then(setData);
       .catch(() => setData({ ok: false }));
 
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -38,14 +31,12 @@ export default function CloudAutomationsPage() {
       .then(setData)
       .catch(() => setData({ ok: false }))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
   return (
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
         ))}
@@ -88,18 +79,11 @@ export default function CloudAutomationsPage() {
             {value.metrics ? (
               <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             ) : null}
           </div>
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }

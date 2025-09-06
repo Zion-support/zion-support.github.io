@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -17,35 +8,6 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
-<<<<<<< HEAD
-import { useState } from "react",
-import { Star } from "lucide-react",
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import {
-  RadioGroup;
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch";
-import { Review } from "@/types/reviews";
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
-=======
 interface ReviewFormValues {;
 
 =======
@@ -73,7 +35,6 @@ interface ReviewFormValues {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -96,14 +57,8 @@ interface ReviewFormProps {;
   defaultValues?: Review;
   isSubmitting: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export function ReviewForm(): any ({;
@@ -113,12 +68,9 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
-<<<<<<< HEAD
-=======
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -182,28 +134,8 @@ export function ReviewForm({
       timeliness_rating: undefined
       would_work_again: undefined
       is_anonymous: false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  });
-  const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values
-      project_id: projectId
-      reviewee_id: revieweeId}
-    const success = await onSubmit(formattedData);
-    if (success) {
-      form.reset()
-    }
-  }
-  const watchRating = form.watch("rating");
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-  }),;
-=======
   });
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -215,15 +147,6 @@ export function ReviewForm({
     if (success) {;
       form && form.reset();
     }
-<<<<<<< HEAD
-  },
-  
-  const watchRating = form.watch("rating"),
-  
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-=======
 
   };
 
@@ -233,7 +156,6 @@ export function ReviewForm({
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -273,39 +195,6 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
-<<<<<<< HEAD
-        />
-      rating: 0,
-      review_text: "",
-      communication_rating: undefined,
-      quality_rating: undefined,
-      timeliness_rating: undefined,
-      would_work_again: undefined,
-      is_anonymous: false}
-  }),;
-  const handleSubmit = async (values: ReviewFormValues) => {;
-    const formattedData = {;
-      ...values,;
-      project_id: projectId,;
-      reviewee_id: revieweeId},;
-    const success = await onSubmit(formattedData),;
-    if (success) {;
-      form.reset();
-    }
-  },
-  
-  const watchRating = form.watch("rating"),
-  
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        
-  },;
-  const watchRating = form.watch("rating"),;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
-=======
 
         />;
 
@@ -314,7 +203,6 @@ export function ReviewForm({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -449,12 +337,8 @@ if ( {) {
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Communication */}
             <FormField
               control={form && form.control}

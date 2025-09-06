@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-const memoryStore: { q: string, ts: number }[] = [],
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,57 +25,11 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
-<<<<<<< HEAD
-    return res.status(200).json({ ok: true, top, total: memoryStore.length })
-  }
-  return res.status(405).end()
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-const memoryStore: { q: string, ts: number }[] = [];
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    const { q } = req.body || {};
-    if (typeof q === 'string' && q.trim()) {;
-      memoryStore.push({ q: q.trim(), ts: Date.now() });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return res.status(204).end();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === 'GET') {
-    const counts = new Map<string number>();
-=======
     return res.status (204).end ();
 
   }
 
     const counts = new Map<string, number>();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
     return res.status(200).json({ ok: true, top, total: memoryStore.length });
@@ -111,7 +58,6 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -132,11 +78,5 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

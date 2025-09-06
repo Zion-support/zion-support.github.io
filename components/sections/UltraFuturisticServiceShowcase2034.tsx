@@ -20,70 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-  Star
-  CheckCircle
-  ArrowRight
-  TrendingUp
-  Users
-  Award
-  Clock
-  Zap
-  Shield
-  Brain
-  Atom
-  Rocket
-  ShoppingCart
-  Cpu
-  Globe
-  Lock
-  Video
-  Palette
-  BarChart
-  UserCheck
-  FileText
-  Heart
-  Eye
-  Search
-  Phone;
-} from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users
 
-  Star,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Zap,
-  Shield,
-  Brain,
-  Atom,
-  Rocket,
-  ShoppingCart,
-  Cpu,
-  Globe,
-  Lock,
-  Video,
-  Palette,
-  BarChart,
-  UserCheck,
-  FileText,
-  Heart,
-  Eye,
-  Search,;
-  Phone,;
-} from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -194,10 +131,6 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticServiceShowcase2034() {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {;
@@ -307,70 +240,17 @@ const service_categories = [;
     icon: Brain,
 
 
-<<<<<<< HEAD
-    visible: {
-      opacity: 1
-      transition: {
-
-
-
-    const matchesCategory =;
-      selectedCategory === 'all' ||;
-      serviceCategories && serviceCategories.some(cat => cat && cat.services.includes(service));
-    const matchesSearch =;
-      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
-      }
-    }
-<<<<<<< HEAD
-  }
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
-    visible: { opacity: 1, y: 0 }
-  }
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
-      }
-    }
-    visible: { opacity: 1, y: 0 },
-
-  };
-=======
   };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },;
   };
-<<<<<<< HEAD
-  return (
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
-      {/* Animated Background */}
-<<<<<<< HEAD
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       <div className='absolute inset-0 overflow-hidden'>;
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
@@ -382,31 +262,22 @@ const service_categories = [;
 
 
 
-<<<<<<< HEAD
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-<<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
         {/* Header */}
 
-<<<<<<< HEAD
-=======
     hidden: { opacity: 0, y: 20 },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -418,7 +289,6 @@ const service_categories = [;
       </div>;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Header */}
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -437,17 +307,9 @@ const service_categories = [;
           viewport={{ once: true }}
           className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -466,32 +328,10 @@ const service_categories = [;
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1;
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    hidden: { opacity: 0, y: 20 }
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: { opacity: 1, coordinate_y: 0 },
-  }
-<<<<<<< HEAD
-;
-=======
 =======
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
-      }
-    }
-=======
     visible: { opacity: 1, y: 0 },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const itemVariants = {
@@ -499,36 +339,15 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  return (
-    <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
-      {/* Animated Background */}
-<<<<<<< HEAD
-      <div className='absolute inset - 0 overflow - hidden'>;
-        <div className='absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse'></div>;
-        <div className='absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000'></div>;
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500'></div>;
-      </div>;
-      <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>        {/* Header */}  }
-;
-=======
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-<<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 =======
         {/* Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
       {/* Animated Background */}
@@ -539,23 +358,6 @@ const service_categories = [;
       </div>;
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className='text - center mb - 16';
-        >;
-          <h2 className='text - 4xl md:text - 5xl lg:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6'>;
-            Revolutionary Technology Services;
-          </h2>;
-          <p className='text - xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>;
-            Discover our comprehensive suite of cutting - edge AI, quantum;
-            computing, and emerging technology solutions. Each service is;
-            designed to transform your business and propel you into the future.;
-          </p>;
-=======
 =======
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -567,21 +369,13 @@ const service_categories = [;
 
         {/* Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -591,7 +385,6 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Stats */}
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
@@ -655,58 +448,12 @@ const service_categories = [;
               },
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-<<<<<<< HEAD
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
 
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-            Revolutionary Technology Services
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
-            Each service is designed to transform your business and propel you into the future.
-          </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
-              { label: 'Happy Customers', value: '50K+', icon: Users },
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
-
-=======
-<<<<<<< HEAD
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-            Revolutionary Technology Services
-          </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. 
-            Each service is designed to transform your business and propel you into the future.
-          </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            {[
-              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket },
-              { label: 'Happy Customers', value: '50K+', icon: Users },
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-=======
-              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ].map((stat, index) => (
               <motion.div
 
@@ -735,11 +482,8 @@ const service_categories = [;
 
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
-=======
           </div>;
         </motion && motion.div>;
 
@@ -747,9 +491,7 @@ const service_categories = [;
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -758,17 +500,9 @@ const service_categories = [;
           viewport={{ once: true }}
           className='mb-12'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -784,7 +518,6 @@ const service_categories = [;
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <input
@@ -800,12 +533,8 @@ const service_categories = [;
 
             </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -816,8 +545,6 @@ const service_categories = [;
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-=======
             </select>;
           </div>;
         </motion && motion.div>;
@@ -827,9 +554,7 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -849,41 +574,6 @@ const service_categories = [;
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <motion&& motion.div
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
-            >
-              {/* Popular Badge */}
-              {service.popular && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-              )}
-                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
-
-                  Popular
-
-                </div>
-              )}
-
-=======
           </div>;
         </motion && motion.div>;
 
@@ -892,7 +582,6 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
@@ -902,7 +591,6 @@ const service_categories = [;
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Icon */}
 
                 className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
@@ -1141,32 +829,12 @@ const service_categories = [;
               </p>;
               {/* Features */}
 
-<<<<<<< HEAD
-                    <span>{feature}</span>
-                  </div>
-                ))}
-                {service.features.length > 3 && (
-                  <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
-                {service.features.slice(0, 3).map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  </div>
-                ))}
-                {service.features.length > 3 && (
-                  <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
-                    +{service.features.length - 3} more features
-                  </div>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
               </div>
                 )}
               </div>
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -1181,57 +849,30 @@ const service_categories = [;
               {/* Features */}
 
                     <span>{feature}</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
                 {service.features.length > 3 && (
                   <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {service.features.slice(0, 3).map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                     <span>{feature}</span>
                   </div>
-<<<<<<< HEAD
-                ))}
-                {service.features.length > 3 && (
-<<<<<<< HEAD
-<div className="text-sm text-cyan-400">
-=======
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     +{service.features.length - 3} more features
                   </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </div>
-<<<<<<< HEAD
-{/* Service Meta */}
-              <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <Clock className="w-4 h-4" />
-                  <span>{service.setupTime}</span>
-=======
 =======
                 )}
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
                 </div>                  <span>{service.setupTime}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </div>
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Users className="w-4 h-4" />
@@ -1326,27 +967,16 @@ const service_categories = [;
               {/* Action Buttons */}
               <div className='flex space-x-3'>
 
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a
 
               <div className="flex space-x-3">
 =======
               <div className='flex space-x-3'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <a
 
                   href={service.link}
@@ -1378,8 +1008,6 @@ const service_categories = [;
           ))}
         </motion.div>
 
-<<<<<<< HEAD
-=======
               {/* Trial Info */}
               <div className='mt-4 text-center'>;
                 <div className='text-sm text-gray-400'>;
@@ -1401,9 +1029,7 @@ const service_categories = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1412,17 +1038,9 @@ const service_categories = [;
           viewport={{ once: true }}
           className='text-center mt-20'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1473,7 +1091,6 @@ const service_categories = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg">;
@@ -1481,11 +1098,6 @@ const service_categories = [;
               </a>;
                              <a
                  href="/pricing-2034"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
                  className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
                >
                  View Pricing
@@ -1499,23 +1111,14 @@ const service_categories = [;
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
@@ -1695,9 +1298,4 @@ const service_categories = [;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-  );
-}
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

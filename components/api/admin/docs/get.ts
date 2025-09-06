@@ -5,17 +5,10 @@ import path from 'path';
 
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const token = req && req.headers['x-admin-token'] as string | undefined,
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
-    return res && res.status(403).json({ error: 'Forbidden' });
-=======
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
@@ -50,12 +43,7 @@ if ( {) {
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
-<<<<<<< HEAD
-    res.status (500).json ({ error: 'Failed to read content' });
-
-=======
     res.status(500).json({ error: 'Failed to read content' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

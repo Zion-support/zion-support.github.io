@@ -1,60 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
-import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-=======
 
 
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC started' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
-import type { KycProfile, KycRole } from '../../../utils/kyc';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-  } catch {
-    return {}
-  }
-function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  const {    userId
-    role
-    fullLegalName
-    businessName
-    businessRegistrationNumber
-  } = req.body as {
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     userId?: string;
 =======
   } = req.body as {
@@ -197,14 +157,9 @@ export default function handler(req, res) {
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   }
-<<<<<<< HEAD
-}
-}
-=======
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
@@ -258,4 +213,3 @@ optional_documents: getOptionalDocuments (role),
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

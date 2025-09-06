@@ -22,22 +22,8 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
-<<<<<<< HEAD
-            'Higher pricing'
-            'Limited customization'
-            'No unlimited plan'
-          ]
-          savings: 'Save $20/month with Zion'
-        },        {
-          name: 'Copy.ai'
-          pricing: '$36/month'
-          rating: '4.6/5'
-          pros: ['Unlimited words', 'Good value', 'Simple interface']
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -65,11 +51,8 @@ export default function PricingComparisonPage() {
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -380,7 +363,6 @@ href="/pricing"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 View Our Pricing
 
 =======
@@ -457,7 +439,6 @@ href="/pricing"
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Why Choose Zion?
               </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Key insights that make Zion the smart choice for your business.
               </p>
@@ -499,19 +480,11 @@ href="/pricing"
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
-<<<<<<< HEAD
-                  </div>;
-                  <p className={`text - lg font - semibold ${insight.color}`}>;
-=======
 
 
                     {insight.icon}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -523,14 +496,11 @@ href="/pricing"
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -727,12 +697,8 @@ href="/pricing"
 
                             {[...Array(5)].map((_, i) => (
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -746,17 +712,9 @@ href="/pricing"
                               {competitor.rating}
                             </span>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -792,15 +750,7 @@ href="/pricing"
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           </div>
                           <div className="mb-4">
                             <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
@@ -838,11 +788,7 @@ href="/pricing"
                         </div>
                       </Card>
                     </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
 </div>;
               </div>;
@@ -850,13 +796,6 @@ href="/pricing"
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           </div>;
@@ -866,18 +805,13 @@ href="/pricing"
         {/* CTA Section */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
               Ready to Save Money and Get Better Features?
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -937,7 +871,6 @@ href="/devops-automation"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Try DevOps Automation
 
 =======
@@ -1106,36 +1039,5 @@ href="/devops-automation"
                 Try AI Content Generator
               </Button>
               <Button
-<<<<<<< HEAD
-                href='/cloud-monitoring'
-                variant='secondary'
-                size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-                Try Cloud Monitoring
-              </Button>
-              <Button
-                href='/devops-automation'
-                variant='secondary'
-                size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-                Try DevOps Automation
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-);
-}
-              <Button
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

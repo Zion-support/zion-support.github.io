@@ -1,27 +1,10 @@
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Separator  } from '@/components/ui/separator';
-import { Switch  } from '@/components/ui/switch';
-import { Label  } from '@/components/ui/label';
-import { toast } from 'sonner';
-export default function AccountSettings() {
-=======
 =======
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -35,29 +18,14 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-export default function AccountSettings() {;
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-    try {
-
-      const saved = localStorage.getItem('account_settings');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        setDisplayWeb3(!!parsed.displayWeb3);
-        setDidHandle(parsed.didHandle |'');
-        setEnableBackup(!!parsed.enableBackup)
-=======
 
 
 
@@ -73,7 +41,6 @@ export default function AccountSettings() {;
 =======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -102,51 +69,13 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
-<<<<<<< HEAD
-import { useState, useEffect } from 'react',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Wallet, Database, Save } from "lucide-react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Separator } from '@/components/ui/separator',;
-import { Switch } from '@/components/ui/switch',;
-import { Label } from '@/components/ui/label',;
-import { toast } from 'sonner',;
-export default function AccountSettings() {;
-  const { user } = useAuth(),;
-  const [displayWeb3, setDisplayWeb3] = useState(false),;
-  const [didHandle, setDidHandle] = useState(''),;
-  const [enableBackup, setEnableBackup] = useState(false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  useEffect(() => {;
-    try {;
-      const saved = localStorage.getItem('account_settings'),;
-      if (saved) {;
-        const parsed = JSON.parse(saved),;
-        setDisplayWeb3(!!parsed.displayWeb3),;
-        setDidHandle(parsed.didHandle || ''),;
-        setEnableBackup(!!parsed.enableBackup);
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
-<<<<<<< HEAD
-  }, []);
-  const handleSave = () => {
-    setIsSubmitting(true);
-  }, []),
-  }, []),
-<<<<<<< HEAD
-=======
 
 
   }, []),
@@ -155,7 +84,6 @@ export default function AccountSettings() {;
   }, []),
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleSave = () => {
     setIsSubmitting(true),
@@ -284,13 +212,10 @@ export default function AccountSettings() {;
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -302,25 +227,16 @@ export default function AccountSettings() {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 
     }
-<<<<<<< HEAD
-  }
-  },
-=======
 
 
   },
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <>;

@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { Link  } from 'react-router-dom';
-import { ShieldAlert } from "lucide-react";
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-interface ProjectActionsProps {
-=======
 =======
 
 
@@ -15,32 +7,21 @@ import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   projectId: string
   isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
 
-<<<<<<< HEAD
-import {Button} from '@/components/ui/button';
-import {Link} from 'react-router-dom';
-import {ShieldAlert} from "lucide-react";
-import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -48,24 +29,9 @@ interface ProjectActionsProps {
   isTalent: boolean,
   onAddMilestone: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function ProjectActions({;
-  projectId;
-  isUnderDispute;
-  disputeId;
-  isTalent;
-export function ProjectActions({
-  projectId,
-  isUnderDispute,
-  disputeId,
-  isTalent,
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -112,12 +78,9 @@ export function ProjectActions({;
           projectId={projectId}
           variant="outline"
         />;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>

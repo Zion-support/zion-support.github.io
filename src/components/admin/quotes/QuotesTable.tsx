@@ -1,21 +1,14 @@
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -24,12 +17,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   deleteQuote,
   onViewDetails
 },) => {
@@ -185,10 +175,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                       <span className="sr-only">View Details</span>
                     </Button>
                     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     {isArchived ? (
@@ -273,15 +259,7 @@ import {formatDate} from "@/utils/dateUtils";
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-<<<<<<< HEAD
-                              }
-                            }}
-                              } }}
-                              }
-                            }}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -464,22 +442,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    )}
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))
-          )}
-        </TableBody>
-      </Table>
-    </div>
-  )
-}
-'"
-=======
 
                     )}
                   </div>;
@@ -488,7 +450,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
             ));
           )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 };
@@ -500,10 +461,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '"
 

@@ -9,12 +9,6 @@ export interface Version {
 
 }
 =======
-<<<<<<< HEAD
-  getVersion: () => '1.0.0',
-  compareVersions: (v1: string, v2: string) => 0,
-  incrementVersion: (version: string) => version;
-};
-=======
 
 }
 =======
@@ -35,5 +29,3 @@ export const versioning = {
   increment_version: (version: string) => version;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

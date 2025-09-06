@@ -1,50 +1,18 @@
 
-<<<<<<< HEAD
-import {useState} from "react";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
-import {toast} from "sonner";
-import {JobApplication} from "@/types/jobs";
-import { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
-import { supabase } from "@/integrations/supabase/client",
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
-import { toast } from "sonner";
-import { JobApplication } from "@/types/jobs";
-import { toast } from "sonner",
-import { JobApplication } from "@/types/jobs",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
-  const [isScoring, setIsScoring] = useState(false);
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
-  // Determine if application has been scored
-  const [isScoring, setIsScoring] = useState(false),
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -62,33 +30,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-<<<<<<< HEAD
-      case "Strongly Recommended": return "bg-green-100 text-green-800",
-      case "Recommended for Review":
-        return "bg-blue-100 text-blue-800",
-      case "Low Match":
-        return "bg-orange-100 text-orange-800"
-      default:
-        return "bg-gray-100 text-gray-800"
-    }
-  }
-  // Trigger the scoring process
-  const handleScore = async () => {
-    try {
-      setIsScoring(true);
-      // Call the trigger_resume_scoring function
-      const { error } = await supabase.rpc(
-        'trigger_resume_scoring';
-        { application_id: application.id }
-      );
-      if (error) throw error;
-      toast.success("Resume scoring has been initiated");
-      // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0;
-      const maxAttempts = 10;
-      const checkScore = async () => {
-        attempts++;
-=======
 =======
 import {useState} from "react";
 import {Badge} from "@/components/ui/badge";
@@ -126,7 +67,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -224,12 +164,9 @@ function ApplicationScoreCard() {
       ),
       
       if (error) throw error,
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       toast.success("Resume scoring has been initiated"),
       
@@ -263,16 +200,6 @@ function ApplicationScoreCard() {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.")
         }
-<<<<<<< HEAD
-      }
-      setTimeout(checkScore, 3000)
-    } catch (error: any) {
-      setIsScoring(false)
-      toast.error(`Failed to score resume: ${error.message}`)
-    }
-  }
-  };
-=======
 
 
         if (data && data.scored_at) {;
@@ -298,7 +225,6 @@ function ApplicationScoreCard() {
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -339,17 +265,8 @@ function ApplicationScoreCard() {
       toast.error(`Failed to score resume: ${error.message}`);
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -440,9 +357,6 @@ function ApplicationScoreCard() {
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-<<<<<<< HEAD
-                      </div>
-=======
 
 
                       </div>;
@@ -452,20 +366,8 @@ function ApplicationScoreCard() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
                       </div>;
-<<<<<<< HEAD
-                      </div>;
-                    )}
-                    
-                    {application.match_breakdown.experience_match && (
-                      <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
-                        <p>{application.match_breakdown.experience_match.analysis}</p>
-                      </div>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
 
                     {application && application.match_breakdown.education_match && (;
@@ -481,8 +383,6 @@ function ApplicationScoreCard() {
                   </div>;
                 </details>;
               </div>;
-<<<<<<< HEAD
-=======
 =======
                     )}
 
@@ -490,9 +390,7 @@ function ApplicationScoreCard() {
                 </details>;
               </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 
           </div>;

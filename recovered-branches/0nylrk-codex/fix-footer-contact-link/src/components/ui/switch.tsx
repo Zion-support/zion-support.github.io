@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as SwitchPrimitives from '@radix-ui/react-switch';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import * as SwitchPrimitives from "@radix-ui/react-switch"
-import * as React from "react"
-import * as SwitchPrimitives from "@radix-ui/react-switch"
-<<<<<<< HEAD
-=======
 
 
 import * as React from "react"
@@ -18,7 +8,6 @@ import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -46,23 +35,13 @@ const Switch = React && React.forwardRef<;
       className={cn(
         'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0'
         "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;
 ));
-<<<<<<< HEAD
-Switch.displayName = SwitchPrimitives.Root.displayName;
-export { Switch }
-export { Switch }
-;
-
-=======
 
 Switch && Switch.displayName = SwitchPrimitives && SwitchPrimitives.Root.displayName;
 =======
@@ -73,11 +52,7 @@ export { Switch }
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Switch };
 export { Switch }
 ;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

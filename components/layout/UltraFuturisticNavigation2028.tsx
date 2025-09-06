@@ -4,64 +4,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -95,7 +37,6 @@ import {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -146,14 +87,6 @@ import {
   Mountain,
   Code,
   Wrench,
-<<<<<<< HEAD
-
-  Smartphone,;
-  BarChart3,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-=======
 
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
@@ -162,7 +95,6 @@ import {
   Microscope, DollarSign, Home, Users, Briefcase, ;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -199,7 +131,6 @@ import {
 
       { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' };
       { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
-<<<<<<< HEAD
     ]
   }
     title: '⚖️ Legal & Compliance'
@@ -262,18 +193,6 @@ import {
         price: '$1,999/month'
       }
       {
-        name: 'Sustainable Supply Chain'
-        href: '/sustainable-supply-chain'
-        description: 'Green supply chain solutions'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' }
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' }
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
         name: 'Sustainable Supply Chain',
         href: '/sustainable-supply-chain',
         description: 'Green supply chain solutions',
@@ -289,116 +208,12 @@ import {
 
 ];
 
-];
-
-=======
-    ]
-  }
-    title: '⚖️ Legal & Compliance'
-    icon: Scale
-    color: 'from-slate-600 to-gray-600'
-    description: 'Legal technology solutions'
-    services: [
-      {
-        name: 'Contract Analysis AI'
-        href: '/contract-analysis-ai'
-        description: 'Intelligent contract review'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Compliance Monitoring Platform'
-        href: '/compliance-monitoring-platform'
-        description: 'Automated compliance tracking'
-        price: '$3,999/month'
-      }
-      {
-        name: 'Legal Document Automation'
-        href: '/legal-document-automation'
-        description: 'Automated legal documents'
-        price: '$1,999/month'
-      }
-      {
-        name: 'Regulatory Change Tracker'
-        href: '/regulatory-change-tracker'
-        description: 'Monitor regulatory updates'
-        price: '$1,499/month'
-      }
-    ]
-  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
-      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' }
-      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' }
-      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
-    ]
-  }
-    title: '🌍 Sustainability & Green Tech'
-    icon: Leaf
-    color: 'from-emerald-600 to-green-600'
-    description: 'Environmental solutions'
-    services: [
-      {
-        name: 'Carbon Footprint Tracking'
-        href: '/carbon-footprint-tracking'
-        description: 'Monitor environmental impact'
-        price: '$1,499/month'
-      }
-      {
-        name: 'Renewable Energy Management'
-        href: '/renewable-energy-management'
-        description: 'Optimize green energy'
-        price: '$2,999/month'
-      }
-      {
-        name: 'Waste Management AI'
-        href: '/waste-management-ai'
-        description: 'Intelligent waste optimization'
-        price: '$1,999/month'
-      }
-      {
-<<<<<<< HEAD
-        name: 'Sustainable Supply Chain'
-        href: '/sustainable-supply-chain'
-        description: 'Green supply chain solutions'
-        price: '$3,999/month'
-      }
-    ]
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' }
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' }
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-=======
-        name: 'Sustainable Supply Chain',
-        href: '/sustainable-supply-chain',
-        description: 'Green supply chain solutions',
-        price: '$3,999/month',
-      },
-    ],
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-<<<<<<< HEAD
-
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     ];
   };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -490,10 +305,6 @@ const company_links = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2028() {
-export default function UltraFuturisticNavigation2028() {;
-=======
 
 
 const companyLinks = [;
@@ -533,13 +344,11 @@ const resource_links = [;
   { name: '🔐 Security Center', href: '/security', icon: Shield },
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -566,21 +375,14 @@ const resource_links = [;
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
   );
   return (
-<<<<<<< HEAD
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -759,13 +561,9 @@ function UltraFuturisticNavigation2028() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -862,7 +660,6 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -893,20 +690,10 @@ function UltraFuturisticNavigation2028() {
                                 </span>                              </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </div>
                       </div>
@@ -994,20 +781,9 @@ function UltraFuturisticNavigation2028() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
               <Link
@@ -1023,34 +799,18 @@ function UltraFuturisticNavigation2028() {
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
 
-<<<<<<< HEAD
             ))}
           </div>
 
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
 
-<<<<<<< HEAD
-=======
-            ))}
-          </div>
-
-          {/* Search and Actions */}
-          <div className='hidden lg:flex items-center space-x-4'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
@@ -1082,8 +842,6 @@ function UltraFuturisticNavigation2028() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
 
             </button>;
           </div>;
@@ -1095,9 +853,7 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1107,17 +863,9 @@ function UltraFuturisticNavigation2028() {
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='px-4 py-6 space-y-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1140,13 +888,9 @@ function UltraFuturisticNavigation2028() {
             <div className="px-4 py-6 space-y-6">;
 
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           >
             <div className="px-4 py-6 space-y-6">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -1172,7 +916,6 @@ function UltraFuturisticNavigation2028() {
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Link
                           key={service && service.name}
                           href={service && service.href}
@@ -1196,20 +939,14 @@ function UltraFuturisticNavigation2028() {
 
                         </Link>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       ))}
                     </div>;
                   </div>;
                 ))}
               </div>
 
-<<<<<<< HEAD
-=======
               </div>;
 
 
@@ -1217,9 +954,7 @@ function UltraFuturisticNavigation2028() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -1254,7 +989,6 @@ function UltraFuturisticNavigation2028() {
               <div className='pt-4 border-t border-purple-500/30'>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1263,11 +997,8 @@ function UltraFuturisticNavigation2028() {
 
               {/* Mobile CTA */}
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -1417,12 +1148,6 @@ function UltraFuturisticNavigation2028() {
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -1434,23 +1159,14 @@ function UltraFuturisticNavigation2028() {
             </div>
           </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </AnimatePresence>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       </AnimatePresence>;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -1488,13 +1204,9 @@ function UltraFuturisticNavigation2028() {
                     </span>                  </div>
 
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </div>;
           </div>;
@@ -1513,16 +1225,10 @@ function UltraFuturisticNavigation2028() {
   );
 }
     </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}
@@ -1565,9 +1271,4 @@ function UltraFuturisticNavigation2028() {
         </div>)}
     </nav>);
 }
-<<<<<<< HEAD
-  );
-}
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

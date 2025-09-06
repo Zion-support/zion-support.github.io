@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as SeparatorPrimitive from '@radix-ui/react-separator';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-<<<<<<< HEAD
-=======
 
 
 import * as React from "react"
@@ -18,7 +8,6 @@ import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -58,13 +47,6 @@ const Separator = React && React.forwardRef<;
     />;
   );
 );
-<<<<<<< HEAD
-Separator.displayName = SeparatorPrimitive.Root.displayName;
-export { Separator }
-export { Separator }
-;
-
-=======
 
 Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
 =======
@@ -75,11 +57,7 @@ export { Separator }
 =======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Separator };
 export { Separator }
 ;
-<<<<<<< HEAD
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

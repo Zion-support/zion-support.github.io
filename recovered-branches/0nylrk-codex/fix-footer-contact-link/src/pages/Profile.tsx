@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -33,34 +30,14 @@ import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
-<<<<<<< HEAD
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
-import React, { useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-import { useNavigate } from "react-router-dom",
-import { toast } from "sonner",
-export default function Profile() {
-  const { user, isLoading, logout } = useAuth(),
-  const navigate = useNavigate(),
-=======
 
   const { user, isLoading, logout } = useAuth();
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -244,9 +221,5 @@ if ( {) {
     </>);
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

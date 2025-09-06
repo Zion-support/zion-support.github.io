@@ -2,17 +2,10 @@
 import React from "react";
 
 
-<<<<<<< HEAD
-import { QuoteStatusBadge } from "./QuoteStatusBadge";
-import type { QuoteRequest } from "@/types/quotes";
-import { format } from "date-fns";
-import {format} from "date-fns";
-=======
 
 import {format} from "date-fns";
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { 
   Dialog,
@@ -28,39 +21,22 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
 }
 
-<<<<<<< HEAD
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-  const formatDate = (dateString?: string) => {
-    if (!dateString) return "Not specified";
-    try {
-      return format(new Date(dateString), "PPP");
-    } catch (e) {
-      return dateString;
-    }
-  }
-  };
-=======
 import {format} from "date-fns";
 =======
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import {;
   Dialog,;
@@ -133,17 +109,11 @@ if (return "Not specified") {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
@@ -225,12 +195,6 @@ if (return "Not specified") {
   );
 };
 
-<<<<<<< HEAD
-  )
-},
-};
-},
-=======
 =======
       return date_string;
     }
@@ -317,4 +281,3 @@ if (return "Not specified") {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

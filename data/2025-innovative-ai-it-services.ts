@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -77,36 +73,7 @@
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeAIService {
-=======
 export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-    icon: '⚛️',
-    color: 'from - indigo - 500 to - blue - 600',
-    popular: true,
-    launch_date: '2025 - 01 - 15',
-    customers: 150,
-    rating: 4 && 4.9,
-    reviews: 89,
-  },
-  {
-
-=======
     id: 'autonomous - devops - platform',
     name: 'Autonomous DevOps Platform',
     tagline:;
@@ -708,9 +675,6 @@ export interface InnovativeAIService {;
       'Research collaboration tools'
     ]
     benefits: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       'Improve diagnostic accuracy by 99.9%'
       'Reduce diagnostic errors by 95%'
       'Enable early disease detection'
@@ -751,19 +715,6 @@ export interface InnovativeAIService {;
     support:
       '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.'
     compliance: [
-<<<<<<< HEAD
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
-    ]
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic'
-    icon: '🏥'
-    color: 'from-blue-500 to-indigo-600'
-    popular: true
-    launchDate: '2025-02-15'
-    customers: 350
-    rating: 4.9
-    reviews: 189
-  }
-=======
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
     ],
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostic',
@@ -775,11 +726,9 @@ export interface InnovativeAIService {;
     rating: 4.9,
     reviews: 189,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -828,7 +777,6 @@ export interface InnovativeAIService {;
     rating: 4.9,
     reviews: 189,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -865,7 +813,6 @@ export interface InnovativeAIService {;
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations';
     description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -982,13 +929,6 @@ export interface InnovativeAIService {;
     rating: 4 && 4.9,
 
     reviews: 189
-<<<<<<< HEAD
-<<<<<<< HEAD
-    rating: 4.9,
-    reviews: 189;
-  }
-
-=======
 
 export interface InnovativeAIService {;
 
@@ -999,14 +939,9 @@ export interface InnovativeAIService {;
 =======
 ;
 =======
-<<<<<<< HEAD
-  }
-];
-=======
 export interface InnovativeAIService {;
 =======
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1482,17 +1417,10 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 =======
     rating: 4.9,
     reviews: 189;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

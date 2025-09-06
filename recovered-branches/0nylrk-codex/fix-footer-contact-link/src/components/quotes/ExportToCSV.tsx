@@ -1,19 +1,8 @@
 
-<<<<<<< HEAD
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Button } from "@/components/ui/button",
-import { Download } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Download } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -129,31 +118,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button 
       variant="outline" 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",;
-import { Download } from "lucide-react",;
-import type { QuoteRequest } from "@/types/quotes",;
-interface ExportToCSVProps {;
-  quotes: QuoteRequest[],;
-  filename?: string;
-}
-;
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
-  const handleExport = () => {;
-    // Define CSV Headers;
-    const headers = [;
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',;
-      'StatusCreated Date';
-    ],;
-    // Format quote data for CSV;
-    const rows = quotes.map(quote => [;
-      quote.id,;
-      quote.talent_name || 'Unknown',;
-      quote.requester_name,;
-      quote.requester_email,;
-      quote.project_name,;
-      quote.project_summary,;
-=======
 
       onClick={handleExport}
       className="flex items-center gap-2"
@@ -175,7 +139,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -217,24 +180,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button;
       variant="outline";
-<<<<<<< HEAD
-      onClick={handleExport}
-      className="flex items-center gap-2"
-      disabled={quotes.length === 0}
-    >
-      <Download size={16} />
-      Export CSV
-    </Button>
-  )
-}
-
-    >;
-      <Download size={16} />;
-      Export CSV;
-    </Button>;
-  );
-};
-=======
       on_click={handle_export}
       className="flex items - center gap - 2";
       disabled={quotes.length === 0}
@@ -245,4 +190,3 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

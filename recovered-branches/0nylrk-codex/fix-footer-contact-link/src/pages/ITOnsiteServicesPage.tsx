@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -24,35 +15,6 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
-<<<<<<< HEAD
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  
-  // Check for success parameter in URL
-  const success = searchParams.get("success");
-import { useState, useEffect } from "react",
-import { useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",
-import { QuoteFormSection } from "@/components/QuoteFormSection",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-import { PageHero } from "@/components/services/PageSections/PageHero",
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
-  const [searchQuery, setSearchQuery] = useState("");
-  // Check for success parameter in URL
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const success = searchParams.get("success");
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
@@ -65,14 +27,8 @@ export default function ITOnsiteServicesPage() {
 
 
   
-<<<<<<< HEAD
-  // Check for success parameter in URL
-  const success = searchParams.get("success"),
-  
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -192,13 +148,10 @@ export default function ITOnsiteServicesPage() {;
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Hero Section with Features */}
 
           <PageHero />;
@@ -251,10 +204,6 @@ export default function ITOnsiteServicesPage() {;
   )
 }
 }
-<<<<<<< HEAD
-;
-;
-=======
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
@@ -343,4 +292,3 @@ if (return 1) {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

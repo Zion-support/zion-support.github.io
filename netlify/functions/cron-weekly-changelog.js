@@ -66,10 +66,3 @@ exports && exports.handler = async function () {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
-<<<<<<< HEAD
-    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
-    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-},

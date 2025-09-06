@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { TALENT_PROFILES } from "@/data/talentData",
-import { JOB_POSTS } from "@/data/jobsData";
-import { PROJECTS } from "@/data/projectsData";
-export interface SearchResult {
-import {useState} from "react";
-import {TALENT_PROFILES} from "@/data/talentData";
-import {JOB_POSTS} from "@/data/jobsData";
-import {PROJECTS} from "@/data/projectsData";
-export interface SearchResult {;
-=======
 
 
 
@@ -21,7 +9,6 @@ import { TALENT_PROFILES } from '@/data / talent_data';
 import { JOB_POSTS } from '@/data / jobs_data';
 import { PROJECTS } from '@/data / projects_data';
 export interface SearchResult {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   type: "talent" | "job" | "project";
   title: string,
@@ -33,49 +20,6 @@ interface SearchFilters {
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
-<<<<<<< HEAD
-  availability?: string | null
-}
-export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false);
-
-export function useAISearch() {;
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-import { useState } from "react",
-import { TALENT_PROFILES } from "@/data/talentData",
-import { JOB_POSTS } from "@/data/jobsData",
-import { PROJECTS } from "@/data/projectsData",
-export interface SearchResult {
-  id: string,
-  type: "talent" | "job" | "project",
-  title: string,
-  description: string
-import { useState } from "react",;
-import { TALENT_PROFILES } from "@/data/talentData",;
-import { JOB_POSTS } from "@/data/jobsData",;
-import { PROJECTS } from "@/data/projectsData",;
-export interface SearchResult {;
-  id: string,;
-  type: "talent" | "job" | "project",;
-  title: string,;
-  description: string;
-}
-;
-interface SearchFilters {;
-  type?: string | null,;
-  skills?: string[] | null,;
-  location?: string | null,;
-  budget?: { min: number, max: number } | null,;
-  availability?: string | null;
-}
-
-export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
-
-=======
   availability?: string | null;
 }
 
@@ -90,7 +34,6 @@ function useAISearch() {
   const [loading, set_loading] = useState (false);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const search = async (query: string) => {
     setLoading(true),
     try {
@@ -170,10 +113,6 @@ function useAISearch() {
     }
   }
 
-<<<<<<< HEAD
-  return { results, loading, search }
-}
-=======
       const response = await fetch (
         "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
         {
@@ -196,7 +135,6 @@ if (return true, ) {
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -271,12 +209,9 @@ if ( {) {
     }
 
   };
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

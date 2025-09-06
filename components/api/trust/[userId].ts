@@ -1,15 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-import { computeTrustScore } from '../../../utils/trust/compute';
-import type {
-  TrustMetricInputs
-  TrustScoreBreakdown;
-  TrustMetricInputs,;
-  TrustScoreBreakdown,;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(
@@ -37,7 +28,6 @@ async function analyzeWithGPT(
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -103,7 +93,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         riskLevel: riskLevelOverride || breakdown.riskLevel};
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       // Persist latest score when possible
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
@@ -338,9 +327,5 @@ if ( {) {
   return res.status(405).json({ error: 'Method not allowed' })
 }
   return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

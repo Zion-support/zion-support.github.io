@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -25,38 +16,14 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { JobsList } from "@/components/jobs/JobsList",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Link } from "react-router-dom",
-import { JobStatus } from "@/types/jobs",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
-import { useJobs } from "@/hooks/useJobs",
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-import { useIsMobile } from "@/hooks/use-mobile";
-function ClientDashboardContent() {
-=======
 function ClientDashboardContent() {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-<<<<<<< HEAD
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
 
 
   // Set the first job as selected when jobs are loaded (if any);
@@ -70,7 +37,6 @@ import { useIsMobile } from "@/hooks/use-mobile",
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -251,13 +217,10 @@ function ClientDashboardContent() {;
 
           <div>;
             <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -281,24 +244,6 @@ function ClientDashboardContent() {;
                   </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
-export default function ClientDashboard() {
-  return (
-    <ProtectedRoute>
-      <ClientDashboardContent />
-    </ProtectedRoute>
-  )
-}
-=======
 =======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
@@ -326,7 +271,6 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
   const is_mobile = useIsMobile ();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Set the first job as selected when jobs are loaded (if any);
   useEffect (() => {
@@ -442,9 +386,6 @@ export default function ClientDashboard() {;
 }
 
 ;
-<<<<<<< HEAD
-;
-=======
 
 
 =======
@@ -460,4 +401,3 @@ function ClientDashboard() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

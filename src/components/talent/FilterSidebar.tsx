@@ -5,12 +5,6 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
-<<<<<<< HEAD
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
-export function FilterSidebar({
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import React from 'react';
@@ -68,35 +62,8 @@ export function FilterSidebar(): any ({;
   setSortOption;
   clearFilters;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
-export function FilterSidebar({
-
-  searchTerm
-  setSearchTerm
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  expandedSections
-  toggleSection
-  sortOption
-  setSortOption
-  clearFilters
-=======
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -115,61 +82,15 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  isMobileFilterOpen,}: FilterSidebarProps) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>
       {/* Filter header */}
-<<<<<<< HEAD
-      <div className='flex items-center justify-between mb-6'>
-        <h3 className='text-lg font-semibold text-white flex items-center'>
-          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm
-  setSearchTerm
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  expandedSections
-  toggleSection
-  sortOption
-  setSortOption
-  clearFilters
-  isMobileFilterOpen
-  return (
-    <>
-      {/* Filter header */}
-      <div className='flex items-center justify-between mb-6'>
-        <h3 className='text-lg font-semibold text-white flex items-center'>
-          <Filter className='h-4 w-4 mr-2 text-zion-purple' />
-          Filters
-        </h3>
-        <Button
-          variant='ghost'
-          size='sm'
-          onClick={clearFilters}
-          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'        >
-          Clear All
-        </Button>
-      </div>
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-=======
 
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Filters
         </h3>
         <Button
@@ -219,12 +140,8 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -233,10 +150,6 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           Filters
@@ -299,10 +212,6 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {/* Search */}
@@ -499,31 +408,7 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (
-<<<<<<< HEAD
-        <Button;
-          on_click={() =>;
-            window.dispatch_event (new CustomEvent ('closeMobileFilter'));
-          }
-          className='w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4'        >;
-        <Button;
-          on_click = {(, ) => window.dispatch_event (new CustomEvent ('closeMobileFilter')), }
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-      {/* Search */}
-      <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
-      {/* Sorting */}
-      <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
-      {/* Skills */}
-      <SkillsFilter;
-        selected_skills={selected_skills}
-        toggle_skill={toggle_skill}
-        expanded={expanded_sections.skills}
-        toggle_section={() => toggle_section ('skills')}
-=======
-<<<<<<< HEAD
-        <Button
-=======
         <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         isMobileFilterOpen={isMobileFilterOpen}
@@ -531,10 +416,6 @@ function FilterSidebar() {
 
       {isMobileFilterOpen && (;
         <Button;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -544,11 +425,6 @@ function FilterSidebar() {
           Apply Filters
         </Button>
       )}
-<<<<<<< HEAD
-    </>
-  )
-}
-=======
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -613,27 +489,5 @@ function FilterSidebar() {
           Apply Filters;
         </Button>;
       )}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>;
   );
-<<<<<<< HEAD
-};
-}
-
-  );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-}
-;

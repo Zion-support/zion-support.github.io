@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, {
-  useState
-  useRef
-  useEffect
-  FormEvent
-  KeyboardEvent
-import React, {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, {
-  useState
-  useRef
-  useEffect
-  FormEvent
-  KeyboardEvent
-=======
 import React, {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   useState,
@@ -45,7 +24,6 @@ import React, {
   KeyboardEvent,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -80,16 +58,11 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         (onSend(message), setMessage(""));
       }
     }
-<<<<<<< HEAD
-  }
-  };
-=======
 
 
   };
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -127,14 +100,10 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       }
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -206,19 +175,6 @@ if (&& !disabled) {) {
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
-<<<<<<< HEAD
-      />
-      <Button 
-        type="submit" 
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-        disabled={!message.trim() |disabled}
-      >
-        <Send className="h-5 w-5" />
-      </Button>
-    </form>
-  );
-);
-=======
       />;
 
         disabled={!message && message.trim() || disabled}>;
@@ -244,10 +200,8 @@ if (&& !disabled) {) {
 =======
   )
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
   )

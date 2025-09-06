@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,;
-=======
 
 
 import {;
@@ -28,7 +8,6 @@ import {;
   CardDescription,;
   CardFooter,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -36,25 +15,16 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-<<<<<<< HEAD
-interface JobMatchCardProps {
-=======
 interface JobMatchCardProps {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export function JobMatchesCard(): any ({;
@@ -68,18 +38,8 @@ export function JobMatchesCard(): any ({;
 
   if (!job) return null;
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-=======
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -102,12 +62,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
   if (!job) return null,
   
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
@@ -133,12 +89,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           {job.description}
         </p>
         
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -189,26 +142,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
           {job && job.description}
         </p>;
-<<<<<<< HEAD
-        {match.matched_skills?.length > 0 && (;
-          <div className="mb-3">;
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
-            <div className="flex flex-wrap gap-1">;
-              {match.matched_skills.slice(0, 5).map((skill, i) => (;
-                <Badge key={i} variant="secondary" className="text-xs">;
-                  {skill}
-                </Badge>
-              ))}
-              {match.matched_skills.length > 5 && (
-                <Badge variant="secondary" className="text-xs">
-                  +{match.matched_skills.length - 5}
-                </Badge>
-              )}
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-=======
 
         {match && match.matched_skills?.length > 0 && (;
           <div className="mb-3">;
@@ -237,7 +170,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
@@ -248,13 +180,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -322,12 +251,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               variant="outline"
             <Button 
               variant="outline" 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
             >;
@@ -339,12 +264,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     </Card>
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
 import { useState  } from './react';

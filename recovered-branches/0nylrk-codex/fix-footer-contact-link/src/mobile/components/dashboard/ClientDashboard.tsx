@@ -1,25 +1,8 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
-import {Link} from "react-router-dom";
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
-import { Link } from "react-router-dom",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -171,9 +154,6 @@ export function ClientDashboard() {
       </section>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
@@ -185,7 +165,6 @@ import {Link} from "react-router-dom";
 
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -409,9 +388,6 @@ function ClientDashboard() {
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

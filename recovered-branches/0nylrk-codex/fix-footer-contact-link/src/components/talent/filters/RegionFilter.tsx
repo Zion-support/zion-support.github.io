@@ -1,20 +1,8 @@
 
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {RegionFilterProps} from "@/types/filters";
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-
-import { Checkbox } from "@/components/ui/checkbox",
-import { RegionFilterProps } from "@/types/filters",
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -102,11 +90,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {region.label}
               </label>
             </div>
@@ -114,12 +99,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-=======
 
     </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
   )
@@ -139,9 +120,6 @@ const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" },
 ];
 ;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

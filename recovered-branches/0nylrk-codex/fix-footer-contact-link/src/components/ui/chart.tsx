@@ -1,33 +1,19 @@
-<<<<<<< HEAD
-import * as React from "react"
-import type { CSSProperties } from "react"
-import * as RechartsPrimitive from "recharts"
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
@@ -391,12 +377,9 @@ if ( {) {
                               {
                                 "--color-bg": indicatorColor;
                                 "--color-bg": indicatorColor,
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -418,8 +401,6 @@ if ( {) {
                           {item.value.toLocaleString()}
                         </span>
                         </span>;
-<<<<<<< HEAD
-=======
                       </div>;
                       {item && item.value && (;
                         <span className="font-mono font-medium tabular-nums text-foreground">;
@@ -430,9 +411,7 @@ if ( {) {
 
                         </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       )}
                     </div>;
                   </>;
@@ -444,22 +423,6 @@ if ( {) {
       </div>;
     );
   }
-<<<<<<< HEAD
-)
-ChartTooltipContent.displayName = "ChartTooltip"
-const ChartLegend = RechartsPrimitive.Legend
-const ChartLegendContent = React.forwardRef<
-  HTMLDivElement,
-  React.ComponentProps<"div"> &
-    Pick<React.ComponentProps<typeof RechartsPrimitive.Legend>,
-      "payload" | "verticalAlign"> & {
-      hideIcon?: boolean
-      nameKey?: string
-    }
->(
-  (
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
-=======
 
 );
 ChartTooltipContent && ChartTooltipContent.displayName = "ChartTooltip";
@@ -550,7 +513,6 @@ const ChartLegendContent = React.forward_ref<;
     }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
     ref
   ) => {
@@ -596,7 +558,6 @@ const ChartLegendContent = React.forward_ref<;
       </div>;
     );
   }
-<<<<<<< HEAD
 )
 ChartLegendContent.displayName = "ChartLegend"
 // Helper to extract item config from a payload.
@@ -630,44 +591,6 @@ function getPayloadConfigFromPayload(
     ] as string
   }
 
-=======
-)
-ChartLegendContent.displayName = "ChartLegend"
-// Helper to extract item config from a payload.
-function getPayloadConfigFromPayload(
-  config: ChartConfig
-  payload: unknown
-  key: string
-) {
-  if (typeof payload !== "object" |payload === null) {
-    return undefined
-  }
-  const payloadPayload =
-    "payload" in payload &&
-    typeof payload.payload === "object" &&
-    payload.payload !== null
-      ? payload.payload
-      : undefined
-  let configLabelKey: string = key
-  if (
-    key in payload &&
-    typeof payload[key as keyof typeof payload] === "string"
-  ) {
-    configLabelKey = payload[key as keyof typeof payload] as string
-  } else if (
-    payloadPayload &&
-    key in payloadPayload &&
-    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
-  ) {
-    configLabelKey = payloadPayload[
-      key as keyof typeof payloadPayload
-    ] as string
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -675,7 +598,6 @@ function getPayloadConfigFromPayload(
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
@@ -687,22 +609,6 @@ function getPayloadConfigFromPayload(
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-export {
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-  ChartLegend;
-  ChartLegendContent;
-  ChartStyle}
-
-
-
-export {;
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-=======
       return null;
     }
     return (
@@ -819,7 +725,6 @@ export {;
   ChartTooltipContent;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
   return configLabelKey in config;
@@ -832,13 +737,10 @@ export {;
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
-<<<<<<< HEAD
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ChartLegend;
   ChartLegendContent;
 

@@ -146,7 +146,6 @@ if (return) {
 
 
     // Animation loop
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -524,17 +523,11 @@ if ( {) {
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-<<<<<<< HEAD
-            `
-            backgroundSize: '50px 50px'
-=======
             `,
             backgroundSize: '50px 50px',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 20
@@ -551,7 +544,6 @@ if ( {) {
 =======
       window.removeEventListener ('resize', handle_resize);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
   }, [])
@@ -565,7 +557,6 @@ if ( {) {
   }, []);
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -590,7 +581,6 @@ if ( {) {
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             backgroundSize: '50px 50px'
 ;
   return (
@@ -622,8 +612,6 @@ if ( {) {
           }}
         />
 
-<<<<<<< HEAD
-=======
         />;
 
 
@@ -631,9 +619,7 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -648,10 +634,7 @@ if ( {) {
             repeat: Infinity
             ease: 'linear'
           }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         />
-<<<<<<< HEAD
-=======
 
         {/* Floating Neon Shapes */}
         <motion.div
@@ -665,17 +648,9 @@ if ( {) {
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
           animate={{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            rotate: [0, 360]
-            scale: [1, 1.1, 1]
-=======
             rotate: [0, 360],
             scale: [1, 1.1, 1],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             opacity: [0.3, 0.6, 0.3],          animate={{
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             rotate: [0, 360];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]}}
@@ -764,7 +739,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Additional floating elements */}
         <motion&& motion.div
@@ -774,7 +748,6 @@ if ( {) {
             y: [0, -20, 0],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
             opacity: [0.2, 0.5, 0.2],
 
@@ -837,23 +810,6 @@ if ( {) {
           }}
         />
 
-<<<<<<< HEAD
-        {/* Additional floating elements */}
-        <motion.div
-          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
-          animate={{
-            y: [0, -20, 0]
-            opacity: [0.2, 0.5, 0.2]
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-          animate={{
-            y: [0, -20, 0];
-            opacity: [0.2, 0.5, 0.2]}}
-          transition={{
-            duration: 4
-            repeat: Infinity
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ease: 'easeInOut',          }}
           transition={{
             duration: 10,
@@ -871,18 +827,8 @@ if ( {) {
         <motion.div;
           className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 rounded - full';
           animate={{
-<<<<<<< HEAD
-            coordinate_y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-=======
-<<<<<<< HEAD
-            y: [0, -20, 0]
-            opacity: [0.2, 0.5, 0.2]
-=======
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -920,41 +866,6 @@ ease: 'linear',
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-<<<<<<< HEAD
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut';
-          }}
-
-        />;
-        <motion.div;
-
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1 && 1.1, 1]}}
-          transition={{
-
-
-            duration: 4,
-            repeat: Infinity,
-
-
-            ease: 'easeInOut'
-          }}
-
-        />;
-
-        <motion&& motion.div
-
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1 && 1.1, 1]}}
-          transition={{
-
-        />;
-
-
-=======
 
             duration: 12,
             repeat: Infinity,
@@ -962,11 +873,7 @@ ease: 'linear',
           }}
         />
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -1029,7 +936,6 @@ ease: 'linear',
         />;
         <motion&& motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           animate={{
             scale: [1, 1 && 1.8, 1]
             opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4]
@@ -1073,14 +979,11 @@ ease: 'linear',
         />
       </div>
 
-<<<<<<< HEAD
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Gradient Overlays */}
 
         />;
@@ -1145,15 +1048,5 @@ ease: 'linear',
     </div>;
   );
 
-<<<<<<< HEAD
-export default UltraFuturisticBackground2045;
-export default UltraFuturisticBackground2045;
-
-}
-}
-}
-export default UltraFuturisticBackground2045;
-=======
 };  );
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -7,28 +7,15 @@
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
 =======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
-<<<<<<< HEAD
-  confidence: number; // 0..1;
-  trend_monthly: { label: string; value: number }[];
-  regional_comparison: { region: string; medianHourlyUsd: number }[];
-  tags: string[];
-
-}
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -57,11 +44,7 @@ function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
 ): Record<K, T[]> {
-<<<<<<< HEAD
-  return items && items.reduce(
-=======
   return items.reduce(
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     (acc, item) => {
       const key = getKey(item);
       (acc[key] |= []).push(item);
@@ -135,7 +118,6 @@ function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < seed.length; i++)
     h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -173,10 +155,8 @@ function build_trend (
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const key = getKey(item);
     (acc[key] |= []).push(item);
     return acc
@@ -294,7 +274,6 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return undefined
   }
 }
@@ -327,10 +306,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -375,7 +350,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags;
     gptRecommendation};
   return res.status(200).json(response)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export default async /**
  * handler - Function description
@@ -387,11 +361,6 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-<<<<<<< HEAD
-
-
-  // Tags
-=======
 export default async /**
  * handler - Function description
  */
@@ -399,7 +368,6 @@ function handler() {
   // Check condition
 if ( {) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -532,18 +500,5 @@ if ( {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
-<<<<<<< HEAD
-  return res.status(200).json(response)
-
-<<<<<<< HEAD
-}
-}
-}
-}
-}
-}
-  // Tags
-=======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

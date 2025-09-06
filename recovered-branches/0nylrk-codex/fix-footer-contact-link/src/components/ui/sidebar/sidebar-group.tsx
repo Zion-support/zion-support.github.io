@@ -1,25 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
-<<<<<<< HEAD
-import React, { forwardRef } from "react",
-import { ChevronDown } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
-=======
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   title?: string;
@@ -68,8 +51,6 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
 =======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
@@ -109,11 +90,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
     return (;
       <div;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -130,29 +107,10 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
       </div>
     );
   }
-<<<<<<< HEAD
-);
-SidebarGroup.displayName = "SidebarGroup";
-export { SidebarGroup }
-
-<<<<<<< HEAD
-    )
-  }
-),
-
-SidebarGroup.displayName = "SidebarGroup";
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );
   }
-<<<<<<< HEAD
-),;
-SidebarGroup.displayName = "SidebarGroup",;
-=======
 );
 
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
@@ -164,5 +122,4 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { SidebarGroup };

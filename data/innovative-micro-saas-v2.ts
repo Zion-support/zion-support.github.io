@@ -46,33 +46,6 @@ import { ServiceVariant } from '../types/service-variants';
     features: [
 
   {
-<<<<<<< HEAD
-
-      'No-code smart contract creation',
-    id: 'smart - contract - automation - platform',
-    name: 'Smart Contract Automation Platform',
-    tagline: 'Automated smart contract creation and management for businesses',
-    price: '$199',
-    period: '/month',
-    description:;
-      'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
-    features: [;
-      'No - code smart contract creation',
-
-      'Template library (100+ templates)',
-      'Automated contract execution',
-      'Multi - blockchain support',
-      'Legal compliance tools',
-      'Contract monitoring and analytics',
-      'Integration with business systems',
-      'Mobile app access',
-      'API for developers',
-      '24 / 7 contract management',
-    ],
-    popular: true,
-    icon: '📋',
-
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
@@ -389,11 +362,8 @@ import { ServiceVariant } from '../types/service-variants';
     rating: 4.8,
     reviews: 912,
   },;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -480,7 +450,6 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
@@ -508,29 +477,14 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
-    launch_date: '2024 - 02 - 01';
-    customers: 789;
-    rating: 4.8,
-    reviews: 912;
-  }
-];
-];
-<<<<<<< HEAD
-=======
 
 =======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

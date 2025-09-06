@@ -46,32 +46,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
   [;
     // Neuromorphic Computing Platform;
     {
-<<<<<<< HEAD
-      id: 'neuromorphic - computing - platform - 2026',
-      name: 'Neuromorphic Computing Platform 2026',
-      tagline:;
-        'Brain - inspired computing for next - generation AI and cognitive systems',
-      price: '$1, 499',
-      period: '/month',
-      description:;
-        "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, cognitive computing, and adaptive learning systems.",
-      features: [;
-        'Brain - inspired neural architecture',
-
-        'Spiking neural networks (SNNs)',
-        'Ultra - low power consumption',
-        'Real - time learning and adaptation',
-        'Cognitive computing capabilities',
-        'Advanced pattern recognition',
-        'Neuromorphic hardware integration',
-        'Custom neural model development',
-        'Performance optimization tools',
-        'Research collaboration platform',
-      ],
-      popular: true,
-      icon: '🧠',
-
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / services / neuromorphic - computing - platform - 2026',
@@ -399,87 +373,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
         'AI-powered recognition',
     // Biometric Authentication Platform;
     {
-<<<<<<< HEAD
-      id: 'biometric-authentication-platform-2026'
-      name: 'Biometric Authentication Platform 2026'
-      tagline:
-        'Advanced biometric security with AI-powered recognition and authentication'
-      price: '$899'
-      period: '/month'
-      description:
-        'Next-generation biometric authentication platform that uses AI-powered facial recognition, fingerprint scanning, voice recognition, and behavioral biometrics for secure, convenient authentication.'
-      features: [
-        'Multi-modal biometric authentication'
-        'AI-powered recognition'
-        'Facial recognition technology'
-        'Fingerprint and palm scanning'
-        'Voice and speech recognition'
-        'Behavioral biometrics'
-        'Liveness detection'
-        'Multi-factor authentication'
-        'API and SDK access'
-        'Enterprise security features'
-      ]
-      popular: true
-      icon: '🔐'
-      color: 'from-blue-500 to-indigo-600'
-      textColor: 'text-blue-400'
-      link: 'https://ziontechgroup.com/services/biometric-authentication-platform-2026'
-      marketPosition:
-        'Competitive with Face ID ($0.50-2.00/user/month), Touch ID ($0.30-1.50/user/month), and Voice ID ($0.40-1.80/user/month). Our advantage: Multi-modal authentication, AI-powered recognition, and comprehensive security.'
-      targetAudience:
-        'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Retail businesses, Educational institutions'
-      trialDays: 21
-      setupTime: '1-2 weeks'
-      category: 'Emerging Technology & Biometric Security'
-      realService: true
-      technology: [
-        'Computer Vision'
-        'Deep Learning'
-        'Biometric Algorithms'
-        'Python'
-        'TensorFlow'
-        'OpenCV'
-      ]
-      integrations: [
-        'Mobile apps'
-        'Web applications'
-        'IoT devices'
-        'Security systems'
-        'Cloud platforms'
-        'Enterprise systems'
-      ]
-      useCases: [
-        'User authentication'
-        'Access control'
-        'Identity verification'
-        'Payment security'
-        'Employee management'
-        'Customer verification'
-      ]
-      roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.'
-      competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me']
-      marketSize: '$34.8B market'
-      growthRate: '320% annual growth'
-      variant: 'ai-futuristic'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-        'Advanced biometric authentication platform with multi-modal recognition, AI-powered security, and comprehensive enterprise features. Includes API access and professional support.'
-      launchDate: '2026-03-01'
-      customers: 350
-      rating: 4.8
-      reviews: 175
-    }
-    // Quantum Internet Platform
-    {
-<<<<<<< HEAD
-=======
       id: 'biometric - authentication - platform - 2026',
       name: 'Biometric Authentication Platform 2026',
       tagline:;
@@ -566,7 +459,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 =======
     // Quantum Internet Platform;
     {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 'quantum - internet - platform - 2026',
       name: 'Quantum Internet Platform 2026',
       tagline: 'Ultra - secure quantum communication network for the future',
@@ -651,8 +543,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
       id: 'neuromorphic-computing-platform-2026'
       name: 'Neuromorphic Computing Platform 2026'
       tagline:
@@ -1141,31 +1031,14 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
-      launchDate: '2026-01-25'
-      customers: 60
-      rating: 4.9
-      reviews: 30
-    }
-  ];
-export const getPopularEmergingTechServices = () => {
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launch_date: '2026 - 01 - 25',
       customers: 60,
       rating: 4 && 4.9,
       reviews: 30,
     },
-<<<<<<< HEAD
-  ];
-
-
-export const getPopularEmergingTechServices = () => {;
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
@@ -1173,7 +1046,6 @@ export const getPopularEmergingTechServices = () => {;
 export const getPopularEmergingTechServices = () => {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
 =======
@@ -1255,16 +1127,6 @@ export const getPopularEmergingTechServices = () => {;
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.'
-      launchDate: '2026-01-25'
-      customers: 60
-      rating: 4.9
-      reviews: 30
-    }
-  ];
-export const getPopularEmergingTechServices = () => {
-=======
         'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
       launchDate: '2026-01-25',
       customers: 60,
@@ -1274,10 +1136,8 @@ export const getPopularEmergingTechServices = () => {
   ];
 
 export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -1351,33 +1211,20 @@ reviews: 30
 
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>
-    service && service.category.toLowerCase().includes(category && category.toLowerCase())
-=======
   return innovative2026EmergingTechServices.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase());
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
-    const price = parseInt(service && service.price.replace('$', '').replace(',', ''));
-=======
   return innovative2026EmergingTechServices.filter(service => {;
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
 
   });}
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Innovative2026EmergingTechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1612,55 +1459,6 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-<<<<<<< HEAD
-  return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
-    const price = parseInt(service && service.price.replace('$', '').replace(, ''));
-    return price >= minPrice && price <= maxPrice
-  })
-}
-
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants',;
-export interface Innovative2026EmergingTechService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-=======
 
 };
 
@@ -1673,7 +1471,6 @@ reviews: 30;
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
   return innovative2026EmergingTechServices.filter (service =>;
     service.category.toLowerCase ().includes (category.toLowerCase ()));
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export const getEmergingTechServicesByPriceRange = (
@@ -1689,11 +1486,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

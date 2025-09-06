@@ -12,7 +12,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     updatedAt: string
   }>
 }
@@ -22,16 +21,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const method = (req.method |'GET').toUpperCase()
-  const method = (req.method || 'GET').toUpperCase(),;
-=======
 
 
   const method = (req.method || 'GET').toUpperCase(),;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -46,21 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-<<<<<<< HEAD
-    funnel: { stage: string, count: number }[]
-    timeToHireDays: number
-    costPerHireUsd?: number,
-    updated_at: string;
-  }>;
-}
-
-
-  }
-  if (method === 'POST') {
-<<<<<<< HEAD
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-=======
 
     const { funnel, timeToHireDays, costPerHireUsd } = req && req.body || {};
 
@@ -69,7 +48,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -99,7 +77,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -110,11 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-<<<<<<< HEAD
-  return res && res.status(405).json({ error: 'Method not allowed' });
-}
-
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 const FILE = 'reporting.json';
@@ -193,10 +165,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
 =======
 =======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
