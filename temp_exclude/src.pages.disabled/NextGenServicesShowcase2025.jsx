@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+<<<<<<< \"HEAD\": src && src.pages.disabled/NextGenServicesShowcase2025 && NextGenServicesShowcase2025.jsx import React from \'react\'; export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: \"ai - consciousness - simulator\",\"title\": \"AI Consciousness Simulation Platform\",\"description\": \"Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.\",\"price\": \"$25,000 / month\",\"category\": \"Advanced AI\",features[\"Consciousness - level reasoning\",\"Emotional intelligence processing\",\"Creative problem solving\"],; benefits[\"98%+ decision accuracy\",\"Human - level creative solutions\",\"24 / 7 intelligent assistance\"],; \"icon\": \'Brain\',\"gradient\": \"from - purple - 600 to - pink - 600\",\"popular\": \'true\',\"demoUrl\": \"https: import React from \'react\'; export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: \"ai - consciousness - simulator\",\"title\": \"AI Consciousness Simulation Platform\",\"description\": \"Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.\",\"price\": \"$25,000 / month\",\"category\": \"Advanced AI\",features[\"Consciousness - level reasoning\",\"Emotional intelligence processing\",\"Creative problem solving\"],; benefits[\"98%+ decision accuracy\",\"Human - level creative solutions\",\"24 / 7 intelligent assistance\"],; \"icon\": \'Brain\',\"gradient\": \"from - purple - 600 to - pink - 600\",\"popular\": \'true\',\"demoUrl\": \"https: \"", <<<<<<< "HEAD": src && src.pages.disabled/NextGenServicesShowcase2025 && NextGenServicesShowcase2025.jsx import _React from 'react', export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator","title": "AI Consciousness Simulation Platform","description": "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.","price": "$25,000 / month","category": "Advanced AI",features["Consciousness - level reasoning","Emotional intelligence processing","Creative problem solving"],; benefits["98%+ decision accuracy","Human - level creative solutions","24 / 7 intelligent assistance"],; "icon": 'Brain',"gradient": "from - purple - 600 to - pink - 600","popular": 'true',"demoUrl": "https: import _React from 'react'; export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator","title": "AI Consciousness Simulation Platform","description": "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.","price": "$25,000 / month","category": "Advanced AI",features["Consciousness - level reasoning","Emotional intelligence processing","Creative problem solving"],; benefits["98%+ decision accuracy","Human - level creative solutions","24 / 7 intelligent assistance"],; "icon": 'Brain',"gradient": "from - purple - 600 to - pink - 600","popular": 'true',"demoUrl": "https: "",
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

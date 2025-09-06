@@ -1,47 +1,69 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-;
-const memoryStore: { q: string, ts: number }[] = [],
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+const memoryStore: { q: string, ts: number }[] = []
+=======
+const memoryStore: { q: string, ts: number }[] = [];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { q } = req.body || {},
+    const { q } = req.body |{}
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+const memory_store: { q: string, ts: number }[] = [],
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const { q } = req.body || {},
+    if () {) {
+  $2
+}
+      memory_store.push ({ q: q.trim (), ts: Date.now () });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-    return res.status(204).end()
+    return res.status (204).end ();
   }
+<<<<<<< HEAD
   if (req.method === 'GET') {
-    const counts = new Map<string, number>(),
-    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1),
-    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n })),
+<<<<<<< HEAD
+    const counts = new Map<string, number>()
+    for (const { q } of memoryStore) counts.set(q, (counts.get(q) |0) + 1)
+    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }))
+
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
   }
   return res.status(405).end()
-};
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-const memoryStore: Array<{ q: string; ts: number }> = [];
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const { q } = req.body || {};
-    if (typeof q === 'string' && q.trim()) {
-      memoryStore.push({ q: q.trim(), ts: Date.now() });
-    }
-    return res.status(204).end();
-  }
-
-  if (req.method === 'GET') {
-    const { limit = '10' } = req.query;
-    const limited = memoryStore
-      .sort((a, b) => b.ts - a.ts)
-      .slice(0, parseInt(limit as string));
-    return res.status(200).json({ searches: limited });
-  }
-
-  res.setHeader('Allow', 'GET, POST');
-  return res.status(405).end('Method Not Allowed');
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+=======
+    const counts = new Map<string, number>();
+    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
+    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
+    return res.status(200).json({ ok: true, top, total: memoryStore.length })
+  }
+  return res.status(405).end()
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    const counts = new Map < string, number>(),
+    for (const { q } of memory_store) counts.set (q, (counts.get (q) || 0) + 1),
+    const top = Array.from (counts.entries ()).sort ((a, b) => b[1] - a[1]).slice (0, 10).map (([q, n]) => ({ q, n })),
+    return res.status (200).json ({ ok: true, top, total: memory_store.length });
+  }
+  return res.status (405).end ();
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

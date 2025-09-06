@@ -1,97 +1,158 @@
-export type SyncScope = "full" | "dao" | "marketplace",;
-export interface Peer {;
-  id: string,;
+<<<<<<< HEAD
+export type SyncScope = "full" | "dao" | "marketplace";
+export interface Peer {id: string;
   baseUrl: string, // e.g., https: //zion-latam.example.org;
-  scope?: SyncScope,;
+  scope?: SyncScope;
   paused?: boolean;
 }
-;
-export interface InstanceConfig {;
-  instanceId: string,;
-  optIn: boolean,;
-  paused: boolean,;
-  scope: SyncScope,;
-  peers: Peer[],;
+export interface InstanceConfig {instanceId: string;
+  optIn: boolean;
+  paused: boolean;
+  scope: SyncScope;
+  peers: Peer[];
   secretConfigured: boolean;
+=======
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,
+  paused?: boolean;
 }
-;
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
-  | "leaderboard_entry",;
-export interface BaseEventPayload {;
-  id: string;
+<<<<<<< HEAD
+  | "leaderboard_entry";
+export interface BaseEventPayload {id: string;
 }
-;
-export interface ProposalVoteEntry {;
-  voterId: string,;
-  weight: number,;
+export interface ProposalVoteEntry {voterId: string;
+  weight: number;
   choice: string;
 }
-;
-export interface ProposalPayload extends BaseEventPayload {;
-  proposalId: string,;
-  title: string,;
+export interface ProposalPayload extends BaseEventPayload {proposalId: string;
+  title: string;
   votes: ProposalVoteEntry[];
 }
-;
-export interface TokenTransferPayload extends BaseEventPayload {;
-  txId: string,;
-  token: string,;
-  amount: number,;
-  fromSubnet: string,;
-  toSubnet: string,;
+export interface TokenTransferPayload extends BaseEventPayload {txId: string;
+  token: string;
+  amount: number;
+  fromSubnet: string;
+  toSubnet: string;
   timestamp: number;
 }
-;
-export interface TalentMobilityPayload extends BaseEventPayload {;
-  personId: string,;
-  fromNation: string,;
-  toNation: string,;
-  role: string,;
-  startDate: string,;
+export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
+  fromNation: string;
+  toNation: string;
+  role: string;
+  startDate: string;
   endDate?: string;
 }
-;
-export interface DaoEndorsementPayload extends BaseEventPayload {;
-  fromDAO: string,;
-  toDAO: string,;
-  resolutionId: string,;
-  decision: "endorse" | "reject",;
+export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject";
   timestamp: number;
 }
-;
-export interface LeaderboardEntryPayload extends BaseEventPayload {;
-  subjectId: string, // userId or teamId;
-  score: number,;
+export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId;
+  score: number;
   category: string, // e.g., grants, contributions;
-  rank?: number,;
+  rank?: number;
   period?: string, // e.g., 2025-Q3;
+=======
+  | "leaderboard_entry",
+export interface BaseEventPayload {
+  id: string;
 }
-;
+export interface ProposalVoteEntry {
+  voter_id: string,
+  weight: number,
+  choice: string;
+}
+export interface ProposalPayload extends BaseEventPayload {
+  proposal_id: string,
+  title: string,
+  votes: ProposalVoteEntry[];
+}
+export interface TokenTransferPayload extends BaseEventPayload {
+  tx_id: string,
+  token: string,
+  amount: number,
+  from_subnet: string,
+  to_subnet: string,
+  timestamp: number;
+}
+export interface TalentMobilityPayload extends BaseEventPayload {
+  person_id: string,
+  from_nation: string,
+  to_nation: string,
+  role: string,
+  start_date: string,
+  end_date?: string;
+}
+export interface DaoEndorsementPayload extends BaseEventPayload {
+  fromDAO: string,
+  toDAO: string,
+  resolution_id: string,
+  decision: "endorse" | "reject",
+  timestamp: number;
+}
+export interface LeaderboardEntryPayload extends BaseEventPayload {
+  subject_id: string, // user_id or team_id;
+  score: number,
+  category: string, // e.g., grants, contributions;
+  rank?: number,
+  period?: string, // e.g., 2025 - Q3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
-  | LeaderboardEntryPayload,;
-export interface SyncEvent {;
-  eventId: string,;
-  type: SyncEventType,;
-  payload: SyncEventPayload,;
-  originInstanceId: string,;
-  version: number,;
-  timestamp: number,;
+<<<<<<< HEAD
+  | LeaderboardEntryPayload;
+export interface SyncEvent {eventId: string;
+  type: SyncEventType;
+  payload: SyncEventPayload;
+  originInstanceId: string;
+  version: number;
+  timestamp: number;
   merkleRoot?: string, // required for proposal events;
 }
-;
-export interface MultiverseState {;
-  config: InstanceConfig,;
-  lastSyncedAt: number,;
-  seenEventIds: Record<string true>,;
-  latestVersionByEntityId: Record<string number>,;
+export interface MultiverseState {config: InstanceConfig;
+  lastSyncedAt: number;
+  seenEventIds: Record<string true>;
+  latestVersionByEntityId: Record<string number>;
   proposalMerkleById: Record<string string>;
+=======
+  | LeaderboardEntryPayload,
+export interface SyncEvent {
+  event_id: string,
+  type: SyncEventType,
+  payload: SyncEventPayload,
+  originInstanceId: string,
+  version: number,
+  timestamp: number,
+  merkle_root?: string, // required for proposal events;
+}
+export interface MultiverseState {
+  config: InstanceConfig,
+  lastSyncedAt: number,
+  seenEventIds: Record < string true>,
+  latestVersionByEntityId: Record < string number>,
+  proposalMerkleById: Record < string string>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   events: SyncEvent[];
 }

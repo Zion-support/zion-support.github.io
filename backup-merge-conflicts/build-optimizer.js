@@ -1,77 +1,60 @@
 <<<<<<< HEAD
-const dependencies = lockFile.dependencies || {};
-; // This would need more sophisticated analysis; return []}; return []} catch (error) {; this.log(`Duplicate dependency check error: ${error.message}`); return []}};
-; async start() {; this.log('Build optimizer service started');
-; // Run optimization immediately; await this.optimizeBuild();
-; // Set up interval for periodic optimization; setInterval(async () = > {; await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}};
-;
+const dependencies = lockFile.dependencies |{}; // This would need more sophisticated analysis; return []}; return []} catch (error) {this.log(`Duplicate dependency check error: ${error.message}`); return []}}; async start() {this.log('Build optimizer service started'); // Run optimization immediately; await this.optimizeBuild(); // Set up interval for periodic optimization; setInterval(async () = > {; await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}}
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
+=======
+const dependencies = lock_file.dependencies || {}
+; // This would need more sophisticated analysis; return []} return []} catch (error) { this.log (`Duplicate dependency check error: ${error.message}`); return []}}
+; async start () { this.log ('Build optimizer service started');
+; // Run optimization immediately; await this.optimize_build ();
+; // Set up interval for periodic optimization; set_interval (async () = > { await this.optimize_build ()}, 24 * 60 * 60 * 1000), // Every 24 hours}}
 ;
+// Start the service;
+const build_optimizer = new BuildOptimizer ();
+build_optimizer.start ().catch (console.error);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         // This would need more sophisticated analysis;
         return [];
-      };
+      }
       return [];
-    } catch (error) {;
-      this.log(`Duplicate dependency check error: ${error.message}`);
+<<<<<<< HEAD
+    } catch (error) {this.log(`Duplicate dependency check error: ${error.message}`);
       return [];
-};
-};
-;
-  async start() {;
-    this.log('Build optimizer service started');
-;
+}
+}
+  async start() {this.log('Build optimizer service started');
     // Run optimization immediately;
     await this.optimizeBuild();
+=======
+    } catch (error) {
+      this.log (`Duplicate dependency check error: ${error.message}`);
+      return [];
+}
+}
 ;
+  async start () {
+    this.log ('Build optimizer service started');
+;
+    // Run optimization immediately;
+    await this.optimize_build ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     // Set up interval for periodic optimization;
-    setInterval(async () => {;
-      await this.optimizeBuild();
+    set_interval (async () => {
+      await this.optimize_build ();
     }, 24 * 60 * 60 * 1000), // Every 24 hours;
-};
-};
-;
+}
+}
+<<<<<<< HEAD
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
 =======
-
-        const dependencies = lockFile.dependencies || {},;
-,;
-        // This would need more sophisticated analysis,;
-        return [];
-      },;
-      return [];
-    } catch (error) {,;
-      this.log(`Duplicate dependency check error: ${error.message}`),;
-      return [];
-    }
-  },;
-,;
-  async start() {,;
-    this.log('Build optimizer service started'),;
-,;
-    // Run optimization immediately,;
-    await this.optimizeBuild(),;
-,;
-    // Set up interval for periodic optimization,;
-    setInterval(async () => {,;
-      await this.optimizeBuild();
-    }, 24 * 60 * 60 * 1000), // Every 24 hours;
-  }
-<<<<<<< HEAD
-},
-,
-// Start the service,
-const buildOptimizer = new BuildOptimizer(),
-buildOptimizer.start().catch(console.error),
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-},;
-,;
-// Start the service,;
-const buildOptimizer = new BuildOptimizer(),;
-buildOptimizer.start().catch(console.error),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+;
+// Start the service;
+const build_optimizer = new BuildOptimizer ();
+build_optimizer.start ().catch (console.error);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

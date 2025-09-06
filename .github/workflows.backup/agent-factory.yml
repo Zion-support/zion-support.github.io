@@ -87,14 +87,19 @@ jobs:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
 <<<<<<< HEAD:.github/workflows.backup/agent-factory.yml
 =======
 :.github/workflows.backup/agent-factory.yml
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -104,6 +109,10 @@ jobs:
 =======
 :.github/workflows.backup/agent-factory.yml
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -114,6 +123,8 @@ jobs:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -128,10 +139,19 @@ jobs:
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -148,6 +168,16 @@ jobs:
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+>>>>>>> origin/chore/fix-build-nav-links:.github/workflows/agent-factory.yml
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       - name: Run crawler (linkinator) on shard
         run: |
           set -e

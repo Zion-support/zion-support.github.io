@@ -1,4 +1,5 @@
 require("@testing-library/jest-dom");
+const React = require("react");
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -25,18 +26,22 @@ jest.mock("next/router", () => ({
 }));
 
 // Mock Next.js Image component
-jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }) {
-    return React.createElement("img", { src, alt, ...props });
-  };
-});
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { src, alt, ...otherProps } = props;
+    return React.createElement("img", { src, alt, ...otherProps });
+  },
+}));
 
 // Mock Next.js Link component
-jest.mock("next/link", () => {
-  return function MockLink({ children, href, ...props }) {
-    return React.createElement("a", { href, ...props }, children);
-  };
-});
+jest.mock("next/link", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { children, href, ...otherProps } = props;
+    return React.createElement("a", { href, ...otherProps }, children);
+  },
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

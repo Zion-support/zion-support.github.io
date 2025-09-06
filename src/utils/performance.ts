@@ -2,16 +2,7 @@
 // TypeScript file
 export const placeholder = 'placeholder';
 =======
-
-},;
-          observer.unobserve(image)}
-      }
-<<<<<<< HEAD
-
-}})),
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
+// TypeScript file;
+export const placeholder = 'placeholder';
 ;
-}})),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

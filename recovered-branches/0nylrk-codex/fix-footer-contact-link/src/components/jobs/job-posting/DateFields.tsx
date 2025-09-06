@@ -1,29 +1,40 @@
+<<<<<<< HEAD
+
 import React from "react";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
+  Popover
+  PopoverContent
+  PopoverTrigger
+=======
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
+
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
-interface DateFieldsProps {
+interface DateFieldsProps {;
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
-  setEndDate: (date: Date | undefined) => void;
+  setEndDate: (date: Date | undefined) => void
 }
-
+<<<<<<< HEAD
 export function DateFields({
-  startDate,
-  setStartDate,
-  endDate,
-  setEndDate,
+  startDate
+  setStartDate
+  endDate
+  setEndDate
 }: DateFieldsProps) {
   return (
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>
@@ -33,30 +44,50 @@ export function DateFields({
               <Button
                 variant={"outline"}
                 className={cn(
+                  "w-full md: w-[240px] pl-3 text-left font-normal"
+                  !startDate && "text-muted-foreground"
+=======
+
+export function DateFields(): any ({;
+  startDate,;
+  setStartDate,;
+  endDate,;
+  setEndDate,;
+}: DateFieldsProps) {;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+      <div>;
+        <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger asChild>;
+            <FormControl>;
+              <Button
+                variant={"outline"}
+                className={cn(
                   "w-full md: w-[240px] pl-3 text-left font-normal",
                   !startDate && "text-muted-foreground",
+                )}>;
+                {startDate ? (;
+                  format(startDate, "PPP");
+                ) : (;
+                  <span>Pick a date</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-              >
-                {startDate ? (
-                  format(startDate, "PPP")
-                ) : (
-                  <span>Pick a date</span>
-                )}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
               selected={startDate}
               onSelect={setStartDate}
               disabled={(date) => date > new Date()}
+<<<<<<< HEAD
               initialFocus
             />
           </PopoverContent>
         </Popover>
       </div>
-
       <div>
         <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>
         <Popover>
@@ -65,25 +96,127 @@ export function DateFields({
               <Button
                 variant={"outline"}
                 className={cn(
-                  "w-full md: w-[240px] pl-3 text-left font-normal",
-                  !endDate && "text-muted-foreground",
+                  "w-full md: w-[240px] pl-3 text-left font-normal"
+
+                  !endDate && "text-muted-foreground"
                 )}
               >
+=======
+              initialFocus;
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+
+      <div>;
+        <Label htmlFor="expiryDate">Expiry Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger asChild>;
+            <FormControl>;
+              <Button
+                variant={"outline"}
+                className={cn(
+                  "w-full md: w-[240px] pl-3 text-left font-normal",
+                  !endDate && "text-muted-foreground",
+                )}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
               disabled={(date) => date < new Date()}
-              initialFocus
-            />
-          </PopoverContent>
-        </Popover>
-      </div>
-    </div>
+              initialFocus;
+=======
+import React from './react';
+import { format  } from './date - fns';
+import { Label  } from '@/components / ui / label';
+import { Button  } from '@/components / ui / button';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components / ui / popover';
+import { Calendar  } from '@/components / ui / calendar';
+import { FormControl  } from '@/components / ui / form';
+import { cn  } from '@/lib / utils';
+interface DateFieldsProps {
+  start_date: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  end_date: Date | undefined;
+  setEndDate: (date: Date | undefined) => void;
+}
+export /**
+ * DateFields - Function description
+ */
+function DateFields() {
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <div>;
+        <Label html_for="published_date">Published Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger as_child>;
+            <FormControl>;
+              <Button;
+                variant={"outline"}
+                className={cn (
+                  "w - full md: w-[240px] pl - 3 text - left font - normal",
+                  !start_date && "text - muted - foreground",
+                )}
+              >;
+                {start_date ? (
+                  format (start_date, "PPP")) : (
+                  <span > Pick a date</span>)}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w - auto p - 0" align="start">;
+            <Calendar;
+              mode="single";
+              selected={start_date}
+              on_select={setStartDate}
+              disabled={(date) => date > new Date ()}
+              initial_focus;
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+      <div>;
+        <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
+        <Popover>;
+          <PopoverTrigger as_child>;
+            <FormControl>;
+              <Button;
+                variant={"outline"}
+                className={cn (
+                  "w - full md: w-[240px] pl - 3 text - left font - normal",
+                  !end_date && "text - muted - foreground",
+                )}
+              >;
+                {end_date ? format (end_date, "PPP") : <span > Pick a date</span>}
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w - auto p - 0" align="start">;
+            <Calendar;
+              mode="single";
+              selected={end_date}
+              on_select={setEndDate}
+              disabled={(date) => date < new Date ()}
+              initial_focus;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+<<<<<<< HEAD
+    </div>;
   );
+=======
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

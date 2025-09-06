@@ -1,28 +1,28 @@
-
 <<<<<<< HEAD
-import { cn } from &quot;@/lib/utils&quot;
 
+import { cn } from &quot;@/lib/utils&quot;
 function Skeleton({
-  className,
+  className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(&quot;animate-pulse rounded-md bg-muted&quot;, className)}
-=======
-import { cn } from "@/lib/utils";
-function Skeleton({;
-  className;
-  ...props;
-}: React.HTMLAttributes<HTMLDivElement>) {;
-  return (;
-    <div;
-      className={cn("animate-pulse rounded-md bg-muted", className)}
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
       {...props}
     />;
   );
+=======
+import { cn } from &quot;@/lib / utils & quot;
+;
+/**
+ * Skeleton - Function description
+ */
+function Skeleton() {
+  return (
+    <div;
+      className={cn (&quot;animate - pulse rounded - md bg - muted & quot;, class_name)}
+      {...props}
+    />);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-;
 export { Skeleton }
-;

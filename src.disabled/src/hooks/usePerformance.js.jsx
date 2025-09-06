@@ -1,0 +1,6 @@
+import { useEffect,useRef,useState } from \"react\"; export function usePerformance() { const [metrics,setMetrics] = useState({; \"fcp\": \'null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null\'}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } \"export default ComponentName;\"}
+<<<<<<< HEAD
+const { useEffect,useRef,useState } from "react"; export function usePerformance() { const [metrics,setMetrics] = useState({; fcp: "null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null"}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}'"'"
+=======
+const { useEffect,useRef,useState } from "react"; export function usePerformance() { const [metrics,setMetrics] = useState({; fcp: "null lcp: null fid: null cls: null ttfb: null domLoad: null windowLoad: null"}); const [observers,setObservers] = useState([]); const observerRef = useRef(null); useEffect(() => {}; return null} } "export default ComponentName;"}'"'"
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

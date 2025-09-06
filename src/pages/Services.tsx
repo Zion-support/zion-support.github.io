@@ -1,6 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+export default function Services() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
+        <p className="text-gray-300 text-lg">Comprehensive technology services for your business needs.</p>
+      </div>
+    </div>
+  );
+}
+=======
+import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
     {
@@ -13,21 +49,21 @@ const Services: React.FC = () => {
     {
       title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
+      features: ["AWS / Azure / GCP", "DevOps", "Microservices", "Auto-scaling"],
       icon: "☁️",
       color: "from-green-500 to-blue-600"
     },
     {
       title: "Web Development",
       description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
+      features: ["React / Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
       icon: "💻",
       color: "from-purple-500 to-pink-600"
     },
     {
       title: "Mobile Applications",
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
+      features: ["iOS / Android", "React Native", "Flutter", "App Store Optimization"],
       icon: "📱",
       color: "from-orange-500 to-red-600"
     },
@@ -46,7 +82,6 @@ const Services: React.FC = () => {
       color: "from-indigo-500 to-purple-600"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -58,7 +93,6 @@ const Services: React.FC = () => {
           </p>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,8 +118,8 @@ const Services: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
                   >
                     Learn More
@@ -99,7 +133,6 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Process Section */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +140,6 @@ const Services: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Process</h2>
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -116,7 +148,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
               <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-600">2</span>
@@ -124,7 +155,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
               <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-green-600">3</span>
@@ -132,7 +162,6 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
               <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
             </div>
-            
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-orange-600">4</span>
@@ -143,21 +172,20 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Get Free Consultation
             </Link>
-            <Link 
-              to="/pricing" 
+            <Link
+              to="/pricing"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               View Pricing
@@ -166,7 +194,36 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
+=======
+const Services: React.FC = () => {;
+  return (
+    <div className="min-h-screen bg-gray-50">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>;
+            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>;
+          </div>;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>;
+            <p className="text-gray-600">Comprehensive IT solutions and support.</p>;
+          </div>;
+          <div className="bg-white p-6 rounded-lg shadow">;
+            <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>;
+            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-};
-
+<<<<<<< HEAD
+}
 export default Services;
+>>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
+=======
+};
+;
+export default Services;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

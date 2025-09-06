@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
-    <lastmod>2025-09-06T01:33:17.163Z</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-06T10:22:45.943Z</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+<<<<<<< HEAD
   <url>
     <loc>https://ziontechgroup.com/about</loc>
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> origin/automation-improvements-final
     <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+=======
+<lastmod>2025-09-05T22:16:45.298Z</lastmod>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -21,6 +29,7 @@
     <loc>https://ziontechgroup.com/services</loc>
     <lastmod>2025-09-05T22:16:45.298Z</lastmod>
     <changefreq>weekly</changefreq>
+<<<<<<< HEAD
     <priority>0.8</priority>
   </url>
   <url>
@@ -30,14 +39,18 @@
     <priority>0.6</priority>
   </url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     <lastmod>2025-09-06T01:33:17.163Z</lastmod>
     <changefreq>monthly</changefreq>
+=======
+>>>>>>> origin/automation-improvements-final
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
+<<<<<<< HEAD
     <lastmod>2025-09-06T01:33:17.163Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -46,4 +59,16 @@
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+=======
+    <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 </urlset>

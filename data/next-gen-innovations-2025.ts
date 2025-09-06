@@ -1,4 +1,5 @@
 export interface NextGenInnovation2025 {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -7,39 +8,125 @@ export interface NextGenInnovation2025 {
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+
+    address: string;
+  }
+export const nextGenInnovations2025: NextGenInnovation2025[] = [
+  {
+    id: 'next-gen-ai-suite'
+    name: 'Next-Gen AI Suite'
+    tagline: 'Future-ready AI solutions'
+    price: '$179/month'
+    description:
+      'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.'
+    features: [
+      'Next-gen AI models'
+      'Advanced capabilities'
+      'Future-ready features'
+      'Innovation platform'
+      'Expert support'
+    ]
+    link: '/services/next-gen-ai-suite'
+    category: 'Next-Gen Innovations 2025'
+    realImplementation: true
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+
+=======
+=======
+  real_implementation: boolean;
     mobile: string;
     email: string;
     address: string;
-  };
-
-export const nextGenInnovations2025: NextGenInnovation2025[] = [
+  }
+;
+export const nextGenInnovations2025: NextGenInnovation2025[] = [;
   {
-    id: 'next-gen-ai-suite',
-    name: 'Next-Gen AI Suite',
-    tagline: 'Future-ready AI solutions',
-    price: '$179/month',
-    description:
-      'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.',
-    features: [
-      'Next-gen AI models',
+    id: 'next - gen - ai - suite',
+    name: 'Next - Gen AI Suite',
+    tagline: 'Future - ready AI solutions',
+    price: '$179 / month',
+    description:;
+      'Next - generation AI suite that provides cutting - edge artificial intelligence capabilities.',
+    features: [;
+      'Next - gen AI models',
       'Advanced capabilities',
-      'Future-ready features',
+      'Future - ready features',
       'Innovation platform',
       'Expert support',
     ],
-    link: '/services/next-gen-ai-suite',
-    category: 'Next-Gen Innovations 2025',
-    realImplementation: true,
-    contactInfo: {
+    link: '/services / next - gen - ai - suite',
+    category: 'Next - Gen Innovations 2025',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
+      email: "kleber@ziontechgroup && ziontechgroup.com",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+]
+=======
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string
+  }
+}
+
+export const nextGenInnovations2025: NextGenInnovation2025[] = [
+  {
+    id: "next-gen-ai-suite",
+    name: "Next-Gen AI Suite",
+    tagline: "Future-ready AI solutions",
+    price: "$179/month",
+    description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",
+    features: [
+      "Next-gen AI models",
+      "Advanced capabilities",
+      "Future-ready features",
+      "Innovation platform",
+      "Expert support"
+    ],
+    link: "/services/next-gen-ai-suite",
+    category: "Next-Gen Innovations 2025",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+<<<<<<< HEAD
 ],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

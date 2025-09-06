@@ -1,35 +1,107 @@
-import { useRouter } from 'next/router';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { z } from "zod";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useRouter } from 'next/router'
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { z } from "zod"
 import { LockKeyhole } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { supabase } from "@/integrations/supabase/client"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";import { toast } from "@/hooks/use-toast";
-import { cleanupAuthState } from "@/utils/authUtils";
-import { logErrorToProduction } from '@/utils/productionLogger';
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
+import { cleanupAuthState } from "@/utils/authUtils"
+import { logErrorToProduction } from '@/utils/productionLogger'
 // Form validation schema
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters");
+      .max(64, "Password must be less than 64 characters")
     confirmPassword: z.string()})
   .refine((data,) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"]}),
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
+=======
+import { useRouter } from 'next/router';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
+import { LockKeyhole } from 'lucide-react';
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {;
+=======
+import { use_router } from 'next / router';
+import { zod_resolver  } from '@hookform / resolvers / zod';
+import { use_form, ControllerRenderProps  } from './react - hook - form';
+import { z  } from './zod';
+import { LockKeyhole } from 'lucide-react';
+import { supabase  } from '@/integrations / supabase / client';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+<<<<<<< HEAD
+  FormMessage} from "@/components/ui/form";import { toast } from "@/hooks/use-toast";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { logErrorToProduction } from '@/utils/productionLogger';
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object({;
+    password: z;
+      .string();
+      .min(8, "Password must be at least 8 characters");
+      .max(64, "Password must be less than 64 characters");
+    confirmPassword: z && z.string()});
+  .refine((data,) => data && data.password === data && data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
 
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
+type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 }
   );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-;
+
+  )
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  FormMessage } from '@/components / ui / form'; import { toast  } from '@/hooks / use - toast';
+import { cleanupAuthState  } from '@/utils / auth_utils';
+import { logErrorToProduction } from '@/utils / production_logger';
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object ({
+    password: z;
+      .string ();
+      .min (8, "Password must be at least 8 characters");
+      .max (64, "Password must be less than 64 characters");
+    confirm_password: z.string ()});
+  .refine ((data, ) => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"]}),
+type UpdatePasswordFormValues = z.infer < typeof updatePasswordSchema>;
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

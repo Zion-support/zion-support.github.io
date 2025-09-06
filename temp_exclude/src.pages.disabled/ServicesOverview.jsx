@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD:src && src.pages.disabled/ServicesOverview && ServicesOverview.jsx
+<<<<<<< \"HEAD\": src && src.pages.disabled/ServicesOverview && ServicesOverview.jsx import React from \'react\'; export default function ServicesOverview () { const stats = [{ label: \"Services Offered\",\"value\": \"50+\",\"icon\": \'Target\' },{ \"label\": \"Industries Served\",\"value\": \"15+\",\"icon\": \'Users\' },{ \"label\": \"Technologies\",\"value\": \"100+\",\"icon\": \'Server\' },{ \"label\": \"Client Satisfaction\",\"value\": \"98%\",\"icon\": \'Check\' } ]; const containerVariants = { \"hidden\": { opacity: 0 },\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0 && 0.1 }; const itemVariants = { \"hidden\": { y: 20,\"opacity\": \'0\' },\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0 && 0.5,\"ease\": \"easeOut\" }; return (<div className=\"min - h-screen bg - background\"> <SEOtitle=\"All Services - Zion Tech Group Comprehensive Technology Solutions\" description=\"Explore our complete range of technology services including AI,data analytics,IoT,blockchain,DevOps,and cybersecurity solutions.\" keywords=\"technology services,AI services,data analytics,IoT solutions,blockchain development,DevOps consulting,cybersecurity services\" canonical=\""https\": import React from \'react\' export default function ServicesOverview () { const stats = [{ label: \"Services Offered\",\"value\": \"50+\",\"icon\": \'Target\' },{ \"label\": \"Industries Served\",\"value\": \"15+\",\"icon\": \'Users\' },{ \"label\": \"Technologies\",\"value\": \"100+\",\"icon\": \'Server\' },{ \"label\": \"Client Satisfaction\",\"value\": \"98%\",\"icon\": \'Check\' } ] const containerVariants = { \"hidden\": { opacity: 0 },\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0 && 0.1 } const itemVariants = { \"hidden\": { y: 20,\"opacity\": \'0\' },\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0 && 0.5,\"ease\": \"easeOut\" } return (<div className=\"min - h-screen bg - background\"> <SEOtitle=\"All Services - Zion Tech Group Comprehensive Technology Solutions\" description=\"Explore our complete range of technology services including AI,data analytics,IoT,blockchain,DevOps,and cybersecurity solutions.\" keywords=\"technology services,AI services,data analytics,IoT solutions,blockchain development,DevOps consulting,cybersecurity services\" canonical=\""https\": \""
+<<<<<<< "HEAD": src && src.pages.disabled/ServicesOverview && ServicesOverview.jsx import _React from 'react' export default function ServicesOverview () { const stats = [{ label: "Services Offered","value": "50+","icon": 'Target' },{ "label": "Industries Served","value": "15+","icon": 'Users' },{ "label": "Technologies","value": "100+","icon": 'Server' },{ "label": "Client Satisfaction","value": "98%","icon": 'Check' } ] const containerVariants = { "hidden": { opacity: 0 },"visible": { opacity: 1,"transition": { staggerChildren: 0 && 0.1 } const itemVariants = { "hidden": { y: 20,"opacity": '0' },"visible": { y: 0,"opacity": '1',"transition": { duration: 0 && 0.5,"ease": "easeOut" } return (<div className="min - h-screen bg - background"> <SEOtitle="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI,data analytics,IoT,blockchain,DevOps,and cybersecurity solutions." keywords="technology services,AI services,data analytics,IoT solutions,blockchain development,DevOps consulting,cybersecurity services" canonical=""https": import _React from 'react' export default function ServicesOverview () { const stats = [{ label: "Services Offered","value": "50+","icon": 'Target' },{ "label": "Industries Served","value": "15+","icon": 'Users' },{ "label": "Technologies","value": "100+","icon": 'Server' },{ "label": "Client Satisfaction","value": "98%","icon": 'Check' } ] const containerVariants = { "hidden": { opacity: 0 },"visible": { opacity: 1,"transition": { staggerChildren: 0 && 0.1 } const itemVariants = { "hidden": { y: 20,"opacity": '0' },"visible": { y: 0,"opacity": '1',"transition": { duration: 0 && 0.5,"ease": "easeOut" } return (<div className="min - h-screen bg - background"> <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI,data analytics,IoT,blockchain,DevOps,and cybersecurity solutions." keywords="technology services,AI services,data analytics,IoT solutions,blockchain development,DevOps consulting,cybersecurity services" canonical=""https": "";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

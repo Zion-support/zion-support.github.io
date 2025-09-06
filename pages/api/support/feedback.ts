@@ -1,54 +1,50 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',
-;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readJson, writeJson } from '../../../utils/fsDb';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
-  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean },
-  if (!articleId || helpful === undefined) return res.status(400).json({ error: 'articleId and helpful required' }),
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean }
+  if (!articleId |helpful === undefined) return res.status(400).json({ error: 'articleId and helpful required' })
+  const feedback = readJson<any[]>('support/feedback.json', [])
+  feedback.push({ articleId, helpful, ts: Date.now() })
+  writeJson('support/feedback.json', feedback)
 
-  const feedback = readJson<any[]>('support/feedback.json', []),
-  feedback.push({ articleId, helpful, ts: Date.now() }),
-  writeJson('support/feedback.json', feedback),
   return res.status(200).json({ ok: true })
-};
+}
 =======
-import { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 
-function writeJson(filePath: string, data: any) {
-  const fullPath = path.join(process.cwd(), 'data', filePath);
-  const dir = path.dirname(fullPath);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(fullPath, JSON.stringify(data, null, 2));
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean };
+  if (!articleId || helpful === undefined) return res.status(400).json({ error: 'articleId and helpful required' });
+
+  const feedback = readJson<any[]>('support/feedback.json', []);
+  feedback.push({ articleId, helpful, ts: Date.now() });
+  writeJson('support/feedback.json', feedback);
+  return res.status(200).json({ ok: true })
 }
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
-  }
-
-  try {
-    const { message, rating, category } = req.body;
-    
-    if (!message) {
-      return res.status(400).json({ error: 'Message is required' });
-    }
-
-    const feedback = {
-      id: Date.now().toString(),
-      message,
-      rating: rating || 5,
-      category: category || 'general',
-      timestamp: new Date().toISOString()
-    };
-
-    writeJson('support/feedback.json', feedback);
-    return res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to save feedback' });
-  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+  const { article_id, helpful } = req.body as { article_id: string, helpful: boolean },
+  if (return res.status (400).json ({ error: 'article_id and helpful required' }), ) {
+  $2
+}
+  const feedback = read_json < any[]>('support / feedback.json', []),
+  feedback.push ({ article_id, helpful, ts: Date.now () }),
+  write_json ('support / feedback.json', feedback),
+  return res.status (200).json ({ ok: true });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

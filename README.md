@@ -55,4 +55,5 @@ All automation reports are saved in the `automation-reports/` directory.
 Please ensure all tests pass and code is properly formatted before submitting pull requests.
 
 ## License
+
 MIT

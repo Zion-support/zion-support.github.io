@@ -1,26 +1,38 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
-;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = getSessionFromReq(req),
-  const internal = isInternalAgentRequest(req),
+  const session = getSessionFromReq(req)
+  const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' }),
+    res.status(401).json({ error: 'Unauthorized' })
     return
   }
   res.status(200).json({ message: 'OK' })
-};
+}
+<<<<<<< HEAD
+
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = getSessionFromReq(req);
-  const internal = isInternalAgentRequest(req);
-  if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils / admin_auth',
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const session = getSessionFromReq (req),
+  const internal = isInternalAgentRequest (req),
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
-  res.status(200).json({ message: 'OK' });
+  res.status (200).json ({ message: 'OK' });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

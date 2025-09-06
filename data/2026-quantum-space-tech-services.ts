@@ -1,4 +1,5 @@
 export interface QuantumSpaceTechService2026 {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -7,40 +8,118 @@ export interface QuantumSpaceTechService2026 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
-    address: string;
-  };
+<<<<<<< HEAD
 
+    address: string;
+  }
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
-    id: '2026-quantum-space-tech',
+    id: '2026-quantum-space-tech'
+    name: '2026 Quantum Space Tech Platform'
+    tagline: 'Quantum computing meets space technology'
+    price: '$599/month'
+    description:
+      'Revolutionary platform combining quantum computing with advanced space technology for 2026.'
+    features: [
+      'Quantum computing'
+      'Space technology'
+      'Advanced algorithms'
+      'Innovation platform'
+      'Expert support'
+    ]
+    link: '/services/2026-quantum-space-tech'
+    category: 'Quantum Space Tech 2026'
+    realImplementation: true
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];      mobile: "+1 302 464 0950";
+
+      email: "kleber@ziontechgroup.com";
+=======
+=======
+    address: string;
+  }
+;
+export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [;
+  {
+    id: '2026 - quantum - space - tech',
     name: '2026 Quantum Space Tech Platform',
     tagline: 'Quantum computing meets space technology',
-    price: '$599/month',
-    description:
+    price: '$599 / month',
+    description:;
       'Revolutionary platform combining quantum computing with advanced space technology for 2026.',
-    features: [
+    features: [;
       'Quantum computing',
       'Space technology',
       'Advanced algorithms',
       'Innovation platform',
       'Expert support',
     ],
-    link: '/services/2026-quantum-space-tech',
+    link: '/services / 2026 - quantum - space - tech',
     category: 'Quantum Space Tech 2026',
-    realImplementation: true,
-    contactInfo: {
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
+      email: "kleber@ziontechgroup && ziontechgroup.com";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+  }
+}
+
+export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
+  {
+    id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
+    tagline: "Quantum computing meets space technology", price: "$599/month",
+    description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
+    features: [
+      "Quantum computing";
+      "Space technology";
+      "Advanced algorithms";
+      "Innovation platform";
+      "Expert support"
+    ];
+    link: "/services/2026-quantum-space-tech", category: "Quantum Space Tech 2026",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

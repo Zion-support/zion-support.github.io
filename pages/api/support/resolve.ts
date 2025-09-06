@@ -1,58 +1,65 @@
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',
-;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
-  const { id } = req.body as { id: string },
-  if (!id) return res.status(400).json({ error: 'id required' }),
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-  const requests = readJson<any[]>('support/requests.json', []),
-  const idx = requests.findIndex((r) => r.id === id),
+import { readJson, writeJson } from '../../../utils/fsDb';
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { id } = req.body as { id: string }
+  if (!id) return res.status(400).json({ error: 'id required' })
+  const requests = readJson<any[]>('support/requests.json', [])
+  const idx = requests.findIndex((r) => r.id === id)
   if (idx >= 0) {
-    requests[idx].status = 'resolved',
-    requests[idx].resolvedAt = Date.now(),
+    requests[idx].status = 'resolved'
+    requests[idx].resolvedAt = Date.now()
+
     writeJson('support/requests.json', requests)
   }
   return res.status(200).json({ ok: true })
-};
+}
 =======
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'PATCH') {
-    res.setHeader('Allow', 'PATCH');
-    return res.status(405).end('Method Not Allowed');
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { id } = req.body as { id: string };
+  if (!id) return res.status(400).json({ error: 'id required' });
+
+  const requests = readJson<any[]>('support/requests.json', []);
+  const idx = requests.findIndex((r) => r.id === id);
+  if (idx >= 0) {
+    requests[idx].status = 'resolved';
+    requests[idx].resolvedAt = Date.now();
+    writeJson('support/requests.json', requests)
   }
-
-  try {
-    const { ticketId, resolution } = req.body;
-    
-    if (!ticketId) {
-      return res.status(400).json({ error: 'Ticket ID is required' });
-    }
-
-    const supabase = getServerSupabase();
-    
-    const { data, error } = await supabase
-      .from('support_tickets')
-      .update({ 
-        status: 'resolved',
-        resolution: resolution || 'Issue resolved',
-        resolved_at: new Date().toISOString()
-      })
-      .eq('id', ticketId)
-      .select()
-      .single();
-
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
-
-    res.status(200).json({ ok: true });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to resolve ticket' });
-  }
+  return res.status(200).json({ ok: true })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { id } = req.body as { id: string },
+  if (return res.status (400).json ({ error: 'id required' }), ) {
+  $2
+}
+  const requests = read_json < any[]>('support / requests.json', []),
+  const idx = requests.find_index ((r) => r.id === id),
+  // Check condition
+if ( {) {
+  $2
+}
+    requests[idx].status = 'resolved',
+    requests[idx].resolved_at = Date.now (),
+    write_json ('support / requests.json', requests);
+  }
+  return res.status (200).json ({ ok: true });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,128 +1,49 @@
 <<<<<<< HEAD
-import React from 'react';
-
 <<<<<<< HEAD
-export default function PerformanceMonitor() {
+import React, { useEffect, useState } from 'react';
+import { Activity } from 'lucide-react';
+
+export const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show in development mode
+    if (import.meta.env.DEV) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
-    <div className="performance-monitor">
-      <p>Performance Monitor</p>
+    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
+      <div className="p-4 border-b border-gray-700">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-white flex items-center">
+            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
+            Performance Monitor
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <p className="text-gray-400 text-sm">
+          Performance monitoring is active. This component will be enhanced with detailed metrics in future updates.
+        </p>
+      </div>
     </div>
   );
-}
+};
 =======
-
-        };
-      };
-
-    };
-
-    // Initial tracking,
-    trackPageLoad(),
-    trackMemory(),
-    trackNetwork(),
-
-    // Set up periodic tracking,
-    const interval = setInterval(() => {,
-      trackMemory(),
-      trackNetwork()
-    }, 10000),
-,
-    // Track online/offline status,
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnlin: e: true })),
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnlin: e: false })),
-,
-    window.addEventListener('online', handleOnline),
-    window.addEventListener('offline', handleOffline),
-
-    return () => {,
-      clearInterval(interval),
-      window.removeEventListener('online', handleOnline),
-      window.removeEventListener('offline', handleOffline)
-    };
-  }, [location.pathname]),
-
-  // Show performance issues,
-  useEffect(() => {,
-    const hasPerformanceIssues =,
-      metrics.pageLoadTime > 3000 || // > 3 seconds,
-      metrics.memoryUsage > 100 || // > 100 MB,
-      !metrics.isOnline,
-
-    if (hasPerformanceIssues) {,
-      setIsVisible(true),
-      // Auto-hide after 10 seconds,
-      const timer = setTimeout(() => setIsVisible(false), 10000),
-      return () => clearTimeout(timer)
-    };
-  }, [metrics]),
-
-  if (!isVisible) return null,
-
-  return (,
-    <div className=&quot;fixed bottom-4 right-4 z-50&quot;>,
-      <div className=&quot;bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl&quot;>,
-        <div className=&quot;flex items-center gap-3 mb-3&quot;>,
-          <BarChart3 className=&quot;w-5 h-5 text-blue-400&quot; />,
-          <span className=&quot;text-sm font-medium text-white&quot;>Performance Monitor</span>,
-          <button,
-
-            onClick={() => setIsVisible(false)};
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+import React from 'react';
+>>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
 =======
-        }
-      }
+import React from 'react';
 ;
-    },;
-,;
-    // Initial tracking,;
-    trackPageLoad(),;
-    trackMemory(),;
-    trackNetwork(),;
-,;
-    // Set up periodic tracking,;
-    const interval = setInterval(() => {,;
-      trackMemory(),;
-      trackNetwork();
-    }, 10000),;
-,;
-    // Track online/offline status,;
-    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnlin: e: true })),;
-    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnlin: e: false })),;
-,;
-    window.addEventListener('online', handleOnline),;
-    window.addEventListener('offline', handleOffline),;
-,;
-    return () => {,;
-      clearInterval(interval),;
-      window.removeEventListener('online', handleOnline),;
-      window.removeEventListener('offline', handleOffline);
-    }
-  }, [location.pathname]),;
-,;
-  // Show performance issues,;
-  useEffect(() => {,;
-    const hasPerformanceIssues =,;
-      metrics.pageLoadTime > 3000 || // > 3 seconds,;
-      metrics.memoryUsage > 100 || // > 100 MB,;
-      !metrics.isOnline,;
-,;
-    if (hasPerformanceIssues) {,;
-      setIsVisible(true),;
-      // Auto-hide after 10 seconds,;
-      const timer = setTimeout(() => setIsVisible(false), 10000),;
-      return () => clearTimeout(timer);
-    }
-  }, [metrics]),;
-,;
-  if (!isVisible) return null,;
-,;
-  return (,;
-    <div className="fixed bottom-4 right-4 z-50">,;
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,;
-        <div className="flex items-center gap-3 mb-3">,;
-          <BarChart3 className="w-5 h-5 text-blue-400" />,;
-          <span className="text-sm font-medium text-white">Performance Monitor</span>,;
-          <button,;
-            onClick={() => setIsVisible(false)},;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

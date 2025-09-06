@@ -1,6 +1,11 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const ReleaseNotesAgent: NextPage = () => {
   return (
     <div>
@@ -15,6 +20,29 @@ const ReleaseNotesAgent: NextPage = () => {
       </main>
     </div>
   )
-},
+}
+export default ReleaseNotesAgent;
+<<<<<<< HEAD
 
-export default ReleaseNotesAgent,;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextPage } from 'next',
+import Head from 'next / head',
+import Link from 'next / link',
+const ReleaseNotesAgent: NextPage = () => {
+  return (
+    <div>;
+      <Head>;
+        <title > AI Release Notes Agent</title>;
+        <meta name="description" content="Daily AI - generated release notes." />;
+      </Head>;
+      <main className="space - y-4">;
+        <h1 className="text - 2xl font - bold">AI Release Notes Agent</h1>;
+        <p > Summarizes the last 24 hours of commits into human - friendly release notes.</p>;
+        <Link href="/data / reports / release / latest.json"><a className="text - blue - 600 underline">Latest Release Notes (JSON)</a></Link>;
+      </main>;
+    </div>);
+},
+export default ReleaseNotesAgent,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
