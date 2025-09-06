@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -90,13 +89,16 @@ function ReferralStats() {
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">;
                   {card.description}
-<<<<<<< HEAD
-                </p>
-              </>
-=======
+
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
 import {Award, Share, Star, TrendingUp} from "lucide-react";
+
+=======
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
+import { Award, Share, Star, TrendingUp } from "lucide-react",;
 
 interface ReferralStatsProps {;
   stats: ReferralStatsType,;
@@ -142,20 +144,19 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
+
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
                 </p>;
               </>)}
@@ -164,3 +165,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </div>
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,44 +1,19 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { motion } from "framer-motion";
-<<<<<<< HEAD
 import {
-  Calendar
-  Clock
-  Users
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Video
-  MessageSquare
-  Building
+
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+
+
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }
@@ -145,8 +120,39 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+  Calendar
+  Clock
+  Users
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Video
+  MessageSquare
+  Building
+=======
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
-
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
   { time: "9:30 AM", available: true, type: "Phone Call" },;
@@ -164,7 +170,6 @@ const timeSlots = [;
   { time: "4:30 PM", available: true, type: "Video Call" },;
   { time: "5:00 PM", available: true, type: "Phone Call" },;
 ];
-
 const consultationTypes = [;
   {;
     title: "Free Discovery Call",;
@@ -209,7 +214,6 @@ const consultationTypes = [;
     ],;
   },;
 ];
-
 const teamMembers = [;
   {;
     name: "Sarah Johnson",;
@@ -240,9 +244,7 @@ const teamMembers = [;
     available: true,;
   },;
 ];
-
 export default function CalendarPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -254,51 +256,18 @@ export default function CalendarPage() {;
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
-<<<<<<< HEAD
-        />
-      </Head>
-=======
+
         />;
       </Head>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Schedule a <span className="text-blue-600">Consultation</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Book a free consultation with our experts to discuss your project
-              requirements and explore how we can help transform your business.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center text-blue-600">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span className="font-semibold">
-                  Free 30-minute Discovery Call
-                </span>
-              </div>
-              <div className="flex items-center text-blue-600">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Expert Team Available</span>
-              </div>
-              <div className="flex items-center text-blue-600">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Flexible Scheduling</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
+
             transition={{ duration: 0 && 0.8 }}
             className="text-center">;
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">;
@@ -328,7 +297,7 @@ export default function CalendarPage() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -381,16 +350,12 @@ export default function CalendarPage() {;
                 </button>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
+
           </div>;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -435,16 +400,12 @@ export default function CalendarPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
+
           </div>;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -463,7 +424,6 @@ export default function CalendarPage() {;
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">;
             {timeSlots && timeSlots.map((slot, index) => (;
               <motion&& motion.button
-=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -752,35 +712,15 @@ function CalendarPage() {
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 5 gap - 4">;
             {time_slots.map ((slot, index) => (
               <motion.button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.05 }}
-                disabled={!slot && slot.available}
-                className={`p-4 rounded-lg text-center transition-all ${
-                  slot && slot.available
-                    ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl"
-                    : "bg-gray-200 text-gray-500 cursor-not-allowed"
-                }`}>;
-                <div className="text-lg font-semibold">{slot && slot.time}</div>;
-                <div className="text-sm opacity-75">{slot && slot.type}</div>;
-                {slot && slot.available && (;
-                  <CheckCircle className="w-5 h-5 mx-auto mt-2" />;
-                )}
-              </motion && motion.button>;
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
+
           </div>;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -816,7 +756,6 @@ function CalendarPage() {
                   <div>;
                     <div className="font-semibold text-gray-900">Office</div>;
                     <div className="text-gray-600">;
-=======
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}
                 className={`p - 4 rounded - lg text - center transition - all ${
@@ -869,36 +808,12 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold text - gray - 900">Office</div>;
                     <div className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       123 Tech Street, San Francisco, CA;
                     </div>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-            </motion && motion.div>;
-            <motion&& motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">;
-              <h3 className="text-2xl font-bold mb-6">Quick Contact</h3>;
-              <div className="space-y-4">;
-                <div className="flex items-center">;
-                  <Clock className="w-6 h-6 mr-4" />;
-                  <div>;
-                    <div className="font-semibold">Business Hours</div>;
-                    <div className="text-blue-100">;
-                      Mon-Fri: 9:00 AM - 6:00 PM PST;
-                    </div>;
-                  </div>;
-                </div>;
-                <div className="flex items-center">;
-                  <Video className="w-6 h-6 mr-4" />;
-                  <div>;
-                    <div className="font-semibold">Video Calls</div>;
-                    <div className="text-blue-100">;
-=======
+
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_x: 20 }}
@@ -922,46 +837,24 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold">Video Calls</div>;
                     <div className="text - blue - 100">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-                <div className="flex items-center">;
-                  <MessageSquare className="w-6 h-6 mr-4" />;
-                  <div>;
-                    <div className="font-semibold">Live Chat</div>;
-                    <div className="text-blue-100">;
-                      Available 24/7 on our website;
-=======
+
                 <div className="flex items - center">;
                   <MessageSquare className="w - 6 h - 6 mr - 4" />;
                   <div>;
                     <div className="font - semibold">Live Chat</div>;
                     <div className="text - blue - 100">;
                       Available 24 / 7 on our website;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     </div>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-              <div className="mt-8">;
-                <Link
-                  href="/contact"
-<<<<<<< HEAD
-                  className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Contact Us Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-=======
+
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
                   Contact Us Now;
                   <ArrowRight className="w-5 h-5 ml-2" />;
@@ -972,7 +865,7 @@ function CalendarPage() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -996,6 +889,7 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
+<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -1003,9 +897,18 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
+=======
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     </div>;
   );
-=======
               <div className="mt - 8">;
                 <Link;
                   href="/contact";
@@ -1053,5 +956,4 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

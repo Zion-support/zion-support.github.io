@@ -10,6 +10,7 @@
     console.error("Error fixing ${filePath} ", error.message)};
   return false};
   };
+<<<<<<< HEAD
   let createdCount = 0,;
   for (const [filePath, content] of Object.entries(minimalFiles)) {,;
     try {,;

@@ -1,24 +1,143 @@
-<<<<<<< HEAD
 
+
+
+=======
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import {
+  Search, Star, DollarSign, CheckCircle,
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
+  ChevronDown, Sparkles
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services',;
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
+export default function Ultimate2026ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
+
+  // Combine all services
+  const allServices = [
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ],
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length,
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length,
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length,
+  const emergingCount = allServices.filter(service =>
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length,
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
+  ],
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
+  ],
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+
+      const matchesCategory = selectedCategory === 'all' ||
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'))),
+
+      const matchesPrice = selectedPriceRange === 'all' ||
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
+
+      return matchesSearch && matchesCategory && matchesPrice
+    }),
+
+    // Sort services
+    switch (sortBy) {
+      case 'name':
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
+        break,
+      case 'price':
+        filtered.sort((a, b) => {
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
+          return priceA - priceB
+        }),
+        break,
+      case 'popularity':
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
+      case 'rating':
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
+      default: break
+    }
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Search, Star, DollarSign, CheckCircle
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  Search, Star, DollarSign, CheckCircle;
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
   ChevronDown, Sparkles
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import {
+  Search, Star, DollarSign, CheckCircle,
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
+  ChevronDown, Sparkles
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services',;
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function Ultimate2026ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -26,16 +145,7 @@ export default function Ultimate2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-  // Combine all services
-  const allServices = [
-    ...ultimate2026Services
-=======
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -45,7 +155,7 @@ export default function Ultimate2026ServicesShowcase() {
   // Combine all services
   const allServices = [
     ...ultimate2026Services;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     ...revolutionary2026Innovations
   ]
   // Dynamic category counts
@@ -59,44 +169,36 @@ export default function Ultimate2026ServicesShowcase() {
     service.category?.includes('Enterprise') |service.category?.includes('IT')
   ).length
   const emergingCount = allServices.filter(service =>
-<<<<<<< HEAD
-    service.category?.includes('Emerging') |service.category?.includes('Innovation')
-  ).length
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount }
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount }
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount }
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
-  ]
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' }
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' }
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' }
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' }
-    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-  ]
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.category.includes('AI')) |
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') |service.category.includes('Space'))) |
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') |service.category.includes('IT'))) |
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') |service.category.includes('Innovation')))
-      const matchesPrice = selectedPriceRange === 'all' |
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) |
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) |
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing')
-      return matchesSearch && matchesCategory && matchesPrice
-    })
-=======
+
     service.category?.includes('Emerging') || service.category?.includes('Innovation')
   ).length;
+=======
+  },
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+  // Combine all services
+  const allServices = [
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations
+  ],
+
+  // Dynamic category counts
+  const aiCount = allServices.filter(service =>
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')
+  ).length,
+  const quantumCount = allServices.filter(service =>
+    service.category?.includes('Quantum') || service.category?.includes('Space')
+  ).length,
+  const enterpriseCount = allServices.filter(service =>
+    service.category?.includes('Enterprise') || service.category?.includes('IT')
+  ).length,
+  const emergingCount = allServices.filter(service =>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length,
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -104,152 +206,142 @@ export default function Ultimate2026ServicesShowcase() {
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
-  ];
-
+];
   const priceRanges = [
-<<<<<<< HEAD
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-=======
-=======
-import React, { useState, useMemo } from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  Search, Star, DollarSign, CheckCircle,
-  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,
-  ChevronDown, Sparkles;
-} from 'lucide-react',
-import { ultimate2026Services } from '../data / ultimate - 2026 - services',
-import { revolutionary2026Innovations } from '../data / revolutionary - 2026 - innovations',
-export default /**
- * Ultimate2026ServicesShowcase - Function description
- */
-function Ultimate2026ServicesShowcase() {
-  const [search_term, setSearchTerm] = useState (''),
-  const [selected_category, setSelectedCategory] = useState < string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState < string>('all'),
-  const [sort_by, setSortBy] = useState < string>('name'),
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  },
-  // Combine all services;
-  const all_services = [;
-    ...ultimate2026Services,
-    ...revolutionary2026Innovations;
-  ],
-  // Dynamic category counts;
-  const ai_count = all_services.filter (service =>;
-    service.category?.includes ('AI') || service.category?.includes ('Machine Learning')).length,
-  const quantum_count = all_services.filter (service =>;
-    service.category?.includes ('Quantum') || service.category?.includes ('Space')).length,
-  const enterprise_count = all_services.filter (service =>;
-    service.category?.includes ('Enterprise') || service.category?.includes ('IT')).length,
-  const emerging_count = all_services.filter (service =>;
-    service.category?.includes ('Emerging') || service.category?.includes ('Innovation')).length,
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: ai_count },
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantum_count },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterprise_count },
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emerging_count }
-  ],
-  const price_ranges = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K / month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K / month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K / month', range: '$5K - $20K' },
-    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  ];
 
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    const filtered = allServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesCategory = selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
-        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
-        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
-
-      const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
-        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
-
-      return matchesSearch && matchesCategory && matchesPrice
-    });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    // Sort services
-    switch (sortBy) {
-      case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name))
-        break
-      case 'price':
-        filtered.sort((a, b) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''))
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''))
-          return priceA - priceB
-        })
-        break
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB
-        });
-        break;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
         break
       case 'rating':
-<<<<<<< HEAD
-        filtered.sort((a, b) => b.rating - a.rating)
-        break
-=======
+
         filtered.sort((a, b) => b.rating - a.rating);
         break;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       default: break
     }
     return filtered
-<<<<<<< HEAD
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy])
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6)
-=======
+
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+=======
+
+import {;
+  Search, Star, DollarSign, CheckCircle,;
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List,;
+  ChevronDown, Sparkles;
+} from 'lucide-react',;
+import { ultimate2026Services } from '../data/ultimate-2026-services';
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+export default function Ultimate2026ServicesShowcase(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const contactInfo = {;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
+  };
+  // Combine all services;
+  const allServices = [;
+    ...ultimate2026Services;
+    ...revolutionary2026Innovations;
+  ];
+  // Dynamic category counts;
+  const aiCount = allServices.filter(service =>;
+    service.category?.includes('AI') || service.category?.includes('Machine Learning');
+  ).length;
+  const quantumCount = allServices.filter(service =>;
+    service.category?.includes('Quantum') || service.category?.includes('Space');
+  ).length;
+  const enterpriseCount = allServices.filter(service =>;
+    service.category?.includes('Enterprise') || service.category?.includes('IT');
+  ).length;
+  const emergingCount = allServices.filter(service =>;
+    service.category?.includes('Emerging') || service.category?.includes('Innovation');
+  ).length;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },;
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },;
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },;
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },;
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },;
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    let filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' ||;
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||;
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||;
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||;
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+      const matchesPrice = selectedPriceRange === 'all' ||;
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||;
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||;
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||;
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),;
+      return matchesSearch && matchesCategory && matchesPrice;
+    }),;
+    // Sort services;
+    switch (sortBy) {;
+      case 'name':;
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),;
+        break,;
+      case 'price':;
+        filtered.sort((a, b) => {;
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),;
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),;
+          return priceA - priceB;
+        }),;
+        break,;
+      case 'popularity':;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),;
+        break,;
+      case 'rating':;
+        filtered.sort((a, b) => b.rating - a.rating),;
+        break,;
+      default: break;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+    return filtered
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
         <title>Ultimate 2026 Services Showcase | Zion Tech Group</title>
         <meta name="description" content="Discover our revolutionary 2026 innovations including AI consciousness simulation, quantum neural interfaces, autonomous AI agents, and cutting-edge enterprise solutions. Transform your business with next-generation technology." />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <meta name="keywords" content="AI consciousness, quantum computing, autonomous AI, metaverse development, space technology, edge computing, 5G networks, cybersecurity, healthcare AI, climate prediction" />
         <meta property="og:title" content="Ultimate 2026 Services Showcase | Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2026 innovations that will transform your business. AI, quantum computing, and emerging technologies." />
@@ -257,7 +349,7 @@ function Ultimate2026ServicesShowcase() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-2026-services-showcase" />
       </Head>
-=======
+
   ],
   // Filter and sort services;
   const filtered_services = useMemo (() => {
@@ -312,11 +404,26 @@ function Ultimate2026ServicesShowcase() {
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup.com / ultimate - 2026 - services - showcase" />;
       </Head>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {/* Hero Section */}
       <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - black">;
         {/* Animated Background */}
-<<<<<<< HEAD
+
+
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -324,9 +431,21 @@ function Ultimate2026ServicesShowcase() {
         </div>
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate 2026
@@ -334,10 +453,13 @@ function Ultimate2026ServicesShowcase() {
               <span className="text-6xl md:text-8xl">Innovations</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents
+
+
+              Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents,
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
-            {/* Service Statistics */}
+
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -368,12 +490,30 @@ function Ultimate2026ServicesShowcase() {
             </div>
           </motion.div>
         </div>
-        {/* Floating Elements */}
+
+
+        {/* Floating Elements */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
       </section>
-      {/* Contact Bar */}
+
+
+      {/* Contact Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-6 mb-4 md:mb-0">
@@ -398,12 +538,29 @@ function Ultimate2026ServicesShowcase() {
           </div>
         </div>
       </section>
-      {/* Featured Services */}
+
+
+      {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -415,9 +572,26 @@ function Ultimate2026ServicesShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+
+
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -429,17 +603,16 @@ function Ultimate2026ServicesShowcase() {
                           <Star className="w-3 h-3 mr-1" />
                           Popular
                         </div>
-                      )}
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                       {service.name}
                     </h3>
                     <p className="text-gray-400 mb-4 line-clamp-3">
@@ -448,6 +621,32 @@ function Ultimate2026ServicesShowcase() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}
+=======
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+
+                      {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>
+                    <p className="text-gray-400 mb-4 line-clamp-3">
+                      {service.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <div className="flex items-center text-yellow-400">
@@ -468,16 +667,37 @@ function Ultimate2026ServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Section */}
+
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -486,11 +706,7 @@ function Ultimate2026ServicesShowcase() {
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
-<<<<<<< HEAD
 
-          {/* Filters and Search */}
-          <div className="mb-12 space-y-6">
-=======
 =======
         <div className="absolute inset - 0">;
           <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 animate - pulse"></div>;
@@ -651,26 +867,33 @@ function Ultimate2026ServicesShowcase() {
               Explore our complete portfolio of cutting - edge 2026 innovations;
             </p>;
           </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           {/* Filters and Search */}
           <div className="mb - 12 space - y-6">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search Bar */}
-<<<<<<< HEAD
+
+
+          {/* Filters and Search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="mb-12 space-y-6">
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
-              />
-            </div>
-<<<<<<< HEAD
 
-            {/* Filters */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
-=======
 =======
             <div className="relative max - w-2xl mx - auto">;
               <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
@@ -681,15 +904,42 @@ function Ultimate2026ServicesShowcase() {
                 on_change={(e) => setSearchTerm (e.target.value)} className="w - full pl - 12 pr - 4 py - 4 bg - gray - 800 border border - gray - 700 rounded - full text - white placeholder - gray - 400 focus:outline - none focus:border - cyan - 500 focus:ring - 2 focus:ring - cyan - 500 / 20 transition - all";
               />;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             {/* Filters */}
             <div className="flex flex - wrap items - center justify - center gap - 4">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Category Filter */}
-<<<<<<< HEAD
+
+
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all"
+              />
+            </div>
+            {/* Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="relative">
                 <select
-                  value={selectedCategory}
+                  value={selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -699,7 +949,7 @@ function Ultimate2026ServicesShowcase() {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
-=======
+
               <div className="relative">;
                 <select;
                   value={selected_category}
@@ -711,12 +961,28 @@ function Ultimate2026ServicesShowcase() {
                 </select>;
                 <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               {/* Price Filter */}
               <div className="relative">;
                 <select;
                   value={selectedPriceRange}
-<<<<<<< HEAD
+
+
+              {/* Price Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="relative">
+                <select
+                  value={selectedPriceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -726,16 +992,23 @@ function Ultimate2026ServicesShowcase() {
                     <option key={range.id} value={range.id}>;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {range.name}
-<<<<<<< HEAD
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
-              </div>
-              {/* Sort */}
+
+
+              {/* Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="relative">
                 <select
-                  value={sortBy}
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -744,7 +1017,16 @@ function Ultimate2026ServicesShowcase() {
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
-              {/* View Mode */}
+
+
+              {/* View Mode */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -761,11 +1043,7 @@ function Ultimate2026ServicesShowcase() {
               </div>
             </div>
           </div>
-          {/* Services Grid/List */}
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service, index) => (
-              <motion.div
-=======
+
                     </option>))}
                 </select>;
                 <ChevronDown className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 4 h - 4 pointer - events - none" />;
@@ -803,16 +1081,14 @@ function Ultimate2026ServicesShowcase() {
           <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}>;
             {filtered_services.map ((service, index) => (
               <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 key={service.id}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 {viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -825,17 +1101,16 @@ function Ultimate2026ServicesShowcase() {
                             <Star className="w-3 h-3 mr-1" />
                             Popular
                           </div>
-                        )}
+                        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                         {service.name}
                       </h3>
                       <p className="text-gray-400 mb-4 line-clamp-3">
@@ -844,6 +1119,32 @@ function Ultimate2026ServicesShowcase() {
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.price}
+=======
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+
+                        {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </h3>
+                      <p className="text-gray-400 mb-4 line-clamp-3">
+                        {service.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </p>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-2xl font-bold text-cyan-400">
+                          {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <span className="text-sm text-gray-400">{service.period}</span>
                         </div>
                         <div className="flex items-center text-yellow-400">
@@ -865,12 +1166,21 @@ function Ultimate2026ServicesShowcase() {
                   </div>
                 ) : (
                   <div className="flex items-center space-x-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div className="text-4xl">{service.icon}</div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-<<<<<<< HEAD
-                          {service.name}
+
+
+                          {service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </h3>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -888,7 +1198,7 @@ function Ultimate2026ServicesShowcase() {
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">
-=======
+
 =======
                 className={view_mode === 'grid' ? 'group relative' : 'group relative bg - gray - 800 rounded - 2xl p - 6 border border - gray - 700 hover:border - cyan - 500 / 50 transition - all duration - 300'}
               >;
@@ -937,7 +1247,7 @@ function Ultimate2026ServicesShowcase() {
                     <div className="flex - 1">;
                       <div className="flex items - center justify - between mb - 2">;
                         <h3 className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                           {service.name}
                         </h3>;
                         {service.popular && (
@@ -957,7 +1267,16 @@ function Ultimate2026ServicesShowcase() {
                       <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.price}
-<<<<<<< HEAD
+
+
+                        {service.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <Link
@@ -967,22 +1286,36 @@ function Ultimate2026ServicesShowcase() {
                       </Link>
                     </div>
                   </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-          {filteredServices.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
+
+
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+          {filteredServices.length === 0 && (;
+            <motion.div;
+              initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
             </motion.div>
-          )}
-        </div>
-      </section>
-=======
+
                         <span className="text - sm text - gray - 400">{service.period}</span>;
                       </div>;
                       <Link;
@@ -1004,9 +1337,25 @@ function Ultimate2026ServicesShowcase() {
             </motion.div>)}
         </div>;
       </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {/* CTA Section */}
-<<<<<<< HEAD
+
+
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </section>;
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -1020,15 +1369,14 @@ function Ultimate2026ServicesShowcase() {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business with 2026 Innovations?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing
 
+
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+
+
+=======
+              Join thousands of forward-thinking companies already leveraging our revolutionary AI, quantum computing,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1041,14 +1389,8 @@ function Ultimate2026ServicesShowcase() {
                 View Pricing
               </Link>
             </div>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">500%+</div>
@@ -1066,7 +1408,16 @@ function Ultimate2026ServicesShowcase() {
           </motion.div>
         </div>
       </section>
-      {/* Footer Contact */}
+
+
+      {/* Footer Contact */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -1093,6 +1444,9 @@ function Ultimate2026ServicesShowcase() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+<div>
+=======
             <div>
               <h4 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h4>
               <div className="space-y-4">
@@ -1130,14 +1484,10 @@ function Ultimate2026ServicesShowcase() {
         </div>
       </section>
     </>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -1241,3 +1591,7 @@ function Ultimate2026ServicesShowcase() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,8 +1,17 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
+
+
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
+
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Dialog;
   DialogContent;
@@ -12,13 +21,7 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
-import { useNavigate } from "react-router-dom";
-import { ShieldAlert } from "lucide-react";
-interface RaiseDisputeButtonProps {
 
-  projectId: string
-
-=======
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
@@ -26,28 +29,46 @@ import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
-<<<<<<< HEAD
-export function RaiseDisputeButton({
-  projectId;
 
-  milestoneId
-  variant = "outline"
-  size;
-  className
+
+import { useNavigate } from "react-router-dom",
+import { ShieldAlert } from "lucide-react",
+
+interface RaiseDisputeButtonProps {
+  projectId: string,
+  milestoneId?: string,
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
+  size?: "default" | "sm" | "lg" | "icon",
+  className?: string
+}
+
+
+export function RaiseDisputeButton({ 
+  projectId,
+
+  milestoneId, 
+  variant = "outline", 
+  size,
+  className 
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const navigate = useNavigate();
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const navigate = useNavigate(),
+  
+
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
-  }
 
+  },
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Button
@@ -67,7 +88,7 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-=======
+
 
 export function RaiseDisputeButton(): any ({ ;
   projectId;
@@ -141,34 +162,31 @@ function RaiseDisputeButton() {
         <DialogContent className="sm:max - w-[550px]">;
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             <DialogDescription>;
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          <DisputeForm
+
+          
+          <DisputeForm 
+=======
+          <DisputeForm 
+
+
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
-<<<<<<< HEAD
-          />
-        </DialogContent>
-      </Dialog>
-    </>
-  )
-}
-=======
+
           />;
         </DialogContent>;
       </Dialog>;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
           <DisputeForm;
             project_id={project_id}

@@ -1,54 +1,42 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-=======
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -59,9 +47,8 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -162,16 +149,12 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   ];
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -211,10 +194,7 @@ export default function HolographicAICommunicationPage() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -322,5 +302,9 @@ function HolographicAICommunicationPage() {
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

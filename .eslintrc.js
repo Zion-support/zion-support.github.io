@@ -1,38 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* eslint-env node */
-module && module.exports = {
-=======
+
 /* eslint - env node */;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+/* eslint-env node */
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+/* eslint-env node */
+module.exports = {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   env: {
     node: true,
     es2021: true
   },
-<<<<<<< HEAD
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+
+
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-/* eslint-env node */
-module.exports = {
-<<<<<<< HEAD
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-export default {
-  extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -49,118 +43,39 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn'
+
+
+    node: true,
+    browser: true,
+    es2021: true
   },
+
+=======
+
+
+
   env: {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    node: true,
+    es2021: true
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
-  "rules": {
-    "react-hooks/rules-of-hooks": "error",
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "no-console": "off",
+    "react/react-in-jsx-scope": "off",
     "no-undef": "off",
     "react/no-unescaped-entities": "off",
-    "@typescript-eslint/no-explicit-any": "warn"
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
   },
-  "env": {
-    "node": true,
-    "browser": true,
-    "es2021": true
-  },
-  "ignorePatterns": [
-    "pages._archive_corrupted/**",
-    "pages.disabled.full/**",
-    "pages.disabled_auto/**",
-    "pages_api.disabled/**",
-    "pages_backup_conflict/**",
-    "pages.blog.disabled/**",
-    "pages.corrupted.*/**",
-    "pages.broken/**",
-    "pages.bak/**",
-    "pages-quarantine/**",
-    "pages-disabled/**",
-    "pages.__backup/**",
-    "temp_backup/**",
-    "temp_broken_files/**",
-    "temp_working/**",
-    "tests.disabled/**",
-    "lib_backup/**",
-    "node_modules/**",
-    ".next/**",
-    "out/**",
-    "dist/**",
-    "build/**"
-  ]
-};
-module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    'no-unused-vars': 'warn',
-    'no-undef': 'error',
-    'no-console': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    'no-useless-escape': 'warn'
-  },
-  env: {
-    browser: true,
-    es2021: true,
-  },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-    node: true,
-    browser: true,
-    es2021: true
-  },
-<<<<<<< HEAD
-=======
-  env: {
-    node: true,
-    es2021: true
-  },
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -317,8 +232,7 @@ module.exports = {
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
-<<<<<<< HEAD
-=======
+
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -326,7 +240,7 @@ module.exports = {
       jsx: true
     }
   extends: ['next/core-web-vitals'],
->>>>>>> origin/automation-improvements-final
+
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -336,39 +250,24 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
-=======
-  extends: ["next / core - web - vitals", "plugin:@typescript - eslint / recommended"],
-  parser: "@typescript - eslint / parser",
-  plugins: ["@typescript - eslint"],
-  rules: {
-    "@typescript - eslint / no - unused - vars": "off",
-    "@typescript - eslint / no - explicit - any": "off",
-    "react - hooks / exhaustive - deps": "warn",
-    "react / react - in - jsx - scope": "off",
-    "no - undef": "off",
-    "react / no - unescaped - entities": "off",
-    "@next / next / no - html - link - for - pages": "off",
-    "@next / next / no - img - element": "off",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
   ignore_patterns: [;
+=======
+
+  ignorePatterns: [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
     "build/",
     "coverage/",
-<<<<<<< HEAD
-    "*.config && config.js",
-    "*.config && config.cjs",
-    "*.config && config.mjs",
-    "fix-critical-files && files.js",
-=======
+
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
     "fix - critical - files.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -388,17 +287,7 @@ module.exports = {
     "api - backup/",
     "temp_backup/",
     "corrupted_files_backup_2/",
-<<<<<<< HEAD
-    "ai-optimization-backups/",
-    "optimization-reports/",
-    "test-generation-reports/",
-    "test-reports/",
-    "test-results/",
-    "security-reports/",
-    "pages && pages.__backup/",
-    "pages-disabled/",
-    "pages && pages.disabled_auto/",
-=======
+
     "ai - optimization - backups/",
     "optimization - reports/",
     "test - generation - reports/",
@@ -408,7 +297,7 @@ module.exports = {
     "pages.__backup/",
     "pages - disabled/",
     "pages.disabled_auto/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -416,17 +305,7 @@ module.exports = {
     "temp_*/",
     "temp_exclude/",
     "test_build/",
-<<<<<<< HEAD
-    "tests && tests.disabled/",
-    "pages && pages.disabled/",
-    "src && src.disabled/",
-    "components && components.disabled/",
-    "hooks && hooks.disabled/",
-    "types && types.disabled/",
-    "contracts && contracts.disabled/",
-    "solutions && solutions.disabled/",
-    "zion-os && os.disabled/",
-=======
+
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -436,47 +315,12 @@ module.exports = {
     "contracts.disabled/",
     "solutions.disabled/",
     "zion - os.disabled/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
     "supabase/",
-<<<<<<< HEAD
-    "*.test && test.js",
-    "*.test && test.ts",
-    "*.test && test.tsx",
-    "*.spec && spec.js",
-    "*.spec && spec.ts",
-    "*.spec && spec.tsx",
-    "temp_footer_start && temp_footer_start.tsx",
-    "test-simple && simple.js",
-    "test-utils && utils.js",
-    "ultimate-automation-runner && runner.js",
-    "vite && vite.config-backup && backup.ts",
-    "vite && vite.config.ts",
-    "types/empty && empty.ts",
-    "types/index && index.ts",
-    "pages_backup_conflicts/",
-    "pages_disabled/",
-    "src && src.broken/",
-    "src && src.corrupted/",
-    "src && src.pages.disabled/",
-    "performance-monitor && monitor.js",
-    "performance-optimization && optimization.js",
-    "playwright && playwright.config.ts",
-    "postcss && postcss.config-backup && backup.js",
-    "public/",
-    "resolve-conflicts && conflicts.js",
-    "resolve-merge-conflicts && conflicts.js",
-    "run-automation-safely && safely.js",
-    "run-automation && automation.js",
-    "run-complete-automation && automation.js",
-    "security-config && config.js",
-    "server/",
-    "setupTests && setupTests.ts",
-    "simple-test && test.js",
-    "src/components/layout/",
-=======
+
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -511,103 +355,51 @@ module.exports = {
     "setup_tests.ts",
     "simple - test.js",
     "src / components / layout/",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
-<<<<<<< HEAD
-    "components && components.disabled_full/",
-    "comprehensive-automation-runner && runner.js",
-    "comprehensive-automation && automation.js",
-    "comprehensive-merge-resolver && resolver.js",
-    "corrupted-files-backup/",
-    "cypress && cypress.config.ts",
-=======
+
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
     "comprehensive - automation.js",
     "comprehensive - merge - resolver.js",
     "corrupted - files - backup/",
     "cypress.config.ts",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     "cypress_backup/",
     "data && data.disabled/",
     "database/",
-<<<<<<< HEAD
-    "ecosystem && ecosystem.simple.js",
-    "ecosystem && ecosystem.working.js",
-    "execute-automation && automation.js",
-    "fix_all_function_names && fix_all_function_names.js",
-    "fix_corrupted_files && fix_corrupted_files.js",
-    "fix_empty_pages && fix_empty_pages.js",
-    "fix_utils_files && fix_utils_files.js",
-    "fix_variable_names && fix_variable_names.js",
-    "git-ops && ops.js",
-    "health-endpoint && endpoint.js",
-    "hooks/",
-    "improve-app && app.js",
-    "jest && jest.config.ts",
-    "jest && jest.setup.js",
-    "lib && lib.broken/",
-    "lib && lib.disabled/",
-    "lib/",
-    "lint-stub && stub.js",
-    "lint-target/",
-    "maintenance-scheduler && scheduler.js",
-    "merge-prs && prs.js",
-    "merge-resolver && resolver.js",
-    "middleware && middleware.security.ts",
-    "middleware/",
-    "monitoring-system && system.js",
-    "netlify/",
-    "next-env && env.d.ts",
-    "next && next.config.analyze && analyze.js",
-    "next && next.config.analyzer && analyzer.js",
-    "next && next.config.optimized && optimized.js",
-    "next && next.config.resolved && resolved.js",
-    "optimized-build && build.js",
-    "pages-backup/",
-    "pages && pages._quarantine/",
-    "pages && pages.disabled_full/",
-    "pages && pages.old/",
-    "App && App.tsx",
-    "advanced-app-improvements && improvements.js",
-    "analyze-missing-pages && pages.js",
-    "api-disabled/",
-    "api && api.disabled/",
-    "api/",
-    "automation-runner && runner.js",
-    "basic-test && test.js",
-    "broken_files_backup/",
-<<<<<<< HEAD
-    "build-verification.js",
-    "check-syntax.js",
-    "clean-conflicts.js",
-<<<<<<< HEAD
-    "commit-and-push.js",
-    "temp_exclude/",
-=======
+
     "build-verification && verification.js",
     "check-syntax && syntax.js",
     "clean-conflicts && conflicts.js",
     "commit-and-push && push.js",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   ],
 };
-<<<<<<< HEAD
+
+
+
 =======
+
+
 =======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+};
+
+=======
+
 >>>>>>> origin/automation-improvements-final
 =======
     "commit-and-push.js"
   ]
 };
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute - automation.js",
@@ -653,6 +445,7 @@ module.exports = {
     "automation - runner.js",
     "basic - test.js",
     "broken_files_backup/",
+<<<<<<< HEAD
     "build - verification.js",
     "check - syntax.js",
     "clean - conflicts.js",
@@ -660,4 +453,40 @@ module.exports = {
   ],
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;
+/* eslint-env node */;
+/* eslint-disable no-undef */;
+module.exports = {;
+  env: {;
+    node: true,;
+    es2021: true;
+  },;
+  globals: {;
+    module: 'readonly',;
+    require: 'readonly',;
+    exports: 'readonly',;
+    __dirname: 'readonly',;
+    __filename: 'readonly',;
+    global: 'readonly',;
+    Buffer: 'readonly',;
+    console: 'readonly';
+  },;
+  extends: ['next/core-web-vitals'],;
+  rules: {;
+    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
+      'warn',;
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+    ],;
+    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
+  },;
+  ignorePatterns: [;
+    'node_modules/.next/out/build/',;
+    'dist/*.config.js*.config.tsscripts/',;
+    'automation/netlify/src/apps/';
+  ];
+},;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

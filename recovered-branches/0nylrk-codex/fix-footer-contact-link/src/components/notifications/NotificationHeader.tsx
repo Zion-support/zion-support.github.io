@@ -1,12 +1,20 @@
-<<<<<<< HEAD
 
-import React from 'react';
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>
+
+
+
+=======
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+interface NotificationHeaderProps {;
+  unreadCount: number,;
+  onMarkAllAsRead: () => Promise<void>;
+
+
+
 }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
@@ -43,10 +51,9 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
           Mark all as read;
         </Button>;
       )}
-<<<<<<< HEAD
-    </div>
-  );
-}
+
+
+
 
 =======
     </div>;

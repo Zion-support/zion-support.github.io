@@ -1,12 +1,24 @@
-import React from 'react';
-import * as React from 'react';
-<<<<<<< HEAD
-import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-const TooltipProvider = TooltipPrimitive.Provider;
-const Tooltip = TooltipPrimitive.Root;
-const TooltipTrigger = TooltipPrimitive.Trigger;
+
+
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+=======
+=======
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+
+
+
+import { cn } from "@/lib/utils"
+
+const TooltipProvider = TooltipPrimitive.Provider
+
+const Tooltip = TooltipPrimitive.Root
+
+const TooltipTrigger = TooltipPrimitive.Trigger
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
@@ -15,8 +27,7 @@ const TooltipContent = React.forwardRef<
     ref={ref}
     sideOffset={sideOffset}
     className={cn(
-      'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2'
-=======
+
 
 const TooltipProvider = TooltipPrimitive && TooltipPrimitive.Provider;
 
@@ -33,17 +44,26 @@ const TooltipContent = React && React.forwardRef<;
     sideOffset={sideOffset}
     className={cn(
       'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1 && 1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
   />;
 ));
-<<<<<<< HEAD
-TooltipContent.displayName = TooltipPrimitive.Content.displayName;
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
-=======
+
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
+=======
+
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+;
+
+=======
+
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

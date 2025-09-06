@@ -1,20 +1,21 @@
-<<<<<<< HEAD
 
-import React, {
-<<<<<<< HEAD
-  useState
-  useRef
-  useEffect
-  FormEvent
-  KeyboardEvent
-=======
 import React, {;
   useState,;
   useRef,;
   useEffect,;
   FormEvent,;
   KeyboardEvent,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  FormEvent,
+  KeyboardEvent,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -27,22 +28,7 @@ interface ChatInputProps {;
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    // Focus input when component mounts
-    inputRef.current?.focus();
-  }, []);
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (message.trim() && !disabled) {
-      (onSend(message), setMessage(""));
-    }
-  }
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      if (message.trim() && !disabled) {
-=======
+
 
   useEffect(() => {;
     // Focus input when component mounts;
@@ -60,11 +46,56 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     if (e && e.key === "Enter" && !e && e.shiftKey) {;
       e && e.preventDefault();
       if (message && message.trim() && !disabled) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         (onSend(message), setMessage(""));
       }
     }
-  }
+
+
+  };
+
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+import { Send } from "lucide-react",
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from "lucide-react",;
+interface ChatInputProps {;
+  onSend: (message: string) => void,;
+  disabled?: boolean;
+}
+;
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []),;
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e.preventDefault(),;
+    if (message.trim() && !disabled) {;
+      onSend(message),;
+      setMessage('');
+    }
+  },;
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      if (message.trim() && !disabled) {;
+        onSend(message);
+        setMessage('');
+      }
+    }
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -137,22 +168,12 @@ if (&& !disabled) {) {
         rows={1}
         disabled={disabled}
       />;
-<<<<<<< HEAD
-      <Button
-        type="submit"
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-<<<<<<< HEAD
-        disabled={!message.trim() |disabled}
-      >
-        <Send className="h-5 w-5" />
-      </Button>
-    </form>
-=======
+
         disabled={!message && message.trim() || disabled}>;
         <Send className="h-5 w-5" />;
       </Button>;
     </form>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
 =======
       <Button;
@@ -165,3 +186,16 @@ if (&& !disabled) {) {
     </form>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+
+);
+=======
+  )
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+=======
+  )
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

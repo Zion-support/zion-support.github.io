@@ -1,24 +1,23 @@
-<<<<<<< HEAD
- marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
-};
+
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+import { ServiceVariant } from '../types/service-variants',
+
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
-=======
-market_advantage: 'First platform to combine content creation, optimization, and distribution in one AI - powered solution';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
-<<<<<<< HEAD
-tagline: 'Advanced AI-powered medical diagnostics with 99 && 99.7% accuracy';
-=======
+
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
@@ -29,15 +28,7 @@ features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom anal
 'Automated report generation_telemedicine integration capabilities' ];
 popular: true;
 icon: '🏥';
-<<<<<<< HEAD
-color: 'from-green-600 to-emerald-600';
-textColor: 'text-green-400';
-link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics';
-marketPosition: 'Advanced AI diagnostics platform competing with Aidoc ($500/month) and Zebra Medical ($400/month) ';
-targetAudience: 'Hospitals, Clinics, Radiologists, Healthcare providers';
-trialDays: 30;
-setupTime: '2 weeks';
-=======
+
 color: 'from - green - 600 to - emerald - 600';
 text_color: 'text - green - 400';
 link: 'https://ziontechgroup.com / ai - healthcare - diagnostics';
@@ -45,7 +36,7 @@ market_position: 'Advanced AI diagnostics platform competing with Aidoc ($500 / 
 target_audience: 'Hospitals, Clinics, Radiologists, Healthcare providers';
 trial_days: 30;
 setup_time: '2 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Healthcare AI';
 real_service: true;
 technology: ['Deep Learning, Computer Vision, Python, TensorFlow, PyTorch'];
@@ -53,15 +44,7 @@ integrations: ['Epic, Cerner, Allscripts, PACS systems, Telemedicine platforms']
 use_cases: ['Medical imaging analysis_diagnostic assistance', 'Treatment planning_patient monitoring'];
 roi: 'Average 500% ROI through improved diagnostic accuracy and reduced misdiagnosis costs';
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
-<<<<<<< HEAD
-marketSize: '$45 && 45.2B AI healthcare market';
-growthRate: '250% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade healthcare platform with FDA compliance, HIPAA security, and clinical validation';
-launchDate: '2024-02-20';
-=======
+
 market_size: '$45.2B AI healthcare market';
 growth_rate: '250% annual growth';
 variant: 'ai - futuristic';
@@ -69,19 +52,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade healthcare platform with FDA compliance, HIPAA security, and clinical validation';
 launch_date: '2024 - 02 - 20';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 156;
 rating: 4 && 4.9;
 reviews: 89;
-<<<<<<< HEAD
-benefits: ['Improved diagnostic accuracyReduced misdiagnosis', 'Faster diagnosisCost savings'];
-capabilities: ['Multi-modality imagingReal-time analysis', 'Clinical decision supportRegulatory compliance'];
-marketAdvantage: 'Highest accuracy rate in the market with comprehensive multi-specialty coverage'
-=======
+
 benefits: ['Improved diagnostic accuracy_reduced misdiagnosis', 'Faster diagnosis_cost savings'];
 capabilities: ['Multi - modality imaging_real - time analysis', 'Clinical decision support_regulatory compliance'];
 market_advantage: 'Highest accuracy rate in the market with comprehensive multi - specialty coverage';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
@@ -97,15 +76,7 @@ features: [ 'Real - time market analysis and prediction_automated trading strate
 'Real - time alerts and notifications_integration with major exchanges' ];
 popular: true;
 icon: '💰';
-<<<<<<< HEAD
-color: 'from-yellow-600 to-orange-600';
-textColor: 'text-yellow-400';
-link: 'https://ziontechgroup && ziontechgroup.com/ai-fintech-intelligence';
-marketPosition: 'Advanced AI fintech platform competing with Alpaca ($20/month) and QuantConnect ($20/month) ';
-targetAudience: 'Investment firms, Banks, Hedge funds, Individual traders';
-trialDays: 14;
-setupTime: '1 week';
-=======
+
 color: 'from - yellow - 600 to - orange - 600';
 text_color: 'text - yellow - 400';
 link: 'https://ziontechgroup.com / ai - fintech - intelligence';
@@ -113,7 +84,7 @@ market_position: 'Advanced AI fintech platform competing with Alpaca ($20 / mont
 target_audience: 'Investment firms, Banks, Hedge funds, Individual traders';
 trial_days: 14;
 setup_time: '1 week';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Fintech AI';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -121,15 +92,7 @@ integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, Coinbase
 use_cases: ['Algorithmic trading_risk management', 'Portfolio optimization_market analysis'];
 roi: 'Average 400% ROI through improved trading performance and risk reduction';
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
-<<<<<<< HEAD
-marketSize: '$12 && 12.8B AI fintech market';
-growthRate: '220% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade fintech platform with real-time data feeds, advanced analytics, and regulatory compliance';
-launchDate: '2024-01-10';
-=======
+
 market_size: '$12.8B AI fintech market';
 growth_rate: '220% annual growth';
 variant: 'ai - futuristic';
@@ -137,19 +100,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade fintech platform with real - time data feeds, advanced analytics, and regulatory compliance';
 launch_date: '2024 - 01 - 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
-<<<<<<< HEAD
-benefits: ['Improved trading performanceRisk reduction', 'Automated operationsReal-time insights'];
-capabilities: ['Multi-asset tradingAdvanced analytics', 'Risk managementRegulatory compliance'];
-marketAdvantage: 'First platform to combine AI-powered trading, risk management, and compliance in one solution'
-=======
+
 benefits: ['Improved trading performance_risk reduction', 'Automated operations_real - time insights'];
 capabilities: ['Multi - asset trading_advanced analytics', 'Risk management_regulatory compliance'];
 market_advantage: 'First platform to combine AI - powered trading, risk management, and compliance in one solution';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
@@ -165,15 +124,7 @@ features: [ 'AI - powered threat hunting and detection_zero false positive guara
 'Multi - cloud security coverage24 / 7 security monitoring' ];
 popular: true;
 icon: '🛡️';
-<<<<<<< HEAD
-color: 'from-red-600 to-pink-600';
-textColor: 'text-red-400';
-link: 'https://ziontechgroup && ziontechgroup.com/ai-cybersecurity-threat-hunting';
-marketPosition: 'Advanced AI cybersecurity platform competing with CrowdStrike ($8 && 8.99/user/month) and SentinelOne ($6 && 6.99/user/month) ';
-targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations';
-trialDays: 30;
-setupTime: '1 week';
-=======
+
 color: 'from - red - 600 to - pink - 600';
 text_color: 'text - red - 400';
 link: 'https://ziontechgroup.com / ai - cybersecurity - threat - hunting';
@@ -181,7 +132,7 @@ market_position: 'Advanced AI cybersecurity platform competing with CrowdStrike 
 target_audience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations';
 trial_days: 30;
 setup_time: '1 week';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Cybersecurity';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -189,15 +140,7 @@ integrations: ['SIEM systems, EDR platforms, Threat intelligence feeds, Cloud pr
 use_cases: ['Threat detection_incident response', 'Security monitoring_compliance management'];
 roi: 'Average 350% ROI through reduced security incidents and automated response';
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
-<<<<<<< HEAD
-marketSize: '$8 && 8.9B AI cybersecurity market';
-growthRate: '280% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade cybersecurity platform with advanced AI algorithms and comprehensive threat coverage';
-launchDate: '2024-03-01';
-=======
+
 market_size: '$8.9B AI cybersecurity market';
 growth_rate: '280% annual growth';
 variant: 'ai - futuristic';
@@ -205,19 +148,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade cybersecurity platform with advanced AI algorithms and comprehensive threat coverage';
 launch_date: '2024 - 03 - 01';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 234;
 rating: 4 && 4.8;
 reviews: 156;
-<<<<<<< HEAD
-benefits: ['Zero false positivesAutomated response', '24/7 monitoringCost reduction'];
-capabilities: ['Advanced threat huntingReal-time detection', 'Automated responseCompliance reporting'];
-marketAdvantage: 'Only platform with zero false positive guarantee and automated incident response'
-=======
+
 benefits: ['Zero false positives_automated response', '24 / 7 monitoring_cost reduction'];
 capabilities: ['Advanced threat hunting_real - time detection', 'Automated response_compliance reporting'];
 market_advantage: 'Only platform with zero false positive guarantee and automated incident response';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //IoT & Smart City Services {
   id: 'iot - smart - city - platform';
@@ -233,18 +172,7 @@ features: [ 'Smart traffic management and optimization_energy consumption monito
 'Data analytics and insights_multi - city management capabilities' ];
 popular: true;
 icon: '🏙️';
-<<<<<<< HEAD
-color: 'from-indigo-600 to-purple-600';
-textColor: 'text-indigo-400';
-link: 'https://ziontechgroup && ziontechgroup.com/iot-smart-city-platform';
-marketPosition: 'Comprehensive smart city platform competing with Cisco Kinetic ($1000/month) and Siemens MindSphere ($500/month) ';
-targetAudience: 'City governments, Municipalities, Urban planners, Infrastructure companies';
-trialDays: 30;
-setupTime: '4 weeks';
-category: 'IoT & Smart Cities';
-realService: true;
-technology: ['IoT, Edge Computing, AI/ML, Python, Node && Node.js, React'];
-=======
+
 color: 'from - indigo - 600 to - purple - 600';
 text_color: 'text - indigo - 400';
 link: 'https://ziontechgroup.com / iot - smart - city - platform';
@@ -255,20 +183,12 @@ setup_time: '4 weeks';
 category: 'IoT & Smart Cities';
 real_service: true;
 technology: ['IoT, Edge Computing, AI / ML, Python, Node.js, React'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 integrations: ['Traffic systems, Energy grids, Waste management, Environmental sensors'];
 use_cases: ['Traffic optimization_energy management', 'Waste optimization_environmental monitoring'];
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
-<<<<<<< HEAD
-marketSize: '$18 && 18.7B smart city market';
-growthRate: '320% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade IoT platform with comprehensive smart city coverage and real-time analytics';
-launchDate: '2024-02-15';
-=======
+
 market_size: '$18.7B smart city market';
 growth_rate: '320% annual growth';
 variant: 'ai - futuristic';
@@ -276,19 +196,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade IoT platform with comprehensive smart city coverage and real - time analytics';
 launch_date: '2024 - 02 - 15';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 45;
 rating: 4 && 4.9;
 reviews: 34;
-<<<<<<< HEAD
-benefits: ['Operational efficiencyCost reduction', 'Improved citizen servicesEnvironmental sustainability'];
-capabilities: ['Comprehensive monitoringReal-time optimization', 'Data analyticsCitizen engagement'];
-marketAdvantage: 'Most comprehensive smart city platform with integrated citizen engagement features'
-=======
+
 benefits: ['Operational efficiency_cost reduction', 'Improved citizen services_environmental sustainability'];
 capabilities: ['Comprehensive monitoring_real - time optimization', 'Data analytics_citizen engagement'];
 market_advantage: 'Most comprehensive smart city platform with integrated citizen engagement features';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
@@ -304,18 +220,7 @@ features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimizat
 'Yield farming optimization_regulatory compliance monitoring' ];
 popular: true;
 icon: '🔗';
-<<<<<<< HEAD
-color: 'from-emerald-600 to-teal-600';
-textColor: 'text-emerald-400';
-link: 'https://ziontechgroup && ziontechgroup.com/blockchain-defi-intelligence';
-marketPosition: 'Advanced blockchain intelligence platform competing with Chainalysis ($25, 000/year) and Elliptic ($50, 000/year) ';
-targetAudience: 'Crypto exchanges, DeFi protocols, Investment firms, Regulatory bodies';
-trialDays: 14;
-setupTime: '1 week';
-category: 'Blockchain & DeFi';
-realService: true;
-technology: ['Blockchain, AI/ML, Python, Solidity, Web3 && Web3.js, React'];
-=======
+
 color: 'from - emerald - 600 to - teal - 600';
 text_color: 'text - emerald - 400';
 link: 'https://ziontechgroup.com / blockchain - defi - intelligence';
@@ -326,20 +231,12 @@ setup_time: '1 week';
 category: 'Blockchain & DeFi';
 real_service: true;
 technology: ['Blockchain, AI / ML, Python, Solidity, Web3.js, React'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 integrations: ['Ethereum, Solana, Polygon, Binance Smart Chain, Major DeFi protocols'];
 use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk assessment'];
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
-<<<<<<< HEAD
-marketSize: '$6 && 6.2B blockchain analytics market';
-growthRate: '450% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade blockchain platform with AI-powered analytics and comprehensive DeFi coverage';
-launchDate: '2024-01-25';
-=======
+
 market_size: '$6.2B blockchain analytics market';
 growth_rate: '450% annual growth';
 variant: 'ai - futuristic';
@@ -347,19 +244,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade blockchain platform with AI - powered analytics and comprehensive DeFi coverage';
 launch_date: '2024 - 01 - 25';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 178;
 rating: 4 && 4.8;
 reviews: 123;
-<<<<<<< HEAD
-benefits: ['Improved DeFi strategiesRisk reduction', 'Real-time insightsCost savings'];
-capabilities: ['Multi-chain analysisAI-powered insights', 'DeFi optimizationRisk management'];
-marketAdvantage: 'First platform to combine AI-powered blockchain analysis with DeFi optimization'
-=======
+
 benefits: ['Improved DeFi strategies_risk reduction', 'Real - time insights_cost savings'];
 capabilities: ['Multi - chain analysisAI - powered insights', 'DeFi optimization_risk management'];
 market_advantage: 'First platform to combine AI - powered blockchain analysis with DeFi optimization';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
@@ -375,15 +268,7 @@ features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorit
 'API access for custom applications_expert quantum computing support' ];
 popular: true;
 icon: '⚛️';
-<<<<<<< HEAD
-color: 'from-purple-600 to-violet-600';
-textColor: 'text-purple-400';
-link: 'https://ziontechgroup && ziontechgroup.com/quantum-computing-service';
-marketPosition: 'Advanced quantum computing platform competing with IBM Quantum ($1000/month) and Google Quantum AI ($2000/month) ';
-targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies';
-trialDays: 30;
-setupTime: '2 weeks';
-=======
+
 color: 'from - purple - 600 to - violet - 600';
 text_color: 'text - purple - 400';
 link: 'https://ziontechgroup.com / quantum - computing - service';
@@ -391,7 +276,7 @@ market_position: 'Advanced quantum computing platform competing with IBM Quantum
 target_audience: 'Research institutions, Pharmaceutical companies, Financial institutions, Government agencies';
 trial_days: 30;
 setup_time: '2 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Quantum Computing';
 real_service: true;
 technology: ['Quantum Computing, AI / ML, Python, Qiskit, Cirq, Q#'];
@@ -399,15 +284,7 @@ integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon 
 use_cases: ['Drug discovery_financial modeling', 'CryptographyOptimization problems'];
 roi: 'Average 1000% ROI through breakthrough discoveries and research acceleration';
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
-<<<<<<< HEAD
-marketSize: '$15 && 15.2B quantum computing market';
-growthRate: '500% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade quantum computing platform with AI optimization and comprehensive support';
-launchDate: '2024-01-15';
-=======
+
 market_size: '$15.2B quantum computing market';
 growth_rate: '500% annual growth';
 variant: 'ai - futuristic';
@@ -415,19 +292,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade quantum computing platform with AI optimization and comprehensive support';
 launch_date: '2024 - 01 - 15';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 67;
 rating: 4 && 4.9;
 reviews: 45;
-<<<<<<< HEAD
-benefits: ['Quantum computing accessAI optimization', 'Real-time simulationExpert support'];
-capabilities: ['Multi-processor supportAI-powered algorithms', 'Real-time monitoringCustom solutions'];
-marketAdvantage: 'First platform to combine quantum computing access with AI-powered optimization'
-=======
+
 benefits: ['Quantum computing accessAI optimization', 'Real - time simulation_expert support'];
 capabilities: ['Multi - processor supportAI - powered algorithms', 'Real - time monitoring_custom solutions'];
 market_advantage: 'First platform to combine quantum computing access with AI - powered optimization';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Space Technology Services {
   id: 'space - resource - intelligence';
@@ -443,15 +316,7 @@ features: [ 'AI - powered asteroid resource identification_satellite mission opt
 'Space traffic management_commercial space mission support' ];
 popular: true;
 icon: '🚀';
-<<<<<<< HEAD
-color: 'from-slate-600 to-gray-600';
-textColor: 'text-slate-400';
-link: 'https://ziontechgroup && ziontechgroup.com/space-resource-intelligence';
-marketPosition: 'Advanced space technology platform competing with Maxar ($500/month) and Planet Labs ($400/month) ';
-targetAudience: 'Space agencies, Satellite companies, Mining companies, Research institutions';
-trialDays: 30;
-setupTime: '3 weeks';
-=======
+
 color: 'from - slate - 600 to - gray - 600';
 text_color: 'text - slate - 400';
 link: 'https://ziontechgroup.com / space - resource - intelligence';
@@ -459,7 +324,7 @@ market_position: 'Advanced space technology platform competing with Maxar ($500 
 target_audience: 'Space agencies, Satellite companies, Mining companies, Research institutions';
 trial_days: 30;
 setup_time: '3 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Space Technology';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Python, TensorFlow, Satellite imagery analysis'];
@@ -467,15 +332,7 @@ integrations: ['NASA APIs, ESA data, Commercial satellite providers, Space weath
 use_cases: ['Resource discovery_mission optimization', 'Debris tracking_traffic management'];
 roi: 'Average 700% ROI through optimized missions and resource discovery';
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
-<<<<<<< HEAD
-marketSize: '$8 && 8.9B space technology market';
-growthRate: '380% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade space technology platform with AI-powered analytics and comprehensive coverage';
-launchDate: '2024-02-01';
-=======
+
 market_size: '$8.9B space technology market';
 growth_rate: '380% annual growth';
 variant: 'ai - futuristic';
@@ -483,19 +340,15 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade space technology platform with AI - powered analytics and comprehensive coverage';
 launch_date: '2024 - 02 - 01';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 34;
 rating: 4 && 4.8;
 reviews: 23;
-<<<<<<< HEAD
-benefits: ['Resource discoveryMission optimization', 'Cost reductionRisk mitigation'];
-capabilities: ['AI-powered analysisReal-time monitoring', 'Mission planningData analytics'];
-marketAdvantage: 'First platform to combine AI-powered resource discovery with mission optimization'
-=======
+
 benefits: ['Resource discovery_mission optimization', 'Cost reduction_risk mitigation'];
 capabilities: ['AI - powered analysis_real - time monitoring', 'Mission planning_data analytics'];
 market_advantage: 'First platform to combine AI - powered resource discovery with mission optimization';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 //Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
@@ -511,15 +364,7 @@ features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimizat
 'Real - time performance analytics_custom autonomous system integration' ];
 popular: true;
 icon: '🤖';
-<<<<<<< HEAD
-color: 'from-cyan-600 to-blue-600';
-textColor: 'text-cyan-400';
-link: 'https://ziontechgroup && ziontechgroup.com/autonomous-systems-orchestration';
-marketPosition: 'Advanced autonomous systems platform competing with Waymo ($1000/month) and Cruise ($800/month) ';
-targetAudience: 'Autonomous vehicle companies, Drone operators, Robotics companies, Logistics firms';
-trialDays: 30;
-setupTime: '2 weeks';
-=======
+
 color: 'from - cyan - 600 to - blue - 600';
 text_color: 'text - cyan - 400';
 link: 'https://ziontechgroup.com / autonomous - systems - orchestration';
@@ -527,7 +372,7 @@ market_position: 'Advanced autonomous systems platform competing with Waymo ($10
 target_audience: 'Autonomous vehicle companies, Drone operators, Robotics companies, Logistics firms';
 trial_days: 30;
 setup_time: '2 weeks';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 category: 'Autonomous Systems';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Robotics, Python, TensorFlow, ROS'];
@@ -535,15 +380,7 @@ integrations: ['Autonomous vehicles, Drones, Robotics platforms, Traffic systems
 use_cases: ['Fleet management_route optimization', 'Safety monitoring_maintenance planning'];
 roi: 'Average 450% ROI through operational efficiency and safety improvements';
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
-<<<<<<< HEAD
-marketSize: '$11 && 11.3B autonomous systems market';
-growthRate: '340% annual growth';
-variant: 'ai-futuristic';
-contactInfo: contact;
-realImplementation: true;
-implementationDetails: 'Enterprise-grade autonomous systems platform with AI orchestration and comprehensive safety features';
-launchDate: '2024-03-10';
-=======
+
 market_size: '$11.3B autonomous systems market';
 growth_rate: '340% annual growth';
 variant: 'ai - futuristic';
@@ -551,17 +388,17 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade autonomous systems platform with AI orchestration and comprehensive safety features';
 launch_date: '2024 - 03 - 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
-<<<<<<< HEAD
-benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
-capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
-marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
-}];
-<<<<<<< HEAD
+
 =======
+
+=======
+import { ServiceVariant } from '../types/service-variants',
+
+
 
 =======
 import { ServiceVariant } from '../types/service-variants';
@@ -580,11 +417,9 @@ export interface ComprehensiveMicroSaasService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -592,13 +427,11 @@ export interface ComprehensiveMicroSaasService {
   benefits: string[], capabilities: string[],
   marketAdvantage: string
 }
-
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -632,7 +465,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['10x faster content creationImproved SEO rankingsHigher engagement ratesCost reduction'], capabilities: ['Multi-format content generationReal-time optimizationAdvanced analyticsTeam collaboration'],
     marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
   };
-
   // Healthcare AI Services
   {
     id: 'ai-healthcare-diagnostics-platform', name: 'AI Healthcare Diagnostics Platform',
@@ -662,7 +494,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Improved diagnostic accuracyReduced misdiagnosisFaster diagnosisCost savings'], capabilities: ['Multi-modality imagingReal-time analysisClinical decision supportRegulatory compliance'],
     marketAdvantage: 'Highest accuracy rate in the market with comprehensive multi-specialty coverage'
   };
-
   // Fintech AI Services
   {
     id: 'ai-fintech-intelligence-platform', name: 'AI Fintech Intelligence Platform',
@@ -692,7 +523,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Improved trading performanceRisk reductionAutomated operationsReal-time insights'], capabilities: ['Multi-asset tradingAdvanced analyticsRisk managementRegulatory compliance'],
     marketAdvantage: 'First platform to combine AI-powered trading, risk management, and compliance in one solution'
   };
-
   // Cybersecurity AI Services
   {
     id: 'ai-cybersecurity-threat-hunting', name: 'AI Cybersecurity Threat Hunting',
@@ -721,7 +551,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Zero false positivesAutomated response24/7 monitoringCost reduction'], capabilities: ['Advanced threat huntingReal-time detectionAutomated responseCompliance reporting'],
     marketAdvantage: 'Only platform with zero false positive guarantee and automated incident response'
   };
-
   // IoT & Smart City Services
   {
     id: 'iot-smart-city-platform', name: 'IoT Smart City Platform',
@@ -750,7 +579,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Operational efficiencyCost reductionImproved citizen servicesEnvironmental sustainability'], capabilities: ['Comprehensive monitoringReal-time optimizationData analyticsCitizen engagement'],
     marketAdvantage: 'Most comprehensive smart city platform with integrated citizen engagement features'
   };
-
   // Blockchain & DeFi Services
   {
     id: 'blockchain-defi-intelligence', name: 'Blockchain & DeFi Intelligence Platform',
@@ -780,7 +608,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Improved DeFi strategiesRisk reductionReal-time insightsCost savings'], capabilities: ['Multi-chain analysisAI-powered insightsDeFi optimizationRisk management'],
     marketAdvantage: 'First platform to combine AI-powered blockchain analysis with DeFi optimization'
   };
-
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service',
@@ -809,7 +636,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Quantum computing accessAI optimizationReal-time simulationExpert support'], capabilities: ['Multi-processor supportAI-powered algorithmsReal-time monitoringCustom solutions'],
     marketAdvantage: 'First platform to combine quantum computing access with AI-powered optimization'
   };
-
   // Space Technology Services
   {
     id: 'space-resource-intelligence', name: 'Space Resource Intelligence Platform',
@@ -838,7 +664,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Resource discoveryMission optimizationCost reductionRisk mitigation'], capabilities: ['AI-powered analysisReal-time monitoringMission planningData analytics'],
     marketAdvantage: 'First platform to combine AI-powered resource discovery with mission optimization'
   };
-
   // Autonomous Systems Services
   {
     id: 'autonomous-systems-orchestration', name: 'Autonomous Systems Orchestration',
@@ -868,12 +693,17 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
 capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 }];
+<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

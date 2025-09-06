@@ -4,45 +4,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function LinkedInRedirect() {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace(
-        'https://www.linkedin.com/company/zion-tech-group'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 export default function LinkedInRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace(;
         'https://www && www.linkedin.com/company/zion-tech-group';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     }
   }, []);
@@ -69,8 +52,12 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-<<<<<<< HEAD
+
 =======
+
+
+}
+
 
 =======
 export default function LinkedInRedirect() {
@@ -78,7 +65,7 @@ export default function LinkedInRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group')
 		}
-	}, []);
+}, []);
 
 	return (
 		<>
@@ -90,14 +77,13 @@ export default function LinkedInRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //www.linkedin.com/company/zion-tech-group" className="text-cyan-400 underline">
-					Continue to LinkedIn
+Continue to LinkedIn
 				</a>
 			</div>
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import Head from 'next / head';
 ;
 export default /**
@@ -138,5 +124,10 @@ if ( {) {
       </div>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

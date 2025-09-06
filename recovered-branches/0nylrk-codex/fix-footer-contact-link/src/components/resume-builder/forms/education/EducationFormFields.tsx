@@ -1,25 +1,22 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { format  } from 'date-fns';
-import { Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { useState  } from 'react';
-import { EducationFormFieldsProps  } from './types';
-import { Education } from '@/types/resume';
+
+
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {format} from 'date-fns';
+import {Loader2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {useState} from 'react';
+import {EducationFormFieldsProps} from './types';
+import {Education} from '@/types/resume';
+
+
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -32,11 +29,16 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
-export function EducationFormFields({
-  isEditing
-  onSubmit
-  onCancel
-}: EducationFormFieldsProps) {
+
+
+
+export function EducationFormFields({ 
+  isEditing, 
+  onSubmit, 
+  onCancel 
+}: EducationFormFieldsProps) {;
+
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -58,13 +60,13 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
-=======
+
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 =======
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import {z} from 'zod';
 import {format} from 'date - fns';
 import {Loader2} from 'lucide-react';
@@ -76,8 +78,33 @@ import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
-<<<<<<< HEAD
-import {Education} from '@/types/resume';
+
+    }
+
+  };
+
+=======
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+
 // Define schema for form validation;
 const educationSchema = z && z.object({;
   institution: z && z.string().min(1, 'Institution is required');
@@ -121,7 +148,12 @@ export function EducationFormFields(): any ({ ;
       setIsLoading(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Form {...form}>;
@@ -191,15 +223,10 @@ function EducationFormFields() {
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-=======
+
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <FormField
             control={form && form.control}
             name="degree"
@@ -212,14 +239,11 @@ function EducationFormFields() {
                 <FormMessage />;
               </FormItem>;
             )}
-<<<<<<< HEAD
-          />
-        </div>
-=======
+
           />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <FormField
           control={form && form.control}
           name="field_of_study"
@@ -253,27 +277,20 @@ function EducationFormFields() {
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
+
         />;
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <FormField
             control={form && form.control}
             name="start_date"
-<<<<<<< HEAD
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Start Date</FormLabel>
-                <FormControl>
-                  <Input
-                    type="date"
+
+
+                  <Input 
+                    type="date" 
+
+
                     {...field}
                     value={field.value |''}
                   />
@@ -317,31 +334,15 @@ function EducationFormFields() {
                   </div>;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-            {!form.watch('is_current') && (
-=======
+
             />;
 
             {!form && form.watch('is_current') && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <FormField
                 control={form && form.control}
                 name="end_date"
-<<<<<<< HEAD
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>End Date</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="date"
-                        {...field}
-                        value={field.value |''}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-=======
+
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -354,18 +355,15 @@ function EducationFormFields() {
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 )}
               />;
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
+
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <FormField
           control={form && form.control}
           name="location"
@@ -439,15 +437,10 @@ function EducationFormFields() {
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
-=======
+
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <FormField
           control={form && form.control}
           name="description"
@@ -476,37 +469,19 @@ function EducationFormFields() {
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-        <div className="flex justify-between pt-2">
-=======
+
         />;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
         <div className="flex justify-between pt-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <Button
             type="button"
             variant="outline"
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-          </Button>
-          <Button type="submit" disabled={isLoading}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-            {isEditing ? 'Update' : 'Add'} Education
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
-}
-=======
+
           </Button>;
 
           <Button type="submit" disabled={isLoading}>;
@@ -518,7 +493,7 @@ function EducationFormFields() {
     </Form>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
             </FormItem>)}
         />;
@@ -540,3 +515,9 @@ function EducationFormFields() {
     </Form>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

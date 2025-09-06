@@ -1,39 +1,18 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
 			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
-			pricePerMonthUSD={1499}
-			implementationWeeks="Implementation: 1–3 weeks"
-			roiNote="Average ROI 3–8x within 60 days"
-			features={[
-				"AI lead scoring using firmographics, intent, and engagement"
-				"One-click hyper-personalized emails and sequences"
-				"Meeting prep briefs and objection handling"
-				"Forecasting with scenario simulations"
-				"CRM automations for notes, tasks, and next steps"
 
-				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
-			]}
-			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
-			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
-		/>
-	)
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
@@ -61,6 +40,59 @@ return (
     industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
     canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
   />);
+
+export default function AISalesIntelligencePlatform() {_return (
+		<ServiceLanding
+			title=&quot;AI Sales Intelligence Platform&quot;
+			slug=&quot;ai-sales-intelligence-platform&quot;
+			description=&quot;Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.&quot;
+			subtitle=&quot;Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows.&quot;
+			pricePerMonthUSD={1499}
+			implementationWeeks=&quot;Implementation: 1–3 weeks&quot;
+			roiNote=&quot;Average ROI 3–8x within 60 days&quot;
+			features={[
+				&quot;AI lead scoring using firmographics, intent, and engagement&quot;,
+				&quot;One-click hyper-personalized emails and sequences&quot;,
+				&quot;Meeting prep briefs and objection handling&quot;,
+				&quot;Forecasting with scenario simulations&quot;,
+				&quot;CRM automations for notes, tasks, and next steps&quot;,
+				&quot;Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom&quot;
+			]}
+		/>
+	)
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+			pricePerMonthUSD={1499  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+			implementationWeeks="Implementation: 1–3 weeks"
+			roiNote="Average ROI 3–8x within 60 days"
+			features={[
+				"AI lead scoring using firmographics, intent, and engagement",
+				"One-click hyper-personalized emails and sequences",
+				"Meeting prep briefs and objection handling",
+				"Forecasting with scenario simulations",
+				"CRM automations for notes, tasks, and next steps",
+				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-interface MobileBottomNavProps {
-  unreadCount?: number
-=======
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
@@ -16,33 +6,48 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 interface MobileBottomNavProps {;
   unreadCount?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-<<<<<<< HEAD
+
+
+
+
+interface MobileBottomNavProps {
+  unreadCount?: number
+}
+
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-    }
+
+
+    },
     {
-      name: "Browse"
-      href: "/talent"
-      icon: Search
-      matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
-    }
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
+    },
     {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
+    },
+
+
     {
       name: "Messages"
       href: "/messages"
@@ -50,7 +55,11 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
-    }
+
+
+    },
+
+
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -58,11 +67,52 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-  ];
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
+
+
 =======
+
+  ],
+
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(item => 
+    !item.authRequired || (item.authRequired && isAuthenticated)
+  ),
+
+
+  return (
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
+      <div className="flex justify-around items-center h-16">
+        {visibleItems.map(item => (
+          <Link
+            key={item.name}
+            to={item.href}
+            className={cn(
+
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1",
+
+              item.matches(location.pathname)
+                ? "text-zion-cyan"
+                : "text-white/70 hover:text-white"
+            )}
+          >
+            <div className="relative">
+              <item.icon className="h-5 w-5 mb-1" />
+              {item.badge && item.badge > 0 && (
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+
+import React from "react",;
+import { Link, useLocation } from "react-router-dom",;
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+}
+;
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation(),;
+  const { user } = useAuth(),;
+  const isAuthenticated = !!user,;
 
   const navItems = [;
     {;
@@ -108,19 +158,10 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
-        {visibleItems && visibleItems.map(item => (;
-          <Link
-            key={item && item.name}
-            to={item && item.href}
-            className={cn(
-<<<<<<< HEAD
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
 
-              item.matches(location.pathname)
-=======
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
             )}>;
@@ -130,22 +171,38 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+=======
+        {visibleItems.map(item => (;
+          <Link;
+            key={item.name}
+            to={item.href}
+            className={cn(;
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
+              item.matches(location.pathname);
+                ? "text-zion-cyan";
+                : "text-white/70 hover:text-white";
+            )}
+          >;
+            <div className="relative">;
+              <item.icon className="h-5 w-5 mb-1" />;
+              {item.badge && item.badge > 0 && (;
+                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
             <span className="text-xs font-medium">{item && item.name}</span>;
           </Link>;
         ))}
-<<<<<<< HEAD
-      </div>
-    </nav>
-  )
-}
-=======
+
       </div>;
     </nav>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Link, use_location } from './react-router-dom';

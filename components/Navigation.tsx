@@ -1,62 +1,16 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-<<<<<<< HEAD
-=======
+
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion, AnimatePresence  } from './framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import {
-<<<<<<< HEAD
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github,
-  ArrowRight,
-  Building,
-  Users,
-  ShoppingCart,
-  Shield,
-  Zap,
-  Globe,
-<<<<<<< HEAD
-  BarChart3,
-  Search,
-<<<<<<< HEAD
-=======
+
 import {;
   Menu,;
   X,;
@@ -79,23 +33,20 @@ import {;
   Globe,;
   BarChart3,;
   Search,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 =======
-<<<<<<< HEAD
-  BarChart3,
-  Search
-} from 'lucide-react';
-import SearchModal from './SearchModal';
-=======
+
   BarChart3
 } from 'lucide-react;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
+
 =======
+
+
   Menu
   X
   ChevronDown
@@ -119,38 +70,23 @@ import SearchModal from './SearchModal';
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Navigation() {
 =======
 export default function Navigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-<<<<<<< HEAD
-  const services = [
-    {
-      name: "AI Services"
-      href: "/ai-services"
-      description: "Machine Learning, NLP, Computer Vision"
-      icon: BarChart3
-    }
-    {
-      name: "IT Services"
-      href: "/it-services"
-      description: "Cloud, DevOps, Cybersecurity"
-      icon: Shield
-    }
-    {
-      name: "Micro SaaS"
-      href: "/micro-saas"
-      description: "Custom SaaS Solutions"
-      icon: Zap
-    }
-=======
+
 } from './lucide-react';
 import SearchModal from "./SearchModal";
 ;
@@ -184,7 +120,7 @@ function Navigation() {
       description: "Custom SaaS Solutions",
       icon: Zap,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     {
       name: "Blockchain"
       href: "/blockchain"
@@ -204,15 +140,7 @@ function Navigation() {
       icon: Shield
     }
   ];
-<<<<<<< HEAD
-  const solutions = [
-    {
-      name: "Enterprise Solutions"
-      href: "/enterprise"
-      description: "Large-scale business solutions"
-      icon: Building
-    }
-=======
+
 ;
   const solutions = [;
     {
@@ -221,7 +149,7 @@ function Navigation() {
       description: "Large - scale business solutions",
       icon: Building,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     {
       name: "Startup Solutions"
       href: "/startup"
@@ -229,86 +157,7 @@ function Navigation() {
       icon: Zap
     }
     {
-<<<<<<< HEAD
-      name: "E-commerce"
-      href: "/ecommerce"
-      description: "Online store solutions"
-      icon: ShoppingCart
-    }
-    {
-      name: "Healthcare"
-      href: "/industries/healthcare"
-      description: "Medical technology solutions"
-      icon: Users
-    }
-    {
-      name: "Finance"
-      href: "/industries/finance"
-      description: "Fintech and banking solutions"
-      icon: BarChart3
-    }
-    {
-      name: "Education"
-      href: "/industries/education"
-      description: "EdTech platforms"
-      icon: Users
-    }
-  ];
-  const industries = [
-    {
-      name: "Healthcare"
-      href: "/industries/healthcare"
-      description: "Medical technology solutions"
-    }
-    {
-      name: "Finance"
-      href: "/industries/finance"
-      description: "Fintech and banking solutions"
-    }
-    {
-      name: "Education"
-      href: "/industries/education"
-      description: "EdTech platforms"
-    }
-    {
-      name: "Government"
-      href: "/industries/government"
-      description: "Public sector solutions"
-    }
-    {
-      name: "Manufacturing"
-      href: "/industries/manufacturing"
-      description: "Industrial automation"
-    }
-    {
-      name: "Retail"
-      href: "/industries/retail"
-      description: "E-commerce and retail tech"
-    }
-    {
-      name: "Real Estate"
-      href: "/industries/real-estate"
-      description: "Property technology"
-    }
-  ];
-  const resources = [
-    { name: "Blog", href: "/blog", description: "Latest insights and updates" }
-    {
-      name: "Case Studies"
-      href: "/case-studies"
-      description: "Success stories and projects"
-    }
-    {
-      name: "White Papers"
-      href: "/white-papers"
-      description: "In-depth research and analysis"
-    }
-    {
-      name: "Tutorials"
-      href: "/tutorials"
-      description: "Step-by-step guides"
-    }
-=======
+
       name: "E - commerce",
       href: "/ecommerce",
       description: "Online store solutions",
@@ -389,7 +238,7 @@ function Navigation() {
       href: "/tutorials",
       description: "Step - by - step guides",
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     {
       name: "Training"
       href: "/training"
@@ -402,15 +251,7 @@ function Navigation() {
     }
     { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-<<<<<<< HEAD
-  const quickLinks = [
-    { name: "About Us", href: "/about" }
-    { name: "Our Team", href: "/team" }
-    { name: "Careers", href: "/careers" }
-    { name: "Contact", href: "/contact" }
-    { name: "Support", href: "/support" }
-    { name: "Status", href: "/status" }
-=======
+
 
   const services = [;
     {;
@@ -450,7 +291,6 @@ function Navigation() {
       icon: Shield,;
     },;
   ];
-
   const solutions = [;
     {;
       name: "Enterprise Solutions",;
@@ -489,7 +329,6 @@ function Navigation() {
       icon: Users,;
     },;
   ];
-
   const industries = [;
     {;
       name: "Healthcare",;
@@ -527,7 +366,6 @@ function Navigation() {
       description: "Property technology",;
     },;
   ];
-
   const resources = [;
     { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
     {;
@@ -557,7 +395,6 @@ function Navigation() {
     },;
     { name: "News", href: "/news", description: "Industry news and updates" },;
   ];
-
   const quickLinks = [;
     { name: "About Us", href: "/about" },;
     { name: "Our Team", href: "/team" },;
@@ -565,8 +402,15 @@ function Navigation() {
     { name: "Contact", href: "/contact" },;
     { name: "Support", href: "/support" },;
     { name: "Status", href: "/status" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   ];
+=======
+  ];
+
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Top Bar */}
@@ -583,35 +427,7 @@ function Navigation() {
               <div className="flex items-center">;
                 <Mail className="w-4 h-4 mr-2" />;
                 <a
-<<<<<<< HEAD
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="hover:text-blue-300"
-                >
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-blue-200">24/7 Support Available</span>
-              <div className="flex space-x-2">
-                <a href="#" className="hover:text-blue-300">
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a href="#" className="hover:text-blue-300">
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a href="#" className="hover:text-blue-300">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a href="#" className="hover:text-blue-300">
-                  <Instagram className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
+
                   href="mailto:kleber@ziontechgroup && ziontechgroup.com"
                   className="hover:text-blue-300">;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -632,7 +448,6 @@ function Navigation() {
                 </a>;
                 <a href="#" className="hover:text-blue-300">;
                   <Instagram className="w-4 h-4" />;
-=======
 ;
   const quick_links = [;
     { name: "About Us", href: "/about" },
@@ -680,36 +495,14 @@ function Navigation() {
                 </a>;
                 <a href="#" className="hover:text - blue - 300">;
                   <Instagram className="w - 4 h - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 </a>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* Main Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">;
-        <div className="container mx-auto px-4">;
-          <div className="flex justify-between items-center py-4">;
-            {/* Logo */}
-<<<<<<< HEAD
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div>
-                <div className="text-xl font-bold text-gray-900">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-gray-500">
-                  Technology Solutions
-                </div>
-              </div>
-            </Link>
-=======
             <Link href="/" className="flex items-center space-x-2">;
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
                 <span className="text-white font-bold text-xl">Z</span>;
@@ -719,7 +512,6 @@ function Navigation() {
                   Zion Tech Group;
                 </div>;
                 <div className="text-xs text-gray-500">;
-=======
       {/* Main Navigation */}
       <nav className="bg - white shadow - lg sticky top - 0 z - 50">;
         <div className="container mx - auto px - 4">;
@@ -734,29 +526,17 @@ function Navigation() {
                   Zion Tech Group;
                 </div>;
                 <div className="text - xs text - gray - 500">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   Technology Solutions;
                 </div>;
               </div>;
             </Link>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">;
-              <Link
-                href="/"
-<<<<<<< HEAD
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Home
-              </Link>
-=======
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
                 Home;
               </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Services Dropdown */}
               <div className="relative group">;
                 <button
@@ -780,7 +560,6 @@ function Navigation() {
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {services && services.map((service, index) => {;
                           const IconComponent = service && service.icon;
-=======
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items - center space - x-8">;
               <Link;
@@ -812,44 +591,14 @@ function Navigation() {
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {services.map ((service, index) => {
                           const IconComponent = service.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
-<<<<<<< HEAD
-                              href={service && service.href}
-                              className="p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
-                              <div className="flex items-center mb-2">;
-                                <IconComponent className="w-5 h-5 text-blue-600 mr-2" />;
-                                <div className="font-medium text-gray-900 group-hover:text-blue-600">;
-                                  {service && service.name}
-                                </div>;
-                              </div>;
-                              <div className="text-sm text-gray-500">;
-                                {service && service.description}
-                              </div>;
-                            </Link>;
-                          );
-                        })}
-                      </div>;
-                      <div className="border-t border-gray-200 mt-4 pt-4 px-6">;
-                        <Link
-                          href="/services"
-                          className="flex items-center text-blue-600 hover:text-blue-700 font-medium">;
-                          View All Services;
-                          <ArrowRight className="w-4 h-4 ml-2" />;
-                        </Link>;
-                      </div>;
-                    </motion && motion.div>;
-                  )}
-<<<<<<< HEAD
-                </AnimatePresence>
-              </div>
-=======
+
                 </AnimatePresence>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Solutions Dropdown */}
               <div className="relative group">;
                 <button
@@ -873,7 +622,6 @@ function Navigation() {
                       <div className="grid grid-cols-2 gap-4 px-6">;
                         {solutions && solutions.map((solution, index) => {;
                           const IconComponent = solution && solution.icon;
-=======
                               href={service.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -924,44 +672,14 @@ function Navigation() {
                       <div className="grid grid - cols - 2 gap - 4 px - 6">;
                         {solutions.map ((solution, index) => {
                           const IconComponent = solution.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           return (
                             <Link;
                               key={index}
-<<<<<<< HEAD
-                              href={solution && solution.href}
-                              className="p-3 rounded-lg hover:bg-blue-50 transition-colors group">;
-                              <div className="flex items-center mb-2">;
-                                <IconComponent className="w-5 h-5 text-blue-600 mr-2" />;
-                                <div className="font-medium text-gray-900 group-hover:text-blue-600">;
-                                  {solution && solution.name}
-                                </div>;
-                              </div>;
-                              <div className="text-sm text-gray-500">;
-                                {solution && solution.description}
-                              </div>;
-                            </Link>;
-                          );
-                        })}
-                      </div>;
-                      <div className="border-t border-gray-200 mt-4 pt-4 px-6">;
-                        <Link
-                          href="/solutions"
-                          className="flex items-center text-blue-600 hover:text-blue-700 font-medium">;
-                          View All Solutions;
-                          <ArrowRight className="w-4 h-4 ml-2" />;
-                        </Link>;
-                      </div>;
-                    </motion && motion.div>;
-                  )}
-<<<<<<< HEAD
-                </AnimatePresence>
-              </div>
-=======
+
                 </AnimatePresence>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Industries Dropdown */}
               <div className="relative group">;
                 <button
@@ -999,14 +717,11 @@ function Navigation() {
                       </div>;
                     </motion && motion.div>;
                   )}
-<<<<<<< HEAD
-                </AnimatePresence>
-              </div>
-=======
+
                 </AnimatePresence>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Resources Dropdown */}
               <div className="relative group">;
                 <button
@@ -1044,35 +759,23 @@ function Navigation() {
                       </div>;
                     </motion && motion.div>;
                   )}
-<<<<<<< HEAD
-                </AnimatePresence>
-              </div>
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Pricing
-              </Link>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+
+
 =======
                 </AnimatePresence>;
               </div>;
 
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -1084,18 +787,19 @@ function Navigation() {
               </button>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-<<<<<<< HEAD
-=======
-=======
+
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 Get Started
               </Link>
@@ -1106,7 +810,6 @@ function Navigation() {
                 Call Now
               </a>
             </div>
-=======
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">;
                 Get Started;
               </Link>;
@@ -1116,8 +819,6 @@ function Navigation() {
                 Call Now;
               </a>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -1128,14 +829,11 @@ function Navigation() {
               ) : (;
                 <Menu className="w-6 h-6" />;
               )}
-<<<<<<< HEAD
-            </button>
-          </div>
-=======
+
             </button>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Mobile Menu */}
           <AnimatePresence>;
             {isMenuOpen && (;
@@ -1149,16 +847,12 @@ function Navigation() {
                     href="/"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
-                  >
-                    Home
-                  </Link>
-=======
+
                   >;
                     Home;
                   </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   {/* Mobile Services */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1175,14 +869,11 @@ function Navigation() {
                           {service && service.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
+
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   {/* Mobile Solutions */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1199,14 +890,11 @@ function Navigation() {
                           {solution && solution.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
+
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   {/* Mobile Industries */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1223,14 +911,11 @@ function Navigation() {
                           {industry && industry.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
+
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   {/* Mobile Resources */}
                   <div className="px-4 py-2">;
                     <div className="font-medium text-gray-900 mb-2">;
@@ -1247,30 +932,21 @@ function Navigation() {
                           {resource && resource.name}
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
+
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg"
                     onClick={() => setIsMenuOpen(false)}
-<<<<<<< HEAD
-                  >
-                    Pricing
-                  </Link>
-                  <div className="px-4 py-2 space-y-2">
-=======
+
                   >;
                     Pricing;
                   </Link>;
-
                   <div className="px-4 py-2 space-y-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     <Link
                       href="/contact"
                       className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center"
@@ -1282,7 +958,6 @@ function Navigation() {
                       href="tel:+13024640950"
                       className="block bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-medium text-center"
                       onClick={() => setIsMenuOpen(false)}
-=======
                               href={solution.href}
                               className="p - 3 rounded - lg hover:bg - blue - 50 transition - colors group";
                             >;
@@ -1529,25 +1204,17 @@ function Navigation() {
                       href="tel:+13024640950";
                       className="block bg - transparent border - 2 border - blue - 600 text - blue - 600 hover:bg - blue - 600 hover:text - white px - 4 py - 2 rounded - lg font - medium text - center";
                       on_click={() => setIsMenuOpen (false)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Call Now;
                     </a>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              </motion && motion.div>;
-            )}
-<<<<<<< HEAD
-          </AnimatePresence>
-        </div>
-      </nav>
-=======
+
           </AnimatePresence>;
         </div>;
       </nav>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
@@ -1555,7 +1222,6 @@ function Navigation() {
       />;
     </>;
   );
-=======
               </motion.div>)}
           </AnimatePresence>;
         </div>;
@@ -1566,5 +1232,4 @@ function Navigation() {
         on_close={() => setIsSearchOpen (false)}
       />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

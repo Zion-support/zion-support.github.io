@@ -1,20 +1,7 @@
-export interface UserDetails {
-  id?: string;
-  name?: string;
-  email?: string;
-  user_type?: string;
-  display_name?: string;
-  avatar_url?: string;
-  headline?: string;
-  profile_complete?: boolean;
-  role?: string;
-<<<<<<< HEAD
-  permissions?: string[],
-  companyId?: string;
-=======
+
   permissions?: string[];
   company_id?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   bio?: string;
   created_at?: string;
   updated_at?: string;
@@ -32,32 +19,7 @@ export interface UserProfile {
   avatar_url?: string;
   headline?: string;
   role?: string;
-<<<<<<< HEAD
 
-  permissions?: string[]
-
-  companyId?: string
-}
-// Update AuthContextType definition to match implementation
-export interface AuthContextType {
-  user: UserDetails | null;
-  isLoading: boolean;
-
-  isAuthenticated: boolean
-  login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
-  signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
-  logout: () => Promise<void>
-  resetPassword: (email: string) => Promise<{ error?: any }>;
-  updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>
-  signIn?: (email: string, password: string) => Promise<{ error: any }>;
-  signOut?: () => Promise<void>;
-
-  signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-=======
   permissions?: string[],
   company_id?: string;
 }
@@ -78,5 +40,13 @@ export interface AuthContextType {
   sign_in?: (email: string, password: string) => Promise<{ error: any }>;
   sign_out?: () => Promise < void>;
   sign_up?: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
+=======
+
+export interface UserDetails {;
+
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

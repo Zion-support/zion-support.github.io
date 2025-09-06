@@ -1,41 +1,36 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { render, screen, fire_event } from '@testing - library / react';
-import '@testing - library / jest - dom';
-import OptimizedImagedynamic from '../components / OptimizedImage.dynamic';
-describe ('OptimizedImagedynamic', () => {
-  test ('renders without crashing', () => {
-    render (<OptimizedImagedynamic />);
-    expect (screen.getByTestId ('optimizedimage.dynamic')).toBeInTheDocument ();
-  });
-<<<<<<< HEAD
-  test('displays correct content', () => {
+
+
+
+=======
+
+import _React from 'react';  import '@testing-library/jest-dom'; import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'; describe('OptimizedImagedynamic',() => { test('renders without crashing',() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<OptimizedImagedynamic />)}); test('handles user interactions',() => { render(<OptimizedImagedynamic />)}); test('applies correct styling',() => { render(<OptimizedImagedynamic />)})});
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
   test('applies correct styling', () => {
     // Test styling
-<<<<<<< HEAD
-  });
-});
+
+
+
 =======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import OptimizedImagedynamic from '../components/OptimizedImage && OptimizedImage.dynamic'
 describe('OptimizedImagedynamic'
   test('renders without crashing'
-<<<<<<< HEAD
-    expect(screen.getByTestId('optimizedimage.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage.dynamic"; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen.getByTestId("optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
->>>>>>> origin/automation-improvements-final
-=======
+
 });
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 =======
     expect(screen && screen.getByTestId('optimizedimage ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import OptimizedImagedynamic from "./components/OptimizedImage ; describe('OptimizedImagedynamic', () => { test("renders without crashing",() => { render(<OptimizedImagedynamic />); expect(screen && screen.getByTestId("optimizedimage && optimizedimage.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<OptimizedImagedynamic />)}); test("handles user interactions",() => { render(<OptimizedImagedynamic />)}); test("applies correct styling"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

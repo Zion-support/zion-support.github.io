@@ -1,14 +1,18 @@
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-export function HeroSection() {;
+
+
+
+export function HeroSection() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -16,6 +20,12 @@ export function HeroSection() {;
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
       </div>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="container relative z-10 px-4 mx-auto text-center">
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
@@ -26,7 +36,7 @@ export function HeroSection() {;
           place.
         </p>
         <div className="flex flex-col sm: flex-row justify-center gap-4">
-=======
+
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
 
       {/* Animated floating particles */}
@@ -49,19 +59,27 @@ export function HeroSection() {;
         </p>;
 
         <div className="flex flex-col sm: flex-row justify-center gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
             asChild>;
             <Link to="/signup">Join Zion Now</Link>;
           </Button>;
+=======
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
+            size="lg"
+            asChild
+          >
+            <Link to="/signup">Join Zion Now</Link>
+          </Button>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
             size="lg"
-            asChild>;
-=======
+
 import { Button  } from '@/components / ui / button';
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Link  } from './react-router-dom';
@@ -103,12 +121,22 @@ function HeroSection() {
             size="lg";
             as_child;
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             <Link to="/marketplace">Explore Marketplace</Link>;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
+
+            asChild
+          >
+            <Link to="/marketplace">Explore Marketplace</Link>
+          </Button>
+        </div>
+      </div>
+
+    </section>
+
+
     </section>;
   );
 =======

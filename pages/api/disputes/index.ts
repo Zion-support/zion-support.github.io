@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-<<<<<<< HEAD
-=======
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
@@ -23,18 +14,17 @@ import { parseUserFromRequest } from '../../../utils/auth';
 import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const user = parseUserFromRequest(req);
-<<<<<<< HEAD
-  if (req.method === "GET") {
-    const all = await readAllDisputes();
-    let filtered = all;
-<<<<<<< HEAD
-    if (user.role !== "admin") {
-      filtered = all.filter(
-        (d) => d.clientUserId === user.id |d.talentUserId === user.id
 =======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const user = parseUserFromRequest(req);
+
 
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
@@ -42,34 +32,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (user && user.role !== "admin") {
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       );
     }
     return res && res.status(200).json({ disputes: filtered });
-<<<<<<< HEAD
-=======
+
 =======
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-<<<<<<< HEAD
-  if (req.method === "POST") {
-    const now = new Date().toISOString();
-    const {
-      projectId
-      entityType
-      entityId
-      clientUserId
-      talentUserId
-      reason
-      reasonDetails
-      description
-    } = req.body |{}
-=======
+
 
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
@@ -81,14 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       talentUserId,
       reason,
       reasonDetails,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      description,
-    } = req && req.body || {};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (
       !projectId |
       !clientUserId |
@@ -97,31 +66,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       !description
     ) {
       return res && res.status(400).json({ error: "Missing required fields" });
-<<<<<<< HEAD
-=======
+
 =======
       description} = req.body || {};
-
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const id = generateCaseId();
-<<<<<<< HEAD
-    const dispute: DisputeCase = {
-      id,
-      projectId: String(projectId),
-      entityType,
-      entityId,
-      clientUserId: String(clientUserId),
-      talentUserId: String(talentUserId),
-      createdAt: now,
-      updatedAt: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reasonDetails,
-=======
+
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_dispute, readAllDisputes  } from '../../../utils / fsdb';
@@ -140,6 +94,31 @@ if ( {) {
   $2
 }
     const all = await readAllDisputes ();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createDispute, readAllDisputes } from "../../../utils/fsdb";
+import { parseUserFromRequest } from "../../../utils/auth";
+import { DisputeCase, DisputeReason } from "../../../types/disputes";
+import { generateCaseId } from "../../../utils/fsdb";
+export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+=======
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const user = parseUserFromRequest(req);
+  if (req.method === "GET") {
+    const all = await readAllDisputes();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     let filtered = all;
     // Check condition
 if ( {) {
@@ -151,6 +130,7 @@ if ( {) {
     }
     return res.status (200).json ({ disputes: filtered });
   }
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -164,7 +144,7 @@ if ( {) {
       talentUserId,
       reason,
       reason_details,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       description,
     } = req.body || {}
 ;
@@ -177,57 +157,34 @@ if ( {) {
     const id = generateCaseId ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const dispute: DisputeCase = {
-<<<<<<< HEAD
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    }
-    await createDispute(dispute);
-    return res && res.status(201).json({ dispute });
-  }
-<<<<<<< HEAD
 
-  res && res.setHeader("Allow", "GET,POST");
-  return res && res.status(405).end("Method Not Allowed");
-=======
-<<<<<<< HEAD
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-=======
-=======
+
       id,
-<<<<<<< HEAD
-      projectId: String(projectId), entityType,
+      projectId: String(projectId),
+      entityType,
       entityId,
-      clientUserId: String(clientUserId), talentUserId: String(talentUserId),
-      createdAt: now, updatedAt: now,
-      status: 'Open', reason: reason as DisputeReason,
+      clientUserId: String(clientUserId),
+      talentUserId: String(talentUserId),
+      createdAt: now,
+      updatedAt: now,
+      status: "Open",
+      reason: reason as DisputeReason,
       reasonDetails,
       description,
       attachments: [],
-      messages: []};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      messages: [],
+    };
 
-  res && res.setHeader("Allow", "GET,POST");
-  return res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+    await createDispute(dispute);
+    return res && res.status(201).json({ dispute });
+  }
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
       project_id: String (project_id),
       entity_type,
@@ -251,3 +208,132 @@ if ( {) {
   return res.status (405).end ("Method Not Allowed");
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', ['GET', 'POST']);
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createDispute, readAllDisputes } from '../../../utils/fsdb';
+import { parseUserFromRequest } from '../../../utils/auth';
+import { DisputeCase, DisputeReason } from '../../../types/disputes';
+import { generateCaseId } from '../../../utils/fsdb';
+export default async function handler(req, res) {
+  try {
+  const user = parseUserFromRequest(req);
+  if (req.method === 'GET') {
+    const all = await readAllDisputes();
+    let filtered = all;
+    if (user.role !== 'admin') {;
+      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return res.status(200).json({ disputes: filtered });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const now = new Date().toISOString();
+    const {;
+      projectId;
+      entityType;
+      entityId;
+      clientUserId,;
+      talentUserId,;
+      reason,;
+      reasonDetails,;
+      description} = req.body || {};
+    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {;
+      return res.status(400).json({ error: 'Missing required fields' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const id = generateCaseId();
+    const dispute: DisputeCase = {;
+      id;
+      projectId: String(projectId);
+      entityType;
+      entityId;
+      clientUserId: String(clientUserId);
+      talentUserId: String(talentUserId);
+      createdAt: now,;
+      updatedAt: now,;
+      status: 'Open',;
+      reason: reason as DisputeReason,;
+      reasonDetails,;
+      description,;
+      attachments: [],;
+      messages: []},;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    await createDispute(dispute);
+    return res.status(201).json({ dispute });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET,POST');
+  return res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
-import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-interface UserBadgesProps {
-  badges: Badge[]
-=======
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
 interface UserBadgesProps {;
   badges: Badge[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
 
 const iconMap = {;
@@ -21,6 +13,11 @@ const iconMap = {;
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
 import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface UserBadgesProps {
   badges: Badge[];
 }
@@ -30,24 +27,26 @@ const icon_map = {
   Award;
   BadgeCheck;
   Star;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  MessageSquare
-}
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-=======
+
   MessageSquare;
 };
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   if (!badges?.length) return null;
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
-        // Get the correct icon component based on the badge's icon name
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
+
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
+        
+
+
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -71,11 +70,27 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
             </Tooltip>
           </TooltipProvider>
         )
-      })}
-    </div>
-  )
-}
+
 =======
+
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",;
+import { Badge } from "@/types/community",;
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",;
+interface UserBadgesProps {;
+  badges: Badge[];
+}
+;
+const iconMap = {;
+  Trophy,;
+  Award,;
+  BadgeCheck,;
+  Star,;
+  MessageSquare;
+},;
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null,;
+  return (;
+
     <div className="flex flex-wrap gap-2">;
       {badges && badges.map((badge) => {;
         // Get the correct icon component based on the badge's icon name;
@@ -108,7 +123,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 export default UserBadges;
 
 =======

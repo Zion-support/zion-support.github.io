@@ -1,10 +1,12 @@
-<<<<<<< HEAD
 
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
-import { useConversationState  } from './useConversationState';
-import { useConversations  } from './useConversations';
-import { useMessages } from './useMessages';
+
+import {UserProfile, UserDetails} from '@/types/auth';
+import {Message, Conversation, ConversationContextData} from '@/types/messaging';
+import {useConversationState} from './useConversationState';
+import {useConversations} from './useConversations';
+import {useMessages} from './useMessages';
+
+
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -39,18 +41,13 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-<<<<<<< HEAD
-    isLoading
-    setIsLoading
-  } = useConversationState();
-  // Conversations management
-=======
+
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   const {
     fetch_conversations;
     create_conversation;
@@ -58,15 +55,11 @@ function useMessagingOperations() {
     user;
     set_conversations;
     setUnreadCount;
-<<<<<<< HEAD
-    setIsLoading
-  );
-  // Messages management
-=======
+
     setIsLoading);
 ;
   // Messages management;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   const {
     load_messages;
     send_message;
@@ -80,13 +73,10 @@ function useMessagingOperations() {
     set_conversations;
     setUnreadCount;
     setIsLoading;
-<<<<<<< HEAD
-    fetchConversations
-  );
-=======
+
     fetch_conversations);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return {
     // State;
     messages;
@@ -98,24 +88,14 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-<<<<<<< HEAD
-    isLoading;
-    // Operations
-    sendMessage;
-    createConversation;
-    markAsRead;
-    fetchConversations;
 
-    loadMessages
-=======
     is_loading;
 ;
     // Operations;
     send_message;
     create_conversation;
     markAsRead;
-    fetch_conversations;
-    load_messages;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

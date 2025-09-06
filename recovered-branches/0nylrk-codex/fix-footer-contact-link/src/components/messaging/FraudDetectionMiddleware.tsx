@@ -1,23 +1,43 @@
-import React, { useCallback } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { checkMessage, monitorContent  } from '@/services/fraud';
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-// Props for the middleware component
-=======
+
 import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
 // Props for the middleware component;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
 }
-<<<<<<< HEAD
-// Interface for the context
-interface FraudDetectionContextType {
-  scanMessageContent: (
+
+
+
+
+=======
+import React, { useCallback } from 'react',;
+import { checkMessage, monitorContent } from '@/services/fraud',;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+// Props for the middleware component;
+interface FraudDetectionMiddlewareProps {;
+  children: React.ReactNode;
+
+
+
+}
+;
+// Interface for the context;
+interface FraudDetectionContextType {;
+  scanMessageContent: (;
+    userId: string,;
+    messageId: string,;
+    content: string,;
+    userEmail?: string;
+  ) => Promise<{;
+    isSafe: boolean,;
+    explanation?: string;
+  }>;
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     userId: string
     messageId: string
@@ -34,8 +54,11 @@ interface FraudDetectionContextType {
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+
+
   undefined as FraudDetectionContextType | undefined
-);
+
+
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -45,13 +68,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+
+
       // First do a quick local check using the fraud detection service
-      const quickCheck = checkMessage(content);
+
+
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
         await monitorContent(
-=======
+
 import {checkMessage, monitorContent} from '@/services/fraud';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
@@ -96,14 +122,24 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       if (quickCheck && quickCheck.isSuspicious) {;
         // Flag the content for review;
         await monitorContent(;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
-<<<<<<< HEAD
+
+          userId,
+          userEmail,
+          'message',
+          messageId,
+          content
+
+        ),
+        
+
+
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -111,13 +147,23 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
-          });
-          return {
-            isSafe: false
+
+
+          }),
+          
+          return { 
+            isSafe: false,
+
+
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
         }
       }
+
+
+      
+
+
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -132,15 +178,27 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
+
+=======
+
+
+
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
-        });
-        return {
-          isSafe: false
+
+
+        }),
+        return { 
+          isSafe: false,
           explanation: data.explanation
+
+
         }
       }
       */
@@ -196,41 +254,36 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       // Message is considered safe;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return { isSafe: true }
-    } catch (error) {;
-      console && console.error('Error in fraud detection:', error);
-      // On error, let the message pass through but log the error;
-      return { isSafe: true }
-    }
-  }, []);
-<<<<<<< HEAD
-  // Create the context value
-  const contextValue: FraudDetectionContextType = {
-    scanMessageContent}
-=======
+
 
   // Create the context value;
   const contextValue: FraudDetectionContextType = {;
     scanMessageContent};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
-<<<<<<< HEAD
-    </FraudDetectionContext.Provider>
-  )
-}
-// Hook to use the fraud detection context
-export const useFraudDetection = () => {
-  const context = React.useContext(FraudDetectionContext);
-  if (context === undefined) {
-    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
-  }
-  return context
-}
+
+    </FraudDetectionContext && FraudDetectionContext.Provider>;
+=======
+
 
 =======
-    </FraudDetectionContext && FraudDetectionContext.Provider>;
+    } catch (error) {;
+      console.error('Error in fraud detection:', error),;
+      // On error, let the message pass through but log the error;
+      return { isSafe: true }
+    }
+  }, []),;
+  // Create the context value;
+  const contextValue: FraudDetectionContextType = {;
+    scanMessageContent},;
+  return (;
+    <FraudDetectionContext.Provider value={contextValue}>;
+      {children}
+    </FraudDetectionContext.Provider>;
+
   );
 };
 
@@ -241,6 +294,11 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

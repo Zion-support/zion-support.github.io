@@ -1,9 +1,18 @@
-<<<<<<< HEAD
 
-import {Badge} from "@/components/ui/badge";
-import {QuoteStatus} from "@/types/quotes";
-<<<<<<< HEAD
-const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
+
+
+import { Badge } from "@/components/ui/badge",
+import { QuoteStatus } from "@/types/quotes",
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },
+  archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" }
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" }
@@ -23,10 +32,13 @@ const status_config: Record < QuoteStatus, { label: string, class_name: string }
   archived: { label: "Archived", class_name: "bg - gray - 400 hover:bg - gray - 500" }},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface QuoteStatusBadgeProps {
-  status: QuoteStatus;
-}
-<<<<<<< HEAD
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+
+  status: QuoteStatus
+
+
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+
+
   const config = statusConfig[status];
 =======
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
@@ -36,13 +48,16 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   return (
     <Badge className={config.class_name}>;
       {config.label}
-<<<<<<< HEAD
-    </Badge>
-  )
-}
+
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+=======
+
 
 =======
-const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+import { Badge } from "@/components/ui/badge",;
+import { QuoteStatus } from "@/types/quotes",;
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
+
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
@@ -62,6 +77,11 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
       {config && config.label}
     </Badge>;
   );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

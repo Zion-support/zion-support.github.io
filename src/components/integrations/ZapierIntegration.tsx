@@ -1,74 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState } from 'react'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-} from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { toast } from 'sonner'
-=======
-
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
-<<<<<<< HEAD
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Zap } from 'lucide-react'
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-    toast.success('API key copied to clipboard')
-    navigator.clipboard.writeText(apiKey)
-    setCopied(true)
-    setTimeout((,) => setCopied(false), 2000)
-    toast.success("API key copied to clipboard")
-  }
 
-  return (
-    <div className='space-y-6'>
-      <div className='grid md:grid-cols-3 gap-6'>
-        <Card className='md:col-span-2'>
-          <CardHeader>
-            <div className='flex items-center justify-between'>
-              <h3 className='text-lg font-semibold'>Zapier Connection</h3>
-              <Badge variant='outline' className='bg-blue-100 text-blue-800'>
-                Active
-              </Badge>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className='text-sm text-muted-foreground mb-4'>
-              Connect Zion with 3,000+ apps via Zapier. Use your API key below
-              to set up integrations.
-            </p>
-            <div className='space-y-4'>
-              <div className='space-y-2'>
-                <label className='text-sm font-medium'>Your Zion API Key</label>
-                <div className='flex gap-2'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -114,7 +47,6 @@ export function ZapierIntegration() {;
             <div className='flex items-center justify-between'>;
               <h3 className='text-lg font-semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
-=======
 import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -151,6 +83,7 @@ function ZapierIntegration() {
     set_copied (true),
     set_timeout ((, ) => set_copied (false), 2000),
     toast.success ("API key copied to clipboard");
+
   },
   return (
     <div className='space - y-6'>;
@@ -160,95 +93,24 @@ function ZapierIntegration() {
             <div className='flex items - center justify - between'>;
               <h3 className='text - lg font - semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg - blue - 100 text - blue - 800'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Active;
               </Badge>;
             </div>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <p className='text-sm text-muted-foreground mb-4'>;
-              Connect Zion with 3,000+ apps via Zapier. Use your API key below;
-              to set up integrations.;
-            </p>;
 
-            <div className='space-y-4'>;
-              <div className='space-y-2'>;
-                <label className='text-sm font-medium'>Your Zion API Key</label>;
-                <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  <Input
-                    value={apiKey}
-                    readOnly
-                    className='font-mono text-sm'                  />;
-                  <Button
-                    size='sm'
-                    variant='outline'
-                    onClick={handleCopyApiKey}>;
-                    {copied ? (;
-                      <Check className='h-4 w-4' />;
-                    ) : (;
-                      <Copy className='h-4 w-4' />;
-                    )}                  </Button>                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>;
+
+
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-  const [ copied, setCopied ] = useState(false),
-  const [ apiKey ] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
-
-  
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard")
-  };
-
-
-  return (
-    <div className="space-y-6">
-      <div className="grid md:grid-cols-3 gap-6">
-        <Card className="md:col-span-2">
-          <CardHeader>
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold">Zapier Connection</h3>
-              <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-4">
-              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
-            </p>
-            
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium" htmlFor="input-Your Zion API Key">Your Zion API Key</label>
-                <div className="flex gap-2">
-                  <Input 
-                    value={apiKey} 
-                    readOnly 
-                    className="font-mono text-sm" 
-                  />
-                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </Button>
                 </div>
               </div>
             </div>
           </CardContent>
-<<<<<<< HEAD
-          <CardFooter className='flex flex-col items-start'>
-            <Button variant='outline' className='gap-2'>
-              <ExternalLink className='h-4 w-4' />              Open Zapier Dashboard
-            </Button>
-          </CardFooter>
-        </Card>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -256,28 +118,9 @@ function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-        <Card>
-          <CardHeader>
-            <h3 className='text-lg font-semibold'>Popular Zaps</h3>
-          </CardHeader>
-          <CardContent>
-            <ul className='space-y-2 text-sm'>
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />                <span>Add new Zion contacts to Mailchimp</span>
-              </li>
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-                <span>Create Slack notifications for new jobs</span>
-              </li>
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-                <span>Sync completed projects to accounting</span>
-              </li>
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />                <span>Create calendar events for interviews</span>              <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500" />
-=======
+
+
+
         
         <Card>
           <CardHeader>
@@ -298,26 +141,31 @@ function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className="flex items-center gap-2">
+
+
+
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
-            <Button variant='outline' className='w-full gap-1'>
-              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
-=======
+
             <Button variant="outline" className="w-full gap-1">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
+
+
+      
+
+
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -327,33 +175,7 @@ function ZapierIntegration() {
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
           </p>
-          <div className='grid md:grid-cols-3 gap-4'>
-            <div className='border rounded-md p-4'>
-              <h4 className='font-medium mb-2'>New Job Posted</h4>
-              <p className='text-xs text-muted-foreground mb-3'>
-                Triggers when a new job is published on your account.
-              </p>
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>            </div>
-            <div className='border rounded-md p-4'>
-              <h4 className='font-medium mb-2'>New Application</h4>
-              <p className='text-xs text-muted-foreground mb-3'>
-                Triggers when a talent applies to your job.
-              </p>
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>
-            </div>
-            <div className='border rounded-md p-4'>
-              <h4 className='font-medium mb-2'>Contract Signed</h4>
-              <p className='text-xs text-muted-foreground mb-3'>
-                Triggers when a contract is signed by all parties.
-              </p>
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>
-=======
+
       
       <Card>
         <CardHeader>
@@ -363,6 +185,8 @@ function ZapierIntegration() {
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
+
+
           
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
@@ -376,10 +200,25 @@ function ZapierIntegration() {
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
+
+
+
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
+
+
+            </div>
+          </div>
+        </CardContent>
+      </Card>;
+    </div>;
+  );
+};
+}
+
+
             
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -387,20 +226,51 @@ function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
-=======
+
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
+
+
+import React, { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "sonner",;
+import { Check, Copy, ExternalLink } from 'lucide-react';
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false),;
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
+  const handleCopyApiKey = () => {;
+    navigator.clipboard.writeText(apiKey),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard");
+  };
+  return (;
+    <div className="space-y-6">;
+      <div className="grid md:grid-cols-3 gap-6">;
+        <Card className="md:col-span-2">;
+          <CardHeader>;
+            <div className="flex items-center justify-between">;
+              <h3 className="text-lg font-semibold">Zapier Connection</h3>;
+              <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-muted-foreground mb-4">;
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+
             </p>;
             <div className='space - y-4'>;
               <div className='space - y-2'>;
@@ -419,23 +289,12 @@ function ZapierIntegration() {
                       <Check className='h - 4 w - 4' />) : (
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </Button>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
-          <CardFooter className='flex flex-col items-start'>;
-            <Button variant='outline' className='gap-2'>;
-              <ExternalLink className='h-4 w-4' />              Open Zapier Dashboard;
-            </Button>;
-          </CardFooter>;
-        </Card>;
-          <CardFooter className="flex flex-col items-start">;
-            <Button variant="outline" className="gap-2">;
-              <ExternalLink className="h-4 w-4" />;
-=======
+
           <CardFooter className='flex flex - col items - start'>;
             <Button variant='outline' className='gap - 2'>;
               <ExternalLink className='h - 4 w - 4' />              Open Zapier Dashboard;
@@ -445,38 +304,12 @@ function ZapierIntegration() {
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
               <ExternalLink className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
         </Card>;
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        <Card>;
-          <CardHeader>;
-            <h3 className='text-lg font-semibold'>Popular Zaps</h3>;
-          </CardHeader>;
-          <CardContent>;
-            <ul className='space-y-2 text-sm'>;
-              <li className='flex items-center gap-2'>;
-                <Check className='h-4 w-4 text-green-500' />                <span>Add new Zion contacts to Mailchimp</span>;
-              </li>;
-              <li className='flex items-center gap-2'>;
-                <Check className='h-4 w-4 text-green-500' />;
-                <span>Create Slack notifications for new jobs</span>;
-              </li>;
-              <li className='flex items-center gap-2'>;
-                <Check className='h-4 w-4 text-green-500' />;
-                <span>Sync completed projects to accounting</span>;
-              </li>;
-              <li className='flex items-center gap-2'>;
-                <Check className='h-4 w-4 text-green-500' />                <span>Create calendar events for interviews</span>              <li className="flex items-center gap-2">;
-                <Check className="h-4 w-4 text-green-500" />;
-                <span>Create calendar events for interviews</span>;
-<<<<<<< HEAD
-=======
-=======
         <Card>;
           <CardHeader>;
             <h3 className='text - lg font - semibold'>Popular Zaps</h3>;
@@ -498,113 +331,34 @@ function ZapierIntegration() {
                 <Check className='h - 4 w - 4 text - green - 500' />                <span > Create calendar events for interviews</span>              <li className="flex items - center gap - 2">;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
               </li>;
             </ul>;
           </CardContent>;
           <CardFooter>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            <Button variant='outline' className='w-full gap-1'>;
-              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">;
-              <ExternalLink className="h-4 w-4" />;
-              <span>Explore Zion Zaps</span>;
-<<<<<<< HEAD
-=======
-=======
-            <Button variant='outline' className='w - full gap - 1'>;
-              <ExternalLink className='h - 4 w - 4' />              <span > Explore Zion Zaps</span>            <Button variant="outline" className="w - full gap - 1">;
-              <ExternalLink className="h - 4 w - 4" />;
-              <span > Explore Zion Zaps</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
             </Button>;
           </CardFooter>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-      <Card>;
-        <CardHeader>;
-          <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>;
-        </CardHeader>;
-        <CardContent>;
-          <p className='text-sm text-muted-foreground mb-4'>;
-            Use these webhook triggers to start Zaps when events happen in your;
-            Zion account.;
-          </p>;
 
-          <div className='grid md:grid-cols-3 gap-4'>;
-            <div className='border rounded-md p-4'>;
-              <h4 className='font-medium mb-2'>New Job Posted</h4>;
-              <p className='text-xs text-muted-foreground mb-3'>;
-<<<<<<< HEAD
-=======
-=======
-      <Card>;
-        <CardHeader>;
-          <h3 className='text - lg font - semibold'>Zapier Webhook Triggers</h3>;
-        </CardHeader>;
-        <CardContent>;
-          <p className='text - sm text - muted - foreground mb - 4'>;
-            Use these webhook triggers to start Zaps when events happen in your;
-            Zion account.;
-          </p>;
-          <div className='grid md:grid - cols - 3 gap - 4'>;
-            <div className='border rounded - md p - 4'>;
-              <h4 className='font - medium mb - 2'>New Job Posted</h4>;
-              <p className='text - xs text - muted - foreground mb - 3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>            </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-            <div className='border rounded-md p-4'>;
-              <h4 className='font-medium mb-2'>New Application</h4>;
-              <p className='text-xs text-muted-foreground mb-3'>;
-<<<<<<< HEAD
-=======
-=======
-            <div className='border rounded - md p - 4'>;
-              <h4 className='font - medium mb - 2'>New Application</h4>;
-              <p className='text - xs text - muted - foreground mb - 3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 Triggers when a talent applies to your job.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
               </Button>;
             </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-            <div className='border rounded-md p-4'>;
-              <h4 className='font-medium mb-2'>Contract Signed</h4>;
-              <p className='text-xs text-muted-foreground mb-3'>;
-<<<<<<< HEAD
-=======
-=======
-            <div className='border rounded - md p - 4'>;
-              <h4 className='font - medium mb - 2'>Contract Signed</h4>;
-              <p className='text - xs text - muted - foreground mb - 3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 Triggers when a contract is signed by all parties.;
               </p>;
               <Button size='sm' variant='outline'>;
@@ -614,19 +368,6 @@ function ZapierIntegration() {
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+;

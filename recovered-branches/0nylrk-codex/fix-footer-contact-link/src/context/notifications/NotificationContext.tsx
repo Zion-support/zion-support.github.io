@@ -1,35 +1,23 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-<<<<<<< HEAD
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { useNotificationOperations  } from './useNotificationOperations';
-import { NotificationContextType } from './types';
-// Default context used when React type definitions are missing. Providing a
-// fully-typed object here avoids TypeScript errors that occur when an untyped
-// `createContext` call returns `{}` instead of the expected shape.
 
-const defaultContext: NotificationContextType = {
-  notifications: []
-  filteredNotifications: []
-  unreadCount: 0
-  loading: false
-  filter: 'all'
-  markAsRead: async () => {}
-  markAllAsRead: async () => {}
-  dismissNotification: async () => {}
-  setFilter: () => {}
-  fetchNotifications: async () => {}}
-// Cast the default context value to avoid issues when React types are missing.
-const NotificationContext = createContext(
-  defaultContext as NotificationContextType
-);
-export const useNotifications = (): NotificationContextType => {
-=======
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
 import {NotificationContextType} from './types';
+=======
+
+
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useNotificationOperations } from './useNotificationOperations',;
+import { NotificationContextType } from './types',;
+
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -55,13 +43,21 @@ export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
+
+
+
+
   }
-<<<<<<< HEAD
   return context
-}
+},
+
+
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
-  const { user } = useAuth();
-  const notificationOps = useNotificationOperations(user?.id);
+  const { user } = useAuth(),
+  const notificationOps = useNotificationOperations(user?.id),
+
+  
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Load notifications when user changes
   useEffect(() => {
     notificationOps.fetchNotifications();
@@ -75,10 +71,19 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             schema: 'public'
             table: 'notifications'
             filter: `user_id=eq.${user.id}`
-          }
+
+
+          },
+
+
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
+
+
+};
+
+
 =======
   return context;
 };
@@ -109,8 +114,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           }
         );
         .subscribe();
-<<<<<<< HEAD
-=======
+
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -174,14 +178,13 @@ if ( {) {
         );
         .subscribe ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       return () => {
         supabase.remove_channel (channel);
       }
     }
   }, [user]);
-<<<<<<< HEAD
-=======
+
 
       return () => {;
         supabase && supabase.removeChannel(channel);
@@ -189,26 +192,17 @@ if ( {) {
     }
   }, [user]);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;
       {children}
-<<<<<<< HEAD
-    </NotificationContext.Provider>
-  )
-}
 
-=======
     </NotificationContext && NotificationContext.Provider>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
-;
-  return (
-    <NotificationContext.Provider value={notification_ops}>;
-      {children}
-    </NotificationContext.Provider>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

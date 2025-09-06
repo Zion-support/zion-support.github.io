@@ -1,16 +1,5 @@
-<<<<<<< HEAD
 
-import React from "react";
-import { Control } from "react-hook-form";
-<<<<<<< HEAD
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-=======
+
 import {;
   FormField,;
   FormItem,;
@@ -18,42 +7,41 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { JobSchemaType } from './validation';
-interface DescriptionFieldsProps {
-=======
+
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
-<<<<<<< HEAD
-export function DescriptionFields({
-  control
-  handleEditorChange
-  editorContent
-}: DescriptionFieldsProps) {
-=======
+
 
 export function DescriptionFields(): any ({;
   control,;
   handleEditorChange,;
   editorContent,;
 }: DescriptionFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <>;
       <FormField
-<<<<<<< HEAD
-        control;
-                  field.onChange(e.target.value)
-=======
+
         control={control}
         name="description"
         render={({ field }) => (;
@@ -61,6 +49,48 @@ export function DescriptionFields(): any ({;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
               <Textarea
+=======
+
+=======
+=======
+
+
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { JobSchemaType } from './validation',
+interface DescriptionFieldsProps {
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+
+
+
+        control={control}
+        name="description"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Job Description</FormLabel>
+            <FormControl>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e && e.target.value);
@@ -114,15 +144,10 @@ function DescriptionFields() {
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <FormField
         control={control}
         name="responsibilities"
@@ -154,15 +179,10 @@ function DescriptionFields() {
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <FormField
         control={control}
         name="qualifications"
@@ -194,15 +214,10 @@ function DescriptionFields() {
               List the required qualifications for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <FormField
         control={control}
         name="benefits"
@@ -234,15 +249,10 @@ function DescriptionFields() {
               List the benefits offered for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-        )}
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <FormField
         control={control}
         name="application_instructions"
@@ -253,7 +263,7 @@ function DescriptionFields() {
               <Textarea
                 placeholder="Provide instructions on how to apply for this job"
                 className="resize-none min-h-[100px]"
-=======
+
           </FormItem>)}
       />;
       <FormField;
@@ -266,7 +276,7 @@ function DescriptionFields() {
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 {...field}
               />;
             </FormControl>;
@@ -274,11 +284,22 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
+
+                {...field}
+              />
+            </FormControl>
+            <FormDescription>
+              Provide instructions on how to apply for this job.
+            </FormDescription>
+            <FormMessage />
+          </FormItem>
         )}
+
       />;
     </>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 =======
           </FormItem>)}

@@ -1,15 +1,8 @@
-import {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
 
-import { SortFilterProps } from "@/types/filters";
+
+
+
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -29,9 +22,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-  );
-}
-=======
+
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {SortFilterProps} from "@/types/filters";
 export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
@@ -55,7 +46,7 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   Select,
   SelectContent,
@@ -88,3 +79,8 @@ function SortFilter() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Search, Sliders } from "lucide-react";
-import { Input } from "@/components/ui/input";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -12,11 +10,12 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
-export function MobileFilterBar({
-  searchTerm;
 
-  setSearchTerm
-  setIsMobileFilterOpen
+
+
+
+
+
 
 }: MobileFilterBarProps) {
   return (
@@ -40,12 +39,18 @@ export function MobileFilterBar({
       </div>
     </div>
   )
-}
-=======
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
+=======
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Search, Sliders } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
@@ -80,8 +85,7 @@ export function MobileFilterBar(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -116,4 +120,9 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

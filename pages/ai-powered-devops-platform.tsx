@@ -1,44 +1,25 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import Layout from '../components/layout/Layout';
 
-export default function AIPoweredDevOpsPlatformPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -72,8 +53,7 @@ export default function AIPoweredDevOpsPlatformPage() {;
       />;
     </>;
   );
-<<<<<<< HEAD
-=======
+
 
 =======
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -82,17 +62,17 @@ export default function AIPoweredDevOpsPlatformPage() {
 		<>
 			<Head>
 				<title>AI-Powered DevOps Platform | Zion Tech Group</title>
-				<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
+<meta name="description" content="Intelligent CI/CD, test acceleration, incident prevention, and release automation powered by AI." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-platform" />
 			</Head>
 			<ServiceLanding
 				title="AI-Powered DevOps Platform"
-				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
+description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
 				subtitle="Ship faster with higher reliability"
 				pricePerMonthUSD={2499}
 				implementationWeeks="2-4 weeks"
 				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
-				features={[
+features={[
 					"Autonomous CI/CD optimization and caching";
 					"Flaky test detection and auto quarantine";
 					"Change-risk scoring before deploy";
@@ -106,7 +86,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
@@ -114,6 +94,19 @@ export default /**
  * AIPoweredDevOpsPlatformPage - Function description
  */
 function AIPoweredDevOpsPlatformPage() {
+=======
+<<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       <Head>;
@@ -149,3 +142,7 @@ function AIPoweredDevOpsPlatformPage() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

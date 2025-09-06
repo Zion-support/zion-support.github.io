@@ -1,21 +1,33 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { QuoteRequestCard } from "./QuoteRequestCard",
-import { EmptyStateCard } from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
+=======
+
 
 type QuoteRequestsListProps = {
-  quotes: QuoteRequest[]
-  isLoading: boolean
-  isArchived: boolean
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded: (id: string) => void
+  quotes: QuoteRequest[],
+  isLoading: boolean,
+  isArchived: boolean,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
-}
-export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-=======
+},
+
+
+
+
+  onToggleArchive
+}) => {
+  if (isLoading) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
+      </div>
+    )
+
+import React from "react",;
+import { QuoteRequestCard } from "./QuoteRequestCard",;
+import { EmptyStateCard } from "./EmptyStateCard",;
+import type { QuoteRequest } from "@/types/quotes",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -47,35 +59,34 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   is_loading;
   is_archived;
   onViewDetails;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  onMarkAsResponded
-  onToggleArchive
-}) => {
-  if (isLoading) {
-=======
+
   onMarkAsResponded,;
   onToggleArchive;
 }) => {;
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-<<<<<<< HEAD
-  if (quotes.length === 0) {
-    return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
-  }
-=======
+
 
   if (quotes && quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -110,17 +121,19 @@ if ( {) {
           onViewDetails={onViewDetails}
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
-<<<<<<< HEAD
-        />;
-      ))}
-<<<<<<< HEAD
-    </div>
-  )
-}
 
+
+
+    </div>;
+  );
+
+=======
 =======
     </div>;
   );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

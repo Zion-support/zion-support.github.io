@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+
+
 
 
 import React, { useState } from "react";
@@ -8,8 +10,12 @@ import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelec
 import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
-<<<<<<< HEAD
-export function MobileOnboarding() {
+
+
+
+export function MobileOnboarding() {;
+
+
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
   const goToNextStep = () => {
@@ -20,10 +26,15 @@ export function MobileOnboarding() {
     } else {
       navigate("/mobile")
     }
-  }
+
+
+  },
+  
   const handleRoleSelect = () => {
     setCurrentStep("signup")
-  }
+  },
+
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -64,12 +75,17 @@ export function MobileOnboarding() {
             </div>
             <SignUpForm />
           </div>
-        )}
-      </div>
-    </div>
-  )
-}
+
+
 =======
+
+import React, { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",;
+import { RolePicker } from "../components/onboarding/RolePicker",;
+import { SignUpForm } from "../components/onboarding/SignUpForm",;
+type OnboardingStep = "language" | "role" | "signup",;
 
 export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
@@ -140,8 +156,7 @@ export function MobileOnboarding() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -217,4 +232,9 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

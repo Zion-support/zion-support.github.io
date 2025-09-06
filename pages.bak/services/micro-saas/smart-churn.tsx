@@ -1,15 +1,9 @@
-<<<<<<< HEAD:pages.bak/services/micro-saas/smart-churn.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function SmartChurn() { return ( <Article title=\"Smart Churn Predictor\" subtitle=\"ML-based churn scoring with prescriptive save plays\" price=\"from $299/mo\" bullets={[\'Real-time churn scoring using product usage + billing + support\',\'Sends save offers and playbooks to Intercom,Zendesk,or email\',\'Cohort analysis and revenue-at-risk dashboards\',\'Export to BigQuery/Snowflake; webhooks and REST API\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
-module.exports = default function SmartChurn() { return ( <Article title="Smart Churn Predictor" subtitle="ML-based churn scoring with prescriptive save plays" price="from $299/mo" bullets={["Real-time churn scoring using product usage + billing + support","Sends save offers and playbooks to Intercom,Zendesk,or email","Cohort analysis and revenue-at-risk dashboards","Export to BigQuery/Snowflake; webhooks and REST API" ]} links={{ website: "https: /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
+
+
 =======
-<<<<<<< HEAD
-=======
-export default function SmartChurn() { return ( <Article title=\"Smart Churn Predictor\" subtitle=\"ML-based churn scoring with prescriptive save plays\" price=\"from $299/mo\" bullets={[\'Real-time churn scoring using product usage + billing + support\',\'Sends save offers and playbooks to Intercom,Zendesk,or email\',\'Cohort analysis and revenue-at-risk dashboards\',\'Export to BigQuery/Snowflake; webhooks and REST API\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
-module.exports = default function SmartChurn() { return ( <Article title="Smart Churn Predictor" subtitle="ML-based churn scoring with prescriptive save plays" price="from $299/mo" bullets={["Real-time churn scoring using product usage + billing + support","Sends save offers and playbooks to Intercom,Zendesk,or email","Cohort analysis and revenue-at-risk dashboards","Export to BigQuery/Snowflake; webhooks and REST API" ]} links={{ website: "https: /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 export default function SmartChurn() { return ( <Article title=\"Smart Churn Predictor\" subtitle=\"ML-based churn scoring with prescriptive save plays\" price=\"from $299/mo\" bullets={[\'Real-time churn scoring using product usage + billing + support\',\'Sends save offers and playbooks to Intercom,Zendesk,or email\',\'Cohort analysis and revenue-at-risk dashboards\',\'Export to BigQuery/Snowflake; webhooks and REST API\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 module.exports = default function SmartChurn() { return ( <Article title="Smart Churn Predictor" subtitle="ML-based churn scoring with prescriptive save plays" price="from $299/mo" bullets={["Real-time churn scoring using product usage + billing + support","Sends save offers and playbooks to Intercom,Zendesk,or email","Cohort analysis and revenue-at-risk dashboards","Export to BigQuery/Snowflake; webhooks and REST API" ]} links={{ website: "https: /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
@@ -17,33 +11,25 @@ module.exports = default function SmartChurn() { return ( <Article title="Smart 
 import React from 'react';
 interface SmartchurnProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function Smartchurn({ }: SmartchurnProps) {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -62,23 +48,14 @@ interface SmartchurnProps {;
   // Add props here as needed;
 }
 export default function Smartchurn(): any ({ }: SmartchurnProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/services/micro-saas/smart-churn.tsx
   return (
     <div>;
       <h1>Smartchurn</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
 =======
 
 

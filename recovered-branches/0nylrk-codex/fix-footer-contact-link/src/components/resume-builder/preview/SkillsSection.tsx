@@ -1,18 +1,15 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Skill } from '@/types/resume';
+
+import {Skill} from '@/types/resume';
+
+
 interface SkillsSectionProps {
   skills: Skill[];
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
 
-  const skillsByCategory = skills.reduce(
-    (acc, skill) => {
-      const category = skill.category |"Other";
-      if (!acc[category]) {
-=======
+
 import { Skill  } from '@/types / resume';
 interface SkillsSectionProps {
   skills: Skill[];
@@ -29,17 +26,43 @@ function SkillsSection() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         acc[category] = [];
       }
       acc[category].push (skill);
       return acc;
-<<<<<<< HEAD
-    }
-    {} as Record<string, Skill[]>
-  );
-  if (skills.length === 0) return null;
 
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(skill);
+
+=======
+import { Skill } from '@/types/resume',;
+interface SkillsSectionProps {;
+  skills: Skill[];
+}
+;
+export function SkillsSection({ skills }: SkillsSectionProps) {;
+  // Group skills by category;
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other',;
+    if (!acc[category]) {;
+      acc[category] = [];
+    }
+    acc[category].push(skill),
+
+
+
+    return acc
+  }, {} as Record<string Skill[]>),
+
+  if (skills.length === 0) return null,
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -48,7 +71,11 @@ if ( {) {
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">
-              {skills.map((skill) => skill.name).join(", ")}
+
+
+              {skills.map(skill => skill.name).join(', ')}
+
+
             </p>
           </div>
         ))}
@@ -64,8 +91,7 @@ if ( {) {
 if (return null) {
   $2
 }
-<<<<<<< HEAD
-=======
+
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -100,7 +126,7 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   return (
     <div className="mb - 6">;

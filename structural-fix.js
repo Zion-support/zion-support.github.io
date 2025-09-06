@@ -1,12 +1,15 @@
 }});
-<<<<<<< HEAD
-console.log(`Fixed ${fixedCount} files`)));
-}
-});
-=======
+
 ;
 console.log (`Fixed ${fixed_count} files`)));
 }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+console.log(`Fixed ${fixedCount} files`)));
+
+};
+});
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

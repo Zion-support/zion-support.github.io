@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
-  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+
+
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+
+
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -21,11 +15,33 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-=======
+
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+=======
+
+
+export function PdfExportButton({ resume }: PdfExportButtonProps) {;
+  const [isExporting, setIsExporting] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [includePortfolio, setIncludePortfolio] = useState(true);
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+  DropdownMenuSeparator,;
+  DropdownMenuLabel,;
+  DropdownMenuRadioGroup,;
+  DropdownMenuRadioItem,;
+  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',;
+
 // Use the centralized icon wrapper to avoid missing icon issues;
 import {FileText, ChevronDown, Loader2, Download} from '@/components/icons';
 import {Resume} from '@/types/resume';
@@ -40,31 +56,44 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [includePortfolio, setIncludePortfolio] = useState(true);
 
-<<<<<<< HEAD
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
-  const handleExport = async () => {
-    if (isExporting) return;
-    setIsExporting(true);
+  const [includePortfolio, setIncludePortfolio] = useState(true),
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+    if (isExporting) return,
+    
+    setIsExporting(true),
+    
     try {
       const options: ExportOptions = {
-        theme;
-        includePortfolio
-        maxProjects: 3
+        theme,
+        includePortfolio,
+        maxProjects: 3,
         fontFamily
-      }
-      const pdfBlob = await exportResumeToPDF(resume, options);
+      },
+      
+      const pdfBlob = await exportResumeToPDF(resume, options),
+      
       // Create download link and trigger download
-      const url = URL.createObjectURL(pdfBlob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = `${resume.basic_info.title |'Resume'}.pdf`;
-      document.body.appendChild(link);
-      link.click();
+      const url = URL.createObjectURL(pdfBlob),
+      const link = document.createElement('a'),
+      link.href = url,
+      link.download = `${resume.basic_info.title || 'Resume'}.pdf`,
+      document.body.appendChild(link),
+      link.click(),
+      
       // Clean up
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      document.body.removeChild(link),
+      URL.revokeObjectURL(url),
+      
+
+
       toast({
         title: "Success!"
         description: "Your resume has been downloaded as a PDF."})
@@ -77,7 +106,7 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
       })
     } finally {
       setIsExporting(false)
-=======
+
   const handleExport = async () => {;
     if (isExporting) return;
 
@@ -117,22 +146,23 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
       });
     } finally {;
       setIsExporting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
   }
+=======
+    }
+
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-<<<<<<< HEAD
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-=======
+
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button
           variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           className="gap-2"
           disabled={isExporting}>;
           {isExporting ? (;
@@ -140,44 +170,66 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
-<<<<<<< HEAD
-          Export PDF
-          <ChevronDown className="h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
-          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
-          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={includePortfolio}
-          onCheckedChange={setIncludePortfolio}
-        >
-          Include Portfolio Projects
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleExport}>
-          <Download className="h-4 w-4 mr-2" />
-          Download PDF
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
+
 =======
+
+
+=======
+;
+export function PdfExportButton({ resume }: PdfExportButtonProps) {;
+  const [isExporting, setIsExporting] = useState(false),;
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),;
+  const [includePortfolio, setIncludePortfolio] = useState(true),;
+  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),;
+  const handleExport = async () => {;
+    if (isExporting) return,;
+    setIsExporting(true),;
+    try {;
+      const options: ExportOptions = {;
+        theme,;
+        includePortfolio,;
+        maxProjects: 3,;
+        fontFamily;
+      },;
+      const pdfBlob = await exportResumeToPDF(resume, options),;
+      // Create download link and trigger download;
+      const url = URL.createObjectURL(pdfBlob),;
+      const link = document.createElement('a'),;
+      link.href = url,;
+      link.download = `${resume.basic_info.title || 'Resume'}.pdf`,;
+      document.body.appendChild(link),;
+      link.click(),;
+      // Clean up;
+      document.body.removeChild(link),;
+      URL.revokeObjectURL(url),;
+      toast({;
+        title: "Success!",;
+        description: "Your resume has been downloaded as a PDF."});
+    } catch (error) {;
+      console.error('Error exporting PDF:', error),;
+      toast({;
+        title: "Export failed",;
+        description: "There was an error exporting your resume to PDF.";
+        variant: "destructive";
+      });
+    } finally {;
+      setIsExporting(false);
+    }
+  };
+  return (;
+    <DropdownMenu>;
+      <DropdownMenuTrigger asChild>;
+        <Button;
+          variant="outline";
+          className="gap-2";
+          disabled={isExporting}
+        >;
+          {isExporting ? (;
+            <Loader2 className="h-4 w-4 animate-spin" />;
+          ) : (;
+            <FileText className="h-4 w-4" />;
+          )}
+
           Export PDF;
           <ChevronDown className="h-4 w-4" />;
         </Button>;
@@ -216,6 +268,11 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

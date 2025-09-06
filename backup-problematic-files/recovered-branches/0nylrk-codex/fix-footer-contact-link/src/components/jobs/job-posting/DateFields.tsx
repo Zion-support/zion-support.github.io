@@ -35,6 +35,20 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
                 ) :(;
                   <span>Pick a date</span>;
                 )}
+=======
+              <Button;
+                variant={"outline"}
+                className={cn(;
+                  "w-full md:w-[240px] pl-3 text-left font-normal",;
+                  !startDate && "text-muted-foreground";
+                )}
+              >;
+                {startDate ? (;
+                  format(startDate, "PPP");
+                ) :(;
+                  <span>Pick a date</span>;
+                )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </Button>;
             </FormControl>;
           </PopoverTrigger>;

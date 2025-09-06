@@ -1,44 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function QuantumCloudInfrastructurePlatformPage() {
 
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function QuantumCloudInfrastructurePlatformPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -78,8 +61,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {;
       />;
     </>;
   );
-<<<<<<< HEAD
-=======
+
 
 =======
 export default function QuantumCloudInfrastructurePlatformPage() {
@@ -87,17 +69,17 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 		<>
 			<Head>
 				<title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>
-				<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
+<meta name="description" content="Quantum-enhanced cloud infrastructure with superior performance, security, and efficiency." />
 				<link rel="canonical" href="https://ziontechgroup.com/quantum-cloud-infrastructure-platform" />
 			</Head>
 			<ServiceLanding
 				title="Quantum Cloud Infrastructure Platform"
-				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
+description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
 				subtitle="Next-gen compute for critical workloads"
 				pricePerMonthUSD={28999}
 				implementationWeeks="1-2 weeks"
 				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
-				features={[
+features={[
 					"Managed quantum accelerators";
 					"Zero-trust and quantum-safe security";
 					"Observability and SLOs";
@@ -111,7 +93,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react';
 import Head from 'next / head';
@@ -120,6 +102,19 @@ export default /**
  * QuantumCloudInfrastructurePlatformPage - Function description
  */
 function QuantumCloudInfrastructurePlatformPage() {
+=======
+<<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function QuantumCloudInfrastructurePlatformPage() {
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       <Head>;
@@ -161,3 +156,7 @@ function QuantumCloudInfrastructurePlatformPage() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

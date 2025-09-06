@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 
-import React from 'react',
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button";
-import { Download  } from 'lucide-react';
-import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {;
-  resume: Resume;
-  onDownload: () => void;
+=======
+
+
+interface ResumePreviewCardProps {
+  resume: Resume,
+  onDownload: () => void,
   isLoading: boolean
 }
-<<<<<<< HEAD
-export function ResumePreviewCard({
-  resume
-  onDownload
-  isLoading
-}: ResumePreviewCardProps) {
-=======
+
 
 export function ResumePreviewCard(): any ({;
   resume,;
@@ -44,14 +34,7 @@ export function ResumePreviewCard(): any ({;
             size="sm"
             onClick={onDownload}
             disabled={isLoading}
-<<<<<<< HEAD
-            className="h-8 w-8 p-0"
-          >
-            <Download className="h-4 w-4 text-zion-cyan" />
-            <span className="sr-only">Download Resume</span>
-          </Button>
-        </div>
-=======
+
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
@@ -62,6 +45,22 @@ interface ResumePreviewCardProps {
   resume: Resume;
   on_download: () => void;
   is_loading: boolean;
+=======
+
+        
+        {resume.basic_info.summary && (
+          <p className="text-xs text-zion-slate line-clamp-2 mb-2">
+import React from 'react',;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Download } from 'lucide-react',;
+import { Resume } from "@/types/resume",;
+interface ResumePreviewCardProps {;
+  resume: Resume,;
+  onDownload: () => void;
+  isLoading: boolean;
+
 }
 export /**
  * ResumePreviewCard - Function description
@@ -95,18 +94,13 @@ function ResumePreviewCard() {
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
-<<<<<<< HEAD
-          </p>
-        )}
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index) => (
-=======
+
             className="h-8 w-8 p-0">;
             <Download className="h-4 w-4 text-zion-cyan" />;
             <span className="sr-only">Download Resume</span>;
           </Button>;
         </div>;
+
 
         {resume && resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
@@ -134,8 +128,17 @@ function ResumePreviewCard() {
             )}
           </div>;
         )}
+
+
+
+=======
+
       </CardContent>;
     </Card>;
+
+
+
+
   );
 =======
           </p>)}

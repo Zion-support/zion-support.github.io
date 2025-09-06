@@ -1,13 +1,39 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Loader2, Sparkles, Check  } from 'lucide-react';
-import { Badge  } from '@/components/ui/badge';
-import { format, parseISO } from 'date-fns';
-interface MilestoneSuggestionsProps {
+
+
+
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date;
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
+
+export function MilestoneSuggestions({;
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+
+=======
+import React, { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Loader2, Sparkles, Check } from 'lucide-react',;
+import { Badge } from '@/components/ui/badge',;
+import { format, parseISO } from 'date-fns',;
+interface MilestoneSuggestionsProps {;
+  projectName: string,;
+  scopeSummary: string,;
+  startDate: Date,;
+  endDate?: Date,;
+  projectType: string,;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   projectName: string
   scopeSummary: string
@@ -47,17 +73,38 @@ export function MilestoneSuggestions(): any ({;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-<<<<<<< HEAD
-  const handleGenerateMilestones = async () => {
-    const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`
-      startDate: startDate.toISOString()
-      endDate: endDate ? endDate.toISOString() : null
-      projectType: projectType |"Other"
-    }
-    const milestones = await generateMilestones(input);
-    if (milestones.length > 0) {
+
 =======
+
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || "Other"
+    },
+
+    const milestones = await generateMilestones(input),
+    
+
+    if (milestones.length > 0) {
+      setShowSuggestions(true),
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones)
+
+  };
+
+=======
+;
+export function MilestoneSuggestions({;
+  projectName,;
+  scopeSummary,;
+  startDate,;
+  endDate,;
+  projectType,;
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
+  const [showSuggestions, setShowSuggestions] = useState(false),;
+
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -75,10 +122,7 @@ export function MilestoneSuggestions(): any ({;
         onMilestonesGenerated(milestones);
       }
     }
-<<<<<<< HEAD
-  }
-  const formatDate = (dateString: string) => {
-=======
+
 import {Button} from '@/components / ui / button';
 import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks / useMilestoneGenerator';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -125,13 +169,11 @@ if ( {) {
   }
 ;
   const format_date = (date_string: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     try {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
-<<<<<<< HEAD
-      return dateString
-=======
+
   };
 
   const formatDate = (dateString: string) => {;
@@ -139,9 +181,14 @@ if ( {) {
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
-  }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-4">;
@@ -149,21 +196,7 @@ if ( {) {
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-<<<<<<< HEAD
-          disabled={isGenerating |!scopeSummary |!startDate}
-          className="w-full"
-        >
-          {isGenerating ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating milestones...
-            </>
-          ) : (
-            <>
-              <Sparkles className="mr-2 h-4 w-4" />
-              Suggest Project Milestones with AI
-            </>
-=======
+
           disabled={isGenerating || !scopeSummary || !startDate}
           className="w-full">;
           {isGenerating ? (;
@@ -176,11 +209,15 @@ if ( {) {
               <Sparkles className="mr-2 h-4 w-4" />;
               Suggest Project Milestones with AI;
             </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           )}
         </Button>;
       )}
-<<<<<<< HEAD
+
+
+
+
+
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -218,10 +255,7 @@ if ( {) {
           </CardContent>
         </Card>
       )}
-    </div>
-  )
-}
-=======
+
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;
@@ -309,20 +343,21 @@ if ( {) {
                 </div>))}
               <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground">;
                 <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 These milestones will be added to your contract;
               </div>;
             </div>;
           </CardContent>;
-<<<<<<< HEAD
-        </Card>;
-      )}
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
         </Card>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+    </div>;
+  );
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

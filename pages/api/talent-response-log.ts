@@ -1,35 +1,23 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    res.setHeader('AllowPOST')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    res.setHeader('AllowPOST');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
   if (!talentId |!['AcceptDeclineNegotiate'].includes(action)) {
-
     return res.status(400).json({ error: 'Invalid payload' })
   }
   // Placeholder for persistence, echo the response for now
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const payload = { talentId, action, at: new Date().toISOString() }
-
   return res.status(200).json({ ok: true, data: payload })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
@@ -57,3 +45,7 @@ if ( {) {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

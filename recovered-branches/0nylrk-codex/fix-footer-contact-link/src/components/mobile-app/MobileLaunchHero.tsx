@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Link } from "react-router-dom",
-import { ArrowRight, Smartphone } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons";
-import { Card, CardContent } from "@/components/ui/card";
 
-<<<<<<< HEAD
+
+
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -59,23 +53,28 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="relative">
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+
+
+              
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
                     <Smartphone className="w-40 h-40 text-white opacity-40" />
-                    {/* In production, replace with actual app screenshot */}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 =======
+
+
+=======
+import React from "react",;
+import { Link } from "react-router-dom",;
+import { ArrowRight, Smartphone } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+import { Card, CardContent } from "@/components/ui/card",;
+
 export const MobileLaunchHero: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -199,13 +198,8 @@ export const MobileLaunchHero: React.FC = () => {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

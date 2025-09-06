@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -677,6 +679,9 @@ export const "Spinner"
     "md"
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
+<<<<<<< HEAD
+console.log('\n New Features "Added")
+=======
 <<<<<<< HEAD
 console.log('\n New Features "Added")
 =======

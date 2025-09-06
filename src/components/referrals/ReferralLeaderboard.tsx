@@ -1,44 +1,23 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-=======
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-import { Award } from 'lucide-react'
-interface LeaderboardEntry {
-  rank: number
-  name: string
-  referrals: number
-  rank: number
-  name: string
-
+rank: number,
+  name: string,
   referrals: number
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
-<<<<<<< HEAD
-    { rank: 1, name: 'Alex Johnson', referrals: 24 }
-    { rank: 2, name: 'Jamie Smith', referrals: 18 }
-    { rank: 3, name: 'Taylor Wong', referrals: 15 }
-    { rank: 4, name: 'Casey Brown', referrals: 12 }
-    { rank: 5, name: 'Jordan Lee', referrals: 10 }
+
+
+    { rank: 1, name: 'Alex Johnson', referrals: 24 },
+    { rank: 2, name: 'Jamie Smith', referrals: 18 },
+    { rank: 3, name: 'Taylor Wong', referrals: 15 },
+    { rank: 4, name: 'Casey Brown', referrals: 12 },
+    { rank: 5, name: 'Jordan Lee', referrals: 10 },
+
+
   ]
   return (
     <Card>
@@ -49,8 +28,6 @@ export function ReferralLeaderboard() {
     { rank: 3, name: "Taylor Wong", referrals: 15 }
     { rank: 4, name: "Casey Brown", referrals: 12 }
     { rank: 5, name: "Jordan Lee", referrals: 10 }]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Card,;
   CardContent,;
@@ -87,7 +64,6 @@ export function ReferralLeaderboard() {;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
     { rank: 4, name: "Casey Brown", referrals: 12 },;
     { rank: 5, name: "Jordan Lee", referrals: 10 }],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card>;
       <CardHeader>;
@@ -111,117 +87,23 @@ export function ReferralLeaderboard() {;
                         ? 'bg-slate-200 text-slate-800'
                         : entry && entry.rank === 3
                           ? 'bg-amber-200 text-amber-800'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                          : 'bg-muted text-muted-foreground'                  }`}
-                >
-=======
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Award } from 'lucide-react';
-interface LeaderboardEntry {
-  rank: number;
-  name: string;
-  referrals: number;
-  rank: number,
-  name: string,
-  referrals: number;
-}
-export /**
- * ReferralLeaderboard - Function description
- */
-function ReferralLeaderboard() {
-  // This would typically be fetched from the server;
-  // For now, we'll use mock data;
-  const leaderboard_data: LeaderboardEntry[] = [;
-    { rank: 1, name: 'Alex Johnson', referrals: 24 },
-    { rank: 2, name: 'Jamie Smith', referrals: 18 },
-    { rank: 3, name: 'Taylor Wong', referrals: 15 },
-    { rank: 4, name: 'Casey Brown', referrals: 12 },
-    { rank: 5, name: 'Jordan Lee', referrals: 10 },
-  ];
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
-          <Award className='h - 5 w - 5' />          Leaderboard    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 }],
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <Award className="h - 5 w - 5" />;
-        </CardTitle>;
-        <CardDescription > Top referrers this month</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='space - y-2'>;
-          {leaderboard_data.map (entry => (
-            <div;
-              key={entry.rank}
-              className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50 transition - colors'              className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50 transition - colors";
-            >;
-              <div className='flex items - center gap - 3'>;
-                <div;
-                  className={`h - 6 w - 6 rounded - full flex items - center justify - center text - xs font - medium ${
-                    entry.rank === 1;
-                      ? 'bg - yellow - 200 text - yellow - 800';
-                      : entry.rank === 2;
-                        ? 'bg - slate - 200 text - slate - 800';
-                        : entry.rank === 3;
-                          ? 'bg - amber - 200 text - amber - 800';
-                          : 'bg - muted text - muted - foreground'                  }`}
-                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  {entry.rank}
-                </div>;
-                <span className='font - medium'>{entry.name}</span>;
-              </div>;
-              <span className='text - sm'>;
-                {entry.referrals} referral{entry.referrals !== 1 ? 's' : ''}              </span>                      ? "bg - slate - 200 text - slate - 800";
-                      : entry.rank === 3;
-                      ? "bg - amber - 200 text - amber - 800";
-                      : "bg - muted text - muted - foreground";
-                >;
-                  {entry.rank}
-                </div>;
-                <span className='font - medium'>{entry.name}</span>;
-              </div>;
-              <span className='text - sm'>;
-                {entry.referrals} referral{entry.referrals !== 1 ? 's' : ''}                <span className="font - medium">{entry.name}</span>;
-              </div>;
-              <span className="text - sm">;
-                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
-<<<<<<< HEAD
-=======
-    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 }],
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Award className="h-5 w-5" />
-          Leaderboard
+
+
         </CardTitle>
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
       <CardContent>
+
+
+
         <div className="space-y-2">
           {leaderboardData.map((entry) => (
             <div 
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+
+
+
             >
               <div className="flex items-center gap-3">
                 <div 
@@ -232,9 +114,60 @@ function ReferralLeaderboard() {
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
+
+                      : "bg-muted text-muted-foreground"
+
+      </CardContent>;
+    </Card>;
+  );
+};
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Award } from 'lucide-react';
+interface LeaderboardEntry {;
+  rank: number,;
+  name: string,;
+  referrals: number;
+}
+;
+export function ReferralLeaderboard() {;
+  // This would typically be fetched from the server;
+  // For now, we'll use mock data;
+  const leaderboardData: LeaderboardEntry[] = [;
+    { rank: 1, name: "Alex Johnson", referrals: 24 },;
+    { rank: 2, name: "Jamie Smith", referrals: 18 },;
+    { rank: 3, name: "Taylor Wong", referrals: 15 },;
+    { rank: 4, name: "Casey Brown", referrals: 12 };
+    { rank: 5, name: "Jordan Lee", referrals: 10 }];
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Award className="h-5 w-5" />;
+          Leaderboard;
+        </CardTitle>;
+        <CardDescription>Top referrers this month</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="space-y-2">;
+          {leaderboardData.map((entry) => (;
+            <div;
+              key={entry.rank}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors";
+            >;
+              <div className="flex items-center gap-3">;
+                <div;
+                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${;
+                    entry.rank === 1;
+                      ? "bg-yellow-200 text-yellow-800";
+                      : entry.rank === 2;
+                      ? "bg-slate-200 text-slate-800";
+                      : entry.rank === 3;
+                      ? "bg-amber-200 text-amber-800";
+
                       : "bg-muted text-muted-foreground";
                   }`}
-                >
+                >;
                   {entry.rank}
                 </div>
                 <span className="font-medium">{entry.name}</span>
@@ -242,17 +175,13 @@ function ReferralLeaderboard() {
               <span className="text-sm">
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
               </span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           ))}
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
                           : 'bg-muted text-muted-foreground'                  }`}>;
                   {entry && entry.rank}
                 </div>;
@@ -280,15 +209,13 @@ function ReferralLeaderboard() {
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

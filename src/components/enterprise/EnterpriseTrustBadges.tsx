@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -34,15 +26,16 @@ export function EnterpriseTrustBadges() {
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>          </div>
-          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <CheckCircle className="h-5 w-5 text-primary" />
-            <span className="font-medium">HIPAA Compliant</span>
-=======
+
+
+
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -70,12 +63,12 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
+
+
+
     </section>
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
@@ -140,12 +133,8 @@ export function EnterpriseTrustBadges() {;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export /**
@@ -214,4 +203,3 @@ function EnterpriseTrustBadges() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from 'react',
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -24,9 +22,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-  );
-}
-=======
+
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
@@ -48,7 +44,7 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Button  } from '@/components / ui / button';
@@ -78,3 +74,14 @@ function ProfileErrorState() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+}
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

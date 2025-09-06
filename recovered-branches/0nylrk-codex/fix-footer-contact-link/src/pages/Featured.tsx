@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { GradientHeading } from "@/components/GradientHeading";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Featured() {
   return (
     <>
@@ -20,19 +18,19 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
-          {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection showTitle={false} />
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
+
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
 import {GradientHeading} from "@/components/GradientHeading";
+=======
+
+          
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { GradientHeading } from "@/components/GradientHeading";
+
 export default function Featured() {;
   return (
     <>;
@@ -81,11 +79,18 @@ function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+
+
+
           {/* Reuse the FeaturedListings component */}
-          <FeaturedListingsSection show_title={false} />;
-        </div>;
-      </div>;
-      <Footer />;
-    </>);
+          <FeaturedListingsSection showTitle={false} />
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

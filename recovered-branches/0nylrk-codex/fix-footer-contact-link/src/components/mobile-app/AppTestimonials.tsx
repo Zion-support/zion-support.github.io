@@ -1,10 +1,21 @@
-<<<<<<< HEAD
+
+
+
 
 
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
-<<<<<<< HEAD
+
+=======
+import React from "react",
+import { Star } from "lucide-react",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -12,7 +23,7 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
     avatar: "/placeholder.svg"
-=======
+
 import React from './react';
 import { Star } from './lucide-react';
 import { Card, CardContent, CardFooter } from '@/components / ui / card';
@@ -23,16 +34,24 @@ const testimonials = [;
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
     rating: 5,
     avatar: "/placeholder.svg";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
   {
     name: "Sarah Williams"
     role: "Tech Recruiter"
     text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
-<<<<<<< HEAD
-    rating: 5
+
+
+  },
+  {
+    name: "Sarah Williams",
+    role: "Tech Recruiter",
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+    rating: 5,
     avatar: "/placeholder.svg"
-  }
+  },
+
+
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -40,7 +59,12 @@ const testimonials = [;
     rating: 4
     avatar: "/placeholder.svg"
   }
-];
+
+
+],
+
+
+
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -57,7 +81,35 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
+
+
 =======
+                    <Star
+                      key={i}
+                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
+              </CardContent>
+              <CardFooter className="border-t border-zion-purple/20 pt-4">
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
+                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+
+
+=======
+import React from "react",;
+import { Star } from "lucide-react",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
 
 const testimonials = [;
   {;
@@ -122,20 +174,13 @@ export const AppTestimonials: React.FC = () => {;
               </CardFooter>;
             </Card>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </section>
-  )
-}
 
-=======
         </div>;
       </div>;
     </section>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     rating: 5,
     avatar: "/placeholder.svg";

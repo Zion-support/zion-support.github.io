@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-"use client";
-import { useEffect, useRef, useState } from "react";
-// Skip link component for keyboard navigation;
-export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
-=======
+
 "use client",
 import { useEffect, useRef, useState  } from './react';,
 // Skip link component for keyboard navigation;
@@ -12,7 +7,16 @@ export /**
  */
 function SkipLink() {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+"use client",;
+import { useEffect, useRef, useState } from "react",;
+// Skip link component for keyboard navigation;
+export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
+  return (;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -20,22 +24,29 @@ function SkipLink() {
       {children}
     </a>);
 }
-// Live region for screen reader announcements;
-<<<<<<< HEAD
-export function LiveRegion({message;
-  role = "status";
-  "aria-live": ariaLive = "polite";
-}: {message: string;
-  role?: "status" | "alert" | "log";
-  "aria-live"?: "polite" | "assertive" | "off";
-}) {return (;
-=======
+
 export /**
  * LiveRegion - Function description
  */
 function LiveRegion() {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+// Live region for screen reader announcements;
+export function LiveRegion({;
+  message,;
+  role = "status",;
+  "aria-live": ariaLive = "polite";
+}: {;
+  message: string,;
+  role?: "status" | "alert" | "log",;
+  "aria-live"?: "polite" | "assertive" | "off";
+}) {;
+  return (;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div;
       role={role}
       aria - live={aria_live}
@@ -45,79 +56,100 @@ function LiveRegion() {
       {message}
     </div>);
 }
+
+
+;
 // Focus trap for modals and dialogs;
-<<<<<<< HEAD
-export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
+export function useFocusTrap(enabled: boolean = true) {;
+  const containerRef = useRef<HTMLDivElement>(null),;
   useEffect(() => {;
-    if (!enabled |!containerRef.current) return;
-    const container = containerRef.current;
+    if (!enabled || !containerRef.current) return,;
+    const container = containerRef.current,;
     const focusableElements = container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    ),;
+    const firstElement = focusableElements[0] as HTMLElement,;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+
+
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-            e.preventDefault();
+
+
+            e.preventDefault(),;
             lastElement.focus();
           }
-        } else {if (document.activeElement === lastElement) {;
-            e.preventDefault();
+        } else {;
+          if (document.activeElement === lastElement) {;
+            e.preventDefault(),;
+
+
             firstElement.focus();
           }
         }
       }
-    }
-    container.addEventListener("keydown", handleKeyDown);
+
+
+    },;
+    container.addEventListener("keydown", handleKeyDown),;
     return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]);
+  }, [enabled]),;
   return containerRef;
 }
+;
 // Keyboard navigation hook;
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {const [selectedIndex, setSelectedIndex] = useState(-1);
+export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
+  const [selectedIndex, setSelectedIndex] = useState(-1),;
   const handleKeyDown = (e: KeyboardEvent) => {;
     switch (e.key) {;
-      case "ArrowDown": e.preventDefault();
-        setSelectedIndex(prev => (prev + 1) % items.length);
-        break;
+      case "ArrowDown": e.preventDefault(),;
+        setSelectedIndex(prev => (prev + 1) % items.length),;
+        break,;
       case "ArrowUp":;
-        e.preventDefault();
-        setSelectedIndex(prev => (prev - 1 + items.length) % items.length);
-        break;
+        e.preventDefault(),;
+        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
+        break,;
       case "Enter":;
       case " ":;
-        e.preventDefault();
+        e.preventDefault(),;
         if (selectedIndex >= 0) {;
           onSelect(items[selectedIndex]);
         }
-        break;
-      case "Escape": setSelectedIndex(-1);
+        break,;
+      case "Escape": setSelectedIndex(-1),;
         break;
     }
-  }
-  useEffect(() => {document.addEventListener("keydown", handleKeyDown);
+  },;
+  useEffect(() => {;
+    document.addEventListener("keydown", handleKeyDown),;
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]);
+  }, [items, selectedIndex, onSelect]),;
   return { selectedIndex, setSelectedIndex }
 }
+;
 // Announcement component for screen readers;
-export function Announcement({message;
+export function Announcement({;
+  message,;
   priority = "polite";
-}: {message: string;
+}: {;
+  message: string,;
   priority?: "polite" | "assertive";
-}) {const [announcements, setAnnouncements] = useState<string[]>([]);
+}) {;
+  const [announcements, setAnnouncements] = useState<string[]>([]),;
   useEffect(() => {;
     if (message) {;
-      setAnnouncements(prev => [...prev, message]);
+      setAnnouncements(prev => [...prev, message]),;
       // Clear announcement after a delay;
       const timer = setTimeout(() => {;
         setAnnouncements(prev => prev.slice(1));
-      }, 1000);
+      }, 1000),;
       return () => clearTimeout(timer);
     }
-  }, [message]);
+  }, [message]),;
+
+
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -126,14 +158,22 @@ export function Announcement({message;
     </div>;
   );
 }
+
+
+;
 // Progress indicator component;
-export function ProgressIndicator({value;
-  max;
+export function ProgressIndicator({;
+  value,;
+  max,;
   label;
-}: {value: number;
-  max: number;
+}: {;
+  value: number,;
+  max: number,;
   label: string;
-}) {const percentage = Math.round((value / max) * 100);
+}) {;
+  const percentage = Math.round((value / max) * 100),;
+
+
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
@@ -184,6 +224,59 @@ if ( {) {
     return () => container.removeEventListener ("keydown", handleKeyDown);
   }, [enabled]),
   return container_ref;
+=======
+export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {;
+    if (!enabled |!containerRef.current) return;
+    const container = containerRef.current;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+=======
+;
+// Focus trap for modals and dialogs;
+export function useFocusTrap(enabled: boolean = true) {;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (!enabled || !containerRef.current) return,;
+    const container = containerRef.current,;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),;
+    const firstElement = focusableElements[0] as HTMLElement,;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+<<<<<<< HEAD
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {if (document.activeElement === lastElement) {;
+            e.preventDefault();
+=======
+            e.preventDefault(),;
+            lastElement.focus();
+          }
+        } else {;
+          if (document.activeElement === lastElement) {;
+            e.preventDefault(),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            firstElement.focus();
+          }
+        }
+      }
+<<<<<<< HEAD
+    }
+    container.addEventListener("keydown", handleKeyDown);
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]);
+  return containerRef;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -235,14 +328,85 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
+<<<<<<< HEAD
   }, [message]),
   return (
     <div aria - live={priority} aria - atomic="true" className="sr - only">;
       {announcements.map ((announcement, index) => (
         <div key={index}>{announcement}</div>))}
     </div>);
+=======
+  }, [message]);
+=======
+    },;
+    container.addEventListener("keydown", handleKeyDown),;
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]),;
+  return containerRef;
 }
+;
+// Keyboard navigation hook;
+export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
+  const [selectedIndex, setSelectedIndex] = useState(-1),;
+  const handleKeyDown = (e: KeyboardEvent) => {;
+    switch (e.key) {;
+      case "ArrowDown": e.preventDefault(),;
+        setSelectedIndex(prev => (prev + 1) % items.length),;
+        break,;
+      case "ArrowUp":;
+        e.preventDefault(),;
+        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
+        break,;
+      case "Enter":;
+      case " ":;
+        e.preventDefault(),;
+        if (selectedIndex >= 0) {;
+          onSelect(items[selectedIndex]);
+        }
+        break,;
+      case "Escape": setSelectedIndex(-1),;
+        break;
+    }
+  },;
+  useEffect(() => {;
+    document.addEventListener("keydown", handleKeyDown),;
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [items, selectedIndex, onSelect]),;
+  return { selectedIndex, setSelectedIndex }
+}
+;
+// Announcement component for screen readers;
+export function Announcement({;
+  message,;
+  priority = "polite";
+}: {;
+  message: string,;
+  priority?: "polite" | "assertive";
+}) {;
+  const [announcements, setAnnouncements] = useState<string[]>([]),;
+  useEffect(() => {;
+    if (message) {;
+      setAnnouncements(prev => [...prev, message]),;
+      // Clear announcement after a delay;
+      const timer = setTimeout(() => {;
+        setAnnouncements(prev => prev.slice(1));
+      }, 1000),;
+      return () => clearTimeout(timer);
+    }
+  }, [message]),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  );
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+<<<<<<< HEAD
 // Progress indicator component;
+<<<<<<< HEAD
 export /**
  * ProgressIndicator - Function description
  */
@@ -251,7 +415,32 @@ function ProgressIndicator() {
   return (
     <div className="space - y-2">;
       <div className="flex justify - between text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export function ProgressIndicator({value;
+  max;
+  label;
+}: {value: number;
+  max: number;
+  label: string;
+}) {const percentage = Math.round((value / max) * 100);
+=======
+;
+// Progress indicator component;
+export function ProgressIndicator({;
+  value,;
+  max,;
+  label;
+}: {;
+  value: number,;
+  max: number,;
+  label: string;
+}) {;
+  const percentage = Math.round((value / max) * 100),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div className="space-y-2">;
+      <div className="flex justify-between text-sm">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -268,16 +457,23 @@ function ProgressIndicator() {
       </div>;
     </div>);
 }
+
+
+;
 // Collapsible section component;
-<<<<<<< HEAD
-export function CollapsibleSection({title;
-  children;
+export function CollapsibleSection({;
+  title,;
+  children,;
   defaultExpanded = false;
-}: {title: string;
-  children: React.ReactNode;
+}: {;
+  title: string,;
+  children: React.ReactNode,;
   defaultExpanded?: boolean;
-}) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const contentRef = useRef<HTMLDivElement>(null);
+}) {;
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
+  const contentRef = useRef<HTMLDivElement>(null),;
+
+
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 =======
@@ -289,7 +485,33 @@ function CollapsibleSection() {
   const content_ref = useRef < HTMLDivElement>(null),
   return (
     <div className="border border-[var (--border)] rounded - lg">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export function CollapsibleSection({title;
+  children;
+  defaultExpanded = false;
+}: {title: string;
+  children: React.ReactNode;
+  defaultExpanded?: boolean;
+}) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  const contentRef = useRef<HTMLDivElement>(null);
+=======
+;
+// Collapsible section component;
+export function CollapsibleSection({;
+  title,;
+  children,;
+  defaultExpanded = false;
+}: {;
+  title: string,;
+  children: React.ReactNode,;
+  defaultExpanded?: boolean;
+}) {;
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
+  const contentRef = useRef<HTMLDivElement>(null),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -302,16 +524,18 @@ function CollapsibleSection() {
         </span>;
       </button>;
       <div;
-<<<<<<< HEAD
-        id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
-        ref={contentRef}
-        className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
-=======
+
         id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
         className={`overflow - hidden transition - all duration - 300 ${
           is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+        className={`overflow-hidden transition-all duration-300 ${;
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -321,21 +545,29 @@ function CollapsibleSection() {
       </div>;
     </div>);
 }
+
+
+;
 // Tooltip component with proper accessibility;
-<<<<<<< HEAD
-export function Tooltip({children;
-  content;
+export function Tooltip({;
+  children,;
+  content,;
   position = "top";
-}: {children: React.ReactNode;
-  content: string;
+}: {;
+  children: React.ReactNode,;
+  content: string,;
   position?: "top" | "bottom" | "left" | "right";
-}) {const [isVisible, setIsVisible] = useState(false);
-  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`);
-  const positionClasses = {top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2";
-    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2";
+}) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),;
+  const positionClasses = {;
+    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",;
+    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
-  }
+  };
+
+
   return (;
     <div className="relative inline-block">;
 =======
@@ -351,9 +583,34 @@ function Tooltip() {
     left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
     right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
   }
+<<<<<<< HEAD
   return (
     <div className="relative inline - block">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+;
+// Tooltip component with proper accessibility;
+export function Tooltip({;
+  children,;
+  content,;
+  position = "top";
+}: {;
+  children: React.ReactNode,;
+  content: string,;
+  position?: "top" | "bottom" | "left" | "right";
+}) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),;
+  const positionClasses = {;
+    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",;
+    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",;
+    left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
+    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div className="relative inline-block">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

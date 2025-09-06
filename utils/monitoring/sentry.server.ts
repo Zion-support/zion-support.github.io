@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import * as Sentry from '@sentry/node';
-if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
-    dsn: process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN |'';
-    tracesSampleRate: 0.1;
-    enabled: Boolean(process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN)});
-}
-=======
+
 import * as Sentry from '@sentry / node',
 if (.get_client ()) {) {
   $2
@@ -15,4 +8,17 @@ if (.get_client ()) {) {
     tracesSampleRate: 0.1;
     enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+=======
+
+if (!Sentry.getCurrentHub().getClient()) {;
+  Sentry.init({;
+    dsn: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
+    tracesSampleRate: 0.1;
+    enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

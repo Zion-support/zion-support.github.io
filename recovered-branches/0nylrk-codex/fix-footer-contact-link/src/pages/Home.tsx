@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CategoriesSection } from "@/components/CategoriesSection",
-import { BenefitsSection } from "@/components/BenefitsSection",
-import { HowItWorksSection } from "@/components/HowItWorksSection",
-import { NewsletterSection } from "@/components/NewsletterSection",
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
-import { SEO } from "@/components/SEO",
-import { HeroSection } from "@/components/HeroSection",
-import { QuickAccess } from "@/components/home/QuickAccess",
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -36,8 +25,7 @@ export default function Home() {
       <Footer />
     </div>
   )
-}
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -74,6 +62,24 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+=======
+
+
+=======
+import React from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CategoriesSection } from "@/components/CategoriesSection",;
+import { BenefitsSection } from "@/components/BenefitsSection",;
+import { HowItWorksSection } from "@/components/HowItWorksSection",;
+import { NewsletterSection } from "@/components/NewsletterSection",;
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { SEO } from "@/components/SEO",;
+import { HeroSection } from "@/components/HeroSection",;
+import { QuickAccess } from "@/components/home/QuickAccess",;
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+
 export default function Home() {;
   return (
     <div className="min-h-screen bg-background">;
@@ -131,12 +137,12 @@ function Home() {
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

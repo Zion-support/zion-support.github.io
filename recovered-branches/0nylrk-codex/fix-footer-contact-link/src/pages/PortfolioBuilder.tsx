@@ -1,16 +1,32 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
-import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+
+
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+
+=======
+import { useState } from 'react',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+
+
+
 function PortfolioBuilderContent() {
-  const [activeTab, setActiveTab] = useState('resume');
+  const [activeTab, setActiveTab] = useState('resume'),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -37,14 +53,7 @@ function PortfolioBuilderContent() {
     </>
   )
 }
-export default function PortfolioBuilder() {
-  return (
-    <ProtectedRoute>
-      <PortfolioBuilderContent />
-    </ProtectedRoute>
-  )
-}
-=======
+
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -86,6 +95,10 @@ function PortfolioBuilderContent() {;
   );
 }
 
+=======
+
+;
+
 export default function PortfolioBuilder() {;
   return (
     <ProtectedRoute>;
@@ -93,7 +106,10 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+;
+
+
 =======
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';

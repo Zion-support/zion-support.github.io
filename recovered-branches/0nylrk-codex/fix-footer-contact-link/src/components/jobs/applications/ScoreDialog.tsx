@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle
-} from "@/components/ui/dialog",
-import { JobApplication } from "@/types/jobs";
-import { ApplicationScoreCard } from "../ApplicationScoreCard";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ScoreDialogProps {
 
   open: boolean
@@ -17,8 +11,7 @@ interface ScoreDialogProps {
 
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
-export function ScoreDialog({
-=======
+
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -30,44 +23,51 @@ interface ScoreDialogProps {;
 }
 
 export function ScoreDialog(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   open;
   onOpenChange;
   application;
   onScoreUpdated;
 }: ScoreDialogProps) {;
   return (
-<<<<<<< HEAD
+
+
+
+
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
+
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
         {application && (
-=======
+
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <ApplicationScoreCard
+=======
+
+          <ApplicationScoreCard 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
-<<<<<<< HEAD
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
+
       </DialogContent>;
     </Dialog>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';

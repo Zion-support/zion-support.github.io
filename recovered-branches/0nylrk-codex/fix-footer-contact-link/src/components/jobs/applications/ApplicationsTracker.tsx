@@ -1,41 +1,58 @@
-<<<<<<< HEAD
 
+
+import { useState } from "react";
+import { useJobApplications } from "@/hooks/useJobApplications";
+import { ApplicationCard } from "./ApplicationCard";
+import { LoadingState } from "./LoadingState";
+import { EmptyState } from "./EmptyState";
+import { ErrorState } from "./ErrorState";
+
+import { Button } from "@/components/ui/button";
+import { ApplicationStatus } from "@/types/jobs";
+
+export function ApplicationsTracker() {
+
+
+  const { applications, isLoading, error } = useJobApplications();
+
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
+    "all",;
+
+  );
+
+
+
+=======
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { ApplicationCard } from "./ApplicationCard",
 import { LoadingState } from "./LoadingState",
 import { EmptyState } from "./EmptyState",
 import { ErrorState } from "./ErrorState",
-import { Button } from "@/components/ui/button";
-import { ApplicationStatus } from "@/types/jobs";
+import { Button } from "@/components/ui/button",
+import { ApplicationStatus } from "@/types/jobs",
+export function ApplicationsTracker() {
+  const { applications, isLoading, error } = useJobApplications(),
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
+  
+  if (isLoading) {
+
+    return <LoadingState />
+import { useState } from "react",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { ApplicationCard } from "./ApplicationCard",;
+import { LoadingState } from "./LoadingState",;
+import { EmptyState } from "./EmptyState",;
+import { ErrorState } from "./ErrorState",;
+import { Button } from "@/components/ui/button",;
+import { ApplicationStatus } from "@/types/jobs",;
 export function ApplicationsTracker() {;
-  const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
-
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
-    "all"
-=======
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
-    "all",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-
+  const { applications, isLoading, error } = useJobApplications(),;
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
   if (isLoading) {;
     return <LoadingState />;
   }
-<<<<<<< HEAD
-  if (error) {
-
-    return <ErrorState error={error} />;
-  }
-  if (applications.length === 0) {
-    return <EmptyState />;
-  }
-  const filteredApplications =
-    statusFilter === "all"
-      ? applications
-      : applications.filter((app) => app.status === statusFilter);
-=======
+;
 
   if (error) {;
     return <ErrorState error={error} />;
@@ -45,12 +62,14 @@ export function ApplicationsTracker() {;
     return <EmptyState />;
   }
 
-  const filteredApplications =;
-    statusFilter === "all";
-      ? applications;
-      : applications && applications.filter((app) => app && app.status === statusFilter);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  
+  const filteredApplications = statusFilter === 'all' 
+    ? applications
+    : applications.filter(app => app.status === statusFilter),
+  
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -100,23 +119,30 @@ export function ApplicationsTracker() {;
           size="sm"
           variant={statusFilter === "rejected" ? "default" : "outline"}
           onClick={() => setStatusFilter("rejected")}
-<<<<<<< HEAD
-        >
-          Not Selected
-        </Button>
-      </div>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
             No applications with this status.
           </p>
         </div>
-=======
+
 =======
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
@@ -133,6 +159,13 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
+=======
+      )}
+
+    </div>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 ;
   // Check condition
@@ -212,25 +245,7 @@ if ( {) {
           Not Selected;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
-      <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">;
-        {filteredApplications && filteredApplications.map((application) => (;
-          <ApplicationCard key={application && application.id} application={application} />;
-        ))}
-      </div>;
-
-      {filteredApplications && filteredApplications.length === 0 && (;
-        <div className="text-center p-8">;
-          <p className="text-muted-foreground">;
-            No applications with this status.;
-          </p>;
-        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      )}
-    </div>;
-  );
-=======
       <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
         {filtered_applications.map ((application) => (
           <ApplicationCard key={application.id} application={application} />))}
@@ -242,5 +257,5 @@ if ( {) {
           </p>;
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

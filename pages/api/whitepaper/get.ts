@@ -1,31 +1,21 @@
-<<<<<<< HEAD
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { getShared } from './share';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query
-  if (!id |Array.isArray(id)) return res.status(400).json({ error: 'Missing id' })
-  const entry = getShared(id)
-  if (!entry) return res.status(404).json({ error: 'Not found' })
 
-  res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { getShared } from './share';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req, res) {
+  try {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { id } = req.query;
   if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
   const entry = getShared(id);
   if (!entry) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
-}
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+}
+
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { get_shared } from './share',
@@ -46,3 +36,11 @@ function handler() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

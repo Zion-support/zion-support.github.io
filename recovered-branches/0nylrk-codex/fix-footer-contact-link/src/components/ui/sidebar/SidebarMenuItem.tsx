@@ -1,23 +1,36 @@
-<<<<<<< HEAD
 
-import React from "react";
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
-=======
 import {cn} from "@/lib/utils";
 interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   className?: string;
   children?: React && React.ReactNode;
-}
-<<<<<<< HEAD
-export function SidebarMenuItem({
-  className
-  children
-  ...props
-}: SidebarMenuItemProps) {
 =======
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+=======
+import {cn} from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string,
+  children?: React.ReactNode
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
+  className?: string;
+  children?: React.ReactNode;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
 import React from './react';
 import { cn  } from '@/lib / utils';
 interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLLIElement> {
@@ -28,15 +41,11 @@ export /**
  * SidebarMenuItem - Function description
  */
 function SidebarMenuItem() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
     <li className={cn ("", class_name)} {...props}>;
       {children}
-<<<<<<< HEAD
-    </li>
-  );
-}
-=======
+
 
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
@@ -47,8 +56,16 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
     </li>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     </li>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </li>
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

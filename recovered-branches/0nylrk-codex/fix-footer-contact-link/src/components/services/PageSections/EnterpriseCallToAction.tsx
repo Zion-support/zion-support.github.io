@@ -1,8 +1,18 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+
+
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+
+=======
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+=======
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -15,9 +25,7 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
-  );
-}
-=======
+
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 export function EnterpriseCallToAction() {;
@@ -34,7 +42,7 @@ export function EnterpriseCallToAction() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Link  } from './react-router-dom';
 import { Button  } from '@/components / ui / button';
@@ -55,3 +63,14 @@ function EnterpriseCallToAction() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

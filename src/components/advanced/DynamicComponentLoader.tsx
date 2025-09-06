@@ -1,97 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React, {
-  Suspense
-  lazy
-  useState
-  useEffect
-  ComponentType
-} from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-'use client';
-import React, {
-  Suspense,
-  lazy,
-  useState,
-  useEffect,
-  ComponentType,
-} from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { cn } from '@/lib / utils';
-import { logErrorToProduction } from '@/utils / production_logger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface LoadingState {
-  is_loading: boolean;
-  error: Error | null;
-  retry_count: number;
-  is_online: boolean;
-interface DynamicLoaderProps {
-  import_fn: () => Promise<{ default: ComponentType < any> }>;
-  fallback?: React.ReactNode;
-  error_fallback?: React.ComponentType<{ error: Error; retry: () => void }>;
-  loading_component?: React.ComponentType;
-  enable_retry?: boolean;
-  max_retries?: number;
-  prefetch?: boolean;
-  class_name?: string;
-  children?: React.ReactNode;
-  [key: string]: any;
-// Enhanced Loading Component;
-const EnhancedLoading: React.FC<{
-<<<<<<< HEAD
-  progress?: number
-  message?: string
-  showProgress?: boolean
-
-}> = ({
-  progress = 0
-  message = 'Loading component...'
-  showProgress = true
-}) => (
-  <Card className='w-full max-w-md mx-auto'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='relative'>
-          <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (
-            <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 'use client';
 
 import React, {;
@@ -141,11 +47,9 @@ const EnhancedLoading: React.FC<{;
         <div className='relative'>;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className='absolute inset-0 rounded-full border-2 border-primary'
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
   progress?: number;
   message?: string;
   show_progress?: boolean;
@@ -154,37 +58,30 @@ const EnhancedLoading: React.FC<{;
   message = 'Loading component...',
   show_progress = true,
 }) => (
-  <Card className='w - full max - w-md mx - auto'>;
-    <CardContent className='p - 6'>;
-      <div className='flex flex - col items - center space - y-4'>;
-        <div className='relative'>;
-          <Loader2 className='h - 8 w - 8 animate - spin text - primary' />          {show_progress && (
-            <motion.div;
-              className='absolute inset - 0 rounded - full border - 2 border - primary';
+
+  <Card className="w-full max-w-md mx-auto">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          {showProgress && (
+
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-                background: `conic - gradient (from 0deg, var (--primary) 0%, var (--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+
+
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-<<<<<<< HEAD
-            />;
-          )}
-        </div>;
-        <div className='text-center'>;
-          <p className='text-sm font-medium'>{message}</p>;
-          {showProgress && (;
-            <p className='text-xs text-muted-foreground mt-1'>;
-              {Math && Math.round(progress)}% loaded;
-            </p>;
-          )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-)
+
+
+
+
+
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -193,14 +90,18 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
-            <AlertTriangle className='h-6 w-6 text-red-600' />
+
+
+  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
+          {isOnline ? (
+            <AlertTriangle className="h-6 w-6 text-red-600" />
+
+
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
-=======
         </div>;
       </div>;
     </CardContent>;
@@ -222,54 +123,51 @@ const EnhancedError: React.FC<{;
             <AlertTriangle className='h-6 w-6 text-red-600' />;
           ) : (;
             <WifiOff className='h-6 w-6 text-red-600' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
         <div className='text-center'>;
           <h3 className='font-semibold text-red-900 dark:text-red-100'>;
             {isOnline ? 'Loading Failed' : 'Offline'}
-<<<<<<< HEAD
-          </h3>
-          <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
-            {isOnline
-              ? error.message |'Failed to load component'
-=======
+
           </h3>;
           <p className='text-sm text-red-700 dark:text-red-200 mt-1'>;
             {isOnline;
               ? error && error.message || 'Failed to load component';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               : 'Please check your internet connection'}
           </p>;
           {retryCount > 0 && (;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
+          </h3>
+
+          <p className="text-sm text-red-700 dark:text-red-200 mt-1">
+            {isOnline 
+              ? error.message || 'Failed to load component'
+              : 'Please check your internet connection'
+            }
+          </p>
+          {retryCount > 0 && (
+
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
-        </div>;
-        {retryCount < maxRetries && (;
-          <Button
-            onClick={retry}
-            variant='outline'
-            size='sm'
-            className='border-red-300 text-red-700 hover:bg-red-100'>;
-            <RefreshCw className='h-4 w-4 mr-2' />;
-            Try Again;
-          </Button>;
+
+        </div>
+        {retryCount < maxRetries && (
+
+          <Button 
+            onClick={retry} 
+            variant="outline" 
+            size="sm"
+            className="border-red-300 text-red-700 hover:bg-red-100"
+          >
+            <RefreshCw className="h-4 w-4 mr-2" />
+
+
+            Try Again
+          </Button>
         )}
-<<<<<<< HEAD
-      </div>
-    </CardContent>
-  </Card>
-)
-// Network Status Hook
-const useNetworkStatus = () => {
-  const [isOnline, setIsOnline] = useState(true)
-  useEffect(() => {
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine)
-    window.addEventListener('online', updateOnlineStatus)
-    window.addEventListener('offline', updateOnlineStatus)
-=======
+
             />)}
         </div>;
         <div className='text - center'>;
@@ -330,7 +228,7 @@ const useNetworkStatus = () =>: any {
     const updateOnlineStatus = () =>: any setIsOnline (navigator.on_line);
     window.addEventListener ('online', updateOnlineStatus);
     window.addEventListener ('offline', updateOnlineStatus);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     return () => {
       window.removeEventListener ('online', updateOnlineStatus);
       window.removeEventListener ('offline', updateOnlineStatus);
@@ -338,41 +236,12 @@ const useNetworkStatus = () =>: any {
   }, []);
   return is_online;
 }
-<<<<<<< HEAD
-// Advanced Dynamic Component Loader
-export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
-  importFn
-  fallback
-  errorFallback
-  loadingComponent
-  enableRetry = true
-  maxRetries = 3
-  prefetch = false
-  className
-  children
-  ...props
-},) => {
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-    isLoading: true
-    error: null
-    retryCount: 0
-    isOnline: true
-  })
-  const [progress, setProgress] = useState(0)
-  const [DynamicComponent, setDynamicComponent] =
-    useState<ComponentType<any> | null>(null)
-  const isOnline = useNetworkStatus()
-  // Simulate loading progress for better UX
-  useEffect((,) => {
-    if (loadingState.isLoading && !loadingState.error) {
-      const interval = setInterval((,) => {
-        setProgress(prev => {
-          if (prev >= 90) return prev
-          return prev + Math.random() * 10
-        })
-      }, 100)
-      return () => clearInterval(interval)
-    }
+
+
+    };
+;
+
+
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -447,7 +316,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       })
     }
           >
-=======
       </div>;
     </CardContent>;
   </Card>;
@@ -592,17 +460,19 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     }
 
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedError
-          error = {loadingState && loadingState.error,}
-          retry = {retry,}
-          isOnline = {loadingState && loadingState.isOnline,}
-          retryCount = {loadingState && loadingState.retryCount,}
-          maxRetries = {maxRetries,}
-<<<<<<< HEAD
-        />
-      </motion.div>
-    )
+
+          error={loadingState.error}
+          retry={retry}
+          isOnline={loadingState.isOnline}
+          retryCount={loadingState.retryCount}
+          maxRetries={maxRetries}
+        />;
+      </motion.div>;
+    );
+
+
+
   }
   // Success state
   if (DynamicComponent) {
@@ -614,23 +484,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className = {className,}
-          >
-            <DynamicComponent {...props}>{children}</DynamicComponent>
-          </motion.div>
-        </AnimatePresence>
-      </Suspense>
-    )
-  }
-  return null
-}
-// HOC for creating dynamic components easily
-export const createDynamicComponent = <T extends ComponentType<any>>(
-  importFn: (,) => Promise<{ default: T }>
-  options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>
-) => {
-  return (props: React.ComponentProps<T> & { children?: React.ReactNode },) => (
-=======
+
         />;
       </motion && motion.div>;
     );
@@ -649,6 +503,14 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
             className = {className,}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;
+
+            className={className}
+          >;
+            <DynamicComponent {...props}>;
+              {children}
+            </DynamicComponent>;
+          </motion.div>;
+
         </AnimatePresence>;
       </Suspense>;
     );
@@ -663,19 +525,23 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
 ) => {;
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <DynamicComponentLoader
       importFn = {importFn,}
       {...(options |{})}
       {...(props as any)}
-<<<<<<< HEAD
+
     />
-  )
+  );
 }
+
+
+
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
-//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
+
+//   () => import('recharts').then(module => ({ default: module.LineChart })),
+
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -686,9 +552,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
-//   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
 
-=======
 // Advanced Dynamic Component Loader;
 export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
   import_fn,
@@ -866,6 +730,10 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
+
+//   () => import('three').then(module => ({ default: module.WebGLRenderer })),
+
+
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -877,7 +745,6 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -885,10 +752,7 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 //       </div>;
 //     );
 //   }
-<<<<<<< HEAD
-// )
-export default DynamicComponentLoader; export default DynamicComponentLoader
-=======
+
     />;
   );
 };
@@ -920,14 +784,11 @@ export default DynamicComponentLoader; export default DynamicComponentLoader
 // );
 
 export default DynamicComponentLoader;export default DynamicComponentLoader ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+// );
+
+export default DynamicComponentLoader;

@@ -1,23 +1,30 @@
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { User  } from 'lucide-react';
-import { Conversation  } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
-interface ConversationsListProps {
 
-  conversations: Conversation[]
-  activeConversation: Conversation | null
-  setActiveConversation: (conversation: Conversation) => void
 
-  markAsRead: (conversationId: string) => Promise<void>
-}
-export function ConversationsList({
+
+
+export function ConversationsList({ ;
   conversations;
 
-  activeConversation
-  setActiveConversation
-  markAsRead
+=======
+import React from 'react',;
+import { User } from 'lucide-react',;
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+export function ConversationsList({ 
+  conversations,
+
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -73,29 +80,28 @@ export function ConversationsList(): any ({ ;
             <ConversationItem
               key={conversation && conversation.id}
               conversation={conversation}
-              isActive={activeConversation?.id === conversation && conversation.id}
+
+                markAsRead(conversation && conversation.id);
+
+=======
+              isActive={activeConversation?.id === conversation.id}
+
               onClick={() => {;
                 setActiveConversation(conversation);
-<<<<<<< HEAD
+                markAsRead(conversation.id);
 
-                markAsRead(conversation.id)
-=======
-                markAsRead(conversation && conversation.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
             />;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
+
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';

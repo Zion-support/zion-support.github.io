@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
 
-import { toast } from "@/hooks/use-toast",
-import type { UserProfile } from "@/types/auth";
-<<<<<<< HEAD
-import { checkNewRegistration } from "@/utils/authUtils";
-import { useNavigate } from 'react-router-dom';
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Custom hook for auth event handling
  */
@@ -24,8 +21,11 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+
+
       }
-    }, 0);
+
+
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile');
@@ -35,18 +35,18 @@ export function useAuthEventHandlers(
         variant: "default"})
       navigate('/onboarding')
     }
-  }
+
+
+  },
+
+
+
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
-  }
-  return {
-    handleSignedIn;
 
-    handleSignedOut
-=======
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 /**;
@@ -92,7 +92,7 @@ export function useAuthEventHandlers(): any (;
   return {;
     handleSignedIn;
     handleSignedOut;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
@@ -146,5 +146,14 @@ if ( {) {
     handleSignedIn;
     handleSignedOut;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  },
+
+  return {
+    handleSignedIn,
+    handleSignedOut
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

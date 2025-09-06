@@ -1,59 +1,37 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
-} from '@/components/ui/form'
-import { Card, CardContent } from '@/components/ui/card'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { useState } from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormMessage,;
-} from '@/components/ui/form';
-import { Card, CardContent } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
-<<<<<<< HEAD
-  parentId?: string
-interface ReplyFormValues {
-  content: string
 
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const form = useForm<ReplyFormValues>({
-    defaultValues: {
-      content: ''
-    }
-  })
-  const handleSubmit = async (values: ReplyFormValues) => {
+
+import { useState } from 'react'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+
+
+
+
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+
+      content: '',;
+    },;
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {;
+
     setIsSubmitting(true);    try {
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
-=======
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -72,8 +50,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       form && form.reset();
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useState } from 'react';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
 import { Button } from '@/components / ui / button';
@@ -104,64 +81,70 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
       form.reset ();
     } finally {
       setIsSubmitting (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     }
   }
   return (
     <Card>;
-<<<<<<< HEAD
-      <CardContent className='pt-6'>;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField
-              control={form && form.control}
-              name='content'
-=======
+
       <CardContent className='pt - 6'>;
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
               control={form.control}
               name='content';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               render={({
                 field
               }: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                field: ControllerRenderProps<ReplyFormValues, 'content'>
-              }) => (                <FormItem>
-                  <FormControl>
-                    <Textarea className='min-h-[100px] resize-y' {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-=======
+
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
+    }
+  },
+
+
+
+
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+
+              control={form.control}
+              name="content"
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      className="min-h-[100px] resize-y"
+  },;
+  return (;
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form.handleSubmit(handleSubmit)}>;
+            <FormField;
+              control={form.control}
+              name="content";
+              render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
+                <FormItem>;
                   <FormControl>;
                     <Textarea className='min-h-[100px] resize-y' {...field} />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
               )}
             />;
             <div className='mt-4 flex justify-end'>;
               <Button type='submit' disabled={isSubmitting}>;
                 {isSubmitting ? 'Submitting...' : 'Post Reply'}
-<<<<<<< HEAD
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-export default ReplyForm
 
-=======
               </Button>;
             </div>;
           </form>;
@@ -170,15 +153,7 @@ export default ReplyForm
     </Card>;
   );
 };
-<<<<<<< HEAD
-export default ReplyForm;
-=======
-export default ReplyForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 field: ControllerRenderProps < ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
                   <FormControl>;
@@ -198,5 +173,3 @@ export default ReplyForm;
     </Card>);
 }
 export default ReplyForm;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

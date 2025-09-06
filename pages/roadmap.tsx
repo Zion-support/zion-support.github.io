@@ -1,72 +1,17 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
 
-=======
 import Head from 'next / head',
 import React, { useMemo, useState } from 'react',
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-type RoadmapInputs = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  milestones: string
-  keywords: string
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  milestones: string,
-  keywords: string,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  priorities: string
-}
-type Stage = {
-  id: number
-  name: string
-  theme: string
-  objective: string
-  highlights: string[]
-  metrics: string[]
-}
-function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
-  const keywordList = keywords
-    .split(/,|\n/)
-    .map((s) => s.trim())
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    .filter(Boolean)
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    .filter(Boolean);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+type RoadmapInputs = {
+
+
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
   const baseThemes = [
-<<<<<<< HEAD
-    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
-    'Governance & OwnershipGlobal Scale']
-  return baseThemes.map((theme, index) => {
-    const id = index + 1
-    const name = `Zion v${id}`
-    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() |'core principles'}, focus: ${
-      priorityList.join() |'execution and learning'
-    }.`
-    const highlights: string[] = [
-      index === 0 && 'Design system, domain model, and initial data architecture'
-      index === 1 && 'Verifiable credentials, attestations, and dispute primitives'
-      index === 2 && 'AI-assisted scoping, matching, and brief generation'
-      index === 3 && 'Reputation graph, portable profiles, contribution proofs'
-      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps'
-      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration'
-      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations'
-      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
-      index === 8 && 'Progressive decentralization, contributor ownership, councils'
-=======
+
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'
   ];
@@ -89,7 +34,7 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations';
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
       index === 8 && 'Progressive decentralization, contributor ownership, councils';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
       .map((s) => String(s))
@@ -143,14 +88,8 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
     return { id, name, theme, objective, highlights, metrics }
   });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
 Inputs you will receive:
@@ -164,21 +103,73 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-<<<<<<< HEAD
-Zion v{n} — {theme}
-Objective: ...
-Highlights:
-- ...
-Metrics:
-- ...
-Risks:
-- ...
-Validation:
-- ...
-`
-=======
+
 =======
 function defaultOperatorPrompt (): string {
+=======
+
+=======
+
+type RoadmapInputs = {
+  milestones: string;
+  keywords: string;
+  priorities: string;
+};
+type Stage = {
+  id: number;
+  name: string;
+  theme: string;
+  objective: string;
+  highlights: string[];
+  metrics: string[];
+};
+function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {;
+  const keywordList = keywords;
+    .split(/,|\n/);
+    .map((s) => s.trim());
+    .filter(Boolean);
+  const priorityList = priorities;
+    .split(/,|\n/);
+    .map((s) => s.trim());
+    .filter(Boolean);
+  const baseThemes = [;
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces';
+    'Governance & OwnershipGlobal Scale'];
+  return baseThemes.map((theme, index) => {;
+    const id = index + 1;
+    const name = `Zion v${id}`;
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${;
+      priorityList.join() || 'execution and learning';
+    }.`,;
+    const highlights: string[] = [;
+      index === 0 && 'Design system, domain model, and initial data architecture',;
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives',;
+      index === 2 && 'AI-assisted scoping, matching, and brief generation',;
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs',;
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps',;
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration',;
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations',;
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem',;
+      index === 8 && 'Progressive decentralization, contributor ownership, councils',;
+      index === 9 && 'Regionalization, localization, reliability, and performance'];
+      .filter(Boolean);
+      .map((s) => String(s)),;
+    const metrics: string[] = [;
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS'],;
+    return { id, name, theme, objective, highlights, metrics   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function defaultOperatorPrompt(): string {;
+
   return `You are Zion's Product Operator.;
 Inputs you will receive:;
 - milestones (string list);
@@ -191,7 +182,6 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -205,38 +195,24 @@ Validation:;
 `;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
-export default function RoadmapPage(): JSX.Element {
-  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
-  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
-  const [priorities, setPriorities] = useState('governance, scale, regional expansion')
-  const [copied, setCopied] = useState(false)
-  const stages = useMemo(
-<<<<<<< HEAD
-    () => generateStages({ milestones, keywords, priorities })
-=======
+
     () => generateStages({ milestones, keywords, priorities });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
-<<<<<<< HEAD
-      await navigator.clipboard.writeText(operatorPrompt)
-      setCopied(true)
-=======
+
       await navigator.clipboard.writeText(operatorPrompt);
       setCopied(true);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       setTimeout(() => setCopied(false), 1500)
 =======
+      await navigator.clipboard.writeText(operatorPrompt)
+      setCopied(true)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      setTimeout(() => setCopied(false), 1500)
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
   const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
@@ -251,39 +227,12 @@ export default function RoadmapPage (): JSX.Element {
       await navigator.clipboard.write_text (operator_prompt),
       set_copied (true),
       set_timeout (() => set_copied (false), 1500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
-<<<<<<< HEAD
-      setCopied(false)
-=======
-      set_copied (false);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    }
-<<<<<<< HEAD
-  }
 
-  return (
-    <>
-      <Head>
-        <title>Zion Roadmap</title>
-        <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />
-      </Head>
-      <main className="min-h-screen bg-white text-gray-900">
-        <div className="mx-auto w-full max-w-6xl px-6 py-12">
-          <header className="mb-8">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>
-            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>
-          </header>
-          <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">
-            <div className="md:col-span-1">
-              <h2 className="text-xl font-semibold">Generator Inputs</h2>
-              <p className="mt-1 text-sm text-gray-600">Tune the roadmap with current context and focus.</p>
-            </div>
-            <div className="md:col-span-2 grid gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>
-                <textarea
-=======
+      set_copied (false);
+
+    }
+
   },
   return (
     <>;
@@ -306,7 +255,7 @@ export default function RoadmapPage (): JSX.Element {
               <div>;
                 <label className="block text - sm font - medium text - gray - 700">Milestones achieved so far</label>;
                 <textarea;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   value={milestones}
                   on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
@@ -327,30 +276,95 @@ export default function RoadmapPage (): JSX.Element {
                 <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
                 <input;
                   value={priorities}
-<<<<<<< HEAD
-                  onChange={(e) => setPriorities(e.target.value)}
+
+
+                  value={milestones  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  rows={3  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
+                <input
+
+                  value={keywords  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
+                <input
+
+                  value={priorities  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriorities(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
               </div>
             </div>
           </section>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
-                onClick={copyPrompt}
+
+
+                onClick={copyPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
-                {copied ? 'Copied' : 'Copy'}
+                {copied ? 'Copied' : 'Copy'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </button>
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
@@ -367,15 +381,24 @@ export default function RoadmapPage (): JSX.Element {
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </ul>
                   </div>
                   <div className="mt-3">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
                         <li key={i}>{m}</li>
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </ul>
                   </div>
                   <div className="mt-3">
@@ -387,6 +410,7 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                   <div className="mt-3">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
@@ -395,28 +419,97 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                 </article>
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  };
+  return (;
+    <>;
+      <Head>;
+        <title>Zion Roadmap</title>;
+        <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />;
+      </Head>;
+      <main className="min-h-screen bg-white text-gray-900">;
+        <div className="mx-auto w-full max-w-6xl px-6 py-12">;
+          <header className="mb-8">;
+            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>;
+            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>;
+          </header>;
+          <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">;
+            <div className="md:col-span-1">;
+              <h2 className="text-xl font-semibold">Generator Inputs</h2>;
+              <p className="mt-1 text-sm text-gray-600">Tune the roadmap with current context and focus.</p>;
+            </div>;
+            <div className="md:col-span-2 grid gap-4">;
+              <div>;
+                <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>;
+                <textarea;
+                  value={milestones  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  rows={3  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors";
+                />;
+              </div>;
+              <div>;
+                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>;
+                <input;
+                  value={keywords  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
+                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools";
+                />;
+              </div>;
+              <div>;
+                <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>;
+                <input;
+                  value={priorities  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriorities(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
             </div>;
           </section>;
+<<<<<<< HEAD
           <section className="mb - 12">;
             <div className="mb - 3 flex items - center justify - between gap - 3">;
               <h2 className="text - xl font - semibold">Operator Prompt</h2>;
@@ -467,11 +560,91 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>;
                   </div>;
                 </article>))}
+=======
+          <section className="mb-12">;
+            <div className="mb-3 flex items-center justify-between gap-3">;
+              <h2 className="text-xl font-semibold">Operator Prompt</h2>;
+              <button;
+                onClick={copyPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900";
+              >;
+                {copied ? 'Copied' : 'Copy'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </button>;
+            </div>;
+            <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>;
+          </section>;
+          <section>;
+            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>;
+            <div className="grid gap-6 md:grid-cols-2">;
+              {stages.map((stage) => (;
+                <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">;
+                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>;
+                  <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Highlights</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      {stage.highlights.map((h, i) => (;
+                        <li key={i}>{h}</li>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Metrics</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      {stage.metrics.map((m, i) => (;
+                        <li key={i}>{m}</li>;
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Risks</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      <li>Scope creep, unclear ownership</li>;
+                      <li>Model hallucinations or bias affecting matches</li>;
+                      <li>Regulatory and payment-compliance variability</li>;
+                    </ul>;
+                  </div>;
+                  <div className="mt-3">;
+                    <p className="font-semibold">Validation</p>;
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">;
+                      <li>Leading indicator movement on activation and retention</li>;
+                      <li>Faster time-to-hire and time-to-pay</li>;
+                      <li>Positive contributor NPS and dispute resolution rates</li>;
+                    </ul>;
+                  </div>;
+                </article>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

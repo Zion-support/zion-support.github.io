@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-export function NewsletterForm() {
-=======
+
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -18,13 +12,29 @@ export function NewsletterForm() {;
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
+
+
+
+export function NewsletterForm() {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+
+
+  const handleSubmit = (e: React.FormEvent) => {
+
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
     // Simulate API call
     setTimeout(() => {
-      setIsSubmitting(false);
-      (setIsSubmitted(true), setEmail(""));
-    }, 1000);
-  }
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -40,7 +50,38 @@ export function NewsletterForm() {;
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
+
+
 =======
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value={email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
+            required
+          />
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+          >
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+          </Button>
+        </form>
+
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
+export function NewsletterForm() {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
 
     // Simulate API call;
     setTimeout(() => {;
@@ -65,32 +106,22 @@ export function NewsletterForm() {;
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-<<<<<<< HEAD
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
-            required
-          />
-          <Button
-            type="submit"
-=======
+
             onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
             required;
           />;
           <Button
             type="submit" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
-<<<<<<< HEAD
-    </div>
-=======
+
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
 =======
 import { Button  } from '@/components / ui / button';
@@ -145,7 +176,12 @@ function NewsletterForm() {
           >;
             {is_submitting ? "Subscribing..." : "Subscribe"}
           </Button>;
-        </form>)}
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+        </form>;
+
+
+      )}
+    </div>
+  );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

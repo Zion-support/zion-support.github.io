@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -52,10 +44,8 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
-}
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -79,6 +69,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -127,9 +122,8 @@ export default function BrowserAutomationCloudPage() {;
 		</>;
 	);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -180,3 +174,8 @@ return (
   </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

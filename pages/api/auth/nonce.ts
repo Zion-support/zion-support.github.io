@@ -1,40 +1,15 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-function randomString(length: number) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let res = ''
-  const cryptoObj = require('crypto')
-  const bytes: Buffer = cryptoObj.randomBytes(length)
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let res = '';
-  const cryptoObj = require('crypto');
-  const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
-
   res.status(200).json({ nonce })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
@@ -60,3 +35,8 @@ function handler() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

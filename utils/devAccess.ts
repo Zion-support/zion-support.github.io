@@ -1,89 +1,71 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import fs from 'fs';
-import path from 'path';
-import { exec_sync } from 'child_process';
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-=======
-;
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-export interface DevIdentity {
-  is_authenticated: boolean;
+
+
   roles: DevRole[];
-  user_id?: string;
+  userId?: string;
 }
-<<<<<<< HEAD
-export function getGitStatus(): { connected: boolean; branch?: string } {
-  try {
-<<<<<<< HEAD
-    const gitDir = path.join(process.cwd(), '.git');
-    if (!fs.existsSync(gitDir)) return { connected: false }
-=======
+
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
-=======
-export function getGitStatus (): { connected: boolean; branch?: string } {
-  try {
-    const git_dir = path.join (process.cwd (), '.git');
-    if () return { connected: false }) {
-  $2
-}
-    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore'],
-    });
-      .to_string ();
-      .trim ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { connected: true, branch }
   } catch {
     return { connected: false }
   }
 }
-<<<<<<< HEAD
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
+
+
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+
+
   // TODO: integrate real auth; for now, check a header and env var for dev
-<<<<<<< HEAD
-  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
-  const adminToken = process.env.ADMIN_TOKEN;
-=======
+
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+=======
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
+=======
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
   allowed: DevRole[]
-): DevIdentity | undefined {
+): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
-  if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' });
+  if (!identity.isAuthenticated) {
+    res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r));
+  const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
-    res && res.status(403).json({ error: 'Forbidden' });
+    res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
-<<<<<<< HEAD
-=======
+
 }
 =======
 // Development access utilities
@@ -219,7 +201,7 @@ export function getClientIp(req: any): string {
          (req.connection.socket ? req.connection.socket.remoteAddress : null) ||
          'unknown';
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
@@ -257,3 +239,8 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,54 +1,4 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
-export interface MilestoneAssistantProps {scopeOfWork: string;
-  startDateIso: string;
-  endDateIso: string;
-  projectType: ProjectType;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
-}
-export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [autoAdd, setAutoAdd] = useState(true);
-  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
-  const isDisabled = useMemo(() => {;
-    return !props.scopeOfWork |!props.startDateIso |!props.endDateIso |!props.projectType;
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
-  async function generate() {setLoading(true);
-    setError(null);
-    try {;
-      const payload: MilestoneSuggestionInput = {;
-        scopeOfWork: props.scopeOfWork;
-        startDateIso: props.startDateIso;
-        endDateIso: props.endDateIso;
-        projectType: props.projectType;
-      }
-      const res = await fetch("/api/ai/milestones", {method: "POST";
-        headers: { "Content-Type": "application/json" }
-        body: JSON.stringify(payload);
-      });
-      if (!res.ok) {const t = await res.text();
-        throw new Error(t |"Failed to generate");
-      }
-      const data = await res.json();
-      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
-      setExpandedIdx(0);
-    } catch (e: any) {setError(e?.message |"Unexpected error");
-    } finally {setLoading(false);
-    }
-  }
-  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
-  }
-  function removeItem(idx: number) {setItems((prev) => prev.filter((_, i) => i !== idx));
-  }
-  function accept() {props.onAccept?.(items, autoAdd);
-  }
-  return (;
-    <div className="milestone-assistant">;
-      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
-        <button onClick={generate} disabled={loading |isDisabled}>;
-=======
+
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {
@@ -57,6 +7,17 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
   project_type: ProjectType,
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
+=======
+
+import React, { useMemo, useState } from "react",;
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
+export interface MilestoneAssistantProps {;
+  scopeOfWork: string,;
+  startDateIso: string,;
+  endDateIso: string,;
+  projectType: ProjectType,;
+  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
+
 }
 export /**
  * MilestoneAssistant - Function description
@@ -122,11 +83,14 @@ function remove_item() {
 function accept() {
     props.on_accept?.(items, auto_add);
   }
-  return (
-    <div className="milestone - assistant">;
-      <div className="assistant - header" style={{ display: "flex", gap: 12, align_items: "center" }}>;
-        <button on_click={generate} disabled={loading || is_disabled}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;
+  return (;
+    <div className="milestone-assistant">;
+      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
+        <button onClick={generate} disabled={loading || isDisabled}>;
+
+
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -134,30 +98,42 @@ function accept() {
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
-<<<<<<< HEAD
+
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
+
+;
+
+
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
         )}
         {items.map((item, idx) => (;
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
-=======
+
       {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
       <div style={{ margin_top: 12 }}>;
         {items.length === 0 && !loading && (
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>)}
         {items.map ((item, idx) => (
           <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             <div;
               className="milestone - summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
-<<<<<<< HEAD
+
+            <div;
+              className="milestone-summary";
+              style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+              onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
+            >;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
-                <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
+
+                <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
+
+
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
 =======
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
@@ -204,11 +180,14 @@ function accept() {
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-<<<<<<< HEAD
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
-=======
+
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -220,4 +199,9 @@ function accept() {
       </div>;
     </div>);
 }
+
+
+;
+
+
 export default MilestoneAssistant;

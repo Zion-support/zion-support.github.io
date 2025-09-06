@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -120,6 +122,9 @@ console.log('====')
       { "cmd": 'npm run type-check', "desc"}
       "recommendations"
     this.log(`Report saved "to"`)
+<<<<<<< HEAD
+      this.log(` Automation suite "failed"`)
+=======
 <<<<<<< HEAD
       this.log(` Automation suite "failed"`)
 =======

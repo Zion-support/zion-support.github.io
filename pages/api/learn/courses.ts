@@ -1,68 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const dataPath = path.join(process.cwd(), 'datalearncourses.json');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
 const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
-    const raw = fs.readFileSync(dataPath, 'utf-8');
-    const courses = JSON.parse(raw);
-    const { category, level, isFree } = req.query;
-    const filtered = courses.filter((c: any) => {
-      if (category && c.category !== category) return false;
-      if (level && c.level !== level) return false;
-      if (typeof isFree !== 'undefined') {
-<<<<<<< HEAD
-        const freeVal = isFree === 'true' |isFree === true;
-        if (c.isFree !== freeVal) return false;
-      }
-      return true;
-    });
-    res.status(200).json({ courses: filtered });
 
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
-  }
-=======
     const raw = fs && fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON && JSON.parse(raw);
 
     const { category, level, isFree } = req && req.query;
-
     const filtered = courses && courses.filter((c: any) => {
       if (category && c && c.category !== category) return false;
       if (level && c && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
         if (c && c.isFree !== freeVal) return false;
-=======
         const freeVal = isFree === 'true' || isFree === true;
         if (c.isFree !== freeVal) return false
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       }
       return true;
     });
-
     res && res.status(200).json({ courses: filtered });
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
 ;
 const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
@@ -104,3 +69,7 @@ if (return false) {
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

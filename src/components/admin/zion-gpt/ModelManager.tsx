@@ -1,49 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
-}
-
-
-        .order('createdAt', { ascending: false })
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
-=======
-        .order ('created_at', { ascending: false }),
-  const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    try {
-      // If activating, deactivate all other models with the same purpose;
+// If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
 }
         await supabase;
-          .from ('model_versions');
-          .update ({ active: false });
-          .eq ('purpose', purpose);
+
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+
+
       }
-<<<<<<< HEAD
-      // Update this model
-      await supabase
-        .from('model_versions')
-        .update({ active: !currentActive })
-        .eq('id', modelId)
-      // Refresh the model list
-      fetchModels()
-=======
+
       // Update this model;
       await supabase;
         .from ('model_versions');
@@ -51,14 +19,12 @@ if ( {) {
         .eq ('id', model_id),
       // Refresh the model list;
       fetch_models ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
         .order('createdAt', { ascending: false }),;
 
 
@@ -85,7 +51,9 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  },
+
 
   return (
     <Card className="w-full">;
@@ -135,19 +103,13 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-<<<<<<< HEAD
-                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
-                  </TableCell>
-                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
-                  <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-=======
+
                     {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
                   <TableCell className="text-right">;
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                       <Button
                         variant="ghost"
                         size="sm"
@@ -158,23 +120,38 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
+
+                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+
+                      >
+                        {activeJobs[model.id] ? (
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                        ) : (
+                          <RefreshCw className="h-4 w-4" />
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
-                        variant = {model && model.active ? "outline" : "default",}
+
+
+                        variant={model.active ? "outline" : "default"}
                         size="sm"
-                        onClick = {(,) => toggleModelActive(model && model.id, model && model.active, model && model.purpose),}
-                      >;
-                        {model && model.active ? (;
-                          <>;
-                            <CheckCircle className="h-4 w-4 mr-1" /> Active;
-                          </>;
-                        ) : (;
-                          <>;
-                            <Play className="h-4 w-4 mr-1" /> Activate;
-                          </>;
+                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+
+
+                      >
+                        {model.active ? (
+                          <>
+                            <CheckCircle className="h-4 w-4 mr-1" /> Active
+                          </>
+                        ) : (
+                          <>
+                            <Play className="h-4 w-4 mr-1" /> Activate
+                          </>
                         )}
                       </Button>;
                     ) : (;
@@ -182,19 +159,27 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-<<<<<<< HEAD
-                        title = {model.errorMessage |"Training failed",}
-                      >
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error
-                      </Button>
-=======
+
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     )}
                   </TableCell>;
                 </TableRow>;
+
+                        title={model.errorMessage || "Training failed"}
+
+                        title = {model.errorMessage || "Training failed",}
+                        title={model.errorMessage || "Training failed"}
+                      >
+                        <AlertCircle className="h-4 w-4 mr-1" /> Error
+                      </Button>
+                    )}
+
+                  </TableCell>;
+                </TableRow>;
+
               ))}
             </TableBody>;
           </Table>;
@@ -203,18 +188,10 @@ if ( {) {
     </Card>;
   );
 }
-<<<<<<< HEAD
-}
-=======
+
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   },
   return (
     <Card className="w - full">;
@@ -304,5 +281,3 @@ if ( {) {
     </Card>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

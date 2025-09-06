@@ -1,31 +1,17 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-import React from "react";
-<<<<<<< HEAD
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+=======
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+=======
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreateServiceProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -41,9 +27,15 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
-}
-=======
+
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+=======
+
+
+=======
+import React from "react",;
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+
 export default function CreateServiceProfile() {;
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
@@ -83,4 +75,8 @@ function CreateServiceProfile() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;
+
+
+

@@ -1,16 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { format  } from 'date-fns';
-import { MessageSquare  } from 'lucide-react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { Button  } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { AspectRatio  } from '@/components/ui/aspect-ratio';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessageBubble  } from './MessageBubble';
-import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
+
+
+
+import {format} from 'date-fns';
+import {MessageSquare} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {Button} from '@/components/ui/button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+import {AspectRatio} from '@/components/ui/aspect-ratio';
+import {useAuth} from '@/hooks/useAuth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
+export function ConversationDetailView() {;
+
+
   const { user } = useAuth();
   const {
     activeConversation;
@@ -26,21 +28,12 @@ export function ConversationDetailView() {
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-  useEffect(() => {
-    scrollToBottom()
-  }, [activeMessages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() |!activeConversation) return
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('')
-  }
-  if (!activeConversation) {
-=======
+
 import {format} from 'date-fns';
+=======
+
+
+
 =======
 import {format} from 'date - fns';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -52,23 +45,16 @@ import {AspectRatio} from '@/components / ui / aspect - ratio';
 import {use_auth} from '@/hooks / use_auth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
-<<<<<<< HEAD
-export function ConversationDetailView() {;
-  const { user } = useAuth();
-  const { ;
-    activeConversation;
-    activeMessages, ;
-    sendMessage, ;
-    loadMessages;
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {;
-    if (activeConversation) {;
-      loadMessages(activeConversation && activeConversation.id);
-    }
-  }, [activeConversation?.id, loadMessages]);
+  }, [activeConversation?.id, loadMessages]),
+
+
+
+  
+  useEffect(() => {
+    scrollToBottom()
+  }, [activeMessages]),
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   useEffect(() => {;
     scrollToBottom();
@@ -98,7 +84,11 @@ export function ConversationDetailView() {;
       </div>;
     );
   }
-<<<<<<< HEAD
+
+
+  
+
+
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -113,9 +103,13 @@ export function ConversationDetailView() {;
       })
     }
   });
-  const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title |activeConversation.context_data.description);
+
+
 =======
+
+
+=======
+;
 
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
@@ -132,34 +126,26 @@ export function ConversationDetailView() {;
         messages: [message];
       });
     }
-  });
 
-  const hasContextData = activeConversation && activeConversation.context_data && ;
-    (activeConversation && activeConversation.context_data.title || activeConversation && activeConversation.context_data.description);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }),
+
+
+
+  
+  const hasContextData = activeConversation.context_data && 
+    (activeConversation.context_data.title || activeConversation.context_data.description),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-<<<<<<< HEAD
-      <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
-        <div className="flex items-center gap-3">
-          <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage
-              src={activeConversation.other_user.avatar_url}
-              alt={activeConversation.other_user.name}
-            />
-            <AvatarFallback className="bg-zion-blue-dark text-white">
-              {activeConversation.other_user.name.charAt(0).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
-          <div>
-            <div className="font-medium text-white">
-              {activeConversation.other_user.name}
-            </div>
-            <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' :
+
+
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
+               activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
+
+
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -288,24 +274,10 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* Context information (if available) */}
-      {hasContextData && (;
-        <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">;
-          <div className="text-sm text-zion-slate flex items-start gap-3">;
-            {activeConversation && activeConversation.context_data.image_url && (;
-              <div className="w-16 h-16 flex-shrink-0">;
-                <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">;
-                  <img
-<<<<<<< HEAD
-                    src={activeConversation.context_data.image_url}
-                    alt={activeConversation.context_data.title |"Context"}
-=======
                     src={activeConversation && activeConversation.context_data.image_url}
                     alt={activeConversation && activeConversation.context_data.title || "Context"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     className="object-cover"
                   />;
                 </AspectRatio>;
@@ -329,10 +301,9 @@ if ( {) {
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {groupedMessages && groupedMessages.length === 0 ? (;
@@ -355,37 +326,28 @@ if ( {) {
             </div>;
           ));
         )}
-<<<<<<< HEAD
-        <div ref={messagesEndRef} />
-      </div>
-=======
+
         <div ref={messagesEndRef} />;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
-<<<<<<< HEAD
-            onChange={(e) => setMessageText(e.target.value)}
-            placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
-          />
-          <Button
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Send
-          </Button>
-        </form>
-      </div>
-    </div>
-  )
-}
-=======
+
             onChange={(e) => setMessageText(e && e.target.value)}
+=======
+
+
+=======
+      <div className="p-3 border-t border-zion-purple/20">;
+        <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+          <textarea;
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+
             placeholder="Type a message...";
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan";
           />;
@@ -461,9 +423,11 @@ if ( {) {
           </Button>;
         </form>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

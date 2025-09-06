@@ -1,23 +1,35 @@
-<<<<<<< HEAD
 
 
-import {useState} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
-import {WebhooksManager} from "@/components/developers/WebhooksManager";
-import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
-import {ApiLogs} from "@/components/developers/ApiLogs";
-<<<<<<< HEAD
+=======
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { 
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+
+
+
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
-export function DeveloperPortal() {
-=======
+
 interface TabDefinition {;
   id: string,;
   label: string,;
@@ -25,12 +37,15 @@ interface TabDefinition {;
 }
 
 export function DeveloperPortal() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const { user } = useAuth();
+=======
 
-  const [activeTab, setActiveTab] = useState<string>("documentation");
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
+
+
+
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -90,12 +105,52 @@ function DeveloperPortal() {
       </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Tabs */}
-      <div className="border - b border - zinc - 800 mb - 8">;
-        <div className="flex flex - wrap -mb - px">;
-          {tabs.map ((tab) => {
-            const Icon = tab.icon;
 
 =======
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+
+            const Icon = tab.icon,
+
+            return (
+              <button
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+                  activeTab === tab.id
+                    ? "text-white border-zion-purple"
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+                }`}
+                onClick={() => setActiveTab(tab.id)}
+              >
+
+                <Icon size={16} className="mr-2" />
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import {;
+  BookOpen,;
+  Code,;
+  Key,;
+  List,;
+  LucideIcon,;
+  Terminal,;
+  Webhook;
+} from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
+import { WebhooksManager } from "@/components/developers/WebhooksManager",;
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",;
+import { ApiLogs } from "@/components/developers/ApiLogs",;
+interface TabDefinition {;
+  id: string,;
+  label: string,;
+  icon: LucideIcon;
+}
+;
+export function DeveloperPortal() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState<string>("documentation"),;
+
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
@@ -118,33 +173,32 @@ function DeveloperPortal() {
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
-          {tabs && tabs.map((tab) => {;
-            const Icon = tab && tab.icon;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            return (
-<<<<<<< HEAD
-              <button
-                key={tab && tab.id}
-                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-                  activeTab === tab && tab.id
-                    ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
+
+          {tabs.map((tab) => {;
+            const Icon = tab.icon;
+            return (;
+              <button;
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${;
+                  activeTab === tab.id;
+                    ? "text-white border-zion-purple";
+                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
                 }`}
-                onClick={() => setActiveTab(tab && tab.id)}
-              >;
-                <Icon size={16} className="mr-2" />;
-                {tab && tab.label}
-              </button>;
-            );
+                onClick={() => setActiveTab(tab.id)}
+              >
+
+
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
-<<<<<<< HEAD
-        </div>
-      </div>
-=======
+
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Tab content */}
       <div>;
         {activeTab === "documentation" && <ApiDocumentation />}
@@ -155,15 +209,11 @@ function DeveloperPortal() {
     </div>;
   );
 }
-<<<<<<< HEAD
-export default function ProtectedDeveloperPortal() {
-  return (
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
-  )
-}
+
+
 =======
+
+;
 
 export default function ProtectedDeveloperPortal() {;
   return (
@@ -172,7 +222,10 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+;
+
+
 =======
               <button;
                 key={tab.id}

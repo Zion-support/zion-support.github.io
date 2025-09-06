@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useAuth } from "./useAuth";
-import { supabase } from "@/integrations/supabase/client";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -15,8 +14,11 @@ interface OnboardingStatus {
 
   responseReceived: boolean
 }
-export function useOnboardingStatus() {
-  const { user } = useAuth();
+
+
+
+
+
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -27,21 +29,76 @@ export function useOnboardingStatus() {
     inviteSent: false
 
     responseReceived: false
-  });
+
+
+  }),
+  
+
   useEffect(() => {
 
     const fetchOnboardingStatus = async () => {
-      if (!user) return;
+
+      if (!user) return,
+      
+
+
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
-          .single();
+
+
+          .single(),
+          
+
+
         if (error) {
           console.error("Error fetching onboarding status:", error);
           return
+
+
+import { useState, useEffect } from "react",;
+import { useAuth } from "./useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+interface OnboardingStatus {;
+  profileCompleted: boolean,;
+  skillsAdded: boolean,;
+  availabilitySet: boolean,;
+  matchReceived: boolean,;
+  jobPosted: boolean,;
+  inviteSent: boolean,;
+  responseReceived: boolean;
+}
+;
+export function useOnboardingStatus() {;
+  const { user } = useAuth(),;
+  const [status, setStatus] = useState<OnboardingStatus>({;
+    profileCompleted: false,;
+    skillsAdded: false,;
+    availabilitySet: false,;
+    matchReceived: false,;
+    jobPosted: false,;
+    inviteSent: false,;
+    responseReceived: false;
+  }),;
+  useEffect(() => {;
+    const fetchOnboardingStatus = async () => {;
+      if (!user) return,;
+      try {;
+        // Get user onboarding progress from database;
+        const { data, error } = await supabase;
+          .from('user_onboarding');
+          .select('*');
+          .eq('user_id', user.id);
+          .single(),;
+        if (error) {;
+          console.error("Error fetching onboarding status:", error),;
+          return;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         if (data) {
           setStatus({
@@ -96,29 +153,14 @@ export function useOnboardingStatus() {;
           return;
         }
 
-        if (data) {;
-          setStatus({;
-            profileCompleted: data && data.profile_completed || false,;
-            skillsAdded: data && data.skills_added || false,;
-            availabilitySet: data && data.availability_set || false,;
-            matchReceived: data && data.match_received || false,;
-            jobPosted: data && data.job_posted || false,;
-            inviteSent: data && data.talent_invited || false,;
-            responseReceived: data && data.quote_received || false;
-          });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        }
-      } catch (err) {;
-        console && console.error("Error in onboarding status hook:", err);
-      }
-<<<<<<< HEAD
-    }
-    fetchOnboardingStatus()
-  }, [user]);
-
-  return status
-}
 =======
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+
+      } catch (err) {;
+        console.error("Error in onboarding status hook:", err);
+      }
+
     };
 
     fetchOnboardingStatus();
@@ -126,8 +168,7 @@ export function useOnboardingStatus() {;
 
   return status;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -200,4 +241,9 @@ if ( {) {
 ;
   return status;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

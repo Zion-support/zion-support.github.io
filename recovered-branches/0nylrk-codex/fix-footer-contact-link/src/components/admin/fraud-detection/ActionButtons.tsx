@@ -1,30 +1,26 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-<<<<<<< HEAD
-=======
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
-<<<<<<< HEAD
 
-  onAction: (
-    flagId: string
-    action: "warning" | "suspension" | "ban" | "ignore"
-  ) => void;
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 
+interface ActionButtonsProps {
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
-export const ActionButtons: React.FC<ActionButtonsProps> = ({
-  flagId
-  status
-  onAction
-}) => {
+
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex space-x-2">
@@ -59,9 +55,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         variant="ghost"
         size="icon"
         title="Send Warning"
-        onClick={() => onAction(flagId, "warning")}
-<<<<<<< HEAD
-        disabled={status === "actioned" |status === "ignored"}
+
+
+        onClick={() => onAction(flagId, 'warning')}
+        disabled={status === 'actioned' || status === 'ignored'}
+
+
       >
         <Info className="h-4 w-4" />
       </Button>
@@ -75,9 +74,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         variant="ghost"
         size="icon"
         title="Suspend User"
-        onClick={() => onAction(flagId, "suspension")}
-<<<<<<< HEAD
-        disabled={status === "actioned" |status === "ignored"}
+
+
+        onClick={() => onAction(flagId, 'suspension')}
+        disabled={status === 'actioned' || status === 'ignored'}
+
+
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
@@ -91,15 +93,70 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
         variant="ghost"
         size="icon"
         title="Ban User"
-        onClick={() => onAction(flagId, "ban")}
-<<<<<<< HEAD
-        disabled={status === "actioned" |status === "ignored"}
+
+        disabled={status === "actioned" || status === "ignored"}
+=======
+
+        onClick={() => onAction(flagId, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}
+
       >
         <Ban className="h-4 w-4" />
       </Button>
-      {status === "pending" && (
+      {status === 'pending' && (
+        <Button
+          variant="ghost"
+          size="sm"
+
+    </div>;
+);
+
 =======
-        disabled={status === "actioned" || status === "ignored"}
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
+interface ActionButtonsProps {;
+  flagId: string,;
+  status: string,;
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+}
+;
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
+  return (;
+    <div className="flex space-x-2">;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="View Details";
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="Send Warning";
+        onClick={() => onAction(flagId, 'warning')}
+        disabled={status === 'actioned' || status === 'ignored'}
+      >;
+        <Info className="h-4 w-4" />;
+      </Button>;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="Suspend User";
+        onClick={() => onAction(flagId, 'suspension')}
+        disabled={status === 'actioned' || status === 'ignored'}
+      >;
+        <AlertTriangle className="h-4 w-4" />;
+      </Button>;
+      <Button;
+        variant="ghost";
+        size="icon";
+        title="Ban User";
+        onClick={() => onAction(flagId, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}
+
       >;
         <Ban className="h-4 w-4" />;
       </Button>;
@@ -115,9 +172,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
       )}
     </div>;
   );
-}
 
-=======
   on_action: (
     flag_id: string,
     action: "warning" | "suspension" | "ban" | "ignore",
@@ -176,4 +231,11 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

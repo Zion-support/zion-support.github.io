@@ -1,30 +1,28 @@
-<<<<<<< HEAD
 
-import React from 'react';
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { use_navigate  } from './react-router-dom';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface NotificationFooterProps {
   on_close: () => void;
 }
-<<<<<<< HEAD
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({
-  onClose
-}) => {
-  const navigate = useNavigate();
-  const handleViewAll = () => {
-    onClose();
-    navigate("/notifications");
-  }
-=======
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
+=======
+
+
+  onClose: () => void
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+
+=======
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+
 interface NotificationFooterProps {;
   onClose: () => void;
 }
@@ -44,21 +42,25 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
-<<<<<<< HEAD
+
+        onClick={handleViewAll}>;
+=======
         onClick={handleViewAll}
-      >
-        View all notifications
-      </Button>
-    </div>
-  );
-}
+
+  )
 
 =======
-        onClick={handleViewAll}>;
+      >;
+
         View all notifications;
       </Button>;
     </div>;
   );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

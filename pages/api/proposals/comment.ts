@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -17,53 +13,40 @@ async function ensure() {
   }
 }
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
   await ensure();
   if (req && req.method === "GET") {
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
-<<<<<<< HEAD
-=======
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
-
 async function ensure() {
   await fs.ensureFile(FILE_PATH);
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 }) }
 }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await ensure();
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-<<<<<<< HEAD
-  if (req.method === "POST") {
-    const body = req.body |{}
-    const data = await fs.readJson(FILE_PATH);
-    const comment = {
-<<<<<<< HEAD
-      id: Date.now().toString()
-      proposalId: body.proposalId
-      region: body.region |"Global"
-      author: body.author |"anon"
-      text: body.text |""
-      createdAt: new Date().toISOString()
-    }
-    data.comments.push(comment);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(comment);
 
-  }
-  res.status(405).json({ error: "Method not allowed" });
+
+  res.status(405).json({ error: 'Method not allowed' })
+
+
 }
 =======
   if (req && req.method === "POST") {
@@ -82,10 +65,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(201).json(comment);
   }
   res && res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-=======
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
@@ -98,8 +80,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -109,6 +89,13 @@ async /**
  */
 function ensure() {
   await fs.ensure_file (FILE_PATH);
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path.join(process.cwd(), "dataproposalscomments.json");
+async function ensure() {
+  await fs.ensureFile(FILE_PATH);
+
   try {
     await fs.read_json (FILE_PATH);
   } catch {
@@ -126,6 +113,11 @@ if ( {) {
 }
     const data = await fs.read_json (FILE_PATH);
     return res.status (200).json (data);
+  await ensure();
+  if (req.method === "GET") {
+    const data = await fs.readJson(FILE_PATH);
+    return res.status(200).json(data);
+
   }
   // Check condition
 if ( {) {
@@ -141,10 +133,11 @@ if ( {) {
       text: body.text || "",
       created_at: new Date ().toISOString (),
     }
-    data.comments.push (comment);
+data.comments.push (comment);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (comment);
   }
   res.status (405).json ({ error: "Method not allowed" });
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

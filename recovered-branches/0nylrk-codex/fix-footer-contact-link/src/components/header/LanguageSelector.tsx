@@ -1,22 +1,18 @@
-<<<<<<< HEAD
+
+
+
 
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
-<<<<<<< HEAD
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-=======
+
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
@@ -75,6 +71,17 @@ function LanguageSelector() {
   const { t } = use_translation ();
   const { current_language, change_language, supported_languages } = use_language ();
 ;
+=======
+import {
+
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -94,19 +101,26 @@ function LanguageSelector() {
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
-            className={`cursor - pointer ${
-              current_language === lang.code;
-                ? "bg - zion - purple / 20 text - zion - cyan";
-                : "text - white hover:bg - zion - purple / 10";
+
+
+            className={`cursor-pointer ${;
+              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
+
+
             }`}
-            on_click={() => change_language (lang.code)}
-          >;
-            <div className="flex items - center gap - 2">;
-              <span className="text - lg">{lang.flag}</span>;
-              <span>{t (`language.${lang.code}`)}</span>;
-            </div>;
-          </DropdownMenuItem>))}
+            onClick={() => changeLanguage(lang.code)}
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{lang.flag}</span>
+              <span>{t(`language.${lang.code}`)}</span>
+            </div>
+          </DropdownMenuItem>
+        ))}
+
       </DropdownMenuContent>;
-    </DropdownMenu>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </DropdownMenu>;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

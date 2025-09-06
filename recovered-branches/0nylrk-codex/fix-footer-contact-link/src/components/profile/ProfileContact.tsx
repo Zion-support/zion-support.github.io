@@ -1,41 +1,35 @@
-<<<<<<< HEAD
-import React from 'react';
 
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Mail, Send } from "lucide-react",
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
+
+
 interface ProfileContactProps {
-  email?: string;
-  profileName: string;
+  email?: string,
+  profileName: string,
   profileType: 'service' | 'talent'
 }
 
-export function ProfileContact({
-  email
-  profileName
-  profileType
-}: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+
+  
   const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSending(true);
+    e.preventDefault(),
+    setIsSending(true),
+    
     // Here would be the actual API call to send the message
     setTimeout(() => {
-      setIsSending(false);
-      setMessage("");
-      (setSubject("")
-        toast({
-          title: "Message Sent"
-          description: `Your message has been sent to ${profileName}.`
-        }));
-    }, 1000);
-  }
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -91,10 +85,7 @@ function ProfileContact() {
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
-<<<<<<< HEAD
-            className="text-zion-cyan hover:underline truncate block"
-          >
-=======
+
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
@@ -140,21 +131,17 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           <a
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {email}
           </a>;
         </div>;
       )}
-<<<<<<< HEAD
-      <form onSubmit={handleSendMessage}>
-        <div className="space-y-4">
-          <div>
-=======
+
 
       <form onSubmit={handleSendMessage}>;
         <div className="space-y-4">;
           <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <Input
               placeholder="Subject"
               value={subject}
@@ -179,19 +166,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-            <Textarea
-              placeholder={`Message to ${profileName}...`}
-              value={message}
-<<<<<<< HEAD
-              onChange={(e) => setMessage(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              required
-            />
-          </div>
-          <Button
-            type="submit"
-=======
+
               onChange={(e) => setMessage(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
               required;
@@ -199,26 +174,30 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           </div>;
           <Button
             type="submit" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
+
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled={isSending}
+          >
+            <Send className="mr-2 h-4 w-4" />
+            {isSending ? "Sending..." : "Send Message"}
+
           </Button>
         </div>
       </form>
     </div>
-  );
-}
-=======
+
           </Button>;
         </div>;
       </form>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
@@ -241,3 +220,10 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

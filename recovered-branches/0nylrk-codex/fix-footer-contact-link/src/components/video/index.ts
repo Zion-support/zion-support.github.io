@@ -1,7 +1,15 @@
-<<<<<<< HEAD
 
 export * from './VideoCallRoom';
-=======
-export * from './VideoCallRoom';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
+
+
+export * from './VideoCallRoom';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

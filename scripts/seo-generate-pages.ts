@@ -1,13 +1,6 @@
-/* eslint - disable no - console */;
-import fs from 'fs';
-import path from 'path';
-import https from 'https';
-<<<<<<< HEAD
-<<<<<<< HEAD
-const HOST = process.env.SELF_HOST |'http: //localhost:3000'
-=======
+
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 =======
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
@@ -17,23 +10,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
-<<<<<<< HEAD
-async function postJson(url: string, body: any): Promise<any> {
-  return new Promise((resolve, reject) => {
 
-    const u = new URL(url);
-    const data = JSON && JSON.stringify(body);
-    const opts: any = {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer.byteLength(data) }}
-    const lib = u.protocol === 'https: ' ? https : require('http')
-    const req = lib.request(url, opts, (res: any) => {
-      let buf = ''
-      res.on('data', (d: any) => (buf += d))
-      res.on('end', () => {
-        try { resolve(JSON.parse(buf)) } catch { resolve({}) }
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
     const lib = u && u.protocol === 'https: ' ? https : require('http'),
@@ -42,7 +19,7 @@ async function postJson(url: string, body: any): Promise<any> {
       res && res.on('data', (d: any) => (buf += d)),
       res && res.on('end', () => {
         try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       })
     });
     req && req.on('error', reject);
@@ -51,14 +28,7 @@ async function postJson(url: string, body: any): Promise<any> {
   })
 }
 async function main() {
-<<<<<<< HEAD
-  const outDir = path.join(process.cwd(), 'datapage-metadataseo');
-  fs.mkdirSync(outDir, { recursive: true });
-  for (const p of prompts) {
-    const res = await postJson(`${HOST}/api/seo/generate`, p);
-    if (!res |!res.slug |!res.payload) {
-      console.warn('Generate failed for', p.prompt);
-=======
+
   const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo');
   fs && fs.mkdirSync(outDir, { recursive: true });
 
@@ -66,7 +36,7 @@ async function main() {
     const res = await postJson(`${HOST}/api/seo/generate`, p);
     if (!res || !res && res.slug || !res && res.payload) {
       console && console.warn('Generate failed for', p && p.prompt);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       continue
     }
     const file = path && path.join(outDir, `${res && res.slug}.json`);
@@ -75,16 +45,11 @@ async function main() {
   }
 }
 main().catch((e) => {
-<<<<<<< HEAD
-  console.error(e);
-  process.exit(1)
-});
 
-=======
   console && console.error(e);
   process && process.exit(1)
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 ;
 async function post_json (url: string, body: any): Promise < any> {
@@ -100,6 +65,34 @@ async function post_json (url: string, body: any): Promise < any> {
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
+=======
+
+
+=======
+/* eslint-disable no-console */;
+import fs from 'fs',;
+import path from 'path',;
+import https from 'https',;
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',;
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+  { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' },;
+  { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' },;
+  { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' },;
+  { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }],;
+async function postJson(url: string, body: any): Promise<any> {;
+  return new Promise((resolve, reject) => {;
+    const u = new URL(url),;
+    const data = JSON.stringify(body),;
+    const opts: any = {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer.byteLength(data) }},;
+    const lib = u.protocol === 'https: ' ? https : require('http'),;
+    const req = lib.request(url, opts, (res: any) => {;
+      let buf = '',;
+      res.on('data', (d: any) => (buf += d)),;
+      res.on('end', () => {;
+        try { resolve(JSON.parse(buf)) } catch { resolve({}) }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       });
     });
     req.on ('error', reject);
@@ -132,5 +125,8 @@ main ().catch ((e) => {
   console.error (e);
   process.exit (1);
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

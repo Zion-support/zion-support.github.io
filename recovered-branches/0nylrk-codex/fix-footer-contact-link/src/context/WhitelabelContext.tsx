@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-<<<<<<< HEAD
-import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
-export interface WhitelabelContextType {
 
-  isWhitelabel: boolean
-  primaryColor: string
-  logoUrl: string | null
-  brandName: string
-  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
-  landingPageCopy: {
-    headline: string
-    subtitle: string
 
-    cta: string
-  }
+    headline: string,
+    subtitle: string,
+    cta: string;
+  };
+
+
   tenant: WhitelabelTenant | null
 }
 
@@ -34,8 +25,7 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
-export const useWhitelabel = (): WhitelabelContextType => {
-=======
+
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
 
 export interface WhitelabelContextType {;
@@ -70,20 +60,23 @@ const defaultContext: WhitelabelContextType = {;
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
 
 export const useWhitelabel = (): WhitelabelContextType => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const context = useContext(WhitelabelContext);
   if (!context) {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
-<<<<<<< HEAD
-  // Cast is used here because the context default is `null` until provided by
-  // `WhitelabelProvider`. The runtime check above guarantees it's defined.
-  return context as WhitelabelContextType
-}
-interface WhitelabelProviderProps {
-  children: ReactNode
-}
-export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
+
+
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -130,16 +123,11 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
-<<<<<<< HEAD
-    </WhitelabelContext.Provider>
-  )
-}
 
-=======
     </WhitelabelContext && WhitelabelContext.Provider>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
 import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
@@ -216,7 +204,11 @@ if ( {) {
   return (
     <WhitelabelContext.Provider value={context_value}>;
       {children}
-    </WhitelabelContext.Provider>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    </WhitelabelContext.Provider>;
+  );
+};
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { Edit, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Education } from "@/types/resume";
-import { EducationItemProps } from "./types";
-export function EducationItem({
-  education
-  onEdit
-  onDelete
-}: EducationItemProps) {
-
-=======
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -24,7 +9,7 @@ export /**
  * EducationItem - Function description
  */
 function EducationItem() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -54,16 +39,32 @@ function EducationItem() {
             {education.location && (
               <p className="text - xs text - muted - foreground">;
                 {education.location}
-<<<<<<< HEAD
-              </p>
+
 =======
+
+
+
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
-export function EducationItem(): any ({ education, onEdit, onDelete }: EducationItemProps) {;
+
+
+=======
+import { format } from 'date-fns',
+import { Edit, Trash2 } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
+
+
+
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
@@ -108,17 +109,12 @@ export function EducationItem(): any ({ education, onEdit, onDelete }: Education
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-  );
-}
-=======
+
       </CardContent>;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
               </p>)}
           </div>;
@@ -145,3 +141,10 @@ export function EducationItem(): any ({ education, onEdit, onDelete }: Education
     </Card>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

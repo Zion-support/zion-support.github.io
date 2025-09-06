@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb'}}}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-  }
-  const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' }
-  if (!html) {
-    res.status(400).json({ error: 'Missing html' })
-    return
-  }
-  const browser = await puppeteer.launch({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    headless: true
-    args: ['--no-sandbox--disable-setuid-sandbox']})
-  try {
-    const page = await browser.newPage()
-    await page.setContent(html, { waitUntil: 'networkidle0' })
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })
-    await browser.close()
-    res.setHeader('Content-Typeapplication/pdf')
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    headless: true,
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -46,17 +10,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    res.status(200).send(pdfBuffer)
-  } catch (e: any) {
-    try { await browser.close() } catch {}
-    res.status(500).json({ error: e?.message |'Failed to render PDF' })
+
+    res.status(200).send(pdfBuffer);
+  } catch (error) {
+    try { await browser.close() } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
+    res.status(500).json({ error: e?.message || 'Failed to render PDF' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+  }
+
+}
+
+}
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
@@ -87,7 +65,7 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
-    const page = await browser.new_page (),
+const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
@@ -97,9 +75,36 @@ if ( {) {
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
-  }
-}
+=======
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import puppeteer from 'puppeteer';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const config = {;
+  api: {;
+    bodyParser: {;
+      sizeLimit: '10mb'}}};
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

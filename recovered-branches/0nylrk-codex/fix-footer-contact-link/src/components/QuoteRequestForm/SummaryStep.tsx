@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from "react",
-import { QuoteFormData } from "@/types/quotes",
-import { Card, CardContent } from "@/components/ui/card",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { toast } from "@/hooks/use-toast";
-interface SummaryStepProps {
 
-  formData: QuoteFormData
-
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
-=======
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -30,28 +13,11 @@ interface SummaryStepProps {;
 }
 
 export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [isMatching, setIsMatching] = useState(false);
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
-<<<<<<< HEAD
-  // Run AI matching when the component mounts
-  useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      setIsMatching(true);
-      try {
-        // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName}
-          ${formData.projectDescription}
-          ${formData.serviceType}
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-        // Get AI matches
-        const results = await findMatches(
-=======
+
 
   // Run AI matching when the component mounts;
   useEffect(() => {;
@@ -71,20 +37,23 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
 
         // Get AI matches;
         const results = await findMatches(;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           queryString;
           formData && formData.serviceType;
           3;
-        );
-<<<<<<< HEAD
-        setMatches(results)
-      } catch (error) {
-        console.error("Error during AI matching:", error);
-        toast({
-          title: "Matching Error"
-          description: "We couldn't find matches for your request. Please try again."
-          variant: "destructive"})
 =======
+
+
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        // Get AI matches
+        const results = await findMatches(
+          queryString,
+          formData.serviceType,
+          3
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        );
+
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -135,12 +104,16 @@ if (return) {
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       } finally {
         setIsMatching (false);
       }
-<<<<<<< HEAD
-    }
+
+
+    },
+    
+
+
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -152,9 +125,15 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
-  }
+
+
+  },
+  
   // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
+  const matchItems = matches.map(match => match.item),
+  
+
+
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -162,11 +141,16 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-  }
 
+
+  },
+  
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -231,6 +215,11 @@ if (return) {
                   </div>
                 </div>
               )}
+
+
+              
+
+
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -292,7 +281,7 @@ if (return) {
       </div>
     </div>
   )
-=======
+
 
         setMatches(results);
       } catch (error) {;
@@ -533,103 +522,17 @@ if ( {) {
               <div>;
                 <Label className="text - zion - slate - light">Phone</Label>;
                 <div className="text - white">{form_data.contact_info.phone || "N / A"}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-<<<<<<< HEAD
 
-      {/* Timeline */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Timeline Type</Label>;
-                <div className="text-white capitalize">{formData && formData.timeline}</div>;
-              </div>;
-
-              {formData && formData.startDate && (;
-                <div>;
-                  <Label className="text-zion-slate-light">Start Date</Label>;
-                  <div className="text-white">;
-                    {formData && formData.startDate.toLocaleDateString()}
-                  </div>;
-                </div>;
-              )}
-
-              {formData && formData.endDate && (;
-                <div>;
-                  <Label className="text-zion-slate-light">End Date</Label>;
-                  <div className="text-white">;
-                    {formData && formData.endDate.toLocaleDateString()}
-                  </div>;
-                </div>;
-              )}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-
-      {/* Budget */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Budget</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Budget Type</Label>;
-                <div className="text-white capitalize">{formData && formData.budget.type}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Amount</Label>;
-                <div className="text-white">;
-                  ${formData && formData.budget.amount && amount.toLocaleString()}
-                  {formData && formData.budget.maxAmount ? ` - $${formData && formData.budget.maxAmount && maxAmount.toLocaleString()}` : ''}
-                </div>;
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
 
-      {/* Contact Information */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Name</Label>;
-                <div className="text-white">{formData && formData.contactInfo.name}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Company</Label>;
-                <div className="text-white">{formData && formData.contactInfo.company || "N/A"}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Email</Label>;
-                <div className="text-white">{formData && formData.contactInfo.email}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Phone</Label>;
-                <div className="text-white">{formData && formData.contactInfo.phone || "N/A"}</div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-    </div>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-import { Route, Routes } from "react-router-dom",
-import MobileAppPage from "../pages/MobileAppPage",
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-<<<<<<< HEAD
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const MobileAppRoutes = () => {
 =======
 const MobileAppRoutes = () => {;
@@ -12,16 +10,7 @@ const MobileAppRoutes = () => {;
   return (
     <Routes>;
       {/* Mobile App Routes */}
-<<<<<<< HEAD
-      <Route path="/download" element={<MobileAppPage />} />
-      <Route path="/mobile-app" element={<MobileAppPage />} />
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-      <Route path="/open-app" element={<OpenAppRedirect />} />
-    </Routes>
-  )
-}
-export default MobileAppRoutes;
-=======
+
       <Route path="/download" element={<MobileAppPage />} />;
       <Route path="/mobile-app" element={<MobileAppPage />} />;
       <Route path="/mobile-launch" element={<MobileLaunchPage />} />;
@@ -29,7 +18,7 @@ export default MobileAppRoutes;
     </Routes>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
 =======
 import { Route, Routes } from './react-router-dom';
@@ -47,6 +36,12 @@ const MobileAppRoutes = () =>: any {
     </Routes>);
 }
 ;
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default MobileAppRoutes;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

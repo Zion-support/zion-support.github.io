@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
-import { Resume } from "@/types/resume";
-=======
 import { Resume  } from '@/types / resume';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export interface StepProps {
   id: string;
   label: string
@@ -11,32 +8,99 @@ export interface StepProps {
 export interface NavigationButtonsProps {
   on_back?: () => void;
   on_next?: () => void;
-  isNextDisabled?: boolean;
-<<<<<<< HEAD
-  backLabel?: string;
-  nextLabel?: string;
-  isLoading?: boolean
 =======
+
+import { Resume } from "@/types/resume",
+
+=======
+import {Resume} from "@/types/resume";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface StepProps {
+  id: string;
+  label: string
+
+
+export interface NavigationButtonsProps {;
+
+  onBack?: () => void;
+  onNext?: () => void;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  isNextDisabled?: boolean;
+
   back_label?: string;
   next_label?: string;
   is_loading?: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface ResumeProgressProps {
   resume: Resume | null;
   progress: number
 }
 export interface CreateResumeFormProps {
-<<<<<<< HEAD
-  onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
-  isLoading: boolean
-=======
+
   onCreateResume: (title: string) => Promise < void>;
   on_cancel: () => void;
   is_loading: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface EmptyResumeProps {
   onCreateClick: () => void;
 }
+=======
+
+=======
+}
+
+export interface ResumeProgressProps {
+  resume: Resume | null,
+  progress: number
+}
+
+export interface CreateResumeFormProps {;
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void,
+  isLoading: boolean
+=======
+import { Resume } from "@/types/resume",
+export interface StepProps {
+  id: string,
+  label: string
+
+import { Resume } from "@/types/resume",;
+export interface StepProps {;
+  id: string,;
+  label: string;
+}
+;
+export interface NavigationButtonsProps {;
+  onBack?: () => void,;
+  onNext?: () => void,;
+  isNextDisabled?: boolean,;
+  backLabel?: string,;
+  nextLabel?: string,;
+  isLoading?: boolean;
+
+=======
+}
+;
+export interface ResumeProgressProps {;
+  resume: Resume | null,;
+  progress: number;
+}
+
+;
+export interface CreateResumeFormProps {;
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+  isLoading: boolean;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export interface EmptyResumeProps {
+
+  onCreateClick: () => void
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

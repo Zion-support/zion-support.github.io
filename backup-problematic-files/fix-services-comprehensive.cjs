@@ -87,6 +87,8 @@ const fs = require('fs')
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
 =======
 <<<<<<< HEAD

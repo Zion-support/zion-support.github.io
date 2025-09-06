@@ -4,129 +4,33 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
-import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-2025-micro-saas';
-import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
-import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
   const categories = [
-<<<<<<< HEAD
-    {
-      id: 'all'
-      name: 'All Services'
-      count:
-        revolutionary2025MicroSaasServices.length +
-        emergingTech2025Services.length +
-        enterpriseIT2025Services.length
-    }
-    {
-      id: 'ai'
-      name: 'AI & ML'
-      count: [
-        ...revolutionary2025MicroSaasServices
-        ...emergingTech2025Services
-        ...enterpriseIT2025Services
-      ].filter(s => s.category.includes('AI')).length
-    }
-    {
-      id: 'quantum'
-      name: 'Quantum Tech'
-      count: [
-        ...revolutionary2025MicroSaasServices
-        ...emergingTech2025Services
-        ...enterpriseIT2025Services
-      ].filter(s => s.category.includes('Quantum')).length
-    }
-=======
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-<<<<<<< HEAD
-import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
-import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
-import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-=======
-import { revolutionary2025MicroSaasServices } from '../../data / revolutionary - 2025 - micro - saas';
-import { emergingTech2025Services } from '../../data / emerging - tech - 2025 - services';
-import { enterpriseIT2025Services } from '../../data / enterprise - it - 2025 - services';
-const RevolutionaryServicesShowcase: React.FC = () => {
-  const [active_category, setActiveCategory] = useState ('all');
-  const [visible_services, setVisibleServices] = useState (12);
-;
-  const categories = [;
-    {
-      id: 'all',
-      name: 'All Services',
-      count:;
-        revolutionary2025MicroSaasServices.length +;
-        emergingTech2025Services.length +;
-        enterpriseIT2025Services.length,
-    },
-    {
-      id: 'ai',
-      name: 'AI & ML',
-      count: [;
-        ...revolutionary2025MicroSaasServices,
-        ...emergingTech2025Services,
-        ...enterpriseIT2025Services,
-      ].filter (string => s.category.includes ('AI')).length,
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum Tech',
-      count: [;
-        ...revolutionary2025MicroSaasServices,
-        ...emergingTech2025Services,
-        ...enterpriseIT2025Services,
-      ].filter (string => s.category.includes ('Quantum')).length,
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    {
-      id: 'emerging'
-      name: 'Emerging Tech'
-      count: emergingTech2025Services.length
-    }
-    {
-      id: 'enterprise'
-      name: 'Enterprise IT'
-      count: enterpriseIT2025Services.length
-    }
-    {
-      id: 'revolutionary'
-      name: 'Revolutionary'
-      count: revolutionary2025MicroSaasServices.length
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 const RevolutionaryServicesShowcase: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [visibleServices, setVisibleServices] = useState(12);
-=======
     { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
     { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length };
     { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length };
@@ -134,8 +38,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
   const categories = [;
     {;
       id: 'all',;
@@ -177,94 +79,29 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       id: 'revolutionary',;
       name: 'Revolutionary',;
       count: revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.length,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     },  ];
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const allServices = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
-<<<<<<< HEAD
-  const filteredServices = activeCategory === 'all'
-    ? allServices
-    : allServices.filter(service => {
-        if (activeCategory === 'ai') return service.category.includes('AI');
-        if (activeCategory === 'quantum') return service.category.includes('Quantum');
-        if (activeCategory === 'emerging') return emergingTech2025Services.includes(service);
-        if (activeCategory === 'enterprise') return enterpriseIT2025Services.includes(service);
-        if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices.includes(service);
-        return true
-      });
-  const loadMore = () => {
-<<<<<<< HEAD
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length));    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
-  }
-=======
-    setVisibleServices(prev => Math.min(prev + 12, filteredServices.length))
-  };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  const containerVariants = {
-    hidden: { opacity: 0 }
-=======
-;
-  const all_services = [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services];
-;
-  const filtered_services = active_category === 'all';
-    ? all_services;
-    : all_services.filter (service => {
-        if (return service.category.includes ('AI')) {
-  $2
-}
-        if (return service.category.includes ('Quantum')) {
-  $2
-}
-        if (return emergingTech2025Services.includes (service)) {
-  $2
-}
-        if (return enterpriseIT2025Services.includes (service)) {
-  $2
-}
-        if (return revolutionary2025MicroSaasServices.includes (service)) {
-  $2
-}
-        return true;
-      });
-;
-  const load_more = () =>: any {
-    setVisibleServices (prev => Math.min (prev + 12, filtered_services.length));    setVisibleServices (prev => Math.min (prev + 12, filtered_services.length));
-  }
-;
-  const container_variants = {
-    hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-<<<<<<< HEAD
-  }
-=======
+
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-        duration: 0.5
-      }
-    }
-  }
+
 =======
+
+        duration: 0.5,
+      },
+    },
+
 
   const filteredServices = activeCategory === 'all' ;
     ? allServices ;
@@ -276,73 +113,38 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service);
         return true;
       });
-
   const loadMore = () => {;
     setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
   };
 
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-  };
 
-  const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0 && 0.5,;
-      },;
-    },;
-  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
-=======
+
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
-<<<<<<< HEAD
-        <motion.div
-          className="text-center mb-16"
+
+
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
+
+
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
-            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-              Revolutionary 2025
-            </span>
-            <br />
-            <span className='text-white'>Services</span>
-          </h2>
-          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Experience the future with our cutting-edge AI, quantum computing
-            and emerging technology solutions. Transform your business with
-            services that were once science fiction.          </p>
-        </motion.div>
-=======
+
         <motion&& motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -362,16 +164,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             services that were once science fiction.          </p>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Category Filter */}
         <motion&& motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
-<<<<<<< HEAD
-=======
+
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Revolutionary 2025
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             </span>
             <br />
             <span className="text-white">Services</span>
@@ -382,9 +183,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           </p>
         </motion.div>
         {/* Category Filter */}
-        <motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div
-=======
+
             </span>;
             <br />;
             <span className="text-white">Services</span>;
@@ -394,32 +193,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             Transform your business with services that were once science fiction.;
           </p>;
         </motion && motion.div>;
-
         {/* Category Filter */}
-<<<<<<< HEAD
-        <motion&& motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'        <motion && motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          viewport={{ once: true }}>;
-          {categories && categories.map(category => (            <button
-              key={category && category.id}
-              onClick={() => {;
-                setActiveCategory(category && category.id);
-                setVisibleServices(12);              }}          {categories && categories.map((category) => (;
-            <button
-              key={category && category.id}
-              onClick={() => {;
-                setActiveCategory(category && category.id);
-                setVisibleServices(12);                setVisibleServices(12);
-<<<<<<< HEAD
-=======
-=======
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -439,23 +214,22 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            >;
-              {category && category.name}
-              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category && category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">;
-                {category && category.count}
-              </span>;
-            </button>;
+
+
+              </span>
+            </button>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-<<<<<<< HEAD
-        </motion.div>
-=======
+
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -470,20 +244,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+<<<<<<< HEAD
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
                 {/* Background Effects */}
-<<<<<<< HEAD
-                <div className='absolute inset-0 rounded-2xl overflow-hidden'>
-                  <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
-                  <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>
-=======
+
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>;
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>                </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -491,11 +262,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             >;
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>;
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">;
-=======
             >
               {category.name}
               <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -584,44 +353,29 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             >;
               {category.name}
               <span className='ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs'>                {category.count}              <span className="ml - 2 px - 2 py - 1 bg - white / 20 rounded - full text - xs">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {category.count}
               </span>;
             </button>))}
         </motion.div>;
         {/* Services Grid */}
-<<<<<<< HEAD
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {filteredServices.slice(0, visibleServices).map((service, index) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className="group relative cursor-pointer"
+
+              className='group relative cursor-pointer'
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               style={{ perspective: '1000px' }}
             >
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75"></div>
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 {/* Background Effects */}
-<<<<<<< HEAD
-                <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                </div>
-<<<<<<< HEAD
-=======
+
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">;
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
                 </div>;
-=======
-
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
@@ -629,9 +383,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR
                   </div>
                 )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -640,13 +392,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     POPULAR;
                   </div>;
                 )}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Service Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className='relative z-10'>
-                  <div className='flex items-start justify-between mb-4'>
-                    <div className='flex items-center space-x-3'>
-                      <div className='text-4xl'>{service.icon}</div>
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 =======
@@ -698,7 +455,27 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className='text - 4xl'>{service.icon}</div>;
                       <div>;
                         <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                {/* Service Header */}
+                <div className='relative z-10'>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='flex items-center space-x-3'>
+                      <div className='text-4xl'>{service.icon}</div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <div>
+                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {service.name}
                         </h3>;
                         <p className='text - gray - 400 text - sm'>;
@@ -712,25 +489,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       </div>;
                       <div className='text - gray - 400 text - sm'>;
                         {service.period}
-<<<<<<< HEAD
-                      </div>                    </div>
-                  </div>
-=======
+
                       </div>                    </div>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   {/* Description */}
                   <p className='text - gray - 300 mb - 4 leading - relaxed'>;
                     {service.description}
-<<<<<<< HEAD
-                  </p>                      <div>
-=======
+
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="text-4xl">{service.icon}</div>
                       <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                         <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
                           {service.name}
                         </h3>
@@ -743,37 +515,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     </div>
                   </div>
                   {/* Description */}
-<<<<<<< HEAD
-                  <p className='text-gray-300 mb-4 leading-relaxed'>
-                    {service.description}
-                  </p>
-                  {/* Stats Grid */}
-                  <div className='grid grid-cols-2 gap-3 mb-4'>
-                    <div className='flex items-center space-x-2 text-sm'>
-                      <Users className='w-4 h-4 text-cyan-400' />
-                      <span className='text-gray-300'>
-                        {service.customers}+ users
-                      </span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-sm'>
-                      <Star className='w-4 h-4 text-yellow-400' />
-                      <span className='text-gray-300'>
-                        {service.rating}/5 ({service.reviews})
-                      </span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-sm'>
-                      <TrendingUp className='w-4 h-4 text-green-400' />
-                      <span className='text-gray-300'>
-                        {service.growthRate}
-                      </span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-sm'>
-                      <Shield className='w-4 h-4 text-blue-400' />
-                      <span className='text-gray-300'>
-                        {service.trialDays} day trial
-                      </span>                    </div>
-                  </div>
-=======
+
                 <div className='relative z-10'>;
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center space-x-3'>;
@@ -795,7 +537,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         {service && service.period}
                       </div>                    </div>;
                   </div>;
-
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
@@ -811,14 +552,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className="text-gray-400 text-sm">{service && service.period}</div>;
                     </div>;
                   </div>;
-
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
                   </p>;
-=======
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>;
@@ -846,31 +585,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         {service && service.trialDays} day trial;
                       </span>                    </div>;
                   </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Action Buttons */}
                   <div className='flex space-x-3 mt-6'>;
                   {/* Stats Grid */}
-<<<<<<< HEAD
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="flex items-center space-x-2 text-sm">
-                      <Users className="w-4 h-4 text-cyan-400" />
-                      <span className="text-gray-300">{service.customers}+ users</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm">
-                      <Star className="w-4 h-4 text-yellow-400" />
-                      <span className="text-gray-300">{service.rating}/5 ({service.reviews})</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm">
-                      <TrendingUp className="w-4 h-4 text-green-400" />
-                      <span className="text-gray-300">{service.growthRate}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-sm">
-                      <Shield className="w-4 h-4 text-blue-400" />
-                      <span className="text-gray-300">{service.trialDays} day trial</span>
-                    </div>
-                  </div>
-=======
+
                   <div className="grid grid-cols-2 gap-3 mb-4">;
                     <div className="flex items-center space-x-2 text-sm">;
                       <Users className="w-4 h-4 text-cyan-400" />;
@@ -890,46 +608,21 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                     </div>;
                   </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   {/* Action Buttons */}
-<<<<<<< HEAD
-                  <div className='flex space-x-3 mt-6'>;
-                    <a
-                      href={service && service.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn'>;
-                      <span>Get Started</span>;
-                      <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />;
-                    </a>;
-                    <button className='px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5'>                      Learn More                    <a
-                      href={service && service.link}
-=======
+
                   <div className="flex space-x-3 mt-6">
                     <a
                       href={service.link}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                       target="_blank"
                       rel="noopener noreferrer"
-<<<<<<< HEAD
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn"
-                    >
-                      <span>Get Started</span>
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                    </a>
-                    <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-<<<<<<< HEAD
-=======
+
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group/btn">;
                       <span>Get Started</span>;
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />;
                     </a>;
                     <button className="px-4 py-3 border border-white/20 hover:border-cyan-400/50 text-white rounded-lg transition-all duration-300 hover:bg-white/5">;
-=======
                   </p>                      <div>;
                         <h3 className="text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
                           {service.name}
@@ -1014,13 +707,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 300" />;
                     </a>;
                     <button className="px - 4 py - 3 border border - white / 20 hover:border - cyan - 400 / 50 text - white rounded - lg transition - all duration - 300 hover:bg - white / 5">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                       Learn More;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-=======
+
 
                 {/* Floating Particles */}
                 <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -1034,9 +726,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </motion.div>
           ))}
         </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Floating Particles */}
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>;
                   <div
@@ -1062,60 +752,49 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               </div>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
-        </motion.div>
-        {/* Load More Button */}
-        {visibleServices < filteredServices.length && (
-<<<<<<< HEAD
-          <motion.div
-            className='text-center'            initial={{ opacity: 0 }}          <motion.div
-=======
-        </motion && motion.div>;
 
+        </motion && motion.div>;
         {/* Load More Button */}
         {visibleServices < filteredServices && filteredServices.length && (;
           <motion&& motion.div
             className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-          <motion.div 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="text-center"
+=======
+
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+
+            className="text-center"
+=======
+
+        {/* Load More Button */}
+        {visibleServices < filteredServices.length && (
+          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40";
-            >;
-              Load More Revolutionary Services;
-            </button>;
-          </motion && motion.div>;
-=======
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
-        {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <motion.div
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
-=======
+
         <motion&& motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion && motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1137,21 +816,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             </a>;
             <a
               href='/pricing'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'            >            Ready to Experience the Future?
-=======
-        <motion.div 
-          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Experience the Future?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the revolution with our cutting-edge AI, quantum, and emerging technology services.
@@ -1174,13 +840,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
-export default RevolutionaryServicesShowcase;  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            Ready to Experience the Future?;
           </h3>;
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
@@ -1204,22 +865,16 @@ export default RevolutionaryServicesShowcase;  )
     </section>;
   );
 };
-
 export default RevolutionaryServicesShowcase;  );
-<<<<<<< HEAD
-=======
+
 =======
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default RevolutionaryServicesShowcase;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
                 {/* Floating Particles */}
                 <div className='absolute inset - 0 pointer - events - none overflow - hidden'>;
@@ -1325,3 +980,10 @@ export default RevolutionaryServicesShowcase);
 export default RevolutionaryServicesShowcase;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

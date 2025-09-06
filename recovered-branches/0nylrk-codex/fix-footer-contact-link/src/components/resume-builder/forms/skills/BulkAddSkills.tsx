@@ -1,65 +1,32 @@
-<<<<<<< HEAD
-import React from 'react';
 
 
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
 import {BulkAddSkillsProps} from './types';
-<<<<<<< HEAD
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {Textarea} from '@/components/ui/textarea';
-export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
-  const [bulkSkills, setBulkSkills] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const { addSkill } = useResume();
-<<<<<<< HEAD
-  const handleCategorizeSkills = async () => {
-    if (!bulkSkills |bulkSkills.trim().length === 0) {
-=======
+
 
   const handleCategorizeSkills = async () => {;
     if (!bulkSkills || bulkSkills && bulkSkills.trim().length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       setError('Please enter some skills to categorize');
       return;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
     setError(null);
     try {;
       const enhancedContent = await enhanceContent(;
         bulkSkills;
         'skill-categorization';
       );
-<<<<<<< HEAD
-      if (enhancedContent) {
-        try {
-          // Parse the JSON response
-          const categorizedSkills = JSON.parse(enhancedContent);
-          // Add the categorized skills
-          for (const [category, skillsList] of Object.entries(categorizedSkills)) {
-            if (Array.isArray(skillsList)) {
-              for (const skillName of skillsList as string[]) {
-                await addSkill(resumeId, {
-                  name: skillName
-                  category: category
-                  proficiency: 3})
-              }
-            }
-          }
-          // Reset the form and bulk input
-          setBulkSkills('');
-          // Refresh the skills
-          await onSuccess()
-=======
+
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Textarea} from '@/components / ui / textarea';
 export const BulkAddSkills = ({ resume_id, on_success }: BulkAddSkillsProps) =>: any {
@@ -108,15 +75,13 @@ if ( {) {
 ;
           // Refresh the skills;
           await on_success ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
-      setError(err.message |'Failed to categorize skills')
-=======
+
 
       if (enhancedContent) {;
         try {;
@@ -142,38 +107,51 @@ if ( {) {
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
+
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  }
-  return (
-<<<<<<< HEAD
-    <div className="bg-muted/40 p-6 rounded-lg">
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
+
+
+  },
 =======
+  };
+=======
+  },
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
     <div className="bg-muted/40 p-6 rounded-lg">;
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
       <div className="space-y-4">;
         <div className="space-y-2">;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <Textarea
+=======
+
+          <Textarea 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
-<<<<<<< HEAD
-            onChange={(e) => setBulkSkills(e.target.value)}
-          />
-        </div>
-        <Button
+
+
+        <Button 
+
           onClick={handleCategorizeSkills}
-          disabled={isEnhancing |!bulkSkills.trim()}
+
+          disabled={isEnhancing || !bulkSkills.trim()}
+
+
           className="gap-2"
         >
           {isEnhancing ? (
@@ -190,9 +168,7 @@ if ( {) {
       </div>
     </div>
   )
-}
 
-=======
             onChange={(e) => setBulkSkills(e && e.target.value)}
           />;
         </div>;
@@ -217,6 +193,12 @@ if ( {) {
       </div>;
     </div>;
   );
+=======
+
+},
+
+=======
+
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

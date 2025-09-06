@@ -1,22 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Image, { type ImageProps } from 'next/image';
+import React, { useState } from 'react'
+import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
-<<<<<<< HEAD
-  src: string;
-  alt?: string;
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
+  src: string;  alt?: string
   /** Source to use if the main src fails */
-=======
+  fallbackSrc?: string
+  /** CSS class for the retry button */
+  retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+
   src: string,
   alt?: string;
   /** Source to use if the main src fails */
-  fallbackSrc?: string;
+  fallbackSrc?: string
   /** CSS class for the retry button */
-  retryClassName?: string
+
+  retryClassName?: string;  retryClassName?: string
+
+import React, { useState } from 'react',;
+import Image, { type ImageProps } from 'next/image',;
+import { cn } from '@/lib/utils',;
+interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
+  src: string,;
+  alt?: string,;
+  /** Source to use if the main src fails */;
+  fallbackSrc?: string,;
+  /** CSS class for the retry button */;
+  retryClassName?: string;
+
+
+
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   fallbackSrc?: string
   /** CSS class for the retry button */
@@ -35,23 +48,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-<<<<<<< HEAD
 
-  src
-  alt = ''
-  fallbackSrc = '/images/image-placeholder.svg'
-  className
-  retryClassName
-}: ImageWithRetryProps) {
-  const [currentSrc, setCurrentSrc] = useState(src)
-  const [failed, setFailed] = useState(false)
-  const handleError = () => {
-    setFailed(true)
-    setCurrentSrc(fallbackSrc) }
-  const handleRetry = () => {
-    setFailed(false)
-    setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
-=======
 import React, { useState } from 'react';
 import Image, { type ImageProps } from 'next / image';
 import { cn } from '@/lib / utils';
@@ -85,15 +82,13 @@ function ImageWithRetry() {
   const handle_retry = () =>: any {
     set_failed (false);
     setCurrentSrc (src) }    setCurrentSrc (fallback_src);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
   const handle_retry = () =>: any {
     set_failed (false);
     setCurrentSrc (src);    setCurrentSrc (src);
   }
-<<<<<<< HEAD
-  const fill = !('width' in props) && !('height' in props)
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -157,54 +152,20 @@ export function ImageWithRetry(): any ({;
   const handleRetry = () => {;
     setFailed(false);
     setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
-<<<<<<< HEAD
-=======
-=======
-  src;
-  alt = '',
-  fallbackSrc = '/images/image-placeholder.svg',
-  className;
-  retryClassName;
-  ...props
-}: ImageWithRetryProps) {
 
-  const [ currentSrc, setCurrentSrc ] = useState(src),
-  const [ failed, setFailed ] = useState(false),
-
-
-  const handleError = () => {
-    setFailed(true);
-    setCurrentSrc(fallbackSrc)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
   const handleRetry = () => {;
     setFailed(false);
-<<<<<<< HEAD
-    setCurrentSrc(src);    setCurrentSrc(src);
-=======
-<<<<<<< HEAD
-    setCurrentSrc(src);    setCurrentSrc(src);
-=======
-    setCurrentSrc(src)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
   };
 
   const fill = !('width' in props) && !('height' in props);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-    <div className='relative inline-block'>      <Image    <div className="relative inline-block">;
-=======
-<<<<<<< HEAD
-    <div className='relative inline-block'>      <Image    <div className="relative inline-block">;
-=======
-    <div className="relative inline-block">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
       <Image
         {...props}
         src = {currentSrc,}
@@ -212,86 +173,49 @@ export function ImageWithRetry(): any ({;
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
-      />;
-      {failed && (;
+      />
+      {failed && (
         <button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          type='button'
-          onClick={handleRetry}
-          className={cn(
-            'absolute bottom-1 right-1 text-xs underline'
-            retryClassName
-          )}>          onClick = {handleRetry,}
-          className = {cn('absolute bottom-1 right-1 text-xs underline', retryClassName),}
-          type="button";
-          onClick={handleRetry}
-          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
-        >;
-          Retry;
-        </button>;
-<<<<<<< HEAD
-=======
-      )}
-<<<<<<< HEAD
-    </div>
-  )
-export default ImageWithRetry
-=======
-    </div>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
-          type="button"
-          onClick={handleRetry}
-          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
-        >
-          Retry
-        </button>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       )}
     </div>
   );
-<<<<<<< HEAD
 
-export default ImageWithRetry;
-=======
 }
 
 
 export default ImageWithRetry;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
   const fill = !('width' in props) && !('height' in props);
   return (
-    <div className='relative inline - block'>      <Image    <div className="relative inline - block">;
-      <Image;
+    <div className="relative inline-block">
+      <Image
         {...props}
-        src = {current_src, }
-        alt = {alt, }
-        on_error = {handle_error, }
-        class_name = {cn (class_name), }
-        fill = {fill, }
-      />;
+        src={currentSrc}
+        alt={alt}
+        onError={handleError}
+        className={cn(className)}
+        fill={fill}
+      />
       {failed && (
-        <button;
-          type='button';
-          on_click={handle_retry}
-          className={cn (
-            'absolute bottom - 1 right - 1 text - xs underline',
-            retryClassName)}        >          on_click = {handle_retry, }
-          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName), }
-          type="button";
-          on_click={handle_retry}
-          className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
+        <button
+          type="button"
+          onClick={handleRetry}
+          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
         >;
           Retry;
-        </button>)}
-    </div>);
+        </button>;
+      )}
+    </div>;
+  );
+}
+;
 export default ImageWithRetry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+  src,
+  alt = '',
+  fallbackSrc = '/images/image-placeholder.svg',
+  className,
+  retryClassName,

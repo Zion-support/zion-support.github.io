@@ -1,52 +1,49 @@
-<<<<<<< HEAD
-import React from 'react';
-import type { AppProps } from 'next/app';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
+
 =======
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
+=======
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 return <Component {...pageProps} />;
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
-}
-=======
-<<<<<<< HEAD
-import '../styles/globals.css';
-=======
-import '../src/styles/globals ;
 
-export default function App(): any ({ Component, pageProps }: AppProps) {;
-  return <Component {...pageProps} />;
-import '../styles/globals ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-export default function App(): any ({ Component, pageProps }: AppProps) {;
-  return <Component {...pageProps} />;
-}
-=======
-import Layout from '../components/layout/Layout';
-import '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
-
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+=======
+}
+=======
+
+=======
+import '../src/styles/globals.css';
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function App({ Component, pageProps }: AppProps) {
+
+import '../styles/globals.css';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';

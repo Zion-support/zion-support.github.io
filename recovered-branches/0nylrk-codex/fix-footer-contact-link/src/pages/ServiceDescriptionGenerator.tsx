@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,11 +31,14 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-<<<<<<< HEAD
+
+
+
+
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -65,7 +56,11 @@ export default function ServiceDescriptionGenerator() {;
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
-  }
+
+
+  },
+
+
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -84,7 +79,7 @@ export default function ServiceDescriptionGenerator() {;
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-=======
+
 
   // Show loading while checking authentication;
   if (isLoading) {;
@@ -126,21 +121,18 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <GeneratedDescriptionDisplay
+=======
+
+              <GeneratedDescriptionDisplay 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-=======
+
 =======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -202,17 +194,12 @@ if ( {) {
                 description={generated_description}
                 on_save={handleDescriptionSave}
               />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           </div>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

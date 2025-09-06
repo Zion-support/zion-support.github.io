@@ -1,58 +1,23 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Mail, Send } from 'lucide-react'
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-interface ProfileContactProps {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, Send } from 'lucide-react';
-import { useState } from 'react';
-import { toast } from '@/hooks/use-toast';
-interface ProfileContactProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  email?: string;
+email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
 
-<<<<<<< HEAD
-export function ProfileContact({
-  email
-  profileName
-  profileType
-}: ProfileContactProps) {
-  const [message, setMessage] = useState('')
-  const [subject, setSubject] = useState('')
-  const [isSending, setIsSending] = useState(false)
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSending(true)
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false)
-      setMessage('')
-      setSubject('');      toast({
-        title: 'Message Sent'
-        description: `Your message has been sent to ${profileName}.`
-      })
-    }, 1000)
-=======
+
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
 import { Textarea } from '@/components / ui / textarea';
 import { Mail, Send } from 'lucide-react';
 import { useState } from 'react';
 import { toast } from '@/hooks / use - toast';
+
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+
 interface ProfileContactProps {
   email?: string;
   profile_name: string;
@@ -76,34 +41,82 @@ function ProfileContact() {
         description: `Your message has been sent to ${profile_name}.`,
       });
     }, 1000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+interface ProfileContactProps {
+  email?: string,
+  profileName: string,
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSending(true),
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
+
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSending(true),
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
+
+
+
+
+
   return (
-<<<<<<< HEAD
-    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
-      <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
-        <Mail className='mr-2 h-5 w-5 text-zion-cyan' />
-        Contact
-      </h3>
-=======
+
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4 flex items - center'>;
         <Mail className='mr - 2 h - 5 w - 5 text - zion - cyan' />;
         Contact;
       </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+      
+
       {email && (
         <div className='mb - 4 text - zion - slate - light'>;
           <span className='block'>Email: </span>;
           <a;
             href={`mailto:${email}`}
-<<<<<<< HEAD
-            className='text-zion-cyan hover:underline truncate block'          >        <div className="mb-4 text-zion-slate-light">
-          <span className="block">Email: </span>
-          <a
-            href={`mailto:${email}`}
-=======
+
 export function ProfileContact(): any ({;
   email,;
   profileName,;
@@ -112,8 +125,7 @@ export function ProfileContact(): any ({;
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
   const [isSending, setIsSending] = useState(false);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
   const handleSendMessage = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -146,33 +158,18 @@ export function ProfileContact(): any ({;
           <span className="block">Email: </span>;
           <a
             href={`mailto:${email}`} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="text-zion-cyan hover:underline truncate block"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
+
+
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
             {email}
           </a>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <form onSubmit={handleSendMessage}>
-        <div className='space-y-4'>
-          <div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-      <form onSubmit={handleSendMessage}>;
-        <div className='space-y-4'>;
-          <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <Input
               placeholder='Subject'
               value={subject}
@@ -182,6 +179,15 @@ export function ProfileContact(): any ({;
         <div className="space-y-4">;
           <div>;
             <Input
+
+      
+
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+
+
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
@@ -193,118 +199,27 @@ export function ProfileContact(): any ({;
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
-              onChange={e => setMessage(e && e.target.value)}
-              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]';
-              required;
-            />;
-          </div>;
-          <Button
-            type='submit'
-            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
-            disabled={isSending}              required
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      
-      <form onSubmit={handleSendMessage}>
-        <div className="space-y-4">
-          <div>
-            <Input
-              placeholder="Subject"
-=======
-            className='text - zion - cyan hover:underline truncate block'          >        <div className="mb - 4 text - zion - slate - light">;
-          <span className="block">Email: </span>;
-          <a;
-            href={`mailto:${email}`}
-            className="text - zion - cyan hover:underline truncate block";
-            {email}
-          </a>;
-        </div>)}
-      <form on_submit={handleSendMessage}>;
-        <div className='space - y-4'>;
-          <div>;
-            <Input;
-              placeholder='Subject';
-              value={subject}
-              on_change={e => set_subject (e.target.value)}
-              className='bg - zion - blue border - zion - blue - light text - white'              required              className="bg - zion - blue border - zion - blue - light text - white";
-      <form on_submit={handleSendMessage}>;
-        <div className="space - y-4">;
-          <div>;
-            <Input;
-              placeholder="Subject";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-              value={subject}
-              on_change={(e) => set_subject (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white";
-              required;
-            />;
-          </div>;
-          <div>;
-            <Textarea;
-              placeholder={`Message to ${profile_name}...`}
-              value={message}
-<<<<<<< HEAD
-              onChange={(e) => setMessage(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-            />
-          </div>
-          <Button
-            type="submit"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            />;
-          </div>;
-          <Button
+
+
             type="submit" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled = {isSending,}>;
-            <Send className='mr-2 h-4 w-4' />;
-            {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
-          >;
-            <Send className="mr-2 h-4 w-4" />;
+
+            disabled={isSending}
+          >
+
+
+            <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-          </Button>
-        </div>
-      </form>
-    </div>
-  )
-  `mailto:$ {
-  email
-}` "
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
-}'"}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
           </Button>;
         </div>;
       </form>;
     </div>;
   );
-<<<<<<< HEAD
 
-  `mailto:$ {;
-  email ;
-}` ";
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
-}'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               on_change={e => set_message (e.target.value)}
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -335,5 +250,5 @@ export function ProfileContact(): any ({;
 }` ";
 }className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+;
