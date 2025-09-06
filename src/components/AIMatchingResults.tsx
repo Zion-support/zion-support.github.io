@@ -16,10 +16,10 @@ interface AIMatchingResultsProps {
 }
 
 export function AIMatchingResults({
-  matches;
-  onSelectMatch;
-  isLoading = false;
-  projectDescription = "";
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all");

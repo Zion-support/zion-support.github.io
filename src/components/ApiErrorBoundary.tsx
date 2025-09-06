@@ -20,9 +20,10 @@ interface ApiErrorBoundaryState {
 }
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null = null,
+  private retryTimeoutId: NodeJS.Timeout | null = null;
+
   constructor(props: ApiErrorBoundaryProps) {
-    super(props),
+    super(props);
     this.state = {
       hasError: false,
       error: null,

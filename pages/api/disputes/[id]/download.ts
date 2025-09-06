@@ -8,9 +8,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
   }
-  const user = parseUserFromRequest(req),
+  const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
-  if (!dispute) return res.status(404).json({ error: 'Not found' }),
+  if (!dispute) return res.status(404).json({ error: 'Not found' });
   try {
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {

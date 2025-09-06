@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string)?.toLowerCase(),
-  if (!code) return res.status(400).json({ error: 'Missing code' }),
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!code) return res.status(400).json({ error: 'Missing code' });
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
   try {
     if (usingPlaceholder) {
-      const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00: 00: 00Z',
-      res.setHeader('Content-Typetext/csv');
+      const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z';
+      res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
     }

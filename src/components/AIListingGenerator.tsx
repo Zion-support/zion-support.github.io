@@ -40,7 +40,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
-        setTitle(e.target.value),
+        setTitle(e.target.value);
         break;
       case 'category':
         setCategory(e.target.value);
@@ -59,8 +59,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
-      }),
-      return
+      });
+      return;
     }
 
     setIsLoading(true);

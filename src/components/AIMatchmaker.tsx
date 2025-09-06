@@ -23,8 +23,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive"}),
-      return
+        variant: "destructive"
+      });
+      return;
     }
 
     setIsMatchmaking(true);
