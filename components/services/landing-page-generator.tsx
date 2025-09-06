@@ -1,1 +1,16 @@
- <Head> <title>Services • Landing-page-generator - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <main> <h1>LandingPageGenerator</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> 
+import React from 'react';
+
+interface Landing-page-generatorProps {
+  className?: string;
+}
+
+const Landing-page-generator: React.FC<Landing-page-generatorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Landing-page-generator</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Landing-page-generator;

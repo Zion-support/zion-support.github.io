@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>ai-predictive-maintenance-platform</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface AiPredictiveMaintenancePlatformProps {
+  className?: string;
 }
+
+const AiPredictiveMaintenancePlatform: React.FC<AiPredictiveMaintenancePlatformProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AiPredictiveMaintenancePlatform</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AiPredictiveMaintenancePlatform;

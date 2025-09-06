@@ -1,12 +1,12 @@
 import React from 'react';
-interface ReviewsModerationProps {
-  // Add props here as needed
-}
-export default function ReviewsModeration({ }: ReviewsModerationProps) {
+
+const ReviewsModeration = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ReviewsModeration</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ReviewsModeration;

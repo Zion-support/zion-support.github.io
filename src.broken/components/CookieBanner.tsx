@@ -1,2 +1,16 @@
- return (<CookieConsent location="bottom" cookieName="zion consent banner" declineButtonText="Reject Non-Essential" buttonText="Accept All" enableDeclineButton disableStyles > <span className="mr-2" >We use cookies to personalize content and ads.</span> <Link to="/privacy-settings" className="underline text-white" >Settings</Link> </CookieConsent>) 
+import React from 'react';
+
+interface CookieBannerProps {
+  className?: string;
 }
+
+const CookieBanner: React.FC<CookieBannerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CookieBanner</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CookieBanner;

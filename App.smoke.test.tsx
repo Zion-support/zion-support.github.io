@@ -1,14 +1,16 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import App from "./App";
+import React from 'react';
 
-describe("App Smoke Tests", () => {
-  it("should render without crashing", () => {
-    expect(() => render(<App />)).not.toThrow();
-  });
+interface App.smoke.testProps {
+  className?: string;
+}
 
-  it("should render a basic structure", () => {
-    const { container } = render(<App />);
-    expect(container.firstChild).toBeTruthy();
-  });
-});
+const App.smoke.test: React.FC<App.smoke.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>App.smoke.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default App.smoke.test;

@@ -1,1 +1,16 @@
- <div> <Head> <title>DigitalTransformationInsights - Zion Tech Solutions</title> <meta name="description" content="DigitalTransformationInsights page" /> </Head> <main> <h1>DigitalTransformationInsights</h1> <p>This page is under construction.</p> </main> </div> export default DigitalTransformationInsights;
+import React from 'react';
+
+interface DigitalTransformationInsightsProps {
+  className?: string;
+}
+
+const DigitalTransformationInsights: React.FC<DigitalTransformationInsightsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DigitalTransformationInsights</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default DigitalTransformationInsights;

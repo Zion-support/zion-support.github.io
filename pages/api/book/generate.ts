@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Generate utility
+export const Generate = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Book generated' });
-}
+export default Generate;

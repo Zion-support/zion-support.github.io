@@ -1,1 +1,7 @@
-// Stub pricing analytics utility - placeholder for missing functionality 
+// PricingAnalytics utility
+export const PricingAnalytics = () => {
+  // Implementation here
+  return null;
+};
+
+export default PricingAnalytics;

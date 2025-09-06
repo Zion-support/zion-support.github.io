@@ -1,1 +1,16 @@
- <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name="description" content="Index page" /> </Head> <main> <h1>Index</h1> <p>This page is under construction.</p> </main> </div> export default Index;
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
+}
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

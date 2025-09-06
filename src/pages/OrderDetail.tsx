@@ -1,41 +1,16 @@
- try {;
-  await supabase.functions.invoke ('send-email',  {;
-  body: {;
-  to: user.email, subject: `Receipt for order $ {;
-  order.orderId ;
-}`;
-html: `<p>Thank you for your purchase. Total $ {;
-  order.total ;
-}.</p>` ;
+import React from 'react';
+
+interface OrderDetailProps {
+  className?: string;
 }
-}
+
+const OrderDetail: React.FC<OrderDetailProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>OrderDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-`Order #$ {;
-  order.orderId ;
-}`;
-`Date: $ {;
-  new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {;
-  i.name ;
-}x$ {;
-  i.quantity ;
-}- $$ {;
-  i.price.toFixed (2) ;
-}`);';
-'';
-`Total: $$ {;
-  order.total.toFixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
-order.shippingAddress.name;
-order.shippingAddress.street;
-await navigator.clipboard.writeText (summary);';
-toast.success ('Order summary copied to clipboard') ;
-};
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
-}'"
+
+export default OrderDetail;

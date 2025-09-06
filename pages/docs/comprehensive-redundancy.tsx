@@ -1,6 +1,16 @@
- <> <Head> </Head> <main style= {
-  {
-  padding: 24 
+import React from 'react';
+
+interface ComprehensiveRedundancyProps {
+  className?: string;
 }
-}> <p>Redirecting to Comprehensive Redundancy docs…</p> </main> </>) 
-}
+
+const ComprehensiveRedundancy: React.FC<ComprehensiveRedundancyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ComprehensiveRedundancy</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ComprehensiveRedundancy;

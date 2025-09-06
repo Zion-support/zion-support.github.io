@@ -1,15 +1,16 @@
- if (!conversation) {;
-  return <div style= {;
-  style ;
-}/> ;
-}return (<div style= {;
-  style ;
-}> <ConversationItem /> </div>) ;
+import React from 'react';
+
+interface ConversationsListProps {
+  className?: string;
+}
+
+const ConversationsList: React.FC<ConversationsListProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ConversationsList</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto" > <div className="p-3 border-b border-zion-purple/20" > <h3 className="font-medium text-white" >Conversations</h3> </div> <p>No conversations yet</p> <p className="text-sm mt-1" > Start a conversation from a job or talent profile. </p> </div>) : (<List height= {;
-  listHeight ;
-}> {;
-  Row ;
-}</List>) ;
-}</div>) ;
-}"
+
+export default ConversationsList;

@@ -1,12 +1,12 @@
 import React from 'react';
-interface OpenAppRedirectProps {
-  // Add props here as needed
-}
-export default function OpenAppRedirect({ }: OpenAppRedirectProps) {
+
+const OpenAppRedirect = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>OpenAppRedirect</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default OpenAppRedirect;

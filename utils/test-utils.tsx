@@ -1,11 +1,16 @@
- {
-  children 
-}</ThemeProvider>) 
+import React from 'react';
+
+interface Test-utilsProps {
+  className?: string;
+}
+
+const Test-utils: React.FC<Test-utilsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Test-utils</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-isFallback: false;
-isLocale: false;
-isReady: true;
-defaultLocale: 'en';
-domainLocales: [];
-isPreview: false 
-});
+
+export default Test-utils;

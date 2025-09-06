@@ -1,22 +1,16 @@
- const EnterpriseRoutes = () => {
-  return (<Routes> {
-  /* Enterprise Routes */ 
-}<Route path="/enterprise" element= {
-  <EnterprisePlans /> 
-}/> <Route path="/plans/enterprise" element= {
-  <EnterprisePlans /> 
-}/> <Route path="/enterprise/admin" element= {
-  <EnterpriseAdmin /> 
-}/> <Route path="/company/:companySlug" element= {
-  <CompanyWorkspace /> 
-}/> <Route path="/enterprise/billing" element= {
-  <EnterpriseBilling /> 
-}/> {
-  /* Zion Hire AI Routes */ 
-}<Route path="/zion-hire-ai" element= {
-  <ZionHireAI /> 
-}/> <Route path="/hire-ai" element= {
-  <ZionHireAI /> 
-}/> 
+import React from 'react';
+
+interface EnterpriseRoutesProps {
+  className?: string;
+}
+
+const EnterpriseRoutes: React.FC<EnterpriseRoutesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnterpriseRoutes</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default EnterpriseRoutes;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AdminDashboard.jsx import React from \'react\'';\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export default function AdminDashboard() {}; return(); <AdminLayout>; <div className=\"space-y-4\">\";\" <h1 className=\"text-2xl font-bold\">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;\" );\";\" }\'";\" \'"\'";\" import React from \'react\'';\'; import AdminLayout from \'@/components / admin / AdminLayout\'; export default function AdminDashboard () {}; return () ; <AdminLayout>; <div className=\"space - y-4\">\";\" <h1 className=\"text - 2xl font - bold\">Admin Dashboard</h1>; <p > Select a section from the sidebar.</p>; </div>; </AdminLayout>;\") ;\";\" }\'";\" \'"\'";\"";
-<<<<<<< "HEAD": src.pages.disabled/AdminDashboard.jsx import _React from 'react'';'; import AdminLayout from '@/components/admin/AdminLayout'; export default function AdminDashboard() {}; return(); <AdminLayout>; <div className="space-y-4">";" <h1 className="text-2xl font-bold">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;" );";" }'";" '"'";" import _React from 'react'';'; import AdminLayout from '@/components / admin / AdminLayout'; export default function AdminDashboard () {}; return () ; <AdminLayout>; <div className="space - y-4">";" <h1 className="text - 2xl font - bold">Admin Dashboard</h1>; <p > Select a section from the sidebar.</p>; </div>; </AdminLayout>;") ;";" }'";" '"'";"";
-=======
-=======
-=======
+import React from 'react';
+
+const AdminDashboard = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AdminDashboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AdminDashboard;

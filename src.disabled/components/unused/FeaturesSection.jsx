@@ -1,12 +1,12 @@
 import React from 'react';
-interface FeaturesSectionProps {
-  // Add props here as needed
-}
-export default function FeaturesSection({ }: FeaturesSectionProps) {
+
+const FeaturesSection = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>FeaturesSection</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default FeaturesSection;

@@ -1,9 +1,7 @@
- export default function handler (req: NextApiRequest, res: NextApiResponse) {
-  const state = readState ();
-status: "ok";
-instanceId: state.config.instanceId;
-config: state.config;
-lastSyncedAt: state.lastSyncedAt;
-counts: {
-  totalEvents: scopedEvents.length;
-}
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
+
+export default Index;

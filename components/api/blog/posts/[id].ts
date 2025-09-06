@@ -1,3 +1,7 @@
- 
-}return res.status (405) .end () 
-}
+// [id] utility
+export const [id] = () => {
+  // Implementation here
+  return null;
+};
+
+export default [id];

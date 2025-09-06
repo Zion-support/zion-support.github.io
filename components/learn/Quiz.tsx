@@ -1,9 +1,16 @@
- /> <span> {
-  opt 
-}</span> </label>) ) 
-}</div> {
-  answers[q.id] === q.answerIndex ? (<span className="text-green-600" >Correct</span>) : (<span className="text-red-600" >Incorrect</span>) 
-}</div>) 
-}</div>) ) 
-}</div>) 
+import React from 'react';
+
+interface QuizProps {
+  className?: string;
 }
+
+const Quiz: React.FC<QuizProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Quiz</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Quiz;

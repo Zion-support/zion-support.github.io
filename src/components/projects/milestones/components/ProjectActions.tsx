@@ -1,12 +1,16 @@
- {;
-  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
-  `/dashboard/disputes/$ {;
-  disputeId ;
-}` ";
-}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
-}{;
-  isTalent && !isUnderDispute && (<Button onClick={;
-  onAddMilestone ;
-}> Add Milestone </Button>) ;
-}</div>) ;
-}"
+import React from 'react';
+
+interface ProjectActionsProps {
+  className?: string;
+}
+
+const ProjectActions: React.FC<ProjectActionsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectActions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectActions;

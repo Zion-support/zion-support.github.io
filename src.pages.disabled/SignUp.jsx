@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} \"from\": \'@/components / ui / form\'';\";\";
-<<<<<<< HEAD
-<<<<<<< HEAD
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
-=======
-Form,FormControl,FormField,FormItem,FormLabel,FormMessage} "from": '@/components / ui / form'';";";""
+import React from 'react';
+
+const SignUp = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SignUp</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SignUp;

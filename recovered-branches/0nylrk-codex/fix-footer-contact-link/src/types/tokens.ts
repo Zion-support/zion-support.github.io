@@ -1,1 +1,7 @@
- export type TransactionType = 'earn' | 'burn';
+// Tokens utility
+export const Tokens = () => {
+  // Implementation here
+  return null;
+};
+
+export default Tokens;

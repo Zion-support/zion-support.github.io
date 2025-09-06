@@ -1,4 +1,16 @@
- export function LoadingContentSkeleton () {
-  return (<Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden" > h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) 
-}</div> </CardContent> </Card>) 
+import React from 'react';
+
+interface LoadingContentSkeletonProps {
+  className?: string;
 }
+
+const LoadingContentSkeleton: React.FC<LoadingContentSkeletonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LoadingContentSkeleton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default LoadingContentSkeleton;

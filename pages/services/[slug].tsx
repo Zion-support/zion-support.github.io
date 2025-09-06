@@ -1,13 +1,16 @@
- function getAllServices () : Service[] {
-  return enhancedRealMicroSaasServices .concat (
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug 
+import React from 'react';
+
+interface SlugPageProps {
+  className?: string;
 }
-}) );
-fallback: false 
-}
-}</li>) ) 
-}</ul> </Card> </div> </div> </Card> </div> </div> </div> </UltraFuturisticBackground>) 
-}
+
+const SlugPage: React.FC<SlugPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SlugPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SlugPage;

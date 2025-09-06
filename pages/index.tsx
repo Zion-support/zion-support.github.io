@@ -1,23 +1,16 @@
 import React from 'react';
-import Head from 'next/head';
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Technology Solutions" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600">
-            Technology solutions for the future
-          </p>
-        </div>
-      </div>
-    </>
-  );
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

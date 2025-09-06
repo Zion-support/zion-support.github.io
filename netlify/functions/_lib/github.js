@@ -1,9 +1,7 @@
-const GITHUB API = 'https: //api.github.com';
-'Authorization': `token $ {
-  token 
-}`;
-'Accept': 'application/vnd.github+jsonContent-Type': 'application/json' 
+// Github utility
+export const Github = () => {
+  // Implementation here
+  return null;
 };
-body: JSON.stringify (body) 
-}return resp.json () 
-}
+
+export default Github;

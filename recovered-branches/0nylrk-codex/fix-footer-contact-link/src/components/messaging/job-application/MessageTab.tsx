@@ -1,12 +1,16 @@
- export interface MessageTabProps {
-  message: string;
-setMessage: (message: string) => void;
-proposalLink: string;
-setProposalLink: (link: string) => void 
-}export function MessageTab ({
-  message, setMessage, proposalLink, setProposalLink 
-}: MessageTabProps) {
-  return (<div className="space-y-4" > message"className=" text-white">Application Message</Label> <Textarea id=" message"value= {
-  message 
-}/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 
+import React from 'react';
+
+interface MessageTabProps {
+  className?: string;
 }
+
+const MessageTab: React.FC<MessageTabProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MessageTab</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MessageTab;

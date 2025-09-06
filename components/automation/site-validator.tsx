@@ -1,10 +1,16 @@
- 
+import React from 'react';
+
+interface Site-validatorProps {
+  className?: string;
 }
+
+const Site-validator: React.FC<Site-validatorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Site-validator</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<div className="space-y-6" > <header className="space-y-1" > <h1 className="text-3xl font-bold" >Site Validator</h1> <p className="text-gray-600 dark:text-gray-300" >Broken links and Open Graph checks from exported site.</p> </header> </div> {
-  report.brokenLinks.length > 0 && (<section>) ) 
-}</ul> </section>) 
-}) ) 
-}</ul> </section>) 
-}</div>) 
-}
+
+export default Site-validator;

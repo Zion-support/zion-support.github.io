@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const "@testing-library/jest-dom/vitest";''"
-import '@testing-library/jest-dom/vitest';''
-=======
-<<<<<<< HEAD
-const "@testing-library/jest-dom/vitest";''"
-import '@testing-library/jest-dom/vitest';''
-=======
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+// SetupTests utility
+export const SetupTests = () => {
+  // Implementation here
+  return null;
+};
+
+export default SetupTests;

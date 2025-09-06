@@ -1,1 +1,16 @@
- <div> <Head> <title>SecurityAuditingChat - Zion Tech Solutions</title> <meta name="description" content="SecurityAuditingChat service" /> </Head> <main> <h1>SecurityAuditingChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default SecurityAuditingChat;
+import React from 'react';
+
+interface Security-auditing-chatProps {
+  className?: string;
+}
+
+const Security-auditing-chat: React.FC<Security-auditing-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Security-auditing-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Security-auditing-chat;

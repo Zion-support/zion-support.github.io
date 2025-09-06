@@ -1,28 +1,16 @@
- const ToggleGroup = React.forwardRef< React.ElementRef<typeof ToggleGroupPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> & VariantProps<typeof toggleVariants> > ( ({
-  className, variant, size, children, ...props 
-}, ref) => (<ToggleGroupPrimitive.Root > <ToggleGroupContext.Provider value= {
-  {
-  variant, size 
+import React from 'react';
+
+interface Toggle-groupProps {
+  className?: string;
 }
-}> {
-  children 
-}</ToggleGroupContext.Provider> </ToggleGroupPrimitive.Root>) ) ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName const ToggleGroupItem = React.forwardRef< React.ElementRef<typeof ToggleGroupPrimitive.Item>;
-React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> & VariantProps<typeof toggleVariants> > ( ({
-  className, children, variant, size, ...props 
-}, ref) => {
-  const context = React.useContext (ToggleGroupContext) as ToggleGroupContextProps return (<ToggleGroupPrimitive.Item ref= {
-  ref 
-}className= {
-  cn (toggleVariants ({
-  variant: context.variant || variant, size: context.size || size 
-});
-className) 
-}{
-  ...props 
-}> {
-  children 
-}</ToggleGroupPrimitive.Item>) 
-}) ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName export {
-  ToggleGroup, ToggleGroupItem 
-}
+
+const Toggle-group: React.FC<Toggle-groupProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Toggle-group</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Toggle-group;

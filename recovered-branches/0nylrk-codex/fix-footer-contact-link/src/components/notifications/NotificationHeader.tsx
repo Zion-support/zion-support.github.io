@@ -1,6 +1,16 @@
- {
-  unreadCount > 0 && (<Button variant="ghost" size="sm" onClick= {
-  onMarkAllAsRead 
-}className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark" > Mark all as read </Button>) 
-}</div>) 
+import React from 'react';
+
+interface NotificationHeaderProps {
+  className?: string;
+}
+
+const NotificationHeader: React.FC<NotificationHeaderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NotificationHeader</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default NotificationHeader;

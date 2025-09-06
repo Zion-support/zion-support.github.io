@@ -1,8 +1,16 @@
- return (<div className="space-y-2" > <input className="border p-2 rounded w-full" value= {
-  query 
-}onChange= {
-  (e) => setQuery (e.target.value) 
-}placeholder="ElasticSearch query" /> <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick= {
-  search 
-}> 
+import React from 'react';
+
+interface ElasticSearchSearchProps {
+  className?: string;
 }
+
+const ElasticSearchSearch: React.FC<ElasticSearchSearchProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ElasticSearchSearch</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ElasticSearchSearch;

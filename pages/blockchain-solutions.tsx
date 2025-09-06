@@ -1,1 +1,16 @@
- <div> <Head> <title>BlockchainSolutions - Zion Tech Solutions</title> <meta name="description" content="BlockchainSolutions page" /> </Head> <main> <h1>BlockchainSolutions</h1> <p>This page is under construction.</p> </main> </div> export default BlockchainSolutions;
+import React from 'react';
+
+interface BlockchainSolutionsProps {
+  className?: string;
+}
+
+const BlockchainSolutions: React.FC<BlockchainSolutionsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BlockchainSolutions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BlockchainSolutions;

@@ -1,13 +1,16 @@
- interface QuickReplyButtonProps {
-  text: string;
-onClick: () => void 
-}text, onClick 
-}: QuickReplyButtonProps) {
-  return (<Button variant="outline" size="sm" className= {
-  cn () 
-}onClick= {
-  onClick 
-}> {
-  text 
-}</Button>) 
+import React from 'react';
+
+interface QuickReplyButtonProps {
+  className?: string;
 }
+
+const QuickReplyButton: React.FC<QuickReplyButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>QuickReplyButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default QuickReplyButton;

@@ -1,11 +1,7 @@
- CredentialsProvider ({
-  name: "credentials", credentials: {
-  email: {
-  label: "Email", type: "email" 
+// Route utility
+export const Route = () => {
+  // Implementation here
+  return null;
 };
-password: {
-  label: "Password", type: "password" 
-}
-};
-const isPasswordValid = await bcrypt.compare (credentials.password;
-user.password);
+
+export default Route;

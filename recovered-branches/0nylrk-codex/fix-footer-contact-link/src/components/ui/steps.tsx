@@ -1,20 +1,16 @@
- 
-}status, label, description, className 
-}: StepProps) {
-  return (<li className= {
-  cn (className) 
-}> <div) : (<span> {
-  /* Step number would go here */ 
-}</span>) 
-}</div> <div className="ml-4 min-w-0" > <h3 > {
-  label 
-}</h3>) 
-}</div> </li>) 
+import React from 'react';
+
+interface StepsProps {
+  className?: string;
 }
-}) 
-}</ol> <div className="hidden md:flex md:mt-4" > <div className="ml-[18px] w-[calc (100%-36px) ] h-0.5 bg-zion-blue-light" > <div width: `$ {
-  (currentStep / (childrenArray.length - 1) ) * 100 
-}%` 
-}
-}/> </div> </div> </div>) 
-}
+
+const Steps: React.FC<StepsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Steps</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Steps;

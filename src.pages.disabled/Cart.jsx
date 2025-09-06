@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Cart.jsx import React from \'react\'; export default function CartPage () { const navigate = useNavigate () ; const [items,setItems] = useState ([]) ; const [loading,setLoading] = useState (false) ; const [cartLoading,setCartLoading] = useState (true) ; const [showEmpty,setShowEmpty] = useState (false) ; useEffect ( () => { import React from \'react\'; export default function CartPage () { const navigate = useNavigate () ; const [items,setItems] = useState ([]) ; const [loading,setLoading] = useState (false) ; const [cartLoading,setCartLoading] = useState (true) ; const [showEmpty,setShowEmpty] = useState (false) ; useEffect ( () => {\'';
-<<<<<<< "HEAD": src.pages.disabled/Cart.jsx import _React from 'react'; export default function CartPage () { const navigate = useNavigate () ; const [items,setItems] = useState ([]) ; const [loading,setLoading] = useState (false) ; const [cartLoading,setCartLoading] = useState (true) ; const [showEmpty,setShowEmpty] = useState (false) ; useEffect ( () => { import _React from 'react'; export default function CartPage () { const navigate = useNavigate () ; const [items,setItems] = useState ([]) ; const [loading,setLoading] = useState (false) ; const [cartLoading,setCartLoading] = useState (true) ; const [showEmpty,setShowEmpty] = useState (false) ; useEffect ( () => {'';
-=======
-=======
-=======
+import React from 'react';
+
+const Cart = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Cart</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Cart;

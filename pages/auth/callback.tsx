@@ -1,1 +1,16 @@
- <div> <Head> <title>Callback - Zion Tech Solutions</title> <meta name="description" content="Callback page" /> </Head> <main> <h1>Callback</h1> <p>This page is under construction.</p> </main> </div> export default Callback;
+import React from 'react';
+
+interface CallbackProps {
+  className?: string;
+}
+
+const Callback: React.FC<CallbackProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Callback</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Callback;

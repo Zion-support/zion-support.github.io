@@ -1,6 +1,16 @@
- if (!item) {
-  return (<EnhancedLayout> <Head> <title>Equipment Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
-  item.name 
-}- Zion Tech Solutions</title> </Head> </Link> <Link href="/products"><a className="text-sm text-blue-600 hover:underline">Back to Equipment</a></Link> 
+import React from 'react';
+
+interface [slug]Props {
+  className?: string;
+}
+
+const [slug]: React.FC<[slug]Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>[slug]</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export default EquipmentDetail;
+
+export default [slug];

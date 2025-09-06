@@ -1,15 +1,16 @@
- interface MobileThemeProviderProps {
-  children: React.ReactNode 
-}export function MobileThemeProvider ({
-  children 
-}: MobileThemeProviderProps) {
-  const {
-  theme 
-}= useTheme ();
-`mobile-app $ {
-  theme === 'dark' ? 'dark' : 'light' 
-}` 
-}> {
-  children 
-}</div>) 
+import React from 'react';
+
+interface MobileThemeProviderProps {
+  className?: string;
 }
+
+const MobileThemeProvider: React.FC<MobileThemeProviderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileThemeProvider</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MobileThemeProvider;

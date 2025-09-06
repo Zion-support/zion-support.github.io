@@ -1,11 +1,16 @@
- interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-talent?: TalentProfile 
-}form, talent 
-}: BudgetFieldsProps) {
-  return (<> <FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Budget (Min) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-white" >Budget (Max) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> </>) 
+import React from 'react';
+
+interface BudgetFieldsProps {
+  className?: string;
 }
+
+const BudgetFields: React.FC<BudgetFieldsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BudgetFields</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BudgetFields;

@@ -1,12 +1,12 @@
 import React from 'react';
-interface FeaturesGuideSectionProps {
-  // Add props here as needed
-}
-export default function FeaturesGuideSection({ }: FeaturesGuideSectionProps) {
+
+const FeaturesGuideSection = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>FeaturesGuideSection</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default FeaturesGuideSection;

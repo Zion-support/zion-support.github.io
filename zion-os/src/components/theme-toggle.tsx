@@ -1,27 +1,16 @@
-"use client";
-return (<div className="flex items-center gap-2"> <span className="sr-only">Theme</span> <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1"> <button onClick= {
-  () => setTheme ("light") 
-}className= {
-  `rounded px-2 py-1 text-sm transition-colors $ {
-  theme === "light" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100" 
-}` 
-}aria-label="Switch to light theme" aria-pressed= {
-  theme === "light" 
-}> <Sun className="h-4 w-4" /> </button> <button onClick= {
-  () => setTheme ("system") 
-}className= {
-  `rounded px-2 py-1 text-sm transition-colors $ {
-  theme === "system" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100" 
-}` 
-}aria-label="Switch to system theme" aria-pressed= {
-  theme === "system" 
-}> <Monitor className="h-4 w-4" /> </button> <button onClick= {
-  () => setTheme ("dark") 
-}className= {
-  `rounded px-2 py-1 text-sm transition-colors $ {
-  theme === "dark" ? "bg-zion-blue text-white" : "text-zinc-400 hover:text-zinc-100" 
-}` 
-}aria-label="Switch to dark theme" aria-pressed= {
-  theme === "dark" 
-}> <Moon className="h-4 w-4" /> </button> </div> </div>) 
+import React from 'react';
+
+interface Theme-toggleProps {
+  className?: string;
 }
+
+const Theme-toggle: React.FC<Theme-toggleProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Theme-toggle</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Theme-toggle;

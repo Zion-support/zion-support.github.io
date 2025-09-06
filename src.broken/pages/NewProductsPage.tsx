@@ -1,9 +1,16 @@
- const CATEGORY FILTERS = Array.from (new Set (NEW PRODUCTS.map (p => p.category) ) ) .map (c => ({
-  label: c, value: c 
-}) );
-export default function NewProductsPage () {
-  const [listings] = useState<ProductListing[]> ([...NEW PRODUCTS]);
-New Products"description=" Explore our latest products priced for today's market."categorySlug=" new-products" listings= {
-  listings 
-}/>) 
+import React from 'react';
+
+interface NewProductsPageProps {
+  className?: string;
 }
+
+const NewProductsPage: React.FC<NewProductsPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NewProductsPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default NewProductsPage;

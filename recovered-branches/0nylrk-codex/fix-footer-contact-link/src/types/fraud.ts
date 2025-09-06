@@ -1,1 +1,7 @@
- export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
+// Fraud utility
+export const Fraud = () => {
+  // Implementation here
+  return null;
+};
+
+export default Fraud;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/NextGenInnovativeServices.jsx import React from \'react\'; export default function NextGenInnovativeServices () { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedService,setSelectedService] = useState (null) ; const [viewMode,setViewMode] = useState (\"grid\") ; import React from \'react\'; export default function NextGenInnovativeServices () { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedService,setSelectedService] = useState (null) ; const [viewMode,setViewMode] = useState (\"grid\") ;\"";
-<<<<<<< "HEAD": src.pages.disabled/NextGenInnovativeServices.jsx import _React from 'react'; export default function NextGenInnovativeServices () { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedService,setSelectedService] = useState (null) ; const [viewMode,setViewMode] = useState ("grid") ; import _React from 'react'; export default function NextGenInnovativeServices () { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedService,setSelectedService] = useState (null) ; const [viewMode,setViewMode] = useState ("grid") ;"";
-=======
-=======
-=======
+import React from 'react';
+
+const NextGenInnovativeServices = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NextGenInnovativeServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default NextGenInnovativeServices;

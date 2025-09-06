@@ -1,12 +1,12 @@
 import React from 'react';
-interface LanguageSelectorProps {
-  // Add props here as needed
-}
-export default function LanguageSelector({ }: LanguageSelectorProps) {
+
+const LanguageSelector = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>LanguageSelector</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default LanguageSelector;

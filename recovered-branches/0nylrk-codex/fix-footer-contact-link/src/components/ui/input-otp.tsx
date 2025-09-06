@@ -1,11 +1,16 @@
- const InputOTP = React.forwardRef< React.ElementRef<typeof OTPInput>;
-React.ComponentPropsWithoutRef<typeof OTPInput> > ( ({
-  className, containerClassName, ...props 
-}, ref) => (<OTPInput />) ) InputOTP.displayName = "InputOTP") ) InputOTPGroup.displayName = "InputOTPGroup") 
-}{
-  ...props 
-}> </div>) 
-}</div>) 
-}) InputOTPSlot.displayName = "InputOTPSlot" <Dot /> </div>) ) InputOTPSeparator.displayName = "InputOTPSeparator" export {
-  InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator 
+import React from 'react';
+
+interface Input-otpProps {
+  className?: string;
 }
+
+const Input-otp: React.FC<Input-otpProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Input-otp</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Input-otp;

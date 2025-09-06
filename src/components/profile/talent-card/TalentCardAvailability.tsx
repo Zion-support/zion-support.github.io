@@ -1,20 +1,16 @@
- import {;
-  {;
-  {;
-  Clock ;
-}from 'lucide-react' interface TalentCardAvailabilityProps {;
-  availabilityType: string ;
-}availabilityType ;
-}: TalentCardAvailabilityProps) {;
-  //Format availability status const getAvailabilityColor = (status: string) => {;
-  switch (status) {';
-  case 'full-time': return 'bg-green-500/20 text-green-400';';
-case 'part-time': return 'bg-yellow-500/20 text-yellow-400';';
-case 'project-based': return 'bg-blue-500/20 text-blue-400';
-default: //Format availability label const getAvailabilityLabel = (status: string) => {;
-  switch (status) {';
-  case 'full-time': return 'Full-time';';
-case 'part-time': return 'Part-time';';
-case 'project-based': return 'Project';
-default: </div>) ;
-}'
+import React from 'react';
+
+interface TalentCardAvailabilityProps {
+  className?: string;
+}
+
+const TalentCardAvailability: React.FC<TalentCardAvailabilityProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentCardAvailability</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TalentCardAvailability;

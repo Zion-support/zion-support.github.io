@@ -1,22 +1,16 @@
- 
-}const mockTalent: Talent[] = Array.from ({
-  length: 47 
-}) .map ( (, i) => ({
-  id: String (i + 1), name: `Talent $ {
-  i + 1 
-}`;
-title: 'Full-Stack Developer';
-badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'];
-<Head> <title>Talent - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Explore Talent</h1>) 
-}</article>) ) 
-}</div> <Pagination page= {
-  page 
-}pageSize= {
-  pageSize 
-}total= {
-  total 
-}onChange= {
-  setPage 
-}/> </div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
+}
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export default TalentDirectory;
+
+export default Index;

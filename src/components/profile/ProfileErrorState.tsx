@@ -1,13 +1,16 @@
- import {;
-  {;
-  {;
-  ArrowLeft ;
-}from 'lucide-react' interface ProfileErrorStateProps {;
-  error: string | null ;
-}export function ProfileErrorState ({;
-  error ;
-}: ProfileErrorStateProps) {;
-  return (<div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4" > <div className="text-red-400 mb-4 text-xl" > {";
-  error || "Something went wrong" ;
-}</div> ;
-}'"
+import React from 'react';
+
+interface ProfileErrorStateProps {
+  className?: string;
+}
+
+const ProfileErrorState: React.FC<ProfileErrorStateProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProfileErrorState</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProfileErrorState;

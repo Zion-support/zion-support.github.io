@@ -1,1 +1,16 @@
- <div> <Head> <title>DataScienceChat - Zion Tech Solutions</title> <meta name="description" content="DataScienceChat blog post" /> </Head> <main> <h1>DataScienceChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default DataScienceChat;
+import React from 'react';
+
+interface Data-science-chatProps {
+  className?: string;
+}
+
+const Data-science-chat: React.FC<Data-science-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Data-science-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Data-science-chat;

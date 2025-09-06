@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ClientDashboard.jsx import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ; import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ;\"";
-<<<<<<< "HEAD": src.pages.disabled/ClientDashboard.jsx import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ; import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ;"";
-=======
-=======
-=======
+import React from 'react';
+
+const ClientDashboard = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ClientDashboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ClientDashboard;

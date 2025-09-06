@@ -1,23 +1,12 @@
- export default function ServiceCard ({
-  service, onSelect 
-}) {
-  const navigate = useNavigate ();
-const location = useLocation ();
-const {
-  user 
-}= useAuth ();
-const dispatch = useAppDispatch ();
-const handleClick = () => {
-  if (onSelect) {
-  onSelect (service.id) 
-}
+import React from 'react';
+
+const ServiceCard = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceCard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const handleSave = (e) => {
-  e.stopPropagation ();
-toast.info ('Log in to save favorites');
-navigate (`/login?next=$ {
-  encodeURIComponent (location.pathname + location.search) 
-}`);
-return 
-}> <Heart className="w-4 h-4" /> </button> </div>) 
-}
+
+export default ServiceCard;

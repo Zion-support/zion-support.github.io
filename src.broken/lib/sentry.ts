@@ -1,2 +1,7 @@
- // Here you would send the error to Sentry using the DSN 
-}
+// Sentry utility
+export const Sentry = () => {
+  // Implementation here
+  return null;
+};
+
+export default Sentry;

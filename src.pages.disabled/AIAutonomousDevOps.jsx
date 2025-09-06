@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousDevOps.jsx import React from \'react\'; export default AIAutonomousDevOps; const AIAutonomousDevOps = () => { return (<> <Helmet> <title > AI Autonomous DevOps Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous DevOps platform that automates software development,testing,deployment,and operations with intelligent automation and continuous learning.\" / / /> <meta name=\"keywords\" content=\"AI DevOps,autonomous DevOps,AI automation,continuous integration,continuous deployment,AI operations\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousDevOps; const AIAutonomousDevOps = () => { return (<> <Helmet> <title > AI Autonomous DevOps Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous DevOps platform that automates software development,testing,deployment,and operations with intelligent automation and continuous learning.\" / / / /> <meta name=\"keywords\" content=\"AI DevOps,autonomous DevOps,AI automation,continuous integration,continuous deployment,AI operations\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousDevOps.jsx import _React from 'react'; export default AIAutonomousDevOps; const AIAutonomousDevOps = () => { return (<> <Helmet> <title > AI Autonomous DevOps Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous DevOps platform that automates software development,testing,deployment,and operations with intelligent automation and continuous learning." / / /> <meta name="keywords" content="AI DevOps,autonomous DevOps,AI automation,continuous integration,continuous deployment,AI operations" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousDevOps; const AIAutonomousDevOps = () => { return (<> <Helmet> <title > AI Autonomous DevOps Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous DevOps platform that automates software development,testing,deployment,and operations with intelligent automation and continuous learning." / / / /> <meta name="keywords" content="AI DevOps,autonomous DevOps,AI automation,continuous integration,continuous deployment,AI operations" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousDevOps = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousDevOps</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousDevOps;

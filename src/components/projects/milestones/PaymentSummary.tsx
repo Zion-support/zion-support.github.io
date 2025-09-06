@@ -1,5 +1,16 @@
- const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {;
-  totalPayment ;
-}</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) ;
+import React from 'react';
+
+interface PaymentSummaryProps {
+  className?: string;
+}
+
+const PaymentSummary: React.FC<PaymentSummaryProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PaymentSummary</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-'"
+
+export default PaymentSummary;

@@ -1,2 +1,16 @@
- <div> <label className="block text-sm mb-1" >Agency Name</label> <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Services Offered</label> <input name="servicesOffered" placeholder="AI prototyping, Data labeling, MLOps" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Verification Docs (URLs, comma-separated) </label> <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> </div>) 
+import React from 'react';
+
+interface RegisterProps {
+  className?: string;
 }
+
+const Register: React.FC<RegisterProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Register</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Register;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ProjectDetails.jsx import React from \'react\'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ; import React from \'react\'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () \';\';
-<<<<<<< "HEAD": src.pages.disabled/ProjectDetails.jsx import _React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ; import _React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ';';
-=======
-=======
-=======
+import React from 'react';
+
+const ProjectDetails = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectDetails</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectDetails;

@@ -1,1 +1,12 @@
-import _React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function Serviceinnovationhub() {}; return null} )}
+import React from 'react';
+
+const ServiceInnovationHub = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceInnovationHub</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServiceInnovationHub;

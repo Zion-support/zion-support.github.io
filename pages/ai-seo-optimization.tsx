@@ -1,5 +1,16 @@
- return (<Layout> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+
+interface AiSeoOptimizationProps {
+  className?: string;
 }
+
+const AiSeoOptimization: React.FC<AiSeoOptimizationProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AiSeoOptimization</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AiSeoOptimization;

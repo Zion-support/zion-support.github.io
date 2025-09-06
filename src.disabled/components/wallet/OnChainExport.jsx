@@ -1,1 +1,12 @@
-' ' ' ' "export": function OnChainExport() { const [isConnected,setIsConnected] = useState(false) const [isExporting,setIsExporting] = useState(false) const [exportStatus,setExportStatus] = useState('idle') const { toast } = useToast() const { user } = useAuth() const handleConnectWallet = async () => { try {''"";""}
+import React from 'react';
+
+const OnChainExport = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>OnChainExport</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default OnChainExport;

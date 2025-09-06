@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowGET, POST');
-return res.status (405) .end ('Method Not Allowed') 
-}
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
+
+export default Index;

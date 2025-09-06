@@ -1,12 +1,12 @@
 import React from 'react';
-interface NewProductsPageProps {
-  // Add props here as needed
-}
-export default function NewProductsPage({ }: NewProductsPageProps) {
+
+const NewProductsPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>NewProductsPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default NewProductsPage;

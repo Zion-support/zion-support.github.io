@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AccountSettings.jsx import React from \'react\'; export default function AccountSettings () { const { user } = useAuth () ; const [displayWeb3,setDisplayWeb3] = useState (false) ; const [didHandle,setDidHandle] = useState (\") ; const [enableBackup,setEnableBackup] = useState (false) ; const [isSubmitting,setIsSubmitting] = useState (false) ; useEffect ( () => { try { const saved = localStorage.getItem (\"account_settings\") ; if (saved) { const parsed = JSON.parse (saved) ; setDisplayWeb3 (!!parsed.displayWeb3) ; setDidHandle (parsed.didHandle || \") ; import React from \'react\'; export default function AccountSettings () { const { user } = useAuth () ; const [displayWeb3,setDisplayWeb3] = useState (false) ; const [didHandle,setDidHandle] = useState (\") ; const [enableBackup,setEnableBackup] = useState (false) ; const [isSubmitting,setIsSubmitting] = useState (false) ; useEffect ( () => { try { const saved = localStorage.getItem (\"account_settings\") ; if (saved) { const parsed = JSON.parse (saved) ; setDisplayWeb3 (!!parsed.displayWeb3) ; setDidHandle (parsed.didHandle || \") ;\";
-<<<<<<< "HEAD": src.pages.disabled/AccountSettings.jsx import _React from 'react'; export default function AccountSettings () { const { user } = useAuth () ; const [displayWeb3,setDisplayWeb3] = useState (false) ; const [didHandle,setDidHandle] = useState (") ; const [enableBackup,setEnableBackup] = useState (false) ; const [isSubmitting,setIsSubmitting] = useState (false) ; useEffect ( () => { try { const saved = localStorage.getItem ("account_settings") ; if (saved) { const parsed = JSON.parse (saved) ; setDisplayWeb3 (!!parsed.displayWeb3) ; setDidHandle (parsed.didHandle || ") ; import _React from 'react'; export default function AccountSettings () { const { user } = useAuth () ; const [displayWeb3,setDisplayWeb3] = useState (false) ; const [didHandle,setDidHandle] = useState (") ; const [enableBackup,setEnableBackup] = useState (false) ; const [isSubmitting,setIsSubmitting] = useState (false) ; useEffect ( () => { try { const saved = localStorage.getItem ("account_settings") ; if (saved) { const parsed = JSON.parse (saved) ; setDisplayWeb3 (!!parsed.displayWeb3) ; setDidHandle (parsed.didHandle || ") ;";
-=======
-=======
-=======
+import React from 'react';
+
+const AccountSettings = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AccountSettings</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AccountSettings;

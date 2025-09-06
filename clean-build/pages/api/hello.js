@@ -1,5 +1,7 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// Hello utility
+export const Hello = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
-}
+export default Hello;

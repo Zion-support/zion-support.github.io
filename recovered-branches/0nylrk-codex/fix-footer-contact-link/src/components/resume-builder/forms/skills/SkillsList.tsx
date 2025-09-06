@@ -1,13 +1,16 @@
- setSkillsByCategory (grouped) 
-}, [skills]);
-return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your Skills</h3> <SkillCategory key= {
-  category 
-}category= {
-  category 
-}skills= {
-  categorySkills 
-}onDelete= {
-  onDeleteSkill 
-}/>) ) 
-}</div> </div>) 
+import React from 'react';
+
+interface SkillsListProps {
+  className?: string;
+}
+
+const SkillsList: React.FC<SkillsListProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SkillsList</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default SkillsList;

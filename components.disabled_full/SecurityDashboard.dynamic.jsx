@@ -1,2 +1,12 @@
-const SecurityDashboard = dynamic(() => import("./SecurityDashboard"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityDashboard' ,'
-</p>'
+import React from 'react';
+
+const SecurityDashboard.dynamic = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SecurityDashboard.dynamic</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SecurityDashboard.dynamic;

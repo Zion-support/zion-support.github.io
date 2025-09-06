@@ -1,10 +1,16 @@
- useEffect ( () => {
-  if (!query) {
-  
+import React from 'react';
+
+interface GlobalSearchBarProps {
+  className?: string;
 }
-}className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800" > {
-  s 
-}</button> </li>) ) 
-}</ul> </div>) 
-}</form>) 
-}
+
+const GlobalSearchBar: React.FC<GlobalSearchBarProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>GlobalSearchBar</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default GlobalSearchBar;

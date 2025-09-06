@@ -1,14 +1,16 @@
- export function PriceFilter ({;
-  priceRange, setPriceRange, expanded,  toggleSection, isMobileFilterOpen ;
-}: PriceFilterProps) {;
-  const handleChange = (values: number[]) => {;
-  setPriceRange ([values[0] || 0, values[1] || 500]) ;
+import React from 'react';
+
+interface PriceFilterProps {
+  className?: string;
+}
+
+const PriceFilter: React.FC<PriceFilterProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PriceFilter</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
-}</button> <span>$ {;
-  priceRange[0] ;
-}/hr</span> <span>$ {;
-  priceRange[1] ;
-}/hr</span> </div> <Slider /> </div>) ;
-}</div>) ;
-}"
+
+export default PriceFilter;

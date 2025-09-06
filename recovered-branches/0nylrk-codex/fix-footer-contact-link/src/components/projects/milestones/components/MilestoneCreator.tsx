@@ -1,19 +1,16 @@
- export function MilestoneCreator ({
-  onSubmit, isSubmitting, onCancel, projectScope, projectStartDate, projectEndDate, projectType 
-}: MilestoneCreatorProps) {
-  return (<AddMilestoneForm onSubmit= {
-  onSubmit 
-}isSubmitting= {
-  isSubmitting 
-}onCancel= {
-  onCancel 
-}projectScope= {
-  projectScope 
-}projectStartDate= {
-  projectStartDate 
-}projectEndDate= {
-  projectEndDate 
-}projectType= {
-  projectType 
-}/>) 
+import React from 'react';
+
+interface MilestoneCreatorProps {
+  className?: string;
 }
+
+const MilestoneCreator: React.FC<MilestoneCreatorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MilestoneCreator</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MilestoneCreator;

@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
+// Jobs utility
+export const Jobs = () => {
+  // Implementation here
+  return null;
+};
+
+export default Jobs;

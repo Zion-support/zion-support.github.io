@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface EnterpriseITProps {
-  // Add props here as needed
-}
-
-export default function EnterpriseIT({ }: EnterpriseITProps) {
+const EnterpriseIT = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>EnterpriseIT</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default EnterpriseIT;

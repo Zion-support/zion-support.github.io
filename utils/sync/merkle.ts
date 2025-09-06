@@ -1,3 +1,7 @@
- 
-}return layer[0] 
-}
+// Merkle utility
+export const Merkle = () => {
+  // Implementation here
+  return null;
+};
+
+export default Merkle;

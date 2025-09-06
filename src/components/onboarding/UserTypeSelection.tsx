@@ -1,16 +1,16 @@
- name: string;
-description: string;
-icon: React.ElementType;
-}export function UserTypeSelection ({;
-  onSelect, selectedType ;
-}: UserTypeSelectionProps) {;
-  const userTypes: UserTypeOption[] = [ {;
-  This helps us personalize your experience </p> </div> {;
-  userTypes.map ( (type) => {;
-  const Icon = type.icon;
-const isSelected = selectedType === type.id;
-type.id ;
-}</p> </div> </Button>) ;
-}) ;
-}</div> </div>) ;
+import React from 'react';
+
+interface UserTypeSelectionProps {
+  className?: string;
 }
+
+const UserTypeSelection: React.FC<UserTypeSelectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UserTypeSelection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UserTypeSelection;

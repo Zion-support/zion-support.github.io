@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousMarketing.jsx import React from \'react\'; export default AIAutonomousMarketing; const AIAutonomousMarketing = () => { return (<> <Helmet> <title > AI Autonomous Marketing Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization,automated content creation,and personalized customer targeting with advanced AI capabilities.\" / / /> <meta name=\"keywords\" content=\"AI marketing,autonomous campaigns,marketing automation,AI content creation,personalized marketing,marketing AI\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousMarketing; const AIAutonomousMarketing = () => { return (<> <Helmet> <title > AI Autonomous Marketing Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization,automated content creation,and personalized customer targeting with advanced AI capabilities.\" / / / /> <meta name=\"keywords\" content=\"AI marketing,autonomous campaigns,marketing automation,AI content creation,personalized marketing,marketing AI\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousMarketing.jsx import _React from 'react'; export default AIAutonomousMarketing; const AIAutonomousMarketing = () => { return (<> <Helmet> <title > AI Autonomous Marketing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization,automated content creation,and personalized customer targeting with advanced AI capabilities." / / /> <meta name="keywords" content="AI marketing,autonomous campaigns,marketing automation,AI content creation,personalized marketing,marketing AI" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousMarketing; const AIAutonomousMarketing = () => { return (<> <Helmet> <title > AI Autonomous Marketing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous marketing platform that provides intelligent campaign optimization,automated content creation,and personalized customer targeting with advanced AI capabilities." / / / /> <meta name="keywords" content="AI marketing,autonomous campaigns,marketing automation,AI content creation,personalized marketing,marketing AI" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousMarketing = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousMarketing</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousMarketing;

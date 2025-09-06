@@ -1,8 +1,16 @@
- interface NoJobsCardProps {
-  onUpdateProfile?: () => void 
-}export function NoJobsCard ({
-  onUpdateProfile 
-}: NoJobsCardProps) {
-  return (<Card className="bg-muted/30 border border-dashed" > <CardContent className="p-6 text-center" > <p className="text-muted-foreground" > onUpdateProfile && (<Button variant="outline" className="mt-4" asChild> <a href="/profile" >Update Profile</Link> </Button>) 
-}</CardContent> </Card>) 
+import React from 'react';
+
+interface NoJobsCardProps {
+  className?: string;
 }
+
+const NoJobsCard: React.FC<NoJobsCardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NoJobsCard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default NoJobsCard;

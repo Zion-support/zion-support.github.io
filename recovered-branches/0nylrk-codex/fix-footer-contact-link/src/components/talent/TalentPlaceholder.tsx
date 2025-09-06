@@ -1,2 +1,16 @@
- export function TalentPlaceholder () {
-  return (<div className="p-8 text-center" > <h3 className="text-2xl font-bold text-white mb-4" >Talent Directory Coming Soon</h3> <p className="text-zion-slate-light mb-6 max-w-md mx-auto" > 
+import React from 'react';
+
+interface TalentPlaceholderProps {
+  className?: string;
+}
+
+const TalentPlaceholder: React.FC<TalentPlaceholderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentPlaceholder</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TalentPlaceholder;

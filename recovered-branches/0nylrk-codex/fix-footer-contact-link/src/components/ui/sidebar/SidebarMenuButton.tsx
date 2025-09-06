@@ -1,20 +1,16 @@
- interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+import React from 'react';
+
+interface SidebarMenuButtonProps {
   className?: string;
-children?: React.ReactNode;
-asChild?: boolean 
-}export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps> ( ({
-  className, children, asChild = false, ...props 
-}, ref) => {
-  return (<Comp className= {
-  cn ("flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";
-"text-muted-foreground hover:text-foreground hover:bg-accent";
-"focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
-className 
-}ref= {
-  ref as any 
-}{
-  ...props 
-}> {
-  children 
-}</Comp>) 
-});
+}
+
+const SidebarMenuButton: React.FC<SidebarMenuButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SidebarMenuButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SidebarMenuButton;

@@ -1,2 +1,7 @@
- export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
-}
+// Tenant utility
+export const Tenant = () => {
+  // Implementation here
+  return null;
+};
+
+export default Tenant;

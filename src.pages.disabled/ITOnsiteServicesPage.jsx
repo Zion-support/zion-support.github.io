@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ITOnsiteServicesPage.jsx import React from \'react\'; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry,setSelectedCountry] = useState (null) ; const [searchQuery,setSearchQuery] = useState (\") ; import React from \'react\'; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry,setSelectedCountry] = useState (null) ; const [searchQuery,setSearchQuery] = useState (\") ;\"";
-<<<<<<< "HEAD": src.pages.disabled/ITOnsiteServicesPage.jsx import _React from 'react'; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry,setSelectedCountry] = useState (null) ; const [searchQuery,setSearchQuery] = useState (") ; import _React from 'react'; export default function ITOnsiteServicesPage () { const [searchParams] = useSearchParams () ; const [selectedCountry,setSelectedCountry] = useState (null) ; const [searchQuery,setSearchQuery] = useState (") ;"";
-=======
-=======
-=======
+import React from 'react';
+
+const ITOnsiteServicesPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ITOnsiteServicesPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ITOnsiteServicesPage;

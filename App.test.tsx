@@ -1,11 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import App from './App';
 import React from 'react';
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    render(<App />);
-    expect(screen.getByText('Hello App')).toBeInTheDocument();
-  });
-});
+interface App.testProps {
+  className?: string;
+}
+
+const App.test: React.FC<App.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>App.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default App.test;

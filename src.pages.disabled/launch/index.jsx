@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/launch/index.jsx import React from \'react\'';\'; import JSZip from \'jszip\'';\'; import { saveAs } from \'file-saver\'';\'; import { AppLayout } from \'@/layout/AppLayout\'';\'; import { NextSeo } from \'@/components/NextSeo\'';\'; import { Button } from \'@/components/ui/button\''; import { Tabs,TabsList,TabsTrigger,TabsContent } from \"@/components/ui/tabs\"';\''; import { Input } from \'@/components/ui/input\'';\'; import { Label } from \'@/components/ui/label\'';\'; import React from \'react\'';\'; import JSZip from \'jszip\'';\'; import { saveAs } from \'file-saver\'';\'; import { AppLayout } from \'@/layout/AppLayout\'';\'; import { NextSeo } from \'@/components/NextSeo\'';\'; import { Button } from \'@/components/ui/button\''; import { Tabs,TabsList,TabsTrigger,TabsContent } from \"@/components/ui/tabs\"';\''; import { Input } from \'@/components/ui/input\'';\'; import { Label } from \'@/components/ui/label\'';\'';\'";
-<<<<<<< "HEAD": src.pages.disabled/launch/index.jsx import _React from 'react'';'; import JSZip from 'jszip'';'; import { saveAs } from 'file-saver'';'; import { AppLayout } from '@/layout/AppLayout'';'; import { NextSeo } from '@/components/NextSeo'';'; import { Button } from '@/components/ui/button''; import { Tabs,TabsList,TabsTrigger,TabsContent } from "@/components/ui/tabs"';''; import { Input } from '@/components/ui/input'';'; import { Label } from '@/components/ui/label'';'; import _React from 'react'';'; import JSZip from 'jszip'';'; import { saveAs } from 'file-saver'';'; import { AppLayout } from '@/layout/AppLayout'';'; import { NextSeo } from '@/components/NextSeo'';'; import { Button } from '@/components/ui/button''; import { Tabs,TabsList,TabsTrigger,TabsContent } from "@/components/ui/tabs"';''; import { Input } from '@/components/ui/input'';'; import { Label } from '@/components/ui/label'';'';'";
-=======
-=======
-=======
+import React from 'react';
+
+const Index = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

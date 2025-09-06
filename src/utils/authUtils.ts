@@ -1,4 +1,7 @@
-export const cleanupAuthState = () => {;
-  // Basic cleanup function;
-  console.log('Cleaning up auth state');
-};'
+// AuthUtils utility
+export const AuthUtils = () => {
+  // Implementation here
+  return null;
+};
+
+export default AuthUtils;

@@ -1,16 +1,16 @@
- if (i < filled) {;
-  return (<Star key= {;
-  i ;
-}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
-}if (i === filled && half) {;
-  return (<StarHalf key= {;
-  i ";
-}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
+import React from 'react';
+
+interface RatingStarsProps {
+  className?: string;
 }
-}) ;
-}{";
-  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
-  count ;
-}) </span> ;
-}</div>) ;
-}'"
+
+const RatingStars: React.FC<RatingStarsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>RatingStars</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default RatingStars;

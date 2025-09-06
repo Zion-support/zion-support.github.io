@@ -1,12 +1,12 @@
 import React from 'react';
-interface AnalyticsProps {
-  // Add props here as needed
-}
-export default function Analytics({ }: AnalyticsProps) {
+
+const Analytics = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Analytics</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default Analytics;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/CloudDevOpsServices.jsx import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ; import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ;\"";
-<<<<<<< "HEAD": src.pages.disabled/CloudDevOpsServices.jsx import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ; import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ;"";
-=======
-=======
-=======
+import React from 'react';
+
+const CloudDevOpsServices = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CloudDevOpsServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CloudDevOpsServices;

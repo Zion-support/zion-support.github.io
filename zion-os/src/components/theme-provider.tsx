@@ -1,20 +1,16 @@
-"use client";
-type Theme = "dark" | "light" | "system";
+import React from 'react';
+
+interface Theme-providerProps {
+  className?: string;
 }
-}, [storageKey]);
-if (theme === "system") {
-  const systemTheme = window.matchMedia (" (prefers-color-scheme: dark) ") .matches ? "dark" : "light";
-root.classList.add (theme) 
-}, [theme, mounted]);
-const value = {
-  theme, setTheme: (theme: Theme) => {
-  if (typeof window !== "undefined") {
-  
-}return (<ThemeProviderContext.Provider {
-  ...props 
-}value= {
-  value 
-}> {
-  children 
-}</ThemeProviderContext.Provider>) 
-}if (context === undefined) throw new Error ("useTheme must be used within a ThemeProvider");
+
+const Theme-provider: React.FC<Theme-providerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Theme-provider</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Theme-provider;

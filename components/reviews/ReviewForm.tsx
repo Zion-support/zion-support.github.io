@@ -1,5 +1,16 @@
- </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
-  submitting ? 'Submitting...' : 'Submit Review' 
-}</button> </form>) 
+import React from 'react';
+
+interface ReviewFormProps {
+  className?: string;
+}
+
+const ReviewForm: React.FC<ReviewFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ReviewForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default ReviewForm;

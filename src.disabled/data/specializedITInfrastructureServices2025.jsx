@@ -1,1 +1,12 @@
-"export": const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = ["]"
+import React from 'react';
+
+const SpecializedITInfrastructureServices2025 = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SpecializedITInfrastructureServices2025</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SpecializedITInfrastructureServices2025;

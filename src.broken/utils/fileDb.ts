@@ -1,3 +1,7 @@
-import fs from 'fs';
-import path from 'path';
-export type JsonRecord = Record<string unknown> | Array<unknown>;
+// FileDb utility
+export const FileDb = () => {
+  // Implementation here
+  return null;
+};
+
+export default FileDb;

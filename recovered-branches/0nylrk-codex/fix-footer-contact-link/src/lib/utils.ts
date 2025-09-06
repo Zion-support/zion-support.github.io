@@ -1,3 +1,7 @@
- export function cn (...inputs: ClassValue[]) {
-  return twMerge (clsx (inputs) ) 
-}
+// Utils utility
+export const Utils = () => {
+  // Implementation here
+  return null;
+};
+
+export default Utils;

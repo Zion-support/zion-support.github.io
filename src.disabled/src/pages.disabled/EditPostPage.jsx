@@ -1,12 +1,12 @@
 import React from 'react';
-interface EditPostPageProps {
-  // Add props here as needed
-}
-export default function EditPostPage({ }: EditPostPageProps) {
+
+const EditPostPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>EditPostPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default EditPostPage;

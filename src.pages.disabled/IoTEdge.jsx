@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface IoTEdgeProps {
-  // Add props here as needed
-}
-
-export default function IoTEdge({ }: IoTEdgeProps) {
+const IoTEdge = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>IoTEdge</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default IoTEdge;

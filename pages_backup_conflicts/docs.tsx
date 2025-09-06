@@ -1,20 +1,16 @@
 import React from 'react';
 
 interface DocsProps {
-  // Add props here as needed
+  className?: string;
 }
 
-export default function Docs({ }: DocsProps) {
+const Docs: React.FC<DocsProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Docs</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
+};
+
+export default Docs;

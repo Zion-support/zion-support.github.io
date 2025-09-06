@@ -1,6 +1,7 @@
- conversations[idx].messages.push (msg);
-conversations[idx].updatedAtIso = now;
-writeJsonFile<Conversation[]> (FILE, conversations);
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
+// Messages utility
+export const Messages = () => {
+  // Implementation here
+  return null;
+};
+
+export default Messages;

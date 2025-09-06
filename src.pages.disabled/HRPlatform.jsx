@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface HRPlatformProps {
-  // Add props here as needed
-}
-
-export default function HRPlatform({ }: HRPlatformProps) {
+const HRPlatform = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>HRPlatform</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default HRPlatform;

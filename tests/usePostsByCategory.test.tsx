@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { renderHook,waitFor } from @testing-library/react\''; import { QueryClient,QueryClientProvider } from \'@tanstack/react-query\'; import { usePostsByCategory } from \'@/hooks/usePostsByCategory\'; import * as forumService from \'@/services/forumPostService\'; it(\',\'returns posts for slug\',async () => {\' jest.spyOn(forumService\'fetchPostsByCategory\').mockResolvedValue([{\' \"id\": \'1 title: Test\',\"content\": \'c\',\"authorId\": 1\' authorName: \'Test categoryId: ; getting-hired\',\"tags\": [] createdAt: \' updatedAt: upvotes: 0,\"downvotes\": \'0\',\"replyCount\": \'0\'}]) const queryClient = new QueryClient() const wrapper = ({ children }: { \"children\": \'React.ReactNode\' }) => ( <div /> ) const { result } = renderHook(() => usePostsByCategory( \'getting-hired\',1),{ wrapper }); await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))});
-const { renderHook,waitFor } from @testing-library/react""; import { QueryClient,QueryClientProvider } from "@tanstack/react-query"; import { usePostsByCategory } from "@/hooks/usePostsByCategory"; import * as forumService from "@/services/forumPostService"; it(","returns posts for slug",async () => {" jest.spyOn(forumService"fetchPostsByCategory").mockResolvedValue([{" id: "1 title: Test",content: "c",authorId: 1" authorName: "Test categoryId: getting-hired",tags: [] createdAt: " updatedAt: upvotes: 0,downvotes: "0",replyCount: "0"}]) const queryClient = new QueryClient() const wrapper = ({ children }: { children: "React.ReactNode" }) => ( <div /> ) const { result } = renderHook(() => usePostsByCategory( "getting-hired",1),{ wrapper }); await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))});"""
-import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/forumPostService'; it(','returns posts for slug',async () => {' jest.spyOn(forumService'fetchPostsByCategory').mockResolvedValue([{' "id": '1 title: Test,"content": 'c',"authorId": 1' authorName: 'Test categoryId: ; getting-hired,"tags": [] createdAt: ' updatedAt: upvotes: 0,"downvotes": '0',"replyCount": '0'}]) const queryClient = new QueryClient() const wrapper = ({ children }: { "children": '_React.ReactNode' }) => ( <div /> ) const { result } = renderHook(() => usePostsByCategory( 'getting-hired',1),{ wrapper }); await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))});
-=======
-import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/forumPostService'; it(','returns posts for slug',async () => {' jest.spyOn(forumService'fetchPostsByCategory').mockResolvedValue([{' "id": '1 title: Test,"content": 'c',"authorId": 1' authorName: 'Test categoryId: ; getting-hired,"tags": [] createdAt: ' updatedAt: upvotes: 0,"downvotes": '0',"replyCount": '0'}]) const queryClient = new QueryClient() const wrapper = ({ children }: { "children": '_React.ReactNode' }) => ( <div /> ) const { result } = renderHook(() => usePostsByCategory( 'getting-hired',1),{ wrapper }); await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))});
-=======
-import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/forumPostService'; it(','returns posts for slug',async () => {' jest.spyOn(forumService'fetchPostsByCategory').mockResolvedValue([{' "id": '1 title: Test,"content": 'c',"authorId": 1' authorName: 'Test categoryId: ; getting-hired,"tags": [] createdAt: ' updatedAt: upvotes: 0,"downvotes": '0',"replyCount": '0'}]) const queryClient = new QueryClient() const wrapper = ({ children }: { "children": '_React.ReactNode' }) => ( <div /> ) const { result } = renderHook(() => usePostsByCategory( 'getting-hired',1),{ wrapper }); await waitFor(() => expect(result.current.data?.length).toBeGreaterThan(0))});
+import React from 'react';
+
+interface UsePostsByCategory.testProps {
+  className?: string;
+}
+
+const UsePostsByCategory.test: React.FC<UsePostsByCategory.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UsePostsByCategory.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UsePostsByCategory.test;

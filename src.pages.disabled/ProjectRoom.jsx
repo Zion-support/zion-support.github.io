@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ProjectRoom.jsx import React from \'react\'; export default function ProjectRoom () { const { projectId } = useParams () ; const [activeTab,setActiveTab] = useState (\"chat\") ; const [isInCall,setIsInCall] = useState (false) ; const [callParticipants,setCallParticipants] = useState ([{ \"id\": \"user - 1\",\"name\": \"You\",\"isHost\": \'true\',\"isVideoEnabled\": \'true\',\"isMuted\": false ]) ; const startVideoCall = () => { setIsInCall (true) ; toast.success (\"Video call started\",{ \"description\": \"Others can join with the project room link\" }) ; import React from \'react\'; export default function ProjectRoom () { const { projectId } = useParams () ; const [activeTab,setActiveTab] = useState (\"chat\") ; const [isInCall,setIsInCall] = useState (false) ; const [callParticipants,setCallParticipants] = useState ([{ \"id\": \"user - 1\",\"name\": \"You\",\"isHost\": \'true\',\"isVideoEnabled\": \'true\',\"isMuted\": false ]) ; const startVideoCall = () => { setIsInCall (true) ; toast.success (\"Video call started\",{ \"description\": \"Others can join with the project room link\" }) ;\";
-<<<<<<< "HEAD": src.pages.disabled/ProjectRoom.jsx import _React from 'react'; export default function ProjectRoom () { const { projectId } = useParams () ; const [activeTab,setActiveTab] = useState ("chat") ; const [isInCall,setIsInCall] = useState (false) ; const [callParticipants,setCallParticipants] = useState ([{ "id": "user - 1","name": "You","isHost": 'true',"isVideoEnabled": 'true',"isMuted": false ]) ; const startVideoCall = () => { setIsInCall (true) ; toast.success ("Video call started",{ "description": "Others can join with the project room link" }) ; import _React from 'react'; export default function ProjectRoom () { const { projectId } = useParams () ; const [activeTab,setActiveTab] = useState ("chat") ; const [isInCall,setIsInCall] = useState (false) ; const [callParticipants,setCallParticipants] = useState ([{ "id": "user - 1","name": "You","isHost": 'true',"isVideoEnabled": 'true',"isMuted": false ]) ; const startVideoCall = () => { setIsInCall (true) ; toast.success ("Video call started",{ "description": "Others can join with the project room link" }) ;";
-=======
-=======
-=======
+import React from 'react';
+
+const ProjectRoom = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectRoom</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectRoom;

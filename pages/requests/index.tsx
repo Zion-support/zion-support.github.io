@@ -1,3 +1,16 @@
-import EmptyState from '../../components/ui/EmptyState' export default function RequestsPage () {
-  return (<div> <h2 className="text-xl font-semibold mb-2" >Requests</h2> <EmptyState title="Nothing here yet..." message="Submit a quote or respond to invitations to see them here." ctaLabel="Submit a quote" ctaHref="/dashboard" /> </div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

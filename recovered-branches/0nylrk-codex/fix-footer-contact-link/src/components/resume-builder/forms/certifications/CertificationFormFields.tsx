@@ -1,8 +1,16 @@
- </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> </>) 
+import React from 'react';
+
+interface CertificationFormFieldsProps {
+  className?: string;
 }
+
+const CertificationFormFields: React.FC<CertificationFormFieldsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CertificationFormFields</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CertificationFormFields;

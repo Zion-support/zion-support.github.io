@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ComprehensiveServicesOverview.jsx import React from \'react\'; export default function ComprehensiveServicesOverview () { import React from \'react\'; export default function ComprehensiveServicesOverview () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ComprehensiveServicesOverview.jsx import _React from 'react'; export default function ComprehensiveServicesOverview () { import _React from 'react'; export default function ComprehensiveServicesOverview () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ComprehensiveServicesOverview = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ComprehensiveServicesOverview</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ComprehensiveServicesOverview;

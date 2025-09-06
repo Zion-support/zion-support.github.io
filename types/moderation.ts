@@ -1,2 +1,7 @@
-export type ContentType = 'listing' | 'message' | 'cv' | 'job';
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+// Moderation utility
+export const Moderation = () => {
+  // Implementation here
+  return null;
+};
+
+export default Moderation;

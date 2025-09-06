@@ -1,2 +1,16 @@
- </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </button> </div> </form> </div>) 
+import React from 'react';
+
+interface PostJobProps {
+  className?: string;
 }
+
+const PostJob: React.FC<PostJobProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PostJob</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PostJob;

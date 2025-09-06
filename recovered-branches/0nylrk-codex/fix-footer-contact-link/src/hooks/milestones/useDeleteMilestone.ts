@@ -1,15 +1,7 @@
- try {
-  setIsSubmitting (true);
-const {
-  error 
-}= await supabase .from ('project milestones') .delete () .eq ('id', milestoneId);
-if (error) throw error;
-}finally {
-  setIsSubmitting (false) 
-}
+// UseDeleteMilestone utility
+export const UseDeleteMilestone = () => {
+  // Implementation here
+  return null;
 };
-return {
-  deleteMilestone;
-isSubmitting 
-}
-};
+
+export default UseDeleteMilestone;

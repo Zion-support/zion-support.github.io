@@ -1,5 +1,7 @@
- // In-memory demo store per process const store: Record<string any> = (global as any) . ZION DID STORE || {
-  
+// Link utility
+export const Link = () => {
+  // Implementation here
+  return null;
 };
-(global as any) . ZION DID STORE = store;
-}
+
+export default Link;

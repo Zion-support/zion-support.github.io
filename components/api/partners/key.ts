@@ -1,25 +1,7 @@
- 
-}const auth = await authenticateRequest (req);
-if (!auth) {
-  
-}const {
-  apiKey 
-}= auth;
-const keys = await listApiKeys ();
-//Deactivate old key const existing = keys.find ( (k) => k.id === apiKey.id);
-if (existing) existing.active = false;
-// Create new key const now = new Date () .toISOString ();
-const newKey = {
-  id: uuidv4 ();
-partnerId: auth.partner.id;
-key: uuidv4 ();
-active: true;
-createdAt: now;
-rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60 
+// Key utility
+export const Key = () => {
+  // Implementation here
+  return null;
 };
-keys.push (newKey as any);
-await saveApiKeys (keys);
-return res.status (201) .json ({
-  apiKey: newKey.key 
-}) 
-}
+
+export default Key;

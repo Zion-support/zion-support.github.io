@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ServicesComparisonPage.jsx import React from \'react\'; export default function ServicesComparisonPage () { import React from \'react\'; export default function ServicesComparisonPage () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ServicesComparisonPage.jsx import _React from 'react'; export default function ServicesComparisonPage () { import _React from 'react'; export default function ServicesComparisonPage () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ServicesComparisonPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServicesComparisonPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServicesComparisonPage;

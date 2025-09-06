@@ -1,4 +1,16 @@
-import useSWR from 'swr';
-const fetcher = (url: string) => fetch (url) .then (r => r.json () );
-return (<span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs" > Under Dispute </span>) 
+import React from 'react';
+
+interface UnderDisputeBadgeProps {
+  className?: string;
 }
+
+const UnderDisputeBadge: React.FC<UnderDisputeBadgeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UnderDisputeBadge</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UnderDisputeBadge;

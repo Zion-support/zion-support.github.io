@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Onboarding.jsx import React from \'react\'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ; import React from \'react\'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () \';\';
-<<<<<<< "HEAD": src.pages.disabled/Onboarding.jsx import _React from 'react'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ; import _React from 'react'; export default function Onboarding () { const { user,updateProfile,isLoading } = useAuth () ; const [currentStep,setCurrentStep] = useState (0) ; const [userType,setUserType] = useState (null) ; const navigate = useNavigate () ';';
-=======
-=======
-=======
+import React from 'react';
+
+const Onboarding = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Onboarding</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Onboarding;

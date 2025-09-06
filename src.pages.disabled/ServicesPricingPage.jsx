@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ServicesPricingPage.jsx import React from \'react\'; export default function ServicesPricingPage () { import React from \'react\'; export default function ServicesPricingPage () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ServicesPricingPage.jsx import _React from 'react'; export default function ServicesPricingPage () { import _React from 'react'; export default function ServicesPricingPage () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ServicesPricingPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServicesPricingPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ServicesPricingPage;

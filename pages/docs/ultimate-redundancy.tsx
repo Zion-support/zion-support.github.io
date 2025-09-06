@@ -1,6 +1,16 @@
- <> <Head> </Head> <main style= {
-  {
-  padding: 24 
+import React from 'react';
+
+interface UltimateRedundancyProps {
+  className?: string;
 }
-}> <p>Redirecting to Ultimate Redundancy docs…</p> </main> </>) 
-}
+
+const UltimateRedundancy: React.FC<UltimateRedundancyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UltimateRedundancy</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UltimateRedundancy;

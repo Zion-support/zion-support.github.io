@@ -1,4 +1,7 @@
- /** * Theme configuration for PDF export */ export function getPdfThemeColors (theme: 'light' | 'dark') : PdfThemeColors {
-  return theme === 'light' ? {
-  
-}
+// ThemeConfig utility
+export const ThemeConfig = () => {
+  // Implementation here
+  return null;
+};
+
+export default ThemeConfig;

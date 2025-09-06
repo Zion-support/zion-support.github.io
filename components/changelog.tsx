@@ -1,11 +1,16 @@
- {
-  generatedAt && (<p className="mt-2 text-sm text-gray-600" >Generated: {
-  generatedAt 
-}</p>) 
-}{
-  content 
-}</pre>) : (<div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600" > No changelog generated yet. </div>) 
-}</main>) 
+import React from 'react';
+
+interface ChangelogProps {
+  className?: string;
 }
-}
-}
+
+const Changelog: React.FC<ChangelogProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Changelog</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Changelog;

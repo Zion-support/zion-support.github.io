@@ -1,4 +1,7 @@
- let pool: Pool | null = null;
-}return pool 
-}
-}
+// Pg utility
+export const Pg = () => {
+  // Implementation here
+  return null;
+};
+
+export default Pg;

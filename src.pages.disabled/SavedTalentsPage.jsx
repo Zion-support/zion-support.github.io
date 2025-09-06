@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/SavedTalentsPage.jsx import React from \'react\'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) { import React from \'react\'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) {\'';
-<<<<<<< "HEAD": src.pages.disabled/SavedTalentsPage.jsx import _React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) { import _React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) {'';
-=======
-=======
-=======
+import React from 'react';
+
+const SavedTalentsPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SavedTalentsPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SavedTalentsPage;

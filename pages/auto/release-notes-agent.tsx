@@ -1,1 +1,16 @@
- <div> <Head> <title>AI Release Notes Agent</title> <meta name="description" content="Daily AI-generated release notes." /> </Head> <main className="space-y-4" > <h1 className="text-2xl font-bold" >AI Release Notes Agent</h1> <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p> <Link href="/data/reports/release/latest.json" ><a className="text-blue-600 underline" >Latest Release Notes (JSON) </Link></Link> </main> </div> export default ReleaseNotesAgent;
+import React from 'react';
+
+interface ReleaseNotesAgentProps {
+  className?: string;
+}
+
+const ReleaseNotesAgent: React.FC<ReleaseNotesAgentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ReleaseNotesAgent</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ReleaseNotesAgent;

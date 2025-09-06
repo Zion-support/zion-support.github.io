@@ -1,2 +1,16 @@
- <Head> <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400, 500, 600, 700, 800, 900&family=JetBrains+Mono:wght@400, 600&display=swap"rel="stylesheet" /> 
+import React from 'react';
+
+interface _documentProps {
+  className?: string;
 }
+
+const _document: React.FC<_documentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>_document</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default _document;

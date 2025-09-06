@@ -1,5 +1,7 @@
- 
-}if (!fs.existsSync (POSTS PATH) ) {
-  fs.writeFileSync (POSTS PATH, JSON.stringify ([], null, 2), 'utf8');
-}
-}
+// BlogStore utility
+export const BlogStore = () => {
+  // Implementation here
+  return null;
+};
+
+export default BlogStore;

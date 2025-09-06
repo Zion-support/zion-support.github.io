@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowPOST');
-return res.status (405) .end ('Method Not Allowed') 
-}
+// Message utility
+export const Message = () => {
+  // Implementation here
+  return null;
+};
+
+export default Message;

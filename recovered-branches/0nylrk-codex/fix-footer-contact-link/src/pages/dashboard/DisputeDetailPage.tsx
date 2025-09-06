@@ -1,1 +1,16 @@
- <ProtectedRoute> <> <SEO title="Dispute Details | Zion AI Marketplace" description="View and manage dispute details" /> <AppHeader /> <DisputeDetail /> <Footer /> </> </ProtectedRoute> export default DisputeDetailPage;
+import React from 'react';
+
+interface DisputeDetailPageProps {
+  className?: string;
+}
+
+const DisputeDetailPage: React.FC<DisputeDetailPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DisputeDetailPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default DisputeDetailPage;

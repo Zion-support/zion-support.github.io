@@ -1,1 +1,16 @@
- <Layout> <Head> <title>Documentation | Zion Tech Group</title> <link rel="canonical" href="https://ziontechgroup.com/docs" /> </Head> 
+import React from 'react';
+
+interface DocsProps {
+  className?: string;
+}
+
+const Docs: React.FC<DocsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Docs</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Docs;

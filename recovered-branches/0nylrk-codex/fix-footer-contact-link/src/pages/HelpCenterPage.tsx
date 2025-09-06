@@ -1,3 +1,16 @@
- export default function HelpCenterPage () {
-  return (<> <SEO title="Help Center | Zion AI Marketplace" description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team." keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace" /> <HelpCenter /> </>) 
+import React from 'react';
+
+interface HelpCenterPageProps {
+  className?: string;
 }
+
+const HelpCenterPage: React.FC<HelpCenterPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>HelpCenterPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default HelpCenterPage;

@@ -1,18 +1,16 @@
- interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData> 
-}export function PersonalInfoFields ({
-  control 
-}: PersonalInfoFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  control 
-}name="fullName" render= {
-  ({
-  field 
-}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
-  ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
+import React from 'react';
+
+interface PersonalInfoFieldsProps {
+  className?: string;
 }
+
+const PersonalInfoFields: React.FC<PersonalInfoFieldsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PersonalInfoFields</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PersonalInfoFields;

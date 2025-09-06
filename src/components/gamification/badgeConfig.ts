@@ -1,1 +1,7 @@
- export type BadgeKey = export const getBadgeMeta = (key: BadgeKey) => badgeList.find ( (b) => b.key === key);
+// BadgeConfig utility
+export const BadgeConfig = () => {
+  // Implementation here
+  return null;
+};
+
+export default BadgeConfig;

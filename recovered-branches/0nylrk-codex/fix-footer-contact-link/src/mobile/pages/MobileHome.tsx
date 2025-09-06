@@ -1,7 +1,16 @@
- export function MobileHome () {
-  const {
-  user 
-}= useAuth ();
-const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>) 
+import React from 'react';
+
+interface MobileHomeProps {
+  className?: string;
 }
+
+const MobileHome: React.FC<MobileHomeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileHome</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MobileHome;

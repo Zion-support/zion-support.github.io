@@ -1,9 +1,16 @@
-import * as React from "react" import * as ProgressPrimitive from "@radix-ui/react-progress" const Progress = React.forwardRef< React.ElementRef<typeof ProgressPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> > ( ({
-  className, value, ...props 
-}, ref) => (<ProgressPrimitive.Root) 
-}{
-  ...props 
-}> <ProgressPrimitive.Indicator /> </ProgressPrimitive.Root>) ) Progress.displayName = ProgressPrimitive.Root.displayName export {
-  Progress 
+import React from 'react';
+
+interface ProgressProps {
+  className?: string;
 }
+
+const Progress: React.FC<ProgressProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Progress</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Progress;

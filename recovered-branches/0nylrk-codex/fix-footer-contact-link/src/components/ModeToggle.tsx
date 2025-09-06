@@ -1,10 +1,16 @@
- export function ModeToggle () {
-  const {
-  theme, setTheme 
-}= useTheme ();
-return (<Button variant="ghost" size="icon" onClick= {
-  () => setTheme (theme === "dark" ? "light" : "dark") 
-}> {
-  theme === "dark" ? (<Sun className="h-5 w-5 text-yellow-300" /> h-5 w-5 text-slate-300"/>) 
-}<span className=" sr-only" >Toggle theme</span> </Button>) 
+import React from 'react';
+
+interface ModeToggleProps {
+  className?: string;
 }
+
+const ModeToggle: React.FC<ModeToggleProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ModeToggle</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ModeToggle;

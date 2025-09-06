@@ -1,1 +1,12 @@
- <div> <h1>ResetPassword</h1> <p>Component placeholder - needs implementation</p> </div> 
+import React from 'react';
+
+const ResetPassword = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ResetPassword</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ResetPassword;

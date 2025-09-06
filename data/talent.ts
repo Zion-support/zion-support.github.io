@@ -1,2 +1,7 @@
-// Stub talent data - placeholder for missing functionality 
-}];
+// Talent utility
+export const Talent = () => {
+  // Implementation here
+  return null;
+};
+
+export default Talent;

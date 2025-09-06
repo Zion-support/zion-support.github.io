@@ -1,19 +1,16 @@
- interface PageViewsChartProps {
-  data: Array< {
-  date: string, views: number 
-}>;
-timeRange: string;
-onTimeRangeChange: (range: string) => void 
-}export function PageViewsChart ({
-  data, timeRange, onTimeRangeChange 
-}: PageViewsChartProps) {
-  return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-2" > <CardTitle className="text-white text-lg" >Page Views Trend</CardTitle> <CardDescription className="text-zion-slate-light" >Daily page view statistics</CardDescription> p-0 pb-4"> <AnalyticsChart title="" data= {
-  data || [] 
-}dataKeys= {
-  ['views'] 
-}timeRange= {
-  timeRange 
-}onTimeRangeChange= {
-  onTimeRangeChange 
-}/> </CardContent> </Card>) 
+import React from 'react';
+
+interface PageViewsChartProps {
+  className?: string;
 }
+
+const PageViewsChart: React.FC<PageViewsChartProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PageViewsChart</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PageViewsChart;

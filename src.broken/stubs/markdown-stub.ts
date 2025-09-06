@@ -1,2 +1,7 @@
-// Emergency stub for react-markdown during build issues // Export as default export default ReactMarkdown;
-// Additional exports that might be needed 
+// Markdown-stub utility
+export const Markdown-stub = () => {
+  // Implementation here
+  return null;
+};
+
+export default Markdown-stub;

@@ -1,37 +1,7 @@
-/** @type {import('tailwindcss).Config} */
-module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}./components/**/*.{js,ts,jsx,tsx,mdx}',
-    ./app/**/*.{js,ts,jsx,tsx,mdx}./src/**/*.{js,ts,jsx,tsx,mdx}'
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: 'var(--background),
-        foreground: 'var(--foreground)'
-      },
-      animation: {
-        fade-in': 'fadeIn 0.5s ease-in-outslide-up: 'slideUp 0.3s ease-outbounce-gentle': bounceGentle 2s infinite'
-      },
-      keyframes: {
-        fadeIn: {
-          '0%: { opacity: '0' },
-          100%': { opacity: '1 }
-        },
-        slideUp: {
-          '0%': { transform: translateY(20px)', opacity: '0 },
-          '100%': { transform: translateY(0)', opacity: '1 }
-        },
-        bounceGentle: {
-          '0%, 100%': { transform: translateY(0)' },
-          '50%: { transform: 'translateY(-10px)' }
-        }
-      }
-    }
-  },
-  plugins: [
-    require(@tailwindcss/forms'),
-    require('@tailwindcss/typography),
-    require('@tailwindcss/aspect-ratio')
-  ]
-}
+// Tailwind.config utility
+export const Tailwind.config = () => {
+  // Implementation here
+  return null;
+};
+
+export default Tailwind.config;

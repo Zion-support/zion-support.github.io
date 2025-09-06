@@ -1,7 +1,16 @@
- export default function EnterpriseAdmin () {
-  const {
-  user 
-}= useAuth ();
-//Check if user has enterprise admin role 
-}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 
+import React from 'react';
+
+interface EnterpriseAdminProps {
+  className?: string;
 }
+
+const EnterpriseAdmin: React.FC<EnterpriseAdminProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnterpriseAdmin</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnterpriseAdmin;

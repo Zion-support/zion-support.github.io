@@ -1,1 +1,16 @@
- <Head> <title>Locations | Zion Tech Group</title> <meta name="description" content="Our office locations and contact information." /> <link rel="canonical" href="https://ziontechgroup.com/locations" /> </Head> </div> </div> </div> 
+import React from 'react';
+
+interface LocationsProps {
+  className?: string;
+}
+
+const Locations: React.FC<LocationsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Locations</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Locations;

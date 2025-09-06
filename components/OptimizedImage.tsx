@@ -1,36 +1,16 @@
-import React from 'react;
-import Image from 'next/image';
-;
-interface OptimizedImageProps {,
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  priority?: boolean,
-  quality?: number
+import React from 'react';
+
+interface OptimizedImageProps {
+  className?: string;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>OptimizedImage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = ',
-  priority = false,
-  quality = 75
-}) => {,
-  return (,
-    <Image,
-      src={src},
-  alt={alt},
-  width={width},
-  height={height},
-  className={className},
-  priority={priority},
-  quality={quality},
-  placeholder="blur,
-      blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=",
-    />)
-};
-,
-export default OptimizedImage,
+
+export default OptimizedImage;

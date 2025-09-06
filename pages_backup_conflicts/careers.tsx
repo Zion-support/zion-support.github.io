@@ -1,20 +1,16 @@
 import React from 'react';
 
 interface CareersProps {
-  // Add props here as needed
+  className?: string;
 }
 
-export default function Careers({ }: CareersProps) {
+const Careers: React.FC<CareersProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Careers</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
+};
+
+export default Careers;

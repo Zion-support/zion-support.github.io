@@ -1,9 +1,7 @@
- </item>`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}) .join ('\n');
-<channel> <title>Zion Podcast</title> <link>$ {
-  siteUrl 
-}/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-  items 
-}</channel> </rss>`;
-}
+// Rss utility
+export const Rss = () => {
+  // Implementation here
+  return null;
+};
+
+export default Rss;

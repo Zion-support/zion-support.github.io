@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+// Web-vitals utility
+export const Web-vitals = () => {
+  // Implementation here
+  return null;
+};
+
+export default Web-vitals;

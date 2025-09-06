@@ -1,9 +1,16 @@
-import React from 'react',
-export default function TestSimple() {
-  return (
-    <div>
-      <h1>Simple Test Page</h1>
-      <p>This is a simple test page to check if Next.js is working.</p>
-    </div>
-  )
+import React from 'react';
+
+interface TestSimpleProps {
+  className?: string;
 }
+
+const TestSimple: React.FC<TestSimpleProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TestSimple</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TestSimple;

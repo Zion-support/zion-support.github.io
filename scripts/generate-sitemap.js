@@ -1,3 +1,7 @@
+// Generate-sitemap utility
+export const Generate-sitemap = () => {
+  // Implementation here
+  return null;
 };
-,
-generateSitemap(),
+
+export default Generate-sitemap;

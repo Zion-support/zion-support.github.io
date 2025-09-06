@@ -1,1 +1,16 @@
- <div> <Head> <title>TechnicalDocumentationChat - Zion Tech Solutions</title> <meta name="description" content="TechnicalDocumentationChat service" /> </Head> <main> <h1>TechnicalDocumentationChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default TechnicalDocumentationChat;
+import React from 'react';
+
+interface Technical-documentation-chatProps {
+  className?: string;
+}
+
+const Technical-documentation-chat: React.FC<Technical-documentation-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Technical-documentation-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Technical-documentation-chat;

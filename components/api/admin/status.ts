@@ -1,2 +1,7 @@
- const status = fs.existsSync (statusPath) ? JSON.parse (fs.readFileSync (statusPath, 'utf8') ) 
-}
+// Status utility
+export const Status = () => {
+  // Implementation here
+  return null;
+};
+
+export default Status;

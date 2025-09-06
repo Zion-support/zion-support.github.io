@@ -1,3 +1,7 @@
-import OpenAI from 'openai';
-type OpenAIClient = OpenAI;
-}
+// Openai utility
+export const Openai = () => {
+  // Implementation here
+  return null;
+};
+
+export default Openai;

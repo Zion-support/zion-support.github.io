@@ -1,3 +1,16 @@
- </div> <div className="flex flex-wrap gap-3 items-center" > <label className="font-medium" >Edition</label> <select > <option value="full" >Full</option> <option value="investor" >Investor</option> <option value="developer" >Developer</option> </select> Download PDF </a> </a> </div> </section>) ) 
-}</div> </div>) 
+import React from 'react';
+
+interface Whitepaper-builderProps {
+  className?: string;
 }
+
+const Whitepaper-builder: React.FC<Whitepaper-builderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Whitepaper-builder</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Whitepaper-builder;

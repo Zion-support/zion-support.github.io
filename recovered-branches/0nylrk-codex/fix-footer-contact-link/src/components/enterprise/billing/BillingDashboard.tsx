@@ -1,5 +1,16 @@
- import {
-  Tabs;
-TabsContent;
-TabsList;
-subscription"className=" mt-8"> <TabsList className=" grid w-full grid-cols-4 mb-8"> <TabsTrigger value=" subscription">Subscription</TabsTrigger> <TabsTrigger value=" payment">Payment Methods</TabsTrigger> <TabsTrigger value=" invoices">Invoice History</TabsTrigger> <TabsTrigger value=" usage">Usage Overview</TabsTrigger> </TabsList> <TabsContent value=" subscription"className=" space-y-8"> <CurrentSubscription /> </TabsContent> <TabsContent value=" payment"className=" space-y-8"> <PaymentMethods /> </TabsContent> <TabsContent value=" invoices"className=" space-y-8"> <InvoiceHistory /> </TabsContent> <TabsContent value=" usage"className=" space-y-8" > <UsageOverview /> </TabsContent> </Tabs> </div> 
+import React from 'react';
+
+interface BillingDashboardProps {
+  className?: string;
+}
+
+const BillingDashboard: React.FC<BillingDashboardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BillingDashboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BillingDashboard;

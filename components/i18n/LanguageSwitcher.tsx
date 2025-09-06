@@ -1,10 +1,16 @@
- > <span className= {
-  `fi fi-$ {
-  localeToFlag[lng] 
-}` 
-}></span> <span> {
-  t (localeLabelKey[lng]) 
-}</span> </button> </li>) ) 
-}</ul>) 
-}</div>) 
+import React from 'react';
+
+interface LanguageSwitcherProps {
+  className?: string;
 }
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LanguageSwitcher</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default LanguageSwitcher;

@@ -1,5 +1,7 @@
- exports.handler = async function () {
-  try {
-  // Demo ranking: based on certifications and progress 
-}
+// Cron-daily-rankings utility
+export const Cron-daily-rankings = () => {
+  // Implementation here
+  return null;
 };
+
+export default Cron-daily-rankings;

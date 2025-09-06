@@ -1,119 +1,16 @@
- if (priceMin && priceMax) setPriceRange ([Number (priceMin), Number (priceMax) ]);
-if (expMin && expMax) ;
-}, [ router.isReady;
-searchTerm;
-selectedSkills;
-selectedAvailability;
-selectedRegions;
-priceRange;
-experienceRange;
-sortOption;
-currentPage;
-initialized]), //Fixed dependencies <TalentSkeleton /> </div>) ;
-}if (!isLoading && !error && filteredTalents.length === 0 && !searchTerm && selectedSkills.length === 0 && selectedAvailability.length === 0 && selectedRegions.length === 0 && priceRange[0] === 50 && priceRange[1] === 200 && experienceRange[0] === 0 && experienceRange[1] === 15 /> <h2 className="text-2xl font-bold text-white mb-4" > Talent Directory Currently Empty </h2> <p className="text-zion-slate-light max-w-md mx-auto mb-6" > No talent profiles are currently available. </p> <Link href="/create-talent-profile" > <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" > Be the first to list a talent </Button> </Link> </div> </div>) ;
-}</div>) ";
-}return (<div> <h1 className="text-3xl font-bold text-white mb-2" > AI & Tech Talent Directory </h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers;
-and tech professionals for your projects. </p> </div> {";
-  isAdmin && (<Link href="/create-talent-profile" className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark" > Add Talent </Link>) ;
-}</div> <FilterSidebar searchTerm= {;
-  searchTerm ;
-}setSearchTerm= {;
-  setSearchTerm ;
-}selectedSkills= {;
-  selectedSkills ;
-}toggleSkill= {;
-  toggleSkill ;
-}selectedAvailability= {;
-  selectedAvailability ;
-}toggleAvailability= {;
-  toggleAvailability ;
-}selectedRegions= {;
-  selectedRegions ;
-}toggleRegion= {;
-  toggleRegion ;
-}priceRange= {;
-  priceRange ;
-}setPriceRange= {;
-  setPriceRange ;
-}experienceRange= {;
-  experienceRange ;
-}setExperienceRange= {;
-  setExperienceRange ;
-}expandedSections= {;
-  expandedSections ;
-}toggleSection= {;
-  toggleSection ;
-}sortOption= {;
-  sortOption ;
-}setSortOption= {;
-  setSortOption ;
-}clearFilters= {;
-  clearFilters ;
-}/> </div> > Filter & Sort </Button> </div> <ErrorBoundary> <TalentResults talents= {;
-  paginatedTalents ;
-}totalCount= {;
-  total ;
-}isLoading= {;
-  isLoading ;
-}viewProfile= {;
-  viewProfile ;
-}handleRequestHire= {;
-  handleRequestHire ;
-}isAuthenticated= {;
-  isAuthenticated ;
-}activeFiltersProps= {;
-  {;
-  selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange,  setExperienceRange, clearFilters ;
+import React from 'react';
+
+interface TalentDirectoryProps {
+  className?: string;
 }
-}/> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
-  `?page=$ {;
-  currentPage - 1 ;
-}` ;
-}/> </PaginationItem> {;
-  Array.from ({;
-  length: totalPages ;
-}, (, i) => i + 1) .map ( (page) => (<PaginationItem key= {;
-  page ;
-}> <PaginationButton /> </PaginationItem>) ) ;
-}<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ";
-}</ErrorBoundary> </div> <Button variant="ghost" size="sm" onClick={;
-  () => setIsMobileFilterOpen (false) ";
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
-  searchTerm ;
-}setSearchTerm= {;
-  setSearchTerm ;
-}selectedSkills= {;
-  selectedSkills ;
-}toggleSkill= {;
-  toggleSkill ;
-}selectedAvailability= {;
-  selectedAvailability ;
-}toggleAvailability= {;
-  toggleAvailability ;
-}selectedRegions= {;
-  selectedRegions ;
-}toggleRegion= {;
-  toggleRegion ;
-}priceRange= {;
-  priceRange ;
-}setPriceRange= {;
-  setPriceRange ;
-}experienceRange= {;
-  experienceRange ;
-}setExperienceRange= {;
-  setExperienceRange ;
-}expandedSections= {;
-  expandedSections ;
-}toggleSection= {;
-  toggleSection ;
-}sortOption= {;
-  sortOption ;
-}setSortOption= {;
-  setSortOption ;
-}clearFilters= {;
-  clearFilters ;
-}isMobileFilterOpen= {;
-  isMobileFilterOpen ;
-}/> </div> </div>) ;
-}</div> </div> </div>) ;
-}"
+
+const TalentDirectory: React.FC<TalentDirectoryProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentDirectory</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TalentDirectory;

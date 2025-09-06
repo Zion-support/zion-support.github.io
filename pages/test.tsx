@@ -1,1 +1,16 @@
- <> <Head> <title>Test Page | Zion Tech Group</title> </Head> <div className="min-h-screen bg-black text-white flex items-center justify-center" > <h1 className="text-4xl font-bold text-cyan-400" >Test Page Working</h1> </div> </> 
+import React from 'react';
+
+interface TestProps {
+  className?: string;
+}
+
+const Test: React.FC<TestProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Test;

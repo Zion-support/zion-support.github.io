@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+// Csp-report utility
+export const Csp-report = () => {
+  // Implementation here
+  return null;
+};
+
+export default Csp-report;

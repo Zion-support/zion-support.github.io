@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/TalentsPage.jsx import React from \'react\'; \"export default function TalentsPage () {\" import React from \'react\'; \"export default function TalentsPage () {\"";
-<<<<<<< "HEAD": src.pages.disabled/TalentsPage.jsx import _React from 'react'; "export default function TalentsPage () {" import _React from 'react'; "export default function TalentsPage () {"";
-=======
-=======
-=======
+import React from 'react';
+
+const TalentsPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentsPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TalentsPage;

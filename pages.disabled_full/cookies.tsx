@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from \'react\'; import Navigation from \'../src/components/Navigation\'; import Footer from \'../src/components/Footer\'; import SEOHead from \'../src/components/seo/SEOHead\'; export default function CookiePolicy() { return ( <> <SEOHead title=\"Cookie Policy — Zion Tech Group\" description=\"How Zion Tech Group uses cookies and similar technologies.\" keywords=\"cookie policy,cookies\" /> <Navigation /> <main className=\"min-h-screen bg-white\"> <section className=\"py-16\"> <div className=\"max-w-3xl mx-auto px-4\"> <h1 className=\"text-3xl font-bold text-gray-900 mb-6\">Cookie Policy</h1> <p className=\"text-gray-700\"> We use cookies to personalize content,to provide social media features and to analyze our traffic. </p> <h2 className=\"text-xl font-semibold mt-6 mb-2\">Types of Cookies</h2> <ul className=\"list-disc pl-6 text-gray-700\"> <li>Essential cookies for site functionality</li> <li>Analytics cookies to improve performance</li> <li>Preference cookies to remember your settings</li> </ul> </div> </section> </main> <Footer /> </> )}
-const React from "react"; import Navigation from "./src/components/Navigation"; import Footer from "./src/components/Footer"; import SEOHead from "./src/components/seo/SEOHead"; export default function CookiePolicy() { return ( <> <SEOHead title="Cookie Policy Zion Tech Group" description="How Zion Tech Group uses cookies and similar technologies." keywords="cookie policy,cookies" /> <Navigation /> <main className="min-h-screen bg-white"> <section className="py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold text-gray-900 mb-6">Cookie Policy</h1> <p className="text-gray-700"> We use cookies to personalize content,to provide social media features and to analyze our traffic. </p> <h2 className="text-xl font-semibold mt-6 mb-2">Types of Cookies</h2> <ul className="list-disc pl-6 text-gray-700"> <li>Essential cookies for site functionality</li> <li>Analytics cookies to improve performance</li> <li>Preference cookies to remember your settings</li> </ul> </div> </section> </main> <Footer /> </> )}'"'"
-import _React from 'react'; import Navigation from '../src/components/Navigation'; import Footer from '../src/components/Footer'; import SEOHead from '../src/components/seo/SEOHead'; export default function CookiePolicy() { return ( <> <SEOHead title="Cookie Policy — Zion Tech Group" description="How Zion Tech Group uses cookies and similar technologies." keywords="cookie policy,cookies" /> <Navigation /> <main className="min-h-screen bg-white"> <section className="py-16"> <div className="max-w-3xl mx-auto px-4"> <h1 className="text-3xl font-bold text-gray-900 mb-6">Cookie Policy</h1> <p className="text-gray-700"> We use cookies to personalize content,to provide social media features and to analyze our traffic. </p> <h2 className="text-xl font-semibold mt-6 mb-2">Types of Cookies</h2> <ul className="list-disc pl-6 text-gray-700"> <li>Essential cookies for site functionality</li> <li>Analytics cookies to improve performance</li> <li>Preference cookies to remember your settings</li> </ul> </div> </section> </main> <Footer /> </> )}
-=======
-=======
+import React from 'react';
+
+interface CookiesProps {
+  className?: string;
+}
+
+const Cookies: React.FC<CookiesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Cookies</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Cookies;

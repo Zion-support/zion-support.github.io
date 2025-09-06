@@ -1,7 +1,16 @@
-import * as React from "react" import * as HoverCardPrimitive from "@radix-ui/react-hover-card" const HoverCard = HoverCardPrimitive.Root const HoverCardTrigger = HoverCardPrimitive.Trigger const HoverCardContent = React.forwardRef< React.ElementRef<typeof HoverCardPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>) 
-}{
-  ...props 
-}/>) ) HoverCardContent.displayName = HoverCardPrimitive.Content.displayName export {
-  HoverCard, HoverCardTrigger, HoverCardContent 
+import React from 'react';
+
+interface Hover-cardProps {
+  className?: string;
 }
+
+const Hover-card: React.FC<Hover-cardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Hover-card</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Hover-card;

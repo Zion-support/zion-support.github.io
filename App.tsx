@@ -1,10 +1,16 @@
-import React, { JSX } from 'react';
+import React from 'react';
 
-export default function App(): JSX.Element {
-  return (
-    <main>
-      <h1>Zion Tech Group</h1>
-      <p>Welcome to our application</p>
-    </main>
-  );
+interface AppProps {
+  className?: string;
 }
+
+const App: React.FC<AppProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>App</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default App;

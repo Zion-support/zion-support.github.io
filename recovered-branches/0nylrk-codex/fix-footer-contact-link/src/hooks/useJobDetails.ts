@@ -1,2 +1,7 @@
- .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
-}export default useJobDetails;
+// UseJobDetails utility
+export const UseJobDetails = () => {
+  // Implementation here
+  return null;
+};
+
+export default UseJobDetails;

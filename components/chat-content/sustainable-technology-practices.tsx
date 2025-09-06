@@ -1,1 +1,16 @@
- <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Sustainable Technology Practices</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p> 
+import React from 'react';
+
+interface Sustainable-technology-practicesProps {
+  className?: string;
+}
+
+const Sustainable-technology-practices: React.FC<Sustainable-technology-practicesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Sustainable-technology-practices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Sustainable-technology-practices;

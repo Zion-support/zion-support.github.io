@@ -1,19 +1,16 @@
- ;
-}export function ClickableBadge ({;
-  children;
-className;
-variant = "default";
-onRemove;
-...props ;
-}: ClickableBadgeProps) {;
-  return (<div className= {;
-  cn (badgeVariants ({;
-  variant ;
-});";
-"group flex items-center gap-1";";
-onRemove && "pl-2.5 pr-1.5 py-1";
-}{;
-  ...props ";
-}> > <X className="h-3 w-3" /> </button>) ;
-}</div>) ;
-}"
+import React from 'react';
+
+interface Clickable-badgeProps {
+  className?: string;
+}
+
+const Clickable-badge: React.FC<Clickable-badgeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Clickable-badge</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Clickable-badge;

@@ -1,5 +1,16 @@
- return (<UltraFuturisticBackground variant="quantum" intensity= {
-  1.5 
-}> <Head>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraFuturisticBackground>) 
+import React from 'react';
+
+interface Quantum-logisticsProps {
+  className?: string;
 }
+
+const Quantum-logistics: React.FC<Quantum-logisticsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Quantum-logistics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Quantum-logistics;

@@ -1,4 +1,7 @@
-import * as React from "react" /** * React 18 introduced `useId` for generating unique IDs. If an older * React version is used where `useId` is unavailable, this hook provides * a small fallback that mimics the API using `useRef`. */ const idRef = React.useRef<string | null> (null) if (idRef.current === null) {
-  idRef.current = Math.random () .toString (36) .slice (2) 
-}return idRef.current 
-}
+// UseReactId utility
+export const UseReactId = () => {
+  // Implementation here
+  return null;
+};
+
+export default UseReactId;

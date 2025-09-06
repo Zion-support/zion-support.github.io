@@ -1,9 +1,16 @@
- interface ErrorStateProps {
-  error: string 
-}export function ErrorState ({
-  error 
-}: ErrorStateProps) {
-  return (<Card className="border-red-200" > <CardContent className="p-6 text-center" > <h3 className="text-lg font-medium text-red-600 mb-1" >Something went wrong</h3> <p className="text-muted-foreground" > {
-  error 
-}</p> 
+import React from 'react';
+
+interface ErrorStateProps {
+  className?: string;
 }
+
+const ErrorState: React.FC<ErrorStateProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ErrorState</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ErrorState;

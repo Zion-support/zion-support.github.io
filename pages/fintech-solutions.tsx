@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>fintech-solutions</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface FintechSolutionsProps {
+  className?: string;
 }
+
+const FintechSolutions: React.FC<FintechSolutionsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FintechSolutions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FintechSolutions;

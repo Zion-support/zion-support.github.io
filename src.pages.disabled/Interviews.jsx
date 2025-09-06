@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Interviews.jsx import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => { import React from \'react\'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState (\"upcoming\") ; useEffect ( () => {\";
-<<<<<<< "HEAD": src.pages.disabled/Interviews.jsx import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => { import _React from 'react'; export default function Interviews () { function InterviewsContent () { const { interviews,isLoading,fetchInterviews } = useInterviews () ; const [activeTab,setActiveTab] = useState ("upcoming") ; useEffect ( () => {";
-=======
-=======
-=======
+import React from 'react';
+
+const Interviews = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Interviews</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Interviews;

@@ -1,45 +1,16 @@
- interface TemplateManagerProps {
-  isOpen: boolean;
-onClose: () => void;
-onSelectTemplate: (template: ContractFormValues) => void;
-currentValues?: ContractFormValues 
-}export function TemplateManager ({
-  isOpen;
-onClose;
-onSelectTemplate;
-currentValues 
-}: TemplateManagerProps) {
-  const handleSelectTemplate = (template: ContractTemplate) => {
-  if (template && template.template data) {
-  onSelectTemplate (template.template data);
-onClose ();
-toast ({
-  
+import React from 'react';
+
+interface TemplateManagerProps {
+  className?: string;
 }
+
+const TemplateManager: React.FC<TemplateManagerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TemplateManager</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<Dialog open= {
-  isOpen 
-}onOpenChange= {
-  onClose 
-}> <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle> {
-  mode === "list" ? "Contract Templates" : "Save Template" 
-}</DialogTitle> </DialogHeader> {
-  mode === "list" ? (<div className="space-y-4" > <div className="flex justify-end" > <Button variant="outline" onClick= {
-  () => setMode ("save") 
-}disabled= {
-  !currentValues 
-}
-}
-}/> </div>) : (<TemplateSaveForm onCancel= {
-  () => {
-  
-}
-}onComplete= {
-  handleSaveComplete 
-}editTemplate= {
-  selectedTemplate 
-}currentValues= {
-  currentValues 
-}
-}</DialogContent> </Dialog>) 
-}
+
+export default TemplateManager;

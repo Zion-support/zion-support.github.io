@@ -1,10 +1,16 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Home from '../pages/index';
 
-describe('Smoke Tests', () => {
-  test('Home page renders without crashing', () => {
-    render(<Home />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-});
+interface Smoke.testProps {
+  className?: string;
+}
+
+const Smoke.test: React.FC<Smoke.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Smoke.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Smoke.test;

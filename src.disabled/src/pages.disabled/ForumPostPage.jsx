@@ -1,12 +1,12 @@
 import React from 'react';
-interface ForumPostPageProps {
-  // Add props here as needed
-}
-export default function ForumPostPage({ }: ForumPostPageProps) {
+
+const ForumPostPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ForumPostPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ForumPostPage;

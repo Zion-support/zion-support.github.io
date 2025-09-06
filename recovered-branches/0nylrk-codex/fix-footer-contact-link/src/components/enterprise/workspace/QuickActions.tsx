@@ -1,4 +1,16 @@
- const actions = [ {
-  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
-}</div> </CardContent> </Card>) 
+import React from 'react';
+
+interface QuickActionsProps {
+  className?: string;
 }
+
+const QuickActions: React.FC<QuickActionsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>QuickActions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default QuickActions;

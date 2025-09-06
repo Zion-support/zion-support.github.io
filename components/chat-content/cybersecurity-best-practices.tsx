@@ -1,1 +1,16 @@
- <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Cybersecurity Best Practices</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p> 
+import React from 'react';
+
+interface Cybersecurity-best-practicesProps {
+  className?: string;
+}
+
+const Cybersecurity-best-practices: React.FC<Cybersecurity-best-practicesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Cybersecurity-best-practices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Cybersecurity-best-practices;

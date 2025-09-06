@@ -1,8 +1,7 @@
- export interface ContractTemplate {
-  id: string;
-title: string;
-template data: ContractFormValues;
-is default: boolean;
-created at: string;
-updated at: string 
-}
+// Contracts utility
+export const Contracts = () => {
+  // Implementation here
+  return null;
+};
+
+export default Contracts;

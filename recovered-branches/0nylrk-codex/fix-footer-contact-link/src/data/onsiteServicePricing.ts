@@ -1,2 +1,7 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+// OnsiteServicePricing utility
+export const OnsiteServicePricing = () => {
+  // Implementation here
+  return null;
+};
+
+export default OnsiteServicePricing;

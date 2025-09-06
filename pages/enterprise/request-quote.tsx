@@ -1,7 +1,16 @@
-export default function RequestQuote () {
-  return (<main style= {
-  {
-  padding: '3rem', maxWidth: 800, margin: '0 auto' 
+import React from 'react';
+
+interface RequestQuoteProps {
+  className?: string;
 }
-}> <h1>Request a Quote</h1> <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p> </form> </main>) 
-}
+
+const RequestQuote: React.FC<RequestQuoteProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>RequestQuote</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default RequestQuote;

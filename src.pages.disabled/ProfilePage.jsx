@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ProfilePage.jsx import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ProfilePage.jsx import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ProfilePage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProfilePage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProfilePage;

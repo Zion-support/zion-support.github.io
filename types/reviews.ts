@@ -1,2 +1,7 @@
-export type ProjectStatus = 'InProgress' | 'Completed';
-export type ReviewRole = 'client' | 'talent';
+// Reviews utility
+export const Reviews = () => {
+  // Implementation here
+  return null;
+};
+
+export default Reviews;

@@ -1,1 +1,7 @@
-export type AvailabilityStatus = 'Open' | 'Part-time' | 'Booked';
+// Talent utility
+export const Talent = () => {
+  // Implementation here
+  return null;
+};
+
+export default Talent;

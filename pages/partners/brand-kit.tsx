@@ -1,1 +1,16 @@
- <p>Download assets and messaging to promote Zion AI Marketplace.</p> <ul className="list-disc pl-6" > <li><a className="text-blue-600 underline" href="/brand-kit.txt" >Brand Kit (txt) </Link></li> </ul> <div className="mt-4 p-4 rounded border" > <h2 className="font-medium mb-2" >Smart CTA</h2> <p>Invite your AI audience to earn & help them get hired.</p> </div> </div> 
+import React from 'react';
+
+interface BrandKitProps {
+  className?: string;
+}
+
+const BrandKit: React.FC<BrandKitProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BrandKit</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BrandKit;

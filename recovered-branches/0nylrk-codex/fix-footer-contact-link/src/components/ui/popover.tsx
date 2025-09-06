@@ -1,7 +1,16 @@
-import * as React from "react" import * as PopoverPrimitive from "@radix-ui/react-popover" const Popover = PopoverPrimitive.Root const PopoverTrigger = PopoverPrimitive.Trigger const PopoverContent = React.forwardRef< React.ElementRef<typeof PopoverPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>) 
-}{
-  ...props 
-}/> </PopoverPrimitive.Portal>) ) PopoverContent.displayName = PopoverPrimitive.Content.displayName export {
-  Popover, PopoverTrigger, PopoverContent 
+import React from 'react';
+
+interface PopoverProps {
+  className?: string;
 }
+
+const Popover: React.FC<PopoverProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Popover</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Popover;

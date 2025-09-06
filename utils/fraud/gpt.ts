@@ -1,10 +1,7 @@
- const completion = await client.chat.completions.create ({
-  model: process.env.FRAUD GPT MODEL || 'gpt-4o-mini', messages: [ {
-  role: 'system', content: systemPrompt 
+// Gpt utility
+export const Gpt = () => {
+  // Implementation here
+  return null;
 };
-{
-  role: 'user', content: userPrompt 
-}];
-temperature: 0;
-}
-}
+
+export default Gpt;

@@ -1,1 +1,16 @@
- <div> <Head> <title>InnovationInEnterpriseTechnology - Zion Tech Solutions</title> <meta name="description" content="InnovationInEnterpriseTechnology page" /> </Head> <main> <h1>InnovationInEnterpriseTechnology</h1> <p>This page is under construction.</p> </main> </div> export default InnovationInEnterpriseTechnology;
+import React from 'react';
+
+interface InnovationInEnterpriseTechnologyProps {
+  className?: string;
+}
+
+const InnovationInEnterpriseTechnology: React.FC<InnovationInEnterpriseTechnologyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>InnovationInEnterpriseTechnology</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default InnovationInEnterpriseTechnology;

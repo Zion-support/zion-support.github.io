@@ -1,1 +1,7 @@
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
+// Types utility
+export const Types = () => {
+  // Implementation here
+  return null;
+};
+
+export default Types;

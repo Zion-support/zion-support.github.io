@@ -1,6 +1,7 @@
- const enhanceContent = async (content: string, type: EnhancementType = 'general', context?: string) : Promise<string | null> => {
-  setIsEnhancing (true);
-setError (null);
-try {
-  
-}
+// UseResumeEnhancer utility
+export const UseResumeEnhancer = () => {
+  // Implementation here
+  return null;
+};
+
+export default UseResumeEnhancer;

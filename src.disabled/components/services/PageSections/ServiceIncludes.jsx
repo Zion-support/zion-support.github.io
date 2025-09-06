@@ -1,12 +1,12 @@
 import React from 'react';
-interface ServiceIncludesProps {
-  // Add props here as needed
-}
-export default function ServiceIncludes({ }: ServiceIncludesProps) {
+
+const ServiceIncludes = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ServiceIncludes</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ServiceIncludes;

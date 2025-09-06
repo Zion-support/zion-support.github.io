@@ -1,1 +1,7 @@
-// Stub file database utility - placeholder for missing functionality 
+// FileDb utility
+export const FileDb = () => {
+  // Implementation here
+  return null;
+};
+
+export default FileDb;

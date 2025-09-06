@@ -1,2 +1,7 @@
- /** * Custom hook to track page views for analytics purposes * Attaches event listeners to track route changes and logs page views */ // Initial page load handleRouteChange ();
-}
+// UsePageViewTracking utility
+export const UsePageViewTracking = () => {
+  // Implementation here
+  return null;
+};
+
+export default UsePageViewTracking;

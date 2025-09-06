@@ -1,14 +1,16 @@
- const Breadcrumb = React.forwardRef< HTMLElement;
-) 
-}{
-  ...props 
-}/>) ) Breadcrumb.displayName = "Breadcrumb" const BreadcrumbList = React.forwardRef< HTMLOListElement;
-/>) ) BreadcrumbList.displayName = "BreadcrumbList" const BreadcrumbItem = React.forwardRef< HTMLLIElement;
-/>) ) BreadcrumbItem.displayName = "BreadcrumbItem" const BreadcrumbLink = React.forwardRef< HTMLAnchorElement;
-return (<Comp ref= {
-  ref 
-}/>) 
-}) BreadcrumbLink.displayName = "BreadcrumbLink" </li>) BreadcrumbSeparator.displayName = "BreadcrumbSeparator" > &#8230;
-</span>) BreadcrumbEllipsis.displayName = "BreadcrumbElipssis" export {
-  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbEllipsis 
+import React from 'react';
+
+interface BreadcrumbProps {
+  className?: string;
 }
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Breadcrumb</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Breadcrumb;

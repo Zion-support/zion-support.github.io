@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>zion-global-2025</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface ZionGlobal2025Props {
+  className?: string;
 }
+
+const ZionGlobal2025: React.FC<ZionGlobal2025Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ZionGlobal2025</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ZionGlobal2025;

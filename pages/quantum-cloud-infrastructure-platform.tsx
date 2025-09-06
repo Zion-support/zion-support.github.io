@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>quantum-cloud-infrastructure-platform</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface QuantumCloudInfrastructurePlatformProps {
+  className?: string;
 }
+
+const QuantumCloudInfrastructurePlatform: React.FC<QuantumCloudInfrastructurePlatformProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>QuantumCloudInfrastructurePlatform</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default QuantumCloudInfrastructurePlatform;

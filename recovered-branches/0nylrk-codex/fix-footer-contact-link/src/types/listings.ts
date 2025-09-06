@@ -1,1 +1,7 @@
- export type ListingView = 'grid' | 'list';
+// Listings utility
+export const Listings = () => {
+  // Implementation here
+  return null;
+};
+
+export default Listings;

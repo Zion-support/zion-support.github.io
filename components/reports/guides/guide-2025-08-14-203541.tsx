@@ -1,2 +1,16 @@
- <Head> <title>Guide — Cloud Improving Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Cloud Improving Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
+import React from 'react';
+
+interface Guide-2025-08-14-203541Props {
+  className?: string;
 }
+
+const Guide-2025-08-14-203541: React.FC<Guide-2025-08-14-203541Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Guide-2025-08-14-203541</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Guide-2025-08-14-203541;

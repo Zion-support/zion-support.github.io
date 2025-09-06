@@ -1,14 +1,12 @@
 import React from 'react';
 
-interface ServicePortfolioDashboard.jsProps {
-  // Add props here as needed
-}
-
-export default function ServicePortfolioDashboard.js({ }: ServicePortfolioDashboard.jsProps) {
+const ServicePortfolioDashboard = ({ className }) => {
   return (
-    <div>
-      <h1>ServicePortfolioDashboard.js</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>ServicePortfolioDashboard</h1>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ServicePortfolioDashboard;

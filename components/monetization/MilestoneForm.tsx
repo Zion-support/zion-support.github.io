@@ -1,4 +1,16 @@
- <div> <label className="block text-sm font-medium" >Title</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Description</label> <textarea /> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> <label className="block text-sm font-medium" >Due Date</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Amount (USD) </label> <input required /> </div> </div> <button > {
-  loading ? 'Adding...' : 'Add Milestone' 
-}</button> </form>) 
+import React from 'react';
+
+interface MilestoneFormProps {
+  className?: string;
 }
+
+const MilestoneForm: React.FC<MilestoneFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MilestoneForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MilestoneForm;

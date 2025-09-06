@@ -1,4 +1,7 @@
- proposals[index] = next;
-saveProposals (proposals);
-return next 
-}
+// Zgp-storage utility
+export const Zgp-storage = () => {
+  // Implementation here
+  return null;
+};
+
+export default Zgp-storage;

@@ -1,3 +1,7 @@
- // @ts-expect-error Indexing into dynamic section const arr: BasePerson[] = data[section] || [];
-// prevent duplicates 
-}
+// Admin utility
+export const Admin = () => {
+  // Implementation here
+  return null;
+};
+
+export default Admin;

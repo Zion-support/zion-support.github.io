@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousTesting.jsx import React from \'react\'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousTesting.jsx import _React from 'react'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousTesting; const AIAutonomousTesting = () => { return (<> <Helmet> <title > AI Autonomous Testing Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing,ensures quality,and maintains testing excellence with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI testing,autonomous testing,automated testing,quality testing,autonomous quality,AI testing platform" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousTesting = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousTesting</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousTesting;

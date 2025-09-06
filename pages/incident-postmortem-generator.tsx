@@ -1,3 +1,16 @@
- </Head> 
-}</div> <div className="flex gap-3" > <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-fuchsia-700 text-white" >Start from $79/mo</Link> <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200" >See market pricing</Link> </div> </div> </div> </Layout>) 
+import React from 'react';
+
+interface IncidentPostmortemGeneratorProps {
+  className?: string;
 }
+
+const IncidentPostmortemGenerator: React.FC<IncidentPostmortemGeneratorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>IncidentPostmortemGenerator</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default IncidentPostmortemGenerator;

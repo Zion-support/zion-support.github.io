@@ -1,8 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import Head from \'next/head\'; export default function HomePage() { return ( <div className=\"min-h-screen\"> <Head> <title>Zion Tech Group — AI,IT & Micro SaaS</title> <meta name=\"description\" content=\"AI services,IT solutions,and micro SaaS products by Zion Tech Group.\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"max-w-5xl mx-auto p-6\"> <h1 className=\"text-3xl font-bold\">Zion Tech Group</h1> <p className=\"mt-4 text-gray-700\">AI services,IT solutions,and micro SaaS products.</p> <ul className=\"list-disc pl-6 mt-6 space-y-2\"> <li><a className=\"text-blue-600 \"hover\": underline\" href=\"/services.page\">Services</a></li> <li><a className=\"text-blue-600 hover:underline\" href=\"/ai-services.page\">AI Services</a></li> <li><a className=\"text-blue-600 hover:underline\" href=\"/contact.page\">Contact</a></li> </ul> </main> </div> )}
-import _React from 'react'; import Head from 'next/head'; export default function HomePage() { return ( <div className="min-h-screen"> <Head> <title>Zion Tech Group — AI,IT & Micro SaaS</title> <meta name="description" content="AI services,IT solutions,and micro SaaS products by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6"> <h1 className="text-3xl font-bold">Zion Tech Group</h1> <p className="mt-4 text-gray-700">AI services,IT solutions,and micro SaaS products.</p> <ul className="list-disc pl-6 mt-6 space-y-2"> <li><a className="text-blue-600 "hover": underline" href="/services.page">Services</a></li> <li><a className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</a></li> <li><a className="text-blue-600 hover:underline" href="/contact.page">Contact</a></li> </ul> </main> </div> )}
-=======
-import _React from 'react'; import Head from 'next/head'; export default function HomePage() { return ( <div className="min-h-screen"> <Head> <title>Zion Tech Group — AI,IT & Micro SaaS</title> <meta name="description" content="AI services,IT solutions,and micro SaaS products by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6"> <h1 className="text-3xl font-bold">Zion Tech Group</h1> <p className="mt-4 text-gray-700">AI services,IT solutions,and micro SaaS products.</p> <ul className="list-disc pl-6 mt-6 space-y-2"> <li><a className="text-blue-600 "hover": underline" href="/services.page">Services</a></li> <li><a className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</a></li> <li><a className="text-blue-600 hover:underline" href="/contact.page">Contact</a></li> </ul> </main> </div> )}
-=======
-import _React from 'react'; import Head from 'next/head'; export default function HomePage() { return ( <div className="min-h-screen"> <Head> <title>Zion Tech Group — AI,IT & Micro SaaS</title> <meta name="description" content="AI services,IT solutions,and micro SaaS products by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6"> <h1 className="text-3xl font-bold">Zion Tech Group</h1> <p className="mt-4 text-gray-700">AI services,IT solutions,and micro SaaS products.</p> <ul className="list-disc pl-6 mt-6 space-y-2"> <li><a className="text-blue-600 "hover": underline" href="/services.page">Services</a></li> <li><a className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</a></li> <li><a className="text-blue-600 hover:underline" href="/contact.page">Contact</a></li> </ul> </main> </div> )}
+import React from 'react';
+
+interface Index.pageProps {
+  className?: string;
+}
+
+const Index.page: React.FC<Index.pageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index.page</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index.page;

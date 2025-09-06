@@ -1,6 +1,16 @@
- export default function CloudPlatformPage () {
-  const features = [ {
-  return (<> <Head> <title>Cloud Platform - Zion Tech Group</title> <meta name="description" content="Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee." /> </Head> </div> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" > <div className="mb-8" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <Cloud className="w-4 h-4 mr-2" /> Enterprise Cloud Infrastructure </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Cloud Platform </h1> <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed" > Enterprise-grade cloud infrastructure with global reach, automated scaling, and 99.99% uptime guarantee. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <a href="/contact" className="shadow-2xl shadow-blue-500/25" > Deploy Now <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/contact" className="border-white/20 hover:border-white/40" > View Documentation </Link> </div> </div> </section> Cloud Infrastructure Features </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Built for scale, performance, and reliability </p> </div> </p> </div>) ) 
-}</div> </div> </section> <div> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8" > Why Choose Our Cloud Platform? </h2> </div>) ) 
-}</div> </div> <div className="relative" > <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20" > <div className="text-center" > <Cloud className="w-24 h-24 mx-auto mb-6 text-blue-400" /> <h3 className="text-2xl font-bold text-white mb-4" > Global Infrastructure </h3> <p className="text-gray-300 mb-6" > Deploy your applications across multiple regions for optimal performance </p> <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm" > <Globe className="w-4 h-4 mr-2" /> 15+ regions worldwide </div> </div> </div> </div> </div> </div> </section> <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"> text-xl text-blue-100 mb-8"> Deploy your applications on enterprise-grade cloud infrastructure </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <a href=" /contact"className=" bg-white text-blue-600 hover:bg-gray-100"> Start Free Trial </Link> <a href=" /contact"className=" border-white text-white hover:bg-white hover:text-blue-600" > Contact Sales </Link> </div> </div> </section> </div> </>) 
+import React from 'react';
+
+interface CloudPlatformProps {
+  className?: string;
 }
+
+const CloudPlatform: React.FC<CloudPlatformProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CloudPlatform</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CloudPlatform;

@@ -1,12 +1,12 @@
 import React from 'react';
-interface ForgotPasswordProps {
-  // Add props here as needed
-}
-export default function ForgotPassword({ }: ForgotPasswordProps) {
+
+const ForgotPassword = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ForgotPassword</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ForgotPassword;

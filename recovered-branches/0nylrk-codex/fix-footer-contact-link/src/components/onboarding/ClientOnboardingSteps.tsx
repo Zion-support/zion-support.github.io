@@ -1,21 +1,16 @@
- export function ClientOnboardingSteps () {
-  const onboardingStatus = useOnboardingStatus ();
-const steps: OnboardingStep[] = [ {
-  id: "post-job";
-label: "Post your first job";
-completed: onboardingStatus.jobPosted;
-link: "/post-job";
-action: "Post Job" 
-};
-{
-  id: "invite";
-label: "Send invitation to talent";
-completed: onboardingStatus.inviteSent;
-link: "/talent";
-action: "Find Talent" 
-};
-{
-  id: "response";
-label: "Receive your first application";
-completed: onboardingStatus.responseReceived;
+import React from 'react';
+
+interface ClientOnboardingStepsProps {
+  className?: string;
 }
+
+const ClientOnboardingSteps: React.FC<ClientOnboardingStepsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ClientOnboardingSteps</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ClientOnboardingSteps;

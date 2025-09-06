@@ -1,12 +1,16 @@
- if (certifications.length === 0) return null;
-{
-  formatDate (cert.issue date) 
-}{
-  cert.expiration date && ` - $ {
-  formatDate (cert.expiration date) 
-}` 
-}</span>) 
-}</div> View Credential </Link> </p>) 
-}</div>) ) 
-}</div> </div>) 
+import React from 'react';
+
+interface CertificationsSectionProps {
+  className?: string;
 }
+
+const CertificationsSection: React.FC<CertificationsSectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CertificationsSection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CertificationsSection;

@@ -1,4 +1,7 @@
- 
-}function escapeHtml (str: string) {
-  return String (str) .replace (/&/g, '&amp, ') .replace (/</g, '<') .replace (/>/g, '>') 
-}
+// Export utility
+export const Export = () => {
+  // Implementation here
+  return null;
+};
+
+export default Export;

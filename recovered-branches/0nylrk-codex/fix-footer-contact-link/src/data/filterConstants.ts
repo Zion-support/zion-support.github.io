@@ -1,17 +1,7 @@
- //Common skills for filtering "Machine Learning";
-"Python";
-"JavaScript";
-"React";
-"Data Science";
-"AWS";
-"Docker";
-"Kubernetes";
-"DevOps";
-"Cloud Architecture";
-"TensorFlow" ];
-// Regions export const REGIONS = [ "North America";
-"Europe";
-"Asia Pacific";
-"South America";
-"Middle East";
-"Africa" ];
+// FilterConstants utility
+export const FilterConstants = () => {
+  // Implementation here
+  return null;
+};
+
+export default FilterConstants;

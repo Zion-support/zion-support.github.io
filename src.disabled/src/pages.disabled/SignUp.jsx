@@ -1,12 +1,12 @@
 import React from 'react';
-interface SignUpProps {
-  // Add props here as needed
-}
-export default function SignUp({ }: SignUpProps) {
+
+const SignUp = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>SignUp</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default SignUp;

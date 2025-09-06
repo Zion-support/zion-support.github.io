@@ -1,10 +1,7 @@
- export const useLogout = (setUser: (user: UserProfile | null) => void) => {
-  const logout = async () => {
-  //Clean up existing auth state cleanupAuthState ();
-// Sign out 
-}
+// UseLogout utility
+export const UseLogout = () => {
+  // Implementation here
+  return null;
 };
-return {
-  logout 
-}
-};
+
+export default UseLogout;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Analytics.jsx import React from \'react\'; \"export default function Analytics () {\" import React from \'react\'; \"export default function Analytics () {\"";
-<<<<<<< "HEAD": src.pages.disabled/Analytics.jsx import _React from 'react'; "export default function Analytics () {" import _React from 'react'; "export default function Analytics () {"";
-=======
-=======
-=======
+import React from 'react';
+
+const Analytics = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Analytics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Analytics;

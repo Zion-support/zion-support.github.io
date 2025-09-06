@@ -1,35 +1,16 @@
- export interface TreeNode {
-  name: string;
-path: string;
-type: "folder" | "file";
-exists?: boolean;
+import React from 'react';
+
+interface TreeProps {
+  className?: string;
+}
+
+const Tree: React.FC<TreeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Tree</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<div className="ml-2"> <div className="flex items-center gap-2 py-1"> </button>) : (<span className="inline-block w-4" />) 
-}</div> </div> {
-  hasChildren && open && (<div className="ml-4 border-l pl-2"> {
-  node.children!.map ( (child) => (<NodeItem key= {
-  child.path 
-}node= {
-  child 
-}depth= {
-  depth + 1 
-}onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}</div>) 
-}export function Tree ({
-  nodes, onDeploy 
-}: TreeProps) {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path 
-}node= {
-  n 
-}depth= {
-  0 
-}onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}export default Tree;
+
+export default Tree;

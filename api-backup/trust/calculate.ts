@@ -1,1 +1,7 @@
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+// Calculate utility
+export const Calculate = () => {
+  // Implementation here
+  return null;
+};
+
+export default Calculate;

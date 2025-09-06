@@ -1,4 +1,7 @@
- episodes[idx] = episode;
-fs.writeFileSync (EPISODES PATH, JSON.stringify (episodes, null, 2), 'utf8');
-}
-}
+// Synthesize utility
+export const Synthesize = () => {
+  // Implementation here
+  return null;
+};
+
+export default Synthesize;

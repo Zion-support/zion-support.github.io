@@ -1,3 +1,7 @@
- res.status (200) .send (pdfBuffer);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+// [invoiceId] utility
+export const [invoiceId] = () => {
+  // Implementation here
+  return null;
+};
+
+export default [invoiceId];

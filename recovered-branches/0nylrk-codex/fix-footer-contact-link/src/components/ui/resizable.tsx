@@ -1,16 +1,16 @@
- const ResizablePanelGroup = ({
-  className, ...props 
-}: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) => (<ResizablePrimitive.PanelGroup) 
-}{
-  ...props 
-}/>) const ResizablePanel = ResizablePrimitive.Panel const ResizableHandle = ({
-  withHandle, className, ...props 
-}: React.ComponentProps<typeof ResizablePrimitive.PanelResizeHandle> & {
-  withHandle?: boolean 
-}) => (<ResizablePrimitive.PanelResizeHandle) 
-}{
-  ...props 
-}> </div>) 
-}</ResizablePrimitive.PanelResizeHandle>) export {
-  ResizablePanelGroup, ResizablePanel, ResizableHandle 
+import React from 'react';
+
+interface ResizableProps {
+  className?: string;
 }
+
+const Resizable: React.FC<ResizableProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Resizable</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Resizable;

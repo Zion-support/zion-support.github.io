@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react';
-=======
-import _React from 'react';
-=======
-import _React from 'react';
-=======
-import _React from 'react';
-=======
-import _React from 'react';
+import React from 'react';
+
+const CheckoutPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CheckoutPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CheckoutPage;

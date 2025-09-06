@@ -1,1 +1,16 @@
- <div> <Head> <title>SustainableTechnologyPractices - Zion Tech Solutions</title> <meta name="description" content="SustainableTechnologyPractices page" /> </Head> <main> <h1>SustainableTechnologyPractices</h1> <p>This page is under construction.</p> </main> </div> export default SustainableTechnologyPractices;
+import React from 'react';
+
+interface SustainableTechnologyPracticesProps {
+  className?: string;
+}
+
+const SustainableTechnologyPractices: React.FC<SustainableTechnologyPracticesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SustainableTechnologyPractices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SustainableTechnologyPractices;

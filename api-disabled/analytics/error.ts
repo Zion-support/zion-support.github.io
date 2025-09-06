@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+// Error utility
+export const Error = () => {
+  // Implementation here
+  return null;
+};
+
+export default Error;

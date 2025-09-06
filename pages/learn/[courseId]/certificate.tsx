@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>learn [courseId] certificate</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface CertificateProps {
+  className?: string;
 }
+
+const Certificate: React.FC<CertificateProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Certificate</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Certificate;

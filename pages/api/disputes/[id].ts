@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowGET');
-return res.status (405) .end ('Method Not Allowed') 
-}
+// [id] utility
+export const [id] = () => {
+  // Implementation here
+  return null;
+};
+
+export default [id];

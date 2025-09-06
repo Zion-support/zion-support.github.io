@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface AIAnalyticsProps {
-  // Add props here as needed
-}
-
-export default function AIAnalytics({ }: AIAnalyticsProps) {
+const AIAnalytics = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>AIAnalytics</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default AIAnalytics;

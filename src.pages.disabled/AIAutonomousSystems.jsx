@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface AIAutonomousSystemsProps {
-  // Add props here as needed
-}
-
-export default function AIAutonomousSystems({ }: AIAutonomousSystemsProps) {
+const AIAutonomousSystems = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>AIAutonomousSystems</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default AIAutonomousSystems;

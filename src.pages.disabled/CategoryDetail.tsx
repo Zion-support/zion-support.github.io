@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
-import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
-=======
-<<<<<<< HEAD
-import { useParams,Link,useNavigate } from \'react - router - dom\''\';\' import { Header } from \'@/components / header / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import { GradientHeading } from \'@/components / GradientHeading\''\';\' import { ProductListingCard } from \'@/components / ProductListingCard\''\';\' import { useState,useEffect,useRef,Suspense,useCallback } from \'react\'';\";\";
-import { useParams,Link,useNavigate } from 'react - router - dom''';' import { Header } from '@/components / header / Header''';' import { Footer } from '@/components / Footer''';' import { GradientHeading } from '@/components / GradientHeading''';' import { ProductListingCard } from '@/components / ProductListingCard''';' import { useState,useEffect,useRef,Suspense,useCallback } from 'react'';";";""
-=======
-=======
+import React from 'react';
+
+interface CategoryDetailProps {
+  className?: string;
+}
+
+const CategoryDetail: React.FC<CategoryDetailProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CategoryDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CategoryDetail;

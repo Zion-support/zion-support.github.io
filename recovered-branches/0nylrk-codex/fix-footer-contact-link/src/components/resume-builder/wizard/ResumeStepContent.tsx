@@ -1,59 +1,16 @@
- interface ResumeStepContentProps {
-  activeTab: string;
-resume: Resume;
-onNextStep: () => void;
-onPrevStep: () => void 
-}export const ResumeStepContent = ({
-  activeTab;
-resume;
-onNextStep;
-onPrevStep 
-}: ResumeStepContentProps) => {
-  return (<> <TabsContent value="basic-info" > <BasicInfoForm resumeId= {
-  resume?.id! 
-}initialData= {
-  resume?.basic info 
-}onSave= {
-  (data) => {
-  //Here you would typically save the data to your backend 
+import React from 'react';
+
+interface ResumeStepContentProps {
+  className?: string;
 }
-}onComplete= {
-  onNextStep 
-}work-experience"> <WorkExperienceForm resumeId= {
-  resume?.id! 
-}workExperiences= {
-  resume?.work experience || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" education"> <EducationForm resumeId= {
-  resume?.id! 
-}educationEntries= {
-  resume?.education || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" skills"> <SkillsForm resumeId= {
-  resume?.id! 
-}skills= {
-  resume?.skills || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" certifications"> <CertificationsForm resumeId= {
-  resume?.id! 
-}certifications= {
-  resume?.certifications || [] 
-}onComplete= {
-  onNextStep 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> <TabsContent value=" preview" > <PreviewResume resume= {
-  resume as Resume 
-}onBack= {
-  onPrevStep 
-}/> </TabsContent> </>) 
+
+const ResumeStepContent: React.FC<ResumeStepContentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ResumeStepContent</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default ResumeStepContent;

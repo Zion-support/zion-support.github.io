@@ -1,2 +1,16 @@
- const MobileLaunchPage: React.FC = () => {
-  return (<AppLayout> <SEO title="Get the Zion App - AI Marketplace in Your Pocket" description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go." keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app" canonical="/mobile-launch" 
+import React from 'react';
+
+interface MobileLaunchPageProps {
+  className?: string;
+}
+
+const MobileLaunchPage: React.FC<MobileLaunchPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileLaunchPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MobileLaunchPage;

@@ -1,16 +1,16 @@
- import {;
-  {;
-  {;
-  Award, Share,  Star, TrendingUp ;
-}from 'lucide-react' interface ReferralStatsProps {;
-  stats: ReferralStatsType;
-isLoading: boolean ;
-}stats, isLoading ;
-}: ReferralStatsProps) {;
-  const statCards = [ {;
-  icon: <Award className="h-5 w-5 text-muted-foreground" />;";
-description: "Credits earned from referrals" ;
-}];
-}</CardContent> </Card>) ) ;
-}</div>) ;
-}'"
+import React from 'react';
+
+interface ReferralStatsProps {
+  className?: string;
+}
+
+const ReferralStats: React.FC<ReferralStatsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ReferralStats</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ReferralStats;

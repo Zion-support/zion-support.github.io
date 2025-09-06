@@ -1,15 +1,16 @@
- </div> </div> <div>) ) 
-}</ul> </div>) 
-}{
-  endpoint.errors.map ( (e) => (<li key= {
-  e.code 
-}><strong> {
-  e.code 
-}</strong> ({
-  e.httpStatus 
-}) - {
-  e.message 
-}</li>) ) 
-}</ul> </div>) 
-}</div>) 
+import React from 'react';
+
+interface EndpointDetailProps {
+  className?: string;
 }
+
+const EndpointDetail: React.FC<EndpointDetailProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EndpointDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EndpointDetail;

@@ -1,5 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Notes-all utility
+export const Notes-all = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'All notes' });
-}
+export default NotesAll;

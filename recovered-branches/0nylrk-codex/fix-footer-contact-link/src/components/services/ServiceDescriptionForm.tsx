@@ -1,33 +1,16 @@
- const formSchema = z.object ({
-  title: z.string () .min (3, "Title must be at least 3 characters");
-keyFeatures: z.string ();
-targetAudience: z.string () 
-});
-const handleSubmit = async (data: FormData) => {
-  setIsLoading (true);
-try {
-  const {
-  data: response, error 
-}= await supabase.functions.invoke ('generate-service-description', {
-  body: {
-  title: data.title;
-keyFeatures: data.keyFeatures;
-targetAudience: data.targetAudience 
+import React from 'react';
+
+interface ServiceDescriptionFormProps {
+  className?: string;
 }
-});
-if (error) {
-  throw new Error (error.message) 
-}if (response.error) {
-  throw new Error (response.error) 
-}
-}finally {
-  setIsLoading (false) 
-}
+
+const ServiceDescriptionForm: React.FC<ServiceDescriptionFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ServiceDescriptionForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
->Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Target Audience</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {
-  isLoading ? (<> <Loader className="mr-2 h-4 w-4 animate-spin" /> Generating Description... </>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Description </>) 
-}</Button> </form> </Form> </CardContent> </Card>) 
-}
+
+export default ServiceDescriptionForm;

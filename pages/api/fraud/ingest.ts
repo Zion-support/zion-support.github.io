@@ -1,5 +1,7 @@
- let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
-if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
-if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
-}
-}
+// Ingest utility
+export const Ingest = () => {
+  // Implementation here
+  return null;
+};
+
+export default Ingest;

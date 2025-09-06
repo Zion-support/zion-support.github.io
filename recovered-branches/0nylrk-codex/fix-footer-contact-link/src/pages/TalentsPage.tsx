@@ -1,15 +1,16 @@
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample talent listings const TALENT LISTINGS: ProductListing[] = [ aiScore: 94;
-rating: 4.9;
-reviewCount: 21 
-}];
-//Filter options specific to talents export default function TalentsPage () {
-  return (<DynamicListingPage listings= {
-  TALENT LISTINGS 
-}categoryFilters= {
-  TALENT FILTERS 
-}initialPrice= {
-  {
-  min: 100, max: 200 
+import React from 'react';
+
+interface TalentsPageProps {
+  className?: string;
 }
-}/>) 
-}
+
+const TalentsPage: React.FC<TalentsPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentsPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TalentsPage;

@@ -1,7 +1,7 @@
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
 
-export * from './JobPostingForm',
-export * from './BasicInfoFields',
-export * from './DateFields',
-export * from './DescriptionFields',
-export * from './useJobForm',
-export * from './validation',
+export default Index;

@@ -1,3 +1,16 @@
- return (<div className="space-y-6" > <div> <h1 className="text-2xl font-semibold" >Certifications</h1> <div className="text-gray-500 text-sm" >Your achievements and top learners</div> </div> <div> </div> </div> <div>) ) 
-}</ol> </div> </div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

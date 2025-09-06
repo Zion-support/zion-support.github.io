@@ -1,1 +1,7 @@
-// Stub admin auth utility - placeholder for missing functionality 
+// AdminAuth utility
+export const AdminAuth = () => {
+  // Implementation here
+  return null;
+};
+
+export default AdminAuth;

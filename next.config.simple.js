@@ -1,4 +1,7 @@
-  };
+// Next.config.simple utility
+export const Next.config.simple = () => {
+  // Implementation here
+  return null;
 };
-,
-export default nextConfig,
+
+export default Next.config.simple;

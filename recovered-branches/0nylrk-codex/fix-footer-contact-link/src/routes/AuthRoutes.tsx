@@ -1,18 +1,16 @@
- const AuthRoutes = () => {
-  return (<Routes> {
-  /* Auth Routes */ 
-}<Route path="/login" element= {
-  <Login /> 
-}/> <Route path="/signup" element= {
-  <Signup /> 
-}/> <Route path="/forgot-password" element= {
-  <ForgotPassword /> 
-}/> <Route path="/update-password" element= {
-  <UpdatePassword /> 
-}/> /* Onboarding Routes */ 
-}<Route <Onboarding /> </ProtectedRoute> 
-}/> <Route <TalentOnboarding /> </ProtectedRoute> 
-}/> <Route <ServiceOnboarding /> </ProtectedRoute> 
-}/> </Routes>) 
+import React from 'react';
+
+interface AuthRoutesProps {
+  className?: string;
+}
+
+const AuthRoutes: React.FC<AuthRoutesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AuthRoutes</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default AuthRoutes;

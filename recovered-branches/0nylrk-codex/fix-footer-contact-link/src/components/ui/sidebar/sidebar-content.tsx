@@ -1,25 +1,16 @@
- export const SidebarInput = React.forwardRef< React.ElementRef<typeof Input>;
-React.ComponentProps<typeof Input> > ( (props, ref) => {
-  return (<Input ref= {
-  ref 
-}) 
-}{
-  ...props 
-}/>) 
-}) SidebarInput.displayName = "SidebarInput" export const SidebarHeader = React.forwardRef< HTMLDivElement;
-/>) 
-}) SidebarHeader.displayName = "SidebarHeader" export const SidebarFooter = React.forwardRef< HTMLDivElement;
-/>) 
-}) SidebarFooter.displayName = "SidebarFooter" export const SidebarSeparator = React.forwardRef< HTMLDivElement;
-React.ComponentProps<typeof Separator> > ( (props, ref) => {
-  return (<Separator ref= {
-  ref 
-}/>) 
-}) SidebarSeparator.displayName = "SidebarSeparator" export const SidebarContent = React.forwardRef< HTMLDivElement;
-) 
-}{
-  ...props 
-}/>) 
-}) SidebarContent.displayName = "SidebarContent" export const SidebarGroup = React.forwardRef< HTMLDivElement;
-/>) 
-}) SidebarGroup.displayName = "SidebarGroup" 
+import React from 'react';
+
+interface Sidebar-contentProps {
+  className?: string;
+}
+
+const Sidebar-content: React.FC<Sidebar-contentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Sidebar-content</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Sidebar-content;

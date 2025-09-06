@@ -1,12 +1,16 @@
- <option>Workforce Dev</option> <option>AI Ethics</option> <option>Digital ID</option> <option>Education</option> </select> </label>) 
-}{
-  result.meta.artifacts?.ipfsCid && (<div>IPFS CID: {
-  result.meta.artifacts.ipfsCid 
-}</div>) 
-}{
-  result.meta.artifacts?.signature && (<div>Signature: {
-  result.meta.artifacts.signature.slice (0, 30) 
-}…</div>) 
-}</div>) 
-}</div> </div> </div>) 
+import React from 'react';
+
+interface UnBridgeProps {
+  className?: string;
 }
+
+const UnBridge: React.FC<UnBridgeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UnBridge</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UnBridge;

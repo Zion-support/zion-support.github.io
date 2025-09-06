@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
+// Updates utility
+export const Updates = () => {
+  // Implementation here
+  return null;
+};
+
+export default Updates;

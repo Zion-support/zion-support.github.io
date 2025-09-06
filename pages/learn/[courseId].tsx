@@ -1,20 +1,20 @@
- async function load () {
-  const [courseResp, progResp] = await Promise.all ([ fetch (`/api/learn/courses/$ {
-  courseId 
-}`);
-fetch (`/api/learn/progress?userId=demo-user`) 
-}load () 
-}, [courseId]);
-async function markLessonComplete (lessonId: string) {
-  const completedCount = (progress.completedLessons || []) .includes (lessonId) ? (progress.completedLessons || []) .length if (!course) return <div>Loading...</div>;
-</button> </li>) ) 
-}</ul> </aside>) 
-}</div>) : (<div className="text-sm text-gray-500" >Select a lesson</div>) 
-}) 
-}</div>) : null 
-}{
-  finalPassed && (<CertificatePreview courseId= {
-  courseId 
-}/>) 
-}</section> </div> </div> <div className="space-y-4" > <CoachWidget /> </div> </div> </div>) 
+import React from 'react';
+import { useRouter } from 'next/router';
+
+interface CourseDetailProps {
+  className?: string;
 }
+
+const CourseDetail: React.FC<CourseDetailProps> = ({ className }) => {
+  const router = useRouter();
+  const { courseId } = router.query;
+
+  return (
+    <div className={className || ''}>
+      <h1>Course: {courseId}</h1>
+      <p>This is a course detail page with ID: {courseId}</p>
+    </div>
+  );
+};
+
+export default CourseDetail;

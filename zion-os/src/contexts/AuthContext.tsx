@@ -1,9 +1,16 @@
- setIsLoading (false) 
-}, [session, status]);
-const register = async (name: string, email: string, password: string) => {
-  try {
-  const response = await fetch ("/api/auth/register", {
-  method: "POST", headers: {
-  "Content-Type": "application/json" 
-};
+import React from 'react';
+
+interface AuthContextProps {
+  className?: string;
 }
+
+const AuthContext: React.FC<AuthContextProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AuthContext</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AuthContext;

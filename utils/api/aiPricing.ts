@@ -1,1 +1,7 @@
-// Stub AI pricing utility - placeholder for missing functionality 
+// AiPricing utility
+export const AiPricing = () => {
+  // Implementation here
+  return null;
+};
+
+export default AiPricing;

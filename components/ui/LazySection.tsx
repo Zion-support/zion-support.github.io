@@ -1,15 +1,16 @@
- const getInitialPosition = () => {
-  switch (direction) {
-  case 'up': 
+import React from 'react';
+
+interface LazySectionProps {
+  className?: string;
 }
+
+const LazySection: React.FC<LazySectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LazySection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const getAnimatePosition = () => {
-  switch (direction) {
-  case 'up': 
-}
-};
-return (<motion.div > {
-  children 
-}</motion.div>) 
-};
+
 export default LazySection;

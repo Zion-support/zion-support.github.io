@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Deploy utility
+export const Deploy = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Contract deployed' });
-}
+export default Deploy;

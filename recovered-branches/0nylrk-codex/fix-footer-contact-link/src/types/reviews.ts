@@ -1,1 +1,7 @@
- export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+// Reviews utility
+export const Reviews = () => {
+  // Implementation here
+  return null;
+};
+
+export default Reviews;

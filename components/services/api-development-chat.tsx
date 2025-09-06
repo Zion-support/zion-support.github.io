@@ -1,1 +1,16 @@
- <div> <Head> <title>ApiDevelopmentChat - Zion Tech Solutions</title> <meta name="description" content="ApiDevelopmentChat service" /> </Head> <main> <h1>ApiDevelopmentChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ApiDevelopmentChat;
+import React from 'react';
+
+interface Api-development-chatProps {
+  className?: string;
+}
+
+const Api-development-chat: React.FC<Api-development-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Api-development-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Api-development-chat;

@@ -1,3 +1,16 @@
- return (<div className="space-y-6" > <div> <h1 className="text-2xl font-semibold" >Automation Reports</h1> <div className="text-sm text-gray-500" >Autonomously generated and synced</div> </div>) : (<div className="text-sm text-gray-500" >No data</div>) 
-}</div> </div> </section> </div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

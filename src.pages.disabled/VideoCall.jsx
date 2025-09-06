@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface VideoCallProps {
-  // Add props here as needed
-}
-
-export default function VideoCall({ }: VideoCallProps) {
+const VideoCall = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>VideoCall</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default VideoCall;

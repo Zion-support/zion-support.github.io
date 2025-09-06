@@ -1,3 +1,16 @@
- export function LoginCard () {
-  return (<div className="mx-auto w-full max-w-sm lg:w-96" > <div className="text-center mb-10" > <h2 className="text-3xl font-bold tracking-tight text-white" > bg-zion-blue-dark rounded-lg p-6" > <LoginForm /> <SocialLogin /> </div> </div>) 
+import React from 'react';
+
+interface LoginCardProps {
+  className?: string;
 }
+
+const LoginCard: React.FC<LoginCardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LoginCard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default LoginCard;

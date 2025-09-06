@@ -1,4 +1,16 @@
- <Badge key= {
-  skill.id 
-}variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) 
+import React from 'react';
+
+interface SkillItemProps {
+  className?: string;
+}
+
+const SkillItem: React.FC<SkillItemProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SkillItem</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default SkillItem;

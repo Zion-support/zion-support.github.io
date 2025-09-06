@@ -1,5 +1,7 @@
- 
-}return res.status (204) .end () 
-}
-}return res.status (405) .end () 
-}
+// Search utility
+export const Search = () => {
+  // Implementation here
+  return null;
+};
+
+export default Search;

@@ -1,1 +1,16 @@
- <div> <Head> <title>DatabaseDesignChat - Zion Tech Solutions</title> <meta name="description" content="DatabaseDesignChat service" /> </Head> <main> <h1>DatabaseDesignChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default DatabaseDesignChat;
+import React from 'react';
+
+interface Database-design-chatProps {
+  className?: string;
+}
+
+const Database-design-chat: React.FC<Database-design-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Database-design-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Database-design-chat;

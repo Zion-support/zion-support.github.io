@@ -1,2 +1,7 @@
-// Emergency stub for react-day-picker during build issues // Export as default export default DayPicker;
-// Additional exports that might be needed 
+// Calendar-stub utility
+export const Calendar-stub = () => {
+  // Implementation here
+  return null;
+};
+
+export default Calendar-stub;

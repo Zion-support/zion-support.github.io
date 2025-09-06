@@ -1,10 +1,16 @@
- interface PaymentSectionProps {
-  selectedCountry: CountryPricing 
-}selectedCountry 
-}: PaymentSectionProps) {
-  //Handle successful payment const handlePaymentInitiated = () => {
-  toast ({
-  
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (/> <p className="text-xs text-zion-slate-light mt-2" > Price includes transportation and first hour onsite. Additional hours billed separately. </p> </div>) 
+import React from 'react';
+
+interface PaymentSectionProps {
+  className?: string;
 }
+
+const PaymentSection: React.FC<PaymentSectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PaymentSection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PaymentSection;

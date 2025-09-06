@@ -1,14 +1,16 @@
-import React from 'react'
-import Header from '../components/Header'
+import React from 'react';
 
-export default function HelpPage() {
-	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-			<main className="container mx-auto px-4 py-12">
-				<h1 className="text-3xl font-bold mb-4">Help Center</h1>
-				<p className="text-gray-700">Find guides and support resources. This page has been simplified to restore build health.</p>
-			</main>
-		</div>
-	)
+interface HelpProps {
+  className?: string;
 }
+
+const Help: React.FC<HelpProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Help</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Help;

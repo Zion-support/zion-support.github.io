@@ -1,18 +1,16 @@
- interface MobileFilterDrawerProps {
-  isMobileFilterOpen: boolean;
-setIsMobileFilterOpen: (isOpen: boolean) => void;
-filterProps: any, //We'll pass all filter-related props through this object 
-}export function MobileFilterDrawer ({
-  isMobileFilterOpen;
-setIsMobileFilterOpen;
-filterProps 
-}: MobileFilterDrawerProps) {
-  return (<Drawer open= {
-  isMobileFilterOpen 
-}onOpenChange= {
-  setIsMobileFilterOpen 
-}> <div className="p-4 bg-zion-blue-dark border-t border-zion-blue-light h-[85vh] overflow-auto" > ...filterProps 
-}isMobileFilterOpen= {
-  isMobileFilterOpen 
-}/> </div> </Drawer>) 
+import React from 'react';
+
+interface MobileFilterDrawerProps {
+  className?: string;
 }
+
+const MobileFilterDrawer: React.FC<MobileFilterDrawerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileFilterDrawer</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MobileFilterDrawer;

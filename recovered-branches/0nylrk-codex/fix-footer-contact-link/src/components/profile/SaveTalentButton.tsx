@@ -1,16 +1,16 @@
- interface SaveTalentButtonProps {
-  talentId: string;
-onSave: (talentId: string) => void;
-isSaved: boolean 
-}talentId, onSave, isSaved 
-}: SaveTalentButtonProps) {
-  return (<Button onClick= {
-  () => onSave (talentId) 
-}> <Star className= {
-  `h-4 w-4 $ {
-  isSaved ? 'fill-current' : '' 
-}mr-1` 
-}/> {
-  isSaved ? 'Saved': 'Save' 
-}</Button>) 
+import React from 'react';
+
+interface SaveTalentButtonProps {
+  className?: string;
 }
+
+const SaveTalentButton: React.FC<SaveTalentButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SaveTalentButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SaveTalentButton;

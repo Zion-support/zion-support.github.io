@@ -1,2 +1,7 @@
-import i18n from './i18n';
-export type TranslationMap = Record<string string | undefined>;
+// Translation utility
+export const Translation = () => {
+  // Implementation here
+  return null;
+};
+
+export default Translation;

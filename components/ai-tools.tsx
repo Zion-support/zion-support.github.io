@@ -1,25 +1,16 @@
- export default function AiToolsPage () {
-  const aiTools = [ {
-  return (<> <Head> <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title> <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." /> <meta property="og:title" content="AI Tools & Services | Zion Tech Group" /> <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> AI Tools & Services </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > Real AI Tools for Real Results </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Curated AI tools and services that actually work. Each tool has been tested and verified to provide real value for professionals and businesses. No hype - just results. </p> </div> </section> AI Market Insights </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Understanding the AI landscape helps you make informed decisions about which tools to invest in. </p> </div> </div> </Card>) ) 
-}</div> </div> </section> Curated AI Tools & Services </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Each tool has been carefully selected based on performance, reliability, and real-world value. </p> </div> <Card key= {
-  index 
-}className= {
-  `card-hover group border-gradient-blue relative $ {
-  tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : '' 
-}` 
-}style= {
-  {
-  animationDelay: `$ {
-  index * 0.1 
-}s` 
+import React from 'react';
+
+interface Ai-toolsProps {
+  className?: string;
 }
-}> Most Popular </div> </div>) 
-}</div> <div className= {
-  `absolute -inset-2 bg-gradient-to-r from-transparent via-$ {
-  tool.gradient 
-}to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm` 
-}/> </div> </li>) ) 
-}</ul> <div className="flex items-center justify-between" > <Button > Try Tool <ExternalLink className="w-4 h-4 ml-2" /> </Button> </div> </div> </div> </div> </Card>) ) 
-}</div> </div> </section> AI Tool Categories </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Understanding the different types of AI tools helps you build a comprehensive toolkit for your needs. </p> </div> </div> </div> </Card>) ) 
-}</div> </div> </section> Getting Started with AI Tools </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Practical advice for implementing AI tools in your workflow and maximizing their value. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-8" > <Card className="card-hover border-gradient-blue" > <div className="p-6" > <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4" > <TrendingUp className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-semibold text-white mb-3" >Start Small</h3> <p className="text-gray-400 mb-4" > Begin with one AI tool that addresses your most immediate need. Master it before adding more. </p> <ul className="space-y-2 text-sm text-gray-300" > <li>• Choose based on your primary use case</li> <li>• Start with free tiers when available</li> <li>• Focus on one tool at a time</li> </ul> </div> </Card> <Card className="card-hover border-gradient-blue" > <div className="p-6" > <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4" > <Shield className="w-8 h-8 text-cursor-blue" /> </div> <h3 className="text-xl font-semibold text-white mb-3" >Best Practices</h3> <p className="text-gray-400 mb-4" > Follow proven strategies to get the most out of your AI tools and ensure quality output. </p> <ul className="space-y-2 text-sm text-gray-300" > <li>• Always review and edit AI-generated content</li> <li>• Use specific, detailed prompts</li> <li>• Maintain human oversight and creativity</li> </ul> </div> </Card> </div> </div> </section> Ready to Supercharge Your Workflow? </h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12" > Start with one AI tool or build a complete AI-powered toolkit. Each tool is designed to work independently and integrate seamlessly with your existing processes. </p> <Button href="/micro-saas" variant="primary" size="lg" className="bg-cursor-blue hover:bg-cursor-blue-dark" > Explore More Tools </Button> <Button href="/contact" variant="outline" size="lg" className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white" > Get AI Consultation </Button> </div> </div> </section> </>) 
-}
+
+const Ai-tools: React.FC<Ai-toolsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Ai-tools</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Ai-tools;

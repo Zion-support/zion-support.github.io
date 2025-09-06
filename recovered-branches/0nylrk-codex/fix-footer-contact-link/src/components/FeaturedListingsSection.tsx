@@ -1,9 +1,16 @@
- interface FeaturedListingsSectionProps {
-  showTitle?: boolean 
-}showTitle = true 
-}: FeaturedListingsSectionProps) {
-  const featuredListings = [ {
-  Featured Listings </GradientHeading> <p className="text-zion-slate-light max-w-3xl mx-auto" > Discover our handpicked selection of top AI products and services </p> </div>) 
-}/>) ) 
-}</div> <div className="mt-10 text-center" > <Button asChild > <Link to="/marketplace" >View All Listings</Link> </Button> </div> </div> </section>) 
+import React from 'react';
+
+interface FeaturedListingsSectionProps {
+  className?: string;
 }
+
+const FeaturedListingsSection: React.FC<FeaturedListingsSectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FeaturedListingsSection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FeaturedListingsSection;

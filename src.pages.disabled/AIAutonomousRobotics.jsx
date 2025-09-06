@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousRobotics.jsx import React from \'react\'; export default AIAutonomousRobotics; const AIAutonomousRobotics = () => { return (<> <Helmet> <title > AI Autonomous Robotics Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently,learn from experience,and perform complex tasks with human - like capabilities.\" / / /> <meta name=\"keywords\" content=\"AI robotics,autonomous robots,intelligent automation,AI automation,robotic systems,autonomous systems\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousRobotics; const AIAutonomousRobotics = () => { return (<> <Helmet> <title > AI Autonomous Robotics Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently,learn from experience,and perform complex tasks with human - like capabilities.\" / / / /> <meta name=\"keywords\" content=\"AI robotics,autonomous robots,intelligent automation,AI automation,robotic systems,autonomous systems\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousRobotics.jsx import _React from 'react'; export default AIAutonomousRobotics; const AIAutonomousRobotics = () => { return (<> <Helmet> <title > AI Autonomous Robotics Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently,learn from experience,and perform complex tasks with human - like capabilities." / / /> <meta name="keywords" content="AI robotics,autonomous robots,intelligent automation,AI automation,robotic systems,autonomous systems" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousRobotics; const AIAutonomousRobotics = () => { return (<> <Helmet> <title > AI Autonomous Robotics Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous robotics platform that enables intelligent robots to operate independently,learn from experience,and perform complex tasks with human - like capabilities." / / / /> <meta name="keywords" content="AI robotics,autonomous robots,intelligent automation,AI automation,robotic systems,autonomous systems" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousRobotics = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousRobotics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousRobotics;

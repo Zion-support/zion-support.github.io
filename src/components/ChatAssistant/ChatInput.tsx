@@ -1,17 +1,16 @@
- import {;
-  {;
-  {;
-  Send ;
-}from 'lucide-react' interface ChatInputProps {;
-  onSend: (message: string) => void;
-disabled?: boolean ;
-}export function ChatInput ({;
-  onSend, disabled = false ;
-}: ChatInputProps) {';
-  const [message, setMessage] = useState ('');
-const inputRef = useRef<HTMLTextAreaElement> (null);
-//Focus input when component mounts ;
+import React from 'react';
+
+interface ChatInputProps {
+  className?: string;
 }
+
+const ChatInput: React.FC<ChatInputProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ChatInput</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-> <Send className="h-5 w-5" /> </Button> </form>) ;
-}'"
+
+export default ChatInput;

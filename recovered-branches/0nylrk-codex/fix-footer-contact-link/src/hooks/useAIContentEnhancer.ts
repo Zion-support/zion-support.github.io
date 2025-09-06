@@ -1,11 +1,7 @@
- type EnhancementType = | 'resume-summary' | 'work-description' | 'job-post' | 'proposal' | 'general';
-}finally {
-  setIsEnhancing (false) 
-}
+// UseAIContentEnhancer utility
+export const UseAIContentEnhancer = () => {
+  // Implementation here
+  return null;
 };
-return {
-  enhanceContent;
-isEnhancing;
-error 
-}
-}
+
+export default UseAIContentEnhancer;

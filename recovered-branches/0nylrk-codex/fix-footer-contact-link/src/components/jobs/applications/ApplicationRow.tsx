@@ -1,28 +1,16 @@
- interface ApplicationRowProps {
-  application: JobApplication;
-processingId: string | null;
-onViewApplication: (applicationId: string) => Promise<void>;
-onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-onViewScore: (application: JobApplication) => void 
-}application, processingId, onViewApplication, onStatusChange, onViewScore 
-}: ApplicationRowProps) {
-  return (<TableRow key= {
-  application.id 
-}> <TableCell> <img src= {
-  application.talent profile.profile picture url 
-}alt= {
-  application.talent profile.full name 
-}/>) : (<User className="h-5 w-5 text-gray-400" />) 
-}</Avatar> <div> </div> </div> </div> </TableCell> <TableCell> </div> </TableCell> <TableCell> <StatusBadge status= {
-  application.status 
-}/> </TableCell> <TableCell> <Button </Button>) : (<span className="text-muted-foreground text-sm" >No resume</span>) 
-}</TableCell> <TableCell className="text-right" > <ApplicationActions application= {
-  application 
-}processingId= {
-  processingId 
-}onViewApplication= {
-  onViewApplication 
-}onStatusChange= {
-  onStatusChange 
-}/> </TableCell> </TableRow>) 
+import React from 'react';
+
+interface ApplicationRowProps {
+  className?: string;
 }
+
+const ApplicationRow: React.FC<ApplicationRowProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ApplicationRow</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ApplicationRow;

@@ -1,3 +1,7 @@
- const store: Map<string number[]> = new Map ();
-}return true 
-}
+// RateLimit utility
+export const RateLimit = () => {
+  // Implementation here
+  return null;
+};
+
+export default RateLimit;

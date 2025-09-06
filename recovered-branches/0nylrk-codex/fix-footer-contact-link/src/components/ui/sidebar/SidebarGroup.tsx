@@ -1,14 +1,16 @@
- interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+import React from 'react';
+
+interface SidebarGroupProps {
   className?: string;
-children?: React.ReactNode 
-}export function SidebarGroup ({
-  className, children, ...props 
-}: SidebarGroupProps) {
-  return (<div className= {
-  cn ("mb-4", className) 
-}{
-  ...props 
-}> {
-  children 
 }
-}
+
+const SidebarGroup: React.FC<SidebarGroupProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SidebarGroup</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SidebarGroup;

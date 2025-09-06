@@ -1,1 +1,16 @@
- <div> <Head> <title>CloudMigrationServicesChat - Zion Tech Solutions</title> <meta name="description" content="CloudMigrationServicesChat service" /> </Head> <main> <h1>CloudMigrationServicesChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default CloudMigrationServicesChat;
+import React from 'react';
+
+interface Cloud-migration-services-chatProps {
+  className?: string;
+}
+
+const Cloud-migration-services-chat: React.FC<Cloud-migration-services-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Cloud-migration-services-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Cloud-migration-services-chat;

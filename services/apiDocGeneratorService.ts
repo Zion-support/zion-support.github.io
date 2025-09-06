@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-module.exports = {};
-=======
-export default {},
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+// ApiDocGeneratorService utility
+export const ApiDocGeneratorService = () => {
+  // Implementation here
+  return null;
+};
+
+export default ApiDocGeneratorService;

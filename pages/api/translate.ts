@@ -1,4 +1,7 @@
- for (const lng of targets) {
-  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
-}
-}
+// Translate utility
+export const Translate = () => {
+  // Implementation here
+  return null;
+};
+
+export default Translate;

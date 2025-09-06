@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowPOST');
-return res.status (405) .end ('Method Not Allowed') 
-}
+// Resolve utility
+export const Resolve = () => {
+  // Implementation here
+  return null;
+};
+
+export default Resolve;

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
-=======
-module.exports = {};
+// Sitemap utility
+export const Sitemap = () => {
+  // Implementation here
+  return null;
+};
+
+export default Sitemap;

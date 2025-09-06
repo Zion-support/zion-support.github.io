@@ -1,5 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Kyc-queue utility
+export const Kyc-queue = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC Queue API' });
-}
+export default KycQueue;

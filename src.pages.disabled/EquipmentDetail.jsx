@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/EquipmentDetail.jsx import React from \'react\'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ; import React from \'react\'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) \';\';
-<<<<<<< "HEAD": src.pages.disabled/EquipmentDetail.jsx import _React from 'react'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ; import _React from 'react'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ';';
-=======
-=======
-=======
+import React from 'react';
+
+const EquipmentDetail = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EquipmentDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EquipmentDetail;

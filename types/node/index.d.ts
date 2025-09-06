@@ -1,5 +1,7 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Buffer {}
-declare const __dirname: string,
-declare const __filename: string,
-export {},
+// Index.d utility
+export const Index.d = () => {
+  // Implementation here
+  return null;
+};
+
+export default Index.d;

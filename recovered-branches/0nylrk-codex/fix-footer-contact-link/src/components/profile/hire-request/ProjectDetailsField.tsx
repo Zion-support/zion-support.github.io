@@ -1,9 +1,16 @@
- interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues> 
-}form 
-}: ProjectDetailsFieldProps) {
-  return (<FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Project Overview</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/>) 
+import React from 'react';
+
+interface ProjectDetailsFieldProps {
+  className?: string;
 }
+
+const ProjectDetailsField: React.FC<ProjectDetailsFieldProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectDetailsField</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectDetailsField;

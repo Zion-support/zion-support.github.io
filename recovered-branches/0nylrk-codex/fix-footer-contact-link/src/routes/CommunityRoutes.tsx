@@ -1,19 +1,16 @@
- const CommunityRoutes = () => {
-  return (<Routes> {
-  /* Public routes */ 
-}<Route path="/community" element= {
-  <CommunityPage /> 
-}/> <Route path="/forum" element= {
-  <CommunityPage /> 
-}/> <Route path="/community/category/:categoryId" element= {
-  <ForumCategoryPage /> 
-}/> <Route path="/community/post/:postId" element= {
-  <ForumPostPage /> 
-}/> <Route path="/community/profile/:userId" element= {
-  <CommunityProfilePage /> 
-}/> /* Protected routes */ 
-}<Route <CreatePostPage /> </ProtectedRoute> 
-}/> <Route <EditPostPage /> </ProtectedRoute> 
-}/> </Routes>) 
+import React from 'react';
+
+interface CommunityRoutesProps {
+  className?: string;
+}
+
+const CommunityRoutes: React.FC<CommunityRoutesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CommunityRoutes</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default CommunityRoutes;

@@ -1,8 +1,16 @@
- return (<div className="w-full h-3 bg-gray-200 dark:bg-gray-800 rounded" > <div className="h-3 bg-blue-600 rounded" style= {
-  {
-  width: `$ {
-  pct 
-}%` 
+import React from 'react';
+
+interface ProgressBarProps {
+  className?: string;
 }
-}/> </div>) 
-}
+
+const ProgressBar: React.FC<ProgressBarProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProgressBar</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProgressBar;

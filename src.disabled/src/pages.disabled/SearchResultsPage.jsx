@@ -1,12 +1,12 @@
 import React from 'react';
-interface SearchResultsPageProps {
-  // Add props here as needed
-}
-export default function SearchResultsPage({ }: SearchResultsPageProps) {
+
+const SearchResultsPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>SearchResultsPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default SearchResultsPage;

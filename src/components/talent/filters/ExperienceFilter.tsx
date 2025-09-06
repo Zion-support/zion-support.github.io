@@ -1,14 +1,16 @@
- export function ExperienceFilter ({;
-  experienceRange, setExperienceRange, expanded,  toggleSection, isMobileFilterOpen ;
-}: ExperienceFilterProps) {;
-  const handleChange = (values: number[]) => {;
-  setExperienceRange ([values[0] || 0, values[1] || 15]) ;
+import React from 'react';
+
+interface ExperienceFilterProps {
+  className?: string;
+}
+
+const ExperienceFilter: React.FC<ExperienceFilterProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ExperienceFilter</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
-}</button> <span> {;
-  experienceRange[0] ;
-}years</span> <span> {;
-  experienceRange[1] ;
-}years</span> </div> <Slider /> </div>) ;
-}</div>) ;
-}"
+
+export default ExperienceFilter;

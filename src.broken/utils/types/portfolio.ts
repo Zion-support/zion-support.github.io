@@ -1,10 +1,7 @@
- createdAt: string;
-updatedAt: string;
-talentSlug?: string;
-personalSummary: string;
-skills: string[];
-technologies: string[];
-certifications: string[];
-workHistory: WorkExperience[];
-education: EducationItem[];
-export type AiAssistAction = | 'improve-summary' | 'format-description' | 'suggest-bullets';
+// Portfolio utility
+export const Portfolio = () => {
+  // Implementation here
+  return null;
+};
+
+export default Portfolio;

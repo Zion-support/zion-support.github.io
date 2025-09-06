@@ -1,2 +1,7 @@
-import React from "react";
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+// Resend-verification-email utility
+export const Resend-verification-email = () => {
+  // Implementation here
+  return null;
+};
+
+export default Resend-verification-email;

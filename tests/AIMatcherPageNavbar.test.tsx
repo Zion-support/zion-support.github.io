@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { render } from \'@testing-library/react\'; import { MemoryRouter } from \'react-router-dom\'; import { AppLayout } from \'@/layout/AppLayout\'; import AIMatcherPage from \'@/pages/AIMatcher\'; test(\'
-const { render } from "@testing-library/react"; import { MemoryRouter } from "react-router-dom"; import { AppLayout } from "@/layout/AppLayout"; import AIMatcherPage from "@/pages/AIMatcher"; test("""
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
-=======
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
-=======
-import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
+import React from 'react';
+
+interface AIMatcherPageNavbar.testProps {
+  className?: string;
+}
+
+const AIMatcherPageNavbar.test: React.FC<AIMatcherPageNavbar.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIMatcherPageNavbar.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIMatcherPageNavbar.test;

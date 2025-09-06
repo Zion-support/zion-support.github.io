@@ -1,16 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', ['GET']);
-      return res.status(405).end('Method Not Allowed');
-    }
-    
-    return res.status(200).json({
-      partners: []
-    });
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' });
-  }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Placeholder for actual logic
+  res.status(200).json({ message: 'API route is working' });
 }

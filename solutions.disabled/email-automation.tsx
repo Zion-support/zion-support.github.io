@@ -1,21 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
-interface EmailautomationProps {
-  // Add props here as needed
+
+interface Email-automationProps {
+  className?: string;
 }
-export default function Emailautomation({ }: EmailautomationProps) {
+
+const Email-automation: React.FC<Email-automationProps> = ({ className }) => {
   return (
-    <div>
-      <h1>Emailautomation</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>Email-automation</h1>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
-=======
-=======
+};
+
+export default Email-automation;

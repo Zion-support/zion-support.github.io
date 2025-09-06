@@ -1,7 +1,7 @@
- declare let process: {
-  env: {
-  [key: string]: string | undefined;
-NODE ENV: 'development' | 'production' | 'test';
-PORT?: string 
-}
+// Vite-env.d utility
+export const Vite-env.d = () => {
+  // Implementation here
+  return null;
 };
+
+export default Vite-env.d;

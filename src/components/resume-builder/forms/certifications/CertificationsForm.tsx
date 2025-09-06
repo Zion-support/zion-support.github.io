@@ -1,17 +1,16 @@
- return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {;
-  certifications.length > 0 && (<CertificationsList certifications= {;
-  certifications ;
-}onEdit= {;
-  handleEdit ;
-}onDelete= {;
-  handleDelete ;
-}/>) ";
-}<div className="flex justify-between pt-2" > <Button if (editingId) {;
-  setEditingId (null);
-form.reset ({;
-  ;
+import React from 'react';
+
+interface CertificationsFormProps {
+  className?: string;
 }
-}> {;
-  editingId ? 'Cancel' : 'Back' ;
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-}'"
+
+const CertificationsForm: React.FC<CertificationsFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CertificationsForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CertificationsForm;

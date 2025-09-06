@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ExpandedServicesPage.jsx import React from \'react\'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState (\"rating\") ; useEffect ( () => { let filtered = EXPANDED_SERVICES; import React from \'react\'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState (\"rating\") ; useEffect ( () => { let filtered = EXPANDED_SERVICES;\"";
-<<<<<<< "HEAD": src.pages.disabled/ExpandedServicesPage.jsx import _React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES; import _React from 'react'; export default function ExpandedServicesPage () { const [searchQuery,setSearchQuery] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [filteredServices,setFilteredServices] = useState (EXPANDED_SERVICES) ; const [sortBy,setSortBy] = useState ("rating") ; useEffect ( () => { let filtered = EXPANDED_SERVICES;"";
-=======
-=======
-=======
+import React from 'react';
+
+const ExpandedServicesPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ExpandedServicesPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ExpandedServicesPage;

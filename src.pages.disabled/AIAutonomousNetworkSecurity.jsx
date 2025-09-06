@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousNetworkSecurity.jsx import React from \'react\'; export default AIAutonomousNetworkSecurity; const AIAutonomousNetworkSecurity = () => { return (<> <Helmet> <title> {\" \"} AI Autonomous Network Security Platform | Zion Tech Group </title> <meta name=\"description\" content=\"Revolutionary AI autonomous network security platform that continuously monitors networks,detects threats,and protects infrastructure with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI network security,autonomous network security,network monitoring,threat detection,autonomous operations,AI network security platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousNetworkSecurity; const AIAutonomousNetworkSecurity = () => { return (<> <Helmet> <title> {} AI Autonomous Network Security Platform | Zion Tech Group </title> <meta name=\"description\" content=\"Revolutionary AI autonomous network security platform that continuously monitors networks,detects threats,and protects infrastructure with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI network security,autonomous network security,network monitoring,threat detection,autonomous operations,AI network security platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousNetworkSecurity.jsx import _React from 'react'; export default AIAutonomousNetworkSecurity; const AIAutonomousNetworkSecurity = () => { return (<> <Helmet> <title> {" "} AI Autonomous Network Security Platform | Zion Tech Group </title> <meta name="description" content="Revolutionary AI autonomous network security platform that continuously monitors networks,detects threats,and protects infrastructure with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI network security,autonomous network security,network monitoring,threat detection,autonomous operations,AI network security platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousNetworkSecurity; const AIAutonomousNetworkSecurity = () => { return (<> <Helmet> <title> {} AI Autonomous Network Security Platform | Zion Tech Group </title> <meta name="description" content="Revolutionary AI autonomous network security platform that continuously monitors networks,detects threats,and protects infrastructure with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI network security,autonomous network security,network monitoring,threat detection,autonomous operations,AI network security platform" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousNetworkSecurity = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousNetworkSecurity</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousNetworkSecurity;

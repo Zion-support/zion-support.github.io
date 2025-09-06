@@ -1,6 +1,16 @@
- const [title, setTitle] = useState ('');
-const [description, setDescription] = useState ('');
-const [category, setCategory] = useState ('');
-}if (!job) return <div>Loading…</div>;
-</div> </div>) 
+import React from 'react';
+
+interface EditProps {
+  className?: string;
 }
+
+const Edit: React.FC<EditProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Edit</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Edit;

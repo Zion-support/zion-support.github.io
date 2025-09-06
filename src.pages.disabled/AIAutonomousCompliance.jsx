@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousCompliance.jsx import React from \'react\'; export default AIAutonomousCompliance; const AIAutonomousCompliance = () => { return (<> <Helmet> <title > AI Autonomous Compliance Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous compliance platform that continuously monitors regulations,ensures adherence,and maintains compliance with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI compliance,autonomous compliance,regulation monitoring,adherence assurance,autonomous operations,AI compliance platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousCompliance; const AIAutonomousCompliance = () => { return (<> <Helmet> <title > AI Autonomous Compliance Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous compliance platform that continuously monitors regulations,ensures adherence,and maintains compliance with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI compliance,autonomous compliance,regulation monitoring,adherence assurance,autonomous operations,AI compliance platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousCompliance.jsx import _React from 'react'; export default AIAutonomousCompliance; const AIAutonomousCompliance = () => { return (<> <Helmet> <title > AI Autonomous Compliance Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous compliance platform that continuously monitors regulations,ensures adherence,and maintains compliance with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI compliance,autonomous compliance,regulation monitoring,adherence assurance,autonomous operations,AI compliance platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousCompliance; const AIAutonomousCompliance = () => { return (<> <Helmet> <title > AI Autonomous Compliance Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous compliance platform that continuously monitors regulations,ensures adherence,and maintains compliance with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI compliance,autonomous compliance,regulation monitoring,adherence assurance,autonomous operations,AI compliance platform" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousCompliance = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousCompliance</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousCompliance;

@@ -1,5 +1,16 @@
- export type RedemptionType = 'boost profile' | 'promote listing' | 'premium support';
-}if (!isOpen) return null;
-</div> <div className="text-sm mb-3" >Conversion rate: 1 ZION = $0.01</div>) 
-}</div> </div> 
+import React from 'react';
+
+interface UseTokensModalProps {
+  className?: string;
 }
+
+const UseTokensModal: React.FC<UseTokensModalProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UseTokensModal</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UseTokensModal;

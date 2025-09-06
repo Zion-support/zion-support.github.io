@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/RequestQuote.js.jsx import React from \'react\'; <div className=\"min-h-screen bg-background\">\";\" <SEO title=\"Request Quote - Zion Tech Group\" description=\"Get a custom quote for your AI and tech project needs from Zion Tech Group.\" keywords=\"quote,pricing,AI services,tech services,project quote,Zion Tech Group\" canonical=\""https\": import React from \'react\'; <div className=\"min - h-screen bg - background\">\";\" <SEO title=\"Request Quote - Zion Tech Group\" description=\"Get a custom quote for your AI and tech project needs from Zion Tech Group.\" keywords=\"quote,pricing,AI services,tech services,project quote,Zion Tech Group\" canonical=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/RequestQuote.js.jsx import _React from 'react'; <div className="min-h-screen bg-background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": import _React from 'react'; <div className="min - h-screen bg - background">";" <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote,pricing,AI services,tech services,project quote,Zion Tech Group" canonical=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const RequestQuote.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>RequestQuote.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default RequestQuote.js;

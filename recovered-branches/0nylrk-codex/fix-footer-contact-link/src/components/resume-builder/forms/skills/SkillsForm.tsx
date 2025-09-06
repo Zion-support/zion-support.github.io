@@ -1,19 +1,16 @@
- 
+import React from 'react';
+
+interface SkillsFormProps {
+  className?: string;
 }
+
+const SkillsForm: React.FC<SkillsFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SkillsForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Skills</h2> <p className="text-muted-foreground" > Add your technical and professional skills. </p> </div> {
-  /* Display skills by category */ 
-}<SkillsList skills= {
-  localSkills 
-}onDeleteSkill= {
-  handleDeleteSkill 
-}/> </div> <BulkAddSkills resumeId= {
-  resumeId 
-}onSuccess= {
-  refreshSkills 
-}/> </div> Back </Button> <Button onClick= {
-  onComplete 
-}disabled= {
-  localSkills.length === 0 
-}> Next </Button> </div> </div>) 
-}
+
+export default SkillsForm;

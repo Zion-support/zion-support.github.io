@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ForgotPassword.jsx import React from \'react\'; export default function ForgotPassword () { import React from \'react\'; export default function ForgotPassword () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ForgotPassword.jsx import _React from 'react'; export default function ForgotPassword () { import _React from 'react'; export default function ForgotPassword () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ForgotPassword = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ForgotPassword</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ForgotPassword;

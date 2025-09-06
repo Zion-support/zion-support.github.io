@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-export declare const config: { api: { bodyParser: boolean } };
-export default function handler(
-  req: 'NextApiRequest',
-  res: 'NextApiResponse'
-): Promise<any>;
-=======
-import React from 'react;
-import * as React from 'react';
-export declare const config: { api: { bodyParser: boolean } };
-export default function handler(,
-  req: NextApiRequest',
-  res: 'NextApiResponse'): Promise<any>;
-,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f
+// Webhook.d utility
+export const Webhook.d = () => {
+  // Implementation here
+  return null;
+};
+
+export default Webhook.d;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/IndustrySolutions.jsx import React from \'react\'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedIndustry,setSelectedIndustry] = useState (\"all\") ; const [selectedSolutionType,setSelectedSolutionType] = useState (\"all\") ; import React from \'react\'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedIndustry,setSelectedIndustry] = useState (\"all\") ; const [selectedSolutionType,setSelectedSolutionType] = useState (\"all\") ;\"";
-<<<<<<< "HEAD": src.pages.disabled/IndustrySolutions.jsx import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ; import _React from 'react'; export default IndustrySolutions; import { Search,Zap,CreditCard,Truck,Phone,Mail,MapPin,Building,Factory,Store,Home,GraduationCap,Stethoscope const IndustrySolutions = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedIndustry,setSelectedIndustry] = useState ("all") ; const [selectedSolutionType,setSelectedSolutionType] = useState ("all") ;"";
-=======
-=======
-=======
+import React from 'react';
+
+const IndustrySolutions = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>IndustrySolutions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default IndustrySolutions;

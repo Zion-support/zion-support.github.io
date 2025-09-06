@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = default function BlockchainSolutions() { return null}
-=======
-=======
 import React from 'react';
 
-interface BlockchainsolutionsProps {
-  // Add props here as needed
+interface Blockchain-solutionsProps {
+  className?: string;
 }
 
-export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
+const Blockchain-solutions: React.FC<Blockchain-solutionsProps> = ({ className }) => {
   return (
-    <div>
-      <h1>Blockchainsolutions</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>Blockchain-solutions</h1>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
+};
+
+export default Blockchain-solutions;

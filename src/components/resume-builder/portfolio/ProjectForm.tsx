@@ -1,14 +1,16 @@
- type ProjectFormValues = z.infer<typeof projectSchema>;
-setIsLoading (true);
-try {;
-  const projectData: PortfolioProject = {;
-  </FormControl> <FormMessage /> </FormItem>) ;
-}/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> {;
-  /* Future file upload field would go here */ ;
-}</Button> </div> </form> </Form>) ;
-}"
+import React from 'react';
+
+interface ProjectFormProps {
+  className?: string;
+}
+
+const ProjectForm: React.FC<ProjectFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectForm;

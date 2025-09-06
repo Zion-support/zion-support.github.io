@@ -1,13 +1,16 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <button onClick= {
-  toggleSection 
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
-}</button> {
-  REGION OPTIONS.map (region => (<div key= {
-  region.id 
-}className="flex items-center" > <Checkbox > {
-  region.label 
-}</label> </div>) ) 
-}</div>) 
-}</div>) 
+import React from 'react';
+
+interface RegionFilterProps {
+  className?: string;
 }
+
+const RegionFilter: React.FC<RegionFilterProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>RegionFilter</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default RegionFilter;

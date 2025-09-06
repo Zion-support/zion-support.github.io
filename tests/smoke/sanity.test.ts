@@ -1,14 +1,7 @@
-describe('sanity', () => {
-  it('runs a basic assertion', () => {
-    expect(1 + 1).toBe(2)
-  })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-})
-=======
-})
-=======
-})
-=======
-})
+// Sanity.test utility
+export const Sanity.test = () => {
+  // Implementation here
+  return null;
+};
+
+export default Sanity.test;

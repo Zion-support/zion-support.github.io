@@ -1,21 +1,7 @@
-#!/usr/bin/env node //Netlify Function Fallback: site-monitor //This is a local fallback when the main function is unavailable try {
-  // Basic fallback logic const result = {
-  statusCode: 200;
-body: JSON.stringify ({
-  message: 'site-monitor executed locally as fallback';
-timestamp: new Date () .toISOString ();
-fallback: true 
-}) 
+// Netlify-fallback-site-monitor utility
+export const Netlify-fallback-site-monitor = () => {
+  // Implementation here
+  return null;
 };
-return result;
-}catch (error) {
-  console.error ('Fallback execution error:', error);
-return {
-  statusCode: 500;
-body: JSON.stringify ({
-  error: 'Fallback execution failed';
-message: error.message 
-}) 
-}
-}
-};
+
+export default Netlify-fallback-site-monitor;

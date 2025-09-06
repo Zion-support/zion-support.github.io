@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ComprehensiveContact.jsx import React from \'react\'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ \"name\": \",\"email\": \",\"comp\": \",\"phone\": \",\"service\": \",\"message\": \" }) ; const handleSubmit = (e) => { e.preventDefault () ; import React from \'react\'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ \"name\": \",\"email\": \",\"comp\": \",\"phone\": \",\"service\": \",\"message\": \" }) ; const handleSubmit = (e) => { e.preventDefault () ;\";
-<<<<<<< "HEAD": src.pages.disabled/ComprehensiveContact.jsx import _React from 'react'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ "name": ","email": ","comp": ","phone": ","service": ","message": " }) ; const handleSubmit = (e) => { e.preventDefault () ; import _React from 'react'; export default function ComprehensiveContact () { const [formData,setFormData] = useState ({ "name": ","email": ","comp": ","phone": ","service": ","message": " }) ; const handleSubmit = (e) => { e.preventDefault () ;";
-=======
-=======
-=======
+import React from 'react';
+
+const ComprehensiveContact = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ComprehensiveContact</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ComprehensiveContact;

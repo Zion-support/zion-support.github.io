@@ -1,30 +1,16 @@
- const services = [ {;
-  title: "Servers";";
-description: "Enterprise-grade servers for any workload with 24/7 maintenance and support";";
-icon: <Server className="h-10 w-10" /> ;
+import React from 'react';
+
+interface GlobalServiceSectionProps {
+  className?: string;
+}
+
+const GlobalServiceSection: React.FC<GlobalServiceSectionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>GlobalServiceSection</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-{";
-  title: "Storage";";
-description: "Scalable storage solutions from SSDs to large-scale enterprise storage systems";";
-icon: <HardDrive className="h-10 w-10" /> ;
-};
-{";
-  title: "Networking";";
-description: "Connectivity solutions including switches,  routers, and network security devices";";
-icon: <Network className="h-10 w-10" /> ;
-};
-{";
-  title: "24x7x365 Support";";
-description: "Around-the-clock technical support with rapid response times guaranteed";";
-icon: <Clock className="h-10 w-10" /> ;
-};
-{";
-  title: "Recycling Services";";
-description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices";";
-icon: <Recycle className="h-10 w-10" /> ;
-};
-{;
-  export function GlobalServiceSection () {";
-  return (<section className="py-20 bg-zion-blue" id="global-services" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-16" > mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes </p> </div> </div>) ) ;
-}</div> Get Your Free Commercial Proposal </Button> </div> </div> </section>) ;
-}"
+
+export default GlobalServiceSection;

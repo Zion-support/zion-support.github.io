@@ -1,2 +1,7 @@
- .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
-}
+// UseWallet utility
+export const UseWallet = () => {
+  // Implementation here
+  return null;
+};
+
+export default UseWallet;

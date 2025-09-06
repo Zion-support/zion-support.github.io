@@ -1,11 +1,16 @@
- return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
-  lang.code 
-}className= {
-  `cursor-pointer $ {
-  currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10' 
-}` 
-}onClick= {
-  () => changeLanguage (lang.code) 
-}> </div> </DropdownMenuItem>) ) 
-}</DropdownMenuContent> </DropdownMenu>) 
+import React from 'react';
+
+interface LanguageSelectorProps {
+  className?: string;
 }
+
+const LanguageSelector: React.FC<LanguageSelectorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LanguageSelector</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default LanguageSelector;

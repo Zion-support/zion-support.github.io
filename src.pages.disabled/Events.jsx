@@ -1,14 +1,12 @@
 import React from 'react';
 
-interface Events.jsProps {
-  // Add props here as needed
-}
-
-export default function Events.js({ }: Events.jsProps) {
+const Events = ({ className }) => {
   return (
-    <div>
-      <h1>Events.js</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>Events</h1>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default Events;

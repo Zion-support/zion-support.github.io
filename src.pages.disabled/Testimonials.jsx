@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface TestimonialsProps {
-  // Add props here as needed
-}
-
-export default function Testimonials({ }: TestimonialsProps) {
+const Testimonials = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Testimonials</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default Testimonials;

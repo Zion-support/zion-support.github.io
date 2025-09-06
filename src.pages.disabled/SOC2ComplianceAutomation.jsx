@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface SOC2ComplianceAutomationProps {
-  // Add props here as needed
-}
-
-export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
+const SOC2ComplianceAutomation = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>SOC2ComplianceAutomation</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default SOC2ComplianceAutomation;

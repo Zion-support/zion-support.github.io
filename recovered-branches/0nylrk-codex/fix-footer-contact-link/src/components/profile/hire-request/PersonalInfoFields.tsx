@@ -1,10 +1,16 @@
- interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues> 
-}form 
-}: PersonalInfoFieldsProps) {
-  return (<> <FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Your Name</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-white" >Your Email</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </>) 
+import React from 'react';
+
+interface PersonalInfoFieldsProps {
+  className?: string;
 }
+
+const PersonalInfoFields: React.FC<PersonalInfoFieldsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PersonalInfoFields</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PersonalInfoFields;

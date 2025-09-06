@@ -1,14 +1,12 @@
 import React from 'react';
 
-interface ServiceComparison.jsProps {
-  // Add props here as needed
-}
-
-export default function ServiceComparison.js({ }: ServiceComparison.jsProps) {
+const ServiceComparison = ({ className }) => {
   return (
-    <div>
-      <h1>ServiceComparison.js</h1>
-      <p>This component is currently under development.</p>
+    <div className={className || ''}>
+      <h1>ServiceComparison</h1>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ServiceComparison;

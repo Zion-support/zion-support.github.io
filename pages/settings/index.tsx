@@ -1,3 +1,16 @@
-export default function SettingsPage () {
-  return (<div> <h2 className="text-xl font-semibold mb-2" >Settings</h2> <p className="opacity-80" >Manage your account preferences.</p> </div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

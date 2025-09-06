@@ -1,2 +1,7 @@
- export type NotificationType = | 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
-export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'system';
+// Types utility
+export const Types = () => {
+  // Implementation here
+  return null;
+};
+
+export default Types;

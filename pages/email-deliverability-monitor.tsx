@@ -1,5 +1,16 @@
- return (<Layout> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </Layout>) 
+import React from 'react';
+
+interface EmailDeliverabilityMonitorProps {
+  className?: string;
 }
+
+const EmailDeliverabilityMonitor: React.FC<EmailDeliverabilityMonitorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EmailDeliverabilityMonitor</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EmailDeliverabilityMonitor;

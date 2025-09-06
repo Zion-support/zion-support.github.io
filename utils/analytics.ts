@@ -1,9 +1,7 @@
-export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
-export async function trackEvent (payload: TrackEventPayload) {
-  try {
-  await fetch ('/api/analytics/events/track', {
-  method: 'POST', headers: {
-  'Content-Type': 'application/json' 
+// Analytics utility
+export const Analytics = () => {
+  // Implementation here
+  return null;
 };
-body: JSON.stringify (payload);
-}
+
+export default Analytics;

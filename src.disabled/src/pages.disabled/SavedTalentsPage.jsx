@@ -1,12 +1,12 @@
 import React from 'react';
-interface SavedTalentsPageProps {
-  // Add props here as needed
-}
-export default function SavedTalentsPage({ }: SavedTalentsPageProps) {
+
+const SavedTalentsPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>SavedTalentsPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default SavedTalentsPage;

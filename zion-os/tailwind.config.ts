@@ -1,4 +1,7 @@
-import type {
-  Config 
-}from 'tailwindcss' plugins: [] 
-}export default config
+// Tailwind.config utility
+export const Tailwind.config = () => {
+  // Implementation here
+  return null;
+};
+
+export default Tailwind.config;

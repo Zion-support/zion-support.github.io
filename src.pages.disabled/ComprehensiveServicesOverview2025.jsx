@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface ComprehensiveServicesOverview2025Props {
-  // Add props here as needed
-}
-
-export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServicesOverview2025Props) {
+const ComprehensiveServicesOverview2025 = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ComprehensiveServicesOverview2025</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default ComprehensiveServicesOverview2025;

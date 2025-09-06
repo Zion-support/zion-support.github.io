@@ -1,1 +1,7 @@
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+// Zion utility
+export const Zion = () => {
+  // Implementation here
+  return null;
+};
+
+export default Zion;

@@ -1,2 +1,16 @@
- export default function BrowserAutomationCloudPage () {
-  return (<> <Head> <title>Browser Automation Cloud | Zion Tech Group</title> </div> </div> </div> </section> </main> </> 
+import React from 'react';
+
+interface BrowserAutomationCloudProps {
+  className?: string;
+}
+
+const BrowserAutomationCloud: React.FC<BrowserAutomationCloudProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>BrowserAutomationCloud</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BrowserAutomationCloud;

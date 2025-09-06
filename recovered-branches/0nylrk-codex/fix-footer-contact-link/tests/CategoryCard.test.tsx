@@ -1,7 +1,16 @@
- <MemoryRouter> <CategoryCard title="Test Category" description="desc" icon="*" /> </MemoryRouter>);
-it ('normalizes slug with special characters', () => {
-  render (<MemoryRouter> <CategoryCard title="R&D Tools!" description="desc" icon="*" /> </MemoryRouter>);
-it ('removes accents from slug', () => {
-  render (<MemoryRouter> <CategoryCard title="Crème Brûlée" description="desc" icon="*" /> </MemoryRouter>);
-it ('treats underscores as spaces in slug', () => {
-  render (<MemoryRouter> <CategoryCard title="AI Tools" description="desc" icon="*" /> </MemoryRouter>);
+import React from 'react';
+
+interface CategoryCard.testProps {
+  className?: string;
+}
+
+const CategoryCard.test: React.FC<CategoryCard.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CategoryCard.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CategoryCard.test;

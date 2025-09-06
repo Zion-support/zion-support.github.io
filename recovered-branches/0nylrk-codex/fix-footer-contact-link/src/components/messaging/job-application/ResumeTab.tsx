@@ -1,16 +1,16 @@
- export interface ResumeTabProps {
-  selectedResumeId?: string | null;
-onSelectResume?: (resumeId: string) => void;
-onResumeSelected?: (resume: ResumeOption) => void;
-onApply?: () => Promise<void>;
-isSubmitting?: boolean 
-}selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting = false 
-}: ResumeTabProps) {
-  const handleResumeSelected = (resume: ResumeOption) => {
-  if (onResumeSelected) {
-  > {
-  isSubmitting ? 'Submitting...' : 'Submit Application' 
-}</Button> Please select a resume to continue </p>) 
-}</div>) 
-}</div>) 
+import React from 'react';
+
+interface ResumeTabProps {
+  className?: string;
 }
+
+const ResumeTab: React.FC<ResumeTabProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ResumeTab</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ResumeTab;

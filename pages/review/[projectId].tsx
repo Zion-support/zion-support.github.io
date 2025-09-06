@@ -1,10 +1,20 @@
- const ReviewSubmitPage: NextPage<Props> = ({
-  projectId, fromRole, fromId, valid, reason 
-}) => {
-  if (!valid) {
-  return (<main className="max-w-2xl mx-auto p-6" > <h1 className="text-2xl font-semibold mb-3" >Review unavailable</h1> <p className="text-sm text-gray-600" > {
-  reason || 'You cannot submit a review for this project.' 
-}</p> </main>) 
-}return (</main>) 
+import React from 'react';
+import { useRouter } from 'next/router';
+
+interface ReviewDetailProps {
+  className?: string;
+}
+
+const ReviewDetail: React.FC<ReviewDetailProps> = ({ className }) => {
+  const router = useRouter();
+  const { projectId } = router.query;
+
+  return (
+    <div className={className || ''}>
+      <h1>Review: {projectId}</h1>
+      <p>This is a review detail page with project ID: {projectId}</p>
+    </div>
+  );
 };
-export default ReviewSubmitPage;
+
+export default ReviewDetail;

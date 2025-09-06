@@ -1,12 +1,16 @@
- 
-}load () 
-}, [userId]);
-</li>) ) 
-}</ul> </div>) 
-}<strong>Operator GPT Analysis:</strong> {
-  data.reasonSummary 
-}</div>) 
-}</div> </form> </div>) 
-}</div> </div>) 
-}</div> </EnhancedLayout>) 
+import React from 'react';
+
+interface TrustProps {
+  className?: string;
 }
+
+const Trust: React.FC<TrustProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Trust</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Trust;

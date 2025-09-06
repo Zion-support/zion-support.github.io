@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-=======
-=======
+import React from 'react';
+
+interface Index.xpageProps {
+  className?: string;
+}
+
+const Index.xpage: React.FC<Index.xpageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index.xpage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index.xpage;

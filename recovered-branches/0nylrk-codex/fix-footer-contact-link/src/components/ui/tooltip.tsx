@@ -1,9 +1,16 @@
-import * as React from "react" import * as TooltipPrimitive from "@radix-ui/react-tooltip" const TooltipProvider = TooltipPrimitive.Provider const Tooltip = TooltipPrimitive.Root const TooltipTrigger = TooltipPrimitive.Trigger const TooltipContent = React.forwardRef< React.ElementRef<typeof TooltipPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content> > ( ({
-  className, sideOffset = 4, ...props 
-}, ref) => (<TooltipPrimitive.Content) 
-}{
-  ...props 
-}/>) ) TooltipContent.displayName = TooltipPrimitive.Content.displayName export {
-  Tooltip, TooltipTrigger, TooltipContent, TooltipProvider 
+import React from 'react';
+
+interface TooltipProps {
+  className?: string;
 }
+
+const Tooltip: React.FC<TooltipProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Tooltip</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Tooltip;

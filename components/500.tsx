@@ -1,12 +1,16 @@
-export default function FiveHundred() {
+import React from 'react';
+
+interface 500Props {
+  className?: string;
+}
+
+const 500: React.FC<500Props> = ({ className }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          500 - Server Error
-        </h1>
-        <p className="text-gray-600">Something went wrong on our end.</p>
-      </div>
+    <div className={className || ''}>
+      <h1>500</h1>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default 500;

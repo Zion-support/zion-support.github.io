@@ -1,1 +1,7 @@
- // Additional type declaration for the badge variants declare type BadgeVariant = 
+// Ui-badge-variants.d utility
+export const Ui-badge-variants.d = () => {
+  // Implementation here
+  return null;
+};
+
+export default Ui-badge-variants.d;

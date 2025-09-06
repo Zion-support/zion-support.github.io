@@ -1,12 +1,16 @@
- interface AppLayoutProps {
-  children: React.ReactNode;
-hideFooter?: boolean 
-}export function AppLayout ({
-  children, hideFooter = false 
-}: AppLayoutProps) {
-  return (<div className="flex flex-col min-h-screen bg-background" > flex-grow" > {
-  children 
-}</main> {
-  !hideFooter && <Footer /> 
-}</div>) 
+import React from 'react';
+
+interface AppLayoutProps {
+  className?: string;
 }
+
+const AppLayout: React.FC<AppLayoutProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AppLayout</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AppLayout;

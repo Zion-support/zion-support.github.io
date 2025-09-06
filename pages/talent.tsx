@@ -1,31 +1,16 @@
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import { Users, MapPin, Clock, Star } from 'lucide-react';
+import React from 'react';
 
-const talentPositions = [
-  {
-    id: 1,
-    title: "Senior AI/ML Engineer",
-    department: "AI Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "Lead the development of cutting-edge AI solutions and machine learning models."
-  }
-];
-
-export default function TalentPage() {
-  return (
-    <Layout title="Talent - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
-            <p className="text-xl text-blue-100">Find your next career opportunity</p>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+interface TalentProps {
+  className?: string;
 }
+
+const Talent: React.FC<TalentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Talent</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Talent;

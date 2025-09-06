@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousCodeReview.jsx import React from \'react\'; export default AIAutonomousCodeReview; const AIAutonomousCodeReview = () => { return (<> <Helmet> <title > AI Autonomous Code Review | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI - powered autonomous code review system that automatically analyzes,reviews,and improves code quality with intelligent insights and recommendations.\" / / /> <meta name=\"keywords\" content=\"AI code review,autonomous code review,code quality,software development,AI development tools\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousCodeReview; const AIAutonomousCodeReview = () => { return (<> <Helmet> <title > AI Autonomous Code Review | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI - powered autonomous code review system that automatically analyzes,reviews,and improves code quality with intelligent insights and recommendations.\" / / / /> <meta name=\"keywords\" content=\"AI code review,autonomous code review,code quality,software development,AI development tools\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousCodeReview.jsx import _React from 'react'; export default AIAutonomousCodeReview; const AIAutonomousCodeReview = () => { return (<> <Helmet> <title > AI Autonomous Code Review | Zion Tech Group</title> <meta name="description" content="Revolutionary AI - powered autonomous code review system that automatically analyzes,reviews,and improves code quality with intelligent insights and recommendations." / / /> <meta name="keywords" content="AI code review,autonomous code review,code quality,software development,AI development tools" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousCodeReview; const AIAutonomousCodeReview = () => { return (<> <Helmet> <title > AI Autonomous Code Review | Zion Tech Group</title> <meta name="description" content="Revolutionary AI - powered autonomous code review system that automatically analyzes,reviews,and improves code quality with intelligent insights and recommendations." / / / /> <meta name="keywords" content="AI code review,autonomous code review,code quality,software development,AI development tools" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousCodeReview = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousCodeReview</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousCodeReview;

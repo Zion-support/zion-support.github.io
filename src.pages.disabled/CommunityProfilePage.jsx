@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/CommunityProfilePage.jsx import React from \'react\'; export default function CommunityProfilePage () { import React from \'react\'; export default function CommunityProfilePage () {\'';
-<<<<<<< "HEAD": src.pages.disabled/CommunityProfilePage.jsx import _React from 'react'; export default function CommunityProfilePage () { import _React from 'react'; export default function CommunityProfilePage () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const CommunityProfilePage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CommunityProfilePage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CommunityProfilePage;

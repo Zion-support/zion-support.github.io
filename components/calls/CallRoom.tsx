@@ -1,21 +1,16 @@
- setRoom (r);
-setConnectedAt (Date.now () );
-rebuild (r);
-// eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [serverUrl, token, startMode]);
-</div> <div className= {
-  `flex-1 p-4 grid gap-4 $ {
-  gridCols 
-}` 
-}> {
-  participants.map ( (p, idx) => (<ParticipantTile key= {
-  String ( (p as any) .sid || (p as any) .identity) + idx 
-}participant= {
-  p 
-}isLocal= {
-  p instanceof LocalParticipant 
-}displayName= {
-  (p as any) .name || (p instanceof LocalParticipant ? 'You' : undefined) 
-}/>) ) 
-}</div> </div>) 
+import React from 'react';
+
+interface CallRoomProps {
+  className?: string;
 }
+
+const CallRoom: React.FC<CallRoomProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CallRoom</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CallRoom;

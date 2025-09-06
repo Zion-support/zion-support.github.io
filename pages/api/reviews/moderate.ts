@@ -1,5 +1,7 @@
- type Action = 'approve' | 'remove' | 'edit';
-}reviews[idx].rating = updates.rating 
-}
-}
-}
+// Moderate utility
+export const Moderate = () => {
+  // Implementation here
+  return null;
+};
+
+export default Moderate;

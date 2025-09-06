@@ -1,1 +1,7 @@
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
+// Proposals utility
+export const Proposals = () => {
+  // Implementation here
+  return null;
+};
+
+export default Proposals;

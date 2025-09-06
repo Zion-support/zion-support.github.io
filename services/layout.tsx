@@ -1,14 +1,16 @@
-<<<<<<< HEAD
-},
-=======
-import React from 'react;
-import * as React from 'react';
-;
-export default function ServicesLayout({;
-  children
-}: {,
-  children: React.ReactNode
-}) {,
-  return <>{children}</>
+import React from 'react';
+
+interface LayoutProps {
+  className?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Layout</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f
+
+export default Layout;

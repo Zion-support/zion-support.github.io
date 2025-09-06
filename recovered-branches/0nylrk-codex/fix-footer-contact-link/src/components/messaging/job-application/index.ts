@@ -1,6 +1,7 @@
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
 
-export * from './ApplyToJobModal',
-export * from './ApplyForm',
-export * from './ResumeTab',
-export * from './MessageTab',
-export * from './types',
+export default Index;

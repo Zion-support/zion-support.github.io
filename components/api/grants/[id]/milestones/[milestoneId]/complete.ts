@@ -1,3 +1,7 @@
- ms[idx].completed = true;
-ms[idx].completedAt = new Date () .toISOString ();
-}
+// Complete utility
+export const Complete = () => {
+  // Implementation here
+  return null;
+};
+
+export default Complete;

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousLogistics.jsx import React from \'react\'; export default AIAutonomousLogistics; const AIAutonomousLogistics = () => { return (<> <Helmet> <title > AI Autonomous Logistics Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous logistics platform that optimizes supply chains,automates warehouse operations,and provides intelligent logistics management with 24 / 7 efficiency.\" / / /> <meta name=\"keywords\" content=\"AI logistics,autonomous logistics,supply chain optimization,warehouse automation,AI logistics management\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousLogistics; const AIAutonomousLogistics = () => { return (<> <Helmet> <title > AI Autonomous Logistics Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous logistics platform that optimizes supply chains,automates warehouse operations,and provides intelligent logistics management with 24 / 7 efficiency.\" / / / /> <meta name=\"keywords\" content=\"AI logistics,autonomous logistics,supply chain optimization,warehouse automation,AI logistics management\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousLogistics.jsx import _React from 'react'; export default AIAutonomousLogistics; const AIAutonomousLogistics = () => { return (<> <Helmet> <title > AI Autonomous Logistics Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous logistics platform that optimizes supply chains,automates warehouse operations,and provides intelligent logistics management with 24 / 7 efficiency." / / /> <meta name="keywords" content="AI logistics,autonomous logistics,supply chain optimization,warehouse automation,AI logistics management" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousLogistics; const AIAutonomousLogistics = () => { return (<> <Helmet> <title > AI Autonomous Logistics Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous logistics platform that optimizes supply chains,automates warehouse operations,and provides intelligent logistics management with 24 / 7 efficiency." / / / /> <meta name="keywords" content="AI logistics,autonomous logistics,supply chain optimization,warehouse automation,AI logistics management" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousLogistics = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousLogistics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousLogistics;

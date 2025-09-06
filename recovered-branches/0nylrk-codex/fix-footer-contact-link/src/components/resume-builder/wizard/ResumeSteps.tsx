@@ -1,16 +1,16 @@
- interface ResumeStepsProps {
-  steps: StepProps[];
-activeTab: string;
-onChange: (value: string) => void 
-}export const ResumeSteps = ({
-  steps, activeTab, onChange 
-}: ResumeStepsProps) => {
-  return (<TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8" > steps.map ( (step) => (<TabsTrigger key= {
-  step.id 
-}value= {
-  step.id 
-}> {
-  step.label 
-}</TabsTrigger>) ) 
-}</TabsList>) 
+import React from 'react';
+
+interface ResumeStepsProps {
+  className?: string;
+}
+
+const ResumeSteps: React.FC<ResumeStepsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ResumeSteps</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default ResumeSteps;

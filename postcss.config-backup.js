@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
-export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
-=======
-<<<<<<< HEAD
-module.exports = default { plugins: { tailwindcss: {},autoprefixer: {}}};""
-export default { "plugins": { tailwindcss: {},"autoprefixer": {}}};""
-=======
-=======
+// Postcss.config-backup utility
+export const Postcss.config-backup = () => {
+  // Implementation here
+  return null;
+};
+
+export default Postcss.config-backup;

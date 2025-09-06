@@ -1,5 +1,7 @@
-
-  };
+// Api utility
+export const Api = () => {
+  // Implementation here
+  return null;
 };
-export const apiClient = new ApiClient(),
-export type { ApiResponse, RequestOptions };
+
+export default Api;

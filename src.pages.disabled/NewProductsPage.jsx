@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/NewProductsPage.jsx import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today&apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\" import React from \'react\'; \"export default function NewProductsPage () {\" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ \"label\": \'c\',\"value\": \'c\' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title=\"New Products\" description=\"Explore our latest products priced for today & apos;s market.\" categorySlug=\"new - products\" detailBasePath=\"/product\" listings={listings}\" categoryFilters={CATEGORY_FILTERS} \";\""\";
-<<<<<<< "HEAD": src.pages.disabled/NewProductsPage.jsx import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ label: c,"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today&apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";" import _React from 'react'; "export default function NewProductsPage () {" const CATEGORY_FILTERS = Array.from (new Set (NEW_PRODUCTS.map (p => p.category) ) ) .map (c => ({ "label": 'c',"value": 'c' }) ) ; const [listings] = useState ([...NEW_PRODUCTS]) ; return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today & apos;s market." categorySlug="new - products" detailBasePath="/product" listings={listings}" categoryFilters={CATEGORY_FILTERS} ";""";
-=======
-=======
-=======
+import React from 'react';
+
+const NewProductsPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NewProductsPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default NewProductsPage;

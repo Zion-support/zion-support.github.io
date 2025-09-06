@@ -1,3 +1,16 @@
- <BreadcrumbList> <BreadcrumbItem> <BreadcrumbLink asChild> <Link href="/" >Home</Link> </BreadcrumbLink> </BreadcrumbItem> <BreadcrumbSeparator /> <BreadcrumbItem> <BreadcrumbLink asChild> <Link href="/case-studies" >Case Studies</Link> </BreadcrumbLink> </BreadcrumbItem> <BreadcrumbSeparator /> <BreadcrumbItem> </BreadcrumbLink> </BreadcrumbItem> </BreadcrumbList> </Breadcrumb> <Button variant="outline" className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link href="/case-studies" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies </Link> </Button> <img Download PDF </Link> </Button>) ;
-}<div </p> </div> </div> </>) ;
-}"
+import React from 'react';
+
+interface CaseStudyProps {
+  className?: string;
+}
+
+const CaseStudy: React.FC<CaseStudyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CaseStudy</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CaseStudy;

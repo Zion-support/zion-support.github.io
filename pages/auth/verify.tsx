@@ -1,1 +1,16 @@
- <div> <Head> <title>Verify - Zion Tech Solutions</title> <meta name="description" content="Verify page" /> </Head> <main> <h1>Verify</h1> <p>This page is under construction.</p> </main> </div> export default Verify;
+import React from 'react';
+
+interface VerifyProps {
+  className?: string;
+}
+
+const Verify: React.FC<VerifyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Verify</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Verify;

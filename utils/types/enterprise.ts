@@ -1,1 +1,7 @@
-export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
+// Enterprise utility
+export const Enterprise = () => {
+  // Implementation here
+  return null;
+};
+
+export default Enterprise;

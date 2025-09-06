@@ -1,20 +1,16 @@
- import {
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample data for integration sync logs export function IntegrationsSyncLog () {
-  const getStatusBadge = (status: string) => {
-  switch (status) {
-  
+import React from 'react';
+
+interface IntegrationsSyncLogProps {
+  className?: string;
 }
+
+const IntegrationsSyncLog: React.FC<IntegrationsSyncLogProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>IntegrationsSyncLog</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead> </TableRow> </TableHeader> <TableBody> {
-  syncLogs.map ( (log) => (<TableRow key= {
-  log.id 
-}> <TableCell> {
-  log.event.replace (/ /g, ' ') .replace (/\b\w/g, l => l.toUpperCase () ) 
-}</TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </Card>) 
-}
+
+export default IntegrationsSyncLog;

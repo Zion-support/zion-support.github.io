@@ -1,8 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
-import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
-=======
-import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
-=======
-import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
+import React from 'react';
+
+interface 404Props {
+  className?: string;
+}
+
+const 404: React.FC<404Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>404</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default 404;

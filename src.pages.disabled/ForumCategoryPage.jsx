@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ForumCategoryPage.jsx import React from \'react\'; export default function ForumCategoryPage () { import React from \'react\'; export default function ForumCategoryPage () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ForumCategoryPage.jsx import _React from 'react'; export default function ForumCategoryPage () { import _React from 'react'; export default function ForumCategoryPage () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ForumCategoryPage = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ForumCategoryPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ForumCategoryPage;

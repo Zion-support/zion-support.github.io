@@ -1,23 +1,16 @@
- const onDrop = useCallback ( (accepted: File[]) => {
-  if (accepted.length) {
-  
+import React from 'react';
+
+interface DropzoneBulkUploadProps {
+  className?: string;
 }
-}catch (err) {
-  console.error (err) 
-}finally {
-  setProgress (100) 
-}
+
+const DropzoneBulkUpload: React.FC<DropzoneBulkUploadProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DropzoneBulkUpload</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-space-y-4" > <div {
-  ...getRootProps ({
-  className: 'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer' 
-}) 
-}> <input {
-  ...getInputProps () 
-}/> {
-  isDragActive ? (<p>Drop the CSV here...</p>) : (<p>Drag and drop CSV file here, or click to select file</p>) 
-}</div> Download error CSV </Link>) 
-}</div>) 
-}</div>) 
-}</div>) 
-}
+
+export default DropzoneBulkUpload;

@@ -1,1 +1,16 @@
- <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Enhanced Home</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Enhanced UI coming soon.</p> 
+import React from 'react';
+
+interface Enhanced-homeProps {
+  className?: string;
+}
+
+const Enhanced-home: React.FC<Enhanced-homeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Enhanced-home</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Enhanced-home;

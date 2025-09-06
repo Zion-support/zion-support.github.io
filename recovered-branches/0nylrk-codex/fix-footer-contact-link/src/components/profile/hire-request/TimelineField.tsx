@@ -1,23 +1,16 @@
- interface TimelineFieldProps {
-  form: UseFormReturn<FormValues> 
-}export function TimelineField ({
-  form 
-}: TimelineFieldProps) {
-  const timelineOptions = [ ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <FormControl> <Select onValueChange= {
-  field.onChange 
-}value= {
-  field.value 
-}defaultValue= {
-  field.value 
-}> <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white" > <SelectValue placeholder="Select estimated timeline" /> </SelectTrigger> <SelectContent> {
-  timelineOptions.map ( (option) => (<SelectItem key= {
-  option.value 
-}value= {
-  option.value 
-}> {
-  option.label 
-}</SelectItem>) ) 
-}</SelectContent> </Select> </FormControl> <FormMessage /> </FormItem>) 
-}/>) 
+import React from 'react';
+
+interface TimelineFieldProps {
+  className?: string;
 }
+
+const TimelineField: React.FC<TimelineFieldProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TimelineField</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TimelineField;

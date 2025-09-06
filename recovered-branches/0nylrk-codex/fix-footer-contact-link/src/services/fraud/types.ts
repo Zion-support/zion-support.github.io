@@ -1,3 +1,7 @@
- // Types used across fraud detection modules export interface SignupCheckResult extends AnalysisResult {
-  
-}
+// Types utility
+export const Types = () => {
+  // Implementation here
+  return null;
+};
+
+export default Types;

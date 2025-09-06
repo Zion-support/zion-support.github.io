@@ -1,3 +1,16 @@
- if (!user) return null;
-</p> </div> <div className="p-4 space-y-3" > <textarea </div> </div> </div> </div>) 
+import React from 'react';
+
+interface ComposeProps {
+  className?: string;
 }
+
+const Compose: React.FC<ComposeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Compose</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Compose;

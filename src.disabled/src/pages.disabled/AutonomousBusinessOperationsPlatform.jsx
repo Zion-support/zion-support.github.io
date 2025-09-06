@@ -1,12 +1,12 @@
 import React from 'react';
-interface AutonomousBusinessOperationsPlatformProps {
-  // Add props here as needed
-}
-export default function AutonomousBusinessOperationsPlatform({ }: AutonomousBusinessOperationsPlatformProps) {
+
+const AutonomousBusinessOperationsPlatform = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>AutonomousBusinessOperationsPlatform</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default AutonomousBusinessOperationsPlatform;

@@ -1,13 +1,16 @@
- function Badge ({
-  className, variant, ...props 
-}: BadgeProps) {
-  return (<span className= {
-  cn (badgeVariants ({
-  variant 
-}), className) 
-}{
-  ...props 
-}/>) 
-}export {
-  Badge, badgeVariants 
+import React from 'react';
+
+interface BadgeProps {
+  className?: string;
 }
+
+const Badge: React.FC<BadgeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Badge</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Badge;

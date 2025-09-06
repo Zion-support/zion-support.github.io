@@ -1,12 +1,12 @@
 import React from 'react';
-interface MobileNavigationProps {
-  // Add props here as needed
-}
-export default function MobileNavigation({ }: MobileNavigationProps) {
+
+const MobileNavigation = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>MobileNavigation</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default MobileNavigation;

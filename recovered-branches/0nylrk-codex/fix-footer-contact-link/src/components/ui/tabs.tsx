@@ -1,21 +1,16 @@
-import * as React from "react" import * as TabsPrimitive from "@radix-ui/react-tabs" const Tabs = TabsPrimitive.Root const TabsList = React.forwardRef< React.ElementRef<typeof TabsPrimitive.List>;
-React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> > ( ({
-  className, ...props 
-}, ref) => (<TabsPrimitive.List) 
-}{
-  ...props 
-}/>) ) TabsList.displayName = TabsPrimitive.List.displayName const TabsTrigger = React.forwardRef< React.ElementRef<typeof TabsPrimitive.Trigger>;
-React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> > ( ({
-  className, ...props 
-}, ref) => (<TabsPrimitive.Trigger) 
-}{
-  ...props 
-}/>) ) TabsTrigger.displayName = TabsPrimitive.Trigger.displayName const TabsContent = React.forwardRef< React.ElementRef<typeof TabsPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content> > ( ({
-  className, ...props 
-}, ref) => (<TabsPrimitive.Content) 
-}{
-  ...props 
-}/>) ) TabsContent.displayName = TabsPrimitive.Content.displayName export {
-  Tabs, TabsList, TabsTrigger, TabsContent 
+import React from 'react';
+
+interface TabsProps {
+  className?: string;
 }
+
+const Tabs: React.FC<TabsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Tabs</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Tabs;

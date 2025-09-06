@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/JobDetails.jsx import React from \'react\'; export default function JobDetails () { import React from \'react\'; export default function JobDetails () {\'';
-<<<<<<< "HEAD": src.pages.disabled/JobDetails.jsx import _React from 'react'; export default function JobDetails () { import _React from 'react'; export default function JobDetails () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const JobDetails = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>JobDetails</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default JobDetails;

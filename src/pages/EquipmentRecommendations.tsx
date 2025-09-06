@@ -1,4 +1,16 @@
- if (!isAuthenticated) {;
-  return (<Dialog open> <DialogContent className="bg-zion-blue border-zion-blue-light text-white" > <DialogHeader> <DialogTitle>Authentication required</DialogTitle> </DialogHeader> <p>Please sign in to get personalized AI picks.</p> <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" > <Link href="/auth/login?returnTo=/equipment/recommendations" >Sign In</Link> </Button> </DialogContent> </Dialog> </div>) ) ;
-}</div> </div>) ;
-}"
+import React from 'react';
+
+interface EquipmentRecommendationsProps {
+  className?: string;
+}
+
+const EquipmentRecommendations: React.FC<EquipmentRecommendationsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EquipmentRecommendations</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EquipmentRecommendations;

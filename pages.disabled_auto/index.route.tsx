@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
-import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
-=======
-<<<<<<< HEAD
-import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
-import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
-=======
-=======
+import React from 'react';
+
+interface Index.routeProps {
+  className?: string;
+}
+
+const Index.route: React.FC<Index.routeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index.route</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index.route;

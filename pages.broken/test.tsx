@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
-=======
-<<<<<<< HEAD
-import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
-import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
-=======
-=======
+import React from 'react';
+
+interface TestProps {
+  className?: string;
+}
+
+const Test: React.FC<TestProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Test;

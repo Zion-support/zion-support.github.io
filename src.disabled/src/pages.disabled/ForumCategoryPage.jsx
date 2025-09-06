@@ -1,12 +1,12 @@
 import React from 'react';
-interface ForumCategoryPageProps {
-  // Add props here as needed
-}
-export default function ForumCategoryPage({ }: ForumCategoryPageProps) {
+
+const ForumCategoryPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ForumCategoryPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default ForumCategoryPage;

@@ -1,15 +1,16 @@
- onError= {;
-  (e) => {;
-  const target = e.currentTarget as HTMLImageElement;
-target.src = '/images/blog-placeholder.svg' ;
+import React from 'react';
+
+interface AuthorBioProps {
+  className?: string;
 }
-}/> <div> <p className="font-medium text-lg" > {;
-  author.name ;
-}</p> {";
-  author.title && <p className="text-sm text-muted-foreground mb-2" > {;
-  author.title ;
-}</p> ;
-}<p> {;
-  author.bio ;
-}</p> ;
-}'"
+
+const AuthorBio: React.FC<AuthorBioProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AuthorBio</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AuthorBio;

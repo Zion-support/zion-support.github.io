@@ -1,3 +1,7 @@
- export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
-}
-});
+// Eslint.config utility
+export const Eslint.config = () => {
+  // Implementation here
+  return null;
+};
+
+export default Eslint.config;

@@ -1,5 +1,16 @@
- // Render the app with proper provider structure ReactDOM.createRoot (document.getElementById ('root') !) .render (<React.StrictMode> <HelmetProvider> <WhitelabelProvider> <Router> <AuthProvider> <NotificationProvider> <AnalyticsProvider> <LanguageProvider authState= {
-  {
-  isAuthenticated: false, user: null 
+import React from 'react';
+
+interface MainProps {
+  className?: string;
 }
-}> <App /> <LanguageDetectionPopup /> </LanguageProvider> </AnalyticsProvider> </NotificationProvider> </AuthProvider> </Router> </WhitelabelProvider> </HelmetProvider> </React.StrictMode>);
+
+const Main: React.FC<MainProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Main</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Main;

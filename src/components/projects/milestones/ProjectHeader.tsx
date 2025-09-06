@@ -1,4 +1,16 @@
- <Button variant="ghost" size="sm" className="mr-2" onClick={;
-  () => router.back () ";
-}//Changed to router.back () > <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) ;
-}"
+import React from 'react';
+
+interface ProjectHeaderProps {
+  className?: string;
+}
+
+const ProjectHeader: React.FC<ProjectHeaderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectHeader</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectHeader;

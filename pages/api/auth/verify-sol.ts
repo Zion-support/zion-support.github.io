@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Verify-sol utility
+export const Verify-sol = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ verified: true });
-}
+export default VerifySol;

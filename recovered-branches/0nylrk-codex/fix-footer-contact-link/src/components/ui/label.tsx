@@ -1,11 +1,16 @@
- React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> > ( ({
-  className, ...props 
-}, ref) => (<LabelPrimitive.Root ref= {
-  ref 
-}className= {
-  cn (labelVariants (), className) 
-}{
-  ...props 
-}/>) ) Label.displayName = LabelPrimitive.Root.displayName export {
-  Label 
+import React from 'react';
+
+interface LabelProps {
+  className?: string;
 }
+
+const Label: React.FC<LabelProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Label</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Label;

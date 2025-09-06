@@ -1,20 +1,16 @@
- 
+import React from 'react';
+
+interface CheckoutV2Props {
+  className?: string;
 }
-}, [searchParams]);
-<FormItem> <FormLabel>Name</FormLabel> <FormControl> <Input {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>Address</FormLabel> <FormControl> <Input {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>City</FormLabel> <FormControl> <Input {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>Country</FormLabel> <FormControl> <Input {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="border-t pt-4" > <div className="flex justify-between font-semibold mb-4" > <span>Subtotal</span> <span>$ {
-  subtotal.toFixed (2) 
-}</span> </div> <Button className="w-full" type="submit" > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 
-}
+
+const CheckoutV2: React.FC<CheckoutV2Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CheckoutV2</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CheckoutV2;

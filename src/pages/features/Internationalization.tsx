@@ -1,4 +1,16 @@
- Internationalization"description=" Reach a global audience with multi-language support across the Zion platform."keywords=" i18n, multi-language marketplace, localized listings"canonical=" https://app.ziontechgroup.com/features/internationalization"/> {;
-  /* Use a normal script tag so JSON-LD is correctly parsed */ ";
-}<script ></script> <Header /> Our interface and search support multiple languages so you can collaborate without barriers. </p> <div className=" relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"> <img src=" https://placehold.co/800x400"alt=" Screenshot of language options"className=" object-cover"/> </div> <li>Publish product and service pages in your native language.</li> <li>Attract international clients and expand your reach.</li> <li>Automatic language detection ensures a localized experience.</li> </ul> <h2 className=" text-2xl font-bold mb-4">Frequently Asked Questions</h2> <div className=" space-y-4 mb-12"> <div> <p className=" font-semibold">Which languages are supported?</p> <p className=" text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p> </div> <div> <p className=" font-semibold">Can I suggest new translations?</p> <p className=" text-zion-slate-light">Yes, community contributions help us continually add new languages.</p> </div> </div> <div className=" text-center"> <Button size=" lg"className=" bg-zion-purple text-white"asChild> <Link href=" /" >Explore Zion</Link> </Button> </div> </div> </main> </>) ;
-}"
+import React from 'react';
+
+interface InternationalizationProps {
+  className?: string;
+}
+
+const Internationalization: React.FC<InternationalizationProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Internationalization</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Internationalization;

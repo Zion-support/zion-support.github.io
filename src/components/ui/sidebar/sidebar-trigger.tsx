@@ -1,10 +1,16 @@
- export const SidebarTrigger = React.forwardRef< React.ElementRef<typeof Button>;
-React.ComponentProps<typeof Button> > ( (props, ref) => {;
-  const {;
-  toggleSidebar ;
-}= useSidebar () return (<Button props.onClick?. (event) toggleSidebar () ;
+import React from 'react';
+
+interface Sidebar-triggerProps {
+  className?: string;
 }
-}{;
-  ...props ;
-}> <PanelLeft /> <span className="sr-only" >Toggle Sidebar</span> </Button>) ";
-}) SidebarTrigger.displayName = "SidebarTrigger" "
+
+const Sidebar-trigger: React.FC<Sidebar-triggerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Sidebar-trigger</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Sidebar-trigger;

@@ -1,9 +1,16 @@
- interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
+import React from 'react';
+
+interface SidebarMenuProps {
   className?: string;
-children?: React.ReactNode 
-}className, children, ...props 
-}: SidebarMenuProps) {
-  return (<ul > {
-  children 
-}</ul>) 
 }
+
+const SidebarMenu: React.FC<SidebarMenuProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SidebarMenu</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SidebarMenu;

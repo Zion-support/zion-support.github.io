@@ -1,2 +1,12 @@
-const SEOEnhancer = dynamic(() => import("./SEOEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SEOEnhancer' ,'
-</p>'
+import React from 'react';
+
+const SEOEnhancer.dynamic = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SEOEnhancer.dynamic</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SEOEnhancer.dynamic;

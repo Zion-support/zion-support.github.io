@@ -1,3 +1,7 @@
- stream.pipe (res);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+// Download utility
+export const Download = () => {
+  // Implementation here
+  return null;
+};
+
+export default Download;

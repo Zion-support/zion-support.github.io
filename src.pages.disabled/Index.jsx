@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Index.jsx import React from \'react\'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ; import React from \'react\'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () \';\';
-<<<<<<< "HEAD": src.pages.disabled/Index.jsx import _React from 'react'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ; import _React from 'react'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ';';
-=======
-=======
-=======
+import React from 'react';
+
+const Index = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

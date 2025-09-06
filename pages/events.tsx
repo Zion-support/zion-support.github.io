@@ -1,1 +1,16 @@
- <> <SEO title="Events | Zion Tech Group" description="Upcoming events and conferences." canonical="/events" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Events</h1> <p className="text-gray-300" >No upcoming events at this time. Check back soon.</p> </div> </> 
+import React from 'react';
+
+interface EventsProps {
+  className?: string;
+}
+
+const Events: React.FC<EventsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Events</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Events;

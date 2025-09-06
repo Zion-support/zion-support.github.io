@@ -1,4 +1,16 @@
- </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Canceled</h1> <p className="text-zion-slate-light mb-6" > Your payment process was canceled. No charges have been made to your account. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
-  () => navigate ('/payments') 
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Try Again </Button> <Button 
+import React from 'react';
+
+interface Payment-canceledProps {
+  className?: string;
 }
+
+const Payment-canceled: React.FC<Payment-canceledProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Payment-canceled</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Payment-canceled;

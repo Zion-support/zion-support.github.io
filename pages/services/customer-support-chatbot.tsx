@@ -1,1 +1,16 @@
- <div> <Head> <title>CustomerSupportChatbot - Zion Tech Solutions</title> <meta name="description" content="CustomerSupportChatbot service" /> </Head> <main className="space-y-4" > <h1>CustomerSupportChatbot</h1> <p>Service details coming soon...</p> <UseTokensButton serviceId="customer-support-chatbot" defaultType="premium support" /> <Link href="/services" >Back to Services</Link> </main> </div> export default CustomerSupportChatbot;
+import React from 'react';
+
+interface CustomerSupportChatbotProps {
+  className?: string;
+}
+
+const CustomerSupportChatbot: React.FC<CustomerSupportChatbotProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CustomerSupportChatbot</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CustomerSupportChatbot;

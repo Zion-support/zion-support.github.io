@@ -1,7 +1,7 @@
-/* eslint-env node */
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  /* config options here */
-}
+// Next.config utility
+export const Next.config = () => {
+  // Implementation here
+  return null;
+};
 
-module.exports = nextConfig
+export default Next.config;

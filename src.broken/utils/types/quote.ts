@@ -1,2 +1,7 @@
-export type AdminQuoteStatus = 'New' | 'In Review' | 'Responded' | 'Accepted' | 'Closed';
-export type TalentQuoteStatus = 'New' | 'Viewed' | 'Replied';
+// Quote utility
+export const Quote = () => {
+  // Implementation here
+  return null;
+};
+
+export default Quote;

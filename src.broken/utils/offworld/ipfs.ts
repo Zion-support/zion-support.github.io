@@ -1,5 +1,7 @@
- 
-}export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
-}
-}
-}for (const f of walk (dirPath) ) files.push (f);
+// Ipfs utility
+export const Ipfs = () => {
+  // Implementation here
+  return null;
+};
+
+export default Ipfs;

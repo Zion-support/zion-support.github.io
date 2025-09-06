@@ -1,9 +1,16 @@
-import React from 'react';';';
-import ReactDOM from 'react-dom/client';';';
-import App from './App.tsx';';';
-import './index.css';';
-,';';
-ReactDOM.createRoot(document.getElementById('root')!).render(,;
-  <React.StrictMode>,;
-    <App />,;';
-  </React.StrictMode>),''
+import React from 'react';
+
+interface MainProps {
+  className?: string;
+}
+
+const Main: React.FC<MainProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Main</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Main;

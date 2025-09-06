@@ -1,9 +1,7 @@
- return {
-  status: isSanction ? 'review' : 'clear', matches: isSanction ? [ {
-  list: 'Sanctions', name: businessName, score: 0.8 
-}] : [];
-checkedAt: new Date () .toISOString ();
-provider: 'mock' 
-}
-}
-}let provider: AmlProvider = new MockAmlProvider ();
+// Aml utility
+export const Aml = () => {
+  // Implementation here
+  return null;
+};
+
+export default Aml;

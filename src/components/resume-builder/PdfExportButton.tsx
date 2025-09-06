@@ -1,21 +1,16 @@
- setIsExporting (true);
-try {;
-  const options: ExportOptions = {;
-  ;
-}catch (error) {;
-  logErrorToProduction ('Error exporting PDF:', {;
-  data: error ;
-});
-toast ({;
-  ;
-}finally {;
-  setIsExporting (false) ;
+import React from 'react';
+
+interface PdfExportButtonProps {
+  className?: string;
 }
+
+const PdfExportButton: React.FC<PdfExportButtonProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PdfExportButton</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-h-4 w-4"/>) ";
-}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
-  includePortfolio ;
-}onCheckedChange= {;
-  setIncludePortfolio ;
-}> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
-}'"
+
+export default PdfExportButton;

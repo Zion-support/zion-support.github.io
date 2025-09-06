@@ -1,14 +1,16 @@
- {
-  error ? (<div className="p-8 text-center text-amber-500" > <p> {
-  error 
-}</p> <Button > Try Again </Button> </div>) : loading ? (<div className="p-4 space-y-4" > <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> </div>) : notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light" > <p>No notifications yet</p> </div>) : (notifications.map ( (notification) => (<NotificationItem key= {
-  notification.id 
-}notification= {
-  notification 
-}onMarkAsRead= {
-  onMarkAsRead 
-}onDismiss= {
-  onDismiss 
-}/>) ) ) 
-}</ScrollArea>) 
+import React from 'react';
+
+interface NotificationListProps {
+  className?: string;
+}
+
+const NotificationList: React.FC<NotificationListProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NotificationList</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
+export default NotificationList;

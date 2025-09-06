@@ -1,14 +1,16 @@
- interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+import React from 'react';
+
+interface SidebarItemProps {
   className?: string;
-children?: React.ReactNode;
-active?: boolean 
-}className, children, active, ...props 
-}: SidebarItemProps) {
-  return (<div className= {
-  cn () 
-}{
-  ...props 
-}> {
-  children 
-}</div>) 
 }
+
+const SidebarItem: React.FC<SidebarItemProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SidebarItem</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SidebarItem;

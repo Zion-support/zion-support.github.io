@@ -1,12 +1,12 @@
 import React from 'react';
-interface CommunityPageProps {
-  // Add props here as needed
-}
-export default function CommunityPage({ }: CommunityPageProps) {
+
+const CommunityPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>CommunityPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default CommunityPage;

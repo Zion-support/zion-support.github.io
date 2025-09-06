@@ -1,4 +1,20 @@
- // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query) // In a production app, this would fetch from a real DB. fetch (`/api/whitepaper/get?id=$ {
-  id 
-}`) return (</div>) 
+import React from 'react';
+import { useRouter } from 'next/router';
+
+interface WhitepaperPreviewProps {
+  className?: string;
 }
+
+const WhitepaperPreview: React.FC<WhitepaperPreviewProps> = ({ className }) => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  return (
+    <div className={className || ''}>
+      <h1>Whitepaper Preview: {id}</h1>
+      <p>This is a whitepaper preview page with ID: {id}</p>
+    </div>
+  );
+};
+
+export default WhitepaperPreview;

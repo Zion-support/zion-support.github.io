@@ -1,12 +1,12 @@
 import React from 'react';
-interface CommunityTrustProps {
-  // Add props here as needed
-}
-export default function CommunityTrust({ }: CommunityTrustProps) {
+
+const CommunityTrust = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>CommunityTrust</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default CommunityTrust;

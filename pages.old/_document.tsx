@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Html,Head,Main,NextScript } from \'next/document\'; export default function Document() { return ( <Html lang=\"en\"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}
-const { Html,Head,Main,NextScript } from "next/document"; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}'"'"
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-=======
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
-=======
-import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head /> <body> <Main /> <NextScript /> </body> </Html> )}""
+import React from 'react';
+
+interface _documentProps {
+  className?: string;
+}
+
+const _document: React.FC<_documentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>_document</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default _document;

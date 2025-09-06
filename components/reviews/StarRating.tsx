@@ -1,5 +1,16 @@
- > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
-}) 
-}</div>) 
+import React from 'react';
+
+interface StarRatingProps {
+  className?: string;
+}
+
+const StarRating: React.FC<StarRatingProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>StarRating</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default StarRating;

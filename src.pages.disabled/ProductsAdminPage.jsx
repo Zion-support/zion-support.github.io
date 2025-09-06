@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface ProductsAdminPageProps {
-  // Add props here as needed
-}
-
-export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
+const ProductsAdminPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>ProductsAdminPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default ProductsAdminPage;

@@ -1,18 +1,16 @@
- interface ContactFieldsProps {
-  control: Control<BasicInfoFormData> 
-}export function ContactFields ({
-  control 
-}: ContactFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  control 
-}name="location" render= {
-  ({
-  field 
-}) => (<FormItem> <FormLabel>Location</FormLabel> <FormControl> <Input placeholder="San Francisco, CA" {
-  ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
+import React from 'react';
+
+interface ContactFieldsProps {
+  className?: string;
 }
+
+const ContactFields: React.FC<ContactFieldsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ContactFields</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ContactFields;

@@ -1,3 +1,7 @@
- 
-}res.status (200) .json (response) 
-}
+// Metrics utility
+export const Metrics = () => {
+  // Implementation here
+  return null;
+};
+
+export default Metrics;

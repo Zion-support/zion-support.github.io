@@ -1,15 +1,16 @@
- interface HelpArticleListProps {
-  categoryId: string;
-onArticleSelect: (articleId: string) => void;
-searchQuery: string 
-}export function HelpArticleList ({
-  categoryId, onArticleSelect, searchQuery 
-}: HelpArticleListProps) {
-  const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
-if (!category) {
-  return <div>Category not found</div> 
-}return (<div> </p> </CardContent> </Card>) ) 
-}</div>) 
-}</div>) 
+import React from 'react';
+
+interface HelpArticleListProps {
+  className?: string;
 }
-}
+
+const HelpArticleList: React.FC<HelpArticleListProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>HelpArticleList</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default HelpArticleList;

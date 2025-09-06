@@ -1,27 +1,16 @@
-'use client';
-const handleError = () => {;
-  if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
-  //If we have an error and no fallback, show a placeholder if (hasError && (!fallbackSrc || currentSrc === fallbackSrc) ) {;
-  return (<div className= {;
-  `flex items-center justify-center bg-gray-100 text-gray-400 $ {;
-  className ;
-}` ;
-}> <ImageIcon className="w-6 h-6" /> </div>) ;
-}return (<Image src= {;
-  currentSrc ;
-}alt= {;
-  alt ;
-}width= {;
-  width ;
-}height= {;
-  height ;
-}className= {;
-  className ;
-}onError= {;
-  handleError ;
-}priority= {;
-  priority ;
-}//Add unoptimized as fallback for problematic images unoptimized= {;
-  hasError ;
-}/>) ;
-}'"
+import React from 'react';
+
+interface Safe-imageProps {
+  className?: string;
+}
+
+const Safe-image: React.FC<Safe-imageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Safe-image</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Safe-image;

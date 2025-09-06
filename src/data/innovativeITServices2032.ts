@@ -1,4 +1,7 @@
-export interface InnovativeITService { id: string, title: string, description: string, category: string, subcategory?: string, price: number, currency: string, pricingModel: string, features: string[], benefits: string[], useCases: string[], targetAudience: string[], integration: string[], support: string[], link: string, badge?: string, icon: string, marketPrice: string, contactEmail: string, tags: string[], techScore: number, rating: number, reviewCount: number, featured: boolean, location: string, availability: string, author: { name: string, id: string,  avatarUrl?: string, verified: boolean},;
-  images: string[], createdAt: string};
-export const INNOVATIVE_IT_SERVICES_2032: InnovativeITServic e[] = [;
-],
+// InnovativeITServices2032 utility
+export const InnovativeITServices2032 = () => {
+  // Implementation here
+  return null;
+};
+
+export default InnovativeITServices2032;

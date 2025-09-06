@@ -1,6 +1,7 @@
- export default async function handler (req: NextApiRequest, res: NextApiResponse) {
-  const state = readState ();
-GET") {
-  return res.status (200) .json ({
-  
-}
+// Hub utility
+export const Hub = () => {
+  // Implementation here
+  return null;
+};
+
+export default Hub;

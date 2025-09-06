@@ -1,6 +1,16 @@
- {;
-  REWARDS.map ( (r) => (<li key= {;
-  r.id ;
-}className="flex justify-between items-center border rounded-md p-4" > <div> </div> <Gift className="h-5 w-5" /> </li>) ) ;
-}</ul> </div>) ;
-}"
+import React from 'react';
+
+interface RewardsProps {
+  className?: string;
+}
+
+const Rewards: React.FC<RewardsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Rewards</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Rewards;

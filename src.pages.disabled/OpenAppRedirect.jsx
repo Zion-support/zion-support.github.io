@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\' export default OpenAppRedirect\';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react' export default OpenAppRedirect';
-=======
-import _React from 'react' export default OpenAppRedirect';
-=======
-import _React from 'react' export default OpenAppRedirect';
-=======
-import _React from 'react' export default OpenAppRedirect';
-=======
-import _React from 'react' export default OpenAppRedirect';
+import React from 'react';
+
+const OpenAppRedirect = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>OpenAppRedirect</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default OpenAppRedirect;

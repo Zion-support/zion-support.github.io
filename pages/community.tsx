@@ -1,1 +1,16 @@
- <Head> <title>Community | Zion Tech Group</title> <meta name="description" content="Community forum and resources for Zion Tech Group users" /> <link rel="canonical" href="https://ziontechgroup.com/community" /> <meta name="description" content="Join the Zion Tech Group community and stay updated." /> </Head> <div className="p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className="text-white text-xl font-semibold mb-2">Get Help</h2> <p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p> p-6 rounded-2xl bg-white/5 border border-white/10"> <h2 className=" text-white text-xl font-semibold mb-2">Follow Us</h2> <ul className=" text-slate-300 space-y-1"> <li><a className=" text-cyan-400"href=" https://linkedin.com/company/ziontechgroup"target=" blank"rel=" noopener noreferrer">LinkedIn</Link></li> <li><a className=" text-cyan-400"href=" https://github.com/Zion-Holdings"target=" blank"rel=" noopener noreferrer">GitHub</Link></li> <li><a className=" text-cyan-400"href=" https://instagram.com/ziontechgroup"target=" blank"rel=" noopener noreferrer">Instagram</Link></li> <li><a className=" text-cyan-400"href=" https://youtube.com/@ziontechgroup"target=" blank"rel=" noopener noreferrer" >YouTube</Link></li> </ul> </div> </div> </div> </div> 
+import React from 'react';
+
+interface CommunityProps {
+  className?: string;
+}
+
+const Community: React.FC<CommunityProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Community</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Community;

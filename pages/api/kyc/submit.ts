@@ -1,6 +1,7 @@
- profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
-// Flags and risk scoring profile.flags = Array.from (flags);
-profile.riskScore = riskScore;
-db[userId] = profile;
-save (db);
-}
+// Submit utility
+export const Submit = () => {
+  // Implementation here
+  return null;
+};
+
+export default Submit;

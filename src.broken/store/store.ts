@@ -1,2 +1,7 @@
- export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+// Store utility
+export const Store = () => {
+  // Implementation here
+  return null;
+};
+
+export default Store;

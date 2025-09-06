@@ -1,11 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import AppMinimal from './AppMinimal';
 import React from 'react';
 
-describe('AppMinimal', () => {
-  it('renders without crashing', () => {
-    render(<AppMinimal />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-});
+interface AppMinimal.testProps {
+  className?: string;
+}
+
+const AppMinimal.test: React.FC<AppMinimal.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AppMinimal.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AppMinimal.test;

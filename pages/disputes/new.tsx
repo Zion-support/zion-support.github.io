@@ -1,12 +1,16 @@
- type ReasonType = typeof REASONS[number];
-const [projectId, setProjectId] = useState (qProjectId || '');
-const [reason, setReason] = useState<ReasonType> ('Scope Disagreement');
-const [reasonDetails, setReasonDetails] = useState ('');
-const [description, setDescription] = useState ('');
-const [files, setFiles] = useState<File[]> ([]);
-const [talentUserId, setTalentUserId] = useState (talentId || '');
-const [clientUserId, setClientUserId] = useState (clientId || (user.role === 'client'? user.id : '') );
-const [submitting, setSubmitting] = useState (false);
-}return (<EnhancedLayout> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </form> </div> </EnhancedLayout>) 
+import React from 'react';
+
+interface NewProps {
+  className?: string;
 }
-}
+
+const New: React.FC<NewProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>New</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default New;

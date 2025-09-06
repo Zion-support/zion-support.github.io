@@ -1,19 +1,16 @@
- const ConsentContext = createContext<ConsentContextValue> ({
-  consent: defaultState, acceptAll: () => {
-  
+import React from 'react';
+
+interface ConsentContextProps {
+  className?: string;
+}
+
+const ConsentContext: React.FC<ConsentContextProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ConsentContext</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-rejectNonEssential: () => {
-  
-};
-updateConsent: () => {
-  
-}
-});
-return (<ConsentContext.Provider value= {
-  {
-  consent, acceptAll, rejectNonEssential, updateConsent 
-}
-}> {
-  children 
-}</ConsentContext.Provider>) 
-}
+
+export default ConsentContext;

@@ -1,16 +1,16 @@
- interface ProfileCardProps {
-  profile: TalentProfile 
-}export function ProfileCard ({
-  profile 
-}: ProfileCardProps) {
-  return (<Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6" > profile-name" > {
-  profile.full name 
-}</CardTitle> </CardHeader> <CardContent> {
-  profile.skills.map (skill => (<li key= {
-  skill 
-}> {
-  skill 
-}</li>) ) 
-}</ul>) 
-}</CardContent> </Card>) 
+import React from 'react';
+
+interface ProfileCardProps {
+  className?: string;
 }
+
+const ProfileCard: React.FC<ProfileCardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProfileCard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProfileCard;

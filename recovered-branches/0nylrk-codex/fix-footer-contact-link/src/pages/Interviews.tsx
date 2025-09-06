@@ -1,24 +1,16 @@
- useEffect ( () => {
-  //Modified to handle Promise<Interview[]> return type const loadInterviews = async () => {
-  await fetchInterviews () 
+import React from 'react';
+
+interface InterviewsProps {
+  className?: string;
+}
+
+const Interviews: React.FC<InterviewsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Interviews</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-}, []);
-//Filter interviews based on status and date parseISO (a.scheduled date) .getTime () - parseISO (b.scheduled date) .getTime () );
-const pendingInterviews = interviews.filter (interview => interview.status === 'requested');
-return grouped;
-};
-/>) ) 
-}</div> </div>) ) 
-};
-return (<> <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent" /> <AppHeader /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Interviews</h1> <p className="text-muted-foreground mt-1" >Schedule and manage your video interviews</p> </div> </div> {
-  upcomingInterviews.length 
-}</span>) 
-}</TabsTrigger> <TabsTrigger value="pending" > Pending {
-  pendingInterviews.length 
-}</span>) 
-}</TabsTrigger> <TabsTrigger value="past" >Past</TabsTrigger> </TabsList> </div>) : upcomingInterviews.length > 0 ? (renderInterviewGroups (upcomingGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No upcoming interviews</h3> <p className="text-muted-foreground mb-6" >You don't have any scheduled interviews coming up.</p> </div>) 
-}</TabsContent> </div>) : pendingInterviews.length > 0 ? (renderInterviewGroups (pendingGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No pending interviews</h3> <p className="text-muted-foreground mb-6" >You don't have any interview requests that need your attention.</p> </div>) 
-}</TabsContent> </div>) : pastInterviews.length > 0 ? (renderInterviewGroups (pastGrouped) ) : (<div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light" > <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" /> <h3 className="text-xl font-medium mb-2" >No past interviews</h3> <p className="text-muted-foreground" >Your interview history will appear here.</p> </div>) 
-}</TabsContent> </Tabs> </main> <Footer /> </>) 
-}export default function Interviews () {
-  return (<ProtectedRoute> <InterviewsContent /> </ProtectedRoute> 
+
+export default Interviews;

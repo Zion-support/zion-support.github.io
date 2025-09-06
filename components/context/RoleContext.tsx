@@ -1,16 +1,16 @@
- export type UserRole = 'client' | 'talent';
-useEffect ( () => {
-  try {
-  
-}catch {
-  
+import React from 'react';
+
+interface RoleContextProps {
+  className?: string;
 }
-}, []);
-useEffect ( () => {
-  try {
-  if (typeof window !== 'undefined') {
-  
-}catch {
-  
-}
-}, [role]);
+
+const RoleContext: React.FC<RoleContextProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>RoleContext</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default RoleContext;

@@ -1,1 +1,16 @@
- <> <div className="mt-8 flex gap-3"> <a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a> <a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a> 
+import React from 'react';
+
+interface ImageOptimizerCdnProps {
+  className?: string;
+}
+
+const ImageOptimizerCdn: React.FC<ImageOptimizerCdnProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ImageOptimizerCdn</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ImageOptimizerCdn;

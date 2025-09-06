@@ -1,7 +1,7 @@
- 
-}catch (err: any) {
-  return res.status (400) .json ({
-  error: err.message 
-}) 
-}
-}
+// Burn utility
+export const Burn = () => {
+  // Implementation here
+  return null;
+};
+
+export default Burn;

@@ -1,2 +1,7 @@
- let cachedClient: SupabaseClient | null = null;
-}
+// Server utility
+export const Server = () => {
+  // Implementation here
+  return null;
+};
+
+export default Server;

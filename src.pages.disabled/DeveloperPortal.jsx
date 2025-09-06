@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface DeveloperPortalProps {
-  // Add props here as needed
-}
-
-export default function DeveloperPortal({ }: DeveloperPortalProps) {
+const DeveloperPortal = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>DeveloperPortal</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default DeveloperPortal;

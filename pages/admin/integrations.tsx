@@ -1,35 +1,16 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React from 'react';
 
-interface ProviderMeta {
-  id: string;
-  name: string;
-  status: string;
+interface IntegrationsProps {
+  className?: string;
 }
 
-interface ConnectionMap {
-  [key: string]: boolean;
-}
-
-const AdminIntegrationsPage: React.FC = () => {
-  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-
+const Integrations: React.FC<IntegrationsProps> = ({ className }) => {
   return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <Head>
-        <title>Admin Integrations - Zion Tech Solutions</title>
-        <meta name="description" content="Admin integrations management" />
-      </Head>
-      
-      <h1 className="text-2xl font-bold mb-4">Integrations Management</h1>
-      
-      <div className="bg-white shadow rounded-lg p-6">
-        <h2 className="text-lg font-semibold mb-4">Available Providers</h2>
-        <p className="text-gray-600">No integrations configured yet.</p>
-      </div>
+    <div className={className || ''}>
+      <h1>Integrations</h1>
+      <p>This component is under development.</p>
     </div>
   );
 };
 
-export default AdminIntegrationsPage;
+export default Integrations;

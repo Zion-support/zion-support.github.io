@@ -1,1 +1,7 @@
-module.exports = 'test-file-stub';
+// FileMock utility
+export const FileMock = () => {
+  // Implementation here
+  return null;
+};
+
+export default FileMock;

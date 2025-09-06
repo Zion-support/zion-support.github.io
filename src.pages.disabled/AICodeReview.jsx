@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface AICodeReviewProps {
-  // Add props here as needed
-}
-
-export default function AICodeReview({ }: AICodeReviewProps) {
+const AICodeReview = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>AICodeReview</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default AICodeReview;

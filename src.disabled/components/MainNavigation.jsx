@@ -1,12 +1,12 @@
 import React from 'react';
-interface MainNavigationProps {
-  // Add props here as needed
-}
-export default function MainNavigation({ }: MainNavigationProps) {
+
+const MainNavigation = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>MainNavigation</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default MainNavigation;

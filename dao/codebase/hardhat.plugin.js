@@ -1,1 +1,7 @@
-require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule.exports = require('./hardhat.config.js'),
+// Hardhat.plugin utility
+export const Hardhat.plugin = () => {
+  // Implementation here
+  return null;
+};
+
+export default Hardhat.plugin;

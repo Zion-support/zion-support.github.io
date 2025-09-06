@@ -1,7 +1,16 @@
- </div>) ) 
-}</div> <form > <input className="flex-1 border rounded px-3 py-2 text-sm" placeholder="Ask about the role..." value= {
-  input 
-}onChange= {
-  (e) => setInput (e.target.value) 
-}submit"className=" bg-gray-900 text-white text-sm rounded px-3 py-2" >Send</button> </form> </div>) 
+import React from 'react';
+
+interface AssistantProps {
+  className?: string;
 }
+
+const Assistant: React.FC<AssistantProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Assistant</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Assistant;

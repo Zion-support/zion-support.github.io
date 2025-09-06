@@ -1,14 +1,16 @@
- export function Analytics () {
-  useEffect ( () => {
-  // Performance monitoring if (typeof window !== "undefined") {
-  // Core Web Vitals monitoring const observer = new PerformanceObserver ( (list) => {
-  for (const entry of list.getEntries () ) {
-  
+import React from 'react';
+
+interface AnalyticsProps {
+  className?: string;
 }
-});
-}
-});
-}
-}, []);
-return null, // This component doesn't render anything 
-}
+
+const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Analytics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Analytics;

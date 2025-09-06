@@ -1,2 +1,7 @@
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-export type Visibility = 'public' | 'partner' | 'internal';
+// Types utility
+export const Types = () => {
+  // Implementation here
+  return null;
+};
+
+export default Types;

@@ -1,19 +1,16 @@
- import {
-  ArrowRight;
-Users;
-Zap;
-Settings;
-Search;
-MessageSquare;
-Smartphone;
-Calendar;
-BookOpen;
-Code;
-Building;
-Clock const features = [ {
-  {
-  feature.badge 
-}</Badge>) 
-}</div> </Link> </Button> </CardFooter> </Card>) ) 
-}</div> </div> </section>) 
+import React from 'react';
+
+interface FeatureCTAsProps {
+  className?: string;
 }
+
+const FeatureCTAs: React.FC<FeatureCTAsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FeatureCTAs</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FeatureCTAs;

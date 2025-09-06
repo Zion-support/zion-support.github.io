@@ -1,30 +1,16 @@
- useEffect ( () => {
-  const observer = new IntersectionObserver ( ([entry]) => {
-  if (entry.isIntersecting) {
-  return () => observer.disconnect () 
-}, [threshold]);
-return (<div className= {
-  `relative overflow-hidden $ {
-  className 
-}` 
-}> {
-  /* Placeholder */ 
-}<img src= {
-  placeholder 
-}alt="" className= {
-  `absolute inset-0 w-full h-full object-cover transition-opacity duration-500 $ {
-  isLoaded ? 'opacity-0' : 'opacity-100' 
-}` 
-}style= {
-  {
-  width, height 
+import React from 'react';
+
+interface LazyImageProps {
+  className?: string;
 }
-}/> {
-  /* Actual Image */ 
-}{
-  isInView && (<motion.img ref= {
-  imgRef 
-}/>) 
-}</div>) 
+
+const LazyImage: React.FC<LazyImageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LazyImage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default LazyImage;

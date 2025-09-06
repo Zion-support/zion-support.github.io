@@ -1,13 +1,16 @@
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <button onClick={;
-  toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  AVAILABILITY OPTIONS.map (option => (<div key= {;
-  option.id ";
-}className="flex items-center" > <Checkbox > {;
-  option.label ;
-}</label> </div>) ) ;
-}</div>) ;
-}</div>) ;
-}"
+import React from 'react';
+
+interface AvailabilityFilterProps {
+  className?: string;
+}
+
+const AvailabilityFilter: React.FC<AvailabilityFilterProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AvailabilityFilter</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AvailabilityFilter;

@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+// Auth-session utility
+export const Auth-session = () => {
+  // Implementation here
+  return null;
+};
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ session: null });
-}
+export default AuthSession;

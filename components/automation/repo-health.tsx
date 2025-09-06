@@ -1,7 +1,16 @@
- 
+import React from 'react';
+
+interface Repo-healthProps {
+  className?: string;
 }
+
+const Repo-health: React.FC<Repo-healthProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Repo-health</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-return (<div className="space-y-6" > <header className="space-y-1" > <h1 className="text-3xl font-bold" >Repo Health</h1> <p className="text-gray-600 dark:text-gray-300" >Automated activity and maintenance snapshot.</p> </header>) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-}
+
+export default Repo-health;

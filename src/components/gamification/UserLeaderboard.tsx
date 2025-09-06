@@ -1,16 +1,16 @@
- import {;
-  {;
-  {;
-  Trophy ;
-}from 'lucide-react' export interface LeaderboardEntry {;
-  name: string;
-points: number ;
-}interface UserLeaderboardProps {;
-  entries: LeaderboardEntry[] ;
-}entries ;
-}: UserLeaderboardProps) {;
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Trophy className="h-5 w-5" /> Leaderboard </CardTitle> <CardDescription>Top users by points</CardDescription> </CardHeader> <CardContent> <div key= {;
-  e.name ";
-}className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50" > </div>) ) ;
-}</div> </CardContent> </Card>) ;
-}'"
+import React from 'react';
+
+interface UserLeaderboardProps {
+  className?: string;
+}
+
+const UserLeaderboard: React.FC<UserLeaderboardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UserLeaderboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UserLeaderboard;

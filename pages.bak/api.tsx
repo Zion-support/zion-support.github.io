@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = default function APIPage() { return null}
-=======
-=======
 import React from 'react';
 
 interface ApiProps {
-  // Add props here as needed
+  className?: string;
 }
 
-export default function Api({ }: ApiProps) {
+const Api: React.FC<ApiProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Api</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
+};
+
+export default Api;

@@ -1,1 +1,16 @@
- <div className="mt-12 text-center"> <Link to="/request-quote"> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8"> mt-4 text-zion-slate-light" > Need volume pricing or custom SLAs? Contact our enterprise sales team. </p> </div> 
+import React from 'react';
+
+interface EnterpriseCallToActionProps {
+  className?: string;
+}
+
+const EnterpriseCallToAction: React.FC<EnterpriseCallToActionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnterpriseCallToAction</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnterpriseCallToAction;

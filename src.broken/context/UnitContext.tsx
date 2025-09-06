@@ -1,10 +1,16 @@
- 
-}return 'metric' 
-}return (<UnitContext.Provider value= {
-  {
-  unit, setUnit, toggleUnit 
+import React from 'react';
+
+interface UnitContextProps {
+  className?: string;
 }
-}> {
-  children 
-}</UnitContext.Provider>) 
-}
+
+const UnitContext: React.FC<UnitContextProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UnitContext</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UnitContext;

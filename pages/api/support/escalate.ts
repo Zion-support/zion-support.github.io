@@ -1,2 +1,7 @@
- await tagOperatorSession (sessionId, tag ?? 'escalate');
-}
+// Escalate utility
+export const Escalate = () => {
+  // Implementation here
+  return null;
+};
+
+export default Escalate;

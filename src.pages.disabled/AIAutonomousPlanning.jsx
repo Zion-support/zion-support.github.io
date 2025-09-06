@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousPlanning.jsx import React from \'react\'; export default AIAutonomousPlanning; const AIAutonomousPlanning = () => { return (<> <Helmet> <title > AI Autonomous Planning Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous planning platform that continuously creates strategies,plans actions,and optimizes decision - making with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI planning,autonomous planning,strategic planning,decision optimization,autonomous operations,AI planning platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousPlanning; const AIAutonomousPlanning = () => { return (<> <Helmet> <title > AI Autonomous Planning Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous planning platform that continuously creates strategies,plans actions,and optimizes decision - making with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI planning,autonomous planning,strategic planning,decision optimization,autonomous operations,AI planning platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousPlanning.jsx import _React from 'react'; export default AIAutonomousPlanning; const AIAutonomousPlanning = () => { return (<> <Helmet> <title > AI Autonomous Planning Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous planning platform that continuously creates strategies,plans actions,and optimizes decision - making with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI planning,autonomous planning,strategic planning,decision optimization,autonomous operations,AI planning platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousPlanning; const AIAutonomousPlanning = () => { return (<> <Helmet> <title > AI Autonomous Planning Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous planning platform that continuously creates strategies,plans actions,and optimizes decision - making with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI planning,autonomous planning,strategic planning,decision optimization,autonomous operations,AI planning platform" / / / /> <link rel="canonical" href=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const AIAutonomousPlanning = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AIAutonomousPlanning</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIAutonomousPlanning;

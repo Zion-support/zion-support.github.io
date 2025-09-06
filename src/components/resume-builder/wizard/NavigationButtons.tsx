@@ -1,27 +1,16 @@
- export const NavigationButtons = ({;
-  onBack;
-onNext;
-isNextDisabled = false;
-backLabel = "Back";";
-nextLabel = "Next";
-isLoading = false ;
-}: NavigationButtonsProps) => {";
-  return (<div className="flex justify-between" > {";
-  onBack && (<Button variant="outline" onClick={;
-  onBack ;
-}> {;
-  backLabel ;
-}</Button>) ;
-}{;
-  onNext && (<Button onClick={;
-  onNext ;
-}disabled= {;
-  isNextDisabled || isLoading ;
-}> {";
-  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;
-}{;
-  nextLabel ;
+import React from 'react';
+
+interface NavigationButtonsProps {
+  className?: string;
 }
-}</div>) ;
+
+const NavigationButtons: React.FC<NavigationButtonsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>NavigationButtons</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-"
+
+export default NavigationButtons;

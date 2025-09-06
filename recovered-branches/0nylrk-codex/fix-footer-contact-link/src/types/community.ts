@@ -1,1 +1,7 @@
- export type ForumCategory = | 'getting-hired' | 'project-help' | 'ai-tools' | 'feedback' | 'announcements';
+// Community utility
+export const Community = () => {
+  // Implementation here
+  return null;
+};
+
+export default Community;

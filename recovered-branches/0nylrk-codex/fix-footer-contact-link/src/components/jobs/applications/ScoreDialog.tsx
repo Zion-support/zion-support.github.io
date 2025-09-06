@@ -1,22 +1,16 @@
- interface ScoreDialogProps {
-  open: boolean;
-onOpenChange: (open: boolean) => void;
-application: JobApplication | null;
-onScoreUpdated: (updatedApplication: JobApplication) => void 
-}export function ScoreDialog ({
-  open;
-onOpenChange;
-application;
-onScoreUpdated 
-}: ScoreDialogProps) {
-  return (<Dialog open= {
-  open 
-}onOpenChange= {
-  onOpenChange 
-}> <DialogContent className="sm:max-w-md" > application && (<ApplicationScoreCard application= {
-  application 
-}onScoreUpdated= {
-  onScoreUpdated 
-}/>) 
-}</DialogContent> </Dialog>) 
+import React from 'react';
+
+interface ScoreDialogProps {
+  className?: string;
 }
+
+const ScoreDialog: React.FC<ScoreDialogProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ScoreDialog</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ScoreDialog;

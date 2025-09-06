@@ -1,12 +1,16 @@
-import * as React from "react" import * as SwitchPrimitives from "@radix-ui/react-switch" const Switch = React.forwardRef< React.ElementRef<typeof SwitchPrimitives.Root>;
-React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> > ( ({
-  className, ...props 
-}, ref) => (<SwitchPrimitives.Root) 
-}{
-  ...props 
-}ref= {
-  ref 
-}> <SwitchPrimitives.Thumb) 
-}/> </SwitchPrimitives.Root>) ) Switch.displayName = SwitchPrimitives.Root.displayName export {
-  Switch 
+import React from 'react';
+
+interface SwitchProps {
+  className?: string;
 }
+
+const Switch: React.FC<SwitchProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Switch</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Switch;

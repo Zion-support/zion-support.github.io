@@ -1,8 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-=======
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-=======
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
+import React from 'react';
+
+interface Research-developmentProps {
+  className?: string;
+}
+
+const Research-development: React.FC<Research-developmentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Research-development</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Research-development;

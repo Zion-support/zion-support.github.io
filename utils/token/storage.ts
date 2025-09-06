@@ -1,10 +1,7 @@
- this.data = fromDisk ?? {
-  wallets: {
-  
+// Storage utility
+export const Storage = () => {
+  // Implementation here
+  return null;
 };
-transactions: [];
-config: DEFAULT TOKEN CONFIG 
-}
-}
-}return wallets[userId] 
-};
+
+export default Storage;

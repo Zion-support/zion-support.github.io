@@ -1,10 +1,16 @@
- {;
-  isLoading ? (<div className="flex items-center" > <Loader2 className="h-4 w-4 animate-spin mr-2" /> <span>Loading talents...</span> </div>) : (<span> {";
-  resultCount === 0 ? ("No talents found. Try adjusting your filters.") : (`Found $ {;
-  resultCount ;
-}talent$ {;
-  resultCount !== 1 ? 's' : '' ;
-}`) ;
-}</span>) ;
-}</div>) ;
-}'"
+import React from 'react';
+
+interface ResultsHeaderProps {
+  className?: string;
+}
+
+const ResultsHeader: React.FC<ResultsHeaderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ResultsHeader</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ResultsHeader;

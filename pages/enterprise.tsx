@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>enterprise</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface EnterpriseProps {
+  className?: string;
 }
+
+const Enterprise: React.FC<EnterpriseProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Enterprise</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Enterprise;

@@ -1,37 +1,16 @@
- //Future implementation: View specific contract details 
-};
-() => setShowBuilderType ('smart') 
-}/> <ContractTypeCards onStandardClick= {
-  () => setShowBuilderType ('standard') 
-}onSmartClick= {
-  () => setShowBuilderType ('smart') 
-}/> <RecentContractsTable contracts= {
-  recentContracts 
-}onViewContract= {
-  handleViewContract 
-}/> {
-  showBuilderType === 'standard' && (<ContractBuilder isOpen= {
-  true 
-}onClose= {
-  () => setShowBuilderType ('none') 
-}talent= {
-  mockTalent 
-}clientName= {
-  user?.displayName || 'Client' 
-}onContractGenerated= {
-  handleContractGenerated 
-}/>) 
-}{
-  showBuilderType === 'smart' && (<SmartContractBuilder isOpen= {
-  true 
-}onClose= {
-  () => setShowBuilderType ('none') 
-}talent= {
-  mockTalent 
-}clientName= {
-  user?.displayName || 'Client' 
-}onContractGenerated= {
-  handleContractGenerated 
-}/>) 
-}</>) 
+import React from 'react';
+
+interface ContractBuilderContentProps {
+  className?: string;
 }
+
+const ContractBuilderContent: React.FC<ContractBuilderContentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ContractBuilderContent</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ContractBuilderContent;

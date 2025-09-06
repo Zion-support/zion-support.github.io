@@ -1,12 +1,12 @@
 import React from 'react';
-interface CheckoutPageProps {
-  // Add props here as needed
-}
-export default function CheckoutPage({ }: CheckoutPageProps) {
+
+const CheckoutPage = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>CheckoutPage</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default CheckoutPage;

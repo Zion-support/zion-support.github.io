@@ -1,5 +1,7 @@
- const {
-  error 
-}= await supabase .from ('notifications') .delete () .eq ('user id', userId);
-}
-}
+// Clear-all utility
+export const Clear-all = () => {
+  // Implementation here
+  return null;
+};
+
+export default Clear-all;

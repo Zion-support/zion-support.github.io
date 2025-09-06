@@ -1,1 +1,16 @@
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Create the AuthContext and export it. We avoid providing a generic //parameter to `createContext` because in environments where the React //type definitions are unavailable, calling an untyped function with type //arguments causes a TypeScript error (TS2347) . Instead, we cast the // default value so consumers still get some level of type safety. 
+import React from 'react';
+
+interface AuthContextProps {
+  className?: string;
+}
+
+const AuthContext: React.FC<AuthContextProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AuthContext</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AuthContext;

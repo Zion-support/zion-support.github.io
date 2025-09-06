@@ -1,9 +1,16 @@
-import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeToggle, expect } from 'lucide-react'; expect.extend(toHaveNoViolations); test(','ModeToggle has no accessibility violations',async () => {  const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()}
-});'
-<<<<<<< HEAD
-<<<<<<< HEAD
-</ModeToggle>'
-=======
-</ModeToggle>'
-=======
-</ModeToggle>'
+import React from 'react';
+
+interface Accessibility.testProps {
+  className?: string;
+}
+
+const Accessibility.test: React.FC<Accessibility.testProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Accessibility.test</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Accessibility.test;

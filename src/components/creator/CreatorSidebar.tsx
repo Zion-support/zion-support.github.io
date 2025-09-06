@@ -1,6 +1,16 @@
- return (<Sidebar> <SidebarContent> <SidebarGroup title="Dashboard" > <SidebarMenuItem href="/creator-dashboard" icon= {;
-  <Home size= {;
-  16 ;
-}/> ;
-}> <span>Home</span> </SidebarMenuItem> <span>Notifications</span> </SidebarMenuItem> </SidebarGroup> <span>Analytics</span> </SidebarMenuItem> </SidebarGroup> <span>Settings</span> </SidebarMenuItem> </SidebarGroup> </SidebarContent> </Sidebar>) ;
-}"
+import React from 'react';
+
+interface CreatorSidebarProps {
+  className?: string;
+}
+
+const CreatorSidebar: React.FC<CreatorSidebarProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CreatorSidebar</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CreatorSidebar;

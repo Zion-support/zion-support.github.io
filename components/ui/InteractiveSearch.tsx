@@ -1,6 +1,16 @@
- /> {
-  value && (<button onClick= {
-  () => setValue ('') 
-}className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" > ✕ </button>) 
-}</motion.div>) 
+import React from 'react';
+
+interface InteractiveSearchProps {
+  className?: string;
 }
+
+const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>InteractiveSearch</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default InteractiveSearch;

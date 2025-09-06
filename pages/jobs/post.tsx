@@ -1,6 +1,16 @@
- <Head> <title>Post a Job - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Post a Job</h1> <div className="grid md:grid-cols-2 gap-6" > <form className="space-y-4" > <div> </EnhancedButton> <EnhancedButton type="submit" >Post Job</EnhancedButton> </div> </form> <div> <div className="text-sm opacity-70" >Title</div> <div className="font-medium" > {
-  title || 'Untitled job' 
-}</div> </div> <div> </div> </div>) : (<p className="text-sm opacity-80" >Click Preview to see how your job will appear to talent.</p>) 
-}</aside> </div> </div>) 
+import React from 'react';
+
+interface PostProps {
+  className?: string;
+}
+
+const Post: React.FC<PostProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Post</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export default PostJob;
+
+export default Post;

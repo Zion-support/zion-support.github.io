@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/Cookies.jsx import React from \'react\'; export default function Cookies () { return (<div className=\"min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20\"> <SEO title=\"Cookie Policy | Zion Tech Group\" description=\"Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.\" keywords=\"cookie policy,privacy,data collection,website cookies\" canonical=\""https\": import React from \'react\'; export default function Cookies () { return (<div className=\"min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20\"> <SEO title=\"Cookie Policy | Zion Tech Group\" description=\"Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.\" keywords=\"cookie policy,privacy,data collection,website cookies\" canonical=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/Cookies.jsx import _React from 'react'; export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": import _React from 'react'; export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy,privacy,data collection,website cookies" canonical=""https": "";
-=======
-=======
-=======
+import React from 'react';
+
+const Cookies = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Cookies</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Cookies;

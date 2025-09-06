@@ -1,24 +1,16 @@
- interface ProjectActionsProps {
-  projectId: string;
-isUnderDispute: boolean;
-disputeId?: string;
-isTalent: boolean;
-onAddMilestone: () => void 
-}export function ProjectActions ({
-  projectId;
-isUnderDispute;
-disputeId;
-isTalent;
-onAddMilestone 
-}: ProjectActionsProps) {
-  return (<div className="flex gap-2" > isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link to= {
-  `/dashboard/disputes/$ {
-  disputeId 
-}` 
-}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) 
-}{
-  isTalent && !isUnderDispute && (<Button onClick= {
-  onAddMilestone 
-}> Add Milestone </Button>) 
-}</div>) 
+import React from 'react';
+
+interface ProjectActionsProps {
+  className?: string;
 }
+
+const ProjectActions: React.FC<ProjectActionsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProjectActions</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProjectActions;

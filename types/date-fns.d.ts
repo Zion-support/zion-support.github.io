@@ -1,2 +1,7 @@
-declare module "date-fns" {
-  // Minimal typing for the `format` helper we use in the codebase. The real // package provides far richer typings – this is only a safety-net so that // isolated compilation doesn't fail if `@types/date-fns` isn't installed. 
+// Date-fns.d utility
+export const Date-fns.d = () => {
+  // Implementation here
+  return null;
+};
+
+export default Date-fns.d;

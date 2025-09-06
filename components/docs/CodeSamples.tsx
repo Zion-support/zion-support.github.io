@@ -1,13 +1,16 @@
- key= {
-  t.key 
-}className= {
-  `px-3 py-1 rounded border $ {
-  active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary' 
-}` 
-}onClick= {
-  () => setActive (t.key) 
-}> {
-  t.label 
-}</button>) ) 
-}</div> </pre> </div>) 
+import React from 'react';
+
+interface CodeSamplesProps {
+  className?: string;
 }
+
+const CodeSamples: React.FC<CodeSamplesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>CodeSamples</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default CodeSamples;

@@ -1,10 +1,7 @@
-export default {
-  plugins: {
-  tailwindcss: {
-  
+// Postcss.config utility
+export const Postcss.config = () => {
+  // Implementation here
+  return null;
 };
-autoprefixer: {
-  
-}
-}
-}
+
+export default Postcss.config;

@@ -1,3 +1,7 @@
- const jobs: SearchResult[] = [];
-const projects: SearchResult[] = [];
-}
+// Filter utility
+export const Filter = () => {
+  // Implementation here
+  return null;
+};
+
+export default Filter;

@@ -1,35 +1,16 @@
-  };
-  return context
+import React from 'react';
+
+interface AccessibilityProviderProps {
+  className?: string;
+}
+
+const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AccessibilityProvider</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-,
-interface AccessibilityProviderProps {,
-  children: React.ReactNode
-};
-,
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {,
-  const [highContrast, setHighContrast] = useState(false),
-  const [largeText, setLargeText] = useState(false),
-  const [reducedMotion, setReducedMotion] = useState(false),
-,
-  const toggleHighContrast = () => setHighContrast(!highContrast),
-  const toggleLargeText = () => setLargeText(!largeText),
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
-,
-  const value = {,
-    highContrast,
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion
-  };
-,
-  return (,
-    <AccessibilityContext.Provider value={value}>,
-      <div className={`${highContrast ? 'high-contrast' : ''} ${largeText ? 'large-text' : ''} ${reducedMotion ? 'reduced-motion' : ''}`}>,
-        {children};
-      </div>,
-    </AccessibilityContext.Provider>)
-};
-,
-export default AccessibilityProvider,
+
+export default AccessibilityProvider;

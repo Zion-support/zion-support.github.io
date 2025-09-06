@@ -1,1 +1,16 @@
- <div> <Head> <title>EmergingTechnologyTrends - Zion Tech Solutions</title> <meta name="description" content="EmergingTechnologyTrends page" /> </Head> <main> <h1>EmergingTechnologyTrends</h1> <p>This page is under construction.</p> </main> </div> export default EmergingTechnologyTrends;
+import React from 'react';
+
+interface EmergingTechnologyTrendsProps {
+  className?: string;
+}
+
+const EmergingTechnologyTrends: React.FC<EmergingTechnologyTrendsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EmergingTechnologyTrends</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EmergingTechnologyTrends;

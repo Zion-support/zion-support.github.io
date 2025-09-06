@@ -1,45 +1,16 @@
- interface SmartContractDeploymentProps {
-  solidityCode: string;
-onDeploy: (options: DeploymentOptions) => Promise<void>;
-isDeploying: boolean 
-}export function SmartContractDeployment ({
-  solidityCode;
-onDeploy;
-isDeploying 
-}: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions> ({
-  network: 'none';
-useEscrow: true;
-deployToChain: false;
-walletAddress: '' 
-});
-const handleDeployContract = async () => {
-  if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
-  
-}try {
-  await onDeploy (deploymentOptions) 
-}catch (error) {
-  
+import React from 'react';
+
+interface SmartContractDeploymentProps {
+  className?: string;
 }
+
+const SmartContractDeployment: React.FC<SmartContractDeploymentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SmartContractDeployment</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const handleDownloadSolidity = () => {
-  //Create a blob from the Solidity code const blob = new Blob ([solidityCode], {
-  type: 'text/plain' 
-});
-const url = URL.createObjectURL (blob);
-//Create a temporary anchor to trigger download const a = document.createElement ('a');
-a.href = url;
-a.download = 'ZionContract.sol';
-document.body.appendChild (a);
-a.click ();
-//Clean up URL.revokeObjectURL (url);
-document.body.removeChild (a);
-flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className=" space-y-6"> <div className=" space-y-4"> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" deploy-blockchain">Deploy to blockchain</Label> </div> > <div className=" flex items-center space-x-2"> <RadioGroupItem value=" ethereum"id=" ethereum"/> <Label htmlFor=" ethereum">Ethereum (higher fees, more secure) </Label> </div> <div className=" flex items-center space-x-2"> <RadioGroupItem value=" polygon"id=" polygon"/> <Label htmlFor=" polygon">Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className=" space-y-2"> <Label htmlFor=" wallet-address">Wallet address for transactions</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Switch /> <Label htmlFor=" use-escrow">Use escrow for payments</Label> </div> </>) 
-}</div> </div> </div> </CardContent> Download .sol File </Button> <Button onClick= {
-  handleDeployContract 
-}disabled= {
-  isDeploying 
-}> {
-  isDeploying ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') 
-}</Button> </CardFooter> </Card>) 
-}
+
+export default SmartContractDeployment;

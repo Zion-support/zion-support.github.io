@@ -1,1 +1,16 @@
- <div> <Head> <title>PriceIntelligenceService - Zion Tech Solutions</title> <meta name="description" content="PriceIntelligenceService service" /> </Head> <main className="space-y-4" > <h1>PriceIntelligenceService</h1> <p>Service details coming soon...</p> <UseTokensButton serviceId="price-intelligence" /> <Link href="/services" >Back to Services</Link> </main> </div> export default PriceIntelligenceService;
+import React from 'react';
+
+interface PriceIntelligenceServiceProps {
+  className?: string;
+}
+
+const PriceIntelligenceService: React.FC<PriceIntelligenceServiceProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>PriceIntelligenceService</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PriceIntelligenceService;

@@ -1,8 +1,16 @@
-import React, {
-  useState 
-}from 'react' import Link from 'next/link' export default function AvatarDropdown () {
-  const {
-  user, logout 
-}= useUser () const [open, setOpen] = useState (false) if (!user) return null </div>) 
-}</div>) 
+import React from 'react';
+
+interface AvatarDropdownProps {
+  className?: string;
 }
+
+const AvatarDropdown: React.FC<AvatarDropdownProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AvatarDropdown</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AvatarDropdown;

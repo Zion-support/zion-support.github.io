@@ -1,9 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function ServicesPage() { return ( <div className=\"min-h-screen\"> <Head> <title>Services — Zion Tech Group</title> <meta name=\"description\" content=\"Browse AI,IT,and micro SaaS services by Zion Tech Group.\" /> <link rel=\"canonical\" href=\""https\": </Head> <main className=\"max-w-5xl mx-auto p-6 space-y-4\"> <h1 className=\"text-3xl font-bold\">Our Services</h1> <p className=\"text-gray-700\">Discover production-ready offerings with transparent pricing.</p> <ul className=\"list-disc pl-6 space-y-2\"> <li> <Link className=\"text-blue-600 hover:underline\" href=\"/micro-saas.page\">Micro SaaS Catalog</Link> </li> <li> <Link className=\"text-blue-600 hover:underline\" href=\"/ai-services.page\">AI Services</Link> </li> <li> <Link className=\"text-blue-600 hover:underline\" href=\"/it-services.page\">IT Services</Link> </li> </ul> </main> </div> )}
-const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function ServicesPage() { return ( <div className="min-h-screen"> <Head> <title>Services Zion Tech Group</title> <meta name="description" content="Browse AI,IT,and micro SaaS services by Zion Tech Group." /> <link rel="canonical" href="https: </Head> <main className="max-w-5xl mx-auto p-6 space-y-4"> <h1 className="text-3xl font-bold">Our Services</h1> <p className="text-gray-700">Discover production-ready offerings with transparent pricing.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link className="text-blue-600 hover:underline" href="/micro-saas.page">Micro SaaS Catalog</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/it-services.page">IT Services</Link> </li> </ul> </main> </div> )}'"'"
-import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function ServicesPage() { return ( <div className="min-h-screen"> <Head> <title>Services — Zion Tech Group</title> <meta name="description" content="Browse AI,IT,and micro SaaS services by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6 space-y-4"> <h1 className="text-3xl font-bold">Our Services</h1> <p className="text-gray-700">Discover production-ready offerings with transparent pricing.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link className="text-blue-600 hover:underline" href="/micro-saas.page">Micro SaaS Catalog</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/it-services.page">IT Services</Link> </li> </ul> </main> </div> )}
-=======
-import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function ServicesPage() { return ( <div className="min-h-screen"> <Head> <title>Services — Zion Tech Group</title> <meta name="description" content="Browse AI,IT,and micro SaaS services by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6 space-y-4"> <h1 className="text-3xl font-bold">Our Services</h1> <p className="text-gray-700">Discover production-ready offerings with transparent pricing.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link className="text-blue-600 hover:underline" href="/micro-saas.page">Micro SaaS Catalog</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/it-services.page">IT Services</Link> </li> </ul> </main> </div> )}
-=======
-import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function ServicesPage() { return ( <div className="min-h-screen"> <Head> <title>Services — Zion Tech Group</title> <meta name="description" content="Browse AI,IT,and micro SaaS services by Zion Tech Group." /> <link rel="canonical" href=""https": </Head> <main className="max-w-5xl mx-auto p-6 space-y-4"> <h1 className="text-3xl font-bold">Our Services</h1> <p className="text-gray-700">Discover production-ready offerings with transparent pricing.</p> <ul className="list-disc pl-6 space-y-2"> <li> <Link className="text-blue-600 hover:underline" href="/micro-saas.page">Micro SaaS Catalog</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/ai-services.page">AI Services</Link> </li> <li> <Link className="text-blue-600 hover:underline" href="/it-services.page">IT Services</Link> </li> </ul> </main> </div> )}
+import React from 'react';
+
+interface Services.pageProps {
+  className?: string;
+}
+
+const Services.page: React.FC<Services.pageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Services.page</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Services.page;

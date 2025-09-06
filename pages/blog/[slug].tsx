@@ -1,20 +1,16 @@
- 
-}interface BlogPostPageProps {
-  /** * Preloaded blog post for static generation. Can be null if not found. */ 
+import React from 'react';
+
+interface SlugPageProps {
+  className?: string;
 }
-}, [slug, initialPost]);
-{
-  post.author.title 
-}</p>) 
-}</div> </div> /> </div>) 
-}<ReactMarkdown> {
-  body 
-}</ReactMarkdown> <AuthorBio author= {
-  post.author 
-}/> <SocialShareButtons title= {
-  post.title 
-}/> <CommentsSection slug= {
-  post.slug 
-}/> </main> </>) 
+
+const SlugPage: React.FC<SlugPageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SlugPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export default BlogPostPage;
+
+export default SlugPage;

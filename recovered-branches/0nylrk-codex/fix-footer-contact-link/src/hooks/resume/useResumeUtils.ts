@@ -1,4 +1,7 @@
- variant: "destructive" 
-});
-return false;
+// UseResumeUtils utility
+export const UseResumeUtils = () => {
+  // Implementation here
+  return null;
 };
+
+export default UseResumeUtils;

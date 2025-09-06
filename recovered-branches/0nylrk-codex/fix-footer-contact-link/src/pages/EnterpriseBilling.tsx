@@ -1,7 +1,16 @@
- export default function EnterpriseBilling () {
-  const {
-  user 
-}= useAuth ();
-//Check if user has billing permissions 
-}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>) 
+import React from 'react';
+
+interface EnterpriseBillingProps {
+  className?: string;
 }
+
+const EnterpriseBilling: React.FC<EnterpriseBillingProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnterpriseBilling</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnterpriseBilling;

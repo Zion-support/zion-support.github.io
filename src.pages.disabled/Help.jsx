@@ -1,23 +1,12 @@
 import React from 'react';
 
-interface HelpProps {
-  // Add props here as needed
-}
-
-export default function Help({ }: HelpProps) {
+const Help = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Help</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+};
+
+export default Help;

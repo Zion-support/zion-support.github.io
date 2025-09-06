@@ -1,1 +1,12 @@
-import { useQuery } from';@tanstack/react-query' "export": function useGetOrderQuery(orderId) { return useQuery({ queryKey[';';order',orderId],"queryFn": async: () => { if (!orderId) return null const res = await fetch(`/api/orders/${orderI,d}`) if (!res.ok) { throw new Error( 'Failed to fetch order')} return (await res.json())},"enabled": '!!orderI',d})}';`''
+import React from 'react';
+
+const UseOrder = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UseOrder</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UseOrder;

@@ -1,23 +1,16 @@
- export function ChatAssistantTrigger () {
-  const [isOpen, setIsOpen] = useState (false);
-try {
-  
-}return Promise.resolve () 
-}catch (error) {
-  
+import React from 'react';
+
+interface ChatAssistantTriggerProps {
+  className?: string;
 }
+
+const ChatAssistantTrigger: React.FC<ChatAssistantTriggerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ChatAssistantTrigger</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-h-5 w-5" /> </Button> {
-  isOpen && (<ChatAssistant isOpen= {
-  isOpen 
-}onClose= {
-  () => setIsOpen (false) 
-}recipient= {
-  {
-  id: 'ai-assistant', name: 'AI Assistant', avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' 
-}
-}onSendMessage= {
-  handleSendMessage 
-}/>) 
-}</>) 
-}
+
+export default ChatAssistantTrigger;

@@ -1,3 +1,7 @@
- // If sendEmail is true, call the edge function to send an email 
-}
-}
+// CreateNotification utility
+export const CreateNotification = () => {
+  // Implementation here
+  return null;
+};
+
+export default CreateNotification;

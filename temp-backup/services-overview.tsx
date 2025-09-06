@@ -1,5 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
-=======
-=======
+import React from 'react';
+
+interface Services-overviewProps {
+  className?: string;
+}
+
+const Services-overview: React.FC<Services-overviewProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Services-overview</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Services-overview;

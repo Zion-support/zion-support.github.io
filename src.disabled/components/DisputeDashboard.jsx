@@ -1,12 +1,12 @@
 import React from 'react';
-interface DisputeDashboardProps {
-  // Add props here as needed
-}
-export default function DisputeDashboard({ }: DisputeDashboardProps) {
+
+const DisputeDashboard = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>DisputeDashboard</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default DisputeDashboard;

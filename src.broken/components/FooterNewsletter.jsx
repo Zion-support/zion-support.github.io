@@ -1,6 +1,12 @@
- required /> {
-  /* Honeypot field */ 
-}<input > {
-  isSubmitting ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Subscribing... </>) : ('Subscribe') 
-}</Button> </form>) 
-}
+import React from 'react';
+
+const FooterNewsletter = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FooterNewsletter</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FooterNewsletter;

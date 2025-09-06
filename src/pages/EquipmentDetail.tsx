@@ -1,101 +1,16 @@
- interface EquipmentSpecification {;
-  name: string;
-value: string ;
-}interface EquipmentDetails {;
-  id: string;
-name: string;
-description: string;
-brand: string;
-category: string;
-subcategory?: string;
-images: string[];
-price: number;
-currency: string;
-rating?: number;
-reviewCount?: number;
-inStock: boolean;
-expectedShipping?: string;
-specifications: EquipmentSpecification[];
-features: string[];
-warranty?: string;
-returnPolicy?: string ;
-}return {;
-  id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' || !item.availability, expectedShipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({';
-  name: spec, value: '' ;
-}) );
-features: item.tags || [];';
-warranty: '1 Year Manufacturer Warranty';';
-returnPolicy: '30-day return policy' ;
+import React from 'react';
+
+interface EquipmentDetailProps {
+  className?: string;
 }
-}//Build sample data from the shared equipment listings const [equipment, setEquipment] = useState<EquipmentDetails | undefined> ();
-useEffect ( () => {;
-  async function loadEquipment () {;
-  if (!id) {';
-  //Check if it's already in EquipmentDetails format or needs conversion let equipmentData: EquipmentDetails;
-if (storedData.name) {;
-  //Already in EquipmentDetails format setEquipment (equipmentData);
-setLoading (false);
-return ;
-}
-}
-}//If not found anywhere, set error ;
-}
-}loadEquipment () ;
-}, [id]);
-const handleAddToCart = async () => {;
-  if (!equipment || !isAuthenticated) {;
-  toast ({;
-  return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
-}finally {;
-  setIsAdding (false) ;
-}
+
+const EquipmentDetail: React.FC<EquipmentDetailProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EquipmentDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const inCart = items.some (item => item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
-}return (<> <NextSeo title= {;
-  `$ {;
-  equipment.name ;
-}- Zion Marketplace` ;
-}description= {;
-  equipment.description ;
-}openGraph= {;
-  {;
-  title: `$ {;
-  equipment.name ;
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {;
-  url: equipment.images[0] ;
-}] : undefined ;
-}
-}/> key= {;
-  index ;
-}onClick={;
-  () => setSelectedImageIndex (index) ;
-}className= {;
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {';
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light' ;
-}` ;
-}> <ImageWithRetry /> </button>) ) ;
-}</div>) ;
-}</motion.div> {;
-  /* Product Details */ ;
-}<motion.div <Star key= {;
-  i ;
-}className= {;
-  `h-4 w-4 $ {';
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light' ;
-}` ;
-}/>) ) ;
-}</div> </span> </div>) ;
-}</div> </span> </div> </div> </div>) ) ;
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
-  equipment.warranty ;
-}</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
-  equipment.returnPolicy ;
-}</p> </div> </div>) ;
-}</div> </motion.div> </div> </div> </div> </>) ;
-}'"
+
+export default EquipmentDetail;

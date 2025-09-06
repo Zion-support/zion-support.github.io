@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"TransformationServices\": React.FC = () => { return ( <> <SEO title=\'TransformationServices - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>TransformationServices</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default TransformationServices
-import _React from 'react'; import { SEO } from '../components/SEO'; const "TransformationServices": _React.FC = () => { return ( <> <SEO title='TransformationServices - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default TransformationServices
-=======
-<<<<<<< HEAD
-import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"TransformationServices\": React.FC = () => { return ( <> <SEO title=\'TransformationServices - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>TransformationServices</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default TransformationServices
-import _React from 'react'; import { SEO } from '../components/SEO'; const "TransformationServices": _React.FC = () => { return ( <> <SEO title='TransformationServices - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>TransformationServices</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default TransformationServices
-=======
-=======
+import React from 'react';
+
+interface TransformationServicesProps {
+  className?: string;
+}
+
+const TransformationServices: React.FC<TransformationServicesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TransformationServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default TransformationServices;

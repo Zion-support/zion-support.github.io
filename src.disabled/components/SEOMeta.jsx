@@ -1,1 +1,12 @@
-import React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`''
+import React from 'react';
+
+const SEOMeta = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SEOMeta</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SEOMeta;

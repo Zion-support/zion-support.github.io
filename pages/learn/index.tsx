@@ -1,17 +1,16 @@
- 
-}load () 
-}, [filters]);
-return (<div className="space-y-6" > <div className="flex items-end justify-between gap-4" > <div> <h1 className="text-2xl font-semibold" >Zion Academy</h1> <div className="text-gray-500 text-sm" >Courses • Certifications • Career Boost</div> </div> </div> <FilterBar {
-  ...filters 
-}onChange= {
-  setFilters 
-}/> {
-  loading ? (<div>Loading...</div> {
-  courses.map ( (c) => (<CourseCard key= {
-  c.id 
-}course= {
-  c 
-}/>) ) 
-}</div>) 
-}</div>) 
+import React from 'react';
+
+interface IndexProps {
+  className?: string;
 }
+
+const Index: React.FC<IndexProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;

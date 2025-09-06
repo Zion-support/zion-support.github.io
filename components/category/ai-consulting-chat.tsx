@@ -1,1 +1,16 @@
- <div> <Head> <title>AiConsultingChat - Zion Tech Solutions</title> <meta name="description" content="AiConsultingChat blog post" /> </Head> <main> <h1>AiConsultingChat</h1> <p>Blog content coming soon...</p> <a href="/blog" >Back to Blog</a> </main> </div> export default AiConsultingChat;
+import React from 'react';
+
+interface Ai-consulting-chatProps {
+  className?: string;
+}
+
+const Ai-consulting-chat: React.FC<Ai-consulting-chatProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Ai-consulting-chat</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Ai-consulting-chat;

@@ -1,1 +1,7 @@
- // Define the shape of a message /** * Set the currently active conversation. Passing `null` will clear the * selection. */ 
+// Messaging utility
+export const Messaging = () => {
+  // Implementation here
+  return null;
+};
+
+export default Messaging;

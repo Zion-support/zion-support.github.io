@@ -1,17 +1,7 @@
-/* eslint-disable no-console */ 
-}const seeds = JSON.parse (fs.readFileSync (seedsPath, 'utf8') ) as Array< {
-  prompt: string, region?: string, service?: string 
-}>;
-const outDir = path.join (process.cwd (), 'datapage-metadataseo');
-fs.mkdirSync (outDir, {
-  recursive: true 
-});
-for (const s of seeds) {
-  const gen = await post (`$ {
-  HOST 
-}/api/seo/generate`, s);
-if (gen?.slug && gen?.payload) {
-  
-}
-}
-}
+// Generate-seo-from-seeds utility
+export const Generate-seo-from-seeds = () => {
+  // Implementation here
+  return null;
+};
+
+export default Generate-seo-from-seeds;

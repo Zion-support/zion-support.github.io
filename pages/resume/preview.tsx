@@ -1,21 +1,16 @@
- > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
-}</select> </>) 
-}</div> </div> <PdfExportButton targetRef= {
-  targetRef 
-}fileName= {
-  `resume-$ {
-  activeData.name.replace (/\s+/g, '-') .toLowerCase () 
-}.pdf` 
-}/> </div> </div>) 
-}if (!user) {
-  return {
-  redirect: {
-  
-}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
-  name: 'Your Name', contact: {
-  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
+import React from 'react';
+
+interface PreviewProps {
+  className?: string;
+}
+
+const Preview: React.FC<PreviewProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Preview</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
-skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'];
-technologies: ['OpenAISupabasePostgresVercelDocker'];
-experience: [ 
+
+export default Preview;

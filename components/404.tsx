@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
 
-export default function NotFoundPage() {
+interface 404Props {
+  className?: string;
+}
+
+const 404: React.FC<404Props> = ({ className }) => {
   return (
-    <div className="container mx-auto px-4 py-20 text-center">
-      <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>
-      <p className="mt-2 text-gray-600 dark:text-gray-300">
-        Sorry, we couldn't find that page.
-      </p>
+    <div className={className || ''}>
+      <h1>404</h1>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default 404;

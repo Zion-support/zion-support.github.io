@@ -1,5 +1,7 @@
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
 
-export * from './KanbanBoard',
-export * from './KanbanColumn',
-export * from './CandidateCard',
-export * from './HiringAnalytics',
+export default Index;

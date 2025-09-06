@@ -1,7 +1,16 @@
-import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>) 
-}{
-  ...props 
-}/>) ) Separator.displayName = SeparatorPrimitive.Root.displayName export {
-  Separator 
+import React from 'react';
+
+interface SeparatorProps {
+  className?: string;
 }
+
+const Separator: React.FC<SeparatorProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Separator</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Separator;

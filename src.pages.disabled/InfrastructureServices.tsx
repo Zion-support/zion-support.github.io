@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"InfrastructureServices\": React.FC = () => { return ( <> <SEO title=\'InfrastructureServices - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>InfrastructureServices</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default InfrastructureServices
-import _React from 'react'; import { SEO } from '../components/SEO'; const "InfrastructureServices": _React.FC = () => { return ( <> <SEO title='InfrastructureServices - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>InfrastructureServices</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default InfrastructureServices
-=======
-<<<<<<< HEAD
-import React from \'react\'; import { SEO } from \'../components/SEO\'; const \"InfrastructureServices\": React.FC = () => { return ( <> <SEO title=\'InfrastructureServices - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>InfrastructureServices</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default InfrastructureServices
-import _React from 'react'; import { SEO } from '../components/SEO'; const "InfrastructureServices": _React.FC = () => { return ( <> <SEO title='InfrastructureServices - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>InfrastructureServices</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default InfrastructureServices
-=======
-=======
+import React from 'react';
+
+interface InfrastructureServicesProps {
+  className?: string;
+}
+
+const InfrastructureServices: React.FC<InfrastructureServicesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>InfrastructureServices</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default InfrastructureServices;

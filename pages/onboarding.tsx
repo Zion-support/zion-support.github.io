@@ -1,3 +1,16 @@
-import OnboardingWizard from '../components/onboarding/OnboardingWizard' export default function OnboardingPage () {
-  return (<div> <OnboardingWizard /> </div>) 
+import React from 'react';
+
+interface OnboardingProps {
+  className?: string;
 }
+
+const Onboarding: React.FC<OnboardingProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Onboarding</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Onboarding;

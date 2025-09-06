@@ -1,1 +1,12 @@
-"export": function ContactPublisherModal ({ isOpen,onClose,productId,sellerId }) { const [subject,setSubject] = useState (') const [message,setMessage] = useState (') const [error,setError] = useState (') const [isLoading,setIsLoading] = useState (false) '';";";""}
+import React from 'react';
+
+const ContactPublisherModal = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ContactPublisherModal</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ContactPublisherModal;

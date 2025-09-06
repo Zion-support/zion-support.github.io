@@ -1,15 +1,16 @@
- const TalentRoutes = () => {
-  return (<Routes> {
-  /* Talent Routes */ 
-}<Route path="/talent" element= {
-  <TalentDirectory /> 
-}/> <Route path="/talents" element= {
-  <TalentsPage /> 
-}/> <Route path="/talent/:id" element= {
-  <TalentProfilePage /> 
-}/> <Route path="/saved-talents" element= {
-  <ProtectedRoute> 
-}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
-}/> </Routes>) 
+import React from 'react';
+
+interface TalentRoutesProps {
+  className?: string;
+}
+
+const TalentRoutes: React.FC<TalentRoutesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentRoutes</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default TalentRoutes;

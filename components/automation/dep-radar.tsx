@@ -1,5 +1,16 @@
-) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
-  outdated.map (o => (</tr>) ) 
-}</tbody> </table> </div>) 
-}</div>) 
+import React from 'react';
+
+interface Dep-radarProps {
+  className?: string;
 }
+
+const Dep-radar: React.FC<Dep-radarProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Dep-radar</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Dep-radar;

@@ -1,10 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\' import { motion } from \'framer-motion\' import { Rocket,Brain,Shield,Heart,Link,Network,FileText,CheckCircle,ArrowRight,Star,TrendingUp,Award,Phone,Mail,MapPin,ExternalLink,Zap,Globe,Users,DollarSign,Clock } from \'lucide-react\' import { SEO } from \'../components/SEO\' export default function InnovativeServicesShowcase2025() { const featuredServices = [{ \"id\": \'ai-legal-document-generator,\',\''\'; \"title\": \'AI-Powered: Legal Document Generator,\',\''\'; \"description\": \'Revolutionary: AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.,\',\''\'; \"category\": \'AI: & Legal Tech,\',\''\'; \"price\": \'$,2,999\',\''\'; \"period\": \'/month,\',\''\'; \"features\": [\'AI-powered: contract generation,\',\'Real-time compliance monitoring\',\'Multi-jurisdiction support\',\'Automated legal advice\'],\''\'; \"benefits\": [\'80% faster: document creation,\',\'99.9% compliance accuracy\',\'Save $50K+ annually\',\'24/7 legal assistance\'],\''\'; \"marketPrice\": \'$,2,500-6,000\',\''\'; \"roi\": \'500% within: 6 months,\',\''\'; \"link\": \"https:;\",;
-import _React from 'react' import { motion } from 'framer-motion' import { Rocket,Brain,Shield,Heart,Link,Network,FileText,CheckCircle,ArrowRight,Star,TrendingUp,Award,Phone,Mail,MapPin,ExternalLink,Zap,Globe,Users,DollarSign,Clock } from 'lucide-react' import { SEO } from '../components/SEO' export default function InnovativeServicesShowcase2025() { const featuredServices = [{ "id": 'ai-legal-document-generator,','''; "title": 'AI-Powered: Legal Document Generator,','''; "description": 'Revolutionary: AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.,','''; "category": 'AI: & Legal Tech,','''; "price": '$,2,999','''; "period": '/month,','''; "features": ['AI-powered: contract generation,','Real-time compliance monitoring','Multi-jurisdiction support','Automated legal advice'],'''; "benefits": ['80% faster: document creation,','99.9% compliance accuracy','Save $50K+ annually','24/7 legal assistance'],'''; "marketPrice": '$,2,500-6,000','''; "roi": '500% within: 6 months,','''; "link": "https:;",;
-=======
-<<<<<<< HEAD
-import React from \'react\' import { motion } from \'framer-motion\' import { Rocket,Brain,Shield,Heart,Link,Network,FileText,CheckCircle,ArrowRight,Star,TrendingUp,Award,Phone,Mail,MapPin,ExternalLink,Zap,Globe,Users,DollarSign,Clock } from \'lucide-react\' import { SEO } from \'../components/SEO\' export default function InnovativeServicesShowcase2025() { const featuredServices = [{ \"id\": \'ai-legal-document-generator,\',\''\'; \"title\": \'AI-Powered: Legal Document Generator,\',\''\'; \"description\": \'Revolutionary: AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.,\',\''\'; \"category\": \'AI: & Legal Tech,\',\''\'; \"price\": \'$,2,999\',\''\'; \"period\": \'/month,\',\''\'; \"features\": [\'AI-powered: contract generation,\',\'Real-time compliance monitoring\',\'Multi-jurisdiction support\',\'Automated legal advice\'],\''\'; \"benefits\": [\'80% faster: document creation,\',\'99.9% compliance accuracy\',\'Save $50K+ annually\',\'24/7 legal assistance\'],\''\'; \"marketPrice\": \'$,2,500-6,000\',\''\'; \"roi\": \'500% within: 6 months,\',\''\'; \"link\": \"https:;\",;
-import _React from 'react' import { motion } from 'framer-motion' import { Rocket,Brain,Shield,Heart,Link,Network,FileText,CheckCircle,ArrowRight,Star,TrendingUp,Award,Phone,Mail,MapPin,ExternalLink,Zap,Globe,Users,DollarSign,Clock } from 'lucide-react' import { SEO } from '../components/SEO' export default function InnovativeServicesShowcase2025() { const featuredServices = [{ "id": 'ai-legal-document-generator,','''; "title": 'AI-Powered: Legal Document Generator,','''; "description": 'Revolutionary: AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.,','''; "category": 'AI: & Legal Tech,','''; "price": '$,2,999','''; "period": '/month,','''; "features": ['AI-powered: contract generation,','Real-time compliance monitoring','Multi-jurisdiction support','Automated legal advice'],'''; "benefits": ['80% faster: document creation,','99.9% compliance accuracy','Save $50K+ annually','24/7 legal assistance'],'''; "marketPrice": '$,2,500-6,000','''; "roi": '500% within: 6 months,','''; "link": "https:;",;
-=======
-=======
+import React from 'react';
+
+interface Innovative-Services-Showcase-2025Props {
+  className?: string;
+}
+
+const Innovative-Services-Showcase-2025: React.FC<Innovative-Services-Showcase-2025Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Innovative-Services-Showcase-2025</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Innovative-Services-Showcase-2025;

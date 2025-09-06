@@ -1,1 +1,16 @@
- <div> <Head> <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title> <meta name="description" content="FutureOfWorkAndAutomation page" /> </Head> <main> <h1>FutureOfWorkAndAutomation</h1> <p>This page is under construction.</p> </main> </div> export default FutureOfWorkAndAutomation;
+import React from 'react';
+
+interface FutureOfWorkAndAutomationProps {
+  className?: string;
+}
+
+const FutureOfWorkAndAutomation: React.FC<FutureOfWorkAndAutomationProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>FutureOfWorkAndAutomation</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FutureOfWorkAndAutomation;

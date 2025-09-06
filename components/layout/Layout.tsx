@@ -1,20 +1,16 @@
-import React from 'react;
-import * as React from 'react';
-;
-interface LayoutProps {,
-  children: React.ReactNode,
-  title?: string,
-  description?: string,
-  keywords?: string
+import React from 'react';
+
+interface LayoutProps {
+  className?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Layout</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export default function Layout({,
-  children,
-  title = "Zion Tech Group,
-  description = "Leading technology solutions provider",
-  keywords = technology, AI, cloud, micro SaaS"
-}: LayoutProps) {,
-  return (,
-    <div className="min-h-screen bg-gray-50">,
-      {children};
-    </div>)
-};
+
+export default Layout;

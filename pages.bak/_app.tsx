@@ -1,20 +1,16 @@
 import React from 'react';
 
 interface _appProps {
-  // Add props here as needed
+  className?: string;
 }
 
-export default function _app({ }: _appProps) {
+const _app: React.FC<_appProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>_app</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
+};
+
+export default _app;

@@ -1,14 +1,16 @@
 import React from 'react';
+
+interface LazyComponentProps {
+  className?: string;
+}
+
+const LazyComponent: React.FC<LazyComponentProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LazyComponent</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-export const "LazyComponent": React.FC<LazyComponentProps> = ({;
-  component,
-  fallback = <div>Loading...</div>;
-  ...props
-}) => {,
-  const LazyLoadedComponent = lazy(component),
-  return (,
-    <Suspense fallback={fallback}>,
-      <LazyLoadedComponent {...props} />,
-    </Suspense>)
-};
-export default LazyComponent,
+
+export default LazyComponent;

@@ -1,4 +1,16 @@
- return (<Layout> <Head> <title>Space Technology | Zion Tech Group</title> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto space-y-12" > <header className="text-center" > <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4" > <Satellite className="w-8 h-8 text-white" /> </div> </div> </header> <section> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center" >Capabilities</h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > {
-  features.map ( (f) => (</div>) ) 
-}</div> </section> <span>Explore detailed Space Technology offerings</span> </Link> </section> </div> </div> </Layout>) 
+import React from 'react';
+
+interface SpaceTechProps {
+  className?: string;
 }
+
+const SpaceTech: React.FC<SpaceTechProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SpaceTech</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default SpaceTech;

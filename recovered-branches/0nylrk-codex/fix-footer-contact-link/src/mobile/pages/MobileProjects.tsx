@@ -1,7 +1,16 @@
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock data progress: 60;
-<MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {
-  projectData 
-}milestones= {
-  milestonesData 
-}/> </main> <BottomNavigation /> </div>) 
+import React from 'react';
+
+interface MobileProjectsProps {
+  className?: string;
 }
+
+const MobileProjects: React.FC<MobileProjectsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileProjects</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MobileProjects;

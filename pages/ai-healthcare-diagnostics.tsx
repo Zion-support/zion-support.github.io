@@ -1,11 +1,16 @@
 import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>ai-healthcare-diagnostics</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+
+interface AiHealthcareDiagnosticsProps {
+  className?: string;
 }
+
+const AiHealthcareDiagnostics: React.FC<AiHealthcareDiagnosticsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>AiHealthcareDiagnostics</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AiHealthcareDiagnostics;

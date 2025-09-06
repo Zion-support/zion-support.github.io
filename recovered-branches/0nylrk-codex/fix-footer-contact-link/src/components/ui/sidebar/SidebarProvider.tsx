@@ -1,27 +1,16 @@
- interface SidebarContextType {
-  isOpen: boolean;
-toggle: () => void;
-open: () => void;
-close: () => void 
-}isOpen: true, toggle: () => {
-  
+import React from 'react';
+
+interface SidebarProviderProps {
+  className?: string;
+}
+
+const SidebarProvider: React.FC<SidebarProviderProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>SidebarProvider</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-open: () => {
-  
-};
-close: () => {
-  
-}
-});
-return (<SidebarContext.Provider value= {
-  {
-  isOpen, toggle, open, close 
-}
-}> <div className= {
-  `grid $ {
-  isOpen ? 'grid-cols-[auto 1fr]' : 'grid-cols-[auto 1fr]' 
-}min-h-screen w-full` 
-}> {
-  children 
-}</div> </SidebarContext.Provider>) 
-}
+
+export default SidebarProvider;

@@ -1,2 +1,16 @@
- </div> <div className="flex-1 border-t border-zion-purple/20" ></div> </div>) 
+import React from 'react';
+
+interface DateDividerProps {
+  className?: string;
 }
+
+const DateDivider: React.FC<DateDividerProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DateDivider</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default DateDivider;

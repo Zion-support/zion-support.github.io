@@ -1,1 +1,16 @@
- <li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div> 
+import React from 'react';
+
+interface Diversity-inclusionProps {
+  className?: string;
+}
+
+const Diversity-inclusion: React.FC<Diversity-inclusionProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Diversity-inclusion</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Diversity-inclusion;

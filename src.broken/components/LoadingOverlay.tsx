@@ -1,1 +1,16 @@
- return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" > <Loader2 className="h-8 w-8 animate-spin text-white" /> </div> export default LoadingOverlay;
+import React from 'react';
+
+interface LoadingOverlayProps {
+  className?: string;
+}
+
+const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>LoadingOverlay</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default LoadingOverlay;

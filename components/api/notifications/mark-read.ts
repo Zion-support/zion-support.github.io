@@ -1,7 +1,7 @@
- const {
-  error 
-}= await supabase .from ('notifications') .update ({
-  read status: true 
-}) .eq ('id', id) .eq ('user id', userId);
-}
-}
+// Mark-read utility
+export const Mark-read = () => {
+  // Implementation here
+  return null;
+};
+
+export default Mark-read;

@@ -1,7 +1,7 @@
- return items 
-}
-}if (changed) writeJson (MESSAGES FILE, messages);
-// Update conversation unreadBy let conversation: Conversation | undefined;
-if (input.conversationId) {
-  
-}
+// Storage utility
+export const Storage = () => {
+  // Implementation here
+  return null;
+};
+
+export default Storage;

@@ -1,2 +1,7 @@
- export type ProjectStatus = | 'offer sent' | 'offer accepted' | 'changes requested' | 'in progress' | 'completed' | 'canceled';
-}
+// Projects utility
+export const Projects = () => {
+  // Implementation here
+  return null;
+};
+
+export default Projects;

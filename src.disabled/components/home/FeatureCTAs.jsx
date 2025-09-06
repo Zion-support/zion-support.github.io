@@ -1,12 +1,12 @@
 import React from 'react';
-interface FeatureCTAsProps {
-  // Add props here as needed
-}
-export default function FeatureCTAs({ }: FeatureCTAsProps) {
+
+const FeatureCTAs = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>FeatureCTAs</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default FeatureCTAs;

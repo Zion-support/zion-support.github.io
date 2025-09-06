@@ -1,27 +1,16 @@
- 
-}catch {
-  
+import React from 'react';
+
+interface MilestonesProps {
+  className?: string;
 }
-}, [role]);
-return (<div> <Head> <title>Project Milestones</title> <meta name="description" content="Track project deliverables and milestone payments" /> </Head> </div> <MilestoneForm onSubmit= {
-  handleCreate 
-}/> </div>) 
-}{
-  milestones.length === 0 && (<div className="text-gray-600" >No milestones yet. {
-  role !== 'talent' ? 'Create the first one.' : '' 
-}</div>) 
-}{
-  milestones.map ( (m) => (<MilestoneCard key= {
-  m.id 
-}milestone= {
-  m 
-}projectId= {
-  String (projectId) 
-}role= {
-  role 
-}onAction= {
-  handleAction 
-}/>) ) 
-}</div>) 
-}</div> </div> </div>) 
-}
+
+const Milestones: React.FC<MilestonesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Milestones</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Milestones;

@@ -1,2 +1,16 @@
- Vote anonymously using zero-knowledge proofs (Semaphore) . Your vote is verified on-chain without revealing your identity. Weighted voting with ZION$ stake is supported. </p> <a href="/dao/zkvote" className="inline-block px-4 py-2 rounded bg-black text-white" >Open ZK Vote</a> </div>) 
+import React from 'react';
+
+interface PrivacyProps {
+  className?: string;
 }
+
+const Privacy: React.FC<PrivacyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Privacy</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Privacy;

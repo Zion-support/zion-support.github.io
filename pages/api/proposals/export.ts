@@ -1,8 +1,7 @@
- const lines = markdown .replace (/\r\n/g, '\n') .split ('\n') 
-}if (current) wrapped.push (current);
-return wrapped.length ? wrapped : [' '] 
-});
-}return pdfDoc.save () 
-}
-}
-}
+// Export utility
+export const Export = () => {
+  // Implementation here
+  return null;
+};
+
+export default Export;

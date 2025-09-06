@@ -1,12 +1,12 @@
 import React from 'react';
-interface SecurityComplianceSectionProps {
-  // Add props here as needed
-}
-export default function SecurityComplianceSection({ }: SecurityComplianceSectionProps) {
+
+const SecurityComplianceSection = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>SecurityComplianceSection</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default SecurityComplianceSection;

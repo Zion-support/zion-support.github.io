@@ -1,4 +1,7 @@
- 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
+// Milestones utility
+export const Milestones = () => {
+  // Implementation here
+  return null;
+};
+
+export default Milestones;

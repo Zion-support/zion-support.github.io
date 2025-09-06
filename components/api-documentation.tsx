@@ -1,1 +1,16 @@
- max-w-5xl mx-auto space-y-6"> <h1 className=" text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">API Documentation</h1> <ul className=" list-disc list-inside text-slate-300 space-y-2"> <li><a className=" text-cyan-400"href=" /api-docs">API Reference</a></li> <li><a className=" text-cyan-400"href=" /api-documentation-generator">API Documentation Generator</a></li> <li><a className=" text-cyan-400"href=" /docs" >Developer Docs</a></li> </ul> </div> </div> 
+import React from 'react';
+
+interface Api-documentationProps {
+  className?: string;
+}
+
+const Api-documentation: React.FC<Api-documentationProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Api-documentation</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Api-documentation;

@@ -1,48 +1,16 @@
- export interface TalentGridProps {
-  talents: TalentProfile[];
-isLoading: boolean;
-onTalentClick: (id: string) => void;
-savedTalentIds: string[];
-onToggleSave: (id: string, isSaved: boolean) => void;
-isAuthenticated: boolean;
-viewProfile?: (id: string) => void;
-clearFilters?: () => void;
-handleRequestHire?: (talent: TalentProfile) => void 
-}talents, isLoading, onTalentClick, savedTalentIds, onToggleSave, isAuthenticated, viewProfile, clearFilters, handleRequestHire 
-}: TalentGridProps) {
-  const handleRequestHireInternal = (talent: TalentProfile) => {
-  if (handleRequestHire) {
-  
+import React from 'react';
+
+interface TalentGridProps {
+  className?: string;
 }
+
+const TalentGrid: React.FC<TalentGridProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>TalentGrid</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const handleViewProfile = (id: string) => {
-  if (viewProfile) {
-  viewProfile (id) 
-}else {
-  onTalentClick (id) 
-}
-};
-if (isLoading) {
-  
-}if (!talents || talents.length === 0) {
-  return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <p className="text-zion-slate-light mb-4" >No talents found matching your criteria</p> clearFilters && (<button onClick= {
-  clearFilters 
-}className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors" > Clear Filters </button>) 
-}</div> 
-}key= {
-  talent.id 
-}talent= {
-  talent 
-}onViewProfile= {
-  () => handleViewProfile (talent.id) 
-}onRequestHire= {
-  () => handleRequestHireInternal (talent) 
-}isSaved= {
-  savedTalentIds.includes (talent.id) 
-}onToggleSave= {
-  onToggleSave 
-}isAuthenticated= {
-  isAuthenticated 
-}/>) ) 
-}</div>) 
-}
+
+export default TalentGrid;

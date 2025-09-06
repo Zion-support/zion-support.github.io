@@ -1,14 +1,16 @@
- const MobileAppRoutes = () => {
-  return (<Routes> {
-  /* Mobile App Routes */ 
-}<Route path="/download" element= {
-  <MobileAppPage /> 
-}/> <Route path="/mobile-app" element= {
-  <MobileAppPage /> 
-}/> <Route path="/mobile-launch" element= {
-  <MobileLaunchPage /> 
-}/> <Route path="/open-app" element= {
-  <OpenAppRedirect /> 
-}/> 
+import React from 'react';
+
+interface MobileAppRoutesProps {
+  className?: string;
+}
+
+const MobileAppRoutes: React.FC<MobileAppRoutesProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MobileAppRoutes</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default MobileAppRoutes;

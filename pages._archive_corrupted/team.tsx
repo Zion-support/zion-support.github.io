@@ -1,21 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
+
 interface TeamProps {
-  // Add props here as needed
+  className?: string;
 }
-export default function Team({ }: TeamProps) {
+
+const Team: React.FC<TeamProps> = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>Team</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
-=======
-=======
+};
+
+export default Team;

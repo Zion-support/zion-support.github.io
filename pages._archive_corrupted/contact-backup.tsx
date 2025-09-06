@@ -1,18 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react"
-import type { NextPage } from 'next'
-const "Contact": NextPage = () => {
-  return (
-    <div>Contact Backup</div>
-  )
+import React from 'react';
+
+interface Contact-backupProps {
+  className?: string;
 }
-export default Contact
-<<<<<<< HEAD
-import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
-=======
-import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
-=======
-=======
+
+const Contact-backup: React.FC<Contact-backupProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Contact-backup</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Contact-backup;

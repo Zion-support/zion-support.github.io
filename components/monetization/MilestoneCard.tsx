@@ -1,18 +1,16 @@
- return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
-  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}title= {
-  step 
-}/> {
-  idx < statusSteps.length - 1 && (<div className= {
-  'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}/>) 
-}</div>) ) 
-}</div> </a> </li>) ) 
-}</ul> </div>) 
-}</div>) 
-}> Mark In Progress </button>) 
-}> Submit Work </button>) 
-}> Approve </button>) 
-}> Mark as Paid </button>) 
-}</div> </div>) 
+import React from 'react';
+
+interface MilestoneCardProps {
+  className?: string;
 }
+
+const MilestoneCard: React.FC<MilestoneCardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>MilestoneCard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MilestoneCard;

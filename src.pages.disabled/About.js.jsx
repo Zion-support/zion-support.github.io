@@ -1,1 +1,12 @@
-import { Header } from \'@/components / Header\''\';\' import { Footer } from \'@/components / Footer\''\';\' import SEO from \'@/components / SEO\''\';\' import { GradientHeading } from \'@/components / GradientHeading\'' export default function About () {\''; \"return\": (<>\''\' <SEO title=\'About Zion - The Future of AI & Tech Marketplace\' description=\'Learn about Zion & apos;s: mission to create the first free marketplace dedicated to high - tech and artificial intelligence.\' keywords=\'about Zion,AI marketplace,tech platform,mission,vision,team\' canonical=\'"https\": \''\''\";\",;
+import React from 'react';
+
+const About.js = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>About.js</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default About.js;

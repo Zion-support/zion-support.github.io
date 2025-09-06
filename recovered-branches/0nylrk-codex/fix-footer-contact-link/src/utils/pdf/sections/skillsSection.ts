@@ -1,4 +1,7 @@
- doc.setFontSize (11);
-doc.setTextColor (colors.text);
-return yPos + 5 
-}
+// SkillsSection utility
+export const SkillsSection = () => {
+  // Implementation here
+  return null;
+};
+
+export default SkillsSection;

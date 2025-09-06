@@ -1,12 +1,12 @@
 import React from 'react';
-interface QuickAccessProps {
-  // Add props here as needed
-}
-export default function QuickAccess({ }: QuickAccessProps) {
+
+const QuickAccess = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>QuickAccess</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default QuickAccess;

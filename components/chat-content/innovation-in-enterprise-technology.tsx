@@ -1,1 +1,16 @@
- <div className="container mx-auto px-4 py-10"> <h1 className="text-2xl font-semibold">Innovation in Enterprise Technology</h1> <p className="mt-2 text-gray-600 dark: text-gray-300">Article coming soon.</p> 
+import React from 'react';
+
+interface Innovation-in-enterprise-technologyProps {
+  className?: string;
+}
+
+const Innovation-in-enterprise-technology: React.FC<Innovation-in-enterprise-technologyProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Innovation-in-enterprise-technology</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Innovation-in-enterprise-technology;

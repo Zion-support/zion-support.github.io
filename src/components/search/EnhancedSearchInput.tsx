@@ -1,37 +1,16 @@
- interface EnhancedSearchInputProps {;
-  value: string;
-onChange: (value: string) => void;
-}, 300);
-[]);
-//Fetch suggestions from API when input value changes useEffect ( () => {;
-  if (!debounced) {;
-  //Show recent suggestions provided via props when no query entered setFilteredSuggestions ( (searchSuggestions || []) .filter (s => s.type === 'recent') return () => controller.abort () ;
-}, [debounced, searchSuggestions]);
-//Handle clicks outside the component to close suggestions useEffect ( () => {;
-  function handleClickOutside (event: MouseEvent) {;
-  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {;
-  ;
+import React from 'react';
+
+interface EnhancedSearchInputProps {
+  className?: string;
 }
-}
-}setIsFocused (false);
-inputRef.current?.blur ();
-setHighlightedIndex (-1) ;
+
+const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedSearchInput</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
-const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
-  switch (e.key) {';
-  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
-  case 'Escape': e.preventDefault ();
-setIsFocused (false);
-setHighlightedIndex (-1);
-setValueOnFocus (null);
-inputRef.current?.blur ();
-break;
-default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
-break ;
-}
-};
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
-  () => onChange ('') ";
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
-}</div> <AutocompleteSuggestions /> </div>) ;
-}'"
+
+export default EnhancedSearchInput;

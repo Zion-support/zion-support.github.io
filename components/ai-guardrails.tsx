@@ -1,3 +1,16 @@
- return (<UltraAdvancedFuturisticBackground> <Head> <title>AI Guardrails Suite | Zion Tech Group</title> </Head> <section className="min-h-screen pt-28 pb-20 px-4" > <div className="max-w-6xl mx-auto" > <div className="text-center mb-12" > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-rose-400 via-red-500 to-orange-500 bg-clip-text text-transparent" >AI Guardrails Suite</h1> <p className="mt-4 text-xl text-gray-300" >Safety and governance for LLM apps with minimal integration and strong guarantees.</p> </div>) ) 
-}</ul> </div> </Card> <Card className="bg-black/30 border border-rose-500/30" > <div className="p-6" > <div className="text-3xl font-bold text-white" >Starting at $199<span className="text-base text-gray-400" >/month</span></div> <div className="text-sm text-gray-400 mt-1" >14-day trial • Setup: 30 minutes</div> <div className="mt-4" > <Button href="/contact" className="w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white" >Request Demo</Button> </div> </div> </Card> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" > <Card className="p-6 bg-black/30 border border-purple-500/30" > <h3 className="text-lg font-semibold mb-2" >SDKs & Proxies</h3> <p className="text-gray-300 text-sm" >Drop-in Node/Python SDKs and gateway proxy for provider-agnostic guardrail enforcement.</p> </Card> <Card className="p-6 bg-black/30 border border-emerald-500/30" > <h3 className="text-lg font-semibold mb-2" >Compliance</h3> <p className="text-gray-300 text-sm" >SOC 2-friendly audit logs, policy-as-code, and retention controls for evidence collection.</p> </Card> <Card className="p-6 bg-black/30 border border-cyan-500/30" > <h3 className="text-lg font-semibold mb-2" >Integrations</h3> <p className="text-gray-300 text-sm" >Slack, PagerDuty, Datadog and SIEM integrations for alerting and incident response.</p> </Card> </div> </div> <div className="text-center mt-6" > <Button href="/services" variant="outline" className="border-rose-500 text-rose-400" >Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button> </div> </div> </div> </section> </UltraAdvancedFuturisticBackground>) 
+import React from 'react';
+
+interface Ai-guardrailsProps {
+  className?: string;
 }
+
+const Ai-guardrails: React.FC<Ai-guardrailsProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Ai-guardrails</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Ai-guardrails;

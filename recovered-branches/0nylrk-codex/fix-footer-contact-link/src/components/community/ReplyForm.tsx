@@ -1,21 +1,16 @@
- import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormMessage interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-parentId?: string 
-}interface ReplyFormValues {
-  content: string 
-}export const ReplyForm = ({
-  onSubmit, parentId 
-}: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState (false);
-defaultValues: {
-  className="min-h-[100px] resize-y" {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> </Button> </div> </form> </Form> </CardContent> </Card>) 
+import React from 'react';
+
+interface ReplyFormProps {
+  className?: string;
+}
+
+const ReplyForm: React.FC<ReplyFormProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ReplyForm</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 };
+
 export default ReplyForm;

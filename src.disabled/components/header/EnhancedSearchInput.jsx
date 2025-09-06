@@ -1,12 +1,12 @@
 import React from 'react';
-interface EnhancedSearchInputProps {
-  // Add props here as needed
-}
-export default function EnhancedSearchInput({ }: EnhancedSearchInputProps) {
+
+const EnhancedSearchInput = ({ className }) => {
   return (
-    <div>
+    <div className={className || ''}>
       <h1>EnhancedSearchInput</h1>
-      <p>This component is currently under development.</p>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default EnhancedSearchInput;

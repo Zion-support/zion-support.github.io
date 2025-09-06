@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/UltimateServicesShowcase2025.jsx import React from \'react\'; export default UltimateServicesShowcase2025; import React from \'react\'; export default UltimateServicesShowcase2025\';\';
-<<<<<<< "HEAD": src.pages.disabled/UltimateServicesShowcase2025.jsx import _React from 'react'; export default UltimateServicesShowcase2025; import _React from 'react'; export default UltimateServicesShowcase2025';';
-=======
-=======
-=======
+import React from 'react';
+
+const UltimateServicesShowcase2025 = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>UltimateServicesShowcase2025</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default UltimateServicesShowcase2025;

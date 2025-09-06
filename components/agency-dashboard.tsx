@@ -1,7 +1,16 @@
- .map (s => s.trim () ) .filter (Boolean) 
-}as Vendor;
-//For MVP, update via direct API not implemented, keep local preview only setActiveVendor (updated) 
-}</div> md:col-span-2"> <button className=" px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button> </div> </form> </section> </div> </div> </section> </section> <div className=" text-center text-xs text-gray-500" >Powered by Zion</div> </div>) 
-}</select> </div>) ) 
-}</div>) 
+import React from 'react';
+
+interface Agency-dashboardProps {
+  className?: string;
 }
+
+const Agency-dashboard: React.FC<Agency-dashboardProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Agency-dashboard</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Agency-dashboard;

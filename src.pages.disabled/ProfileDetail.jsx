@@ -1,8 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< \"HEAD\": src.pages.disabled/ProfileDetail.jsx import React from \'react\'; export default function ProfileDetail () { import React from \'react\'; export default function ProfileDetail () {\'';
-<<<<<<< "HEAD": src.pages.disabled/ProfileDetail.jsx import _React from 'react'; export default function ProfileDetail () { import _React from 'react'; export default function ProfileDetail () {'';
-=======
-=======
-=======
+import React from 'react';
+
+const ProfileDetail = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ProfileDetail</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ProfileDetail;

@@ -1,10 +1,16 @@
- export default function Login () {
-  const {
-  isAuthenticated, user 
-}= useAuth ();
-//Redirect if user is already logged in and has completed profile if (isAuthenticated && user?.profileComplete) {
-  
-}// Redirect to onboarding if user is authenticated but hasn't completed profile if (isAuthenticated && !user?.profileComplete) {
-  
+import React from 'react';
+
+interface LoginProps {
+  className?: string;
 }
-}
+
+const Login: React.FC<LoginProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Login</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Login;

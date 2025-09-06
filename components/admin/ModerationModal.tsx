@@ -1,2 +1,16 @@
- </div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
+import React from 'react';
+
+interface ModerationModalProps {
+  className?: string;
 }
+
+const ModerationModal: React.FC<ModerationModalProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>ModerationModal</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ModerationModal;

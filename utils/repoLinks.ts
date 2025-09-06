@@ -1,1 +1,7 @@
- const repoWebUrl = normalizeRepoUrl (typeof (pkg as any) .repository === "string" ? ( (pkg as any) .repository as string) : (pkg as any) .repository?.url);
+// RepoLinks utility
+export const RepoLinks = () => {
+  // Implementation here
+  return null;
+};
+
+export default RepoLinks;

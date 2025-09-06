@@ -1,18 +1,16 @@
- interface DisputeStatusBadgeProps {;
-  status: 'open' | 'under review' | 'resolved' | 'closed' ;
-}export function DisputeStatusBadge ({;
-  status ;
-}: DisputeStatusBadgeProps) {;
-  switch (status) {';
-  case 'under review': variant = "secondary";";
-message = "This dispute is under review by our team";
-break;'";
-case 'resolved': variant = "outline";";
-message = "This dispute has been resolved";
-break;'";
-case 'closed': variant = "outline";";
-message = "This dispute has been closed";
-break;
-message ;
-}</p> </TooltipContent> </Tooltip>) ;
-}'"
+import React from 'react';
+
+interface DisputeStatusBadgeProps {
+  className?: string;
+}
+
+const DisputeStatusBadge: React.FC<DisputeStatusBadgeProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>DisputeStatusBadge</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default DisputeStatusBadge;

@@ -1,2 +1,7 @@
-export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
-export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
+// Types utility
+export const Types = () => {
+  // Implementation here
+  return null;
+};
+
+export default Types;
