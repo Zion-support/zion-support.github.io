@@ -266,6 +266,8 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
@@ -317,7 +319,9 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
+    "dotenv": "^17.2.2",
     "events": "^3.3.0",
+    "fastify": "^5.6.0",
     "framer-motion": "^10.16.16",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
@@ -366,6 +370,7 @@
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^9.35.0",
     "@next/eslint-plugin-next": "^15.5.2",
+    "@playwright/test": "^1.55.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",

@@ -8,14 +8,22 @@ import next from '@next/eslint-plugin-next';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+    files: ["**/*.{js,jsx,ts,tsx}"],
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
     ignores: [
       '.next/**',
       'out/**',
       'dist/**',
       'build/**',
       'node_modules/**',
+<<<<<<< HEAD
       '.eslintrc.js',
+=======
+      'coverage/**',
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -30,6 +38,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
       '**/test-utils.*',
       '**/jest.setup.*',
       '**/jest.config.*',
@@ -164,6 +173,17 @@ export default [
       '**/performance-*.html',
       '**/performance-*.md',
       '**/performance-*.txt'
+=======
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -176,6 +196,7 @@ export default [
       },
       globals: {
         // Browser globals
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -204,6 +225,52 @@ export default [
         performance: 'readonly',
         IntersectionObserver: 'readonly',
         IntersectionObserverEntry: 'readonly',
+=======
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
+        navigator: "readonly",
+        performance: "readonly",
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
+        requestAnimationFrame: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        self: "readonly",
+        // Node.js globals
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly",
+        global: "readonly",
+        // DOM types
+        Element: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        HTMLDivElement: "readonly",
+        MouseEvent: "readonly",
+        KeyboardEvent: "readonly",
+        Node: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
+        LayoutShift: "readonly",
+        IntersectionObserver: "readonly",
+        IntersectionObserverEntry: "readonly",
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
         // React
         React: 'readonly',
         // Jest/Testing globals
@@ -276,6 +343,7 @@ export default [
       },
     },
   },
+<<<<<<< HEAD
   {
     ignores: [
       // Node/build outputs
@@ -309,4 +377,6 @@ export default [
       '**/zion-website/**',
     ],
   },
+=======
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
 ];

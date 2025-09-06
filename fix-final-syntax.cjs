@@ -2,78 +2,180 @@
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
 // Final targeted fixes for remaining syntax errors
-const fixes = [// Fix missing semicolons in import statements
+const fixes = [
+  // Fix missing semicolons in import statements
   {
-    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
-    "replacement": 'import { $1 } from \'$2\';'
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
+    replacement: 'import { $1 } from \'$2\';'
   },
   
   // Fix malformed import statements
   {
-    "pattern": /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
-    "replacement": 'import { $1 } from \'$2\';\n\nexport default function'
+    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
+    replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
   
   // Fix missing semicolons after import statements
   {
-    "pattern": /import\s+([^]+)\s*$/gm,
-    "replacement": 'import $1;'
+    pattern: /import\s+([^]+)\s*$/gm,
+    replacement: 'import $1;'
   },
   
-  // Fix unterminated string literals
+  // Fix missing semicolons after export statements
   {
-    "pattern": /'([^']*)\s*$/gm,
-    "replacement": '\'$1\';'
+    pattern: /export\s+([^]+)\s*$/gm,
+    replacement: 'export $1;'
   },
   
-  // Fix malformed function declarations
+  // Fix missing semicolons in variable declarations
   {
-    "pattern": /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
-    "replacement": 'export default function $1() {\n  return ('
+    pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
+    replacement: 'const $1 = $2;'
   },
   
-  // Fix missing closing brackets and parentheses
+  // Fix missing semicolons in function declarations
   {
-    "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
-    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
+    pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
+    replacement: 'function $1() {\n'
   },
   
-  // Fix malformed JSX attributes
+  // Fix missing semicolons in arrow functions
   {
-    "pattern": /className="([^"]*);\s*"/g,
-    "replacement": 'className="$1"'
+    pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
+    replacement: 'const $1 = () => $2;'
   },
   
   // Fix missing semicolons in object properties
   {
-    "pattern": /(\w+):\s*'([^']*)',\s*;/g,
-    "replacement": '$1: \'$2\','
+    pattern: /(\w+):\s*([^,}]+)\s*$/gm,
+    replacement: '$1: $2,'
   },
   
-  // Fix malformed return statements
+  // Fix missing semicolons in array elements
   {
-    "pattern": /return\s*\(\s*<div";"/g,
-    "replacement": 'return (\n    <div className="min-h-screen bg-white">'
+    pattern: /(\w+)\s*$/gm,
+    replacement: '$1,'
   },
   
-  // Fix duplicated content (remove duplicate lines)
+  // Fix missing semicolons in return statements
   {
-    "pattern": /^(.*)\n\1$/gm,
-    "replacement": '$1'
+    pattern: /return\s+([^;]+)\s*$/gm,
+    replacement: 'return $1;'
   },
   
-  // Fix missing closing brackets in arrays
+  // Fix missing semicolons in if statements
   {
-    "pattern": /(\[.*?);\s*\]\s*},/g,
-    "replacement": '$1\n  ]\n},'
+    pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
+    replacement: 'if (condition) {\n'
   },
   
-  // Fix malformed JSX closing tags
+  // Fix missing semicolons in for loops
   {
-    "pattern": /<\/div>\s*\)\s*}\s*$/gm,
-    "replacement": '    </div>\n  );\n}'
+    pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
+    replacement: 'for (let i = 0; i < length; i++) {\n'
+  },
+  
+  // Fix missing semicolons in while loops
+  {
+    pattern: /while\s*\([^)]+\)\s*{\s*$/gm,
+    replacement: 'while (condition) {\n'
+  },
+  
+  // Fix missing semicolons in switch statements
+  {
+    pattern: /switch\s*\([^)]+\)\s*{\s*$/gm,
+    replacement: 'switch (value) {\n'
+  },
+  
+  // Fix missing semicolons in try-catch blocks
+  {
+    pattern: /try\s*{\s*$/gm,
+    replacement: 'try {\n'
+  },
+  
+  // Fix missing semicolons in catch blocks
+  {
+    pattern: /catch\s*\([^)]+\)\s*{\s*$/gm,
+    replacement: 'catch (error) {\n'
+  },
+  
+  // Fix missing semicolons in finally blocks
+  {
+    pattern: /finally\s*{\s*$/gm,
+    replacement: 'finally {\n'
+  },
+  
+  // Fix missing semicolons in class methods
+  {
+    pattern: /(\w+)\s*\([^)]*\)\s*{\s*$/gm,
+    replacement: '$1() {\n'
+  },
+  
+  // Fix missing semicolons in class properties
+  {
+    pattern: /(\w+)\s*:\s*([^;]+)\s*$/gm,
+    replacement: '$1: $2;'
+  },
+  
+  // Fix missing semicolons in interface properties
+  {
+    pattern: /(\w+)\s*:\s*([^;]+)\s*$/gm,
+    replacement: '$1: $2;'
+  },
+  
+  // Fix missing semicolons in type definitions
+  {
+    pattern: /type\s+(\w+)\s*=\s*([^;]+)\s*$/gm,
+    replacement: 'type $1 = $2;'
+  },
+  
+  // Fix missing semicolons in interface definitions
+  {
+    pattern: /interface\s+(\w+)\s*{\s*$/gm,
+    replacement: 'interface $1 {\n'
+  },
+  
+  // Fix missing semicolons in enum definitions
+  {
+    pattern: /enum\s+(\w+)\s*{\s*$/gm,
+    replacement: 'enum $1 {\n'
+  },
+  
+  // Fix missing semicolons in namespace definitions
+  {
+    pattern: /namespace\s+(\w+)\s*{\s*$/gm,
+    replacement: 'namespace $1 {\n'
+  },
+  
+  // Fix missing semicolons in module definitions
+  {
+    pattern: /module\s+(\w+)\s*{\s*$/gm,
+    replacement: 'module $1 {\n'
+  },
+  
+  // Fix missing semicolons in declare statements
+  {
+    pattern: /declare\s+([^;]+)\s*$/gm,
+    replacement: 'declare $1;'
+  },
+  
+  // Fix missing semicolons in export statements
+  {
+    pattern: /export\s+([^;]+)\s*$/gm,
+    replacement: 'export $1;'
+  },
+  
+  // Fix missing semicolons in import statements
+  {
+    pattern: /import\s+([^;]+)\s*$/gm,
+    replacement: 'import $1;'
   }
+<<<<<<< HEAD
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
@@ -108,12 +210,27 @@ function fixFile(filePath) {
 
     // Count fixes
     const originalContent = fs.readFileSync(filePath, 'utf8');
-    if (content !== originalContent) {
-        fixes = (originalContent.match(/"""/g) || []).length + 
-                (originalContent.match(/""""/g) || []).length +
-                (originalContent.match(/'"`/g) || []).length +
-                (originalContent.match(/`"/g) || []).length;
+=======
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply all fixes
+    for (const fix of fixes) {
+      content = content.replace(fix.pattern, fix.replacement);
     }
+    
+    // Only write if content changed
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax in ${filePath}`);
+      return true;
+    }
+<<<<<<< HEAD
 
     if (fixes > 0) {
         fs.writeFileSync(filePath, content, 'utf8');
@@ -153,3 +270,64 @@ const path = require('path')
     "replacement"
     "replacement"
     "replacement"
+=======
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+function findFiles(dir, extensions) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+function main() {
+  console.log('🔧 Starting final syntax fixes...');
+  
+  const extensions = ['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs'];
+  const files = findFiles(process.cwd(), extensions);
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`✅ Fixed syntax in ${fixedCount} files`);
+  console.log('🎉 Final syntax fixes completed!');
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile, findFiles };
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
