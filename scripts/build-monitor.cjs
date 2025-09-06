@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -38,4 +41,8 @@ const { execSync } = require('child_process')
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
       console.log(`� Build "status"`)
+<<<<<<< HEAD
 
+=======
+      console.error('\n� Build Monitor "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

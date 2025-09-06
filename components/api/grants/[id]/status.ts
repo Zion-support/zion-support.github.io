@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import type {
   GrantApplication
   StatusUpdatePayload;
@@ -11,6 +12,8 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -18,38 +21,19 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
-
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  const p = grantPath(id);
-  if (!fs && fs.existsSync(p)) return null;
-  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
-function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs && fs.writeFileSync(
-    grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
-    'utf8'
-  );
-function isAuthorized(req: NextApiRequest) {
-  const header = req && req.headers.authorization || '';
-  const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
-
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 function isAuthorized(req: NextApiRequest) {
-
-  const header = req && req.headers.authorization || '',
-  const token = header && header.replace('Bearer ', '');
-
   return (
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
@@ -77,6 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;  }  }
 
   }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
@@ -84,29 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const existing = readGrant(id);
   if (!existing) {
-
-
-  }
-
-
-  const payload = req && req.body as StatusUpdatePayload;
-  existing && existing.status = payload && payload.status;
-  existing && existing.updatedAt = new Date().toISOString();
-
-  writeGrant(existing);
-  res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
-}
-
-=======
-  writeGrant(existing);
-
-  res.status(200).json({ record: existing });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  writeGrant(existing);
-  res.status(200).json({ record: existing })
-}
   // Check condition
 if ( {) {
   $2
@@ -124,6 +87,7 @@ if ( {) {
     return;  }    return;
   }
 const payload = req.body as StatusUpdatePayload;
+<<<<<<< HEAD
   existing.status = payload.status;
 =======
 <<<<<<< HEAD
@@ -138,3 +102,9 @@ const payload = req.body as StatusUpdatePayload;
 }
   res.status(200).json({ record: existing });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

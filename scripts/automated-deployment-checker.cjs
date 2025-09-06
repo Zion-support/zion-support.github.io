@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Checking build output...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -46,10 +52,17 @@ const { execSync } = require("child_process")
     this.log(" Starting Deployment Checker")
     const results = {"timestamp": new Date().toISOString(),"buildOutput": this.checkBuildOutput(),"environmentVariables"}
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.log(` Deployment check report "generated"`)
 // console.log("\n� Deployment Check "Summary": ")
     console.log(` Environment variables "configured"`)
 // console.log(` Package.json "scripts": ${Object.values(results.packageJson).filter(v => typeof v === "boolean"`})
     console.log(` Netlify "config"`)
+<<<<<<< HEAD
 
+=======
+    console.log(` Git status "clean"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

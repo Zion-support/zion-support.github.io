@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -12,15 +15,23 @@ export default function QuantumSecureCloudInfrastructure() {
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
+<<<<<<< HEAD
 			features={[;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -35,12 +46,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -54,6 +59,7 @@ import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {;
 	return (<ServiceLanding
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import { motion } from 'framer-motion';
@@ -62,12 +68,15 @@ import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {
 	return(<ServiceLanding
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			title="Quantum-Secure Cloud Infrastructure"
 			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
 			subtitle="Protect data beyond the quantum horizon"
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
+<<<<<<< HEAD
 
 				"PQC algorithms for data at-rest and in-transit";
 				"Hybrid crypto transition plans";
@@ -75,6 +84,8 @@ export default function QuantumSecureCloudInfrastructure() {
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}

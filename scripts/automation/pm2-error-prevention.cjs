@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -129,4 +132,8 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
+<<<<<<< HEAD
 
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

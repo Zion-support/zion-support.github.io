@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Intelligent Deployment Automation;
@@ -21,7 +24,10 @@ const http = require('http')
           healthEndpoint: '/api/health'
           url: process.env.STAGING_URL || 'http://localhost:3001'
           healthEndpoint: '/api/health'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -112,4 +118,8 @@ const http = require('http')
       this.log(' Intelligent Deployment Automation is ready')
       process.on('SIGINT')
         this.log('� Shutting down Deployment Automation...')
+<<<<<<< HEAD
 
+=======
+      this.log(` Fatal error: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

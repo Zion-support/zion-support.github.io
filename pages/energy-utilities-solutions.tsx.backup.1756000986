@@ -87,4 +87,12 @@ export default function EnergyUtilitiesSolutionsPage() {
 			</div>
 		</UltraAdvancedFuturisticBackground>
 	);
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

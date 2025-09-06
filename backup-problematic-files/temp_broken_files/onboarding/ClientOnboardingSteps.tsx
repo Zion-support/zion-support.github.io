@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -52,3 +53,12 @@ label: "Receive your first application";
 completed: onboardingStatus.responseReceived;
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ export function ClientOnboardingSteps () {;
+  const onboardingStatus = useOnboardingStatus ();
+const steps: OnboardingStep[] = [ {;
+  id: "post-job",";"label: "Post your first job","completed: onboardingStatus.jobPosted;";"link: "/post-job",";"action: "Post Job",
+};"{";"  id: "invite",";"label: "Send invitation to talent","completed: onboardingStatus.inviteSent;";"link: "/talent",";"action: "Find Talent",
+};"{";"  id: "response",";"label: "Receive your first application",
+completed: onboardingStatus.responseReceived;"}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils',;
@@ -13,32 +14,36 @@ import {;
 interface FavoriteButtonProps {;
   itemId: string,;
   className?: string;
+=======
+return (
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
+
+                )}              />;
+            </button>;
+          </TooltipTrigger>;
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-;
-export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
-  const { isWishlisted, toggle } = useWishlist(),;
-  const { isAuthenticated } = useAuth(),;
-  const [loginOpen, setLoginOpen] = React.useState(false),;
-  const handleClick = (e: React.MouseEvent) => {;
-    e.stopPropagation(),;
-    if (!isAuthenticated) {;
-      setLoginOpen(true),;
-      return;
-    }
-    
-    const wasWishlisted = isWishlisted(itemId),
-    toggle(itemId),
-    
-    // Provide feedback
-    toast({
-      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
-      description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
-        : "Item has been added to your wishlist"})
-  },
+      // Add to favorites`;
+      // console && console.log(`Added ${itemType} ${itemId} to favorites`)}  };
+  return ();
 
-  const active = isWishlisted(itemId),
+    <button
+      onClick = {handleToggleFavorite}`
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
+          ? 'bg-red-500 hover:bg-red-600 text-white''
+          : 'bg-zion-blue-dark/80 hover:bg-zion-cyan text-white'`
+} ${className}`}
+      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
 
+<<<<<<< HEAD
   return (
     <>
       <TooltipProvider>
@@ -64,6 +69,25 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
+=======
+     aria-label="Button">;
+
+      <Heart`
+        className={`w-4 h-4 transition-all duration-300 ${
+          isFavorited ? 'fill-current' : ''`
+}`}
+      />    </button>
+  )};`
+className: {`w-4 h-4 transition-all duration-300 ${
+          isFavorited ? 'fill-current' : '';`
+}`}
+      />
+    </button>;) }
+'`
+}
+
+          <TooltipTrigger as_child>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <button;
               className={cn(;
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
@@ -87,4 +111,40 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+      // Add to favorites`;
+      // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
+  return ();
+    <button;
+      on_click = {handleToggleFavorite}`;
+      className={`absolute top - 2 right - 2 p - 2 rounded - full transition - all duration - 300 ${is_favorited';
+          ? 'bg - red - 500 hover:bg - red - 600 text - white'';
+          : 'bg - zion - blue - dark / 80 hover:bg - zion - cyan text - white'`;
+} ${class_name}`}
+      aria - label={is_favorited ? 'Remove from favorites' : 'Add to favorites'}
+    >;
+      <Heart`;
+        className={`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : ''`;
+}`}
+      />    </button>)}`;
+class_name: {`w - 4 h - 4 transition - all duration - 300 ${
+          is_favorited ? 'fill - current' : '';`;
+}`}
+      />;
+    </button>) }
+'`;
+}
+
+
+
+
+  return (
+    <>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

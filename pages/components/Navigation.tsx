@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   ArrowRight,
   Award,
@@ -15,6 +16,29 @@
   ShoppingCart,
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+import React, { useState } from './react';
+import Link from './next / link';
+import { motion  } from './framer-motion';
+
+import {
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   BookOpen,
   Brain,
   Building,
@@ -49,12 +73,60 @@
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 
   Truck,
   Users,
   X,
+=======
+<<<<<<< HEAD
+=======
+
+import {;
+  ArrowRight,;
+  Award,;
+  BarChart3,;
+  BookOpen,;
+  Brain,;
+  Building,;
+  Calculator,;
+  Calendar,;
+  Camera,;
+  CheckCircle,;
+  ChevronDown,;
+  Clock,;
+  Cloud,;
+  Code,;
+  CreditCard,;
+  DollarSign,;
+  Eye,;
+  FileText,;
+  Gamepad2,;
+  Globe,;
+  Heart,;
+  Home,;
+  Lock,;
+  Mail,;
+  MapPin,;
+  Menu,;
+  MessageSquare,;
+  Music,;
+  Network,;
+  Phone,;
+  Rocket,;
+  Settings,;
+  Shield,;
+  ShoppingCart,;
+  Star,;
+  Target,;
+  TrendingUp,;
+  Truck,;
+  Users,;
+  X,;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Zap,;
 } from "lucide-react";
+<<<<<<< HEAD
 
 } from 'lucide-react';
 
@@ -66,6 +138,11 @@
   Users,
   X,
   Zap
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Clock,
   DollarSign,
   Cpu,
@@ -103,16 +180,39 @@
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-} from 'lucide-react';
-origin/automation-improvements-final
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+
+=======
+} from 'lucide-react';
+>>>>>>> origin/automation-improvements-final
+
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+} from 'lucide-react';
+
+
+<<<<<<< HEAD
+
+
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ArrowRight
   Award
   BarChart3
@@ -154,12 +254,22 @@ import {
   Users
   X
   Zap
+<<<<<<< HEAD
+=======
 } from "lucide-react";
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 origin/main
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const navigationItems = [
   {
     title: "Services"
@@ -187,7 +297,6 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
-=======
 } from './lucide-react';
 ;
 const navigation_items = [;
@@ -217,7 +326,6 @@ const navigation_items = [;
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         title: "Cybersecurity"
         href: "/cybersecurity"
@@ -226,6 +334,8 @@ const navigation_items = [;
         popular: false
       }
       {
+<<<<<<< HEAD
+=======
 
         title: "Cloud Solutions",
         href: "/cloud - solutions",
@@ -233,6 +343,7 @@ const navigation_items = [;
         description: "Scalable cloud infrastructure",
         popular: false,
       },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "Data Analytics",
         href: "/data - analytics",
@@ -317,11 +428,14 @@ const navigation_items = [;
     ],
   },
   {
+<<<<<<< HEAD
+=======
     title: "Resources",
     href: "/resources",
     icon: FileText,
     submenu: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "Blog"
         href: "/blog"
@@ -329,12 +443,15 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
+<<<<<<< HEAD
+=======
 
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
         description: "Success stories and results",
       },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "White Papers",
         href: "/white - papers",
@@ -342,12 +459,15 @@ const navigation_items = [;
         description: "In - depth research reports",
       },
       {
+<<<<<<< HEAD
+=======
         title: "Tutorials",
         href: "/tutorials",
         icon: BookOpen,
         description: "Step - by - step guides",
       },
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "FileTextation"
         href: "/docs"
@@ -357,12 +477,15 @@ const navigation_items = [;
     ]
   }
   {
+<<<<<<< HEAD
+=======
 
     title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {
         title: "About Us"
         href: "/about"
@@ -402,6 +525,8 @@ const navigation_items = [;
     ]
   }
 ];
+<<<<<<< HEAD
+=======
 
 const navigationItems = [;
   {;
@@ -608,13 +733,35 @@ const navigationItems = [;
     ],;
   },;
 ];
+<<<<<<< HEAD
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+const quickLinks = [;
+  { title: "Pricing", href: "/pricing", icon: DollarSign },;
+  { title: "Contact", href: "/contact", icon: Phone },;
+  { title: "Support", href: "/support", icon: MessageSquare },;
+  { title: "Status", href: "/status", icon: BarChart3 },;
+  { title: "Quote", href: "/quote", icon: FileText },;
+  { title: "API Docs", href: "/api-docs", icon: Code },;
+];
+export default function Navigation() {;
+=======
+<<<<<<< HEAD
+export default function Navigation() {
+=======
+
+export default function Navigation() {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+=======
 
 
 export default function Navigation() {;
@@ -624,7 +771,15 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -649,6 +804,390 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
+=======
 
                 className="hover:text-blue-200 transition-colors">;
+<<<<<<< HEAD
 }
+=======
+;
+const quick_links = [;
+  { title: "Pricing", href: "/pricing", icon: DollarSign },
+  { title: "Contact", href: "/contact", icon: Phone },
+  { title: "Support", href: "/support", icon: MessageSquare },
+  { title: "Status", href: "/status", icon: BarChart3 },
+  { title: "Quote", href: "/quote", icon: FileText },
+  { title: "API Docs", href: "/api - docs", icon: Code },
+];
+;
+export default /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [is_open, setIsOpen] = useState (false);
+  const [active_submenu, setActiveSubmenu] = useState < string | null>(null);
+;
+  return (
+    <nav className="bg - white shadow - lg sticky top - 0 z - 50">;
+      {/* Top Bar */}
+      <div className="bg - blue - 600 text - white py - 2">;
+        <div className="container mx - auto px - 4">;
+          <div className="flex justify - between items - center text - sm">;
+            <div className="flex items - center space - x-6">;
+              <div className="flex items - center">;
+                <Phone className="w - 4 h - 4 mr - 2" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items - center">;
+                <Mail className="w - 4 h - 4 mr - 2" />;
+                <span > kleber@ziontechgroup.com</span>;
+              </div>;
+            </div>;
+            <div className="flex items - center space - x-4">;
+              <Link;
+                href="/contact";
+                className="hover:text - blue - 200 transition - colors";
+              >;
+                Get Free Consultation;
+              </Link>;
+              <Link;
+                href="/pricing";
+                className="hover:text - blue - 200 transition - colors";
+              >;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                View Pricing;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+=======
+
+          <Link href="/" className="flex items-center space-x-2">;
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
+              <span className="text-white font-bold text-xl">Z</span>;
+            </div>;
+            <div>;
+              <div className="text-xl font-bold text-gray-900">;
+                Zion Tech Group;
+              </div>;
+              <div className="text-sm text-gray-500">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      {/* Main Navigation */}
+      <div className="container mx - auto px - 4">;
+        <div className="flex justify - between items - center py - 4">;
+          {/* Logo */}
+<<<<<<< HEAD
+=======
+          <Link href="/" className="flex items - center space - x-2">;
+            <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
+              <span className="text - white font - bold text - xl">Z</span>;
+            </div>;
+            <div>;
+              <div className="text - xl font - bold text - gray - 900">;
+                Zion Tech Group;
+              </div>;
+              <div className="text - sm text - gray - 500">;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                AI & Technology Solutions;
+              </div>;
+            </div>;
+          </Link>;
+<<<<<<< HEAD
+=======
+
+                  href={item && item.href}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
+                  <item && item.icon className="w-5 h-5" />;
+                  <span>{item && item.title}</span>;
+                  <ChevronDown className="w-4 h-4" />;
+                </Link>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                {/* Submenu */}
+                {activeSubmenu === item && item.title && (;
+                  <motion&& motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50">;
+                    <div className="grid grid-cols-1 gap-2">;
+                      {item && item.submenu.map((subItem) => (;
+                        <Link
+                          key={subItem && subItem.title}
+                          href={subItem && subItem.href}
+                          className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors">;
+                          <subItem && subItem.icon className="w-5 h-5 text-blue-600 mt-0 && 0.5" />;
+                          <div className="flex-1">;
+                            <div className="flex items-center space-x-2">;
+                              <span className="font-medium text-gray-900">;
+                                {subItem && subItem.title}
+                              </span>;
+                              {subItem && subItem.popular && (;
+                                <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0 && 0.5 rounded-full">;
+                                  Popular;
+                                </span>;
+                              )}
+                            </div>;
+                            <p className="text-sm text-gray-500 mt-1">;
+                              {subItem && subItem.description}
+                            </p>;
+                          </div>;
+                          <ArrowRight className="w-4 h-4 text-gray-400" />;
+                        </Link>;
+                      ))}
+                    </div>;
+                  </motion && motion.div>;
+                )}
+              </div>;
+            ))}
+            {/* Quick Links */}
+            <div className="flex items-center space-x-4 ml-8 pl-8 border-l border-gray-200">;
+              {quickLinks && quickLinks.map((link) => (;
+                <Link
+                  key={link && link.title}
+                  href={link && link.href}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">;
+                  <link && link.icon className="w-4 h-4" />;
+                  <span>{link && link.title}</span>;
+                </Link>;
+              ))}
+<<<<<<< HEAD
+=======
+
+            </div>;
+          </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+=======
+
+          </button>;
+        </div>;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        {/* Mobile Navigation */}
+        {isOpen && (;
+          <motion&& motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden border-t border-gray-200 py-4">;
+            <div className="space-y-4">;
+              {navigationItems && navigationItems.map((item) => (;
+                <div key={item && item.title}>;
+                  <Link
+                    href={item && item.href}
+                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                    onClick={() => setIsOpen(false)}
+                  >;
+                    <item && item.icon className="w-5 h-5" />;
+                    <span className="font-medium">{item && item.title}</span>;
+                  </Link>;
+                  <div className="ml-7 space-y-2 mt-2">;
+                    {item && item.submenu.map((subItem) => (;
+                      <Link
+                        key={subItem && subItem.title}
+                        href={subItem && subItem.href}
+                        className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600 transition-colors py-1"
+                        onClick={() => setIsOpen(false)}
+                      >;
+                        <subItem && subItem.icon className="w-4 h-4" />;
+                        <span>{subItem && subItem.title}</span>;
+                        {subItem && subItem.popular && (;
+                          <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0 && 0.5 rounded-full">;
+                            Popular;
+                          </span>;
+                        )}
+                      </Link>;
+                    ))}
+                  </div>;
+                </div>;
+              ))}
+              {/* Mobile Quick Links */}
+              <div className="pt-4 border-t border-gray-200">;
+                <div className="grid grid-cols-2 gap-2">;
+                  {quickLinks && quickLinks.map((link) => (;
+                    <Link
+                      key={link && link.title}
+                      href={link && link.href}
+                      className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors py-2"
+                      onClick={() => setIsOpen(false)}
+                    >;
+                      <link && link.icon className="w-4 h-4" />;
+                      <span>{link && link.title}</span>;
+                    </Link>;
+                  ))}
+                </div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        )}
+      </div>;
+    </nav>;
+  );
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items - center space - x-8">;
+            {navigation_items.map ((item) => (
+              <div;
+                key={item.title}
+                className="relative group";
+                onMouseEnter={() => setActiveSubmenu (item.title)}
+                onMouseLeave={() => setActiveSubmenu (null)}
+              >;
+                <Link;
+                  href={item.href}
+                  className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                >;
+                  <item.icon className="w - 5 h - 5" />;
+                  <span>{item.title}</span>;
+                  <ChevronDown className="w - 4 h - 4" />;
+                </Link>;
+                {/* Submenu */}
+                {active_submenu === item.title && (
+                  <motion.div;
+                    initial={{ opacity: 0, coordinate_y: 10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: 10 }}
+                    className="absolute top - full left - 0 mt - 2 w - 80 bg - white rounded - lg shadow - xl border border - gray - 200 py - 4 z - 50";
+                  >;
+                    <div className="grid grid - cols - 1 gap - 2">;
+                      {item.submenu.map ((sub_item) => (
+                        <Link;
+                          key={sub_item.title}
+                          href={sub_item.href}
+                          className="flex items - start space - x-3 p - 3 hover:bg - gray - 50 rounded - lg transition - colors";
+                        >;
+                          <sub_item.icon className="w - 5 h - 5 text - blue - 600 mt - 0.5" />;
+                          <div className="flex - 1">;
+                            <div className="flex items - center space - x-2">;
+                              <span className="font - medium text - gray - 900">;
+                                {sub_item.title}
+                              </span>;
+                              {sub_item.popular && (
+                                <span className="bg - blue - 100 text - blue - 800 text - xs font - medium px - 2 py - 0.5 rounded - full">;
+                                  Popular;
+                                </span>)}
+                            </div>;
+                            <p className="text - sm text - gray - 500 mt - 1">;
+                              {sub_item.description}
+                            </p>;
+                          </div>;
+                          <ArrowRight className="w - 4 h - 4 text - gray - 400" />;
+                        </Link>))}
+                    </div>;
+                  </motion.div>)}
+              </div>))}
+            {/* Quick Links */}
+            <div className="flex items - center space - x-4 ml - 8 pl - 8 border - l border - gray - 200">;
+              {quick_links.map ((link) => (
+                <Link;
+                  key={link.title}
+                  href={link.href}
+                  className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors";
+                >;
+                  <link.icon className="w - 4 h - 4" />;
+                  <span>{link.title}</span>;
+                </Link>))}
+            </div>;
+          </div>;
+          {/* Mobile Menu Button */}
+          <button;
+            on_click={() => setIsOpen (!is_open)}
+            className="lg:hidden p - 2 rounded - lg hover:bg - gray - 100 transition - colors";
+          >;
+            {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+          </button>;
+        </div>;
+        {/* Mobile Navigation */}
+        {is_open && (
+          <motion.div;
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden border - t border - gray - 200 py - 4";
+          >;
+            <div className="space - y-4">;
+              {navigation_items.map ((item) => (
+                <div key={item.title}>;
+                  <Link;
+                    href={item.href}
+                    className="flex items - center space - x-2 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                    on_click={() => setIsOpen (false)}
+                  >;
+                    <item.icon className="w - 5 h - 5" />;
+                    <span className="font - medium">{item.title}</span>;
+                  </Link>;
+                  <div className="ml - 7 space - y-2 mt - 2">;
+                    {item.submenu.map ((sub_item) => (
+                      <Link;
+                        key={sub_item.title}
+                        href={sub_item.href}
+                        className="flex items - center space - x-2 text - sm text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
+                        on_click={() => setIsOpen (false)}
+                      >;
+                        <sub_item.icon className="w - 4 h - 4" />;
+                        <span>{sub_item.title}</span>;
+                        {sub_item.popular && (
+                          <span className="bg - blue - 100 text - blue - 800 text - xs font - medium px - 2 py - 0.5 rounded - full">;
+                            Popular;
+                          </span>)}
+                      </Link>))}
+                  </div>;
+                </div>))}
+              {/* Mobile Quick Links */}
+              <div className="pt - 4 border - t border - gray - 200">;
+                <div className="grid grid - cols - 2 gap - 2">;
+                  {quick_links.map ((link) => (
+                    <Link;
+                      key={link.title}
+                      href={link.href}
+                      className="flex items - center space - x-2 text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                      on_click={() => setIsOpen (false)}
+                    >;
+                      <link.icon className="w - 4 h - 4" />;
+                      <span>{link.title}</span>;
+                    </Link>))}
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>)}
+      </div>;
+    </nav>);
+}
+=======
+import React from 'react';
+import MainLayout from '../../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Navigation - Zion Tech Group"
+      description="Navigation component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Navigation</h1>
+          <p className="text-xl text-gray-600">Navigation component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
@@ -36,7 +39,10 @@ class $1 {}
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (type === "error") {}
   fs.appendFileSync(this.errorLogFile, logMessage)};
 console.log(`[${type.toUpperCase()}] ${message}`)};
@@ -395,7 +401,10 @@ if (require.main === module) {}
   const fixer = new ESLintErrorFixer();
   fixer;
     .run();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     .then(report => {})
   console.log("ESLint Error Fixer completed successfully`);
       process.exit(0)}
@@ -404,4 +413,8 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = ESLintErrorFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

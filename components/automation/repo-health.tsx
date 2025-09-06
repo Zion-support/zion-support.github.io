@@ -10,11 +10,14 @@ interface Report {
 }
  
 
+<<<<<<< HEAD
  
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -26,10 +29,13 @@ interface Report {
   stalePages: { file: string, lastCommitAt: string }[]
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
@@ -51,6 +57,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 
 
 =======
+=======
+
+}
+type Props = { report: Report | null }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 }
 type Props = { report: Report | null },
@@ -59,19 +71,28 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationrepo - health.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
+<<<<<<< HEAD
 
 export default function RepoHealth({ report }: Props) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RepoHealth(): any ({ report }: Props) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
   if (!report) return <div>No report yet. Check back soon.</div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="space-y-6">
@@ -96,18 +117,23 @@ export default function RepoHealth(): any ({ report }: Props) {;
       </section>
       <section>
 
+<<<<<<< HEAD
           ))}
         </ul>
       </section>
     </div>
-export default function RepoHealth({ report }: Props) {
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function RepoHealth({ report }: Props) {
 export default function RepoHealth({ report }: Props) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
 
@@ -137,15 +163,6 @@ export default function RepoHealth({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-        </ul>
-      </section>
-    </div>
-);
-}
-  );
-}
-
-=======
 }
 ;
 export default /**
@@ -183,6 +200,7 @@ if (return <div > No report yet. Check back soon.</div>) {
         </ul>;
       </section>;
     </div>);
+<<<<<<< HEAD
   }
 },
 
@@ -209,3 +227,5 @@ export default function RepoHealth({ report }: Props) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

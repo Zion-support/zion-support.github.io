@@ -13,7 +13,11 @@ export function earnTokens(
   userId: string,
   amount: number,
   reason: string,
+<<<<<<< HEAD
   metadata?: Record<string, any>
+=======
+  metadata?: Record<string any>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   const wallet = tokenStore.getWallet(userId)
@@ -35,7 +39,11 @@ export function burnTokens(
   userId: string,
   amount: number,
   reason: string,
+<<<<<<< HEAD
   metadata?: Record<string, any>
+=======
+  metadata?: Record<string any>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
   const wallet = tokenStore.getWallet(userId)
@@ -106,6 +114,10 @@ export function getConfig() {
 
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig()
+<<<<<<< HEAD
   tokenStore.setConfig({ ...current, ...partial })
 
+=======
+  tokenStore.setConfig({ ...current, ...partial });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

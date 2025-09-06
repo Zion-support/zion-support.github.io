@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 
@@ -10,9 +11,32 @@ export type User = {;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+<<<<<<< HEAD
+=======
+import React, {;
+  createContext,;
+  useContext,;
+  useEffect,;
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export type UserRole = 'client' | 'talent';
+
+export type User = {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   role: UserRole;
+<<<<<<< HEAD
   avatarUrl?: string;
   onboardingCompleted: boolean;
 
@@ -36,10 +60,19 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   useEffect(() => {;
     try {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  avatar?: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export interface UserContextType {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
   completeOnboarding: () => void;};}
 };
 
@@ -175,6 +208,10 @@ export function useUser() {;
       setUser(DEFAULT_USER);
     }
   }, []);
+=======
+  updateUser: (userData: Partial<User>) => Promise<void>;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 interface UserProviderProps {
@@ -238,6 +275,16 @@ export function useUser() {;
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+export default UserProvider;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+export default UserProvider;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

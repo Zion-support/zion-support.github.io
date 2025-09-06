@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -256,7 +259,10 @@ View automation reports in the project root:- \"ai-analysis-report.json\" - AI c
 <${componentName} className="custom-class"
 </${componentName}>\`\"\""
   extractComponentStyling(content) {return "This component uses Tailwind CSS classes for styling. Custom styles can be added via the "className" prop."}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   "fetch": "Fetches data from the API"
       "create": "Creates a new resource"
       "update": "Updates an existing resource"
@@ -275,4 +281,8 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
 
+=======
+  console.error(" Failed to start smart documentation "generator")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

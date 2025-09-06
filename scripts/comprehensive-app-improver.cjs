@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -83,4 +87,8 @@ NEXT_PUBLIC_API_URL="http"
 // console.log("\n  Fixes "Applied": ")
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
+<<<<<<< HEAD
 
+=======
+  console.error("Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

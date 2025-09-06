@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ChatAssistant/ChatAssistant.jsx
+=======
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/ChatAssistant/ChatAssistant.jsx
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
@@ -5,6 +20,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
 :temp_exclude/src.disabled/components/ChatAssistant/ChatAssistant.jsx
+<<<<<<< HEAD
 =======
 ' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
 " " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
@@ -12,3 +28,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+=======
+import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+=======
+' \' \' \' \"export\": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated\';\";\";
+" " " " export: function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated";";";"""
+import React,{ useState,useEffect,useRef,useContext } from';react' import { AuthContext } from '../../context/auth/AuthContext''';' import { useDebounce } from '../../hooks/useDebounce''';' import { useLocalStorage } from '../../hooks/useLocalStorage''';' import { ChatMessage } from './ChatMessage''';' import { ChatInput } from './ChatInput''';' import { Avatar,AvatarFallback,AvatarImage } from '@/components/ui/avatar''';' import { Button } from '@/components/ui/button''';' import { X } from 'lucide-react' import { focusManagement } from';';@/utils/accessibility' "export": function ChatAssistant({ isOpen,onClose,recipient,conversationId,initialMessages = [],onSendMessage,contextHeader }) { const auth = useContext(AuthContext) const isGuest = !auth?.isAuthenticated'';''}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

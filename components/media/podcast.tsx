@@ -1,7 +1,13 @@
 =======
 
 
+<<<<<<< HEAD
   if (loading) return <div>Loading episodes…</div>;
+=======
+useEffect ( () => {
+  const load = async () => {
+  try {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -86,6 +92,7 @@
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
+<<<<<<< HEAD
 
 =======
 import React, { useEffect, useState } from 'react';
@@ -187,11 +194,19 @@ useEffect ( () => {
           </li>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
 
   );
+<<<<<<< HEAD
 }
 ;
+=======
+  // Check condition
+if (return <div > Loading episodes…</div>) {
+  $2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   return (
     <div className='space - y-6'>;
@@ -281,6 +296,7 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
+<<<<<<< HEAD
 }
 =======
 
@@ -288,3 +304,8 @@ if (return <div > Loading episodes…</div>) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

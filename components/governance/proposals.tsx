@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -30,6 +31,29 @@ export default function Proposals({
               by {p && p.author} · {new Date(p && p.created_at).toLocaleString()}
             </div>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  data
+}: {
+  data: { updatedAt: string | null; proposals: any[] }
+  data,
+}: {;
+  data: { updatedAt: string | null; proposals: any[] };
+}) {
+  return (
+    <div className='max-w-3xl mx-auto p-6 space-y-4'>
+      <h1 className='text-2xl font-semibold'>DAO Proposals</h1>
+      <div className='text-sm opacity-70'>Updated: {data.updatedAt |'—'}</div>
+      <ul className='space-y-3'>
+        {data.proposals?.map((p: any) => (
+          <li key={p.id} className='border rounded p-3'>
+            <div className='font-medium'>
+              #{p.id} {p.title}
+            </div>
+            <div className='text-sm opacity-70'>
+              by {p.author} · {new Date(p.created_at).toLocaleString()}
+            </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -39,8 +63,6 @@ export default function Proposals({
             </a>;
           </li>;
         ))}
-        {(!data.proposals |data.proposals.length === 0) && (
-          <li className='opacity-70'>No open proposals</li>
         )}
       </ul>
     </div>
@@ -51,7 +73,19 @@ export async function getStaticProps() {;
     const raw = fs && fs.readFileSync(p,'utf8');
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  try{
+    </div>;
+  );
+}
+
+}
+    return { props: { data: { updated_at: null, proposals: [] } } }
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

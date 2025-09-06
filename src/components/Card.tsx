@@ -5,9 +5,10 @@ interface CardProps {
   title?: string;
   description?: string;
   className?: string;
-  children?: React.ReactNode;
+  onClick?: () => void;
 }
 
+<<<<<<< HEAD
 const Card: React.FC<CardProps> = ({ title, description, className = '', children }) => {
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 ${className}`}>
@@ -18,3 +19,29 @@ const Card: React.FC<CardProps> = ({ title, description, className = '', childre
     </div>
   );
 }
+=======
+const Card: React.FC<CardProps> = ({ 
+  children, 
+  title, 
+  description, 
+  className = '', 
+  onClick 
+}) => {
+  return (
+    <div 
+      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
+      onClick={onClick}
+    >
+      {title && (
+        <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+      )}
+      {description && (
+        <p className="text-gray-600 mb-4">{description}</p>
+      )}
+      {children}
+    </div>
+  );
+};
+
+export default Card;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

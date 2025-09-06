@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 export default function Contact() {;
@@ -6,6 +8,7 @@ export default function Contact() {;
 
     </div>;
   );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from './react';
 ;
 export default /**

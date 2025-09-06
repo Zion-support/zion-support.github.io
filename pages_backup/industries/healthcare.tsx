@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';';
@@ -48,6 +49,11 @@ import { Heart,
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import * as React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Heart,
   Brain,
@@ -62,9 +68,10 @@ import {
   Stethoscope,
   Activity,
   Database,
-  Camera,;
+  Camera,
   FileText;
 } from 'lucide-react';
+<<<<<<< HEAD
 
 import Layout from '../../components/Layout';';
 const services = [;
@@ -72,6 +79,8 @@ const services = [;
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -86,70 +95,61 @@ const services = [
     ];
   },
   {}
-
-    title: 'Telemedicine Platforms,',;
-    description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',;
-    icon: Phone,;
-    features: [,;
-      'Video consultation systems,',;
-      'Remote patient monitoring',',;
-      'Digital prescription management',',;
-
+    title: 'Telemedicine Platforms,',
+    description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',
+    icon: Phone,
+    features: [;
+      'Video consultation systems,',
+      'Remote patient monitoring',',
+      'Digital prescription management',',
       'Integrated health records'';
     ];
   },
   {}
-
-    title: 'Electronic Health Records (EHR),',;
-    description: 'Secure, interoperable health information management systems.',',;
-    icon: Database,;
-    features: [,;
-      'Patient data management,',;
-      'Interoperability standards',',;
-      'Clinical decision support',',;
-
+    title: 'Electronic Health Records (EHR),',
+    description: 'Secure, interoperable health information management systems.',',
+    icon: Database,
+    features: [;
+      'Patient data management,',
+      'Interoperability standards',',
+      'Clinical decision support',',
       'Privacy compliance tools'';
     ];
   },
   {}
-
-    title: 'Medical Imaging AI,',;
-    description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',;
-    icon: Camera,;
-    features: [,;
-      'Radiology image analysis,',;
-      'Pathology image processing',',;
-      '3D imaging reconstruction',',;
-
+    title: 'Medical Imaging AI,',
+    description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',
+    icon: Camera,
+    features: [;
+      'Radiology image analysis,',
+      'Pathology image processing',',
+      '3D imaging reconstruction',',
       'Automated report generation'';
     ];
   },
   {}
-
-    title: 'Healthcare Analytics,',;
-    description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',;
-    icon: BarChart3,;
-    features: [,;
-      'Population health analytics,',;
-      'Predictive modeling',',;
-      'Cost optimization analysis',',;
-
+    title: 'Healthcare Analytics,',
+    description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',
+    icon: BarChart3,
+    features: [;
+      'Population health analytics,',
+      'Predictive modeling',',
+      'Cost optimization analysis',',
       'Quality metrics tracking'';
     ];
   },
   {}
-
-    title: 'Patient Management Systems,',;
-    description: 'Comprehensive patient care coordination and management platforms.,',;
-    icon: Users,;
-    features: [,;
-      'Appointment scheduling,',;
-      'Care plan management',',;
-      'Patient communication tools',',;
-
+    title: 'Patient Management Systems,',
+    description: 'Comprehensive patient care coordination and management platforms.,',
+    icon: Users,
+    features: [;
+      'Appointment scheduling,',
+      'Care plan management',',
+      'Patient communication tools',',
       'Outcome tracking systems'';
     ];
   }
+<<<<<<< HEAD
 
 ;];
 const benefits = [;
@@ -159,6 +159,8 @@ const benefits = [;
     icon: Heart;
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -167,22 +169,21 @@ const benefits = [
     icon: Heart
   },
   {}
-
-    title: 'Enhanced Efficiency,',;
-    description: 'Streamlined workflows and automated processes reduce administrative burden.,',;
-    icon: Activity,;
-  },;
+    title: 'Enhanced Efficiency,',
+    description: 'Streamlined workflows and automated processes reduce administrative burden.,',
+    icon: Activity;
+  },
   {}
-    title: 'Cost Reduction,',;
-    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',;
-    icon: BarChart3,;
-  },;
+    title: 'Cost Reduction,',
+    description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',
+    icon: BarChart3;
+  },
   {}
-    title: 'Regulatory Compliance,',;
-    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',;
-    icon: Shield,;
-
+    title: 'Regulatory Compliance,',
+    description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
+    icon: Shield;
   }
+<<<<<<< HEAD
 
 ;];
 const caseStudies = [;
@@ -192,6 +193,8 @@ const caseStudies = [;
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const caseStudies = [
   {
@@ -209,6 +212,7 @@ const caseStudies = [
     description: 'Unified health records across 15 healthcare facilities, improving care coordination.',',
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
+<<<<<<< HEAD
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -266,6 +270,15 @@ export default function HealthcarePage() {
 ];
 export default function HealthcarePage() {
 
+=======
+];
+export default function HealthcarePage() {
+  return (
+    <Layout
+      title="Healthcare Technology Solutions - Zion Tech Group"
+      description="Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, EHR systems, and medical imaging solutions."
+      keywords="healthcare technology, medical AI, telemedicine, EHR systems, medical imaging, healthcare analytics"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -313,6 +326,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
               className="text-center mb-16""
             >;
@@ -328,6 +342,8 @@ export default function HealthcarePage() {
               {services.map((service, index) => (,
                 <motion.div}),
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -345,6 +361,7 @@ export default function HealthcarePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -363,6 +380,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -380,6 +399,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </ul>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -396,6 +416,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -406,6 +428,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
               className="text-center mb-16""
             >;
@@ -421,6 +444,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -447,6 +472,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -463,6 +489,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -473,6 +501,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
               className="text-center mb-16""
             >;
@@ -488,6 +517,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               {caseStudies.map((study, index) => (,
                 <motion.div}),
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -505,6 +536,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -520,6 +552,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -534,6 +568,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   </div>,
                 </motion.div>;
               ))}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -550,6 +585,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -560,6 +597,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
@@ -591,6 +629,8 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
@@ -613,3 +653,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </Layout>
   );
+}

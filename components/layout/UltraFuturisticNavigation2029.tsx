@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -63,6 +66,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Briefcase
 
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -98,6 +102,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu,
   X,
   ChevronDown,
@@ -154,12 +161,16 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, ;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
+<<<<<<< HEAD
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
 
 const serviceCategories = [
@@ -170,6 +181,38 @@ const serviceCategories = [
     description: 'Beyond human consciousness simulation'
     services: [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    services: [;
+      {
+        name: 'Mars Colonization Automation Platform',
+        href: '/mars - colonization - automation - platform',
+        description: 'Automate Mars colonization process',
+        price: '$99, 999 / month',
+      },
+      {
+        name: 'Interplanetary Communication Network',
+        href: '/interplanetary - communication - network',
+        description: 'Real - time solar system communication',
+        price: '$75, 999 / month',
+      },
+      {
+      },
+    ],
+  },  {      { name: 'Mars Colonization Automation Platform', href: '/mars - colonization - automation - platform', description: 'Automate Mars colonization process', price: '$99, 999 / month' }
+      { name: 'Interplanetary Communication Network', href: '/interplanetary - communication - network', description: 'Real - time solar system communication', price: '$75, 999 / month' }
+      { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
+    ];
+  }
+
+    title: '🏠 2029 Space Architecture & Energy',
+    icon: Building,
+    color: 'from - green - 600 to - teal - 600',
+    description: 'Habitat design and space energy harvesting',
+    title: '⛓️ Blockchain & Web3 Solutions',
+    icon: Layers,
+    color: 'from - orange - 600 to - red - 600',
+    description: 'Decentralized and blockchain solutions',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
@@ -181,19 +224,161 @@ const mainNavItems = [
   { name: 'Support', href: '/support', icon: MessageCircle }
 =======
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
-
 ];
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2029() {
 
 export default function UltraFuturisticNavigation2029() {;
+=======
+
+const mainNavItems = [
+    services: [;
+      {;
+        name: 'AI Personalized Medicine Platform',;
+        href: '/ai-personalized-medicine-platform',;
+        description: 'AI-powered personalized treatment',;
+        price: '$8,999/month',;
+      },;
+      {;
+        name: 'AI Healthcare Diagnosis Platform',;
+        href: '/ai-healthcare-diagnosis-platform',;
+        description: 'Revolutionary medical diagnosis',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'Biotech Research Automation',;
+        href: '/biotech-research-automation',;
+        description: 'Automated biotechnology research',;
+        price: '$4,999/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Personalized Medicine Platform', href: '/ai-personalized-medicine-platform', description: 'AI-powered personalized treatment', price: '$8,999/month' };
+    title: '🏥 Healthcare & Biotech Innovation',
+    icon: Heart,
+    color: 'from - pink - 600 to - rose - 600',
+    description: 'Advanced healthcare solutions',
+      { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' };
+      { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
+    ];
+  };
+    title: '🏙️ Smart City & Infrastructure',;
+    icon: Building,;
+    color: 'from-slate-600 to-gray-600',;
+    description: 'Intelligent urban management',;
+    services: [;
+      {;
+        name: 'AI Smart City Orchestrator',;
+        href: '/ai-smart-city-orchestrator',;
+        description: 'Comprehensive city infrastructure AI',;
+        price: '$12,999/month',;
+      },;
+      {;
+        name: 'Smart Traffic Management',;
+        href: '/smart-traffic-management',;
+        description: 'AI-powered traffic optimization',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'Energy Grid Optimization',;
+        href: '/energy-grid-optimization',;
+        description: 'Smart energy management',;
+        price: '$5,999/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Smart City Orchestrator', href: '/ai-smart-city-orchestrator', description: 'Comprehensive city infrastructure AI', price: '$12,999/month' };
+    title: '🏙️ Smart City & Infrastructure',
+    icon: Building,
+    color: 'from - slate - 600 to - gray - 600',
+    description: 'Intelligent urban management',
+      { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/month' };
+      { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
+    ];
+  };
+    title: '🔬 Research & Development',;
+    icon: Microscope,;
+    color: 'from-blue-600 to-indigo-600',;
+    description: 'Advanced research tools and platforms',;
+    services: [;
+      {;
+        name: 'AI Research Assistant',;
+        href: '/ai-research-assistant',;
+        description: 'AI-powered research acceleration',;
+        price: '$1,999/month',;
+      },;
+      {;
+        name: 'Data Analysis Platform',;
+        href: '/data-analysis-platform',;
+        description: 'Advanced data analytics',;
+        price: '$2,499/month',;
+      },;
+      {;
+        name: 'Research Collaboration Hub',;
+        href: '/research-collaboration-hub',;
+        description: 'Global research collaboration',;
+        price: '$1,799/month',;
+      },;
+    ],;
+  },  {      { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'AI-powered research acceleration', price: '$1,999/month' };
+    title: '🔬 Research & Development',
+    icon: Microscope,
+    color: 'from - blue - 600 to - indigo - 600',
+    description: 'Advanced research tools and platforms',
+      { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/month' };
+      { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
+    ];
+  };
+    title: '💼 Enterprise & Business Solutions',;
+    icon: Briefcase,;
+    color: 'from-emerald-600 to-blue-600',;
+    description: 'Corporate and business automation',;
+    services: [;
+      {;
+        name: 'Enterprise AI Operations Center',;
+        href: '/enterprise-ai-operations-center',;
+        description: 'Centralized AI operations',;
+        price: '$15,999/month',;
+      },;
+      {;
+        name: 'Business Process Automation',;
+        href: '/business-process-automation',;
+        description: 'End-to-end process automation',;
+        price: '$4,999/month',;
+      },;
+      {;
+        name: 'Corporate Intelligence Platform',;
+        href: '/corporate-intelligence-platform',;
+        description: 'AI-powered business intelligence',;
+        price: '$7,999/month',;
+      },;
+    ],;
+  },];      { name: 'Enterprise AI Operations Center', href: '/enterprise-ai-operations-center', description: 'Centralized AI operations', price: '$15,999/month' };
+    title: '💼 Enterprise & Business Solutions',
+    icon: Briefcase,
+    color: 'from - emerald - 600 to - blue - 600',
+    description: 'Corporate and business automation',
+      { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' };
+      { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
+    ];
+  }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Support', href: '/support', icon: MessageCircle },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -205,7 +390,12 @@ const mainNavItems = [;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
+];
 
+<<<<<<< HEAD
+=======
+export default function UltraFuturisticNavigation2029() {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -233,14 +423,16 @@ const mainNavItems = [;
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
-=======
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
@@ -248,9 +440,12 @@ const mainNavItems = [;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
+<<<<<<< HEAD
 =======
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -267,7 +462,6 @@ const mainNavItems = [;
           </div>              <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
               <Mail size={14} />
               <span>{contactInfo.email}</span>
@@ -277,6 +471,7 @@ const mainNavItems = [;
               <span>{contactInfo.address}</span>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex items-center space-x-4'>
             <a
               href={contactInfo.website}
@@ -289,12 +484,20 @@ const mainNavItems = [;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </a>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center space-x-3"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
@@ -324,23 +527,29 @@ const mainNavItems = [;
                   2029 Innovation Hub;
                 </span>              </div>;
             </motion && motion.div>;
+<<<<<<< HEAD
             {/* Desktop Navigation */}
 
                 <Link
                   key={item.name}
                   href={item.href}
 className="group relative text-gray-300 hover:text-white transition-colors duration-200"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+<<<<<<< HEAD
 =======
                 </Link>
 
               ))}
               {/* Services Dropdown */}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className='relative group'>
                 <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
                   <Briefcase
@@ -353,9 +562,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   />
                 </button>
                 {/* Mega Menu */}
+<<<<<<< HEAD
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
                   <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               </div>
             </motion.div>
@@ -364,10 +576,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
-                </Link>
-              ))}
-              {/* Services Dropdown */}
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -380,6 +590,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -388,6 +600,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                         transition={{ delay: index * 0.1 }}
                         className='group'
 
+<<<<<<< HEAD
                       >
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -395,6 +608,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                       >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                      >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -450,15 +666,23 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 </div>;
                                 <p className="text-xs text-gray-500 mt-1">{service && service.description}</p>;
                               </Link>;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                        key={category.title}
+                        initial={{ opacity: 0, coordinate_y: 20 }}
+                        animate={{ opacity: 1, coordinate_y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             ))}
                           </div>;
                         </div>;
                       </motion && motion.div>;
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
@@ -466,21 +690,29 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 Get Started
               </motion.button>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -488,6 +720,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         </div>
       </nav>
 
+<<<<<<< HEAD
                 className='text-gray-300 hover:text-white transition-colors'              >
 
               >
@@ -500,38 +733,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
       </nav>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-
 =======
-                                  </span>;
-                                </div>;
-                                <p className="text - xs text - gray - 500 mt - 1">{service.description}</p>;
-                              </Link>))}
-                          </div>;
-                        </div>;
-                      </motion.div>))}
-                  </div>;
-                </div>;
-              </div>;
-              {/* CTA Button */}
-              <motion.button;
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                className='px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40'              >                className="px - 6 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40";
-              >;
-                Get Started;
-              </motion.button>;
-            </div>;
-            {/* Mobile Menu Button */}
-            <div className='lg:hidden'>;
-              <button;
-                on_click={toggle_menu}
-                className='text - gray - 300 hover:text - white transition - colors'              >            <div className="lg:hidden">;
-              <button;
-                on_click={toggle_menu}
-                className="text - gray - 300 hover:text - white transition - colors";
-                {is_open ? <X size={24} /> : <Menu size={24} />}
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>;
             </div>;
           </div>;
@@ -542,8 +747,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -551,6 +759,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
             className='fixed inset-0 z-50 lg:hidden'
 =======
 
@@ -558,8 +767,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
@@ -577,9 +788,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   </div>
                   <button
                     onClick={closeMenu}
+<<<<<<< HEAD
                     className='text-gray-400 hover:text-white'
                   >                    <X size={24} />          >
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">
               <div className="p-6">
@@ -609,14 +823,18 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     <X size={24} />;
                   </button>;
                 </div>;
+<<<<<<< HEAD
                 {/* Mobile Navigation Items */}
 
 =======
                   {mainNavItems.map((item) => (
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
 
                     >
                       <item.icon size={20} className="text-cyan-400" />
@@ -645,6 +863,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile Services */}
                 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -693,6 +913,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -701,13 +922,61 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  ))}
+                {/* Mobile Services */}
+                <div className='mt-8'>;
+                  <h3 className='text-lg font-semibold text-white mb-4'>;
+                    Our Services;
+                  </h3>;
+                  <div className='space-y-3'>;
+                    {serviceCategories && serviceCategories.slice(0, 6).map(category => (;
+                      <div
+                        key={category && category.title}
+                        className='p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20'>;
+                        <h4 className='font-medium text-white mb-2'>;
+                          {category && category.title}
+                        </h4>;
+                        <p className='text-sm text-gray-400 mb-3'>;
+                          {category && category.description}
+                        </p>;
+                        <div className='space-y-2'>;
+                          {category && category.services.slice(0, 2).map(service => (                            <Link
+                              key={service && service.name}
+                              href={service && service.href}
+                              onClick={closeMenu}                <div className="mt-8">;
+                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>;
+                  <div className="space-y-3">;
+                    {serviceCategories && serviceCategories.slice(0, 6).map((category) => (;
+                      <div key={category && category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">;
+                        <h4 className="font-medium text-white mb-2">{category && category.title}</h4>;
+                        <p className="text-sm text-gray-400 mb-3">{category && category.description}</p>;
+                        <div className="space-y-2">;
+                          {category && category.services.slice(0, 2).map((service) => (;
+                              key={service && service.name}
+                              href={service && service.href}
+                              onClick={closeMenu}
+                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200';
+                            >;
+                              <div className='flex items-center justify-between'>;
+                                <span className='text-sm text-gray-300'>;
+                                  {service && service.name}
+                                </span>;
+                                <span className='text-xs text-cyan-400 font-mono'>;
+                                  {service && service.price}
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200";
+                            >;
+                              <div className="flex items-center justify-between">;
+                                <span className="text-sm text-gray-300">{service && service.name}</span>;
+                                <span className="text-xs text-cyan-400 font-mono">{service && service.price}</span>;
+                            </Link>;
                           ))}
                         </div>;
                       </div>;
                     ))}
+<<<<<<< HEAD
 =======
 
 =======
@@ -717,6 +986,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -734,9 +1005,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             </div>;
           </motion && motion.div>;
         )}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
@@ -752,15 +1026,156 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
     </>
       </AnimatePresence>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;
   );      <div className="h-20" />;
     </>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      {/* Mobile Menu */}
+      <AnimatePresence>;
+        {is_open && (
+          <motion.div;
+            initial={{ opacity: 0, coordinate_x: '100%' }}
+            animate={{ opacity: 1, coordinate_x: 0 }}
+            exit={{ opacity: 0, coordinate_x: '100%' }}
+            className='fixed inset - 0 z - 50 lg:hidden';
+          >;
+            <div;
+              className='absolute inset - 0 bg - black / 80 backdrop - blur - sm';
+              on_click={close_menu}
+            />;
+            <div className='absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 30 overflow - y-auto'>;
+              <div className='p - 6'>;
+                <div className='flex items - center justify - between mb - 8'>;
+                  <div className='flex items - center space - x-3'>;
+                    <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items - center justify - center'>;
+                      <Rocket className='w - 5 h - 5 text - white' />;
+                    </div>;
+                    <span className='text - lg font - bold text - white'>;
+                      Zion Tech;
+                    </span>;
+                  </div>;
+                  <button;
+                    on_click={close_menu}
+                    className='text - gray - 400 hover:text - white';
+                  >                    <X size={24} />          >;
+            <div className="absolute inset - 0 bg - black / 80 backdrop - blur - sm" on_click={close_menu} />;
+            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 30 overflow - y-auto">;
+              <div className="p - 6">;
+                <div className="flex items - center justify - between mb - 8">;
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items - center justify - center">;
+                      <Rocket className="w - 5 h - 5 text - white" />;
+                    </div>;
+                    <span className="text - lg font - bold text - white">Zion Tech</span>;
+                  </div>;
+                  <button on_click={close_menu} className="text - gray - 400 hover:text - white">;
+                    <X size={24} />;
+                  </button>;
+                </div>;
+                {/* Mobile Navigation Items */}
+                <div className='space - y-4'>;
+                  {mainNavItems.map (item => (                    <Link;
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}
+                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                    >;
+                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space - y-4">;
+                  {mainNavItems.map ((item) => (
+                    <Link;
+                      key={item.name}
+                      href={item.href}
+                      on_click={close_menu}
+                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                    >;
+                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200";
+                    >;
+                      <item.icon size={20} className="text - cyan - 400" />;
+                      <span>{item.name}</span>;
+                    </Link>))}
+                </div>;
+                {/* Mobile Services */}
+                <div className='mt - 8'>;
+                  <h3 className='text - lg font - semibold text - white mb - 4'>;
+                    Our Services;
+                  </h3>;
+                  <div className='space - y-3'>;
+                    {service_categories.slice (0, 6).map (category => (
+                      <div;
+                        key={category.title}
+                        className='p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border - cyan - 500 / 20';
+                      >;
+                        <h4 className='font - medium text - white mb - 2'>;
+                          {category.title}
+                        </h4>;
+                        <p className='text - sm text - gray - 400 mb - 3'>;
+                          {category.description}
+                        </p>;
+                        <div className='space - y-2'>;
+                          {category.services.slice (0, 2).map (service => (                            <Link;
+                              key={service.name}
+                              href={service.href}
+                              on_click={close_menu}                <div className="mt - 8">;
+                  <h3 className="text - lg font - semibold text - white mb - 4">Our Services</h3>;
+                  <div className="space - y-3">;
+                    {service_categories.slice (0, 6).map ((category) => (
+                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border - cyan - 500 / 20">;
+                        <h4 className="font - medium text - white mb - 2">{category.title}</h4>;
+                        <p className="text - sm text - gray - 400 mb - 3">{category.description}</p>;
+                        <div className="space - y-2">;
+                          {category.services.slice (0, 2).map ((service) => (
+                              key={service.name}
+                              href={service.href}
+                              on_click={close_menu}
+                              className='block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200';
+                            >;
+                              <div className='flex items - center justify - between'>;
+                                <span className='text - sm text - gray - 300'>;
+                                  {service.name}
+                                </span>;
+                                <span className='text - xs text - cyan - 400 font - mono'>;
+                                  {service.price}
+                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200";
+                            >;
+                              <div className="flex items - center justify - between">;
+                                <span className="text - sm text - gray - 300">{service.name}</span>;
+                                <span className="text - xs text - cyan - 400 font - mono">{service.price}</span>;
+                            </Link>))}
+                        </div>;
+                      </div>))}
+                  </div>;
+                </div>;
+                {/* Mobile CTA */}
+                <div className='mt - 8'>;
+                  <motion.button;
+                    while_hover={{ scale: 1.02 }}
+                    while_tap={{ scale: 0.98 }}
+                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt - 8">;
+                  <motion.button;
+                    while_hover={{ scale: 1.02 }}
+                    while_tap={{ scale: 0.98 }}
+                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
+                    Get Started;
+                  </motion.button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20' />;
+    </>);      <div className="h - 20" />;
+    </>);
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

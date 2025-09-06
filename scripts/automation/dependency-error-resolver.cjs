@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -276,7 +279,10 @@ throw error}
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async runDependencyCheck() {
     try {
@@ -505,4 +511,8 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = DependencyErrorResolver
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

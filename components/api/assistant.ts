@@ -1,11 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
+<<<<<<< HEAD
 
   }
   try {
@@ -31,6 +28,16 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 console.error('Assistant API error:', error?.message |error);
     return res.status(500).json({ error: 'Assistant request failed' });
   }    return res.status(500).json({ error: 'Assistant request failed' })
+=======
+- Greet users warmly and concisely
+- Answer FAQs accurately
+- Guide users through discovering features and how to get started
+- Ask brief clarifying questions when needed but minimize back-and-forth
+- Keep answers succinct, scannable, and actionable
+Context about Zion AI Marketplace:
+- Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
+- Users can browse categories, view product pages, compare features, and connect via APIs
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 
@@ -38,6 +45,7 @@ console.error('Assistant API error:', error?.message |error);
   };
 }
   }
+<<<<<<< HEAD
 }
 
 
@@ -59,6 +67,14 @@ console.error('Assistant API error:', error?.message |error);
     return res.status(200).json({ message })
   } catch (error: any) {
 =======
+=======
+    console && console.error('Assistant API error:', error?.message || error);
+    return res && res.status(500).json({ error: 'Assistant request failed' });
+  }    return res && res.status(500).json({ error: 'Assistant request failed' })
+
+  };
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },
@@ -82,5 +98,8 @@ console.error ('Assistant API error:', error?.message || error);
   }    return res.status (500).json ({ error: 'Assistant request failed' });
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

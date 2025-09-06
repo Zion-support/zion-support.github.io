@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect,useCallback } from 'react, interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void, onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]), useEffect(() => { window.addEventListener('message',handleMessage), return () => { window.removeEventListener(message',handleMessage)}},[handleMessage])};
 ,
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 // Type definition for MessageEvent
 interface MessageEvent {
@@ -12,11 +15,12 @@ interface MessageChannelHandlerProps {
 }
 export function useMessageChannelHandler({
   onMessage,
+>>>>>>> main
   onError
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback((event: MessageEvent) => {
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
-      if (onMessage) {
+      if (onMessage) {;
         onMessage(event.data);
       }
     } catch (error) {
@@ -25,6 +29,7 @@ export function useMessageChannelHandler({
       }
     }
   }, [onMessage, onError]);
+
   useEffect(() => {
     window.addEventListener('message', handleMessage);
     return () => {
@@ -32,6 +37,11 @@ export function useMessageChannelHandler({
     };
   }, [handleMessage]);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,4 +53,8 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

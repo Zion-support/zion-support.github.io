@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process");
@@ -26,7 +29,10 @@ class $1 {}
 ;
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
@@ -343,4 +349,8 @@ if (require.main === module) {}
   console.error("Test automation "failed": ", error);
     process.exit(1)})};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = TestAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

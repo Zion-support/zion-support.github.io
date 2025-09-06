@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -9,25 +10,40 @@ import {
   ArrowRight
   Smartphone;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,;
   Smartphone,;
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
+=======
+export default function MDMPage() {
+  const service = extraServices.find(s =>
+    s.link.endsWith('/mdm-mobile-device-management')
+
+export default function MDMPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/mdm-mobile-device-management');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -112,11 +128,19 @@ export default function MDMPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
+<<<<<<< HEAD
+=======
+import Head from 'next / head';
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Phone,
   Mail,
   MapPin,
   Check,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
@@ -223,18 +247,16 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-
-=======
-}
-
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
 
 export default function MDMPage() {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -242,18 +264,25 @@ export default function MDMPage() {
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 =======
   );
 }
@@ -263,3 +292,12 @@ export default function MDMPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}
+}
+
+
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

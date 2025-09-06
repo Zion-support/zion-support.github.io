@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 const fs = require('fs')
 // console.log(' Build Optimizer Starting...')
@@ -7,4 +10,8 @@ const fs = require('fs')
         execSync('rm -rf .next', { "stdio"})
         execSync('rm -rf out', { "stdio"})
     execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
 
+=======
+    console.error(' Build optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync, spawn } = require("child_process")
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})
@@ -67,7 +73,10 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.warnings.push({"type": "security","message": "Security vulnerabilities found"})
     this.log("Generating build report...")
       this.buildResults.overallStatus = "failed"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       this.buildResults.overallStatus = "warning"
       this.buildResults.overallStatus = "success"
     this.buildResults.summary = {"totalSteps": this.buildResults.steps.length,"successfulSteps": this.buildResults.steps.filter(s => s.status === "success").length,"failedSteps": this.buildResults.steps.filter(s => s.status === "failed"})
@@ -97,4 +106,8 @@ const { execSync, spawn } = require("child_process")
       this.buildResults.overallStatus = "failed"
       console.log("\n Build automation completed")
       process.exit(results.overallStatus === "success")
+<<<<<<< HEAD
 
+=======
+      console.error("\n Build automation "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

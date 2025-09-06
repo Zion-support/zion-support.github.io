@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function MainLayout({
@@ -13,3 +14,11 @@ export default function MainLayout({
     </div>
   );
 }
+=======
+
+import React from 'react';
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

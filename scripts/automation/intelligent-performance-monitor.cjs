@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -252,4 +255,8 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
+<<<<<<< HEAD
 
+=======
+    this.logError("Unhandled rejection")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

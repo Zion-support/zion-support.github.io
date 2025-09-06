@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -22,6 +23,20 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Eye className="h-4 w-4" />
       </Button>
       <Button
+=======
+>
+        <Eye className="h-4 w-4" />
+      </Button>
+      <Button
+
+
+};
+'"},;
+  );
+};
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -55,8 +70,28 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Button
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+=======
+          onClick={() => onAction(flagId, 'ignore')}
+        >
+          Ignore
+        </Button>
+      )}
+
+    </div>
+  )
+
+
+  );
+};
+
+
+
+import React from 'react';
+import { Button } from '@/components / ui / button';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {;
   flagId: string,;
@@ -117,4 +152,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

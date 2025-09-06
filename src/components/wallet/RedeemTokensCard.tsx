@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
@@ -54,6 +55,69 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
   },
+=======
+return (
+    <Card>;
+      <CardHeader>;
+
+        <CardTitle className='flex items - center gap - 2'>;
+          <Gift className='h - 5 w - 5' /> Redeem Rewards;
+
+        </CardTitle>;
+        <CardDescription>;
+          Exchange your ZION$ for rewards and perks;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+                {wallet?.balance || 0} ZION$.;
+              </DialogDescription>;
+            </DialogHeader>;
+            <div className='space-y-4 py-4'>;
+              {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
+
+                <div
+                  key={option.id}
+                  className='flex justify-between items-center border-b pb-4'
+                >                  <div>
+                    <h3 className='font-medium'>{option.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      {option.description}
+                    </p>
+                  </div>
+                  <div className='flex flex-col items-end gap-1'>
+                    <span className='text-sm font-bold'>
+                      {option.cost} ZION$
+                    </span>
+                    <Button
+                      size='sm'
+                      variant={
+                        wallet && wallet.balance >= option.cost
+                          ? 'default'
+                          : 'outline'
+                      }
+
+                      disabled={!wallet || wallet.balance < option && option.cost}
+                      onClick={() => handleRedeem(option)}                    >;
+                      Redeem <ArrowRight className='ml-1 h-3 w-3' />;
+                    </Button>;
+                  </div>;
+                </div>;
+
+              ))}
+            </div>;
+            <div className='flex justify-between'>;
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => setOpen(false)}
+
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <Card>
@@ -72,6 +136,7 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
@@ -91,6 +156,10 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </Button>
                   </div>
                 </div>
@@ -106,6 +175,7 @@ export function RedeemTokensCard() {
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -169,6 +239,12 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+=======
+
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -207,7 +283,17 @@ export function RedeemTokensCard() {;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
 }
 ;
+=======
+
+
+
+    </Card>);
+}
+
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

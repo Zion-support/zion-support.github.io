@@ -74,6 +74,10 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Enhanced service advertising content with comprehensive market data
   const serviceHighlights = [
     {
@@ -254,6 +258,23 @@ export default function ServicesPage() {
       icon: <Rocket className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Space Technology').length
     }
+<<<<<<< HEAD
+=======
+=======
+  const heroStats = [
+<<<<<<<< HEAD:components/services.tsx.backup.1755991789.backup.1756001157
+    { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
+    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
+    { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
+    { value: '800%+', label: 'Average ROI', color: 'text-green-400', icon: <TrendingUp className="w-6 h-6" /> },
+========
+    { value: '250+', label: 'Revolutionary Services', icon: <ShieldCheck className="w-6 h-6 text-cyan-400" /> },
+    { value: '99.99%', label: 'Uptime Guarantee', icon: <ShieldCheck className="w-6 h-6 text-fuchsia-400" /> },
+    { value: '30+', label: 'Day Free Trials', icon: <Clock className="w-6 h-6 text-blue-400" /> },
+    { value: '1000%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6 text-green-400" /> }
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991913.backup.1756001158
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
 
   return (
@@ -271,6 +292,11 @@ export default function ServicesPage() {
           <link rel="canonical" href="https://ziontechgroup.com/services" />
         </Head>
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991789.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <QuantumHolographicBackground>
@@ -304,6 +330,11 @@ export default function ServicesPage() {
         <meta property="og:type" content="website" />
       </Head>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755991913.backup.1756001158
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">

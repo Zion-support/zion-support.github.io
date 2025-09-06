@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -21,3 +22,5 @@ import _React,{ useState } from 'react'; import Head from 'next/head'; import Li
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

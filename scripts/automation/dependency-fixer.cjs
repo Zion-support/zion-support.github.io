@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,4 +12,8 @@ const path = require('path')
       this.log(' Dependency fixing logic to be implemented')
         "successRate"
         "version"
+<<<<<<< HEAD
 
+=======
+  console.error('Fatal "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

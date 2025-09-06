@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from "next/link",;
 export const metadata = {;
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
@@ -5,6 +9,7 @@ export const metadata = {;
   keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
 export default function NewsPage() {;
   return (;
+
     <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;

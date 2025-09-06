@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -26,4 +29,8 @@ const { execSync } = require('child_process')
       "dependencies"
       "codeQuality"
       "performance"
+<<<<<<< HEAD
 
+=======
+      console.error('\n� App Health Monitor "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -2,11 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 import type {
   CreateGrantPayload
   GrantApplication;
   CreateGrantPayload,;
   GrantApplication,;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -27,11 +30,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
+<<<<<<< HEAD
 
 =======
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'));
@@ -80,6 +89,18 @@ function readAllGrants(): GrantApplication[] {
     }
     return;
   }
+=======
+        res.status(400).json({ error: 'Missing required fields' });
+        !payload ||
+        !payload && payload.projectName ||
+        !payload && payload.teamInfo ||
+        !payload && payload.proposalSummary ||
+        !payload && payload.timeline
+      ) {
+        res && res.status(400).json({ error: 'Missing required fields' });
+        return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
+        res && res.status(400).json({ error: 'Missing required fields' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return
   CreateGrantPayload,
   GrantApplication,
@@ -175,34 +196,6 @@ if ( {) {
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-        id
-        program: payload.program |'grant'
-        projectName: payload.projectName
-        teamInfo: payload.teamInfo
-        proposalSummary: payload.proposalSummary
-        timeline: payload.timeline
-        budgetAmount: payload.budgetAmount |0
-        budgetCurrency: payload.budgetCurrency |'USDC'
-        supportingLinks: payload.supportingLinks |[]
-        pitchDeckUrl: payload.pitchDeckUrl
-        region: payload.region
-        sector: payload.sector
-        status: payload.submit ? 'Submitted' : 'Draft'
-        createdAt: now
-        updatedAt: now
-        milestones: []
-        fundsReleased: 0
-        updates: []
-        votes: []
-      }
-      fs.writeFileSync(
-        path.join(GRANTS_DIR, `${id}.json`)
-        JSON.stringify(record, null, 2)
-        'utf8'
-      );
-      res.status(201).json({ id, record });
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
@@ -212,9 +205,15 @@ if ( {) {
     }
     return;
   }
+<<<<<<< HEAD
 
 
 =======
+=======
+  res.set_header ('AllowGET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
@@ -223,6 +222,7 @@ if ( {) {
     return
   }
 
+<<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -234,3 +234,5 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

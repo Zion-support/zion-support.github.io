@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
       "status"
         "status"
@@ -38,4 +44,8 @@ const { execSync } = require('child_process')
       recommendations.push(`Focus on "fixing"`)
 // console.log('\n "RECOMMENDATIONS")
     console.log('\n� Final report saved "to")
+<<<<<<< HEAD
 
+=======
+    console.error('Ultimate automation orchestrator "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

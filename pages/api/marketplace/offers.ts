@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next",
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -9,6 +10,16 @@ import { v4 as uuidv4 } from "uuid";
 import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+import { v4 as uuidv4 } from "uuid";
+
+import {
+
+
+
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -18,12 +29,25 @@ import {
   listOffers
   saveOffer
   saveProject
+<<<<<<< HEAD
+=======
+  assertClient,
+  assertTalentOrClientForOffer,
+  getDemoUser,;
+} from "../../../utils/marketplace/auth";
+import {
+  getOfferById,
+  listOffers,
+  saveOffer,
+  saveProject,;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "../../../utils/marketplace/store";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -37,17 +61,53 @@ import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  assert_client,
+  assertTalentOrClientForOffer,
+  getDemoUser,
+} from '../../../utils / marketplace / auth';
+import {
+  getOfferById,
+  list_offers,
+  save_offer,
+  save_project,
+} from '../../../utils / marketplace / store';
+import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
+/**
+ * bad - Function description
+ */
+function bad() {
+  return res.status (code).json ({ ok: false, error: message });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default /**
  * handler - Function description
  */
 function handler() {
   try {
+<<<<<<< HEAD
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
         return res.json({ ok: true, offers });
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       // Check condition
 if ( {) {
@@ -57,6 +117,7 @@ if ( {) {
         return res.json ({ ok: true, offers });
 
       }
+<<<<<<< HEAD
       return bad(res, "Unknown role", 403);
     }
     if (req.method === "POST") {
@@ -157,6 +218,9 @@ if ( {) {
         return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403);
+=======
+      return bad (res, "Unknown role", 403);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 
 
@@ -174,6 +238,7 @@ if ( {) {
 
         return bad(res, "Missing required fields");
       }
+<<<<<<< HEAD
 
     if (req.method === 'GET') {
       res.status(200).json({ offers: [] });
@@ -264,12 +329,17 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const offer: Offer = {
 
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client && client.id,
         talentSlug,
+<<<<<<< HEAD
         startDateIso,
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
@@ -468,11 +538,108 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
     }
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      // Create an offer (client sends an offer to confirm);
+      const client = assert_client (req);
+      const {
+        talent_slug,
+        startDateIso,
+        scope_summary,
+        payment_terms,
+        agreement_url,
+      } = req.body || {}
+      // Check condition
+if ( {) {
+  $2
+}
+        return bad (res, "Missing required fields");
+      }
+      const offer: Offer = {
+        id: uuidv4 (),
+        createdAtIso: new Date ().toISOString (),
+        client_id: client.id,
+        talent_slug,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+        startDateIso,
+        scope_summary,
+        payment_terms: payment_terms as PaymentTerms,
+        agreement_url,
+        status: "SENT",
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
+import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
+import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message })
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+<<<<<<< HEAD
+      }
+      if (user.role === "talent") {
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers });
+      }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    if (req.method === "GET") {
+      const user = getDemoUser(req);
+      if (user.role === "client") {
+        const offers = listOffers({ clientId: user.id });
+<<<<<<< HEAD
+=======
+        return res.json({ ok: true, offers })
+      }
+      if (user.role === "talent") {
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers })
+      }
+      return bad(res, "Unknown role", 403)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+    if (req.method === "POST") {
+      // Create an offer (client sends an offer to confirm)
+      const client = assertClient(req);
+<<<<<<< HEAD
+=======
+      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
+      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
+        return bad(res, "Missing required fields")
+      }
+      const offer: Offer = {
+        id: uuidv4(), createdAtIso: new Date().toISOString(),
+        clientId: client.id, talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms: paymentTerms as PaymentTerms, agreementUrl,
+        status: "SENT"};
+      saveOffer(offer);
+      return res.status(201).json({ ok: true, offer })
+    }
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+      const { id, action, changeRequestNote } = req.body |{}
+      if (!id |!action) return bad(res, "Missing id or action");
+      const existing = getOfferById(id);
+      if (!existing) return bad(res, "Offer not found", 404);
+      const user = assertTalentOrClientForOffer(
+        req
+        existing
+        req.headers["x-demo-talent-slug"] as string
+
+    if (req && req.method === "PATCH") {
+      // Update offer: accept or request changes
+      const { id, action, changeRequestNote } = req && req.body || {};
       if (!id || !action) return bad(res, "Missing id or action");
       const existing = getOfferById(id);
       if (!existing) return bad(res, "Offer not found", 404);
@@ -480,9 +647,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         req,
         existing,
         req && req.headers["x-demo-talent-slug"] as string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
+<<<<<<< HEAD
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
         status: "SENT"},
@@ -513,6 +680,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED",
         // Create a project upon acceptance
         const project: Project = {
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
           summary: existing && existing.scopeSummary,
@@ -520,18 +691,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           talentSlug: existing && existing.talentSlug,
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
+<<<<<<< HEAD
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
           timeline:
             existing.paymentTerms.type === "milestone"
               ? existing.paymentTerms.milestones || []
               : [],
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           documents: existing.agreementUrl
 
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
+<<<<<<< HEAD
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
             : [],
@@ -543,15 +721,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing);
         return res.json({ ok: true, offer: existing, project })
       }
+=======
+                  url: existing && existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString(),
+                },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ]
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             : []
           notes: []
         }
-=======
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-=======
       }
       save_offer (offer);
       return res.status (201).json ({ ok: true, offer });
@@ -621,7 +801,188 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
+
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message })
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+
+    if (req.method === "GET") {
+      const user = getDemoUser(req);
+      if (user.role === "client") {
+        const offers = listOffers({ clientId: user.id });
+
+      const offer: Offer = {
+        id: uuidv4(),
+        createdAtIso: new Date().toISOString(),
+        clientId: client.id,
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms: paymentTerms as PaymentTerms,
+        agreementUrl,
+
+        status: "SENT"
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      };
+      saveOffer(offer);
+      return res.status(201).json({ ok: true, offer });
+    }
+        scope_summary,
+        payment_terms,
+        agreement_url,
+      } = req.body || {}
+      // Check condition
+if ( {) {
+  $2
+}
+        return bad (res, "Missing required fields");
+      }
+      const offer: Offer = {
+        id: uuidv4 (),
+        createdAtIso: new Date ().toISOString (),
+        client_id: client.id,
+        talent_slug,
+
+    if (req.method === "PATCH") {
+      // Update offer: accept or request changes
+      const { id, action, changeRequestNote } = req.body || {};
+      if (!id || !action) return bad(res, "Missing id or action");
+      const existing = getOfferById(id);
+      if (!existing) return bad(res, "Offer not found", 404);
+      const user = assertTalentOrClientForOffer(
+        req,
+        existing,
+        req && req.headers["x-demo-talent-slug"] as string,
+      );
+      if (action === "accept") {
+<<<<<<< HEAD
 =======
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
+        existing.status = "CONFIRMED";
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        // Create a project upon acceptance
+        const project: Project = {
+
+
+          id: uuidv4(),
+          title: `Project with ${existing && existing.talentSlug}`,
+          summary: existing && existing.scopeSummary,
+          clientId: existing && existing.clientId,
+          talentSlug: existing && existing.talentSlug,
+          startDateIso: existing && existing.startDateIso,
+          status: "ACTIVE",
+<<<<<<< HEAD
+=======
+
+          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          documents: existing.agreementUrl
+
+            ? [
+                {
+                  id: uuidv4(),
+                  name: "Agreement",
+<<<<<<< HEAD
+=======
+                  url: existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()}]
+            : [],
+
+          notes: []
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        };
+        saveProject(project);
+        existing.projectId = project.id;
+        saveOffer(existing);
+        return res.json({ ok: true, offer: existing, project })
+      }
+                  url: existing && existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString(),
+                },
+              ]
+
+            : []
+          notes: []
+        }
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
+      }
+      save_offer (offer);
+      return res.status (201).json ({ ok: true, offer });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      // Update offer: accept or request changes;
+      const { id, action, changeRequestNote } = req.body || {}
+      if (return bad (res, "Missing id or action")) {
+  $2
+}
+      const existing = getOfferById (id);
+      if (return bad (res, "Offer not found", 404)) {
+  $2
+}
+      const user = assertTalentOrClientForOffer (
+        req,
+        existing,
+        req.headers["x - demo - talent - slug"] as string,
+      );
+      // Check condition
+if ( {) {
+  $2
+}
+        if (
+          return bad (res, "Only talent can accept", 403)) {
+  $2
+}
+
+        existing.status = "CONFIRMED";
+        // Create a project upon acceptance;
+        const project: Project = {
+
+
+  }
+
+          id: uuidv4 (),
+          title: `Project with ${existing.talent_slug}`,
+          summary: existing.scope_summary,
+          client_id: existing.client_id,
+          talent_slug: existing.talent_slug,
+          startDateIso: existing.startDateIso,
+          status: "ACTIVE",
+          timeline:;
+            existing.payment_terms.type === "milestone";
+              ? existing.payment_terms.milestones || [];
+              : [],
+          documents: existing.agreement_url;
+            ? [;
+                {
+                  id: uuidv4 (),
+                  name: "Agreement",
+                  url: existing.agreement_url,
+                  uploadedAtIso: new Date ().toISOString (),
+                },
+              ];
+            : [],
+          notes: [],
+        }
+        save_project (project);
+        existing.project_id = project.id;
+        save_offer (existing);
+        return res.json ({ ok: true, offer: existing, project });
+      }
+      // Check condition
+if ( {) {
+  $2
 
 
 }
@@ -631,16 +992,25 @@ if ( {) {
 }
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         saveOffer(existing);
         return res.json({ ok: true, offer: existing })
       }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return bad(res, "Unknown action");
     }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return bad(res, "Method not allowed", 405);
   } catch (e: any) {
     const status = e?.statusCode |500;
     return res
       .status(status)
+<<<<<<< HEAD
       .json({ ok: false, error: e?.message |"Server error" });
 
 
@@ -686,6 +1056,31 @@ if ( {) {
       if (action === "decline") {;
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
   }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+        existing.status = "DECLINED";
+        save_offer (existing);
+        return res.json ({ ok: true, offer: existing });
+      }
+      return bad (res, "Unknown action");
+    }
+    return bad (res, "Method not allowed", 405);
+  } catch (e: any) {
+<<<<<<< HEAD
+  }
+  }
+=======
+    const status = e?.statusCode || 500;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
   } catch (error) {
@@ -699,11 +1094,21 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
-<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

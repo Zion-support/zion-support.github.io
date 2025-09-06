@@ -1,8 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ManagedCybersecurity() { return ( <Article title=\"Managed Cybersecurity\" subtitle=\"Threat detection,incident response,and compliance automation\" price=\"from $6k/mo\" bullets={[\'24/7 monitoring with SIEM/SOAR integrations\',\'Identity hardening and zero-trust access policies\',\'Vulnerability scanning and prioritized patching\',\'Compliance \"packs\": \'SOC2\',ISO 27001,HIPAA\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function ManagedCybersecurity() { return ( <Article title="Managed Cybersecurity" subtitle="Threat detection,incident response,and compliance automation" price="from $6k/mo" bullets={["24/7 monitoring with SIEM/SOAR integrations","Identity hardening and zero-trust access policies","Vulnerability scanning and prioritized patching","Compliance packs: "SOC2",ISO 27001,HIPAA" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function ManagedCybersecurity() { return ( <Article title=\"Managed Cybersecurity\" subtitle=\"Threat detection,incident response,and compliance automation\" price=\"from $6k/mo\" bullets={[\'24/7 monitoring with SIEM/SOAR integrations\',\'Identity hardening and zero-trust access policies\',\'Vulnerability scanning and prioritized patching\',\'Compliance \"packs\": \'SOC2\',ISO 27001,HIPAA\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function ManagedCybersecurity() { return ( <Article title="Managed Cybersecurity" subtitle="Threat detection,incident response,and compliance automation" price="from $6k/mo" bullets={["24/7 monitoring with SIEM/SOAR integrations","Identity hardening and zero-trust access policies","Vulnerability scanning and prioritized patching","Compliance packs: "SOC2",ISO 27001,HIPAA" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface CybersecurityProps {
+  // Add props here as needed
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -24,9 +46,12 @@ import * as React from 'react';
 interface CybersecurityProps {
   // Add props here as needed
 }
-export default function Cybersecurity({ }: CybersecurityProps) {
+<<<<<<< HEAD
 =======
-
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function Cybersecurity({ }: CybersecurityProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,13 +89,13 @@ interface CybersecurityProps {;
   // Add props here as needed;
 }
 export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/services/it/cybersecurity.tsx
   return (
     <div>;
       <h1>Cybersecurity</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -81,6 +106,24 @@ export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -91,3 +134,7 @@ export default function Cybersecurity(): any ({ }: CybersecurityProps) {;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

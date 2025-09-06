@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const path = require("path");
 class FileRestorer {}
   constructor() {}
@@ -108,4 +113,8 @@ class FileRestorer {}
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = FileRestorer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

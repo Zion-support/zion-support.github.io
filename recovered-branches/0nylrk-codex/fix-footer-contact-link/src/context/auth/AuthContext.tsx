@@ -1,13 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import {createContext} from "react";
+
+import type { AuthContextType } from "@/types/auth";
+
+import { createContext } from "react",
+import type { AuthContextType } from "@/types/auth",
+
+
+
+<<<<<<< HEAD
 import { createContext } from "react";
 import {createContext} from "react";
 =======
-import {createContext} from "react";
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { createContext } from "react";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import {createContext} from "react";
 import type { AuthContextType } from "@/types/auth";
 import { createContext } from "react",
 import type { AuthContextType } from "@/types/auth",
+<<<<<<< HEAD
 =======
 
 
@@ -15,25 +36,91 @@ import type { AuthContextType } from "@/types/auth",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import type { AuthContextType } from "@/types/auth";
+import { createContext } from "react",
+import type { AuthContextType } from "@/types/auth",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Create the AuthContext and export it. We avoid providing a generic
 // parameter to `createContext` because in environments where the React
 // type definitions are unavailable, calling an untyped function with type
 // arguments causes a TypeScript error (TS2347). Instead, we cast the
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+import { createContext } from "react",;
+import type { AuthContextType } from "@/types/auth",;
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // default value so consumers still get some level of type safety.
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 export const AuthContext = createContext<AuthContextType | undefined>(undefined),
 import { createContext } from "react",;
 import type { AuthContextType } from "@/types/auth",;
+<<<<<<< HEAD
 
 // default value so consumers still get some level of type safety.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Create the AuthContext and export it. We avoid providing a generic;
 // parameter to `createContext` because in environments where the React;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+// default value so consumers still get some level of type safety.
+
+
 // default value so consumers still get some level of type safety.;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { create_context } from './react';
+import type { AuthContextType } from "@/types / auth";
+// Create the AuthContext and export it. We avoid providing a generic;
+// parameter to `create_context` because in environments where the React;
+// type definitions are unavailable, calling an untyped function with type;
+// arguments causes a TypeScript error (TS2347). Instead, we cast the;
+// default value so consumers still get some level of type safety.;
+export const AuthContext = create_context < AuthContextType | undefined>(undefined);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export const AuthContext = createContext<AuthContextType | undefined>(undefined),; 
+// default value so consumers still get some level of type safety.;
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+// default value so consumers still get some level of type safety.;
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

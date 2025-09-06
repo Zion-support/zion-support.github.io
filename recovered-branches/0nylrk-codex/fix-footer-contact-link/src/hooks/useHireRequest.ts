@@ -1,26 +1,30 @@
+<<<<<<< HEAD
 
+=======
+import { useState  } from 'react';
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";
+import {useState} from 'react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { TalentProfile } from '@/types / talent';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-
-    professional_title: string,
-    email?: string;
-  }
-  requester: {
-    name: string;
-    email: string,
-    id?: string;
-
-  }
   project: {
     overview: string;
     timeline: string;
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -29,8 +33,38 @@ export interface HireRequestData {
   talent: {;
     id: string;
     full_name: string;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import { useState } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { TalentProfile } from "@/types/talent",
+export interface HireRequestData {
+  talent: {
+    id: string,
+    full_name: string,
+    professional_title: string,
+    email?: string
+  },
+  requester: {
+    name: string,
+    email: string,
+    id?: string
+  },
+  project: {
+    overview: string,
+    timeline: string,
+    budgetMin: number,
+    budgetMax: number
+  }
+}
+
+
+export function useHireRequest() {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -39,6 +73,7 @@ export interface HireRequestData {
     setError(null)
     try {
       // Call the edge function to process the hire request
+<<<<<<< HEAD
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
@@ -47,11 +82,65 @@ export interface HireRequestData {
         title: "Error";
         description: errorMessage
         variant: "destructive"});
+=======
+    budget_min: number,
+    budget_max: number;
+  }
+}
+export /**
+ * useHireRequest - Function description
+ */
+function useHireRequest() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const submitHireRequest = async (request_data: HireRequestData) => {
+    setIsSubmitting (true);
+    set_error (null),
+    try {
+      // Call the edge function to process the hire request;
+      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
+        body: request_data;
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Show success message;
+      toast ({
+        title: "Request Submitted",
+        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
+;
+      return { success: true, request_id: response?.request_id }
+    } catch (error) {
+      console.error ("Error submitting hire request:", error);
+;
+      const error_message = error instanceof Error;
+        ? error.message;
+        : "There was a problem submitting your request. Please try again.";
+;
+      set_error (error_message);
+;
+      toast ({
+        title: "Error";
+        description: error_message,
+        variant: "destructive"});
+;
+      return { success: false, error: error_message }
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -62,8 +151,17 @@ export interface HireRequestData {
     submitHireRequest;
     isSubmitting;
 
+<<<<<<< HEAD
     error
 
+=======
+  }
+}
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -128,6 +226,7 @@ export function useHireRequest() {;
   }
 }
 ;
+<<<<<<< HEAD
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -135,3 +234,7 @@ export function useHireRequest() {;
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

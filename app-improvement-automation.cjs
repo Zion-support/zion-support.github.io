@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 class AppImprovementAutomation {}
   constructor() {}
@@ -108,4 +114,8 @@ if (require.main === module) {}
   const automation = new AppImprovementAutomation();
   automation.run();
 };
+<<<<<<< HEAD
 
+=======
+module.exports = AppImprovementAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

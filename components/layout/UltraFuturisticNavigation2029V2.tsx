@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -96,6 +97,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu,
   X,
   Search,
@@ -152,6 +156,7 @@ import {
   Briefcase,
   Lightbulb,
   Award,
+<<<<<<< HEAD
 
 =======
   Clock,;
@@ -160,6 +165,8 @@ import {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu, X, Search, ChevronDown, ChevronRight;
 
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
@@ -170,6 +177,7 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
+<<<<<<< HEAD
 
 ];
 
@@ -225,36 +233,29 @@ export default function UltraFuturisticNavigation2029V2() {
     ],
 
     title: '🎯 2029 Innovative Micro SAAS',
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     icon: Target,
     color: 'from-green-600 via-yellow-600 to-orange-600',
     description: 'Cutting-edge micro solutions',
     services: [
-
-
-      {
-
-        name: 'Intelligent Sales Optimization',
-        href: '/services / intelligent - sales - optimization',
-        description: 'AI - powered sales intelligence',
-        price: '$1, 799 / month',
-      },
-    ],
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    title: '🔬 2029 Research & Development',
-    icon: Eye,
-    color: 'from - orange - 600 via - red - 600 to - pink - 600',
-    description: 'Breakthrough research solutions',
-
-
       'Advanced Research Automation',
       'Quantum Research Platform',
       'AI Research Assistant',
       'Biotech Research Suite',
     ],
+<<<<<<< HEAD
 
 
 const mainNavigation = [
+=======
+  }, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
+    ];
+  }
+];
+;
+const main_navigation = [;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
@@ -265,22 +266,30 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
 
-
-
 const quickLinks = [
-=======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
+  { name: 'Blog', href: '/blog', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Careers', href: '/careers', icon: GraduationCap },
 
 export default function UltraFuturisticNavigation2029V2() {
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
   return (
     <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Main Navigation Bar */}
@@ -299,6 +308,9 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -314,7 +326,21 @@ export default function UltraFuturisticNavigation2029V2() {;
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
+<<<<<<< HEAD
 
+=======
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -330,46 +356,19 @@ export default function UltraFuturisticNavigation2029V2() {;
               </div>
             </Link>
           </motion.div>
-
-            transition={{ duration: 0 && 0.5 }}
-            className='flex-shrink-0'>;
-            <Link href='/' className='flex items-center space-x-3 group'>;
-              <div className='relative'>;
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
-                  <Rocket className='w-7 h-7 text-white' />;
-                </div>;
-                <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300' />;
-              </div>;
-              <div className='hidden sm:block'>;
-                <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                  Zion Tech Group;
-                </h1>;
-                <p className='text-xs text-gray-400'>;
-                  Future Technology Solutions;
-                </p>              </div>          >;
-            <Link href="/" className="flex items-center space-x-3 group">;
-              <div className="relative">;
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                  <Rocket className="w-7 h-7 text-white" />;
-                </div>;
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />;
-              </div>;
-              <div className="hidden sm:block">;
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                  Zion Tech Group;
-                </h1>;
-                <p className="text-xs text-gray-400">Future Technology Solutions</p>;
-              </div>;
-            </Link>;
-          </motion && motion.div>;
-
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items-center space-x-8'>;
             {mainNavigation && mainNavigation.map(item => (              <motion&& motion.div
                 key={item && item.name}
                 initial={{ opacity: 0, y: -20 }}
+<<<<<<< HEAD
 
+=======
+                }}
+                className='relative group';
+                <Link;
+                  href={item.href}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Search */}
             <div className='relative'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
@@ -377,6 +376,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                 type='text'
                 placeholder='Search services...'
                 value={searchQuery}
+<<<<<<< HEAD
 
 
           {/* Desktop Navigation */}
@@ -385,12 +385,17 @@ export default function UltraFuturisticNavigation2029V2() {;
                 animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {mainNavigation.map((item) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span>{item.name}</span>
                 </Link>
                 {/* Hover effect */}
@@ -406,18 +411,26 @@ export default function UltraFuturisticNavigation2029V2() {;
             ))}
           </div>
           {/* Right side - Contact & Search */}
+<<<<<<< HEAD
 
 =======
               </motion.div>
 
+=======
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>
 
           {/* Right side - Contact & Search */}
+<<<<<<< HEAD
 
 =======
           <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -425,16 +438,19 @@ export default function UltraFuturisticNavigation2029V2() {;
                 type='text'
                 placeholder='Search services...'
                 value={searchQuery}
+<<<<<<< HEAD
                 onChange={e => setSearchQuery(e.target.value)}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -442,14 +458,14 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0 && 0.5, delay: 0 && 0.5 }}>;
               <Link
-
-
             <button
               onClick={toggleMenu}
               className='p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300'>;
@@ -461,6 +477,7 @@ export default function UltraFuturisticNavigation2029V2() {;
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
             </button>
           </div>
         </div>
@@ -471,6 +488,13 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -478,6 +502,7 @@ export default function UltraFuturisticNavigation2029V2() {;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -486,9 +511,11 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className='px-4 py-6 space-y-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -496,6 +523,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                   type='text'
                   placeholder='Search services...'
                   value={searchQuery}
+<<<<<<< HEAD
 
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'                />;
@@ -508,18 +536,12 @@ export default function UltraFuturisticNavigation2029V2() {;
                     key={item.name}
                     href={item.href}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     onClick={closeMenu}
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
             <div className="px-4 py-6 space-y-4">;
-
-=======
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
-          >
-            <div className="px-4 py-6 space-y-4">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
@@ -527,6 +549,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
+<<<<<<< HEAD
 
 
               {/* Mobile Navigation Links */}
@@ -535,10 +558,13 @@ export default function UltraFuturisticNavigation2029V2() {;
                 {mainNavigation.map((item) => (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Link
                     key={item && item.name}
                     href={item && item.href}
                     onClick={closeMenu}
+<<<<<<< HEAD
 
                   >
                     <item.icon className="w-5 h-5" />
@@ -566,6 +592,8 @@ export default function UltraFuturisticNavigation2029V2() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -597,15 +625,24 @@ export default function UltraFuturisticNavigation2029V2() {;
                 </div>
               </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </div>
               </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -615,6 +652,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
+<<<<<<< HEAD
 
 =======
 
@@ -622,6 +660,8 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -633,12 +673,16 @@ export default function UltraFuturisticNavigation2029V2() {;
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
+<<<<<<< HEAD
 =======
             </div>
           </motion.div>
@@ -647,27 +691,33 @@ export default function UltraFuturisticNavigation2029V2() {;
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
           <motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
                 {serviceCategories.map(category => (
                   <div key={category.title} className='space-y-4'>
                     <div className='flex items-center space-x-3'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div
 
           </motion.div>)}
@@ -680,6 +730,7 @@ export default function UltraFuturisticNavigation2029V2() {;
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
@@ -695,15 +746,12 @@ export default function UltraFuturisticNavigation2029V2() {;
                       <div>
                         <h3 className='text-lg font-semibold text-white'>
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           {category.title}
                         </h3>;
                         <p className='text - sm text - gray - 400'>;
                           {category.description}
-
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
-          >
-
             <div className="max-w-7xl mx-auto px-4 py-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {serviceCategories.map((category) => (
@@ -719,40 +767,6 @@ export default function UltraFuturisticNavigation2029V2() {;
                     </div>
                     <div className="space-y-3">
                       {category.services.map((service, index) => (
-
-                        className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
-                        <category && category.icon className='w-5 h-5 text-white' />;
-                      </div>;
-                      <div>;
-                        <h3 className='text-lg font-semibold text-white'>;
-                          {category && category.title}
-                        </h3>;
-                        <p className='text-sm text-gray-400'>;
-                          {category && category.description}
-                        </p>;
-                      </div>;
-                    </div>;
-                    <div className='space-y-3'>                      {category && category.services.map((service, index) => (;
-                        <Link
-                          key={service && service.name}
-                          href={service && service.href}
-                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'>;
-            <div className="max-w-7xl mx-auto px-4 py-8">;
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-                {serviceCategories && serviceCategories.map((category) => (;
-                  <div key={category && category.title} className="space-y-4">;
-                    <div className="flex items-center space-x-3">;
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
-                        <category && category.icon className="w-5 h-5 text-white" />;
-                      </div>;
-                      <div>;
-                        <h3 className="text-lg font-semibold text-white">{category && category.title}</h3>;
-                        <p className="text-sm text-gray-400">{category && category.description}</p>;
-                      </div>;
-                    </div>;
-                    <div className="space-y-3">;
-                      {category && category.services.map((service, index) => (;
-
                         <Link
                           key={service && service.name}
                           href={service && service.href}
@@ -780,6 +794,7 @@ export default function UltraFuturisticNavigation2029V2() {;
                           </div>;
                         </Link>;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -792,6 +807,9 @@ export default function UltraFuturisticNavigation2029V2() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                        </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       ))}
                     </div>;
                   </div>;
@@ -800,10 +818,24 @@ export default function UltraFuturisticNavigation2029V2() {;
             </div>;
           </motion && motion.div>;
         )}
+<<<<<<< HEAD
 
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
+=======
+
+      </AnimatePresence>;
+    </nav>;
+  );
+
+  );
+
+}
+}
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </p>;
                       </div>;
                     </div>;
@@ -862,6 +894,9 @@ export default function UltraFuturisticNavigation2029V2() {;
       </AnimatePresence>;
     </nav>);
 }
+<<<<<<< HEAD
   );
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

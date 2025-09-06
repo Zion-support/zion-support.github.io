@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}          price: priceId,
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +72,7 @@ async function handler(req, res) {
       cancel_url: `${req.headers.origin}/cancel`,
     });
 
+>>>>>>> main
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -78,10 +84,28 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 export default withErrorLogging(handler);      url: session.url
+=======
+<<<<<<< HEAD
+
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      url: session.url
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     })
   } catch (err) {,
     // console.error('Checkout session API error:, err),
@@ -90,8 +114,18 @@ export default withErrorLogging(handler);      url: session.url
   };
 };
 export default withErrorLogging(handler),
+<<<<<<< HEAD
 ,
 =======
+=======
+<<<<<<< HEAD
+=======
+,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default withErrorLogging(handler);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,4 +141,8 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

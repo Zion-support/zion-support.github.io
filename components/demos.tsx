@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -21,6 +22,8 @@ import {
   Play,;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 export default function DemosPage() {;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 
 import {
@@ -34,12 +37,20 @@ import {
   Code
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 } from 'lucide-react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function DemosPage() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
@@ -106,6 +117,7 @@ export default function DemosPage() {
     }
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
+<<<<<<< HEAD
 
   return (
     <>
@@ -366,20 +378,36 @@ export default function DemosPage() {
               Choose a Service to Test;
             </h2>;
             <p className='text - lg text - gray - 400 max - w-2xl mx - auto'>;
+=======
+
+export default function DemosPage() {;
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+
+    <>;
+      <Head>;
+        <title>;
+          Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
+        </title>;
+              <Button
+                href='#demos'
+                size='lg'
+                className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+              <Button
+                href='/micro-saas'
+                variant='outline'
+                size='lg'
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                style={{ animationDelay: '0.2s' }}
-              >
-                Start Testing
-                <Play className="w-5 h-5 ml-2" />
-              </Button>
               <Button
                 href="/micro-saas"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+<<<<<<< HEAD
                 style={{ animationDelay: '0.4s' }}
               >
                 <Code className="w-5 h-5 mr-2" />
@@ -466,14 +494,14 @@ export default function DemosPage() {
             {demos.map((demo) => (
               <button
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Each demo showcases a different micro SaaS service with full;
               functionality;
             </p>;
           </div>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
+<<<<<<< HEAD
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
@@ -487,6 +515,41 @@ export default function DemosPage() {
                 <div
 
 
+=======
+                key={demo && demo.id}
+                onClick={() => setActiveDemo(demo && demo.id)}
+                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
+                  activeDemo === demo && demo.id;
+                    ? 'border-blue-500 bg-blue-500/10';
+                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
+                }`}
+              >;
+                <div
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  {demo && demo.icon}
+                </div>;
+                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
+                  {demo && demo.title}
+                </h3>;
+                <p className='text-sm text-gray-400 leading-relaxed'>;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className='mt-3 flex items-center text-blue-400 text-sm'>;
+                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
+                </div>;
+                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
+                  {demo && demo.title}
+                </h3>;
+                <p className="text-sm text-gray-400 leading-relaxed">;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className="mt-3 flex items-center text-blue-400 text-sm">;
+                    <CheckCircle className="w-4 h-4 mr-2" />;
+                    Active Demo;
+                  </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
@@ -494,6 +557,7 @@ export default function DemosPage() {
                     ? 'border - blue - 500 bg - blue - 500 / 10';
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
                 }`}
+<<<<<<< HEAD
 
                   {demo.title}
                 </h3>;
@@ -504,6 +568,8 @@ export default function DemosPage() {
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -513,6 +579,7 @@ export default function DemosPage() {
                   {demo.description}
                 </p>
                 {activeDemo === demo.id && (
+<<<<<<< HEAD
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo.icon}
                 </div>
@@ -533,9 +600,9 @@ export default function DemosPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 )}
               </button>;
             ))}
@@ -543,20 +610,34 @@ export default function DemosPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+      {/* Active Demo */}
+      <section className='py-16 bg-black relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-12'>;
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>;
+              <Play className='w-4 h-4 mr-2' />;
+              Live Demo;
+            </div>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
@@ -573,6 +654,7 @@ export default function DemosPage() {
             </h2>;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
+<<<<<<< HEAD
 
 
                   </div>
@@ -632,10 +714,13 @@ export default function DemosPage() {
       {/* Features */}              Live Demo;
             </div>;
             <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 4">;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {activeDemoData?.title}
             </h2>;
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
               {activeDemoData?.description}
+<<<<<<< HEAD
             </p>
           </div>
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">
@@ -649,6 +734,8 @@ export default function DemosPage() {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </div>
       </section>
       {/* Features */}
@@ -702,10 +789,14 @@ export default function DemosPage() {
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -722,7 +813,63 @@ export default function DemosPage() {
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Play className='w-8 h-8 text-cyan-400' />              </div>
+<<<<<<< HEAD
 
+=======
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+              Why Test Our Demos?
+            </h2>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Experience the quality and reliability of our services before integrating them into your applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
+                Real Performance
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Test actual API endpoints with real data processing and response times
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <CheckCircle className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
+                Full Functionality
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Experience complete service capabilities, not just mock responses
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Code className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
+                API Examples
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                See exact request/response formats for easy integration
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <BarChart3 className="w-8 h-8 text-orange-400" />
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
                 Detailed Results
               </h3>
@@ -730,13 +877,6 @@ export default function DemosPage() {
                 Get comprehensive analysis and insights from each service
               </p>
             </Card>
-
-
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-8 h-8 text-cyan-400" />
-              </div>
-
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                 Instant Testing
               </h3>
@@ -744,13 +884,6 @@ export default function DemosPage() {
                 No signup required - start testing immediately
               </p>
             </Card>
-
-
-            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-pink-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle className="w-8 h-8 text-pink-400" />
-              </div>
-
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300">
                 Production Ready
               </h3>
@@ -761,6 +894,7 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
               Get Started
             </Button>
@@ -770,11 +904,61 @@ export default function DemosPage() {
     </>
 
 }
+=======
+          </div>;
+          <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
+            {activeDemoData?.component}
+          </div>;
+        </div>;
+      </section>;
+      {/* Features */}
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0 && 0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0 && 0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
+            </h2>;
+            <p className='text-lg text-gray-400 max-w-3xl mx-auto'>;
+            </p>;
+          </div>;
+          <div className='animate - fade - in'>{activeDemoData?.component}</div>          <div className="animate - fade - in">;
+            {activeDemoData?.component}
+          </div>;
+        </div>;
+      </section>;
+      {/* Features */}
+      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[linear - gradient (rgba (59, 130, 246, 0.05)_1px, transparent_1px), linear - gradient (90deg, rgba (59, 130, 246, 0.05)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
+            </h2>;
+            <p className='text - lg text - gray - 400 max - w-3xl mx - auto'>;
+              Experience the quality and reliability of our services before;
+              integrating them into your applications;
+            </p>;
+          </div>;
+                Test actual API endpoints with real data processing and response;
+                times;
+              </p>;
+            </Card>;
+                Experience complete service capabilities, not just mock;
+                responses;
+              </p>;
+            </Card>;
+                Same infrastructure that powers our production services;
+              </p>;
+            </Card>;
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Get Started;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 =======
@@ -788,3 +972,9 @@ export default function DemosPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

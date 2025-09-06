@@ -1,11 +1,40 @@
+<<<<<<< HEAD
 :src.disabled/src/pages.disabled/ITOnsiteServicesPage.jsx
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
 const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
 const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
-:temp_exclude/src.disabled/src/pages.disabled/ITOnsiteServicesPage.jsx
+import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
+const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -27,3 +56,14 @@ const React from "react"; export default function ITOnsiteServicesPage() { retur
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+=======
+=======
+<<<<<<< HEAD
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+=======
+import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
+const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"
+import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

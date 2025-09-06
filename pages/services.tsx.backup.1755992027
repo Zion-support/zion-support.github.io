@@ -123,8 +123,18 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-fuchsia-500 to-purple-600',
       textColor: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500',
+<<<<<<< HEAD
       pricing: 'Custom pricing based on requirements',
       category: 'AI & Automation'
+=======
+<<<<<<< HEAD
+      pricing: 'Custom pricing based on requirements',
+      category: 'AI & Automation'
+=======
+      link: '/ai-content-generator',
+      cta: 'Try AI Content Generator'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       icon: '☁️',
@@ -140,8 +150,18 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-cyan-500 to-blue-600',
       textColor: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500',
+<<<<<<< HEAD
       pricing: 'Pay-as-you-use model, starting from $50/month',
       category: 'Infrastructure'
+=======
+<<<<<<< HEAD
+      pricing: 'Pay-as-you-use model, starting from $50/month',
+      category: 'Infrastructure'
+=======
+      link: '/cloud-monitoring',
+      cta: 'Explore Cloud Monitoring'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       id: 'qr-generator',
@@ -280,7 +300,16 @@ export default function ServicesPage() {
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
       gradient: 'from-indigo-400 to-purple-500',
+<<<<<<< HEAD
       href: '/password-checker'
+=======
+<<<<<<< HEAD
+      href: '/password-checker'
+=======
+      link: '/devops-automation',
+      cta: 'Try DevOps Automation'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       icon: '📄',
@@ -1387,6 +1416,10 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <Button
                       href={service.href}
                       className={`bg-gradient-to-r ${service.gradient} hover:opacity-90 text-white`}
@@ -1394,6 +1427,21 @@ export default function ServicesPage() {
                       Try Now
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
+<<<<<<< HEAD
+=======
+=======
+                    {service.link && service.cta && (
+                      <Button
+                        href={service.link}
+                        variant="outline"
+                        size="sm"
+                        className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+                      >
+                        {service.cta}
+                      </Button>
+                    )}
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                 </div>
               </Card>

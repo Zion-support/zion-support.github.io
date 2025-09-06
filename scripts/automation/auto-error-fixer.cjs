@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -149,4 +153,8 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
 
+=======
+  process.on(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

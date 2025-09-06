@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 export default function ServicesIndexPage () {
@@ -7,16 +8,28 @@ export default function ServicesIndexPage () {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
+<<<<<<< HEAD
   'Content-Type': 'application/json'
 }
   'Content-Type': 'application/json' ;
 };
+=======
+
+
+  'Content-Type': 'application/json' ;
+};
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -34,15 +47,23 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
+<<<<<<< HEAD
 
 
+=======
+export default function ServicesIndexPage () {
+ export default function ServicesIndexPage () {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -60,7 +81,10 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -77,8 +101,54 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      extraServices as any[];
+  'Content - Type': 'application / json';
+}
+body: JSON.stringify ({
+  service: values.service_title, description: values.project_description, timeline: {
+  start: values.timeline_start, end: values.timeline_end;
+}
+budget_range: values.budget_range;
+;
+}
+<Head> <title > Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." /> </Head>) );
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modal_open;
+}on_close= {
+  () => setModalOpen (false);
+}service= {
+  selected;
+}on_submit= {
+  handle_submit;
+}/> </div>);
+}export default ServicesPage;
+const mapLocalToServiceItem = (item: any): ServiceItem => ({
+  slug: item.slug,
+  title: item.name,
+  description: item.description,
+  provider: 'Zion Provider',
+  priceRangeUSD: item.priceRangeUSD,
+  categories: [item.category],
+  rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
+const ServicesPage: NextPage = () => {
+  const [services, set_services] = React.useState < ServiceItem[]>([]);
+  const [filtered, set_filtered] = React.useState < ServiceItem[]>([]);
+  const [filters, set_filters] = React.useState < Filters>({ categories: [] }),
+  const [modal_open, setModalOpen] = React.useState (false);
+  const [selected, set_selected] = React.useState < ServiceItem | null>(null);
+;
+export default /**
+ * ServicesIndexPage - Function description
+ */
+function ServicesIndexPage() {
+  const all = (enhancedRealMicroSaasServices as unknown[]);
+    .concat (
+      extra_services as any[];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -89,6 +159,7 @@ export default function ServicesIndexPage() {
       realOperationalServices as any[];
       verified2025Additions as any[];
       realServicesQ12025 as any[];
+<<<<<<< HEAD
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
@@ -130,6 +201,20 @@ export default function ServicesIndexPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    const set = new Set<string>();
+    services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)));
+    return Array && Array.from(set);
+  }, [services]);
+    }
+  }
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -244,14 +329,18 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+<<<<<<< HEAD
       />
     </div>
   )
@@ -266,3 +355,20 @@ export default ServicesPage;
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export default ServicesPage;
+
+export default ServicesPage;
+
+      <QuoteRequestModal;
+        open={modal_open}
+        on_close={() => setModalOpen (false)}
+        service={selected}
+        on_submit={handle_submit}
+      />;
+    </div>);
+}
+;
+export default ServicesPage;
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

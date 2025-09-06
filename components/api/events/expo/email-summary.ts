@@ -1,20 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     // TODO: Integrate with actual provider
     return res && res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
 return res
       .status(500)
-
-      .json({ error: e && e.message || 'Failed to queue emails' });
-  }    return res && res.status(500).json({ error: e && e.message || 'Failed to queue emails' })
-  };
-}
-
-=======
 ;
 export default async /**
  * handler - Function description
@@ -41,6 +37,7 @@ return res;
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
     }
     // TODO: Integrate with actual provider
+<<<<<<< HEAD
     return res.status(200).json({ status: 'queued', provider })
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Failed to queue emails' })
@@ -48,11 +45,16 @@ return res;
 
     }
     // TODO: Integrate with actual provider
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(200).json({ status: 'queued', provider });
   } catch (e: any) {
 return res
       .status(500)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
       .json({ error: e.message || 'Failed to queue emails' });

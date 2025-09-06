@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -6,7 +9,10 @@ const path = require('path');
 class BuildMonitor {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
@@ -17,12 +23,20 @@ class BuildMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -53,7 +67,11 @@ class BuildMonitor {}
   async attemptBuildFix() {}
     try {}
       console.log('Attempting to fix build issues...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
         "stdio": 'inherit',
@@ -95,4 +113,8 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

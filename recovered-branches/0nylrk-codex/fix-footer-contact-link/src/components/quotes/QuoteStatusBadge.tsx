@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { Badge } from "@/components/ui/badge",
@@ -6,6 +7,8 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -14,19 +17,36 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface QuoteStatusBadgeProps {
+
   status: QuoteStatus
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
   return (
     <Badge className={config.className}>
       {config.label}
     </Badge>
   )
-}
 
+<<<<<<< HEAD
+=======
+
+
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+
+
+  const config = statusConfig[status];
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
+  const config = status_config[status];
+;
+  return (
+    <Badge className={config.class_name}>;
+      {config.label}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Badge } from "@/components/ui/badge",;
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
@@ -37,11 +57,11 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
-
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
 
+<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
 
@@ -51,6 +71,12 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
     </Badge>;
   );
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

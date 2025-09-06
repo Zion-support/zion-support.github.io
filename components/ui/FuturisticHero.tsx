@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
@@ -10,6 +11,11 @@ export default function FuturisticHero() {
 
 export default function FuturisticHero() {
 
+=======
+export default function FuturisticHero() {
+
+export default function FuturisticHero() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -46,23 +52,26 @@ function FuturisticHero() {
             </a>;
           </Link>;
           <Link href='/services'>;
-
-            <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
-
               Explore Services;
             </a>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 
   );
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
           </p>
         </div>
       </div>
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
@@ -94,9 +103,12 @@ function FuturisticHero() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

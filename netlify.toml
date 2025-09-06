@@ -3,7 +3,17 @@ command = "npm run build"
 publish = "dist"
 
 [build.environment]
+<<<<<<< HEAD
   NODE_VERSION = "18"
+=======
+<<<<<<< HEAD
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -12,20 +22,26 @@ publish = "dist"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
+=======
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 # Security and caching headers for static assets
 [[headers]]
-for = "/assets/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-for = "/*.js"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/*.css"
@@ -44,7 +60,17 @@ Cache-Control = "public, max-age=31536000, immutable"
 <<<<<<< HEAD
 =======
 
-# Static redirects to mirror Next.js redirects (since output: export)
+<<<<<<< HEAD
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
+=======
+# Static redirects for exported site
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -81,7 +107,16 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite/"
+  status = 301
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

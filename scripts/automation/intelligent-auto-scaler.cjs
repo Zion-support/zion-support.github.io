@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Intelligent Auto-Scaler;
@@ -33,4 +36,8 @@ const { execSync } = require('child_process')
         "action"
       this.log(` Strategy optimization "failed"`)
       "onlineProcesses"
+<<<<<<< HEAD
 
+=======
+      this.log(` Fatal "error"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

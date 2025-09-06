@@ -411,7 +411,15 @@ EOF
 # Display ecosystem status
 display_ecosystem_status() {
     banner "🧠 Enhanced Intelligent PM2 Ecosystem V2 Status"
+<<<<<<< HEAD
     echo "============================================================="
+=======
+<<<<<<< HEAD
+    echo "============================================================="
+=======
+    echo "====="
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     echo
     
     # Show PM2 process list
@@ -523,7 +531,15 @@ run_comprehensive_health_check() {
 # Main execution
 main() {
     banner "🚀 Enhanced Intelligent PM2 Ecosystem V2 Startup"
+<<<<<<< HEAD
     banner "=================================================="
+=======
+<<<<<<< HEAD
+    banner "=================================================="
+=======
+    banner "="
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     echo
     
     # System checks

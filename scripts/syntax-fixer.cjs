@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("fs")
 const path = require("path")
@@ -10,4 +13,8 @@ const util = require("util")
   async log(message, level = "INFO")
       console.error(`Failed to write to log "file"`)
     await this.log(" Starting syntax error fixing...")
+<<<<<<< HEAD
 
+=======
+    fixed = fixed.replace(/(\w+):\s*([^}]+)/g, '"$1"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
@@ -12,15 +13,28 @@ import {
 import { Input } from "@/components/ui/input",
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
+=======
+} import {
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
+<<<<<<< HEAD
   location?: string,
   rateType: "hourly" | "fixed"
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
   control,
@@ -34,6 +48,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     setValue("hourlyRate", rate)
   },
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       <FormField
@@ -118,3 +133,18 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
+=======
+
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+interface RateOptimizationSectionProps {
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  rateType: "hourly" | "fixed"
+}
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

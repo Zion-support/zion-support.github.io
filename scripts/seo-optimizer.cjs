@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -171,4 +174,8 @@ if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
+<<<<<<< HEAD
 
+=======
+module.exports = SEOOptimizer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

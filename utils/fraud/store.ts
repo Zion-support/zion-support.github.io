@@ -1,6 +1,3 @@
-
-
-=======
   private records: Map < string, FraudRecord> = new Map ();
 ;
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
@@ -48,5 +45,3 @@ if (return undefined) {
 }
 export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

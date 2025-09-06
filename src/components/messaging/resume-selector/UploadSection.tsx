@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react'
 
 interface UploadSectionProps {
+<<<<<<< HEAD
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -41,6 +42,8 @@ import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -74,7 +77,23 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
+=======
+
+      {customFile && (
+        <Button
+          onClick={onProcessFile}
+          disabled={isProcessing}
+          className="w-full"
+        >
+          {isProcessing ? 'Processing...' : 'Process Resume'}
+        </Button>
+      )}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

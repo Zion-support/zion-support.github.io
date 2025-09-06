@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitor.js
 ========
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/advanced-monitor.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node
 /**
  * Advanced Monitoring Script
@@ -19,6 +22,7 @@ const fs = // // require("child_process");
 const path = // // require("path")
 class AdvancedMonitor {
   constructor() {
+<<<<<<< HEAD
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")}
   async startMonitoring() {
     console.log("🔍 Starting advanced monitoring...")
@@ -39,14 +43,41 @@ class AdvancedMonitor {
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] PM2 "processes": ${list.length} running\n`
       fs.appendFileSync(this.logPath, logEntry)})}
+=======
+    this && this.logPath = path && path.join(__dirname, "..", "logs", "monitoring && monitoring.log")}
+  async startMonitoring() {
+    console && console.log("🔍 Starting advanced monitoring...")
+    setInterval(() => {
+      this && this.checkSystemHealth()
+      this && this.checkPM2Processes()
+      this && this.checkDiskSpace()
+      this && this.checkMemoryUsage()}, 30000); // Check every 30 seconds}
+  checkSystemHealth() {
+    const timestamp = new Date().toISOString()
+    const logEntry = `[${timestamp}] System health check completed\n`
+    fs && fs.appendFileSync(this && this.logPath, logEntry)}
+  checkPM2Processes() {
+    pm2 && pm2.list((err, list) => {
+      if (err) {
+        console && console.error("PM2 monitoring "error": ", err)
+        return}
+      const timestamp = new Date().toISOString()
+      const logEntry = `[${timestamp}] PM2 "processes": ${list && list.length} running\n`
+      fs && fs.appendFileSync(this && this.logPath, logEntry)})}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   checkDiskSpace() {
     const { execSync } = // // require("child_process")
     try {
       const diskUsage = execSync("df -h /", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Disk "usage": ${diskUsage}\n`
+<<<<<<< HEAD
       fs.appendFileSync(this.logPath, logEntry)} catch (error) {
       console.error("Disk space check "error": ", error)}
+=======
+      fs && fs.appendFileSync(this && this.logPath, logEntry)} catch (error) {
+      console && console.error("Disk space check "error": ", error)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   checkMemoryUsage() {
     const { execSync } = // // require("child_process")
@@ -54,12 +85,16 @@ class AdvancedMonitor {
       const memoryUsage = execSync("free -h", { "encoding": "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Memory "usage": ${memoryUsage}\n`
+<<<<<<< HEAD
       fs.appendFileSync(this.logPath, logEntry)} catch (error) {
       console.error("Memory check "error": ", error)}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 // Start monitoring
 const monitor = new AdvancedMonitor()
+<<<<<<< HEAD
 monitor.startMonitoring()
 <<<<<<<< HEAD:backup-problematic-files/scripts/advanced-monitor.js
 ========
@@ -77,3 +112,5 @@ monitor.startMonitoring()
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class AdvancedMonitor { constructor() { this.metrics = { performance: {},errors: [],uptime: Date.now(),requests: 0 }} logMetric(type,data) { this.metrics[type] = { ...this.metrics[type],...data }; this.saveMetrics()} saveMetrics() { const reportPath = path.join(process.cwd(),'monitoring','metrics.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(this.metrics,null,2))} } module.exports = AdvancedMonitor;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/advanced-monitor.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -259,7 +262,10 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
 - **Duration**: ${this.ciResults.build.result?.duration || ""N/A""}${this.ciResults.build.result?.buildSize ? `- **Build Size**: ${this.ciResults.build.result.buildSize}` : ``
 - **Status**: ${this.ciResults.testing.status === "success" ? " Success" : this.ciResults.testing.status === "skipped" ? "⏭ Skipped" : " Failed"}
 - **Duration**: ${this.ciResults.testing.result?.duration || ""N/A""}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     : "
 - **Status**: ${this.ciResults.quality.status === "success" ? " Passed" : " Failed"}
 ### Immediate Actions "Required"
@@ -287,4 +293,8 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
+<<<<<<< HEAD
 
+=======
+// Start the "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

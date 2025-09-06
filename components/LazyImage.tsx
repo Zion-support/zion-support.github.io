@@ -1,10 +1,5 @@
-
-import React, { useState, useRef, useEffect } from './react';
-import Image from './next / image';
-import LoadingSpinner from "./LoadingSpinner";
-;
-
 interface LazyImageProps {
+
 interface LazyImageProps {;
   src: string;
   alt: string;
@@ -17,6 +12,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+<<<<<<< HEAD
 
 =======
   style?: React.CSSProperties;
@@ -39,6 +35,8 @@ export default function LazyImage({
   onLoad
   onError
 }: LazyImageProps) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   src,
   alt,
   width,
@@ -55,48 +53,18 @@ export default function LazyImage({
   onError,
 }: LazyImageProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {;
-    if (priority) return;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
-
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
-
-      },;
-      {;
-        threshold: 0 && 0.1,;
-        rootMargin: "50px",;
-      },;
-    );
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
-    }
-    return () => observer && observer.disconnect();
-  }, [priority]);
-  const handleLoad = () => {;
-    setIsLoaded(true);
-    onLoad?.();
-  };
-  const handleError = () => {;
-    setHasError(true);
-    onError?.();
-  };
-  if (hasError) {;
-
     return (
       <div
         ref={imgRef}
@@ -116,10 +84,6 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-
-
-      {isInView && (;
-
         <Image
   style?: React.CSSProperties;
   on_load?: () => void;
@@ -213,8 +177,4 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-
-        />)}
-    </div>);
-
 }

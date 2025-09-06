@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -16,6 +21,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -184,6 +194,7 @@ const EquipmentFilterControls = ({
   </div>
 ),
 
+
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
@@ -332,45 +343,6 @@ function EquipmentPageContent() {;
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
-  const {
-    items: equipment,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
-    loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12),
-
-  // Refresh when filters change
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      refresh()
-    }, 100), // Small delay to prevent rapid successive refreshes
-
-    return () => clearTimeout(timeoutId)
-  }, [sortBy, filterCategory, showRecommended, refresh]),
-
-  const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null,
-    return getEquipmentMarketStats(equipment)
-  }, [equipment]),
-
-  const categories = useMemo(() => {
-    // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
-  }, []),
-
-  const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -386,6 +358,13 @@ function EquipmentPageContent() {;
     )
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -504,6 +483,10 @@ function EquipmentPageContent() {;
         />
       </motion.div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {equipment.map((item, index) => (
@@ -590,4 +573,22 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+;
+}
+// Main export with error boundary;
+export default /**
+ * EquipmentPage - Function description
+ */
+function EquipmentPage() {
+  return (
+    <EquipmentErrorBoundary>;
+      <EquipmentPageContent />;
+    </EquipmentErrorBoundary>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

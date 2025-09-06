@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AccessibilityPage() {;
   return (;
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white py-20">;

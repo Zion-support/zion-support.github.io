@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+=======
+return (
+
+    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
+      <button;
+        on_click={toggle_section}
+        className='flex w - full items - center justify - between text - white font - medium'      >;
+        <span > Hourly Rate</span>;
+        {expanded ? (
+          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
+          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
+      </button>;
+      {expanded && (
+        <div className='mt - 6'>;
+          <div className='flex justify - between text - sm text - zion - slate - light mb - 2'>            <span>${price_range[0]}/hr</span>;
+            <span>${price_range[1]}/hr</span>;
+          </div>;
+          <Slider;
+            aria - label='Hourly rate range'            value={[price_range[0], price_range[1]]}
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+import { Slider  } from '@/components / ui / slider';
+import { PriceFilterProps  } from '@/types / filters';
+export /**
+ * PriceFilter - Function description
+ */
+function PriceFilter() {
+  const handle_change = (values: number[]) =>: any {
+    setPriceRange ([values[0] || 0, values[1] || 500]);
+
+  }
+      </button>;
+
+      {expanded && (;
+        <div className='mt-6'>;
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>${priceRange[0]}/hr</span>;
+            <span>${priceRange[1]}/hr</span>;
+          </div>;
+          <Slider
+            aria-label='Hourly rate range'            value={[priceRange[0], priceRange[1]]}
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
@@ -6,13 +52,24 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] || 0, values[1] || 500])
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
         className="flex w-full items-center justify-between text-white font-medium"
       >
+=======
+
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <span>Hourly Rate</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -20,6 +77,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       {expanded && (
         <div className="mt-6">
@@ -28,6 +89,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
@@ -62,11 +127,49 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
+=======
+
+
+    </div>;
+  );
+};
+}
+<<<<<<< HEAD
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="mt-6"
           />
         </div>
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+    </div>
+  );
+}
+
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+            <span>${price_range[0]}/hr</span>;
+            <span>${price_range[1]}/hr</span>;
+          </div>;
+          <Slider;
+            aria - label='Hourly rate range'            aria - label="Hourly rate range";
+            value={[price_range[0], price_range[1]]}
+            min={50}
+            max={200}
+            step={5}
+            onValueChange={handle_change}
+            className='mt - 6'          />            className="mt - 6";
+            className="mt - 6";
+          />;
+        </div>)}
+    </div>);
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

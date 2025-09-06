@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -10,11 +20,14 @@ import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',;
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',;
 const contactInfo = {
+<<<<<<< HEAD
+=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const serviceCategories = [
   {
@@ -52,6 +65,12 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-600',
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30'
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -62,17 +81,26 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+<<<<<<< HEAD
 
   mobile: '+1 302 464 0950',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+<<<<<<< HEAD
+=======
+
+  mobile: '+1 302 464 0950',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -96,9 +124,7 @@ const service_categories = [;
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
     borderColor: 'border-violet-500/30'
   }
   {
@@ -137,8 +163,97 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
 
   }
+<<<<<<< HEAD
 }
 ],
+=======
+]
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    borderColor: 'border-violet-500/30'
+  }
+=======
+    color: 'from - violet - 500 to - purple - 600',
+    bg_color: 'from - violet - 900 / 20 to - purple - 900 / 20',
+    border_color: 'border - violet - 500 / 30';
+  },
+  {
+
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    services: cuttingEdgeEmergingTechServices2025,
+    icon: Atom,
+
+  {
+    title: 'Enterprise IT',
+    description: 'Advanced enterprise infrastructure and security solutions',
+    services: cuttingEdgeITServices2025,
+    icon: Shield,
+
+=======
+    color: 'from - blue - 500 to - cyan - 600',
+    bg_color: 'from - blue - 900 / 20 to - cyan - 900 / 20',
+    border_color: 'border - blue - 500 / 30';
+  },
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  {
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
+    services: cuttingEdgeMicroSaasServices2025,
+    icon: Rocket,
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const serviceCategories = [;
+  {;
+    title: 'AI & Consciousness';
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
+    services: cuttingEdgeAIServices2025;
+    icon: Brain;
+    color: 'from-violet-500 to-purple-600',;
+    bgColor: 'from-violet-900/20 to-purple-900/20',;
+    borderColor: 'border-violet-500/30';
+  },;
+  {;
+    title: 'Quantum & Emerging Tech',;
+    description: 'Breakthrough quantum computing and space technology solutions',;
+    services: cuttingEdgeEmergingTechServices2025,;
+    icon: Atom,;
+    color: 'from-indigo-500 to-blue-600',;
+    bgColor: 'from-indigo-900/20 to-blue-900/20',;
+    borderColor: 'border-indigo-500/30';
+  },;
+  {;
+    title: 'Enterprise IT',;
+    description: 'Advanced enterprise infrastructure and security solutions',;
+    services: cuttingEdgeITServices2025,;
+    icon: Shield,;
+    color: 'from-blue-500 to-cyan-600',;
+    bgColor: 'from-blue-900/20 to-cyan-900/20',;
+    borderColor: 'border-blue-500/30';
+  },;
+  {;
+    title: 'Micro SAAS',;
+    description: 'Innovative business solutions for modern enterprises',;
+    services: cuttingEdgeMicroSaasServices2025,;
+    icon: Rocket,;
+    color: 'from-teal-500 to-emerald-600',;
+    bgColor: 'from-teal-900/20 to-emerald-900/20',;
+    borderColor: 'border-teal-500/30';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ],
@@ -154,6 +269,18 @@ export default function CuttingEdgeServices2025() {
         <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
       </Head>
       {/* Hero Section */}
+=======
+
+
+  }
+=======
+    color: 'from - teal - 500 to - emerald - 600',
+    bg_color: 'from - teal - 900 / 20 to - emerald - 900 / 20',
+    border_color: 'border - teal - 500 / 30';
+  }
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -174,6 +301,7 @@ export default function CuttingEdgeServices2025() {
         <link rel="canonical" href="https://ziontechgroup.com/cutting-edge-services-2025" />
       </Head>
 
+<<<<<<< HEAD
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -182,6 +310,10 @@ export default function CuttingEdgeServices2025() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -200,20 +332,39 @@ export default function CuttingEdgeServices2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
               Experience the future of technology with our revolutionary services that combine AI consciousness
 
               Experience the future of technology with our revolutionary services that combine AI consciousness,
               Experience the future of technology with our revolutionary services that combine AI consciousness, 
               Experience the future of technology with our revolutionary services that combine AI consciousness,
+=======
+
+
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
+
+<<<<<<< HEAD
+              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
+=======
+=======
+              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+=======
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
+=======
+
+
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -224,7 +375,14 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -232,8 +390,10 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
+=======
+
+
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -244,7 +404,14 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -254,6 +421,71 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+=======
+],
+export default /**
+ * CuttingEdgeServices2025 - Function description
+ */
+function CuttingEdgeServices2025() {
+  return (
+    <Layout>;
+      <Head>;
+        <title > Cutting - Edge Services 2025 | Zion Tech Group</title>;
+        <meta name="description" content="Discover our revolutionary cutting - edge services including AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions for 2025." />;
+        <meta name="keywords" content="cutting - edge services, AI consciousness, quantum computing, enterprise IT, micro SAAS, 2025 technology" />;
+        <meta property="og:title" content="Cutting - Edge Services 2025 - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary technology services for the future. AI consciousness, quantum computing, enterprise IT, and micro SAAS solutions." />;
+        <link rel="canonical" href="https://ziontechgroup.com / cutting - edge - services - 2025" />;
+      </Head>;
+      {/* Hero Section */}
+      <section className="relative py - 20 overflow - hidden">;
+        <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black">;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (0, 255, 255, 0.1), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (139, 92, 246, 0.1), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (236, 73, 153, 0.1), transparent_50%)]"></div>;
+        </div>;
+        <div className="relative z - 10 max - w-7xl mx - auto px - 6 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className="text - 5xl md:text - 7xl font - bold mb - 6">;
+              <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+                Cutting - Edge Services 2025;
+              </span>;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
+              quantum computing, enterprise IT, and innovative micro SAAS solutions.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+              <motion.a;
+                href="/contact";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 shadow - lg hover:shadow - xl";
+              >;
+                Get Started Today;
+                <ArrowRight className="ml - 2 w - 5 h - 5" />;
+              </motion.a>;
+              <motion.a;
+                href="tel:+13024640950";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 hover:text - white transition - all duration - 300";
+              >;
+                <Phone className="mr - 2 w - 5 h - 5" />;
+                Call Now;
+              </motion.a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+
       {/* Service Categories */}
       <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -262,6 +494,8 @@ export default function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
+
       {/* Service Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -290,21 +524,36 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               Revolutionary Technology Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Explore our comprehensive portfolio of cutting-edge services designed to transform your business 
               Explore our comprehensive portfolio of cutting-edge services designed to transform your business
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               and give you a competitive advantage in the digital age.
             </p>
           </motion.div>
           <div className="space-y-16">
             {serviceCategories.map((category, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={category.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -371,29 +620,87 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            className="text - center mb - 16";
+          >;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - purple - 600 bg - clip - text text - transparent">;
+              Revolutionary Technology Categories;
+            </h2>;
+            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+              Explore our comprehensive portfolio of cutting - edge services designed to transform your business;
+              and give you a competitive advantage in the digital age.;
+            </p>;
+          </motion.div>;
+          <div className="space - y-16">;
+            {service_categories.map ((category, index) => (
+              <motion.div;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={category.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="group"
                     >
                       <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
                             {service.name}
                           </h4>
                           <div className="text-right">
                             <div className="text-2xl font-bold text-cyan-400">
                               ${service.pricing.starter.price}
+=======
+
+=======
+              >;
+                <div className="text - center mb - 12">;
+                  <div className={`inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - r ${category.color} p - 5 mb - 6`}>;
+                    <category.icon className="w - 10 h - 10 text - white" />;
+                  </div>;
+                  <h3 className="text - 3xl font - bold text - white mb - 4">{category.title}</h3>;
+                  <p className="text - xl text - gray - 300 max - w-2xl mx - auto">{category.description}</p>;
+                </div>;
+                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                  {category.services.map ((service, service_index) => (
+                    <motion.div;
+
+                      key={service.id}
+                      initial={{ opacity: 0, coordinate_y: 20 }}
+                      whileInView={{ opacity: 1, coordinate_y: 0 }}
+                      transition={{ duration: 0.6, delay: service_index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="group";
+                    >;
+                      <div className={`bg - gradient - to - br ${category.bg_color} p - 8 rounded - 2xl border ${category.border_color} hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105`}>;
+                        <div className="flex items - start justify - between mb - 4">;
+                          <h4 className="text - xl font - semibold text - white group - hover:text - cyan - 400 transition - colors">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                            {service.name}
+                          </h4>;
+                          <div className="text - right">;
+                            <div className="text - 2xl font - bold text - cyan - 400">;
+                              ${service.pricing.starter.price}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             {service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
                           </h4>
                           <div className="text-right">
                             <div className="text-2xl font-bold text-cyan-400">
@@ -402,7 +709,14 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             </div>
                             <div className="text-sm text-gray-400">/month</div>
                           </div>
@@ -431,26 +745,49 @@ export default function CuttingEdgeServices2025() {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
                           >
                             <Mail className="w-4 h-4 mr-2" />
                             Get Quote
                           </a>
                           <a
-                            href={service.website}
+<<<<<<< HEAD
+=======
+
+
                             href={service.website  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
                           >
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -459,21 +796,55 @@ export default function CuttingEdgeServices2025() {
                         </div>
                       </div>
                     </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Pricing Comparison */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+=======
+                            </div>;
+                            <div className="text - sm text - gray - 400">/month</div>;
+                          </div>;
+                        </div>;
+                        <p className="text - gray - 300 mb - 6 leading - relaxed">{service.description}</p>;
+                        <div className="mb - 6">;
+                          <h5 className="text - white font - semibold mb - 3">Key Features:</h5>;
+                          <div className="space - y-2">;
+                            {service.features.slice (0, 4).map ((feature, feature_index) => (
+                              <div key={feature_index} className="flex items - center space - x-3 text - sm">;
+                                <CheckCircle className="w - 4 h - 4 text - cyan - 400 flex - shrink - 0" />;
+                                <span className="text - gray - 300">{feature}</span>;
+                              </div>))}
+                          </div>;
+                        </div>;
+                        <div className="mb - 6">;
+                          <div className="flex items - center justify - between text - sm text - gray - 400 mb - 2">;
+                            <span > Market Size:</span>;
+                            <span className="text - cyan - 400 font - semibold">{service.market_size}</span>;
+                          </div>;
+                          <div className="flex items - center justify - between text - sm text - gray - 400">;
+                            <span > Category:</span>;
+                            <span className="text - purple - 400">{service.category}</span>;
+                          </div>;
+                        </div>;
+                        <div className="flex flex - col sm:flex - row gap - 3">;
+                          <a;
+                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
+                            className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 text - sm";
+                          >;
+                            <Mail className="w - 4 h - 4 mr - 2" />;
+                            Get Quote;
+                          </a>;
+                          <a;
+                            href={service.website}
+                            className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 border border - gray - 600 text - gray - 300 font - semibold rounded - xl hover:border - cyan - 500 hover:text - cyan - 400 transition - all duration - 300 text - sm";
+                          >;
+                            <ExternalLink className="w - 4 h - 4 mr - 2" />;
+                            Learn More;
+                          </a>;
+                        </div>;
+                      </div>;
+                    </motion.div>))}
+=======
+
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -493,7 +864,11 @@ export default function CuttingEdgeServices2025() {
 }
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.div
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -510,6 +885,7 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -551,15 +927,42 @@ export default function CuttingEdgeServices2025() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+<<<<<<< HEAD
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              Ready to Experience the Future?
+            </h2>
+              Choose the plan that best fits your business needs. All plans include our cutting-edge technology 
+              Choose the plan that best fits your business needs. All plans include our cutting-edge technology
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Choose the plan that best fits your business needs. All plans include our cutting-edge technology
               Choose the plan that best fits your business needs. All plans include our cutting-edge technology 
               Choose the plan that best fits your business needs. All plans include our cutting-edge technology
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               and expert support.
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </p>
@@ -567,13 +970,15 @@ export default function CuttingEdgeServices2025() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
-                key={plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+
+<<<<<<< HEAD
+=======
+            className="text - center mb - 16";
+=======
+
             className="text-center mb-16";
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent">;
               Transparent Pricing Plans;
@@ -586,6 +991,7 @@ export default function CuttingEdgeServices2025() {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {['StarterProfessionalEnterprise'].map ((plan, index) => (
               <motion.div;
+<<<<<<< HEAD
                 key={plan  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -612,11 +1018,31 @@ export default function CuttingEdgeServices2025() {
   }
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   <div className="space-y-4 mb-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                className="group";
+              >;
+                <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
+                  <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
+                  <div className="space - y-4 mb - 8">;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {plan === 'Starter' && (
 
                       <>;
@@ -634,17 +1060,22 @@ export default function CuttingEdgeServices2025() {
 
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
-                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+
+
                       {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>
                     <div className="text-gray-400">per month</div>
                   </div>
@@ -767,6 +1198,26 @@ export default function CuttingEdgeServices2025() {
                     Get Started
                     <ArrowRight className="ml-2 w-4 h-4" />
 
+<<<<<<< HEAD
+=======
+
+                  </Link>
+                </div>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -798,6 +1249,7 @@ export default function CuttingEdgeServices2025() {
 
               Contact our team of experts to learn how our cutting-edge services can transform your business
 
+<<<<<<< HEAD
               and give you a competitive advantage in the digital age.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -842,6 +1294,13 @@ export default function CuttingEdgeServices2025() {
     </Layout>
 
   )
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -849,6 +1308,38 @@ export default function CuttingEdgeServices2025() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                      <>;
+                        <div className="text - sm text - gray - 400">For large enterprises and organizations</div>;
+                        <div className="text - sm text - gray - 400">Full platform access and custom development</div>;
+                        <div className="text - sm text - gray - 400">Dedicated specialists and 24 / 7 support</div>;
+                      </>)}
+                  </div>;
+                  <div className="text - center mb - 8">;
+                    <div className="text - 4xl font - bold text - cyan - 400 mb - 2">;
+                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+                    </div>;
+                    <div className="text - gray - 400">per month</div>;
+                  </div>;
+                  <a;
+                    href="/contact";
+                    className="w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300";
+                  >;
+                    Get Started;
+                    <ArrowRight className="ml - 2 w - 4 h - 4" />;
+                  </a>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact Section */}
       <section className="py - 20 bg - gradient - to - r from - cyan - 900 / 20 to - blue - 900 / 20">;
         <div className="max - w-4xl mx - auto text - center px - 6">;
@@ -861,7 +1352,6 @@ export default function CuttingEdgeServices2025() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               and give you a competitive advantage in the digital age.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -884,8 +1374,11 @@ export default function CuttingEdgeServices2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a
                 href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -896,11 +1389,13 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
@@ -908,8 +1403,6 @@ export default function CuttingEdgeServices2025() {
               </motion.a>
               <motion.a
                 href="tel:+13024640950"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -920,7 +1413,13 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
@@ -931,9 +1430,21 @@ export default function CuttingEdgeServices2025() {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
   );
 };
   )
+=======
+  )
+
+=======
+}
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
               Ready to Experience the Future?;
@@ -982,13 +1493,78 @@ export default function CuttingEdgeServices2025() {
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
+=======
+<<<<<<< HEAD
+
+
+=======
+    </Layout>);
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>Perfect for small businesses and startups</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Basic features and standard support</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Email support included</div>
+                      </>
+                    )}
+                    {_plan === 'Professional' && (
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>Ideal for growing businesses</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Advanced features and priority support</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Custom configurations available</div>
+                      </>
+                    )}
+                    {_plan === 'Enterprise' && (
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>For large enterprises and organizations</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Full platform access and custom development</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Dedicated specialists and 24/7 support</div>
+                      </>
+                    )}
+                  </div>
+
+                  <div className=&quot;text-center mb-8&quot;>
+                    <div className=&quot;text-4xl font-bold text-cyan-400 mb-2&quot;>
+                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+                    </div>
+                    <div className=&quot;text-gray-400&quot;>per month</div>
+                  </div>
+
+                  <a
+                    href=&quot;/contact&quot;
+                    className=&quot;w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300&quot;
+                  >
+                    Get Started
+                    <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
+                  </Link>
+=======
+      {/* Pricing Comparison */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+=======
+                  ))  } catch (error) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Security Audit Script for PM2;
@@ -186,4 +189,8 @@ main().catch(error => {})
   log(`Security Audit Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

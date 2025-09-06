@@ -85,6 +85,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
     default:;
       return <Badge variant="outline">Notification</Badge>;
   }
+<<<<<<< HEAD
 },;
 const NotificationCard: React.FC<{;
   notification: {;
@@ -277,5 +278,7 @@ export default function NotificationsPage() {
       </main>;
     </>;
   );
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;

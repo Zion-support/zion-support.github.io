@@ -248,6 +248,32 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991927.backup.1756001157
+  const categories = [
+    {
+      name: 'Development Tools',
+      description: 'Tools to improve code quality and development workflow',
+      services: ['code-review', 'json-formatter']
+    },
+    {
+      name: 'Security & Validation',
+      description: 'Services to enhance security and validate data',
+      services: ['email-validator', 'password-checker', 'file-detector']
+    },
+    {
+      name: 'API & Infrastructure',
+      description: 'Services to protect and optimize your APIs',
+      services: ['rate-limiter']
+    },
+    {
+      name: 'Marketing & Utilities',
+      description: 'Tools for marketing campaigns and general utilities',
+      services: ['url-shortener', 'qr-generator']
+    }
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const microServices = [
     {
       icon: '✨',
@@ -280,6 +306,87 @@ export default function ServicesPage() {
       textColor: 'text-red-400',
       gradient: 'from-red-400 to-pink-500',
       href: '/security'
+<<<<<<< HEAD
+=======
+=======
+      icon: '📊',
+      title: 'Project Management Suite',
+      description: 'Comprehensive project management platform with advanced planning tools.',
+      features: [
+        'Project planning & scheduling',
+        'Team collaboration tools',
+        'Time tracking & reporting',
+        'Resource management',
+        'Gantt charts & timelines'
+      ],
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      pricing: '$99/month',
+      link: 'https://projects.zion.app',
+      category: 'Productivity & Collaboration',
+      marketSize: '$4.8B'
+    },
+    {
+      icon: '🎨',
+      title: 'Design System Builder',
+      description: 'Create and maintain consistent design systems with automated component generation.',
+      features: [
+        'Component library management',
+        'Design token automation',
+        'Style guide generation',
+        'Design-to-code workflow',
+        'Team collaboration tools'
+      ],
+      color: 'bg-gradient-to-br from-violet-500 to-purple-600',
+      textColor: 'text-violet-400',
+      gradient: 'from-violet-400 to-purple-500',
+      pricing: '$79/month',
+      link: 'https://design.zion.app',
+      category: 'Productivity & Collaboration',
+      marketSize: '$800M'
+    },
+    // Micro SaaS Services - Analytics & Monitoring
+    {
+      icon: '📈',
+      title: 'Data Analytics Platform',
+      description: 'Business intelligence and data visualization with predictive analytics.',
+      features: [
+        'Real-time data processing',
+        'Advanced data visualization',
+        'Predictive analytics',
+        'Custom dashboard builder',
+        'Data integration tools'
+      ],
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      textColor: 'text-teal-400',
+      gradient: 'from-teal-400 to-cyan-500',
+      pricing: '$129/month',
+      link: 'https://analytics.zion.app',
+      category: 'Analytics & Monitoring',
+      marketSize: '$6.8B'
+    },
+    {
+      icon: '⚡',
+      title: 'App Performance Monitor',
+      description: 'Real-time monitoring and optimization for web and mobile applications.',
+      features: [
+        'Performance metrics tracking',
+        'Error monitoring & alerting',
+        'User experience analytics',
+        'Automated optimization',
+        'Custom dashboards'
+      ],
+      color: 'bg-gradient-to-br from-amber-500 to-orange-600',
+      textColor: 'text-amber-400',
+      gradient: 'from-amber-400 to-orange-500',
+      pricing: '$39/month',
+      link: 'https://monitor.zion.app',
+      category: 'Analytics & Monitoring',
+      marketSize: '$2.4B'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-832b
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ];
 
@@ -311,6 +418,10 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const categoryIcons = {
     'AI & Machine Learning': <Brain className="w-5 h-5" />,
     'Quantum Computing': <Zap className="w-5 h-5" />,
@@ -1213,6 +1324,303 @@ export default function ServicesPage() {
               ))}
             </div>
           )}
+<<<<<<< HEAD
+=======
+=======
+      {/* Individual Services */}
+      <section className="py-24 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              Service Details
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Each service is built with production environments in mind, featuring comprehensive testing, 
+              error handling, and real-world use cases.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {services.map((service, index) => (
+              <Card
+                key={service.id}
+                className="border border-gray-800 hover:border-blue-500/30 transition-all duration-300"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {/* Service Header */}
+                  <div className="lg:col-span-1">
+                    <div className={`${service.color} p-8 rounded-xl mb-6 lg:mb-0`}>
+                      <div className="w-20 h-20 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                      <p className="text-white/90 leading-relaxed">{service.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Service Details */}
+                  <div className="lg:col-span-2 space-y-8">
+                    {/* Features */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                        <Zap className="w-5 h-5 text-blue-400 mr-2" />
+                        Key Features
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-gray-300">
+                            <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Use Cases */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                        <Globe className="w-5 h-5 text-blue-400 mr-2" />
+                        Use Cases
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.useCases.map((useCase, useCaseIndex) => (
+                          <span
+                            key={useCaseIndex}
+                            className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm rounded-full"
+                          >
+                            {useCase}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Pricing */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                        <BarChart3 className="w-5 h-5 text-blue-400 mr-2" />
+                        Pricing Plans
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {Object.entries(service.pricing).map(([plan, details]) => (
+                          <div
+                            key={plan}
+                            className={`p-6 rounded-xl border ${
+                              plan === 'pro' || plan === 'enterprise'
+                                ? 'border-blue-500/30 bg-blue-500/5'
+                                : 'border-gray-700 bg-gray-800/50'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between mb-4">
+                              <h5 className="text-lg font-semibold text-white capitalize">
+                                {plan === 'free' ? 'Free Tier' : plan === 'pro' ? 'Pro Plan' : 'Enterprise'}
+                              </h5>
+                              {plan === 'pro' || plan === 'enterprise' ? (
+                                <Star className="w-5 h-5 text-yellow-400" />
+                              ) : null}
+                            </div>
+                            <div className="text-2xl font-bold text-white mb-2">{details.price}</div>
+                            <div className="text-sm text-gray-400 mb-4">{details.requests}</div>
+                            <ul className="space-y-2">
+                              {details.features.map((feature, featureIndex) => (
+                                <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                                  <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+=======
+                    
+                    {/* Pricing and Category */}
+                    <div className="flex items-center justify-between">
+                      <div className="inline-flex items-center px-2 py-1 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-xs font-medium">
+                        {service.category}
+                      </div>
+                      <div className="text-sm text-gray-400">
+                        {service.pricing}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro Services */}
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+              Micro SaaS Services
+            </div>
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Ready-to-Use Micro Services
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Instant access to professional micro services that solve real business problems. 
+              No setup required, just use and scale as needed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {microServices.map((service, index) => (
+              <Card
+                key={index}
+                className="card-hover group border-gradient-blue cursor-pointer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onClick={() => { if (service.href) window.location.href = service.href; }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {service.icon}
+                    </div>
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${service.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={`text-2xl font-bold mb-4 ${service.textColor}`}>
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    {service.href && (
+                      <div className="mt-6 flex items-center text-cursor-blue group-hover:text-white transition-colors duration-300">
+                        <span className="text-sm font-medium">Learn More</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Services Promotion */}
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+              New: Micro SaaS Tools
+            </div>
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Real Tools for Real Business Growth
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Discover our curated collection of micro SaaS services that actually work. Each tool includes real pricing, 
+              market analysis, and direct links to help you make informed decisions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="card-hover border-gradient-blue text-center">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Tools & Services</h3>
+                <p className="text-gray-400 mb-4">
+                  Curated AI tools including ChatGPT, Midjourney, GitHub Copilot, and more with real pricing.
+                </p>
+                <Button
+                  href="/ai-tools"
+                  variant="primary"
+                  size="sm"
+                  className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                >
+                  Explore AI Tools
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="card-hover border-gradient-blue text-center">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">💼</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Micro SaaS Services</h3>
+                <p className="text-gray-400 mb-4">
+                  Business tools for content generation, performance monitoring, SEO, and lead generation.
+                </p>
+                <Button
+                  href="/micro-saas"
+                  variant="primary"
+                  size="sm"
+                  className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                >
+                  View Services
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="card-hover border-gradient-blue text-center">
+              <div className="p-6">
+                <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Developer Tools</h3>
+                <p className="text-gray-400 mb-4">
+                  Professional development stack with GitHub, MongoDB Atlas, Vercel, and security tools.
+                </p>
+                <Button
+                  href="/developer-tools"
+                  variant="primary"
+                  size="sm"
+                  className="bg-cursor-blue hover:bg-cursor-blue-dark"
+                >
+                  Dev Tools
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack */}
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+              Technology Stack
+<<<<<<<< HEAD:components/services.tsx.backup.1755991927.backup.1756001157
+========
+=======
+  return (
+    <>
+      <Head>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services including AI automation, cloud infrastructure, security, and specialized micro SaaS solutions for modern businesses." />
+      </Head>
+
+      <div className="min-h-screen bg-black">
+        {/* Header Section */}
+        <section className="pt-32 pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" />
+                Our Services
+              </div>
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-832b
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               Comprehensive

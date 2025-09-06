@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -80,7 +84,10 @@ function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         filesProcessed++}
     }
   }
@@ -88,7 +95,10 @@ function main() {
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements "removed": ${totalRemoved}`);
   if (totalRemoved > 0) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`\n✨ Production build optimized!`);
   } else {
     console.log(`\n✨ No console statements found to remove.`);
@@ -97,3 +107,7 @@ function main() {
 if (require.main === module) {
   main().catch(console.error)}
 
+<<<<<<< HEAD
+=======
+module.exports = { removeConsoleStatements, processFile };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

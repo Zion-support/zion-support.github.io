@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -31,7 +34,10 @@ const path = require('path')
           type: 'missing_semicolon'
           message: 'Missing semicolon'
           severity: 'error'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const lines = content.split('\n')
       case 'console.log'
         lines[lineIndex] = lines[lineIndex].replace(/console\.log\([^)]*\);?/g, ''
@@ -49,4 +55,8 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
+<<<<<<< HEAD
 
+=======
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

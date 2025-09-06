@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang |!item.translations) return { item, translated: false }
@@ -47,18 +48,23 @@ export default async function handler(
 }
     const base = LOCAL && LOCAL.find(t => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   }
 
   const { slug, lang } = req && req.query as { slug: string, lang?: string };
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -66,18 +72,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
-
-}
-
-
-
-=======
-
-    const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
-    if (!base) return res && res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated })
   } catch (e: any) {
+<<<<<<< HEAD
     return res && res.status(500).json({ error: e && e.message })
   };
 }
@@ -89,9 +87,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
-
-
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -107,13 +107,10 @@ function apply_translations() {
   // Check condition
 if (return { item, translated: false }) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   }
 
 }
-<<<<<<< HEAD
-=======
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string; lang?: string }
@@ -180,7 +177,10 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

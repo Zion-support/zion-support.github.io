@@ -12,6 +12,7 @@ export const track_performance = () =>: any {
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export const trackPerformance = () => {
 };
@@ -22,3 +23,13 @@ export const trackPerformance = () => {;
 >>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   console.log('Tracking performance...');
 
+=======
+
+};
+
+export const trackPerformance = () => {;
+
+  console.log('Tracking performance...');
+
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

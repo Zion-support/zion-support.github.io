@@ -1,6 +1,11 @@
+<<<<<<< HEAD
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
     props: {
       docs: content as DocsContent,
@@ -21,11 +26,16 @@ type DocsContent = {
 };
 
 type PageProps = {
-  docs: DocsContent
-};
 
+<<<<<<< HEAD
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
 
+=======
+  docs: DocsContent;
+}
+;
+export const getStaticProps: GetStaticProps < PageProps> = async () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return {
     props: {
       docs: content as DocsContent
@@ -50,16 +60,56 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
 
+<<<<<<< HEAD
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {;
     const id = setTimeout(() => window.print(), 500);
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
+  return {;
+    props: {;
+      docs: content as DocsContent,;
+    },;
+  };};import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content ;
+export type Section = {;
+  id: string,;
+  title: string,;
+  html?: string;
+  code?: { language?: string, content: string }[];
+};
+type DocsContent = {;
+  title: string,;
+  sections: Section[];
+};
+export const getStaticProps: GetStaticProps<PageProps> = async () => {;
+  return {;
+    props: {;
+      docs: content as DocsContent}}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return () => clearTimeout(id);
   }, []);
   return (
@@ -78,7 +128,16 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+<<<<<<< HEAD
 
+=======
+};
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+    return () => clearTimeout(id)
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -91,6 +150,7 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
+<<<<<<< HEAD
 
 
         ))}
@@ -101,6 +161,8 @@ export default function PrintDocs({ docs }: PageProps) {
   );
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default /**
  * PrintDocs - Function description
@@ -141,6 +203,7 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
     props: {
@@ -163,12 +226,23 @@ export default function PrintDocs({ docs }: PageProps) {
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map((c, i) => (
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </section>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  );
+}
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

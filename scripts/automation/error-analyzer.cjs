@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
@@ -39,4 +42,8 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+<<<<<<< HEAD
 
+=======
+    console.error(' Error analyzer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

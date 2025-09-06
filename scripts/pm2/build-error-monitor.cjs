@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -30,4 +33,8 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
+<<<<<<< HEAD
 
+=======
+        execSync(`"npm": install ${packageName}`, { "stdio"`})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

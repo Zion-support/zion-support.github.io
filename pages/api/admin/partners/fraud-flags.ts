@@ -1,8 +1,65 @@
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+=======
+
+  const code = (req.query.code as string)?.toLowerCase()
+  if (!code) return res.status(400).json({ error: 'Missing code' })
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL |'').includes('placeholder') |(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key') === 'placeholder-key'
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({
+        flags: [
+          {
+            type: 'suspicious_ip',
+            severity: 'low',
+            note: 'Multiple visits from same IP',
+          },
+        ],
+      });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+    const supabase = getServerSupabase()
+    const { data, error } = await supabase
+      .from('referral_events')
+      .select('ip_address, created_at')
+      .eq('partner_code', code)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+.gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
+    if (error) return res.status(500).json({ error: error.message })
+    const counts = new Map<string, number>()
+    for (const row of data |[]) {
+      const key = (row as any).ip_address |'unknown'
+      counts.set(key, (counts.get(key) |0) + 1)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
@@ -16,6 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
       }
 
+<<<<<<< HEAD
   } catch (e: any) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,46 +83,88 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
 
-    if (req.method === 'GET') {
-      const code = (req.query.code as string)?.toLowerCase();
-      if (!code) return res.status(400).json({ error: 'Code required' });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-      // Mock fraud flags data
-      const flags = [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
-      ];
 
-      res.json({ flags });
-    } else {
-      res.setHeader('Allow', 'GET');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 
-    if (req.method === 'GET') {
-      const code = (req.query.code as string)?.toLowerCase();
-      if (!code) return res.status(400).json({ error: 'Code required' });
+        flags.push({
+          type: 'suspicious_ip',
+          severity: 'medium',
+          ip,
+          count,
+          note: 'High number of events from a single IP in 7 days',
+        });
+      }
+    })
+    return res.status(200).json({ flags })
 
-      // Mock fraud flags data
-      const flags = [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
-      ];
-
-      res.json({ flags });
-    } else {
-      res.setHeader('Allow', 'GET');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+    if (req.method === 'GET') {
+      const code = (req.query.code as string)?.toLowerCase();
+      if (!code) return res.status(400).json({ error: 'Code required' });
+
+      // Mock fraud flags data
+      const flags = [
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
+      ];
+
+      res.json({ flags });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+  }
+}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

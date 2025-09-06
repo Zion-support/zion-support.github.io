@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -23,6 +24,15 @@ export default function WishlistPage() {;
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
     return null, // Or a loading spinner;
   }
+=======
+}
+<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   const { items, dispatch } = useCart(),;
   const addToCart = (item: { id: string, title?: string, price?: number }) => {;
@@ -121,4 +131,8 @@ export default function WishlistPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

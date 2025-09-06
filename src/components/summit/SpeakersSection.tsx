@@ -9,6 +9,7 @@ interface Speaker {
   linkedin?: string
 }
 
+<<<<<<< HEAD
 const speakers: Speaker[] = [
   {
     name: 'Alex Zion',
@@ -95,3 +96,34 @@ export function SpeakersSection() {;
   );
 }
 ;
+=======
+
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
+
+import Image from "next/image",
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+
+
+
+  linkedin?: string
+}
+
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+
+  linkedin?: string
+}
+const speakers: Speaker[] = [
+  {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

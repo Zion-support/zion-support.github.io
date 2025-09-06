@@ -502,10 +502,24 @@ a:hover {
 }
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .btn-futuristic::before {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   content: '';
 .btn-futuristic::before {  content: '';
+<<<<<<< HEAD
+=======
+
+.btn-futuristic::before {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .particles-bg::before {
   position: absolute;
   top: 0;
@@ -672,6 +686,29 @@ a:hover {
 .button {
   @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg;
 .button::before {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
+  content: '';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+.btn-futuristic::before {
+=======
+.particles-bg::before {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  content: '';
+.btn-futuristic::before {  content: '';
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 .btn-futuristic::before {  content: '';
 >>>>>>> main
@@ -798,6 +835,15 @@ a:hover {
 >>>>>>> main
     display: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+.button:hover {
+  @apply transform scale-105 shadow-xl;
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.3);
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced typography */
 .futuristic-text {
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
@@ -852,13 +898,29 @@ a:hover {
   .matrix-rain {
     background: none !important;
     animation: none !important;
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
   }
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
     display: none;  }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    display: none;  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    display: none;  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .cyber-grid {
     background-size: 15px 15px;
   }

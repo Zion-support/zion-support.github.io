@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("$1")
 const path = require("$1")
 const { execSync, spawn } = require("child_process")
@@ -154,4 +158,8 @@ process.on("SIGINT")
       case "report":";        await launcher.generateReport();"
       case "help":";      default"
   } catch (error) {launcher.log(` Command failed``})
+<<<<<<< HEAD
 
+=======
+process.on("SIGINT", () => {";  launcher.log("\n� Shutting down PM2 automation launcher...");  process.exit(0),"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

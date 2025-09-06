@@ -1,11 +1,37 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -18,7 +44,39 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 =======
+=======
+
+export default AutomationStatus,;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+  );
+};
+export default AutomationStatus;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+export default AutomationStatus,;
+
+  );
+};
+export default AutomationStatus;
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default AutomationStatus,;
+
+  );
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
 export default AutomationStatus;
@@ -27,5 +85,26 @@ export default AutomationStatus,;
   );
 };
 export default AutomationStatus;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+export default AutomationStatus,;
+
+=======
+  );
+};
+export default AutomationStatus;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

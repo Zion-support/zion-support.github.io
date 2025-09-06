@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import { useResume } from '@/hooks/useResume';
+interface ResumeVersionSelectorProps {
+  currentResume: Resume;
+  onResumeChange: (resumeId: string) => void
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { useState } from 'react',;
 import {;
@@ -17,6 +24,7 @@ interface ResumeVersionSelectorProps {;
   currentResume: Resume,;
   onResumeChange: (resumeId: string) => void;
 }
+<<<<<<< HEAD
 ;
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume(),;
@@ -33,11 +41,41 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
+=======
+      setIsLoading (true);
+      const resume_id = await create_resume ({ title: newResumeTitle.trim () });
+      // Check condition
+if ( {) {
+  $2
+}
+        await fetch_resume (resume_id);
+        onResumeChange (resume_id);
+        setSaveDialogOpen (false);
+        setNewResumeTitle ('');
+      setIsLoading (false);
+    }
+  }
+
+
+
+
+
+
+
+
+  return (
+
+        setNewResumeTitle('')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       setIsLoading(false);
     }
-  },
+  };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
@@ -48,16 +86,53 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
+
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
+<<<<<<< HEAD
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
+=======
+            <DropdownMenuItem
+    <div className='flex items - center gap - 2'>;
+      <span className='text - sm text - muted - foreground'>Resume:</span>;
+      <DropdownMenu>;
+        <DropdownMenuTrigger as_child>;
+          <Button variant='outline' size='sm' className='gap - 2'>;
+            {current_resume?.basic_info?.title || 'My Resume'}
+            <ChevronDown className='h - 4 w - 4' />;
+          </Button>;
+        </DropdownMenuTrigger>;
+        <DropdownMenuContent align='end'>;
+          {existing_resumes.map (resume => (
+            <DropdownMenuItem;
+              key={resume.id}
+              on_click={() => onResumeChange (resume.id!)}
+              className='cursor - pointer'            >              className="cursor - pointer";
+        <DropdownMenuContent align="end">;
+          {existing_resumes.map ((resume) => (
+            <DropdownMenuItem;
+              key={resume.id}
+              on_click={() => onResumeChange (resume.id!)}
+              className="cursor - pointer";
+            >;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="cursor-pointer"
             >
               {resume.basic_info.title}
             </DropdownMenuItem>;
           ))}
+<<<<<<< HEAD
+=======
+
+          <DropdownMenuSeparator />
+          <DropdownMenuItem 
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
             onClick={() => setSaveDialogOpen(true)}
@@ -84,6 +159,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DialogFooter>
             <Button 
               variant="outline" 
+<<<<<<< HEAD
               onClick={() => setSaveDialogOpen(false)}
             >;
               Cancel;
@@ -94,6 +170,11 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Save className="h-4 w-4" />
               Save
             </Button>
@@ -103,4 +184,21 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
+<<<<<<< HEAD
 ;
+=======
+
+}
+
+
+;
+
+    </div>);
+}
+> {
+  resume.basic info.title;
+}</DropdownMenuItem>) );
+}<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
+}";
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -29,4 +29,8 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
+<<<<<<< HEAD
 
+=======
+    console.log(" Monitoring setup completed!")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

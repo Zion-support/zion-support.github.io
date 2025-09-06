@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -17,4 +22,8 @@ class ErrorDetector {}
 if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = ErrorDetector;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

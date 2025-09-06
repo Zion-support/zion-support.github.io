@@ -1,9 +1,60 @@
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function Internationalization() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Internationalization',;
+    description:;
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',;
+    url: 'https://app && app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Internationalization";
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",;
+    "url": "https://app && app.ziontechgroup.com/features/internationalization";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function Internationalization() {
   const schema = {
     "@context": "https://schema.org",
@@ -13,6 +64,11 @@ export default function Internationalization() {
     "url": "https://app.ziontechgroup.com/features/internationalization"
   },
 
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <SEO
@@ -57,6 +113,9 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
+
+
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
@@ -66,6 +125,12 @@ export default function Internationalization() {
       </main>
     </>
   )
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -131,7 +196,12 @@ export default function Internationalization() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

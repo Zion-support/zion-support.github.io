@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+export default function CloudAutomationsPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -9,26 +13,25 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
+<<<<<<< HEAD
 
 =======
+=======
+export default function CloudAutomationsPage() {
+  const [data, setData] = useState<any>(null);
+  useEffect(() => {
+    fetch('/api/cloud-automations-status')
+      .then((r) => r.json())
+      .then(setData)
+      .catch(() => setData({ ok: false }))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-  return (
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
         ))}
-      </div>
-    </div>
-);
-}
-  );
-}
-
-=======
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
@@ -44,6 +47,7 @@ export default function CloudAutomationsPage() {;
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
   const items = data?.data ? Object.entries(data.data) : []
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -59,3 +63,5 @@ export default function CloudAutomationsPage() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

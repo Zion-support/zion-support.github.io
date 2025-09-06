@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 import { MapPin } from "lucide-react",;
@@ -32,3 +33,15 @@ export function PaymentSection({ selectedCountry } PaymentSectionProps) {;
       </p>;
     </div>;
 
+=======
+ interface PaymentSectionProps {;
+  selectedCountry: CountryPricing ;
+}selectedCountry ;
+}: PaymentSectionProps) {;
+  //Handle successful payment const handlePaymentInitiated = () => {;
+  toast ({;
+  ;
+};
+
+}"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

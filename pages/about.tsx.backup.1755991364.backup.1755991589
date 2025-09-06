@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/about.tsx.backup.1755991364.backup.1756001148
+========
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function AboutPage() {
@@ -16,5 +23,27 @@ const About: NextPage = () => (
 );
 
 export default About;
+<<<<<<< HEAD
+=======
+=======
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Information coming soon.</p>
+    </div>
+  );
+}
+=======
+export default function AboutPage() {
+  return (
+    <div className="py-8">
+      <h1 className="text-2xl font-semibold text-white">About</h1>
+      <p className="text-slate-300 mt-2">About Zion AI Marketplace.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/build-zion-ai-talent-directory-page-f450
+=======
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/about.tsx.backup.1755991364.backup.1755991589
+export default function AboutPage() { return null; }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

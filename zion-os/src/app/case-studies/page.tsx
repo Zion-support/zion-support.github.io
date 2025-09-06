@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CaseStudiesPage() {;
   return (;
+
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb-20">;

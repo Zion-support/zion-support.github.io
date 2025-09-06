@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const { execSync } = require('child_process')
@@ -9,4 +12,8 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     addTest('Unit Tests', 'skipped', 0, { "reason"})
     runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
+<<<<<<< HEAD
 
+=======
+console.log('\n Test Results "Summary")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

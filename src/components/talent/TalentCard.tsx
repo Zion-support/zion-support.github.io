@@ -1,19 +1,52 @@
+<<<<<<< HEAD
 import React from 'react',
 import { useRouter } from 'next/router',
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton",
+<<<<<<< HEAD
+=======
+
+
+
+export const TalentCard = React && React.memo(TalentCardComponent);
+TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { TalentProfile } from "@/types/talent";
+import { RatingStars  } from '@/components/RatingStars';
+import { useAuth  } from '@/context/auth/AuthProvider';
+import { useCart } from '@/context/CartContext';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
   onRequestHire: (talent: TalentProfile) => void,
   isAuthenticated: boolean
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Badge } from "@/components/ui/badge",;
@@ -31,7 +64,50 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 }
+<<<<<<< HEAD
 ;
+=======
+const TalentCardComponent = ({
+  talent
+  onViewProfile
+  onRequestHire
+  isAuthenticated
+}: TalentCardProps,) => {
+  const router = useRouter()
+  const handleViewProfile = () => {
+    // Navigate directly to the talent profile
+    router.push(`/talent/${talent.id}`)
+    // Also call the onViewProfile callback if provided
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+
+
+
+
+  const handleRequestHire = (e: React.MouseEvent,) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+
+
+  },
+
+
+
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) |[]
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string,) => void,;
+  onRequestHire: (talent: TalentProfile,) => void,;
+  isAuthenticated: boolean;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const TalentCardComponent = ({;
   talent,;
   onViewProfile,;
@@ -62,8 +138,15 @@ const TalentCardComponent = ({;
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       onClick={handleViewProfile}
       tabIndex={0}
+
+
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -72,14 +155,27 @@ const TalentCardComponent = ({;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
               {talent.profile_picture_url ? (
                 <img
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
                   className="w-full h-full object-cover"
                   loading="lazy"
+<<<<<<< HEAD
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
                   {talent.full_name?.charAt(0) || "T"}
+=======
+
+
+                  {talent.full_name?.charAt(0) || "T"}
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               )}
             </div>
@@ -97,6 +193,10 @@ const TalentCardComponent = ({;
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
             
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -111,9 +211,19 @@ const TalentCardComponent = ({;
                   <span>{talent.availability_type}</span>
                 </div>
               )}
+<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
+=======
+
+
+            </div>;
+          </div>;
+        </div>;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
@@ -121,6 +231,10 @@ const TalentCardComponent = ({;
               {skills.map((skill, index) => (
                 <span 
                   key={index}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
@@ -146,14 +260,29 @@ const TalentCardComponent = ({;
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
+<<<<<<< HEAD
           </div>
           
+=======
+
+
+          
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
                 size="sm"
                 variant="secondary"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={handleRequestHire}
+
+
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -162,7 +291,16 @@ const TalentCardComponent = ({;
             <Button
               size="sm"
               variant="ghost"
+<<<<<<< HEAD
               onClick={(e) => {
+=======
+
+
+              onClick={(e) => {
+              onClick={(e) => {
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -175,6 +313,7 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
+<<<<<<< HEAD
 },
 
 export const TalentCard = React.memo(TalentCardComponent),
@@ -206,6 +345,11 @@ TalentCard.displayName = 'TalentCard',
               variant="ghost";
               onClick={(e) => {;
                 e.stopPropagation(),;
+=======
+
+              onClick={(e,) => {;
+                e && e.stopPropagation(),;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -215,8 +359,26 @@ TalentCard.displayName = 'TalentCard',
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </Card>;
   );
 },;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
+=======
+
+
+    </Card>);
+},
+export const TalentCard = React.memo (TalentCardComponent),
+TalentCard.display_name = 'TalentCard',
+export const TalentCard = React.memo (TalentCardComponent);
+TalentCard.display_name = 'TalentCard';
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
+},
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

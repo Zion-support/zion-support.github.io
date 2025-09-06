@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React, { useState, useEffect } from 'react';
 
@@ -7,18 +14,36 @@ import Head from 'next / head';
 ;
 
 interface Partner {
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 interface Partner {
+=======
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+interface Partner {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface Partner {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   code: string;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
+<<<<<<< HEAD
+=======
 
 
 const mockPartners: Partner[] = [;
@@ -62,13 +87,14 @@ const mockPartners: Partner[] = [;
     totalEarnings: 0;
   }
 ];
-
 const AdminPartnersPage: React.FC = () => {;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
+<<<<<<< HEAD
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
@@ -93,41 +119,35 @@ const AdminPartnersPage: React.FC = () => {;
     setFlags(json.flags |[]);
 
   }
+=======
+    const json = await res.json();
+    setFlags(json.flags |[]);
+<<<<<<< HEAD
+
+=======
+=======
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
+<<<<<<< HEAD
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || [])
-      } catch {}
-    })()
-  }, []);
 
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-  }
-
-  async function viewFlags(code: string) {
-    setSelected(code);
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || [])
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
@@ -142,6 +162,7 @@ export default function AdminPartners() {
       body: JSON && JSON.stringify({ code, ...updates }),;
     });
     const res = await fetch('/api/admin/partners/list');
+<<<<<<< HEAD
     const json = await res && res.json();
     setPartners(json && json.partners || []);  }
   async function viewFlags(): any (code: string) {;
@@ -151,15 +172,30 @@ export default function AdminPartners() {
     );
 
   }
+=======
+    const json = await res.json();
+    setPartners(json.partners || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function viewFlags(code: string) {;
+    setSelected(code);
+    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-}
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -219,6 +255,135 @@ export default function AdminPartners() {
   }
 }
                     className="w-24 border rounded px-2 py-1"
+<<<<<<< HEAD
+=======
+
+
+  return (
+    <div className='space-y-6'>;
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
+      <div className='overflow-auto'>;
+        <table className='min-w-full text-sm'>;
+          <thead>;
+            <tr className='text-left border-b'>;
+              <th className='py-2 pr-4'>Code</th>;
+              <th className='py-2 pr-4'>Name</th>;
+              <th className='py-2 pr-4'>Status</th>;
+              <th className='py-2 pr-4'>Commission</th>;
+              <th className='py-2 pr-4'>Actions</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {partners && partners.map(p => (;
+              <tr key={p && p.code} className='border-b'>;
+                <td className='py-2 pr-4'>{p && p.code}</td>;
+                <td className='py-2 pr-4'>{p && p.name}</td>;
+                <td className='py-2 pr-4'>{p && p.status}</td>;
+                <td className='py-2 pr-4'>;
+                  <input
+
+
+                    }
+                    className='w-24 border rounded px-2 py-1';
+                  />;
+                </td>;
+                <td className='py-2 pr-4 space-x-2'>;
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>;
+                      updatePartner(p && p.code, { status: 'approved' });
+
+                    on_blur={e =>;
+                      update_partner (p.code, {
+                        commission_rate: Number (e.target.value),
+                      });
+                    }
+                    className='w - 24 border rounded px - 2 py - 1';
+                  />;
+                </td>;
+                <td className='py - 2 pr - 4 space - x-2'>;
+                  <button;
+                    className='px - 2 py - 1 rounded border';
+                    on_click={() =>;
+                      update_partner (p.code, { status: 'approved' });
+
+                    }
+                  >;
+                    Approve;
+                  </button>;
+
+
+                    }
+                  >;
+                    Reject;
+                  </button>;
+
+
+=======
+useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
+        setPartners(json.partners || [])
+      } catch {}
+    })()
+  }, []);
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code, ...updates })});
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || [])
+  }
+  async function viewFlags(code: string) {
+    setSelected(code);
+    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+    const json = await res.json();
+    setFlags(json.flags || [])
+  }
+  useEffect(() => {;
+    // Simulate loading partners;
+    setTimeout(() => {;
+      setPartners(mockPartners);
+      setLoading(false);
+    }, 1000);  }, []);
+  async function updatePartner(): any (code: string, updates: any) {;
+    await fetch('/api/admin/partners/update', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({ code, ...updates }),;
+    });
+    const res = await fetch('/api/admin/partners/list');
+
+    const json = await res.json();
+    setPartners(json.partners || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function viewFlags(code: string) {;
+    setSelected(code);
+    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+
+
+
+    const json = await res.json();
+    setFlags(json.flags || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -265,7 +430,7 @@ export default function AdminPartners() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -274,12 +439,19 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
+<<<<<<< HEAD
 
         <div className="p-4 rounded border">
           <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
           <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
 
           </tbody>;
@@ -323,6 +495,10 @@ export default function AdminPartners() {
         </div>;
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -340,6 +516,8 @@ export default function AdminPartners() {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
+<<<<<<< HEAD
+=======
 
                   <button;
                     className='px - 2 py - 1 rounded border';
@@ -417,6 +595,7 @@ export default function AdminPartners() {
             <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
           </div>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -478,6 +657,8 @@ export default function AdminPartners() {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
+<<<<<<< HEAD
+=======
 
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
@@ -490,13 +671,11 @@ export default function AdminPartners() {
             </div>;
           </div>;
         </div>;
-
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">;
           <div className="px-6 py-4 border-b">;
             <h2 className="text-lg font-semibold">Partners ({filteredPartners && filteredPartners.length})</h2>;
           </div>;
-
           {loading ? (;
             <div className="text-center py-8">Loading partners...</div>;
           ) : filteredPartners && filteredPartners.length === 0 ? (;
@@ -562,6 +741,7 @@ export default function AdminPartners() {
                           {partner && partner.status === 'pending' && (;
                             <>;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -592,29 +772,103 @@ export default function AdminPartners() {
                               Activate;
                             </button>;
                           )}
-                          <button className="text-blue-600 hover:text-blue-900">
-                            Edit
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+<<<<<<< HEAD
           )}
         </div>
       </main>
     </>
   );
+<<<<<<< HEAD
 =======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                          <button className="text-blue-600 hover:text-blue-900">;
+                            <>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'active')}
+                                className="text - green - 600 hover:text - green - 900";
+                              >;
+                                Approve;
+                              </button>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'inactive')}
+                                className="text - red - 600 hover:text - red - 900";
+                              >;
+                                Reject;
+                              </button>;
+                            </>)}
+                          {partner.status === 'active' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'inactive')}
+                              className="text - red - 600 hover:text - red - 900";
+                            >;
+                              Deactivate;
+                            </button>)}
+                          {partner.status === 'inactive' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'active')}
+                              className="text - green - 600 hover:text - green - 900";
+                            >;
+                              Activate;
+                            </button>)}
+                          <button className="text - blue - 600 hover:text - blue - 900">;
+                            Edit;
+                          </button>;
+                        </div>;
+                      </td>;
+
+        </div>;
+      </main>;
+    </>;
+  );
+
+=======
+                    </tr>))}
+                </tbody>;
+              </table>;
+            </div>)}
+        </div>;
+      </main>;
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 }
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

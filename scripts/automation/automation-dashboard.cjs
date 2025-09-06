@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
@@ -86,4 +89,8 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
+<<<<<<< HEAD
 
+=======
+  console.error(chalk.red(" Dashboard "error": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 const fs = require("fs");
 const path = require("path");
@@ -17,7 +20,10 @@ class BuildHealthMonitor {}
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes default};
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   log(message) {}
   console.log(`[${new Date().toISOString()}] [BuildHealthMonitor] ${message}";
     )};
@@ -116,4 +122,8 @@ class BuildHealthMonitor {}
 };
 ;
 const monitor = new BuildHealthMonitor();
+<<<<<<< HEAD
 
+=======
+monitor.run().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -8,4 +11,8 @@ const problematicFiles = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
+<<<<<<< HEAD
 
+=======
+    console.log(' Build "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -207,4 +210,8 @@ const packagePath = path.join(this.projectRoot, "package.json")
         "ERROR"
   this.log(")
   console.log("Smart Build Optimization completed successfully")
+<<<<<<< HEAD
 
+=======
+  console.error("Smart Build Optimization "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +23,10 @@ class ErrorDetectionMonitor {}
     this.lastCheck = null};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runTypeScriptCheck() {}
     try {}
@@ -191,4 +197,8 @@ if (require.main === module) {}
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
+<<<<<<< HEAD
 
+=======
+module.exports = ErrorDetectionMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

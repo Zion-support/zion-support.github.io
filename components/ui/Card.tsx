@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   className: string;
   id: string;
@@ -139,6 +140,8 @@ const CardFooter = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
   <div
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -157,10 +160,13 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import React from 'react',;
 interface CardProps {
@@ -189,7 +195,14 @@ const Card: React.FC<CardProps> = ({
   const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  />));
+CardFooter.display_name = "CardFooter";
+;
+import React from 'react',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -197,12 +210,17 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
+<<<<<<< HEAD
 
+=======
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
+<<<<<<< HEAD
 
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
 
@@ -217,3 +235,17 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+    </div>);
+
+},
+export default Card,
+;
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+    </div>);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

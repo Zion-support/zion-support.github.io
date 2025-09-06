@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Heart, Shield, Database, Users, Activity } from 'lucide-react';
 import React from 'react';
@@ -32,6 +33,9 @@ import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -42,9 +46,10 @@ import {
   Users, 
   Activity, 
   CheckCircle, 
-  ArrowRight ;
+  ArrowRight 
 } from 'lucide-react';
 
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -92,6 +97,8 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const features = [
   {
     icon: Heart,
@@ -110,6 +117,7 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
   },
@@ -207,6 +215,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 ];
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'Provider Management',
     description: 'Comprehensive provider and staff management solutions',
     benefits: ['Provider profiles', 'Scheduling', 'Communication', 'Performance tracking']
@@ -214,6 +224,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 
 export default function HealthcareSolutionsPage() {
+<<<<<<< HEAD
 
     title: 'Provider Portal',
     description: 'Streamlined workflows for healthcare providers and staff'
@@ -334,6 +345,29 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Transform healthcare delivery with secure, compliant, and intelligent technology solutions
                 designed for modern healthcare providers.
+=======
+  return (
+    <>
+      <Head>
+        <title>Healthcare Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive healthcare technology solutions including patient data management, security, analytics, and provider management." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Healthcare Solutions</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Secure and compliant healthcare technology solutions designed for healthcare providers. 
+                From patient data management to analytics and provider management.
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -346,7 +380,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -368,6 +404,33 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
 
 <<<<<<< HEAD
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Healthcare Technology Features</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our healthcare solutions are built with security and compliance in mind.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -380,6 +443,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -508,9 +572,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -532,8 +599,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
     </>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+}

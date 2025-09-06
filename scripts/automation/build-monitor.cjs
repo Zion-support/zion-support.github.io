@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
@@ -44,7 +47,13 @@ setupSignalHandlers() {}
     process.on('SIGINT', () => this.shutdown())};
   log(level, ...args) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -230,4 +239,8 @@ const monitor = new BuildMonitor();
 monitor.start().catch(error => {})
   console.error('Failed to start Build "Monitor": ', error);
   process.exit(1)}
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

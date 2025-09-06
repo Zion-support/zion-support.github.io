@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -73,4 +76,8 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
+<<<<<<< HEAD
 
+=======
+  const fullPath = path.join(dirPath, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -20,7 +23,10 @@ import { execSync, spawn } from;
         warnings: this.parseLintOutput(output, 'warning')
     const lines = output.split('\\n')
           type: 'lint'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   '
       console.log(')
   '
@@ -48,4 +54,8 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
 
+=======
+      lines[lineIndex] = line.replace(/"/g, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

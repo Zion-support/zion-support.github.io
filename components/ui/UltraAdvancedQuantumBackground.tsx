@@ -1,12 +1,20 @@
 
+<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+let animationFrameId: number;
+let particles: Particle[] = [];
+let quantumFields: QuantumField[] = [];
+let neuralNetworks: NeuralNetwork[] = [];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
+<<<<<<< HEAD
 
 max_life: number;
 
@@ -20,10 +28,13 @@ constructor () {
 this.y = Math.random () * canvas.height;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 this.vx = (Math.random () - 0.5) * 2;
 this.vy = (Math.random () - 0.5) * 2;
 this.size = Math.random () * 3 + 1;
 this.color = `hsl ($ {
+<<<<<<< HEAD
 
 =======
   Math.random () * 360;
@@ -47,10 +58,13 @@ if ( {) {
   this.coordinate_x = Math.random () * canvas.width;
 this.coordinate_y = Math.random () * canvas.height;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 this.radius = Math.random () * 100 + 50;
 this.intensity = Math.random () * 0.5 + 0.5;
 this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
+<<<<<<< HEAD
 
 =======
 import React, { useEffect, useRef } from 'react';
@@ -69,6 +83,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -76,6 +92,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 
     let animationFrameId: number;
     let particles: Particle[] = [];
@@ -87,6 +104,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 
       x: number;
       y: number;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   200 + Math.random () * 60;
 }, 80%, 60%) `;
 const UltraAdvancedQuantumBackground: React.FC<;
@@ -117,13 +136,24 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
 
+=======
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       update() {
         this.x += this.vx;
@@ -134,6 +164,7 @@ if (return) {
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -141,15 +172,52 @@ if (return) {
       }
 
 =======
+=======
+      maxLife: number;      x: number,;
+      y: number,;
+      vx: number,;
+      vy: number,;
+      size: number,;
+      color: string,;
+      life: number,;
+      maxLife: number,;
+        this && this.x = Math && Math.random() * canvas && canvas.width;
+        this && this.y = Math && Math.random() * canvas && canvas.height;
+        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
+        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
+        this && this.size = Math && Math.random() * 3 + 1;
+        this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
+        this && this.life = Math && Math.random() * 100;
+        this && this.maxLife = 100;      }        this && this.maxLife = 100;
+      }
+      update() {;
+        this && this.x += this && this.vx;
+        this && this.y += this && this.vy;
+        this && this.life--;
+        if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
+        if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
+        if (this && this.life <= 0) {;
+          this && this.life = this && this.maxLife;
+          this && this.x = Math && Math.random() * canvas && canvas.width;
+          this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
+
+        }
+      }
+
+      draw() {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           this.y = Math.random() * canvas.height;        }
 
         }
       }
+<<<<<<< HEAD
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (!ctx) return;
 
         ctx.save();
@@ -159,6 +227,7 @@ if (return) {
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
 
+<<<<<<< HEAD
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -169,6 +238,74 @@ if (return) {
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.stroke();
 
+=======
+        if (!ctx) return;
+        ctx && ctx.save();
+        ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
+        ctx && ctx.fillStyle = this && this.color;
+        ctx && ctx.beginPath();
+        ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
+        ctx && ctx.fill();
+        ctx && ctx.restore();      }
+    }
+      x: number;
+      y: number;
+      max_life: number,
+        this.coordinate_x = Math.random () * canvas.width;
+        this.coordinate_y = Math.random () * canvas.height;
+        this.vx = (Math.random () - 0.5) * 2;
+        this.vy = (Math.random () - 0.5) * 2;
+        this.size = Math.random () * 3 + 1;
+        this.color = `hsl (${Math.random () * 360}, 70%, 60%)`;
+        this.life = Math.random () * 100;
+        this.max_life = 100;      }        this.max_life = 100;
+      }
+      update () {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+;
+        // Check condition
+if (this.vx *= -1) {
+  $2
+}
+        // Check condition
+if (this.vy *= -1) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          this.life = this.max_life;
+          this.coordinate_x = Math.random () * canvas.width;
+          this.coordinate_y = Math.random () * canvas.height;        }          this.coordinate_y = Math.random () * canvas.height;
+        }
+      }
+      draw () {
+        // Check condition
+if (return) {
+  $2
+}
+        ctx.save ();
+        ctx.global_alpha = this.life / this.max_life;
+        ctx.fill_style = this.color;
+        ctx.begin_path ();
+        ctx.arc (this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill ();
+        ctx.restore ();      }
+    }
+    class QuantumField {        ctx.restore ();
+      }
+    }
+    class QuantumField {
+      coordinate_x: number;
+      coordinate_y: number;
+      radius: number;
+      intensity: number;
+      phase: number;
+      color: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.nodes = [];
         this.connections = [];
         // Create neural network structure
@@ -188,6 +325,7 @@ if (return) {
                   to: nodeIndex
                   weight: Math.random()
                 })
+<<<<<<< HEAD
 
               }
             }
@@ -196,63 +334,34 @@ if (return) {
         })
       }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }
             }
             nodeIndex++;
           }
-
-        })
-
-      }
-
-          node.y += (Math.random() - 0.5) * 0.5
-
-        })
-      }
-      draw() {
-        if (!ctx) return;
-        ctx.save();
-
-        
-
-        // Draw connections
-        ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
-        ctx.lineWidth = 1;
-        this.connections.forEach(connection => {
-          const from = this.nodes[connection.from];
-          const to = this.nodes[connection.to];
-          ctx.beginPath();
-          ctx.moveTo(from.x, from.y);
-          ctx.lineTo(to.x, to.y);
-
-          ctx.stroke()
-
-        });
         // Draw nodes
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
         this.nodes.forEach(node => {
           ctx.beginPath();
           ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
-
-          ctx.fill()
-
         });
         ctx.restore()
       }
     }
     // Initialize
-
-    for (let i = 0, i < 100, i++) {
-
       particles.push(new Particle())
     }
     for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
+<<<<<<< HEAD
 
     }
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     neuralNetworks.push(new NeuralNetwork());
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -260,26 +369,36 @@ if (return) {
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update();
+<<<<<<< HEAD
 
 =======
         field.draw()
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
       ctx.lineWidth = 1;
+<<<<<<< HEAD
 
 =======
       for (let i = 0, i < particles.length, i += 2) {
@@ -363,18 +482,35 @@ if (return) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
         }
       }
 
       ctx && ctx.restore();
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
+        if (i + 1 < particles.length) {
+          const p1 = particles[i];
+          const p2 = particles[i + 1];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
 =======
             ctx.stroke()
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -382,19 +518,43 @@ if (return) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+          }
+        }
+      }
+      ctx.restore();
+    }
+  }, []);
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>;
+      {/* Quantum Matrix Overlay */}
+      {/* Animated Quantum Grid */}
+      <div className='absolute inset-0 opacity-20'>;
+        <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />;
+        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0 && 0.3)_100%)] bg-[length:50px_50px]' />      </div>;
+      {/* Floating Quantum Elements */}
+      <motion&& motion.div
+        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         transition={{
           duration: 4
           repeat: Infinity
           ease: 'easeInOut',        animate={{
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         transition={{
           duration: 4
           repeat: Infinity
           ease: "easeInOut"
         }}
+<<<<<<< HEAD
 
+=======
+        className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         animate={{
           scale: [1, 1.3, 1];
           opacity: [0.2, 0.5, 0.2]}}
@@ -404,38 +564,27 @@ if (return) {
 ease: "easeInOut",
           delay: 1;
         }}
+<<<<<<< HEAD
       />;
       <motion.div;
         className='absolute top - 40 right - 32 w - 24 h - 24 bg - gradient - to - r from - purple - 400 to - pink - 500 rounded - full opacity - 20 blur - xl';
         animate={{
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         transition={{
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,          ease: "easeInOut"
           delay: 2
-          duration: 6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 2,
-
         }}
         transition={{
           duration: 5
           repeat: Infinity
           ease: 'easeInOut'
           delay: 1,        }}
-
-      />;
-      <motion.div;
-        className='absolute bottom - 32 left - 1/3 w - 28 h - 28 bg - gradient - to - r from - green - 400 to - emerald - 500 rounded - full opacity - 20 blur - xl';
-
-        animate={{
-          scale: [1, 1.4, 1]
-          opacity: [0.2, 0.6, 0.2]
-      />;
       <motion&& motion.div
         className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
         animate={{
@@ -447,6 +596,7 @@ ease: "easeInOut",
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,        }}
+<<<<<<< HEAD
       />
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -454,12 +604,17 @@ ease: "easeInOut",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
-
+        className='absolute inset-0 w-full h-full opacity-60'        style={{ zIndex: 1 }}
+      />
+      />;
 
       {/* Content Layer */}
+<<<<<<< HEAD
 
       {/* Quantum Energy Waves */}
       <div className='absolute bottom - 0 left - 0 right - 0 h - 32 overflow - hidden'>;
@@ -467,6 +622,23 @@ ease: "easeInOut",
           className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 500 / 20 to - transparent';
           animate={{
             coordinate_x: [0, -100, 0],
+=======
+      <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60";
+        style={{ zIndex: 1 }}
+      {/* Quantum Energy Waves */}
+      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>;
+        <motion&& motion.div
+          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
+          animate={{
+            x: [0, -100, 0]
+      />;
+      {/* Quantum Canvas */}
+      <canvas;
+        ref={canvas_ref}
+        className='absolute inset - 0 w - full h - full opacity - 60'        style={{ z_index: 1 }}
+      />;
+      {/* Content Layer */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
             duration: 8
@@ -487,6 +659,7 @@ ease: "easeInOut",
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
 };
@@ -496,6 +669,8 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
       {/* Content Layer */}
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             delay: 2
           }}
         />
@@ -507,6 +682,7 @@ export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
 
+<<<<<<< HEAD
     </div>
   );
 }
@@ -514,8 +690,27 @@ export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
 =======
+};
+
+export default UltraAdvancedQuantumBackground;  );
+};
+
+
+export default UltraAdvancedQuantumBackground;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+};
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",;
+            delay: 2;
+          }}
+        />;
+      </div>;
+    </div>;
+  );
+export default UltraAdvancedQuantumBackground;
             ease: 'linear',          }}
         />;
         <motion.div;
@@ -523,12 +718,30 @@ export default UltraAdvancedQuantumBackground;
           animate={{
             coordinate_x: [0, 100, 0],
           }}
+<<<<<<< HEAD
 }
 ;
 export default UltraAdvancedQuantumBackground;            ease: "linear",
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'linear',
+            delay: 2,          }}
+        />;
+      </div>;
+    </div>);
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+            delay: 2
+          }}
+        />
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             delay: 2;
           }}
         />;
@@ -539,6 +752,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 export default UltraAdvancedQuantumBackground);
 }
 ;
+<<<<<<< HEAD
 export default UltraAdvancedQuantumBackground;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -554,3 +768,11 @@ export default UltraAdvancedQuantumBackground;
     </div>
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+        />
+      </div>
+    </div>
+
+      {/* Content Layer */}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

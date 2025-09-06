@@ -1,8 +1,36 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <>;
@@ -38,6 +66,7 @@ export default function AIPoweredDevOpsPlatformPage() {
     </>;
   );
 
+<<<<<<< HEAD
 }
 import React from 'react',
 import Head from 'next/head',
@@ -45,11 +74,19 @@ import ServiceLanding from '../components/sections/ServiceLanding',
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
+=======
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import ServiceLanding from '../components/sections/ServiceLanding';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>
@@ -79,8 +116,35 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 =======
 
+=======
+
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next / head';
+import Layout from '../components / layout / Layout';
+export default /**
+ * AIPoweredDevOpsPlatformPage - Function description
+ */
+function AIPoweredDevOpsPlatformPage() {
+=======
+<<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>;
       <Head>;
@@ -109,6 +173,7 @@ export default function AIPoweredDevOpsPlatformPage() {
           'Rollback orchestration with blast radius limits',
           'Incident prediction, runbooks, and guardrails',
         ]}
+<<<<<<< HEAD
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
@@ -163,7 +228,19 @@ export default function AIPoweredDevOpsPlatformPage() {
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+        industries={['SaaS', 'E - commerce', 'Fintech', 'Media', 'Enterprise IT']}
+        canonical='https: //ziontechgroup.com / ai - powered - devops - platform';
+      />;
+    </>);
+;
 
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

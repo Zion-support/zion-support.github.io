@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 const Component = () => {
@@ -10,11 +15,40 @@ const Component = () => {
 };
 
 export default Component;
+<<<<<<< HEAD
+=======
+=======
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+=======
+<<<<<<< HEAD
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+=======
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default class MyDocument extends Document {
   render() {
     return (
+<<<<<<< HEAD
       <Html>
+=======
+<<<<<<< HEAD
+      <Html>
+=======
+      <Html lang="en">
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
         <Head />
         <body>
@@ -22,10 +56,53 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
   }
 }
 
 export default MyDocument;
 >>>>>>> origin/cursor/build-zion-s-modular-org-chart-builder-7425
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+    )
+  }
+}
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const _document: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>_document - Zion Tech Solutions</title>
+        <meta name="description" content="_document page" />
+      </Head>
+      
+      <main>
+        <h1>_document</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  );
+};
+
+export default _document;
+>>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
+=======
+    );
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

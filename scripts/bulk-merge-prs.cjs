@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const https = require('https')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.owner = 'Zion-Holdings'
     this.repo = 'zion.app'
     this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
@@ -18,4 +24,8 @@ const path = require('path')
         return { "status": 'merged', "message"}
         return { "status"}
       return { "status"}
+<<<<<<< HEAD
 
+=======
+    console.error('Bulk PR merger "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

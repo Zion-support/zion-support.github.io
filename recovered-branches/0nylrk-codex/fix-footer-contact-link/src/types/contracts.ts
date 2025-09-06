@@ -1,18 +1,71 @@
+export interface ContractTemplate {
 
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export interface ContractTemplate {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ContractTemplate {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
   template_data: ContractFormValues;
   is_default: boolean;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+  created_at: string,
+  updated_at: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  created_at: string
+
+  updated_at: string
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
   created_at: string,
   updated_at: string
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+  created_at: string,
+  updated_at: string
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",
 export interface ContractTemplate {
   id: string,
@@ -30,7 +83,29 @@ export interface ContractTemplate {;
   created_at: string;
   updated_at: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

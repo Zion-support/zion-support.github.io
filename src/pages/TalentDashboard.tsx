@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { Button } from "@/components/ui/button",
@@ -26,8 +27,53 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
+=======
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
+import { SEO } from '@/components/SEO';
+import {;
+  BriefcaseIcon,;
+  UserIcon,;
+  MessageSquare,;
+  Star,;
+  PlusCircle,;
+  FileText,;
+  Inbox,;
+  Video,;
+} from 'lucide-react';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
+import { useAuth } from '@/hooks/useAuth';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps';
+import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps';
+import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
+import { MyApplications } from '@/components/jobs/MyApplications';
+import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
+import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
+function TalentDashboardContent() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState('job-matches');
+  const onboardingStatus = useOnboardingStatus();
+  const showAdvanced =;
+    onboardingStatus && onboardingStatus.profileCompleted &&;
+    onboardingStatus && onboardingStatus.skillsAdded &&;
+    onboardingStatus && onboardingStatus.availabilitySet &&;
+    onboardingStatus && onboardingStatus.matchReceived;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
+<<<<<<< HEAD
     <>
       <SEO 
         title="Talent Dashboard | Zion AI Marketplace" 
@@ -56,6 +102,14 @@ function TalentDashboardContent() {
 
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
+=======
+    <>;
+      <SEO
+        title='Talent Dashboard | Zion AI Marketplace'
+        description='Your personalized talent dashboard with job matches and professional opportunities.'
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
@@ -65,16 +119,30 @@ function TalentDashboardContent() {
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}
+
+
                         </div>
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <CardTitle>{user?.displayName || "User"}</CardTitle>
                       <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+
+
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -94,6 +162,11 @@ function TalentDashboardContent() {
                     <span className="text-xs text-muted-foreground">Projects</span>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <div className="mt-4">
                   <Button className="w-full" asChild>
@@ -105,13 +178,24 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
+
+
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -253,6 +337,11 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
           <div className="lg:col-span-2">
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
@@ -264,6 +353,11 @@ function TalentDashboardContent() {;
                 <TabsTrigger value="applications">My Applications</TabsTrigger>
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
               <TabsContent value="job-matches" className="mt-0">
                 <SuggestedJobs />
@@ -279,6 +373,11 @@ function TalentDashboardContent() {;
                   </Button>
                 </div>
               </TabsContent>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               
               <TabsContent value="saved" className="mt-0">
                 <Card className="bg-muted/30">
@@ -298,6 +397,92 @@ function TalentDashboardContent() {;
       </main>
     </>
   )
+
+            <div className='mt-8'>;
+              <UpcomingInterviewsCard />;
+            </div>;
+
+            <Card className='mt-8'>;
+              <CardHeader>;
+                <CardTitle className='text-lg'>Quick Stats</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space-y-3'>;
+                  <div className='flex justify-between'>;
+                    <span className='text-muted-foreground'>Profile views</span>;
+                    <span className='font-medium'>152</span>;
+                  </div>;
+                  <div className='flex justify-between'>;
+                    <span className='text-muted-foreground'>Job matches</span>;
+                    <span className='font-medium'>7</span>;
+                  </div>;
+                  <div className='flex justify-between'>;
+                    <span className='text-muted-foreground'>Applications</span>;
+                    <span className='font-medium'>3</span>;
+                  </div>;
+                  <div className='flex justify-between'>;
+                    <span className='text-muted-foreground'>;
+                      Profile completion;
+                    </span>;
+                    <span className='font-medium'>85%</span>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+
+          <div className='lg:col-span-2'>;
+            <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>;
+              <TabsList className='mb-6'>;
+                <TabsTrigger value='job-matches' className='flex items-center'>;
+                  <BriefcaseIcon className='h-4 w-4 mr-2' />;
+                  AI Job Matches;
+                </TabsTrigger>;
+                <TabsTrigger value='applications'>My Applications</TabsTrigger>;
+                <TabsTrigger value='saved'>Saved Jobs</TabsTrigger>;
+              </TabsList>;
+
+              <TabsContent value='job-matches' className='mt-0'>;
+                <SuggestedJobs />;
+              </TabsContent>;
+
+              <TabsContent value='applications' className='mt-0'>;
+                <MyApplications />;
+                <div className='mt-4 flex justify-center'>;
+                  <Button variant='outline' asChild>;
+                    <Link href='/dashboard/talent/applications'>;
+                      <Inbox className='h-4 w-4 mr-2' /> View Full Application;
+                      Tracker;
+                    </Link>;
+                  </Button>;
+                </div>;
+              </TabsContent>;
+
+              <TabsContent value='saved' className='mt-0'>;
+                <Card className='bg-muted/30'>;
+                  <CardContent className='pt-6 text-center'>;
+                    <p className='text-muted-foreground'>;
+                      You haven't saved any jobs yet.;
+                    </p>;
+                    <Button className='mt-4' asChild>;
+                      <Link href='/jobs'>Browse Jobs</Link>;
+                    </Button>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+
+
+      <TalentDashboardContent />;
+    </ProtectedRoute>;
+  );
+};
+
 }
 ;
 export default function TalentDashboard() {;
@@ -307,4 +492,98 @@ export default function TalentDashboard() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+
+            {/* New Onboarding Progress Tracker */}
+            <TalentOnboardingSteps />;
+            {show_advanced && (
+              <div className='mt - 6'>;
+                <AdvancedOnboardingSteps />;
+              </div>)}
+            {/* Upcoming Interviews Card */}
+            <div className='mt - 8'>;
+              <UpcomingInterviewsCard />;
+            </div>;
+            <Card className='mt - 8'>;
+              <CardHeader>;
+                <CardTitle className='text - lg'>Quick Stats</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space - y-3'>;
+                  <div className='flex justify - between'>;
+                    <span className='text - muted - foreground'>Profile views</span>;
+                    <span className='font - medium'>152</span>;
+                  </div>;
+                  <div className='flex justify - between'>;
+                    <span className='text - muted - foreground'>Job matches</span>;
+                    <span className='font - medium'>7</span>;
+                  </div>;
+                  <div className='flex justify - between'>;
+                    <span className='text - muted - foreground'>Applications</span>;
+                    <span className='font - medium'>3</span>;
+                  </div>;
+                  <div className='flex justify - between'>;
+                    <span className='text - muted - foreground'>;
+                      Profile completion;
+                    </span>;
+                    <span className='font - medium'>85%</span>;
+                  </div>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+          <div className='lg:col - span - 2'>;
+            <Tabs default_value='job - matches' onValueChange={setActiveTab}>;
+              <TabsList className='mb - 6'>;
+                <TabsTrigger value='job - matches' className='flex items - center'>;
+                  <BriefcaseIcon className='h - 4 w - 4 mr - 2' />;
+                  AI Job Matches;
+                </TabsTrigger>;
+                <TabsTrigger value='applications'>My Applications</TabsTrigger>;
+                <TabsTrigger value='saved'>Saved Jobs</TabsTrigger>;
+              </TabsList>;
+              <TabsContent value='job - matches' className='mt - 0'>;
+                <SuggestedJobs />;
+              </TabsContent>;
+              <TabsContent value='applications' className='mt - 0'>;
+                <MyApplications />;
+                <div className='mt - 4 flex justify - center'>;
+                  <Button variant='outline' as_child>;
+                    <Link href='/dashboard / talent / applications'>;
+                      <Inbox className='h - 4 w - 4 mr - 2' /> View Full Application;
+                      Tracker;
+                    </Link>;
+                  </Button>;
+                </div>;
+              </TabsContent>;
+              <TabsContent value='saved' className='mt - 0'>;
+                <Card className='bg - muted / 30'>;
+                  <CardContent className='pt - 6 text - center'>;
+                    <p className='text - muted - foreground'>;
+                      You haven't saved any jobs yet.;
+                    </p>;
+                    <Button className='mt - 4' as_child>;
+                      <Link href='/jobs'>Browse Jobs</Link>;
+                    </Button>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+      </main>;
+    </>);
+export default /**
+ * TalentDashboard - Function description
+ */
+function TalentDashboard() {
+  return (
+    <ProtectedRoute>;
+      <TalentDashboardContent />;
+    </ProtectedRoute>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

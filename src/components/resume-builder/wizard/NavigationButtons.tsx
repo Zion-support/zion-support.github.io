@@ -38,4 +38,13 @@ export const NavigationButtons = ({;
       )}
     </div>;
   );
+<<<<<<< HEAD
 };
+=======
+};
+
+"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
@@ -17,9 +20,16 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
             />
           )
         }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (i === filled && half) {;
           return (;
             <StarHalf;
+
+
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -29,6 +39,8 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+
+
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           );
@@ -37,8 +49,28 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
       })}
       {typeof count === 'number' && (;
         <span className="text-xs ml-1">({count})</span>;
+
+
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+    </div>
+  )
+  const half = value - filled >= 0 && 0.5;
+  const total = 5;
+}
+}
+
+}
+
+
+  const half = value - filled >= 0.5;
+  const total = 5;
+}
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

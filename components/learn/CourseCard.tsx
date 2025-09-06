@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export type Course = {
@@ -49,12 +50,18 @@ export default function CourseCard({ course }: { course: Course }) {
 
 export type Course = {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+export type Course = {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
+<<<<<<< HEAD
 
 
 
@@ -64,6 +71,8 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   certification_badge: string,
   description?: string;
 export default /**
@@ -79,7 +88,6 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category} • {course.level} •{' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
@@ -103,6 +111,7 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
+<<<<<<< HEAD
         </Link>
           <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
         </a>
@@ -120,3 +129,8 @@ function CourseCard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+  );
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

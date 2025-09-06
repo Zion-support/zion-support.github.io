@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -190,4 +193,8 @@ const glob = require("glob")
       return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in "automation"`})
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
+<<<<<<< HEAD
 
+=======
+  console.error("Automation "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

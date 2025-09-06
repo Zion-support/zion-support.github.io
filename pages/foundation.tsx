@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
@@ -25,6 +29,7 @@ export default function FoundationPage() {
             <a className="underline" href="#mou">Partnership MOUs</a>
           </div>
         </section>
+<<<<<<< HEAD
         <section className="space-y-4" id="reports">
           <h2 className="text-2xl font-semibold">Transparency Reports</h2>
           <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
@@ -35,37 +40,184 @@ export default function FoundationPage() {
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+            <Link href="/governance/trust"><a className="underline">Governance & Trust</Link></Link>
+            <a className="underline" href="#reports">Transparency Reports</Link>
+            <a className="underline" href="#grants">Grants</Link>
+            <a className="underline" href="#mou">Partnership MOUs</Link>
+          </div>
+        </section>
+        <section className="space-y-4" id="charter">
+          <h2 className="text-2xl font-semibold">Foundation Charter</h2>
+          <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>
+          <CharterGenerator />
+        </section>
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
+            <li>
+              Open dataset creation for multilingual benchmarks — Milestone 0
+              (Planned)
+            </li>            <li>Agent interoperability standards and sandbox — RFP (Open)</li>
+          </ul>
+        </section>
+
+
+              </div>;
+            ))}
+          </div>;
+        </section>;
+        <section className='space-y-4' id='grants'>;
+          <h2 className='text-2xl font-semibold'>Grants Issued</h2>;
+          <p className='text-gray-600 dark:text-gray-300'>;
+            Cross-multiverse grants across chains, rollups, and alternate;
+            compute realms.;
+          </p>;
+          <ul className='list-disc list-inside space-y-2 text-sm'>;
+            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>;
+            <li>;
+              Open dataset creation for multilingual benchmarks — Milestone 0;
+              (Planned);
+            </li>            <li>Agent interoperability standards and sandbox — RFP (Open)</li>;
+          </ul>;
+        </section>;
+        <section className='space-y-4' id='mou'>;
+          <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>;
+          <p className='text-gray-600 dark: text-gray-300'>;
+            Public archive of Memoranda of Understanding (MOUs). Redactions may;
+            apply where legally required.;
+          </p>;
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import Head from 'next / head';
+import Link from 'next / link';
+import CharterGenerator from '../components / foundation / CharterGenerator';
+              </div>))}
+          </div>;
+        </section>;
+        <section className='space - y-4' id='grants'>;
+          <h2 className='text - 2xl font - semibold'>Grants Issued</h2>;
+          <p className='text - gray - 600 dark:text - gray - 300'>;
+            Cross - multiverse grants across chains, rollups, and alternate;
+            compute realms.;
+          </p>;
+          <ul className='list - disc list - inside space - y-2 text - sm'>;
+            <li > Seed safety tooling and evals R & D — Milestone 1 (Pending)</li>;
+            <li>;
+              Open dataset creation for multilingual benchmarks — Milestone 0;
+              (Planned);
+            </li>            <li > Agent interoperability standards and sandbox — RFP (Open)</li>;
+          </ul>;
+        </section>;
+        <section className='space - y-4' id='mou'>;
+          <h2 className='text - 2xl font - semibold'>Partnership MOU Archive</h2>;
+          <p className='text - gray - 600 dark: text - gray - 300'>;
+            Public archive of Memoranda of Understanding (MOUs). Redactions may;
+            apply where legally required.;
+          </p>;
+          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 text - sm text - gray - 600 dark:text - gray - 400'>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             No MOUs published yet.;
           </div>;
         </section>;
       </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+        <section className='space-y-4' id='grants'>
+          <h2 className='text-2xl font-semibold'>Grants Issued</h2>
+          <p className='text-gray-600 dark:text-gray-300'>
+            Cross-multiverse grants across chains, rollups, and alternate
+            compute realms.
+          </p>
+          <ul className='list-disc list-inside space-y-2 text-sm'>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
           <ul className="list-disc list-inside space-y-2 text-sm">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>
             <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
+<<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+<<<<<<< HEAD
+        <section className='space-y-4' id='mou'>
+          <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
+          <p className='text-gray-600 dark: text-gray-300'>
+            Public archive of Memoranda of Understanding (MOUs). Redactions may
+            apply where legally required.
+          </p>
+          <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>
+            No MOUs published yet.
+          </div>
+        </section>
+      </div>
+    </>
+  );
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
@@ -73,11 +225,53 @@ export default function FoundationPage() {
         </section>
       </div>
     </>
-  )
+<<<<<<< HEAD
 =======
+  )
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+}
+
+    </>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          </div>;
+        </section>;
+        <section className="space-y-4" id="grants">;
+          <h2 className="text-2xl font-semibold">Grants Issued</h2>;
+          <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>;
+          <ul className="list-disc list-inside space-y-2 text-sm">;
+            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>;
+            <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>;
+            <li>Agent interoperability standards and sandbox — RFP (Open)</li>;
+          </ul>;
+        </section>;
+        <section className="space-y-4" id="mou">;
+          <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>;
+          <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>;
+          <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400">No MOUs published yet.</div>;
+        </section>;
+      </div>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

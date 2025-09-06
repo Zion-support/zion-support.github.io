@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -10,7 +13,10 @@ class ErrorPreventionOrchestrator {}
     this.ensureLogDirectory()};
   ensureLogDirectory() {}
     const logDir = path.dirname(this.logFile;);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if () {}
       fs.mkdirSync(logDir, { "recursive": true })};
   };
@@ -99,7 +105,11 @@ class ErrorPreventionOrchestrator {}
   runCommand(command, args) {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -142,4 +152,9 @@ switch (command) {}
   case 'logs':
     orchestrator.logs();
     break;
+<<<<<<< HEAD
 
+=======
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

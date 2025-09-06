@@ -37,8 +37,12 @@
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -297,6 +301,15 @@ body::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   animation: neuralPulse 15s ease-in-out infinite;}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -493,6 +506,17 @@ body::after {
 =======
 >>>>>>> main
   overflow: hidden;
+<<<<<<< HEAD
+=======
+=======
+.text-gradient-rainbow {
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-yellow), var(--neon-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Quantum Glow Effects */
 .quantum-glow {
   box-shadow: var(--quantum-glow);
@@ -584,6 +608,15 @@ body::after {
   padding: 12px 24px;
   border-radius: 8px;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+  transition: all 0.3s ease;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  transition: all 0.3s ease;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   overflow: hidden;  transition: all 0.3s ease;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -762,6 +795,15 @@ body::after {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: holographicShift 3s ease-in-out infinite;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   height: 300px;}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -862,6 +904,18 @@ body::after {
   *,
   *::before,
   *::after {
+<<<<<<< HEAD
+=======
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2d92
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     color: black !important;  }
 >>>>>>> main
 }

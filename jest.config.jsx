@@ -1,6 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }}},;
 =======
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}}}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+}}};
+<<<<<<< HEAD
+}}}
+;
+}}}
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 interface Jest.configProps {
@@ -36,4 +60,8 @@ export default function Jest.config({ }: Jest.configProps) {
 =======
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

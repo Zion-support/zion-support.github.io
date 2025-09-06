@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,20 +10,38 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-export default function CaseStudyPage() {
-  const router = useRouter()
-  const { id } = router.query
-  // Case studies data - this should match the data in case-studies.tsx
-  const caseStudies = [
+<<<<<<< HEAD
+=======
+
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { use_router } from 'next / router',
+export default /**
+ * CaseStudyPage - Function description
+ */
+function CaseStudyPage() {
+  const router = use_router (),
+  const { id } = router.query,
+  // Case studies data - this should match the data in case - studies.tsx;
+  const case_studies = [;
     {
       id: 'ai - automation - manufacturing',
       title: 'AI - Powered Manufacturing Automation',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
@@ -28,8 +49,11 @@ export default function CaseStudyPage() {
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control'],
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -53,6 +77,8 @@ export default function CaseStudyPage() {
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
+<<<<<<< HEAD
+=======
         <h2>Implementation Timeline</h2>
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
@@ -70,14 +96,72 @@ export default function CaseStudyPage() {
         and reducing operational costs. They required a solution that could adapt to changing production demands 
         and minimize human intervention.</p>
         
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function CaseStudyPage() {
+  const router = useRouter(),
+  const { id } = router.query,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export default function CaseStudyPage() {
+  const router = useRouter()
+  const { id } = router.query
+  // Case studies data - this should match the data in case-studies.tsx
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing'
+      title: 'AI-Powered Manufacturing Automation'
+      company: 'Global Manufacturing Corp'
+      industry: 'Manufacturing'
+      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.'
+      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.'
+      results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control']
+      duration: '6 months'
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+      fullContent: `
+        <h2>Background</h2>
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
+        <h2>Challenge</h2>
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
+        and reducing operational costs. They required a solution that could adapt to changing production demands
+        and minimize human intervention.</p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included:</p>
+        <ul>
+          <li>Predictive maintenance algorithms</li>
+          <li>Real-time production optimization</li>
+          <li>Automated quality control systems</li>
+          <li>Intelligent scheduling and resource allocation</li>
+        </ul>
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -85,6 +169,18 @@ import { useRouter } from 'next/router';
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        <h2>Implementation Timeline</h2>
+        <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
+        The system was deployed in phases, allowing for gradual adoption and optimization.</p>
+      `
+    },
+    {
+      id: 'content-generation-scale',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
@@ -130,6 +226,7 @@ import { useRouter } from 'next/router';
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -140,27 +237,75 @@ import { useRouter } from 'next/router';
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
           <li>Cost optimization algorithms</li>
           <li>Performance monitoring and alerting</li>
         </ul>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>Results</h2>
+        <p>The optimization delivered outstanding results:</p>
+        <ul>
+          <li><strong>50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>
+          <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
+          <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
+        </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<h2>Implementation Timeline</h2>
+=======
+        <h2>Implementation Timeline</h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <p>The project was completed in 8 months with careful planning to avoid service disruption.
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
 
+=======
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CaseStudyPage(req, res) {
   try {
   const router = useRouter();
@@ -284,29 +429,56 @@ export default function CaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!caseStudy) {
     return (
       <>
         <Head>
           <title>Case Study Not Found | Zion Tech Group</title>
         </Head>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
                 The case study you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
               <Link
               <Link 
               <Link
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/case-studies"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -318,7 +490,18 @@ export default function CaseStudyPage(req, res) {
       </>
     )
   }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
     <>
@@ -333,16 +516,34 @@ export default function CaseStudyPage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Case Studies
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                  {caseStudy.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -361,38 +562,193 @@ export default function CaseStudyPage(req, res) {
                     <div>
                       <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>
                       <p className="text-white/80">{caseStudy.solution}</p>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                    </div>
+                  </div>
+                </div>
+              </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              <div className="space-y-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
                   <ul className="space-y-3">
                     {caseStudy.results.map((result, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+<<<<<<< HEAD
 
                         {result}
                       </li>
                     ))}
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
+      <>;
+        <Head>;
+          <title>Case Study Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+          <main className="container mx-auto px-6 py-12">;
+            <div className="max-w-4xl mx-auto text-center">;
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Not Found</h1>;
+              <p className="text-xl text-white/80 mb-8">;
+                The case study you're looking for doesn't exist.;
+              </p>;
+              <Link;
+                href="/case-studies";
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+              >;
+                ← Back to Case Studies;
+              </Link>;
+            </div>;
+          </main>;
+        </div>;
+      </>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return (;
+    <>;
+      <Head>;
+        <title>{caseStudy.title} | Zion Tech Group - Case Study</title>;
+        <meta name="description" content={caseStudy.description} />;
+        <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />;
+        <meta property="og:description" content={caseStudy.description} />;
+      </Head>;
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+        <main className="container mx-auto px-6 py-12">;
+          <div className="max-w-4xl mx-auto">;
+            <nav className="mb-8">;
+              <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
+                ← Back to Case Studies;
+              </Link>;
+            </nav>;
+            <header className="mb-12">;
+              <div className="mb-6">;
+                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">;
+                  {caseStudy.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </span>;
+              </div>;
+              <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>;
+              <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>;
+              <p className="text-white/80 text-lg">{caseStudy.description}</p>;
+            </header>;
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">;
+              <div className="lg:col-span-2">;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
+                  <h2 className="text-2xl font-bold mb-6 text-white">Overview</h2>;
+                  <div className="space-y-6">;
+                    <div>;
+                      <h3 className="font-semibold text-cyan-400 text-lg mb-2">Challenge</h3>;
+                      <p className="text-white/80">{caseStudy.challenge}</p>;
+                    </div>;
+                    <div>;
+                      <h3 className="font-semibold text-fuchsia-400 text-lg mb-2">Solution</h3>;
+                      <p className="text-white/80">{caseStudy.solution}</p>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+              <div className="space-y-6">;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>;
+                  <ul className="space-y-3">;
+                    {caseStudy.results.map((result, index) => (;
+                      <li key={index} className="text-white/80 flex items-center gap-3">;
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
+                        {result  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </li>;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                   </ul>
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </ul>
                 </div>
 
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-white/60 text-sm">Duration:</span>
+                      <p className="text-white font-medium">{caseStudy.duration}</p>
+                    </div>
+                    <div>
+                      <span className="text-white/60 text-sm">Industry:</span>
+                      <p className="text-white font-medium">{caseStudy.industry}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<<<<<<< HEAD
+              <div
+                className="prose prose-invert max-w-none"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               />
             </div>
             <div className="text-center">
               <Link
+<<<<<<< HEAD
+=======
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -403,8 +759,12 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
   );
 };
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
                   </ul>;
                 </div>;
@@ -412,7 +772,17 @@ export default function CaseStudyPage(req, res) {
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
                   <div className="space-y-3">;
 =======
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -504,7 +874,6 @@ if ( {) {
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
                   <h2 className="text - 2xl font - bold mb - 6 text - white">Overview</h2>;
                   <div className="space - y-6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div>;
                       <h3 className="font - semibold text - cyan - 400 text - lg mb - 2">Challenge</h3>;
                       <p className="text - white / 80">{case_study.challenge}</p>;
@@ -537,26 +906,94 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Industry:</span>;
                       <p className="text - white font - medium">{case_study.industry}</p>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+=======
+                  </ul>;
+                </div>;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>;
+                  <div className="space-y-3">;
+                    <div>;
+                      <span className="text-white/60 text-sm">Duration:</span>;
+                      <p className="text-white font-medium">{caseStudy.duration}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text-white/60 text-sm">Industry:</span>;
+                      <p className="text-white font-medium">{caseStudy.industry}</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
+              <div;
+                className="prose prose - invert max - w-none";
+                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
+              />;
+            </div>;
+            <div className="text - center">;
+              <Link;
+                href="/contact";
+                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+=======
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">;
+              <div;
+                className="prose prose-invert max-w-none";
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              />;
+            </div>;
+            <div className="text-center">;
+              <Link;
+                href="/contact";
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
+
+
+=======
       </div>;
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

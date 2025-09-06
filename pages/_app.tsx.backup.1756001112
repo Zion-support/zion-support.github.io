@@ -1,5 +1,9 @@
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Navigation from '../components/layout/Navigation';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -9,4 +13,17 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </>
   );
+<<<<<<< HEAD
+=======
+=======
+import Layout from '../components/layout/Layout';
+
+export default function App({ Component, pageProps }: AppProps) {
+	return (
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
+	);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

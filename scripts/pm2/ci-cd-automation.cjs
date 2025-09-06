@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * CI/CD Automation Script for PM2;
@@ -88,4 +91,8 @@ main().catch(error => {})
   log(`CI/CD Automation Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const axios = require("child_process")
 const fs = require("fs")
 const path = require("path")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   constructor(baseUrl = ""https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
@@ -64,4 +70,8 @@ const path = require("path")
       this.log("� Website analysis completed successfully")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

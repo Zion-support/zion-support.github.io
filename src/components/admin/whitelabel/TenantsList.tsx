@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -222,5 +223,15 @@ export function TenantsList() {;
       )}
     </div>;
   );
+=======
+.order('created_at', { ascending: false }),;
+
+}
+
+
+
+        .order ('created_at', { ascending: false }),
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;

@@ -1,7 +1,22 @@
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+    </EnhancedLayout>);
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
+export default function GovernancePulsePage() {
+
+  const items: any[] = (data?.items |[]).slice(0, 60)
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -14,4 +29,59 @@
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                {it.title}
+              </a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  )
+  );
+};
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </li>;
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

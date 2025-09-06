@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Message checking functionality
 import { FraudSeverity  } from '@/types/fraud';
 import { analyzeContent  } from './analyzeContent';
@@ -12,28 +13,126 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
   let severity: FraudSeverity = 'safe',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+let severity: FraudSeverity = 'safe',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (analysis && analysis.reasons.length > 0) {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
       : 'suspicious'
   }
   return {
     ...analysis;
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      : 'suspicious'
+// Message checking functionality;
+import {FraudSeverity} from '@/types / fraud';
+import {analyze_content} from './analyze_content';
+import {MessageAnalysisResult} from './types';
+/**;
+* Check message for suspicious content;
+*/;
+export const check_message = (message_content: string): MessageAnalysisResult => {
+  const analysis = analyze_content (message_content);
+;
+  // Determine severity based on number and type of issues;
+  let severity: FraudSeverity = 'safe',
+  // Check condition
+if ( {) {
+  $2
+}
+    severity = analysis.reasons.length > 2 ||;
+              analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
+      ? 'dangerous';
+      : 'suspicious';
+  }
+  return {
+    ...analysis;
+
+;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    severity
+
+
+=======
+=======
+    severity
+
+
+    severity;
+  }
+}
+;
+
+// Message checking functionality
+import { FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { MessageAnalysisResult } from './types';
+/**
+ * Check message for suspicious content
+ */
+
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {
+export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
+  const analysis = analyzeContent(messageContent);
+  // Determine severity based on number and type of issues
+  let severity: FraudSeverity = 'safe'
+  if (analysis.reasons.length > 0) {
+    severity = analysis.reasons.length > 2 |
+              analysis.reasons.some(r => r.includes('payment') |r.includes('external'))
+      ? 'dangerous'
+      : 'suspicious'
+  }
+  return {
+    ...analysis;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     severity
 
   }
+<<<<<<< HEAD
 };
   }
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    severity
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -56,11 +155,48 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     ...analysis;
     severity;
 <<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+};
+;
+/**;
+ * Check message for suspicious content;
+ */;
+export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
+  const analysis = analyzeContent(messageContent),;
+  ;
+  // Determine severity based on number and type of issues;
+  let severity:FraudSeverity = 'safe',;
+  if (analysis.reasons.length > 0) {;
+    severity = analysis.reasons.length > 2 || ;
+              analysis.reasons.some(r => r.includes('payment') || r.includes('external')) ;
+      ? 'dangerous' ;
+      :'suspicious';
+  }
+  ;
+  return {;
+    ...analysis,;
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    severity;
+  }
+<<<<<<< HEAD
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

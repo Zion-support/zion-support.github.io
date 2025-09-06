@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
   );
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -56,6 +57,56 @@ const AIFinancialRisk: React.FC = () => {
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>
 
 =======
+=======
+<<<<<<< HEAD
+=======
+import NextHead from 'next/head';
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    <UltraAdvancedFuturisticBackground>;
+      <NextHead>;
+        <title>;
+          {service?.name || 'AI Financial Risk Management'} - Zion Tech Group;
+        </title>;
+
+          href='https://ziontechgroup && ziontechgroup.com/ai-financial-risk'
+        />;
+      </NextHead>;
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-6xl mx-auto'>;
+          <div className='text-center mb-10'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
+              <DollarSign className='w-10 h-10' />;
+              {service?.name || 'AI Financial Risk Management'}
+            </h1>;
+            <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'>;
+              {service?.tagline ||;
+                'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
+            <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
+              <h2 className='text-2xl font-semibold mb-4'>Capabilities</h2>;
+              <p className='text-slate-300 mb-6'>;
+                {service?.description ||;
+                  'Credit risk, market risk, model validation, and anti-fraud analytics powered by ML.'}
+              </p>;
+              <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>;
+                {(;
+                  service?.features?.slice(0, 12) || [;
+                    'Credit/market risk',;
+                    'Anomaly detection',;
+                    'Explainable AI',;
+                    'Stress testing',;
+                    'Model governance',;
+                    'Real-time alerts',;
+                  ];
+                ).map((feat, i) => (;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -119,21 +170,164 @@ export default function AIFinancialRiskPage() {
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
 
               </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+              </ul>;
+            </div>;
+            <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
+              <div className='flex items-end justify-between mb-3'>;
+                <div>;
+                  <div className='text-3xl font-bold text-white'>;
+                    {service?.price || 'Custom pricing'}
+                    <span className='text-slate-400 text-base'>;
+        <meta;
+          name='description';
+          content={
+            service?.description ||;
+            'Advanced risk models, stress testing, and anomaly detection for financial institutions.';
+          }
+        />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / ai - financial - risk';
+        />;
+      </NextHead>;
+      <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-6xl mx - auto'>;
+          <div className='text - center mb - 10'>;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent flex items - center justify - center gap - 3'>;
+              <DollarSign className='w - 10 h - 10' />;
+              {service?.name || 'AI Financial Risk Management'}
+            </h1>;
+            <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto'>;
+              {service?.tagline ||;
+                'Real - time risk scoring, fraud detection, and stress scenarios with explainable AI.'}
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12'>;
+            <div className='lg:col - span - 2 bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6'>;
+              <h2 className='text - 2xl font - semibold mb - 4'>Capabilities</h2>;
+              <p className='text - slate - 300 mb - 6'>;
+                {service?.description ||;
+                  'Credit risk, market risk, model validation, and anti - fraud analytics powered by ML.'}
+              </p>;
+              <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
+                {(
+                  service?.features?.slice (0, 12) || [;
+                    'Credit / market risk',
+                    'Anomaly detection',
+                    'Explainable AI',
+                    'Stress testing',
+                    'Model governance',
+                    'Real - time alerts',
+                  ]).map ((feat, i) => (
+                  <li;
+                    key={i}
+                    className='flex items - start space - x-3 text - slate - 200';
+                  >;
+                    <Check className='w - 5 h - 5 text - cyan - 400 mt - 0.5' />;
+                    <span>{feat}</span>;
+                  </li>))}
+              </ul>;
+            </div>;
+            <div className='bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit'>;
+              <div className='flex items - end justify - between mb - 3'>;
+                <div>;
+                  <div className='text - 3xl font - bold text - white'>;
+                    {service?.price || 'Custom pricing'}
+                    <span className='text - slate - 400 text - base'>;
+
+                      {service?.period || ''}
+                    </span>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
                 </div>              </div>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+                className='w-full'>;
+                Discuss Controls;
+              </Button>;
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
+                <div className='flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400' />;
+                  <span>{contactInfo && contactInfo.mobile}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400' />;
+                  <span>{contactInfo && contactInfo.email}</span>;
+                </div>;
+                <div className='flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400' />;
+                  <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+              <Button;
+                href='/contact';
+                variant='quantum';
+                size='lg';
+                className='w - full';
+              >;
+                Discuss Controls;
+              </Button>;
+              <div className='mt - 6 space - y-3 text - sm text - slate - 300'>;
+                <div className='flex items - center space - x-2'>;
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <MapPin className='w - 4 h - 4 text - green - 400' />;
+                  <span className='text - xs'>{contact_info.address}</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                </div>              </div>;
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -186,6 +380,7 @@ export default function AIFinancialRiskPage(req, res) {
                 <div>;
                   <div className="text-3xl font-bold text-white">{service?.price || 'Custom pricing'}<span className="text-slate-400 text-base">{service?.period || ''}</span></div>;
                 </div>;
+<<<<<<< HEAD
                 <div className='flex items - center space - x-2'>;
                   <Mail className='w - 4 h - 4 text - purple - 400' />;
                   <span>{contact_info.email}</span>;
@@ -193,13 +388,23 @@ export default function AIFinancialRiskPage(req, res) {
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </div>              </div>;
+=======
+              </div>;
+              <Button href="/contact" variant="quantum" size="lg" className="w-full">Discuss Controls</Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>;
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
+              </div>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -208,6 +413,7 @@ export default function AIFinancialRiskPage(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -220,5 +426,9 @@ export default function AIFinancialRiskPage(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

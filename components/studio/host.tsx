@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -27,16 +28,22 @@ type PersonaConfig = {
 }
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     voice: 'Visionary'
     language: 'English'
     voice: 'Visionary',
     language: 'English',;
+<<<<<<< HEAD
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
+<<<<<<< HEAD
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );}
@@ -45,20 +52,41 @@ export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
-
-
-
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to generate episode');
+    } finally {
+      set_generating (false);
+    }
+
+  return (
+    <div className='space-y-8'>;
+      <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
+
+      <section className='space-y-3'>;
+        <h2 className='text-xl font-semibold'>AI Persona</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>Voice</label>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -89,27 +117,10 @@ export default function StudioHostPage() {
             </select>;
           </div>;
           <div>;
-
-            <label className='block text - sm font - medium'>Language</label>;
-            <input;
-              className='mt - 1 w - full border rounded p - 2';
-              value={persona.language}
-              on_change={e =>;
-                set_persona ({ ...persona, language: e.target.value });
-
               }
             />;
           </div>;
           <div>;
-
-    <div className="space-y-8">
-      <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">AI Persona</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-          <div>
-            <label className='block text-sm font-medium'>Invitee Name</label>
               value={persona && persona.cloneStyleText || ''}
               onChange={e =>;
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
@@ -171,35 +182,6 @@ export default function StudioHostPage() {
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
             <select
               className="mt-1 w-full border rounded p-2"
-              value={persona.voice}
-              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
-            >
-              <option value="Visionary">Visionary</option>
-              <option value="Grounded">Grounded</option>
-              <option value="Technical">Technical</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
-            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
-
-    }
-  };
-
-  return (
-
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold">Episode Generator</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -222,9 +204,6 @@ export default function StudioHostPage() {
         </button>
       </section>
       {episode && (
-
-        <section className="space-y-4">
-
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -232,10 +211,6 @@ export default function StudioHostPage() {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
-
-                {episode.questions?.map((q: string, idx: number) => (
-
-                  <li key={idx}>{q}</li>
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
             >;
@@ -292,6 +267,7 @@ export default function StudioHostPage() {
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
+<<<<<<< HEAD
 
   const [generating, setGenerating] = useState(false),
   const [episode, setEpisode] = useState<any>(null),
@@ -671,6 +647,8 @@ export default function StudioHostPage() {
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -687,6 +665,7 @@ export default function StudioHostPage() {
                   </a>)}
                 {episode.audio.mp4Url && (
                   <a;
+<<<<<<< HEAD
                     href={episode.audio.mp4Url}
 =======
                     className='text - blue - 600 underline';
@@ -706,12 +685,58 @@ export default function StudioHostPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+                disabled={publishing}
+              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+
+;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -720,3 +745,5 @@ export default function StudioHostPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

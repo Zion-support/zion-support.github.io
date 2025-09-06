@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -8,6 +9,29 @@ export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+export interface EnterpriseIt2026ServiceV2 {
+
+export interface EnterpriseIt2026ServiceV2 {;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface EnterpriseIt2026ServiceV2 {
+=======
+
+<<<<<<< HEAD
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
@@ -38,12 +62,15 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
     website: string;
   }
 
   {
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -59,16 +86,47 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
+=======
       
     mobile: string, email: string,
     address: string,
     website: string
   
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+}
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
+    launchDate: '2026-05-01'
+    customers: 280
+    rating: 4.9
+    reviews: 180
+  }
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
+    launchDate: '2026-05-01',
+    customers: 280,
+    rating: 4.9,
+    reviews: 180,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.';
+    launchDate: '2026-05-01';
+    customers: 280;
+    rating: 4.9
+
+    reviews: 180
+  }
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
@@ -97,6 +155,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
     growthRate: '220% annual growth', variant: 'security-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -690,10 +749,18 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
     reviews: 180
   }
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    reviews: 180
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -709,8 +776,21 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180
 
   }
+=======
+    real_implementation: true,
+    implementation_details: 'Production - ready quantum security platform with post - quantum algorithms, monitoring, and enterprise deployment.';
+    launch_date: '2026 - 05 - 01';
+    customers: 280;
+    rating: 4.9,
+    reviews: 180;
+<<<<<<< HEAD
 ];
 =======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1152,8 +1232,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 <<<<<<< HEAD
   }
 ];
+<<<<<<< HEAD
+  }
+;
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -26,11 +32,18 @@
       this.addCheck("Performance", "failed", "Build failed")
     this.results.checks.push({ name, status, message, "timestamp"})
     const reportPath = "code-quality-report.json"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // console.log("\n Code Quality "Results": ")
     console.log("=")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log(`"Warnings"`)
     console.log("=")
+<<<<<<< HEAD
 
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

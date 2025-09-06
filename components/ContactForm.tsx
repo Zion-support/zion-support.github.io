@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       });
@@ -99,15 +100,20 @@
             <option value="ai - services">AI Services</option>;
             <option value="cloud - solutions">Cloud Solutions</option>;
 
+=======
+      setSubmitStatus('success');
+    } catch {;
+      setSubmitStatus('error');
+    } finally {;
+      setIsSubmitting(false);
+    }
+  }
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
-
-          />;
-        </div>;
-
-
         <button
           type="submit"
           disabled={isSubmitting}
@@ -124,7 +130,10 @@
       </form>;
     </div>;
   );
+<<<<<<< HEAD
 
 export default ContactForm;
 export default ContactForm;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -13,4 +16,8 @@ const glob = require('glob')
         newContent = "
       const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
         this.log(`Remaining "errors"`)
+<<<<<<< HEAD
 
+=======
+      this.log(`Error during import fixing "process"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

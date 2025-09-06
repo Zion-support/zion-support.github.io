@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+      } catch {
+        // ignore;
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  try {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   try {
 
@@ -105,7 +130,12 @@ export default async function handler(req, res) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       } catch {
+<<<<<<< HEAD
         // ignore;
+=======
+        // ignore
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
 return results;
@@ -113,6 +143,7 @@ return results;
     return [];
   }
 }
+<<<<<<< HEAD
 
 export default async /**
  * handler - Function description
@@ -143,10 +174,12 @@ if ( {) {
     }
   } catch {
     // fall through to GitHub
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 const remote = await fetchFromGitHub()
 
-  return res.status(200).json({ logs: remote })
 const remote = await fetchFromGitHub(),
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -241,7 +274,70 @@ export default async function handler(req, res) {
   const remote = await fetchFromGitHub();
   return res.status(200).json({ logs: remote });
 }
+}
 };
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+const dir = path.join (process.cwd (), 'automation_logs'),
+  try {
+<<<<<<< HEAD
+    if () {) {
+  $2
+}
+      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
+      // Check condition
+if ( {) {
+  $2
+}
+        const logs = files.slice (0, 50).map ((f) => {
+          try {
+            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
+            const json = JSON.parse (raw),
+            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
+          } catch {
+            return { id: f, file: f }
+          }
+        }),
+        return res.status (200).json ({ logs });
+
+      }
+    }
+  } catch {
+    // fall through to GitHub;
+  }
+
+=======
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
+}
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+  return res.status(200).json({ logs: remote });
+
+};
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

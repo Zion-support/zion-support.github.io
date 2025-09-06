@@ -1,10 +1,13 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 export default function AgencyDashboardPage({ vendor }: Props) {
 
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
 
@@ -12,13 +15,18 @@ type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+<<<<<<< HEAD
 
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
@@ -43,23 +51,19 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc
         priceUsd: Number(pkgPrice)
       }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
-
-
-  function addPackage() {;
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
-      about: String(formData && formData.get('about') || activeVendor && activeVendor.about || ''),;
-      servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
-        .split();
-        .map(s => s && s.trim());
-
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
+<<<<<<< HEAD
   function addPackage() {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
     const packages = [
@@ -70,14 +74,29 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc
         priceUsd: Number(pkgPrice)
       }
+<<<<<<< HEAD
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+  function addPackage() {;
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [;
+      ...(activeVendor && activeVendor.packages || []),;
+      {;
+        id: `pkg_${Date && Date.now()}`,;
+        title: pkgTitle,;
+        description: pkgDesc,;
+        priceUsd: Number(pkgPrice),;
+      },;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
 
   return (
     <div className='space-y-8'>
@@ -131,6 +150,16 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+  function addPackage() {
+
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -140,11 +169,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             Pending Verification;
           </span>;
         )}
-
-      </div>;
-      <section className='space-y-4'>;
-        <h2 className='text-lg font-medium'>Profile</h2>;
-
         <form
           onSubmit={saveProfile}
           className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -160,9 +184,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>About</label>;
             <textarea
               name='about'
-
-              defaultValue={activeVendor && activeVendor.about || ''}
-
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -171,6 +192,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
+<<<<<<< HEAD
 
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
@@ -248,6 +270,45 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    setPkgTitle('');
+    setPkgDesc('');
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Publish Packages</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+
+    <div className="space-y-8">;
+      <div className="flex items-center justify-between">;
+        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
+        {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
+      </div>;
+
+      <section className="space-y-4">;
+        <h2 className="text-lg font-medium">Profile</h2>;
+        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div>;
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>;
+            <input name="name" defaultValue={activeVendor && activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>;
+            <textarea name="about" defaultValue={activeVendor && activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>;
+            <input name="servicesOffered" defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>;
+          </div>;
+        </form>;
+      </section>;
+
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Publish Packages</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div
               key={p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'
@@ -278,6 +339,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               type='number'
               value={pkgPrice}
 
+<<<<<<< HEAD
         </div>
       </section>
       <section className='space-y-3'>
@@ -303,13 +365,35 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function Pipeline({ vendorId }: { vendorId: string }) {
 
+<<<<<<< HEAD
+=======
+    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
+    const data = await res.json();
+    setItems(data.items || [])
+
+  }
+
+  async function changeStatus(itemId: string, status: string) {
+    await fetch('/api/vendors/update-pipeline', {
+
+
+
+
+
+  useEffect(() => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 =======
       method: 'POST',
@@ -344,7 +428,10 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
 function Pipeline({ vendorId }: { vendorId: string }) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [items, setItems] = useState<any[]>([]);
+
   async function fetchItems() {;
     const res = await fetch(;
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`;
@@ -361,14 +448,22 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       body: JSON && JSON.stringify({ itemId, status }),;
     });
     fetchItems();
+<<<<<<< HEAD
 
   useEffect(() => {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {;
 
   }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
   useEffect(() => {
+=======
+    fetchItems();
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -385,12 +480,18 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             </div>;
           </div>;
           <select
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
 
+=======
+            defaultValue={item && item.status}
+            onChange={e => changeStatus(item && item.id, e && e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -398,14 +499,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
-
-
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -414,17 +514,23 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
 };  );
+<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
@@ -434,3 +540,57 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            defaultValue={item.status}
+            onChange={e => changeStatus(item.id, e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm'
+          >
+            <option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>          </select>
+        </div>
+      ))}
+    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+        </div>
+      ))}
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null; // tie to auth later
+  return { props: { vendor } }
+};  )
+}
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null, // tie to auth later
+  return { props: { vendor } }
+}
+}
+
+    </div>
+};
+    </div>
+
+};
+        </div>))}
+    </div>);
+;
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+}  );
+}
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null, // tie to auth later;
+  return { props: { vendor } }
+}
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

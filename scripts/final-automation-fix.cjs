@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -58,4 +62,8 @@ const { execSync } = require("child_process")
       this.log(` Git operations "failed"`)
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
+<<<<<<< HEAD
 
+=======
+      this.log(` Final automation fix "failed"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -35,4 +39,8 @@ const fs = require("fs")";const path = require("path")""
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
+<<<<<<< HEAD
 
+=======
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

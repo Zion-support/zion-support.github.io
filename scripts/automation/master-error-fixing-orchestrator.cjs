@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -32,4 +35,8 @@ console.log(' Starting master error fixing orchestrator...')
             execSync(`pm2 restart ${fixer}`, { "stdio"`})
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
+<<<<<<< HEAD
 
+=======
+  console.error(' Master error fixing orchestrator failed to "start")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

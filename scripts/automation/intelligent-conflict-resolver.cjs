@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const fs = require("fs");
@@ -24,7 +27,10 @@ class $1 {}
 ;
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logMessage = `[${timestamp}] [${level}] ${message}`;`
     console.log("logMessage);
     // Write to log file;
@@ -494,4 +500,8 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = IntelligentConflictResolver;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

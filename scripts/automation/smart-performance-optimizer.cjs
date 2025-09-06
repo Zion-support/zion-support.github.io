@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Smart Performance Optimizer Automation;
@@ -28,7 +31,10 @@ class SmartPerformanceOptimizer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     analyzeBundleSize() {}
         this.log('Analyzing bundle size...');
@@ -166,4 +172,8 @@ if ( {})
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = SmartPerformanceOptimizer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

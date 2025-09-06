@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs')
 const path = require('path')
 console.log(' Fixing react-router-dom imports...')
@@ -13,4 +16,8 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
       "
     content = content.replace(/to="/g, 'href=')
+<<<<<<< HEAD
 
+=======
+        "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

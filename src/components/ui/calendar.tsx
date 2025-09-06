@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
@@ -112,3 +113,19 @@ Calendar.displayName = "Calendar",
 export { Calendar },
 Calendar.displayName = "Calendar";
 export { Calendar };
+=======
+class_name, class_names,  showOutsideDays = true, ...props;
+}: CalendarProps) {
+}/>);
+}";
+
+}/>) ;
+}";
+
+import * as React from "react",
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { DayPicker } from "react-day-picker",
+import { cn } from "@/lib/utils",
+import { buttonVariants } from "@/components/ui/button",
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

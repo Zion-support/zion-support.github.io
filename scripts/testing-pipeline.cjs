@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require("$1")
 const fs = require("fs")
       "timestamp"
@@ -30,4 +34,8 @@ const fs = require("fs")
 // console.log(`"Passed"`)
     console.log(`"Failed"`)
 // console.log("=")
+<<<<<<< HEAD
 
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -2,8 +2,6 @@ import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
@@ -68,6 +66,9 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
+
+
+
   }
 ;
   return context as CarouselContextProps;
@@ -80,6 +81,7 @@ const Carousel = React.forwardRef<
   (
     {
       orientation = "horizontal",
+
       opts,
       setApi,
       plugins,
@@ -91,8 +93,15 @@ const Carousel = React.forwardRef<
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ...(opts || {}),
         axis: orientation === "horizontal" ? "x" : "y"},
+
+
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -124,6 +133,7 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
+<<<<<<< HEAD
       },;
       [scrollPrev, scrollNext];
     );
@@ -142,6 +152,79 @@ const Carousel = React.forwardRef<
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
+=======
+
+import * as React from &quot;react & quot;
+import useEmblaCarousel from &quot;embla - carousel - react & quot;
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+import { Button } from &quot;@/components / ui / button & quot;
+
+      };
+
+      },;
+
+      [scrollPrev, scrollNext];
+    );
+    React.useEffect(() => {;
+      if (!api || !setApi) {;
+        return;
+      }
+;
+type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
+type CarouselOptions = {
+  axis?: 'x' | 'y';
+  [key: string]: any;
+}
+type CarouselPlugin = any;
+type CarouselProps = {
+  opts?: CarouselOptions;
+  plugins?: CarouselPlugin;
+  orientation?: &quot;horizontal & quot; | &quot;vertical & quot;
+  set_api?: (api: CarouselApi) => void;
+}
+type CarouselContextProps = {
+  carousel_ref: ReturnType < typeof useEmblaCarousel>[0];
+  api: ReturnType < typeof useEmblaCarousel>[1];
+  scroll_prev: () => void;
+  scroll_next: () => void;
+  canScrollPrev: boolean;
+  canScrollNext: boolean;
+  }
+  return context as CarouselContextProps;
+}
+const Carousel = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement> & CarouselProps;
+>(
+  (
+    {
+      orientation = &quot;horizontal & quot;,
+      opts,
+      set_api,
+      plugins,
+      class_name,
+      children,
+      ...props;
+    },
+    ref) => {
+    const [carousel_ref, api] = useEmblaCarousel (
+      {
+        ...(opts || {}),
+        axis: orientation === &quot;horizontal & quot; ? &quot;x & quot; : &quot;y & quot;},
+      plugins);
+    const [canScrollPrev, setCanScrollPrev] = React.useState (false);
+    const [canScrollNext, setCanScrollNext] = React.useState (false);
+    const on_select = React.useCallback ((api: CarouselApi) => {
+      // Check condition
+if ( {) {
+  $2
+}
+        return;
+      }
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       return () => {
         api?.off("select", onSelect)
@@ -164,6 +247,15 @@ const Carousel = React.forwardRef<
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+<<<<<<< HEAD
+=======
+
+
+className={cn(&quot;relative&quot; className)}
+
+          role=&quot;region&quot;
+          aria-roledescription=&quot;carousel&quot;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
@@ -175,19 +267,41 @@ const Carousel = React.forwardRef<
     );
   }
 )
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Carousel.displayName = "Carousel"
+
+
 
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
+<<<<<<< HEAD
 
+=======
+);
+Carousel.display_name = &quot;Carousel & quot;
+;
+const CarouselContent = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => {
+  const { carousel_ref, orientation } = use_carousel ();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
+
         className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           "flex",
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
@@ -199,7 +313,14 @@ const CarouselContent = React.forwardRef<
     </div>
   )
 })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 CarouselContent.displayName = "CarouselContent"
+
+
 
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
@@ -213,6 +334,10 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className
@@ -221,12 +346,24 @@ const CarouselItem = React.forwardRef<
     />
   )
 })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 CarouselItem.displayName = "CarouselItem"
+
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+
+
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
   return (
@@ -235,6 +372,10 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
@@ -247,12 +388,32 @@ const CarouselPrevious = React.forwardRef<
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
+
+
+
     </Button>
   )
 })
 CarouselPrevious.displayName = "CarouselPrevious"
 
 const CarouselNext = React.forwardRef<
+<<<<<<< HEAD
+=======
+  HTMLButtonElement
+  React.ComponentProps<typeof Button>
+
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+
+  const { orientation, scrollNext, canScrollNext } = useCarousel()
+>;
+      <ArrowLeft className=&quot;h - 4 w - 4&quot; />;
+      <span className=&quot;sr - only & quot;>Previous slide</span>;
+    </Button>);
+});
+CarouselPrevious.display_name = &quot;CarouselPrevious & quot;
+;
+const CarouselNext = React.forward_ref<;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   HTMLButtonElement,
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
@@ -264,6 +425,10 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
@@ -276,6 +441,9 @@ const CarouselNext = React.forwardRef<
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
+
+
+
     </Button>
   )
 })
@@ -286,6 +454,11 @@ export {
   Carousel,
   CarouselContent,
   CarouselItem,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   CarouselPrevious,
   CarouselNext}
 ;

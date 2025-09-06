@@ -23,7 +23,10 @@ function defaultConfig(): InstanceConfig {
 function defaultConfig(): InstanceConfig {_const _instanceId = process.env.ZION_INSTANCE_ID || "zion-local";
   return {
     instanceId, _optIn: false, _paused: false, _scope: "full", _peers: [], _secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)};
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 function defaultState(): MultiverseState {_return {
@@ -78,5 +81,8 @@ export function filterEventsByScope(
     return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
   }
   return events
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

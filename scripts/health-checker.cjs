@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Health Checker;
@@ -6,7 +9,10 @@
  */
 const fs = require("child_process");
 const path = require("child_process");
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require("child_process");
 class HealthChecker {}
   constructor() {}
@@ -237,4 +243,8 @@ class HealthChecker {}
 if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = HealthChecker;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

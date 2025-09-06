@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -6,7 +9,10 @@ const path = require('path');
 class SecurityAuditor {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.interval = 300000; // 5 minutes;
   };
   async start() {}
@@ -17,12 +23,20 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
     try {}
       console.log('Running security audit...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const child = spawn('npm', ['audit'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -52,7 +66,11 @@ class SecurityAuditor {}
   async attemptSecurityFix() {}
     try {}
       console.log('Attempting to fix security issues...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const child = spawn('npm', ['audit', 'fix', '--force'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
@@ -92,4 +110,8 @@ if ( {})
     process.exit(0)}
 });
   auditor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = SecurityAuditor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

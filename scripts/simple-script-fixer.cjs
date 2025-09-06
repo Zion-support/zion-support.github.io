@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
@@ -9,7 +12,10 @@ class SimpleScriptFixer {}
   constructor() {}
     this.projectRoot = path.join(__dirname, '..');
     this.fixedCount = 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.errorCount = 0};
   async log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -93,4 +99,8 @@ class SimpleScriptFixer {}
 if (require.main === module) {}
   const fixer = new SimpleScriptFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = SimpleScriptFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

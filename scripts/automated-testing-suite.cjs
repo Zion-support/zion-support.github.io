@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 #!/usr/bin/env node
 const { execSync } = require('child_process');
@@ -15,7 +19,11 @@ async function runTests() {
     { name: 'Type Check', command: 'npm run type-check' }
   ];
   const results = [];
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -46,3 +54,7 @@ async function runTests() {
   return report;
 }
 
+<<<<<<< HEAD
+=======
+runTests().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

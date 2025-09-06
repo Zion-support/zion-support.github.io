@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Simple Code Quality Checker;
  * Performs basic code quality checks;
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs')
 const path = require('path')
 console.log(' Running code quality checks...')
@@ -22,4 +28,8 @@ if (fs.existsSync('package.json')
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'eslint-config', "status"})
   results.checks.push({ "name": 'prettier-config', "status"})
+<<<<<<< HEAD
 
+=======
+  results.checks.push({ "name": 'prettier-config', "status"})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

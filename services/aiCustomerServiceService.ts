@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface CustomerTicket {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
@@ -13,52 +23,172 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  attachments: string[],
+  conversation_history: CustomerMessage[];
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  attachments: string[],
+  conversation_history: CustomerMessage[];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export interface CustomerMessage {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   ticket_id: string;
   sender_id: string;
   sender_type: 'customer' | 'agent' | 'ai';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  attachments: string[]
+
+  conversationHistory: CustomerMessage[]
+}
+export interface CustomerMessage {
+
+export interface CustomerMessage {;
+  id: string;
+  ticketId: string;
+  senderId: string;
+  senderType: 'customer' | 'agent' | 'ai';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   message: string;
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   intent: string,
   confidence: number;
 
 }
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export interface CustomerProfile {
+=======
+  intent: string,
+  confidence: number;
+}
+export interface CustomerProfile {
+
+  intent: string
+
+  confidence: number
+}
+export interface CustomerProfile {
+
+export interface CustomerProfile {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface CustomerProfile {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  intent: string,
+  confidence: number;
+
+}
+export interface CustomerProfile {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   email: string;
   name: string;
   phone?: string;
   company?: string;
   plan: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   total_tickets: number;
   resolved_tickets: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   averageResolutionTime: number;
   customer_satisfaction: number;
   last_contact: Date;
   preferences: {
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
+<<<<<<< HEAD
   tags: string[]
 }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  tags: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  tags: string[];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export interface AIResponse {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
+<<<<<<< HEAD
 
 }
 
@@ -66,31 +196,221 @@ export interface CustomerTicket {;
   openTickets: number;
   resolvedTickets: number;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface CustomerServiceMetrics {
+  total_tickets: number;
+  open_tickets: number;
+  resolved_tickets: number;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   averageResolutionTime: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ticketsResolved: number
     averageResolutionTime: number,
 
     customerSatisfaction: number
   }>
-}
-
-  customerId: string;
 =======
+<<<<<<< HEAD
+=======
+    ticketsResolved: number
+    averageResolutionTime: number,
+    customerSatisfaction: number
+  }>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  customer_satisfaction: number;
+  firstResponseTime: number,
+  ticketVolumeByCategory: Record < string, number>;
+  agent_performance: Record < string, {
+    tickets_resolved: number;
+    averageResolutionTime: number,
+    customer_satisfaction: number;
+  }>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+<<<<<<< HEAD
+
+=======
+export interface CustomerServiceRequest {
+  customer_id: string;
+=======
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
+  totalTickets: number;
+  resolvedTickets: number;
+  averageResolutionTime: number;
+  customerSatisfaction: number;
+  lastContact: Date;
+  preferences: {
+    communicationChannel: 'email' | 'chat' | 'phone';
+
+    language: string
+
+    timezone: string
+  }
+  tags: string[]
+}
+export interface AIResponse {
+
+export interface AIResponse {;
+  id: string;
+  ticketId: string;
+  response: string;
+  confidence: number;
+  suggestedActions: string[];
+  nextSteps: string[];
+
+  requiresHumanReview: boolean
+
+  generatedAt: Date
+}
+export interface CustomerServiceMetrics {
+
+export interface CustomerServiceMetrics {;
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
+  averageResolutionTime: number;
+  customerSatisfaction: number;
+
+  firstResponseTime: number
+  ticketVolumeByCategory: Record<string, number>;
+  agentPerformance: Record<string, {
+    ticketsResolved: number;
+    averageResolutionTime: number
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    customerSatisfaction: number
+  }>
+}
+export interface CustomerServiceRequest {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  customerId: string;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  customer_id: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export interface CustomerServiceRequest {
+  customer_id: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
+
+=======
+  attachments?: string[],
+  preferred_channel?: 'email' | 'chat' | 'phone';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+  ticketId: string;
+export interface CustomerServiceResponse {
+  ticket_id: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  ai_response?: AIResponse;
+  estimatedResolutionTime: string;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+
+=======
+  attachments?: string[]
+
+  preferredChannel?: 'email' | 'chat' | 'phone'
+}
+export interface CustomerServiceResponse {
+
+export interface CustomerServiceResponse {;
+  ticketId: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  aiResponse?: AIResponse;
+  estimatedResolutionTime: string;
+
+  nextSteps: string[]
+
+  assignedAgent?: string
+}
+export class AICustomerServiceService {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export class AICustomerServiceService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+
+<<<<<<< HEAD
+=======
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
 
 }
+<<<<<<< HEAD
 
   ticketId: string;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export interface CustomerServiceResponse {
+  ticket_id: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
@@ -99,16 +419,24 @@ export interface CustomerTicket {;
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
   assignedAgent?: string
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(request)});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Create ticket API error: ${response && response.statusText}`)
@@ -116,17 +444,61 @@ export interface CustomerTicket {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
+=======
+      if (!response && response.ok) {
+        throw new Error(`Create ticket API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify(request)});
+      if (!response.ok) {
+        throw new Error(`Create ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return data
+    } catch (error) {
+      console.error('Error creating ticket:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      return data
+    } catch (error) {
+      console && console.error('Error creating ticket:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -145,6 +517,60 @@ export interface CustomerTicket {;
 
     } catch (error) {
       console && console.error('Error getting ticket:', error);
+<<<<<<< HEAD
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Get ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        createdAt: new Date(data.createdAt);
+        updatedAt: new Date(data.updatedAt);
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
+        conversationHistory: data.conversationHistory.map((msg: any) => ({
+          ...msg
+          timestamp: new Date(msg.timestamp)}))}
+    } catch (error) {
+      console.error('Error getting ticket:', error);
+      throw error
+    }
+  }
+  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
+    try {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        method: 'PATCH',
+        headers: {
+<<<<<<< HEAD
+
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+=======
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
+        body: JSON && JSON.stringify(updates)});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      if (!response && response.ok) {
+        throw new Error(`Update ticket API error: ${response && response.statusText}`)
+      }
+
+      const data = await response && response.json();
+      return {
+        ...data;
+        createdAt: new Date(data && data.createdAt);
+        updatedAt: new Date(data && data.updatedAt);
+        resolvedAt: data && data.resolvedAt ? new Date(data && data.resolvedAt) : undefined;
+        conversationHistory: data && data.conversationHistory.map((msg: any) => ({
+          ...msg,
+          timestamp: new Date(msg && msg.timestamp)}))}
+<<<<<<< HEAD
+
+    } catch (error) {
+      console && console.error('Error getting ticket:', error);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
@@ -171,19 +597,63 @@ export interface CustomerTicket {;
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error updating ticket:', error);
+=======
+    } catch (error) {
+      console && console.error('Error updating ticket:', error);
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
+        method: 'PATCH'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify(updates)});
+      if (!response.ok) {
+        throw new Error(`Update ticket API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        createdAt: new Date(data.createdAt);
+        updatedAt: new Date(data.updatedAt);
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
+        conversationHistory: data.conversationHistory.map((msg: any) => ({
+          ...msg
+          timestamp: new Date(msg.timestamp)}))}
+    } catch (error) {
+      console.error('Error updating ticket:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      console && console.error('Error updating ticket:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error updating ticket:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(message)});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
@@ -191,21 +661,67 @@ export interface CustomerTicket {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+      if (!response && response.ok) {
+        throw new Error(`Add message API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
     } catch (error) {
       console && console.error('Error adding message:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify(message)});
+      if (!response.ok) {
+        throw new Error(`Add message API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        timestamp: new Date(data.timestamp)}
+    } catch (error) {
+      console.error('Error adding message:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
@@ -213,16 +729,54 @@ export interface CustomerTicket {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+      if (!response && response.ok) {
+        throw new Error(`AI response API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`AI response API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        generatedAt: new Date(data.generatedAt)}
+    } catch (error) {
+      console.error('Error generating AI response:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
 
@@ -234,16 +788,54 @@ export interface CustomerTicket {;
 
       const data = await response && response.json();
 
+<<<<<<< HEAD
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`Get customer profile API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Get customer profile API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return {
+        ...data;
+        lastContact: new Date(data.lastContact)}
+    } catch (error) {
+      console.error('Error getting customer profile:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
 
@@ -255,14 +847,46 @@ export interface CustomerTicket {;
 
       return await response && response.json()
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error getting metrics:', error);
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`Get metrics API error: ${response && response.statusText}`)
+      }
+      return await response && response.json()
+    } catch (error) {
+      console && console.error('Error getting metrics:', error);
+      const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Get metrics API error: ${response.statusText}`)
+      }
+      return await response.json()
+    } catch (error) {
+      console.error('Error getting metrics:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      console && console.error('Error getting metrics:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error getting metrics:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -272,6 +896,15 @@ export interface CustomerTicket {;
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
+=======
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+      if (!response && response.ok) {
+        throw new Error(`Search tickets API error: ${response && response.statusText}`)
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -281,19 +914,63 @@ export interface CustomerTicket {;
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     } catch (error) {
       console && console.error('Error searching tickets:', error);
+=======
+    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Search tickets API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return data.tickets.map((ticket: any) => ({
+        ...ticket;
+        createdAt: new Date(ticket.createdAt);
+        updatedAt: new Date(ticket.updatedAt);
+        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
+        conversationHistory: ticket.conversationHistory.map((msg: any) => ({
+          ...msg
+          timestamp: new Date(msg.timestamp)}))}))
+    } catch (error) {
+      console.error('Error searching tickets:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
@@ -301,19 +978,58 @@ export interface CustomerTicket {;
 
       return await response && response.json()
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
+=======
+      if (!response && response.ok) {
+        throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
+      }
+      return await response && response.json()
+    } catch (error) {
+      console && console.error('Error auto-assigning tickets:', error);
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`}});
+      if (!response.ok) {
+        throw new Error(`Auto assign tickets API error: ${response.statusText}`)
+      }
+      return await response.json()
+    } catch (error) {
+      console.error('Error auto-assigning tickets:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      console && console.error('Error auto-assigning tickets:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error auto-assigning tickets:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -322,14 +1038,45 @@ export interface CustomerTicket {;
       const data = await response && response.json();
       return data && data.downloadUrl
 
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error generating report:', error);
+=======
+      if (!response && response.ok) {
+        throw new Error(`Generate report API error: ${response && response.statusText}`)
+      }
+      const data = await response && response.json();
+      return data && data.downloadUrl
+    } catch (error) {
+      console && console.error('Error generating report:', error);
+      const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
+        body: JSON.stringify({ timeframe, format })});
+      if (!response.ok) {
+        throw new Error(`Generate report API error: ${response.statusText}`)
+      }
+      const data = await response.json();
+      return data.downloadUrl
+    } catch (error) {
+      console.error('Error generating report:', error);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      console && console.error('Error generating report:', error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    } catch (error) {
+      console && console.error('Error generating report:', error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       throw error
     }
   }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
+<<<<<<< HEAD
   private apiKey: string;
 
   private baseUrl: string
@@ -337,6 +1084,51 @@ export interface CustomerTicket {;
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+=======
+=======
+export interface CustomerTicket {;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  id: string,;
+  customerId: string,;
+  subject: string,;
+  description: string,;
+  priority: 'low' | 'medium' | 'high' | 'urgent',;
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  category: string,;
+  assignedTo?: string,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  resolvedAt?: Date,;
+  customerSatisfaction?: number,;
+  tags: string[],;
+  attachments: string[],;
+  conversationHistory: CustomerMessage[];
+<<<<<<< HEAD
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  next_steps: string[],
+  assigned_agent?: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -574,12 +1366,433 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
+<<<<<<< HEAD
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface CustomerTicket {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+export interface CustomerTicket {;
+
+export interface CustomerTicket {;
+  id:string,;
+  customerId:string,;
+  subject:string,;
+  description:string,;
+  priority:'low' | 'medium' | 'high' | 'urgent',;
+  status:'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  category:string,;
+  assignedTo?:string,;
+  createdAt:Date,;
+  updatedAt:Date,;
+  resolvedAt?:Date,;
+  customerSatisfaction?:number,;
+  tags:string[],;
+  attachments:string[],;
+  conversationHistory:CustomerMessage[];
+}
+;
+export interface CustomerMessage {;
+  id:string,;
+  ticketId:string,;
+  senderId:string,;
+  senderType:'customer' | 'agent' | 'ai',;
+  message:string,;
+  timestamp:Date,;
+  attachments?:string[],;
+  sentiment:'positive' | 'neutral' | 'negative',;
+  intent:string,;
+  confidence:number;
+}
+;
+export interface CustomerProfile {;
+  id:string,;
+  email:string,;
+  name:string,;
+  phone?:string,;
+  company?:string,;
+  plan:string,;
+  totalTickets:number,;
+  resolvedTickets:number,;
+  averageResolutionTime:number,;
+  customerSatisfaction:number,;
+  lastContact:Date,;
+  preferences:{;
+    communicationChannel:'email' | 'chat' | 'phone',;
+    language:string,;
+    timezone:string;
+  },;
+  tags:string[];
+}
+;
+export interface AIResponse {;
+  id:string,;
+  ticketId:string,;
+  response:string,;
+  confidence:number,;
+  suggestedActions:string[],;
+  nextSteps:string[],;
+  requiresHumanReview:boolean,;
+  generatedAt:Date;
+}
+;
+export interface CustomerServiceMetrics {;
+  totalTickets:number,;
+  openTickets:number,;
+  resolvedTickets:number,;
+  averageResolutionTime:number,;
+  customerSatisfaction:number,;
+  firstResponseTime:number,;
+  ticketVolumeByCategory:Record<string number>,;
+  agentPerformance:Record<string {;
+    ticketsResolved:number,;
+    averageResolutionTime:number,;
+    customerSatisfaction:number;
+  }>,;}
+;
+export interface CustomerServiceRequest {;
+  customerId:string,;
+  subject:string,;
+  description:string,;
+  priority:'low' | 'medium' | 'high' | 'urgent',;
+  category:string,;
+  attachments?:string[],;
+  preferredChannel?:'email' | 'chat' | 'phone';
+}
+;
+export interface CustomerServiceResponse {;
+  ticketId:string,;
+  status:'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated',;
+  aiResponse?:AIResponse,;
+  estimatedResolutionTime:string,;
+  nextSteps:string[],;
+  assignedAgent?:string;
+}
+;
+export class AICustomerServiceService {;
+  private apiKey:string,;
+  private baseUrl:string,;
+;
+  constructor(apiKey:string, baseUrl:string = 'https://api.ziontechgroup.com') {;
+}
+;
+export interface CustomerMessage {;
+  id: string,;
+  ticketId: string,;
+  senderId: string,;
+  senderType: 'customer' | 'agent' | 'ai',;
+  message: string,;
+  timestamp: Date,;
+  attachments?: string[],;
+  sentiment: 'positive' | 'neutral' | 'negative',;
+  intent: string,;
+  confidence: number;
+}
+;
+export interface CustomerProfile {;
+  id: string,;
+  email: string,;
+  name: string,;
+  phone?: string,;
+  company?: string,;
+  plan: string,;
+  totalTickets: number,;
+  resolvedTickets: number,;
+  averageResolutionTime: number,;
+  customerSatisfaction: number,;
+  lastContact: Date,;
+  preferences: {;
+    communicationChannel: 'email' | 'chat' | 'phone',;
+    language: string,;
+    timezone: string;
+  },;
+  tags: string[];
+}
+;
+export interface AIResponse {;
+  id: string,;
+  ticketId: string,;
+  response: string,;
+  confidence: number,;
+  suggestedActions: string[],;
+  nextSteps: string[],;
+  requiresHumanReview: boolean,;
+  generatedAt: Date;
+}
+;
+export interface CustomerServiceMetrics {;
+  totalTickets: number,;
+  openTickets: number,;
+  resolvedTickets: number,;
+  averageResolutionTime: number,;
+  customerSatisfaction: number,;
+  firstResponseTime: number,;
+  ticketVolumeByCategory: Record<string number>,;
+  agentPerformance: Record<string {;
+    ticketsResolved: number,;
+    averageResolutionTime: number,;
+    customerSatisfaction: number;
+  }>;
+}
+;
+export interface CustomerServiceRequest {;
+  customerId: string,;
+  subject: string,;
+  description: string,;
+  priority: 'low' | 'medium' | 'high' | 'urgent',;
+  category: string,;
+  attachments?: string[],;
+  preferredChannel?: 'email' | 'chat' | 'phone';
+}
+;
+export interface CustomerServiceResponse {;
+  ticketId: string,;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated',;
+  aiResponse?: AIResponse,;
+  estimatedResolutionTime: string,;
+  nextSteps: string[],;
+  assignedAgent?: string;
+}
+;
+export class AICustomerServiceService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},;
+        body: JSON.stringify(request)}),;
+      if (!response.ok) {;
+        throw new Error(`Create ticket API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return data;
+    } catch (error) {;
+      console.error('Error creating ticket:', error),;
+      throw error;
+    }
+  }
+;
+  async getTicket(ticketId: string): Promise<CustomerTicket> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Get ticket API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return {;
+        ...data,;
+        createdAt: new Date(data.createdAt),;
+        updatedAt: new Date(data.updatedAt),;
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,;
+        conversationHistory: data.conversationHistory.map((msg: any) => ({;
+          ...msg,;
+          timestamp: new Date(msg.timestamp)}))}
+    } catch (error) {;
+      console.error('Error getting ticket:', error),;
+      throw error;
+    }
+  }
+;
+  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {;
+        method: 'PATCH',;
+        headers: {;
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},;
+        body: JSON.stringify(updates)}),;
+      if (!response.ok) {;
+        throw new Error(`Update ticket API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return {;
+        ...data,;
+        createdAt: new Date(data.createdAt),;
+        updatedAt: new Date(data.updatedAt),;
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,;
+        conversationHistory: data.conversationHistory.map((msg: any) => ({;
+          ...msg,;
+          timestamp: new Date(msg.timestamp)}))}
+    } catch (error) {;
+      console.error('Error updating ticket:', error),;
+      throw error;
+    }
+  }
+;
+  async addMessage(ticketId: string, message: Omit<CustomerMessage 'id' | 'timestamp'>): Promise<CustomerMessage> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},;
+        body: JSON.stringify(message)}),;
+      if (!response.ok) {;
+        throw new Error(`Add message API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return {;
+        ...data,;
+        timestamp: new Date(data.timestamp)}
+    } catch (error) {;
+      console.error('Error adding message:', error),;
+      throw error;
+    }
+  }
+;
+  async generateAIResponse(ticketId: string): Promise<AIResponse> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`AI response API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return {;
+        ...data,;
+        generatedAt: new Date(data.generatedAt)}
+    } catch (error) {;
+      console.error('Error generating AI response:', error),;
+      throw error;
+    }
+  }
+;
+  async getCustomerProfile(customerId: string): Promise<CustomerProfile> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Get customer profile API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return {;
+        ...data,;
+        lastContact: new Date(data.lastContact)}
+    } catch (error) {;
+      console.error('Error getting customer profile:', error),;
+      throw error;
+    }
+  }
+;
+  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Get metrics API error: ${response.statusText}`);
+      }
+;
+      return await response.json();
+    } catch (error) {;
+      console.error('Error getting metrics:', error),;
+      throw error;
+    }
+  }
+;
+  async searchTickets(query: string, filters?: Record<string any>): Promise<CustomerTicket[]> {;
+    try {;
+      const params = new URLSearchParams({ query, ...filters }),;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Search tickets API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return data.tickets.map((ticket: any) => ({;
+        ...ticket,;
+        createdAt: new Date(ticket.createdAt),;
+        updatedAt: new Date(ticket.updatedAt),;
+        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,;
+        conversationHistory: ticket.conversationHistory.map((msg: any) => ({;
+          ...msg,;
+          timestamp: new Date(msg.timestamp)}))}));
+    } catch (error) {;
+      console.error('Error searching tickets:', error),;
+      throw error;
+    }
+  }
+;
+  async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`}}),;
+      if (!response.ok) {;
+        throw new Error(`Auto assign tickets API error: ${response.statusText}`);
+      }
+;
+      return await response.json();
+    } catch (error) {;
+      console.error('Error auto-assigning tickets:', error),;
+      throw error;
+    }
+  }
+;
+  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {;
+    try {;
+      const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`},;
+        body: JSON.stringify({ timeframe, format })}),;
+      if (!response.ok) {;
+        throw new Error(`Generate report API error: ${response.statusText}`);
+      }
+;
+      const data = await response.json(),;
+      return data.downloadUrl;
+    } catch (error) {;
+      console.error('Error generating report:', error),;
+      throw error;
+    }
+  }
+}
+;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+export interface CustomerTicket {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

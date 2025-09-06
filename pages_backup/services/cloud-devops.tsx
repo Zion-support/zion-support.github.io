@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 import Layout from '../../components/Layout';
@@ -15,20 +16,27 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
 
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
@@ -36,6 +44,16 @@ const features = [
   },
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
+    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+  },
+  {
+    icon: Server,
+    title: 'Infrastructure as Code',
+    description: 'Manage your infrastructure using code for better consistency and automation.',
+    benefits: ['Version control', 'Automated provisioning', 'Consistent environments', 'Disaster recovery']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
   {
     icon: GitBranch,
@@ -58,10 +76,13 @@ const features = [
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -75,6 +96,7 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
+<<<<<<< HEAD
 
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
@@ -99,6 +121,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
     >
       <div className="min-h-screen bg-white">
+=======
+  return (
+    <>
+      <Head>
+        <title>Cloud & DevOps Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cloud and DevOps services including migration, infrastructure as code, CI/CD pipelines, and monitoring solutions." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,6 +153,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,9 +165,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
+<<<<<<< HEAD
 
             </motion.div>
 
+=======
+            </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -152,6 +189,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
         {/* Benefits Section */}
         <section className="py-20">;
@@ -187,6 +225,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -255,6 +295,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </motion.div>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20">
@@ -291,9 +332,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -315,8 +359,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
     </>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+}

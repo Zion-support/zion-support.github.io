@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -16,6 +17,9 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -28,6 +32,7 @@ import {
   Users,
   CreditCard,
   Smartphone,
+<<<<<<< HEAD
   Globe,;
   Database;
 } from 'lucide-react';
@@ -40,6 +45,11 @@ const services = [;
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
 =======
 =======
+=======
+  Globe,
+  Database;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -54,6 +64,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Inventory Management AI,',;
     description: 'AI-powered inventory optimization and demand forecasting systems.,',;
@@ -63,10 +74,20 @@ const services = [
       'Stock optimization',',;
       'Automated reordering',',;
 
+=======
+    title: 'Inventory Management AI,',
+    description: 'AI-powered inventory optimization and demand forecasting systems.,',
+    icon: Brain,
+    features: [;
+      'Demand forecasting,',
+      'Stock optimization',',
+      'Automated reordering',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Waste reduction'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Customer Analytics,',;
     description: 'Advanced analytics to understand customer behavior and preferences.,',;
@@ -76,10 +97,20 @@ const services = [
       'Purchase pattern analysis',',;
       'Personalization engines',',;
 
+=======
+    title: 'Customer Analytics,',
+    description: 'Advanced analytics to understand customer behavior and preferences.,',
+    icon: BarChart3,
+    features: [;
+      'Customer segmentation,',
+      'Purchase pattern analysis',',
+      'Personalization engines',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Lifetime value prediction'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Personalized Recommendations,',;
     description: 'AI-driven product recommendation systems for enhanced customer experience.,',;
@@ -89,10 +120,20 @@ const services = [
       'Real-time recommendations',',;
       'Cross-selling optimization',',;
 
+=======
+    title: 'Personalized Recommendations,',
+    description: 'AI-driven product recommendation systems for enhanced customer experience.,',
+    icon: Users,
+    features: [;
+      'Machine learning algorithms,',
+      'Real-time recommendations',',
+      'Cross-selling optimization',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'A/B testing frameworks'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain management with AI optimization.,',;
@@ -102,10 +143,20 @@ const services = [
       'Logistics optimization',',;
       'Demand planning',',;
 
+=======
+    title: 'Supply Chain Optimization,',
+    description: 'End-to-end supply chain management with AI optimization.,',
+    icon: Package,
+    features: [;
+      'Supplier management,',
+      'Logistics optimization',',
+      'Demand planning',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Cost reduction'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Omnichannel Solutions,',;
     description: 'Seamless integration across all sales channels and touchpoints.,',;
@@ -128,6 +179,18 @@ const benefits = [;
     icon: ShoppingCart;
 =======
 =======
+=======
+    title: 'Omnichannel Solutions,',
+    description: 'Seamless integration across all sales channels and touchpoints.,',
+    icon: Smartphone,
+    features: [;
+      'Unified customer experience,',
+      'Cross-channel inventory',',
+      'Mobile commerce',',
+      'Social commerce integration'';
+    ];
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -136,6 +199,7 @@ const benefits = [
     icon: ShoppingCart
   },
   {}
+<<<<<<< HEAD
 
     title: 'Better Customer Experience,',;
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',;
@@ -207,6 +271,29 @@ export default function RetailPage() {
 ];
 export default function RetailPage() {
 
+=======
+    title: 'Better Customer Experience,',
+    description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',
+    icon: Users;
+  },
+  {}
+    title: 'Reduced Costs,',
+    description: 'Optimized inventory and supply chain reduce operational costs significantly.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Data-Driven Insights,',
+    description: 'Advanced analytics provide actionable insights for business growth.,',
+    icon: Database;
+  }
+];
+export default function RetailPage() {
+  return (
+    <Layout
+      title="Retail Technology Solutions - Zion Tech Group"
+      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
+      keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -256,6 +343,7 @@ export default function RetailPage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -271,6 +359,8 @@ export default function RetailPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -290,6 +380,7 @@ export default function RetailPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -303,6 +394,8 @@ export default function RetailPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -322,11 +415,14 @@ export default function RetailPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -337,6 +433,7 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
@@ -354,6 +451,8 @@ export default function RetailPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -382,11 +481,14 @@ export default function RetailPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -397,6 +499,7 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
@@ -422,6 +525,8 @@ export default function RetailPage() {
     </Layout>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
@@ -444,3 +549,7 @@ export default function RetailPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

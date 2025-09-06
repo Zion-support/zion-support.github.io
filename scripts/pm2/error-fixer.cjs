@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -19,7 +22,10 @@ class ErrorFixer {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(message);
   };
   error(message) {}
@@ -149,4 +155,8 @@ if (require.main === module) {}
   }
 });
 };
+<<<<<<< HEAD
 
+=======
+module.exports = ErrorFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -20,4 +23,8 @@ console.log(' Starting JSX/TSX syntax fixer...')
       execSync('npm run type-check', { "stdio"})
       "summary"
       "status"
+<<<<<<< HEAD
 
+=======
+  console.error(' JSX/TSX syntax fixer failed to "start")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

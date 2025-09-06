@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +24,10 @@ class ComprehensiveTestAutomation {}
     const dirs = ['automation/logs', 'test-results', 'coverage'];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -286,4 +292,8 @@ if ( {})
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = ComprehensiveTestAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

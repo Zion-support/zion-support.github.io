@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -13,7 +16,10 @@ const { execSync } = require('child_process')
           // Skip files that can'
     this.log(' Analyzing error logs...')
         file.includes('error') || file.includes('stderr') || file.includes('crash')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           const content = fs.readFileSync(logFile, 'utf8')
           const lines = content.split('\n')
             if (line.includes('"Error")
@@ -36,4 +42,8 @@ const { execSync } = require('child_process')
         "priority"
         "message"
         "impact"
+<<<<<<< HEAD
 
+=======
+      console.error('\n� Log Analyzer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

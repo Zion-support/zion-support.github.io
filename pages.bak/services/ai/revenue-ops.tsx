@@ -1,8 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
+module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface RevenueopsProps {
+  // Add props here as needed
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -24,9 +46,12 @@ import * as React from 'react';
 interface RevenueopsProps {
   // Add props here as needed
 }
-export default function Revenueops({ }: RevenueopsProps) {
+<<<<<<< HEAD
 =======
-
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function Revenueops({ }: RevenueopsProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,13 +89,13 @@ interface RevenueopsProps {;
   // Add props here as needed;
 }
 export default function Revenueops(): any ({ }: RevenueopsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/services/ai/revenue-ops.tsx
   return (
     <div>;
       <h1>Revenueops</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -81,6 +106,24 @@ export default function Revenueops(): any ({ }: RevenueopsProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -91,3 +134,7 @@ export default function Revenueops(): any ({ }: RevenueopsProps) {;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

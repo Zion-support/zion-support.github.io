@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -11,6 +12,9 @@ import {
   Linkedin
   Instagram
   Github
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Mail,
   Phone,
   MapPin,
@@ -20,17 +24,68 @@ import {
   Instagram,
   Github,;
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
@@ -88,6 +143,20 @@ import {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+import React from 'react';
+import Link from 'next/link';
+
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -97,8 +166,16 @@ import {
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -132,16 +209,26 @@ import {
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+<<<<<<< HEAD
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
+<<<<<<< HEAD
 
   const footerLinks = {;
     services: [;
@@ -185,6 +272,69 @@ import {
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
+=======
+<<<<<<< HEAD
+=======
+
+  const footerLinks = {;
+    services: [;
+      { name: "AI Services", href: "/ai-services" },;
+      { name: "IT Services", href: "/it-services" },;
+      { name: "Micro SaaS", href: "/micro-saas" },;
+      { name: "Cloud Solutions", href: "/cloud-solutions" },;
+      { name: "Cybersecurity", href: "/cybersecurity" },;
+      { name: "Database Solutions", href: "/database-solutions" },;
+    ],;
+    solutions: [;
+      { name: "Enterprise Solutions", href: "/enterprise-solutions" },;
+      { name: "Startup Solutions", href: "/startup-solutions" },;
+      { name: "Industries", href: "/industries" },;
+      { name: "Custom Development", href: "/custom-development" },;
+      { name: "Digital Transformation", href: "/digital-transformation" },;
+      { name: "Consulting", href: "/consulting" },;
+    ],;
+    company: [;
+      { name: "About Us", href: "/about" },;
+      { name: "Our Team", href: "/team" },;
+      { name: "Careers", href: "/careers" },;
+      { name: "Case Studies", href: "/case-studies" },;
+      { name: "News", href: "/news" },;
+      { name: "Partners", href: "/partners" },;
+    ],;
+    resources: [;
+      { name: "Blog", href: "/blog" },;
+      { name: "Documentation", href: "/docs" },;
+      { name: "API Documentation", href: "/docs/api" },;
+      { name: "Tutorials", href: "/tutorials" },;
+      { name: "White Papers", href: "/white-papers" },;
+      { name: "Webinars", href: "/webinars" },;
+    ],;
+    legal: [;
+      { name: "Privacy Policy", href: "/privacy" },;
+      { name: "Terms of Service", href: "/terms" },;
+      { name: "Cookie Policy", href: "/cookies" },;
+      { name: "Security", href: "/security" },;
+      { name: "Compliance", href: "/compliance" },;
+      { name: "Accessibility", href: "/accessibility" },;
+    ],;
+  };
+=======
+  ];
+
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -193,7 +343,31 @@ import {
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -203,6 +377,8 @@ import {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
@@ -279,6 +455,7 @@ import {
           </div>;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -296,12 +473,15 @@ import {
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
+=======
 
               </ul>;
             </motion && motion.div>;
           </div>;
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -319,6 +499,7 @@ import {
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
@@ -336,15 +517,41 @@ import {
             </motion.div>
           </div>
         </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+
+              </ul>;
+
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
+              <ul className="space-y-3">;
+                {footerLinks && footerLinks.legal.map((link, index) => (;
+                  <li key={index}>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                    <Link
+                      href={link && link.href}
+                      className="text-gray-400 hover:text-white transition-colors">;
+                      {link && link.name}
+                    </Link>;
+                  </li>;
+                ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -355,14 +562,23 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
@@ -370,12 +586,40 @@ origin/automation-improvements-final
             </motion.div>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+<<<<<<< HEAD
+
+
+
+=======
+=======
+
+
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <motion.div
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            <motion.div
+              transition={{ duration: 0 && 0.8 }}
+              className="text-gray-400 text-sm mb-4 md:mb-0">;
+              © {currentYear} Zion Tech Group. All rights reserved.;
+            </motion && motion.div>;
+
+            <motion&& motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -389,7 +633,16 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -469,6 +722,7 @@ origin/automation-improvements-final
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> |
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
+<<<<<<< HEAD
 
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -476,6 +730,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+            
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -493,15 +757,49 @@ origin/main
                 </a>
               ))}
             </motion.div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            <div className="flex items-center space-x-6">
+              <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Sitemap
+              </Link>
+              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Accessibility
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Cookie Policy
+              </Link>
+            </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-export default Footer;
+<<<<<<< HEAD
 =======
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  );
+=======
+<<<<<<< HEAD
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -740,3 +1038,25 @@ const Footer = () =>: any {
 export default Footer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import MainLayout from '../../src/components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Footer - Zion Tech Group"
+      description="Footer component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
+          <p className="text-xl text-gray-600">Footer component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

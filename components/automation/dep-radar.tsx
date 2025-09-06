@@ -1,5 +1,6 @@
 =======
 
+<<<<<<< HEAD
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
@@ -10,6 +11,8 @@ type Outdated = { name: string, current: string, latest: string, type: 'dependen
 export async function getServerSideProps() {
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 export async function getServerSideProps() {;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
@@ -28,6 +31,7 @@ export async function getServerSideProps() {;
 }
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+<<<<<<< HEAD
 
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
@@ -37,6 +41,17 @@ import path from 'path';
 
   const file = path.join(process.cwd(), 'datadep-radar.json');
 
+=======
+import path from 'path';
+) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {;
+  outdated && outdated.map (o => (</tr>) ) ;
+}</tbody> </table> </div>) ;
+}</div>) import fs from 'fs';
+import path from 'path';
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -51,17 +66,22 @@ function getServerSideProps() {
   const file = path.join (process.cwd (), 'datadep - radar.json');
   let outdated: Outdated[] = [];  let generated_at = '';
   try {
+<<<<<<< HEAD
 
   } catch {}
   return { props: { outdated, generated_at } }
 }
 
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
+=======
+  } catch {}
+  return { props: { outdated, generated_at } }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 
 
-=======
 export default /**
  * DepRadarPage - Function description
  */
@@ -72,6 +92,7 @@ function DepRadarPage() {
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
       <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       {outdated.length === 0 ? (
+<<<<<<< HEAD
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -102,3 +123,5 @@ function DepRadarPage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

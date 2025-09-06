@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
   answerIndex: number
 }
 type Props = {
   questions: Question[]
   onComplete: (score: number) => void
+=======
+export default function Quiz({ questions, onComplete }: Props) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -11,8 +15,12 @@ type Props = {
     (acc, q) => acc + (answers[q && q.id] === q && q.answerIndex ? 1 : 0),;
     0;
   );
+<<<<<<< HEAD
   function submit() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  function submit() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setSubmitted(true);
     onComplete(score);
   }
@@ -27,12 +35,8 @@ type Props = {
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
                 <input
-
-=======
-};
-=======
-                  type='radio'                  name={q.id}
   function submit() {
+<<<<<<< HEAD
     setSubmitted(true);
     onComplete(score)
   }
@@ -46,6 +50,8 @@ export default function Quiz({ questions, onComplete }: Props) {
   function submit() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   function submit() {
 
     setSubmitted(true)
@@ -63,6 +69,7 @@ export default function Quiz({ questions, onComplete }: Props) {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
+<<<<<<< HEAD
                   name={q.id}
                   checked={answers[q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q.id]: i })}
@@ -93,25 +100,50 @@ export default function Quiz({ questions, onComplete }: Props) {
       </button>
       {submitted && (
         <div className='text-sm'>
+=======
+            <div className='mt - 2 text - sm'>;
+              {answers[q.id] === q.answer_index ? (
+                <span className='text - green - 600'>Correct</span>) : (
+                <span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (
+                <span className="text - green - 600">Correct</span>) : (
+                <span className="text - red - 600">Incorrect</span>)}
+            </div>)}
+        </div>))}
+      <button;
+        on_click={submit}
+        className='px - 4 py - 2 bg - blue - 600 text - white rounded';
+      >;
+        Submit Quiz;
+      </button>;
+      {submitted && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Score: {score} / {questions.length}
         </div>)}
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+<<<<<<< HEAD
                 />
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                <span>{opt}</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </label>
             ))}
           </div>
           {submitted && (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
             </div>
           )}
         </div>
       ))}
+<<<<<<< HEAD
 =======
       <button onClick={submit} className=&quot;px-4 py-2 bg-blue-600 text-white rounded&quot;>Submit Quiz</button>
       {submitted && <div className=&quot;text-sm&quot;>Score: {score} / {questions.length}</div>}
@@ -126,3 +158,13 @@ export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  )
+
+}
+  );
+}
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

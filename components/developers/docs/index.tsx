@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 
@@ -21,20 +22,22 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import type { GetServerSideProps } from 'next';
+=======
+import path from 'path';
+import fs from 'fs';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   title: string;
   html?: string;
   code?: { language?: string; content: string }[];
-
-}
-;
-
 type DocsContent = {
   title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 type PageProps = {
   docs: DocsContent;
 }
@@ -42,6 +45,14 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+=======
+
+
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -57,22 +68,43 @@ export default function ApiDocsPage({ docs }: PageProps) {
         <section key={section.id} id={section.id} className='scroll-mt-24'>
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
+<<<<<<< HEAD
 
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
 
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
 
+=======
+          )}
+          {section && section.code && section && section.code.length > 0 && (  return (
+    <DocsLayout title={docs && docs.title} nav={docs && docs.sections.map((s) => ({ id: s && s.id, title: s && s.title }))}>;
+      {docs && docs.sections.map((section) => (;
+        <section key={section && section.id} id={section && section.id} className="scroll-mt-24">;
+          <h2 className="text-2xl font-semibold">{section && section.title}</h2>;
+            <div dangerouslySetInnerHTML={{ __html: section && section.html }} />;
+          )}
+          {section && section.code && section && section.code.length > 0 && (;
+            <div className='space-y-4 mt-4'>;
+              {section && section.code.map((c, idx) => (;
+                <CodeBlock key={idx} language={c && c.language}>;
+                  {c && c.content}
+                </CodeBlock>              ))}            <div className="space-y-4 mt-4">;
+              {section && section.code.map((c, idx) => (;
+                <CodeBlock key={idx} language={c && c.language}>{c && c.content}</CodeBlock>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ApiDocsPage({ docs }: PageProps) {
   return (
     <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id: s.id, title: s.title }))}>
       {docs.sections.map((section) => (
-<section key={section.id} id={section.id} className="scroll-mt-24">
+        <section key={section.id} id={section.id} className="scroll-mt-24">
           <h2 className="text-2xl font-semibold">{section.title}</h2>
           {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
+<<<<<<< HEAD
 =======
             <div className='space-y-4 mt-4'>
               {section.code.map((c, idx) => (
@@ -83,11 +115,14 @@ export default function ApiDocsPage({ docs }: PageProps) {
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </div>;
           )}
         </section>;
       ))}
+<<<<<<< HEAD
     </DocsLayout>
 );
   );
@@ -95,6 +130,14 @@ export default function ApiDocsPage({ docs }: PageProps) {
     </DocsLayout>;
 );
 }
+=======
+
+  );
+
+
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </DocsLayout>
   );
 }
@@ -138,9 +181,18 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

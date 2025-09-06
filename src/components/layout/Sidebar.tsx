@@ -1,7 +1,31 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 export default function Sidebar() {
   return (
+    <aside className="hidden lg:block fixed left-0 top-16 bottom-0 w-80 bg-gray-100 border-r">
+      <div className="p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a href="/" className="block text-gray-600 hover:text-gray-900">Home</a>
+          <a href="/about" className="block text-gray-600 hover:text-gray-900">About</a>
+          <a href="/services" className="block text-gray-600 hover:text-gray-900">Services</a>
+          <a href="/pricing" className="block text-gray-600 hover:text-gray-900">Pricing</a>
+          <a href="/contact" className="block text-gray-600 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+    </aside>
+  );
+}
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+export default function Sidebar() {
+  return (
+<<<<<<< HEAD
     <aside className="sidebar">
       <p>Sidebar</p>
     </aside>
@@ -43,6 +67,95 @@ export default function Sidebar() {
     { nam: e: 'Schedule Call', hre: f: '/contact', ico: n: Clock },;
     { nam: e: 'View Portfolio', hre: f: '/case-studies', ico: n: Award },;
     { nam: e: 'Download Brochure', hre: f: '/resources', ico: n: ArrowRight }
+=======
+    <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
+      <div className="p-6">;
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
+        <nav className="space-y-2">;
+          <Link
+            to="/"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
+            Home;
+          </Link>;
+          <Link
+            to="/about"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
+            About;
+          </Link>;
+          <Link
+            to="/services"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
+            Services;
+          </Link>;
+          <Link
+            to="/contact"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
+            Contact;
+          </Link>;
+          <Link
+            to="/pricing"
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
+            Pricing;
+          </Link>;
+        </nav>;
+      </div>;
+    </div>;
+  );
+};
+
+
+export default Sidebar;
+
+  };
+,
+  const navigationSections = [,
+    {,
+      id: 'services',
+      title: 'Our Services',
+      icon: Settings,
+      items: [,
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' },
+        { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
+        { name: 'Database Solutions', href: '/database-solutions', icon: Database, description: 'Database management & optimization' };
+      ],
+    },
+    {,
+      id: 'solutions',
+      title: 'Solutions',
+      icon: Building2,
+      items: [,
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2, description: 'Large-scale business solutions' },
+        { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket, description: 'Scalable startup solutions' },
+        { name: 'Industry Solutions', href: '/industries', icon: Factory, description: 'Industry-specific solutions' },
+        { name: 'Custom Development', href: '/custom-development', icon: Code, description: 'Tailored software development' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Network, description: 'Complete digital transformation' },
+        { name: 'Technology Consulting', href: '/consulting', icon: Users, description: 'Strategic technology consulting' };
+      ],
+    },
+    {,
+      id: 'company',
+      title: 'Company',
+      icon: Building2,
+      items: [,
+        { name: 'About Us', href: '/about', icon: Building2, description: 'Learn about our company' },
+        { name: 'Our Team', href: '/team', icon: Users, description: 'Meet our expert team' },
+        { name: 'Careers', href: '/careers', icon: Award, description: 'Join our team' },
+        { name: 'Case Studies', href: '/case-studies', icon: CheckCircle, description: 'Success stories' },
+        { name: 'News & Updates', href: '/news', icon: ArrowRight, description: 'Latest news' },
+        { name: 'Partners', href: '/partners', icon: Users, description: 'Our partners' };
+      ],
+    };
+  ],
+,
+  const quickLinks = [,
+    { name: 'Get Quote', href: '/contact', icon: Phone, highlight: true },
+    { name: 'Schedule Call', href: '/contact', icon: Clock },
+    { name: 'View Portfolio', href: '/case-studies', icon: Award },
+    { name: 'Download Brochure', href: '/resources', icon: ArrowRight };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
 ,
   const contactInfo = {,
@@ -350,4 +463,10 @@ export default function Sidebar() {
       </div>,;
     </motion.aside>,;
   );
+<<<<<<< HEAD
 },;
+=======
+};
+export default Sidebar;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

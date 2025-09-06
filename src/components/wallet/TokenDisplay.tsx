@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+const { wallet, loading } = useWallet();
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { BadgeDollarSign } from 'lucide-react'
@@ -21,14 +26,28 @@ export function TokenDisplay() {
         {loading ? (
           <Skeleton className="h-12 w-28" />
         ) : (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
               <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>
+
+
+
             </div>
             <p className="text-sm text-muted-foreground">
               Use your tokens to boost visibility, access premium features, or convert to credits.
             </p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mt-2">
               <Button variant="outline" size="sm">
                 View Wallet
@@ -69,10 +88,27 @@ export function TokenDisplay() {;
                 View Wallet;
               </Button>;
             </div>;
+<<<<<<< HEAD
           </div>;
         )}
       </CardContent>;
     </Card>;
   );
+=======
+            <p className='text - sm text - muted - foreground'>;
+              Use your tokens to boost visibility, access premium features, or;
+              convert to credits.;
+            </p>;
+            <div className='mt - 2'>;
+              <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
+
+              <Button variant="outline" size="sm">;
+                View Wallet;
+              </Button>;
+            </div>;
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;

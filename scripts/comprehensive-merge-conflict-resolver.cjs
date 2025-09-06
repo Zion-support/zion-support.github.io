@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
@@ -13,7 +16,10 @@ class ComprehensiveMergeConflictResolver {}
     this.totalFiles = 0};
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async findFilesWithConflicts() {}
     const filesWithConflicts = [];
@@ -131,4 +137,8 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = ComprehensiveMergeConflictResolver;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

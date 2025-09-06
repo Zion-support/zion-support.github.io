@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 
@@ -43,6 +44,8 @@ interface SimpleLayoutProps {
 =======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default /**
  * SimpleLayout - Function description
@@ -54,6 +57,7 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
+<<<<<<< HEAD
 
       {children};
     </>)
@@ -64,3 +68,5 @@ function SimpleLayout() {,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,14 +1,42 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+import {
+  Project
+  ProjectDocument
+  ProjectNote
+} from "../../../utils/marketplace/types";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+<<<<<<< HEAD
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Project,
   ProjectDocument,
@@ -25,29 +53,46 @@ import { v4 as uuidv4 } from "uuid",
 import { getDemoUser } from "../../../utils/marketplace/auth",
 import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
+<<<<<<< HEAD
+=======
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res && res.status(code).json({ ok: false, error: message });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug)
     return true;
   return false;
+<<<<<<< HEAD
 
         const note: ProjectNote = {
           id: uuidv4(),
           authorId: user.id,
           authorRole: user.role,
           content,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         };
 
+<<<<<<< HEAD
         project.notes.push(note);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -115,12 +160,16 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+<<<<<<< HEAD
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500;
@@ -143,14 +192,18 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
-<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -166,29 +219,124 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const user = getDemoUser(req);
-    const { id } = (req.method === "GET" ? req.query : req.body) as {
-      id?: string;
-    }
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-    if (req.method === "GET") {
-      return res.json({ ok: true, project });
-    }
-    if (req.method === "PATCH") {
-      const { action } = req.body as { action: string }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    if (req && req.method === "PATCH") {
+      const { action } = req && req.body as { action: string };
       if (action === "add_note") {
-        const { content } = req.body as { content: string }
+        const { content } = req && req.body as { content: string };
         if (!content) return bad(res, "Missing content");
         const note: ProjectNote = {
-          id: uuidv4()
-          authorId: user.id
-          authorRole: user.role
-          content
-          createdAtIso: new Date().toISOString()
+          id: uuidv4(),
+          authorId: user && user.id,
+          authorRole: user && user.role,
+          content,
+          createdAtIso: new Date().toISOString(),
+        };
+        project && project.notes.push(note);
+        saveProject(project);
+        return res && res.json({ ok: true, project });
+      }
+      if (action === "add_document") {
+        const { name, url } = req && req.body as { name: string; url?: string };
+        if (!name) return bad(res, "Missing name");
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import { getDemoUser  } from '../../../utils / marketplace / auth';
+import { getProjectById, save_project  } from '../../../utils / marketplace / store';
+import {
+  Project,
+  ProjectDocument,
+  ProjectNote,
+} from '../../../utils / marketplace / types';
+/**
+ * bad - Function description
+ */
+function bad() {
+  return res.status (code).json ({ ok: false, error: message });
+}
+/**
+ * can_access - Function description
+ */
+function can_access() {
+  // Check condition
+if (return true) {
+  $2
+}
+  // Check condition
+if (
+    return true) {
+  $2
+}
+  return false;
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  try {
+    const user = getDemoUser (req);
+    const { id } = (req.method === "GET" ? req.query : req.body) as {
+      id?: string;
+    }
+    if (return bad (res, "Missing project id")) {
+  $2
+}
+    const project = getProjectById (id);
+    if (return bad (res, "Not found", 404)) {
+  $2
+}
+    if () return bad (res, "Forbidden", 403)) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.json ({ ok: true, project });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      const { action } = req.body as { action: string }
+      // Check condition
+if ( {) {
+  $2
+}
+        const { content } = req.body as { content: string }
+        if (return bad (res, "Missing content")) {
+  $2
+}
+        const note: ProjectNote = {
+          id: uuidv4 (),
+          author_id: user.id,
+          author_role: user.role,
+          content,
+          createdAtIso: new Date ().toISOString (),
         }
+<<<<<<< HEAD
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!id) return bad(res, "Missing project id");
@@ -196,108 +344,168 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
 
+=======
+        project.notes.push (note);
+        save_project (project);
+        return res.json ({ ok: true, project });
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        const { name, url } = req.body as { name: string; url?: string }
+        if (return bad (res, "Missing name")) {
+  $2
+}
+        const doc: ProjectDocument = {
+          id: uuidv4 (),
+          name,
+          url,
+        const { timeline } = req && req.body as { timeline: Project["timeline"] };
+        project && project.timeline = Array && Array.isArray(timeline)
+          ? timeline
+          : project && project.timeline;
+        saveProject(project);
+        return res && res.json({ ok: true, project });
+      }
+      if (action === "mark_completed") {
+        project && project.status = "COMPLETED";
+        saveProject(project);
+        return res && res.json({ ok: true, project });
+      }
+      return bad(res, "Unknown action");
+    }
+    return bad(res, "Method not allowed", 405);
+  } catch (e: any) {
+    const status = e?.statusCode |500;
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message |"Server error" });
+  }
+}
+    if (req.method === "GET") {
+      return res.json({ ok: true, project })
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (req.method === "PATCH") {
       const { action } = req.body as { action: string };
       if (action === "add_note") {
         const { content } = req.body as { content: string };
         if (!content) return bad(res, "Missing content");
+        const note: ProjectNote = {
+          id: uuidv4(), authorId: user.id,
+          authorRole: user.role, content,
+          createdAtIso: new Date().toISOString()};
+        project.notes.push(note);
+        saveProject(project);
+        return res.json({ ok: true, project })
+      }
+      if (action === "add_document") {
+        const { name, url } = req.body as { name: string, url?: string };
+        if (!name) return bad(res, "Missing name");
+        const doc: ProjectDocument = {
+          id: uuidv4(), name,
+          url,
+          uploadedAtIso: new Date().toISOString()};
+        project.documents.push(doc);
+        saveProject(project);
+        return res.json({ ok: true, project })
+      }
+      if (action === "update_timeline") {
+        const { timeline } = req.body as { timeline: Project["timeline"] };
+        project.timeline = Array.isArray(timeline) ? timeline : project.timeline;
+        saveProject(project);
+        return res.json({ ok: true, project })
+      }
+      if (action === "mark_completed") {
+        project.status = "COMPLETED";
+        saveProject(project);
+        return res.json({ ok: true, project })
+      }
+      return bad(res, "Unknown action")
+    }
+    return bad(res, "Method not allowed", 405)
+  } catch (e: any) {
+    const status = e?.statusCode || 500;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+  }
+}
+          uploadedAtIso: new Date ().toISOString (),
+        }
+        project.documents.push (doc);
+        save_project (project);
+        return res.json ({ ok: true, project });
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        const { timeline } = req.body as { timeline: Project["timeline"] }
+        project.timeline = Array.is_array (timeline);
+          ? timeline;
+          : project.timeline;
+        save_project (project);
+        return res.json ({ ok: true, project });
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        project.status = "COMPLETED";
+        save_project (project);
+        return res.json ({ ok: true, project });
+      }
+      return bad (res, "Unknown action");
+    }
+    return bad (res, "Method not allowed", 405);
+  } catch (e: any) {
+    const status = e?.status_code || 500;
+    return res;
+      .status (status);
+      .json ({ ok: false, error: e?.message || "Server error" });
+
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message })
+}
+
+function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
+  if (user.role === "client" && user.id === project.clientId) return true,
+  if (user.role === "talent" && user.talentSlug === project.talentSlug) return true,
+  return false
+
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    if (req.method === 'GET') {
-      res.status(200).json({ projects: [] });
-    } else if (req.method === 'POST') {
-      const project = {
-        id: 'project-id',
-        title: 'New Project',
-        description: 'Project description',
-        status: 'active',
-        createdAtIso: new Date().toISOString()
-      };
-      res.status(201).json({
-        ok: true,
-        project
-      });
-    } else {
-      res.setHeader('Allow', ['GET', 'POST']);
-      res.status(405).end('Method Not Allowed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    return bad(res, "Internal server error", 500);
-    const user = getDemoUser(req),
-    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string },
+    const user = getDemoUser(req)
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string }
     if (!id) return bad(res, "Missing project id"),
-    const project = getProjectById(id),
+    const project = getProjectById(id)
     if (!project) return bad(res, "Not found", 404),
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403),
+
     if (req.method === "GET") {
       return res.json({ ok: true, project })
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+    }
+
     if (req.method === "PATCH") {
-      const { action } = req.body as { action: string },
+      const { action } = req.body as { action: string }
+
       if (action === "add_note") {
-        const { content } = req.body as { content: string },
+        const { content } = req.body as { content: string }
         if (!content) return bad(res, "Missing content"),
+
         const note: ProjectNote = {
           id: uuidv4(),
           authorId: user.id,
           authorRole: user.role,
           content,
-          createdAtIso: new Date().toISOString()
-          createdAtIso: new Date().toISOString(),
-        };
-        project.notes.push(note);
-        saveProject(project);
-        return res.json({ ok: true, project });
-      }
-      if (action === "add_document") {
-        const { name, url } = req.body as { name: string; url?: string }
-        if (!name) return bad(res, "Missing name");
-        const doc: ProjectDocument = {
-          id: uuidv4()
-          name
-          url
-          uploadedAtIso: new Date().toISOString()
-        }
           createdAtIso: new Date().toISOString()},
         project.notes.push(note),
         saveProject(project),
         return res.json({ ok: true, project })
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      }
+
       if (action === "add_document") {
         const { name, url } = req.body as { name: string, url?: string },
         if (!name) return bad(res, "Missing name"),
@@ -305,8 +513,129 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           id: uuidv4(),
           name,
           url,
-          uploadedAtIso: new Date().toISOString(),
-        };
+          uploadedAtIso: new Date().toISOString()},
+        project.documents.push(doc),
+        saveProject(project),
+        return res.json({ ok: true, project })
+      }
+
+      if (action === "update_timeline") {
+        const { timeline } = req.body as { timeline: Project["timeline"] }
+        project.timeline = Array.isArray(timeline) ? timeline : project.timeline,
+        saveProject(project),
+        return res.json({ ok: true, project })
+      }
+
+      if (action === "mark_completed") {
+        project.status = "COMPLETED",
+        saveProject(project),
+        return res.json({ ok: true, project })
+      }
+
+      return bad(res, "Unknown action")
+    }
+
+    return bad(res, "Method not allowed", 405)
+
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next",
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+
+import {
+  Project
+  ProjectDocument
+  ProjectNote
+} from "../../../utils/marketplace/types";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { getDemoUser } from "../../../utils/marketplace/auth";
+import { getProjectById, saveProject } from "../../../utils/marketplace/store";
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types";
+import {
+  Project,
+  ProjectDocument,
+  ProjectNote,;
+} from "../../../utils/marketplace/types";
+import type { NextApiRequest, NextApiResponse } from 'next';
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({
+    ok: false,
+    error: message
+  });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { v4 as uuidv4 } from "uuid",
+import { getDemoUser } from "../../../utils/marketplace/auth",
+import { getProjectById, saveProject } from "../../../utils/marketplace/store",
+import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res.status(code).json({ ok: false, error: message })
+}
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
+  if (user.role === "client" && user.id === project.clientId) return true;
+  if (user.role === "talent" && user.talentSlug === project.talentSlug)
+    return true;
+  return false;
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
+  if (user.role === "client" && user.id === project.clientId) return true;
+  if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
+  return false
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+    if (!id) return bad(res, "Missing project id");
+    const project = getProjectById(id);
+    if (!project) return bad(res, "Not found", 404);
+    if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+        project.notes.push(note);
+        saveProject(project);
+        return res.json({ ok: true, project });
+      }
+<<<<<<< HEAD
+=======
+
+      if (action === "add_document") {
+        const { name, url } = req.body as { name: string; url?: string }
+        if (!name) return bad(res, "Missing name");
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -322,26 +651,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (action === "mark_completed") {
         project.status = "COMPLETED";
 
-      if (action === "add_document") {
-        const { name, url } = req.body as { name: string, url?: string };
-        if (!name) return bad(res, "Missing name");
-        const doc: ProjectDocument = {
-          id: uuidv4(),
-          name,
-          url,
-          uploadedAtIso: new Date().toISOString()
-        };
-        project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project })
       }
 
-      if (action === "update_timeline") {
-        const { timeline } = req.body as { timeline: Project["timeline"] };
-        project.timeline = Array.isArray(timeline) ? timeline : project.timeline;
-        saveProject(project);
-        return res.json({ ok: true, project })
-      }
       return bad(res, "Unknown action");
     }
     return bad(res, "Method not allowed", 405);
@@ -352,31 +665,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .json({ ok: false, error: e?.message |"Server error" });
 
 
-      if (action === "mark_completed") {
-        project.status = "COMPLETED";
-        saveProject(project);
-        return res.json({ ok: true, project })
-      }
-
-      return bad(res, "Unknown action")
-    }
-
-    return bad(res, "Method not allowed", 405);
-  } catch (e: any) {
-    const status = e?.statusCode || 500;
-    return res
-      .status(status)
-      .json({ ok: false, error: e?.message || "Server error" });
-          uploadedAtIso: new Date().toISOString()},
-        project.documents.push(doc),
-        saveProject(project),
-        return res.json({ ok: true, project })
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -435,11 +723,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
   } catch (error) {
@@ -460,4 +752,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

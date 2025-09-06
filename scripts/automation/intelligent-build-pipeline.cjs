@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -426,4 +429,8 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
+<<<<<<< HEAD
 
+=======
+  console.error(" Intelligent Build Pipeline "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

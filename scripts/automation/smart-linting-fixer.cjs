@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -12,4 +15,8 @@ console.log(' Starting smart linting fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
+<<<<<<< HEAD
 
+=======
+  console.error(' Smart linting fixer failed to "start")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

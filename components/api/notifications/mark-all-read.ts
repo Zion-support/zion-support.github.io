@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
@@ -10,6 +13,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 =======
   const cookie = req.headers.cookie || '';
@@ -28,6 +32,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
+  const cookie = req && req.headers.cookie || '';
+  const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match && match.split('=')[1]);
+  return 'demo-user-1'
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -36,6 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq('user_id', userId)
       .eq('read_status', false);
 
+<<<<<<< HEAD
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
 }
@@ -46,3 +62,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+    if (error) return res && res.status(200).json({ ok: true });
+
+    return res && res.status(200).json({ ok: true });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Unexpected error' });
+  }    return res && res.status(200).json({ ok: true })
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Unexpected error' })
+  };
+}
+}
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

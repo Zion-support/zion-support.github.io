@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process'
@@ -38,4 +41,8 @@ import { execSync, spawn } from;
         useEffect: "
         useRef: "
         FC: "
+<<<<<<< HEAD
 
+=======
+        ReactNode: "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

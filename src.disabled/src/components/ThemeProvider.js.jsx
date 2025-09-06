@@ -1,5 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 "use client\";\"; import * as React from \"react\"; export const ThemeProvider({ children }) {}}; \"use client\"; const initialState = {}; \"setTheme\": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window && window.document.documentElement;\"; root && root.classList.remove(\"light\",\"dark\");\"; root && root.classList.add(\"dark\")},[]); const value = {}}}; return (<ThemeContext && ThemeContext.Provider value={value}> {children} </ThemeContext && ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)\"; throw new Error(\"useTheme must be used within a ThemeProvider\"); return context}; \"}
 "use client";"; import * as React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; setTheme: () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window && window.document.documentElement;"; root && root.classList.remove("light","dark");"; root && root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext && ThemeContext.Provider value={value}> {children} </ThemeContext && ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}""
 
 "use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window && window.document.documentElement;"; root && root.classList.remove("light","dark");"; root && root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext && ThemeContext.Provider value={value}> {children} </ThemeContext && ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
 
+<<<<<<< HEAD
+=======
+=======
+"use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
+>>>>>>> main
+=======
+"use client\";\"; import * as React from \"react\"; export const ThemeProvider({ children }) {}}; \"use client\"; const initialState = {}; \"setTheme\": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;\"; root.classList.remove(\"light\",\"dark\");\"; root.classList.add(\"dark\")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)\"; throw new Error(\"useTheme must be used within a ThemeProvider\"); return context}; \"}
+"use client";"; import * as React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; setTheme: () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}""
+"use client";"; import * as _React from "react"; export const ThemeProvider({ children }) {}}; "use client"; const initialState = {}; "setTheme": () => null}; export const ThemeProvider({ children }) {}};},[]);,[]); const root = window.document.documentElement;"; root.classList.remove("light","dark");"; root.classList.add("dark")},[]); const value = {}}}; return (<ThemeContext.Provider value={value}> {children} </ThemeContext.Provider>)} export const useTheme = () => {}}; const context = useContext(ThemeProviderContext); if(context === null)"; throw new Error("useTheme must be used within a ThemeProvider"); return context}; "}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

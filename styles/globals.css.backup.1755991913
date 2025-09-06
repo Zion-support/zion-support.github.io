@@ -565,6 +565,92 @@ body::after {
     transform: translateY(-20px) scale(1.2);
 /* Enhanced Button Effects */
 .quantum-button {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+  position: relative;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+/* Advanced Card Hover Effects */
+.futuristic-card {
+=======
+@keyframes holographicWave {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+  50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
+}
+
+@keyframes cyberpunkPulse {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  25% { opacity: 0.2; transform: scale(1.05); }
+  50% { opacity: 0.3; transform: scale(1.1); }
+  75% { opacity: 0.2; transform: scale(1.05); }
+}
+
+/* Enhanced Text Effects */
+.quantum-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: quantumTextGlow 3s ease-in-out infinite;
+}
+
+.holographic-text {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink), var(--neon-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+  animation: holographicTextGlow 4s ease-in-out infinite;
+}
+
+.cyberpunk-text {
+  background: linear-gradient(45deg, var(--neon-pink), var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(236, 73, 153, 0.7);
+  animation: cyberpunkTextGlow 5s ease-in-out infinite;
+}
+
+.neural-text {
+  background: linear-gradient(45deg, var(--neon-green), var(--neon-cyan), var(--neon-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 35px rgba(16, 185, 129, 0.4);
+  animation: neuralTextGlow 6s ease-in-out infinite;
+}
+
+@keyframes quantumTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.2) saturate(1.3); }
+}
+
+@keyframes holographicTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.3) saturate(1.4); }
+}
+
+@keyframes cyberpunkTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.4) saturate(1.5); }
+}
+
+@keyframes neuralTextGlow {
+  0%, 100% { filter: brightness(1) saturate(1); }
+  50% { filter: brightness(1.1) saturate(1.2); }
+}
+
+/* Advanced Futuristic Animations */
+@keyframes quantumPulse {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   0%, 100% { 
   25% { 
   50% { 
@@ -580,6 +666,7 @@ body::after {
   transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
   content: '';
 .futuristic-card::before {  content: '';
 =======
@@ -587,6 +674,25 @@ body::after {
 .futuristic-card::before {
   content: '';
 .futuristic-card::before {  content: '';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+.futuristic-card::before {
+=======
+/* Advanced Futuristic Effect Classes */
+.quantum-pulse {
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .holographic-flow {
   animation: holographicFlow 6s ease-in-out infinite;
 }

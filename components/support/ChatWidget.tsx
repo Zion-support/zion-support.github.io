@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -5,6 +6,8 @@ useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -13,6 +16,7 @@ type ChatMessage = {
   timestamp?: number
 }
 function generateSessionId(): string {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -51,6 +55,8 @@ function generateSessionId(): any (): string {;
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -61,6 +67,7 @@ function generateSessionId(): any (): string {;
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
+<<<<<<< HEAD
 
   useEffect(() => {
 
@@ -111,12 +118,23 @@ function generateSessionId(): any (): string {;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch {}
   }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+<<<<<<< HEAD
+=======
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
@@ -125,6 +143,7 @@ function generateSessionId(): any (): string {;
           tag: 'escalate'
         })
       });
+<<<<<<< HEAD
 
       setShowEscalation(true)
 
@@ -186,140 +205,38 @@ function generateSessionId(): any (): string {;
     } catch {}
   }
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-=======
     } catch {}
   }
-=======
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
     } catch {}
   }
 
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-
-
-  useEffect(() => {;
-    sessionIdRef && sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef && sessionIdRef.current = generateSessionId();
-  }, []);
-
-  useEffect(() => {;
-    if (!isOpen && messages && messages.length === 0) {;
-      // Seed greeting;
-      setMessages([;
-        {;
-          role: 'assistant',;
-          content: 'Hi! How can I help you?',;
-          timestamp: Date && Date.now(),;
-        },;
-      ]);    }
-  }, [isOpen, messages && messages.length]);
-
-  useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date && Date.now() }]);
-    }
-  }, [isOpen, messages && messages.length]);
-
-  useEffect(() => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  const quickReplies = useMemo(;
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
-
-  const quickReplies = useMemo(;
-    () => ['How do I hire?How do I get matched?Billing help'];
-  );
-
-  async function logEvent(): any (eventType: string, payload: any) {;
-    try {;
-      await fetch('/api/support/session', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          sessionId: sessionIdRef && sessionIdRef.current,;
-          eventType,;
-          payload,;
-        }),;
-      });    } catch {}        body: JSON && JSON.stringify({ sessionId: sessionIdRef && sessionIdRef.current, eventType, payload })});
-    } catch {}
-  }
-
-  async function escalateSupport(): any (reason: string) {;
-    try {;
-      await fetch('/api/support/escalate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          sessionId: sessionIdRef && sessionIdRef.current,;
-          reason,;
-          tag: 'escalate',;
-        }),;
-      });
-      setShowEscalation(true);    } catch {}        body: JSON && JSON.stringify({ sessionId: sessionIdRef && sessionIdRef.current, reason, tag: 'escalate' })}),;
-      setShowEscalation(true);
-    } catch {}
-  }
-
-  async function onSend(): any (messageText?: string) {;
-    const text = (messageText ?? input).trim();
-    if (!text) return;
-
-    const newUserMessage: ChatMessage = {;
-      role: 'user',;
-      content: text,;
-      timestamp: Date && Date.now(),;
-    };
-    setMessages(prev => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date && Date.now() },;
-    setMessages((prev) => [...prev, newUserMessage]);
-    setInput('');
-    setIsLoading(true);
-    await logEvent('message/user', { content: text }),;
-      const res = await fetch('/api/support/chat', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          sessionId: sessionIdRef && sessionIdRef.current,;
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({;
-            role,;
-            content,;
-          })),;
-        }),;
-      });      const data = await res && res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
-      const data = await res && res.json();
-
-      if (data?.assistantMessage) {;
-        const assistantMessage: ChatMessage = {;
-          role: 'assistant',;
-          content: data && data.assistantMessage,;
-          timestamp: Date && Date.now(),;
-        };
-        setMessages(prev => [...prev, assistantMessage]);
-        await logEvent('message/assistant', {;
-          content: assistantMessage && assistantMessage.content,;
-          meta: data && data.meta,;
-        });
-      }
-
-      if (data?.meta?.intentMatched === false) {;
-        setFailedIntents(n => {;
-
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -329,6 +246,7 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
 
     } catch (e) {;
       setMessages(prev => [;
@@ -350,6 +268,15 @@ function generateSessionId(): any (): string {;
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>      }
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -359,6 +286,7 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
@@ -378,18 +306,22 @@ function generateSessionId(): any (): string {;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
@@ -410,6 +342,7 @@ function generateSessionId(): any (): string {;
         </button>
       )}
 
+<<<<<<< HEAD
           <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800">
             <div className="font-semibold">Zion Support</div>
             <button onClick={() => setIsOpen(false)} aria-label="Close" className="p-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
@@ -419,20 +352,51 @@ function generateSessionId(): any (): string {;
           <div className="flex-1 overflow-y-auto p-3 space-y-3">
             {messages.map((m, idx) => (
               <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
+=======
+    }
+  }
+  return (
+    <div className='fixed bottom-4 right-4 z-50'>;
+      {!isOpen && (;
+        <button
+          aria-label='Open support chat'
+          onClick={() => setIsOpen(true)}
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
+        <button
+          aria-label="Open support chat"
+          onClick={() => setIsOpen(true)}
+          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
+        >;
+          ?;
+        </button>;
+      )}
+              <div
+                key={idx}
+                className={
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                }>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div
                   className={
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   }
                 >
                   {m.content}
                 </div>
               </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
             {isLoading && (
               <div className='text-sm'>
@@ -443,21 +407,19 @@ function generateSessionId(): any (): string {;
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
               </div>
             )}
-
-            <div ref={messagesEndRef} />;
-          </div>;
-          {!showEscalation && (;
-            <div className='px-3 pb-2'>;
-              <div className='flex flex-wrap gap-2 mb-2'>;
-                {quickReplies && quickReplies.map(q => (;
-
                   <button
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
 
 =======
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
+=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+              <div className="flex flex-wrap gap-2 mb-2">;
+                {quickReplies && quickReplies.map((q) => (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <button
                     key={q}
                     onClick={() => onSend(q)}
@@ -472,8 +434,12 @@ function generateSessionId(): any (): string {;
               </div>
             </div>
           )}
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {q}
                   </button>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -486,12 +452,12 @@ function generateSessionId(): any (): string {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
 
+<<<<<<< HEAD
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -502,6 +468,17 @@ function generateSessionId(): any (): string {;
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
 
+=======
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
+            {!showEscalation ? (;
+              <div className='flex gap-2'>;
+                <input
+                  value={input}
+                  onChange={e => setInput(e && e.target.value)}
+                  onKeyDown={e => {;
+                    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+                      e && e.preventDefault();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       onSend();
                     }
                   }}
@@ -510,6 +487,7 @@ function generateSessionId(): any (): string {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className="flex gap-2">
@@ -523,10 +501,16 @@ function generateSessionId(): any (): string {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+              <div className="flex gap-2">
+                <input
+                  value={input}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
 
                 >
                   Send
@@ -542,22 +526,18 @@ function generateSessionId(): any (): string {;
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                    }
+                  }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             )}
           </div>;
         </div>;
       )}
-
-
-  );
-
 }
-=======
-
-}
-=======
-    </div>;
   );
 }
+<<<<<<< HEAD
     </div>
 
 }
@@ -565,11 +545,16 @@ function generateSessionId(): any (): string {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 useEffect ( () => {
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   );
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

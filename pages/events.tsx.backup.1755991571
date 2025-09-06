@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -39,10 +43,23 @@ export default function EventsPage() {
 		}
 	];
 
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+
+export default function EventsPage() {
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 	return (
 		<>
 			<Head>
 				<title>Events | Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<meta name="description" content="Join Zion Tech Group at upcoming events, conferences, and workshops. Meet our team and see our solutions in action." />
 				<link rel="canonical" href="https://ziontechgroup.com/events/" />
 			</Head>
@@ -76,3 +93,20 @@ export default function EventsPage() {
 		</>
 	);
 }
+<<<<<<< HEAD
+=======
+=======
+				<meta name="description" content="Upcoming events, conferences, and webinars from Zion Tech Group." />
+				<link rel="canonical" href="https://ziontechgroup.com/events/" />
+			</Head>
+			<Layout>
+				<section className="min-h-[60vh] px-4 py-24">
+					<h1 className="text-5xl font-bold mb-4">Events</h1>
+					<p className="text-gray-300 mb-8">Stay tuned for our upcoming events and conferences.</p>
+				</section>
+			</Layout>
+		</>
+	);
+}
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-d08b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

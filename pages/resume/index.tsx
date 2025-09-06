@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GetServerSideProps } from 'next';
 
 import { GetServerSideProps } from 'next',;
@@ -6,6 +7,18 @@ export const getServerSideProps: GetServerSideProps = async () => {
     redirect: {
       destination: '/resume/preview'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       permanent: false}}
 
 export const getServerSideProps: GetServerSideProps = async () => {;
@@ -26,6 +39,38 @@ export default function ResumeIndex() { return null   } catch (error) {
 =======
 export default function ResumeIndex() { return null }
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+      destination: '/resume/preview',
+      permanent: false}}
+}
+export default function ResumeIndex() { return null }
+import { GetServerSideProps } from 'next',
+import { GetServerSideProps } from 'next';
+
+import { GetServerSideProps } from 'next',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/resume/preview'
+      permanent: false}}
+}
+export default function ResumeIndex() { return null }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 ;
 export default function ResumeIndex() { return null };
@@ -45,5 +90,21 @@ export default function ResumeIndex() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

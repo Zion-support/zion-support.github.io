@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -133,12 +134,16 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const securityServices = [
+<<<<<<< HEAD
 
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
@@ -332,10 +337,40 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     icon: ArrowRight,
     title: 'Security Training',
     description: 'Employee security awareness and training programs'
+=======
+  {
+    title: "Security Assessment",
+    description: "Comprehensive security evaluation of your systems",
+    icon: Eye,
+    features: ["Vulnerability scanning", "Penetration testing", "Security audit", "Risk assessment"],
+    pricing: "$2,000 - $10,000/project"
+  },
+  {
+    title: "Threat Detection",
+    description: "AI-powered threat detection and response",
+    icon: AlertTriangle,
+    features: ["Real-time monitoring", "AI threat detection", "Automated response", "Incident management"],
+    pricing: "$1,500 - $8,000/month"
+  },
+  {
+    title: "Data Protection",
+    description: "Comprehensive data protection and encryption",
+    icon: Lock,
+    features: ["Data encryption", "Access control", "Backup & recovery", "Compliance"],
+    pricing: "$1,000 - $5,000/month"
+  },
+  {
+    title: "Security Training",
+    description: "Employee security awareness and training programs",
+    icon: Shield,
+    features: ["Security training", "Phishing simulations", "Best practices", "Certification"],
+    pricing: "$500 - $2,000/month"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
 
 export default function CybersecurityPage() {
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Protection against cyber threats and attacks',
@@ -471,6 +506,29 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Protect your business with comprehensive cybersecurity solutions.
                 Advanced threat protection, compliance, and 24/7 monitoring.
+=======
+  return (
+    <>
+      <Head>
+        <title>Cybersecurity Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cybersecurity services including threat detection, data protection, security assessment, and training programs." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Cybersecurity</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Protect your business with our comprehensive cybersecurity solutions designed 
+                to defend against evolving threats.
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -483,9 +541,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -496,6 +557,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -526,11 +588,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
@@ -552,6 +617,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -565,6 +632,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
 
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -630,8 +698,41 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
     </>
 
+=======
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Secure Your Business Today
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our cybersecurity services can protect your business from threats.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/security"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View Security
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-    </>;
-  ),;
 }
-

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process")"console.log(" Merge Conflict Resolver")"console.log("=====")class MergeConflictResolver { constructor() { this.resolvedFiles = [] this.errors = [] } async resolveConflicts() { try { / Get list of files with conflicts" const conflictFiles = execSync("git diff --name-only --diff-filter=U", {" encoding: "utf8"" }).trim().split("\n").filter(f => f) console.log(`Found ${conflictFiles.length} files with conflicts`) for (const file of conflictFiles) { if (file) { await this.resolveFileConflicts(file) } }` console.log(`\n Resolved conflicts in ${this.resolvedFiles.length} files`)` console.log(` Errors in ${this.errors.length} files`) if (this.errors.length > 0) {"" console.log("\nErrors: ")` this.errors.forEach(error => console.log(` - ${error}`)) } } catch (error) {"" console.error("Error resolving conflicts: ", error.message) } } async resolveFileConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let resolvedContent = content" / Strategy: Keep our changes (HEAD) for most conflicts / Remove conflict markers and keep the HEAD version resolvedContent = resolvedContent.replace('"`'"`
@@ -57,10 +58,25 @@ files.forEach(file => {
 console.log(`✅ Fixed ${totalFixed} files`);
 console.log('🎉 Merge conflict resolver completed!');
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 
 class MergeConflictResolver {
   constructor() {
@@ -120,6 +136,8 @@ const resolver = new MergeConflictResolver()
 resolver.resolveConflicts().then(() => {
   })
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // console.log(' Merge Conflict Resolver')
 console.log('=====')
       const conflictFiles = execSync('git diff --name-only --diff-filter=U')
@@ -127,3 +145,23 @@ console.log('=====')
         console.log('\"nErrors")
       console.error('Error resolving "conflicts")
   console.log('Run "git add ." and "git commit")
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> 9ed4ba1b92a691fe36a93d14d4961cf252717c28
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

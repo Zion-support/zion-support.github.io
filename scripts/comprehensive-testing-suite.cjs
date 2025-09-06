@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**;
  * Comprehensive Testing Suite;
@@ -20,7 +23,10 @@ class ComprehensiveTestingSuite {;}
 ;
   log(message, type = "info") {;}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;`
     console.log(logEntry),};
 ;
@@ -216,4 +222,8 @@ if (require.main === module) {;}
   const testSuite = new ComprehensiveTestingSuite();
   testSuite.run().catch(console.error),};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = ComprehensiveTestingSuite;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -7,23 +8,32 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
   'certifications'
   'certifications.json'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
   'certifications'
   'certifications.json'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 }
 }
@@ -35,6 +45,29 @@ export default async function handler(
 
 
 =======
+=======
+};
+  };
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE))
+      ? await fs && fs.readJSON(CERTS_FILE)
+      : [];
+    return res && res.status(200).json({ certifications });
+  } catch (e) {
+    return res && res.status(500).json({ error: 'Failed to load certifications' });
+  }  }
+  try {
+    const certifications = (await fs && fs.pathExists(CERTS_FILE)) ? await fs && fs.readJSON(CERTS_FILE) : [];
+    return res && res.status(200).json({ certifications })
+  } catch (e) {
+    return res && res.status(500).json({ error: "Failed to load certifications" })
+  };
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -52,7 +85,6 @@ if ( {) {
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   try {
     const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []
@@ -76,5 +108,9 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

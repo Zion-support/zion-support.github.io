@@ -11,6 +11,16 @@ import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices, getRevolutionaryServices, serviceCategories } from '../data/enhanced-real-micro-saas-services';
 
 export default function HomePage() {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/index.tsx.backup.1755991813.backup.1756001155
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState('hero');
+
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991938.backup.1756001158
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const heroStats = [
     { value: '300+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
     { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },

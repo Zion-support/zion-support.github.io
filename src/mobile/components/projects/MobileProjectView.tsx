@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+=======
+id: string;
+    title: string;
+    client: {
+      name: string;
+      avatar?: string
+    },
+    startDate: string;
+    endDate?: string;
+    status: string;
+    totalAmount: string;
+    progress: number;
+
+import React from 'react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import {
+  CheckCircle,
+  ChevronRight,
+  FileText,
+  MessageSquare,
+  Video,
+} from 'lucide-react';
+import { Progress } from '@/components / ui / progress';
+import { SeverityIndicator } from '../common / SeverityIndicator';
+import { use_router } from 'next / router';
+import { toast } from 'sonner';
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -73,6 +108,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   },
   
   return (
+<<<<<<< HEAD
     <div className="space-y-6 px-4 pb-24">
       <Card>
         <CardContent className="p-4">
@@ -90,6 +126,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
@@ -98,6 +138,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div>
@@ -105,8 +150,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <p className="text-muted-foreground">End Date</p>
                 <p className="font-medium">{project.endDate || "Not set"}</p>
+
+
               </div>
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
@@ -117,11 +169,77 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 <p className="font-medium capitalize">{project.status}</p>
               </div>
             </div>
+
+
             
             <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
             </div>
+<<<<<<< HEAD
+=======
+
+                      src={project && project.client.avatar}
+                      alt={project && project.client.name}
+                    />;
+                    <AvatarFallback>{project && project.client.name[0]}</AvatarFallback>;
+                  </Avatar>;
+                  <span className='text-sm'>{project && project.client.name}</span>;
+                </div>;
+              </div>;
+              <Badge>{project && project.status}</Badge>;
+            </div>;
+
+            <div className='space-y-1'>;
+              <div className='flex justify-between items-center text-sm'>;
+                <span>Progress</span>;
+                <span className='font-medium'>{project && project.progress}%</span>;
+              </div>;
+              <Progress value={project && project.progress} className='h-2' />;
+            </div>;
+
+            <div className='grid grid-cols-2 gap-3 text-sm'>;
+              <div>;
+                <p className='text-muted-foreground'>Start Date</p>;
+                <p className='font-medium'>{project && project.startDate}</p>;
+              </div>;
+              <div>;
+                <p className='text-muted-foreground'>End Date</p>;
+                <p className='font-medium'>{project && project.endDate || 'Not set'}</p>;
+              </div>;
+              <div>;
+                <p className='text-muted-foreground'>Total Amount</p>;
+                <p className='font-medium'>{project && project.totalAmount}</p>;
+              </div>;
+              <div>;
+                <p className='text-muted-foreground'>Status</p>;
+                <p className='font-medium capitalize'>{project && project.status}</p>;
+              </div>;
+            </div>;
+
+            <div>;
+              <p className='text-sm text-muted-foreground mb-1'>Description</p>;
+              <p className='text-sm'>{project && project.description}</p>;
+            </div>;
+
+            <div className='flex gap-2'>;
+              <Button size='sm' variant='outline' className='gap-1 flex-1'>;
+                <FileText className='h-4 w-4' /> Contract;
+              </Button>;
+
+              <Button
+                size='sm'
+                variant='outline'
+                className='gap-1 flex-1'
+                onClick={messageClient}              >
+                <MessageSquare className='h-4 w-4' /> Message
+              </Button>
+              <Button
+                size='sm'
+                className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -146,6 +264,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
@@ -162,6 +285,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
@@ -280,6 +407,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
+
+
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -327,8 +456,19 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>;
           ))}
         </div>;
+<<<<<<< HEAD
       </section>;
     </div>;
   );
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      </section>;
+    </div>;
+  );
+};
+}
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

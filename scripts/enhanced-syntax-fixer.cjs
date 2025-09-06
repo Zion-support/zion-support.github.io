@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
   console.log(' Starting Enhanced Syntax Fixer...')
     const files = findCodeFiles('.;')
@@ -17,4 +23,8 @@ const { execSync } = require('child_process')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
     const reportPath = 'enhanced-syntax-fix-report.json;'
+<<<<<<< HEAD
 
+=======
+    console.error(' Enhanced syntax fixer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

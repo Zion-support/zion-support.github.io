@@ -38,6 +38,10 @@ import { real2028ServiceExpansions } from '../../data/real-2028-service-expansio
 
 import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
 import { realMarketServices } from '../../data/real-market-services';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
 import { innovativeMicroSaasServicesV3 } from '../../data/innovative-micro-saas-v3';
 import { innovative2026MicroSaasServicesV2 } from '../../data/innovative-2026-micro-saas-v2';
@@ -45,6 +49,104 @@ import { ultimateRealMicroSaasServices2025 } from '../../data/2025-ultimate-real
 import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services';
 import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
 import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
+
+type Service = typeof enhancedRealMicroSaasServices[number] | {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string | { monthly: number; yearly: number; currency: string; trialDays: number; setupTime: string; } | null;
+  period?: string;
+  description: string;
+  features?: string[];
+  popular?: boolean;
+  icon?: string;
+  color?: string;
+  textColor?: string;
+  link: string;
+  marketPosition?: string;
+  targetAudience?: string;
+  trialDays?: number;
+  setupTime?: string;
+  category?: string;
+  realService?: boolean;
+  technology?: string[];
+  integrations?: string[];
+  useCases?: string[];
+  roi?: string;
+  competitors?: string[];
+  marketSize?: string;
+  growthRate?: string;
+  variant?: any;
+  contactInfo?: any;
+  realImplementation?: boolean;
+  implementationDetails?: string;
+  launchDate?: string;
+  customers?: number;
+  rating?: number;
+  reviews?: number;
+};
+
+const contactInfo = {
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+function getPriceValue(price: Service['price']): string {
+	if (price && typeof price === 'object' && 'monthly' in price) {
+		return price.monthly.toString();
+	}
+	if (typeof price === 'string') {
+		return price;
+	}
+	return '99';
+}
+
+function getAllServices(): Service[] {
+	return enhancedRealMicroSaasServices
+		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
+		.concat(newlyAddedServices as unknown as Service[])
+		.concat(curatedMarketServices as Service[])
+		.concat(new2025Services as unknown as Service[])
+		.concat(marketValidatedServices as unknown as Service[])
+		.concat(moreRealServices2025 as unknown as Service[])
+		.concat(verified2025Additions as unknown as Service[])
+		.concat(realServicesQ12025 as unknown as Service[])
+		.concat(realEnterpriseServices2025 as unknown as Service[])
+		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
+		.concat(realMarketAugmentations2025 as unknown as Service[])
+		.concat(additionalLiveServices2025 as unknown as Service[])
+		.concat(real2025Q2Additions as unknown as Service[])
+		.concat(augmentedServicesBatch3 as unknown as Service[])
+		.concat(realServicesQ22025 as unknown as Service[])
+		.concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(realMarketServicesExtended as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		.concat(real2026Additions as unknown as Service[])
+		.concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2028ServiceExpansions as unknown as Service[])
+		.concat(real2029Q1Additions as unknown as Service[])
+<<<<<<< HEAD
+		.concat(realMarketServices as unknown as Service[])
+		.concat(real2029Q2Additions as unknown as Service[])
+		.concat(real2029Q3Additions as unknown as Service[])
+		.concat(real2029Q4Additions as unknown as Service[]);
+=======
+		.concat(realMarketServices as unknown as Service[]);
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 function toSlug(value: string): string {

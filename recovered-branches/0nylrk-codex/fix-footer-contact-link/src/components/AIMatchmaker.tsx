@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -8,13 +11,24 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+<<<<<<< HEAD
+=======
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from "lucide-react";
+interface AIMatchmakerProps {
+
+interface AIMatchmakerProps {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -33,10 +47,37 @@ import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+interface AIMatchmakerProps {
+  serviceType?: string,
+  onMatchSelect?: (match: any) => void,
+  className?: string
+}
+
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -44,6 +85,7 @@ import { Sparkles, Search } from "lucide-react",
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 
     }
 
@@ -73,12 +115,47 @@ import { Sparkles, Search } from "lucide-react",
         onMatchSelect(matchResult)
       }
     }
+=======
+    }
+
+
+    try {;
+      console && console.log("Starting AI matching with query:", query, "and service type:", serviceType);
+
+      // Get AI matches;
+      const results = await findMatches(;
+
+        query;
+        serviceType;
+        3;
+      );
+      toast({
+        title: "Matches Found"
+        description: `Found ${results.length} matches based on your description.`})
+    } catch (error) {
+      console.error("Error during AI matching:", error),
+      toast({
+        title: "Matching Error"
+        description: "We couldn't find matches for your request. Please try again."
+        variant: "destructive"})
+      // Set empty matches to show no results found UI
+      setMatches([])
+    } finally {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
 
   };
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+      setIsMatchmaking(false)
+
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -106,48 +183,24 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"}),;
       return;
     }
-;
-    setIsMatchmaking(true),;
-    setHasSearched(true),;
-    try {;
-      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),;
-      // Get AI matches;
-      const results = await findMatches(;
-        query,;
-        serviceType,;
-        3;
-      ),;
-      // // // console.log("AI matching results:", results),;
-      setMatches(results),;
-      toast({;
-        title: "Matches Found",;
-        description: `Found ${results.length} matches based on your description.`});
-    } catch (error) {;
-      console.error("Error during AI matching:", error),;
-      toast({;
-        title: "Matching Error",;
-        description: "We couldn't find matches for your request. Please try again.",;
-        variant: "destructive"}),;
-      // Set empty matches to show no results found UI;
-      setMatches([]);
-    } finally {;
-      setIsMatchmaking(false);
-    }
-  },;
-  const handleItemSelect = (item: any) => {;
-    if (onMatchSelect) {;
-      // Find the original MatchResult that contains this item;
-      const matchResult = matches.find(match => match.item.id === item.id),;
-      if (matchResult) {;
-        onMatchSelect(matchResult);
+  }
+  const handleItemSelect = (item: any) => {
+    if (onMatchSelect) {
+      // Find the original MatchResult that contains this item
+      const matchResult = matches.find(match => match.item.id === item.id)
+      if (matchResult) {
+        onMatchSelect(matchResult)
       }
     }
+<<<<<<< HEAD
   },
 =======
 
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
@@ -167,15 +220,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
+<<<<<<< HEAD
+=======
+    }
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
       <CardContent>;
-
-              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
@@ -188,25 +241,17 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
                   Find Matches;
                 </>;
               )}
-
-            </Button>;
-          </div>;
-
-          {hasSearched && (;
-
             <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-            />;
           )}
         </div>;
       </CardContent>;
     </Card>;
   );
-=======
         <div className="space - y-4">;
           <div className="space - y-2">;
             <Textarea;
@@ -239,5 +284,4 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -34,9 +34,16 @@ const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return 
   }},
   })}
       return config}}})}
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/analyze-bundle.js
+=======
+      return config;
+  }},
+  })}
+      return config}}})}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

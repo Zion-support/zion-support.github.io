@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -9,6 +12,7 @@ export default async function handler(
   if (!isAuthorized(req))
     return res && res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
+<<<<<<< HEAD
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
     return !superToken |token === superToken;
@@ -18,6 +22,13 @@ export default async function handler(
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+
+    return !superToken || token === superToken;
+  }
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -30,40 +41,23 @@ export default async function handler(
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
-
-      const { prompt, userIntent } = req && req.body || {};
-      const result = await optimizePrompt(String(prompt || ""), userIntent);
-      const latencyMs = Date && Date.now() - started;
-      const status =
-        result && result.optimized.length > String(prompt || "").length * 0 && 0.5
-
-          ? "ok"
-          : "laggy";
-      appendLog({
-        module: "optimizer"
-        type: "optimize"
-        status: status as any
-        latencyMs
-        payload: {
-
-          userIntent,
-          originalLength: String(prompt || "").length,
-          optimizedLength: result && result.optimized.length,
-        },
-      });
-
-
-=======
 export default async /**
  * handler - Function description
  */
@@ -131,7 +125,9 @@ function handler() {
       status: "error",
       payload: { error: e?.message || "unknown" },
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

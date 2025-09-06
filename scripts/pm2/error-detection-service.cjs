@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Main Error Detection Service;
@@ -17,7 +20,11 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -35,6 +42,11 @@ class ErrorDetectionService {}
       level,
       message,
       data,
+<<<<<<< HEAD
+=======
+      "service": 'error-detection-service'
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
@@ -61,7 +73,11 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -97,7 +113,10 @@ class ErrorDetectionService {}
         this.scanForESLintErrors(),
         this.scanForBuildErrors(),
         this.scanForDependencyErrors(),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.scanForConfigurationErrors();
       ]);
       // Generate comprehensive report;
@@ -296,7 +315,11 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -309,7 +332,10 @@ class ErrorDetectionService {}
           !line.includes('function') && !line.includes('class') && !line.includes('const') &&
           !line.includes('let') && !line.includes('var') && !line.includes('import') &&
           !line.includes('export') && !line.includes('return') && !line.includes('if') &&
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           !line.includes('for') && !line.includes('while') && !line.includes('switch')) {}
         // This might be a missing semicolon;
         return true};
@@ -494,7 +520,11 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -574,7 +604,10 @@ class ErrorDetectionService {}
       'utils/**/*.{js,jsx,ts,tsx}',
       'hooks/**/*.{js,jsx,ts,tsx}',
       'types/**/*.{js,jsx,ts,tsx}'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ], {}
       "ignored": /node_modules|\.git|\.next|dist|build/,
       "persistent": true;
@@ -644,4 +677,8 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -7,6 +8,10 @@ import {
 import { motion } from 'framer-motion';
 
 import {
+=======
+import { motion } from 'framer-motion';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Phone
   Mail
   MapPin
@@ -57,10 +62,13 @@ import {
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -192,11 +200,6 @@ const serviceCategories = [
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
-      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
-    ]
-  }
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -382,6 +385,7 @@ const serviceCategories = [;
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },;
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },;
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },;
+<<<<<<< HEAD
 
 
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
@@ -391,6 +395,31 @@ const serviceCategories = [;
   { name: 'Contact', href: '/contact' },];  { name: 'Contact', href: '/contact' }
 ];
 
+=======
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Case Studies', href: '/case - studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  { name: 'Status', href: '/status' }
+];
+
+const quickLinks = [;
+  { name: 'Home', href: '/' },;
+  { name: 'Services', href: '/services' },;
+  { name: 'Solutions', href: '/solutions' },;
+  { name: 'Pricing', href: '/pricing' },;
+  { name: 'Resources', href: '/resources' },;
+  { name: 'Case Studies', href: '/case-studies' },;
+  { name: 'Blog', href: '/blog' },;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -419,6 +448,7 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
+<<<<<<< HEAD
 
 const certifications = [
   'ISO 27001 Certified'
@@ -566,6 +596,8 @@ export default function UltraFuturisticFooter2030() {
 
       {/* Animated Background */}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -587,14 +619,18 @@ export default function UltraFuturisticFooter2030() {
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
+<<<<<<< HEAD
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -638,10 +674,17 @@ export default function UltraFuturisticFooter2030() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+                    {contactInfo.website.replace('https://', '')}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </a>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
             <div className="space-y-6">;
               <div className="flex items-center space-x-3">;
@@ -670,6 +713,12 @@ export default function UltraFuturisticFooter2030() {
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
 
+=======
+                  </a>;
+                </div>;
+              </div>;
+            </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -679,7 +728,6 @@ export default function UltraFuturisticFooter2030() {
                       {category.title}
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
@@ -697,16 +745,20 @@ export default function UltraFuturisticFooter2030() {
                           className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors">;
                           {service && service.name}
                         </Link>;
+<<<<<<< HEAD
 
                         >
                           {service.name}
                         </Link>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       ))}
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
               </div>
             </div>
 
@@ -740,16 +792,13 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                   </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Quick Links */}
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 ))}
-
-              </div>;
-              <div className='space-y-2'>;
-                <h5 className='text-sm font-medium text-cyan-300'>Company</h5>                {companyInfo && companyInfo.map((link, index) => (;
-
                   <Link
                     key={index}
                     href={link && link.href}
@@ -762,6 +811,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors">;
                     {link && link.name}
                   </Link>;
+<<<<<<< HEAD
 
                 ))}
 =======
@@ -782,14 +832,35 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 <span>Connect & Trust</span>
               </h4>
 
+=======
+                ))}
+                <span>Connect & Trust</span>
+              </h4>
+              </div>;
+            </div>;
+
+            {/* Social & Certifications */}
+            <div className='space-y-6'>;
+              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
+                <Users className='w-5 h-5 text-green-400' />;
+                <span>Connect & Trust</span>;
+              </h4>;
+              </div>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
 
                 <span>Connect & Trust</span>
               </h4>
 
+=======
+                <span>Connect & Trust</span>
+              </h4>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Social Links */}
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -798,6 +869,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
+<<<<<<< HEAD
 
                       href={social && social.href}                <span>Connect & Trust</span>;
               </h4>;
@@ -816,17 +888,45 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
+                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
+                    >;
+                      <social && social.icon className="w-5 h-5" />;
+              {/* Social Links */}
+              <div className="space - y-3">;
+                <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
+                <div className="flex flex - wrap gap - 2">;
+                  {social_links.map ((social, index) => (
+                    <a;
+                      key={index}
+                      href={social.href}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Certifications */}
+              <div className='space-y-3'>;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
+                  <Award className='w-4 h-4' />;
+                  <span>Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2'>;
+                  {certifications && certifications.map((cert, index) => (;
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
@@ -838,8 +938,22 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              <div className="space-y-3">
+                <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
+                  <Award className="w-4 h-4" />
+                  <span>Certifications</span>
+                </h5>
+                <div className="grid grid-cols-1 gap-2">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400" />
+                      <span>{cert}</span>
+                    </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </div>
               </div>
@@ -847,11 +961,14 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
           </div>
         </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -889,17 +1006,11 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
             </div>;
           </div>;
         </div>;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>;
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/privacy'
                   className='hover:text-purple-400 transition-colors'>;
@@ -907,6 +1018,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 </Link>;
                 <Link
                   href='/terms'
+<<<<<<< HEAD
 
         <div className="border-t border-purple-500/20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -938,6 +1050,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               </div>
               <div className='flex items-center space-x-4 text-sm text-gray-400'>              </div>
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Heart className="w-4 h-4 text-red-400" />
@@ -958,6 +1072,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 
   );
 
@@ -966,7 +1081,24 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 
   );
 =======
+=======
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 }
 }
+<<<<<<< HEAD
+=======
+}
+  );
+}
+    </footer>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

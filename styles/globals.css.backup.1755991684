@@ -229,6 +229,15 @@ h3 {
     opacity: 0.6;
 /* Quantum Holographic Background */
 .quantum-holographic-bg {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+<<<<<<< HEAD
+  background: 
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   background: 
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
@@ -336,6 +345,15 @@ h3 {
 =======
 >>>>>>> main
 .futuristic-card {
+<<<<<<< HEAD
+=======
+=======
+    linear-gradient(45deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: quantumHolographic 20s ease-in-out infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 @keyframes quantumHolographic {
   0%, 100% { 
     background-position: 0% 0%, 100% 100%, 0% 100%, 0% 0%;
@@ -456,6 +474,15 @@ h3 {
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
 /* Enhanced Button States */
 .btn-futuristic {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+  position: relative;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: relative;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .futuristic-card {  position: relative;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -672,6 +699,15 @@ h3 {
   25% { background-position: 100% 50%; }
   50% { background-position: 100% 100%; }
   75% { background-position: 0% 100%; }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   background: #1f2937;}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -755,6 +791,7 @@ h3 {
   }
 }
 
+<<<<<<< HEAD
 @media (prefers-reduced-motion: reduce) {
 /* Reduced Motion */@media (prefers-reduced-motion: reduce) {
 =======
@@ -762,6 +799,24 @@ h3 {
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
 /* Reduced Motion */@media (prefers-reduced-motion: reduce) {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+/* Reduced Motion */
+=======
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Pulse Effects */
 .pulse-glow {
   animation: pulseGlow 2s ease-in-out infinite alternate;
@@ -917,7 +972,21 @@ h3 {
     display: none !important;
   }
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+}
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Print Styles */
 @media print {
   .no-print {
@@ -926,7 +995,20 @@ h3 {
   body {
     background: white !important;
     color: black !important;
+<<<<<<< HEAD
 =======
+=======
+  }
+}
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }

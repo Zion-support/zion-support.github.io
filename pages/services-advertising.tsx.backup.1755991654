@@ -24,6 +24,11 @@ export default function ServicesAdvertisingPage() {
 					</div>
 				</div>
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services-advertising.tsx.backup.1755992072.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				{/* New: Core micro SaaS and AI additions */}
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
@@ -105,6 +110,10 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services-advertising.tsx.backup.1755991654
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
@@ -178,7 +187,15 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">WHOIS, nameserver, and DNS record drift detection with alerts.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$40/mo</li>
+<<<<<<< HEAD
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/tools')}</li>
+=======
+<<<<<<< HEAD
+						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/tools')}</li>
+=======
+						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/ssl-tools/ssl-checker/')}</li>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					</ul>
 				</section>
 
@@ -250,6 +267,10 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Privacy-friendly dashboards with goals and funnels. Cookie-less.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $9–$50/mo</li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 						<li>References: {ext('https://plausible.io/pricing')}, {ext('https://usefathom.com/pricing')}</li>
 					</ul>
 					<div className="flex gap-3">
@@ -257,6 +278,14 @@ export default function ServicesAdvertisingPage() {
 						<a href="/pricing" className="px-3 py-1.5 rounded-md border border-cyan-500/40 text-cyan-300">Pricing</a>
 					</div>
 				</section>
+<<<<<<< HEAD
+=======
+=======
+											<li>References: {ext('https://plausible.io/#pricing')}, {ext('https://usefathom.com/pricing')}</li>
+				</ul>
+			</section>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 			<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Automated Email Follow-ups</h2>
@@ -590,7 +619,15 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Calibrated forecasts, scenarios, and risk bands on CRM pipeline with executive dashboards.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$600/mo</li>
+<<<<<<< HEAD
 						<li>References: {ext('https://www.pigment.com/')}, {ext('https://www.anaplan.com/platform/overview')}</li>
+=======
+<<<<<<<< HEAD:components/services-advertising.tsx.backup.1755992072.backup.1756001157
+						<li>References: {ext('https://www.pigment.com/pricing')}, {ext('https://www.anaplan.com/platform/overview')}</li>
+========
+						<li>References: {ext('https://www.pigment.com/')}, {ext('https://www.anaplan.com/platform/overview')}</li>
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services-advertising.tsx.backup.1755991654
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					</ul>
 				</section>
 
@@ -1728,6 +1765,50 @@ export default function ServicesAdvertisingPage() {
 						</div>
 					</div>
 				</section>
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services-advertising.tsx.backup.1755992072.backup.1756001157
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Status Pages & SLO Monitor</h2>
+					<p className="text-slate-300">Public status pages, incident comms, and SLO/error budget analytics with burn rate alerts and synthetic checks.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $20–$150/mo</li>
+						<li>References: {ext('https://www.atlassian.com/software/statuspage/pricing')}, {ext('https://sre.google/sre-book/service-level-objectives/')}, {ext('https://www.checklyhq.com/pricing/')}</li>
+					</ul>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">AI Customer Journey Analytics</h2>
+					<p className="text-slate-300">Unify product events, tickets, chats, and CRM; AI summarizes friction points and recommends experiments with funnels and cohorts.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $100–$600/mo</li>
+						<li>References: {ext('https://mixpanel.com/pricing/')}, {ext('https://amplitude.com/pricing')}, {ext('https://snowflake.com/pricing')}</li>
+					</ul>
+				</section>
+
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">SOC 2 Evidence Automation</h2>
+					<p className="text-slate-300">Continuously collect and package control evidence from cloud, CI, and ticketing—export-ready for auditors.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $300–$1,500/mo</li>
+						<li>References: {ext('https://trustcenter.transcend.io/')}, {ext('https://vanta.com/pricing')}, {ext('https://drata.com/pricing')}</li>
+					</ul>
+				</section>
+
+				<section id="service-expansions-2036" className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">New 2036 Service Expansions</h2>
+					<ul className="list-disc list-inside text-slate-300 space-y-2">
+						<li><strong className="text-white">API Latency & SLO Tracker Pro</strong> — $59/mo. <a className="text-cyan-400 underline" href="/services/api-latency-slo-tracker-pro">Learn more</a>. References: {ext('https://opentelemetry.io/')}, {ext('https://grafana.com/')}</li>
+						<li><strong className="text-white">Cloud SQL Spend Optimizer</strong> — $79/mo. <a className="text-cyan-400 underline" href="/services/cloud-sql-spend-optimizer">Learn more</a>. References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/pricing/')}, {ext('https://azure.microsoft.com/pricing')}</li>
+						<li><strong className="text-white">AI Contract Reviewer</strong> — $69/mo. <a className="text-cyan-400 underline" href="/services/ai-contract-reviewer">Learn more</a>. References: {ext('https://openai.com/api/pricing')}, {ext('https://www.anthropic.com/pricing')}</li>
+						<li><strong className="text-white">ETL Incident Copilot</strong> — $45/mo. <a className="text-cyan-400 underline" href="/services/etl-incident-copilot">Learn more</a>. References: {ext('https://airflow.apache.org/')}, {ext('https://www.getdbt.com/')}</li>
+					</ul>
+					<div className="text-slate-400 text-sm">Contact: <a className="text-cyan-400 underline" href="tel:+13024640950">+1 302 464 0950</a> · <a className="text-cyan-400 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · <a className="text-cyan-400 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a></div>
+				</section>
+========
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services-advertising.tsx.backup.1755991654
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			</div>
 		</div>
 	);

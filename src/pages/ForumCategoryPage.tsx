@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -55,6 +56,38 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
+=======
+"feedback": {
+    id: "feedback"
+    name: "Feedback & Feature Requests"
+    description: "Share your feedback and suggest new features."
+    adminOnly: false
+    icon: "FileText"
+
+
+  },
+
+
+  "announcements": {
+    id: "announcements"
+    name: "Announcements"
+    description: "Official announcements from the Zion team."
+    adminOnly: true
+    icon: "Megaphone"
+import { log_info } from '@/utils / production_logger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
+// Mock category data;
+const categories_info: Record < string, ForumCategoryInfo> = {
+  "getting - hired": {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
+  }
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 
 const iconMap = {
@@ -69,6 +102,11 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
@@ -81,11 +119,21 @@ function CategoryContent({
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
   ),
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   // Apply search filter
   const filteredPosts = searchQuery 
@@ -94,16 +142,39 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
+=======
+
+
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
+
+
+
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+import { logInfo } from '@/utils/productionLogger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
+import { logInfo } from '@/utils/productionLogger';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -202,6 +273,7 @@ function CategoryContent({;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
+<<<<<<< HEAD
       return;
     }
     if (isFollowed(categoryId)) {;
@@ -210,38 +282,43 @@ function CategoryContent({;
       follow(categoryId);
     }
   },;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      return;
+
+
+
+
+    }
+    if (isFollowed(categoryId)) {
+      unfollow(categoryId)
+    } else {
+      follow(categoryId)
+    }
+
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
-  return (;
-    <div className="container py-8">;
-      <div className="flex items-center gap-3 mb-6">;
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-          Forum;
-        </Link>;
-        <span className="text-muted-foreground">/</span>;
-        <span className="font-medium">{category.name}</span>;
-      </div>;
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
-        <div className="flex items-center gap-4">;
-          <div className="p-3 bg-zion-purple/10 rounded-full">;
-            <IconComponent className="h-8 w-8 text-zion-purple" />;
-          </div>;
-          <div>;
-            <h1 className="text-3xl font-bold">{category.name}</h1>;
-            <p className="text-muted-foreground mt-1">{category.description}</p>;
-          </div>;
-        </div>;
-        <div className="flex items-center gap-2">;
-          {canCreatePost && <CreatePostButton categoryId={categoryId} />}
-          <Button;
-            variant={isFollowed(categoryId) ? 'outline' : 'default'}
-            onClick={handleFollow}
-          >;
-            {isFollowed(categoryId) ? 'Following' : 'Follow'}
-          </Button>
-        </div>
-      </div>
+  const category = categoryId ? categoriesInfo[categoryId] : null;
+  const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
+
+}
+  );
+
+}
+<<<<<<< HEAD
+
+
+  )
+}
+
+
+
+  );
+};
 
       <div className="mb-6">
         <div className="relative">
@@ -289,6 +366,7 @@ function CategoryContent({;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 export default function ForumCategoryPage() {;
   const router = useRouter(),;
@@ -349,4 +427,7 @@ export default function ForumCategoryPage() {;
     </>;
   );
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

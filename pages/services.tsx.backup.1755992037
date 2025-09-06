@@ -444,6 +444,11 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991929.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Individual Services */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -628,6 +633,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Micro SaaS Services Promotion */}
       <section className="section-padding bg-gradient-cursor-accent">
         <div className="container-cursor">
@@ -708,6 +717,20 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+=======
+      {/* Micro SaaS Services */}
+      <MicroSaasServices
+        title="Our Micro SaaS Portfolio"
+        subtitle="Explore our comprehensive collection of AI-powered micro SaaS solutions. Each service is designed to solve specific business challenges with cutting-edge technology and competitive pricing."
+        showCategoryFilter={true}
+      />
+
+      {/* Service Comparison */}
+      <ServiceComparison />
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-a78d
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Technology Stack */}
       <section className="section-padding bg-gradient-cursor">
@@ -717,6 +740,10 @@ export default function ServicesPage() {
               <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
               Technology Stack
 =======
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992037
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <>
       <Head>

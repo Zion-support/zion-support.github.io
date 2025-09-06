@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
  setErrors (newErrors);
 }
 setIsSubmitting (true);
@@ -24,6 +27,7 @@ const handleInputBlur = (name: keyof FormData) => {;
   opacity: 0, y: -10
 }animate= {
   {
+<<<<<<< HEAD
 =======
 
   opacity: 1, y: 0 
@@ -40,6 +44,8 @@ export default EnhancedContactForm;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
@@ -54,38 +60,17 @@ export default EnhancedContactForm;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
-    }
-
-    if (!formData && formData.email.trim()) {;
-      newErrors && newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData && formData.email)) {;
-      newErrors && newErrors.email = 'Please enter a valid email address';
-    }
-    if (!formData && formData.message.trim()) {;
-      newErrors && newErrors.message = 'Message is required';
-    } else if (formData && formData.message.trim().length < 10) {;
-      newErrors && newErrors.message = 'Message must be at least 10 characters long';
-    } else if (formData && formData.message.trim().length > 1000) {;
-      newErrors && newErrors.message = 'Message must be less than 1000 characters';
-
-    }
-=======
-    }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setErrors(newErrors);
 
     return Object && Object.keys(newErrors).length === 0;
   };
+
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!validateForm()) {;
@@ -94,20 +79,6 @@ export default EnhancedContactForm;
       return;
     }
     setIsSubmitting(true);
-
-
-    try {;
-      // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setIsSubmitted(true);
-      showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.');
-      setFormData({;
-        name: '',;
-        email: '',;
-        company: '',;
-        service: '',;
-        message: '';
-
       });
       setErrors({});
     } catch (error) {;
@@ -116,24 +87,6 @@ export default EnhancedContactForm;
     } finally {;
       setIsSubmitting(false);
     }
-
-  };
-
-  const services = [;
-    'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther';
-  ];
-  const handleInputBlur = (name: keyof FormData) => {;
-    // Validate individual field on blur;
-    if (formData[name] && errors[name]) {;
-      const newErrors = { ...errors };
-
-      delete newErrors[name];
-      setErrors(newErrors);
-    }
-
-  };
-  if (isSubmitted) {;
-
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
@@ -159,6 +112,7 @@ export default EnhancedContactForm;
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
+<<<<<<< HEAD
 
         <div className="space-y-8">;
           <div>;
@@ -382,6 +336,8 @@ if ( {) {
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name"
                 />
@@ -396,6 +352,7 @@ if ( {) {
                     {errors.name}
                   </motion.p>
                 )}
+<<<<<<< HEAD
               </div>
 
                   value={formData.email}
@@ -404,6 +361,19 @@ if ( {) {
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
 
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
+=======
+                  Email Address *
+                ">;
+                  Email Address *;
+                </label>;
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData && formData.email}
+                  onChange={handleInputChange}
+                  onBlur={() => handleInputBlur('email')}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address"
                 />
@@ -418,23 +388,64 @@ if ( {) {
                     {errors.email}
                   </motion.p>
                 )}
+<<<<<<< HEAD
               </div>
             </div>
 
+=======
+                  Company
+                ">;
+                  Company;
+                </label>;
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData && formData.company}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
+                  placeholder="Enter your company name"
+                  Service Interest
+                ">;
+                  Service Interest;
+                </label>;
+                <select
+                  id="service"
+                  name="service"
+                  value={formData && formData.service}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300">;
+                  <option value="">Select a service</option>;
+                  {services && services.map((service) => (;
+                    <option key={service} value={service} className="bg-slate-800 text-white">;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {service}
                     </option>
                   ))}
+<<<<<<< HEAD
                 </select>
               </div>
             </div>
 
+=======
+                Message *
+              ">;
+                Message *;
+              </label>;
+              <textarea
+                id="message"
+                name="message"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 rows={5}
                 value={formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
+<<<<<<< HEAD
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
 
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements..."
               />
@@ -449,8 +460,17 @@ if ( {) {
                   {errors.message}
                 </motion.p>
               )}
+<<<<<<< HEAD
             </div>
 
+=======
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
+                isSubmitting
+                  ? 'bg-gray-600 cursor-not-allowed'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}
             >
@@ -466,6 +486,7 @@ if ( {) {
                   Send Message
                 </>
               )}
+<<<<<<< HEAD
             </button>
           </form>
         </div>
@@ -476,3 +497,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+export default EnhancedContactForm;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

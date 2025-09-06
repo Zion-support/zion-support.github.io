@@ -1,10 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const store = getFraudStore();
 
     return res.status(200).json(settings)
@@ -18,11 +32,111 @@ export default async function handler(
 
   }
   res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+}
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  const store = getFraudStore();
+
+  }
+  res.status(405).json({ error: "Method not allowed" });
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  if (req && req.method === "GET") {
+    const userId = (req && req.query.userId as string) || "";
+    if (!userId) return res && res.status(400).json({ error: "Missing userId" });
+    const settings = await store && store.getPrivacySettings(userId);
+    return res && res.status(200).json(settings);
+  }
+
+  if (req && req.method === "POST") {
+    const { userId, optOut } = req && req.body || {};
+    if (!userId || typeof optOut !== "boolean")
+      return res && res.status(400).json({ error: "Missing userId or optOut" });
+    const updated = await store && store.setPrivacySettings(userId, optOut);
+    return res && res.status(200).json(updated);
+  }
+
+  res && res.status(405).json({ error: "Method not allowed" });
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getFraudStore  } from '../../../../utils / fraud / store';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const store = getFraudStore ();
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    const user_id = (req.query.user_id as string) || "";
+    if (return res.status (400).json ({ error: "Missing user_id" })) {
+  $2
+}
+    const settings = await store.getPrivacySettings (user_id);
+    return res.status (200).json (settings);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { user_id, opt_out } = req.body || {}
+    if (
+      return res.status (400).json ({ error: "Missing user_id or opt_out" })) {
+  $2
+}
+    const updated = await store.setPrivacySettings (user_id, opt_out);
+    return res.status (200).json (updated);
+  }
+  res.status (405).json ({ error: "Method not allowed" });
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -35,7 +149,47 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const store = getFraudStore();
+  if (req.method === "GET") {
+    const userId = (req.query.userId as string) |"";
+    if (!userId) return res.status(400).json({ error: "Missing userId" });
+    const settings = await store.getPrivacySettings(userId);
+    return res.status(200).json(settings);
+  }
+  if (req.method === "POST") {
+    const { userId, optOut } = req.body |{}
+    if (!userId |typeof optOut !== "boolean")
+      return res.status(400).json({ error: "Missing userId or optOut" });
+    const updated = await store.setPrivacySettings(userId, optOut);
+    return res.status(200).json(updated);
+
+  }
+  res.status(405).json({ error: "Method not allowed" });
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -43,12 +197,29 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -80,9 +251,25 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  res.status(405).json({ error: "Method not allowed" });
 }
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -104,6 +291,18 @@ res.status(405).json({ error: "Method not allowed" });
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

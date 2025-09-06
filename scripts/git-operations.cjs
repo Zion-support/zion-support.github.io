@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -9,4 +12,8 @@ const path = require('path')
       this.log('� Committing changes')
       this.log('� Pushing to current branch')
       const currentBranch = execSync('git branch --show-current')
+<<<<<<< HEAD
 
+=======
+        "encoding"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
+=======
+<<<<<<<< HEAD:components/_app.tsx.backup.1755991372.backup.1756001148
+========
+<<<<<<< HEAD
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/globals.css';
 import '../styles/enhanced-design-system.css';
@@ -6,19 +14,55 @@ import '../styles/modern-design-system.css';
 import '../styles/globals.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/enhanced-design-system.css';
 import '../styles/modern-design-system.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991372.backup.1755991589
+=======
+export default function MyApp({ Component, pageProps }: AppProps) {
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   return (
     <EnhancedLayout>
       <Component {...pageProps} />
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 =======
   );
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+<<<<<<< HEAD
+<<<<<<<< HEAD:components/_app.tsx.backup.1755991372.backup.1756001148
+  );
+========
+  );
+=======
+import '../styles/globals.css';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+>>>>>>> origin/cursor/build-zion-ipo-readiness-portal-e565
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+=======
+  )
+>>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
+=======
+  );
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_app.tsx.backup.1755991372.backup.1755991589
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }

@@ -1,19 +1,50 @@
+<<<<<<< HEAD
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
 #!/usr/bin/env node
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`;  fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+#!/usr/bin/env node
+
+=======
+<<<<<<< HEAD
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+#!/usr/bin/env node
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**
  * PM2 Continuous Automation Script
  * Replaces GitHub Actions continuous automation workflow
  */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+=======
+const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 class ContinuousAutomation {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'continuous-automation.log');
     this.reportFile = path.join(__dirname, 'reports', 'continuous-automation-report.json');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.ensureDirectories();
   }
 
@@ -90,10 +121,18 @@ class ContinuousAutomation {
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.log(`Report generated: ${this.reportFile}`);
     return report;
   }
@@ -119,9 +158,171 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
     return { success: allPassed, report };
   }
+<<<<<<< HEAD
+=======
 }
 
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+// Run the pipeline if this script is executed directly
+if (require.main === module) {
+  const automation = new ContinuousAutomation();
+  automation.runContinuousPipeline()
+    .then(result => {
+      process.exit(result.success ? 0 : 1);
+    })
+    .catch(error => {
+      console.error('Continuous automation failed:', error);
+      process.exit(1);
+    });
+}
+
+module.exports = ContinuousAutomation;
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    this.ensureDirectories()}
+  ensureDirectories() {
+    const dirs = ['logs', 'reports'];
+    dirs.forEach(dir => {
+      const dirPath = path.join(__dirname, dir;);
+      if () {
+        fs.mkdirSync(dirPath, { "recursive": true })}
+    })}
+  log(message) {
+    const timestamp = new Date().toISOString() {
+    ) {
+        fs.mkdirSync(dirPath, { "recursive": true })}
+    })}
+  log(message) {
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] ${message};`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
+  async runCommand(command, description) {
+    try {
+      this.log(`"Starting": ${description}`);
+      const output = execSync(command, { 
+        "encoding": 'utf8', 
+        "cwd": process.cwd(),
+        "stdio": 'pipe'
+      };);
+      this.log(`✅ "Success": ${description}`);
+      return { "success": true, output }} catch (error) {
+      this.log(`❌ "Error": ${description} - ${error.message}`);
+      return { "success": false, "error": error.message, "output": error.stdout || error.stderr }}
+  }
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+    const scriptPath = 'scripts/automation/automation-orchestrator.cjs;';
+    if () {
+      return await this.runCommand(`node ${scriptPath) {
+    ) {
+      return await this.runCommand(`node ${scriptPath}}", 'Running automation orchestrator')} else {
+      this.log('⚠️ Automation orchestrator script not found, skipping...');
+      return { "success": true, "skipped": true }}
+  }
+  async runComprehensiveAutomation() {
+    this.log('🎯 Running comprehensive automation...');
+    const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;';
+    if () {
+      return await this.runCommand("node ${scriptPath) {
+    ) {
+      return await this.runCommand(`node ${scriptPath}}`, 'Running comprehensive automation')} else {
+      this.log('⚠️ Comprehensive automation script not found, skipping...');
+      return { "success": true, "skipped": true }}
+  }
+  async runMarketingAutomation() {
+    this.log('📢 Running marketing automation...');
+    const scriptPath = 'scripts/linkedin_automation.js;';
+    if () {
+      return await this.runCommand(`node ${scriptPath) {
+    ) {
+      return await this.runCommand(`node ${scriptPath}}", 'Running marketing automation')} else {
+      this.log('⚠️ Marketing automation script not found, skipping...');
+      return { "success": true, "skipped": true }}
+  }
+  async runSecurityAudit() {
+    this.log('🔒 Running security audit...');
+    return await this.runCommand('npm audit', 'Running security audit')}
+  async installDependencies() {
+    this.log('📦 Installing dependencies...');
+    return await this.runCommand('npm install', 'Installing dependencies')}
+  generateReport(results) {
+    const report = {
+      "timestamp": new Date().toISOString(),
+      "status": results.every(r => r.success) ? 'success' : 'failed',
+      "results": results,
+      "summary": {
+        total: results.length,
+        "passed": results.filter(r => r.success).length,
+        "failed": results.filter(r => !r.success).length,
+        "skipped": results.filter(r => r.skipped).length
+      }
+   };
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+>>>>>>> main
+    return report}
+  async run() {
+    this.log('🚀 Starting Continuous Automation Pipeline');
+    const results = [];
+    // Install dependencies
+    const installResult = await this.installDependencies(;);
+    results.push({ "step": 'install', ...installResult });
+    if ( {
+      // Run automation scripts
+      const automationResult = await this.runAutomationScripts() {
+     {
+      // Run automation scripts
+      const automationResult = await this.runAutomationScripts(});
+      results.push({ "step": 'automation', ...automationResult });
+      // Run comprehensive automation
+      const comprehensiveResult = await this.runComprehensiveAutomation(;);
+      results.push({ "step": 'comprehensive', ...comprehensiveResult });
+      // Run marketing automation
+      const marketingResult = await this.runMarketingAutomation(;);
+      results.push({ "step": 'marketing', ...marketingResult });
+      // Run security audit
+      const securityResult = await this.runSecurityAudit(;);
+      results.push({ "step": 'security', ...securityResult })}
+    const report = this.generateReport(results;);
+    this.log("📊 Continuous Automation Pipeline completed with "status": ${report.status}`);
+    return report}
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> main
+// Run if called directly
+if ( {
+  const automation = new ContinuousAutomation) {
+     {
+  const automation = new ContinuousAutomation}(;);
+  automation.run().catch(error => {
+    console.error('Continuous Automation "failed": ', error);
+    process.exit(1)})}
+module.exports = ContinuousAutomation;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+#!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs') const path = require('path') class ContinuousAutomation { constructor() { this.logFile = path.join(__dirname,'logs','continuous-automation.log'); this.reportFile = path.join(__dirname,'reports','continuous-automation-report.json'); this.ensureDirectories()} ensureDirectories() { const dirs = ['logs','reports']; dirs.forEach(dir => { const dirPath = path.join(__dirname,dir;); if () { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString() { ) { fs.mkdirSync(dirPath,{ recursive: true })} })} log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message};`; console.log(logMessage); fs.appendFileSync(this.logFile,logMessage + '\n')} async runCommand(command,description) { try { this.log(`Starting: ${description}`); const output = execSync(command,{ encoding: 'utf8',cwd: process.cwd(),stdio: 'pipe' };); this.log(`✅ Success: ${description}`); return { success: true,output }} catch (error) { this.log(`❌ Error: ${description} - ${error.message}`); return { success: false,error: error.message,output: error.stdout || error.stderr }} } async runAutomationScripts() { this.log('🤖 Running automation scripts...'); const scriptPath = 'scripts/automation/automation-orchestrator.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running automation orchestrator')} else { this.log('⚠️ Automation orchestrator script not found,skipping...'); return { success: true,skipped: true }} } async runComprehensiveAutomation() { this.log('🎯 Running comprehensive automation...'); const scriptPath = 'scripts/automation/comprehensive-continuous-automation.cjs;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running comprehensive automation')} else { this.log('⚠️ Comprehensive automation script not found,skipping...'); return { success: true,skipped: true }} } async runMarketingAutomation() { this.log('📢 Running marketing automation...'); const scriptPath = 'scripts/linkedin_automation.js;'; if () { return await this.runCommand(`node ${scriptPath) { ) { return await this.runCommand(`node ${scriptPath}}`,'Running marketing automation')} else { this.log('⚠️ Marketing automation script not found,skipping...'); return { success: true,skipped: true }} } async runSecurityAudit() { this.log('🔒 Running security audit...'); return await this.runCommand('npm audit','Running security audit')} async installDependencies() { this.log('📦 Installing dependencies...'); return await this.runCommand('npm install','Installing dependencies')} generateReport(results) { const report = { timestamp: new Date().toISOString(),status: results.every(r => r.success) ? 'success' : 'failed',results: results,summary: { total: results.length,passed: results.filter(r => r.success).length,failed: results.filter(r => !r.success).length,skipped: results.filter(r => r.skipped).length } }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2)); return report} async run() { this.log('🚀 Starting Continuous Automation Pipeline'); const results = []; const installResult = await this.installDependencies(;); results.push({ step: 'install',...installResult }); if ( { const automationResult = await this.runAutomationScripts() { { const automationResult = await this.runAutomationScripts(}); results.push({ step: 'automation',...automationResult }); const comprehensiveResult = await this.runComprehensiveAutomation(;); results.push({ step: 'comprehensive',...comprehensiveResult }); const marketingResult = await this.runMarketingAutomation(;); results.push({ step: 'marketing',...marketingResult }); const securityResult = await this.runSecurityAudit(;); results.push({ step: 'security',...securityResult })} const report = this.generateReport(results;); this.log(`📊 Continuous Automation Pipeline completed with status: ${report.status}`); return report} } if ( { const automation = new ContinuousAutomation) { { const automation = new ContinuousAutomation}(;); automation.run().catch(error => { console.error('Continuous Automation failed:',error); process.exit(1)})} module.exports = ContinuousAutomation;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

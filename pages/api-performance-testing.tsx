@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
@@ -10,6 +13,142 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',;
   ];
+<<<<<<< HEAD
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import SEO from '../components / SEO';
+import {Check, ExternalLink} from 'lucide-react';
+
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+<<<<<<< HEAD
+
+                rel='noreferrer'>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
+                <h3 className='text - xl font - bold'>Enterprise</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+                  Unlimited scale, private agents, SSO, and SRE support.;
+                </p>;
+                <p className='mt - 4 text - 3xl font - bold'>Custom</p>;
+              </div>;
+            </div>;
+            <p className='mt - 4 text - sm text - gray - 400'>;
+              Market references:{' '}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import SEO from '../components / SEO';
+import {Check, ExternalLink} from 'lucide-react';
+                title: 'Reports & Export',
+                desc: 'Beautiful HTML / CSV exports, signed artifacts, and webhook notifications.',
+              },
+            ].map (function => (
+              <div;
+                key={f.title}
+                className='rounded - xl border border - white / 10 bg - white / 5 p - 6 backdrop - blur';
+              >;
+                <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
+                <p className='mt - 2 text - sm text - gray - 300'>{f.desc}</p>;
+              </div>))}
+          </div>;
+          <div className='mt - 14'>;
+            <h2 className='text - 2xl font - semibold'>Pricing</h2>;
+            <div className='mt - 6 grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+              <div className='rounded - 2xl border border - cyan - 400 / 30 p - 6'>;
+                <h3 className='text - xl font - bold'>Starter</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+                  Up to 250 RPS, 1 region, CI integration.;
+                </p>;
+                <p className='mt - 4 text - 3xl font - bold'>;
+                  $149;
+                  <span className='text - base font - normal text - gray - 300'>;
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+              <div className='rounded - 2xl border border - fuchsia - 400 / 30 p - 6'>;
+                <h3 className='text - xl font - bold'>Growth</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+                  Up to 2k RPS, 3 regions, regression gates.;
+                </p>;
+                <p className='mt - 4 text - 3xl font - bold'>;
+                  $590;
+                  <span className='text - base font - normal text - gray - 300'>;
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+                rel='noreferrer'>;
+              <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
+                <h3 className='text - xl font - bold'>Enterprise</h3>;
+                <p className='mt - 2 text - gray - 300'>;
+                  Unlimited scale, private agents, SSO, and SRE support.;
+                </p>;
+                <p className='mt - 4 text - 3xl font - bold'>Custom</p>;
+              </div>;
+            </div>;
+            <p className='mt - 4 text - sm text - gray - 400'>;
+              Market references:{' '}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -52,6 +191,7 @@ export default function ApiPerformanceTestingPage() {
     </div>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
+<<<<<<< HEAD
 =======
               <a
                 className='underline hover:text-cyan-300'
@@ -101,6 +241,8 @@ export default function ApiPerformanceTestingPage() {
       </section>
     </div>
   );
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 }
 import React from 'react',
@@ -164,6 +306,88 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://k6.io / pricing/';
+                target='_blank';
+                rel='noreferrer';
+              >;
+                Grafana k6;
+              </a>;
+              , {' '}
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://www.loadmill.com / pricing';
+                target='_blank';
+                rel='noreferrer';
+              >;
+                Loadmill;
+              </a>;
+              , {' '}
+              <a;
+                className='underline hover:text - cyan - 300';
+                href='https://www.blazemeter.com / pricing';
+                target='_blank';
+                rel='noreferrer';
+              >;
+
+                BlazeMeter;
+              </a>;
+              .;
+            </p>;
+          </div>;
+
+              href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+              className='px-5 py-3 rounded-lg border border-white/20'>;
+              Email: kleber@ziontechgroup && ziontechgroup.com;
+<<<<<<< HEAD
+            </a>;
+            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+
+<<<<<<< HEAD
+=======
+<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
+            >;
+              Talk to Sales;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+<<<<<<< HEAD
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -231,8 +455,44 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>;
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
+            >;
+              Talk to Sales;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>);
+;
+
+
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

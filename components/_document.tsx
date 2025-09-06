@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Document, {
 
@@ -13,6 +14,10 @@ import Document, {
 } from 'next/document';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import Document, {
+} from 'next/document';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <Html lang='en'>;
@@ -28,7 +33,10 @@ import Document, {
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="theme-color" content="#0a0a0a" />;
@@ -74,15 +82,21 @@ function Document() {
         <Main />;
         <NextScript />;
       </body>;
+<<<<<<< HEAD
 
   );
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
+<<<<<<< HEAD
 } from 'next/document';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function Document() {
   return (
@@ -100,8 +114,11 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 

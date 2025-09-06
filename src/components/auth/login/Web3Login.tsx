@@ -1,3 +1,11 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext ;
+import { Wallet } from 'lucide-react'import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {;
+
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -16,29 +24,64 @@ export function Web3Login() {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
+<<<<<<< HEAD
       return
+=======
+      return;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
     try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsLoading(true),
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
+
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return
       }
+<<<<<<< HEAD
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
+=======
+
+      
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+      
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (error: any) {
       toast("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
+<<<<<<< HEAD
       logErrorToProduction('Web3 login error:', { data: error })
+=======
+      logErrorToProduction ('Web3 login error:', { data: error });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
+<<<<<<< HEAD
+=======
+
+  const { loginWithWeb3 } = useAuth();
+  const { isWalletSystemAvailable } = useAppWallet();
+  const [isLoading, setIsLoading] = useState(false);
+
+    : "";
+};
+  );
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
@@ -157,4 +200,9 @@ export function Web3Login() {;
     </Button>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

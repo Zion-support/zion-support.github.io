@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 console.log(' Starting Smart Deployment Automation...')
   "environment"
@@ -37,4 +43,8 @@ console.log(' Starting Smart Deployment Automation...')
     "logsDirectory"
     "applicationStatus"
     const pm2List = execSync('pm2 list --json', { "encoding"})
+<<<<<<< HEAD
 
+=======
+  console.log('� Application should be running on "http")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

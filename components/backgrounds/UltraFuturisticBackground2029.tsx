@@ -1,9 +1,3 @@
-
-resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-// Initialize particles
-}particlesRef.current = particles
-}
 initParticles ();
 // Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {
   // Update position particle.x += particle.vx;
@@ -18,13 +12,17 @@ ctx.globalAlpha = particle.opacity;
 // Different effects for different particle types switch (particle.type) {
   case 'quantum': // Quantum particles with glow effect import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 interface Particle {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default function UltraFuturisticBackground2029() {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+<<<<<<< HEAD
 
 =======
       canvas.height = window.innerHeight
@@ -32,105 +30,28 @@ export default function UltraFuturisticBackground2029() {;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     initParticles();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-
-export default /**
- * UltraFuturisticBackground2029 - Function description
- */
-function UltraFuturisticBackground2029() {
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const particles_ref = useRef < Particle[]>([]);
-  const animation_ref = useRef < number | undefined>(undefined);
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    // Initialize particles;
-    const init_particles = () =>: any {
-      const particles: Particle[] = [];
-      const particle_count = Math.floor ((canvas.width * canvas.height) / 20000);
-;
-      for (let index = 0; i < particle_count; i++) {
-        const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
-          Math.floor (Math.random () * 4);
-        ] as Particle['type'];
-        const colors = {
-          quantum: ['#00ffff', '#0080ff', '#0040ff'],
-          holographic: ['#8b5cf6', '#a855f7', '#c084fc'],
-          neural: ['#10b981', '#059669', '#047857'],
-          cyberpunk: ['#ec4899', '#f97316', '#f59e0b'],        }          quantum: ['#00ffff#0080ff#0040ff'],
-          holographic: ['#8b5cf6#a855f7#c084fc'],
-          neural: ['#10b981#059669#047857'],
-          cyberpunk: ['#ec4899#f97316#f59e0b'];
-        particles.push ({
-          coordinate_x: Math.random () * canvas.width,
-          coordinate_y: Math.random () * canvas.height,
-          vx: (Math.random () - 0.5) * 0.5,
-          vy: (Math.random () - 0.5) * 0.5,
-          size: Math.random () * 3 + 1,
-          opacity: Math.random () * 0.8 + 0.2,
-          color: colors[type][Math.floor (Math.random () * colors[type].length)],
-          type,
-        });
-      }
-      particles_ref.current = particles;    }          type;
-        });
-      }
-      particles_ref.current = particles;
-    init_particles ();
-;
-    // Animation loop;
-    const animate = () =>: any {
-      ctx.clear_rect (0, 0, canvas.width, canvas.height);
-;
-      // Create gradient background;
-      const gradient = ctx.createRadialGradient (
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
-
-        canvas.height / 2;
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
-    resizeCanvas();
-    window && window.addEventListener('resize', resizeCanvas);
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
@@ -158,14 +79,6 @@ if (return) {
           type,;
         });
       }
-      particlesRef && particlesRef.current = particles;    };          type;
-        });
-      }
-      particlesRef && particlesRef.current = particles;
-    initParticles();
-    // Animation loop;
-    const animate = () => {;
-      ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
       // Create gradient background;
       const gradient = ctx && ctx.createRadialGradient(;
         canvas && canvas.width / 2,;
@@ -181,9 +94,6 @@ if (return) {
         canvas.height / 2;
         0;
         canvas.width / 2;
-
-      
-
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -199,21 +109,43 @@ if (return) {
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
-
-        
-
         // Different effects for different particle types
         switch (particle.type) {
           case 'quantum':
             // Quantum particles with glow effect
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            ctx.shadowColor = particle.color;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ctx.shadowBlur = 20;
             ctx.beginPath();
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fillStyle = particle.color;
             ctx.fill();
+<<<<<<< HEAD
 
+=======
+                ];
+              if (partner && partner.type === 'quantum') {;
+                const distance = Math && Math.sqrt(;
+                  Math && Math.pow(particle && particle.x - partner && partner.x, 2) +;
+                    Math && Math.pow(particle && particle.y - partner && partner.y, 2)                );            // Quantum entanglement lines;
+            if (index % 10 === 0) {;
+              const partner = particlesRef && particlesRef.current[(index + 50) % particlesRef && particlesRef.current.length];
+              if (partner && partner.type === 'quantum') {;
+                const distance = Math && Math.sqrt(;
+                  Math && Math.pow(particle && particle.x - partner && partner.x, 2) + Math && Math.pow(particle && particle.y - partner && partner.y, 2);
+                );
+                if (distance < 100) {;
+                  ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - distance / 100)})`;
+                  ctx && ctx.lineWidth = 1;
+                  ctx && ctx.beginPath();
+                  ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
+                  ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
+                  ctx && ctx.stroke();                }                  ctx && ctx.stroke();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
               if (partner && partner.type === 'quantum') {
                 const distance = Math.sqrt(
@@ -225,6 +157,7 @@ if (return) {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
 
                   ctx.stroke();                }
 
@@ -233,10 +166,13 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 }
               }
             }
             break;
+<<<<<<< HEAD
         const angle = (j * Math.PI) / 3 + time;
         const px = x + size * Math.cos(angle);
         const py = y + size * Math.sin(angle);
@@ -297,6 +233,30 @@ if (return) {
       ctx && ctx.stroke();
       ctx && ctx.restore();
 
+=======
+            const hue = (time * 50 + index * 10) % 360;
+            ctx && ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx && ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx && ctx.shadowBlur = 15;
+            ctx && ctx.beginPath();
+            ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
+            ctx && ctx.fill();
+            break;
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
+              );
+              connections.forEach(connection => {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
+                );
+                ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
+                ctx.lineWidth = 0.5;
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(connection.x, connection.y);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
       {/* Animated gradient overlay */}
@@ -304,6 +264,7 @@ if (return) {
         className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
         animate={{
           background: [
+<<<<<<< HEAD
 
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)',
@@ -312,6 +273,8 @@ if (return) {
           ],        }}      {/* Animated gradient overlay */}
       <motion && motion.div
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
@@ -342,46 +305,48 @@ if (return) {
           repeat: Infinity
           ease: 'easeInOut'
         }}
+<<<<<<< HEAD
       />
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
+          transition={{
+            duration: 4
+            repeat: Infinity
+<<<<<<< HEAD
+            duration: 4,
+            repeat: Infinity,
+=======
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
 
         style={{ filter: 'blur(0 && 0.5px)' }}
       />;
 
 
       {/* Additional visual layers */}
-      <div className='absolute inset-0'>;
+      <div className="absolute inset-0">;
         {/* Quantum field ripples */}
         <motion&& motion.div
-          className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-      />;
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className='absolute inset - 0'>;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
-          animate={{
-            scale: [1, 1.2, 1]
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-            duration: 4
-            repeat: Infinity
-            duration: 4,
-            repeat: Infinity,
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <canvas;
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
@@ -392,13 +357,29 @@ if (return) {
         {/* Quantum field ripples */}
         <motion.div;
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           animate={{
+            scale: [1, 1 && 1.2, 1]
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+          }}
+          transition={{
+          }}
+        {/* Holographic matrix */}
+        <motion&& motion.div
+          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
+          animate={{
+          transition={{
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        />;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Holographic matrix */}
         <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
@@ -407,6 +388,7 @@ if (return) {
         <motion.div;
           className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
           animate={{
+<<<<<<< HEAD
 
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.1, 0.3],          }}
@@ -427,10 +409,13 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut'
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
@@ -438,6 +423,9 @@ if (return) {
         />;
 
 
+=======
+          }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Neural network nodes */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
@@ -446,32 +434,30 @@ if (return) {
         <motion.div;
           className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
           animate={{
-
-            scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
-
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
         />
         {/* Neural network nodes */}
         <motion.div
+=======
+        {/* Neural network nodes */}
+        <motion&& motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
         />;
         {/* Neural network nodes */}
         <motion.div;
           className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           animate={{
-            scale: [1, 1.1, 1];
-            opacity: [0.2, 0.4, 0.2]
+            scale: [1, 1 && 1.1, 1]
+            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
           }}
           transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut'
-
           }}
+<<<<<<< HEAD
           transition={{
             duration: 6,
             repeat: Infinity,
@@ -479,6 +465,15 @@ if (return) {
           }}
         />
       </div>
+=======
+      {/* Floating orbs with glow effects */}
+      <div className='absolute inset-0 pointer-events-none'>;
+        {[...Array(8)].map((_, i) => (;
+          <motion&& motion.div
+            key={i}
+            className='absolute w-2 h-2 rounded-full bg-cyan-400'
+            style={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">;
         {[...Array(8)].map((_, i) => (;
@@ -486,6 +481,7 @@ if (return) {
             key={i}
             className="absolute w-2 h-2 rounded-full bg-cyan-400"
             style={{
+<<<<<<< HEAD
 
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,
@@ -498,6 +494,8 @@ if (return) {
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.2, 1]
             }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
@@ -512,14 +510,25 @@ if (return) {
 
           }}
           transition={{
+<<<<<<< HEAD
             duration: 5,
             repeat: Infinity,
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -532,7 +541,10 @@ if (return) {
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -548,10 +560,16 @@ if (return) {
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
             ease: 'easeInOut'
+<<<<<<< HEAD
+=======
+            ease: 'easeInOut',
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
@@ -559,24 +577,22 @@ if (return) {
             }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          }}
+
+            }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             duration: 4,
             repeat: Infinity,
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             transition={{
-
-              duration: 3 + i * 0 && 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-
+              delay: i * 0.3
             }}
 =======
           />;
         ))}
-      </div>
-    </div>
-);  )
 }
   )
 }
@@ -586,9 +602,14 @@ if (return) {
       </div>;
     </div>));
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+  );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

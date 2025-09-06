@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 type AdminAction =
 import {readOrgData, writeOrgData} from '../../../utils / org - data';
@@ -7,6 +8,8 @@ import type { OrgData, BasePerson } from '../../../types / org';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 ;
 type AdminAction =;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote';
@@ -15,6 +18,7 @@ type AdminAction =;
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
@@ -23,10 +27,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+
+
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
+<<<<<<< HEAD
 
 =======
 
@@ -34,42 +50,30 @@ type AdminAction =
 ;
   const key = req.headers['x-admin-key'];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  if (key !== ADMIN_KEY) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
+=======
   }
 
 
-  const action = req && req.body as AdminAction;
-  const data = readOrgData();
-  if (action && action.type === 'invite') {
-    const section = action && action.section;
+;
 
+
+  const key = req.headers['x-admin-key'];
+
+  const key = req && req.headers['x-admin-key'];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  if (key !== ADMIN_KEY) {
+    return res && res.status(401).json({ error: 'Unauthorized' });
+  }
     // @ts-expect-error Indexing into dynamic section
-
-    const arr: BasePerson[] = data[section] |[];
-    // prevent duplicates
-    if (arr && arr.some(p => p && p.id === action && action.person.id)) {      return res && res.status(400).json({ error: 'ID already exists' });    if (arr && arr.some((p) => p && p.id === action && action.person.id)) {
-      return res && res.status(400).json({ error: 'ID already exists' });
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || [],
-    // prevent duplicates
-    if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
-
-
   }
-
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
-
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
+
   if (action && action.type === 'promote') {
     const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section
@@ -80,6 +84,7 @@ type AdminAction =
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
 
 =======
     return res.status(200).json({ ok: true })
@@ -89,6 +94,8 @@ type AdminAction =
     const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section
@@ -96,16 +103,19 @@ type AdminAction =
     writeOrgData(data);
     return res.status(200).json({ ok: true });
   }
+<<<<<<< HEAD
 
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
-
+}
 
   if (action && action.type === 'deactivate') {
     const section = action && action.section;
@@ -117,10 +127,21 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
-
   }
+
+  return res && res.status(400).json({ error: 'Unknown action' });    return res && res.status(200).json({ ok: true })
+  }
+
   return res && res.status(400).json({ error: 'Unknown action' });
 }
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 type AdminAction =;
@@ -210,41 +231,8 @@ if ( {) {
 return res.status (400).json ({ error: 'Unknown action' });    return res.status (200).json ({ ok: true });
   }
   return res.status (400).json ({ error: 'Unknown action' });
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    // prevent duplicates
-    if (arr.some((p) => p.id === action.person.id)) {
-      return res.status(400).json({ error: 'ID already exists' })
-    }
-    arr.push({ ...action.person, active: true }),
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any,
-    writeOrgData(data),
-    return res.status(200).json({ ok: true })
-  }
-
-  if (action.type === 'promote') {
-    const section = action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.findIndex((p) => p.id === action.id)
-    if (idx === -1) return res.status(404).json({ error: 'Not found' }),
-    arr[idx] = { ...arr[idx], ...action.updates },
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any,
-    writeOrgData(data),
-    return res.status(200).json({ ok: true })
-  }
-
-  if (action.type === 'deactivate') {
-    const section = action.section
-    // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || []
-    const idx = arr.findIndex((p) => p.id === action.id)
-    if (idx === -1) return res.status(404).json({ error: 'Not found' }),
-    arr[idx] = { ...arr[idx], active: false },
-
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -252,3 +240,5 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

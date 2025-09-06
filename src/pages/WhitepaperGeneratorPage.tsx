@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -348,6 +352,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {
       const whitepaperPayload = {
         tokenName,
@@ -574,6 +584,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
+<<<<<<< HEAD
       <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>
@@ -589,6 +600,222 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 </Button>
             </div>
         </div>
+=======
+
+                isDownloading ||
+                sections && sections.length === 0 ||
+                isLoading ||
+                isSharing ||
+
+                isSubmittingToCounsel
+              }
+              variant='outline'
+              size='sm'
+              title='Download as Markdown'
+            >
+              <Download className='h-4 w-4' />{' '}
+              <span className='ml-1 hidden sm:inline'>MD</span>
+            </Button>
+            <Button
+              onClick={handleDownloadPdf}
+              disabled={
+
+                isDownloading ||
+                sections && sections.length === 0 ||
+                isLoading ||
+                isSharing ||
+
+                isSubmittingToCounsel
+              }
+              variant='outline'
+              size='sm'
+              title='Download as PDF'
+            >
+              <Download className='h-4 w-4' />{' '}
+              <span className='ml-1 hidden sm:inline'>PDF</span>
+            </Button>
+            <Button
+              onClick={handleGenerateShareableLink}
+              disabled={
+
+                isSharing ||
+                sections && sections.length === 0 ||
+                isLoading ||
+                isDownloading ||
+
+                isSubmittingToCounsel
+              }
+              variant='outline'
+              size='sm'
+              title='Generate Shareable Link'
+            >
+              <Share2 className='h-4 w-4' />{' '}
+
+              <span className='ml-1 hidden sm:inline'>Share</span>;
+            </Button>;
+          </div>;
+        </div>;
+
+        <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
+
+          {/* ... (Input fields remain the same) ... */}
+          <div>
+            <label htmlFor='tokenName' className='block text-sm font-medium'>
+              Token Name:
+            </label>
+            <Input
+              id='tokenName'
+              value={tokenName}
+              onChange={e => setTokenName(e && e.target.value)}
+      setIsSubmittingToCounsel (false);
+    }
+  }
+  return (
+    <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>;
+      {/* Left Column: Inputs and Editors */}
+      <div className='md:w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>;
+        <div className='flex justify - between items - center mb - 6'>;
+          <h1 className='text - xl font - bold text - center flex - grow'>;
+            Whitepaper Configuration;
+          </h1>;
+          <div className='flex space - x-1'>;
+            <Button;
+              on_click={handleDownloadMarkdown}
+              disabled={
+                is_downloading ||;
+                sections.length === 0 ||;
+                is_loading ||;
+                is_sharing ||;
+                isSubmittingToCounsel;
+              }
+              variant='outline';
+              size='sm';
+              title='Download as Markdown';
+            >;
+              <Download className='h - 4 w - 4' />{' '}
+              <span className='ml - 1 hidden sm:inline'>MD</span>;
+            </Button>;
+            <Button;
+              on_click={handleDownloadPdf}
+              disabled={
+                is_downloading ||;
+                sections.length === 0 ||;
+                is_loading ||;
+                is_sharing ||;
+                isSubmittingToCounsel;
+              }
+              variant='outline';
+              size='sm';
+              title='Download as PDF';
+            >;
+              <Download className='h - 4 w - 4' />{' '}
+              <span className='ml - 1 hidden sm:inline'>PDF</span>;
+            </Button>;
+            <Button;
+              on_click={handleGenerateShareableLink}
+              disabled={
+                is_sharing ||;
+                sections.length === 0 ||;
+                is_loading ||;
+                is_downloading ||;
+                isSubmittingToCounsel;
+              }
+              variant='outline';
+              size='sm';
+              title='Generate Shareable Link';
+            >;
+              <Share2 className='h - 4 w - 4' />{' '}
+              <span className='ml - 1 hidden sm:inline'>Share</span>;
+            </Button>;
+          </div>;
+        </div>;
+        <form on_submit={e => e.prevent_default ()} className='space - y-6'>;
+          {/* ... (Input fields remain the same) ... */}
+          <div>;
+            <label html_for='token_name' className='block text - sm font - medium'>;
+              Token Name:;
+            </label>;
+            <Input;
+              id='token_name';
+              value={token_name}
+              on_change={e => setTokenName (e.target.value)}
+              required;
+            />;
+          </div>;
+          <div>;
+
+            <label html_for='token_supply' className='block text - sm font - medium'>;
+              Token Supply:;
+            </label>;
+            <Input;
+              id='token_supply';
+              value={token_supply}
+              on_change={e => setTokenSupply (e.target.value)}
+
+              required;
+            />;
+          </div>;
+          <div>;
+
+            <label html_for='use_cases' className='block text - sm font - medium'>;
+              Use Cases:;
+            </label>;
+            <textarea;
+              id='use_cases';
+              value={use_cases}
+              on_change={e => setUseCases (e.target.value)}
+              required;
+              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+
+              rows={3}
+            />;
+          </div>;
+          <div>;
+
+            />;
+          </div>;
+
+
+          {/* Token Distribution Inputs */}
+          <div className='space-y-3 p-3 border rounded-md'>
+            <h2 className='text-lg font-semibold'>Token Distribution</h2>
+            {distributionData.map(item => (
+              <div key={item.id} className='flex items-center space-x-2'>
+                <Input
+                  type='text'
+                  placeholder='Category'
+                  value={item.name}
+                  onChange={e =>
+                    handleDistributionChange(item.id, 'name', e.target.value)
+                  }
+                  className='flex-grow'
+                />
+                <Input
+                  type='number'
+                  placeholder='%'
+
+                  value={item && item.percentage}
+                  onChange={e =>;
+                    handleDistributionChange(;
+                      item && item.id,;
+                      'percentage',;
+                      e && e.target.value;
+                    );
+
+                  }
+                  className='w-24'
+                  min='0'
+                  max='100'
+                />
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  onClick={() => removeDistributionItem(item.id)}
+                  aria-label='Remove'
+                >
+                  <Trash2 className='h-4 w-4' />
+                </Button>              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -621,6 +848,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
+<<<<<<< HEAD
               <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
@@ -795,6 +1023,68 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           )}
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
+=======
+              )}
+            </div>
+          )}
+
+
+           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
+
+
+          {/* Submit to Counsel Button */}
+          {sections.length > 0 && (
+            <Button
+
+
+
+        </form>
+        </form>;
+
+        {/* Section Editors */}
+        {sections && sections.length > 0 && (;
+          <div className='mt-8 pt-6 border-t'>;
+            <h2 className='text-xl font-bold mb-4 text-center'>;
+              Edit Generated Sections;
+            </h2>;
+            {sections && sections.map(section => (;
+              <WhitepaperSectionEditor
+                key={section && section.id}
+                title={section && section.title}
+                content={section && section.content}
+                onContentChange={newContent =>;
+                  handleSectionContentChange(section && section.id, newContent);
+                }              />;
+            ))}
+          </div>;
+        )}
+        {rawDraft && (;
+          <div className='mt-6 p-3 border rounded-md'>;
+            <Button
+              onClick={() => setShowRawDraft(!showRawDraft)}
+              variant='outline';
+              size='sm';
+              className='w-full';
+            >;
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>;
+            {showRawDraft && (;
+              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>;
+                {rawDraft}
+              </pre>;
+            )}
+          </div>;
+        )}
+
+      </div>;
+
+
+                </p>)}
+            </div>)}
+          {is_sharing && (
+            <p className='text - center text - sm text - blue - 600'>;
+              Generating shareable link...;
+            </p>)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
@@ -815,19 +1105,35 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
         {/* Section Editors */}
         {sections.length > 0 && (
+<<<<<<< HEAD
+=======
+
+          tokenSupply={tokenSupply}        />;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
+
+
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
             ))}
           </div>;
         )}
         {rawDraft && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
@@ -841,6 +1147,15 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         )}
       </div>;
       {/* Right Column: Preview Panel - Pass ref here */}
+<<<<<<< HEAD
+=======
+
+'";
+;
+}
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
             sections={sections}
@@ -852,4 +1167,23 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     </div>;
   );
 },;
+<<<<<<< HEAD
 export default WhitepaperGeneratorPage;
+=======
+export default WhitepaperGeneratorPage;
+
+
+
+        className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
+      >;
+        <WhitepaperPreviewPanel;
+          sections={sections}
+          distributionChartData={distributionChartData}
+          token_name={token_name}
+          token_supply={token_supply}        />;
+      </div>;
+    </div>);
+}
+export default WhitepaperGeneratorPage;
+'";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

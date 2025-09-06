@@ -1,5 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+=======
+=======
+=======
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+
+const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'>) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  <nav
+    role='navigation'
+    aria-label='pagination'
+    className={cn('mx-auto flex w-full justify-center', className)}
+    {...props}
+
+import * as React from 'react';
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
@@ -7,31 +48,137 @@ import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+
+
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+import React from 'react';
+import * as React from 'react';
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   <nav
     role='navigation'
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
-
+<<<<<<< HEAD
   />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+);
+Pagination.displayName = 'Pagination';
+const PaginationContent = React.forwardRef<
+  HTMLUListElement
+  React.ComponentProps<'ul'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+)
+Pagination.displayName = "Pagination"
+
+const PaginationContent = React.forwardRef<
+  HTMLUListElement,
+  React.ComponentProps<"ul">
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >(({ className, ...props }, ref) => (
+=======
+=======
+  />;
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+Pagination && Pagination.displayName = 'Pagination';
+
+const PaginationContent = React && React.forwardRef<;
+  HTMLUListElement,;
+  React && React.ComponentProps<'ul'>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  <ul
+=======
+;
+import {cn} from '@/lib / utils';
+import {ButtonProps, button_variants} from '@/components / ui / button';
+;
+const Pagination = ({ class_name, ...props }: React.ComponentProps<'nav'>) =>: any (
+  <nav;
+    role='navigation';
+    aria - label='pagination';
+    className={cn ('mx - auto flex w - full justify - center', class_name)}
+    {...props}
+  />);
+Pagination.display_name = 'Pagination';
+;
+const PaginationContent = React.forward_ref<;
+  HTMLUListElement,
+  React.ComponentProps<'ul'>;
+>(({ class_name, ...props }, ref) => (
+  <ul;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('flex flex - row items - center gap - 1', class_name)}
+    {...props}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  />));
+PaginationContent.display_name = 'PaginationContent';
+;
+const PaginationItem = React.forward_ref<;
+  HTMLLIElement,
+  React.ComponentProps<'li'>;
+>(({ class_name, ...props }, ref) => (
+  <li ref={ref} className={cn ('', class_name)} {...props} />));
+PaginationItem.display_name = 'PaginationItem';
+;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+type PaginationLinkProps = {
+  is_active?: boolean;
+} & Pick < ButtonProps, 'size'> &;
+  React.ComponentProps<'a'>;
+<<<<<<< HEAD
+
+  />
+
+=======
+>(({ className, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
     {...props}
   />
+<<<<<<< HEAD
 
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
     {...props}
   />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ));
 PaginationContent.displayName = 'PaginationContent';
 const PaginationItem = React.forwardRef<
@@ -49,6 +196,10 @@ const PaginationLink = ({
   className
   isActive
   size = 'icon'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ))
 PaginationContent.displayName = "PaginationContent"
 
@@ -69,25 +220,199 @@ const PaginationLink = ({
   className,
   isActive,
   size = "icon",
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  ...props
+}: PaginationLinkProps) => (
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ...props
+}: PaginationLinkProps) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+PaginationContent && PaginationContent.displayName = 'PaginationContent';
+
+const PaginationItem = React && React.forwardRef<;
+  HTMLLIElement,;
+  React && React.ComponentProps<'li'>;
+>(({ className, ...props }, ref) => (;
+  <li ref={ref} className={cn('', className)} {...props} />;
+));
+PaginationItem && PaginationItem.displayName = 'PaginationItem';
+type PaginationLinkProps = {;
+  isActive?: boolean;
+} & Pick<ButtonProps, 'size'> &;
+  React && React.ComponentProps<'a'>;
+const PaginationLink = ({;
+  className,;
+  isActive,;
+  size = 'icon',;
+  ...props;
+}: PaginationLinkProps) => (;
+type PaginationLinkProps = {
+  is_active?: boolean;
+} & Pick < ButtonProps, 'size'> &;
+  React.ComponentProps<'a'>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+PaginationLink && PaginationLink.displayName = 'PaginationLink';
+
+const PaginationPrevious = ({;
+  className,;
+  ...props;
+}: React && React.ComponentProps<typeof PaginationLink>) =></typeof> (;
 
 =======
         variant: isActive ? 'outline' : 'ghost'
         size
       })
+      className
+import * as React from "react";
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
+;
+import { cn } from "@/lib/utils";
+import { ButtonProps, buttonVariants } from "@/components/ui/button";
+;
+const Pagination = ({ className, ...props } React.ComponentProps<"nav">) => (;
+  <nav;
+    role="navigation";
+    aria-label="pagination";
+    className={cn("mx-auto flex w-full justify-center", className)}
+    {...props}
+  />;
+);
+Pagination.displayName = "Pagination";
+;
+const PaginationContent = React.forwardRef<;
+  HTMLUListElement,;
+  React.ComponentProps<"ul">;
+>(({ className, ...props }, ref) => (;
+  <ul;
+    ref={ref}
+    className={cn("flex flex-row items-center gap-1", className)}
+    {...props}
+  />;
+));
+PaginationContent.displayName = "PaginationContent";
+;
+const PaginationItem = React.forwardRef<;
+  HTMLLIElement,;
+  React.ComponentProps<"li">;
+>(({ className, ...props }, ref) => (;
+  <li ref={ref} className={cn("", className)} {...props} />;
+));
+PaginationItem.displayName = "PaginationItem";
+;
+type PaginationLinkProps = {;
+  isActive?:boolean;
+} & Pick<ButtonProps "size"> &;
+  React.ComponentProps<"a">;
+;
+const PaginationLink = ({;
+  className,;
+  isActive,;
+  size = "icon",;
+  ...props;
+} PaginationLinkProps) => (;
+  <a;
+    aria-current={isActive ? "page" :undefined}
+    className={cn(;
+      buttonVariants({;
+        variant:isActive ? "outline" :"ghost",;
+        size}),;
+      className;
+    )}
+    {...props}
+  />;
+);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  <PaginationLink
+    aria-label='Go to previous page'
+    size='default'
+    className={cn('gap-1 pl-2 && 2.5', className)}
+    {...props}>;
+    <ChevronLeft className='h-4 w-4' />;
+    <span>Previous</span>;
+  </PaginationLink>;
+);
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+PaginationPrevious && PaginationPrevious.displayName = 'PaginationPrevious';
+
+const PaginationNext = ({;
+  className,;
+  ...props;
+}: React && React.ComponentProps<typeof Pagination</typeof>Link>) => (;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  <PaginationLink
+    aria-label='Go to next page'
+    size='default'
+    className={cn('gap-1 pr-2 && 2.5', className)}
+    {...props}>;
+    <span>Next</span>;
+    <ChevronRight className='h-4 w-4' />;
+  </PaginationLink>;
+);
+<<<<<<< HEAD
+
+
         variant: isActive ? "outline" : "ghost",
         size}),
+
+=======
+  ...props
+}: PaginationLinkProps) => (
+  <a
+    aria-current={isActive ? "page" : undefined}
+    className={cn(
+      buttonVariants({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+        variant: isActive ? 'outline' : 'ghost'
+        size
+      })
+        variant: isActive ? "outline" : "ghost",
+        size}),
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className
     )}
     {...props}
   />
+<<<<<<< HEAD
+=======
+
+)
+PaginationLink.displayName = "PaginationLink"
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 );
 PaginationLink.displayName = 'PaginationLink';
@@ -95,6 +420,7 @@ PaginationLink.displayName = 'PaginationLink';
 PaginationLink.displayName = "PaginationLink"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const PaginationPrevious = ({
   className
   ...props
@@ -108,7 +434,22 @@ const PaginationPrevious = ({
     <ChevronLeft className="h-4 w-4" />
     <span>Previous</span>
   </PaginationLink>
+<<<<<<< HEAD
+=======
 
+)
+PaginationPrevious.displayName = "PaginationPrevious"
+
+
+<<<<<<< HEAD
+=======
+);
+PaginationPrevious.displayName = 'PaginationPrevious';
+)
+PaginationPrevious.displayName = "PaginationPrevious"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const PaginationNext = ({
   className
   ...props
@@ -122,25 +463,128 @@ const PaginationNext = ({
     <span>Next</span>
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
+<<<<<<< HEAD
+=======
 
+)
+PaginationNext.displayName = "PaginationNext"
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PaginationEllipsis = ({
   className
   ...props
 }: React.ComponentProps<'span'>) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+PaginationNext && PaginationNext.displayName = 'PaginationNext';
+
+const PaginationEllipsis = ({;
+  className,;
+  ...props;
+}: React && React.ComponentProps<'span'>) => (;
   <span
     aria-hidden
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+=======
+=======
+);
+PaginationNext.displayName = 'PaginationNext';
+)
+PaginationNext.displayName = "PaginationNext"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+const PaginationEllipsis = ({
+  className
+  ...props
+<<<<<<< HEAD
+}: React.ComponentProps<'span'>) => (
+=======
+}: React.ComponentProps<"span">) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  <span
+    aria-hidden
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >
+    <MoreHorizontal className="h-4 w-4" />
+    <span className="sr-only">More pages</span>
+  </span>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+)
+PaginationEllipsis.displayName = "PaginationEllipsis"
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export {;
   Pagination,;
   PaginationContent,;
   PaginationEllipsis,;
   PaginationItem,;
+<<<<<<< HEAD
   PaginationLink;
   PaginationNext;
   PaginationPrevious}
 ;
 =======
+=======
+  PaginationLink,;
+  PaginationNext,;
+  PaginationPrevious,;
+};
+      className
+    )}
+    {...props}
+  />;
+);
+  <PaginationLink
+    aria-label='Go to previous page'
+    size='default'
+    className={cn('gap-1 pl-2 && 2.5', className)}
+    {...props}>;
+    <ChevronLeft className='h-4 w-4' />;
+    <span>Previous</span>;
+  </PaginationLink>;
+);
+  <PaginationLink
+    aria-label='Go to next page'
+    size='default'
+    className={cn('gap-1 pr-2 && 2.5', className)}
+    {...props}>;
+    <span>Next</span>;
+    <ChevronRight className='h-4 w-4' />;
+  </PaginationLink>;
+);
+  <span
+    aria-hidden
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}>;
+    <MoreHorizontal className='h-4 w-4' />;
+    <span className='sr-only'>More pages</span>;
+  </span>;
+);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 const PaginationLink = ({
   class_name,
@@ -204,6 +648,25 @@ const PaginationEllipsis = ({
   </span>);
 PaginationEllipsis.display_name = 'PaginationEllipsis';
 ;
+<<<<<<< HEAD
+=======
+);
+PaginationEllipsis.displayName = 'PaginationEllipsis';
+export {
+  Pagination
+  PaginationContent
+  PaginationEllipsis
+  PaginationItem
+  PaginationLink
+  PaginationNext
+  PaginationPrevious
+}
+)
+PaginationEllipsis.displayName = "PaginationEllipsis"
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export {
   Pagination,
   PaginationContent,
@@ -211,8 +674,19 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   PaginationPrevious,;
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />;
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -249,6 +723,19 @@ const PaginationPrevious = ({;
   className,;
   ...props;
 }: React.ComponentProps<typeof PaginationLink>) => (;
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}>;
+    <MoreHorizontal className='h-4 w-4' />;
+    <span className='sr-only'>More pages</span>;
+  </span>;
+);
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+PaginationLink.displayName = "PaginationLink";
+;
+const PaginationPrevious = ({;
+  className,;
+  ...props;
+} React.ComponentProps<typeof PaginationLink>) => (;
   <PaginationLink;
     aria-label="Go to previous page";
     size="default";
@@ -264,6 +751,17 @@ const PaginationNext = ({;
   className,;
   ...props;
 }: React.ComponentProps<typeof PaginationLink>) => (;
+  >;
+    <ChevronLeft className="h-4 w-4" />;
+    <span>Previous</span>;
+  </PaginationLink>;
+);
+PaginationPrevious.displayName = "PaginationPrevious";
+;
+const PaginationNext = ({;
+  className,;
+  ...props;
+} React.ComponentProps<typeof PaginationLink>) => (;
   <PaginationLink;
     aria-label="Go to next page";
     size="default";
@@ -279,6 +777,17 @@ const PaginationEllipsis = ({;
   className,;
   ...props;
 }: React.ComponentProps<"span">) => (;
+  >;
+    <span>Next</span>;
+    <ChevronRight className="h-4 w-4" />;
+  </PaginationLink>;
+);
+PaginationNext.displayName = "PaginationNext";
+;
+const PaginationEllipsis = ({;
+  className,;
+  ...props;
+} React.ComponentProps<"span">) => (;
   <span;
     aria-hidden;
     className={cn("flex h-9 w-9 items-center justify-center", className)}
@@ -289,15 +798,31 @@ const PaginationEllipsis = ({;
   </span>
 );
 PaginationEllipsis.displayName = "PaginationEllipsis";
-export {;
-  Pagination,;
-  PaginationContent,;
-  PaginationEllipsis,;
-  PaginationItem,;
-  PaginationLink;
-  PaginationNext;
-  PaginationPrevious}
+  PaginationPrevious,
+}
 ;
+<<<<<<< HEAD
+  PaginationPrevious} />) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
+/>) ) PaginationContent.displayName = "PaginationContent" const PaginationItem = React.forwardRef< HTMLLIElement;
+) ) PaginationItem.displayName = "PaginationItem" React.ComponentProps<"a"> 
+}{
+  ...props 
+}/>) PaginationLink.displayName = "PaginationLink" const PaginationPrevious = ({
+  className, ...props 
+}: React.ComponentProps<typeof PaginationLink>) => (<PaginationLink > <ChevronLeft className="h-4 w-4" /> <span>Previous</span> </PaginationLink>) PaginationPrevious.displayName = "PaginationPrevious" const PaginationNext = ({
+  className, ...props 
+}: React.ComponentProps<typeof PaginationLink>) => (<PaginationLink > <span>Next</span> <ChevronRight className="h-4 w-4" /> </PaginationLink>) PaginationNext.displayName = "PaginationNext" <span aria-hidden className= {
+  cn ("flex h-9 w-9 items-center justify-center", className) 
+}{
+  ...props 
+}> <MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >More pages</span> </span>) PaginationEllipsis.displayName = "PaginationEllipsis" export {
+  Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious 
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

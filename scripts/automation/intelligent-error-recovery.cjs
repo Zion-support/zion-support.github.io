@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Intelligent Error Recovery System;
@@ -21,4 +24,8 @@ const { execSync } = require('child_process')
                 "type"
                 "severity"
             execSync('npm run "lint")
+<<<<<<< HEAD
 
+=======
+            execSync('npm run "lint")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

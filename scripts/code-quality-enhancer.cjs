@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -16,4 +19,8 @@ s*(w+)/g, '
       improvements.push('Arrow functions optimized')
       improvements.push('Semicolons added')
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+<<<<<<< HEAD
 
+=======
+      // Skip directories that can'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

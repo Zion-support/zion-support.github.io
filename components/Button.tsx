@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-
-
+export default function Button(): any ({;
+  children,;
+  variant = 'primary',;
+  size = 'md',;
+  className = '',;
+  onClick,;
+  type = 'button',;
+  disabled = false,;
+}: ButtonProps) {;
+  const baseClasses =;
+    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+}
 
   const variantClasses = {;
     primary:;
@@ -12,27 +25,22 @@ import React from 'react';
     outline:;
       'bg-transparent text-white border border-white/20 hover:bg-white/10 hover:border-white/30 focus:ring-white/50',;
   };
+
   const sizeClasses = {;
     sm: 'px-3 py-1 && 1.5 text-sm',;
     md: 'px-4 py-2 text-base',;
     lg: 'px-6 py-3 text-lg',;
   };
+
   const disabledClasses = disabled;
     ? 'opacity-50 cursor-not-allowed';
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
-
-      >;
-
       {children}
     </button>;
   );
-
-}  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
-
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -82,19 +90,41 @@ function Button() {
 );
 }
 
+<<<<<<< HEAD
 }
 
 =======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
     >
       {children}
     </button>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+    </button>);
+  
+  return (
+    <button
+      type={_type}
+      className={_classes}
+      onClick={_onClick}
+      disabled={_disabled}
+    >
+      {_children}
+    </button>
+  )
+
+}
+
+
+    </button>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

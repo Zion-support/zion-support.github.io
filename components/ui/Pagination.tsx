@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -53,10 +54,14 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
+<<<<<<< HEAD
 
 };
 
@@ -90,6 +95,8 @@ export default function Pagination({
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -115,12 +122,6 @@ export default function Pagination({
     </div>;
   );
 
-}  }
-    if (p >= 1 && p <= totalPages) onChange(p)
-  };
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -128,7 +129,10 @@ export default function Pagination({
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -137,105 +141,12 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
-
-
-const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage,;
-  totalPages,;
-  baseUrl,;
-  className = '' ;
-}) => {;
-  const getPageNumbers = () => {;
-  on_change: (next_page: number) => void;
-}
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {
-  const total_pages = Math.max (1, Math.ceil (total / page_size));
-  const can_prev = page > 1;
-  const can_next = page < total_pages;
-;
-  const go_to = (p: number) =>: any {
-    if (on_change (p)) {
-  $2
-}
-  }
-;
-  return (
-    <div className='flex items - center justify - between gap - 2 mt - 4'>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page - 1)}
-        disabled={!can_prev}
-      >;
-        Prev;
-      </EnhancedButton>;
-      <div className='text - sm'>;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page + 1)}
-        disabled={!can_next}
-      >        Next;
-      </EnhancedButton>;
-    </div>);
-}  }
-;
-  return (
-    <div className="flex items - center justify - between gap - 2 mt - 4">;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page - 1)} disabled={!can_prev}>;
-        Prev;
-      </EnhancedButton>;
-      <div className="text - sm">;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page + 1)} disabled={!can_next}>;
-        Next;
-      </EnhancedButton>;
-    </div>);
-import Link from 'next / link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-interface PaginationProps {
-  current_page: number;
-  total_pages: number;
-  base_url: string;
-  class_name?: string;
-}
-const Pagination: React.FC < PaginationProps> = ({
-  current_page,
-  total_pages,
-  base_url,
-  class_name = '' ;
-}) => {
-  const getPageNumbers = () =>: any {
-
-    const pages = [];
-    const maxVisiblePages = 5;
-
-    } else {;
-      const startPage = Math && Math.max(1, currentPage - 2);
-      const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
-
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
-
-
-      for (let i = startPage; i <= endPage; i++) {;
-        pages && pages.push(i);
-}
-      if (endPage < totalPages) {;
-        if (endPage < totalPages - 1) {;
-          pages && pages.push('...');
-
 }
         pages && pages.push(totalPages);
 }
@@ -261,11 +172,6 @@ const Pagination: React.FC < PaginationProps> = ({
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-
-        {getPageNumbers().map((page, index) => {;
-          if (page === '...') {;
-            return (
-
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -277,13 +183,6 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
-
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                isCurrentPage
-                  ? 'bg-blue-600 text-white border border-blue-600'
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'
-}`}>;
-
               {pageNumber}
             </Link>;
           );
@@ -391,11 +290,9 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
-
-
 }
-export default Pagination;
 }
+<<<<<<< HEAD
 =======
   );
 <<<<<<< HEAD
@@ -405,3 +302,13 @@ export default Pagination;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}
+          <ChevronRight className="w - 4 h - 4 ml - 1" />;
+        </span>)}
+    </nav>);
+}
+
+  );
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

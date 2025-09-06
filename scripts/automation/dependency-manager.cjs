@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 /**;
  * Dependency Manager - PM2 Automation;
@@ -34,7 +37,10 @@ class $1 {}
   log(message, level = "INFO") {}
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
@@ -474,4 +480,8 @@ async function $1() {}
 if (require.main === module) {}
   main()};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

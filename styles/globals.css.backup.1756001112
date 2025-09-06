@@ -173,6 +173,19 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 @media (max-width: 480px) {
+<<<<<<< HEAD
+=======
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);}
 >>>>>>> main
 
@@ -413,6 +426,16 @@ input, textarea, select {
     box-shadow: var(--cyberpunk-fusion-2026);
     background: linear-gradient(45deg, #00ffff, #ec4899, #8b5cf6);
     box-shadow: var(--cyberpunk-resonance);
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);}
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -550,9 +573,29 @@ body::after {
 =======
 /* Enhanced Background Animations */
 =======
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 /* Enhanced Background Animations */
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+/* Enhanced Background Animations */
+/* Enhanced Background Animations */
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+/* Enhanced Background Animations */
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 =======
 >>>>>>> main
@@ -573,9 +616,38 @@ body::after {
     transform: translateY(-10px) rotate(-1deg);
   75% {
     transform: translateY(-15px) rotate(0.5deg);
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    transform: translateY(-15px) rotate(0.5deg);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     transform: translate(-10px, -10px) rotate(1deg);
     transform: translate(10px, -5px) rotate(-1deg);
     transform: translate(-5px, 10px) rotate(0.5deg);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+    transform: translateY(-15px) rotate(0.5deg);
+=======
+    transform: translate(-10px, -10px) rotate(1deg);
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     transform: translateY(-15px) rotate(0.5deg);  }
 =======
 >>>>>>> main
@@ -701,6 +773,15 @@ a:hover {
   text-shadow: 0 0 15px currentColor;
 /* Enhanced Buttons */
 .btn-futuristic {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+  position: relative;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: relative;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .btn-quantum {  position: relative;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -848,6 +929,16 @@ a:hover {
   font-family: 'Rajdhani', 'Inter', sans-serif;
   font-weight: 600;
   letter-spacing: 0.05em;
+<<<<<<< HEAD
+=======
+=======
+  height: 2px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .card-futuristic:hover::before {
   transform: scaleX(1);
 .card-futuristic:hover {
@@ -1059,6 +1150,14 @@ pre code {
 .focus-pink:focus {
   box-shadow: 0 0 0 3px rgba(236, 73, 153, 0.3);
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
   letter-spacing: 0.05em;}
@@ -1089,6 +1188,15 @@ pre code {
     padding: 12px;
     padding: 8px 16px;
     font-size: 13px;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     display: none;  }
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1423,6 +1531,20 @@ pre code {
     background-size: 100px 100px;
   .grid-bg {
     background-size: 25px 25px;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    background-size: 25px 25px;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced High Contrast Mode */
 @media (prefers-contrast: high) {
   :root {
@@ -1433,6 +1555,23 @@ pre code {
     border-width: 2px;
   .btn-futuristic {
     border: 2px solid currentColor;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+    background-size: 25px 25px;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     background-size: 25px 25px;  }
 <<<<<<< HEAD
 =======

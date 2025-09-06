@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -26,6 +27,25 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value]),
         e.currentTarget.value = ""
+=======
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+}
+
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");  ;
+  const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
+    if (e && e.key === "Enter" || e && e.key === ",") {;
+      e && e.preventDefault();
+      const value = e && e.currentTarget.value && value.trim();
+
+      if (value && !keywords && keywords.includes(value)) {;
+        setValue("keywords", [...keywords, value]);
+        e && e.currentTarget.value = "";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     }
   },
@@ -214,6 +234,15 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
           </div>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
 };
+=======
+
+
+
+    </Card>);
+},
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

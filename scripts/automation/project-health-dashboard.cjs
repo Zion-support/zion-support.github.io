@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -305,4 +308,8 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.dependencies.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
+<<<<<<< HEAD
 
+=======
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

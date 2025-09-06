@@ -23,6 +23,10 @@ export default function NewsPage() {
 
   const featuredNews = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
       author: 'Press Team',
@@ -74,6 +78,20 @@ export default function NewsPage() {
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+=======
+  return (
+    <UltraFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>
+          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
+        </Head>
+
+=======
+>>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: 1,
       title: 'Zion Tech Group Achieves Breakthrough in AI Consciousness Technology',
       excerpt: 'Revolutionary AI system demonstrates unprecedented emotional intelligence and self-awareness capabilities, marking a major milestone in artificial consciousness research.',

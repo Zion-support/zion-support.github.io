@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -89,4 +92,8 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
 
+=======
+  process.on(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

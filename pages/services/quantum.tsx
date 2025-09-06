@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -21,7 +25,43 @@ import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
   const services = [
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React from 'react';
+import Head from 'next / head';
+
+import { motion } from 'framer-motion';
+
+import {
+
+  Atom,
+  Cpu,
+  Shield,
+  Rocket,
+  Zap,
+  Database,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
+
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * QuantumServicesPage - Function description
+ */
+function QuantumServicesPage() {
+  const services = [;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
+<<<<<<< HEAD
       title: 'Quantum Algorithm Development'
       description:
         'Custom quantum algorithms designed for specific business problems'
@@ -83,6 +123,16 @@ export default function QuantumServicesPage() {
     { number: '24/7', label: 'Quantum Support', icon: Clock }
   ];
 
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Atom,
   Cpu,
   Shield,
@@ -93,13 +143,7 @@ export default function QuantumServicesPage() {
   CheckCircle,
   Star,
   Users,
-  Clock,
-  TrendingUp,
-
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-import React from 'react',
+<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -115,7 +159,58 @@ export default function QuantumServicesPage() {
       description: "Custom quantum algorithms designed for specific business problems",
       features: ["Optimization Algorithms", "Machine Learning", "Cryptography", "Simulation"],
       price: "From $15,000",
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * QuantumServicesPage - Function description
+ */
+function QuantumServicesPage() {
+  const services = [;
+    {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      title: 'Quantum Algorithm Development',
+      description:;
+        'Custom quantum algorithms designed for specific business problems',
+      features: [;
+        'Optimization Algorithms',
+        'Machine Learning',
+        'Cryptography',
+        'Simulation',
+      ],
+      price: 'From $15, 000',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: Atom,
+<<<<<<< HEAD
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -150,6 +245,7 @@ export default function QuantumServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   ],
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const stats = [
@@ -195,6 +291,8 @@ export default function QuantumServicesPage() {
             className="mb-8"
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum Computing
@@ -205,9 +303,138 @@ export default function QuantumServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              Experience the future of computing with our quantum solutions.
+              From algorithm development to security protocols, we're pioneering
+              the quantum revolution.
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary quantum solutions that unlock unprecedented computational power
+            </p>
+            <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
+              Explore Quantum Solutions
+              <ArrowRight className='w-5 h-5' />            </button>
+          </motion.div>
+        </div>
+      </section>
+            transition={{ duration: 0 && 0.8 }}
+            className='mb-8'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
+              Quantum Computing;
+            </h1>;
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>;
+              Revolutionary quantum solutions that unlock unprecedented;
+              computational power            </p>;
+          </motion && motion.div>;
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+      color: 'from - blue - 500 to - cyan - 500',
+    },
+    {
+      title: 'Quantum Security Solutions',
+      description: 'Quantum - resistant cryptography and security protocols',
+      features: [;
+        'Post - Quantum Cryptography',
+        'Quantum Key Distribution',
+        'Security Auditing',
+        'Compliance',
+      ],
+      price: 'From $12, 000',
+      icon: Shield,
+      color: 'from - red - 500 to - orange - 500',
+    },
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing hardware and cloud access solutions',
+      features: [;
+        'Cloud Quantum Access',
+        'Hardware Integration',
+        'Performance Optimization',
+        'Scalability',
+      ],
+      price: 'From $8, 000',
+      icon: Cpu,
+      color: 'from - indigo - 500 to - purple - 500',
+    },
+    {
+      title: 'Quantum AI Integration',
+      description:;
+        'Hybrid quantum - classical AI systems for enhanced performance',
+      features: [;
+        'Quantum Neural Networks',
+        'Hybrid Algorithms',
+        'Performance Enhancement',
+        'Future - Proofing',
+      ],
+      price: 'From $20, 000',
+      icon: Zap,
+      color: 'from - emerald - 500 to - teal - 500',
+    },
+  ];
+;
+  const stats = [;
+    { number: '100+', label: 'Quantum Algorithms', icon: Atom },
+    { number: '99.99%', label: 'Security Guarantee', icon: Shield },
+    { number: '10x', label: 'Performance Boost', icon: TrendingUp },
+    { number: '24 / 7', label: 'Quantum Support', icon: Clock },
+  ];
+;
+  return (
+
+          href='https://ziontechgroup && ziontechgroup.com/services/quantum'
+        />      </Head>;
+      <EnhancedNavigation />;
+
+
+      {/* Hero Section */}
+      <section className='relative pt-32 pb-20 px-6'>;
+        <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+          >
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+              Quantum Computing
+            </h1>
+<<<<<<< HEAD
+=======
+
+
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary quantum solutions that unlock unprecedented computational power
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Explore Quantum Solutions
@@ -218,6 +445,8 @@ export default function QuantumServicesPage() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
+=======
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>;
               Quantum Computing;
@@ -226,14 +455,12 @@ export default function QuantumServicesPage() {
               Revolutionary quantum solutions that unlock unprecedented;
               computational power            </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='mb-12'>;
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>;
-=======
     <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
       <Head>;
         <title > Quantum Computing Services - Zion Tech Group</title>;
@@ -276,17 +503,25 @@ export default function QuantumServicesPage() {
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Experience the future of computing with our quantum solutions.;
               From algorithm development to security protocols, we're pioneering;
               the quantum revolution.;
             </p>;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Experience the future of computing with our quantum solutions. From algorithm development 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
             className='mb-12'
           >
@@ -294,6 +529,7 @@ export default function QuantumServicesPage() {
               Experience the future of computing with our quantum solutions.
               From algorithm development to security protocols, we're pioneering
               the quantum revolution.
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
               to security protocols, we're pioneering the quantum revolution.
@@ -429,6 +665,19 @@ export default function QuantumServicesPage(req, res) {
             </p>;
           </motion.div>;
           <motion.div;
+=======
+=======
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Revolutionary quantum solutions that unlock unprecedented computational power
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </p>
+          </motion.div>
+          <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -448,6 +697,20 @@ export default function QuantumServicesPage(req, res) {
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Experience the future of computing with our quantum solutions. From algorithm development
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              to security protocols, we're pioneering the quantum revolution.
+            </p>
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
+              Explore Quantum Solutions
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
               to security protocols, we're pioneering the quantum revolution.
             </p>
@@ -459,32 +722,25 @@ export default function QuantumServicesPage(req, res) {
         </div>
       </section>
 
+<<<<<<< HEAD
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className='text-3xl font-bold text-white mb-2'>
-                  {stat.number}
-                </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -498,16 +754,39 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       </section>;
 
 
+<<<<<<< HEAD
+=======
       {/* Services Grid */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
+<<<<<<< HEAD
+=======
+=======
+
+      {/* Services Grid */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <h2 className="text-4xl font-bold text-white mb-6">Quantum Computing Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Cutting-edge quantum solutions designed to solve complex problems and secure the future
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -538,6 +817,37 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              <motion.div
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Quantum Computing Services;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Cutting-edge quantum solutions designed to solve complex problems;
+              and secure the future;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -545,20 +855,35 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </ul>
                 <div className="flex items-center justify-between">
@@ -567,12 +892,36 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 </ul>
                 <div className="flex items-center justify-between">
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                      {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </li>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                </ul>
+                <div className="flex items-center justify-between">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* CTA Section */}
@@ -580,6 +929,61 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+<<<<<<< HEAD
+=======
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -588,18 +992,100 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems.
             </p>
+<<<<<<< HEAD
+=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+Schedule Quantum Demo
+              </button>
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+                Schedule Quantum Demo
+              </button>
+              <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
+
+=======
+                Schedule Quantum Demo
+              </button>
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Learn More
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }</div> </div> </section> <motion.div initial= {
+=======
+<<<<<<< HEAD
+=======
+      <EnhancedFooter />
+    </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+
+
+}</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Experience Quantum Computing?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Let's explore how quantum computing can revolutionize your;
+              business operations and solve previously impossible problems.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
+                Schedule Quantum Demo;
+              </button>;
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Learn More;
+              </button>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <EnhancedFooter />;
+    </div>;
+  ),;
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
+}</div> </div> </section> <motion&& motion.div initial= {
+<<<<<<< HEAD
+=======
+=======
+      <EnhancedFooter />
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) )
+=======
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}</div> </div> </section> <motion.div initial= {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -608,6 +1094,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }transition= {
   {
 
+<<<<<<< HEAD
   duration: 0 && 0.8 
 
 }viewport= {
@@ -618,10 +1105,28 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 }
 }
 }
+=======
+<<<<<<< HEAD
+}
+}
+}
+=======
+  duration: 0 && 0.8 
+}viewport= {
+  {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <button className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
               Explore Quantum Solutions;
               <ArrowRight className='w - 5 h - 5' />            </button>;
@@ -725,13 +1230,45 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 Schedule Quantum Demo;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                Learn More;
+<<<<<<< HEAD
+=======
+=======
+  once: true
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Experience Quantum Computing? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems. </p> Schedule Quantum Demo </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Experience Quantum Computing?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Let's explore how quantum computing can revolutionize your business operations and solve previously impossible problems.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                Schedule Quantum Demo;
+              </button>;
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+                Learn More;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
   } catch (error) {
@@ -745,5 +1282,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

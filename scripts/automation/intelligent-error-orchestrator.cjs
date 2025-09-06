@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -21,7 +24,10 @@ class IntelligentErrorOrchestrator {}
     this.lastOrchestration = null};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async checkErrorReports() {}
     try {}
@@ -289,4 +295,8 @@ if (require.main === module) {}
   orchestrator.startOrchestrator().catch(error => {})
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})};
+<<<<<<< HEAD
 
+=======
+module.exports = IntelligentErrorOrchestrator;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

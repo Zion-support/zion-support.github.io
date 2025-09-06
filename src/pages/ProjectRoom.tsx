@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+}
+}
+
+;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -86,6 +94,7 @@ export default function ProjectRoom() {;
     }
   },
   
+<<<<<<< HEAD
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
@@ -250,6 +259,38 @@ export default function ProjectRoom() {;
         </Tabs>
       </main>
     </>
+=======
+
+  return (
+    <>
+      <SEO
+        title="Project Room | Zion AI Marketplace"
+        description="Collaborate with your team in real-time"
+      />
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6">Project Room</h1>
+        <p className="text-muted-foreground">
+          Real-time collaboration features coming soon.
+        </p>
+      </div>
+    </>
+
+
+
+
+
+
+}
+
+}
+
+
+}
+
+;
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 }
 ;

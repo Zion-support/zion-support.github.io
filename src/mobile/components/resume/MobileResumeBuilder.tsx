@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -28,6 +29,51 @@ export function MobileResumeBuilder() {
         return <SkillsStep />,
       default:
         return <BasicsStep />
+=======
+import {;
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
+
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+
+export function MobileResumeBuilder() {;
+  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
+
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "basics": return <BasicsStep />,;
+      case "experience":;
+        return <ExperienceStep />,;
+      case "education":;
+        return <EducationStep />,;
+      case "skills":;
+        return <SkillsStep />,;
+      default:;
+        return <BasicsStep />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   },
   
@@ -35,13 +81,24 @@ export function MobileResumeBuilder() {
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
+
+
         >
           Basics
         </Button>
         <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
@@ -49,6 +106,10 @@ export function MobileResumeBuilder() {
           Experience
         </Button>
         <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
@@ -56,6 +117,10 @@ export function MobileResumeBuilder() {
           Education
         </Button>
         <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
@@ -65,6 +130,11 @@ export function MobileResumeBuilder() {
       </div>
       
       {renderStepContent()}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
@@ -103,6 +173,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+<<<<<<< HEAD
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
@@ -163,6 +234,9 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         >;
           Skills;
         </Button>;
@@ -215,6 +289,16 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }]),
@@ -288,6 +372,7 @@ function ExperienceStep() {
   )
 }
 
+<<<<<<< HEAD
 function EducationStep() {
   const [educations, setEducations] = useState([{ id: '1' }]),
   
@@ -421,6 +506,11 @@ function SkillsStep() {
         <Plus className="h-4 w-4" /> Add Another Experience;
       </Button>;
     </div>;
+=======
+
+  };
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 ;
@@ -487,6 +577,7 @@ function EducationStep() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -573,4 +664,8 @@ function SkillsStep() {;
     </div>
   )
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

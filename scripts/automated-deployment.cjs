@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
     console.log('� Starting deployment process...')
@@ -25,4 +31,8 @@ const { execSync } = require('child_process')
         "failedSteps"
         "skippedSteps"
 // console.log('\n Deployment "Report")
+<<<<<<< HEAD
 
+=======
+      console.log('\n Errors "encountered")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

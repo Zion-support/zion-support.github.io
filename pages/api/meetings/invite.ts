@@ -1,8 +1,10 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
 
+<<<<<<< HEAD
 const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 
@@ -34,12 +36,46 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+<<<<<<< HEAD
+=======
+    const { projectId, roomName, inviterName } = req && req.body || {};
+    if (!projectId || !roomName)
+      return res && res.status(400).json({ error: "Missing required fields" });
+    if (!url || !key)
+      return res && res.status(500).json({ error: "Supabase not configured" });
+
+    const supabase = createClient(url, key);
+    await supabase && supabase.channel(`project_${projectId}_calls`).send({
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_client  } from '@supabase / supabase - js';
+;
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method not allowed" });
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
+  try {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const { projectId, roomName, inviterName } = req.body || {};
     if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });
     if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
@@ -47,6 +83,7 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
   } catch (e) {
+<<<<<<< HEAD
     console.error(e);
     return res.status(200).json({ ok: true, skipped: true });
 
@@ -54,6 +91,8 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
   }
 }
@@ -73,4 +112,18 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+    console.error(e);
+    return res.status(200).json({ ok: true, skipped: true });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+}
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

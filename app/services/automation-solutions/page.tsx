@@ -1,6 +1,7 @@
-export const metadata = { 
-  title: 'Automation Solutions | Zion Tech Group',
-  description: 'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.'
+export const metadata = {
+  title: "Automation Solutions | Zion Tech Group",
+  description:
+    "Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.",
 };
 
 export default function AutomationSolutionsPage() {
@@ -11,94 +12,275 @@ export default function AutomationSolutionsPage() {
           Automation Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. 
-          Streamline your operations and boost productivity.
+          Intelligent automation solutions including RPA, workflow automation,
+          AI-powered automation, and business process optimization. Streamline
+          your operations and boost productivity.
         </p>
       </section>
 
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Automation Solutions</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          Our Automation Solutions
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AutomationServiceCard
             title="Robotic Process Automation (RPA)"
             description="Automate repetitive tasks and business processes with intelligent bots"
-            features={["Process discovery & analysis", "Bot development & deployment", "Exception handling", "Monitoring & reporting", "Scalable automation"]}
+            features={[
+              "Process discovery & analysis",
+              "Bot development & deployment",
+              "Exception handling",
+              "Monitoring & reporting",
+              "Scalable automation",
+            ]}
             price="$15k–$50k"
             icon="🤖"
           />
           <AutomationServiceCard
             title="Workflow Automation"
             description="End-to-end workflow automation with intelligent decision making"
-            features={["Workflow design", "Integration management", "Approval processes", "Notification systems", "Performance analytics"]}
+            features={[
+              "Workflow design",
+              "Integration management",
+              "Approval processes",
+              "Notification systems",
+              "Performance analytics",
+            ]}
             price="$10k–$35k"
             icon="⚡"
           />
           <AutomationServiceCard
             title="AI-Powered Automation"
             description="Intelligent automation using AI and machine learning for complex tasks"
-            features={["AI decision making", "Natural language processing", "Predictive automation", "Learning algorithms", "Cognitive automation"]}
+            features={[
+              "AI decision making",
+              "Natural language processing",
+              "Predictive automation",
+              "Learning algorithms",
+              "Cognitive automation",
+            ]}
             price="$25k–$80k"
             icon="🧠"
           />
           <AutomationServiceCard
             title="Document Processing Automation"
             description="Automated document handling, extraction, and processing"
-            features={["OCR & text extraction", "Document classification", "Data validation", "Workflow routing", "Compliance checking"]}
+            features={[
+              "OCR & text extraction",
+              "Document classification",
+              "Data validation",
+              "Workflow routing",
+              "Compliance checking",
+            ]}
             price="$12k–$40k"
             icon="📄"
           />
           <AutomationServiceCard
             title="Customer Service Automation"
             description="Automated customer support with chatbots and intelligent routing"
-            features={["Chatbot development", "Ticket routing", "Response automation", "Sentiment analysis", "Escalation management"]}
+            features={[
+              "Chatbot development",
+              "Ticket routing",
+              "Response automation",
+              "Sentiment analysis",
+              "Escalation management",
+            ]}
             price="$18k–$60k"
             icon="💬"
           />
           <AutomationServiceCard
             title="Financial Process Automation"
             description="Automated financial processes including invoicing, payments, and reporting"
-            features={["Invoice processing", "Payment automation", "Financial reporting", "Reconciliation", "Compliance automation"]}
+            features={[
+              "Invoice processing",
+              "Payment automation",
+              "Financial reporting",
+              "Reconciliation",
+              "Compliance automation",
+            ]}
             price="$20k–$70k"
             icon="💰"
+          />
+          <AutomationServiceCard
+            title="HR & Payroll Automation"
+            description="Complete HR process automation including recruitment, onboarding, and payroll"
+            features={["Resume screening", "Interview scheduling", "Onboarding workflows", "Payroll processing", "Benefits management", "Performance tracking"]}
+            price="$18k–$60k"
+            icon="👥"
+          />
+          <AutomationServiceCard
+            title="Marketing Automation"
+            description="Intelligent marketing campaign automation and lead nurturing"
+            features={["Email campaigns", "Lead scoring", "Social media posting", "Content scheduling", "A/B testing", "Analytics tracking"]}
+            price="$15k–$50k"
+            icon="📢"
+          />
+          <AutomationServiceCard
+            title="Inventory Management Automation"
+            description="Automated inventory tracking, ordering, and supply chain management"
+            features={["Stock monitoring", "Auto reordering", "Supplier management", "Demand forecasting", "Quality control", "Cost optimization"]}
+            price="$20k–$65k"
+            icon="📦"
+          />
+          <AutomationServiceCard
+            title="Email & Communication Automation"
+            description="Intelligent email management and communication workflows"
+            features={["Email routing", "Response automation", "Template management", "Follow-up sequences", "Spam filtering", "Analytics tracking"]}
+            price="$12k–$40k"
+            icon="📧"
+          />
+          <AutomationServiceCard
+            title="Data Entry & Migration Automation"
+            description="Automated data entry, validation, and system migration"
+            features={["Data extraction", "Validation rules", "Format conversion", "Error handling", "Migration testing", "Data quality checks"]}
+            price="$15k–$45k"
+            icon="📊"
+          />
+          <AutomationServiceCard
+            title="Compliance & Audit Automation"
+            description="Automated compliance monitoring and audit preparation"
+            features={["Compliance checking", "Audit trail generation", "Report automation", "Policy enforcement", "Risk assessment", "Documentation management"]}
+            price="$18k–$55k"
+            icon="📋"
+          />
+          <AutomationServiceCard
+            title="Customer Onboarding Automation"
+            description="Streamlined customer onboarding with automated workflows"
+            features={["Application processing", "Document verification", "Account setup", "Welcome sequences", "Progress tracking", "Compliance checks"]}
+            price="$16k–$50k"
+            icon="🚀"
+          />
+          <AutomationServiceCard
+            title="Sales Process Automation"
+            description="End-to-end sales automation from lead to close"
+            features={["Lead qualification", "Follow-up automation", "Proposal generation", "Contract management", "Pipeline tracking", "Revenue forecasting"]}
+            price="$20k–$70k"
+            icon="💼"
+          />
+          <AutomationServiceCard
+            title="IT Operations Automation"
+            description="Automated IT operations and infrastructure management"
+            features={["Server monitoring", "Backup automation", "Patch management", "Incident response", "Performance optimization", "Security scanning"]}
+            price="$25k–$80k"
+            icon="⚙️"
+          />
+          <AutomationServiceCard
+            title="Quality Assurance Automation"
+            description="Automated testing and quality control processes"
+            features={["Test case generation", "Automated testing", "Bug tracking", "Performance monitoring", "Regression testing", "Quality reporting"]}
+            price="$18k–$60k"
+            icon="🔍"
+          />
+          <AutomationServiceCard
+            title="Expense Management Automation"
+            description="Automated expense tracking, approval, and reimbursement"
+            features={["Receipt processing", "Expense categorization", "Approval workflows", "Policy compliance", "Reimbursement processing", "Analytics reporting"]}
+            price="$12k–$40k"
+            icon="💳"
+          />
+          <AutomationServiceCard
+            title="Project Management Automation"
+            description="Automated project tracking and resource management"
+            features={["Task assignment", "Progress tracking", "Resource allocation", "Timeline management", "Risk monitoring", "Reporting automation"]}
+            price="$15k–$50k"
+            icon="📅"
+          />
+          <AutomationServiceCard
+            title="Customer Feedback Automation"
+            description="Automated feedback collection and analysis"
+            features={["Survey automation", "Response collection", "Sentiment analysis", "Action planning", "Follow-up automation", "Trend analysis"]}
+            price="$10k–$35k"
+            icon="💬"
+          />
+          <AutomationServiceCard
+            title="Supply Chain Automation"
+            description="End-to-end supply chain process automation"
+            features={["Order processing", "Vendor management", "Shipment tracking", "Quality control", "Compliance monitoring", "Cost optimization"]}
+            price="$25k–$75k"
+            icon="🚚"
+          />
+          <AutomationServiceCard
+            title="Legal Document Automation"
+            description="Automated legal document processing and management"
+            features={["Document generation", "Contract analysis", "Compliance checking", "Version control", "Approval workflows", "Archive management"]}
+            price="$20k–$65k"
+            icon="⚖️"
+          />
+          <AutomationServiceCard
+            title="Real Estate Process Automation"
+            description="Automated real estate workflows and property management"
+            features={["Property listing", "Lead management", "Document processing", "Inspection scheduling", "Contract management", "Commission tracking"]}
+            price="$18k–$55k"
+            icon="🏠"
+          />
+          <AutomationServiceCard
+            title="Healthcare Process Automation"
+            description="Medical process automation and patient management"
+            features={["Patient scheduling", "Appointment reminders", "Insurance verification", "Billing automation", "Compliance tracking", "Report generation"]}
+            price="$25k–$80k"
+            icon="🏥"
+          />
+          <AutomationServiceCard
+            title="Manufacturing Automation"
+            description="Production line and manufacturing process automation"
+            features={["Production scheduling", "Quality control", "Inventory management", "Equipment monitoring", "Maintenance scheduling", "Performance tracking"]}
+            price="$30k–$100k"
+            icon="🏭"
+          />
+          <AutomationServiceCard
+            title="Insurance Process Automation"
+            description="Automated insurance workflows and claims processing"
+            features={["Claims processing", "Policy management", "Risk assessment", "Underwriting automation", "Payment processing", "Compliance monitoring"]}
+            price="$22k–$70k"
+            icon="🛡️"
+          />
+          <AutomationServiceCard
+            title="Event Management Automation"
+            description="Automated event planning and management workflows"
+            features={["Event registration", "Attendee management", "Communication automation", "Resource planning", "Feedback collection", "Analytics reporting"]}
+            price="$15k–$45k"
+            icon="🎉"
           />
         </div>
       </section>
 
       <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Technology Stack</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          Automation Technology Stack
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item 
-            title="RPA & Process Automation" 
+          <Item
+            title="RPA & Process Automation"
             details={[
               "UiPath, Automation Anywhere, Blue Prism",
               "Process mining and discovery tools",
               "Screen scraping and data extraction",
               "API integration and orchestration",
               "Exception handling and error recovery",
-              "Performance monitoring and analytics"
-            ]} 
+              "Performance monitoring and analytics",
+            ]}
           />
-          <Item 
-            title="AI & Machine Learning" 
+          <Item
+            title="AI & Machine Learning"
             details={[
               "Natural language processing (NLP)",
               "Computer vision and image recognition",
               "Predictive analytics and forecasting",
               "Decision trees and rule engines",
               "Machine learning model integration",
-              "Cognitive automation platforms"
-            ]} 
+              "Cognitive automation platforms",
+            ]}
           />
-          <Item 
-            title="Integration & Orchestration" 
+          <Item
+            title="Integration & Orchestration"
             details={[
               "API management and integration",
               "Workflow orchestration engines",
               "Event-driven automation",
               "Microservices architecture",
               "Cloud-native automation",
-              "Real-time monitoring and alerting"
-            ]} 
+              "Real-time monitoring and alerting",
+            ]}
           />
         </div>
       </section>
@@ -109,12 +291,18 @@ export default function AutomationSolutionsPage() {
   );
 }
 
-function AutomationServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
+function AutomationServiceCard({
+  title,
+  description,
+  features,
+  price,
+  icon,
+}: {
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  icon: string;
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -153,11 +341,13 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Packages</h2>
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        Automation Packages
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Process Assessment" 
-          price="$5k–$15k" 
+        <Plan
+          name="Process Assessment"
+          price="$5k–$15k"
           duration="2–4 weeks"
           features={[
             "Process discovery and analysis",
@@ -165,12 +355,12 @@ function Pricing() {
             "ROI calculation and business case",
             "Technology recommendations",
             "Implementation roadmap",
-            "Pilot process selection"
-          ]} 
+            "Pilot process selection",
+          ]}
         />
-        <Plan 
-          name="Automation Implementation" 
-          price="$20k–$80k" 
+        <Plan
+          name="Automation Implementation"
+          price="$20k–$80k"
           duration="8–16 weeks"
           features={[
             "End-to-end automation development",
@@ -178,12 +368,12 @@ function Pricing() {
             "Testing and quality assurance",
             "User training and documentation",
             "Deployment and go-live support",
-            "Performance monitoring setup"
-          ]} 
+            "Performance monitoring setup",
+          ]}
         />
-        <Plan 
-          name="Managed Automation" 
-          price="$3k+/mo" 
+        <Plan
+          name="Managed Automation"
+          price="$3k+/mo"
           duration="Ongoing"
           features={[
             "24/7 monitoring and maintenance",
@@ -191,19 +381,24 @@ function Pricing() {
             "Exception handling and support",
             "Performance reporting",
             "Process improvements",
-            "Scalability management"
-          ]} 
+            "Scalability management",
+          ]}
         />
       </div>
     </section>
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({
+  name,
+  price,
+  duration,
+  features,
+}: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
@@ -218,8 +413,8 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950" 
+      <a
+        href="tel:+13024640950"
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
       >
         Get Started
@@ -236,8 +431,9 @@ function ContactSection() {
           Ready to Automate Your Business?
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's identify automation opportunities and implement solutions that save time and reduce costs. 
-          Our automation experts have delivered 150+ successful automation projects.
+          Let's identify automation opportunities and implement solutions that
+          save time and reduce costs. Our automation experts have delivered 150+
+          successful automation projects.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

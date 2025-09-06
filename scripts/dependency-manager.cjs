@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -140,4 +143,8 @@ class DependencyManager {
 }
 // Run the dependency manager
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
+<<<<<<< HEAD
 
+=======
+module.exports = DependencyManager;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

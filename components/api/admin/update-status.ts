@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 =======
 
 
@@ -10,12 +11,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(405).json({ error: 'Method Not Allowed' });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return;
   }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
+<<<<<<< HEAD
 
   const body = req && req.body || {};
   const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');
@@ -29,6 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(405).json({ error: 'Method Not Allowed' });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return
   }
   if (!isInternalAgentRequest(req)) {
@@ -36,6 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
+<<<<<<< HEAD
   const body = req && req.body || {};
   const dataDir = path && path.join(process && process.cwd(), 'dataadmin');
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
@@ -43,6 +50,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  const merged = {
+    ...existing;
+    ...body;
+import { isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -101,6 +121,7 @@ if ( {) {
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
 
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -111,3 +132,7 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

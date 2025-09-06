@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Code
   Database
   Shield
@@ -43,6 +47,8 @@ import React from 'react';
 import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 
 export default function APIDocumentation() {;
@@ -66,6 +72,7 @@ export default function APIDocumentation() {;
         <ul className='list-disc list-inside text-slate-300 space-y-2'>;
           <li>;
             <a className='text-cyan-400' href='/api-docs'>;
+<<<<<<< HEAD
 =======
 import {
 =======
@@ -73,6 +80,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Code,
   Database,
   Shield,
@@ -83,23 +92,28 @@ import {
   CheckCircle,
   ArrowRight,
   BarChart3,
+<<<<<<< HEAD
 
 =======
             <a className='text - cyan - 400' href='/api - documentation - generator'>;
 
+=======
+              API Reference;
+            </a>;
+          </li>;
+          <li>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               API Documentation Generator;
             </a>;
           </li>;
           <li>;
-
-            <a className='text - cyan - 400' href='/docs'>;
-
               Developer Docs;
             </a>;
           </li>;
         </ul>;
       </div>;
 
+<<<<<<< HEAD
 import { 
   Code, Database, Shield, Zap, Globe, Cpu, 
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
@@ -149,12 +163,17 @@ export default function APIDocumentation() {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 
 export default function APIDocumentation() {
 	return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -171,7 +190,10 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -188,6 +210,7 @@ export default function APIDocumentation() {
     </ul>;
   </div>;
   </div>),
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -195,5 +218,7 @@ export default function APIDocumentation() {
 	)
 }
 	),
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

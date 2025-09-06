@@ -1,3 +1,51 @@
+<<<<<<< HEAD
+=======
+import {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useProjects } from '@/hooks/useProjects';
+import { SEO } from '@/components/SEO';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { Clock, Briefcase } from 'lucide-react';
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -5,8 +53,29 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
+<<<<<<< HEAD
 import { Clock, Briefcase } from 'lucide-react'
 
+=======
+
+
+import { Clock, Briefcase } from 'lucide-react'
+
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+import { Clock, Briefcase } from 'lucide-react'
+function ProjectsContent() { const { projects, isLoading  } = useProjects()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function ProjectsContent() {
   const { projects, isLoading } = useProjects(),
 
@@ -23,8 +92,21 @@ function ProjectsContent() {
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+<<<<<<< HEAD
           <div className="grid gap-6">
             {projects.map((project) => (
+=======
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -101,6 +183,7 @@ function ProjectsContent() {;
                 </CardFooter>;
               </Card>;
             ))}
+<<<<<<< HEAD
           </div>;
         )}
       </main>;
@@ -112,3 +195,7 @@ export default function Projects() {;
   return <ProjectsContent />;
 }
 ;
+=======
+          </div>
+        )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

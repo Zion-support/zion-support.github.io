@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 
@@ -30,6 +31,8 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu
   X
   ChevronDown
@@ -41,10 +44,25 @@ import {
   Brain
   Atom
   Shield;
+<<<<<<< HEAD
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,;
+  Shield,;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
   className?: string;
 export default function UltraFuturisticNavigation({
+<<<<<<< HEAD
   className = ''
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
@@ -61,11 +79,38 @@ interface UltraFuturisticNavigationProps {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Menu,;
+  X,;
+  ChevronDown,;
+  Search,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Shield,;
+} from 'lucide-react';
+
+interface UltraFuturisticNavigationProps {;
+  className?: string;
+
+
+
+
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 
     },
     { name: 'Solutions', href: '/solutions' },
@@ -74,6 +119,46 @@ interface UltraFuturisticNavigationProps {
     { name: 'Pricing', href: '/pricing' },  ];
 
   ];
+=======
+      setIsScrolled(window.scrollY > 20);
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  const navigationItems = [
+    {
+      name: 'Services'
+      href: '/services'
+      hasDropdown: true
+      dropdownItems: [
+        {
+          name: 'AI & Machine Learning'
+          href: '/services/ai-ml'
+          icon: Brain
+          color: 'from-purple-500 to-pink-600'
+        }
+        {
+          name: 'Quantum Computing'
+          href: '/services/quantum'
+          icon: Atom
+          color: 'from-cyan-500 to-blue-600'
+        }
+        {
+          name: 'Cybersecurity'
+          href: '/services/cybersecurity'
+          icon: Shield
+          color: 'from-red-500 to-pink-600'
+        }
+        {
+          name: 'IT Solutions'
+          href: '/services/it-solutions'
+          icon: Rocket
+          color: 'from-green-500 to-emerald-600'
+        }
+        {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
         { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
@@ -89,7 +174,10 @@ interface UltraFuturisticNavigationProps {
 
   ];
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -102,6 +190,7 @@ interface UltraFuturisticNavigationProps {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
+<<<<<<< HEAD
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,11 +201,16 @@ interface UltraFuturisticNavigationProps {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
         { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
       ];
@@ -127,15 +221,12 @@ interface UltraFuturisticNavigationProps {
     { name: 'Pricing', href: '/pricing' }
 
 
-
     >;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,10 +237,14 @@ interface UltraFuturisticNavigationProps {
             transition={{ duration: 0.6 }}
             className='flex items-center space-x-3'
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
               <Rocket className='w-7 h-7 text-white' />
@@ -166,7 +261,17 @@ interface UltraFuturisticNavigationProps {
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >
+<<<<<<< HEAD
 
+=======
+        : 'bg-transparent'
+    } ${className}`}>;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="flex items-center justify-between h-20">;
+          <motion&& motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
             </div>
@@ -190,12 +295,11 @@ interface UltraFuturisticNavigationProps {
                 Revolutionary Technology;
               </div>            </div>;
           </motion && motion.div>;
-          {/* Desktop Navigation */}
-
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">
                 {item.hasDropdown ? (
+<<<<<<< HEAD
 
                   <div
                     onMouseEnter={() => setActiveDropdown(item && item.name)}
@@ -209,6 +313,8 @@ interface UltraFuturisticNavigationProps {
                     </button>
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   >;
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>;
                       <span>{item && item.name}</span>;
@@ -216,10 +322,13 @@ interface UltraFuturisticNavigationProps {
                     </button>                      <span>{item && item.name}</span>;
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />;
                     </button>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
@@ -263,6 +372,7 @@ interface UltraFuturisticNavigationProps {
                                     </div>;
                                     {dropdownItem && dropdownItem.name === 'View All Services' && (;
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>;
+<<<<<<< HEAD
 
                                     )}
                                   </div>;
@@ -343,6 +453,8 @@ interface UltraFuturisticNavigationProps {
                                     )}
                                   </div>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                                 </Link>
                               ))}
                             </div>
@@ -353,6 +465,7 @@ interface UltraFuturisticNavigationProps {
                   </div>
                 ) : (
                   <Link
+<<<<<<< HEAD
                     href={item.href}
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -384,52 +497,107 @@ interface UltraFuturisticNavigationProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>;
+            ))}
+
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  >
+                          className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
+                        >;
+                          <div className='p - 4'>;
+                            <div className='grid gap - 3'>                              {item.dropdown_items?.map ((dropdown_item, idx) => (
+                                <Link;
+                                  key={dropdown_item.name}
+                                  href={dropdown_item.href}
+                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item'                          className="absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden";
+                        >;
+                          <div className="p - 4">;
+                            <div className="grid gap - 3">;
+                                <Link;
+                                  key={dropdown_item.name}
+                                  href={dropdown_item.href}
+                                  className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 300 group / item';
+                                >;
+                                  <div;
+                                    className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item:scale - 110 transition - transform duration - 300`}
+                                  >;
+                                    <dropdown_item.icon className='w - 5 h - 5 text - white' />;
+                                  </div>;
+                                  <div>;
+                                    <div className='text - white font - medium group - hover / item:text - cyan - 300 transition - colors'>;
+                                      {dropdown_item.name}
+                                    </div>;
+                                    {dropdown_item.name ===;
+                                      'View All Services' && (
+                                      <div className='text - xs text - gray - 400'>;
+                                        Explore our complete portfolio;
+                                      </div>                                    )}                                >;
+                                  <div className={`w - 10 h - 10 bg - gradient - to - r ${dropdown_item.color} rounded - lg flex items - center justify - center group - hover / item:scale - 110 transition - transform duration - 300`}>;
+                                    <dropdown_item.icon className="w - 5 h - 5 text - white" />;
+                                  </div>;
+                                  <div>;
+                                    <div className="text - white font - medium group - hover / item:text - cyan - 300 transition - colors">;
+                                      {dropdown_item.name}
+                                    </div>;
+                                    {dropdown_item.name === 'View All Services' && (
+                                      <div className="text - xs text - gray - 400">Explore our complete portfolio</div>)}
+                                  </div>;
+                                </Link>))}
+                            </div>;
+                          </div>;
+                        </motion.div>)}
+                    </AnimatePresence>;
+                  </div>) : (
+                  <Link;
+                    href={item.href}
+                    className='text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50'                  >                    className="text - gray - 300 hover:text - white transition - colors duration - 300 py - 2 px - 3 rounded - lg hover:bg - gray - 800 / 50";
+                  >;
+                    {item.name}
+                  </Link>)}
+              </div>))}
+          </div>;
+          </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Contact Info & CTA */}
-
-
             {/* Contact Info */}
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <div className='flex items-center space-x-2'>;
                 <Phone className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.mobile}</span>          <div className="hidden lg:flex items-center space-x-6">;
             {/* Contact Info */}
 
-                <span>{contactInfo.mobile}</span>
-
-              </div>
-            </div>
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
+<<<<<<< HEAD
               <Link
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
-
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30">;
-                <Rocket className="w-4 h-4 mr-2" />;
-                Get Started;
-              </Link>;
-            </motion && motion.div>;
-          </div>;
-
-
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
@@ -443,6 +611,7 @@ interface UltraFuturisticNavigationProps {
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
             </button>
           </div>
         </div>
@@ -453,6 +622,13 @@ interface UltraFuturisticNavigationProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -460,6 +636,7 @@ interface UltraFuturisticNavigationProps {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden'
           >
@@ -487,15 +664,17 @@ interface UltraFuturisticNavigationProps {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {activeDropdown === item.name && (
                         <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         />;
                       </button>;
+
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
 
+<<<<<<< HEAD
 
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -506,9 +685,16 @@ interface UltraFuturisticNavigationProps {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                          transition={{ duration: 0.2 }}
+                          className='ml-4 mt-2 space-y-2'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         >
                           {item.dropdownItems?.map(dropdownItem => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                          transition={{ duration: 0 && 0.2 }}
+                          className='ml-4 mt-2 space-y-2'>;
+                          {item && item.dropdownItems?.map(dropdownItem => (;
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
@@ -516,17 +702,26 @@ interface UltraFuturisticNavigationProps {
                               onClick={() => setIsOpen(false)}
                             >
                               <div
+<<<<<<< HEAD
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
                               >
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                                className={`w-8 h-8 bg-gradient-to-r ${dropdownItem && dropdownItem.color} rounded-lg flex items-center justify-center`}>;
+                                <dropdownItem && dropdownItem.icon className='w-4 h-4 text-white' />;
+                              </div>;
+                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem && dropdownItem.name}                        >;
+                          {item && item.dropdownItems?.map((dropdownItem) => (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <Link
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
                               onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
                             >
                               <div className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}>
                                 <dropdownItem.icon className="w-4 h-4 text-white" />
@@ -541,40 +736,78 @@ interface UltraFuturisticNavigationProps {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               </span>
                             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           ))}
                         </motion && motion.div>;
                       )}
                     </div>;
                   ) : (;
                     <Link
+<<<<<<< HEAD
                       href={item.href}
 =======
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
                       onClick={() => setIsOpen(false)}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
 
                       onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     >
                       {item.name}
                     </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
               ))}
 
-              {/* Mobile Contact Info */}
-              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
-                <div className='flex items-center space-x-3 text-gray-300'>
-                  <Phone className='w-4 h-4 text-cyan-400' />
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-sm'>{contactInfo.address}</span>                </div>
+              </div>
+              {/* Mobile CTA */}
+              <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              {/* Mobile Contact Info */}
+                  <span>{contactInfo.mobile}</span>
+                      onClick={() => setIsOpen(false)}
+                    >;
+                      {item && item.name}
+                    </Link>;
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <Mail className="w-4 h-4 text-purple-400" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-green-400" />
+                  <span className="text-sm">{contactInfo.address}</span>
+                </div>
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;
@@ -588,8 +821,6 @@ interface UltraFuturisticNavigationProps {
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
-              {/* Mobile CTA */}
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -709,53 +940,46 @@ interface UltraFuturisticNavigationProps {
                   on_click={() => setIsOpen (false)}
                 >;
                   <Rocket className="w - 5 h - 5 inline mr - 2" />;
-
                   Get Started;
                 </Link>;
               </div>;
             </div>;
-
-=======
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Rocket className="w-5 h-5 inline mr-2" />
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
+<<<<<<< HEAD
       </AnimatePresence>
     </nav>
 );
   );
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+}
+
 
 }
+<<<<<<< HEAD
 =======
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+
+  );
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+  );
+}
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
+<<<<<<< HEAD
 =======
       </AnimatePresence>
     </nav>
@@ -767,3 +991,6 @@ interface UltraFuturisticNavigationProps {
 }
   );
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

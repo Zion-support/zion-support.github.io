@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,4 +12,8 @@ const { execSync } = require('child_process')
         return {"success": false,"error"}
 // console.log(`Build "Status"`)
     console.log(`Bundle "Size": ${bundleSize.success ? `${bundleSize.sizeInMB} MB``)
+<<<<<<< HEAD
 
+=======
+    console.log(`"Dependencies"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

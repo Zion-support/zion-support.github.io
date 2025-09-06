@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -17,4 +20,8 @@ const path = require('path')
       execSync('pm2 save', { "stdio"})
       execSync('pm2 status', { "stdio"})
 // console.log('\n� Automation "Schedule")
+<<<<<<< HEAD
 
+=======
+    console.log('\n  Useful PM2 "Commands")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

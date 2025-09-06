@@ -2,6 +2,8 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
+<<<<<<< HEAD
+=======
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
@@ -51,6 +53,7 @@ const supabaseConfig: SupabaseConfig = {
 export const supabase = createSupabaseClient(supabaseConfig);
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -63,11 +66,33 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
+<<<<<<< HEAD
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+        single: () => null;
+      });
+    });
+  });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
   });
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  });
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -108,7 +114,10 @@ const fs = require("fs").promises;
 const path = require("child_process");
 const { exec } = require("child_process");
 const util = require("child_process");
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const execAsync = util.promisify(exec);
 class ErrorMonitor {}
   constructor() {}
@@ -217,7 +226,10 @@ class ErrorMonitor {}
     // Save report;
     const reportFile = path.join()
       this.reportsDir;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       `error-report-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log("info", `Error report saved to ${reportFile}`);
@@ -278,4 +290,8 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
+<<<<<<< HEAD
 
+=======
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

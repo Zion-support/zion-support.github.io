@@ -5,27 +5,88 @@ import path from "path";
 async function fetchFromGitHub() {
   try {
     const response = await fetch(
+<<<<<<< HEAD
+    );
+=======
 
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
 
     );
+<<<<<<< HEAD
     if (!response && response.ok) return null;
     const data = await response && response.json();
     return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
+=======
+    if (!response.ok) return null;
+    const data = await response.json();
+    return JSON.parse(Buffer.from(data.content, "base64").toString());
   } catch {
     return null;
   }
 }
 
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  if (req.method !== "GET") {;
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  try {
+    const localPath = path.join(process.cwd(), "data", "homepage.json");
+    if (fs.existsSync(localPath)) {
+      const local = JSON.parse(fs.readFileSync(localPath, "utf-8"));
+      return res.status(200).json(local);
+    }
+  } catch {
+    // fall back to remote
+  }
+
+  const remote = await fetchFromGitHub();
+  if (remote) return res.status(200).json(remote);
+  return res.status(200).json(null);
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs';
+import path from './path';
+;
+async /**
+ * fetchFromGitHub - Function description
+ */
+function fetchFromGitHub() {
+  try {
+    const response = await fetch (
+      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
+    );
+    // Check condition
+if (return null) {
+  $2
+}
+    const data = await response.json ();
+    return JSON.parse (Buffer.from (data.content, "base64").to_string ());
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  } catch {
+    return null;
+  }
+}
+<<<<<<< HEAD
+=======
+
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
   try {
+<<<<<<< HEAD
+=======
 
     const localPath = path.join(process.cwd(), 'publicautonomyHOMEPAGE_CONTENT.json');
     if (fs.existsSync(localPath)) {
@@ -43,6 +104,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message || 'Internal error' })
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -61,7 +123,10 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
     return res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json");
@@ -75,9 +140,13 @@ if ( {) {
   } catch {
     // fall back to remote;
   }
+<<<<<<< HEAD
   const remote = await fetchFromGitHub();
   if (remote) return res.status(200).json(remote);
   return res.status(200).json(null);
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -111,10 +180,24 @@ async function fetchFromGitHub(): Promise<any | null> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  if (remote) return res && res.status(200).json(remote);
+  return res && res.status(200).json(null);
+}
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -124,77 +207,20 @@ async function fetchFromGitHub(): Promise<any | null> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
-;
-export default async function handler(req, res) {
-  try {
-  res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
-  try {
-    const localPath = path.join(process.cwd(), 'publicautonomyHOMEPAGE_CONTENT.json'),;
-    if (fs.existsSync(localPath)) {;
-      try {
-        const json = JSON.parse(fs.readFileSync(localPath, 'utf8')),;
-        return res.status(200).json(json);
-      } catch {;
-        // fall back to remote;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+<<<<<<< HEAD
+=======
+
+=======
+  return res.status (200).json (null);
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
 }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const remote = await fetchFromGitHub();
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

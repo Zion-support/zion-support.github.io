@@ -11,4 +11,13 @@ export const validateAriaLabels = () =>: any {
 // Accessibility checker utilities
 export const checkAccessibility = () => {;
   console.log('Checking accessibility...');
+<<<<<<< HEAD
 
+=======
+
+};
+
+export const validateAriaLabels = () => {;
+  console.log('Validating ARIA labels...');
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

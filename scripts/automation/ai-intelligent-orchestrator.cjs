@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * AI-Powered Intelligent Orchestrator;
@@ -32,4 +35,8 @@ const { execSync } = require('child_process')
       "action"
         "type"
       this.log(` Learning model update "failed"`)
+<<<<<<< HEAD
 
+=======
+      this.log(` Fatal "error"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

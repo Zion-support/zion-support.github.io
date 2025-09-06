@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -6,7 +9,10 @@ const glob = require('glob');
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.fixesApplied = 0};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -50,7 +56,10 @@ class ImportExtensionFixer {}
 // Run the automation if this script is executed directly;
 if (require.main === module) {}
   const automation = new ImportExtensionFixer();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   automation.run();
     .then(() => {}
       console.log('Import Extension Fixer completed successfully!');
@@ -59,4 +68,8 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 
+=======
+module.exports = ImportExtensionFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -9,8 +9,12 @@ export interface TokenTransaction {;
 export interface TokenTransaction {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -19,10 +23,19 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
+<<<<<<< HEAD
 export interface TokenConfig {
 
 export interface TokenConfig {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+export interface TokenConfig {;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   name: string;
   symbol: string;
   total_supply: number;
@@ -31,6 +44,8 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
+=======
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
@@ -38,6 +53,7 @@ const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && tra
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -75,6 +91,8 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
+<<<<<<< HEAD
+=======
 
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
@@ -91,10 +109,17 @@ function load_config (): TokenConfig {
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
 
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
@@ -103,6 +128,7 @@ function save_config (config: TokenConfig): void {
 function getDefaultConfig (): TokenConfig {
 
   return {
+<<<<<<< HEAD
     name: 'ZION Token'
     symbol: 'ZION$'
     totalSupply: 1000000000
@@ -116,6 +142,13 @@ export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    name: 'ZION Token',
+    symbol: 'ZION$',
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
 
@@ -129,13 +162,19 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   saveTransactions(transactions);
   return newTransaction;
 }
+<<<<<<< HEAD
 export function getConfig(): TokenConfig {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return loadConfig();
 }
 export function setConfig(config: TokenConfig): void {
   saveConfig(config);
 }
+<<<<<<< HEAD
 export function getUserBalance(userId: string): number {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -146,11 +185,6 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -162,12 +196,15 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
+<<<<<<< HEAD
+=======
 
   
   return Math && Math.max(0, balance);
 
 }
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -175,27 +212,84 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function getAllTransactions (): TokenTransaction[] {
+  return load_transactions ();
+}
+export function add_transaction (transaction: Omit < TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+  const transactions = load_transactions ();
+  const new_transaction: TokenTransaction = {
+    ...transaction,
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    timestamp: new Date ().toISOString ();
+=======
+<<<<<<< HEAD
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function get_config (): TokenConfig {
+  return load_config ();
+=======
+<<<<<<< HEAD
+export function getConfig(): TokenConfig {
+  return loadConfig();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function getUserBalance (user_id: string): number {
+  const transactions = load_transactions ();
+=======
+export function getUserBalance(userId: string): number {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const transactions = loadTransactions();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -217,4 +311,3 @@ if ( {) {
     }
   }
   return Math.max (0, balance);
-}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title?: string;
   description?: string;
   keywords?: string;
@@ -36,6 +39,7 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
+<<<<<<< HEAD
 
 
 const SEOHead: React.FC<SEOHeadProps> = ({;
@@ -130,27 +134,48 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta property="og:image:alt" content={title} />;
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <meta name="twitter:title" content={title} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={fullOgImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
+<<<<<<< HEAD
       {/* Additional SEO */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
+      <script;
+        type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
-    </Head>
+      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
+      <link rel="preconnect" href="https://images && images.unsplash.com" />;
+    </Head>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default SEOHead;
 export default SEOHead;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          __html: JSON.stringify (structured_data || defaultStructuredData);
+        }}
+      />;
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />;
+      <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="anonymous" />;
+      <link rel="preconnect" href="https://images.unsplash.com" />;
+    </Head>);
+}
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

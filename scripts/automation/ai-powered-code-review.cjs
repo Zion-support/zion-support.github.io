@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -250,4 +253,8 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
+<<<<<<< HEAD
 
+=======
+  const content = fs.readFileSync(filePath, ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

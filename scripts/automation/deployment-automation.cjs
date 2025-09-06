@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +23,10 @@ class DeploymentAutomation {}
     const dirs = ['automation/logs', 'deployment-reports'];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -296,4 +302,8 @@ if ( {})
      {}
   const deployment = new DeploymentAutomation}(;);
   deployment.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = DeploymentAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

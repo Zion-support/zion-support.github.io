@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -14,6 +15,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
+=======
+<CardTitle className="flex items-center gap-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <FileText className="h-5 w-5" />
             Standard Contracts
           </CardTitle>
@@ -22,6 +26,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -31,12 +40,25 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
+<<<<<<< HEAD
+=======
+
+
+          <Button variant="outline" onClick={onStandardClick}>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Create Standard Contract
           </Button>
         </CardFooter>
       </Card>
       
       <Card>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -61,6 +83,33 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
+=======
+
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+            onClick={onSmartClick}
+
+          >
+            Create Smart Contract
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+
+
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -131,7 +180,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>;
         </CardFooter>;
       </Card>;
-    </div>;
+
   );
 }
+<<<<<<< HEAD
+=======
+
+    </div>);
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

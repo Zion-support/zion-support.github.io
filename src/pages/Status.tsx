@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -10,6 +11,70 @@ interface ServiceStatus {
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
   lastChecked: string
+=======
+interface ServiceStatus {
+
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
+  lastChecked: string
+}
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+
+
+
+
+
+;
+
+const FALLBACK_SERVICES: ServiceStatus[] = [
+  {
+    name: "Marketplace API",
+    status: "operational",
+    description: "Product listings and search functionality",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Authentication Service", 
+    status: "operational",
+    description: "User login and registration",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Payment Processing",
+    status: "operational", 
+    description: "Checkout and payment handling",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Talent Directory",
+    status: "operational",
+    description: "AI talent profiles and matching",
+    lastChecked: new Date().toISOString()
+
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -394,4 +459,9 @@ export default function Status() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

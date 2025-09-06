@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -53,7 +56,10 @@ function run() {}
 		for (const rel of files) {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			try {}
 				if (processFile(fp)) {}
 					changed++};
@@ -62,4 +68,8 @@ function run() {}
 		};
 	};
 	console.log(`Repaired imports/exports in ${changed} of ${total} files.`)};
+<<<<<<< HEAD
 
+=======
+run();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

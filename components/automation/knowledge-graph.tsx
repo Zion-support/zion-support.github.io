@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
+
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -31,15 +45,6 @@ export default function KnowledgeGraph({ report }: Props) {
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-        </ul>
-      </section>
-    </div>
-);
-}
-  );
-}
-
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -80,6 +85,7 @@ if (return <div > No knowledge graph yet.</div>) {
         </ul>;
       </section>;
     </div>);
+<<<<<<< HEAD
   }
 },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -115,3 +121,5 @@ if (return <div > No knowledge graph yet.</div>) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -7,15 +8,21 @@ import { Settings, Code, Zap, Users } from 'lucide-react';
 =======
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const features = [;
   {}
@@ -43,6 +50,10 @@ const features = [;
     benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
   }
 ;];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const technologies = [;
   { category: 'Frontend, techs: ['_React, 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },',
   { category: 'Backend, techs: ['Node.js, 'Python', 'Java', 'C#', 'Go'] },',
@@ -50,6 +61,10 @@ const technologies = [;
   { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',
   { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',
 ;];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const process = [;
   { step: 'Discovery, description: 'Understanding your requirements and business goals' },',
   { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',
@@ -58,12 +73,20 @@ const process = [;
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
 ;];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const stats = [;
   { number: '150+, label: 'Custom Projects' },',
   { number: '98%, label: 'Client Satisfaction' },',
   { number: 'On Time, label: 'Delivery Rate' },',
   { number: '5+, label: 'Years Experience' }',
 ;];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function CustomDevelopmentPage() {
   return (;
     <Layout);
@@ -78,6 +101,10 @@ export default function CustomDevelopmentPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -87,6 +114,7 @@ export default function CustomDevelopmentPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
+<<<<<<< HEAD
 
                 <h1 className="text-5xl md: text-6xl font-bold">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>",;
                 </h1>;
@@ -103,12 +131,34 @@ export default function CustomDevelopmentPage() {
                   href="/case-studies""
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"",>,;
 
+=======
+                <h1 className="text-5xl md:text-6xl font-bold">";
+                  Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>";
+                </h1>;
+              </div>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
+                Bespoke software solutions designed specifically for your unique business needs and requirements;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Start Your Project;
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;
+                  href="/case-studies"";
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
+                >;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View Portfolio;
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
@@ -118,6 +168,16 @@ export default function CustomDevelopmentPage() {
                 <motion&& motion.div}),
                   key={stat && stat.label}
 
+=======
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">"
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+              {stats.map((stat, index) => (,
+                <motion.div}),
+                  key={stat.label}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -130,22 +190,38 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>",;
 
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {features.map((feature, index) => (,
                 <motion.div}),
@@ -164,6 +240,10 @@ export default function CustomDevelopmentPage() {
                       <p className="text-gray-600">{feature.description}</p>"
                     </div>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <ul className="space-y-3">";
                     {feature.benefits.map((benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
@@ -177,22 +257,38 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Technologies Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>",;
 
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
             </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {technologies.map((category, index) => (,
                 <motion.div}),
@@ -218,28 +314,45 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Process Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>",;
 
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16""
+            >;
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
               </p>;
             </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {process.map((step, index) => (,
                 <motion.div}),
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
@@ -247,6 +360,14 @@ export default function CustomDevelopmentPage() {
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">",;
                       <span className="text-white font-bold text-lg">{index + 1}</span>";
 
+=======
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
+                >;
+                  <div className="flex items-center mb-4">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";
+                      <span className="text-white font-bold text-lg">{index + 1}</span>"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"
                   </div>;
@@ -256,20 +377,32 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Build Something Custom?,;
 
+=======
+              transition={{ duration: 0.8 }}
+            >,
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
+                Ready to Build Something Custom?;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
@@ -281,6 +414,20 @@ export default function CustomDevelopmentPage() {
                   href="/solutions""
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"",>,;
 
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link;
+                  href="/contact"";
+                  className="px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+                >;
+                  Start Custom Project;
+                  <ArrowRight className="ml-2 w-5 h-5" />";
+                </Link>;
+                <Link;
+                  href="/solutions"";
+                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"";
+                >;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   View All Solutions;
                 </Link>;
               </div>;
@@ -290,3 +437,7 @@ export default function CustomDevelopmentPage() {
       </div>;
     </Layout>;
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

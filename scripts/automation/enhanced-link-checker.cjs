@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -173,4 +176,8 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
+<<<<<<< HEAD
 
+=======
+  console.error(" Link checker automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node,"}),"
 ,"}),"
 const fs = require(,"}),"
@@ -33,4 +36,8 @@ const fs = require(,"}),"
         "action"
       '\n Dependency Monitor "Summary"
   '\n "Recommendations"
+<<<<<<< HEAD
 
+=======
+      '\n� "CRITICAL"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

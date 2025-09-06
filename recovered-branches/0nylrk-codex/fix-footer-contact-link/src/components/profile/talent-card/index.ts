@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+export { TalentCardSkills } from './TalentCardSkills';
+<<<<<<< HEAD
+
+=======
+=======
 export { TalentCardAvatar } from "./TalentCardAvatar";
 export { TalentCardAvailability } from "./TalentCardAvailability";
 export { TalentCardBadges } from "./TalentCardBadges";
@@ -6,6 +19,7 @@ export { TalentCardFooter } from "./TalentCardFooter";
 export { TalentCardHeader } from "./TalentCardHeader";
 export { TalentCardSaveButton } from "./TalentCardSaveButton";
 export { TalentCardSkills } from "./TalentCardSkills";
+<<<<<<< HEAD
 
 export { TalentCardAvatar } from './TalentCardAvatar';
 export { TalentCardAvailability } from './TalentCardAvailability';
@@ -22,3 +36,9 @@ export { TalentCardFooter } from './TalentCardFooter',;
 export { TalentCardHeader } from './TalentCardHeader',;
 export { TalentCardSaveButton } from './TalentCardSaveButton',;
 export { TalentCardSkills } from './TalentCardSkills';
+=======
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

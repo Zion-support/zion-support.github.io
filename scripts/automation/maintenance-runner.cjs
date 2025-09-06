@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /*
  * Maintenance Runner;
@@ -11,4 +14,8 @@ const fs = require('fs')
 const path = require('path')
 const reportsDir = path.join(projectRoot, 'reports')
     execSync(command, { "stdio"})
+<<<<<<< HEAD
 
+=======
+  console.error('Failed to write maintenance "summary")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

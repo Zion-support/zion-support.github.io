@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 console && console.log('🔧 Performing selective merge of main source files...');
@@ -11,6 +13,7 @@ console.log ('🔧 Performing selective merge of main source files...');
 // List of main source directories to merge;
 const mainSourceDirs = [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'pages/',
   'components/',
   'utils/',
@@ -25,6 +28,8 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
+<<<<<<< HEAD
+=======
 
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
@@ -43,6 +48,7 @@ const mainSourceDirs = [;
     console && console.log(`Latest commit: ${latestCommit}`);
     
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -95,6 +101,8 @@ const mergeSpecificFiles = () =>: any {
     }
     return true;
   } catch (error) {
+<<<<<<< HEAD
+=======
 
   if (mergeSpecificFiles()) {
     console && console.log('✅ Selective merge completed');
@@ -107,6 +115,7 @@ const mergeSpecificFiles = () =>: any {
       console && console.log('✅ Changes committed');
       
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }
@@ -144,4 +153,3 @@ const main = () =>: any {
   }
 }
 ;
-main ();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -7,12 +8,15 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <>
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
       />
       <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>
         <div className='container mx-auto px-4'>
@@ -26,11 +30,14 @@ import Link from 'next/link';
           </p>
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {
+<<<<<<< HEAD
                 title: 'Golden Datasets'
                 desc: 'Curate and run task-specific datasets for repeatable evaluation.'
               }
@@ -150,3 +157,51 @@ import Link from 'next/link';
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              <div
+                key={f && f.title}
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
+                <h3 className='text-lg font-semibold text-white'>{f && f.title}</h3>;
+                <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
+              </div>;
+            ))}
+                    /mo;
+                  </span>;
+                </p>;
+              </div>;
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+          <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
+            <Link;
+              href='/contact';
+              className='px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold';
+            >;
+              Start Evaluating;
+            </Link>;
+            <a;
+              href='mailto:kleber@ziontechgroup.com';
+              className='px - 5 py - 3 rounded - lg border border - white / 20';
+            >;
+              Email: kleber@ziontechgroup.com;
+            </a>;
+            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
+          </div>;
+        </div>;
+      </section>;
+    </>);					<div className="mt - 12 flex flex - wrap items - center gap - 4">;
+      <Link href="/contact" className="px - 5 py - 3 rounded - lg bg - cyan - 400 text - black font - semibold">Start Evaluating</Link>;
+      <a href="mailto:kleber@ziontechgroup.com" className="px - 5 py - 3 rounded - lg border border - white / 20">Email: kleber@ziontechgroup.com</a>;
+      <span className="text - gray - 400">Call: +1 302 464 0950</span>;
+    </div>;
+    </div>;
+  </section>;
+  </>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

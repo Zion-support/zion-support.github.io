@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -199,6 +200,73 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         variant: "destructive";
       });
     } finally {;
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface ApplyFormProps {
+  job: Job;
+  onClose: () => void;
+}
+
+export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
+  const [activeTab, setActiveTab] = useState('message');
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const { applyToJob } = useJobApplications();
+  const { sendMessage } = useMessaging();
+
+  const handleSubmit = async () => {
+    if (!selectedResume) {
+      toast({
+        title: 'Resume required',
+        description: 'Please select a resume before applying.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await applyToJob(job.id, {
+        resumeId: selectedResume.id,
+        message,
+      });
+
+      // Send a message to the job poster
+      await sendMessage({
+        content: `I'm interested in the ${job.title} position. ${message}`,
+        recipientId: job.posterId,
+        jobId: job.id,
+      });
+
+      toast({
+        title: 'Application submitted',
+        description: 'Your application has been sent successfully.',
+      });
+      
+      onClose();
+    } catch (error) {
+      logErrorToProduction('Job application failed', error);
+      toast({
+        title: 'Application failed',
+        description: 'There was an error submitting your application.',
+        variant: 'destructive',
+      });
+    } finally {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setIsSubmitting(false);
     }
   };
@@ -240,10 +308,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           Cancel
         </Button>
         <Button
+<<<<<<< HEAD
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+=======
+          onClick={handleSubmit}
+          disabled={isSubmitting || !selectedResume}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         >
           {isSubmitting ? (
             <>
@@ -253,9 +326,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
         </Button>;
       </div>;
     </>;
   );
 }
 ;
+=======
+        </Button>
+      </div>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Advanced Testing Automation;
@@ -6,7 +9,10 @@
  */
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
       'INFO': 'ℹ'
@@ -78,4 +84,8 @@ const { execSync } = require('child_process')
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
+<<<<<<< HEAD
 
+=======
+    console.error('Advanced testing automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

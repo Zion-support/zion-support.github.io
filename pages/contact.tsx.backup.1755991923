@@ -59,6 +59,10 @@ export default function ContactPage() {
 
   const contactMethods = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
       value: '+1 302 464 0950',
@@ -75,6 +79,25 @@ export default function ContactPage() {
       color: 'from-green-500 to-green-600',
       bgColor: 'from-green-500/10 to-green-600/10',
       link: 'mailto:kleber@ziontechgroup.com'
+<<<<<<< HEAD
+=======
+=======
+      icon: '📧',
+      title: 'Email',
+      description: 'Get in touch with our team',
+      contact: 'kleber@ziontechgroup.com',
+      color: 'text-cyan-400',
+      gradient: 'from-cyan-400 to-blue-500',
+    },
+    {
+      icon: '📱',
+      title: 'Phone',
+      description: 'Speak with an expert',
+      contact: '+1 302 464 0950',
+      color: 'text-fuchsia-400',
+      gradient: 'from-fuchsia-400 to-purple-500',
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b289
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -116,6 +139,10 @@ export default function ContactPage() {
 
   const whyChooseUs = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: <Star className="w-5 h-5" />,
       title: 'Expert Team',
       description: 'Certified professionals with 10+ years of experience'
@@ -129,6 +156,30 @@ export default function ContactPage() {
       icon: <Shield className="w-5 h-5" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime guarantee'
+<<<<<<< HEAD
+=======
+=======
+      city: 'Middletown',
+      country: 'United States',
+      address: '364 E Main St STE 1008, Middletown, DE 19709',
+      icon: '🏢',
+      gradient: 'from-blue-400 to-cyan-500',
+    },
+    {
+      city: 'Global Support',
+      country: 'Worldwide',
+      address: '24/7 Remote Support & Consulting Available',
+      icon: '🌍',
+      gradient: 'from-purple-400 to-pink-500',
+    },
+    {
+      city: 'Cloud Operations',
+      country: 'Multi-Region',
+      address: 'AWS, Azure, GCP Infrastructure Worldwide',
+      icon: '☁️',
+      gradient: 'from-green-400 to-teal-500',
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b289
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     {
       icon: <Users className="w-5 h-5" />,

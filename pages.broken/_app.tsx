@@ -1,10 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+<<<<<<< HEAD
+=======
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,4 +42,8 @@ import _React from 'react'; import type { AppProps } from 'next/app'; import Lay
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

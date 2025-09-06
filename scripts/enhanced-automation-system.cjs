@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 console.log(' Enhanced Automation System Starting...')
         this.logDir = 'automation-reports'
@@ -39,4 +44,8 @@ console.log(' Enhanced Automation System Starting...')
         "command"
         execSync(check.command, { "stdio"})
             this.log(`System "error"`)
+<<<<<<< HEAD
 
+=======
+    console.error('Automation system "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

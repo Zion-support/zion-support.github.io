@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+=======
+</ArrowRight>;
+                      </Link>;
+                    </li>;
+                </ul>;
+              </div>;
+          </div>";
+
+          <div className="pt - 8 border - t border - slate - 800 / 50">";
+</div>";
+            <div className="flex flex - col md: flex - row justify - between items - center space - y-4 md:space - y-0">", </div>",
+              <div className="text - slate - 400 text - sm">";
+</div>;
+              </div>";
+              <div className="flex items - center space - x-6 text - sm text - slate - 400">";
+</div>";
+                <span className="flex items - center">";
+</span>";
+                  <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2" />";
+</CheckCircle>;
+                </span>";
+                <span className="flex items - center">";
+</span>";
+                  <Shield className="w - 4 h - 4 text - blue - 400 mr - 2" />";
+</Shield>;
+                </span>";
+                <span className="flex items - center">";
+</span>";
+                  <Award className="w - 4 h - 4 text - yellow - 400 mr - 2" />";
+</Award>;
+                </span> </div>;
+
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 
 export default function FuturisticFooter() {
@@ -10,11 +52,19 @@ export default function FuturisticFooter() {
   );
 }
   ],
+<<<<<<< HEAD
 
   const socialLinks = ['],
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
     { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
     { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }']
+=======
+,
+  const socialLinks = ['],
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
 ,
   return ('),
@@ -33,6 +83,7 @@ export default function FuturisticFooter() {
         <div className="container mx-auto px-4 py-16">",
 </div>,
           <motion.div,",
+<<<<<<< HEAD
             className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
 
             initial={{ opacit: y: 0, y: 20 }},
@@ -40,17 +91,31 @@ export default function FuturisticFooter() {
             viewport={{ onc: e: true }},
             transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},
 
+=======
+            className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            viewport={{ once: true }};
+            transition={{ duration: 0.6, staggerChildren: 0.1 }};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
+<<<<<<< HEAD
 
                 initial={{ opacit: y: 0, y: 20 }},
                 whileInView={{ opacit: y: 1, y: 0 }},
                 viewport={{ onc: e: true }},
                 transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},
 
+=======
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                viewport={{ once: true }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -61,6 +126,7 @@ export default function FuturisticFooter() {
 </stat>,
                   </div>,
           {/* Main Footer Content */}",
+<<<<<<< HEAD
           <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-6 gap-8 mb-12">",
 </div>",
             <div className="l: g: col-span-2">",
@@ -69,6 +135,16 @@ export default function FuturisticFooter() {
                 initial={{ opacit: y: 0, y: 20 }},
                 whileInView={{ opacit: y: 1, y: 0 }},
                 transition={{ duratio: n: 0.6 }}",
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">",
+</div>",
+            <div className="lg: col-span-2">",
+</div>,
+              <motion.div,
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.6 }}",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
@@ -98,7 +174,11 @@ export default function FuturisticFooter() {
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
+<<<<<<< HEAD
                   <a href="te: l: +13024640950" className="hove: r:text-cyan-400 transition-colors">",
+=======
+                  <a href="tel: +13024640950" className="hover:text-cyan-400 transition-colors">",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </a>,
                   </a>,
                 </div>",
@@ -106,7 +186,11 @@ export default function FuturisticFooter() {
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
+<<<<<<< HEAD
                   <a href="mailt: o: kleber@ziontechgroup.com" className="hove: r:text-cyan-400 transition-colors">",
+=======
+                  <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </a>,
                   </a>,
                 </div>",
@@ -130,11 +214,19 @@ export default function FuturisticFooter() {
 </li>,
                       <Link,
                         href={link.href}",
+<<<<<<< HEAD
                         className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",
+=======
+                        className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
+                      >,
+</Link>",
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -143,7 +235,11 @@ export default function FuturisticFooter() {
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
+<<<<<<< HEAD
             <div className="flex flex-col: md: flex-row justify-between items-center space-y-4: md:space-y-0">",
+=======
+            <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </div>",
               <div className="text-slate-400 text-sm">",
 </div>,
@@ -171,6 +267,12 @@ export default function FuturisticFooter() {
         </div>,
       </div>,
     </footer>",
+<<<<<<< HEAD
+=======
+
+    </footer>";
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   ],;
 ,;
@@ -329,4 +431,8 @@ export default function FuturisticFooter() {
           </div>,;
         </div>,;
       </div>,;
+<<<<<<< HEAD
     </footer>",;
+=======
+    </footer>",;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

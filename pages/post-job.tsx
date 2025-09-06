@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useState } from 'react',;
 import { useRouter } from 'next/router',;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -16,11 +32,36 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
+<<<<<<< HEAD
     e.preventDefault()
     setError(null)
     if (!title |!description |!category |!clientEmail) {
       setError('Please fill in all required fields.')
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+    e.preventDefault();
+    setError(null);
+
+    if (!title || !description || !category || !clientEmail) {
+      setError('Please fill in all required fields.');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+<<<<<<< HEAD
+=======
+    e.preventDefault()
+    setError(null)
+    if (!title |!description |!category |!clientEmail) {
+      setError('Please fill in all required fields.')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return
     }
     try {
@@ -29,21 +70,57 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+          title;
+          description;
+          category;
+          requiredSkills: skills
+            .split()
+            .map((s) => s.trim())
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
+          clientEmail})});
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       setIsSubmitting(false),
 
     }
+<<<<<<< HEAD
   }
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -68,11 +145,13 @@ export default function PostJobPage(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;
@@ -113,14 +192,139 @@ export default function PostJobPage(req, res) {
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+
+
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage(req, res) {
+  try {
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setError(null);
+    if (!title || !description || !category || !clientEmail) {;
+      setError('Please fill in all required fields.');
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
+  }
+}
+;
+    try {
+      setIsSubmitting(true);
+      const res = await fetch('/api/jobs', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          description,;
+          category,;
+          requiredSkills: skills;
+            .split();
+            .map((s) => s.trim());
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
+          clientEmail})}),;
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
+      router.push(`/client/dashboard`);
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
+      setIsSubmitting(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return (
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+
+      setIsSubmitting(false),
+    }
+  }
+  return (
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage(req, res) {
+  try {
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setError(null);
+    if (!title || !description || !category || !clientEmail) {;
+      setError('Please fill in all required fields.');
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  return (
+    <div className="max-w-2xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {error && <p className="text-red-600 mb-3">{error}</p>}
       {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -158,25 +362,60 @@ export default function PostJobPage(req, res) {
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {isSubmitting ? 'Posting…' : 'Post Job'}
           </button>
         </div>
       </form>
     </div>
   )
+<<<<<<< HEAD
   );
 };
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  );
+};
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 
 =======
 }
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -287,7 +526,45 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+};
+            {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>;
+        </div>;
+      </form>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

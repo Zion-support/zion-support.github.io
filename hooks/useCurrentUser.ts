@@ -1,6 +1,19 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 export function useCurrentUser() {
+=======
+<<<<<<< HEAD
+export function useCurrentUser() {
+
+export function useCurrentUser() {;
+
+export function useCurrentUser() {
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -22,10 +35,20 @@ function useCurrentUser() {
     mutate,
   }
     loading: !data && !error;
+<<<<<<< HEAD
+=======
+
     error
 
+=======
+
     error,
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     mutate}
 
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
@@ -35,6 +58,7 @@ export function useCurrentUser() {
     user: data?.user || null, loading: !data && !error,
     error;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     mutate}
 }
 }

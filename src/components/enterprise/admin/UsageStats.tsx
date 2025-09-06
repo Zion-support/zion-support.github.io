@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -30,6 +31,15 @@ export function UsageStats() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+=======
+return (
+
+
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -58,6 +68,8 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         
         <Card>
           <CardHeader>
@@ -87,6 +99,8 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         
         <Card>
           <CardHeader>
@@ -116,6 +130,8 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+
+
         
         <Card>
           <CardHeader>
@@ -157,6 +173,11 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -172,6 +193,7 @@ export function UsageStats() {
         </div>
         <Button>Contact Us</Button>
       </div>
+<<<<<<< HEAD
     </div>
   )
 import React from "react",;
@@ -179,6 +201,9 @@ import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {;
   Card,;
   CardContent,;
@@ -339,9 +364,22 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
         <Button>Contact Us</Button>;
       </div>;
     </div>;
   );
 }
 ;
+=======
+
+
+
+        <Button > Contact Us</Button>;
+      </div>;
+    </div>);
+}"}
+
+    </div>
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

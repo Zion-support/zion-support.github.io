@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Monitoring Automation;
@@ -6,7 +9,10 @@
  */
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   log(message, type = 'INFO')
       'INFO': 'ℹ'
       'SUCCESS': ''
@@ -33,4 +39,8 @@ const path = require('path')
         "type"
         "severity"
                 console.error('Failed to load "metrics")
+<<<<<<< HEAD
 
+=======
+    console.error('Monitoring automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

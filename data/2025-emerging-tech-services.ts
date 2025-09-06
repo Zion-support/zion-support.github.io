@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  {
+
+      'Unbreakable encryption security',
+      'Future-proof against quantum attacks',
+      'Reduce security risks by 99 && 99.9%',
+    id: 'quantum - encryption',
+    name: 'Quantum Encryption Platform',
+    tagline: 'Unbreakable quantum encryption for the post - quantum era',
+    description:;
+      'Next - generation encryption platform that uses quantum - resistant algorithms and quantum key distribution to provide unbreakable security for the post - quantum computing era.',
+    category: 'Cybersecurity',
+    price: {
+      monthly: 1899,
+      yearly: 18990,
+      currency: 'USD',
+      trial_days: 30,
+      setup_time: '1 week',
+    },
+    features: [;
+      'Quantum - resistant algorithms',
+      'Quantum key distribution',
+      'Post - quantum cryptography',
+      'Real - time encryption',
+      'Multi - layer security',
+      'Compliance automation',
+      'Performance monitoring',
+      'API integration',
+      'Mobile security',
+      'Cloud security',
+    ],
+    benefits: [;
+      'Unbreakable encryption security',
+      'Future - proof against quantum attacks',
+      'Reduce security risks by 99.9%',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
@@ -8,12 +48,18 @@
     yearly: number;
     currency: string;
     trialDays: number;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       'Comply with future regulations',
       'Enable quantum - safe communications',
     ],
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-encryption',
@@ -56,6 +102,7 @@
     link: 'https://ziontechgroup.com / quantum - encryption',
 
     icon: '🔐',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 25',
@@ -64,6 +111,8 @@
     reviews: 145,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards',
     ],
@@ -139,6 +188,7 @@
     link: 'https://ziontechgroup.com / synthetic - biology - platform',
 
     icon: '🧬',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 500 to - teal - 600',
     popular: true,
     launch_date: '2025 - 03 - 01',
@@ -147,6 +197,8 @@
     reviews: 56,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards',
     ],
@@ -223,6 +275,7 @@
     link: 'https://ziontechgroup.com / fusion - energy - ai',
 
     icon: '⚡',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2025 - 03 - 05',
@@ -231,6 +284,8 @@
     reviews: 6,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Network security standards, Government security, Financial regulations, International communication standards',
     ],
@@ -308,6 +363,7 @@
     link: 'https://ziontechgroup.com / quantum - internet',
 
     icon: '🌐',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2025 - 03 - 10',
@@ -316,6 +372,8 @@
     reviews: 23,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Medical device regulations, Research ethics, Safety standards, Government approval, International standards',
     ],
@@ -392,6 +450,7 @@
     link: 'https://ziontechgroup.com / brain - computer - interface',
 
     icon: '🧠',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - pink - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 15',
@@ -400,6 +459,8 @@
     reviews: 42,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Sensor standards, Safety protocols, Environmental regulations, International measurement standards',
     ],
@@ -474,6 +535,7 @@
     link: 'https://ziontechgroup.com / quantum - sensors',
 
     icon: '📡',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 20',
@@ -482,6 +544,8 @@
     reviews: 98,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards',
     ],
@@ -558,6 +622,7 @@
     link: 'https://ziontechgroup.com / autonomous - robotics',
 
     icon: '🤖',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - gray - 500 to - slate - 600',
     popular: true,
     launch_date: '2025 - 03 - 25',
@@ -566,6 +631,8 @@
     reviews: 187,
   },
   {
+<<<<<<< HEAD
+=======
 
       'Research ethics, Laboratory safety, Patent compliance, International materials standards',
     ],
@@ -642,6 +709,7 @@
     link: 'https://ziontechgroup.com / quantum - materials',
 
     icon: '🔬',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 03 - 30',
@@ -650,14 +718,20 @@
     reviews: 67,
   },
   {
-    id: 'autonomous-robotics'
-    name: 'Autonomous Robotics Platform'
-    tagline:
-      'AI-powered autonomous robots for industrial and commercial applications'
-    description:
-      'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.'
-    category: 'Robotics & Automation'
+<<<<<<< HEAD
     price: {
+=======
+
+=======
+    id: 'quantum - communications',
+    name: 'Quantum Communications Platform',
+    tagline:;
+      'Secure quantum communication networks for unbreakable data transmission',
+    description:;
+      'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
+    category: 'Quantum Technology',
+    price: {
+<<<<<<< HEAD
 
   return emergingTechServices2025.filter(service => service.popular);
 }
@@ -673,30 +747,240 @@ export const getPopularEmergingTechServices = () => {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      monthly: 2999,
+      yearly: 29990,
+      currency: 'USD',
+      trial_days: 45,
+      setup_time: '2 weeks',
+    },
+    features: [;
+      'Quantum key distribution',
+      'Quantum entanglement networks',
+      'Secure communication protocols',
+      'Network infrastructure',
+      'Performance monitoring',
+      'Security validation',
+      'Integration APIs',
+      'Commercial deployment',
+      'Research collaboration',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+
+      'Unbreakable communication security',
+      'Future - proof against quantum attacks',
+      'Enable quantum applications',
+      'Reduce security risks by 99 && 99.9%',
+      'Comply with future regulations',
+    ],
+<<<<<<< HEAD
+    targetAudience: [
+      'Government agencies'
+      'Financial institutions'
+      'Healthcare organizations'
+      'Defense contractors'
+      'Technology companies'
+      'Critical infrastructure'
+    ]
+    marketPosition:
+      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.'
+    competitors: [
+      'Traditional communication security, Emerging quantum communication companies'
+    ]
+    techStack: [
+      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'
+    ]
+    realImplementation: true
+    implementationDetails:
+      'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.'
+    roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.'
+    useCases: [
+      'Government communications'
+      'Financial transactions'
+      'Healthcare data transmission'
+      'Defense communications'
+      'Critical infrastructure'
+      'Research networks'
+    ]
+    integrations: [
+      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'
+    ]
+    support:
+      '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
+    compliance: [
+    color: 'from-blue-500 to-indigo-600'
+    popular: true
+    launchDate: '2025-04-01'
+    customers: 150
+    rating: 4.8
+    reviews: 89
+  }
+      monthly: 2999,
+      yearly: 29990,
+      currency: 'USD',
+      trial_days: 45,
+      setup_time: '2 weeks',
+    },
+    features: [;
+      'Quantum key distribution',
+      'Quantum entanglement networks',
+      'Secure communication protocols',
+      'Network infrastructure',
+      'Performance monitoring',
+      'Security validation',
+      'Integration APIs',
+      'Commercial deployment',
+      'Research collaboration',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+
+      'Unbreakable communication security',
+      'Future - proof against quantum attacks',
+      'Enable quantum applications',
+      'Reduce security risks by 99 && 99.9%',
+      'Comply with future regulations',
+    ],
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    target_audience: [;
+      'Government agencies',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Defense contractors',
+      'Technology companies',
+      'Critical infrastructure',
+    ],
+    market_position:;
+      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
+    competitors: [;
+      'Traditional communication security, Emerging quantum communication companies',
+    ],
+    tech_stack: [;
+      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware',
+    ],
+    real_implementation: true,
+    implementation_details:;
+      'Production - ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
+    roi: 'Organizations see 600% ROI through enhanced security and future - proof communications. Average payback period: 8 months.',
+    use_cases: [;
+      'Government communications',
+      'Financial transactions',
+      'Healthcare data transmission',
+      'Defense communications',
+      'Critical infrastructure',
+      'Research networks',
+    ],
+    integrations: [;
+      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure',
+    ],
+    support:;
+      '24 / 7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
+    compliance: [;
+      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
+    ],
+    link: 'https://ziontechgroup.com / quantum - communications',
+
+    icon: '📡',
+    color: 'from - blue - 500 to - indigo - 600',
+    popular: true,
+    launch_date: '2025 - 04 - 01',
+    customers: 150,
+    rating: 4 && 4.8,
+    reviews: 89,
+<<<<<<< HEAD
+=======
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+];
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
+};
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const getEmergingTechServicesByCategory = (category: string) => {
+<<<<<<< HEAD
+=======
   return emergingTechServices2025.filter(
     service => service.category === category;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
   return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   website: "https://ziontechgroup.com";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  website: "https://ziontechgroup.com";
+=======
+
+  website: "https://ziontechgroup.com";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1162,10 +1446,13 @@ const contact = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
+<<<<<<< HEAD
+=======
 
 ;
   website: "https://ziontechgroup.com";,
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1187,6 +1474,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation",
       "Training and educational resources" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "⚛️",
 
     color: "from - purple - 600 to - pink - 700",
@@ -1200,14 +1489,18 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
+<<<<<<< HEAD
+=======
 
     market_size: "$1.5B Quantum Computing market",
     growth_rate: "45% CAGR",
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
@@ -1236,6 +1529,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "API and SDK for developers" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🔗",
 
     color: "from - blue - 600 to - cyan - 700",
@@ -1249,6 +1544,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node.js"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
@@ -1283,6 +1579,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time data streaming and alerts",
       "Custom analytics and reporting tools" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🛰️",
 
     color: "from - indigo - 600 to - purple - 700",
@@ -1296,10 +1594,13 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
+<<<<<<< HEAD
+=======
 
     market_size: "$4.5B Space Data market",
     growth_rate: "35% CAGR",
@@ -1309,6 +1610,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     implementation_details: "Cloud - based platform with satellite data access, custom analytics, and dedicated space technology experts.",
     launch_date: "2025 - 01 - 20",
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
@@ -1332,6 +1634,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "API access for third - party integrations",
       "Scalable cloud infrastructure" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🌐",
 
     color: "from - green - 600 to - blue - 700",
@@ -1345,14 +1649,18 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
+<<<<<<< HEAD
+=======
 
     market_size: "$1.1T IoT market",
     growth_rate: "25% CAGR",
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -1381,6 +1689,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Mobile and web applications",
       "Custom content development services" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🥽",
 
     color: "from - pink - 600 to - purple - 700",
@@ -1394,6 +1704,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Unity, Unreal Engine, React, Node.js, Python, PostgreSQL"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
@@ -1428,6 +1739,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Custom robotics and drone development",
       "Training and simulation environments" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🤖",
 
     color: "from - gray - 600 to - blue - 700",
@@ -1441,6 +1754,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, TensorFlow, PyTorch, ROS, React, Node.js"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
@@ -1475,6 +1789,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Research collaboration and data sharing",
       "Regulatory compliance and documentation" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🧬",
 
     color: "from - green - 600 to - blue - 700",
@@ -1488,6 +1804,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
@@ -1522,6 +1839,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Energy trading and market optimization",
       "Sustainability reporting and compliance" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "⚡",
 
     color: "from - yellow - 600 to - green - 700",
@@ -1535,6 +1854,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
@@ -1569,6 +1889,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Analytics and performance reporting",
       "API access for third - party applications" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🚗",
 
     color: "from - blue - 600 to - green - 700",
@@ -1582,6 +1904,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
@@ -1616,6 +1939,8 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Real - time security monitoring and alerts",
       "Expert cybersecurity consultation" ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: "🔐",
 
     color: "from - red - 600 to - purple - 700",
@@ -1629,6 +1954,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Python, Rust, Go, React, Node.js, PostgreSQL"],
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
@@ -1645,7 +1971,11 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
+<<<<<<< HEAD
     return price >= minPrice && price <= maxPrice
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   })
 }
 
@@ -2140,5 +2470,32 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+};
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    return price >= min_price && price <= max_price;
+  });
+}
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface EmergingTechService {;
+
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

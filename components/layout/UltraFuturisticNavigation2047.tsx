@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +8,8 @@ import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Menu,
   ChevronDown,
@@ -65,6 +68,10 @@ import {
   Twitter,
   Github,
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Menu,
   ChevronDown,
@@ -188,11 +195,171 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
   href: string;  icon?: React.ReactNode;import { ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+
+
+
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+interface NavigationItem {
+  name: string;
+  href: string;  icon?: React.ReactNode;import {
+
+  href: string;  icon?: React.ReactNode;import { ;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
   Brain, Rocket, Target, Atom, Shield;
@@ -201,9 +368,12 @@ interface NavigationItem {
   Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   description?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -216,6 +386,10 @@ interface NavigationItem {
   color?: string;  color?: string
 }
   color?: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const navigationItems: NavigationItem[] = [
   {
 
@@ -231,6 +405,7 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500'
     children: [
       {
+<<<<<<< HEAD
         name: 'Home'
         href: '/'
         description: 'Main homepage'
@@ -621,6 +796,114 @@ const UltraFuturisticNavigation2047 = () => {
 
   color?: string
 =======
+=======
+}
+const navigation_items: NavigationItem[] = [;
+  {
+    name: 'Home & Core',
+    href: '/',
+    icon: <Home className='w - 5 h - 5' />,    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
+      {    icon: <Home className="w - 5 h - 5" />,
+    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from - emerald - 500 to - cyan - 500',
+    children: [;
+      {
+        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className='w - 4 h - 4' />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true,
+      },
+      {
+        name: 'About Us',
+        href: '/about',
+        description: 'Company information and mission',
+        icon: <Info className='w - 4 h - 4' />,
+        color: 'from - blue - 500 to - cyan - 500',
+      },
+      {
+        name: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team',
+        icon: <Mail className='w - 4 h - 4' />,
+        color: 'from - purple - 500 to - pink - 500',
+      },
+      {
+        name: 'Team',
+        href: '/team',
+        description: 'Meet our leadership team',
+        icon: <Users className='w - 4 h - 4' />,
+        color: 'from - orange - 500 to - red - 500',
+      },
+    ],
+  },
+  {
+    name: 'Advanced Solutions',
+    href: '/solutions',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {
+
+    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
+    name: 'AI & Technology Services',
+    href: '/services',
+    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className="w - 4 h - 4" />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       {
         name: 'About Us',
@@ -644,6 +927,7 @@ const UltraFuturisticNavigation2047 = () => {
         color: 'from - orange - 500 to - red - 500';
       }
     ];
+<<<<<<< HEAD
 
   }
 =======
@@ -658,38 +942,19 @@ const UltraFuturisticNavigation2047 = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+  };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
-
-
-
-  const handleDropdownToggle = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
-  useEffect(() => {;
-    const handleResize = () => {;
-      if (window && window.innerWidth >= 1024) {;
-        setIsOpen(false);
-        setActiveDropdown(null);      }
-    };
-
-    window && window.addEventListener('resize', handleResize);
-    return () => window && window.removeEventListener('resize', handleResize);        setActiveDropdown(null);
-      }
-    }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -702,44 +967,42 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className='w-5 h-5 text-white' />
               </div>
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
-
+  }, []);
+;
   return (
-    <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
-          {/* Logo */}
-
-  return (
-
-
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Zion Tech Group
               </span>
             </Link>
           </div>
+<<<<<<< HEAD
           {/* Desktop Navigation */}
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>
             {navigationItems.map(item => (
               <div key={item.name} className='relative group'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Zion Tech Group;
               </span>;
             </Link>;
           </div>;
-
-
           {/* Desktop Navigation */}
           <div className='hidden lg:flex lg:items-center lg:space-x-8'>;
             {navigationItems && navigationItems.map(item => (;
               <div key={item && item.name} className='relative group'>;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <button
@@ -777,13 +1040,20 @@ const UltraFuturisticNavigation2047 = () => {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                <button
+
+                    >
+                      <div className='space-y-4'>
+                        {item.children?.map(child => (
+                      transition={{ duration: 0 && 0.2 }}
+                      className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'>;
+                      <div className='space-y-4'>;
+                        {item && item.children?.map(child => (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           <Link
-                            key={child.name}
-                            href={child.href}
-                            className='flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200'
-                            onClick={closeMenu}
-                          >
                             <div
+<<<<<<< HEAD
                               className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}
                             >
                               {child.icon}
@@ -817,6 +1087,15 @@ const UltraFuturisticNavigation2047 = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                              </div>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {child.description}
+                              </p>                              <p className="text-sm text-gray-400 mt-1">{child.description}</p>
+                            </div>
+
+                          </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -824,6 +1103,7 @@ const UltraFuturisticNavigation2047 = () => {
                 </AnimatePresence>;
               </div>;
             ))}
+<<<<<<< HEAD
           </div>
 
 =======
@@ -832,6 +1112,8 @@ const UltraFuturisticNavigation2047 = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
@@ -853,6 +1135,7 @@ const UltraFuturisticNavigation2047 = () => {
             </div>
             <Link
               href='/contact'
+<<<<<<< HEAD
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
             >
               Get Started
@@ -871,18 +1154,23 @@ const UltraFuturisticNavigation2047 = () => {
           </div>
           {/* Mobile menu button */}
           <div className='lg:hidden'>              href="/contact"
+=======
+                <span>{contactInfo.mobile}</span>
+              </a>
+            </div>
+            <Link
+              href="/contact"
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
               Get Started
               <ArrowRight className="ml-2 w-4 h-4" />
-
-            </Link>
-
-          </div>
               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'>;
               Get Started;
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>;
           </div>;
+<<<<<<< HEAD
           {/* Mobile menu button */}
 
               )}
@@ -894,12 +1182,22 @@ const UltraFuturisticNavigation2047 = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -907,18 +1205,18 @@ const UltraFuturisticNavigation2047 = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
                 <div key={item.name}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <button
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
@@ -934,7 +1232,6 @@ const UltraFuturisticNavigation2047 = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name}>;
-=======
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
@@ -942,9 +1239,6 @@ const UltraFuturisticNavigation2047 = () => {
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <button
-
-                  
-
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
@@ -957,13 +1251,11 @@ const UltraFuturisticNavigation2047 = () => {
                     </div>;
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item && item.name ? 'rotate-180' : ''}`} />;
                   </button>;
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
-                      <motion&& motion.div
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
           <motion.div;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -978,11 +1270,14 @@ const UltraFuturisticNavigation2047 = () => {
         {isOpen && (
           <motion.div
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
 
+<<<<<<< HEAD
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -1021,9 +1316,12 @@ const UltraFuturisticNavigation2047 = () => {
                         exit={{ opacity: 0, height: 0 }}
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         transition={{ duration: 0.2 }}
 =======
 
+<<<<<<< HEAD
                       >
                         {item.children?.map(child => (
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1032,51 +1330,38 @@ const UltraFuturisticNavigation2047 = () => {
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
+                        {item.children?.map((child) => (
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         ))}
                       </motion && motion.div>;
                     )}
                   </AnimatePresence>;
                 </div>;
               ))}
-
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>;
                 <div className='px-3 py-2 text-sm text-gray-400'>;
                   <div className='flex items-center space-x-2 mb-2'>;
                     <Phone className='w-4 h-4' />;
-                    <a
-                      href={`tel:${contactInfo && contactInfo.mobile}`}
                       className='hover:text-white transition-colors'>;
                       {contactInfo && contactInfo.mobile}
                     </a>;
                   </div>;
-                  <div className='flex items-center space-x-2 mb-2'>;
-                    <Mail className='w-4 h-4' />;
-                    <a
-
-                      href={`mailto:${contactInfo && contactInfo.email}`}
-                      className='hover:text-white transition-colors'>;
-                      {contactInfo && contactInfo.email}
-                    </a>;
-                  </div>;
-                  <div className='flex items-center space-x-2'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span>{contactInfo && contactInfo.address}</span>;
-                  </div>;
-                </div>;
-
-                <div className='px-3 pt-2'>;
-
                   <Link
                     href='/contact'
                     className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
                     onClick={closeMenu}>;
                     Get Started;
                     <ArrowRight className='ml-2 w-4 h-4' />                  </Link>              {/* Mobile Contact Info */}
-
-              
-              {/* Mobile Contact Info */}
-
               <div className="pt-4 pb-3 border-t border-slate-700/50">
                 <div className="px-3 py-2 text-sm text-gray-400">
                   <div className="flex items-center space-x-2 mb-2">
@@ -1097,13 +1382,33 @@ const UltraFuturisticNavigation2047 = () => {
                   </div>
                 </div>
                 <div className="px-3 pt-2">
+<<<<<<< HEAD
 
+=======
+              <div className="pt-4 pb-3 border-t border-slate-700/50">;
+                    </a>;
+                  </div>;
+                  <div className="flex items-center space-x-2 mb-2">;
+                    <Mail className="w-4 h-4" />;
+                    <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-white transition-colors">;
+                      {contactInfo && contactInfo.email}
+                    </a>;
+                  </div>;
+                  <div className="flex items-center space-x-2">;
+                    <MapPin className="w-4 h-4" />;
+                    <span>{contactInfo && contactInfo.address}</span>;
+                  </div>;
+                </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       >
                         {item.children?.map(child => (
                           <Link
                             key={child.name}
                             href={child.href}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           >
                             {child.name}
                           </Link>
@@ -1113,7 +1418,10 @@ const UltraFuturisticNavigation2047 = () => {
                   </AnimatePresence>
                 </div>
               ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -1142,6 +1450,7 @@ const UltraFuturisticNavigation2047 = () => {
                 </div>
                 <div className='px-3 pt-2'>
                   <Link
+<<<<<<< HEAD
                     href='/contact'
                     className='w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200'
                     onClick={closeMenu}
@@ -1171,25 +1480,36 @@ const UltraFuturisticNavigation2047 = () => {
 
                   <Link
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default UltraFuturisticNavigation2047;
-
-
 =======
+                  <Link
+                    href="/contact"
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+                  </Link>;
+                </div>;
+              </div>;
+            </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default UltraFuturisticNavigation2047;
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
 =======
+=======
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-}
-};
-
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
 
 export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
 export default UltraFuturisticNavigation2047;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

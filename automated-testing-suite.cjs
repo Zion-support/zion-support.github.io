@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -67,7 +70,11 @@ class AutomatedTestingSuite {}
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
@@ -89,4 +96,8 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
+<<<<<<< HEAD
 
+=======
+module.exports = AutomatedTestingSuite;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

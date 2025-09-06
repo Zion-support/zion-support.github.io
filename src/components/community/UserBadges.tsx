@@ -1,13 +1,27 @@
+<<<<<<< HEAD
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+=======
+;
+
+interface UserBadgesProps {
+  badges: Badge[];
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface UserBadgesProps {
   badges: Badge[]
 }
 
+<<<<<<< HEAD
 const iconMap = {
+=======
+}
+const iconMap = {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Trophy,
   Award,
   BadgeCheck,
@@ -18,10 +32,23 @@ const iconMap = {
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
+=======
+
+  return (
+
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+export default UserBadges;
+}
+}
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -95,4 +122,20 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null;
+  return (
+    <div className="flex flex-wrap gap-2">;
+      {badges && badges.map((badge,) => {;
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
+
+    <div className="flex flex - wrap gap - 2">;
+      {badges.map ((badge, ) => {
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default UserBadges;

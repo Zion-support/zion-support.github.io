@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
@@ -23,6 +24,50 @@ export function ConversationDetailView() {;
   useEffect(() => {;
     if (activeConversation) {;
       loadMessages(activeConversation.id);
+=======
+import React, { useState, useEffect, useRef } from 'react';
+import { format } from 'date-fns';
+import { MessageSquare } from 'lucide-react';
+import { useMessaging } from '@/context/MessagingContext';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useAuth } from '@/hooks/useAuth';
+import { MessageBubble } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+
+export function ConversationDetailView() {
+  const { user } = useAuth();
+  const { currentConversation, sendMessage, messages, loading } = useMessaging();
+  const [newMessage, setNewMessage] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newMessage.trim() || !currentConversation) return;
+
+    setIsSending(true);
+    try {
+      await sendMessage({
+        content: newMessage,
+        recipientId: currentConversation.participantId,
+        conversationId: currentConversation.id,
+      });
+      setNewMessage('');
+    } catch (error) {
+      console.error('Failed to send message:', error);
+    } finally {
+      setIsSending(false);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     inputRef.current?.focus();
   }, [activeConversation?.id, loadMessages]),;
@@ -97,6 +142,7 @@ export function ConversationDetailView() {;
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
             </div>
+<<<<<<< HEAD
             <div className="text-xs text-zion-slate">
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
@@ -161,6 +207,39 @@ export function ConversationDetailView() {;
               </div>;
             </div>;
           ));
+=======
+          </div>
+        ) : messages.length === 0 ? (
+          <div className="flex items-center justify-center h-full">
+            <div className="text-center">
+              <MessageSquare className="mx-auto h-12 w-12 text-gray-400" />
+              <h3 className="mt-2 text-sm font-medium text-gray-900">No messages yet</h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Start the conversation by sending a message.
+              </p>
+            </div>
+          </div>
+        ) : (
+          messages.map((message, index) => {
+            const isUserMessage = message.senderId === user?.id;
+            const prevMessage = messages[index - 1];
+            const showDateDivider = !prevMessage || 
+              format(new Date(message.timestamp), 'yyyy-MM-dd') !== 
+              format(new Date(prevMessage.timestamp), 'yyyy-MM-dd');
+
+            return (
+              <div key={message.id}>
+                {showDateDivider && (
+                  <DateDivider date={message.timestamp} />
+                )}
+                <MessageBubble
+                  message={message}
+                  isUserMessage={isUserMessage}
+                />
+              </div>
+            );
+          })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )}
         <div ref={messagesEndRef} />;
       </div>;
@@ -172,18 +251,28 @@ export function ConversationDetailView() {;
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
+<<<<<<< HEAD
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
+=======
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            disabled={isSending}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           />
           <Button 
             type="submit"
+<<<<<<< HEAD
             className="bg-zion-purple hover: bg-zion-purple-dark text-white"
+=======
+            disabled={!newMessage.trim() || isSending}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             Send
           </Button>
         </form>
       </div>
     </div>
+<<<<<<< HEAD
   )
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
@@ -207,3 +296,7 @@ export function ConversationDetailView() {;
   );
 }
 ;
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

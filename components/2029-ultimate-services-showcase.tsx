@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 
@@ -6,6 +7,8 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
 import {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
@@ -52,7 +55,11 @@ import {
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Rocket,
   Brain,
   Atom,
@@ -95,13 +102,19 @@ import {
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
+<<<<<<< HEAD
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon;
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -124,17 +137,268 @@ export default function UltimateServicesShowcase2029() {;
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      transition: {
+  const allServices = [;
+    ...cuttingEdge2028MicroSaas,;
+    ...practicalBusinessSolutions2028,;
+    ...advancedAIAutonomousServices2028,;
+    ...quantumSpaceInnovations2028,;
+  ];
+  const categories = [;
+    {;
+      id: 'all',;
+      name: '🚀 All Services',;
+      icon: Rocket,;
+      count: allServices && allServices.length,;
+      color: 'from-violet-600 to-purple-600',;
+    },;
+    {;
+      id: 'cutting-edge',;
+      name: '⚡ Cutting-Edge',;
+      icon: Zap,;
+      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length,;
+      color: 'from-cyan-600 to-blue-600',;
+    },;
+    {;
+      id: 'business',;
+      name: '🎯 Business Solutions',;
+      icon: Target,;
+      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length,;
+      color: 'from-green-600 to-emerald-600',;
+    },;
+    {;
+      id: 'ai-autonomous',;
+      name: '🤖 AI & Autonomous',;
+      icon: Brain,;
+      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length,;
+      color: 'from-emerald-600 to-teal-600',;
+    },;
+    {;
+      id: 'quantum-space',;
+      name: '⚛️ Quantum & Space',;
+      icon: Atom,;
+      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length,;
+      color: 'from-indigo-600 to-blue-600',;
+    },;
+    {;
+      id: 'ai',;
+      name: '🧠 AI & ML',;
+      icon: Brain,;
+      count: allServices && allServices.filter(s =>;
+        s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'));
+      ).length,;
+      color: 'from-pink-600 to-rose-600',;
+    },;
+    {;
+      id: 'quantum',;
+      name: '🔮 Quantum Tech',;
+      icon: Atom,;
+      count: allServices && allServices.filter(s =>;
+        s && s.category.some(c => c && c.includes('Quantum'));
+      ).length,;
+      color: 'from-purple-600 to-violet-600',;
+    },;
+    {;
+      id: 'enterprise',;
+      name: '🏢 Enterprise',;
+      icon: Shield,;
+      count: allServices && allServices.filter(s =>;
+        s && s.category.some(c => c && c.includes('Enterprise'));
+      ).length,;
+      color: 'from-blue-600 to-cyan-600',;
+    },    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' },;
+    { id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' },;
+    { id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },;
+    { id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },;
+    { id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },;
+    { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },;
+    { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },;
+    { id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $5K', range: 'Under $5,000' },;
+    { id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' },;
+    { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },;
+    { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },;
+  ];
+  const filteredServices = allServices && allServices.filter(service => {;
+    const matchesCategory =;
+      selectedCategory === 'all' ||;
+      (selectedCategory === 'cutting-edge' &&;
+        cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;
+      (selectedCategory === 'business' &&;
+        practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;
+      (selectedCategory === 'ai-autonomous' &&;
+        advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.includes(service)) ||;
+      (selectedCategory === 'quantum-space' &&;
+        quantumSpaceInnovations2028 && quantumSpaceInnovations2028.includes(service)) ||;
+      (selectedCategory === 'ai' &&;
+        service && service.category.some(;
+          c => c && c.includes('AI') || c && c.includes('Machine Learning');
+        )) ||;
+      (selectedCategory === 'quantum' &&;
+        service && service.category.some(c => c && c.includes('Quantum'))) ||;
+      (selectedCategory === 'enterprise' &&;
+        service && service.category.some(c => c && c.includes('Enterprise')));
+    const matchesSearch =;
+      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      service && service.category.some(c =>;
+        c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      );
+    const matchesPrice =;
+      selectedPriceRange === 'all' ||;
+      (selectedPriceRange === 'low' &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
+      (selectedPriceRange === 'medium' &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
+      (selectedPriceRange === 'high' &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
+      (selectedPriceRange === 'premium' &&;
+        parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
+    return matchesCategory && matchesSearch && matchesPrice;  });    const matchesCategory = selectedCategory === 'all' || ;
+      (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;
+      (selectedCategory === 'business' && practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;
+      (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.includes(service)) ||;
+      (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028 && quantumSpaceInnovations2028.includes(service)) ||;
+      (selectedCategory === 'ai' && service && service.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))) ||;
+      (selectedCategory === 'quantum' && service && service.category.some(c => c && c.includes('Quantum'))) ||;
+      (selectedCategory === 'enterprise' && service && service.category.some(c => c && c.includes('Enterprise')));
+    const matchesPrice = selectedPriceRange === 'all' ||;
+      (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
+      (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
+      (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
+      (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };        staggerChildren: 0 && 0.1;
+      }
+    }
+        stagger_children: 0.1,
+      },
+    },  }        stagger_children: 0.1;
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      transition: {
+      }
+    }
+  }
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    <>;
+      <Head>;
+        <title>;
+          2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary;
+          Technology Solutions;
+        </title>;
+        {/* Open Graph */}
+        <meta
+          property='og:title'
+          content='2029 Ultimate Services Showcase - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
+        />;
+        <meta
+          property='og:url'
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta
+          name='twitter:title'
+          content='2029 Ultimate Services Showcase - Zion Tech Group'
+        />;
+        <meta
+          name='twitter:description'
+          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
+        />      </Head>        {/* Open Graph */}
+        {/* Twitter */}
+        <meta;
+          name='description';
+          content='Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology.';
+        />;
+        <meta;
+          name='keywords';
+          content='2029 technology, AI consciousness, quantum computing, space technology, autonomous AI, business automation, micro SAAS, Zion Tech Group';
+        />;
+        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / 2029 - ultimate - services - showcase';
+        />;
+        {/* Open Graph */}
+        <meta;
+          property='og:title';
+          content='2029 Ultimate Services Showcase - Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
+        />;
+        <meta;
+          property='og:url';
+          content='https://ziontechgroup.com / 2029 - ultimate - services - showcase';
+        />;
+        <meta property='og:type' content='website' />;
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta;
+          name='twitter:title';
+          content='2029 Ultimate Services Showcase - Zion Tech Group';
+        />;
+        <meta;
+          name='twitter:description';
+          content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.';
+        />      </Head>        {/* Open Graph */}
+        <meta property="og:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
+        <meta property="og:url" content="https://ziontechgroup.com / 2029 - ultimate - services - showcase" />;
+        <meta property="og:type" content="website" />;
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
+        <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
+      </Head>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 Get Started Today
               </Link>
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
+                Get Started Today;
+              </Link>;
               <Link
+<<<<<<< HEAD
                 href="/pricing"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                href='/pricing'
+                className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'                href="/pricing"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
               </Link>
+<<<<<<< HEAD
             </div>
 
 =======
@@ -144,6 +408,8 @@ export default function UltimateServicesShowcase2029() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -151,7 +417,6 @@ export default function UltimateServicesShowcase2029() {;
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
-
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
                 <div className="text-gray-400">Market Valuation</div>
@@ -168,6 +433,7 @@ export default function UltimateServicesShowcase2029() {;
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Filters Section */}
 
@@ -201,26 +467,88 @@ export default function UltimateServicesShowcase2029() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            {/* Stats */}
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>;
+              <div className='text-center'>;
+                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
+                  {allServices && allServices.length}+;
+                </div>;
+                <div className='text-gray-400'>Revolutionary Services</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl md:text-4xl font-bold text-emerald-400 mb-2'>;
+                  $500M+;
+                </div>;
+                <div className='text-gray-400'>Market Valuation</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
+                  99 && 99.9%;
+                </div>;
+                <div className='text-gray-400'>Success Rate</div>;
+              </div>;
+              <div className='text-center'>;
+                <div className='text-3xl md:text-4xl font-bold text-blue-400 mb-2'>;
+                  24/7;
+                </div>;
+                <div className='text-gray-400'>Support Available</div>              </div>              </div>;
+              <div className="text-center">;
+                <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>;
+                <div className="text-gray-400">Market Valuation</div>;
+              </div>;
+              <div className="text-center">;
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99 && 99.9%</div>;
+                <div className="text-gray-400">Success Rate</div>;
+              </div>;
+              <div className="text-center">;
+                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">24/7</div>;
+                <div className="text-gray-400">Support Available</div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+            {/* Category Filter */}
+            <div className='flex flex-wrap items-center space-x-2'>
+              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
+              {categories.map((category) => (
+                <button
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
 
 
               ))}
             </div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Price Filter */}
 
 
+=======
+              ))}
+            {/* Price Filter */}
+            <div className='flex items-center space-x-2'>
+              {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
+              {priceRanges.map((range) => (
+                <button
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   }`}
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -232,6 +560,8 @@ export default function UltimateServicesShowcase2029() {;
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={range.id}
                   onClick={() => setSelectedPriceRange(range.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -248,11 +578,15 @@ export default function UltimateServicesShowcase2029() {;
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 
@@ -261,6 +595,8 @@ export default function UltimateServicesShowcase2029() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Grid */}
 
 
@@ -269,6 +605,7 @@ export default function UltimateServicesShowcase2029() {;
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+<<<<<<< HEAD
 
               <motion.div
                 key={service.id}
@@ -332,6 +669,8 @@ export default function UltimateServicesShowcase2029() {;
                   {/* Categories */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
                         <span
@@ -355,6 +694,14 @@ export default function UltimateServicesShowcase2029() {;
                         </span>;
                       ))}
 
+<<<<<<< HEAD
+=======
+                      {service.category.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
+                          +{service.category.length - 3}
+                        </span>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {/* Features Preview */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white mb-2'>
@@ -383,9 +730,8 @@ export default function UltimateServicesShowcase2029() {;
                           +{service.features.length - 3} more features
                         </li>
                       )}
-                    </ul>
-                  </div>
 
+<<<<<<< HEAD
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
@@ -409,22 +755,54 @@ export default function UltimateServicesShowcase2029() {;
                   </div>
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
                   </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Features Preview */}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+                          {cat}
+                        </span>;
+                      ))}
+                      {service && service.category.length > 3 && (;
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service && service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">;
+                          +{service && service.category.length - 3}
+                        </span>;
                       )}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  {/* Features Preview */}
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white mb-2'>;
+                      Key Features:;
+                    </h4>;
+                    <ul className='space-y-1'>;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li
+                          key={idx}
+                          className='flex items-center space-x-2 text-sm text-gray-300'>;
+                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                          +{service && service.features.length - 3} more features                  <div className="mb-6">;
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>;
+                    <ul className="space-y-1">;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">;
+                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">;
+                          +{service && service.features.length - 3} more features;
+                        </li>;
+                      )}
                   {/* Market Info */}
 
                   <div className="mb-6 space-y-2">
@@ -437,12 +815,6 @@ export default function UltimateServicesShowcase2029() {;
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">ROI:</span>
                       <span className="text-cyan-400 font-medium">{service.roi}</span>
-
-                    </div>
-
-                  </div>
-                    </ul>;
-                  </div>;
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>;
                     <div className='flex items-center justify-between text-sm'>;
@@ -457,36 +829,35 @@ export default function UltimateServicesShowcase2029() {;
                         {service && service.roi}
                       </span>                    </div>;
                   </div>;
-                  {/* Action Button */}
-
-                  <div className="mt-auto">
-                    <Link
                       href={`/services/${service.id}`}
-                      className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'
-                    >
-                      Learn More
-                      <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
-                  </div>
-                  {/* Hover Effect */}
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
-                      href={`/services/${service.id}`}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                      className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
+                    >
+                      Learn More
+                      <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
                       Learn More;
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
                   </div>;
+<<<<<<< HEAD
                   {/* Hover Effect */}
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -496,6 +867,14 @@ export default function UltimateServicesShowcase2029() {;
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+          </motion && motion.div>;
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -513,6 +892,7 @@ export default function UltimateServicesShowcase2029() {;
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
 
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-gray-400" />
@@ -523,11 +903,14 @@ export default function UltimateServicesShowcase2029() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all')
 
                 }}
@@ -542,31 +925,38 @@ export default function UltimateServicesShowcase2029() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
+          )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
 
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-Join the future of technology with our revolutionary services.
+              Join the future of technology with our revolutionary services.
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -575,8 +965,12 @@ Join the future of technology with our revolutionary services.
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
               >
                 Get Started Today
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="flex items-center space-x-4 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-cyan-400" />
@@ -591,8 +985,58 @@ Join the future of technology with our revolutionary services.
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+              Join the future of technology with our revolutionary services.;
+              Contact us today to discuss how we can help you achieve your;
+              goals.;
+            </p>;
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan - 500 / 25 text - lg';
+              >;
+                Get Started Today;
+              </Link>;
+              <div className='flex items - center space - x-4 text - gray - 300'>;
+                <div className='flex items - center space - x-2'>;
+                  <Phone className='h - 5 w - 5 text - cyan - 400' />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className='flex items - center space - x-2'>;
+                  <Mail className='h - 5 w - 5 text - cyan - 400' />                  <span>{contact_info.email}</span>              Ready to Transform Your Business?;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+              Join the future of technology with our revolutionary services.;
+              Contact us today to discuss how we can help you achieve your goals.;
+            </p>;
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
+              <Link;
+                href="/contact";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan - 500 / 25 text - lg";
+              >;
+                Get Started Today;
+              </Link>;
+              <div className="flex items - center space - x-4 text - gray - 300">;
+                <div className="flex items - center space - x-2">;
+                  <Phone className="h - 5 w - 5 text - cyan - 400" />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center space - x-2">;
+                  <Mail className="h - 5 w - 5 text - cyan - 400" />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2029 />;
+    </>));
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

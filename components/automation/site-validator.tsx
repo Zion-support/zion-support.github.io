@@ -1,14 +1,33 @@
+<<<<<<< HEAD
  
 
 }
 type Props = { report: Report | null }
+=======
+
+
+ 
+
+
+
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = { url: string, page: string, status: number },
+interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
+
+type Props = { report: Report | null },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
+  try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -16,9 +35,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');
     const raw = fs && fs.readFileSync(file, 'utf8');
     const data = JSON && JSON.parse(raw);
-
-
-=======
 ;
 }
 type Props = { report: Report | null },
@@ -27,19 +43,28 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationsite - validator.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
   }
+<<<<<<< HEAD
 
 export default function SiteValidator({ report }: Props) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function SiteValidator(): any ({ report }: Props) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+<<<<<<< HEAD
   if (!report) return <div>No validation report yet.</div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <div className="space-y-6">
@@ -66,19 +91,24 @@ export default function SiteValidator(): any ({ report }: Props) {;
       {report.ogIssues.length > 0 && (
         <section>
 
+<<<<<<< HEAD
             ))}
           </ul>
         </section>
       )}
     </div>
-export default function SiteValidator({ report }: Props) {
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function SiteValidator({ report }: Props) {
 export default function SiteValidator({ report }: Props) {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;
@@ -111,12 +141,6 @@ export default function SiteValidator({ report }: Props) {;
           </ul>;
         </section>;
       )}
-
-    </div>;
-  );
-}
-
-=======
 }
 ;
 export default /**
@@ -155,6 +179,7 @@ if (return <div > No validation report yet.</div>) {
           </ul>;
         </section>)}
     </div>);
+<<<<<<< HEAD
   }
 },
 
@@ -181,3 +206,10 @@ export default function SiteValidator({ report }: Props) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    </div>
+);
+}
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * AI-Enhanced PM2 Orchestrator;
@@ -19,7 +22,10 @@ const os = require('os')
       securityMode: process.env.SECURITY_MODE === 'true'
       performanceMode: process.env.PERFORMANCE_MODE === 'true'
       deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -37,4 +43,8 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
+<<<<<<< HEAD
 
+=======
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

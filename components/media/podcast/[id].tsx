@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export default function EpisodePage() {
 
   const router = useRouter();
@@ -6,10 +7,19 @@ export default function EpisodePage() {
   const [episode, setEpisode] = useState<any>(null);
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+export default function EpisodePage() {
+
+export default function EpisodePage() {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
+<<<<<<< HEAD
     if (!id) return;
     (async () => {
       const res = await fetch('/api/podcast/get?id=' + id);
@@ -21,21 +31,21 @@ export default function EpisodePage() {
   if (!episode) return <div>Loading…</div>;
 
   return (
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function EpisodePage() {;
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);
+
   useEffect(() => {;
     if (!id) return;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
-
-
   }, [id]);
   if (!episode) return <div>Loading…</div>;
+
   return (
-
-
       <div>
         <h2 className="text-xl font-semibold">Transcript</h2>
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
@@ -43,7 +53,6 @@ export default function EpisodePage() {;
     </div>
 );
 }
-=======
       <div>;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
@@ -51,9 +60,6 @@ export default function EpisodePage() {;
     </div>;
   );
 }
-
-
-=======
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -106,28 +112,13 @@ if (return <div > Loading…</div>) {
         <pre className="whitespace - pre - wrap bg - gray - 50 p - 3 rounded">{episode.transcript}</pre>;
       </div>;
     </div>);
-  if (!episode) return <div>Loading…</div>,
-
-  return (
-    <div className=&quot;space-y-4&quot;>
-      <h1 className=&quot;text-2xl font-bold&quot;>{episode.title}</h1>
-      <p className=&quot;text-sm text-gray-600&quot;>Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-      {episode.audio?.mp3Url && (
-        <audio controls className=&quot;w-full&quot;>
-          <source src={episode.audio.mp3Url} type=&quot;audio/mpeg&quot; />
-        </audio>
-      )}
-      <div>
-        <h2 className=&quot;text-xl font-semibold&quot;>Transcript</h2>
-        <pre className=&quot;whitespace-pre-wrap bg-gray-50 p-3 rounded&quot;>{episode.transcript}</pre>
-      </div>
-    </div>
-  )
-
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
@@ -146,7 +137,10 @@ if (return <div > Loading…</div>) {
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

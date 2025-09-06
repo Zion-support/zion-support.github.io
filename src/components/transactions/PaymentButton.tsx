@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -82,6 +83,11 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
+=======
+redirectUrl?: string
+}
+export function PaymentButton({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       
       // Call the create-checkout edge function
@@ -116,6 +122,7 @@ export function PaymentButton({;
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
+<<<<<<< HEAD
       }, 1500)
 ;
       // Call the create-checkout edge function;
@@ -173,3 +180,6 @@ export function PaymentButton({;
   );
 }
 ;
+=======
+      }, 1500)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

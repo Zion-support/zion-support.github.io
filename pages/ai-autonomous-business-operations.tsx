@@ -1,22 +1,23 @@
-import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIAutonomousBusinessOperations() {
-	return (
-		<ServiceLanding
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-			title="AI‑Powered Autonomous Business Operations"
-			slug="ai-autonomous-business-operations"
-			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
-			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
+=======
+
 
 			pricePerMonthUSD={3500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -26,12 +27,137 @@ export default function AIAutonomousBusinessOperations() {
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+
+
+}
+import React from 'react',
+import ServiceLanding from '../components / sections / ServiceLanding',
+export default /**
+ * AIAutonomousBusinessOperations - Function description
+ */
+function AIAutonomousBusinessOperations() {
+return (
+  <ServiceLanding;
+  title="AI‑Powered Autonomous Business Operations";
+  slug="ai - autonomous - business - operations";
+  description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always - on.";
+  subtitle="From reactive to autonomous: 24 / 7 operations with measurable outcomes.";
+  pricePerMonthUSD={3500}
+    implementation_weeks="Implementation: 3–6 weeks";
+  roi_note="Average ROI 5–12x within 120 days";
+  features={[;
+    "Autonomous KPI monitoring and anomaly detection",
+    "Agentic workflows for ticket triage, billing, collections, and renewals",
+    "Human - in - the - loop approvals and audit trails",
+    "Playbooks for incident response and customer recovery",
+    "Compliance logging and role - based access",
+    "Integrations: Slack / Teams, Jira, Zendesk, QuickBooks, Stripe";
+  ]}
+    industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+    canonical="https: //ziontechgroup.com / ai - autonomous - business - operations";
+  />);
+		/>
+	)
+
+}
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIAutonomousBusinessOperations() {
+	return (
+		<ServiceLanding
+
+<<<<<<< HEAD
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+			title="AI‑Powered Autonomous Business Operations"
+			slug="ai-autonomous-business-operations"
+			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
+			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
+<<<<<<< HEAD
+
+=======
+			pricePerMonthUSD={3500}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			implementationWeeks="Implementation: 3–6 weeks"
+			roiNote="Average ROI 5–12x within 120 days"
+			features={[
+				"Autonomous KPI monitoring and anomaly detection"
+				"Agentic workflows for ticket triage, billing, collections, and renewals"
+				"Human-in-the-loop approvals and audit trails"
+				"Playbooks for incident response and customer recovery"
+				"Compliance logging and role-based access"
+
+				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+			]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+			pricePerMonthUSD={3500  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+			implementationWeeks="Implementation: 3–6 weeks"
+			roiNote="Average ROI 5–12x within 120 days"
+			features={[
+				"Autonomous KPI monitoring and anomaly detection",
+				"Agentic workflows for ticket triage, billing, collections, and renewals",
+				"Human-in-the-loop approvals and audit trails",
+				"Playbooks for incident response and customer recovery",
+				"Compliance logging and role-based access",
+				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -42,6 +168,7 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
@@ -53,4 +180,16 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

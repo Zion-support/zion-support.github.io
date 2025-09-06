@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+const fs = require('fs')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 console.log(' Starting Automation Orchestrator...')
     "name"
     "script"
@@ -22,4 +28,8 @@ console.log(' Starting Automation Orchestrator...')
     console.log('\n Failed "Tasks")
 // console.log('\n "Recommendations")
     console.log('\n "Recommendations")
+<<<<<<< HEAD
 
+=======
+  console.error('Orchestrator "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

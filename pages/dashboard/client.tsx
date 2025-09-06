@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import {useEffect, useState} from 'react';
 const STEPS = [
@@ -13,6 +20,7 @@ const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
+<<<<<<< HEAD
 
 type StepKey = typeof STEPS[number]['key'];
 
@@ -26,6 +34,14 @@ export default function ClientDashboard() {
     response: false,;
   });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+type StepKey = typeof STEPS[number]['key'];
+export default function ClientDashboard() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
@@ -44,10 +60,15 @@ export default function ClientDashboard() {
   );
   const toggle = (key: StepKey) =>
     setCompleted(c => ({ ...c, [key]: !c[key] }));
+<<<<<<< HEAD
 =======
 
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'job', label: 'Job posted' },;
@@ -76,8 +97,94 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
+<<<<<<< HEAD
+=======
+  return (
+    <div className='space-y-4'>;
+      <EnhancedCard>;
+        <div className='flex items-center justify-between'>;
+          <div>;
+            <h1 className='text-lg font-semibold'>Welcome back</h1>;
+            <p className='text-sm text-gray-600 dark:text-gray-300'>;
+              Post your first job and invite talent to get started.;
+            </p>;
+          </div>;
+          <div className='text-sm font-medium'>{progress}%</div>;
+        </div>;
+        <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
+          <div
+            className='h-2 rounded bg-blue-600'
+            style={{ width: `${progress}%` }}
+=======
+  return (
+    <div className='space-y-4'>;
+      <EnhancedCard>;
+        <div className='flex items-center justify-between'>;
+          <div>;
+            <h1 className='text-lg font-semibold'>Welcome back</h1>;
+            <p className='text-sm text-gray-600 dark:text-gray-300'>;
+              Post your first job and invite talent to get started.;
+            </p>;
+          </div>;
+          <div className='text-sm font-medium'>{progress}%</div>;
+        </div>;
+        <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
+          <div
+            className='h-2 rounded bg-blue-600'
+            style={{ width: `${progress}%` }}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          />        </div>;
+      </EnhancedCard>;
+      <EnhancedCard>;
+        <h2 className='font-semibold mb-2'>Checklist</h2>;
+        <ul className='space-y-2'>;
+          {STEPS && STEPS.map(s => (;
+            <li key={s && s.key} className='flex items-center justify-between'>;
+              <div className='flex items-center gap-2'>;
+
+                <span
+                  className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
+                  {completed[s && s.key] ? '✓' : ''}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                </span>;
+                <span className='text-sm'>{s && s.label}</span>;
+              </div>;
+              {completed[s && s.key] ? (;
+                <button
+                  onClick={() => toggle(s && s.key)}
+                  className='text-xs text-gray-500 hover:underline';
+                >;
+                  Undo;
+                </button>;
+              ) : (;
+                <EnhancedButton
+                  onClick={() => toggle(s && s.key)}
+                  variant='secondary';
+                  className='text-xs py-1 px-2';
+                >;
+                  {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
+                </EnhancedButton>              )}
+            </li>;
+<<<<<<< HEAD
+=======
+
+=======
+    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
+  }, [completed]);
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
+=======
+<<<<<<< HEAD
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton';
+<<<<<<< HEAD
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -105,6 +212,7 @@ export default function ClientDashboard(req, res) {
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
+<<<<<<< HEAD
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
                   variant='secondary'
@@ -121,6 +229,22 @@ export default function ClientDashboard(req, res) {
 
 
 }
+=======
+
+
+<<<<<<< HEAD
+}
+
+
+=======
+=======
+
+
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -133,15 +257,29 @@ export default function ClientDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -234,9 +372,12 @@ function ClientDashboard() {
       </EnhancedCard>;
     </div>);
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -248,4 +389,8 @@ function ClientDashboard() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node;
 const { execSync } = require("child_process");
@@ -14,7 +17,10 @@ class $1 {}
 ;
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
@@ -133,4 +139,8 @@ class $1 {}
 ;
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
+<<<<<<< HEAD
 
+=======
+aggregator.run().catch(console.error);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

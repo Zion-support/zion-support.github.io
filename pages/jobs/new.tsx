@@ -33,6 +33,13 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -47,7 +54,38 @@ export default function NewJobPage() {
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
 
           </form>
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+=======
+
+
+          </form>;
+        )}
+      </EnhancedCard>;
+    </div>;
+  );
+
+
+=======
+  )
+}
+import {useState} from 'react';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
+import { use_toast } from '../../components / ui / NotificationSystem';
+          </form>)}
+      </EnhancedCard>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -66,4 +104,8 @@ export default function NewJobPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

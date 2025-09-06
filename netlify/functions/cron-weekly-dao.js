@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+
+=======
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
@@ -40,12 +45,15 @@ if ( {) {
         repo,
         path: 'data / dao / metrics.json',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+=======
 
 exports.handler = async function() {
   try {
@@ -60,6 +68,7 @@ exports.handler = async function() {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
@@ -86,6 +95,8 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
+=======
 
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
@@ -115,5 +126,5 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },

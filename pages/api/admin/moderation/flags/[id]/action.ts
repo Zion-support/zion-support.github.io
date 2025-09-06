@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = parseUserFromRequest(req);
+  try {
+    ensureAdmin(user);
+  } catch (e: any) {
+    return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+  }
+  const { id } = req.query;
+  if (typeof id !== 'string') {
+    return res.status(400).json({ error: 'Invalid id' });
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',;
 import { updateFlagStatus } from '../../../../../../utils/moderationDb',;
@@ -6,9 +24,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
+  const { id } = req.query,
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' }),
 
   if (req.method === 'POST') {
-    const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string },
+    const { action, adminNotes } = req.body || {} as { 
+      action: string; 
+      adminNotes?: string; 
+    };
     const actionMap: Record<string, ModerationStatus> = {
       approve: 'approved',
       remove: 'removed',
@@ -24,13 +47,39 @@ ban: 'banned'},
   res.setHeader('AllowPOST'),;
   return res.status(405).end('Method Not Allowed');
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
 import type { ModerationStatus } from '../../../../../../types/moderation';
+<<<<<<< HEAD
+=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+<<<<<<< HEAD
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
   const { id } = req.query
@@ -87,3 +136,8 @@ ban: 'banned'}
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

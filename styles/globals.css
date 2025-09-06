@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 =======
 @tailwind base; @tailwind components; @tailwind utilities;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+@tailwind base; @tailwind components; @tailwind utilities;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

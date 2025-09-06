@@ -1,7 +1,9 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -12,6 +14,8 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
@@ -27,6 +31,7 @@ export default async function handler(
 
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,18 +47,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const supabase = getServerSupabase();
+=======
+
+    }
+    const supabase = getServerSupabase();
+    }
+
+    const supabase = getServerSupabase()
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const { data, error } = await supabase
 
 
   } catch (e: any) {
+<<<<<<< HEAD
 
   }
 
   }
 }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
   const using_placeholder =;
@@ -96,8 +113,11 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 
@@ -120,4 +140,32 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+    return res && res.status(500).json({ error: e?.message });
+
+  }
+
+}
+
+
+  }
+}
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+
+}
+
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

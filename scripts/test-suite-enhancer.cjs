@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -13,4 +16,8 @@ function log(message, level = 'INFO')
   "text"
   "sender"
   const jestSetupContent = "
+<<<<<<< HEAD
 
+=======
+    log(` Test suite enhancement "failed"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

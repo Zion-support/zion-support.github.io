@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -5,6 +6,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: err.message })
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { burnTokens, burnForFeature } from "../../../utils/token/service",;
+=======
+
+
+  try {
+<<<<<<< HEAD
+  } catch (err: any) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -65,8 +73,28 @@ export default function handler(req, res) {
   }
 }
 =======
+<<<<<<< HEAD
+=======
+    const tx = feature;
+      ? burnForFeature (user_id, feature, metadata);
+      : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
+    return res.status (200).json ({ tx });
+  } catch (err: any) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+
+}
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(400).json({ error: err.message })
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

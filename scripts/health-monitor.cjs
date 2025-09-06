@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs')
@@ -11,7 +14,10 @@ class HealthMonitor {
   async runChecks() {
     for (const check of this.checks) {
       try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         const result = execSync(check.command, { "encoding": 'utf8' };);
         const result = execSync(check.command, { encoding: 'utf8' });
         console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
@@ -19,4 +25,8 @@ class HealthMonitor {
     }
   }
 }
+<<<<<<< HEAD
 
+=======
+new HealthMonitor().runChecks();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

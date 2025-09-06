@@ -1,9 +1,60 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages-disabled/api.tsx
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from \'lucide-react\'; export default function API() { const apiEndpoints = [{ \"name\": \'Authentication\',\"method\": \'POST\',\"endpoint\": \'/api/auth/login\',\"description\": \'Authenticate users and get access tokens\',\"parameters\": [\'email\',\'password\'],\"response\": \'JWT token\' },{ \"name\": \'User Profile\',\"method\": \'GET\',\"endpoint\": \'/api/user/profile\',\"description\": \'Get user profile information\',\"parameters\": [\'token\'],\"response\": \'User profile data\' },{ \"name\": \'Services List\',\"method\": \'GET\',\"endpoint\": \'/api/services\',\"description\": \'Get list of available services\',\"parameters\": [\'category\',\'limit\'],\"response\": \'Array of services\' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive API documentation and integration guides\" /> </Head> <div className=\"min-h-screen bg-gray-50\"> {} <div className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16\"> <div className=\"container mx-auto px-4 text-center\"> <h1 className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> API <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400\">Documentation</span> </h1> <p className=\"text-xl text-gray-200 max-w-2xl mx-auto\"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className=\"grid md:grid-cols-2 gap-8 mb-12\"> <div className=\"bg-white p-6 rounded-lg shadow-md\"> <h2 className=\"text-2xl font-semibold mb-4\">Getting Started</h2> <ul className=\"text-gray-600 space-y-2\"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className=\"bg-white p-6 rounded-lg shadow-md\"> <h2 className=\"text-2xl font-semibold mb-4\">Endpoints</h2> <ul className=\"text-gray-600 space-y-2\"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className=\"text-center\"> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\"> <a href=\"/docs/api\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors\"> View Full Documentation </a> <a href=\"/contact/\" className=\"bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors\"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;
 import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from 'lucide-react'; export default function API() { const apiEndpoints = [{ "name": 'Authentication',"method": 'POST',"endpoint": '/api/auth/login',"description": 'Authenticate users and get access tokens',"parameters": ['email','password'],"response": 'JWT token' },{ "name": 'User Profile',"method": 'GET',"endpoint": '/api/user/profile',"description": 'Get user profile information',"parameters": ['token'],"response": 'User profile data' },{ "name": 'Services List',"method": 'GET',"endpoint": '/api/services',"description": 'Get list of available services',"parameters": ['category','limit'],"response": 'Array of services' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name="description" content="Comprehensive API documentation and integration guides" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl "md": text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className="grid md:grid-cols-2 gap-8 mb-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Getting Started</h2> <ul className="text-gray-600 space-y-2"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Endpoints</h2> <ul className="text-gray-600 space-y-2"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className="text-center"> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="/docs/api" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"> View Full Documentation </a> <a href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
+
 export default function API() {;
   const apiEndpoints = [;
     {;
@@ -31,6 +82,7 @@ export default function API() {;
       response: 'Array of services';
     }
   ];
+
   return (
     <>;
       <Head>;
@@ -38,6 +90,7 @@ export default function API() {;
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
+
       <div className="min-h-screen bg-gray-50">;
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
@@ -50,6 +103,7 @@ export default function API() {;
             </p>;
           </div>;
         </div>;
+
         {/* API Overview */}
         <div className="py-16 bg-white>;
           <div className=container mx-auto px-4">;
@@ -78,6 +132,7 @@ export default function API() {;
             </div>;
           </div>;
         </div>;
+
         {/* API Endpoints */}
         <div className="py-16 bg-gray-50>;
           <div className="container mx-auto px-4">;
@@ -120,7 +175,10 @@ export default function API() {;
             </div>;
           </div>;
         </div>;
+
         {/* Getting Started */}
+<<<<<<< HEAD
+<<<<<<< HEAD
         <div className=py-16 bg-white">;
           <div className="container mx-auto px-4>;
             <div className=max-w-3xl mx-auto text-center">;
@@ -143,9 +201,45 @@ export default function API() {;
       </div>;
     </>;
   )}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+=======
+
+  )}
+        <div className=py-16 bg-white">
+          <div className="container mx-auto px-4>
+            <div className=max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6>Getting Started</h2>
+              <p className=text-lg text-gray-600 mb-8">
+                Ready to integrate with our APIs? Get your API key and start building amazing applications.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center>
+                <Link href=/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300>
+                  Get API Key
+                  <ArrowRight className=ml-2 w-5 h-5" />
+                </Link>
+                <Link href="/docs className=inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">                  View Full Documentation
+                  <ExternalLink className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )}
+origin/chore/merge-open-prs
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from 'lucide-react'; export default function API() { const apiEndpoints = [{ "name": 'Authentication',"method": 'POST',"endpoint": '/api/auth/login',"description": 'Authenticate users and get access tokens',"parameters": ['email','password'],"response": 'JWT token' },{ "name": 'User Profile',"method": 'GET',"endpoint": '/api/user/profile',"description": 'Get user profile information',"parameters": ['token'],"response": 'User profile data' },{ "name": 'Services List',"method": 'GET',"endpoint": '/api/services',"description": 'Get list of available services',"parameters": ['category','limit'],"response": 'Array of services' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name="description" content="Comprehensive API documentation and integration guides" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl "md": text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className="grid md:grid-cols-2 gap-8 mb-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Getting Started</h2> <ul className="text-gray-600 space-y-2"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Endpoints</h2> <ul className="text-gray-600 space-y-2"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className="text-center"> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="/docs/api" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"> View Full Documentation </a> <a href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;
 =======
 import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from \'lucide-react\'; export default function API() { const apiEndpoints = [{ \"name\": \'Authentication\',\"method\": \'POST\',\"endpoint\": \'/api/auth/login\',\"description\": \'Authenticate users and get access tokens\',\"parameters\": [\'email\',\'password\'],\"response\": \'JWT token\' },{ \"name\": \'User Profile\',\"method\": \'GET\',\"endpoint\": \'/api/user/profile\',\"description\": \'Get user profile information\',\"parameters\": [\'token\'],\"response\": \'User profile data\' },{ \"name\": \'Services List\',\"method\": \'GET\',\"endpoint\": \'/api/services\',\"description\": \'Get list of available services\',\"parameters\": [\'category\',\'limit\'],\"response\": \'Array of services\' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name=\"description\" content=\"Comprehensive API documentation and integration guides\" /> </Head> <div className=\"min-h-screen bg-gray-50\"> {} <div className=\"bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16\"> <div className=\"container mx-auto px-4 text-center\"> <h1 className=\"text-4xl \"md\": text-5xl font-bold mb-4\"> API <span className=\"text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400\">Documentation</span> </h1> <p className=\"text-xl text-gray-200 max-w-2xl mx-auto\"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className=\"grid md:grid-cols-2 gap-8 mb-12\"> <div className=\"bg-white p-6 rounded-lg shadow-md\"> <h2 className=\"text-2xl font-semibold mb-4\">Getting Started</h2> <ul className=\"text-gray-600 space-y-2\"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className=\"bg-white p-6 rounded-lg shadow-md\"> <h2 className=\"text-2xl font-semibold mb-4\">Endpoints</h2> <ul className=\"text-gray-600 space-y-2\"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className=\"text-center\"> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\"> <a href=\"/docs/api\" className=\"bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors\"> View Full Documentation </a> <a href=\"/contact/\" className=\"bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors\"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;
@@ -156,4 +250,8 @@ import _React from 'react'; import Head from 'next/head'; import Link from 'next
 import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; import { Code,Key,Globe,Database,Shield,Zap,ArrowRight,Copy,CheckCircle,ExternalLink,Clock,Users } from 'lucide-react'; export default function API() { const apiEndpoints = [{ "name": 'Authentication',"method": 'POST',"endpoint": '/api/auth/login',"description": 'Authenticate users and get access tokens',"parameters": ['email','password'],"response": 'JWT token' },{ "name": 'User Profile',"method": 'GET',"endpoint": '/api/user/profile',"description": 'Get user profile information',"parameters": ['token'],"response": 'User profile data' },{ "name": 'Services List',"method": 'GET',"endpoint": '/api/services',"description": 'Get list of available services',"parameters": ['category','limit'],"response": 'Array of services' } ]; const API = () => { return ( <> <Head> <title>API Documentation - Zion Tech Group</title> <meta name="description" content="Comprehensive API documentation and integration guides" /> </Head> <div className="min-h-screen bg-gray-50"> {} <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"> <div className="container mx-auto px-4 text-center"> <h1 className="text-4xl "md": text-5xl font-bold mb-4"> API <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Documentation</span> </h1> <p className="text-xl text-gray-200 max-w-2xl mx-auto"> Comprehensive API documentation for integrating with Zion Tech Group services </p> </div> <div className="grid md:grid-cols-2 gap-8 mb-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Getting Started</h2> <ul className="text-gray-600 space-y-2"> <li>• Authentication</li> <li>• Rate Limits</li> <li>• Error Handling</li> <li>• SDKs & Libraries</li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h2 className="text-2xl font-semibold mb-4">Endpoints</h2> <ul className="text-gray-600 space-y-2"> <li>• REST API</li> <li>• GraphQL</li> <li>• Webhooks</li> <li>• Real-time APIs</li> </ul> </div> </div> <div className="text-center"> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="/docs/api" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"> View Full Documentation </a> <a href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"> Contact Support </a> </div> </div> </div> </div> </> )}; export default API;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

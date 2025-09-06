@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+=======
+private readonly RETRY_DELAY = 1000; // 1 second
+  private readonly CACHE_CLEAR_THRESHOLD = 2
+  constructor() {
+
+    this && this.initializeGlobalHandlers();
+
+  }
+  private initializeGlobalHandlers(): void {
+    if (typeof window === 'undefined') return;
+    // Handle webpack chunk loading errors
+
+    window && window.addEventListener('error', event => {
+      this && this.handleScriptError(event);
+    });
+
+    // Handle unhandled promise rejections (async chunk loading)
+    window && window.addEventListener('unhandledrejection', event => {
+      this && this.handlePromiseRejection(event);
+    });  }
+
+
+      this.handlePromiseRejection(event)
+    }) }
+  private handleScriptError(event: ErrorEvent): void {
+
+    const { error, filename } = event;
+
+    if (this && this.isChunkError(error, filename)) {
+      event && event.preventDefault(); // Prevent the error from bubbling up
+      this && this.handleChunkError(error, { filename, source: 'script' });
+
+    }
+  }
+  private handlePromiseRejection(event: PromiseRejectionEvent): void {
+
+    const error = event && event.reason;
+
+    if (this && this.isChunkError(error)) {
+      event && event.preventDefault(); // Prevent unhandled rejection
+      this && this.handleChunkError(error, { source: 'promise' });
+
+    }
+  }
+  private isChunkError(error: any, filename?: string): boolean {
+
+    if (!error) return false;
+
+    const errorMessage = error && error.message || String(error);
+    const errorName = error && error.name || '';
+
+    const chunkErrorPatterns = [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -136,10 +190,48 @@ class ChunkErrorHandler {;
         } catch (e) {;
           // Ignore localStorage errors;
         }
+<<<<<<< HEAD
       });
       logErrorToProduction('Caches cleared successfully', undefined, {;
         context: 'chunkErrorRecovery';
         action: 'cache-clear';
+=======
+
+    window && window.location.replace(window && window.location.href);
+
+  }
+  private hardRefresh(): void {
+    // Force a hard refresh bypassing all caches
+
+    window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
+
+  }
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+
+          background: #0070f3
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+          margin-right: 1rem;        ">
+
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+    const errorDiv = document && document.createElement('div');
+    errorDiv && errorDiv.style.cssText = `
+    window.location.href = window.location.href + '?_t=' + Date.now()
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -161,6 +253,7 @@ class ChunkErrorHandler {;
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+<<<<<<< HEAD
     const errorDiv = document.createElement('div'),
     errorDiv.style.cssText = `
       position: fixed,
@@ -176,6 +269,9 @@ class ChunkErrorHandler {;
       z-index: 999999,
       font-family: system-ui, -apple-system, sans-serif,
     `,
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
@@ -185,6 +281,7 @@ class ChunkErrorHandler {;
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
           background: #0070f3,
           color: white,
           border: none,
@@ -204,10 +301,46 @@ class ChunkErrorHandler {;
           border-radius: 0.5rem,
           font-size: 1rem,
           cursor: pointer,
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ">
           Go Home
         </button>
       </div>
+<<<<<<< HEAD
+=======
+
+    `;
+
+    document && document.body.appendChild(errorDiv);
+
+  }
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+  private getSessionKey(): string {
+
+    return `${navigator && navigator.userAgent}_${window && window.location.origin}`;
+
+  }
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
+
+    if (!this && this.errorStats.has(sessionKey)) {
+      this && this.errorStats.set(sessionKey, {
+        errorCount: 0,
+        lastErrorTime: 0,
+        userAgent: navigator && navigator.userAgent,
+        url: window && window.location.href,
+      });
+    }
+    return this && this.errorStats.get(sessionKey)!;
+
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     `,
 
     document.body.appendChild(errorDiv)
@@ -283,6 +416,80 @@ class ChunkErrorHandler {;
     }
     return this.errorStats.get(sessionKey)!;
   }
+<<<<<<< HEAD
+=======
+
+
+
+  // Public method to manually trigger recovery
+  public triggerRecovery(): void {
+
+    this && this.clearCaches().then(() => {
+      this && this.reloadPage();
+    });  }
+
+
+      this.reloadPage()
+    }) }
+  // Public method to check if we're in a chunk error state
+  public isInErrorState(): boolean {
+
+    const sessionKey = this && this.getSessionKey();
+    const stats = this && this.errorStats.get(sessionKey);
+    return stats ? stats && stats.errorCount > 0 : false;
+
+  }
+  // Public method to reset error state
+  public resetErrorState(): void {
+
+    const sessionKey = this && this.getSessionKey();
+    this && this.errorStats.delete(sessionKey);
+
+  }
+
+
+// Create and export singleton instance
+export const chunkErrorHandler = new ChunkErrorHandler()
+// Export for manual usage
+
+export default chunkErrorHandler
+export default chunkErrorHandler
+        ">
+          Try Again
+        </button>
+
+
+      background: rgba (0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      align - items: center;
+      justify - content: center;
+      z - index: 999999;
+      font - family: system - ui, -apple - system, sans - serif;
+    `;
+    error_div.innerHTML = `;
+      <div style="text - align: center; padding: 2rem; max - width: 500px;">;
+        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;
+        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;
+          We're having trouble loading some parts of the application.;
+          This might be due to a poor network connection or a temporary server issue.;
+        </p>;
+        <button onclick="window.location.reload ()" style=";
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+          margin - right: 1rem;        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -308,4 +515,44 @@ class ChunkErrorHandler {;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+<<<<<<< HEAD
+=======
+export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+
+;
+  // Public method to manually trigger recovery;
+  public triggerRecovery(): void {;
+    this.clearCaches().then(() => {;
+      this.reloadPage();
+    });
+  }
+;
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState(): boolean {;
+    const sessionKey = this.getSessionKey(),;
+    const stats = this.errorStats.get(sessionKey),;
+    return stats ? stats.errorCount > 0 : false;
+  }
+;
+  // Public method to reset error state;
+  public resetErrorState(): void {;
+    const sessionKey = this.getSessionKey(),;
+    this.errorStats.delete(sessionKey);
+  }
+}
+;
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
+// Export for manual usage;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default chunkErrorHandler;

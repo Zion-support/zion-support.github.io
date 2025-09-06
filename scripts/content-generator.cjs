@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Content Generator Script;
@@ -7,7 +10,10 @@
 const fs = require("child_process")
 const path = require("path")
     this.projectRoot = path.resolve(__dirname, "..")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -19,7 +25,10 @@ const path = require("path")
         "
       "it-services": {"title": "IT Services","description": "Complete IT solutions for digital transformation"}
         content: "
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "
     console.log(" Generating solution page content...")
       "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations"}
@@ -30,4 +39,8 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
+<<<<<<< HEAD
 
+=======
+    console.log(`� Report saved "to"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

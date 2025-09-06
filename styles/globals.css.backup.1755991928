@@ -199,6 +199,11 @@ body {
   color: white;
   overflow-x: hidden;
   position: relative;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-b6e9
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 h3 {
   font-size: clamp(1.5rem, 3vw, 2.25rem);

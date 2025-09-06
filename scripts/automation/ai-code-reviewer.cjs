@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -197,4 +200,8 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
+<<<<<<< HEAD
 
+=======
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,5 +1,29 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+}
+export interface SearchHighlight {
+  before: string;
+  match: string,
+  after: string;
+}
+export interface FilterOptions {
+  product_types: {
+    label: string,
+    value: string;
+  }[];
+  locations: {
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface SearchSuggestion {
+export interface SearchSuggestion {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   text: string;
 
   type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent'
@@ -44,9 +68,15 @@ export interface SearchSuggestion {;
 export interface SearchHighlight {;
   before: string,;
   match: string,;
+<<<<<<< HEAD
+=======
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
   before: string;
+<<<<<<< HEAD
 
   match: string
 
@@ -76,20 +106,110 @@ export interface SearchHighlight {;
   before: string,;
   match: string,;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  match: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   after: string;
 }
 export interface FilterOptions {
-  product_types: {
+  productTypes: {
+
+  }[];
+<<<<<<< HEAD
+  ratingOptions: number[];
+=======
+  locations: {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     label: string,
     value: string;
   }[];
-  ratingOptions: number[];
+  availability_options: {
+    label: string,
+    value: string;
+  }[];
+  rating_options: number[];
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export interface SearchSuggestion {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+export interface SearchSuggestion {;
+  text:string,;
+  type:'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',;
+  iconUrl?:string;
+}
+;
+export interface SearchHighlight {;
+  before:string,;
+  match:string,;
+  after:string;
+}
+;
+export interface FilterOptions {;
+  productTypes:{;
+    label:string,;
+    value:string;
+  }[],;
+  locations:{;
+    label:string,;
+    value:string;
+  }[],;
+  availabilityOptions:{;
+    label:string,;
+    value:string;
+  }[],;
+  ratingOptions:number[];
+} 
+}
+  after: string;
+}
+;
+export interface FilterOptions {;
+  productTypes: {;
+    label: string,;
+    value: string;
+  }[],;
+  locations: {;
+    label: string,;
+    value: string;
+  }[],;
+  availabilityOptions: {;
+    label: string,;
+    value: string;
+  }[];
+  ratingOptions: number[];
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+export interface SearchSuggestion {
+  text: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

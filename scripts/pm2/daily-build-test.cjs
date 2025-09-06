@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Daily Build and Test Script for PM2;
@@ -140,4 +143,8 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

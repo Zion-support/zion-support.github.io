@@ -1,3 +1,252 @@
+<<<<<<< HEAD
+=======
+}
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipment_listings.reduce (
+    (acc, item) => {
+
+      acc[item.id] = convertProductListingToEquipmentDetails (item);
+      return acc;
+    },
+
+    {} as { [key: string]: EquipmentDetails }
+  )
+export default function EquipmentDetail() {
+  const router = useRouter()
+  const { id } = router.query as { id?: string }
+  const { isAuthenticated, user } = useAuth()
+  const { items, dispatch } = useCart()
+  const { formatPrice } = useCurrency()
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const [isAdding, setIsAdding] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>()
+  useEffect((,) => {
+    async function loadEquipment() {
+      if (!id) {
+        setLoading(false)
+        setError('No equipment ID provided')
+        return;
+      }
+      try {
+        setLoading(true)
+        setError(null)
+        // Try to find in static data first
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id]
+        if (equipmentFromSample) {
+          setEquipment(equipmentFromSample)
+          setLoading(false)
+          return;
+        }
+
+        // Try to get from session_storage (for dynamically generated equipment);
+        // Check condition
+if ( {) {
+  $2
+}
+
+          try {
+            const stored = sessionStorage.getItem(`equipment:${id}`)
+            if (stored) {
+              const storedData = JSON.parse(stored)
+              // Check if it's already in EquipmentDetails format or needs conversion
+              let equipmentData: EquipmentDetails
+              if (storedData.name) {
+                // Already in EquipmentDetails format
+                equipmentData = storedData
+              } else {
+
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import {;
+  ShoppingCart,;
+  Star,;
+  Truck,;
+  Shield,;
+  RotateCcw,;
+  Clock,;
+  AlertTriangle,;
+  ArrowLeft,;
+} from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from '@/context/CartContext';
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
+import { equipmentListings } from '@/data/equipmentData';
+import { ProductListing } from '@/types/listings';
+import { motion } from 'framer-motion';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface EquipmentSpecification {;
+  name: string;
+value: string ;
+}interface EquipmentDetails {;
+  id: string;
+name: string;
+description: string;
+brand: string;
+category: string;
+subcategory?: string;
+images: string[];
+price: number;
+currency: string;
+rating?: number;
+reviewCount?: number;
+inStock: boolean;
+expectedShipping?: string;
+specifications: EquipmentSpecification[];
+features: string[];
+warranty?: string;
+returnPolicy?: string ;
+}return {;
+  id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({';
+  name: spec, value: '' ;
+}) );
+features: item && item.tags || [];';
+warranty: '1 Year Manufacturer Warranty';';
+returnPolicy: '30-day return policy' ;
+
+// Convert ProductListing to EquipmentDetails format;
+function convertProductListingToEquipmentDetails(): any (;
+  item: ProductListing;
+): EquipmentDetails {;
+  return {;
+    id: item && item.id,;
+    name: item && item.title,;
+    description: item && item.description,;
+    brand: item && item.brand || 'Unknown',;
+    category: item && item.category,;
+    subcategory: item && item.subcategory,;
+    images: item && item.images || [;
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',;
+    ],;
+    price: item && item.price || 0,;
+    currency: item && item.currency || '$',;
+    rating: item && item.rating,;
+    reviewCount: item && item.reviewCount,;
+    inStock: item && item.availability === 'In Stock' || !item && item.availability,;
+    expectedShipping: item && item.availability || 'In Stock',;
+    specifications: (item && item.specifications || []).map(spec => ({;
+      name: spec,;
+      value: '',    })),;
+    features: item && item.tags || [],;
+    warranty: '1 Year Manufacturer Warranty',;
+    returnPolicy: '30-day return policy',;
+  };
+
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipmentListings && equipmentListings.reduce(;
+    (acc, item) => {;
+      acc[item && item.id] = convertProductListingToEquipmentDetails(item);
+      return acc;
+    },;
+    {} as { [key: string]: EquipmentDetails }
+  );
+export default function EquipmentDetail() {;
+  const router = useRouter();
+  const { id } = router && router.query as { id?: string };
+  const { isAuthenticated, user } = useAuth();
+  const { items, dispatch } = useCart();
+  const { formatPrice } = useCurrency();
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+
+  useEffect((,) => {;
+    async function loadEquipment() {;
+      if (!id) {;
+        setLoading(false);
+        setError('No equipment ID provided');
+        return;
+      }
+
+      try {;
+        setLoading(true);
+        setError(null);
+
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
+        if (equipmentFromSample) {;
+          setEquipment(equipmentFromSample);
+          setLoading(false);
+          return;
+        }
+
+        // Try to get from sessionStorage (for dynamically generated equipment);
+        if (typeof window !== 'undefined') {;
+          try {;
+            const stored = sessionStorage && sessionStorage.getItem(`equipment:${id}`);
+            if (stored) {;
+              const storedData = JSON && JSON.parse(stored);
+
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails;
+              if (storedData && storedData.name) {;
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
+              } else {;
+                // It's a ProductListing, convert it;
+                equipmentData = convertProductListingToEquipmentDetails(;
+                  storedData as ProductListing;
+                );
+              }
+              setEquipment(equipmentData)
+              setLoading(false)
+              return;
+            }
+
+                // It's a ProductListing, convert it;
+                equipment_data = convertProductListingToEquipmentDetails (
+                  stored_data as ProductListing);
+              }
+              set_equipment (equipment_data);
+              set_loading (false);
+              return;
+            }
+          } catch (storage_error) {
+            logErrorToProduction ('Error reading from session_storage:', {
+              data: storage_error,
+            });
+          }
+        }
+        // If not found anywhere, set error;
+        set_error ('Equipment not found');
+        set_loading (false);
+
+      } catch (error) {
+        logErrorToProduction('Error loading equipment:', { data: error })
+        setError('Failed to load equipment details')
+        setLoading(false)
+      }
+    }
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -158,6 +407,27 @@ export default function EquipmentDetail() {;
         setError('Failed to load equipment details'),;
         setLoading(false);
       }
+<<<<<<< HEAD
+=======
+    }
+
+    loadEquipment()
+  }, [id]),
+
+
+
+
+  const handleAddToCart = async () => {
+    if (!equipment |!isAuthenticated) {
+      toast({
+
+        title: 'Authentication Required',
+        description: 'Please log in to add items to cart',
+        variant: 'destructive',
+
+      })
+      return;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
     loadEquipment()
@@ -177,6 +447,7 @@ export default function EquipmentDetail() {;
       dispatch({
         type: 'ADD_ITEM',
         payload: {
+<<<<<<< HEAD
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
@@ -197,6 +468,45 @@ export default function EquipmentDetail() {;
 
   const inCart = items.some(item => item.id === equipment?.id),
 
+=======
+
+    load_equipment ();
+  }, [id]);
+  const handleAddToCart = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Authentication Required',
+        description: 'Please log in to add items to cart',
+        variant: 'destructive',
+      });
+      return;
+    }
+  }
+  const inCart = items.some(item => item.id === equipment?.id)
+          quantity}}),
+
+      toast({
+        title: "Added to Cart",
+        description: `${equipment.name} has been added to your cart.`})
+    } catch (error) {
+      toast ({
+        title: 'Error',
+        description: 'Failed to add item to cart. Please try again.',
+        variant: 'destructive',
+      });
+
+    } finally {
+      setIsAdding(false)
+    }
+
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Loading state
   if (loading) {
     return (
@@ -233,6 +543,7 @@ export default function EquipmentDetail() {;
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
+<<<<<<< HEAD
               <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
                 {error === 'Equipment not found' 
                   ? "The equipment you're looking for doesn't exist or has been removed." 
@@ -252,6 +563,11 @@ export default function EquipmentDetail() {;
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Browse Equipment
                 </Button>
               </div>
@@ -260,6 +576,39 @@ export default function EquipmentDetail() {;
         </div>
       </>
     )
+<<<<<<< HEAD
+=======
+
+                  onClick={() => router && router.push('/equipment')}
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
+                  Browse Equipment;
+                </Button>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </>;
+    );
+
+  }
+  return (
+    <>
+      <NextSeo
+        title={`${equipment.name} - Zion Marketplace`}
+        description = {equipment.description,}
+        openGraph={{
+
+          title: `${equipment && equipment.name} - Zion Marketplace`,
+          description: equipment && equipment.description,
+          images:
+            equipment && equipment.images.length> 0 && equipment && equipment.images[0];
+              ? [{ url: equipment && equipment.images[0] }];
+              : undefined,;
+
+
+              : undefined,
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     loadEquipment();
   }, [id]),;
@@ -368,11 +717,21 @@ export default function EquipmentDetail() {;
           title: `${equipment.name} - Zion Marketplace`;
           description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }}
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <motion.nav 
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
@@ -388,7 +747,24 @@ export default function EquipmentDetail() {;
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
 
+<<<<<<< HEAD
           <div className="grid lg:grid-cols-2 gap-12">
+=======
+              onClick={() => router && router.push('/equipment')}
+              className='text-zion-cyan hover:text-white transition-colors'            >;
+              Equipment;
+            </button>;
+            <span className='mx-2 text-zion-slate-light'>/</span>;
+            <span className='text-zion-slate-light'>{equipment && equipment.name}</span>;
+          </motion && motion.nav>;
+
+          <div className='grid lg:grid-cols-2 gap-12'>;
+
+
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Images */}
             <motion.div 
               className="space-y-4"
@@ -398,6 +774,25 @@ export default function EquipmentDetail() {;
             >
               <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
+<<<<<<< HEAD
+=======
+
+                    equipment && equipment.images[selectedImageIndex] ||
+                    equipment && equipment.images[0] ||
+                    'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+                  }
+                  alt={equipment && equipment.name}
+                  className='object-cover'                />;
+              </AspectRatio>;
+
+              {equipment && equipment.images.length > 1 && (;
+                <div className='grid grid-cols-4 gap-2'>;
+                  {equipment && equipment.images.map((image, index) => (                    <button
+
+                      key = {index,}
+                      onClick = {(,) => setSelectedImageIndex(index),}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover"
@@ -420,6 +815,8 @@ export default function EquipmentDetail() {;
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
+
+
                       />
                     </button>
                   ))}
@@ -427,13 +824,46 @@ export default function EquipmentDetail() {;
               )}
             </motion.div>;
             {/* Product Details */}
+<<<<<<< HEAD
             <motion.div 
               className="space-y-6"
+=======
+
+
+            <motion.div 
+              className="space-y-6"
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >;
               {/* Header */}
+<<<<<<< HEAD
+=======
+
+                    className='border-zion-slate-light text-zion-slate-light'>;
+                    {equipment && equipment.brand}
+                  </Badge>;
+                </div>;
+
+                <h1 className='text-3xl font-bold text-white'>;
+                  {equipment && equipment.name}
+                </h1>;
+
+                {equipment && equipment.rating && (;
+                  <div className='flex items-center gap-2'>;
+                    <div className='flex items-center'>;
+
+                      {[...Array(5)].map((_, i) => (                        <Star
+                          key = {i,}
+                          className={`h-4 w-4 ${
+                            i < Math.floor(equipment.rating!)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-zion-slate-light'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
@@ -443,6 +873,10 @@ export default function EquipmentDetail() {;
                     {equipment.brand}
                   </Badge>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 
                 <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
                 
@@ -456,6 +890,10 @@ export default function EquipmentDetail() {;
                             i < Math.floor(equipment.rating!);
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           }`}
                         />;
                       ))}
@@ -467,6 +905,7 @@ export default function EquipmentDetail() {;
                 )}
               </div>;
               {/* Price */}
+<<<<<<< HEAD
               <div className="bg-zion-blue-light rounded-lg p-4">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">
                   {formatPrice(equipment.price)}
@@ -477,6 +916,30 @@ export default function EquipmentDetail() {;
                     {equipment.expectedShipping}
                   </span>;
                 </div>;
+=======
+;
+
+;
+                {/* Return Policy */}
+                {equipment.returnPolicy && (
+                  <div className="flex gap-3 text-zion-slate-light">
+                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium">Returns</p>
+                      <p className="text-xs">{equipment.returnPolicy}</p>
+                    </div>
+                  </div>
+                )}
+
+
+  equipment.returnPolicy 
+}</p> </div> </div>) 
+}</div> </motion.div> </div> </div> </div> </>) 
+}'"};
+;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>;
               {/* Description */}
               <div className="space-y-4">
@@ -576,4 +1039,9 @@ export default function EquipmentDetail() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

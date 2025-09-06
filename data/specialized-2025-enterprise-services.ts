@@ -1,8 +1,13 @@
-import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
+=======
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
@@ -33,18 +38,24 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
+<<<<<<< HEAD
+=======
 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
+<<<<<<< HEAD
+=======
 
   market_advantage: string;
 ;
@@ -54,6 +65,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -65,12 +77,15 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+<<<<<<< HEAD
+=======
 
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -83,9 +98,43 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert consultation services',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🧠',
 
 =======
+=======
+<<<<<<< HEAD
+    marketPosition:
+      'Leading AI consciousness research platform for scientific institutions'
+    targetAudience:
+      'Research institutions, Universities, AI labs, Government agencies, Tech companies'
+    trialDays: 14
+    setupTime: '6-8 weeks'
+    category: 'Advanced AI & Consciousness'
+    realService: true
+    technology: [
+      'Advanced AI/ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch'
+    ]
+    integrations: [
+      'Research platforms, Academic databases, AI frameworks, Collaboration tools'
+    ]
+    useCases: [
+      'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'
+    ]
+    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
+    competitors: ['No direct competitors in consciousness simulation']
+    marketSize: 'Emerging research market'
+    growthRate: 'Projected 500% annual growth'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+=======
+    icon: '🧠',
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -114,12 +163,17 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     contact_info: contact,
     real_implementation: true,
     implementation_details:;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
     rating: 5 && 5.0,
     reviews: 18,
+<<<<<<< HEAD
+=======
 
       'Quantum-enhanced ML algorithms',
     benefits: [;
@@ -151,6 +205,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     features: [;
       'Quantum - enhanced ML algorithms',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum optimization solvers',
       'Hybrid quantum - classical computing',
       'Quantum feature selection',
@@ -162,6 +217,8 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert quantum consulting',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: '⚛️',
 
       'Multi-quantum backend platform with hybrid computing capabilities',
@@ -237,6 +294,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Hash - based signatures',
       'Code - based cryptography',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multivariate cryptography',
       'Quantum key distribution',
       'Hybrid encryption systems',
@@ -245,6 +303,8 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert security consulting',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: '🔒',
 
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
@@ -313,6 +373,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -325,6 +386,8 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert space consulting',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
     icon: '🛰️',
 
       'Custom satellite orchestration platform with AI-powered optimization',
@@ -393,6 +456,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Cutting - edge brain - computer interface platform that enables direct communication between the human brain and computers for research and medical applications.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -405,6 +469,8 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Clinical trial support',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
     icon: '🧬',
 
       'Advanced BCI platform with medical-grade hardware and research tools',
@@ -473,6 +539,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.',
     features: [;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -485,6 +552,8 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert IoT consultation',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
     icon: '🌐',
 
       'Industrial-grade autonomous IoT platform with AI-powered management',
@@ -544,9 +613,14 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   },
   // Advanced Analytics Services;
   {
+<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -556,6 +630,17 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
     features: [;
 
+<<<<<<< HEAD
+    id: 'predictive-analytics-engine'
+    name: 'Predictive Analytics Engine'
+    tagline: 'AI-powered predictive insights and forecasting'
+    price: '$2,199'
+    period: '/month'
+    description:
+      'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
+    features: [
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -569,6 +654,12 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     ],
     popular: true,
     icon: '📊',
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
 
 =======
     color: 'from - green - 600 to - emerald - 600',
@@ -578,10 +669,32 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Leading AI - powered predictive analytics platform for enterprise',
     target_audience:;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
     category: 'Advanced Analytics & AI',
+<<<<<<< HEAD
+    integrations: [
+      'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
+    ]
+    useCases: [
+      'Sales forecasting, Demand prediction, Risk assessment, Performance optimization'
+    ]
+    roi: 'Improve decision-making accuracy by 60% and reduce operational costs by 35%'
+    competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx']
+    marketSize: '$30B+ predictive analytics market'
+    growthRate: '160% YoY'
+    variant: 'analytics-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+    customers: 189,
+    rating: 4 && 4.8,
+    reviews: 145,
+];
+export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+=======
 
       'Enterprise-grade predictive analytics platform with custom model development',
     launchDate: '2024-05-01',
@@ -611,14 +724,138 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
       'Advanced predictive analytics platform with custom ML model development',
   },;
+
+
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    benefits: [;
+      '60% decision accuracy improvement',
+      '35% operational cost reduction',
+      'Advanced ML algorithms',
+      'Real - time predictions',
+      'Custom model development',
+    ],
+    capabilities: [;
+      'Predictive modeling',
+      'Time series forecasting',
+      'Trend analysis',
+      'Anomaly detection',
+      'Scenario modeling',
+    ],
+    market_advantage:;
+      'Advanced predictive analytics platform with custom ML model development',
+  },
+<<<<<<< HEAD
+      'Advanced predictive analytics platform with custom ML model development',
+  },;
+
+
+];
+export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
+    benefits: [;
+      '60% decision accuracy improvement',
+      '35% operational cost reduction',
+      'Advanced ML algorithms',
+      'Real - time predictions',
+      'Custom model development',
+    ],
+    capabilities: [;
+      'Predictive modeling',
+      'Time series forecasting',
+      'Trend analysis',
+      'Anomaly detection',
+      'Scenario modeling',
+    ],
+    market_advantage:;
+      'Advanced predictive analytics platform with custom ML model development',
+  },
+=======
+=======
+    id: 'predictive-analytics-engine'
+    name: 'Predictive Analytics Engine'
+    tagline: 'AI-powered predictive insights and forecasting'
+    price: '$2,199'
+    period: '/month'
+    description:
+      'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.'
+    features: [
+      'Advanced ML algorithms'
+      'Predictive modeling'
+      'Time series forecasting'
+      'Trend analysis'
+      'Anomaly detection'
+      'Scenario modeling'
+      'Real-time predictions'
+      'Custom model development'
+      'Performance analytics'
+      'Expert data consultation'
+    ]
+    popular: true
+    icon: '📊'
+    color: 'from-green-600 to-emerald-600'
+    textColor: 'text-green-400'
+    link: 'https://ziontechgroup.com/predictive-analytics-engine'
+    marketPosition:
+      'Leading AI-powered predictive analytics platform for enterprise'
+    targetAudience:
+      'Businesses, Financial services, Retail companies, Manufacturing companies'
+    trialDays: 21
+    setupTime: '2-3 weeks'
+    category: 'Advanced Analytics & AI'
+    realService: true
+    technology: ['Python, TensorFlow, PyTorch, Scikit-learn, React, Node.js']
+    integrations: [
+      'Data warehouses, Business intelligence tools, CRM systems, ERP platforms'
+    ]
+    useCases: [
+      'Sales forecasting, Demand prediction, Risk assessment, Performance optimization'
+    ]
+    roi: 'Improve decision-making accuracy by 60% and reduce operational costs by 35%'
+    competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx']
+    marketSize: '$30B+ predictive analytics market'
+    growthRate: '160% YoY'
+    variant: 'analytics-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+      'Enterprise-grade predictive analytics platform with custom model development'
+    launchDate: '2024-05-01'
+    customers: 189
+    rating: 4.8
+    reviews: 145
+    benefits: [
+      '60% decision accuracy improvement'
+      '35% operational cost reduction'
+      'Advanced ML algorithms'
+      'Real-time predictions'
+      'Custom model development'
+    ]
+    capabilities: [
+      'Predictive modeling'
+      'Time series forecasting'
+      'Trend analysis'
+      'Anomaly detection'
+      'Scenario modeling'
+    ]
+    marketAdvantage:
+<<<<<<< HEAD
+      'Advanced predictive analytics platform with custom ML model development'
+  }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Advanced predictive analytics platform with custom ML model development',
   },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -627,8 +864,11 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     price: '$4, 499';
     period: '/month';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -678,12 +918,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Quantum ML algorithms_quantum optimization_hybrid computing_error correction_research tools';
     ];
+<<<<<<< HEAD
+=======
 
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
   }
 ;
   // Advanced Cybersecurity Services;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -696,6 +939,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Compliance and certification_expert security consulting';
     ];
     popular: true;
+<<<<<<< HEAD
+=======
     icon: '🔒';
 
     color: 'from - red - 600 to - orange - 600';
@@ -706,6 +951,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 30;
     setup_time: '3 - 4 weeks';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Advanced Cybersecurity';
     real_service: true;
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];
@@ -729,6 +975,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Post - quantum algorithms_lattice cryptography_hash - based signatures_migration tools_compliance support';
     ];
+<<<<<<< HEAD
+=======
 
     market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support';
   }
@@ -736,6 +984,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   // Space Technology Services;
 
   {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -747,6 +996,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Mission analytics dashboard_expert space consulting';
     ];
     popular: false;
+<<<<<<< HEAD
+=======
     icon: '🛰️';
 
     color: 'from - indigo - 600 to - purple - 600';
@@ -757,6 +1008,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 14;
     setup_time: '8 - 12 weeks';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Space Technology';
     real_service: true;
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];
@@ -780,12 +1032,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Autonomous operations_constellation optimization_mission planning_data processing_collision avoidance';
     ];
+<<<<<<< HEAD
+=======
 
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
   }
 ;
   // Neural Interface Services;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -798,6 +1053,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Expert neural consultation_clinical trial support';
     ];
     popular: true;
+<<<<<<< HEAD
+=======
     icon: '🧬';
 
     color: 'from - pink - 600 to - rose - 600';
@@ -808,6 +1065,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 7;
     setup_time: '12 - 16 weeks';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Neural Technology & BCI';
     real_service: true;
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];
@@ -831,12 +1089,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Neural signal processing_brain - computer communication_cognitive enhancement_medical applications_research tools';
     ];
+<<<<<<< HEAD
+=======
 
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
   }
 ;
   // Advanced IoT Services;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -849,6 +1110,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Custom IoT applications_expert IoT consultation';
     ];
     popular: false;
+<<<<<<< HEAD
+=======
     icon: '🌐';
 
     color: 'from - teal - 600 to - cyan - 600';
@@ -859,6 +1122,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 30;
     setup_time: '4 - 6 weeks';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     category: 'Advanced IoT & Edge Computing';
     real_service: true;
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];
@@ -882,12 +1146,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     capabilities: [;
       'Autonomous management_self - healing networksAI optimization_predictive maintenance_security automation';
     ];
+<<<<<<< HEAD
+=======
 
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
   }
 ;
   // Advanced Analytics Services;
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -900,6 +1167,8 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
       'Performance analytics_expert data consultation';
     ];
     popular: true;
+<<<<<<< HEAD
+=======
     icon: '📊';
 
     color: 'from - green - 600 to - emerald - 600';
@@ -913,6 +1182,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     real_service: true;
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -936,8 +1206,16 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     market_advantage: 'Advanced predictive analytics platform with custom ML model development';
   }
 ];
+<<<<<<< HEAD
 ;
 export default specializedEnterpriseServices;
+=======
+<<<<<<< HEAD
+;
+export default specializedEnterpriseServices;
+;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default specializedEnterpriseServices;
 
@@ -946,6 +1224,13 @@ export default specializedEnterpriseServices;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default specializedEnterpriseServices;
+=======
+export default specializedEnterpriseServices;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

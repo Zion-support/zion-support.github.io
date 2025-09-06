@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -16,6 +27,10 @@ export default async function handler(
     reason?: string;
     tag?: string;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -29,6 +44,7 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -42,6 +58,100 @@ export default async function handler(
   const { sessionId, reason, tag } = req.body as {
     sessionId: string;
 
+=======
+<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson } from "../../../utils/fsDb";
+import { tagOperatorSession } from "../../../utils/operator";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    reason?: string;
+    tag?: string;
+  }
+  if (return res.status (400).json ({ error: "Missing session_id" })) {
+  $2
+}
+  const requests = read_json < any[]>("support / requests.json", []);
+  const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const record = {
+    id
+    sessionId
+    reason: reason ?? "User requested escalation"
+    tag: tag ?? "escalate"
+    status: "open"
+    createdAt: Date.now()
+  }
+  requests.push(record);
+  writeJson("support/requests.json", requests);
+  };
+  if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
+  const requests = readJson<any[]>("support/requests && requests.json", []);
+  const id = `sr_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
+  const record = {
+    id,
+    session_id,
+    reason: reason ?? "User requested escalation",
+    tag: tag ?? "escalate",
+    status: "open",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+
+    created_at: Date.now (),
+=======
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { tagOperatorSession } from '../../../utils/operator';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string };
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+  return res.status(200).json({ ok: true, id })
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -53,5 +163,51 @@ export default async function handler(
   return res.status (200).json ({ ok: true, id });
 }
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Session escalated' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { tagOperatorSession } from '../../../utils/operator';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string };
+  if (!sessionId) return res.status($1).json({$2});
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+  return res.status(200).json({ ok: true, id })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

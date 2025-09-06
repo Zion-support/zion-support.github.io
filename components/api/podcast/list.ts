@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -11,6 +12,8 @@ function ensureStorage() {
 
   ensureStorage();
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -18,6 +21,7 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -72,10 +76,22 @@ function handler() {
     summary: e.best_quote || '',
     audio: e.audio || {},
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const simplified = episodes.map(e => ({
+    id: e.id
+    title: e.title
+    inviteeName: e.invitee?.name |'Guest'
+    createdAt: e.createdAt
+    summary: e.bestQuote |''
+    audio: e.audio |{}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
     title: e.title;
+<<<<<<< HEAD
 
   ensureStorage(),
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -105,6 +121,8 @@ function ensureStorage() {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
     id: e.id, title: e.title,
@@ -112,21 +130,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     invitee_name: e.invitee?.name || 'Guest';
     created_at: e.created_at;
     summary: e.best_quote || '',
     audio: e.audio || {}}));
   return res.status (200).json ({ episodes: simplified });
+<<<<<<< HEAD
 
 }
 }
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

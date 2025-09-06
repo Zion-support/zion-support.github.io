@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -17,6 +18,9 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -30,6 +34,7 @@ import {
   Wrench,
   Activity,
   Database,
+<<<<<<< HEAD
   FileText,;
   Users;
 } from 'lucide-react';
@@ -42,6 +47,11 @@ const services = [;
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
 =======
 =======
+=======
+  FileText,
+  Users;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -56,6 +66,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Predictive Maintenance AI,',;
     description: 'AI-powered systems to predict and prevent equipment failures.,',;
@@ -65,10 +76,20 @@ const services = [
       'Failure prediction algorithms',',;
       'Maintenance scheduling',',;
 
+=======
+    title: 'Predictive Maintenance AI,',
+    description: 'AI-powered systems to predict and prevent equipment failures.,',
+    icon: Brain,
+    features: [;
+      'Equipment health monitoring,',
+      'Failure prediction algorithms',',
+      'Maintenance scheduling',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Cost optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'IoT Sensor Networks,',;
     description: 'Connected sensor systems for comprehensive factory monitoring.,',;
@@ -78,10 +99,20 @@ const services = [
       'Equipment status tracking',',;
       'Data collection systems',',;
 
+=======
+    title: 'IoT Sensor Networks,',
+    description: 'Connected sensor systems for comprehensive factory monitoring.,',
+    icon: Cpu,
+    features: [;
+      'Environmental monitoring,',
+      'Equipment status tracking',',
+      'Data collection systems',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Real-time alerts'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Quality Control Systems,',;
     description: 'Automated quality assurance using computer vision and AI.,',;
@@ -91,10 +122,20 @@ const services = [
       'Defect detection algorithms',',;
       'Quality metrics tracking',',;
 
+=======
+    title: 'Quality Control Systems,',
+    description: 'Automated quality assurance using computer vision and AI.,',
+    icon: Shield,
+    features: [;
+      'Visual inspection systems,',
+      'Defect detection algorithms',',
+      'Quality metrics tracking',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Automated reporting'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Supply Chain Optimization,',;
     description: 'AI-driven supply chain management for improved efficiency.,',;
@@ -104,10 +145,20 @@ const services = [
       'Inventory optimization',',;
       'Supplier management',',;
 
+=======
+    title: 'Supply Chain Optimization,',
+    description: 'AI-driven supply chain management for improved efficiency.,',
+    icon: BarChart3,
+    features: [;
+      'Demand forecasting,',
+      'Inventory optimization',',
+      'Supplier management',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Logistics coordination'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Digital Twin Technology,',;
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',;
@@ -130,6 +181,18 @@ const benefits = [;
     icon: Activity;
 =======
 =======
+=======
+    title: 'Digital Twin Technology,',
+    description: 'Virtual replicas of physical manufacturing systems for simulation.,',
+    icon: Database,
+    features: [;
+      '3D factory modeling,',
+      'Process simulation',',
+      'Performance optimization',',
+      'Scenario planning'';
+    ];
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -138,6 +201,7 @@ const benefits = [
     icon: Activity
   },
   {}
+<<<<<<< HEAD
 
     title: 'Reduced Downtime,',;
     description: 'Predictive maintenance prevents unexpected equipment failures.,',;
@@ -209,6 +273,29 @@ export default function ManufacturingPage() {
 ];
 export default function ManufacturingPage() {
 
+=======
+    title: 'Reduced Downtime,',
+    description: 'Predictive maintenance prevents unexpected equipment failures.,',
+    icon: Wrench;
+  },
+  {}
+    title: 'Better Quality,',
+    description: 'Automated quality control ensures consistent product quality.,',
+    icon: Shield;
+  },
+  {}
+    title: 'Cost Savings,',
+    description: 'Optimized operations and reduced waste lower manufacturing costs.,',
+    icon: BarChart3;
+  }
+];
+export default function ManufacturingPage() {
+  return (
+    <Layout
+      title="Manufacturing Technology Solutions - Zion Tech Group"
+      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
+      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -258,6 +345,7 @@ export default function ManufacturingPage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -273,6 +361,8 @@ export default function ManufacturingPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -292,6 +382,7 @@ export default function ManufacturingPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -305,6 +396,8 @@ export default function ManufacturingPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -324,11 +417,14 @@ export default function ManufacturingPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -339,6 +435,7 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
@@ -356,6 +453,8 @@ export default function ManufacturingPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -384,11 +483,14 @@ export default function ManufacturingPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -399,6 +501,7 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
@@ -424,6 +527,8 @@ export default function ManufacturingPage() {
     </Layout>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -446,3 +551,7 @@ export default function ManufacturingPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

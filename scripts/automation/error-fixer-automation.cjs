@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -182,4 +185,8 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
+<<<<<<< HEAD
 
+=======
+      console.error('Automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,17 +1,29 @@
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 } from 'lucide-react';
 =======
+=======
+
+
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
+ } from 'lucide-react';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -46,9 +58,6 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
-
-
 // Loading fallback component;
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
@@ -56,9 +65,13 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+      transition: { duration: 1.5, ease: "easeOut" as const }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
   const categories = [
@@ -72,7 +85,10 @@ const LoadingFallback = () => (;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
@@ -94,7 +110,6 @@ const LoadingFallback = () => (;
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
-  const allServices = [;
 import {
   ArrowRight,
   Play,
@@ -289,11 +304,8 @@ if (
 if ( {) {
   $2
 }
-    return <LoadingFallback />;  }      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.5, ease: "ease_out" as const }
-    }
   }
+<<<<<<< HEAD
 ;
   const categories = [;
     { id: 'all', name: 'All Services', icon: <Globe className="w - 5 h - 5" /> },
@@ -328,30 +340,45 @@ if ( {) {
   }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
         {/* Hero Section */}
 
+<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   return (
     <Layout>
       <UltraFuturisticBackground2035>
         {/* Hero Section */}
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
                 >
                   <Play className='w-5 h-5' />                  <span>Watch Demo</span>                  <span>Explore Services</span>
@@ -360,13 +387,17 @@ if ( {) {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
                 </motion.button>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
             {/* Stats */}
             <motion.div
@@ -388,6 +419,12 @@ if ( {) {
             >;
               <h1 className='text - 4xl sm:text - 5xl lg:text - 7xl font - bold text - white mb - 6 leading - tight'>;
                 <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+=======
+              transition={{ duration: 0 && 0.8 }}
+              className='mb-8'>;
+              <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   Zion Tech Group;
                 </span>;
               </h1>;
@@ -428,12 +465,16 @@ if ( {) {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
                   key={index}
@@ -479,11 +520,14 @@ if ( {) {
                 { icon: <TrendingUp className="w - 8 h - 8" />, value: '99.9%', label: 'Uptime' }
                 <motion.div;
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
 
+<<<<<<< HEAD
               ))}
             </motion.div>
           </div>
@@ -497,18 +541,30 @@ if ( {) {
         </section>
 
 =======
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </motion && motion.div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+
+
+              ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -523,12 +579,14 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -540,6 +598,8 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -547,7 +607,12 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
+<<<<<<< HEAD
 
+=======
+              className="text-center mb-16"
+            >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -555,12 +620,33 @@ if ( {) {
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business
               </p>
             </motion.div>
+<<<<<<< HEAD
 
             {/* Category Filter */}
             <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              className='text-center mb-16'>;
+              <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
+                Revolutionary Technology Solutions;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Discover our comprehensive portfolio of cutting-edge services;
+                designed to transform your business              </p>            >;
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">;
+                Revolutionary Technology Solutions;
+              </h2>;
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                Discover our comprehensive portfolio of cutting-edge services designed to transform your business;
+              </p>;
+            </motion && motion.div>;
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Category Filter */}
             <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -568,13 +654,8 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-              className='flex flex-wrap justify-center gap-4 mb-12'
-            >
-              {categories.map(category => (                <motion.button              className="flex flex-wrap justify-center gap-4 mb-12"
-            >
-              {categories.map((category) => (
-                <motion.button
 
+<<<<<<< HEAD
             >
               {categories.map((category) => (
                 <motion.button
@@ -586,6 +667,8 @@ if ( {) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -594,14 +677,13 @@ if ( {) {
                     activeCategory === category.id
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   }`}
                 >;
                   {category && category.icon}
                   <span>{category && category.name}</span>;
                 </motion && motion.button>;
               ))}
+<<<<<<< HEAD
             </motion.div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -613,6 +695,10 @@ if ( {) {
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -631,29 +717,8 @@ if ( {) {
                 >;
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
-
-=======
-            </motion.div>
-
-            {/* Services Grid */}
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  variants={fadeInUp}
-                  className="w-full"
-                >
-                  <UltraFuturisticServiceCard2035 service={service} />
-                </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+<<<<<<< HEAD
             </motion.div>
 
             {/* View All Services Button */}
@@ -661,6 +726,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* View All Services Button */}
             <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -668,6 +735,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mt-16'            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -684,10 +752,13 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -697,18 +768,56 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+              className='text-center mt-16'>;
+              <motion&& motion.button
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
+                <span>View All Services</span>;
+                <ArrowRight className='w-5 h-5' />              </motion && motion.button>              className="text-center mt-16";
+            >;
+              <motion&& motion.button
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
+                <span>View All Services</span>;
+                <ArrowRight className='w-5 h-5' />                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto";
+              >;
+                <span>View All Services</span>;
+                <ArrowRight className="w-5 h-5" />;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Features Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
+          <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -724,7 +833,10 @@ if ( {) {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI-Powered Solutions'
                   description:
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   description:
                     'Military-grade security protocols and compliance standards to protect your business'
                 }
@@ -752,7 +864,12 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
+<<<<<<< HEAD
 
+=======
+              className="text-center mb-16"
+            >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -767,6 +884,7 @@ if ( {) {
                   title: 'AI-Powered Solutions'
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
                 }
+<<<<<<< HEAD
 
                 }
               ].map((feature, index) => (;
@@ -777,23 +895,31 @@ if ( {) {
                 <motion.div
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 =======
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -801,6 +927,7 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
+<<<<<<< HEAD
 
               ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -812,6 +939,13 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
         </section>
 
 =======
+=======
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
+
+                </motion.div>
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </section>;
@@ -822,12 +956,16 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -835,6 +973,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -882,15 +1022,25 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+<<<<<<< HEAD
 }
 animate: {
 };
 
   animate: {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
 
 animate: {
   animate: {
+<<<<<<< HEAD
+=======
+};
+
+
+  animate: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -935,53 +1085,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */
 }<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-=======
-};
-  animate: {;
-  transition: {;
-  staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
-};
-};
-];
-...innovative2025ITEnterpriseBatch;
-...innovative2025AIServicesBatch ];
-const filteredServices = activeCategory === 'all' ? allServices return (<Layout> <UltraFuturisticBackground2035> > <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Explore Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button > <Play className="w-5 h-5" /> <span>Watch Demo</span> </motion && motion.button> </div> </motion && motion.div> {;
-  /* Stats */ ;
-}<motion && motion.div </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Revolutionary Technology Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of cutting-edge services designed to transform your business </p> </motion && motion.div> {;
-  /* Category Filter */ ;
-}<motion && motion.div > {;
-  categories && categories.map ( (category) => (<motion&& motion.button key= {
-  category && category.id 
-}whileHover= {
-  {
-  scale: 1 && 1.05 
-}whileTap= {
-  {
-  scale: 0 && 0.95 
-}onClick= {
-  () => setActiveCategory (category && category.id) ;
-}className= {;
-  `flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 $ {;
-  activeCategory === category && category.id ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400' : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400' ;
-}` ;
-}> {;
-  category && category.icon ;
-}<span> {;
-  category && category.name ;
-}</span> </motion && motion.button>) ) ;
-}</motion && motion.div> {;
-  /* Services Grid */ ;
-}<motion && motion.div > {;
-  filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
-  service && service.id 
-}> <UltraFuturisticServiceCard2035service= {
-  service 
-}/> </motion && motion.div>) ) ;
-}</motion && motion.div> {;
-  /* View All Services Button */ ;
-}<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
-}</div> </div> </section> <motion&& motion.div initial= {
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -990,6 +1093,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }transition= {
   {
 
+<<<<<<< HEAD
   duration: 0 && 0.8 
 }viewport= {
   {
@@ -1061,6 +1165,303 @@ export default Homepage2035;
 ;
 animate: {
 
+=======
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+};
+
+export default Homepage2035;
+
+
+                  className='text - center';
+                >;
+                  <div className='text - cyan - 400 mb - 2 flex justify - center'>;
+                    {stat.icon}
+                  </div>;
+                  <div className='text - 3xl font - bold text - white mb - 1'>;
+                    {stat.value}
+                  </div>;
+                  <div className='text - gray - 400 text - sm'>{stat.label}</div>                </motion.div>                  className="text - center";
+                >;
+                  <div className="text - cyan - 400 mb - 2 flex justify - center">{stat.icon}</div>;
+                  <div className="text - 3xl font - bold text - white mb - 1">{stat.value}</div>;
+                  <div className="text - gray - 400 text - sm">{stat.label}</div>))}
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Services Section */}
+        <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text - center mb - 16';
+            >;
+              <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 6'>;
+                Revolutionary Technology Solutions;
+              </h2>;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+                Discover our comprehensive portfolio of cutting - edge services;
+                designed to transform your business              </p>            >;
+              <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6">;
+                Revolutionary Technology Solutions;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Discover our comprehensive portfolio of cutting - edge services designed to transform your business;
+              </p>;
+            </motion.div>;
+            {/* Category Filter */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='flex flex - wrap justify - center gap - 4 mb - 12';
+            >;
+              {categories.map (category => (                <motion.button              className="flex flex - wrap justify - center gap - 4 mb - 12";
+            >;
+              {categories.map ((category) => (
+                <motion.button;
+                  key={category.id}
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  on_click={() => setActiveCategory (category.id)}
+                  className={`flex items - center space - x-2 px - 6 py - 3 rounded - full border transition - all duration - 300 ${
+                    active_category === category.id;
+                      ? 'border - cyan - 400 bg - cyan - 400 / 10 text - cyan - 400';
+                      : 'border - gray - 600 text - gray - 300 hover:border - cyan - 400 hover:text - cyan - 400';
+                  }`}
+                >;
+                  {category.icon}
+                  <span>{category.name}</span>;
+                </motion.button>))}
+            </motion.div>;
+            {/* Services Grid */}
+            <motion.div;
+              variants={stagger_container}
+              initial='initial';
+              whileInView='animate';
+              viewport={{ once: true }}
+              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'            >              initial="initial";
+              whileInView="animate";
+              viewport={{ once: true }}
+              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
+              {filtered_services.map ((service, index) => (
+                <motion.div;
+                  key={service.id}
+                  variants={fadeInUp}
+                  className='w - full'                >                  className="w - full";
+                >;
+                  <UltraFuturisticServiceCard2035 service={service} />;
+                </motion.div>))}
+            </motion.div>;
+            {/* View All Services Button */}
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className='text - center mt - 16'            >;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 400 hover:to - pink - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2 mx - auto';
+              >;
+                <span > View All Services</span>;
+                <ArrowRight className='w - 5 h - 5' />              </motion.button>              className="text - center mt - 16";
+            >;
+              <motion.button;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className='bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 400 hover:to - pink - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2 mx - auto';
+              >;
+                <span > View All Services</span>;
+                <ArrowRight className='w - 5 h - 5' />                className="bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 400 hover:to - pink - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2 mx - auto";
+              >;
+                <span > View All Services</span>;
+                <ArrowRight className="w - 5 h - 5" />;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* Features Section */}
+        <section className='py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 900 / 50'>;
+          <div className='max - w-7xl mx - auto'>            <motion.div        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gray - 900 / 50">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text - center mb - 16';
+            >;
+              <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 6'>;
+                Why Choose Zion Tech Group?;
+              </h2>;
+              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+                We combine innovation, expertise, and cutting - edge technology to;
+                deliver exceptional results;
+              </p>;
+            </motion.div>;
+            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+              {[;
+                {
+                  icon: <Brain className='w - 12 h - 12' />,
+                  title: 'AI - Powered Solutions',
+                  description:;
+                    'Leverage the latest AI and machine learning technologies for intelligent automation and insights',
+                },
+                {
+                  icon: <Shield className='w - 12 h - 12' />,
+                  title: 'Enterprise Security',
+                  description:;
+                    'Military - grade security protocols and compliance standards to protect your business',
+                },
+                {
+                  icon: <Rocket className='w - 12 h - 12' />,
+                  title: 'Space Technology',
+                  description:;
+                    'Pioneering space tech solutions for the next generation of innovation',
+                },
+                {
+                  icon: <Atom className='w - 12 h - 12' />,
+                  title: 'Quantum Computing',
+                  description:;
+                    'Access to quantum computing power for complex problem - solving',
+                },
+                {
+                  icon: <Cloud className='w - 12 h - 12' />,
+                  title: 'Cloud - Native',
+                  description:;
+                    'Built for the cloud with scalability, reliability, and performance in mind',
+                },
+                {
+                  icon: <Target className='w - 12 h - 12' />,
+                  title: 'Results - Driven',
+                  description:;
+                    'Focused on delivering measurable business outcomes and ROI',
+                },              ].map ((feature, index) => (            >;
+              <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6">;
+                Why Choose Zion Tech Group?;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                We combine innovation, expertise, and cutting - edge technology to deliver exceptional results;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {[;
+                {
+                  icon: <Brain className="w - 12 h - 12" />,
+                  title: 'AI - Powered Solutions',
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights';
+                }
+                {
+                  icon: <Shield className="w - 12 h - 12" />,
+                  title: 'Enterprise Security',
+                  description: 'Military - grade security protocols and compliance standards to protect your business';
+                }
+                {
+                  icon: <Rocket className="w - 12 h - 12" />,
+                  title: 'Space Technology',
+                  description: 'Pioneering space tech solutions for the next generation of innovation';
+                }
+                {
+                  icon: <Atom className="w - 12 h - 12" />,
+                  title: 'Quantum Computing',
+                  description: 'Access to quantum computing power for complex problem - solving';
+                }
+                {
+                  icon: <Cloud className="w - 12 h - 12" />,
+                  title: 'Cloud - Native',
+                  description: 'Built for the cloud with scalability, reliability, and performance in mind';
+                }
+                {
+                  icon: <Target className="w - 12 h - 12" />,
+                  title: 'Results - Driven',
+                  description: 'Focused on delivering measurable business outcomes and ROI';
+                }
+              ].map ((feature, index) => (
+                <motion.div;
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='text - center p - 6 rounded - 2xl bg - gray - 800 / 50 border border - gray - 700 / 30 hover:border - cyan - 400 / 50 transition - all duration - 300 group';
+                >;
+                  <div className='text - cyan - 400 mb - 4 flex justify - center group - hover:scale - 110 transition - transform duration - 300'>;
+                    {feature.icon}
+                  </div>;
+                  <h3 className='text - xl font - bold text - white mb - 3'>;
+                    {feature.title}
+                  </h3>;
+                  <p className='text - gray - 300'>{feature.description}</p>                </motion.div>                >;
+                  <div className="text - cyan - 400 mb - 4 flex justify - center group - hover:scale - 110 transition - transform duration - 300">;
+                    {feature.icon}
+                  </div>;
+                  <h3 className="text - xl font - bold text - white mb - 3">{feature.title}</h3>;
+                  <p className="text - gray - 300">{feature.description}</p>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-4xl mx - auto text - center'>            <motion.div        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Join thousands of companies already leveraging our cutting - edge;
+                technology solutions;
+              </p>;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 400 hover:to - blue - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2';
+                >;
+                  <span > Get Started Today</span>;
+                  <ArrowRight className='w - 5 h - 5' />                </motion.button>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='border border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300'                >                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of companies already leveraging our cutting - edge technology solutions;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className="bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 400 hover:to - blue - 400 text - white font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300 flex items - center space - x-2";
+                >;
+                  <span > Get Started Today</span>;
+                  <ArrowRight className="w - 5 h - 5" />;
+                </motion.button>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='border border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300'                  className="border border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black font - bold py - 4 px - 8 rounded - full text - lg transition - all duration - 300";
+                >;
+                  Schedule a Demo;
+                </motion.button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </UltraFuturisticBackground2035>;
+    </Layout>);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }
@@ -1116,12 +1517,19 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
   duration: 0.8;
 }viewport= {
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default Homepage2035);
 }
 ;
 export default Homepage2035;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

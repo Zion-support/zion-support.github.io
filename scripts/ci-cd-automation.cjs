@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * CI/CD Pipeline Automation;
@@ -19,7 +22,13 @@ class CICDAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
 
+=======
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.report.steps.push({})
       timestamp,
       type,
@@ -99,4 +108,8 @@ if ( {})
      {}
   const automation = new CICDAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = CICDAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -108,6 +109,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
   if (typeof window !== 'undefined') {;
 
     (window as any).trackEvent = trackEvent;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -210,6 +213,7 @@ if ( {) {
   }
   return (
     <Head>;
+<<<<<<< HEAD
 
       <script;
         dangerouslySetInnerHTML={{
@@ -217,6 +221,18 @@ if ( {) {
 =======
                       });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          __html: `
+            // Performance monitoring
+            if ('performance' in window) {
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const perfData = performance.getEntriesByType('navigation')[0];
+                  if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    if (window.gtag) {
+                      window.gtag('event', 'timing_complete', {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -225,6 +241,7 @@ if ( {) {
                         value: Math && Math.round(loadTime),
                       })
                     }
+<<<<<<< HEAD
                   }
 
           `
@@ -234,3 +251,5 @@ if ( {) {
 export default Analytics;
 export default Analytics;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

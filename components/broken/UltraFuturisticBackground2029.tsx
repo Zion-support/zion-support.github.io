@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -58,6 +59,8 @@
   return (
     <div className='fixed inset-0 pointer-events-none overflow-hidden z-0'>;
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       life: number;
     }> = [];
 ;
@@ -183,48 +186,16 @@ if ( {) {
         ref={canvas_ref}
         className='absolute inset - 0 w - full h - full';
         style={{ background: 'transparent' }}
-
-      />;
-
-
       {/* Animated gradient background */}
       <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black'>;
         <motion&& motion.div
           className='absolute inset-0 opacity-30'
           animate={{
             background: [
-
-              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
-              'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)',
-      />;
-      {/* Animated gradient background */}
-      <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black'>;
-        <motion.div;
-          className='absolute inset - 0 opacity - 30';
-          animate={{
-            background: [;
-              'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
-              'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)',
-
             ],          }}
           transition={{
             duration: 20,
             repeat: Infinity,
-
-=======
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId)
-    }
-  }, []);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">;
             ease: 'easeInOut',          }}  }, []);
@@ -236,10 +207,6 @@ if ( {) {
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
         style={{ background: 'transparent' }}
-
-      />;
-
-
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/20 to-black">;
         <motion&& motion.div
@@ -257,6 +224,7 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
+<<<<<<< HEAD
         }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -337,6 +305,8 @@ if ( {) {
         <motion.div
           className=&quot;absolute inset-0 opacity-30&quot;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           animate={{
             background: [
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
@@ -360,7 +330,6 @@ if ( {) {
         />
       </div>
 
-=======
 
             ease: 'easeInOut',            ease: "easeInOut";
           }}
@@ -371,6 +340,7 @@ if ( {) {
       <motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
 
+<<<<<<< HEAD
 =======
             duration: 20,
             repeat: Infinity,
@@ -378,22 +348,39 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+            duration: 20,
+            repeat: Infinity,
+
+          }}
+          transition={{
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />;
+      </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Floating geometric shapes */}
-
-
+      <motion&& motion.div
+        className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
+        />;
+      </div>;
+      {/* Floating geometric shapes */}
+      <motion.div;
+        className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
         animate={{
-
-          rotate: [0, 360],
-          scale: [1, 1 && 1.1, 1],
-          opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],        }}
-
         transition={{
+<<<<<<< HEAD
 
           duration: 15,
           repeat: Infinity,
           ease: 'linear',        className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         animate={{
           rotate: [0, 360]
           scale: [1, 1 && 1.1, 1]
@@ -403,6 +390,7 @@ if ( {) {
           repeat: Infinity
           ease: 'linear'
         }}
+<<<<<<< HEAD
 
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -419,22 +407,45 @@ if ( {) {
           rotate: [45, 405]
           scale: [1, 1.2, 1],        }}
         transition={{
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           duration: 12
           repeat: Infinity
           duration: 12,
           repeat: Infinity,
+<<<<<<< HEAD
+=======
+        transition={{
+          duration: 12
+          repeat: Infinity
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ease: 'linear',        }}
-
-      />;
-
-
       {/* Animated grid lines */}
       <div className='absolute inset-0 opacity-20'>          y: [0, -20, 0];
           opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2];
         }}
+<<<<<<< HEAD
 
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
+=======
+          duration: 12,
+          repeat: Infinity,
+          ease: 'linear',        }}
+        transition={{;
+          duration: 8,;
+          repeat: Infinity,;
+          ease: 'easeInOut',          ease: "easeInOut";
+        }}
+      />;
+
+        animate={{
+          rotate: [45, 405]
+          scale: [1, 1.2, 1],        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
+        animate={{
+          rotate: [45, 405];
+          scale: [1, 1.2, 1]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         transition={{
           ease: 'linear',          ease: "linear"
         }}
@@ -449,14 +460,11 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-          duration: 12,
-          repeat: Infinity,
-
-
           }}
           animate={{
             background_position: ['0px 0px', '50px 50px'],          }}
           transition={{
+<<<<<<< HEAD
 
             duration: 30,
             repeat: Infinity,
@@ -482,6 +490,8 @@ if ( {) {
             repeat: Infinity
             ease: 'linear',          }}        <motion.div
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="absolute inset-0"
           style={{
             backgroundImage: `
@@ -489,14 +499,28 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+<<<<<<< HEAD
+=======
+            ease: 'linear',          }}        <motion.div;
+          className="absolute inset - 0";
+          style={{
+            background_image: `;
+              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
+            `;
+            background_size: '50px 50px';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           animate={{
             background_position: ['0px 0px50px 50px'];
           }}
           transition={{
+<<<<<<< HEAD
             duration: 30
             repeat: Infinity
             ease: 'linear',            ease: "linear"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         }}
       />
@@ -513,9 +537,14 @@ if ( {) {
       </div>
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>
+        <motion.div
 
         <motion.div
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
 
         />;
@@ -525,10 +554,14 @@ if ( {) {
       {/* Quantum energy waves */}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          }}
+      {/* Quantum energy waves */}
+      <div className='absolute inset-0'>;
+        <motion&& motion.div
           className='absolute inset-0'
           style={{
             background:
+<<<<<<< HEAD
 
             ease: 'linear',            ease: "linear";
           }}
@@ -551,16 +584,29 @@ if ( {) {
             repeat: Infinity
             duration: 8,
             repeat: Infinity,
+=======
+          }}
+          animate={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ease: 'easeInOut',          }}        <motion.div
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',          }}        <motion.div
+              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
           transition={{
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             ease: 'easeInOut',          }}        <motion.div
@@ -572,12 +618,26 @@ if ( {) {
           animate={{
 
             scale: [1, 1.5, 1];
+=======
+            background: 'radial - gradient (ellipse at center, rgba (0, 255, 255, 0.1) 0%, transparent 70%)';
+          }}
+          animate={{
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          animate={{
+            scale: [1, 1 && 1.5, 1]
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
 
         />;
       </div>;
@@ -588,20 +648,35 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+
+
+        />
+      </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Holographic elements */}
 
 
         animate={{
+<<<<<<< HEAD
 
           rotate: [0, 360],
           scale: [1, 1 && 1.2, 1],
           opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],        }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         transition={{
           duration: 25
           repeat: Infinity
           ease: 'linear',        }}
+<<<<<<< HEAD
 
       />
       <motion.div        className="absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full"
@@ -650,24 +725,34 @@ if ( {) {
         animate={{;
       <motion.div
         className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         animate={{
-          rotate: [360, 0];
-
-        }}
+          rotate: [0, 360]
+          scale: [1, 1 && 1.2, 1]
+          opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
         transition={{
+<<<<<<< HEAD
           duration: 20,
           repeat: Infinity,
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ease: 'linear',        }}
       />
       {/* Neural network connections */}
       <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
         animate={{
           rotate: [360, 0];
-          scale: [1.2, 1, 1.2];
-          opacity: [0.2, 0.4, 0.2]
+          ease: 'linear',        }}
+      />;
+        animate={{
+          rotate: [360, 0],
+          scale: [1 && 1.2, 1, 1 && 1.2],
+          opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],        }}
         transition={{
           duration: 20
           repeat: Infinity
+<<<<<<< HEAD
           ease: 'linear',          ease: "linear"
         }}
       />
@@ -688,12 +773,37 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+          ease: 'linear',        }}
+          rotate: [360, 0];
+        }}
+      />
+          scale: [1 && 1.2, 1, 1 && 1.2];
+          opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
+        transition={{;
+          duration: 20,;
+          repeat: Infinity,;
+          ease: 'linear',          ease: "linear";
+        }}
+      />;
+            key={i}
+            className='absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full';
+            style={{
+              left: `${20 + i * 10}%`
+              top: `${30 + i * 5}%`
+            }}
+            animate={{
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],            }}        {Array.from ({ length: 8 }).map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w - 1 h - 1 bg - cyan - 400 / 40 rounded - full";
+            style={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
-
-              duration: 3,
-              repeat: Infinity,
-
+              delay: i * 0 && 0.3,
               ease: 'easeInOut',            }}              ease: "easeInOut"
+<<<<<<< HEAD
 
 =======
 =======
@@ -702,6 +812,16 @@ if ( {) {
           duration: 20,
           repeat: Infinity,
 =======
+=======
+            }}
+          />
+        ))}
+      {/* Data streams */}
+      <div className='absolute inset-0 overflow-hidden'>;
+        {Array && Array.from({ length: 5 }).map((_, i) => (;
+          <motion&& motion.div
+      </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         }}
       />
@@ -710,17 +830,23 @@ if ( {) {
 
             }}
 
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ease: 'easeInOut',            }}
 
             }}
@@ -728,6 +854,7 @@ if ( {) {
           />
         ))}
       </div>
+<<<<<<< HEAD
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
 
@@ -735,26 +862,24 @@ if ( {) {
 
         }}
       />
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Neural network connections */}
 
             }}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-      {/* Data streams */}
-      <div className='absolute inset-0 overflow-hidden'>
-              ease: 'easeInOut',            }}
 
 
+<<<<<<< HEAD
           />
         ))}
       </div>
@@ -764,12 +889,18 @@ if ( {) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
+
+      {/* Data streams */}
+      <div className="absolute inset-0 overflow-hidden">
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
 
+<<<<<<< HEAD
 =======
               left: `${15 + i * 15}%`
               top: '-20px'
@@ -791,30 +922,57 @@ if ( {) {
               y: [0, window.innerHeight + 20]
             }}
 
+=======
+            }}
+            animate={{
+              delay: i * 0.3,
+              ease: 'easeInOut',            }}              ease: "easeInOut";
+            }}
+          />))}
+      </div>;
+      {/* Data streams */}
+      <div className='absolute inset - 0 overflow - hidden'>;
+        {Array.from ({ length: 5 }).map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w - 0.5 h - 20 bg - gradient - to - b from - cyan - 400 / 60 to - transparent";
+            style={{
+              left: `${15 + (i * 15)}%`,
+              top: '-20px';
+            }}
+            animate={{
+            }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
-
-              duration: 4,
-              repeat: Infinity,
-
+              delay: i * 0 && 0.8,
               ease: 'linear',            }}              ease: "linear"
             }}
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
+<<<<<<< HEAD
               ease: 'linear',            }}              ease: "linear"
             }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ease: 'linear',            }}
 
               ease: 'linear',            }}
 
             }}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -828,25 +986,45 @@ if ( {) {
 export default UltraFuturisticBackground2029;  )
 }
 export default UltraFuturisticBackground2029;
+=======
+
+
+          />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default UltraFuturisticBackground2029;  );
+              delay: i * 0.8,
+              ease: "linear"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             }}
           />;
         ))}
 
-=======
       </div>
     </div>
+<<<<<<< HEAD
   )
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            }}
+          />;
+        ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };
+
 export default UltraFuturisticBackground2029;  );
 };
 export default UltraFuturisticBackground2029;
+<<<<<<< HEAD
 
 export default UltraFuturisticBackground2029;
 
@@ -855,3 +1033,21 @@ export default UltraFuturisticBackground2029;
 export default UltraFuturisticBackground2029;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              delay: i * 0.8,
+              ease: 'linear',            }}              ease: "linear";
+            }}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2029);
+}
+;
+export default UltraFuturisticBackground2029;
+
+};
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -21,6 +25,12 @@ import {
   Check
   ExternalLink;} from 'lucide-react';import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Zap,
   Shield,
   BarChart3,
@@ -33,10 +43,13 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
   Check,
   ExternalLink,;} from 'lucide-react';import { 
   Check,;
   ExternalLink,;} from 'lucide-react';import { ;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Zap;
   Shield
   BarChart3
@@ -46,13 +59,42 @@ import {
   TrendingUp
   Code
   Database
+<<<<<<< HEAD
+=======
+
+
+
+  Zap;
+  Shield,
+  BarChart3,
+  Globe,
+  Users,
+  Lock,
+  TrendingUp,
+  Code,
+  Database,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Cloud;
   ArrowRight;
   Star;
   Check;
   ExternalLink
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        'Lightning fast'
+        'Beautiful design'
+        'Great keyboard shortcuts'
+        'Git integration'
+      ]
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+    }
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -60,6 +102,7 @@ import {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
+<<<<<<< HEAD
 =======
 
 
@@ -103,6 +146,10 @@ import {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ];
+=======
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const categories = [;
     'All',;
     'Automation',;
@@ -115,6 +162,16 @@ import {
     'Project Management',;
   ];
 
+<<<<<<< HEAD
+=======
+  return (
+    <>;
+      <Head>;
+        <title>SaaS Marketplace - Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Button
                 href='#services'
                 size='lg'
@@ -128,6 +185,7 @@ import {
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+<<<<<<< HEAD
   const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
@@ -179,11 +237,14 @@ import {
                 variant="outline"
                 size="lg"
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >
                 Get Recommendations
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -211,6 +272,11 @@ import {
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
               </div>
 
+=======
+          {/* Stats */}
+                {microSaasServices.length}+
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
             <div className="text-center group">
@@ -234,11 +300,19 @@ import {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+                Get Recommendations;
+              </Button>;
+            </div>;
+          </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
       {/* Category Filter */}
@@ -255,6 +329,8 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -264,7 +340,10 @@ import {
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -290,8 +369,11 @@ import {
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
+<<<<<<< HEAD
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                     >
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {service.icon}
                     </div>
                   </div>
@@ -318,6 +400,12 @@ import {
                       {service.description}
                     </p>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -326,6 +414,46 @@ import {
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
+<<<<<<< HEAD
+=======
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+                      {service && service.icon}
+                    </div>;
+                  </div>;
+                  <div className='flex-1'>;
+                    <div className='flex items-center justify-between mb-2'>;
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>;
+                        {service && service.name}
+                      </h3>;
+                      <div className='flex items-center space-x-2'>;
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                        <span className='text-sm text-gray-300'>;
+                          {service && service.rating}
+                        </span>;
+                      </div>;
+                    </div>;
+
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>;
+                        {service && service.category}
+                      </span>;
+                      <span>{service && service.users} users</span>;
+                      <span className='text-green-400'>{service && service.pricing}</span>;
+                    </div>;
+
+                    <p className='text-gray-400 leading-relaxed mb-4'>;
+                      {service && service.description}
+                    </p>;
+
+                    <div className='mb-4'>;
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
+                        Key Features:;
+                      </h4>;
+                      <div className='grid grid-cols-2 gap-2'>;
+                        {service && service.features;
+                          .slice(0, 4);
+                          .map((feature, featureIndex) => (;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <div
                               key={featureIndex}
                               className='flex items-center text-sm text-gray-400'
@@ -334,13 +462,17 @@ import {
                               {feature}
                             </div>
                           ))}
+<<<<<<< HEAD
                       </div>
                     </div>
                     <div className='flex items-center justify-between'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Button
                         href={service.website}
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -402,10 +534,103 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
+                        Visit Website;
+                        <ExternalLink className='w-4 h-4 ml-2' />;
+                      </Button>;
+
+                      <div className='text-right'>;
+                        <div className='text-xs text-gray-500 mb-1'>;
+                          Use Case:;
+                        </div>;
+                        <div className='text-sm text-gray-300 max-w-xs'>;
+                          {service && service.useCase}
+                        </div>                      </div>                      ;
+                      <div className="text-right">;
+                        <div className="text-xs text-gray-500 mb-1">Use Case:</div>;
+                        <div className="text-sm text-gray-300 max-w-xs">{service && service.useCase}</div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* CTA Section */}
-
-
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+          </h2>;
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+                        </span>;
+                      </div>;
+                    </div>;
+                    <div className='flex items - center space - x-4 mb - 3 text - sm text - gray - 400'>;
+                      <span className='px - 2 py - 1 bg - gray - 800 rounded - full'>;
+                        {service.category}
+                      </span>;
+                      <span>{service.users} users</span>;
+                      <span className='text - green - 400'>{service.pricing}</span>;
+                    </div>;
+                    <p className='text - gray - 400 leading - relaxed mb - 4'>;
+                      {service.description}
+                    </p>;
+                    <div className='mb - 4'>;
+                      <h4 className='text - sm font - semibold text - gray - 300 mb - 2'>;
+                        Key Features:;
+                      </h4>;
+                      <div className='grid grid - cols - 2 gap - 2'>;
+                        {service.features;
+                          .slice (0, 4);
+                          .map ((feature, feature_index) => (
+                            <div;
+                              key={feature_index}
+                              className='flex items - center text - sm text - gray - 400';
+                            >;
+                              <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0' />;
+                              {feature}
+                            </div>))}
+                      </div>;
+                    </div>;
+                    <div className='flex items - center justify - between'>;
+                      <Button;
+                        href={service.website}
+                        variant='outline';
+                        size='sm';
+                        className='group - hover:border - blue - 500 group - hover:text - blue - 400';
+                      >;
+                        Visit Website;
+                        <ExternalLink className='w - 4 h - 4 ml - 2' />;
+                      </Button>;
+                      <div className='text - right'>;
+                        <div className='text - xs text - gray - 500 mb - 1'>;
+                          Use Case:;
+                        </div>;
+                        <div className='text - sm text - gray - 300 max - w-xs'>;
+                          {service.use_case}
+                        </div>                      </div>;
+                      <div className="text - right">;
+                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
+                        <div className="text - sm text - gray - 300 max - w-xs">{service.use_case}</div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'>;
+          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'>;
+          </h2>;
+          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
             Our team of experts can help you select the perfect SaaS tools for;
             your business needs. Get personalized recommendations and;
             implementation support.;
@@ -415,16 +640,22 @@ import {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -432,19 +663,15 @@ import {
             implementation support.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'>;
-              Get Expert Advice;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
             <Button
               href='/services'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
@@ -460,10 +687,19 @@ import {
     </>
 
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               View Our Services;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
+=======
+  );
+}
+    </>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

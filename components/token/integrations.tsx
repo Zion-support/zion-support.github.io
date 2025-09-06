@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -30,6 +31,8 @@ import {
   fetchDepinActivities,
   calculateRewards,;
   DepinReward,;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
@@ -37,23 +40,36 @@ const ClientOnlyBridge = dynamic(
   { ssr: false }
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
+<<<<<<< HEAD
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
 export default function TokenIntegrationsPage() {
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
   const [suggestion, setSuggestion] = useState<any>(null);
   const [rewards, setRewards] = useState<DepinReward[] | null>(null);
   const [depinsSyncing, setDepinsSyncing] = useState(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
+<<<<<<< HEAD
 
 =======
 
@@ -67,10 +83,16 @@ export default function TokenIntegrationsPage() {;
       body: JSON && JSON.stringify({ region, stakeUsd: stake }),;
 
     });
+=======
+    const data = await res.json();
+    setSuggestion(data);
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -78,11 +100,18 @@ export default function TokenIntegrationsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const data = await res.json();
     setSuggestion(data);
   }
 
+    const data = await res && res.json();
+    setSuggestion(data);
+  }
   return (
+<<<<<<< HEAD
     <div className='space-y-8'>
       <section className='space-y-2'>
         <h1 className='text-2xl font-bold'>ZION$ Integrations</h1>
@@ -100,6 +129,8 @@ export default function TokenIntegrationsPage() {;
           jobs, and data streaming.
         </p>
         <div className='flex gap-2'>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <button
             onClick={syncDepin}
             className='px-4 py-2 rounded bg-purple-600 text-white'
@@ -121,6 +152,7 @@ export default function TokenIntegrationsPage() {;
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
 
+<<<<<<< HEAD
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -136,6 +168,8 @@ export default function TokenIntegrationsPage() {;
         <div className="flex gap-2">
           <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     setSuggestion(data)
         </div>;
@@ -144,30 +178,6 @@ export default function TokenIntegrationsPage() {;
             {rewards && rewards.map((r, i) => (;
               <div key={i} className='flex items-center justify-between'>;
                 <span>;
-                  {r && r.network} — {r && r.reason}
-                </span>;
-                <span className='font-medium'>+{r && r.points} ZION$</span>              </div>    const data = await res && res.json();
-    setSuggestion(data);
-
-
-  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return (
-
-    <div className="space-y-8">;
-      <section className="space-y-2">;
-        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>;
-        <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
-      </section>;
-      <section className="space-y-4">;
-        <ClientOnlyBridge />;
-      </section>;
-      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">;
-        <h2 className="text-lg font-semibold">DePIN Hook</h2>;
-        <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
-        <div className="flex gap-2">;
-          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;
-
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
         {rewards && (;
@@ -177,26 +187,6 @@ export default function TokenIntegrationsPage() {;
                 <span>{r && r.network} — {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            ))}
-          </div>;
-        )}
-
-      </section>;
-      <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>;
-        <h2 className='text-lg font-semibold'>Operator AI Actions</h2>;
-        <p className='text-sm text-gray-600 dark:text-gray-300'>;
-          Based on your region and stake, we suggest the best chain for ZION$.;
-        </p>;
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>;
-          <div className='flex flex-col gap-1'>;
-            <label className='text-xs text-gray-500'>Region</label>;
-
             <input
               value={region}
               onChange={e => setRegion(e && e.target.value)}
@@ -247,9 +237,12 @@ export default function TokenIntegrationsPage() {;
             </div>;
             {suggestion && suggestion.alternatives && (;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -264,8 +257,11 @@ export default function TokenIntegrationsPage() {;
         <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
         <div className="flex gap-2">
           <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -274,6 +270,7 @@ export default function TokenIntegrationsPage() {;
               <div key={i} className="flex items-center justify-between">
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
+<<<<<<< HEAD
 
               </div>
 
@@ -283,10 +280,13 @@ export default function TokenIntegrationsPage() {;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>
         )}
       </section>
+<<<<<<< HEAD
 
 =======
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
@@ -330,6 +330,8 @@ export default function TokenIntegrationsPage() {;
               </div>            )}          </div>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
             <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -343,12 +345,13 @@ export default function TokenIntegrationsPage() {;
             </div>
             {suggestion.alternatives && (
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }        <div>Security</div>;
         <ul className="list-disc ml-5 space-y-1">;
@@ -358,6 +361,7 @@ export default function TokenIntegrationsPage() {;
         </ul>;
       </section>;
     </div>;
+<<<<<<< HEAD
 
   );
 }
@@ -373,6 +377,12 @@ export default function TokenIntegrationsPage() {;
     </div>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+  );
+;
+  );
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';
@@ -574,6 +584,9 @@ function run_operator() {
       </section>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 
 =======
 import React from 'react',
 import React from 'react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       id: 'machine-learning'
@@ -18,6 +22,16 @@ export default function AISolutionsPage() {
       features: [
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
+      complexity: 'Advanced'
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -26,8 +40,11 @@ export default function AISolutionsPage() {
       category: 'Core AI',
       complexity: 'Advanced';
     };
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -63,7 +80,10 @@ export default function AISolutionsPage() {
       icon: '📊'
       category: 'Analytics'
       complexity: 'Intermediate'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const technologies = [
     'TensorFlow'
     'PyTorch'
@@ -90,6 +110,7 @@ export default function AISolutionsPage() {
   ];
   const technologies = [
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
+<<<<<<< HEAD
   ];
 
   return (
@@ -165,6 +186,139 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
+=======
+  const use_cases = [;
+    {
+      industry: 'Manufacturing',
+      solutions: [;
+        'Quality Control',
+        'Predictive Maintenance',
+        'Supply Chain Optimization',
+      ],
+      icon: '🏭',
+    },
+    {
+      industry: 'Healthcare',
+      solutions: [;
+        'Diagnostic Support',
+        'Patient Care Optimization',
+        'Drug Discovery',
+      ],
+      icon: '🏥',
+    },
+    {
+      industry: 'Finance',
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
+      icon: '💳',
+    },
+    {
+      industry: 'Retail',
+      solutions: [;
+        'Customer Segmentation',
+        'Inventory Management',
+        'Personalized Marketing',
+      ],
+      icon: '🛍️',
+    },
+  ];
+;
+  const technologies = [;
+    'TensorFlow',
+    'PyTorch',
+    'Scikit - learn',
+    'OpenAI GPT',
+    'BERT',
+    'YOLO',
+    'Keras',
+    'Pandas',  ];    {
+      industry: 'Healthcare',
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
+      icon: '🏥';
+    }
+    {
+      industry: 'Finance',
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
+      icon: '💳';
+    }
+    {
+      industry: 'Retail',
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
+      icon: '🛍️';
+    }
+  ];
+;
+  const technologies = [;
+    'TensorFlowPyTorchScikit - learnOpenAI GPTBERTYOLOKerasPandas';
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          AI Solutions | Zion Tech Group - Advanced AI & Machine Learning;
+        </title>;
+            {/* AI Solutions Grid */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
+                Our AI Solutions;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {aiSolutions && aiSolutions.map((solution, index) => (;
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'>;
+                    <div className='text-4xl mb-4'>{solution && solution.icon}</div>;
+                    <div className='flex items-center gap-2 mb-3'>;
+                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>;
+                        {solution && solution.category}
+                      </span>;
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>;
+                        {solution && solution.complexity}
+                      </span>;
+                    </div>;
+                    <h3 className='text-xl font-bold mb-3 text-white'>;
+                      {solution && solution.title}
+                    </h3>;
+                    <p className='text-white/70 mb-4'>{solution && solution.description}</p>;
+                    <ul className='space-y-1 mb-4'>;
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li
+                          key={featureIndex}
+                          className='text-sm text-white/60 flex items-center'>;
+                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}
+                        </li>;
+                      ))}
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              AI Solutions
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence solutions that transform businesses and drive innovation
+            </p>
+          </section>
+          <section className="mx-auto max-w-7xl">
+            {/* AI Solutions Grid */}
+                          {feature}
+                        </li>
+                      ))}
+            <div className="mb-16">;
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+                {aiSolutions && aiSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
+                    <div className="text-4xl mb-4">{solution && solution.icon}</div>;
+                    <div className="flex items-center gap-2 mb-3">;
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution && solution.category}</span>;
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution && solution.complexity}</span>;
+                    </div>;
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
+                    <p className="text-white/70 mb-4">{solution && solution.description}</p>;
+                    <ul className="space-y-1 mb-4">;
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </ul>
 
                     <Link
@@ -177,8 +331,11 @@ export default function AISolutionsPage() {
                       Learn More <span className="ml-1">→</span>
                     </Link>
 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           {feature}
                         </li>;
                       ))}
@@ -192,19 +349,41 @@ export default function AISolutionsPage() {
                       Learn More <span className="ml-1">→</span>;
                     </Link>;
                   </div>;
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                  </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                ))}
-              </div>
-            </div>
+=======
+            {/* AI Solutions Grid */}
+            <div className="mb - 16">;
+              <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+                {ai_solutions.map ((solution, index) => (
+                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
+                    <div className="text - 4xl mb - 4">{solution.icon}</div>;
+                    <div className="flex items - center gap - 2 mb - 3">;
+                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full">{solution.category}</span>;
+                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full">{solution.complexity}</span>;
+                    </div>;
+                    <h3 className="text - xl font - bold mb - 3 text - white">{solution.title}</h3>;
+                    <p className="text - white / 70 mb - 4">{solution.description}</p>;
+                    <ul className="space - y-1 mb - 4">;
+                      {solution.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                  </div>
+                ))}
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+              </div>;
+            </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -212,6 +391,7 @@ export default function AISolutionsPage() {
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 
+<<<<<<< HEAD
                 {useCases.map((useCase, index) => (
                   <div
                     key={index}
@@ -229,8 +409,17 @@ export default function AISolutionsPage() {
                         >                          {solution}                {useCases.map((useCase, index) => (
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {useCases.map((useCase, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                ))}
+            {/* Industry Use Cases */}
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
+                Industry Applications;
+              </h2>;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
+                {useCases && useCases.map((useCase, index) => (;
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -249,6 +438,7 @@ export default function AISolutionsPage() {
                     <ul className="space-y-2">;
                       {useCase && useCase.solutions.map((solution, solutionIndex) => (;
                         <li key={solutionIndex} className="text-sm text-white/70">;
+<<<<<<< HEAD
 
 =======
             <div className="mb-16">
@@ -263,18 +453,23 @@ export default function AISolutionsPage() {
                       {useCase.solutions.map((solution, solutionIndex) => (
                         <li key={solutionIndex} className="text-sm text-white/70">
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           {solution}
                         </li>
                       ))}
                     </ul>
                   </div>
                 ))}
+<<<<<<< HEAD
               </div>
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -369,10 +564,13 @@ export default function AISolutionsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
 
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {tech}
                     </span>;
                   ))}
@@ -380,6 +578,7 @@ export default function AISolutionsPage() {
               </div>
             </div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Success Stories */}
 
@@ -468,76 +667,69 @@ export default function AISolutionsPage() {
                       key={index}
                       className="px - 4 py - 2 bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 text - white rounded - lg border border - white / 20";
                     >;
-                      {tech}
-                    </span>))}
+=======
                 </div>;
               </div>;
             </div>;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                      {tech}
+                    </span>;
+                  ))}
             {/* Success Stories */}
-            <div className='mb - 16'>;
-              <h2 className='text - 3xl font - bold mb - 8 text - center text - blue - 400'>;
+            <div className='mb-16'>;
+              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>;
                 AI Success Stories;
               </h2>;
-              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-                <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6'>;
-                  <h3 className='text - xl font - bold mb - 3 text - cyan - 400'>;
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
+                  <h3 className='text-xl font-bold mb-3 text-cyan-400'>;
                     Manufacturing Excellence;
                   </h3>;
-                  <p className='text - white / 70 mb - 4'>;
+                  <p className='text-white/70 mb-4'>;
                     Implemented computer vision and ML solutions that improved;
                     quality control by 85% and reduced defects by 60%.;
                   </p>;
-                  <Link;
-                    href='/case - studies#ai - automation - manufacturing';
-                    className='text - fuchsia - 400 hover:text - fuchsia - 300 transition - colors'                  >;
+                  <Link
+                    href='/case-studies#ai-automation-manufacturing'
+              <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                  <h3 className="text-xl font-bold mb-3 text-cyan-400">Manufacturing Excellence</h3>
+                  <p className="text-white/70 mb-4">
+                    Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.
+                  </p>
+                    className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'>;
                     Read Case Study →;
                   </Link>;
-                </div>            <div className="mb - 16">;
-              <h2 className="text - 3xl font - bold mb - 8 text - center text - blue - 400">AI Success Stories</h2>;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
-                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
-                  <h3 className="text - xl font - bold mb - 3 text - cyan - 400">Manufacturing Excellence</h3>;
-                  <p className="text - white / 70 mb - 4">;
+                </div>            <div className="mb-16">;
+              <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">;
+                  <h3 className="text-xl font-bold mb-3 text-cyan-400">Manufacturing Excellence</h3>;
+                  <p className="text-white/70 mb-4">;
                     Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.;
                   </p>;
-                  <Link;
-                    href="/case - studies#ai - automation - manufacturing";
-                    className="text - fuchsia - 400 hover:text - fuchsia - 300 transition - colors";
-                    Read Case Study →;
-                  </Link>;
-                </div>;
-                <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6'>;
-                  <h3 className='text - xl font - bold mb - 3 text - fuchsia - 400'>;
-                    Content Generation Scale;
-                  </h3>;
-                  <p className='text - white / 70 mb - 4'>;
-                    Built autonomous content generation systems that increased;
-                    output by 10x while maintaining quality standards.;
-                  </p>;
-                  <Link;
-                    href='/case - studies#content - generation - scale';
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors'                  >                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
-                  <h3 className="text - xl font - bold mb - 3 text - fuchsia - 400">Content Generation Scale</h3>;
-                  <p className="text - white / 70 mb - 4">;
-                    Built autonomous content generation systems that increased output by 10x while maintaining quality standards.;
-                  </p>;
-                  <Link;
-                    href="/case - studies#content - generation - scale";
-                    className="text - cyan - 400 hover:text - cyan - 300 transition - colors";
-                    Read Case Study →;
-
+                  <Link
+                    href="/case-studies#ai-automation-manufacturing"
+                    className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                   </Link>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
 
                 <Link
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Start Your AI Journey
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Link
@@ -561,7 +753,31 @@ export default function AISolutionsPage() {
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                </Link>
+                <Link
+                  href="/automation-insights"
+
+                  Explore Insights;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
+}
+  );
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    </>);
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

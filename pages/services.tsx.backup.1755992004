@@ -153,6 +153,15 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991897.backup.1756001157
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+========
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   const popularServices = getPopularServices();
 
@@ -196,6 +205,10 @@ export default function ServicesPage() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992004
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: 'Blockchain & DeFi',
       description: 'Decentralized finance and blockchain technology solutions',
       icon: <LinkIcon className="w-6 h-6" />,
@@ -215,6 +228,95 @@ export default function ServicesPage() {
       icon: <Globe2 className="w-6 h-6" />,
       count: enhancedRealMicroSaasServices.filter(s => s.category === 'Metaverse & Virtual Reality').length,
       color: 'from-purple-500 to-pink-600'
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991897.backup.1756001157
+========
+=======
+      name: 'Neural Technology',
+      description: 'Brain-computer interfaces and neural systems',
+      icon: <Dna className="w-6 h-6" />,
+      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Neural Technology').length,
+      color: 'from-pink-500 to-rose-600'
+    },
+    {
+      name: 'Cybersecurity',
+      description: 'Quantum-resistant security and threat protection',
+      icon: <Shield className="w-6 h-6" />,
+      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Cybersecurity' || s.category === 'Quantum Cybersecurity').length,
+      color: 'from-red-500 to-pink-600'
+    },
+    {
+      name: 'Financial Technology',
+      description: 'Quantum financial modeling and trading algorithms',
+      icon: <DollarSign className="w-6 h-6" />,
+      count: enhancedRealMicroSaasServices.filter(s => s.category === 'Financial Technology' || s.category === 'Quantum Finance & Trading').length,
+      color: 'from-yellow-500 to-orange-600'
+    }
+  ];
+
+  const serviceHighlights = [
+    {
+      title: 'Quantum Advantage',
+      description: 'Our quantum computing services provide 10-100x speedup for complex calculations, giving you unprecedented competitive advantage.',
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'AI-First Innovation',
+      description: 'Every service is built with AI at its core, continuously learning and improving to deliver better results over time.',
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Proven ROI',
+      description: 'Our customers see an average ROI of 800% within 12 months, with some achieving 1000%+ returns.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance, 99.99% uptime guarantee, and quantum-resistant encryption.',
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-600'
+    }
+  ];
+
+  const pricingTiers = [
+    {
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
+      features: ['Basic AI features', 'Standard support', 'Core integrations', 'Basic analytics'],
+      color: 'from-blue-500 to-indigo-600'
+    },
+    {
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+      features: ['Advanced AI capabilities', 'Priority support', 'Full integrations', 'Advanced analytics', 'Team collaboration'],
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      name: 'Enterprise',
+      price: '$599',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      features: ['Full AI suite', '24/7 dedicated support', 'Custom integrations', 'Enterprise analytics', 'Advanced security', 'Custom training'],
+      color: 'from-emerald-500 to-teal-600'
+    },
+    {
+      name: 'Quantum',
+      price: '$1,999',
+      period: '/month',
+      description: 'Cutting-edge quantum computing solutions',
+      features: ['Quantum algorithms', 'Quantum security', 'AI optimization', 'Custom development', 'Dedicated infrastructure', 'White-label options'],
+      color: 'from-cyan-500 to-blue-600'
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992004
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ];
 
@@ -606,6 +708,11 @@ export default function ServicesPage() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-gradient-to-r from-gray-900/50 to-gray-800/30 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6"
           >
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991897.backup.1756001157
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Search and View Controls */}
             <div className="flex flex-col lg:flex-row gap-4 mb-6">
               <div className="flex-1 relative">
@@ -726,6 +833,81 @@ export default function ServicesPage() {
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.6 }}
               className="text-center py-20"
+<<<<<<< HEAD
+=======
+=======
+        {/* Pricing Tiers */}
+        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                <span className="text-gradient-rainbow">Transparent Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your business needs with our flexible, scalable pricing options
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            >
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className={`p-8 rounded-2xl bg-gradient-to-br ${tier.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-all duration-300`}
+                >
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <div className="text-4xl font-bold text-white mb-1">
+                      {tier.price}
+                      <span className="text-lg text-white/60">{tier.period}</span>
+                    </div>
+                    <p className="text-white/80">{tier.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {tier.features.map((feature, fIndex) => (
+                      <li key={fIndex} className="flex items-center text-white/80">
+                        <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700"
+                  >
+                    Get Started
+                  </Button>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-8"
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -1106,6 +1288,10 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992004
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-xl border border-cyan-500/30 rounded-3xl p-12">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
                 Ready to Get Started?

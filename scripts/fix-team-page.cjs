@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Fix Team Page - Targeted fix for team.tsx;
@@ -84,4 +87,8 @@ const fs = require('fs')
               "fontWeight"
               "display"
               "border"
+<<<<<<< HEAD
 
+=======
+              "transition"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

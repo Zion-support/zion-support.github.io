@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface ShortUrl {
 export interface ShortUrl {;
   id: string;
@@ -6,36 +16,161 @@ export interface ShortUrl {;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+<<<<<<< HEAD
+export interface ShortUrl {
+  id: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  original_url: string;
+  short_code: string;
+  short_url: string;
+  created_at: Date;
+  expires_at?: Date;
+  is_active: boolean,
+  user_id?: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export interface UrlAnalytics {
+  total_clicks: number;
+  unique_visitors: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  isActive: boolean
+
+  userId?: string
+}
+export interface UrlAnalytics {
+
+export interface UrlAnalytics {;
+  totalClicks: number;
+  uniqueVisitors: number;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export interface ShortUrl {
+  id: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   last_clicked: Date,
   click_history: ClickEvent[];
 
+<<<<<<< HEAD
 }
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+  last_clicked: Date,
+  click_history: ClickEvent[];
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+export interface ClickEvent {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   timestamp: Date;
   ip_address: string;
   user_agent: string;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  lastClicked: Date
+
+  clickHistory: ClickEvent[]
+}
+export interface ClickEvent {
+
+export interface ClickEvent {;
+  id: string;
+  timestamp: Date;
+  ipAddress: string;
+  userAgent: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   referrer: string;
   country: string;
   city: string;
   device: string;
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  browser: string
+=======
     const shortCode = request && request.customCode || this && this.generateShortCode(),
     
     if (this && this.urls.has(shortCode)) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
   os: string
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    const shortCode = request && request.customCode || this && this.generateShortCode(),
+    if (this && this.urls.has(shortCode)) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      throw new Error('Short code already exists')
+    }
+    const shortUrl: ShortUrl = {
+
+=======
+      throw new Error('Short code already exists')
+    }
+    const shortUrl: ShortUrl = {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: this && this.generateId();
       originalUrl: request && request.originalUrl;
       shortCode,
@@ -48,7 +183,19 @@ export interface ShortUrl {;
 
     this && this.urls.set(shortCode, shortUrl);
     this && this.analytics.set(shortCode, {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      throw new Error('Short code already exists')
+    }
+    const shortUrl: ShortUrl = {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       totalClicks: 0;
       uniqueVisitors: 0;
 =======
@@ -65,6 +212,7 @@ export interface ShortUrl {;
   userId?: string
 }
 class UrlShortenerService {
+<<<<<<< HEAD
   private urls: Map<string, ShortUrl> = new Map();
   private analytics: Map<string, UrlAnalytics> = new Map();
   private clicks: Map<string, ClickEvent[]> = new Map();
@@ -72,10 +220,68 @@ class UrlShortenerService {
 
     const shortCode = request.customCode |this.generateShortCode()
     if (this.urls.has(shortCode)) {
+=======
+  private urls: Map < string, ShortUrl> = new Map ();
+  private analytics: Map < string, UrlAnalytics> = new Map ();
+  private clicks: Map < string, ClickEvent[]> = new Map ();
+;
+  async createShortUrl (request: CreateShortUrlRequest): Promise < ShortUrl> {
+    const short_code = request.custom_code || this.generateShortCode (),
+    if () {) {
+  $2
+}
+      throw new Error ('Short code already exists');
+    }
+    const short_url: ShortUrl = {
+      id: this.generate_id ();
+      original_url: request.original_url;
+      short_code,
+      short_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${short_code}`;
+      created_at: new Date ();
+      expires_at: request.expires_at;
+      is_active: true,
+      user_id: request.user_id;
+    }
+;
+    this.urls.set (short_code, short_url);
+    this.analytics.set (short_code, {
+      total_clicks: 0;
+      unique_visitors: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      throw new Error('Short code already exists')
+    }
+    const shortUrl: ShortUrl = {
+      id: this.generateId();
+      originalUrl: request.originalUrl;
+      shortCode
+      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL |'https://zion.app'}/s/${shortCode}`;
+      createdAt: new Date();
+      expiresAt: request.expiresAt;
+      isActive: true
+      userId: request.userId
+    }
+    this.urls.set(shortCode, shortUrl);
+    this.analytics.set(shortCode, {
+      totalClicks: 0;
+      uniqueVisitors: 0;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       referrers: [];
       countries: [];
       devices: [];
       browsers: [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     this && this.clicks.set(shortCode, []);
 
@@ -92,7 +298,42 @@ class UrlShortenerService {
 
       return null
 =======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    this && this.clicks.set(shortCode, []);
+
+
+    return shortUrl
+  }
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
+
+    const url = this && this.urls.get(shortCode);
+    if (!url || !url && url.isActive) return null;
+    
+    if (url && url.expiresAt && url && url.expiresAt < new Date()) {
+      url && url.isActive = false,
+
+      return null
+<<<<<<< HEAD
+      lastClicked: new Date()
+      clickHistory: []
+    });
+    this.clicks.set(shortCode, []);
+    return shortUrl
+  }
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {
+    const url = this.urls.get(shortCode);
+    if (!url |!url.isActive) return null;
+    if (url.expiresAt && url.expiresAt < new Date()) {
+      url.isActive = false
+      return null
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface ShortUrl {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -175,19 +416,62 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+    return url
+  }
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export interface ShortUrl {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
     }
     return url
   }
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    }
+    return url
+  }
+
+  async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
+    const url = this.urls.get(shortCode);
+    if (!url) return;
+    const clickEvent: ClickEvent = {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       id: this.generateId()
       ...clickData
     }
@@ -200,10 +484,52 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+;
+  async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
+    const url = this.urls.get(shortCode),;
+    if (!url) return,;
+    const clickEvent: ClickEvent = {;
+      id: this.generateId(),;
+      ...clickData;
+    },;
+    const urlClicks = this.clicks.get(shortCode) || [],;
+    urlClicks.push(clickEvent),;
+    this.clicks.set(shortCode, urlClicks),;
+    const analytics = this.analytics.get(shortCode),;
+    if (analytics) {;
+      analytics.totalClicks++,;
+      analytics.lastClicked = new Date(),;
+      if (!analytics.referrers.includes(clickData.referrer)) {;
+        analytics.referrers.push(clickData.referrer);
+
+
+      id: this && this.generateId(),
+      ...clickData
+    };
+    const urlClicks = this && this.clicks.get(shortCode) || [];
+    urlClicks && urlClicks.push(clickEvent);
+    this && this.clicks.set(shortCode, urlClicks);
+    const analytics = this && this.analytics.get(shortCode);
+    if (analytics) {
+      analytics && analytics.totalClicks++;
+      analytics && analytics.lastClicked = new Date();
+      if (!analytics && analytics.referrers.includes(clickData && clickData.referrer)) {
+        analytics && analytics.referrers.push(clickData && clickData.referrer)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -213,21 +539,201 @@ class UrlShortenerService {;
       }
       if (!analytics && analytics.browsers.includes(clickData && clickData.browser)) {
         analytics && analytics.browsers.push(clickData && clickData.browser)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface ShortUrl {;
+  id:string,;
+  originalUrl:string,;
+  shortCode:string,;
+  shortUrl:string,;
+  createdAt:Date,;
+  expiresAt?:Date,;
+  isActive:boolean,;
+  userId?:string;
+}
+;
+export interface UrlAnalytics {;
+  totalClicks:number,;
+  uniqueVisitors:number,;
+  referrers:string[],;
+  countries:string[],;
+  devices:string[],;
+  browsers:string[],;
+  lastClicked:Date,;
+  clickHistory:ClickEvent[];
+}
+;
+export interface ClickEvent {;
+  id:string,;
+  timestamp:Date,;
+  ipAddress:string,;
+  userAgent:string,;
+  referrer:string,;
+  country:string,;
+  city:string,;
+  device:string,;
+  browser:string,;
+  os:string;
+}
+;
+export interface CreateShortUrlRequest {;
+  originalUrl:string,;
+  customCode?:string,;
+  expiresAt?:Date,;
+  userId?:string;
+}
+;
+class UrlShortenerService {;
+  private urls:Map<string ShortUrl> = new Map(),;
+  private analytics:Map<string UrlAnalytics> = new Map(),;
+  private clicks:Map<string ClickEvent[]> = new Map(),;
+;
+  async createShortUrl(request:CreateShortUrlRequest):Promise<ShortUrl> {;
+    const shortCode = request.customCode || this.generateShortCode(),;
+    ;
+    if (this.urls.has(shortCode)) {;
+      throw new Error('Short code already exists');
+    }
+;
+    const shortUrl:ShortUrl = {;
+      id:this.generateId(),;
+      originalUrl:request.originalUrl,;
+      shortCode,;
+      shortUrl:`${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`,;
+      createdAt:new Date(),;
+      expiresAt:request.expiresAt,;
+      isActive:true,;
+      userId:request.userId;
+    },;
+;
+    this.urls.set(shortCode, shortUrl),;
+    this.analytics.set(shortCode, {;
+      totalClicks:0,;
+      uniqueVisitors:0,;
+      referrers:[],;
+      countries:[],;
+      devices:[],;
+      browsers:[],;
+      lastClicked:new Date(),;
+      clickHistory:[];
+    }),;
+    this.clicks.set(shortCode, []),;
+;
+    return shortUrl,;  }
+;
+  async getShortUrl(shortCode:string):Promise<ShortUrl | null> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || !url.isActive) return null,;
+    ;
+    if (url.expiresAt && url.expiresAt < new Date()) {;
+      url.isActive = false,;
+      return null;
+    }
+;
+    return url,;
+  }
+;
+  async trackClick(shortCode:string, clickData:Omit<ClickEvent 'id'>):Promise<void> {;
+    const url = this.urls.get(shortCode),;
+    if (!url) return,;
+;
+    const clickEvent:ClickEvent = {;
+      id:this.generateId(),;
+      ...clickData;
+    },;
+;
+    const urlClicks = this.clicks.get(shortCode) || [],;
+    urlClicks.push(clickEvent),;
+    this.clicks.set(shortCode, urlClicks),;
+;
+    const analytics = this.analytics.get(shortCode),;
+    if (analytics) {;
+      analytics.totalClicks++,;
+      analytics.lastClicked = new Date(),;
+      ;
+      if (!analytics.referrers.includes(clickData.referrer)) {;
+        analytics.referrers.push(clickData.referrer),;
+      }
+      if (!analytics.countries.includes(clickData.country)) {;
+        analytics.countries.push(clickData.country),;
+      }
+      if (!analytics.devices.includes(clickData.device)) {;
+        analytics.devices.push(clickData.device),;
+      }
+      if (!analytics.browsers.includes(clickData.browser)) {;
+        analytics.browsers.push(clickData.browser),;      }
+    }
+  }
+
+
+
+
+  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
+
+  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
+    const url = this && this.urls.get(shortCode);
+    if (!url || (userId && url && url.userId !== userId)) return false;
+    url && url.isActive = false;
+    return true
+  }
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+    const url = this && this.urls.get(shortCode);
+    if (!url || (userId && url && url.userId !== userId)) return false;
+    Object && Object.assign(url, updates);
+      }
+      if (!analytics.countries.includes(clickData.country)) {
+        analytics.countries.push(clickData.country)
+      }
+      if (!analytics.devices.includes(clickData.device)) {
+        analytics.devices.push(clickData.device)
+      }
+      if (!analytics.browsers.includes(clickData.browser)) {
+        analytics.browsers.push(clickData.browser)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
     return this && this.analytics.get(shortCode) || null
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    return this && this.analytics.get(shortCode) || null
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
+<<<<<<< HEAD
+    return true
+  }
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+<<<<<<< HEAD
+=======
 
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
@@ -237,12 +743,36 @@ class UrlShortenerService {;
     return true
   }
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const url = this && this.urls.get(shortCode);
     if (!url || (userId && url && url.userId !== userId)) return false;
 
     Object && Object.assign(url, updates);
 
+<<<<<<< HEAD
+=======
+    return this.analytics.get(shortCode) |null
+  }
+  async getUserUrls(userId: string): Promise<ShortUrl[]> {
+    return Array.from(this.urls.values()).filter(url => url.userId === userId)
+  }
+
+  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
+    const url = this.urls.get(shortCode);
+    if (!url |(userId && url.userId !== userId)) return false;
+    url.isActive = false;
+    return true
+  }
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+    const url = this.urls.get(shortCode);
+    if (!url |(userId && url.userId !== userId)) return false;
+    Object.assign(url, updates);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return true
   }
   private generateShortCode(): string {
@@ -250,8 +780,11 @@ class UrlShortenerService {;
     let result = '';
     for (let i = 0, i < 6, i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       result += chars.charAt(Math.floor(Math.random() * chars.length))
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return result
   }
@@ -259,8 +792,68 @@ class UrlShortenerService {;
     return Math.random().toString(36).substr(2, 9)
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      result += chars.charAt(Math.floor(Math.random() * chars.length))
+;
+  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || (userId && url.userId !== userId)) return false,;
+    url.isActive = false,;
+    return true;
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
+=======
+      last_clicked: new Date (),
+      click_history: [];
+    });
+    this.clicks.set (short_code, []);
+;
+    return short_url;
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
+  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || (userId && url.userId !== userId)) return false,;
+    Object.assign(url, updates),;
+    return true;
+  }
+;
+  private generateShortCode(): string {;
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
+    let result = '',;
+    for (let i = 0, i < 6, i++) {;
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+<<<<<<< HEAD
+  async getShortUrl (short_code: string): Promise < ShortUrl | null> {
+    const url = this.urls.get (short_code);
+    // Check condition
+if (return null) {
+  $2
+}
+    if () {) {
+  $2
+}
+      url.is_active = false,
+      return null;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     return url;
   }
@@ -340,12 +933,25 @@ if ( {) {
     }
     return result;
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -357,17 +963,176 @@ if ( {) {
     }
   }
   async importData(data: any): Promise<void> {
+<<<<<<< HEAD
 
     this && this.urls = new Map(data && data.urls);
     this && this.analytics = new Map(data && data.analytics),
     this && this.clicks = new Map(data && data.clicks)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }
+    return result
+  }
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9)
+  }
+
+  // Utility methods for data persistence (in a real app, this would use a database)
+  async exportData(): Promise<any> {
+    return {
+      urls: Array.from(this.urls.entries());
+      analytics: Array.from(this.analytics.entries())
+      clicks: Array.from(this.clicks.entries())
+    }
+  }
+  async importData(data: any): Promise<void> {
+    this.urls = new Map(data.urls);
+    this.analytics = new Map(data.analytics)
+    this.clicks = new Map(data.clicks)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 export const urlShortenerService = new UrlShortenerService();
 
+<<<<<<< HEAD
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      urls: Array && Array.from(this && this.urls.entries());
+      analytics: Array && Array.from(this && this.analytics.entries()),
+      clicks: Array && Array.from(this && this.clicks.entries())
+    }
+  }
+  async importData(data: any): Promise<void> {
+    this && this.urls = new Map(data && data.urls);
+    this && this.analytics = new Map(data && data.analytics),
+    this && this.clicks = new Map(data && data.clicks)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }
+}
+export const urlShortenerService = new UrlShortenerService();
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  private generate_id (): string {
+    return Math.random ().to_string (36).substr (2, 9);
+  }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  // Utility methods for data persistence (in a real app, this would use a database);
+  async export_data (): Promise < any> {
+    return {
+      urls: Array.from (this.urls.entries ());
+      analytics: Array.from (this.analytics.entries ()),
+      clicks: Array.from (this.clicks.entries ());
+    }
+  }
+  async import_data (data: any): Promise < void> {
+    this.urls = new Map (data.urls);
+    this.analytics = new Map (data.analytics),
+    this.clicks = new Map (data.clicks);
+  }
+}
+export const urlShortenerService = new UrlShortenerService ();
+;
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export const urlShortenerService = new UrlShortenerService();
+;
+  async getAnalytics(shortCode:string):Promise<UrlAnalytics | null> {;
+    return this.analytics.get(shortCode) || null;
+  }
+;
+  async getUserUrls(userId:string):Promise<ShortUrl[]> {;
+    return Array.from(this.urls.values()).filter(url => url.userId === userId);
+  }
+;
+  async deactivateUrl(shortCode:string, userId?:string):Promise<boolean> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || (userId && url.userId !== userId)) return false,;
+;
+    url.isActive = false,;
+    return true,;
+  }
+;
+  async updateUrl(shortCode:string, updates:Partial<ShortUrl>, userId?:string):Promise<boolean> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || (userId && url.userId !== userId)) return false,;
+;
+    Object.assign(url, updates),;
+    return true,;
+  }
+;
+  private generateShortCode():string {;
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
+    let result = '',;
+    for (let i = 0, i < 6, i++) {;
+      result += chars.charAt(Math.floor(Math.random() * chars.length)),;
+    }
+    return result,;
+  }
+;
+  private generateId():string {;
+    return Math.random().toString(36).substr(2, 9),;
+  }
+;
+  // Utility methods for data persistence (in a real app, this would use a database);
+  async exportData():Promise<any> {;
+    return {;
+      urls:Array.from(this.urls.entries()),;
+      analytics:Array.from(this.analytics.entries()),;
+      clicks:Array.from(this.clicks.entries());
+    },;  }
+;
+  async importData(data:any):Promise<void> {;
+;
+  // Utility methods for data persistence (in a real app, this would use a database);
+  async exportData(): Promise<any> {;
+    return {;
+      urls: Array.from(this.urls.entries()),;
+      analytics: Array.from(this.analytics.entries()),;
+      clicks: Array.from(this.clicks.entries());
+    }
+  }
+;
+  async importData(data: any): Promise<void> {;
+    this.urls = new Map(data.urls),;
+    this.analytics = new Map(data.analytics),;
+    this.clicks = new Map(data.clicks);
+  }
+}
+;
+export const urlShortenerService = new UrlShortenerService();
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

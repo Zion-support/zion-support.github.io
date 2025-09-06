@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
       req && req.body || {};
@@ -32,10 +33,13 @@
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
+<<<<<<< HEAD
 
     return res && res.status(500).json({ error: "Failed to create partner" });
 
@@ -50,3 +54,34 @@
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    try {
+      const { partner, api_key } = await create_partner ({
+        name,
+        entity_type,
+        pointOfContact,
+        useCaseType,
+        brand,
+      });
+      return res.status (201).json ({
+        partner: {
+          id: partner.id,
+          name: partner.name,
+          status: partner.status,
+          entity_type: partner.entity_type,
+          useCaseType: partner.useCaseType,
+          created_at: partner.created_at,
+        },
+        api_key: api_key.key,
+        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
+      });
+    } catch (e) {
+      return res.status (500).json ({ error: "Failed to create partner" });
+    }
+    return res.status (500).json ({ error: "Failed to create partner" });
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

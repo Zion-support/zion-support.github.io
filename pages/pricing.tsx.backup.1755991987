@@ -63,6 +63,10 @@ const pricingPlans = [
   }
 ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const serviceCategories = [
   {
     name: 'AI & Machine Learning',
@@ -104,6 +108,158 @@ const serviceCategories = [
     ]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+  const pricingPlans = [
+    {
+      id: 'starter',
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 99 : 990,
+      period: billingCycle === 'monthly' ? '/month' : '/year',
+      savings: billingCycle === 'yearly' ? 'Save 17%' : '',
+      icon: '🚀',
+      color: 'from-blue-500 to-cyan-600',
+      bgColor: 'from-blue-500/10 to-cyan-500/10',
+      features: [
+        'Access to 20 core services',
+        'Basic AI assistance',
+        'Email support',
+        'Standard integrations',
+        '14-day free trial',
+        'Basic analytics',
+        'Community forum access',
+        'Documentation & guides'
+      ],
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaLink: '/contact'
+    },
+    {
+      id: 'pro',
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 2990,
+      period: billingCycle === 'monthly' ? '/month' : '/year',
+      savings: billingCycle === 'yearly' ? 'Save 17%' : '',
+      icon: '⭐',
+      color: 'from-purple-500 to-pink-600',
+      bgColor: 'from-purple-500/10 to-pink-500/10',
+      features: [
+        'Access to 50+ services',
+        'Advanced AI features',
+        'Priority support',
+        'Advanced integrations',
+        '30-day free trial',
+        'Advanced analytics',
+        'Team collaboration',
+        'Custom workflows',
+        'API access',
+        'White-label options'
+      ],
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaLink: '/contact'
+    },
+    {
+      id: 'enterprise',
+      name: 'Enterprise',
+      description: 'For large organizations with custom needs',
+      price: billingCycle === 'monthly' ? 799 : 7990,
+      period: billingCycle === 'monthly' ? '/month' : '/year',
+      savings: billingCycle === 'yearly' ? 'Save 17%' : '',
+      icon: '👑',
+      color: 'from-amber-500 to-orange-600',
+      bgColor: 'from-amber-500/10 to-orange-500/10',
+      features: [
+        'Access to all 300+ services',
+        'Custom AI models',
+        '24/7 dedicated support',
+        'On-premise options',
+        'Custom integrations',
+        'Training & onboarding',
+        'White-label options',
+        'SLA guarantees',
+        'Custom development',
+        'Dedicated account manager'
+      ],
+      popular: false,
+      cta: 'Contact Sales',
+      ctaLink: '/contact'
+    }
+  ];
+
+  const addOnServices = [
+    {
+      name: 'Custom AI Model Development',
+      description: 'Tailored AI solutions for your specific business needs with 1500%+ ROI guarantee',
+      price: 'From $2,500',
+      period: '/project',
+      icon: '🧠',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      name: 'Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing services for complex problem solving',
+      price: 'From $5,000',
+      period: '/month',
+      icon: '⚛️',
+      color: 'from-blue-500 to-indigo-600'
+    },
+    {
+      name: 'Fusion Energy Implementation',
+      description: 'AI-powered fusion energy control systems for sustainable power generation',
+      price: 'From $15,000',
+      period: '/month',
+      icon: '☢️',
+      color: 'from-orange-500 to-red-600'
+    },
+    {
+      name: 'Genetic Engineering Platform',
+      description: 'Advanced CRISPR technology and genetic research platforms',
+      price: 'From $8,000',
+      period: '/month',
+      icon: '🧬',
+      color: 'from-emerald-500 to-teal-600'
+    }
+  ];
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const features = [
+    {
+      icon: <Shield className="w-8 h-8 text-white" />,
+      title: 'Enterprise Security',
+      description: 'SOC 2 compliance, quantum-resistant encryption, and 24/7 security monitoring',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'Lightning Fast Setup',
+      description: 'Get started in minutes with automated onboarding and intuitive interfaces',
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-white" />,
+      title: '24/7 Expert Support',
+      description: 'Round-the-clock support from our team of technology experts',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-white" />,
+      title: 'Global Infrastructure',
+      description: 'Worldwide deployment with local data centers and compliance',
+      color: 'from-orange-500 to-red-600'
+    }
+  ];
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function Pricing() {
   return (

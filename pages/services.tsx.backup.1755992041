@@ -185,6 +185,20 @@ export default function ServicesPage() {
       trend: 'up',
       change: '+21.8% YoY'
     },
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991932.backup.1756001157
+      icon: '📊',
+      title: 'Project Management Suite',
+      description: 'Comprehensive project management platform with advanced planning tools.',
+      features: [
+        'Project planning & scheduling',
+        'Team collaboration tools',
+        'Time tracking & reporting',
+        'Resource management',
+        'Gantt charts & timelines'
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       metric: 'Average Growth Rate',
       value: '22.1%',
@@ -205,6 +219,249 @@ export default function ServicesPage() {
       description: 'Average LTV across micro SaaS customers',
       trend: 'up',
       change: '+18% YoY'
+<<<<<<< HEAD
+=======
+=======
+      icon: '📊',
+      title: 'AI-Powered Social Media Analytics',
+      description: 'Real-time social media performance tracking with AI-driven insights and automated reporting for businesses.',
+      features: [
+        'Multi-platform social media monitoring',
+        'AI-powered sentiment analysis',
+        'Automated performance reports',
+        'Competitor analysis & benchmarking',
+        'ROI tracking & attribution',
+        'Custom dashboard & alerts'
+      ],
+      pricing: {
+        starter: '$49/month',
+        professional: '$149/month',
+        enterprise: '$399/month'
+      },
+      marketPosition: 'Competitive with Hootsuite, Buffer, and Sprout Social',
+      useCases: ['Marketing agencies', 'E-commerce brands', 'SaaS companies', 'Content creators'],
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+      textColor: 'text-blue-400',
+      gradient: 'from-blue-400 to-indigo-500',
+      cta: 'Start Free Trial'
+    },
+    {
+      icon: '🔍',
+      title: 'SEO Content Optimization Suite',
+      description: 'AI-powered content optimization tool that analyzes and improves your content for better search rankings.',
+      features: [
+        'Real-time SEO scoring',
+        'Keyword density optimization',
+        'Content readability analysis',
+        'Competitor content research',
+        'Automated content suggestions',
+        'Performance tracking & reporting'
+      ],
+      pricing: {
+        starter: '$39/month',
+        professional: '$99/month',
+        enterprise: '$249/month'
+      },
+      marketPosition: 'Alternative to Clearscope, MarketMuse, and Surfer SEO',
+      useCases: ['Content marketers', 'SEO agencies', 'Bloggers', 'E-commerce sites'],
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      textColor: 'text-green-400',
+      gradient: 'from-green-400 to-emerald-500',
+      cta: 'Try for Free'
+    },
+    {
+      icon: '📧',
+      title: 'Smart Email Marketing Automation',
+      description: 'Intelligent email marketing platform with AI-powered segmentation, personalization, and automation workflows.',
+      features: [
+        'AI-powered audience segmentation',
+        'Behavioral trigger automation',
+        'Personalized content recommendations',
+        'A/B testing optimization',
+        'Advanced analytics & reporting',
+        'GDPR compliance tools'
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992041
+      ],
+      pricing: {
+        starter: '$29/month',
+        professional: '$79/month',
+        enterprise: '$199/month'
+      },
+      marketPosition: 'Competes with Mailchimp, ConvertKit, and ActiveCampaign',
+      useCases: ['E-commerce businesses', 'SaaS companies', 'Newsletters', 'Marketing teams'],
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      textColor: 'text-purple-400',
+      gradient: 'from-purple-400 to-pink-500',
+      cta: 'Get Started'
+    },
+    {
+      icon: '🎯',
+      title: 'Customer Feedback & Survey Platform',
+      description: 'Comprehensive feedback collection and analysis platform with AI-powered insights and automated reporting.',
+      features: [
+        'Multi-channel feedback collection',
+        'AI-powered sentiment analysis',
+        'Automated survey workflows',
+        'Real-time response tracking',
+        'Advanced analytics & reporting',
+        'Integration with popular tools'
+      ],
+      pricing: {
+        starter: '$19/month',
+        professional: '$59/month',
+        enterprise: '$159/month'
+      },
+      marketPosition: 'Alternative to SurveyMonkey, Typeform, and Qualtrics',
+      useCases: ['Product teams', 'Customer success', 'Market research', 'HR departments'],
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+<<<<<<<< HEAD:components/services.tsx.backup.1755991932.backup.1756001157
+      pricing: '$99/month',
+      link: 'https://projects.zion.app',
+      category: 'Productivity & Collaboration',
+      marketSize: '$4.8B'
+    },
+    {
+      icon: '🎨',
+      title: 'Design System Builder',
+      description: 'Create and maintain consistent design systems with automated component generation.',
+      features: [
+        'Component library management',
+        'Design token automation',
+        'Style guide generation',
+        'Design-to-code workflow',
+        'Team collaboration tools'
+      ],
+      color: 'bg-gradient-to-br from-violet-500 to-purple-600',
+      textColor: 'text-violet-400',
+      gradient: 'from-violet-400 to-purple-500',
+      pricing: '$79/month',
+      link: 'https://design.zion.app',
+      category: 'Productivity & Collaboration',
+      marketSize: '$800M'
+    },
+    // Micro SaaS Services - Analytics & Monitoring
+    {
+      icon: '📈',
+      title: 'Data Analytics Platform',
+      description: 'Business intelligence and data visualization with predictive analytics.',
+      features: [
+        'Real-time data processing',
+        'Advanced data visualization',
+        'Predictive analytics',
+        'Custom dashboard builder',
+        'Data integration tools'
+========
+      cta: 'Start Collecting'
+    },
+    {
+      icon: '📈',
+      title: 'Business Intelligence Dashboard',
+      description: 'Real-time business intelligence platform that consolidates data from multiple sources into actionable insights.',
+      features: [
+        'Multi-source data integration',
+        'Real-time dashboard updates',
+        'Custom KPI tracking',
+        'Automated reporting',
+        'Data visualization tools',
+        'Mobile-responsive design'
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992041
+      ],
+      pricing: {
+        starter: '$79/month',
+        professional: '$199/month',
+        enterprise: '$499/month'
+      },
+      marketPosition: 'Competes with Tableau, Power BI, and Looker',
+      useCases: ['Business analysts', 'Executives', 'Data teams', 'Consultants'],
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      textColor: 'text-teal-400',
+      gradient: 'from-teal-400 to-cyan-500',
+<<<<<<<< HEAD:components/services.tsx.backup.1755991932.backup.1756001157
+      pricing: '$129/month',
+      link: 'https://analytics.zion.app',
+      category: 'Analytics & Monitoring',
+      marketSize: '$6.8B'
+    },
+    {
+      icon: '⚡',
+      title: 'App Performance Monitor',
+      description: 'Real-time monitoring and optimization for web and mobile applications.',
+      features: [
+        'Performance metrics tracking',
+        'Error monitoring & alerting',
+        'User experience analytics',
+        'Automated optimization',
+        'Custom dashboards'
+      ],
+      color: 'bg-gradient-to-br from-amber-500 to-orange-600',
+      textColor: 'text-amber-400',
+      gradient: 'from-amber-400 to-orange-500',
+      pricing: '$39/month',
+      link: 'https://monitor.zion.app',
+      category: 'Analytics & Monitoring',
+      marketSize: '$2.4B'
+========
+      cta: 'View Demo'
+    },
+    {
+      icon: '🤖',
+      title: 'AI Chatbot Builder',
+      description: 'No-code AI chatbot platform for customer service, lead generation, and business automation.',
+      features: [
+        'Drag-and-drop chatbot builder',
+        'AI-powered conversation flows',
+        'Multi-language support',
+        'Integration with popular platforms',
+        'Analytics & performance tracking',
+        'Custom branding options'
+      ],
+      pricing: {
+        starter: '$25/month',
+        professional: '$75/month',
+        enterprise: '$199/month'
+      },
+      marketPosition: 'Alternative to Intercom, Drift, and ManyChat',
+      useCases: ['Customer support', 'E-commerce', 'Lead generation', 'Small businesses'],
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+      textColor: 'text-indigo-400',
+      gradient: 'from-indigo-400 to-purple-500',
+      cta: 'Build Your Bot'
+    }
+  ];
+
+  const marketAnalysis = [
+    {
+      category: 'Social Media Tools',
+      marketSize: '$23.4B',
+      growthRate: '13.2%',
+      keyPlayers: 'Hootsuite, Buffer, Sprout Social',
+      ourAdvantage: 'AI-powered insights, competitive pricing, easy integration'
+    },
+    {
+      category: 'SEO Tools',
+      marketSize: '$1.2B',
+      growthRate: '18.7%',
+      keyPlayers: 'Clearscope, MarketMuse, Surfer SEO',
+      ourAdvantage: 'Real-time optimization, AI suggestions, comprehensive reporting'
+    },
+    {
+      category: 'Email Marketing',
+      marketSize: '$7.5B',
+      growthRate: '15.3%',
+      keyPlayers: 'Mailchimp, ConvertKit, ActiveCampaign',
+      ourAdvantage: 'AI segmentation, automation workflows, advanced analytics'
+    },
+    {
+      category: 'Survey Platforms',
+      marketSize: '$3.2B',
+      growthRate: '12.8%',
+      keyPlayers: 'SurveyMonkey, Typeform, Qualtrics',
+      ourAdvantage: 'AI sentiment analysis, automated workflows, competitive pricing'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b680
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992041
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ];
 

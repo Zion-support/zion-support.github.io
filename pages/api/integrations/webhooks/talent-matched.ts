@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -6,6 +13,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
+=======
 
   try {
   if (req && req.method !== "POST")
@@ -18,22 +27,60 @@ export default async function handler(
   // record Zapier event
 
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { write_state, read_state  } from '../../../../lib / integrations / file_store';
+import { crm  } from '../../../../lib / integrations / connectors';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { match } = req.body as {
+    match?: { talent_id: string; job_id: string; summary?: string }
+  }
+  if (return res.status (400).json ({ error: "Missing match payload" })) {
+  $2
+}
+  // record Zapier event;
+  const event_id = `${Date.now ()}-talent - matched`;
+  write_state ((s) => {
+    s.events.push ({
+      id: event_id,
+      type: "zion.talent.matched",
+      timestamp: Date.now (),
+
+      payload: { match },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     });
 =======
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   });
 
 
-=======
 ;
   // log to connected CRMs as a note;
   const state = read_state ();
@@ -51,15 +98,25 @@ export default async function handler(
       job_id: match.job_id,
       note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
     });
+<<<<<<< HEAD
+=======
     write_state ((s) => s.logs.push (log));
   }
   res.status (200).json ({ ok: true, event_id });
 }
 
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
-  res.status(200).json({ ok: true, eventId });
-}
+
+<<<<<<< HEAD
 res.status(200).json({ ok: true, eventId });
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -87,4 +144,35 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+<<<<<<< HEAD
+=======
+;
+  res.status(200).json({ ok: true, eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  res.status(200).json({ ok: true, eventId });
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

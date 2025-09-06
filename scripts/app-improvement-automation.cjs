@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -124,4 +127,8 @@ if (document.readyState === "loading")
       this.log(` App Improvement Automation "failed"`)
 // console.log(" App improvement automation completed successfully")
     console.log(" "Report": ")
+<<<<<<< HEAD
 
+=======
+    console.error(" App improvement automation "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

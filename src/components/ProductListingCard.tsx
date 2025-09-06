@@ -1,3 +1,63 @@
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ProductListing } from '@/types/listings';
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components/RatingStars';
+import { FavoriteButton } from '@/components/FavoriteButton';import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+
+import React, { useState } from 'react';
+import { log_debug, logErrorToProduction } from '@/utils / production_logger';
+import { use_router } from 'next / router';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { ProductListing } from '@/types / listings';
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from '@/components / RatingStars';
+import { FavoriteButton } from '@/components / FavoriteButton'; import { use_dispatch } from 'react - redux';
+import type { AppDispatch } from '@/store';
+import { add_item } from '@/store / cart_slice';
+import { toast } from '@/hooks / use - toast';
+import { use_currency } from '@/hooks / use_currency';
+import Image from 'next / image'; // Import next / image;
+interface ProductListingCardProps {
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+  detailBasePath?: string;
+import Image from 'next/image'; // Import next/image
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -5,6 +65,10 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -20,11 +84,18 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -85,6 +156,73 @@ interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
   onRequestQuote?: (id: string) => void,;
+=======
+
+  const handleViewListing = () =>: any {
+    // Debug logging for development;
+    // Check condition
+if ( {) {
+  $2
+}
+      log_debug ('[ProductCard] Navigating to:', {
+        path: `${detailBasePath}/${listing.id}`,
+      });
+      log_debug ('[ProductCard] Listing ID:', { id: listing.id });
+      log_debug ('[ProductCard] Listing Title:', { title: listing.title });
+    }
+    // Validate listing ID exists before navigation;
+    // Check condition
+if ( {) {
+  $2
+}
+      logErrorToProduction (
+        '[ProductCard] Missing listing ID, cannot navigate',
+        new Error ('Missing listing ID'),
+        { component: 'ProductListingCard' }
+      );
+      toast ({
+        title: 'Navigation Error',
+        description: 'Product information is incomplete',
+        variant: 'destructive',
+      });
+      return;
+    }
+    router.push (`${detailBasePath}/${listing.id}`);
+  }
+  const dispatch = use_dispatch < AppDispatch>();
+  const addToCart = () =>: any {
+    set_loading (true);
+    dispatch (
+      add_item ({
+        id: listing.id,
+        title: listing.title,
+        price: listing.price ?? 0,
+      }));
+    toast.success (`1× ${listing.title} added`, {
+      action: {
+        label: 'View Cart',
+        on_click: () => router.push ('/cart'),
+      },
+    });
+    set_loading (false);
+
+  }
+  const handleRequestQuote = (e: React.MouseEvent) =>: any {
+    e.prevent_default ();
+    e.stop_propagation ();
+    // Check condition
+if ( {) {
+  $2
+}
+      onRequestQuote (listing.id);
+    } else {
+      router.push (`/request - quote?listing=${listing.id}`);
+    }
+  }
+  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
+      onKeyDown={e => {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   detailBasePath?: string;
 }
 ;
@@ -183,7 +321,34 @@ const ProductListingCardComponent = ({;
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
 
+<<<<<<< HEAD
   return (
+=======
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+
+
+      onKeyDown={e => {;
+        if (e && e.key === 'Enter' || e && e.key === ' ') {;
+          e && e.preventDefault();
+          handleViewListing();
+
+        }      }}
+    >;
+      {/* Image */}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+
+
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
+
+        onKeyDown={e => {;
+          if (e && e.key === 'Enter' || e && e.key === ' ') {;
+            e && e.preventDefault();
+            handleViewListing();
+          }  return ();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div
       data-testid="equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -210,6 +375,7 @@ const ProductListingCardComponent = ({;
           }
         }}
       >;
+<<<<<<< HEAD
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image;
             src={imageSrc}
@@ -217,6 +383,21 @@ const ProductListingCardComponent = ({;
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
+=======
+        <div className={`relative ${imageContainerClasses}`}>;
+          {' '}
+          {/* Ensure this container has dimensions */}
+
+
+        onKeyDown={(e) => {
+
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -225,6 +406,11 @@ const ProductListingCardComponent = ({;
               Featured
             </Badge>
           )}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {stockStatus && (;
             <Badge;
               variant={stockVariant as any}
@@ -242,19 +428,78 @@ const ProductListingCardComponent = ({;
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+
+
               {listing.category}
             </Badge>;
             {listing.rating && (;
               <RatingStars value={listing.rating} count={listing.reviewCount} />;
             )}
+<<<<<<< HEAD
+=======
+
+          </div>;
+
+          {/* Title & Description */}
+
+          <Image;
+            src = {image_src, }
+            alt = {listing.title, }
+            fill = {true, }
+            style={{ object_fit: 'cover' }}
+            on_error = {handleImageError, }
+            priority={false} // Assuming these are not LCP images;
+            sizes={
+              is_grid;
+                ? '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
+                : '192px';
+            } // 192px is w - 48;
+          />;
+          {listing.featured && (
+            <Badge className='absolute top - 2 right - 2 bg - primary text - primary - foreground border - none'>;
+              Featured;
+            </Badge>)}
+          {stock_status && (
+            <Badge;
+              variant={stock_variant as any}
+              className='absolute top - 2 left - 2'            >;
+              {stock_status}
+            </Badge>)}
+          <FavoriteButton item_id={listing.id} />;
+        </div>;
+      </div>;
+      {/* Content */}
+      <div;
+        className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}
+      >;
+        <div>;
+          {/* Category & Rating */}
+          <div className='flex justify - between items - center mb - 2'>;
+            <Badge;
+              variant='outline';
+              className='bg - background text - foreground / 80 border - primary / 10';
+            >;
+              {listing.category}
+            </Badge>;
+            {listing.rating && (
+              <RatingStars value={listing.rating} count={listing.review_count} />)}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+<<<<<<< HEAD
                 {listing.uspHeadline}
               </p>;
             )}
+=======
+
+                {listing.uspHeadline}
+              </p>
+            )}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -275,16 +520,30 @@ const ProductListingCardComponent = ({;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
         </div>;
+=======
+
+
+
+        </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
+
+
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -300,6 +559,10 @@ const ProductListingCardComponent = ({;
                 addToCart()
               }}
               disabled={loading}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               {loading ? (
                 <>
@@ -313,6 +576,10 @@ const ProductListingCardComponent = ({;
                 "Add to Cart"
               )}
             </Button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             
             <Button
               size="sm"
@@ -330,6 +597,181 @@ const ProductListingCardComponent = ({;
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
+            
+            {onRequestQuote && (
+              <Button 
+                size="sm"
+                variant="outline" 
+=======
+
+              onClick={e => {;
+                e && e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout;
+                dispatch(;
+                  addItem({;
+                    id: listing && listing.id,;
+                    title: listing && listing.title,;
+                    price: listing && listing.price ?? 0,;
+                  });
+                );
+                router && router.push('/checkout');
+              }}
+              disabled = {loading,}
+            >;
+              Buy Now;
+            </Button>;
+
+            {onRequestQuote && (;
+
+              <Button
+                size='sm'
+                variant='outline'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+                onClick={handleRequestQuote}
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
+              >
+                Request Quote
+              </Button>
+          </div>;
+          <div className="flex gap-2">;
+            <Button;
+              size="sm";
+              className="bg-primary hover: bg-primary/80 text-primary-foreground";
+              onClick={(e) => {;
+                e.stopPropagation(), // Prevent card click event;
+                addToCart();
+              }}
+              disabled={loading}
+            >;
+              {loading ? (;
+                <>;
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>;
+                  </svg>;
+                  Loading...;
+                </>;
+              ) : (;
+                "Add to Cart";
+              )}
+            </Button>;
+            <Button;
+              size="sm";
+              variant="default";
+              className="bg-green-600 hover: bg-green-700 text-white";
+              onClick={(e) => {;
+                e.stopPropagation(), // Prevent card click event;
+                // Add to cart first, then redirect to checkout;
+                dispatch(;
+                  addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
+                ),;
+                router.push('/checkout');
+              }}
+              disabled={loading}
+            >;
+              Buy Now;
+            </Button>;
+            {onRequestQuote && (;
+              <Button;
+                size="sm";
+                variant="outline";
+                onClick={handleRequestQuote}
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
+              >;
+                Request Quote;
+              </Button>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+    </div>;
+  );
+=======
+    </div>);
+const stock_variant = listing.stock === undefined ? 'success' : listing.stock <= 0 ? 'destructive' : listing.stock <= 5 ? 'warning' : 'success';
+const handleImageError = () =>: any {
+  // Check condition
+if ( {') {
+  $2
+}
+  //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg');
+setImageError (true);
+}';
+//Debug logging for development // Check condition
+if ( {) {
+  $2
+}
+  return;
+}
+}> {
+  /* Image */;
+}<div;
+}> <div className= {
+  `relative $ {
+  imageContainerClasses;
+}`;
+}> {
+  /* Ensure this container has dimensions */;
+}<Image Featured </Badge>);
+}{
+  stock_status && (<Badge variant= {
+  stock_variant as any;
+}className="absolute top - 2 left - 2" > {
+  stock_status;
+}</Badge>);
+}<FavoriteButton item_id= {
+  listing.id;
+}/> </div> </div> {
+  /* Content */;
+}<div className= {
+  `flex flex - col justify - between $ {';
+  is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1';
+}`;
+}> <div> </Badge> {
+  listing.rating && (<RatingStars value= {
+  listing.rating;
+}count= {
+  listing.review_count;
+}/>);
+}</div> <span key= {
+  idx ";
+}className="text - xs text - foreground / 70 bg - background / 50 px - 2 py - 1 rounded - full" > {
+  tag;
+}</span>) );
+}</div>);
+}</div> </span>) ";
+}</div> <div className="flex gap - 2" > <Button on_click={
+  (e) => {
+  e.stop_propagation (), //Prevent card click event addToCart ();
+}disabled= {
+  loading ";
+}loading ? (<> <svg className="animate - spin -ml - 1 mr - 3 h - 5 w - 5 text - white" xmlns="http://www.w3.org / 2000 / svg" fill="none" view_box="0 0 24 24" > <circle className="opacity - 25" cx="12" cy="12" r="10" stroke="current_color" stroke_width="4" ></circle> <path className="opacity - 75" fill="current_color" d="M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z" ></path> </svg> Loading... </>) : ("Add to Cart");
+}</Button> <Button on_click={
+  (e) => {
+  e.stop_propagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (add_item ({
+  id: listing.id,  title: listing.title, price: listing.price ?? 0;
+}) );';
+router.push ('/checkout');
+}disabled= {
+  loading;
+}> Buy Now </Button> {";
+  onRequestQuote && (<Button size="sm" variant="outline" on_click={
+  handleRequestQuote ";
+}className="border - primary text - primary hover:bg - primary / 10 hover:text - primary - foreground" > Request Quote </Button>);
+}</div> </div> </div> </div>);
+
+}
+'";
+export const ProductListingCard = React.memo (ProductListingCardComponent);
+ProductListingCard.display_name = 'ProductListingCard';
+                Request Quote;
+              </Button>) }
+
+
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+
             
             {onRequestQuote && (
               <Button 
@@ -389,11 +831,33 @@ const ProductListingCardComponent = ({;
                 Request Quote;
               </Button>;
             )}
+
           </div>;
         </div>;
       </div>;
     </div>;
   );
+
+          </div>;
+        </div>;
+      </div>;
+    </div>) }
+export default React.memo (ProductListingCard);
+
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+'"`;
+
+
+
+export const ProductListingCard = React.memo (ProductListingCardComponent);
+ProductListingCard.display_name = 'ProductListingCard';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';

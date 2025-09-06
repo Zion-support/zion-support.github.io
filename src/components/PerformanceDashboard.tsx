@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -16,6 +17,116 @@ interface Improvement {;
   description: string,;
   status: 'completed' | 'in-progress' | 'planned',;
   impact: 'high' | 'medium' | 'low',;
+=======
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+  CheckCircle
+  AlertCircle
+  TrendingUp
+  Zap
+  Shield
+  Search
+} from 'lucide-react'
+
+interface PerformanceMetrics {
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
+  healthStatus: 'healthy' | 'warning' | 'error'
+interface Improvement {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import {;
+  CheckCircle,;
+  AlertCircle,;
+  TrendingUp,;
+  Zap,;
+  Shield,;
+  Search,;
+} from 'lucide-react';
+interface PerformanceMetrics {;
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
+  healthStatus: 'healthy' | 'warning' | 'error';
+
+interface Improvement {;
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
+  category: 'performance' | 'security' | 'ux' | 'build'
+
+
+import React, { useState } from 'react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+  CheckCircle,
+  AlertCircle,
+  TrendingUp,
+  Zap,
+  Shield,
+  Search,
+} from 'lucide-react';
+interface PerformanceMetrics {
+  build_size: string;
+  page_count: number;
+  load_time: number;
+  health_status: 'healthy' | 'warning' | 'error';
+interface Improvement {
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in - progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   category: 'performance' | 'security' | 'ux' | 'build';
 }
 ;
@@ -133,6 +244,8 @@ const PerformanceDashboard: React.FC = () => {;
             <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
         </Card>
+
+
         
         <Card>
           <CardHeader className="pb-2">
@@ -143,12 +256,15 @@ const PerformanceDashboard: React.FC = () => {;
             <p className="text-xs text-gray-500">Generated pages</p>
           </CardContent>
         </Card>
+
+
         
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
@@ -162,6 +278,13 @@ const PerformanceDashboard: React.FC = () => {;
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
               <span className="text-sm font-semibold text-green-600">Healthy</span>
+=======
+            <div className='flex items-center space-x-2'>
+              <CheckCircle className='h-5 w-5 text-green-500' />
+              <span className='text-sm font-semibold text-green-600'>
+                Healthy
+              </span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </CardContent>
         </Card>
@@ -179,11 +302,17 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+
+
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -197,6 +326,10 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -286,9 +419,17 @@ const PerformanceDashboard: React.FC = () => {;
                         {improvement.impact} impact;
                       </Badge>;
                       {getStatusIcon(improvement.status)}
+<<<<<<< HEAD
                     </div>;
                   </div>;
                   <p className="text-sm text-gray-600 mt-1">;
+=======
+                    </div>
+                  </div>
+
+
+                  <p className='text-sm text-gray-600 mt-1'>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {improvement.description}
                   </p>;
                 </div>;
@@ -298,9 +439,16 @@ const PerformanceDashboard: React.FC = () => {;
         </CardContent>;
       </Card>;
       {/* Action Buttons */}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
+
+
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -312,10 +460,78 @@ const PerformanceDashboard: React.FC = () => {;
   )
 },
 
+<<<<<<< HEAD
+=======
+          variant='outline';
+        >;
+          <TrendingUp className='h-4 w-4 mr-2' />;
+
+export default PerformanceDashboard;
+export default PerformanceDashboard, ;
+export default PerformanceDashboard;
+}
+
+},
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default PerformanceDashboard, 
       <div className="flex space-x-4">;
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">;
           <Shield className="h-4 w-4 mr-2" />;
+<<<<<<< HEAD
+=======
+          Check Health Status;
+        </Button>;
+        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
+          <TrendingUp className="h-4 w-4 mr-2" />;
+
+          Bundle Analysis;
+        </Button>;
+      </div>;
+    </div>;
+  );
+};
+
+export default PerformanceDashboard;
+
+
+
+          <div className='space - y-4'>;
+            {completed_improvements.map (improvement => (
+              <div;
+                key={improvement.id}
+                className='flex items - start space - x-3 p - 3 border rounded - lg';
+              >;
+                <div className='flex - shrink - 0 mt - 1'>                  {getCategoryIcon (improvement.category)}
+                </div>;
+                <div className='flex - 1 min - w-0'>;
+                  <div className='flex items - center justify - between'>;
+                    <h3 className='text - sm font - medium text - gray - 900'>;
+                      {improvement.title}
+                    </h3>;
+                    <div className='flex items - center space - x-2'>;
+                      <Badge className={getImpactColor (improvement.impact)}>;
+                        {improvement.impact} impact;
+                      </Badge>;
+                      {getStatusIcon (improvement.status)}
+                    </div>;
+                  </div>;
+                  <p className='text - sm text - gray - 600 mt - 1'>;
+                    {improvement.description}
+                  </p>;
+                </div>;
+              </div>))}
+          </div>;
+        </CardContent>;
+      </Card>;
+      {/* Action Buttons */}
+      <div className='flex space - x-4'>;
+        <Button;
+          on_click={() => window.open ('/api / health / environment', '_blank')}
+          variant='outline';
+        >;
+          <Shield className='h - 4 w - 4 mr - 2' />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           Check Health Status;
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
@@ -327,3 +543,8 @@ export default PerformanceDashboard,
   );
 },;
 export default PerformanceDashboard;
+<<<<<<< HEAD
+=======
+export default PerformanceDashboard,
+export default PerformanceDashboard,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

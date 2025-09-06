@@ -1,32 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
       updated_at: string;
     }
-
-
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     updatedAt: string
   }>
 }
-
-
-
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),;
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+  const method = (req.method || 'GET').toUpperCase(),;
+
+
+  const method = (req.method |'GET').toUpperCase()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -41,16 +42,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
-
-        const next = curr && curr.byTenant || {};
-
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:
@@ -69,12 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-
-
-  return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
-      const next = curr && curr.byTenant || {};
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -82,12 +77,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
+<<<<<<< HEAD
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -158,12 +156,8 @@ if ( {) {
     return res.status (200).json (updated.by_tenant[tenant_id]);
   }
 return res.status (405).json ({ error: 'Method not allowed' });
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -172,3 +166,5 @@ return res.status (405).json ({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

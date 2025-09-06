@@ -1,13 +1,34 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface InnovativeNewService2025 {
+=======
 
 export interface InnovativeNewService2025 {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+export interface InnovativeNewService2025 {
+
+=======
+=======
+export interface InnovativeNewService2025 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   tagline: string;
@@ -38,21 +59,27 @@ export interface InnovativeNewService2025 {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
     website: string;
   }
 
   {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+<<<<<<< HEAD
+=======
 
     market_size: '$32.1B financial technology market',
     growth_rate: '22% annual growth',
     variant: 'quantum - financial - enterprise',
     contact_info: {
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -69,12 +96,17 @@ export interface InnovativeNewService2025 {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.';
     launch_date: '2025 - 01 - 08';
+<<<<<<< HEAD
+=======
 
     customers: 12;
 
@@ -82,6 +114,7 @@ export interface InnovativeNewService2025 {;
 
     reviews: 6
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
@@ -97,47 +130,11 @@ export interface InnovativeNewService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-
-}
-export const innovativeNewServices2025: InnovativeNewService[] = [
-  // AI-Powered Legal Document Analysis
-  {
-
-    id: 'ai-legal-document-analyzer', name: 'AI Legal Document Analyzer',
-    tagline: 'Transform legal document review with AI-powered analysis and insights', price: '$199',
-    period: '/month',
-    description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
-    features: [
-      'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alertsTemplate generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control';
-      'Real-time collaboration toolsMobile-responsive interface'
-    ];
-    popular: true, icon: '⚖️',
-    color: 'from-purple-600 to-indigo-600', textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-legal-document-analyzer',
-    marketPosition: 'Competes with DocuSign ($25/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces review time by 80% and catches 95% of potential issues.',
-    targetAudience: 'Law firms, Corporate legal departments, Contract managers, Compliance officers, Legal consultants',
-    trialDays: 14, setupTime: '2-3 hours',
-    category: 'Legal Technology', realService: true,
-    technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker, AWS'];
-    integrations: ['DocuSign, Salesforce, Microsoft Office, Google Workspace, Slack, Zoom'];
-    useCases: ['Contract review and analysis, Compliance monitoring, Risk assessment, Legal research automation, Document generation'];
-    roi: 'Law firms report 400% ROI through faster document processing and reduced legal risks.',
-    competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw'];
-    marketSize: '$15.2B legal tech market', growthRate: '18% annual growth',
-    variant: 'ai-legal-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
@@ -154,7 +151,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detectionMulti-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging';
       'Zero-knowledge architectureGlobal quantum network access'
     ];
-    popular: true, icon: '🔐',
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-secure-communication',
     marketPosition: 'Competes with Signal (Free), Wickr ($4.99/month). Our advantage: Quantum-resistant encryption that future-proofs against quantum attacks.',
@@ -169,9 +165,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$8.7B quantum security market', growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10', customers: 15,
@@ -188,7 +181,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engineClinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis';
       'Integration with EHR systemsMobile diagnostic tools'
     ];
-    popular: true, icon: '🏥',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition: 'Competes with IBM Watson Health ($500/month), Google Health AI (Custom pricing). Our advantage: 95% diagnostic accuracy and seamless EHR integration.',
@@ -203,9 +195,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$45.8B AI healthcare market', growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05', customers: 22,
@@ -222,7 +211,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoringPredictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking';
       'Multi-warehouse managementIntegration with ERP systems'
     ];
-    popular: true, icon: '🚚',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization',
     marketPosition: 'Competes with SAP Supply Chain ($1,000/month), Oracle SCM ($800/month). Our advantage: Autonomous optimization reduces costs by 25% and improves efficiency by 40%.',
@@ -237,9 +225,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$19.2B supply chain software market', growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
     realImplementation: true, implementationDetails: 'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12', customers: 35,
@@ -256,7 +241,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard';
       'API for custom strategies24/7 market monitoring'
     ];
-    popular: true, icon: '📈',
     color: 'from-yellow-600 to-amber-600', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'Competes with Bloomberg Terminal ($2,000/month), Thomson Reuters ($1,500/month). Our advantage: Quantum algorithms provide 10x faster analysis and superior risk modeling.',
@@ -271,30 +255,55 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
+<<<<<<< HEAD
+=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
+<<<<<<< HEAD
     reviews: 6,
   },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    reviews: 6;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     realImplementation: true;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
     launchDate: '2025-01-08';
     customers: 12;
 
+<<<<<<< HEAD
     rating: 4.9
+=======
+=======
+    reviews: 6;
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -558,6 +567,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     rating: 4.9;
     reviews: 6;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
@@ -568,3 +578,18 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+];
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

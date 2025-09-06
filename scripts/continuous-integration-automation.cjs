@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -19,4 +23,8 @@ const path = require('path')
       "type"
       "message"
       console.log('\n FAILED "STEPS")
+<<<<<<< HEAD
 
+=======
+      this.log(`� CI automation "failed"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

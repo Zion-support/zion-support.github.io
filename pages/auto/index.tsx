@@ -1,6 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -27,18 +38,93 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </li>
         </ul>
       </main>
     </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          </li>;
+        </ul>;
+      </main>;
+    </div>;
+  ),;
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default AutoIndex;
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+export default AutoIndex;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import Head from 'next / head';
+import Link from 'next / link';
+          </li>;
+        </ul>;
+      </main>;
+    </div>),
+}
+;
+export default AutoIndex;
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export default AutoIndex
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ),
 };
 
   )
+<<<<<<< HEAD
 
 export default AutoIndex;
 
+=======
+}
+export default AutoIndex;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 },
 export default AutoIndex,
 import type { NextPage } from 'next';
@@ -70,6 +156,7 @@ const AutoIndex: NextPage = () => {;
         </ul>;
       </main>;
     </div>;
+<<<<<<< HEAD
   );
 },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -80,3 +167,15 @@ export default AutoIndex;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+export default AutoIndex;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

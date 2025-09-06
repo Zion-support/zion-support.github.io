@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 /**;
  * AI-Powered Code Quality Enhancer - PM2 Automation;
@@ -690,4 +693,8 @@ if (require.main === module) {}
   const enhancer = new AICodeQualityEnhancer();
   enhancer.run()};
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = AICodeQualityEnhancer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

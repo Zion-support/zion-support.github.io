@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,4 +12,8 @@ const { execSync } = require('child_process')
 // console.log(`NPM "Audit"`)
     console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured
 // console.log(`Environment "Files"`)
+<<<<<<< HEAD
 
+=======
+    console.log(`Vulnerable "Packages"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

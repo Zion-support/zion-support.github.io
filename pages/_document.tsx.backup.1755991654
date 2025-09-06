@@ -148,6 +148,10 @@ export default function Document() {
     }
   })();`;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const themeScript = `(() => {
     try {
       const theme = localStorage.getItem('theme');
@@ -496,3 +500,27 @@ export default function Document() {
     </Html>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+	render() {
+		return (
+			<Html lang="en">
+				<Head>
+					<meta name="theme-color" content="#000000" />
+					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+					<link rel="dns-prefetch" href="//plausible.io" />
+					<link rel="icon" href="/favicon.svg" />
+					<link rel="manifest" href="/site.webmanifest" />
+					<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+				</Head>
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
+}
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-0d5e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

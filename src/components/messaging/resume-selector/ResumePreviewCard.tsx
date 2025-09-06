@@ -22,17 +22,42 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
               <p className="text-sm text-zion-cyan">{resume.basic_info.headline}</p>
             )}
           </div>
+<<<<<<< HEAD
           <Button 
             variant="ghost" 
             size="sm" 
             onClick={onDownload} 
             disabled={isLoading}
             className="h-8 w-8 p-0"
+=======
+          {resume.status && (
+            <Badge className={getStatusColor(resume.status)}>
+              {resume.status}
+            </Badge>
+          )}
+        </div>
+
+        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+          <span>Modified: {resume.lastModified}</span>
+          <span>{resume.fileSize}</span>
+        </div>
+
+        <div className="flex items-center space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              onDownload(resume);
+            }}
+            className="flex-1"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
             <Download className="h-4 w-4 text-zion-cyan" />
             <span className="sr-only">Download Resume</span>
           </Button>
         </div>
+<<<<<<< HEAD
         
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">
@@ -102,3 +127,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
   );
 }
 ;
+=======
+      </CardContent>
+    </Card>
+  );
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

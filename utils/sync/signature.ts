@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import crypto from "crypto";
 export function getSyncSecret(): string | null {;
   const raw = process.env.ZION_SYNC_SECRET || "";
@@ -5,6 +6,21 @@ export function getSyncSecret(): string | null {;
 }
 ;
 export function signPayload(payload: unknown): string | null {;
+=======
+<<<<<<< HEAD
+export function getSyncSecret(): string | null {
+  const raw = process.env.ZION_SYNC_SECRET || '';
+  return raw.length > 0 ? raw : null;
+}
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, privateKey: string) => '',
+  recover: (signature: string, message: string) => '';
+
+export function signPayload(payload: unknown): string | null {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const secret = getSyncSecret();
   if (!secret) return null;
   const body = typeof payload === "string" ? payload : JSON.stringify(payload);
@@ -23,4 +39,33 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
   } catch {;
     return false;
   }
+<<<<<<< HEAD
 }
+=======
+}
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+=======
+
+import crypto from 'crypto';
+
+
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
+<<<<<<< HEAD
+}
+}
+=======
+};
+=======
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

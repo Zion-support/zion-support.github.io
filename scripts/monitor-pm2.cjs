@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**;
  * PM2 Monitoring Dashboard for Zion Application;
  * Provides real-time monitoring of all PM2 processes;
  */;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { exec } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -80,4 +86,8 @@ const path = require("path")"
     case "help"
     "default"
   process.on("SIGINT")
+<<<<<<< HEAD
 
+=======
+  process.on(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

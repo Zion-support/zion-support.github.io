@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Quality Checks Script for PM2;
@@ -180,4 +183,8 @@ main().catch(error => {})
   log(`Quality Checks Process failed: ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs').promises;
 const path = require('path');
@@ -17,7 +20,10 @@ class AutomationScriptFixer {}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {}
       await fs.appendFile(this.logFile, logEntry);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       console.log(`[${level}] ${message}`)} catch (error) {`}
       console.error(`Failed to write to log "file": ${error.message}`)};
   };
@@ -169,4 +175,8 @@ class AutomationScriptFixer {}
 if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = AutomationScriptFixer;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

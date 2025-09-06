@@ -1,21 +1,53 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 export type ForumCategory =
 export type ForumCategory = 
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export type ForumCategory = 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export type ForumCategory =;
+  | 'getting - hired';
+  | 'project - help';
+  | 'ai - tools';
+  | 'feedback';
+  | 'announcements';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
+<<<<<<< HEAD
   adminOnly: boolean
   icon: string
 }
@@ -25,6 +57,52 @@ export interface ForumPost {
 export interface ForumPost {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  id: ForumCategory;
+  name: string;
+  description: string;
+  adminOnly: boolean
+  icon: string
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+export interface ForumCategoryInfo {;
+
+
+  id: ForumCategory;
+  name: string;
+  description: string;
+
+  admin_only: boolean,
+  icon: string;
+
+}
+export interface ForumPost {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
+
+export interface ForumPost {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ForumPost {
+
+export interface ForumPost {;
+export interface ForumPost {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   title: string;
   content: string;
@@ -38,6 +116,38 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface ForumPost {
+
+export interface ForumPost {;
+  id: string;
+  title: string;
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  categoryId: ForumCategory;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+  downvotes: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean
+  isFeatured?: boolean
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   reply_count: number;
   is_answered?: boolean;
@@ -47,6 +157,7 @@ export interface ForumPost {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export interface ForumReply {
@@ -54,6 +165,29 @@ export interface ForumReply {
 export interface ForumReply {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export interface ForumReply {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
+
+export interface ForumReply {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ForumReply {
+
+export interface ForumReply {;
+}
+export interface ForumReply {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -65,11 +199,48 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface ForumReply {
+
+export interface ForumReply {;
+  id: string;
+  postId: string;
+  parentReplyId?: string;
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  downvotes: number
+  isAnswer?: boolean
+}
+export interface Badge {
+
+export interface Badge {;
+  id: string;
+  name: string;
+  description: string;
+<<<<<<< HEAD
+  icon: string
+  color: string
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   downvotes: number,
   is_answer?: boolean;
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -78,45 +249,209 @@ export interface Badge {
 export interface Badge {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+export interface Badge {
+}
+
+
+export interface Badge {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   description: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   icon: string,
   color: string;
 }
+<<<<<<< HEAD
+=======
+export interface UserBadge {
+  user_id: string;
+  badge_id: string,
+  awarded_at: string;
+
+}
+export interface CommunityUser {
+<<<<<<< HEAD
+
+
+export interface UserBadge {;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export interface UserBadge {
 
 
 export interface UserBadge {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userId: string;
   badgeId: string
   awardedAt: string
 }
+<<<<<<< HEAD
 export interface CommunityUser {
 
 export interface CommunityUser {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+export interface CommunityUser {;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export interface CommunityUser {
+
+export interface CommunityUser {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
   post_count: number;
   reply_count: number;
   badges: Badge[];
 
+<<<<<<< HEAD
   isModerator: boolean
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  postCount: number;
+  replyCount: number;
+  badges: Badge[];
+  isVerified: boolean
+
+  isModerator: boolean
+}
+export type ForumCategory =;
+  | 'getting-hired';
+  | 'project-help';
+  | 'ai-tools';
+  | 'feedback';
+  | 'announcements',;
+export interface ForumCategoryInfo {;
+  id: ForumCategory,;
+  name: string,;
+  description: string,;
+  adminOnly: boolean,;
+  icon: string;
+}
+;
+export interface ForumPost {;
+  id: string,;
+  title: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  categoryId: ForumCategory,;
+  tags: string[],;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  replyCount: number,;
+  isAnswered?: boolean,;
+  isPinned?: boolean,;
+  isLocked?: boolean,;
+  isFeatured?: boolean;
+}
+;
+export interface ForumReply {;
+  id: string,;
+  postId: string,;
+  parentReplyId?: string,;
+  content: string,;
+  authorId: string,;
+  authorName: string,;
+  authorAvatar?: string,;
+  authorRole?: string,;
+  createdAt: string,;
+  updatedAt: string,;
+  upvotes: number,;
+  downvotes: number,;
+  isAnswer?: boolean;
+}
+;
+export interface Badge {;
+  id: string,;
+  name: string,;
+  description: string,;
+  icon: string,;
+  color: string;
+}
+;
+export interface UserBadge {;
+  userId: string,;
+  badgeId: string,;
+  awardedAt: string;
+}
+;
+export interface CommunityUser {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  role: string,;
+  reputation: number,;
+  postCount: number,;
+  replyCount: number,;
+  badges: Badge[],;
+  isVerified: boolean;
+  isModerator: boolean;
+}
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  post_count: number;
+  reply_count: number;
+  badges: Badge[];
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

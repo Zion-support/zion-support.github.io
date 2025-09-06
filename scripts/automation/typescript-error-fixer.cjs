@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
@@ -84,4 +87,8 @@ const glob = require("glob")
           content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
+<<<<<<< HEAD
 
+=======
+  console.error(" Failed to start TypeScript error "fixer")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

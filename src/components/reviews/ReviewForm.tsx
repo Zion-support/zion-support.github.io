@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react",
 import { Star } from 'lucide-react'
@@ -51,10 +52,23 @@ interface ReviewFormValues {;
   is_anonymous?: boolean;
 }
 ;
+=======
+rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean;
+}
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
+<<<<<<< HEAD
   onSubmit: (data: any) => Promise<boolean>,;
   defaultValues?: Review,;
   isSubmitting: boolean;
@@ -336,3 +350,19 @@ export function ReviewForm({
   )
 }
 ;
+=======
+  onSubmit: (data: any) => Promise<boolean>, ;
+
+  }
+
+  )
+}
+interface ReviewFormProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  on_submit: (data: any) => Promise < boolean>,
+  }
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

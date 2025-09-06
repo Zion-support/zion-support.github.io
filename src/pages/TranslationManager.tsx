@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -112,6 +113,19 @@ export default function TranslationManager() {;
       setFilteredKeys(Array.from(allKeys)),;
       return;
     }
+=======
+let sourceText = '';    ;
+    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
+
+
+}
+
+}
+
+}
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -458,4 +472,8 @@ export default function TranslationManager() {;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync, spawn } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "enhanced-build-test.log")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       "timestamp"
       summary: { total: 0, "passed": 0, "failed": 0, "warnings"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
@@ -28,7 +34,10 @@ const path = require("path")
     this.log("� Running build process...")
     return await this.runCommand("npm run build", "Next.js Build")
     this.log("🧪 Running tests...")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return await this.runCommand("npm test", "Jest Tests")
       this.log("⚠ Tests not configured or failed, continuing...", "warning")
       return { "success": true, "output": "Tests skipped", "duration"}
@@ -51,4 +60,8 @@ const path = require("path")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

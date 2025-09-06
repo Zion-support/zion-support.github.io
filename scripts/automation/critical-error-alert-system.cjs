@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -177,4 +180,8 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
+<<<<<<< HEAD
 
+=======
+        "ERROR"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

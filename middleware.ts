@@ -1,62 +1,22 @@
-
-  const response = NextResponse && NextResponse.next();
-
-
+<<<<<<< HEAD
 =======
-  
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
   // Security headers
-
-  response && response.headers.set("X-Frame-Options", "DENY");
-  response && response.headers.set("X-Content-Type-Options", "nosniff");
-  response && response.headers.set("Referrer-Policy", "origin-when-cross-origin");
-  response && response.headers.set(
-    "Permissions-Policy",
-=======
-import { NextResponse  } from './next / server';
-import type { NextRequest } from './next / server';
-;
-export /**
- * middleware - Function description
- */
-function middleware() {
-  const response = NextResponse.next ();
-;
-  // Security headers;
-  response.headers.set ("X - Frame - Options", "DENY");
-  response.headers.set ("X - Content - Type - Options", "nosniff");
-  response.headers.set ("Referrer - Policy", "origin - when - cross - origin");
-  response.headers.set (
-    "Permissions - Policy",
-
     "camera=(), microphone=(), geolocation=()",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
-  response && response.headers.set(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;",
-
-=======
 ;
   // CSP header;
   response.headers.set (
     "Content - Security - Policy",
     "default - src 'self'; script - src 'self' 'unsafe - eval' 'unsafe - inline'; style - src 'self' 'unsafe - inline'; img - src 'self' data: https:; font - src 'self' data:; connect - src 'self' https:;",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
 
-
-
   return response;
-=======
     return response;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-}
-
 =======
+<<<<<<< HEAD
   
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
@@ -82,8 +42,31 @@ return response;
 };
 
 =======
+=======
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+>>>>>>> main
+}
+
+return response;
+}
+export const config = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export const config = {
   matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -32,6 +33,9 @@ import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -42,9 +46,10 @@ import {
   Users, 
   Database, 
   CheckCircle, 
-  ArrowRight ;
+  ArrowRight 
 } from 'lucide-react';
 
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -92,6 +97,8 @@ const features = [;
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const features = [
   {
     icon: DollarSign,
@@ -110,6 +117,7 @@ const features = [
   },
   {
     icon: Users,
+<<<<<<< HEAD
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -207,6 +215,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 ];
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
@@ -214,6 +224,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ];
 
 export default function FinanceSolutionsPage() {
+<<<<<<< HEAD
 
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
@@ -334,6 +345,29 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                 Secure, compliant, and innovative financial technology solutions
                 designed for modern financial institutions and fintech companies.
+=======
+  return (
+    <>
+      <Head>
+        <title>Finance Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive finance technology solutions including data management, security, analytics, and compliance." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Finance Solutions</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Secure and compliant finance technology solutions designed for financial institutions. 
+                From data management to analytics and reporting.
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -346,6 +380,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -356,18 +391,26 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
+<<<<<<< HEAD
 
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -380,6 +423,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -508,9 +552,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -532,8 +579,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 
     </>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+}

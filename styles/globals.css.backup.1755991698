@@ -52,6 +52,11 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
@@ -638,6 +643,26 @@ body::after {
     display: none;
   body::before,
   body::after {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+    display: none;
+=======
+  25% { transform: translateY(-20px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(0.5deg); }
+}
+
+@keyframes particleFloat {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
 @keyframes gridMove {
@@ -665,6 +690,15 @@ body::after {
   .holographic-matrix {
   .neural-network {
     background-size: 100px 100px;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     display: none;  }
 >>>>>>> main
 }

@@ -27,6 +27,23 @@ export default function HomePage() {
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
     { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
     { value: '800%+', label: 'Average ROI', color: 'text-purple-400', icon: <Trophy className="w-6 h-6" /> },
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/index.tsx.backup.1755991787.backup.1756001155
+========
+=======
+import QuantumNeuralBackground from '../components/ui/QuantumNeuralBackground';
+import { Cloud, Bot, RefreshCw, Zap, Shield, BarChart3, ArrowRight, Check, ExternalLink, Star, Users, Globe, Lock, Rocket, Cpu, Database, TrendingUp, Clock, Target, Building, Award, DollarSign, ChartBar, Code, BookOpen, Activity, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, Settings, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Sparkles, Atom, Brain, Eye, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon } from 'lucide-react';
+
+export default function HomePage() {
+  const heroStats = [
+    { value: '85+', label: 'Real Micro SaaS Services', color: 'text-cyan-400' },
+    { value: '99.9%', label: 'Uptime Guarantee', color: 'text-fuchsia-400' },
+    { value: '14', label: 'Day Free Trials', color: 'text-blue-400' },
+    { value: '24/7', label: 'AI Support', color: 'text-green-400' },
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-acae
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/index.tsx.backup.1755991911.backup.1756001158
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
 
   const contactInfo = {

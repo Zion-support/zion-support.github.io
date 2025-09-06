@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -17,6 +18,9 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -30,6 +34,7 @@ import {
   Lock,
   CreditCard,
   Database,
+<<<<<<< HEAD
   FileText,;
   Users;
 } from 'lucide-react';
@@ -42,6 +47,11 @@ const services = [;
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
 =======
 =======
+=======
+  FileText,
+  Users;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -56,6 +66,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'AI Trading Algorithms,',;
     description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',;
@@ -65,10 +76,20 @@ const services = [
       'Risk management AI',',;
       'Market prediction models',',;
 
+=======
+    title: 'AI Trading Algorithms,',
+    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
+    icon: Brain,
+    features: [;
+      'Algorithmic trading systems,',
+      'Risk management AI',',
+      'Market prediction models',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Portfolio optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Digital Payment Systems,',;
     description: 'Secure, scalable payment processing solutions for modern financial transactions.',',;
@@ -78,10 +99,20 @@ const services = [
       'Mobile payment solutions',',;
       'Cross-border payments',',;
 
+=======
+    title: 'Digital Payment Systems,',
+    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
+    icon: CreditCard,
+    features: [;
+      'Payment gateway integration,',
+      'Mobile payment solutions',',
+      'Cross-border payments',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Fraud detection systems'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Risk Management AI,',;
     description: 'AI-powered risk assessment and management tools for financial institutions.,',;
@@ -91,10 +122,20 @@ const services = [
       'Market risk modeling',',;
       'Operational risk assessment',',;
 
+=======
+    title: 'Risk Management AI,',
+    description: 'AI-powered risk assessment and management tools for financial institutions.,',
+    icon: TrendingUp,
+    features: [;
+      'Credit risk analysis,',
+      'Market risk modeling',',
+      'Operational risk assessment',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Regulatory compliance monitoring'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Fraud Detection Systems,',;
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',;
@@ -104,10 +145,20 @@ const services = [
       'Behavioral analysis',',;
       'Pattern recognition',',;
 
+=======
+    title: 'Fraud Detection Systems,',
+    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
+    icon: Lock,
+    features: [;
+      'Real-time transaction monitoring,',
+      'Behavioral analysis',',
+      'Pattern recognition',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Automated alert systems'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Regulatory Compliance Tools,',;
     description: 'Automated compliance monitoring and reporting for financial regulations.,',;
@@ -130,6 +181,18 @@ const benefits = [;
     icon: Shield;
 =======
 =======
+=======
+    title: 'Regulatory Compliance Tools,',
+    description: 'Automated compliance monitoring and reporting for financial regulations.,',
+    icon: FileText,
+    features: [;
+      'KYC/AML automation,',
+      'Regulatory reporting',',
+      'Audit trail management',',
+      'Compliance dashboards'';
+    ];
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -138,6 +201,7 @@ const benefits = [
     icon: Shield
   },
   {}
+<<<<<<< HEAD
 
     title: 'Improved Efficiency,',;
     description: 'Automated processes reduce manual work and increase operational efficiency.,',;
@@ -209,6 +273,29 @@ export default function FinancePage() {
 ];
 export default function FinancePage() {
 
+=======
+    title: 'Improved Efficiency,',
+    description: 'Automated processes reduce manual work and increase operational efficiency.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Better Risk Management,',
+    description: 'AI-powered risk assessment helps make informed financial decisions.,',
+    icon: TrendingUp;
+  },
+  {}
+    title: 'Regulatory Compliance,',
+    description: 'Built-in compliance tools ensure adherence to financial regulations.,',
+    icon: FileText;
+  }
+];
+export default function FinancePage() {
+  return (
+    <Layout
+      title="Financial Technology Solutions - Zion Tech Group"
+      description="Transform financial services with blockchain solutions, AI trading algorithms, digital payments, and risk management systems."
+      keywords="fintech, blockchain solutions, AI trading, digital payments, risk management, financial technology"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -258,6 +345,7 @@ export default function FinancePage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -273,6 +361,8 @@ export default function FinancePage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -292,6 +382,7 @@ export default function FinancePage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -305,6 +396,8 @@ export default function FinancePage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -324,11 +417,14 @@ export default function FinancePage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -339,6 +435,7 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
@@ -356,6 +453,8 @@ export default function FinancePage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -384,11 +483,14 @@ export default function FinancePage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -399,6 +501,7 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
@@ -424,6 +527,8 @@ export default function FinancePage() {
     </Layout>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?
@@ -446,3 +551,7 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -47,7 +47,27 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
                 <Github className="h-4 w-4" />;
               </Button>;
             </a>;
+<<<<<<< HEAD
 
+=======
+          )}
+          ;
+          {project.demo_url && (;
+            <a;
+              href={project.demo_url}
+              target="_blank";
+              rel="noopener noreferrer";
+              aria-label="Live demo";
+              title="Live demo";
+            >;
+              <Button variant="ghost" size="icon" aria-label="Live demo link">;
+                <Link className="h-4 w-4" />;
+              </Button>;
+            </a>;
+          )}
+        </div>;
+        ;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex gap-2">;
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">;
             <Edit className="h-4 w-4" />;

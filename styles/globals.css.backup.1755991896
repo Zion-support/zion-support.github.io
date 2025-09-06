@@ -51,8 +51,12 @@
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
   --neural-quantum: 0 0 120px rgba(16, 185, 129, 0.3);
@@ -187,6 +191,27 @@ body::after {
 body::after {
   content: '';
   position: absolute;
+<<<<<<< HEAD
+=======
+=======
+    radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(236, 73, 153, 0.8), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.8), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.8), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(59, 130, 246, 0.8), transparent),
+    radial-gradient(2px 2px at 240px 90px, rgba(168, 85, 247, 0.8), transparent),
+    radial-gradient(1px 1px at 280px 20px, rgba(0, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 320px 50px, rgba(139, 92, 246, 0.8), transparent),
+    radial-gradient(1px 1px at 360px 80px, rgba(236, 73, 153, 0.8), transparent);
+  background-repeat: repeat;
+  background-size: 400px 100px;
+  pointer-events: none;
+  z-index: -1;
+  animation: particleFloat 30s linear infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Quantum Grid */
 .quantum-grid {
   position: fixed;
@@ -210,6 +235,18 @@ body::after {
 =======
 >>>>>>> main
   opacity: 0.3;
+<<<<<<< HEAD
+=======
+=======
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  animation: gridPulse 20s ease-in-out infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Holographic Matrix */
 .holographic-matrix {
   position: fixed;
@@ -262,7 +299,18 @@ body::after {
     radial-gradient(circle at 30% 70%, rgba(236, 73, 153, 0.1) 0%, transparent 60%),
     radial-gradient(circle at 70% 30%, rgba(236, 73, 153, 0.1) 0%, transparent 60%);
   animation: cyberpunkPulse 16s ease-in-out infinite;
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Animations */
 @keyframes backgroundFloat {
   opacity: 0.3;}
@@ -620,6 +668,16 @@ h3 {
 =======
 >>>>>>> main
     background: rgba(0, 0, 0, 0.3);
+<<<<<<< HEAD
+=======
+=======
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(0.5deg); }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -782,6 +840,15 @@ h3 {
     background-size: 75px 75px;
   .cyberpunk-elements {
     background-size: 100px 100px;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     background: rgba(0, 0, 0, 0.3);  }
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

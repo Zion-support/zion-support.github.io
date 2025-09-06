@@ -336,6 +336,156 @@ h3 {
   animation: data-stream 4s linear infinite;
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+  background: 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+  right: 0;
+  bottom: 0;
+=======
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-blue);
+}
+
+/* Focus styles */
+:focus {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+/* Enhanced Futuristic Effects */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.6);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    filter: drop-shadow(0 0 1px rgba(59, 130, 246, 0.8)) drop-shadow(0 0 3px rgba(59, 130, 246, 0.8)) drop-shadow(0 0 5px rgba(59, 130, 246, 0.8));
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    filter: none;
+  }
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100vh); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes hologram {
+  0%, 100% { 
+    opacity: 0.8;
+    filter: hue-rotate(0deg) brightness(1) contrast(1);
+  }
+  50% { 
+    opacity: 1;
+    filter: hue-rotate(180deg) brightness(1.2) contrast(1.1);
+  }
+}
+
+@keyframes cyber-pulse {
+  0%, 100% { 
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% { 
+    background-position: 100% 50%;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes data-stream {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+@keyframes quantum-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-10px) rotate(1deg);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    transform: translateY(-20px) rotate(0deg);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    transform: translateY(-10px) rotate(-1deg);
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Animation classes */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.neon-flicker {
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 3s ease-in-out infinite;
+}
+
+.data-stream {
+  animation: data-stream 4s linear infinite;
+}
+
+/* Enhanced futuristic backgrounds */
+.futuristic-bg {
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   background: 
   bottom: 0;  background: 
@@ -1127,8 +1277,12 @@ h3 {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .particle-bg::before {
     display: none;
   }
@@ -1240,6 +1394,12 @@ h3 {
 .gradient-border-purple > * {
 /* Enhanced Quantum Effects */
 .quantum-field {
+<<<<<<< HEAD
+=======
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Utility Classes */
   animation: glow 2s ease-in-out infinite alternate;
 .hover-pulse:hover {
@@ -1289,6 +1449,15 @@ h3 {
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+<<<<<<< HEAD
+  position: relative;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   position: relative;
   overflow: hidden;
 }
@@ -1557,6 +1726,10 @@ h3 {
     0 0 5px rgba(59, 130, 246, 0.5),
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
 }
 =======

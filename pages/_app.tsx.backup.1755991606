@@ -1,6 +1,10 @@
 // CRITICAL: Import immediate process polyfill FIRST to prevent process.env errors
 import '../src/utils/immediate-process-polyfill';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // CRITICAL: Runtime check - polyfills should be loaded from document script and webpack banner
 if (typeof process !== 'undefined' && process.env?.NODE_ENV === 'development') {
   // console.log('🚨 APP.TSX RUNTIME CHECK - Polyfills should be active');
@@ -122,3 +126,23 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+export default function App({ Component, pageProps }: AppProps) {
+	const renderedRef = useRef(false);
+	return (
+		<SEOContext.Provider value={{ renderedRef }}>
+			<DefaultSEO />
+			<Analytics />
+			<a href="#main-content" className="skip-link">Skip to content</a>
+			<Layout>
+				<main id="main-content">
+					<Component {...pageProps} />
+				</main>
+			</Layout>
+		</SEOContext.Provider>
+	);
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f7
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

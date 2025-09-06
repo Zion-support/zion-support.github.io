@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 /**;
  * PM2 Sync Monitor System;
@@ -98,7 +101,10 @@ class $1 {}
 ;
     this.log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
       try {}
@@ -860,7 +866,10 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
 };
 ;
 // Handle process signals;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
 // Handle process signals;
@@ -886,4 +895,8 @@ if (require.main === module) {}
   }, 60000)};
 ;
 module.exports = PM2SyncMonitor;
+<<<<<<< HEAD
 
+=======
+module.exports = PM2SyncMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

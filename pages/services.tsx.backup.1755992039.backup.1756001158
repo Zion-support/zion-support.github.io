@@ -416,6 +416,43 @@ export default function ServicesPage() {
     },
     // Micro SaaS Services - Productivity & Collaboration
     {
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services.tsx.backup.1755991930.backup.1756001157
+  const microServices = [
+    {
+      icon: '✨',
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content for blogs, social media, emails, and more with AI-powered tools.',
+      features: [
+        'Multiple content types',
+        'Customizable tone and style',
+        'SEO optimization',
+        'Bulk content generation',
+        'Real-time editing'
+      ],
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      textColor: 'text-purple-400',
+      gradient: 'from-purple-400 to-pink-500',
+      href: '/ai-content-generator'
+    },
+    {
+      icon: '🛡️',
+      title: 'API Rate Limiter',
+      description: 'Protect your APIs from abuse with intelligent rate limiting and DDoS protection.',
+      features: [
+        'Flexible rate limiting rules',
+        'Real-time monitoring',
+        'DDoS protection',
+        'Multiple time windows',
+        'Developer-friendly API'
+      ],
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      textColor: 'text-red-400',
+      gradient: 'from-red-400 to-pink-500',
+      href: '/security'
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       icon: '📊',
       title: 'Project Management Suite',
       description: 'Comprehensive project management platform with advanced planning tools.',
@@ -491,6 +528,32 @@ export default function ServicesPage() {
       link: 'https://monitor.zion.app',
       category: 'Analytics & Monitoring',
       marketSize: '$2.4B'
+<<<<<<< HEAD
+=======
+=======
+    {
+      metric: 'Average Growth Rate',
+      value: '22.1%',
+      description: 'Compound annual growth rate across segments',
+      trend: 'up',
+      change: '+3.2% vs 2023'
+    },
+    {
+      metric: 'Customer Acquisition Cost',
+      value: '$89',
+      description: 'Average CAC for micro SaaS services',
+      trend: 'down',
+      change: '-12% YoY'
+    },
+    {
+      metric: 'Customer Lifetime Value',
+      value: '$2,847',
+      description: 'Average LTV across micro SaaS customers',
+      trend: 'up',
+      change: '+18% YoY'
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992039.backup.1756001158
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ];
 
@@ -522,6 +585,10 @@ export default function ServicesPage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Individual Services */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -626,6 +693,104 @@ export default function ServicesPage() {
                             </ul>
                           </div>
                         ))}
+<<<<<<< HEAD
+=======
+=======
+                    
+                    {/* Pricing and Category */}
+                    <div className="flex items-center justify-between">
+                      <div className="inline-flex items-center px-2 py-1 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-xs font-medium">
+                        {service.category}
+                      </div>
+                      <div className="text-sm text-gray-400">
+                        {service.pricing}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro Services */}
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+              Micro SaaS Services
+            </div>
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Ready-to-Use Micro Services
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Instant access to professional micro services that solve real business problems. 
+              No setup required, just use and scale as needed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {microServices.map((service, index) => (
+              <Card
+                key={index}
+                className="card-hover group border-gradient-blue cursor-pointer"
+=======
+  return (
+    <>
+      <Head>
+<<<<<<<< HEAD:components/services.tsx.backup.1755991930.backup.1756001157
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services including AI automation, cloud infrastructure, security, and specialized micro SaaS solutions for modern businesses." />
+========
+        <title>Micro SaaS Services | Zion Tech Group - Real Solutions with Market Pricing</title>
+        <meta name="description" content="Discover real micro SaaS services with market research, actual pricing, and proven ROI. AI automation, security, analytics, and more with competitive market analysis." />
+        <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" />
+        <meta property="og:description" content="Real micro SaaS services with market research, pricing, and ROI analysis." />
+        <meta name="twitter:card" content="summary_large_image" />
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services.tsx.backup.1755992039.backup.1756001158
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        
+        <div className="relative z-10 container-cursor text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            Real Micro SaaS Services
+          </div>
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+            Proven Solutions with Market Research
+          </h1>
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+            Discover real micro SaaS services backed by market research, competitive analysis, and proven ROI. No generic descriptions - just actionable solutions with actual pricing and market data.
+          </p>
+        </div>
+      </section>
+
+      {/* Market Insights */}
+      <section className="section-padding bg-gradient-cursor-accent">
+        <div className="container-cursor">
+          <div className="text-center mb-16">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Market Intelligence & Insights
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Data-driven insights from the micro SaaS market to help you make informed decisions about your technology investments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index) => (
+              <Card
+                key={index}
+                className="card-hover text-center border-gradient-blue"
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={() => { if (service.href) window.location.href = service.href; }}
               >
@@ -639,6 +804,10 @@ export default function ServicesPage() {
                     <TrendingUp className={`w-4 h-4 mr-1 ${insight.trend === 'down' ? 'rotate-180' : ''}`} />
                     {insight.change}
                   </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="flex-1">
                     <h3 className={`text-2xl font-bold mb-4 ${service.textColor}`}>
                       {service.title}
@@ -660,6 +829,132 @@ export default function ServicesPage() {
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     )}
+<<<<<<< HEAD
+=======
+=======
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Services */}
+      <section className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Real Micro SaaS Services
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Each service is backed by market research, competitive analysis, and real customer use cases. See actual pricing, ROI expectations, and market positioning.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {microSaasServices.map((service, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-8">
+                  <div className="flex flex-col lg:flex-row gap-8">
+                    {/* Service Icon & Basic Info */}
+                    <div className="lg:w-1/4">
+                      <div className="text-center lg:text-left">
+                        <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl mx-auto lg:mx-0 mb-6`}>
+                          {service.icon}
+                        </div>
+                        <h3 className={`text-2xl font-bold mb-3 ${service.textColor}`}>
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-400 mb-4 leading-relaxed">
+                          {service.description}
+                        </p>
+                        
+                        {/* Market Data */}
+                        <div className="space-y-3 text-sm">
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Market Price:</span>
+                            <span className="text-white font-semibold">{service.marketPrice}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">Target Market:</span>
+                            <span className="text-white">{service.targetMarket}</span>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-400">ROI Expectation:</span>
+                            <span className="text-green-400 font-semibold">{service.roi}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Features & Use Cases */}
+                    <div className="lg:w-3/4">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {/* Features */}
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <Check className="w-5 h-5 mr-2 text-green-400" />
+                            Key Features
+                          </h4>
+                          <ul className="space-y-2">
+                            {service.features.map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-start text-gray-300 text-sm">
+                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Use Cases */}
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <Zap className="w-5 h-5 mr-2 text-yellow-400" />
+                            Use Cases
+                          </h4>
+                          <ul className="space-y-2">
+                            {service.useCases.map((useCase, useCaseIndex) => (
+                              <li key={useCaseIndex} className="flex items-start text-gray-300 text-sm">
+                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+                                {useCase}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      {/* Market Analysis */}
+                      <div className="mt-8 pt-6 border-t border-gray-700">
+                        <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                          <BarChart3 className="w-5 h-5 mr-2 text-blue-400" />
+                          Market Analysis
+                        </h4>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                          <div>
+                            <span className="text-gray-400">Competitors:</span>
+                            <div className="text-white mt-1">{service.competitors.join(', ')}</div>
+                          </div>
+                          <div>
+                            <span className="text-gray-400">Market Size:</span>
+                            <div className="text-white mt-1">{service.marketSize}</div>
+                          </div>
+                          <div>
+                            <span className="text-gray-400">Growth Rate:</span>
+                            <div className="text-green-400 mt-1">{service.growthRate}</div>
+                          </div>
+                          <div>
+                            <span className="text-gray-400">Pricing Tier:</span>
+                            <div className="text-white mt-1">{service.marketPrice}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-b249
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                 </div>
               </Card>

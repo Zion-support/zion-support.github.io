@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -6,7 +9,10 @@ const path = require('path');
 class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.interval = 600000; // 10 minutes;
     this.packageJsonPath = path.join(process.cwd(), 'package.json')};
   async start() {}
@@ -17,12 +23,20 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Check for outdated packages;
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
@@ -44,7 +58,11 @@ class DependencyMonitor {}
           console.log('Dependency check passed ✓')}} else {}
           console.log('Dependency check found outdated packages ✗');
           console.log('"Output": ', output);
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
@@ -55,7 +73,11 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -66,7 +88,11 @@ class DependencyMonitor {}
   async checkPackageIntegrity() {}
     try {}
       console.log('Checking package integrity...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -115,4 +141,8 @@ if ( {})
     process.exit(0)}
 });
   monitor.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 =======
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const real2027Q3Additions = [
   {
@@ -39,7 +46,6 @@ export const real2027Q3Additions = [;
     category: 'Cloud & Infrastructure'
     link: '/managed-postgres-ha'
     realService: true
-    roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
   }
   {
     id: 'vector-search-starter'
@@ -210,7 +216,6 @@ export const real2027Q3Additions = [;
     category: 'Operations'
     link: '/incident-copilot'
     realService: true
-    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
   }
   {
     id: 'ai-market-research'
@@ -229,7 +234,6 @@ export const real2027Q3Additions = [;
     category: 'AI & Data'
     link: '/ai-market-research'
     realService: true
-    roi: 'Save 10–20 analyst hours per week while increasing coverage.'
   }
   {
     id: 'ai-sales-automation'
@@ -248,7 +252,6 @@ export const real2027Q3Additions = [;
     category: 'Sales & Marketing'
     link: '/ai-sales-automation'
     realService: true
-    roi: 'Increase meetings booked by 20–40% with consistent outreach.'
   }
   {
     id: 'ai-legal-contract-analyzer'
@@ -286,7 +289,6 @@ export const real2027Q3Additions = [;
     category: 'Content & Marketing'
     link: '/ai-content-generator'
     realService: true
-    roi: 'Publish 3–5x more content while improving rankings.'
   }
   {
     id: 'email-dmarc-analyzer'
@@ -323,6 +325,25 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
+<<<<<<< HEAD
+=======
+  }
+];
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export const real2027Q3Additions = [
+  {
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export const real2027Q3Additions = [;
+  {
+    id: 'it - asset - discovery - agent',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -633,15 +654,49 @@ export const real2027Q3Additions = [;
     description:;
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
-
-];      'Discovery via traffic / specsOWASP API Top 10 checksPR annotations and CI gating_change detection and drift alerts';
-
     ];
     category: 'Security & Identity';
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
+    ],;
+    category: 'Security & Identity',;
+    link: '/email-dmarc-analyzer',;
+    realService: true,;
+    roi: 'Improve deliverability and block spoofing/phishing attempts.';
+  },;
+  {;
+    id: 'api-security-scanner',;
+    name: 'API Security Scanner',;
+    tagline: 'API discovery and vuln scanning with CI gates',;
+    price: '$199',;
+    period: '/month',;
+    description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',;
+    features: [;
+      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts';
+    ],;
+    category: 'Security & Identity',;
+    link: '/api-security-scanner',;
+    realService: true,;
+    roi: 'Prevent high-severity API incidents and cut MTTR.';
+<<<<<<< HEAD
+  }
+];
+;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
 ;
@@ -650,3 +705,9 @@ export const real2027Q3Additions = [;
 
   }
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

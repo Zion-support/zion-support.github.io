@@ -77,4 +77,8 @@ export async function updateFlagStatus(id: string, status: ModerationStatus, adm
   flag.updatedAt = new Date().toISOString(),
   await upsertFlag(flag),
   return flag
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

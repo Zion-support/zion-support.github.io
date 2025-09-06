@@ -1,12 +1,78 @@
+<<<<<<< HEAD
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
+=======
+name: string;
+  role?: string;
+  text: string;
+  avatar?: string
+}
+
+
+interface ServiceLandingTemplateProps {;
+
+  title: string;
+  subtitle: string;
+  heroImage?: string;
+  description: string;
+  benefits: Benefit[];
+  testimonials: Testimonial[];
+  ctaText: string;
+import React from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
+import React from 'react';
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+export interface Testimonial {
+
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
+
+}
+interface ServiceLandingTemplateProps {
+
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: Benefit[];
+  features?: string[];
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export interface Benefit {
+  title: string,
+  description: string,
+  icon?: React.ReactNode
+<<<<<<< HEAD
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -34,6 +100,10 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -44,7 +114,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   benefits,
   testimonials,
   ctaText,
+<<<<<<< HEAD
   ctaLink}) => {
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -55,6 +130,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image
@@ -71,6 +151,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {description}
           </p>
         </div>
@@ -151,4 +237,34 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
+<<<<<<< HEAD
 },
+=======
+
+                  </div>;
+                  <div className="text - gray - 600">{stat.label}</div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>)}
+      <section className="py - 16 px - 4 bg - blue - 600">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <h2 className="text - 3xl font - bold text - white mb - 4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8">;
+            Contact us today to learn more about our services.;
+          </p>;
+          <a;
+            href={cta_link}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
+          >;
+            {cta_text}
+          </a>;
+        </div>;
+      </section>;
+    </div>);
+}
+
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

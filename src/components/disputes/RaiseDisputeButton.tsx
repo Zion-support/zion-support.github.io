@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -12,6 +13,11 @@ import { useRouter } from 'next/router',
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
+=======
+return (
+    <>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -20,12 +26,16 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
+
+
+
   projectId,
   milestoneId, 
   variant = "outline", 
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -54,6 +64,66 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
+=======
+
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className='sm:max-w-[550px]'>
+          <DialogHeader>
+            <DialogTitle>Raise a Dispute</DialogTitle>
+            <DialogDescription>
+              Please provide details about the issue you're experiencing with
+              this project.
+            </DialogDescription>
+          </DialogHeader>
+
+        onClick={() => setIsDialogOpen(true)}      >;
+        <ShieldAlert className='h-4 w-4 mr-2' />;
+        Raise Dispute;
+      </Button>;
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max-w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+      <Button;
+        variant={variant}
+        size={size}
+        className={class_name}
+        on_click={() => setIsDialogOpen (true)}      >;
+        <ShieldAlert className='h - 4 w - 4 mr - 2' />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max - w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle > Raise a Dispute</DialogTitle>;
+
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+
+            onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  );
+}
+
+          <DisputeForm;
+            project_id={project_id}
+            milestone_id={milestone_id}
+            onDisputeCreated={handleDisputeCreated}
+            on_cancel={() => setIsDialogOpen (false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>);
+}
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -117,5 +187,9 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;

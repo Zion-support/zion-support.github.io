@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -6,7 +9,10 @@ const path = require('path');
 class TypeChecker {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
@@ -17,12 +23,20 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -44,7 +58,11 @@ class TypeChecker {}
           console.log('Type check failed ✗');
           console.log('"Output": ', output);
           console.log('"Errors": ', errorOutput);
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
@@ -55,7 +73,11 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -88,4 +110,8 @@ if ( {})
     process.exit(0)}
 });
   checker.start().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = TypeChecker;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

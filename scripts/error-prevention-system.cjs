@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -51,4 +54,8 @@ const { execSync } = require('child_process')
         "impact"
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
+<<<<<<< HEAD
 
+=======
+      console.error('\n� Error Prevention System "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

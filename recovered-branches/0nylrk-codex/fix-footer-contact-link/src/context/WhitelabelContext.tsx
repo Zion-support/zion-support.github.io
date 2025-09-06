@@ -1,23 +1,53 @@
+<<<<<<< HEAD
 
+
+<<<<<<< HEAD
+
+=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
 
+<<<<<<< HEAD
 =======
+=======
+  isWhitelabel: boolean
+  primaryColor: string
+  logoUrl: string | null
+  brandName: string
+  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
+  landingPageCopy: {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    headline: string
+    subtitle: string
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     cta: string
   }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     headline: string,
     subtitle: string,
     cta: string;
   };
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   tenant: WhitelabelTenant | null
 }
 
@@ -36,10 +66,63 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+<<<<<<< HEAD
 export const useWhitelabel = (): WhitelabelContextType => {
 
 export const useWhitelabel = (): WhitelabelContextType => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
+
+=======
+
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
+=======
+
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface WhitelabelContextType {;
+  isWhitelabel: boolean,;
+  primaryColor: string,;
+  logoUrl: string | null,;
+  brandName: string,;
+  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landingPageCopy: {;
+    headline: string,;
+    subtitle: string,;
+    cta: string;
+  };
+  tenant: WhitelabelTenant | null;
+}
+
+const defaultContext: WhitelabelContextType = {;
+  isWhitelabel: false,;
+  primaryColor: '#9b87f5', // Default Zion purple;
+  logoUrl: null,;
+  brandName: 'Zion AI Marketplace',;
+  themePreset: 'light',;
+  landingPageCopy: {;
+    headline: 'AI Talent Marketplace',;
+    subtitle: 'Find the best AI talent for your projects',;
+    cta: 'Get Started'},;
+  tenant: null},;
+
+// The context may be undefined if the provider is not mounted.  By declaring;
+// the generic as `WhitelabelContextType | null` we get proper type checking;
+// without falling back to an empty object which triggers TS2740 errors.;
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
@@ -51,6 +134,7 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 interface WhitelabelProviderProps {
   children: ReactNode
 }
+<<<<<<< HEAD
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
 
 
@@ -63,6 +147,17 @@ export const useWhitelabel = (): WhitelabelContextType => {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -86,8 +181,165 @@ export const useWhitelabel = (): WhitelabelContextType => {;
   )
 }
 
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
+import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export interface WhitelabelContextType {;
+  isWhitelabel: boolean,;
+  primaryColor: string,;
+  logoUrl: string | null,;
+  brandName: string,;
+  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landingPageCopy: {;
+    headline: string,;
+    subtitle: string,;
+    cta: string;
+<<<<<<< HEAD
+  };
+  tenant: WhitelabelTenant | null;
+}
+
+=======
+  },;
+  tenant: WhitelabelTenant | null;
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+const defaultContext: WhitelabelContextType = {;
+  isWhitelabel: false,;
+  primaryColor: '#9b87f5', // Default Zion purple;
+  logoUrl: null,;
+  brandName: 'Zion AI Marketplace',;
+  themePreset: 'light',;
+  landingPageCopy: {;
+    headline: 'AI Talent Marketplace',;
+    subtitle: 'Find the best AI talent for your projects',;
+    cta: 'Get Started'},;
+  tenant: null},;
+
+// The context may be undefined if the provider is not mounted.  By declaring;
+// the generic as `WhitelabelContextType | null` we get proper type checking;
+// without falling back to an empty object which triggers TS2740 errors.;
+<<<<<<< HEAD
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+=======
+
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const context = useContext(WhitelabelContext);
+  if (!context) {;
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+
+
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+  useEffect(() => {
+    if (!isLoading && tenant) {
+      setContextValue({
+        isWhitelabel: true
+        primaryColor: tenant.primary_color
+        logoUrl: tenant.logo_url
+        brandName: tenant.brand_name
+        themePreset: tenant.theme_preset
+        landingPageCopy: tenant.landing_page_copy
+        tenant: tenant})
+    } else if (!isLoading) {
+      setContextValue(defaultContext)
+<<<<<<< HEAD
+=======
+=======
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null),;
+export const useWhitelabel = (): WhitelabelContextType => {;
+  const context = useContext(WhitelabelContext),;
+  if (!context) {;
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType;
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+interface WhitelabelProviderProps {;
+  children: ReactNode;
+}
+
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+
+<<<<<<< HEAD
+=======
+interface WhitelabelProviderProps {;
+  children: ReactNode;
+}
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
+  const { tenant, isLoading } = useWhitelabelTenant();
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType;
+},;
+interface WhitelabelProviderProps {;
+  children: ReactNode;
+}
+;
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),;
+  const { tenant, isLoading } = useWhitelabelTenant(),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  useEffect(() => {;
+    if (!isLoading && tenant) {;
+      setContextValue({;
+        isWhitelabel: true,;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        primaryColor: tenant && tenant.primary_color,;
+        logoUrl: tenant && tenant.logo_url,;
+        brandName: tenant && tenant.brand_name,;
+        themePreset: tenant && tenant.theme_preset,;
+        landingPageCopy: tenant && tenant.landing_page_copy,;
+<<<<<<< HEAD
+=======
+        primaryColor: tenant.primary_color,;
+        logoUrl: tenant.logo_url,;
+        brandName: tenant.brand_name,;
+        themePreset: tenant.theme_preset,;
+        landingPageCopy: tenant.landing_page_copy,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        tenant: tenant});
+    } else if (!isLoading) {;
+      setContextValue(defaultContext);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }, [tenant, isLoading]);
+<<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
       {children}
@@ -97,6 +349,190 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+=======
+    </WhitelabelContext && WhitelabelContext.Provider>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <WhitelabelContext && WhitelabelContext.Provider value={contextValue}>;
+      {children}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React, { create_context, useContext, useState, useEffect, ReactNode } from 'react';
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks / useWhitelabelTenant';
+export interface WhitelabelContextType {
+  is_whitelabel: boolean,
+  primary_color: string,
+  logo_url: string | null,
+  brand_name: string,
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
+  landingPageCopy: {
+    headline: string,
+    subtitle: string,
+    cta: string;
+  }
+  tenant: WhitelabelTenant | null;
+}
+const default_context: WhitelabelContextType = {
+  is_whitelabel: false,
+  primary_color: '#9b87f5', // Default Zion purple;
+  logo_url: null,
+  brand_name: 'Zion AI Marketplace',
+  theme_preset: 'light',
+  landingPageCopy: {
+    headline: 'AI Talent Marketplace',
+    subtitle: 'Find the best AI talent for your projects',
+    cta: 'Get Started'},
+  tenant: null},
+// The context may be undefined if the provider is not mounted.  By declaring;
+// the generic as `WhitelabelContextType | null` we get proper type checking;
+// without falling back to an empty object which triggers TS2740 errors.;
+const WhitelabelContext = create_context < WhitelabelContextType | null>(null);
+;
+export const use_whitelabel = (): WhitelabelContextType => {
+  const context = useContext (WhitelabelContext);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('use_whitelabel must be used within a WhitelabelProvider');
+  }
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType;
+}
+;
+interface WhitelabelProviderProps {
+  children: ReactNode;
+}
+export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) =>: any {
+  const [context_value, setContextValue] = useState < WhitelabelContextType>(default_context);
+  const { tenant, is_loading } = useWhitelabelTenant ();
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setContextValue ({
+        is_whitelabel: true,
+        primary_color: tenant.primary_color,
+        logo_url: tenant.logo_url,
+        brand_name: tenant.brand_name,
+        theme_preset: tenant.theme_preset,
+        landingPageCopy: tenant.landing_page_copy,
+        tenant: tenant});
+    } else // Check condition
+if ( {) {
+  $2
+}
+      setContextValue (default_context);
+    }
+  }, [tenant, is_loading]);
+;
+  return (
+    <WhitelabelContext.Provider value={context_value}>;
+      {children}
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    </WhitelabelContext.Provider>;
+  );
+};
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+    </WhitelabelContext.Provider>);
+}
+;
+
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',;
+import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
+;
+export interface WhitelabelContextType {;
+  isWhitelabel:boolean,;
+  primaryColor:string,;
+  logoUrl:string | null,;
+  brandName:string,;
+  themePreset:'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landingPageCopy:{;
+    headline:string,;
+    subtitle:string,;
+    cta:string;
+  },;
+  tenant:WhitelabelTenant | null;
+}
+;
+const defaultContext:WhitelabelContextType = {;
+  isWhitelabel:false,;
+  primaryColor:'#9b87f5', // Default Zion purple;
+  logoUrl:null,;
+  brandName:'Zion AI Marketplace',;
+  themePreset:'light',;
+  landingPageCopy:{;
+    headline:'AI Talent Marketplace',;
+    subtitle:'Find the best AI talent for your projects',;
+    cta:'Get Started'},;
+  tenant:null},;
+;
+// The context may be undefined if the provider is not mounted.  By declaring;
+// the generic as `WhitelabelContextType | null` we get proper type checking;
+// without falling back to an empty object which triggers TS2740 errors.;
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null),;
+;
+export const useWhitelabel = ():WhitelabelContextType => {;
+  const context = useContext(WhitelabelContext),;
+  if (!context) {;
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider'),;
+  }
+  // Cast is used here because the context default is `null` until provided by;
+  // `WhitelabelProvider`. The runtime check above guarantees it's defined.;
+  return context as WhitelabelContextType,;
+},;
+;
+interface WhitelabelProviderProps {;
+  children:ReactNode;
+}
+;
+export const WhitelabelProvider = ({ children } WhitelabelProviderProps) => {;
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),;
+  const { tenant, isLoading } = useWhitelabelTenant(),;
+;
+  useEffect(() => {;
+    if (!isLoading && tenant) {;
+      setContextValue({;
+        isWhitelabel:true,;
+        primaryColor:tenant.primary_color,;
+        logoUrl:tenant.logo_url,;
+        brandName:tenant.brand_name,;
+        themePreset:tenant.theme_preset,;
+        landingPageCopy:tenant.landing_page_copy,;
+        tenant:tenant}),;
+    } else if (!isLoading) {;
+      setContextValue(defaultContext),;
+    }
+  }, [tenant, isLoading]),;
+;
+  return (;
+    <WhitelabelContext.Provider value={contextValue}>;
+      {children}
+    </WhitelabelContext.Provider>;
+  );
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </WhitelabelContext.Provider>);
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

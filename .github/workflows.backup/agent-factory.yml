@@ -85,6 +85,13 @@ jobs:
             exit 0
           fi
 
+<<<<<<< HEAD
+=======
+:.github/workflows.backup/agent-factory.yml
+:.github/workflows.backup/agent-factory.yml
+:.github/workflows.backup/agent-factory.yml
+:.github/workflows.backup/agent-factory.yml
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -98,6 +105,10 @@ jobs:
         with:
           node-version: '20'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       - name: Run crawler (linkinator) on shard
         run: |
           set -e

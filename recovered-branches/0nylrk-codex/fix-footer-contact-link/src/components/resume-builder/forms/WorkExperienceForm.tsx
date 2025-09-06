@@ -35,10 +35,13 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -56,10 +59,19 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
+<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -104,17 +116,29 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+<<<<<<< HEAD
   }
   };
 
+=======
+
+
+  };
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -126,11 +150,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
+<<<<<<< HEAD
   }
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
   };
+=======
+
+
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -179,34 +210,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
-                    )}
-                  </div>
-                  <div className="flex gap-2">
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
-                    >
-                      <Edit className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDelete(work.id!)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-                {work.description && (
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -214,37 +221,37 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    >;
+                      <Edit className="h-4 w-4" />;
+                    </Button>;
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDelete(work && work.id!)}
+                    >;
+                      <Trash2 className="h-4 w-4" />;
+                    </Button>;
+                  </div>;
+                </div>;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="company_name"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Company Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Google, Microsoft, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                    <FormControl>;
+                      <Input placeholder="Google, Microsoft, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="role_title"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Job Title</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormControl>;
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="start_date"
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
@@ -275,13 +282,35 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         type="date"
                         {...field}
                         value={field.value |''}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="space-y-4">
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Start Date</FormLabel>;
+                    <FormControl>;
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;
+                )}
+              />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -298,6 +327,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>;
                     </FormItem>;
                   )}
+<<<<<<< HEAD
 
                 />;
 
@@ -334,14 +364,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location (Optional)</FormLabel>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <FormControl>;
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="description"
@@ -350,9 +378,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
                     <AIEnhancementButton
-
-                      currentContent={field && field.value || ''}
-
                       enhancementType="work-description"
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -362,24 +387,36 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
+<<<<<<< HEAD
+=======
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="description";
+              render={({ field }) => (
+                <FormItem>;
+                  <FormLabel className="flex justify - between">;
+                    <span > Job Description</span>;
+                    <AIEnhancementButton;
+                      current_content={field.value || ''}
+                      enhancement_type="work - description";
+                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
+                      on_enhanced={handleEnhanceDescription}
+                    />;
+                  </FormLabel>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder="Describe your responsibilities and accomplishments...";
+                      className="min - h-[100px]";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
-
               <Button
                 type="button"
                 variant="outline"
-
-                onClick={() => {
-                  if (editingId) {
-                    setEditingId(null),
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -387,6 +424,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       is_current: false
                       description: ''
 
+<<<<<<< HEAD
 =======
                       company_name: '',
                       role_title: '',
@@ -396,11 +434,30 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                    form && form.reset({;
+                      company_name: '',;
+                      role_title: '',;
+                      start_date: format(new Date(), 'yyyy-MM-dd');
+                      is_current: false,;
+                      description: '',;
+                      location: ''});
+                  } else {;
+                    onBack();
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                  }
+                }}
+              >;
+                {editingId ? 'Cancel' : 'Back'}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
 
     </div>);
 }
@@ -413,3 +470,5 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

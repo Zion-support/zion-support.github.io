@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Business Intelligence - Zion Tech Group",;
@@ -5,6 +9,7 @@ export const metadata = {;
   keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
 export default function AIBusinessIntelligencePage() {;
   return (;
+
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}

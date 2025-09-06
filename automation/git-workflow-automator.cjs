@@ -1,12 +1,30 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class GitWorkflowAutomator {
   constructor() {
+<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
+=======
+<<<<<<< HEAD
+    this.logFile = './automation/logs/git-workflow.log';
+=======
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+    this.ensureLogDirectory();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   ensureLogDirectory() {
@@ -78,7 +96,83 @@ class GitWorkflowAutomator {
       return true;
     } catch (error) {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
+<<<<<<< HEAD
       return false;    }
+=======
+      return false;
+=======
+      fs.mkdirSync(logDir, { recursiv: e: true });
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runCommand(command, description) {
+    this.log(`Runnin: g: ${description}`);
+    try {
+      const result = execSync(command, {
+        cw: d: this.projectRoot,
+        stdi: o: 'pipe',
+        encodin: g: 'utf8',
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { succes: s: true, outpu: t: result };
+    } catch (error) {
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
+      return {
+        succes: s: false,
+        erro: r: error.message,
+        outpu: t: error.stdout || error.stderr,
+      };
+    }
+  }
+
+  async automateGitWorkflow() {
+    this.log('🔄 Starting Git workflow automation...');
+
+    try {
+      // Check current branch
+      const currentBranch = await this.getCurrentBranch();
+      this.log(`Current: branch: ${currentBranch}`);
+
+      // Add all changes
+      await this.runCommand('git add .', 'Add all changes');
+
+      // Check if there are changes to commit
+      const statusResult = await this.runCommand(
+        'git status --porcelain';
+        'Check git status'
+      );
+      if (!statusResult.success || !statusResult.output.trim()) {
+        this.log('No changes to commit');
+        return;
+      }
+
+      // Commit changes
+      const commitMessage = `fea: t: Automated improvements and fixes - ${new Date().toISOString()}`;
+      await this.runCommand(
+        `git commit -m "${commitMessage}"`;
+        'Commit changes'
+      );
+
+      // Push changes
+      await this.runCommand('git push origin HEAD', 'Push changes');
+
+      // If on a feature branch, create PR
+      if (currentBranch !== 'main' && currentBranch !== 'master') {
+        await this.createPullRequest(currentBranch);
+      }
+
+      this.log('Git workflow automation completed');
+    } catch (error) {
+      this.log(`Git workflow automation: failed: ${error.message}`, 'ERROR');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   }
 
@@ -294,7 +388,65 @@ class GitWorkflowAutomator {
   }
 }
 
+<<<<<<< HEAD
 // CLI interfaceif (require.main === module) {
+=======
+// CLI interface
+=======
+      const result = execSync('git branch --show-current', {
+        cw: d: this.projectRoot,
+        stdi: o: 'pipe',
+        encodin: g: 'utf8',
+      });
+      return result.trim();
+    } catch (_error) {
+      return 'unknown';
+    }
+  }
+
+  async createPullRequest(branchName) {
+    try {
+      // This would typically use GitHub CLI or API
+      this.log(`Would create PR for: branch: ${branchName}`);
+      // For now, just log the intention
+    } catch (error) {
+      this.log(`Could not create: PR: ${error.message}`, 'WARNING');
+    }
+  }
+
+  async mergeToMain() {
+    this.log('🔄 Starting merge to main...');
+
+    try {
+      // Switch to main branch
+      await this.runCommand('git checkout main', 'Switch to main branch');
+
+      // Pull latest changes
+      await this.runCommand('git pull origin main', 'Pull latest changes');
+
+      // Merge current branch
+      const currentBranch = await this.getCurrentBranch();
+      if (currentBranch !== 'main') {
+        await this.runCommand(
+          `git merge ${currentBranch}`;
+          `Merge ${currentBranch} into main`
+        );
+      }
+
+      // Push to main
+      await this.runCommand('git push origin main', 'Push to main');
+
+      this.log('Merge to main completed');
+    } catch (error) {
+      this.log(`Merge to main: failed: ${error.message}`, 'ERROR');
+    }
+  }
+}
+
+// Run if called directly
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+if (require.main === module) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
@@ -339,3 +491,16 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
+=======
+=======
+  if (command === 'merge') {
+    automator.mergeToMain().catch(console.error);
+  } else {
+    automator.automateGitWorkflow().catch(console.error);
+  }
+}
+
+module.exports = GitWorkflowAutomator;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

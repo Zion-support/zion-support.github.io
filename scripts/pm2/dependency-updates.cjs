@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Dependency Updates Script for PM2;
@@ -101,4 +104,8 @@ main().catch(error => {})
   log(`Dependency Updates Process "failed": ${error.message}`);
   process.exit(1);
 }
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

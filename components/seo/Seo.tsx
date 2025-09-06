@@ -1,29 +1,43 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
   return <NextSeo {...props} />;
-
+=======
   return <NextSeo {...props} />;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+}
+export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -36,3 +50,11 @@ import React from 'react';
 
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+import { NextSeo } from 'next - seo';
+import { NextSeoProps } from 'next - seo';
+;
+export type SeoProps = NextSeoProps;
+  return <NextSeo {...props} />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

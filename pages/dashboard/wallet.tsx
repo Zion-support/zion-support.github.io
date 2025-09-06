@@ -1,9 +1,80 @@
+<<<<<<< HEAD
 
 export default function WalletPage() {
   return (
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function WalletPage() {_return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+import dynamic from "next/dynamic",;
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+import React from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import dynamic from "next/dynamic",
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export default function WalletPage() {
+  return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function WalletPage() {
   return (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -12,8 +83,15 @@ export default function WalletPage() {
         <WalletPanel />
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   )
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -22,8 +100,49 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 export default function WalletPage(req, res) {
   try {
   return (;
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}
+
+import React from './react';,
+import EnhancedLayout from "../../components / layout / EnhancedLayout",
+import dynamic from './next / dynamic';,
+const WalletPanel = dynamic (() => import ("../../components / wallet / WalletPanel"), { ssr: false }),
+export default /**
+ * WalletPage - Function description
+ */
+function WalletPage() {
+  return (
     <EnhancedLayout title="Your ZION$ Wallet">;
       <div className="max - w-2xl mx - auto">;
+        <WalletPanel />;
+      </div>;
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+  );
+};
+  )
+    </EnhancedLayout>);
+}
+
+
+
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
+export default function WalletPage(req, res) {
+  try {
+  return (;
+    <EnhancedLayout title="Your ZION$ Wallet">;
+      <div className="max-w-2xl mx-auto">;
         <WalletPanel />;
       </div>;
     </EnhancedLayout>;
@@ -34,10 +153,51 @@ export default function WalletPage(req, res) {
   }
 }
 }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+}
+
+=======
+import React from './react';,
+import EnhancedLayout from "../../components / layout / EnhancedLayout",
+import dynamic from './next / dynamic';,
+const WalletPanel = dynamic (() => import ("../../components / wallet / WalletPanel"), { ssr: false }),
+export default /**
+ * WalletPage - Function description
+ */
+function WalletPage() {
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    <EnhancedLayout title="Your ZION$ Wallet">;
+      <div className="max - w-2xl mx - auto">;
+        <WalletPanel />;
+      </div>;
+<<<<<<< HEAD
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

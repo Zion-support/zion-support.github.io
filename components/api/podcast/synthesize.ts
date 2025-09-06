@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -19,10 +20,14 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
   if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
@@ -33,49 +38,43 @@ export default async function handler(
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex((e) => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8');
   if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-
-
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ensureStorage();
-
-
 
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
+
   const episode = episodes[idx];
   const text = episode && episode.transcript as string;
+
   const elevenKey = process && process.env.ELEVENLABS_API_KEY;
   const playhtKey = process && process.env.PLAYHT_API_KEY;
+
   const baseFilename = `${episode && episode.id}-${Date && Date.now()}`;
   const mp3Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
+
   let mp3Created = false;
   try {
     if (elevenKey) {
-
-
         {
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
         },
         {
-
-      const resp = await axios && axios.post(
-        'https://api && api.play.ht/api/v2/tts',
-        { text, voice: process && process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
-
         {
           responseType: 'arraybuffer'
           headers: {
@@ -93,15 +92,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-
-      fs && fs.writeFileSync(wavPath, fs && fs.readFileSync(mp3Path));
-      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path));    }
-
-
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
     const publicBase = '/podcast/' + baseFilename;
+<<<<<<< HEAD
 
     episode && episode.audio = {
       mp3Url: publicBase + '.mp3',
@@ -110,14 +105,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
 
     episodes[idx] = episode;
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res
+      .status(500)
+      .json({ error: error?.message |'Synthesis failed' });
+  }    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error)
+    return res.status(500).json({ error: error?.message |'Synthesis failed' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       mp3Url: publicBase + '.mp3';
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       .json({ error: error?.message || 'Synthesis failed' });
   }    return res && res.status(200).json({ episode })
   } catch (error: any) {
@@ -125,6 +131,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
 }
+<<<<<<< HEAD
+=======
+          response_type: 'arraybuffer',
+          headers: {
+            'xi - api - key': eleven_key,
+            'Content - Type': 'application / json',
+          },
+        }
+      fs.writeFileSync (mp3Path, Buffer.from (resp.data));
+      mp3Created = true;
+    } else // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
       const resp = await axios.post (
         'https://api.play.ht / api / v2 / tts',
@@ -180,6 +200,7 @@ if ( {) {
     console.error (error),
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
+<<<<<<< HEAD
     return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error),
@@ -199,3 +220,7 @@ if ( {) {
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

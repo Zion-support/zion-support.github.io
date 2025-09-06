@@ -1,4 +1,28 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',;
+=======
+{ purchase: 0, post: 0, referral: 0 }
+  );
+  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      setLoginOpen (true);
+    }
+  }
+  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
+    e.preventDefault();
+    e.stopPropagation();
+    if (!isAuthenticated) return;
+    setIsRefreshing(true);    try {
+      await fetchLedger()
+    } catch (error) {
+      logErrorToProduction('Failed to refresh points:', { data: error })
+    } finally {
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -41,6 +65,38 @@ export function PointsBadge() {;
       setIsRefreshing(false);
     }
   },
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  return (
+    <TooltipProvider>;
+
+      <div className='flex items - center gap - 1'>;
+        <Tooltip>;
+          <TooltipTrigger as_child>;
+            <Link;
+              href={is_authenticated ? '/points' : '#'}
+              on_click={handle_click}
+
+              title={
+                isAuthenticated ? 'View points' : 'Earn points by participating'
+              }
+
+              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+              <Gift className='h - 4 w - 4' aria - hidden='true' />;
+
+              <span>{`${points} pts`}</span>;
+            </Link>;
+          </TooltipTrigger>;
+          <TooltipContent>;
+
+    }
+  },
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   return (
     <TooltipProvider>
@@ -48,6 +104,10 @@ export function PointsBadge() {;
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -103,6 +163,9 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
+
+
+
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -114,6 +177,12 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
+<<<<<<< HEAD
+=======
+
+;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -121,4 +190,20 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
+<<<<<<< HEAD
+=======
+
+}
+
+
+              <p className='text - sm'>Refresh points balance</p>;
+            </TooltipContent>;
+          </Tooltip>)}
+      </div>;
+      {!is_authenticated && (
+        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
+    </TooltipProvider>);
+}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

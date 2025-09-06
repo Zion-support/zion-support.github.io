@@ -49,6 +49,11 @@
   --quantum-space: 0 0 90px rgba(0, 255, 255, 0.1);
   --holographic-neural: 0 0 100px rgba(139, 92, 246, 0.08);
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
@@ -513,6 +518,18 @@ body::before {
     radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
   animation: neuralPulse 8s ease-in-out infinite;
 .quantum-button::before {
+<<<<<<< HEAD
+=======
+=======
+    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(139, 92, 246, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  animation: matrixFlow 30s linear infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Enhanced Neural Network Background */
 body::after {
   content: '';
@@ -587,6 +604,15 @@ body::after {
   border: none;
   color: white;
 .btn-quantum::before {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+  content: '';
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  content: '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .quantum-button::before {  content: '';
 >>>>>>> main
   position: absolute;
@@ -613,6 +639,7 @@ body::after {
 
 /* Enhanced Card Hover Effects */
 .card-futuristic {
+<<<<<<< HEAD
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  position: relative;
 =======
@@ -620,6 +647,23 @@ body::after {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);  position: relative;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+=======
+.btn-quantum:hover::before {
+  left: 100%;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 .btn-quantum:hover {
   transform: translateY(-2px);
   box-shadow: var(--quantum-glow);
@@ -670,6 +714,15 @@ body::after {
 .card-quantum:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: var(--quantum-glow);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     0 0 30px rgba(0, 255, 255, 0.2);}
 >>>>>>> main
 
@@ -695,6 +748,32 @@ body::after {
   height: 60px;}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   width: 60px;
+<<<<<<< HEAD
+=======
+  height: 60px;
+=======
+  width: 40px;
+  height: 40px;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+  width: 60px;
+  height: 60px;}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  width: 60px;
+  height: 60px;}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  width: 60px;
+  height: 60px;}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -797,6 +876,16 @@ body::after {
       0 0 20px rgba(59, 130, 246, 0.5),
       0 0 40px rgba(147, 51, 234, 0.3),
       0 0 60px rgba(16, 185, 129, 0.2);
+<<<<<<< HEAD
+=======
+=======
+  border: 2px solid transparent;
+  border-top: 2px solid #00ffff;
+  border-right: 2px solid #8000ff;
+}
+
+.loading-quantum::after {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   width: 60%;
   height: 60%;
   top: 20%;
@@ -861,6 +950,15 @@ body::after {
     --neon-cyan: #00ffff;
     --neon-purple: #a855f7;
     --neon-pink: #ec4899;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       0 0 60px rgba(16, 185, 129, 0.2);  }
 >>>>>>> main
   50% { 
@@ -1396,6 +1494,20 @@ body::after {
     background: white;
     color: black;
 }
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+}
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   .particle-quantum,
   .particle-holographic,
   .loading-quantum {
@@ -1403,7 +1515,11 @@ body::after {
   .text-gradient-quantum {
     color: #000 !important;
     background: none !important;
+<<<<<<< HEAD
 =======
+=======
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-fcf3
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

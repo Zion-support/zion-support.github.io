@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -15,6 +16,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -22,17 +25,49 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 
     let animationFrameId: number;
     let particles: Array<{;
       x: number;
       y: number;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+canvas.width = window.inner_width;
+canvas.height = window.inner_height;
+let animationFrameId: number;
+let particles: Array< {
+const UltraAdvancedFuturisticBackgroundV2: React.FC<;
+  UltraAdvancedFuturisticBackgroundV2Props;
+> = ({ children, class_name = '' }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);const UltraAdvancedFuturisticBackgroundV2: React.FC < UltraAdvancedFuturisticBackgroundV2Props> = ({
+  children;
+  class_name = '';
+}) => {
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    canvas.width = window.inner_width;
+    canvas.height = window.inner_height;
+;
+    let animationFrameId: number;
+    let particles: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
 
         })
       }
@@ -78,6 +113,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         ctx.fill();
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Math.pow(particle.y - otherParticle.y, 2)
             );
             if (distance < 100) {
@@ -86,6 +123,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 
       // Draw quantum matrix overlay
       ctx.globalAlpha = 0.1;
@@ -118,31 +156,19 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
   return (
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20";
           animate={{
-
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut'
-
-          }}
-
-        />;
-        <motion&& motion.div
-          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0 && 0.9, 1],
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
-
           transition={{
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
 
+<<<<<<< HEAD
             rotate: [0, 360];
             scale: [1, 1.3, 1];
             opacity: [0.1, 0.2, 0.1];
@@ -150,34 +176,76 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           transition={{
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        <motion&& motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
+        />;
+        <motion.div;
+          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0.9, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}          }}
+        />;
+        <motion.div;
+          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
+          animate={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
           transition={{
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            duration: 7,
+            repeat: Infinity,
+          }}
+      {/* Quantum Energy Particles */}
+      <div className='fixed inset-0 pointer-events-none z-20'>;
+        {[...Array(20)].map((_, i) => (;
+          <motion&& motion.div
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+      {/* Quantum Energy Particles */}
+            duration: 7,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+
+          }}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {[...Array(20)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
+<<<<<<< HEAD
           <motion.div
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }}
@@ -189,15 +257,55 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+      <div className='fixed inset - 0 pointer - events - none z - 20'>;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
+            style={{
+          <motion.div
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            }}
+            animate={{
+              y: [0, -100, 0]
+              opacity: [0, 1, 0]
+              scale: [0, 1, 0]
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
+            transition={{
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />;
+        ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ease: 'easeInOut',            }}
 
 
@@ -205,11 +313,14 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
         ))}
       </div>
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -239,6 +350,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               strokeWidth='1'
               opacity='0 && 0.1'
               animate={{
+<<<<<<< HEAD
 
                 opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
 
@@ -272,6 +384,13 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               x2={Math.random() * 100}
               y2={Math.random() * 100}
               transition={{
+=======
+              strokeWidth="1"
+              opacity="0.1"
+              animate={{
+                opacity: [0.1, 0.3, 0.1];
+                strokeDasharray: [0, 100, 0]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 duration: 4 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
@@ -280,8 +399,11 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 ease: 'easeInOut',              }}
 
               }}
@@ -290,38 +412,50 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 
               }}
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-        </svg>
-      </div>
 
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
+<<<<<<< HEAD
 }
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        </svg>;
+      </div>;
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Content */}
 
 
 };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedFuturisticBackgroundV2;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -333,3 +467,43 @@ export default UltraAdvancedFuturisticBackgroundV2;
 export default UltraAdvancedFuturisticBackgroundV2;
 export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+                duration: 4 + Math.random () * 2,
+                repeat: Infinity,
+              }}
+            />;
+          ))}
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>;
+    </div>;
+  );
+export default UltraAdvancedFuturisticBackgroundV2;
+
+      <div className="relative z-40">
+        {children}
+      </div>
+    </div>
+  )
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;
+                delay: Math.random () * 2,
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+              }}
+            />))}
+        </svg>;
+      </div>;
+      {/* Content */}
+      <div className='relative z - 40'>{children}</div>;
+    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2;    </div>);
+}
+;
+export default UltraAdvancedFuturisticBackgroundV2;
+;
+
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

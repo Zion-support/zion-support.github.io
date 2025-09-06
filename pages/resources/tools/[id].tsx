@@ -1,13 +1,26 @@
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function ToolResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
         <h2>How to Use This Tool</h2>
         <p>To get the most accurate results:</p>
@@ -19,23 +32,56 @@ import { useRouter } from 'next/router';
         </ol>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+
+
+      type: 'Interactive Tool',
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
+<<<<<<< HEAD
+=======
 
 =======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
+      description: 'Assess your current AI capabilities and plan your transformation journey.',
+      type: 'Framework',
+      estimatedTime: '30 minutes',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      fullContent: `
+        <h2>About This Framework</h2>
+        <p>The AI Maturity Model provides a structured approach to understanding and advancing your
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         organization's AI capabilities. This framework helps you identify where you are today and
         create a roadmap for where you want to be tomorrow.</p>
         <h2>Maturity Levels</h2>
@@ -47,7 +93,18 @@ import { useRouter } from 'next/router';
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<h2>Assessment Dimensions</h2>
+=======
+        <h2>Assessment Dimensions</h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
           <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
@@ -58,9 +115,12 @@ import { useRouter } from 'next/router';
         </ul>
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -68,6 +128,34 @@ import { useRouter } from 'next/router';
           <li>Develop a phased transformation roadmap</li>
           <li>Track progress and adjust plans as needed</li>
         </ol>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>Benefits of the Framework</h2>
+        <p>This framework provides several key benefits:</p>
+        <ul>
+          <li>Clear understanding of current AI capabilities</li>
+          <li>Structured approach to AI transformation</li>
+          <li>Prioritized improvement roadmap</li>
+          <li>Progress tracking and measurement</li>
+          <li>Stakeholder alignment and communication</li>
+        </ul>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      features: [
+        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
+      ]
+    }
+    {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
       id: 'performance-benchmark',
@@ -76,10 +164,15 @@ import { useRouter } from 'next/router';
       type: 'Analytics Tool',
       estimatedTime: '20 minutes',
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         industry standards and best practices. This tool provides insights into how your organization
         performs relative to peers and identifies opportunities for improvement.</p>
         <h2>Benchmarking Categories</h2>
@@ -99,7 +192,27 @@ import { useRouter } from 'next/router';
           <li><strong>Peer Groups:</strong> Similar-sized organizations with comparable resources</li>
           <li><strong>Historical Trends:</strong> Performance evolution over time</li>
         </ul>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <h2>How to Use This Tool</h2>
+        <p>To get the most value from benchmarking:</p>
+        <ol>
+          <li>Collect accurate performance data for your organization</li>
+          <li>Select relevant industry and peer group comparisons</li>
+          <li>Analyze performance gaps and identify root causes</li>
+          <li>Develop targeted improvement strategies</li>
+          <li>Track progress and measure improvement over time</li>
+        </ol>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <h2>Interpreting Results</h2>
         <p>When analyzing benchmark results:</p>
         <ul>
@@ -109,8 +222,19 @@ import { useRouter } from 'next/router';
           <li>Prioritize actions based on business impact and feasibility</li>
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        <h2>Action Planning</h2>
+<<<<<<< HEAD
+=======
+        <p>Based on benchmark results, develop action plans that include: </p>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -118,22 +242,46 @@ import { useRouter } from 'next/router';
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+<<<<<<< HEAD
   ]
   const tool = tools.find(t => t.id === id)
 
+=======
+<<<<<<< HEAD
+=======
+
+
+
+=======
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 =======
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -305,29 +453,56 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   ],
   const tool = tools.find(t => t.id === id),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+  ],
+  const tool = tools.find(t => t.id === id),
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],
+  const tool = tools.find(t => t.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!tool) {
     return (
       <>
         <Head>
           <title>Tool Resource Not Found | Zion Tech Group</title>
         </Head>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
               <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
               <Link
               <Link 
               <Link
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -339,7 +514,18 @@ export default function ToolResourcePage(req, res) {
       </>
     )
   }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 
     <>
@@ -354,16 +540,34 @@ export default function ToolResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+                  {tool.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -375,9 +579,13 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+<<<<<<< HEAD
                   <div 
                     className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div
                     className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
@@ -387,40 +595,192 @@ export default function ToolResourcePage(req, res) {
   }
 }
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   />
                 </div>
               </div>
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+              <div className="space-y-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
                   <ul className="space-y-3">
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+<<<<<<< HEAD
 
                         {feature}
                       </li>
                     ))}
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  ];
+  const tool = tools.find(t => t.id === id);
+  if (!tool) {;
+    return (;
+      <>;
+        <Head>;
+          <title>Tool Resource Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+          <main className="container mx-auto px-6 py-12">;
+            <div className="max-w-4xl mx-auto text-center">;
+              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>;
+              <p className="text-xl text-white/80 mb-8">;
+                The tool resource you're looking for doesn't exist.;
+              </p>;
+              <Link;
+                href="/resources";
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+              >;
+                ← Back to Resources;
+              </Link>;
+            </div>;
+          </main>;
+        </div>;
+      </>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return (;
+    <>;
+      <Head>;
+        <title>{tool.title} | Zion Tech Group - Tool Resource</title>;
+        <meta name="description" content={tool.description} />;
+        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />;
+        <meta property="og:description" content={tool.description} />;
+      </Head>;
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+        <main className="container mx-auto px-6 py-12">;
+          <div className="max-w-4xl mx-auto">;
+            <nav className="mb-8">;
+              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
+                ← Back to Resources;
+              </Link>;
+            </nav>;
+            <header className="mb-12">;
+              <div className="mb-6">;
+                <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">;
+                  {tool.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </span>;
+              </div>;
+              <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>;
+              <p className="text-xl text-white/80 mb-4">{tool.description}</p>;
+              <div className="flex items-center gap-4 text-white/60">;
+                <span>Estimated time: {tool.estimatedTime}</span>;
+              </div>;
+            </header>;
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">;
+              <div className="lg:col-span-2">;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
+                  <div;
+                    className="prose prose-invert max-w-none";
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  />;
+                </div>;
+              </div>;
+              <div className="space-y-6">;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>;
+                  <ul className="space-y-3">;
+                    {tool.features.map((feature, index) => (;
+                      <li key={index} className="text-white/80 flex items-center gap-3">;
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
+                        {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </li>;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                   </ul>
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </ul>
                 </div>
 
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-white/60 text-sm">Type:</span>
+                      <p className="text-white font-medium">{tool.type}</p>
+                    </div>
+                    <div>
+                      <span className="text-white/60 text-sm">Time Required:</span>
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -431,11 +791,23 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
   );
 };
   )
 =======
 =======
+
+<<<<<<< HEAD
+}
+
+=======
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -667,7 +1039,6 @@ if ( {) {
                         <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
                         {feature}
                       </li>))}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>;
                 </div>;
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
@@ -680,26 +1051,78 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Time Required:</span>;
                       <p className="text - white font - medium">{tool.estimated_time}</p>;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+=======
+                  </ul>;
+                </div>;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>;
+                  <div className="space-y-3">;
+                    <div>;
+                      <span className="text-white/60 text-sm">Type:</span>;
+                      <p className="text-white font-medium">{tool.type}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text-white/60 text-sm">Time Required:</span>;
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className="text - center">;
+              <Link;
+                href="/contact";
+                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+=======
+            <div className="text-center">;
+              <Link;
+                href="/contact";
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
+
+
+=======
       </div>;
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

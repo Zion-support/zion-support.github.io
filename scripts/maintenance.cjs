@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "maintenance-reports")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     this.log("🧹 Cleaning cache...")
@@ -14,7 +20,10 @@ const { execSync } = require("child_process")
           this.log(`⚠ Failed to clean ${dir}: ${error.message}`, "warning"`)
     this.log("🧹 Cleaning old log files...")
     const logDirs = ["logs", "automation-reports", "maintenance-reports"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             this.log(` Removed old "log"`)
           this.log(`⚠ Failed to clean logs in ${dir}: ${error.message}`, "warning"`)
     this.log(" Optimizing dependencies...")
@@ -50,4 +59,8 @@ const { execSync } = require("child_process")
       this.log("� Maintenance Script completed successfully")
       return { "success"}
       this.log(`� Maintenance "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
 
+=======
+      return { "success": false, "error"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

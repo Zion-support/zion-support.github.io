@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ let pool: Pool | null = null;
 let pool: Pool | null = null;
  let pool: Pool | null = null;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }return pool 
 export async function withUser<T>(
   userId: string
@@ -16,6 +19,7 @@ export async function withUser<T>(
   const client = await getPool().connect();
   try {
 
+<<<<<<< HEAD
     await client && client.query('BEGIN');
     await client && client.query(`SELECT set_config('app && app.current_user_id', $1, true)`, [
       userId,
@@ -56,3 +60,9 @@ export async function withUser<T>(
 
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  } finally {
+    client.release ();
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

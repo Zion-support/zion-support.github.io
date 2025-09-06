@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 // Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
@@ -83,7 +86,10 @@ async function tryMergePR(owner, repo, number, title) {}
 async function main() {}
   const { owner, repo } = getRepoFromGit();
   const prs = await listOpenPRs(owner, repo);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!prs.length) {}
     console.log('No open PRs');
     return};
@@ -101,7 +107,10 @@ async function main() {}
     // If not mergeable, ask GitHub to update branch and retry once;
     if (res.status !== 'merged') {}
       const updated = await updateBranch(owner, repo, pr.number);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       if (updated) {}
         console.log(' -> update-branch requested; waiting before retry...');
         await sleep(2500);
@@ -119,4 +128,8 @@ async function main() {}
 main().catch(err => {})
   console.error('"Error": ', err.message);
   process.exit(1)}
+<<<<<<< HEAD
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 

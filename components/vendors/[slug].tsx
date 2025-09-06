@@ -1,6 +1,11 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 export default function VendorProfilePage({ vendor }: Props) {
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -28,78 +33,23 @@ export default function VendorProfilePage({ vendor }: Props) {
         </div>
       )}
 export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
-=======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
-
-      });
-      if (!res && res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form && form.reset();
-    } catch (e: any) {;
-      setMessage(e && e.message);
-    } finally {;
-      setLoading(false);    }
-  }
-  return (
-    <div className='space-y-8'>;
-      <div className='flex items-center gap-4'>      if (!res && res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form && form.reset();
-    } catch (e: any) {;
-      setMessage(e && e.message);
-    } finally {;
-      setLoading(false);
-
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vendorId: vendor.id, title })});
-      if (!res.ok) throw new Error('Failed to submit');
-      setMessage('Thanks! We will contact you soon.');
-      form.reset()
-import {FormEvent, useState} from 'react';
-import type { Vendor } from '../../utils / vendor - types';
-;
-type Props = { vendor: Vendor | null }type Props = { vendor: Vendor | null },
-export default /**
- * VendorProfilePage - Function description
- */
-function VendorProfilePage() {
-  const [message, set_message] = useState < string | null>(null);
-  const [loading, set_loading] = useState (false);
-;
-  // Check condition
-if (return <div className='text - gray - 500'>Vendor not found.</div>) {
-  $2
-}  // Check condition
-if (return <div className="text - gray - 500">Vendor not found.</div>) {
-  $2
-}
-  async /**
- * submit_lead - Function description
- */
-function submit_lead() {
-    e.prevent_default ();
-    const form = e.current_target;
-    const form_data = new FormData (form);
-    const title = String (form_data.get ('title') || 'New lead');
-    set_loading (true);
-    set_message (null),
+  async function submitLead(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const title = String(formData.get('title') |'New lead');
+    setLoading(true);
+    setMessage(null)
     try {
+<<<<<<< HEAD
       const res = await fetch ('/api / vendors / lead', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -129,6 +79,22 @@ function submit_lead() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
+        ) : (
+          <div className="w-16 h-16 rounded bg-gray-100 dark: bg-gray-900" />
+        )}
+        <div>
+          <div className="text-2xl font-semibold flex items-center gap-2">
+            {vendor.name}
+            {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
+          </div>
+          <div className="text-sm text-gray-500">{vendor.servicesOffered?.join()}</div>
+        </div>
+      </div>
+      <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div
                 key={p && p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -144,14 +110,6 @@ function submit_lead() {
           </div>;
         </div>;
       )}
-
-
-      {vendor && vendor.sampleProjects && vendor && vendor.sampleProjects.length > 0 && (;
-        <div>;
-          <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>;
-            {vendor && vendor.sampleProjects.map(sp => (;
-
               <div
                 key={sp && sp.id}
                 className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
@@ -175,6 +133,7 @@ function submit_lead() {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
+<<<<<<< HEAD
                 <div className="p-3">
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
@@ -184,6 +143,8 @@ function submit_lead() {
   }
 
   return (
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         </div>
       </div>
@@ -209,17 +170,18 @@ function submit_lead() {
 
                 </div>
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>;
         </div>;
       )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -228,7 +190,6 @@ function submit_lead() {
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
-
           <input
             name='title'
             required
@@ -241,6 +202,7 @@ function submit_lead() {
             {loading ? 'Submitting...' : 'Send'}
           </button>;
           {message && <div className='text-sm'>{message}</div>}
+<<<<<<< HEAD
         </form>;
       </div>;
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>;
@@ -269,10 +231,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
                 </div>
 
               </div>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
 
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
@@ -325,6 +290,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
@@ -364,5 +331,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   return { props: { vendor } };
 };
 };
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+};
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -67,4 +70,8 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
+<<<<<<< HEAD
 
+=======
+          "file": "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

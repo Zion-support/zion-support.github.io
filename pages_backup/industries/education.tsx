@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -16,6 +17,9 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -28,6 +32,7 @@ import {
   BarChart3,
   FileText,
   Video,
+<<<<<<< HEAD
   Globe,;
   Database;
 } from 'lucide-react';
@@ -40,6 +45,11 @@ const services = [;
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',
 =======
 =======
+=======
+  Globe,
+  Database;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -54,6 +64,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual learning environments with interactive features.,',;
@@ -63,10 +74,20 @@ const services = [
       'Interactive whiteboards',',;
       'Breakout rooms',',;
 
+=======
+    title: 'Virtual Classrooms,',
+    description: 'Advanced virtual learning environments with interactive features.,',
+    icon: Video,
+    features: [;
+      'Live video streaming,',
+      'Interactive whiteboards',',
+      'Breakout rooms',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Recording capabilities'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Educational AI Tutors,',;
     description: 'AI-powered tutoring systems for personalized learning experiences.,',;
@@ -76,10 +97,20 @@ const services = [
       'Intelligent tutoring',',;
       'Progress monitoring',',;
 
+=======
+    title: 'Educational AI Tutors,',
+    description: 'AI-powered tutoring systems for personalized learning experiences.,',
+    icon: Brain,
+    features: [;
+      'Adaptive learning paths,',
+      'Intelligent tutoring',',
+      'Progress monitoring',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Personalized feedback'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Student Analytics,',;
     description: 'Data-driven insights into student performance and engagement.,',;
@@ -89,10 +120,20 @@ const services = [
       'Engagement metrics',',;
       'Predictive analytics',',;
 
+=======
+    title: 'Student Analytics,',
+    description: 'Data-driven insights into student performance and engagement.,',
+    icon: BarChart3,
+    features: [;
+      'Performance tracking,',
+      'Engagement metrics',',
+      'Predictive analytics',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Intervention recommendations'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Online Assessment Tools,',;
     description: 'Secure and comprehensive online testing and evaluation systems.,',;
@@ -102,10 +143,20 @@ const services = [
       'Plagiarism detection',',;
       'Secure testing',',;
 
+=======
+    title: 'Online Assessment Tools,',
+    description: 'Secure and comprehensive online testing and evaluation systems.,',
+    icon: FileText,
+    features: [;
+      'Automated grading,',
+      'Plagiarism detection',',
+      'Secure testing',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Performance reports'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Content Management Systems,',;
     description: 'Digital content creation and management platforms for educators.,',;
@@ -128,6 +179,18 @@ const benefits = [;
     icon: GraduationCap;
 =======
 =======
+=======
+    title: 'Content Management Systems,',
+    description: 'Digital content creation and management platforms for educators.,',
+    icon: Database,
+    features: [;
+      'Content creation tools,',
+      'Resource libraries',',
+      'Version control',',
+      'Collaboration features'';
+    ];
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -136,6 +199,7 @@ const benefits = [
     icon: GraduationCap
   },
   {}
+<<<<<<< HEAD
 
     title: 'Enhanced Engagement,',;
     description: 'Interactive tools and gamification increase student participation.,',;
@@ -207,6 +271,29 @@ export default function EducationPage() {
 ];
 export default function EducationPage() {
 
+=======
+    title: 'Enhanced Engagement,',
+    description: 'Interactive tools and gamification increase student participation.,',
+    icon: Users;
+  },
+  {}
+    title: 'Better Accessibility,',
+    description: 'Online platforms make education accessible to more students.,',
+    icon: Globe;
+  },
+  {}
+    title: 'Data-Driven Insights,',
+    description: 'Analytics help educators make informed decisions about teaching methods.,',
+    icon: BarChart3;
+  }
+];
+export default function EducationPage() {
+  return (
+    <Layout
+      title="Education Technology Solutions - Zion Tech Group"
+      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
+      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -256,6 +343,7 @@ export default function EducationPage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -271,6 +359,8 @@ export default function EducationPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -290,6 +380,7 @@ export default function EducationPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -303,6 +394,8 @@ export default function EducationPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -322,11 +415,14 @@ export default function EducationPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -337,6 +433,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
@@ -354,6 +451,8 @@ export default function EducationPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -382,11 +481,14 @@ export default function EducationPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -397,6 +499,7 @@ export default function EducationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
@@ -422,6 +525,8 @@ export default function EducationPage() {
     </Layout>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
@@ -444,3 +549,7 @@ export default function EducationPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

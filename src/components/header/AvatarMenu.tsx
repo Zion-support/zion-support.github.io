@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link',
 import { useAuth } from '@/hooks/useAuth',
@@ -72,3 +73,16 @@ export const AvatarMenu: React.FC = () => {
 },
 
 export default AvatarMenu,
+=======
+import React from 'react';
+
+const AvatarMenu = () => {
+  return (
+    <div>
+      {/* AvatarMenu component */}
+    </div>
+  );
+};
+
+export default AvatarMenu;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -252,6 +252,19 @@ body::after {
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
 .quantum-grid {  background-image:
 .quantum-grid {
+<<<<<<< HEAD
+=======
+=======
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(236, 73, 153, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+  animation: quantumPulse 20s ease-in-out infinite;
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* Advanced Quantum Field Animation */
 @keyframes backgroundFloat {
   0%, 100% {
@@ -277,6 +290,16 @@ body::after {
     opacity: 0.3;
 /* Quantum Matrix Grid */
 .quantum-matrix {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+<<<<<<< HEAD
+  background-image: 
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  background-image: 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -368,7 +391,24 @@ body::after {
   content: '';
   animation: matrixMove 30s linear infinite;
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+@keyframes matrixMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Holographic Scan Lines */
+.holographic-scan::before {
+  content: '';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   position: absolute;
   top: 0;
   left: 0;
@@ -421,6 +461,15 @@ body::after {
 .cyberpunk-glitch::before,
 .cyberpunk-glitch::after {
   content: attr(data-text);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+  position: absolute;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: absolute;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   content: '';  position: absolute;
 >>>>>>> main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -628,6 +677,17 @@ body::after {
     transform: rotate(180deg);
 /* Quantum Ripple Effect */
 .quantum-ripple {
+<<<<<<< HEAD
+=======
+  position: relative;
+  overflow: hidden;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+}
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transform: scale(1.02);}
 >>>>>>> main
 
@@ -711,6 +771,15 @@ body::after {
       rgba(139, 92, 246, 0.1) 1px,
       rgba(139, 92, 246, 0.1) 2px
     );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+  }
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     --neon-pink: #ec4899;  }
 >>>>>>> main
 }
@@ -753,13 +822,49 @@ body::after {
     box-shadow: none;
     text-shadow: none;
   }
-
+<<<<<<< HEAD
+=======
+  
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+>>>>>>> main
   .particle {
+=======
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neon-cyan: #00ffff;
+    --neon-purple: #a855f7;
+    --neon-pink: #ec4899;
+    --neon-green: #10b981;
+    --neon-blue: #3b82f6;
+    --neon-yellow: #f59e0b;
+    --neon-red: #ef4444;
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+/* Print Styles */
+@media print {
+  .quantum-matrix,
+  .holographic-scan,
+  .quantum-entanglement,
+  .neural-network,
+  .cyberpunk-glitch {
     display: none;
+<<<<<<< HEAD
 
     display: none;
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
   body::before,
   body::after {

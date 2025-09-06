@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -69,4 +72,8 @@ const path = require("path")
 // console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
+<<<<<<< HEAD
 
+=======
+  console.error(" Intelligent Predictive Monitor "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

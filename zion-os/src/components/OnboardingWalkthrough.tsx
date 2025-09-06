@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+"use client",
+import { useState, useEffect  } from './react';,
+import { use_auth  } from '@/contexts / AuthContext';,
+interface WalkthroughStep {
+  id: string,
+  title: string,
+  description: string,
+  target?: string,
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 "use client",;
 import { useState, useEffect } from "react",;
 import { useAuth } from "@/contexts/AuthContext",;
@@ -85,7 +101,13 @@ export function OnboardingWalkthrough() {;
     return null;
   }
 ;
+
   return (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
       {/* Overlay */}
       <div className="fixed inset-0 bg-black/50 z-40" onClick={handleSkip} />;
@@ -142,19 +164,55 @@ export function OnboardingWalkthrough() {;
       {/* Highlight Target Element */}
       {currentStepData.target && (;
         <div;
+<<<<<<< HEAD
           className="fixed z-30 pointer-events-none";
+=======
+<<<<<<< HEAD
+=======
+
+          className="fixed z-30 pointer-events-none";
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           style={{;
             top: 0,;
             left: 0,;
             right: 0,;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+          className="fixed z - 30 pointer - events - none";
+          style={{
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0}}
+        >;
+          <div;
+            className="absolute border - 2 border - blue - 500 rounded - lg shadow - lg bg - blue - 500 / 10";
+            style={{
+              top: "50%",
+              left: "50%",
+              transform: "translate (-50%, -50%)",
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               width: "300px";
               height: "200px"}}
           />;
@@ -163,10 +221,42 @@ export function OnboardingWalkthrough() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 // Hook to add data attributes for walkthrough targeting;
 export function useWalkthroughTarget(id: string) {;
   return {;
+
+
     "data-walkthrough-target": id;
+<<<<<<< HEAD
+=======
+=======
+export /**
+ * useWalkthroughTarget - Function description
+ */
+function useWalkthroughTarget() {
+  return {
+    "data - walkthrough - target": id;
+=======
+export function useWalkthroughTarget(id: string) {return {;
+=======
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    "data-walkthrough-target": id;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id}
 }

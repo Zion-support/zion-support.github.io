@@ -1,13 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+
+'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
+"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
+'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {' return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>' </div>' <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>' <TooltipProvider>' <Tooltip> ''';'"";
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 :src.disabled/components/community/EmptyState.jsx
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
 "const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 ursor/add-new-services-and-deploy-updates-0462
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
 "const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
 'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {' return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>' </div>' <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>' <TooltipProvider>' <Tooltip> ''';'"";
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/community/EmptyState.jsx
 &apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
 
@@ -18,3 +38,20 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/community/EmptyState.jsx
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/community/EmptyState.jsx
+=======
+:temp_exclude/src.disabled/components/community/EmptyState.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 207d7230e0649fa517bb469b27623282180528c9
+=======
+<<<<<<< HEAD
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+=======
+'const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {\' return (<div className=\'text-center py-16\'>\' <div className=\'bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex\'>\' <MessageSquare className=\'h-10 w-10 text-zion-purple\'/>\' </div>\' <h2 className=\'text-xl font-medium mb-2\'>{title}</h2>\' <p className=\'text-muted-foreground mb-6\'>{subtitle}</p>\' <TooltipProvider>\' <Tooltip> \''\';\'"\";
+"const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {" return (<div className="text-center py-16">" <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">" <MessageSquare className="h-10 w-10 text-zion-purple"/>" </div>" <h2 className="text-xl font-medium mb-2">{title}</h2>" <p className="text-muted-foreground mb-6">{subtitle}</p>" <TooltipProvider>" <Tooltip> """;""";"""
+&apos;const EmptyState = ({ title,subtitle,cta,href,hasSession }) => {&apos; return (<div className='text-center py-16'>' <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>' <MessageSquare className='h-10 w-10 text-zion-purple'/>&apos; </div>&apos; <h2 className='text-xl font-medium mb-2'>{title}</h2>' <p className='text-muted-foreground mb-6'>{subtitle}</p>&apos; <TooltipProvider>&apos; <Tooltip> ''';'"";
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

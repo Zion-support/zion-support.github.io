@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Smart Deployment Automation;
@@ -28,7 +31,10 @@ class SmartDeploymentAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(message)};
     preDeploymentChecks() {}
         this.log('Running pre-deployment checks...');
@@ -38,13 +44,21 @@ class SmartDeploymentAutomation {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -173,4 +187,8 @@ if ( {})
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
 
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

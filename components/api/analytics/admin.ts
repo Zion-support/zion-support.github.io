@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 =======
 
@@ -9,6 +10,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     // Fallback to mock if querying fails
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -31,8 +34,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       referralsR && referralsR.status === 'fulfilled' && referralsR && referralsR.value.data
         ? (referralsR && referralsR.value.data as any[])
         : [];
-
-
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -60,41 +61,56 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
-
-
-
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
-
-    const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
-
-
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
+<<<<<<< HEAD
     const geoCounts: Record<string, number> = {}
+=======
+
+    const totalUsers = usersData && usersData.length;
+    const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
+    const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
+    const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length;
+    const quotesAccepted = quotesData && quotesData.filter(
+      q => q && q.status === 'accepted'
+    ).length;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     usersData.forEach(u => {
       geoCounts[u.country |'Unknown'] =
         (geoCounts[u.country |'Unknown'] |0) + 1;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   } catch (e: any) {
 
+<<<<<<< HEAD
 =======
+=======
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
+    const referralConversions = referralsData.filter(r => r.converted).length;
+    const geoCounts: Record<string, number> = {};
+    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
+    res.status(200).json({
+      totals: {
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+    },
+    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
+      referralConversions;
+      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
+      referralConversions: 2
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
-}
-
-=======
+    });
+  } catch (e: any) {
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -118,6 +134,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
+<<<<<<< HEAD
     const geoCounts: Record<string, number> = {};
 
 }
@@ -125,3 +142,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

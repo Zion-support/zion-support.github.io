@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { ProductListing } from "@/types/listings"; export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [","});"})"@/types/listings&apos;&apos,export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [","export const EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED: "ProductListing[] = [",""""
 import { ProductListing } from "@/types/listings"; export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',,"}
 });"})'@/types/listings&apos;&apos,export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',"export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',""]"
@@ -6,3 +7,6 @@ import { ProductListing } from "@/types/listings"; export const "EMERGING_TECHNO
 });"})'@/types/listings&apos;&apos,export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',"export const "EMERGING_TECHNOLOGY_SERVICES_2030_EXTENDED": 'ProductListing[] = [',""]"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

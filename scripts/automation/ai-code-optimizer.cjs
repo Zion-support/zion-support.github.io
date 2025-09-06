@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -157,4 +160,8 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push("� Memory optimization opportunities available")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
+<<<<<<< HEAD
 
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

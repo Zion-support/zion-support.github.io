@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -16,13 +17,51 @@ interface Param {;
   name: string,;
   type: string,;
   required?: boolean;
+=======
+const options: RequestInit = {
+      method
+      headers: {
+
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+      // Add timeout to prevent hanging
+
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+
+    set_loading (true);
+    set_response (null);
+
+    try {
+      const res = await fetch (url, options);
+      const content_type = res.headers.get ('content - type');
+      let response_text: string;
+      if () {) {
+  $2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-;
-interface ApiPlaygroundProps {;
-  method: string,;
-  path: string,;
-  params?: Param[];
+        try {
+          const json_data = await res.json ();
+          response_text = JSON.stringify (json_data, null, 2);
+        } catch {
+          response_text = await res.text ();
+        }
+      } else {
+        response_text = await res.text ();
+      }
+
+      // Format the response with status information;
+      const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
+      set_response (status_info + response_text);
+
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
 }
+<<<<<<< HEAD
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
   const [apiKey, setApiKey] = useState("demo_key_123"),
@@ -62,6 +101,43 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       try {
         options.body = JSON.stringify(JSON.parse(body))
       } catch {
+=======
+        error_message = 'Request timed out (15s)';
+      } else if () {) {
+  $2
+}
+        error_message =;
+          'Network error - check CORS configuration or API endpoint';
+      } else {
+
+
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
+
+interface Param {;
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+  path: string;
+  params?: Param[];
+
+export function ApiPlayground(): any ({;
+  method,;
+  path,;
+  params = [],;
+}: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState('demo_key_123');
+  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [body, setBody] = useState('{}');
+  const [response, setResponse] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         options.body = body
 ;
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
@@ -142,12 +218,123 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     <div className="space-y-4">
       <Input
         value={apiKey}
+<<<<<<< HEAD
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
       />
       {params.map((p) => (
         <Input
           key={p.name}
+          value={paramValues[p.name] || ""}
+          onChange={(e) => handleParamChange(p.name, e.target.value)}
+        />;
+=======
+
+
+        onChange={(e) => setApiKey(e.target.value)}
+        placeholder="API Key"
+
+
+      />
+      {params.map(p => (
+        <Input
+
+
+          value={paramValues[p.name] || ''}
+
+
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
+          key={p && p.name}
+          value={paramValues[p && p.name] || ''}
+          onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      ))}
+      {method !== "GET" && method !== "DELETE" && (
+        <Textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+<<<<<<< HEAD
+=======
+});
+const query = search_params.to_string ();
+// Check condition
+if (url += `?$ {) {
+  $2
+}
+  query;
+}`;
+}const options: RequestInit = {
+  method, headers: {
+  Authorization: `Bearer $ {
+  api_key;
+}`;
+"Content - Type" : "application / json";
+}
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000);
+}
+}set_loading (true);
+set_response (null);
+let response_text: string;
+if () {) {
+  $2
+
+}
+  try {
+  /> {
+  params.map ( (p) => (<Input key= {
+
+
+    </div>;
+  );
+
+export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params && params.map ( (p) => (<Inputkey= {
+  p && p.name 
+}</div>) ;
+}export default ApiPlayground;
+
+  p.name;
+}</div>);
+}export default ApiPlayground;
+'";
+  p.name 
+}</div>) ;
+}export default ApiPlayground;
+'";
+}
+
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -166,5 +353,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     </div>
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 export default ApiPlayground;

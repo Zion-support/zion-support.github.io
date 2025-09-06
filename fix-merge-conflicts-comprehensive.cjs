@@ -114,4 +114,12 @@ try {
   console.log('Build error:', error.message);
 }
 
+<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
+=======
+<<<<<<< HEAD
+console.log('\n✨ Merge conflict resolution script completed!');
+=======
+console.log('\n✨ Merge conflict resolution script completed!');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

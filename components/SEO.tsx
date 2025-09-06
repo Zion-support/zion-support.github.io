@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -32,10 +33,16 @@ origin/automation-improvements-final
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface SEOProps {
 interface SEOProps {;
   title?: string;
   description?: string;
+<<<<<<< HEAD
 
   keywords?: string;
 }
@@ -53,16 +60,11 @@ const SEO: React.FC<SEOProps> = ({
     </Head>
   );
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   keywords?: string;
 }
-
-const SEO: React.FC < SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
-
 }) => {
-=======
 
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
@@ -70,6 +72,7 @@ const SEO: React.FC<SEOProps> = ({;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
   return (
+<<<<<<< HEAD
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -86,10 +89,13 @@ export default SEO;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
   image?: string;
   url?: string;
   type?: string;
+
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -99,6 +105,7 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
+<<<<<<< HEAD
   return (
 =======
 
@@ -137,10 +144,10 @@ export default SEO;
   );
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default SEO;
-origin/main
-origin/automation-improvements-final
 }
 export default SEO;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

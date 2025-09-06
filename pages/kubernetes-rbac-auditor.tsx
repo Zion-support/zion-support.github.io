@@ -1,9 +1,53 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+<<<<<<< HEAD
+
+}
 
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    <Layout>;
+      <Head>;
+        <title > Kubernetes RBAC Auditor | Zion Tech Group</title>;
+        <meta name="description" content="Detect over - permissive Kubernetes roles and unused bindings with least - privilege recommendations." />;
+        <link rel="canonical" href="https://ziontechgroup.com / kubernetes - rbac - auditor" />;
+      </Head>;
+
+<<<<<<< HEAD
+=======
+      <Head>
+        <title>Kubernetes RBAC Auditor | Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Detect over-permissive Kubernetes roles and unused bindings with least-privilege recommendations.&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/kubernetes-rbac-auditor&quot; />
+
+import React from 'react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function KubernetesRbacAuditorPage() {
@@ -35,7 +79,16 @@ export default function KubernetesRbacAuditorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white">Start from $179/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+<<<<<<< HEAD
 =======
+=======
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -44,11 +97,13 @@ export default function KubernetesRbacAuditorPage(req, res) {
   return (;
     <Layout>;
       <Head>;
-        <title > Kubernetes RBAC Auditor | Zion Tech Group</title>;
-        <meta name="description" content="Detect over - permissive Kubernetes roles and unused bindings with least - privilege recommendations." />;
-        <link rel="canonical" href="https://ziontechgroup.com / kubernetes - rbac - auditor" />;
+        <title>Kubernetes RBAC Auditor | Zion Tech Group</title>;
+        <meta name="description" content="Detect over-permissive Kubernetes roles and unused bindings with least-privilege recommendations." />;
+        <link rel="canonical" href="https://ziontechgroup.com/kubernetes-rbac-auditor" />;
       </Head>;
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent">Kubernetes RBAC Auditor</h1>;
@@ -62,6 +117,15 @@ export default function KubernetesRbacAuditorPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white">Start from $179/mo</a>;
@@ -72,11 +136,27 @@ export default function KubernetesRbacAuditorPage(req, res) {
     </Layout>;
   );
   } catch (error) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

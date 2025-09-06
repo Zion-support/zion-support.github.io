@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -18,4 +22,8 @@ const path = require("path")
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
+<<<<<<< HEAD
 
+=======
+      "
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

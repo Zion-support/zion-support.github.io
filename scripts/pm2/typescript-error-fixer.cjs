@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * TypeScript Error Fixer Service;
@@ -19,7 +22,10 @@ class TypeScriptErrorFixer {}
     this.fixesApplied = 0;
     this.fixesFailed = 0;
     this.fixesSkipped = 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.fixedFiles = new Set()};
   log(level, message, data = null) {}
     const timestamp = new Date().toISOString();
@@ -51,7 +57,11 @@ class TypeScriptErrorFixer {}
       this.startContinuousFixing();
       this.setupSignalHandlers();
       this.log('info', 'TypeScript Error Fixer Service started successfully');
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -117,7 +127,10 @@ class TypeScriptErrorFixer {}
           column: parseInt(match[3]),
           message: match[4].trim(),
           code: 'TS_ERROR'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         })};
     }
 });
@@ -148,7 +161,11 @@ class TypeScriptErrorFixer {}
         fs.writeFileSync(error.file, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -162,7 +179,10 @@ class TypeScriptErrorFixer {}
            trimmed.startsWith('/*') ||
            trimmed.startsWith('*') ||
            trimmed.startsWith('import') ||
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
            trimmed.startsWith('export')};
   async fixTypeScriptLine(line, error, allLines, lineIndex) {}
     let fixedLine = line;
@@ -178,7 +198,11 @@ class TypeScriptErrorFixer {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -209,7 +233,11 @@ class TypeScriptErrorFixer {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -221,7 +249,11 @@ class TypeScriptErrorFixer {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -243,7 +275,11 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -274,7 +310,10 @@ class TypeScriptErrorFixer {}
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       fs.copyFileSync(filePath, backupPath);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       this.log('debug', `Backup created: ${backupPath}`)} catch (error) {`}
       this.log('warn', `Failed to create backup for: ${filePath}`, error.message)};
   };
@@ -286,7 +325,10 @@ class TypeScriptErrorFixer {}
         fixesApplied: this.fixesApplied,
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
       },
       fixedFiles: Array.from(this.fixedFiles),
@@ -295,7 +337,10 @@ class TypeScriptErrorFixer {}
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log('info', `TypeScript fix report generated: ${reportPath}`);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -347,4 +392,8 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

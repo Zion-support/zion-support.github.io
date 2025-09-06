@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
@@ -33,14 +34,58 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
 };export default CareersPage;import React, { useState } from 'react';
 
+=======
+
+};export default CareersPage;import React, { useState } from 'react';
+
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
+  /* Company Culture */
+}<motion.div </div>) )
+}</div> </motion.div> {
+  /* Benefits */
+}<motion.div </div>) )
+}</div> </div> </motion.div> {
+  /* Job Openings */
+}<motion.div > <h2 className="text-3xl font-bold text-white text-center mb-8" >Open Positions</h2> key= {
+  dept.id
+}onClick= {
+  () => setSelectedDepartment (dept.id)
+}className= {
+  `px-4 py-2 rounded-lg font-medium transition-all duration-300 $ {
+  selectedDepartment === dept.id ? 'bg-blue-500 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+}`
+}> {
+  dept.name
+}</button>) )
+}</div> > <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4" > <div> </span> </div> </div> <a > Apply Now <ArrowRight className="w-5 h-5 ml-2" /> </a> </div> </li>) )
+}</ul> </div> </motion.div>) )
+}</div> We don't have any open positions in this department at the moment. Check back later or send us your resume for future opportunities. </p> </div>)
+}</motion.div> {
+  /* General Application */
+}<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>)
+};export default CareersPage;import React, { useState } from 'react';
+import React, { useState } from 'react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+<<<<<<< HEAD
 export default function Careers() {
 
 export default function Careers() {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+export default function Careers() {;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -50,6 +95,7 @@ export default function Careers() {;
     { id: 'space-tech', name: 'Space Technology' }
     { id: 'sales', name: 'Sales & Business Development' }
     { id: 'marketing', name: 'Marketing' }
+<<<<<<< HEAD
 
     { id: 'operations', name: 'Operations' }
   ];
@@ -66,53 +112,44 @@ export default function Careers() {;
       requirements: [;
         'Advanced degree in Computer Science, AI, or related field_expertise in Python, TensorFlow, PyTorchExperience with large language models and neural networks_strong problem - solving and analytical skills';
       ];
+=======
+    { id: 'operations', name: 'Operations' }
+  ];
+  const jobOpenings = [
+    {
+      id: 1
+      title: 'Senior AI Engineer'
+      department: 'ai-research'
+      location: 'Remote / Middletown, DE';
+      type: 'Full-time'
+      experience: '5+ years'
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.'
+      requirements: [
+        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
+      ]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     {
       id: 2
       title: 'Quantum Computing Researcher'
       department: 'quantum'
       location: 'Remote / Middletown, DE';
-
-      type: 'Full - time',
-      experience: '3+ years',
-      description: 'Research and develop quantum algorithms and quantum computing solutions.',
-      requirements: [;
-        'PhD in Physics, Computer Science, or related field_experience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theory_strong mathematical and theoretical background';
-      ];
-    }
-    {
-      id: 3,
-      title: 'Space Technology Engineer',
-      department: 'space - tech',
-      location: 'Remote / Middletown, DE';
-      type: 'Full - time',
-      experience: '4+ years',
-      description: 'Design and develop innovative space technology solutions and satellite systems.',
-      requirements: [;
-        'Degree in Aerospace Engineering, Physics, or related field_experience with satellite design and space systems_knowledge of orbital mechanics and space environment_familiarity with space industry standards and regulations';
-      ];
-
     }
     {
       id: 4
       title: 'Full Stack Developer'
       department: 'engineering'
       location: 'Remote / Middletown, DE';
-
-      type: 'Full - time',
-      experience: '3+ years',
-      description: 'Build scalable web applications and cloud - based solutions.',
-      requirements: [;
-        'Experience with React, Node.js, and cloud platforms_knowledge of modern web technologies and APIsUnderstanding of software architecture and design patterns_experience with DevOps and CI / CD practices';
-      ];
-
     }
     {
       id: 5
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />
@@ -148,10 +185,13 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
+<<<<<<< HEAD
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -169,15 +209,23 @@ export default function Careers() {;
             Be part of a team that's revolutionizing technology through AI, quantum computing, and space technology. Help us build the future.
           </p>
         </motion.div>
+<<<<<<< HEAD
         {/* Company Culture */}
         <motion.div
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function Careers() {;
   const [selectedDepartment, setSelectedDepartment] = useState('all');
+
   const departments = [;
     { id: 'all', name: 'All Departments' },;
     { id: 'engineering', name: 'Engineering' },;
@@ -188,6 +236,7 @@ export default function Careers() {;
     { id: 'marketing', name: 'Marketing' },;
     { id: 'operations', name: 'Operations' }
   ];
+
   const jobOpenings = [;
     {;
       id: 1,;
@@ -250,6 +299,7 @@ export default function Careers() {;
       ];
     }
   ];
+
   const companyValues = [;
     {;
       icon: <Brain className="w-8 h-8" />,;
@@ -272,12 +322,15 @@ export default function Careers() {;
       description: 'We strive for the highest quality in everything we do.';
     }
   ];
+
   const benefits = [;
     'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment';
   ];
+
   const filteredJobs = selectedDepartment === 'all' ;
     ? jobOpenings ;
     : jobOpenings && jobOpenings.filter(job => job && job.department === selectedDepartment);
+
   return (
     <UltraFuturisticBackground>;
       <div className="min-h-screen">;
@@ -285,6 +338,7 @@ export default function Careers() {;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
+
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
         {/* Hero Section */}
         <motion&& motion.div 
@@ -301,8 +355,11 @@ export default function Careers() {;
         </motion && motion.div>;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Company Culture */}
+<<<<<<< HEAD
         <motion.div
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -320,6 +377,7 @@ export default function Careers() {;
 
               </div>
             ))}
+<<<<<<< HEAD
           </div>
         </motion.div>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -327,6 +385,14 @@ export default function Careers() {;
         {/* Benefits */}
         <motion.div
 
+=======
+
+
+
+
+        {/* Benefits */}
+        <motion&& motion.div 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -342,6 +408,7 @@ export default function Careers() {;
 
                 </div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
         </motion.div>
@@ -351,6 +418,8 @@ export default function Careers() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         {/* Job Openings */}
         <motion.div 
@@ -361,6 +430,7 @@ export default function Careers() {;
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>
+<<<<<<< HEAD
 =======
 
             </div>;
@@ -376,6 +446,8 @@ export default function Careers() {;
           <h2 className="text-3xl font-bold text-white text-center mb-8">Open Positions</h2>;
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">;
             {departments && departments.map((dept) => (;
@@ -391,6 +463,7 @@ export default function Careers() {;
                 {dept && dept.name}
               </button>;
             ))}
+<<<<<<< HEAD
 
           </div>;
 
@@ -398,6 +471,8 @@ export default function Careers() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -425,6 +500,7 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
+<<<<<<< HEAD
                     href={`/contact?position=${encodeURIComponent(job.title)}`}
                     className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
@@ -463,8 +539,12 @@ export default function Careers() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
 
         {/* General Application */}
         <motion.div 
@@ -491,6 +571,7 @@ export default function Careers() {;
               <a
                 href="/about"
                 className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+<<<<<<< HEAD
 
 =======
 
@@ -498,3 +579,19 @@ export default CareersPage;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              >
+                Learn More About Us
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </Layout>
+  )
+}
+                Learn More About Us;
+              </a>;
+            </div>;
+          </div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

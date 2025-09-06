@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -42,4 +45,8 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
+<<<<<<< HEAD
 
+=======
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

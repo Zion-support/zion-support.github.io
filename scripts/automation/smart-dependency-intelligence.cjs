@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -315,4 +318,8 @@ this.log("Intelligence report "generated": ${reportPath}")
   this.log(Smart Dependency Intelligence "failed": ${error.message}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
+<<<<<<< HEAD
 
+=======
+  console.error(" Smart Dependency Intelligence "failed": ")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

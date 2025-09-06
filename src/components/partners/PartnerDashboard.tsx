@@ -1,7 +1,60 @@
+<<<<<<< HEAD
+=======
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {;
+  BarChart,;
+  DollarSign,;
+  LineChart,;
+  TrendingUp,;
+  Users,;
+} from 'lucide-react';
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
+
+
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+<<<<<<< HEAD
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00
+  },
+  
+=======
+
+
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00
+  },
+  
+  return (
+    <div className="space-y-6">
+      {/* Stats Overview */}
+
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -12,8 +65,10 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
     totalRevenue: 850.00,
     pendingRevenue: 200.00
-  },
-  
+  };
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -30,6 +85,8 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+
+
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -43,6 +100,7 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -52,11 +110,16 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
+
               ${stats.pendingRevenue} pending payout
             </p>
           </CardContent>
         </Card>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -69,8 +132,13 @@ export function PartnerDashboard() {
             <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
+<<<<<<< HEAD
         </CardContent>
       </Card>
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -91,6 +159,7 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -183,3 +252,29 @@ export function PartnerDashboard() {;
   );
 }
 ;
+=======
+
+
+        </CardContent>
+      </Card>
+      {/* Recent Referrals */}
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>Recent Referrals</CardTitle>
+            <CardDescription>Your latest partner referrals</CardDescription>
+          </div>
+
+          <Button variant="outline" size="sm">View All</Button>
+        </CardHeader>
+        <CardContent>
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <p className="text-zion-slate-light mb-4">No referrals yet</p>
+            <p className="text-xs text-zion-slate-light">
+              Start sharing your referral links to earn rewards
+
+            </p>
+          </div>
+        </CardContent>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

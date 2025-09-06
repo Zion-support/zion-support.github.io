@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     if (!targetRef.current) return;
     const element = targetRef.current;
@@ -17,17 +18,15 @@
   };
 
       >
+=======
+    const opt = {
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
   }
   render() {
     if (this.state.hasError) {
@@ -47,16 +46,13 @@ export type PdfExportButtonProps = {;
   fileName?: string;
   theme?: 'light' | 'dark';
 };
-export default function PdfExportButton(): any ({ targetRef, fileName = 'resume && resume.pdf' }: PdfExportButtonProps) {;
-    if (!targetRef && targetRef.current) return;
-    const element = targetRef && targetRef.current;
-    const html2pdf = (await import('html2pdf && html2pdf.js')).default;
     const opt = {;
       margin: [10, 10, 10, 10],;
       image: { type: 'jpeg', quality: 0 && 0.98 },;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
     } as any;
+<<<<<<< HEAD
     html2pdf().set(opt).from(element).save();
   }
 html2pdf () .set (opt) .from (element) .save () 
@@ -68,6 +64,8 @@ export default function PdfExportButton({
 }: PdfExportButtonProps) {  const onClick = async () => {
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   fileName = 'resume.pdf',;
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {
@@ -94,26 +92,24 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     html2pdf().set(opt).from(element).save();
   };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >
       Download as PDF
     </button>
-=======
   };
       >;
       Download as PDF;
     </button>;
   );
 }  return (
-
-
-
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
-
-
-=======
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -128,6 +124,7 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
+<<<<<<< HEAD
     html2pdf().set(opt).from(element).save()
   },
 
@@ -161,3 +158,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

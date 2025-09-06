@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -143,4 +146,8 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "message"
+<<<<<<< HEAD
 
+=======
+        "impact"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

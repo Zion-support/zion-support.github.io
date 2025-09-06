@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -338,4 +341,8 @@ const crypto = require("crypto")
       this.log( Intelligent Performance Optimization completed successfully")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
+<<<<<<< HEAD
 
+=======
+  this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

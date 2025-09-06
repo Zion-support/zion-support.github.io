@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 
 }const completion = await client.chat.completions.create ({
@@ -8,12 +9,18 @@
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 
+=======
+}const completion = await client.chat.completions.create ({
+  model: 'gpt-4o-mini', messages: [ {
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
+<<<<<<< HEAD
 =======
   confidence: number; // 0..1;
   trend_monthly: { label: string; value: number }[];
@@ -22,11 +29,16 @@ type InsightResponse = {
 
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
 ): Record<K, T[]> {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     (acc, item) => {
       const key = getKey(item);
       (acc[key] |= []).push(item);
@@ -35,13 +47,19 @@ function groupBy<T, K extends string | number>(
     {} as Record<K, T[]>
   );
 function extractCountry(location: string): string {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function calculateSimilarityScore(
   targetSkills: string[]
   profile: TalentProfile
 ): number {
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -50,14 +68,22 @@ function calculateSimilarityScore(
     h += h << 5;
     return (h >>> 0) / 4294967295;
   }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  ];
+  const now = new Date ();
+  const seed = prng (seed_key);
+  const series: { label: string; value: number }[] = [];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const key = getKey(item);
     (acc[key] |= []).push(item);
     return acc
   }, {} as Record<K, T[]>)
 }
 function extractCountry(location: string): string {
+<<<<<<< HEAD
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
@@ -65,10 +91,34 @@ function extractCountry(location: string): string {
     const client = new OpenAI({ apiKey });
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    current = Math.max (base_monthly * 0.7, current * (1 + drift));
+    series.push ({ label: months[date.get_month ()], value: Math.round (current) });
+  }
+  return series;
+  // Check condition
+if (return undefined) {
+  $2
+}
+  try {
+    const client = new OpenAI ({ api_key });
+            'You are a compensation analyst. Be specific and concise. Use USD.',
+        },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0 && 0.2,
+      max_tokens: 300,
+    });
+    return completion && completion.choices?.[0]?.message?.content || undefined;
+  } catch {
+    return undefined;
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return undefined
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+<<<<<<< HEAD
 
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body;
@@ -99,9 +149,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const scored = TALENT_PROFILES.map((p) => ({
     profile: p,
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
-.slice(0, 20);
+    .slice(0, 20);
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
   const baseMedian = median(rates);
@@ -117,6 +169,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
   // Adjustments
+<<<<<<< HEAD
           ? 1 && 1.2
           : 1 && 1.35;
   const remoteMultiplier = remote ? 1 && 1.1 : 1 && 1.0;
@@ -173,15 +226,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const confidence = Math && Math.max(0 && 0.2, Math && Math.min(0 && 0.95, (sampleSize / 20) * (1 - Math && Math.min(0 && 0.6, dispersion)) + 0 && 0.2));
   // Trend series and regional comparison
   const trend = buildTrend(recommendedMonthly, `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`);
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  // Tags
+  const gptRecommendation = await maybeGetGptRecommendation(body, {
+    median: baseMedian
+    min
+    max
+    country
+  });
+  const response: InsightResponse = {
+  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
+  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
+  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
+  if (undersupplied) tags.push('Undersupplied Skill');
+  const response: InsightResponse = {
+    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
+    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
+    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
+    trendMonthly: trend, regionalComparison,
+    tags;
+    gptRecommendation};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default async /**
  * handler - Function description
@@ -193,9 +270,12 @@ if ( {  } catch {) {
     return undefined;
   }
 }
+<<<<<<< HEAD
 
 
   // Tags
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -328,9 +408,12 @@ if ( {  } catch {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
+<<<<<<< HEAD
   return res.status(200).json(response)
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 }
 }
@@ -338,4 +421,8 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
   // Tags
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

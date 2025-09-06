@@ -1,8 +1,30 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from \'next/link\'; import Head from \'next/head\'; export default function ITFiveGSolutions() { return ( <> <Head> <title>5G Solutions - IT Services - Zion Tech Group</title> <meta name=\"description\" content=\"5G network solutions and applications for ultra-fast connectivity and IoT implementations.\" />\" <meta name=\"keywords\" content=\"5G,5G solutions,ultra-fast connectivity,IoT,mobile networks,wireless technology\" />\" <link rel=\"canonical\" href=\""https\": </Head> \" <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\" <div className=\"max-w-6xl mx-auto px-4 py-16\">\" <div className=\"text-center mb-12\">\" <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">5G Solutions</h1>\" <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Harness the power of: 5G for ultra-fast connectivity and IoT applications </p> </div> \" <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\">\" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-blue-400\">5G Network Design</h3>\" <p className=\"text-slate-300 mb-4\">Design and implement: 5G network infrastructure</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Network planning</li> <li>• Coverage optimization</li> <li>• Capacity planning</li> <li>• Performance tuning</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-green-400\">IoT Applications</h3>\" <p className=\"text-slate-300 mb-4\">Develop: 5G-powered IoT solutions</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Smart city solutions</li> <li>• Industrial IoT</li> <li>• Connected vehicles</li> <li>• Remote monitoring</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Edge Computing</h3>\" <p className=\"text-slate-300 mb-4\">5G edge computing for low-latency applications</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Edge deployment</li> <li>• Latency optimization</li> <li>• Real-time processing</li> <li>• Distributed computing</li> </ul> </div> </div> \" <div className=\"text-center\">\" <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Explore: 5G Solutions </Link>\" <Link href=\"/it-services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All IT Services </Link> </div> </div> </main> </> );\"}
 const Link from "next/link"; import Head from "next/head"; export default function ITFiveGSolutions() { return ( <> <Head> <title>5G Solutions - IT Services - Zion Tech Group</title> <meta name="description" content="5G network solutions and applications for ultra-fast connectivity and IoT implementations." />" <meta name="keywords" content="5G,5G solutions,ultra-fast connectivity,IoT,mobile networks,wireless technology" />" <link rel="canonical" href="https: </Head> " <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">" <div className="max-w-6xl mx-auto px-4 py-16">" <div className="text-center mb-12">" <h1 className="text-4xl md:text-5xl font-bold mb-6">5G Solutions</h1>" <p className="text-xl text-slate-300 max-w-3xl mx-auto"> Harness the power of: 5G for ultra-fast connectivity and IoT applications </p> </div> " <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">" <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-blue-400">5G Network Design</h3>" <p className="text-slate-300 mb-4">Design and implement: 5G network infrastructure</p>" <ul className="text-slate-400 space-y-2"> <li> Network planning</li> <li> Coverage optimization</li> <li> Capacity planning</li> <li> Performance tuning</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-green-400">IoT Applications</h3>" <p className="text-slate-300 mb-4">Develop: 5G-powered IoT solutions</p>" <ul className="text-slate-400 space-y-2"> <li> Smart city solutions</li> <li> Industrial IoT</li> <li> Connected vehicles</li> <li> Remote monitoring</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-purple-400">Edge Computing</h3>" <p className="text-slate-300 mb-4">5G edge computing for low-latency applications</p>" <ul className="text-slate-400 space-y-2"> <li> Edge deployment</li> <li> Latency optimization</li> <li> Real-time processing</li> <li> Distributed computing</li> </ul> </div> </div> " <div className="text-center">" <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4"> Explore: 5G Solutions </Link>" <Link href="/it-services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> View All IT Services </Link> </div> </div> </main> </> );"}'"'"
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import Link from \'next/link\'; import Head from \'next/head\'; export default function ITFiveGSolutions() { return ( <> <Head> <title>5G Solutions - IT Services - Zion Tech Group</title> <meta name=\"description\" content=\"5G network solutions and applications for ultra-fast connectivity and IoT implementations.\" />\" <meta name=\"keywords\" content=\"5G,5G solutions,ultra-fast connectivity,IoT,mobile networks,wireless technology\" />\" <link rel=\"canonical\" href=\""https\": </Head> \" <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\" <div className=\"max-w-6xl mx-auto px-4 py-16\">\" <div className=\"text-center mb-12\">\" <h1 className=\"text-4xl md:text-5xl font-bold mb-6\">5G Solutions</h1>\" <p className=\"text-xl text-slate-300 max-w-3xl mx-auto\"> Harness the power of: 5G for ultra-fast connectivity and IoT applications </p> </div> \" <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12\">\" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-blue-400\">5G Network Design</h3>\" <p className=\"text-slate-300 mb-4\">Design and implement: 5G network infrastructure</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Network planning</li> <li>• Coverage optimization</li> <li>• Capacity planning</li> <li>• Performance tuning</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-green-400\">IoT Applications</h3>\" <p className=\"text-slate-300 mb-4\">Develop: 5G-powered IoT solutions</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Smart city solutions</li> <li>• Industrial IoT</li> <li>• Connected vehicles</li> <li>• Remote monitoring</li> </ul> </div> \" <div className=\"p-6 bg-slate-900/60 rounded-lg border border-white/10\">\" <h3 className=\"text-xl font-bold mb-4 text-purple-400\">Edge Computing</h3>\" <p className=\"text-slate-300 mb-4\">5G edge computing for low-latency applications</p>\" <ul className=\"text-slate-400 space-y-2\"> <li>• Edge deployment</li> <li>• Latency optimization</li> <li>• Real-time processing</li> <li>• Distributed computing</li> </ul> </div> </div> \" <div className=\"text-center\">\" <Link href=\"/contact\" className=\"px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4\"> Explore: 5G Solutions </Link>\" <Link href=\"/it-services\" className=\"px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors\"> View All IT Services </Link> </div> </div> </main> </> );\"}
+const Link from "next/link"; import Head from "next/head"; export default function ITFiveGSolutions() { return ( <> <Head> <title>5G Solutions - IT Services - Zion Tech Group</title> <meta name="description" content="5G network solutions and applications for ultra-fast connectivity and IoT implementations." />" <meta name="keywords" content="5G,5G solutions,ultra-fast connectivity,IoT,mobile networks,wireless technology" />" <link rel="canonical" href="https: </Head> " <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">" <div className="max-w-6xl mx-auto px-4 py-16">" <div className="text-center mb-12">" <h1 className="text-4xl md:text-5xl font-bold mb-6">5G Solutions</h1>" <p className="text-xl text-slate-300 max-w-3xl mx-auto"> Harness the power of: 5G for ultra-fast connectivity and IoT applications </p> </div> " <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">" <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-blue-400">5G Network Design</h3>" <p className="text-slate-300 mb-4">Design and implement: 5G network infrastructure</p>" <ul className="text-slate-400 space-y-2"> <li> Network planning</li> <li> Coverage optimization</li> <li> Capacity planning</li> <li> Performance tuning</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-green-400">IoT Applications</h3>" <p className="text-slate-300 mb-4">Develop: 5G-powered IoT solutions</p>" <ul className="text-slate-400 space-y-2"> <li> Smart city solutions</li> <li> Industrial IoT</li> <li> Connected vehicles</li> <li> Remote monitoring</li> </ul> </div> " <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">" <h3 className="text-xl font-bold mb-4 text-purple-400">Edge Computing</h3>" <p className="text-slate-300 mb-4">5G edge computing for low-latency applications</p>" <ul className="text-slate-400 space-y-2"> <li> Edge deployment</li> <li> Latency optimization</li> <li> Real-time processing</li> <li> Distributed computing</li> </ul> </div> </div> " <div className="text-center">" <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mr-4"> Explore: 5G Solutions </Link>" <Link href="/it-services" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"> View All IT Services </Link> </div> </div> </main> </> );"}'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+interface 5gsolutionsProps {
+  // Add props here as needed
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -24,9 +46,12 @@ import * as React from 'react';
 interface 5gsolutionsProps {
   // Add props here as needed
 }
-export default function 5gsolutions({ }: 5gsolutionsProps) {
+<<<<<<< HEAD
 =======
-
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default function 5gsolutions({ }: 5gsolutionsProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -62,13 +87,13 @@ interface 5gsolutionsProps {;
   // Add props here as needed;
 }
 export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.bak/it-services/5g-solutions.tsx
   return (
     <div>;
       <h1>5gsolutions</h1>;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -79,6 +104,24 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
 }
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -89,3 +132,7 @@ export default function 5gsolutions(): any ({ }: 5gsolutionsProps) {;
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 }
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

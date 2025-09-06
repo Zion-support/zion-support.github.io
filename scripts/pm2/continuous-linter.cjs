@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,7 +24,10 @@ class ContinuousLinter {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log(message);
   };
   error(message) {}
@@ -247,7 +253,10 @@ if (require.main === module) {}
   } else if (command === 'fix') {}
     linter.runFullLint().then(success => {})
       process.exit(success ? 0 : 1);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 });
   } else {}
@@ -255,4 +264,8 @@ if (require.main === module) {}
     process.exit(1);
   };
 };
+<<<<<<< HEAD
 
+=======
+module.exports = ContinuousLinter;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

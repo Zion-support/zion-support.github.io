@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -37,4 +43,8 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
+<<<<<<< HEAD
 
+=======
+  console.error(' Security enhancement automation "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

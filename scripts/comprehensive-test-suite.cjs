@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 /**
  * Comprehensive Test Suite;
@@ -7,7 +10,10 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
@@ -49,4 +55,8 @@ const path = require('path')
         "name"
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
+<<<<<<< HEAD
 
+=======
+      this.log(` Test suite "failed"`)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

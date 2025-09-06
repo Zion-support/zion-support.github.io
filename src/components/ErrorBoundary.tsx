@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+=======
+import React, { Component, ReactNode } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 interface Props {
   children: ReactNode;
@@ -6,6 +10,10 @@ interface Props {
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
+=======
+  error?: Error;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 export default class ErrorBoundary extends Component<Props, State> {
@@ -21,9 +29,32 @@ export default class ErrorBoundary extends Component<Props, State> {
     console.error('Uncaught error:', error, errorInfo);
   }
 
+<<<<<<< HEAD
   public render() {
     if (this.state.hasError) {
       return <h1>Sorry, something went wrong.</h1>;
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-8">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+      );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 
     return this.props.children;
@@ -60,6 +91,7 @@ export default class ErrorBoundary extends Component<Props, State> {
 };
 ,
 
+<<<<<<< HEAD
 export { ErrorBoundary };
     return { hasErro: r: true, error }
 ;
@@ -124,3 +156,6 @@ export { ErrorBoundary };
 },;
 ,;
 export { ErrorBoundary };
+=======
+export default ErrorBoundary;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

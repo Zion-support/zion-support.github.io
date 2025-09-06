@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -22,35 +25,6 @@ if (strength = 'strong') {
 }
 else strength = 'very - strong';
 // Generate feedback const feedback: string[] = [];
-
-if (feedback.push ('Password is too short (minimum 8 characters) ')) {
-  $2
-}
-if (feedback.push ('Add uppercase letters')) {
-  $2
-}
-if (feedback.push ('Add lowercase letters')) {
-  $2
-}
-if (feedback.push ('Add numbers')) {
-  $2
-}
-if (feedback.push ('Add special characters')) {
-  $2
-}
-if (feedback.push ('Avoid common patterns and words')) {
-  $2
-}
-if (feedback.push ('Password is too predictable')) {
-  $2
-}
-
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 interface PasswordStrengthResult {
   password: string;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
@@ -58,52 +32,11 @@ interface PasswordStrengthResult {
   feedback: string[];
   details: {
 
-      
-    length: number, hasUppercase: boolean,
-    hasLowercase: boolean, hasNumbers: boolean,
-    hasSymbols: boolean, hasCommonPatterns: boolean,
-    entropy: number
-  
-    },
-    suggestions: string[]
-}
-
-
-    hasCommonPatterns: boolean
     entropy: number
   }
   suggestions: string[]
 }
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
-) {
-
-
-  }
-  try {
-    const { password } = req && req.body;
-
-
-    if (!password || typeof password !== 'string') {
-      return res && res.status(400).json({ error: 'Password is required' });
-
-    }
-    // Password analysis
-
-    const length = password && password.length;
-
-    const hasUppercase = /[A-Z]/.test(password);
-    const hasLowercase = /[a-z]/.test(password);
-    const hasNumbers = /\d/.test(password);
-
-
-    // Calculate score
-    let score = 0;
-
-    score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns    const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) +
-                       (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0);
-
     // Calculate score
     let score = 0;
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
@@ -113,34 +46,9 @@ export default async function handler(
     score += entropy > 50 ? 15 : 0; // High entropy bonus
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns
 
-    // Determine strength level
-    let strength: PasswordStrengthResult['strength'];
-    if (score < 30) strength = 'very-weak';    else if (score < 50) strength = 'weak';    else if (score < 70) strength = 'medium';
-    score += Math.min(length * 2, 20), // Length contribution (max 20)
-    score += hasUppercase ? 10 : 0;
-    score += hasLowercase ? 10 : 0;
-    score += hasNumbers ? 10 : 0;
-    score += hasSymbols ? 15 : 0;
-    score += entropy > 50 ? 15 : 0, // High entropy bonus
-    score -= hasCommonPatterns ? 20 : 0, // Penalty for common patterns
-    // Determine strength level
-    let strength: PasswordStrengthResult['strength'], if (score < 30) strength = 'very-weak',
-    else if (score < 50) strength = 'weak';
-    else if (score < 70) strength = 'medium';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    else if (score < 90) strength = 'strong';
-    else strength = 'very-strong';
-    // Generate feedback
-
-
     // Generate suggestions
     const suggestions: string[] = []
     if (score < 50) {
-
-
-    }
-    const result: PasswordStrengthResult = {
       password
       strength
       score: Math.max(0, Math.min(100, score))
@@ -199,9 +107,6 @@ if ( {) {
     const result: PasswordStrengthResult = {
       password;
       strength;
-
-      score: Math.max (0, Math.min (100, score));
-
       feedback;
       details: {
         length;
@@ -210,6 +115,7 @@ if ( {) {
         has_numbers;
         has_symbols;
         hasCommonPatterns;
+<<<<<<< HEAD
 
         entropy: Math && Math.round(entropy * 100) / 100};
       suggestions};
@@ -235,6 +141,8 @@ if ( {) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -393,6 +301,7 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
+<<<<<<< HEAD
 =======
   }      suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
@@ -434,3 +343,8 @@ export default async function handler(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+}
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

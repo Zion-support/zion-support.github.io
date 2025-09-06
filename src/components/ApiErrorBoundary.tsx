@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react',;
 import { QueryClient } from '@tanstack/react-query',;
 import * as Sentry from '@sentry/nextjs',;
@@ -115,6 +116,62 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       }
 
       return (
+=======
+}
+      return (
+
+      // Reset error state after a brief delay;
+      this.retryTimeoutId = set_timeout ((, ) => {
+        this.set_state ({
+          has_error: false,
+          error: null,
+          error_info: null,
+          is_retrying: false,
+        });
+      }, 500);
+    } catch (retry_error) {
+      logErrorToProduction ('Retry failed:', { data: retry_error });
+      Sentry.capture_exception (retry_error);
+      this.set_state ({ is_retrying: false });
+    }
+  }
+  render () {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check if it's a network - related error;
+      const isNetworkError =;
+        this.state.error?.message?.includes ('fetch') ||;
+        this.state.error?.message?.includes ('network') ||;
+        this.state.error?.message?.includes ('timeout') ||;
+        !this.state.is_online;
+      // Use custom fallback if provided;
+      // Check condition
+if ( {) {
+  $2
+}
+        return this.props.fallback;
+      }
+      return (
+        <div className='flex min - h-screen items - center justify - center p - 4'>;
+          <div className='w - full max - w-md space - y-4'>;
+            <Alert variant='destructive'>;
+              <div className='flex items - center gap - 2'>;
+                {isNetworkError ? (
+                  <WifiOff className='h - 4 w - 4' />) : (
+                  <RefreshCw className='h - 4 w - 4' />)}
+
+                <AlertTitle>;
+                  {isNetworkError;
+                    ? 'Connection Problem';
+                    : 'Something went wrong'}
+                </AlertTitle>;
+              </div>;
+
+              </AlertDescription>;
+            </Alert>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -122,10 +179,16 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+
+
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -141,12 +204,21 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
               </AlertDescription>
             </Alert>
 
+<<<<<<< HEAD
             <div className="flex flex-col gap-2">
               <Button
+=======
+
+            <div className='flex flex-col gap-2'>;
+              <Button
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+
+
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -158,9 +230,14 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     Try Again
                   </>
                 )}
+<<<<<<< HEAD
               </Button>
 
               <Button
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 variant="outline"
                 onClick={() => window.location.reload()}
                 className="w-full"
@@ -181,21 +258,41 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <pre className="mt-2 whitespace-pre-wrap break-all">
+
+
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
+=======
+
+}, ;
+  return { handleApiError };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </div>;
       );
     }
+<<<<<<< HEAD
 ;
     return this.props.children;
   }
 }
 ;
+=======
+
+    return this && this.props.children;
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
@@ -205,5 +302,20 @@ export const useApiErrorHandler = () => {;
       Sentry.captureException(error);
     });
   };
+<<<<<<< HEAD
   return { handleApiError }
+=======
+  return { handleApiError };
+};
+  return { handleApiError }
+
+
+
+
+},
+  return { handleApiError }
+},
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 };

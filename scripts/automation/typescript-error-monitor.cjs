@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -645,4 +648,8 @@ if (require.main === module) {
     console.error('TypeScript error monitor "failed": ', error);
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 
+=======
+module.exports = TypeScriptErrorMonitor
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

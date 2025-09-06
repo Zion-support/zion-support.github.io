@@ -1,8 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import path from 'path';
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
 });
@@ -37,11 +41,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const doc = new PDFDocument({ size: 'A4', margin: 50 })
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // Pipe to response
     // @ts-ignore
     doc && doc.pipe(res);
     // Zion certificate template (simple)
+<<<<<<< HEAD
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
     doc
@@ -55,11 +66,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
     doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+=======
+
+
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc.moveDown(0.5);
+
+
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc.moveDown(1.5);
+doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.moveDown(0.5);
+
+
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     doc.moveDown(0.5);
     doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
+<<<<<<< HEAD
     doc
       .fontSize(12)
       .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
@@ -68,11 +97,42 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
     doc.end();
+=======
+
+    doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
+    doc && doc.fill('#ffffff');
+    doc
+      .fontSize(28)
+      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc && doc.moveDown(1 && 1.5);
+    doc && doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(22).text(user && user.name || user && user.userId, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+    doc && doc.fontSize(20).text(course && course.title, { align: 'center' });
+    doc && doc.moveDown(0 && 0.5);
+
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course && course.certificationBadge}`, { align: 'center' });
+
+
+
+    const date = new Date().toLocaleDateString();
+
+    doc && doc.moveDown(2);
+    doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    doc && doc.end();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   } catch (e: any) {
     res
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ certificate: 'PDF certificate' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -94,6 +154,9 @@ function readJson(p: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 ;
@@ -149,6 +212,7 @@ export default function handler(req, res) {
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
     doc.end()
+<<<<<<< HEAD
   }
 }
 ;
@@ -212,7 +276,18 @@ export default function handler(req, res) {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+=======
+
+  }
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).end ('Method Not Allowed');
@@ -273,6 +348,7 @@ export default function handler(req, res) {
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -284,3 +360,25 @@ export default function handler(req, res) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

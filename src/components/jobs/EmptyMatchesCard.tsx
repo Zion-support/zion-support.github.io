@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -10,6 +11,14 @@ export interface EmptyMatchesCardProps {
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
   return (
+=======
+export function EmptyMatchesCard(): any ({;
+  onRefresh,;
+  isProcessing,;
+}: EmptyMatchesCardProps) {;
+  return (
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
         <Sparkles className="h-12 w-12 text-muted-foreground" />
@@ -25,21 +34,48 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       >
         {isProcessing ? (
           <>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
             Processing...
           </>
         ) : (
           <>
+<<<<<<< HEAD
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
+=======
+
+
+
+}
+
+
+            <Sparkles className="mr-2 h-4 w-4" />
+            Find AI Matches
+          </>
+        )}
+
+      </Button>;
+    </Card>;
+  );
+}
+
+import { Card } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { Sparkles, RefreshCcw } from 'lucide-react';
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
   isProcessing: boolean;
 }
+<<<<<<< HEAD
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
@@ -71,4 +107,6 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
     </Card>;
   );
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

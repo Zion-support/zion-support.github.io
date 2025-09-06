@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+return (
+    <>;
+      <SEO
+        title='Application Status Tracker | Zion AI Marketplace'
+        description='Track the status of your job applications in the Zion AI marketplace.'
+
+  const isMobile = useIsMobile();
+
+
+
+  const isMobile = useIsMobile()
+
+
+import { SEO } from "@/components/SEO",
+import { ApplicationsTracker } from "@/components/jobs/applications",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Briefcase, Inbox } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile(),
+  
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -14,6 +41,11 @@ function ApplicationStatusTrackerContent() {
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
@@ -22,6 +54,12 @@ function ApplicationStatusTrackerContent() {
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         <div className="grid grid-cols-1 gap-6">
           <Card>
@@ -37,6 +75,7 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   )
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -84,3 +123,13 @@ export default function ApplicationStatusTracker() {;
   );
 }
 ;
+=======
+
+  );
+}
+
+
+export default function ApplicationStatusTracker() {
+  return (
+    <ProtectedRoute>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

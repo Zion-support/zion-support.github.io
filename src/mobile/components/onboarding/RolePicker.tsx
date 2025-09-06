@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -50,6 +51,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
         <Card 
           className={`cursor-pointer transition-all ${
+=======
+className={`cursor-pointer transition-all ${
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -66,6 +70,10 @@ export function RolePicker({ onSelect }: RolePickerProps) {
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -134,7 +142,14 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+    </div>);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -18,11 +21,18 @@ const { execSync } = require('child_process')
             type: 'dependency'
             description: vuln.description || 'No description available'
             recommendation: vuln.recommendation || 'Update to latest version'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           this.stats[riskLevel + 'Risk']
       this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, 'WARNING'`)
       this.log(`Dependency scan failed: ${error.message}`, 'ERROR'`)
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
+<<<<<<< HEAD
 
+=======
+        pattern: /secret\s*=\s*['"][^'']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

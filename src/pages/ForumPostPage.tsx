@@ -1,4 +1,9 @@
+export default function ForumPostPage() {
+  // Using `useParams` without type arguments avoids issues when TypeScript
+  // can't determine the generic type for the helper from React Router.
+  // Cast the result instead to provide the expected shape.
 
+<<<<<<< HEAD
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -35,6 +40,8 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Mock data for replies
 const mockReplies: ForumReply[] = [
@@ -99,8 +106,170 @@ export default function ForumPostPage() {
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
   
+<<<<<<< HEAD
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
+      return;
+
+  const router = useRouter(),
+  const postId = router.query.postId as string,
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [post, setPost] = useState(mockPost),
+  const [replies, setReplies] = useState(mockReplies),
+  
+  // Check if this is the user's own post
+  const isAuthor = user?.id === post?.authorId,
+  
+  // Check if user is admin/mod
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
+  
+  // For this demo, we'll assume the post is found
+  if (!post) {
+    return (
+      <div className="container py-8">
+        <h1>Post not found</h1>
+        <Button asChild className="mt-4">
+          <Link href="/community">Back to Community</Link>
+        </Button>
+      </div>
+    )
+  }
+
+  const handleUpvote = () => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
+      const returnTo = encodeURIComponent(router.asPath),
+      router.push(`/auth/login?returnTo=${returnTo}`),
+      return
+    }
+    
+    setPost({ ...post, upvotes: post.upvotes + 1 }),
+    toast({
+      title: "Vote recorded",
+      description: "You upvoted this post"})
+  },
+
+  const handleDownvote = () => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
+      const returnTo = encodeURIComponent(router.asPath),
+      router.push(`/auth/login?returnTo=${returnTo}`),
+      return
+    }
+    
+    setPost({ ...post, downvotes: post.downvotes + 1 }),
+    toast({
+      title: "Vote recorded",
+      description: "You downvoted this post"})
+  },
+
+  const handleSubmitReply = async (content: string) => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to reply"}),
+      const returnTo = encodeURIComponent(router.asPath),
+      router.push(`/auth/login?returnTo=${returnTo}`),
+      return
+    }
+    
+    // Create a new reply
+    const newReply: ForumReply = {
+      id: `reply${Date.now()}`,
+      postId: post.id,
+      content,
+      authorId: user.id || 'unknown',
+      authorName: user.displayName || 'Anonymous',
+      authorAvatar: user.avatarUrl,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      upvotes: 0,
+      downvotes: 0
+    },
+    
+    setReplies([...replies, newReply]),
+    setPost({ ...post, replyCount: post.replyCount + 1 }),
+    
+    toast({
+      title: "Reply posted",
+      description: "Your reply has been added to the discussion"})
+  },
+
+  const handleMarkAsAnswer = (replyId: string) => {
+    // Only post author or admin can mark an answer
+    if (!isAuthor && !isAdminOrMod) {
+      toast({
+        title: "Permission denied",
+        description: "Only the original poster or moderators can mark answers",
+        variant: "destructive"
+      }),
+      return
+    }
+    
+    // Update the replies
+    const updatedReplies = replies.map(reply => ({
+      ...reply,
+      isAnswer: reply.id === replyId
+    })),
+    
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
+    
+    toast({
+      title: "Answer marked",
+      description: "The reply has been marked as the accepted answer"})
+  },
+
+  const handleReportPost = () => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to report content"}),
+      const returnTo = encodeURIComponent(router.asPath),
+      router.push(`/auth/login?returnTo=${returnTo}`),
+      return
+    }
+    
+    toast({
+      title: "Report submitted",
+      description: "A moderator will review this content"})
+  },
+
+  const handlePinPost = () => {
+
+
+    setPost({ ...post, isPinned: !post.isPinned }),
+    
+    toast({
+      title: post.isPinned ? "Post unpinned" : "Post pinned",
+      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
+  },
+
+  const handleLockPost = () => {
+
+
+    setPost({ ...post, isLocked: !post.isLocked }),
+    
+    toast({
+      title: post.isLocked ? "Post unlocked" : "Post locked",
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
+  },
+  
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
@@ -657,4 +826,99 @@ export default function ForumPostPage() {;
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+  );
+}
+
+
+  )
+}
+
+    id: "reply1",
+    post_id: "1",
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+    author_id: "user2",
+    author_name: "Sarah Chen",
+    author_avatar: "https://i.pravatar.cc / 150?img = 5",
+    created_at: "2025 - 04 - 01T14:30:00Z",
+    updated_at: "2025 - 04 - 01T14:30:00Z",
+    upvotes: 12,
+    downvotes: 0;
+  }
+  {
+    id: "reply2",
+    post_id: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine - tuning? I've found them to be much more resource - friendly while maintaining good performance.",
+    author_id: "user3",
+    author_name: "Michael Wong",
+    author_role: "AI Engineer",
+    created_at: "2025 - 04 - 01T16:15:00Z",
+    updated_at: "2025 - 04 - 01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0;
+  }
+  {
+    id: "reply3",
+    post_id: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine - tuning process.\n\n_also, when fine - tuning language models, I've found that carefully crafting your prompts / templates for training can make a huge difference in the quality of the outputs.";
+    author_id: "user4",
+    author_name: "Emma Davis",
+    author_role: "ML Research Lead",
+    created_at: "2025 - 04 - 02T09:45:00Z",
+    updated_at: "2025 - 04 - 02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    is_answer: true;
+  }
+  {
+    id: "reply4",
+    post_id: "1",
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
+    author_id: "user5",
+    author_name: "David Lin",
+    created_at: "2025 - 04 - 02T11:20:00Z",
+    updated_at: "2025 - 04 - 02T11:20:00Z",
+    upvotes: 4,
+    downvotes: 0;
+  }
+];
+export default /**
+ * ForumPostPage - Function description
+ */
+function ForumPostPage() {
+  // Using `use_params` without type arguments avoids issues when TypeScript;
+  // can't determine the generic type for the helper from React Router.;
+  // Cast the result instead to provide the expected shape.;
+  const router = use_router ();
+  const post_id = router.query.post_id as string;
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [post, set_post] = useState (mock_post);
+  const [replies, set_replies] = useState (mock_replies);
+  // Check if this is the user's own post;
+  const is_author = user?.id === post?.author_id;
+  // Check if user is admin / mod;
+  const isAdminOrMod = user?.user_type === 'admin' || user?.role === 'admin';
+      return;
+    }
+  const handlePinPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_pinned: !post.is_pinned }),
+  const handleLockPost = () =>: any {
+    // Check condition
+if (return) {
+  $2
+}
+    set_post ({ ...post, is_locked: !post.is_locked }),
+  const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
+  const formatted_date = format (new Date (post.created_at), "MMMM d, yyyy 'at' h: mm a"),
+}
+  );
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;

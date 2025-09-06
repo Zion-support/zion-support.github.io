@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
@@ -58,4 +61,8 @@ console.log(' Starting enhanced error detection and fixing automation...')
     execSync('npm install --force', { "stdio"})
     return { "type": 'peer-dependency', "action"}
     return { "type": 'peer-dependency', "action"}
+<<<<<<< HEAD
 
+=======
+    console.error(' Enhanced error detection "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

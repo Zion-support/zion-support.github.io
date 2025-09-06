@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +26,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
@@ -31,6 +36,9 @@ import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Eye
   Ear
   Hand
@@ -43,13 +51,40 @@ import {
   Zap
   FileText
   Settings
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
+=======
+import Link from 'next / link';
+import MainLayout from '../components / layout / MainLayout';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   AlertTriangle,
   Globe,
   Users,
@@ -59,9 +94,15 @@ import {
   Settings;
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
 const accessibility_features = [;
   {
@@ -130,7 +171,11 @@ const accessibilityFeatures = [;
     ];
   }
 ];
+<<<<<<< HEAD
 
+
+
+=======
 const standardsCompliance = [;
   {;
     standard: "WCAG 2 && 2.1 AA",;
@@ -161,7 +206,6 @@ const standardsCompliance = [;
     icon: Globe;
   }
 ];
-
 const accessibilityTools = [;
   {;
     name: "Screen Reader Testing",;
@@ -184,7 +228,6 @@ const accessibilityTools = [;
     frequency: "Quarterly";
   }
 ];
-
 const accessibilityGuidelines = [;
   {;
     category: "Content",;
@@ -228,11 +271,29 @@ const accessibilityGuidelines = [;
 
   }
 ];
+<<<<<<< HEAD
 
 
 
+=======
 
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AccessibilityPage() {
+=======
 interface AccessibilityProps {
   className?: string;
 }
@@ -240,6 +301,7 @@ interface AccessibilityProps {
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
               transition={{ duration: 0.8 }}
@@ -256,24 +318,91 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  return (
+    <MainLayout
+      title="Accessibility - Zion Tech Group"
+      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2 && 2.1, Section 508, and ADA standards.">;
+      <div className="min-h-screen bg-gray-50">;
+        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center max-w-4xl mx-auto">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
+                  Web Accessibility;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">;
+                Ensuring digital inclusion for everyone;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        <section className="py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Web Accessibility
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Ensuring digital inclusion for everyone
+              </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -422,6 +551,8 @@ origin/automation-improvements-final
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -432,11 +563,11 @@ origin/automation-improvements-final
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -456,6 +587,8 @@ origin/automation-improvements-final
                   </ul>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+=======
 
             </div>
           </div>
@@ -467,9 +600,9 @@ origin/automation-improvements-final
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </MainLayout>
-=======
             </div>;
           </div>;
         </section>;
@@ -508,6 +641,7 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
       </div>
     </MainLayout>;
@@ -515,9 +649,34 @@ origin/automation-improvements-final
 };
 
 export default Accessibility;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
+                Have Questions About Accessibility?;
+              </h2>;
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">;
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a href="mailto:accessibility@ziontechgroup && ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">;
+                  Contact Accessibility Team;
+                </a>;
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">;
+                  General Contact;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-=======
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -936,5 +1095,180 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+=======
+=======
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      </div>
+    </MainLayout>;
+  );
+};
+
+export default Accessibility;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  Eye,
+  Ear,
+  MousePointer,
+  Keyboard,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Users,
+  Globe,
+  Heart,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
+
+const accessibilityFeatures = [
+  {
+    icon: Eye,
+    title: 'Visual Accessibility',
+    description: 'High contrast modes, screen reader compatibility, and customizable text sizes.',
+    features: ['Screen reader support', 'High contrast themes', 'Text scaling', 'Color blind friendly']
+  },
+  {
+    icon: Ear,
+    title: 'Audio Accessibility',
+    description: 'Audio descriptions, captions, and alternative audio formats for all content.',
+    features: ['Audio descriptions', 'Closed captions', 'Transcripts', 'Volume controls']
+  },
+  {
+    icon: MousePointer,
+    title: 'Motor Accessibility',
+    description: 'Keyboard navigation, voice control, and assistive technology support.',
+    features: ['Keyboard navigation', 'Voice control', 'Switch control', 'Gesture alternatives']
+  },
+  {
+    icon: Shield,
+    title: 'Security & Privacy',
+    description: 'Secure accessibility features that protect user data and privacy.',
+    features: ['Data encryption', 'Privacy controls', 'Secure authentication', 'GDPR compliance']
+  }
+];
+
+export default function AccessibilityPage() {
+  return (
+    <MainLayout
+      title="Accessibility - Zion Tech Group"
+      description="Committed to making technology accessible to everyone. Learn about our accessibility features and compliance."
+      keywords="accessibility, inclusive design, WCAG, screen reader, assistive technology"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Accessibility
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We believe technology should be accessible to everyone. Our solutions are designed 
+              with inclusivity at their core, ensuring equal access for all users.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {accessibilityFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.features.map((item, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Committed to Inclusive Technology
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us to learn more about our accessibility features and how we can help make your technology more inclusive.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

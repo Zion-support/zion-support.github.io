@@ -1,4 +1,12 @@
 import { ApiDocsSpec } from './types';
+<<<<<<< HEAD
+  ]
+}
+export default v1;
+
+  ];
+
+=======
 
 const baseUrl = 'https://api.zion.os';
 
@@ -52,8 +60,44 @@ const v1: ApiDocsSpec = {
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
 
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+=======
+
+
+const baseUrl = 'https://api.zion.os';
+
+
+const baseUrl = 'https://api.zion.os';
+const v1: ApiDocsSpec = {
+
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       ];
     }
@@ -63,16 +107,37 @@ const v1: ApiDocsSpec = {
             { language: 'python', code: `import requests\nrequests ;
 
 
+<<<<<<< HEAD
+
+  ];
+
+  }
+=======
 =======
 =======
 
   ];
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+};
+export default v1;
+  ];
+}
+;
+export default v1;
+;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

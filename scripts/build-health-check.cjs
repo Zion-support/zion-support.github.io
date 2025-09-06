@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("fs").promises;
 const path = require("$1");
@@ -16,7 +19,10 @@ class BuildHealthCheck {;}
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       console.log(logEntry.trim()),} catch (error) {;}
       console.error("Failed to write to log "file": ", error),};
   };
@@ -67,7 +73,10 @@ class BuildHealthCheck {;}
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`;`
     try {;}
       await fs.appendFile(this.logFile, logEntry);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       console.log(logEntry.trim())} catch (error) {;}
       console.error("Failed to write to log ""file": ", error)}"};
 ;
@@ -212,4 +221,8 @@ if (require.main === module) {;}
   process.on("SIGINT", () => {;}
     checker.log("Build health checker shutting down", "INFO');
     process.exit(0),}),};
+<<<<<<< HEAD
 
+=======
+module.exports = BuildHealthCheck;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

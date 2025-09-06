@@ -115,10 +115,19 @@ automation/data/*.json
 !automation/data/autonomous-config.json
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+<<<<<<< HEAD
 # Test results
 test-results/
 coverage/
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 # Generated reports
 automation-reports/
 health-check-report-*.json
@@ -174,4 +183,14 @@ backups/
 health-check-report.json
 performance-metrics.json
 security-scan-report.json
+<<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+<<<<<<< HEAD
+
+core
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -16,6 +17,9 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 =======
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import {
@@ -29,6 +33,7 @@ import {
   FileText,
   Lock,
   Database,
+<<<<<<< HEAD
   Phone,;
   Mail;
 } from 'lucide-react';
@@ -41,6 +46,11 @@ const services = [;
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',
 =======
 =======
+=======
+  Phone,
+  Mail;
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -55,6 +65,7 @@ const services = [
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Secure Data Management,',;
     description: 'Government-grade data security and management systems for sensitive information.,',;
@@ -64,10 +75,20 @@ const services = [
       'Access control systems',',;
       'Audit trail management',',;
 
+=======
+    title: 'Secure Data Management,',
+    description: 'Government-grade data security and management systems for sensitive information.,',
+    icon: Shield,
+    features: [;
+      'Encrypted data storage,',
+      'Access control systems',',
+      'Audit trail management',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Compliance monitoring'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Digital Identity Solutions,',;
     description: 'Secure digital identity verification and management systems for citizens.,',;
@@ -77,10 +98,20 @@ const services = [
       'Digital ID cards',',;
       'Identity verification',',;
 
+=======
+    title: 'Digital Identity Solutions,',
+    description: 'Secure digital identity verification and management systems for citizens.,',
+    icon: Users,
+    features: [;
+      'Biometric authentication,',
+      'Digital ID cards',',
+      'Identity verification',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Fraud prevention'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Public Safety Systems,',;
     description: 'Advanced systems for emergency response and public safety management.,',;
@@ -90,10 +121,20 @@ const services = [
       'Real-time monitoring',',;
       'Incident management',',;
 
+=======
+    title: 'Public Safety Systems,',
+    description: 'Advanced systems for emergency response and public safety management.,',
+    icon: Phone,
+    features: [;
+      'Emergency dispatch systems,',
+      'Real-time monitoring',',
+      'Incident management',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Resource coordination'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Government Analytics,',;
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',;
@@ -103,10 +144,20 @@ const services = [
       'Trend analysis',',;
       'Predictive modeling',',;
 
+=======
+    title: 'Government Analytics,',
+    description: 'Data analytics platforms for informed policy-making and resource allocation.,',
+    icon: BarChart3,
+    features: [;
+      'Performance metrics,',
+      'Trend analysis',',
+      'Predictive modeling',',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Resource optimization'';
     ];
   },
   {}
+<<<<<<< HEAD
 
     title: 'Compliance Management,',;
     description: 'Automated systems for regulatory compliance and policy enforcement.,',;
@@ -129,6 +180,18 @@ const benefits = [;
     icon: Shield;
 =======
 =======
+=======
+    title: 'Compliance Management,',
+    description: 'Automated systems for regulatory compliance and policy enforcement.,',
+    icon: FileText,
+    features: [;
+      'Regulatory tracking,',
+      'Compliance reporting',',
+      'Policy management',',
+      'Audit automation'';
+    ];
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 const benefits = [
   {
@@ -137,6 +200,7 @@ const benefits = [
     icon: Shield
   },
   {}
+<<<<<<< HEAD
 
     title: 'Improved Efficiency,',;
     description: 'Digital processes streamline government operations and reduce administrative burden.,',;
@@ -208,6 +272,29 @@ export default function GovernmentPage() {
 ];
 export default function GovernmentPage() {
 
+=======
+    title: 'Improved Efficiency,',
+    description: 'Digital processes streamline government operations and reduce administrative burden.,',
+    icon: BarChart3;
+  },
+  {}
+    title: 'Better Citizen Experience,',
+    description: 'User-friendly digital services make government more accessible to citizens.,',
+    icon: Users;
+  },
+  {}
+    title: 'Transparency & Accountability,',
+    description: 'Digital systems provide transparency and enable better accountability.,',
+    icon: Globe;
+  }
+];
+export default function GovernmentPage() {
+  return (
+    <Layout
+      title="Government Technology Solutions - Zion Tech Group"
+      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."
+      keywords="government technology, citizen services, digital government, public safety, government security, civic tech"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -257,6 +344,7 @@ export default function GovernmentPage() {
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -272,6 +360,8 @@ export default function GovernmentPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -291,6 +381,7 @@ export default function GovernmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -304,6 +395,8 @@ export default function GovernmentPage() {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
@@ -323,11 +416,14 @@ export default function GovernmentPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -338,6 +434,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16""
@@ -355,6 +452,8 @@ export default function GovernmentPage() {
                 <motion.div}),
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -383,11 +482,14 @@ export default function GovernmentPage() {
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </section>
@@ -398,6 +500,7 @@ export default function GovernmentPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
@@ -423,6 +526,8 @@ export default function GovernmentPage() {
     </Layout>;
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Government?
@@ -445,3 +550,7 @@ export default function GovernmentPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

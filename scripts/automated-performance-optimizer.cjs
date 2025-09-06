@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -61,7 +67,10 @@ const { execSync } = require("child_process")
     this.log(" Starting Performance Optimizer")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     this.log(` Performance optimization report "generated"`)
 // console.log("\n� Performance Analysis "Summary": ")
     console.log(`�  Total "images"`)
@@ -69,4 +78,8 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
+<<<<<<< HEAD
 
+=======
+      console.log("\n� High Priority "Optimizations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

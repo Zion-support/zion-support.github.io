@@ -12,6 +12,13 @@ export default function ServicesAdvertisingPage() {
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/services-advertising.tsx.backup.1755992106.backup.1756001157
+				{/* Original sections */}
+				<section className="space-y-6">
+========
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 				{/* Quick contact */}
 				<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
 					<a href="tel:+13024640950" className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a>
@@ -106,6 +113,10 @@ export default function ServicesAdvertisingPage() {
 				</section>
 
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
+<<<<<<< HEAD
+=======
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services-advertising.tsx.backup.1755991656
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -178,7 +189,15 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">WHOIS, nameserver, and DNS record drift detection with alerts.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $5–$40/mo</li>
+<<<<<<< HEAD
 						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/ssl-tools/ssl-checker/')}</li>
+=======
+<<<<<<< HEAD
+						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/ssl-tools/ssl-checker/')}</li>
+=======
+						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.digicert.com/kb/ssl-checker/sslchecker-intro')}</li>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-b32e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					</ul>
 				</section>
 
@@ -478,7 +497,15 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Freshness SLAs, schema drift detection, and anomaly alerts for your warehouse and lakes.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$500/mo</li>
+<<<<<<< HEAD
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
+=======
+<<<<<<< HEAD
+						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
+=======
+						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://docs.bigeye.com/docs/pricing')}, {ext('https://soda.io/')}</li>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-b32e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 					</ul>
 				</section>
 

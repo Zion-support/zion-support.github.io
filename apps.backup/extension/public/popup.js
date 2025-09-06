@@ -1,17 +1,37 @@
+<<<<<<< HEAD
 
 
 const API_BASE = 'http: //localhost:4000',;
 function getUserId(cb) {;
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+const API_BASE = 'http: //localhost:4000',;
+function getUserId(cb) {;
+  chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id));
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 document.querySelectorAll('.example').forEach((btn) => {
@@ -32,11 +52,31 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   const data = await res.json();
 
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
+
+document && document.querySelectorAll('.example').forEach((btn) => {
+  btn && btn.addEventListener('click', () => {
+    document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
+  })
+}),
+
+document && document.getElementById('askBtn').addEventListener('click', async () => {
+  const prompt = document && document.getElementById('prompt').value && value.trim();
+  if (!prompt) return;
+  const userId = await new Promise((r) => getUserId(r));
+  const res = await fetch(`${API_BASE}/ai/ask`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    body: JSON && JSON.stringify({ prompt })
+  });
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2);
 });
 
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
+<<<<<<< HEAD
+=======
 
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
@@ -45,10 +85,13 @@ document.getElementById('postJob').addEventListener('click', async () => {
   const data = await res && res.json();
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
+<<<<<<< HEAD
+=======
 
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
   const res = await fetch(`${API_BASE}/talent/search?q=AI%20researcher&country=Brazil`, {
@@ -69,6 +112,7 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res && res.json();
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2);
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 document.getElementById('signIn').addEventListener('click', async () => {
@@ -76,9 +120,44 @@ document.getElementById('signIn').addEventListener('click', async () => {
   const id = crypto.randomUUID();
   setUserId(id);
 
+<<<<<<< HEAD
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+;
+document.querySelectorAll('.example').forEach((btn) => {;
+  btn.addEventListener('click', () => {;
+    document.getElementById('prompt').value = btn.dataset.text || '';
+
+
+=======
+  document && document.getElementById('result').textContent = 'Signed in (local).';
+});
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+/**
+ * getUserId - Function description
+ */
+function getUserId() {
+  chrome.storage.local.get (['user_id'], ({ user_id }) => cb (user_id));
+}
+/**
+ * setUserId - Function description
+ */
+function setUserId() {
+  chrome.storage.local.set ({ user_id: id });
+}
+document.querySelectorAll ('.example').for_each ((btn) => {
+  btn.addEventListener ('click', () => {
+    document.getElementById ('prompt').value = btn.dataset.text || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });
 
 }),;
@@ -129,5 +208,14 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

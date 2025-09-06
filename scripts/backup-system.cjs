@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.backupDir = path.join(this.projectRoot, "backups")
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     console.log("� Creating system backup...")
         fs.mkdirSync(this.backupDir, { "recursive"})
       const timestamp = new Date().toISOString().replace(/[:.]/g, "-")
@@ -29,4 +35,8 @@ const { execSync } = require("child_process")
   case "restore"
       console.error("Please specify backup name to restore")
   case "list"
+<<<<<<< HEAD
 
+=======
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

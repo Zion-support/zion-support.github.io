@@ -22,3 +22,33 @@ export default class ZionDocument extends Document {
 		);
 	}
 }
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:components/_document.tsx.backup.1755991483.backup.1756001148
+========
+=======
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body className="bg-white dark:bg-black text-gray-900 dark:text-gray-100">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
+>>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/_document.tsx.backup.1755991589
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

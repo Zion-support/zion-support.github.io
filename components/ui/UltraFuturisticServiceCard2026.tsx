@@ -1,6 +1,5 @@
-
-
 import React from 'react';
+<<<<<<< HEAD
 
 =======
 import {motion} from 'framer-motion';
@@ -13,25 +12,19 @@ interface Service {;
   description: string,;
   price?: string | {;
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     monthly?: number;
     yearly?: number;
     currency?: string;
-
-    setupTime?: string;
-  };
-    trial_days?: number;
-    setup_time?: string;
-  }
-
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
-
-  marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
+<<<<<<< HEAD
   integration?: string[],
   benefits?: string[]
 }
@@ -46,17 +39,26 @@ interface ServiceCardProps {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+    switch (variant) {
+      case 'ai':;
+        return {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
     }
   }
   const styles = getVariantStyles();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
+<<<<<<< HEAD
 
         {/* Popular Badge */}
         {service.popular && (
@@ -112,6 +114,11 @@ interface ServiceCardProps {
         </div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      className="group relative">;
+      <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
+        {/* Enhanced Background Glow */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -123,7 +130,6 @@ interface ServiceCardProps {
             Popular;
           </motion && motion.div>;
         )}
-
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
           text_color: 'text - purple - 400',
@@ -235,49 +241,31 @@ interface ServiceCardProps {
     >;
       <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
         {/* Enhanced Background Glow */}
+<<<<<<< HEAD
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
         
+=======
+        <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+<<<<<<< HEAD
             className="absolute -top - 3 left - 6 px - 4 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full shadow - lg";
           >;
             <Star className="w - 4 h - 4 inline mr - 1" />;
             Popular;
           </motion.div>)}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
-
-
-        {/* Service Header */}
-        <div className="text-center mb-8 relative z-10">;
-          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles && styles.iconBg} flex items-center justify-center border ${styles && styles.iconBorder} text-4xl backdrop-blur-sm`}>;
-            {service && service.icon}
-          </div>;
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">;
-            {service && service.name}
-          </h3>;
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-            {service && service.tagline}
-          </p>;
-          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">;
-            {service && service.price}
-            <span className="text-lg text-gray-400 font-normal">/{service && service.period}</span>;
-          </div>;
-          {/* Category Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">;
-            <CategoryIcon className="w-3 h-3" />;
-            <span>{service && service.category}</span>;
-          </div>;
-        </div>;
-
-
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">;
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">;
@@ -295,6 +283,7 @@ interface ServiceCardProps {
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
         </div>
         
 =======
@@ -302,6 +291,8 @@ interface ServiceCardProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -317,6 +308,7 @@ interface ServiceCardProps {
             )}
           </div>
         )}
+<<<<<<< HEAD
 
         {/* Target Market & Use Cases */}
         {service.targetMarket && (
@@ -354,6 +346,8 @@ interface ServiceCardProps {
           </div>
         )}
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -371,12 +365,25 @@ interface ServiceCardProps {
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
         
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+        {/* CTA Button */}
+        <div className="relative z-10">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+          >
+            Get Started
+          </motion.button>
+        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -386,6 +393,10 @@ interface ServiceCardProps {
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Button */}
         <div className="relative z-10">;
           <motion&& motion.button
@@ -407,7 +418,15 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 
 
+<<<<<<< HEAD
 =======
+=======
+export default UltraFuturisticServiceCard2026;
+export default UltraFuturisticServiceCard2026;
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -503,6 +522,9 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

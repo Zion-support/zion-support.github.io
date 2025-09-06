@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -53,4 +56,8 @@ const { execSync, spawn } = require("child_process")
     this.log("Continuous mode started. Press Ctrl+C to stop.", "info")
   if (args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
+<<<<<<< HEAD
 
+=======
+    automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

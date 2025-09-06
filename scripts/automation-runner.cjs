@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 'use strict';
 const { execSync, spawnSync } = require('"node": child_process');
@@ -29,4 +32,11 @@ function main() {}
 	run('node scripts/seo-optimizer.cjs || true');
 	if (!ok) {}
 		console.error('\nAutomation runner encountered failures. See logs above.');
+<<<<<<< HEAD
+=======
+		process.exitCode = 1} else {}
+		console.log('\nAutomation runner completed successfully.')};
+};
+main();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 

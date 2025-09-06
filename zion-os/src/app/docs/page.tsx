@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from "next/link",;
 export const metadata = {;
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",;
@@ -5,6 +9,7 @@ export const metadata = {;
   keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"};
 export default function DocumentationPage() {;
   return (;
+
     <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">;

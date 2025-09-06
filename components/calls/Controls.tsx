@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,22 +22,25 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 type Props = {
+=======
+type Props = {;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   room: Room | null;
   onLeave: () => void;
-  accent?: 'blue' | 'cyan';};type Props = {
-  room: Room | null
-  onLeave: () => void
-  accent?: 'blue' | 'cyan'
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+<<<<<<< HEAD
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
+<<<<<<< HEAD
     const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
@@ -64,10 +68,35 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
 
   return (
   };
+=======
+  accent?: 'blue' | 'cyan';};type Props = {;
+  room: Room | null,;
+  onLeave: () => void,;
+  accent?: 'blue' | 'cyan';
+
+export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Props) {;
+  const [micEnabled, setMicEnabled] = React && React.useState(true);
+  const [camEnabled, setCamEnabled] = React && React.useState(true);
+  const [sharing, setSharing] = React && React.useState(false);
+
+  const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
+
+  const toggleMic = async () => {;
+    if (!room) return;
+    const enabled =;
+      await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const toggleCam = async () => {;
     if (!room) return;
+    const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
 
-
+  const toggleScreenShare = async () => {;
     if (!room) return;
     try {;
       const enabled =;
@@ -81,8 +110,11 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+<<<<<<< HEAD
   }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -112,6 +144,20 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
 );
 }
 
+<<<<<<< HEAD
+=======
+    }
+
+  };
+
+  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {;
+      console && console.warn('Screen share failed', e);
+  };
+
+  return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -203,18 +249,10 @@ if (return) {
         Leave;
       </button>;
     </div>);
-      </button>
-      <button onClick={_toggleCam} className={_`px-4 py-2 rounded ${accentClass} text-white`}>
-        {_camEnabled ? 'Stop Video' : 'Start Video'}
-      </button>
-      <button onClick={toggleScreenShare} className=&quot;px-4 py-2 rounded bg-gray-700 text-white&quot;>
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>
-      <button onClick={onLeave} className=&quot;px-4 py-2 rounded bg-red-600 text-white&quot;>Leave</button>
-    </div>
-  )
-
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

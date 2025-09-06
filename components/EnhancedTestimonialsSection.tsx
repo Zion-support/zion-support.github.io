@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Star,
   Quote,
   Users,
   Award,
+<<<<<<< HEAD
 
 =======
   TrendingUp,;
@@ -14,7 +26,10 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
+
 interface Testimonial {;
   id: string;
   name: string;
@@ -23,10 +38,6 @@ interface Testimonial {;
   content: string;
   rating: number;
   avatar: string;
-
-import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
-
-
   category: string;  id: string
   name: string
   title: string
@@ -42,52 +53,15 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
   content: string,
   rating: number,
   avatar: string,
-category: string;
-}
-
-
-const EnhancedTestimonialsSection: React.FC = () => {
-  const testimonials: Testimonial[] = [;
-
-const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testimonial[] = [
-
-    {
-      id: '1',
-      name: 'Dr. Sarah Chen',
-      title: 'CTO',
-      company: 'Quantum Dynamics Inc.',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         key={i}
         className={`w - 4 h - 4 ${
           i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}
-
-
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
   return (
     <section className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
-
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
-      </div>;
-      <div className="max-w-7xl mx-auto relative z-10">;
-        {/* Header */}
-        <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
-              What Our Clients Say;
-            </span>;
-          </h2>;
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">;
-            Discover why leading companies trust Zion Tech Group to transform their business with cutting-edge technology solutions;
-          </p>;
-        </div>;
-
-
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>;
           {stats && stats.map((stat, index) => (;
@@ -106,6 +80,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               <div className="text-3xl font-bold text-white mb-2">{stat && stat.number}</div>;
               <p className="text-blue-300 font-medium">{stat && stat.label}</p>;
             </div>;
+<<<<<<< HEAD
           ))}
         </div>;
         {/* Testimonials Grid */}
@@ -171,6 +146,22 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 <div className='flex items-center gap-4'>
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                    {testimonial.avatar}
+                  </div>;
+                  <div className='flex - 1'>;
+                    <div className='font - semibold text - white'>;
+                      {testimonial.name}
+                    </div>;
+                    <div className='text - sm text - white / 70'>;
+                      {testimonial.title}
+                    </div>;
+                    <div className='text - xs text - blue - 400'>;
+                      {testimonial.company}
+                  "{testimonial.content}"
+                </p>
+                {/* Author Info */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -186,6 +177,12 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
+<<<<<<< HEAD
+=======
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {testimonials.map(testimonial => (
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -202,22 +199,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
-                {/* Author Info */}            <div
-              key={testimonial.id}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              {/* Quote Icon */}
-              <div className="absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300">
-                <Quote className="w-8 h-8" />
-              </div>
-              {/* Content */}
-              <div className="p-8">
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {renderStars(testimonial.rating)}
-                </div>
-                {/* Testimonial Text */}
-                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
 
                 {/* Author Info */}
 
@@ -226,10 +207,13 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 {/* Testimonial Text */}
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -263,6 +247,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                     {testimonial.category}
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
@@ -271,6 +256,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 <div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
+=======
+                  </span>
+                </div>
+              </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">;
                   "{testimonial && testimonial.content}";
@@ -307,10 +297,6 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 </div>;
               </div>;
               {/* Hover Effect */}
-
-        </div>;
-
-
         {/* CTA Section */}
         <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -323,15 +309,25 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               innovation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+          ))}
+        </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -340,8 +336,8 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               innovation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
+<<<<<<< HEAD
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'              >
                 Start Your Success Story
@@ -360,21 +356,18 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
 
+=======
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion'
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
+                Start Your Success Story;
+              </a>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Experience the same transformative results that our clients have achieved.
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>              Ready to Join Our Success Stories?;
-            </h3>;
-            <p className="text-white/70 mb-6 max-w-2xl mx-auto">;
-              Experience the same transformative results that our clients have achieved. ;
-              Let's discuss how Zion Tech Group can accelerate your innovation journey.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-
               <a
                 href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">;
@@ -383,6 +376,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               <a
                 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
+<<<<<<< HEAD
 
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion"
@@ -395,6 +389,8 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 href="tel:+13024640950"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
                 Schedule a Call
@@ -402,6 +398,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
             </div>
             <div className="flex items-center gap-2">
@@ -419,26 +416,34 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 export default EnhancedTestimonialsSection;  )
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default EnhancedTestimonialsSection;
-
-
 =======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default EnhancedTestimonialsSection;
     </section>);
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default EnhancedTestimonialsSection;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+=======
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-}
-};
-
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 
 export default EnhancedTestimonialsSection;
+<<<<<<< HEAD
 export default EnhancedTestimonialsSection;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

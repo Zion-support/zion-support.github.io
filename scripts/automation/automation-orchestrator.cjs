@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const pm2 = require("pm2")
 const fs = require("fs")
@@ -147,4 +150,8 @@ const path = require("path")
   console.error(" Failed to save "report": ")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
+<<<<<<< HEAD
 
+=======
+  console.error(" Orchestrator "error")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

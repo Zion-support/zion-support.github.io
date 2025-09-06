@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
@@ -16,4 +22,8 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
+<<<<<<< HEAD
 
+=======
+  console.log('\n "Recommendations")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

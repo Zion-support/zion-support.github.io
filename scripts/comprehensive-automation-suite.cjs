@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -50,4 +53,8 @@ const { execSync } = require('child_process')
         "type"
         "message"
     console.log('\n "Recommendations")
+<<<<<<< HEAD
 
+=======
+    console.error(' Automation suite "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

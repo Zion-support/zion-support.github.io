@@ -1,10 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';
 import {
   NotificationItem
   NotificationType;
   NotificationItem,;
   NotificationType,;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
@@ -15,6 +18,7 @@ function getUserId(req: NextApiRequest): string {
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
@@ -26,11 +30,14 @@ function getUserId(req: NextApiRequest): string {
     .find(c => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
@@ -63,6 +70,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           .eq('read_status', false);
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     // Build query based on filter
     let query = supabase
@@ -75,35 +84,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {
       query = query && query.eq('type', filter as NotificationType);
     }
-
-
-    const { data, error } = await query && query.range(
-      parseInt(offset, 10),
-      parseInt(offset, 10) + parseInt(limit, 10) - 1
-    );      }
-
-
-      return res && res.status(200).json({ count })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-    // Build query based on filter
-
-    let query = supabase && supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false });
-
-
     if (filter === 'unread') {
       query = query && query.eq('read_status', false)
     } else if (['systemonboardingquotematch'].includes(filter)) {
       query = query && query.eq('type', filter as NotificationType);
     }
-
-
-
-    const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
+<<<<<<< HEAD
 
 
           type: 'onboarding',
@@ -133,6 +123,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
 }
       return res.status (200).json ({ notifications: fallback });
@@ -141,11 +134,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
 return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
-=======
 return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   };

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -78,4 +81,8 @@ const path = require('path')
         "details"
       return { "success": false, "reason"}
       "ignore"
+<<<<<<< HEAD
 
+=======
+    console.error(' Error recovery manager "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

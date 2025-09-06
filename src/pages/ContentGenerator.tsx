@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -157,39 +158,20 @@ export default function ContentGenerator() {;
       </>
     )
   }
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+const ContentGenerator = () => {
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-1">
-              <Card className="bg-zion-blue-dark border border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white">Content Settings</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    Configure what type of content you want to generate.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="contentType" className="text-white">Content Type</Label>
-                    <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter' | 'serviceDescription' | 'faq')}>
-                      <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">
-                        <SelectValue placeholder="Select content type" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                        <SelectItem value="blog" className="text-white">Blog Post</SelectItem>
-                        <SelectItem value="newsletter" className="text-white">Email Newsletter</SelectItem>
-                        <SelectItem value="serviceDescription" className="text-white">Service Description</SelectItem>
-                        <SelectItem value="faq" className="text-white">FAQ</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+    <div>
+      <h1>ContentGenerator</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Main Topic / User Prompt</Label>
                     <Input
@@ -453,3 +435,6 @@ export default function ContentGenerator() {;
   );
 }
 ;
+=======
+export default ContentGenerator;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

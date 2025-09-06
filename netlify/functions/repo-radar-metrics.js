@@ -1,41 +1,71 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const abs = path && path.resolve(__dirname, '..', '..', relPath);
+=======
 
 
 function runNode(relPath, args = []) {
 
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
 exports && exports.config = { schedule: '*/30 * * * *' };
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
     return status;
   };
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return status;
   }
   step('repo:radar-metrics', () =>
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return {
     statusCode: 200,
@@ -44,11 +74,18 @@ exports && exports.handler = async () => {
   };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
+<<<<<<< HEAD
+  const abs = path.resolve(__dirname, '....', relPath),
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
+
 exports && exports.config = { schedule: '*/30 * * * *' },
+
 exports && exports.handler = async () => {
   const logs = [],
   const step = (name, fn) => {
@@ -59,13 +96,21 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   },
+
   step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -136,4 +181,3 @@ exports.handler = async () => {
   step ('repo:radar - metrics', () => run_node ('automation / repo - radar - metrics.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
-},

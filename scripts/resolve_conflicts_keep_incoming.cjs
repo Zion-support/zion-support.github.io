@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +16,10 @@ function getAllFiles(dir) {}
   return files};
 function resolveConflictsKeepIncoming(filePath) {}
   const text = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!text.includes('')) return false;
   const lines = text.split('\n');
   const out = [];
@@ -48,7 +54,10 @@ function main() {}
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         console.log(`Resolved conflicts "in": ${f}`)};
     } catch (e) {}
       console.error(`Failed to process ${f}: ${e.message}`)};
@@ -56,4 +65,8 @@ function main() {}
   console.log(`Done. Files "updated": ${count}`)};
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
+<<<<<<< HEAD
 
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

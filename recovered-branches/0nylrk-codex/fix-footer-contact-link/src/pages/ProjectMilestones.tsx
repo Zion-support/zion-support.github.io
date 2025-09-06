@@ -1,27 +1,68 @@
+<<<<<<< HEAD
 
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
@@ -29,8 +70,28 @@ function ProjectMilestones() {
 
         <SEO
           title="Payment Milestones | Zion AI Marketplace"
+<<<<<<< HEAD
           description="Manage project payment milestones and deliverables"
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
+function ProjectMilestones() {;
+  return (
+    <ProtectedRoute>;
+      <>;
+        <SEO
+          title="Payment Milestones | Zion AI Marketplace" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          description="Manage project payment milestones and deliverables"
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -46,31 +107,91 @@ function ProjectMilestones() {
       <>;
         <SEO;
           title="Payment Milestones | Zion AI Marketplace";
+<<<<<<< HEAD
+=======
+
+import React from 'react',;
+import { SEO } from '@/components/SEO',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',;
+;
+function ProjectMilestones() {;
+  return (;
+    <ProtectedRoute>;
+      <>;
+        <SEO ;
+          title="Payment Milestones | Zion AI Marketplace" ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           description="Manage project payment milestones and deliverables";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         />;
         <AppHeader />;
         <ProjectMilestonesContent />;
         <Footer />;
       </>;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ProjectMilestones;
 
+<<<<<<< HEAD
 =======
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 
 export default ProjectMilestones;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+export default ProjectMilestones;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default ProjectMilestones;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+=======
+export default ProjectMilestones;
+
+    </ProtectedRoute>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ProjectMilestones;
 
 ;
 export default ProjectMilestones;
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

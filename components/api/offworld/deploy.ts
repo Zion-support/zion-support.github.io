@@ -1,23 +1,48 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   try {
     // Ensure export
     const outDir = path && path.resolve(process && process.cwd(), 'out');
     try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     } catch (e) {
       // attempt minimal static export try {
         execSync('next build && next export', { stdio: 'inherit' })
+<<<<<<< HEAD
 
+=======
+    }
+      return res
+        .status(500)
+        .json({ error: 'Export failed, no out/ directory found' });      return res && res.status(500).json({ error: 'Export failed, no out/ directory found' });
+    }
+    const { cid, provider } = await addDirectory(outDir);
+    return res.status(500).json({ error: error?.message |'Unknown error' });
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }    return res.status(200).json({ cid, provider })
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
+<<<<<<< HEAD
 =======
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+    return res.status(200).json({ cid, provider })
+
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -26,9 +51,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -90,8 +118,11 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+<<<<<<< HEAD
   }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
@@ -99,6 +130,7 @@ function handler() {
 }
 }
   }
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
@@ -107,3 +139,6 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

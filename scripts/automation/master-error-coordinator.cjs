@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -128,4 +131,8 @@ const path = require("path")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
+<<<<<<< HEAD
 
+=======
+  console.error("Master error coordinator "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
