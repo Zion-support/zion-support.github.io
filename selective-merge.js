@@ -59,7 +59,7 @@ const mergeSpecificFiles = () => {
       try {
         console.log(`Merging file: ${file}`);
         execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
-      } catch (error) {
+      } catch (_error) {
         console.log(`Skipping ${file} due to conflicts`);
       }
     }
