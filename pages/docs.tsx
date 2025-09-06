@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-export default function DocsPage() {
-	return (
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
