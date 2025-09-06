@@ -17,12 +17,20 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {;
     // This would typically download the resume file;
+<<<<<<< HEAD
     toast && toast.info("Resume download functionality will be implemented soon");
   };
 
   const renderActionButtons = () => {;
     switch (application && application.status) {;
 
+=======
+    toast && toast.info("Resume download functionality will be implemented soon")
+};
+
+  const renderActionButtons = () => {;
+    switch (application && application.status) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -37,6 +45,7 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
+<<<<<<< HEAD
 }
 interface ApplicationCardProps {;
   application: JobApplication;
@@ -62,10 +71,14 @@ interface ApplicationCardProps {
 
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
+=======
+}export function ApplicationCard({ application }: ApplicationCardProps) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
+<<<<<<< HEAD
     toast.info("Resume download functionality will be implemented soon")
 
   },
@@ -74,6 +87,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return (
+=======
+    toast.info("Resume download functionality will be implemented soon")      case "shortlisted": return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button variant="default" size="sm">;
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview;
           </Button>;
@@ -93,7 +109,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       case "rejected":;
         return (
 
+<<<<<<< HEAD
           <Button variant="outline" size="sm">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback;
           </Button>;
         ),;
@@ -101,6 +120,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null;
 
     }
+<<<<<<< HEAD
   }
     }
 
@@ -182,10 +202,21 @@ function ApplicationCard() {
             <div className="text-sm text-muted-foreground mt-1">;
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
             </div>;
+=======
+  }    }
+
+  },
+
+  return (
+        {expanded && (
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (            </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
           <StatusBadge status={application.status} />;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent className="pb - 3">;
         <ApplicationProgress status={application.status} className="my - 4" />;
 
@@ -275,12 +306,27 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
 
             {application && application.resume && (;
+=======
+      <CardContent className="pb-3">;
+        <ApplicationProgress status={application.status} className="my-4" />;
+
+        {expanded && (
+          <div className="mt - 4 space-y-3">;
+            {application.cover_letter && (    <Card className="overflow-hidden">;
+      <CardHeader className="pb-3">;
+        <div className="flex justify-between items-start">;
+          <div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="border rounded-md p-3 bg-muted/20">;
                 <div className="flex justify-between items-center">;
                   <div className="flex items-center">;
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />;
+<<<<<<< HEAD
                     <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
                     <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
+=======
+                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;                    <span className="text-sm font-medium">{application && application.resume.title || "Resume"}</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
                     <Download className="h-3 w-3 mr-1" /> Download;
@@ -290,20 +336,28 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             )}
 
             {application && application.match_score && (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {application && application.match_score && (;
               <div>;
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>;
                 <div className="flex items-center">;
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">;
+<<<<<<< HEAD
                     {application && application.match_score}%;
                     {application && application.match_score}%;
+=======
+                    {application && application.match_score}%;                    {application && application.match_score}%;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>;
                 </div>;
               </div>;
             )}
           </div>;
+<<<<<<< HEAD
 
 
 
@@ -317,17 +371,25 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         <div className="flex justify-between items-center w-full">;
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {expanded ? "Show Less" : "Show More"}
           </Button>;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
 
+<<<<<<< HEAD
 
         <Button 
           variant="secondary" 
 
 
+=======
+        <Button 
+          variant="secondary" 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           size="sm"
           className="w-full"
           asChild
@@ -338,6 +400,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 
               variant="outline" 
@@ -448,3 +511,6 @@ case "interview" : default: return (<Card className="overflow-hidden" > <CardHea
 }
 }
 ;
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

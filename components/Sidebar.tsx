@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -82,12 +83,16 @@ const quickLinks = [
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
 ];
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
 
@@ -124,6 +129,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <AnimatePresence>
       {isOpen && (
@@ -141,7 +148,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >
             <div className="p-6">
               {/* Header */}
@@ -154,7 +165,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -166,6 +181,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
                       className="flex items-center justify-between w-full text-left py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span className="font-medium">{title}</span>
@@ -199,6 +215,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   </div>
                 ))}
               </nav>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -217,6 +235,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
@@ -225,6 +244,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <p>kleber@ziontechgroup.com</p>
                   <p>24/7 Support Available</p>
                 </div>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>
             </div>
           </motion.div>
@@ -232,6 +253,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 };
 
 export default Sidebar;
@@ -470,6 +492,9 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
 export default Sidebar;
 ;
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -507,15 +532,19 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ]
 };
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+<<<<<<< HEAD
 const navigationItems = [
   {
     label: 'Home',
@@ -665,3 +694,5 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </AnimatePresence>
   );
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

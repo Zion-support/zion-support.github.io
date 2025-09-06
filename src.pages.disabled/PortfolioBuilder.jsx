@@ -25,7 +25,10 @@ import React from 'react';
 interface PortfolioBuilderProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
@@ -36,10 +39,14 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/PortfolioBuilder.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
 }
 }
 :temp_exclude/src.pages.disabled/PortfolioBuilder.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

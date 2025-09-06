@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -52,12 +53,15 @@ export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -68,6 +72,15 @@ export type WatchlistMatch = {;
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -77,6 +90,7 @@ export type WatchlistMatch = {;
 ;
 
 export type AmlCheckResult = {
+<<<<<<< HEAD
   status: "clear" | "match" | "review" | "unknown";
   status: "clear" | "match" | "review" | "unknown";
 };
@@ -87,6 +101,18 @@ export type WatchlistMatch = {
   name: string;
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
+=======
+
+};
+
+export type AmlCheckResult = {;
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  status: 'clear' | 'match' | 'review' | 'unknown';
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: "mock" | "remote";
@@ -107,6 +133,7 @@ export interface AmlProvider {
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -258,15 +285,22 @@ class AmlManager {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const name = params && params.fullLegalName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return { status: 'clear' }
   }
@@ -274,20 +308,30 @@ class AmlManager {
     // Mock implementation - in production, this would call a real AML service
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return { status: "clear" };
   }
@@ -307,6 +351,7 @@ class AmlManager {
     return { status: "clear" };
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -340,6 +385,8 @@ export function getAmlProvider(): AmlProvider {;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -397,6 +444,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -422,3 +470,16 @@ export function getAmlProvider(): AmlProvider {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export function getAmlProvider(): AmlProvider {
+  return provider;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

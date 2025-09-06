@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -27,6 +28,11 @@ const corsHeaders = {
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -40,12 +46,17 @@ serve(async (req) => {
       throw new Error("OpenAI API key is not set in environment variables")
     }
 
+<<<<<<< HEAD
 
 
 
     const { modelId, jobId } = await req && req.json();
     
     if (!modelId && !jobId) {
+=======
+    const { modelId, jobId } = await req && req.json();
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       throw new Error("Either modelId or jobId is required")
 
     const response = await fetch(`https://api && api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
@@ -55,6 +66,7 @@ serve(async (req) => {
         "Content-Type": "application/json"}});
 
     if (!response && response.ok) {
+<<<<<<< HEAD
 
       // If 404, the job doesn't exist or is deleted
       if (response && response.status === 404) {
@@ -87,6 +99,8 @@ serve(async (req) => {;
     switch(data && data.status) {
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -123,6 +137,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
       finetuneJobId = `ft-job-${modelId}-${Date.now()}`
     }
@@ -187,6 +202,9 @@ serve(async (req) => {;
     }
     
     
+=======
+}    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
@@ -195,18 +213,25 @@ serve(async (req) => {;
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
       if (response.status === 404) {
         return new Response(
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+<<<<<<< HEAD
         )
 
 
 ;
     }
+=======
+        )    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const data = await response.json();
     // Map OpenAI status to our internal status names
     let status;
@@ -240,7 +265,10 @@ if ( {) {
 ;
 
         error = data && data.error?.message || "Unknown error occurred during training";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Map OpenAI status to our internal status names;
     let status;
     let error = null;
@@ -251,6 +279,7 @@ if ( {) {
       case "failed":;
         status = "failed";
         error = data && data.error?.message || "Unknown error occurred during training";
+<<<<<<< HEAD
         break;
       case "cancelled":;
         status = "failed";
@@ -278,6 +307,8 @@ if ( {) {
         error = data.error?.message || "Unknown error occurred during training",
         break,
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -286,6 +317,7 @@ if ( {) {
         status = "running",
         break,
       default:
+<<<<<<< HEAD
         status = "queued"
     }
 
@@ -306,6 +338,9 @@ if ( {) {
           trainingFiles: data && data.training_file} : null
     }
     return new Response (
+=======
+        status = "queued"    return new Response (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       JSON.stringify ({
         status,
         error;
@@ -320,11 +355,15 @@ if ( {) {
     console && console.error("Error in check-training-status function:", error);
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error("Error in check-training-status function:", error),
     
 
     return new Response(
+<<<<<<< HEAD
       JSON && JSON.stringify({ error: error && error.message });
     console && console.error("Error in check-training-status function:", error);
     return new Response(
@@ -335,6 +374,9 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message }),
     return new Response(
+=======
+      JSON && JSON.stringify({ error: error && error.message });    return new Response(
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       JSON && JSON.stringify({ error: error && error.message });
       {
         status: 500
@@ -342,6 +384,7 @@ if ( {) {
     )
 
     console.error ("Error in check - training - status function:", error);
+<<<<<<< HEAD
 
 
 
@@ -485,3 +528,5 @@ serve(async (req) => {;
 });
   }
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

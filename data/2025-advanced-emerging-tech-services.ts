@@ -1,13 +1,15 @@
+
 <<<<<<< HEAD
 
 
 
-
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const advancedEmergingTechServices2025 = [
   {
 
 
-=======
 id: 'space-mining-operations-platform',
     name: 'SpaceMining Operations',
     description:
@@ -70,8 +72,9 @@ id: 'space-mining-operations-platform',
     competitiveAdvantage:
       'Industry-leading space mining operations, comprehensive resource mapping, and extensive space agency integration'
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -94,8 +97,10 @@ id: 'space-mining-operations-platform',
     pricing: {
 <<<<<<< HEAD
 =======
-
 =======
+    pricing: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'quantum - materials - discovery - platform',
     name: 'QuantumMaterials Discovery',
     description:;
@@ -157,7 +162,6 @@ id: 'space-mining-operations-platform',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$2.8B',
     target_audience:;
       'Materials science companies, research institutions, manufacturing firms, government agencies',
@@ -179,7 +183,7 @@ id: 'space-mining-operations-platform',
       'Custom robotic algorithms',
       '24 / 7 robotic operations',
     ],
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     pricing: {
       starter: {
         price: 499,
@@ -227,7 +231,6 @@ id: 'space-mining-operations-platform',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$3.2B',
     target_audience:;
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
@@ -296,7 +299,6 @@ id: 'space-mining-operations-platform',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$8.9B',
     target_audience:;
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
@@ -365,7 +367,6 @@ id: 'space-mining-operations-platform',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$12.4B',
     target_audience:;
       'Logistics companies, supply chain managers, transportation firms, e - commerce businesses',
@@ -440,10 +441,14 @@ id: 'space-mining-operations-platform',
 
     };
     marketSize: '$6 && 6.8B',
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       starter: {
         price: 599
         period: 'month'
@@ -1000,14 +1005,21 @@ id: 'space-mining-operations-platform',
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
+=======
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1539,12 +1551,17 @@ id: 'space-mining-operations-platform',
 ];      phone: '+1 302 464 0950';
     };
     marketSize: '$6 && 6.8B',
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
 
 
 
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1560,6 +1577,11 @@ id: 'space-mining-operations-platform',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1780,6 +1802,7 @@ id: 'space-mining-operations-platform',
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
+<<<<<<< HEAD
     }
     market_size: '$6.8B',
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
@@ -1790,6 +1813,16 @@ id: 'space-mining-operations-platform',
   }
 ];
 ;
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const advancedEmergingTechServices2025 = [;
   {;
@@ -2021,6 +2054,7 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2034,3 +2068,16 @@ export const advancedEmergingTechServices2025 = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

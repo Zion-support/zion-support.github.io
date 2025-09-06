@@ -4,6 +4,7 @@ import {
   DialogContent;
   DialogHeader;
   DialogTitle;
+<<<<<<< HEAD
   DialogDescription;
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -16,13 +17,19 @@ import {useNavigate} from "react-router-dom";
 
 
 import React, { useState } from 'react',
+=======
+  DialogDescription;import React, { useState } from 'react',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -30,6 +37,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
 
+<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
 
@@ -59,18 +67,24 @@ export function MessageTalentModal({
   onClose,
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   jobTitle
 }: MessageTalentModalProps) {
 
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
+<<<<<<< HEAD
   jobTitle
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
 
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
+<<<<<<< HEAD
   const navigate = useNavigate(),
   const [message, setMessage] = useState(
     jobTitle
@@ -84,10 +98,14 @@ export function MessageTalentModal({
 
 
   const handleSendMessage = async () => {
+=======
+  const navigate = useNavigate(),  const handleSendMessage = async () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
+<<<<<<< HEAD
         variant: "destructive"
   const [message, setMessage] = useState(;
     jobTitle ;
@@ -106,6 +124,11 @@ export function MessageTalentModal({
       return;
     }
 
+=======
+        variant: "destructive"      });
+      return;
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
       return;
     }
@@ -159,6 +182,7 @@ function MessageTalentModal() {
 ;
       // Create conversation with this talent;
       await create_conversation (
+<<<<<<< HEAD
 
         image_url: talent.profile_picture_url || ""
       },
@@ -196,6 +220,8 @@ function MessageTalentModal() {
       });
       return;
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         talent.user_id;
 
     try {;
@@ -203,14 +229,22 @@ function MessageTalentModal() {
 
       // Create context data for the conversation;
       const contextData = {;
+<<<<<<< HEAD
         title: jobTitle || `Discussion with ${talent && talent.full_name}`,;
         description: talent && talent.bio || talent && talent.professional_title || "",;
         image_url: talent && talent.profile_picture_url || "";
       };
+=======
+        title: jobTitle || `Discussion with ${talent && talent.full_name}`,,
+  description: talent && talent.bio || talent && talent.professional_title || "",;
+        image_url: talent && talent.profile_picture_url || ""
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Create conversation with this talent;
       await createConversation(;
         talent && talent.user_id;
+<<<<<<< HEAD
         message;
 
     try {
@@ -347,14 +381,21 @@ export function MessageTalentModal({;
         title: "Message not sent",;
         description: "There was an error sending your message. Please try again.",;
         variant: "destructive";
+=======
+        message;        variant: "destructive";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
     } finally {;
       setIsSubmitting(false);
     }
   }
 
+<<<<<<< HEAD
   return (
     }
+=======
+  return (    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   return (
@@ -363,12 +404,16 @@ export function MessageTalentModal({;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
+<<<<<<< HEAD
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
 
 
 
               <AvatarFallback className="bg-zion-blue-dark text-white">;
+=======
+              <AvatarFallback className="bg-zion-blue-dark text-white">;              <AvatarFallback className="bg-zion-blue-dark text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -377,6 +422,7 @@ export function MessageTalentModal({;
           <DialogDescription className="text-zion-slate">
             Send a direct message to start a conversation.
             {talent.professional_title && (
+<<<<<<< HEAD
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
             )}
 
@@ -427,34 +473,53 @@ export function MessageTalentModal({;
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
               placeholder="Write your message here...";
+=======
+              <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>              placeholder="Write your message here...";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <DialogFooter className="gap - 2 sm:gap - 0">;
+=======
+        <DialogFooter className="gap - 2 sm:gap-0">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button;
             type="button";
             variant="outline";
             on_click={on_close}
+<<<<<<< HEAD
             className="border - zion - purple / 30 text - white";
           >;
+=======
+            className="border - zion - purple / 30 text-white";          >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Cancel;
           </Button>;
           <Button;
             type="button";
             on_click={handleSendMessage}
             disabled={is_submitting}
+<<<<<<< HEAD
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
+=======
+            className="bg - zion - purple hover:bg - zion - purple - dark text-white";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >;
             {is_submitting ? 'Sending...' : 'Send Message'}
           </Button>;
         </DialogFooter>;
       </DialogContent>;
     </Dialog>);
+<<<<<<< HEAD
 }
 
             type="button" ;
             onClick={handleSendMessage}
+=======
+}            onClick={handleSendMessage}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             disabled={isSubmitting}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
           >;
@@ -502,7 +567,10 @@ contextData);
 }finally {
   setIsSubmitting (false) 
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 return (<Dialog open= {
@@ -522,3 +590,7 @@ return (<Dialog open= {
 }</Button> </DialogFooter> </DialogContent> </Dialog>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

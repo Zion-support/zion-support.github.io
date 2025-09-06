@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 import React from "react";
 import Layout from "../components/Layout";
@@ -202,15 +202,16 @@ export default function AboutPage() {
 <<<<<<< HEAD:pages_backup/about.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
   Brain,
-=======
 Brain,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Shield,
   Users,
   Zap,
@@ -231,6 +232,7 @@ Brain,
   Lock,
   TrendingUp;
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -670,6 +672,8 @@ function About() {
     </Layout>);
 }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 
   const team = [
@@ -839,4 +843,4 @@ name: "John Smith",
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,10 +1,17 @@
   };
 
+<<<<<<< HEAD
 export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
 
+=======
+  query: string,
+): Promise<SearchFilters> {
+  const filters: SearchFilters = {};
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!query || query.trim().length === 0) {
     return filters;
   }
@@ -96,9 +103,14 @@ export async function parseQueryToFilters(
     filters.skills = skills;
   }
 
+<<<<<<< HEAD
   return filters;
 
     keywords: [],
+=======
+  return filters,
+  keywords: [],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     skills: [],
     location: null,
     type: null;
@@ -106,6 +118,7 @@ export async function parseQueryToFilters(
     all: [],
     talent: [],
     jobs: [],
+<<<<<<< HEAD
     projects: [];
 
   };
@@ -121,8 +134,25 @@ export const suggestDidYouMean = (query: string) => {
 }
   }
 }
+=======
+    projects: []
+};
+};
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null
+};
+
+}
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

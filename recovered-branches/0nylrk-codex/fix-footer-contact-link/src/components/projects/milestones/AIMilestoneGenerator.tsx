@@ -17,6 +17,7 @@ interface AIMilestoneGeneratorProps {;
 
 export function AIMilestoneGenerator(): any ({;
 
+<<<<<<< HEAD
 
 
 export function AIMilestoneGenerator({;
@@ -245,6 +246,14 @@ export function AIMilestoneGenerator({;
 ;
   return (;
     }
+=======
+export function AIMilestoneGenerator({;
+
+export function AIMilestoneGenerator({;
+import React, { useState } from 'react';  },
+
+  return (    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return (
     <div className="space-y-4">;
@@ -256,15 +265,22 @@ export function AIMilestoneGenerator({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
 
           disabled={isGenerating || !scope || !startDate || !projectType}>;
           {isGenerating ? (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Generating...;
             </>;
+<<<<<<< HEAD
           ) : (;
             <>;
+=======
+          ) : (;            <>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Sparkles className="mr-2 h-4 w-4" />;
               Generate Milestones;
             </>;
@@ -272,8 +288,12 @@ export function AIMilestoneGenerator({;
         </Button>;
       </div>;
 
+<<<<<<< HEAD
       {generatedMilestones && generatedMilestones.length > 0 && (;
         <Card>;
+=======
+      {generatedMilestones && generatedMilestones.length > 0 && (;        <Card>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <CardContent className="pt-6">;
             <div className="flex justify-between items-center mb-4">;
               <p className="text-sm text-muted-foreground">;
@@ -293,6 +313,7 @@ export function AIMilestoneGenerator({;
                     <div className="flex items-center flex-1">;
 
                       <input
+<<<<<<< HEAD
                         type="checkbox"
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] |false}
@@ -316,15 +337,23 @@ export function AIMilestoneGenerator({;
                         checked={selectedMilestones[index] |false}
                         onChange={() => toggleMilestoneSelection(index)}
                             AI Suggested;
+=======
+                        type="checkbox"                        id={`milestone-${index}`}
+                        checked={selectedMilestones[index] |false}
+                        onChange={() => toggleMilestoneSelection(index)}                            AI Suggested;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
 
                       onClick={(e) => {
+<<<<<<< HEAD
 
                       onClick={(e) => {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         e.stopPropagation(),
                         handleAddSingleMilestone(milestone)
                     <Button;
@@ -333,6 +362,7 @@ export function AIMilestoneGenerator({;
                       onClick={(e) => {;
                         e.stopPropagation(),;
                         handleAddSingleMilestone(milestone),;
+<<<<<<< HEAD
                       }}
                       className="mr-2";
                     >;
@@ -513,3 +543,5 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
     </div>
   )
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

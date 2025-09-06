@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
@@ -7,6 +10,7 @@ interface EmailautomationProps {
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 
@@ -29,3 +33,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

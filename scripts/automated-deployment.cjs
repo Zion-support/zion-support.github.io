@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require('child_process')
 // console.log(' Starting Automated Deployment...')
@@ -27,3 +33,8 @@ const { execSync } = require('child_process')
         "skippedSteps"
 // console.log('\n Deployment "Report")
 
+<<<<<<< HEAD
+=======
+      console.log('\n Errors "encountered")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

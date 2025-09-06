@@ -4,6 +4,11 @@
  * Automatically detects and recovers from various types of errors;
  */
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -21,3 +26,8 @@ const { execSync } = require('child_process')
                 "severity"
             execSync('npm run "lint")
 
+<<<<<<< HEAD
+=======
+            execSync('npm run "lint")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

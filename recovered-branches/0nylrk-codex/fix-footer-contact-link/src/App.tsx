@@ -4,7 +4,10 @@ import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +31,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App ;
@@ -173,6 +179,7 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
+<<<<<<< HEAD
         <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
           <Routes>;
             {base_routes.map (({ path, element }) => (
@@ -221,6 +228,12 @@ import {
   CommunityRoutes,
 
   DeveloperRoutes
+=======
+        <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
+          <Routes>;
+            {base_routes.map (({ path, element }) => (
+              <Route key={path} path={path} element={element} />))}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -237,6 +250,7 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
+<<<<<<< HEAD
 
 
 const baseRoutes = [
@@ -283,6 +297,8 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -369,7 +385,11 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
+<<<<<<< HEAD
         <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+=======
+        <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
@@ -387,6 +407,7 @@ const App = () =>: any {
           </Routes>;
         </Suspense>;
         <Toaster />;
+<<<<<<< HEAD
         <SonnerToaster position="top-right" />;
       </ThemeProvider>;
     </WhitelabelProvider>;
@@ -408,4 +429,13 @@ export default App;
 export default App;
 export default App;
 
+=======
+
+export default App;  )
+},
+
+export default App;
+
+=======export default App;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default App;

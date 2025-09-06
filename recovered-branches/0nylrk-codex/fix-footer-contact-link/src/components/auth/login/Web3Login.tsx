@@ -12,13 +12,19 @@ export function Web3Login() {;
     try {;
       setIsLoading(true);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleWeb3Login = async () => {
     try {
 
@@ -26,6 +32,7 @@ export function Web3Login() {
       
 
       // Check if wallet is available
+<<<<<<< HEAD
       const ethereum = (window as any).ethereum;
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -48,6 +55,9 @@ export function Web3Login() {
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast("Web3 wallet not found", {
+=======
+      const ethereum = (window as any).ethereum;        toast("Web3 wallet not found", {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           description: "Please install MetaMask or another compatible wallet"})
         return
       }
@@ -59,25 +69,38 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast("Web3 wallet not found", {;
           description: "Please install MetaMask or another compatible wallet"}),;
+=======
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast("Web3 wallet not found", {,
+  description: "Please install MetaMask or another compatible wallet"}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return;
       }
 
       await loginWithWeb3();
 
     } catch (error: any) {;
+<<<<<<< HEAD
       toast("Login failed", {;
         description: error && error.message || "Failed to connect wallet"}),;
+=======
+      toast("Login failed", {,
+  description: error && error.message || "Failed to connect wallet"}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error("Web3 login error:", error);
     } finally {;
       setIsLoading(false);
 
     }
+<<<<<<< HEAD
   }
     }
 
@@ -94,6 +117,12 @@ export function Web3Login() {
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
 
+=======
+  }    }
+
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       disabled={isLoading}
     >
       {isLoading ? (
@@ -110,6 +139,7 @@ export function Web3Login() {
           <Wallet className="h-5 w-5" />
         </>
 
+<<<<<<< HEAD
 
       )}
     </Button>
@@ -187,6 +217,12 @@ export function Web3Login() {;
 
       )}
 import { useState } from './react';
+=======
+      )}
+    </Button>
+  )
+}import { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
 import { Wallet } from '@/components / icons';
@@ -197,6 +233,7 @@ export /**
 function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
+<<<<<<< HEAD
 ;
   const handleWeb3Login = async () => {
     try {
@@ -273,3 +310,6 @@ return (<Button type="button" variant="outline" className="w-full border border-
   );
 }
 ;
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

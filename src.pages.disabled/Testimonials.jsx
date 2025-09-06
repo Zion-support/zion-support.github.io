@@ -25,7 +25,10 @@ import React from 'react';
 interface TestimonialsProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function Testimonials({ }: TestimonialsProps) {
@@ -36,10 +39,14 @@ export default function Testimonials({ }: TestimonialsProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/Testimonials.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function Testimonials({ }: TestimonialsProps) {
 }
 }
 :temp_exclude/src.pages.disabled/Testimonials.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function Testimonials({ }: TestimonialsProps) {
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

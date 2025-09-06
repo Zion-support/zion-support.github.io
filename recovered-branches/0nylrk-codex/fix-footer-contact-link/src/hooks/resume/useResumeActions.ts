@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useResumeActions() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -15,12 +19,16 @@ export function useResumeActions() {;
 
 
   const { user } = useAuth();
+=======
+export function useResumeActions() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to create a resume')
+<<<<<<< HEAD
       return null
 
 
@@ -58,6 +66,12 @@ export function useResumeActions() {;
           summary: basicInfo && basicInfo.summary
 
         })
+=======
+      return null    try {
+      const { data, error } = await supabase
+        .from('talent_resumes')
+        .insert({        })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .select('id')
         .single();
       if (error) throw error;
@@ -68,7 +82,11 @@ export function useResumeActions() {;
         .eq('user_id', user && user.id);
       
 
+<<<<<<< HEAD
       if (error) throw error,
+=======
+=======      if (error) throw error,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -118,6 +136,7 @@ if (throw error) {
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
 
 
@@ -182,6 +201,12 @@ if (throw error) {
         .from('talent_resumes')
         .update({
 
+=======
+  }    try {
+      const { error } = await supabase
+        .from('talent_resumes')
+        .update({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (error) throw error;
       return showSuccessToast("Resume updated", "Your resume information has been updated")
     } catch (e: any) {
@@ -204,6 +229,7 @@ if (throw error) {
       if (error) throw error,
       
 
+<<<<<<< HEAD
 
       return showSuccessToast("Resume updated", "Your resume information has been updated")
 ;
@@ -247,6 +273,9 @@ if (throw error) {
 
 
 ;
+=======
+      return showSuccessToast("Resume updated", "Your resume information has been updated");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -271,13 +300,17 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
     
     try {
@@ -292,6 +325,13 @@ if (throw error) {
       if (resetError) throw resetError;
 
         .eq('user_id', user.id),
+=======
+        try {
+      // First, set all user's resumes to inactive
+      const { error: resetError } = await supabase
+        .from('talent_resumes')
+        .update({ is_active: false })        .eq('user_id', user.id),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       if (resetError) throw resetError,
       
@@ -300,6 +340,7 @@ if (throw error) {
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
+<<<<<<< HEAD
         .eq('id', resumeId)
 
         .eq('user_id', user && user.id);
@@ -323,6 +364,9 @@ if (throw error) {
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
 ;
+=======
+        .eq('id', resumeId);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
@@ -363,6 +407,7 @@ if (throw error) {
       setIsLoading (false);
     }
 
+<<<<<<< HEAD
 ;
 
   return {
@@ -410,6 +455,9 @@ if (throw error) {
     }
   },;
   return {;
+=======
+;  return {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     isLoading,;
     error,;
     createResume;
@@ -419,7 +467,10 @@ if (throw error) {
 }
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -589,3 +640,7 @@ setActiveResume
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

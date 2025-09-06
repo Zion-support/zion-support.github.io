@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -13,6 +16,7 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
+<<<<<<< HEAD
 import { CertificationFormValues, certificationSchema } from './types';
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
@@ -30,6 +34,9 @@ import {CertificationFormValues, certificationSchema} from './types';
 
 
 interface CertificationsFormProps {
+=======
+import { CertificationFormValues, certificationSchema } from './types';interface CertificationsFormProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   resumeId: string
   certifications: Certification[]
@@ -38,6 +45,7 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {Button} from '@/components / ui / button';
@@ -136,6 +144,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
 
 
+=======
+  };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -146,6 +158,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
+<<<<<<< HEAD
 
 
 
@@ -207,6 +220,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   };
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
 
   };
@@ -218,6 +233,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form && form.reset({;
       ...cert,;
       issue_date: formatDateValue(cert && cert.issue_date),;
+<<<<<<< HEAD
       expiration_date: formatDateValue(cert && cert.expiration_date)});
   };
 
@@ -319,6 +335,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await addCertification(resumeId, certData),;
       } else {
         success = await add_certification (resume_id, cert_data);
+=======
+      expiration_date: formatDateValue(cert && cert.expiration_date)})
+};
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     }
   },;
@@ -366,15 +387,19 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">;
+<<<<<<< HEAD
 
   }
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
+<<<<<<< HEAD
 
                     form && form.reset({;
                       name: '',;
@@ -564,3 +589,5 @@ form.reset ({
 }
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

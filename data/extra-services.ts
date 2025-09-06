@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ExtraService {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,6 +12,12 @@ export interface ExtraService {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -33,11 +40,13 @@ export const extraServices: ExtraService[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     address: string;
   }
 ;
@@ -61,10 +70,15 @@ export const extra_services: ExtraService[] = [;
     real_implementation: true,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -73,9 +87,12 @@ export const extra_services: ExtraService[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -84,14 +101,17 @@ export const extra_services: ExtraService[] = [;
   contactInfo: {
     mobile: string, email: string,
     address: string
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-  id: string;
 =======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  id: string;
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -106,6 +126,7 @@ id: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     address: string;
   };
@@ -113,6 +134,13 @@ id: string;
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 }
+=======
+    address: string;
+  };
+}
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     address: string;
   }
@@ -121,11 +149,17 @@ export const extraServices: ExtraService[] = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -134,12 +168,14 @@ export const extraServices: ExtraService[] = [
 ];      mobile: "+1 302 464 0950";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
 
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
@@ -160,10 +196,15 @@ export const extraServices: ExtraService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   },
   {
@@ -185,6 +226,7 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -195,6 +237,12 @@ export const extraServices: ExtraService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     address: string
   }
 }
@@ -240,18 +288,47 @@ export const extraServices: ExtraService[] = [
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+];
+
+;
+    id: "cloud-migration-expert",
+    name: "Cloud Migration Expert",
+    tagline: "Seamless cloud migration and optimization",
+    price: "$99/hour",
+    description: "Professional cloud migration services for businesses looking to modernize their infrastructure.",
+    features: [
+      "AWS/Azure/GCP migration",
+      "Performance optimization",
+      "Cost analysis",
+      "Security implementation",
+      "24/7 support"
+    ],
+    link: "/services/cloud-migration-expert",
+    category: "Cloud Services",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   },
@@ -272,9 +349,9 @@ export const extraServices: ExtraService[] = [
     category: "Security",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -286,10 +363,16 @@ export const extraServices: ExtraService[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,3 +384,9 @@ export const extraServices: ExtraService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

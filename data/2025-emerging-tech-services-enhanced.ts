@@ -1,14 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface EmergingTechService {
 
+
 export interface EmergingTechService {;
+<<<<<<< HEAD
 
 export interface EmergingTechService {
 <<<<<<< HEAD
@@ -21,22 +29,26 @@ export interface EmergingTechService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface EmergingTechService {
+=======
+ursor/fix-website-loading-errors-and-merge-6662
 
-=======
-=======
 export interface EmergingTechService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechService2025 {
 export interface EmergingTechService {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export interface EmergingTechService {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -70,12 +82,14 @@ export interface EmergingTechService {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
-=======
     website: string
   },
   realImplementation: boolean;
@@ -125,33 +139,46 @@ export interface EmergingTechService {;
     rating: 4.9;
     reviews: 5
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
     competitors: ['No direct competitors - first quantum metaverse platform'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_size: '$35.5B quantum metaverse market',
     growth_rate: '85% annual growth',
     variant: 'quantum - metaverse - enterprise',
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -170,6 +197,7 @@ export interface EmergingTechService {;
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -178,6 +206,11 @@ export interface EmergingTechService {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -185,9 +218,12 @@ export interface EmergingTechService {;
     launch_date: '2024 - 04 - 30';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     customers: 18;
 
@@ -195,10 +231,15 @@ export interface EmergingTechService {;
 
     reviews: 11
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface EmergingTechService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -228,6 +269,7 @@ export interface EmergingTechService2025 {
   };
   // Quantum Bio-Computing Platform
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'quantum-bio-computing', name: 'Quantum Bio-Computing Platform',
     tagline: 'Revolutionary computing that combines quantum mechanics with biological systems',
@@ -643,6 +685,11 @@ export interface EmergingTechService2025 {
     reviews: 11;
 
 =======
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'quantum-bio-computing',
     name: 'Quantum Bio-Computing Platform',
     tagline:
@@ -1531,26 +1578,33 @@ export interface EmergingTechService2025 {
     reviews: 11,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
     launchDate: '2024-04-30';
     customers: 18;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     reviews: 11;
-=======
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechService2025 {;
   id: string,;
@@ -2209,6 +2263,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
     customers: 18,;
     rating: 4.8;
     reviews: 11;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2223,19 +2278,34 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     rating: 4.8;
     reviews: 11
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -11,8 +11,11 @@ export interface SkillsFormProps {
 
   on_complete: () => void;
   on_back: () => void;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Skill  } from '@/types / resume';
 
 export interface SkillsFormProps {
@@ -24,6 +27,7 @@ export interface SkillsFormProps {;
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;
+<<<<<<< HEAD
 }
 export interface SkillItemProps {
   skill: Skill;
@@ -45,11 +49,14 @@ export interface SkillCategoryProps {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface AddSkillFormProps {;
 
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string;
+<<<<<<< HEAD
 }
 
 export interface BulkAddSkillsProps {
@@ -71,6 +78,10 @@ export interface BulkAddSkillsProps {
 
 ;
 
+=======
+  onAddSkill: (skill: Skill) => Promise<boolean>;
+  defaultCategory?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
 ;

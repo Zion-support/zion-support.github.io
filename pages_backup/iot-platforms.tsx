@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-
-import type { NextPage } from 'next',
-import Head from 'next/head',
-const IotPlatforms: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>IotPlatforms - Zion Tech Solutions</title>
-        <meta name="description" content="IotPlatforms page" />
-      </Head>
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const IotPlatforms: NextPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <main>
         <h1>IotPlatforms</h1>
         <p>This page is under construction.</p>
@@ -23,33 +11,4 @@ const IotPlatforms: NextPage;
 };
 
 export default IotPlatforms;
-<<<<<<< HEAD
-
-},
-export default IotPlatforms,
-
-
-      <main>;
-        <h1>IotPlatforms</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
-};
-export default IotPlatforms;
-
-
-import Head from 'next / head';
-      <main>;
-        <h1 > IotPlatforms</h1>;
-        <p > This page is under construction.</p>;
-      </main>;
-    </div>),
-}
-;
-export default IotPlatforms;
-;
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

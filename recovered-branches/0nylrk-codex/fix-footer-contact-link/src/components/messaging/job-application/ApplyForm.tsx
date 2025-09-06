@@ -16,6 +16,7 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
+<<<<<<< HEAD
 interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
@@ -35,6 +36,8 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -66,8 +69,12 @@ interface ApplyFormProps {
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
+<<<<<<< HEAD
 }
 interface ApplyFormProps {;
+=======
+}interface ApplyFormProps {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   job: Job,;
   onClose: () => void,;
   onApplySuccess?: (jobId: string) => Promise<void>;
@@ -82,14 +89,34 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
+<<<<<<< HEAD
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+=======
+    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`  const { createConversation } = useMessaging();
+  const { applyToJob } = useJobApplications();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [message, setMessage] = useState(;
     `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
   ),
+=======
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useMessaging } from "@/context/MessagingContext",
+import { toast } from "@/hooks/use-toast",
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { MessageTab } from "./MessageTab",
+interface ApplyFormProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [proposalLink, setProposalLink] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [activeTab, setActiveTab] = useState<string>("message"),
@@ -100,11 +127,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume)
     setSelectedResumeId(resume.id)
+<<<<<<< HEAD
 
   },
   
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [activeTab, setActiveTab] = useState<string>("message");
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
@@ -115,6 +145,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         description: "Please enter a message before applying."
         variant: "destructive"
 
+<<<<<<< HEAD
 
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
@@ -132,10 +163,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       return;
     }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }),
       return
     }
     try {
+<<<<<<< HEAD
 
       setIsSubmitting(true),
       
@@ -222,17 +256,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         throw new Error("Failed to submit application")
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
 
+<<<<<<< HEAD
 
 
       
 
 
+=======
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -246,9 +287,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Create conversation with the job client
       await createConversation(
         job.client_id;
+<<<<<<< HEAD
     try {;
       setIsSubmitting(true);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
         job && job.id, ;
@@ -261,14 +305,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       }
       // Create context data for the conversation;
       const contextData = {;
+<<<<<<< HEAD
         title: job && job.title,;
         description: job && job.description,;
+=======
+        title: job && job.title,,
+  description: job && job.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         attachedResume: selectedResume ? {;
           id: selectedResume && selectedResume.id,;
           title: selectedResume && selectedResume.title,;
           type: selectedResume && selectedResume.type;
+<<<<<<< HEAD
         } : null;
       };
+=======
+        } : null
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
       return;
     }
@@ -276,6 +330,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         'job';
         job && job.id;
         contextData;
+<<<<<<< HEAD
       );
 
 
@@ -285,6 +340,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       const contextData = {;
         title: job.title,;
         description: job.description,;
+=======
+      );;
+      // Create context data for the conversation;
+      const contextData = {;
+        title: job.title,,
+  description: job.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         attachedResume: selectedResume ? {;
           id: selectedResume.id,;
           title: selectedResume.title,;
@@ -302,6 +364,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+<<<<<<< HEAD
 
 
 
@@ -312,14 +375,25 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       }
       
       }
+=======
+      }
+      
+
+      }
+      
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Failed to send application:", error);
       console.error("Failed to send application:", error),
+=======
+      console.error("Failed to send application:", error),      console.error("Failed to send application:", error),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Application failed"
         description: "There was an error sending your application. Please try again."
@@ -336,15 +410,25 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       }
 
       toast({;
+<<<<<<< HEAD
         title: "Application sent",;
         description: `Your application for "${job && job.title}" has been sent.`}),;
+=======
+        title: "Application sent",,
+  description: `Your application for "${job && job.title}" has been sent.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       onClose();
     } catch (error) {;
       console && console.error("Failed to send application:", error);
       toast({;
+<<<<<<< HEAD
         title: "Application failed",;
         description: "There was an error sending your application. Please try again.",;
+=======
+        title: "Application failed",,
+  description: "There was an error sending your application. Please try again.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
       });
     } finally {;
@@ -352,6 +436,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
     }
   }
+<<<<<<< HEAD
 
   return (
 
@@ -486,6 +571,9 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
     }
   };
   return (;
+=======
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -498,8 +586,11 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
         </TabsList>;
 
         <TabsContent value="message">;
+<<<<<<< HEAD
 
           <MessageTab
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -621,26 +712,39 @@ if ( {) {
 ;
   return (
     <>;
+<<<<<<< HEAD
       <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
         <TabsList className="w - full mb - 4 bg - zion - blue - dark / 30">;
           <TabsTrigger value="message" className="flex - 1">;
             Message;
           </TabsTrigger>;
           <TabsTrigger value="resume" className="flex - 1">;
+=======
+      <Tabs value={active_tab} onValueChange={setActiveTab} className="w-full">;
+        <TabsList className="w - full mb - 4 bg - zion - blue-dark / 30">;
+          <TabsTrigger value="message" className="flex-1">;
+            Message;
+          </TabsTrigger>;
+          <TabsTrigger value="resume" className="flex-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Resume;
           </TabsTrigger>;
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
+<<<<<<< HEAD
 
           <MessageTab 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <MessageTab 
 
         ;
         <TabsContent value="message">;
           <MessageTab ;
+<<<<<<< HEAD
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
@@ -659,19 +763,26 @@ if ( {) {
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Button
           type="button"
           variant="outline"
           onClick={onClose}
           className="border-zion-purple/30 text-white">;
           Cancel;
+<<<<<<< HEAD
         </Button>;
           className="border-zion-purple/30 text-white">;
+=======
+        </Button>;          className="border-zion-purple/30 text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Cancel;
         </Button>;
         <Button
           type="button"
           onClick={handleApply}
+<<<<<<< HEAD
           disabled={isSubmitting}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
           {isSubmitting ? (;
@@ -690,6 +801,9 @@ if ( {) {
 }
 
           />;
+=======
+          disabled={isSubmitting}          />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </TabsContent>;
         <TabsContent value="resume">;
           <ResumeTab;
@@ -698,12 +812,20 @@ if ( {) {
           />;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
       <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt - 4">;
+=======
+      <div className="flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 gap - 2 sm:gap - 0 mt-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Button;
           type="button";
           variant="outline";
           on_click={on_close}
+<<<<<<< HEAD
           className="border - zion - purple / 30 text - white";
+=======
+          className="border - zion - purple / 30 text-white";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         >;
           Cancel;
         </Button>;
@@ -711,20 +833,32 @@ if ( {) {
           type="button";
           on_click={handle_apply}
           disabled={is_submitting}
+<<<<<<< HEAD
           className="bg - zion - purple hover:bg - zion - purple - dark text - white";
         >;
           {is_submitting ? (
             <>;
               <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+=======
+          className="bg - zion - purple hover:bg - zion - purple - dark text-white";
+        >;
+          {is_submitting ? (
+            <>;
+              <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Submitting...;
             </>) : (
             'Submit Application')}
         </Button>;
       </div>;
     </>);
+<<<<<<< HEAD
 }
 
   ),; interface ApplyFormProps {
+=======
+}  ),; interface ApplyFormProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   job: Job;
 onClose: () => void;
 onApplySuccess?: (jobId: string) => Promise<void> 
@@ -759,8 +893,13 @@ if (proposalLink) {
   selectedResume.title 
 }` 
 }//Create context data for the conversation const contextData = {
+<<<<<<< HEAD
   title: job.title;
 description: job.description;
+=======
+  title: job.title,
+  description: job.description;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 attachedResume: selectedResume ? {
   id: selectedResume.id;
 title: selectedResume.title;
@@ -819,3 +958,7 @@ return (<> <Tabs value= {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

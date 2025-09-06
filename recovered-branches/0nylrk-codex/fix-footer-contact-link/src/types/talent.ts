@@ -7,6 +7,7 @@ export interface TalentProfile {
   bio?: string;
   summary?: string;
   location?: string;
+<<<<<<< HEAD
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -18,10 +19,14 @@ export interface TalentProfile {
   key_projects?: {
     title: string;
     description: string;
+=======
+    title: string,    description: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }[];
 }
 export interface TalentProfileFilters {
   search?: string;
+<<<<<<< HEAD
   skills?: string[];
   availabilities?: string[];
   regions?: string[];
@@ -114,3 +119,6 @@ export interface HireRequest {;
 }
 ;
 }
+=======
+  skills?: string[];}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

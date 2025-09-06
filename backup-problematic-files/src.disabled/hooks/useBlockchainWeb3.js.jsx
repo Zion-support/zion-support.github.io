@@ -6,6 +6,6 @@ const UseBlockchainWeb3.js = ({ className }) => {
       <h1>UseBlockchainWeb3.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

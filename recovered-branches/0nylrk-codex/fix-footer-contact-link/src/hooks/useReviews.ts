@@ -41,17 +41,24 @@ if (return) {
 }
     setIsLoading (true),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
 
+<<<<<<< HEAD
     if (!projectId) return,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     setIsLoading(true),
     
 
+<<<<<<< HEAD
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -67,11 +74,14 @@ if (return) {
     
 
     try {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase;
         .from ("reviews");
         .select (`;
           *;
 
+<<<<<<< HEAD
 
         .eq("status", "approved"),
         
@@ -81,6 +91,8 @@ if (return) {
       
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Check if current user has already submitted a review
       if (user) {
         const { data: userReviewData, error: userReviewError } = await supabase
@@ -88,6 +100,7 @@ if (return) {
           .select("*")
           .eq("project_id", projectId)
 
+<<<<<<< HEAD
           .eq("reviewer_id", user.id)
 
           .single(),
@@ -131,6 +144,16 @@ if (return) {
 
         variant: "destructive"})
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
+=======
+          .eq("reviewer_id", user.id)    } finally {
+      setIsLoading(false)
+    }
+  }
+        title: "Error",
+        description: "Failed to load reviews",
+
+        variant: "destructive"})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         `);
         .eq ("project_id", project_id);
         .eq ("is_visible", true);
@@ -164,8 +187,13 @@ if ( {) {
     } catch (err: any) {
       console.error ("Error fetching reviews:", err);
       toast ({
+<<<<<<< HEAD
         title: "Error";
         description: "Failed to load reviews",
+=======
+        title: "Error",
+  description: "Failed to load reviews",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {
       setIsLoading (false);
@@ -180,7 +208,10 @@ if (return) {
 }
     setIsLoading (true),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   
   // Fetch reviews for a user (to display on profile)
@@ -188,6 +219,7 @@ if (return) {
     if (!userId) return,
     
     setIsLoading(true),
+<<<<<<< HEAD
     
 
     try {
@@ -236,6 +268,9 @@ if (return) {
 
   }
     project_id: string;
+=======
+        project_id: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     reviewee_id: string;
     rating: number;
     review_text: string;
@@ -252,8 +287,13 @@ if ( {) {
   $2
 }
       toast ({
+<<<<<<< HEAD
         title: "Error";
         description: "You must be logged in to submit a review"
+=======
+        title: "Error",
+  description: "You must be logged in to submit a review"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
       return false;
     }
@@ -273,10 +313,16 @@ if ( {) {
       // Check for unique constraint violation
       if (err && err.code === "23505") {
         toast({
+<<<<<<< HEAD
           title: "Error";
           description: "You have already submitted a review for this project"
           variant: "destructive"})
           reviewer_id: user.id});
+=======
+          title: "Error",
+  description: "You have already submitted a review for this project"
+          variant: "destructive"})          reviewer_id: user.id});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .select ();
         .single ();
 ;
@@ -299,6 +345,7 @@ if ( {) {
   $2
 }
         toast ({
+<<<<<<< HEAD
           title: "Error";
           description: "You have already submitted a review for this project",
           variant: "destructive"});
@@ -330,6 +377,17 @@ if ( {) {
       toast({
 
 
+=======
+          title: "Error",
+  description: "You have already submitted a review for this project",
+          variant: "destructive"});
+      } else {
+        toast ({
+          title: "Error",
+  description: "Failed to submit review",
+          variant: "destructive"});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -338,14 +396,18 @@ if ( {) {
     
     setIsSubmitting(true),
     
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data, error } = await supabase
         .from("reviews")
         .insert({
           ...review,
           reviewer_id: user.id})
+<<<<<<< HEAD
         .select()
 
         toast({
@@ -359,6 +421,9 @@ if ( {) {
           variant: "destructive"})
         .single(),
         
+=======
+        .select()        
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (error) throw error,
       
       toast({
@@ -380,9 +445,13 @@ if ( {) {
         toast({
           title: "Error",
           description: "Failed to submit review",
+<<<<<<< HEAD
           variant: "destructive"})
 
 import { useState } from "react",;
+=======
+          variant: "destructive"})import { useState } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Review, ReviewReport } from "@/types/reviews",;
@@ -443,8 +512,13 @@ if ( {) {
   $2
 }
         toast ({
+<<<<<<< HEAD
           title: "Error";
           description: "You have already submitted a review for this project",
+=======
+          title: "Error",
+  description: "You have already submitted a review for this project",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive"});
       } else {
         toast({
@@ -452,12 +526,16 @@ if ( {) {
           description: "Failed to submit review",
           variant: "destructive"})
 
+<<<<<<< HEAD
         toast ({
           title: "Error";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       return false;
     } finally {
       setIsSubmitting (false);
+<<<<<<< HEAD
     }
 
 
@@ -474,6 +552,9 @@ if ( {) {
   };
 
   },;
+=======
+    }  },;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
     if (!userId) return,;
@@ -494,8 +575,13 @@ if ( {) {
     } catch (err: any) {;
       console.error("Error fetching user reviews:", err),;
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description: "Failed to load reviews",;
+=======
+        title: "Error",,
+  description: "Failed to load reviews",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {;
       setIsLoading(false);
@@ -515,8 +601,13 @@ if ( {) {
   }) => {;
     if (!user) {;
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description: "You must be logged in to submit a review",;
+=======
+        title: "Error",,
+  description: "You must be logged in to submit a review",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"}),;
       return false;
     }
@@ -532,8 +623,13 @@ if ( {) {
         .single(),;
       if (error) throw error,;
       toast({;
+<<<<<<< HEAD
         title: "Success",;
         description: "Your review has been submitted and is pending approval"}),;
+=======
+        title: "Success",,
+  description: "Your review has been submitted and is pending approval"}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setUserReview(data),;
       return true;
     } catch (err: any) {;
@@ -541,6 +637,7 @@ if ( {) {
       // Check for unique constraint violation;
       if (err.code === "23505") {;
         toast({;
+<<<<<<< HEAD
           title: "Error",;
           description: "You have already submitted a review for this project",;
           variant: "destructive"});
@@ -548,6 +645,15 @@ if ( {) {
         toast({;
           title: "Error",;
           description: "Failed to submit review",;
+=======
+          title: "Error",,
+  description: "You have already submitted a review for this project",;
+          variant: "destructive"});
+      } else {;
+        toast({;
+          title: "Error",,
+  description: "Failed to submit review",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive"});
       }
       return false;
@@ -556,15 +662,20 @@ if ( {) {
     }
   },
 
+<<<<<<< HEAD
 
 
   
   
+=======
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false,
     
     setIsSubmitting(true),
+<<<<<<< HEAD
     
     
     try {
@@ -586,14 +697,21 @@ if ( {) {
 
 
       if (userReview) {
+=======
+          if (userReview) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         setUserReview({ ...userReview, ...updates })
       }
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console && console.error("Error updating review:", err);
       toast({
 
 ;
+=======
+  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Update a review;
   const update_review = async (review_id: string, updates: Partial < Review>) => {
     // Check condition
@@ -627,15 +745,21 @@ if ( {) {
     } catch (err: any) {
       console.error ("Error updating review:", err);
       toast ({
+<<<<<<< HEAD
 
   }
         title: "Error";
         description: "Failed to update review"
+=======
+        title: "Error",
+  description: "Failed to update review"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
       return false;
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
 
 
   },
@@ -643,6 +767,9 @@ if ( {) {
 
 
   }
+=======
+  }  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -653,12 +780,17 @@ if ( {) {
 
           reporter_id: user && user.id,
 
+<<<<<<< HEAD
           reason});
           review_id: reviewId,
+=======
+          reason});          review_id: reviewId,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           reporter_id: user.id,
           reason}),
         
 
+<<<<<<< HEAD
       if (error) {
         // Check for unique constraint violation
         if (error && error.code === "23505") {
@@ -669,6 +801,11 @@ if ( {) {
             description: "You have already reported this review",
 
 
+=======
+        // Check for unique constraint violation
+        if (error && error.code === "23505") {
+          toast({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: "destructive"})
 ;
   // Report a review;
@@ -695,13 +832,19 @@ if ( {) {
   $2
 }
           toast ({
+<<<<<<< HEAD
             title: "Error";
             description: "You have already reported this review",
+=======
+            title: "Error",
+  description: "You have already reported this review",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: "destructive"});
         } else {
           throw error;
         }
       } else {
+<<<<<<< HEAD
 
         toast ({
           title: "Report Submitted",
@@ -747,13 +890,19 @@ if ( {) {
       console.error("Error reporting review:", err),
       toast({
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return false
   }
   // Initialize by fetching reviews if projectId is provided
   if (projectId && reviews.length === 0 && !isLoading) {
+<<<<<<< HEAD
     fetchProjectReviews(projectId)
   }
+=======
+    fetchProjectReviews(projectId)  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return {
     reviews;
     user_review;
@@ -762,6 +911,7 @@ if ( {) {
     fetchProjectReviews;
     fetchUserReviews;
 
+<<<<<<< HEAD
   },;
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
@@ -845,6 +995,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     submitReview;
     updateReview;
 
@@ -852,6 +1004,7 @@ if ( {) {
     submit_review;
     update_review;
     report_review}
+<<<<<<< HEAD
     submit_review;
     update_review;
     report_review}
@@ -868,3 +1021,6 @@ if ( {) {
     fetchProjectReviews;
     fetchUserReviews;
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

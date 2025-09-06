@@ -13,16 +13,23 @@ interface QuotesTableProps {;
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
   quotes;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
 
+<<<<<<< HEAD
 
 
 import {formatDate} from "@/utils/dateUtils";
 
+=======
+import {formatDate} from "@/utils/dateUtils";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
@@ -32,6 +39,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
+<<<<<<< HEAD
 
 import {formatDate} from "@/utils/dateUtils";
 import React from "react",
@@ -57,6 +65,8 @@ import { formatDate } from "@/utils/dateUtils",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -64,6 +74,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
+<<<<<<< HEAD
 
 
   onViewDetails: (quote: QuoteRequest) => void
@@ -71,6 +82,8 @@ interface QuotesTableProps {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
@@ -83,6 +96,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isArchived = false;
   isLoading;
   updateStatus;
+<<<<<<< HEAD
   toggleArchive;
   deleteQuote
   quotes,
@@ -133,6 +147,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 </TableCell>
                 <TableCell className="text-white">
 import React from './react';
+=======
+  toggleArchive;import React from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Button } from '@/components / ui / button';
@@ -159,6 +176,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
   onViewDetails;
 }) => {
   return (
+<<<<<<< HEAD
     <div className="overflow - x-auto">;
       <Table>;
         <TableHeader>;
@@ -170,17 +188,38 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
             <TableHead className="text - zion - slate - light">Date</TableHead>;
             <TableHead className="text - zion - slate - light">Status</TableHead>;
             <TableHead className="text - zion - slate - light">Actions</TableHead>;
+=======
+    <div className="overflow-x-auto">;
+      <Table>;
+        <TableHeader>;
+          <TableRow className="border - zion - blue - light hover:bg - zion-blue">;
+            <TableHead className="text - zion - slate-light">Talent</TableHead>;
+            <TableHead className="text - zion - slate-light">Requester</TableHead>;
+            <TableHead className="text - zion - slate-light">Project</TableHead>;
+            <TableHead className="text - zion - slate-light">Budget</TableHead>;
+            <TableHead className="text - zion - slate-light">Date</TableHead>;
+            <TableHead className="text - zion - slate-light">Status</TableHead>;
+            <TableHead className="text - zion - slate-light">Actions</TableHead>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </TableRow>;
         </TableHeader>;
         <TableBody>;
           {is_loading ? (
             <TableRow>;
+<<<<<<< HEAD
               <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
+=======
+              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Loading quote requests...;
               </TableCell>;
             </TableRow>) : quotes.length === 0 ? (
             <TableRow>;
+<<<<<<< HEAD
               <TableCell col_span={7} className="text - center py - 10 text - zion - slate - light">;
+=======
+              <TableCell col_span={7} className="text - center py - 10 text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {is_archived;
                   ? "No archived quote requests found.";
                   : "No quote requests found."}
@@ -189,6 +228,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
             quotes.map (quote => (
               <TableRow;
                 key={quote.id}
+<<<<<<< HEAD
                 className="border - zion - blue - light hover:bg - zion - blue";
               >;
                 <TableCell className="text - white">;
@@ -270,6 +310,20 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     <Button
                       variant="ghost" 
                       size="icon" 
+=======
+                className="border - zion - blue - light hover:bg - zion-blue";
+              >;
+                <TableCell className="text-white">;
+                  {quote.talent_name || 'Unknown Talent'}
+                </TableCell>;
+                <TableCell className="text-white">;
+                  {quote.requester_name}
+                </TableCell>;
+                <TableCell className="text-white">;
+                  <div className="font-medium">{quote.project_name}</div>;
+                  <div className="text - sm text - zion - slate - light truncate max-w-[200px]">;
+                    {quote.project_summary}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       onClick={() => onViewDetails(quote)}
                     >;
                       <Eye className="h-4 w-4" />;
@@ -281,14 +335,21 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         <Button
                           variant="ghost" 
                           size="icon"
+<<<<<<< HEAD
                           onClick={() => toggleArchive(quote && quote.id, false)}
                         >;
+=======
+                          onClick={() => toggleArchive(quote && quote.id, false)}                        >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <Archive className="h-4 w-4" />;
                           <span className="sr-only">Unarchive</span>;
                         </Button>;
                         <Button
                           variant="ghost" 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
@@ -296,8 +357,11 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                               deleteQuote(quote && quote.id);
                             }
                           }}
+<<<<<<< HEAD
 
                               }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             }}
                             className="text-red-500"
                           >
@@ -306,6 +370,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
+<<<<<<< HEAD
 
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
@@ -437,10 +502,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             }
                           }}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
                         </Button>;
+<<<<<<< HEAD
                       </>;
                     ) : (;
                       <DropdownMenu>;
@@ -514,6 +582,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                     )}
                       </DropdownMenu>;                    )}
                     )}
+=======
+                      </>;                    )}                    )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>
                 </TableCell>
               </TableRow>
@@ -530,6 +601,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                 </TableCell>;
               </TableRow>;
             ));
+<<<<<<< HEAD
           )}
 
 
@@ -724,3 +796,9 @@ onViewDetails
     </div>;
   );
 };
+=======
+          )}        </TableBody>;
+      </Table>;
+    </div>;
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

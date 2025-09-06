@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -160,6 +164,14 @@ if ( {) {
     isLoading 
 
     isLoading
+=======
+    const checkDispute = async () => {
+      if (!projectId && !milestoneId) {
+        setIsLoading(false),
+        return
+      }
+      try {    isLoading
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     isLoading 
 
@@ -178,12 +190,16 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         setIsLoading(false),;
         return;
       }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     check_dispute ();
   }, [project_id, milestone_id]);
 ;
+<<<<<<< HEAD
 
 
         // Order by status priority: open, under_review, resolved, closed;
@@ -227,6 +243,9 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     dispute_id;
     is_loading;
   }
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 import { useState, useEffect } from "react",;

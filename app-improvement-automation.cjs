@@ -3,6 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class AppImprovementAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -95,6 +100,11 @@ class AppImprovementAutomation {}
       };
     };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);
@@ -122,3 +132,8 @@ if (require.main === module) {}
   automation.run();
 };
 
+<<<<<<< HEAD
+=======
+module.exports = AppImprovementAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

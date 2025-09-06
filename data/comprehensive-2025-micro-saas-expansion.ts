@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 import { ServiceVariant } from '../types/service-variants',
 
+=======
+
+import { ServiceVariant } from '../types/service-variants',
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 
@@ -12,7 +20,10 @@ marketAdvantage: 'First platform to combine content creation, optimization, and 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string;
@@ -59,25 +70,36 @@ export interface ComprehensiveMicroSaasService {
 }
 
 const contact = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
-<<<<<<< HEAD
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+//Healthcare AI Services {
+  id: 'ai - healthcare - diagnostics - platform';
+name: 'AI Healthcare Diagnostics Platform';
 
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
@@ -89,9 +111,12 @@ features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom anal
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🏥';
 
 color: 'from - green - 600 to - emerald - 600';
@@ -102,10 +127,15 @@ target_audience: 'Hospitals, Clinics, Radiologists, Healthcare providers';
 trial_days: 30;
 setup_time: '2 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Healthcare AI';
 real_service: true;
 technology: ['Deep Learning, Computer Vision, Python, TensorFlow, PyTorch'];
@@ -115,9 +145,12 @@ roi: 'Average 500% ROI through improved diagnostic accuracy and reduced misdiagn
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$45.2B AI healthcare market';
 growth_rate: '250% annual growth';
@@ -135,10 +168,15 @@ benefits: ['Improved diagnostic accuracy_reduced misdiagnosis', 'Faster diagnosi
 capabilities: ['Multi - modality imaging_real - time analysis', 'Clinical decision support_regulatory compliance'];
 market_advantage: 'Highest accuracy rate in the market with comprehensive multi - specialty coverage';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
@@ -155,9 +193,12 @@ features: [ 'Real - time market analysis and prediction_automated trading strate
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '💰';
 
 color: 'from - yellow - 600 to - orange - 600';
@@ -168,10 +209,15 @@ target_audience: 'Investment firms, Banks, Hedge funds, Individual traders';
 trial_days: 14;
 setup_time: '1 week';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Fintech AI';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -181,9 +227,12 @@ roi: 'Average 400% ROI through improved trading performance and risk reduction';
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$12.8B AI fintech market';
 growth_rate: '220% annual growth';
@@ -201,10 +250,15 @@ benefits: ['Improved trading performance_risk reduction', 'Automated operations_
 capabilities: ['Multi - asset trading_advanced analytics', 'Risk management_regulatory compliance'];
 market_advantage: 'First platform to combine AI - powered trading, risk management, and compliance in one solution';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
@@ -221,9 +275,12 @@ features: [ 'AI - powered threat hunting and detection_zero false positive guara
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🛡️';
 
 color: 'from - red - 600 to - pink - 600';
@@ -234,10 +291,15 @@ target_audience: 'Enterprises, Government agencies, Financial institutions, Heal
 trial_days: 30;
 setup_time: '1 week';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Cybersecurity';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -247,9 +309,12 @@ roi: 'Average 350% ROI through reduced security incidents and automated response
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$8.9B AI cybersecurity market';
 growth_rate: '280% annual growth';
@@ -267,10 +332,15 @@ benefits: ['Zero false positives_automated response', '24 / 7 monitoring_cost re
 capabilities: ['Advanced threat hunting_real - time detection', 'Automated response_compliance reporting'];
 market_advantage: 'Only platform with zero false positive guarantee and automated incident response';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //IoT & Smart City Services {
   id: 'iot - smart - city - platform';
@@ -287,9 +357,12 @@ features: [ 'Smart traffic management and optimization_energy consumption monito
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🏙️';
 
 color: 'from - indigo - 600 to - purple - 600';
@@ -303,19 +376,27 @@ category: 'IoT & Smart Cities';
 real_service: true;
 technology: ['IoT, Edge Computing, AI / ML, Python, Node.js, React'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 integrations: ['Traffic systems, Energy grids, Waste management, Environmental sensors'];
 use_cases: ['Traffic optimization_energy management', 'Waste optimization_environmental monitoring'];
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$18.7B smart city market';
 growth_rate: '320% annual growth';
@@ -333,10 +414,15 @@ benefits: ['Operational efficiency_cost reduction', 'Improved citizen services_e
 capabilities: ['Comprehensive monitoring_real - time optimization', 'Data analytics_citizen engagement'];
 market_advantage: 'Most comprehensive smart city platform with integrated citizen engagement features';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
@@ -353,9 +439,12 @@ features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimizat
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🔗';
 
 color: 'from - emerald - 600 to - teal - 600';
@@ -369,19 +458,27 @@ category: 'Blockchain & DeFi';
 real_service: true;
 technology: ['Blockchain, AI / ML, Python, Solidity, Web3.js, React'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 integrations: ['Ethereum, Solana, Polygon, Binance Smart Chain, Major DeFi protocols'];
 use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk assessment'];
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$6.2B blockchain analytics market';
 growth_rate: '450% annual growth';
@@ -399,10 +496,15 @@ benefits: ['Improved DeFi strategies_risk reduction', 'Real - time insights_cost
 capabilities: ['Multi - chain analysisAI - powered insights', 'DeFi optimization_risk management'];
 market_advantage: 'First platform to combine AI - powered blockchain analysis with DeFi optimization';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
@@ -419,9 +521,12 @@ features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorit
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '⚛️';
 
 color: 'from - purple - 600 to - violet - 600';
@@ -432,10 +537,15 @@ target_audience: 'Research institutions, Pharmaceutical companies, Financial ins
 trial_days: 30;
 setup_time: '2 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Quantum Computing';
 real_service: true;
 technology: ['Quantum Computing, AI / ML, Python, Qiskit, Cirq, Q#'];
@@ -445,9 +555,12 @@ roi: 'Average 1000% ROI through breakthrough discoveries and research accelerati
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$15.2B quantum computing market';
 growth_rate: '500% annual growth';
@@ -465,10 +578,15 @@ benefits: ['Quantum computing accessAI optimization', 'Real - time simulation_ex
 capabilities: ['Multi - processor supportAI - powered algorithms', 'Real - time monitoring_custom solutions'];
 market_advantage: 'First platform to combine quantum computing access with AI - powered optimization';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Space Technology Services {
   id: 'space - resource - intelligence';
@@ -485,9 +603,12 @@ features: [ 'AI - powered asteroid resource identification_satellite mission opt
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🚀';
 
 color: 'from - slate - 600 to - gray - 600';
@@ -498,10 +619,15 @@ target_audience: 'Space agencies, Satellite companies, Mining companies, Researc
 trial_days: 30;
 setup_time: '3 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Space Technology';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Python, TensorFlow, Satellite imagery analysis'];
@@ -511,9 +637,12 @@ roi: 'Average 700% ROI through optimized missions and resource discovery';
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 market_size: '$8.9B space technology market';
 growth_rate: '380% annual growth';
@@ -531,10 +660,15 @@ benefits: ['Resource discovery_mission optimization', 'Cost reduction_risk mitig
 capabilities: ['AI - powered analysis_real - time monitoring', 'Mission planning_data analytics'];
 market_advantage: 'First platform to combine AI - powered resource discovery with mission optimization';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 //Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
@@ -551,9 +685,12 @@ features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimizat
 popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 icon: '🤖';
 
 color: 'from - cyan - 600 to - blue - 600';
@@ -564,10 +701,15 @@ target_audience: 'Autonomous vehicle companies, Drone operators, Robotics compan
 trial_days: 30;
 setup_time: '2 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 category: 'Autonomous Systems';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Robotics, Python, TensorFlow, ROS'];
@@ -576,12 +718,15 @@ use_cases: ['Fleet management_route optimization', 'Safety monitoring_maintenanc
 roi: 'Average 450% ROI through operational efficiency and safety improvements';
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 market_size: '$11.3B autonomous systems market';
 growth_rate: '340% annual growth';
 variant: 'ai - futuristic';
@@ -589,22 +734,30 @@ contact_info: contact;
 real_implementation: true;
 implementation_details: 'Enterprise - grade autonomous systems platform with AI orchestration and comprehensive safety features';
 launch_date: '2024 - 03 - 10';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',
 
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -613,6 +766,10 @@ import { ServiceVariant } from '../types/service-variants',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -923,6 +1080,7 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
@@ -942,3 +1100,12 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

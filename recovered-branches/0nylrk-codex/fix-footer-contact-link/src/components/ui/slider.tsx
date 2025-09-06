@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Slider = React.forwardRef<
@@ -27,6 +34,7 @@ const Slider = React && React.forwardRef<;
 
 Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
 
+<<<<<<< HEAD
 export { Slider };
 
       className
@@ -99,6 +107,9 @@ const Slider = React.forwardRef<
       "relative flex w-full touch-none select-none items-center",
       className
     )}
+=======
+export { Slider };    )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {...props}
   >
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
@@ -110,6 +121,7 @@ const Slider = React.forwardRef<
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
+<<<<<<< HEAD
 
     {...props}
   >;
@@ -141,3 +153,5 @@ export { Slider }
 export { Slider };
 export { Slider }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

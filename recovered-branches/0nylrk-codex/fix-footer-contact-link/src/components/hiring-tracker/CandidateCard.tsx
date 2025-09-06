@@ -5,6 +5,7 @@ import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Avatar } from "@/components/ui/avatar",
 
 import {;
@@ -116,6 +117,12 @@ interface CandidateCardProps {
 
 
 
+=======
+import { Avatar } from "@/components/ui/avatar",  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
 
   const handleSaveNotes = () => {
@@ -123,13 +130,19 @@ interface CandidateCardProps {
     // For now, we'll just show a toast
     toast({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
   const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application && application.notes || "");
   const [showHireModal, setShowHireModal] = useState(false);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -144,13 +157,17 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     })
   },
   
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { Draggable } from "react-beautiful-dnd",;
@@ -194,30 +211,46 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
+<<<<<<< HEAD
       title: "Notes saved",;
       description: "Your notes have been saved",;
     });
     setShowNotes(false);
   };
+=======
+      title: "Notes saved",,
+  description: "Your notes have been saved",;
+    });
+    setShowNotes(false)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleHireConfirmed = () => {;
     // Hiring process completed via the modal;
     toast({;
+<<<<<<< HEAD
       title: "Hiring process initiated",;
       description: "Offer has been sent to the talent.",;
   application: JobApplication;
   index: number
 }
     });
+=======
+      title: "Hiring process initiated",,
+  description: "Offer has been sent to the talent.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   return (
     <>;
       <Draggable draggableId={application && application.id} index={index}>;
+<<<<<<< HEAD
         {(provided) => (;
 
           <Card;
@@ -233,6 +266,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
+=======
+        {(provided) => (;                <div className="flex items-center gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Avatar className="h-8 w-8">;
                     {application && application.talent_profile?.profile_picture_url ? (;
                       <img
@@ -240,6 +276,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                         alt={
                         }
                       />;
+<<<<<<< HEAD
                     ) : (;
                       <User className="h-4 w-4" />;
                     )}
@@ -276,6 +313,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
                       {application.talent_profile?.professional_title |
+=======
+                    ) : (;                      {application.talent_profile?.professional_title |
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         "Applicant"}
                     </p>
                   </div>
@@ -285,13 +325,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>
                 </div>
                 
+<<<<<<< HEAD
                 <DropdownMenu>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
                       <MoreVertical className="h-4 w-4" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
+<<<<<<< HEAD
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
                   </Avatar>;
                   <div>;
@@ -315,6 +359,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
                       {showNotes ? "Hide notes" : "Add notes"}
                       {showNotes ? "Hide notes" :"Add notes"}
+=======
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>                      {showNotes ? "Hide notes" :"Add notes"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -330,12 +377,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                         <a
                           href={application && application.resume.file_url}
                           target="_blank"
+<<<<<<< HEAD
                           rel="noopener noreferrer">;
                           View Resume;
+=======
+                          rel="noopener noreferrer">;                          View Resume;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         </a>;
                       </DropdownMenuItem>;
                     )}
 
+<<<<<<< HEAD
 
 
 
@@ -361,6 +413,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 )}
               </div>;
 
+=======
+                  </DropdownMenuContent>;
+                </DropdownMenu>;
+              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {/* Match Score */}
 
               {application.match_score !== null && application.match_score !== undefined && (;
@@ -370,9 +427,12 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               )}
 ;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -390,6 +450,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 </div>;
               )}
 
+<<<<<<< HEAD
 
 
 
@@ -403,12 +464,20 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 ;
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
+=======
+              {/* Action Buttons */}
+
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Button 
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 
@@ -429,6 +498,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
                   {application.resume?.file_url ? (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;
@@ -452,6 +523,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
                 </Button>;
 
+<<<<<<< HEAD
 
                 <Button
                   variant="default"
@@ -663,6 +735,11 @@ function CandidateCard() {
 }
   );
         on_confirm={handleHireConfirmed}
+=======
+                <Button
+                  variant="default"
+                  size="sm"                </Button>        on_confirm={handleHireConfirmed}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       />;
     </>);
 }
@@ -714,3 +791,7 @@ function CandidateCard() {
     </>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

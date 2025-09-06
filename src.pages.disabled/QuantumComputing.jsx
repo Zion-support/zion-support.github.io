@@ -25,7 +25,10 @@ import React from 'react';
 interface QuantumComputingProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function QuantumComputing({ }: QuantumComputingProps) {
@@ -36,10 +39,14 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/QuantumComputing.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
 }
 }
 :temp_exclude/src.pages.disabled/QuantumComputing.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

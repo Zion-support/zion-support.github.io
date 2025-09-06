@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -62,10 +63,18 @@ export function ProductListingCard({
   view = 'grid',
 
   onRequestQuote
+=======
+import React from 'react';import {useNavigate} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {ProductListing} from "@/types/listings";
+import {Star, DollarSign} from "lucide-react";  onRequestQuote
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
   
+<<<<<<< HEAD
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
@@ -98,6 +107,12 @@ interface ProductListingCardProps {
     e.preventDefault();
     e.stopPropagation()
   },
+=======
+  // Get the first image or use a placeholder  // Format price display
+  const formatPrice = () => {
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency}${listing.price.toLocaleString()}`  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -114,6 +129,7 @@ interface ProductListingCardProps {
     e.preventDefault(),
     e.stopPropagation(),
     
+<<<<<<< HEAD
 
     if (onRequestQuote) {
       onRequestQuote(listing.id)
@@ -121,6 +137,8 @@ interface ProductListingCardProps {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -172,12 +190,16 @@ if ( {) {
   $2
 }
       onRequestQuote (listing.id);
+<<<<<<< HEAD
     } else {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
 
+<<<<<<< HEAD
 
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
@@ -205,6 +227,17 @@ if ( {) {
     e && e.preventDefault();
     e && e.stopPropagation(),;
 
+=======
+  // Format price display;
+  const formatPrice = () => {;
+    if (listing && listing.price === null) return "Custom pricing";
+    return `${listing && listing.currency}${listing && listing.price.toLocaleString()}`
+};
+  // Handle navigating to listing detail;
+  const handleViewListing = () => {;
+    navigate(`/listing/${listing && listing.id}`)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (onRequestQuote) {;
       onRequestQuote(listing && listing.id);
     } else {;
@@ -213,6 +246,7 @@ if ( {) {
     }
   };
 
+<<<<<<< HEAD
 
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
@@ -260,6 +294,9 @@ if ( {) {
               </div>;
             )}
 
+=======
+      {/* Image */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -311,11 +348,19 @@ if ( {) {
           <img;
             src={image_url}
             alt={listing.title}
+<<<<<<< HEAD
             className="w - full h - full object - cover";
             on_error={handleImageError}
           />;
           {listing.featured && (
             <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border - none">;
+=======
+            className="w - full h - full object-cover";
+            on_error={handleImageError}
+          />;
+          {listing.featured && (
+            <Badge className="absolute top - 2 right - 2 bg - zion - purple text - white border-none">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Featured;
             </Badge>)}
         </div>;
@@ -324,6 +369,7 @@ if ( {) {
       <div className={`flex flex - col justify - between ${is_grid ? 'p - 4 flex - 1' : 'p - 4 flex - 1'}`}>;
         <div>;
           {/* Category & Rating */}
+<<<<<<< HEAD
           <div className="flex justify - between items - center mb - 2">;
             <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue - light">;
               {listing.category}
@@ -353,6 +399,29 @@ if ( {) {
 
           </div>;
 
+=======
+          <div className="flex justify - between items - center mb-2">;
+            <Badge variant="outline" className="bg - zion - blue - light / 20 text - zion - slate - light border - zion - blue-light">;
+              {listing.category}
+            </Badge>;
+            {listing.rating && (
+              <div className="flex items - center text - zion - slate-light">;
+                <Star className="h - 4 w - 4 fill - zion - cyan text - zion - cyan mr-1" />;
+                <span>{listing.rating}</span>;
+                {listing.review_count && (
+                  <span className="text - xs ml-1">({listing.review_count})</span>)}
+              </div>)}
+          </div>;
+          {/* Title & Description */}
+          <div on_click={handleViewListing} className="block">;
+            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition-colors">;
+              {listing.title}
+            </h3>;
+          </div>;
+          <p className="text - sm text - zion - slate line - clamp - 2 mb-4">;
+            {listing.description}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">;
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
@@ -370,13 +439,17 @@ if ( {) {
                 <span
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
 
+<<<<<<< HEAD
         </div>;
 
 
@@ -409,12 +482,16 @@ if ( {) {
 
                 e.stopPropagation(),
                 navigate(`/listing/${listing.id}`)
+=======
+        </div>;                navigate(`/listing/${listing.id}`)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
               Buy Now
             </Button>
             {onRequestQuote && (
+<<<<<<< HEAD
           </div>;
 
           <div className="flex gap-2">;
@@ -429,10 +506,13 @@ if ( {) {
               Buy Now;
             </Button>;
             {onRequestQuote && (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
                 Request Quote;
               </Button>;
@@ -556,3 +636,7 @@ return (<div className= {
     </div>
   )
 }
+=======
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;                Request Quote;
+              </Button>;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

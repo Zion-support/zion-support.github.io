@@ -1,7 +1,11 @@
 
 import {useState, useEffect} from 'react';
+<<<<<<< HEAD
 import { supabase } from '@/integrations / supabase / client';
 interface PricingSuggestionAnalytics {
+=======
+import { supabase } from '@/integrations / supabase / client';interface PricingSuggestionAnalytics {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   total_suggestions: number;
   acceptance_rate: number;
   averagePriceGap: number,
@@ -13,6 +17,7 @@ interface PricingSuggestionAnalytics {
     suggested_min: number;
     suggested_max: number;
     actual_value?: number;
+<<<<<<< HEAD
     accepted: boolean;
 
 
@@ -25,6 +30,12 @@ import { supabase } from "@/integrations/supabase/client",
 
 
 interface PricingSuggestionAnalytics {
+=======
+    accepted: boolean;import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",interface PricingSuggestionAnalytics {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   totalSuggestions: number,
   acceptanceRate: number,
   averagePriceGap: number,
@@ -37,6 +48,7 @@ interface PricingSuggestionAnalytics {
     actualValue?: number,
     accepted: boolean,
     createdAt: string,
+<<<<<<< HEAD
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
@@ -104,11 +116,17 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 
         setAnalytics({
+=======
+    type: 'client' | 'talent'        setAnalytics({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           ...mockData;
           isLoading: false
           error: null
         });
+<<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 1000)),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         // Mock data for demonstration
         const mockData = {
@@ -138,6 +156,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
+<<<<<<< HEAD
 
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
@@ -365,3 +384,9 @@ export function usePricingSuggestionAnalytics(days = 30) {;
   return analytics;
 }
 }
+=======
+        // In a real implementation with Supabase, you might do:
+        // const { data, error } = await supabase
+        //   .from('pricing_suggestions')
+        //   .select(...)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

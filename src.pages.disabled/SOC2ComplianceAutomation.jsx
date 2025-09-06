@@ -25,7 +25,10 @@ import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
@@ -36,10 +39,14 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
 }
 }
 :temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

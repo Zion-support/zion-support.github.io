@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -16,7 +13,6 @@ import { SkeletonCard  } from '@/components/ui/skeleton';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-=======
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -44,7 +40,7 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
 import { useCurrency  } from '@/hooks/useCurrency';
@@ -52,16 +48,6 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-<<<<<<< HEAD
-    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
-    category: "AI Hardware";
-    price: 85000;
-    currency: "$";
-    brand: "NVIDIA";
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
-    tags: ["AI", "Machine Learning", "GPU"],
-    author: { name: "NVIDIA", id: "nvidia" },
-=======
 
 
     id: "nvidia-a100-server",
@@ -232,98 +218,16 @@ const EquipmentFilterControls = ({
   </div>
 ),
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
-            <p className="text-sm text-muted-foreground">{equipment.category}</p>
-            <div className="flex items-center gap-2 mt-2">
-              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
-            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
-              {equipment.availability}
-            </Badge>
-          </div>
-        </div>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
-            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
-          </div>
-        </div>
-        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-medium">{equipment.category}</span>
-          <Button size="sm" onClick={onViewDetails}>
-            <ShoppingCart className="h-4 w-4 mr-1" />
-            View Details
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  )
-},
 
 
 
-  const {
-    items: equipment,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
-    loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12),
 
-  // Refresh when filters change
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      refresh()
-    }, 100), // Small delay to prevent rapid successive refreshes
-
-    return () => clearTimeout(timeoutId)
-  }, [sortBy, filterCategory, showRecommended, refresh]),
-
-  const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null,
-    return getEquipmentMarketStats(equipment)
-  }, [equipment]),
-
-  const categories = useMemo(() => {
-    // Use all possible categories, not just from current items
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
-  }, []),
-
-  const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-=======
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -339,8 +243,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     )
   }
 
-<<<<<<< HEAD
-=======
   );
 
 }animate= {;
@@ -511,4 +413,4 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

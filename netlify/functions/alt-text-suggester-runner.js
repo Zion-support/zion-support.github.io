@@ -1,18 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 function runNode(relPath, args = []) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -25,6 +32,7 @@ function run_node() {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
@@ -32,6 +40,12 @@ function run_node() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -40,6 +54,7 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -56,6 +71,16 @@ exports && exports.config = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+
+ursor/expand-services-advertise-and-build-project-4b36
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -71,6 +96,7 @@ exports && exports.config = {
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -84,6 +110,13 @@ exports && exports.config = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 exports.handler = async () => {
@@ -109,7 +142,6 @@ function step() {
 }  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-=======
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -132,4 +164,4 @@ exports.handler = async () => {
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

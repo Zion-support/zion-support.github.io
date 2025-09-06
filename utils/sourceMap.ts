@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export interface DeployTemplateResult {
 =======
@@ -8,6 +9,8 @@ export interface DeployTemplateResult {
 }
 export interface DeployTemplateResult {
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 }
@@ -15,7 +18,6 @@ export interface DeployTemplateResult {
 
 // Mock source map utility
 export function getSourceMapWithExistence() {
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -48,8 +50,9 @@ function folder(
   children: string[] = []
 ): SourceNode {
   const fullPath = withPath(basePath, name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -83,6 +86,13 @@ export function getGitStatus() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  return nodes && nodes.map(markExistenceRecursive);
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -130,6 +140,7 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -138,6 +149,10 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
@@ -145,10 +160,13 @@ export function getSourceMapWithExistence(): SourceNode[] {
 export interface DeployTemplateResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     nodes: [],
     edges: [];
@@ -158,10 +176,15 @@ export interface DeployTemplateResult {
 export function getGitStatus() {
   return {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     connected: false,
     branch: 'main';
   };
@@ -173,10 +196,19 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
   createdPaths: string[];
   skippedPaths: string[];
   createdPaths: string[];
   skippedPaths: string[];
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+  createdPaths: string[];
+  skippedPaths: string[];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -190,6 +222,7 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
   } else {
     skippedPaths.push(keepFile);
   }
@@ -200,6 +233,8 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(keepFile);
   }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -218,14 +253,20 @@ export function deployBasicTemplateForPath(
     fs && fs.writeFileSync(readmeFile, readme);
     createdPaths && createdPaths.push(readmeFile);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } else {
     skippedPaths.push(readmeFile);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -245,6 +286,12 @@ export function deployBasicTemplateForPath(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  return { createdPaths, skippedPaths }
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   created_paths: string[];
@@ -266,19 +313,26 @@ export function ensure_directory (dir_path: string): void {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   return { createdPaths, skippedPaths };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

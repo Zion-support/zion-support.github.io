@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -11,14 +14,26 @@ interface JobApplicationsTableProps {;
   jobId: string;
 }
 
+<<<<<<< HEAD
 
 export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
   const { ;
+=======
+export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;  const { ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     applications, ;
     isLoading, ;
     error, ;
     updateApplicationStatus, ;
 
+<<<<<<< HEAD
+=======
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -32,6 +47,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     error, 
     updateApplicationStatus, ;
 
+<<<<<<< HEAD
   const { 
     applications, 
     isLoading, 
@@ -52,10 +68,15 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
+=======
+    markApplicationAsViewed;
+    refetch;      // If it's not already viewed, mark it as viewed;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
 
+<<<<<<< HEAD
 
 
 
@@ -91,10 +112,23 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
     refetch();
   };
+=======
+    } finally {;
+      setProcessingId(null);
+    }
+  const handleViewApplication = async (applicationId: string) => {;
+    await markApplicationAsViewed(applicationId)
+};
+
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+    refetch()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (isLoading) {;
     return <LoadingState />;
 
+<<<<<<< HEAD
 
 
   }
@@ -207,6 +241,9 @@ if ( {) {
       <ScoreDialog
       <ScoreDialog;
       <ScoreDialog
+=======
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
@@ -215,6 +252,7 @@ if ( {) {
       />;
     </>;
   );
+<<<<<<< HEAD
 }
 
       />;
@@ -282,3 +320,6 @@ return (<> <ApplicationsTable applications= {
     </>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

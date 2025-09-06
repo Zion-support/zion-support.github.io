@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
 
+<<<<<<< HEAD
 
 
 export const CreateResumeForm = ({ ;
@@ -50,11 +54,19 @@ export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
   isLoading ;
+=======
+export const CreateResumeForm = ({ ;
+  onCreateResume;
+  onCancel;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <input
               type="text"
               placeholder="Resume Title (e && e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -65,6 +77,7 @@ export const CreateResumeForm = ({;
   onCancel,;
   isLoading;
 
+<<<<<<< HEAD
 }: CreateResumeFormProps) => {;
   const [newResumeTitle, setNewResumeTitle] = useState('');
 
@@ -75,10 +88,13 @@ export const CreateResumeForm = ({;
 
   return (
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>;
+<<<<<<< HEAD
           <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;
 
           <div className="flex gap-2 max-w-md mx-auto">;
@@ -95,12 +111,22 @@ export const CreateResumeForm = ({;
               disabled={!newResumeTitle.trim() || isLoading}
 
 
+=======
+          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>;            <input;
+              type="text";
+              placeholder="Resume Title (e.g. 'AI Engineer Resume')";
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";              value={newResumeTitle}
+
+              disabled={!newResumeTitle.trim() || isLoading}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
             <Button
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() |isLoading}
+<<<<<<< HEAD
               disabled={!newResumeTitle.trim() || isLoading}
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -200,3 +226,6 @@ export const CreateResumeForm = ({
     </Card>);
 }
 ;
+=======
+              disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

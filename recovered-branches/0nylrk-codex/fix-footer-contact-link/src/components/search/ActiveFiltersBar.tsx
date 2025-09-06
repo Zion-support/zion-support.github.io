@@ -1,14 +1,18 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
+<<<<<<< HEAD
 import { X } from "lucide-react",
 interface ActiveFiltersBarProps {
 
@@ -40,6 +44,9 @@ interface ActiveFiltersBarProps {;
 export function ActiveFiltersBar(): any ({;
 
 export function ActiveFiltersBar({;
+=======
+import { X } from "lucide-react",export function ActiveFiltersBar({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   selectedProductTypes;
   selectedLocations;
   selectedAvailability;
@@ -63,9 +70,12 @@ export function ActiveFiltersBar({
   onRemoveFilter;
   onRemoveRating;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onClearSearch
 }: ActiveFiltersBarProps) {
 
@@ -90,6 +100,7 @@ export function ActiveFiltersBar({
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
       {searchQuery && (
+<<<<<<< HEAD
 
   onClearSearch;
 }: ActiveFiltersBarProps) {;
@@ -108,6 +119,8 @@ export function ActiveFiltersBar({
 
       {searchQuery && (;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
@@ -122,9 +135,13 @@ export function ActiveFiltersBar({
         </ClickableBadge>;
       )}
 
+<<<<<<< HEAD
 
       {selectedProductTypes && selectedProductTypes.map(type => (;
 
+=======
+      {selectedProductTypes && selectedProductTypes.map(type => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <ClickableBadge
           key={`type-${type}`}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
@@ -135,9 +152,13 @@ export function ActiveFiltersBar({
         </ClickableBadge>;
       ))}
 
+<<<<<<< HEAD
 
       {selectedLocations && selectedLocations.map(location => (;
 
+=======
+      {selectedLocations && selectedLocations.map(location => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
         <ClickableBadge 
@@ -170,9 +191,12 @@ export function ActiveFiltersBar(): any ({;
   onRemoveFilter;
   onRemoveRating;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onClearSearch
 }: ActiveFiltersBarProps) {
 
@@ -186,7 +210,10 @@ export function ActiveFiltersBar(): any ({;
   if (!hasActiveFilters) return null,
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">
       <span className="text-sm text-zion-slate-light">Active filters:</span>
@@ -230,6 +257,7 @@ export function ActiveFiltersBar(): any ({;
           {type}
           <X className="h-3 w-3" />;
         </ClickableBadge>;
+<<<<<<< HEAD
       ))}
       {selectedLocations.map(location => (
         <ClickableBadge
@@ -405,3 +433,9 @@ return (<div className="flex flex-wrap gap-2 items-center mb-4" > <span classNam
     </div>
   )
 }
+=======
+      ))}          {location}
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

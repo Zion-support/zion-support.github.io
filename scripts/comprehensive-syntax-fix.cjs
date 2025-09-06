@@ -12,3 +12,8 @@ console.log(' Comprehensive syntax fix...')
     content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, '<h1 className="$1 $2"
     content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g, '<p className="$1 $2"
 
+<<<<<<< HEAD
+=======
+    content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, '<div className="$1 $2"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

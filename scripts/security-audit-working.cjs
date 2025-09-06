@@ -9,3 +9,8 @@ const { execSync } = require('child_process')
     console.log(`Security "Headers": ${securityHeaders.success ? `${securityHeaders.checks ? Object.values(securityHeaders.checks).filter(Boolean).length : 0}/5 configured
 // console.log(`Environment "Files"`)
 
+<<<<<<< HEAD
+=======
+    console.log(`Vulnerable "Packages"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

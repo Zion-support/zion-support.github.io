@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import { 
@@ -38,12 +36,11 @@ import { Separator } from "@/components/ui/separator"
 import { QuoteStatusBadge } from "./QuoteStatusBadge"
 import type { QuoteRequest } from "@/types/quotes"
 import {format} from "date-fns"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
   onClose: () => void
-
 
 };
 import React from "react";
@@ -65,36 +62,18 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-<<<<<<< HEAD
 
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null;
-
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified';    try {;
-=======
-;
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
-  if (!quote) return null,;
-  const formatDate = (dateString?: string) => {;
-    if (!dateString) return 'Not specified',;
-    try {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;
     }
   }
 
-
   return (
 
-
-        
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
 
           <Card>
             <CardContent className="pt-6">
@@ -111,10 +90,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
               </div>
             </CardContent>
           </Card>
-
-
-          
-
 
           <Card>
             <CardContent className="pt-6">
@@ -133,18 +108,10 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
         </div>
 
-
-        
-
-
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
             <p className="mb-4">{quote.project_summary}</p>
-
-
-            
-
 
             {quote.project_description && (
               <>
@@ -152,10 +119,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 <p>{quote.project_description}</p>
               </>
             )}
-
-
-            
-
 
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
@@ -169,10 +132,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </div>
           </CardContent>
         </Card>
-
-
-        
-
 
         <div className="mt-6 flex justify-end">
           <Button onClick={onClose}>Close</Button>
@@ -281,7 +240,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }` : 'Not specified') ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
-
 
 import React from './react';
 import {
@@ -408,8 +366,5 @@ if (return 'Not specified') {
 }` : 'Not specified');
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>);
 }
-<<<<<<< HEAD
-'";
-=======
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {;
   Form,;
@@ -9,6 +10,8 @@ import {;
   FormLabel,;
   FormMessage,;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { AppMetadataValues } from "./MetadataManager";
@@ -23,6 +26,7 @@ import {
   FormItem
   FormLabel
   FormMessage
+<<<<<<< HEAD
 
 
 import {;
@@ -37,12 +41,15 @@ import {;
 
 
   Form,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
 
 } from "@/components/ui/form";
 
@@ -94,6 +101,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { control, register, watch, setValue } = form;
 
   const keywords = watch("keywords");
@@ -112,6 +121,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e.currentTarget.value.trim(),
       
 
+<<<<<<< HEAD
       if (value && !keywords.includes(value)) {
 
   const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
@@ -371,6 +381,8 @@ if ( {) {
                     <Input
                       placeholder="Brief description of your app"
                       maxLength={platform === "ios" ? 170 : 80}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Input ;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
@@ -383,19 +395,29 @@ if ( {) {
 
             />;
 
+<<<<<<< HEAD
 
             <FormField
               control={control}
               name="longDescription"
               render={({ field }) => (;
+=======
+            <FormField
+              control={control}
+              name="longDescription"              render={({ field }) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FormItem>;
                   <FormLabel>Long Description</FormLabel>;
                   <FormControl>;
                     <Textarea
                       placeholder="Detailed description of your app"
+<<<<<<< HEAD
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                 </FormItem>)}
+=======
+                      className="min-h-32"                      maxLength={maxDescriptionLength}                </FormItem>)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
             <FormField;
               control={control}
@@ -406,7 +428,11 @@ if ( {) {
                   <FormControl>;
                     <Textarea;
                       placeholder="Detailed description of your app";
+<<<<<<< HEAD
                       className="min - h-32";
+=======
+                      className="min-h-32";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       max_length={maxDescriptionLength}
                       {...field}
                     />;
@@ -417,6 +443,7 @@ if ( {) {
               )}
             />;
             <FormField;
+<<<<<<< HEAD
 
 
               control={control}
@@ -450,11 +477,14 @@ if ( {) {
             <FormField
             />;
             <FormField;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
+<<<<<<< HEAD
                   <FormControl>
 
                     <Textarea 
@@ -466,6 +496,9 @@ if ( {) {
                     <Textarea
                     <Textarea 
                       placeholder="Detailed description of your app"
+=======
+                  <FormControl>                      placeholder="Detailed description of your app"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
                       {...field}
@@ -476,6 +509,7 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
+<<<<<<< HEAD
             />
             
 
@@ -495,6 +529,9 @@ if ( {) {
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
               />;
+=======
+            />              />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords && keywords.map((keyword, index) => (;
@@ -503,6 +540,7 @@ if ( {) {
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
 
+<<<<<<< HEAD
 
                     <button 
 
@@ -530,6 +568,11 @@ if ( {) {
 
 
             <FormField
+=======
+                    <button 
+
+                      type="button"            <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               control={control}
               name="version"
               render={({ field }) => (
@@ -537,6 +580,7 @@ if ( {) {
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
 
+<<<<<<< HEAD
 );
 
                     <Input placeholder="e.g., 1.0.0" {...field} />
@@ -632,6 +676,9 @@ if (value && !keywords.includes (value) ) {
 }
 
 );
+=======
+););
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -644,5 +691,11 @@ if (value && !keywords.includes (value) ) {
         </Form>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
   );
 };
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

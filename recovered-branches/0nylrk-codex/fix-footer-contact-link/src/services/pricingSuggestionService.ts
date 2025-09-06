@@ -6,6 +6,7 @@ export interface PricingSuggestion {;
 }
   jobTitle: string;
 
+<<<<<<< HEAD
 
 
 
@@ -177,6 +178,12 @@ if ( {) {
     if (lowercaseTitle && lowercaseTitle.includes("senior") || lowercaseTitle && lowercaseTitle.includes("lead")) {
 
       minRate += 20;
+=======
+export interface ClientBudgetParams {
+  job_title: string;
+  category: string;
+  timeline?: string;      minRate += 20;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       maxRate += 30
     } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
@@ -208,10 +215,18 @@ if ( {) {
       min_rate -= 10;
       max_rate -= 15;
       min_rate = Math.max (min_rate, 15), // Ensure minimum doesn't go too low;
+<<<<<<< HEAD
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
 
 
 ;
+=======
+    }
+    
+    // Generate explanation
+    const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
+    ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
@@ -222,19 +237,28 @@ if ( {) {
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
 
+<<<<<<< HEAD
 
 
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     // Generate explanation;
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${job_title}", we recommend a budget range of $${min_rate}-$${max_rate}/hour. This aligns with current market trends for similar projects.`;
 ;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return {
       min_rate;
       max_rate;
@@ -242,6 +266,7 @@ if ( {) {
       explanation;
     }
   } catch (error) {
+<<<<<<< HEAD
 
 
       minRate: 30,
@@ -261,6 +286,17 @@ if ( {) {
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+=======
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    }
+      confidence: "Low",
+      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+    };  }
+}
+
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+  try {;      explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
       confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
@@ -268,6 +304,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -275,6 +312,10 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {;
     const { skills, yearsExperience, location } = params;
+=======
+export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
+  try {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Base rate calculation based on years of experience
@@ -283,6 +324,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
 
     const hasInDemandSkills = skills && skills.some(skill => 
+<<<<<<< HEAD
       inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
 
     );
@@ -309,6 +351,9 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 
 ;
+=======
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill));
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
     const { skills, yearsExperience, location } = params,;
@@ -334,6 +379,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
+<<<<<<< HEAD
         locationFactor = 0.8;
 
 
@@ -374,10 +420,14 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (hasInDemandSkills) {
       explanation += ` and your in-demand skills (${skills && skills.join()})`
     }
+=======
+        locationFactor = 0.8;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
 
+<<<<<<< HEAD
 
 
     
@@ -385,6 +435,11 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
     console.error ("Error generating budget suggestion:", error);
+=======
+    
+
+    explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Return a fallback suggestion;
     return {
     
@@ -403,8 +458,12 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 }
 export async function getTalentRateSuggestion (params: TalentRateParams): Promise < PricingSuggestion> {
   try {
+<<<<<<< HEAD
     const { skills, years_experience, location } = params;
 ;
+=======
+    const { skills, years_experience, location } = params;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Simulate API call delay;
     await new Promise (resolve => set_timeout (resolve, 1000));
 ;
@@ -481,6 +540,7 @@ if ( {) {
       confidence;
       explanation;
 
+<<<<<<< HEAD
 
 
 
@@ -644,10 +704,17 @@ export async function trackPricingSuggestion(data: {
   actualValue?: number,
   accepted: boolean
 }) {
+=======
+    }
+  } catch (error) {
+    console.error("Error generating rate suggestion:", error),
+    return {}) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
 
+<<<<<<< HEAD
     console && console.log("Tracking pricing suggestion:", data);
     
 
@@ -710,6 +777,10 @@ export async function trackPricingSuggestion(data: {;
     }
 
   }
+=======
+    console && console.error("Error tracking pricing suggestion:", error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 // Function to save pricing analytics data;
 export async /**
@@ -729,4 +800,8 @@ function trackPricingSuggestion() {
     console.error ("Error tracking pricing suggestion:", error);
     return false;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

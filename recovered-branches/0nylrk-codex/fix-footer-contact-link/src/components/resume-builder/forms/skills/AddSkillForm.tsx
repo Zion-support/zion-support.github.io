@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
+<<<<<<< HEAD
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
@@ -17,16 +21,24 @@ import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhanceme
 
 
 interface AddSkillFormProps {
+=======
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';interface AddSkillFormProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
 
+<<<<<<< HEAD
 
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
 
+=======
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -36,6 +48,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     const newSkill: Skill = {
       name: skillName.trim()
       category: skillCategory |'Other'
+<<<<<<< HEAD
       proficiency: proficiency}
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {
@@ -231,6 +244,13 @@ if ( {) {
                 enhancementType="general";
                 onEnhanced={handleEnhanceSkill}
               <SelectValue placeholder="Select category" />;
+=======
+      proficiency: proficiency}  return (  return (
+    <form onSubmit={handleSubmit} className="space-y-4">;
+      <div className="flex flex-col gap-4 md:flex-row">;
+        <div className="flex-1">;
+          <Label htmlFor="skill-name">Skill Name</Label>;              <SelectValue placeholder="Select category" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </SelectTrigger>;
             <SelectContent>;
               <SelectItem value="Programming">Programming</SelectItem>;
@@ -239,6 +259,7 @@ if ( {) {
               <SelectItem value="DevOps">DevOps</SelectItem>;
               <SelectItem value="Data Science">Data Science</SelectItem>;
 
+<<<<<<< HEAD
               <SelectItem value="AI / ML">AI / ML</SelectItem>;
 
               <SelectItem value="Management">Management</SelectItem>;
@@ -279,18 +300,34 @@ if ( {) {
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20";
 }
+=======
+              <SelectItem value="AI / ML">AI / ML</SelectItem>;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 },
 };
 },
               on_change={(e) => set_proficiency (Number (e.target.value))}
+<<<<<<< HEAD
               className="w - 20";
+=======
+              className="w-20";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
     </form>);
 }
 
+=======
+    </form>);}
+
+},
+};
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

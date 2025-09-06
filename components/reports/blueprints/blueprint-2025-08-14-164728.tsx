@@ -1,22 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Head from 'next/head';
 
 export default function Page() {
 
-=======
 import Head from 'next/head';
 export default function Page(){
 export default function Page() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -24,6 +27,10 @@ export default function Page() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
@@ -58,13 +65,8 @@ export default function Page() {
         </p>
       </main>
     </div>
-<<<<<<< HEAD
-  );  return (
-  return (
-    </div>;
-  );  return (
-    <div className="min-h-screen bg-slate-950 text-white">
 
+<<<<<<< HEAD
       <Head>
         <title>Reference Architecture — Autonomous Content Mesh</title>
         <meta name="description" content="High-level blueprint for an autonomous content mesh with evaluation-in-the-loop." />
@@ -151,6 +153,9 @@ export default function Page(){
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Head from 'next / head';
 ;
 export default /**
@@ -208,10 +213,16 @@ function Page() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  );
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   )
   } catch (error) {
@@ -221,6 +232,7 @@ function Page() {
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -234,3 +246,9 @@ function Page() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

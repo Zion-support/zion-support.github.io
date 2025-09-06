@@ -41,6 +41,7 @@ try {
   } = require('lucide-react');
   console.log('✅ Lucide React icons import successful', {
 <<<<<<< HEAD
+<<<<<<< HEAD
     ArrowRight: 'typeof ArrowRight',
     CheckCircle: 'typeof CheckCircle',
     Brain: 'typeof Brain',
@@ -54,17 +55,24 @@ try {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ArrowRight: typeof ArrowRight,
     CheckCircle: typeof CheckCircle,
     Brain: typeof Brain,
     Cloud: typeof Cloud,
     Shield: typeof Shield,
     Zap: typeof Zap,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   });
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

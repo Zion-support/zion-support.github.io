@@ -7,10 +7,13 @@ interface TemplateManagerProps {
   currentValues?: ContractFormValues
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   currentValues
 }: TemplateManagerProps) {
   const [mode, setMode] = useState<"list" | "save">("list"),
@@ -48,13 +51,17 @@ export function TemplateManager(): any ({;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { ContractTemplate } from "@/types/contracts",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { TemplateList } from "./TemplateList",
+<<<<<<< HEAD
 import { TemplateSaveForm } from "./TemplateSaveForm",
 interface TemplateManagerProps {
 
@@ -266,6 +273,12 @@ export function TemplateManager({
 }
 
             <TemplateList;
+=======
+import { TemplateSaveForm } from "./TemplateSaveForm",              onEdit={(template) => {;
+                setSelectedTemplate(template);
+                setMode("save");
+              }}            <TemplateList;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               templates={templates}
               is_loading={is_loading}
               on_select={handleSelectTemplate}
@@ -286,9 +299,13 @@ export function TemplateManager({
           />)}
       </DialogContent>;
     </Dialog>);
+<<<<<<< HEAD
 }
 
   ),; interface TemplateManagerProps {
+=======
+}  ),; interface TemplateManagerProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isOpen: boolean;
 onClose: () => void;
 onSelectTemplate: (template: ContractFormValues) => void;
@@ -306,7 +323,10 @@ onClose ();
 toast ({
   
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 return (<Dialog open= {
@@ -357,3 +377,7 @@ return (<Dialog open= {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

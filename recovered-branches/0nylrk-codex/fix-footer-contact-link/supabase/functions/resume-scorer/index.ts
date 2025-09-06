@@ -1,19 +1,26 @@
+<<<<<<< HEAD
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 serve(async (req) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -43,17 +50,23 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
   const openAiKey = Deno.env.get("OPENAI_API_KEY") || "",;
   if (!openAiKey) {;
     return new Response(;
+<<<<<<< HEAD
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
 
 
 
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+=======
+      JSON.stringify({ error: "OpenAI API key is not configured" }),;      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )
   }
 
@@ -61,11 +74,15 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
+<<<<<<< HEAD
     
     
     const { applicationId } = await req && req.json();
     
     
+=======
+        
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -120,6 +137,7 @@ if ( {) {
         job_id;
         talent_id;
         cover_letter;
+<<<<<<< HEAD
         resume_id;
 
 
@@ -203,6 +221,9 @@ if ( {) {
             `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
             ${job.description |""}`
           ).join("\n\n")}
+=======
+        resume_id;          ).join("\n\n")}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Education:
           ${resume.education.map((edu: any) =>
             `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
@@ -218,12 +239,16 @@ if ( {) {
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         Bio: ${application && application.talent_profile?.bio || ""}
         Cover Letter: ${application && application.cover_letter || ""}
         Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
       `;
+<<<<<<< HEAD
       resumeSkills = application && application.talent_profile?.skills || []
 
     }
@@ -232,14 +257,24 @@ if ( {) {
 
       resumeSkills = application.talent_profile?.skills |[]
     }
+=======
+      resumeSkills = application.talent_profile?.skills |[]
+    }
+    // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // 4. Prepare job details
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
+<<<<<<< HEAD
       resumeSkills = application.talent_profile?.skills || []
 
     );
+=======
+      resumeSkills = application.talent_profile?.skills || []    );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ;
   const supabase = createClient(supabaseUrl, supabaseAnonKey),;
@@ -321,14 +356,18 @@ if ( {) {
       `,;
       resumeSkills = application.talent_profile?.skills || [];
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
 
     // 4. Prepare job details
     const jobTitle = application.job?.title || "",
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
+<<<<<<< HEAD
 
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -358,11 +397,15 @@ if ( {) {
         model: "gpt-4o-mini";
         messages: [
           {
+=======
+        model: "gpt-4o-mini";          {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             role: "system"
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
 
+<<<<<<< HEAD
 
           },
 
@@ -377,6 +420,9 @@ if ( {) {
             Required Skills: ${jobSkills && jobSkills.join(", ")}
             
 
+=======
+          },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -384,6 +430,7 @@ if ( {) {
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
+<<<<<<< HEAD
 
         job:jobs (title, description, skills);
         talent_profile:profiles ! talent_id (bio, skills);
@@ -646,6 +693,8 @@ if ( {) {
 
     }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const aiResult = await openAIResponse.json(),
     let matchResult,
     
@@ -656,8 +705,12 @@ if ( {) {
       
 
       // Validate required fields
+<<<<<<< HEAD
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       // Validate required fields
+=======
+      if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {      // Validate required fields
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
       const content = aiResult && aiResult.choices[0].message && message.content;
       matchResult = JSON && JSON.parse(content);
@@ -679,15 +732,19 @@ if ( {) {
       
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+<<<<<<< HEAD
         throw new Error("Invalid response format")
       }
     } catch (error) {
       console && console.error("Error parsing AI response:", error);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       // Validate required fields
       if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
         throw new Error("Invalid response format")
       }
+<<<<<<< HEAD
     } catch (error) {
       console.error("Error parsing AI response:", error),
       throw new Error("Failed to parse AI analysis results")
@@ -874,6 +931,13 @@ if ( {) {
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
+=======
+    } catch (error) {      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
+    }
+    // 7. Return the match results
+    return new Response(    );
+  } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error ("Error in resume - scorer function:", error);
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -886,4 +950,230 @@ if ( {) {
 });
 
 ;
+<<<<<<< HEAD
 
+=======
+      }
+    }
+    ;
+    // 3. If no resume content, use talent profile and cover letter;
+    if (!resumeContent) {;
+      resumeContent = `;
+        Bio:${application.talent_profile?.bio || ""}
+        Cover Letter:${application.cover_letter || ""}
+        Skills:${application.talent_profile?.skills?.join(", ") || ""}
+      `,;
+      resumeSkills = application.talent_profile?.skills || [],;
+    }
+;
+    // 4. Prepare job details;
+    const jobTitle = application.job?.title || "",;
+    const jobDescription = application.job?.description || "",;
+    const jobSkills = application.job?.skills || [],;
+;
+    // 5. Process using OpenAI to calculate match score;
+    const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {;
+      method:"POST",;
+      headers:{;
+        "Authorization":`Bearer ${openAiKey}`,;
+        "Content-Type":"application/json"},;
+      body:JSON.stringify({;
+        model:"gpt-4o-mini",;
+        messages:[;
+          {;
+            role:"system",;
+            content:`You are an expert resume analyzer that compares resumes against job descriptions;
+            to determine how well a candidate matches a job. Analyze the resume and job details ;
+            provided, focusing on skills, experience, and qualifications.`;
+          },;
+          {;
+            role:"user",;
+            content:`;
+            # Job Details;
+            Title:${jobTitle}
+            Description:${jobDescription}
+            Required Skills:${jobSkills.join(", ")}
+            ;
+            # Resume Content;
+            ${resumeContent}
+            ;
+            Compare the resume to the job description and provide:;
+            1. A match score between 0-100 (where 100 is a perfect match);
+            2. A brief summary of why this score was given (1-2 sentences);
+            3. A detailed breakdown of how well the candidate's skills and experience align with job requirements;
+            4. A suggestion categorization:"Strongly Recommended", "Recommended for Review", or "Low Match";
+            ;
+            Respond in JSON format with the following structure:;
+            {;
+              "score":75,;
+              "summary":"Good match with relevant experience in required technologies.",;
+              "breakdown":{;
+                "skills_match":{;
+                  "score":80,;
+                  "matching":["skill1", "skill2"],;
+                  "missing":["skill3"];
+                },;
+                "experience_match":{;
+                  "score":70,;
+                  "analysis":"Candidate has X years experience in relevant field.";
+                },;
+                "education_match":{;
+                  "score":65,;
+                  "analysis":"Candidate has relevant degree.";
+                }
+              },;
+              "suggestion":"Recommended for Review";
+            }`;
+          }
+        ],;
+        temperature:0.5})}),;
+;
+    if (!openAIResponse.ok) {;
+      const errorData = await openAIResponse.json(),;
+      throw new Error(`OpenAI API Error:${JSON.stringify(errorData)}`),;
+    }
+;
+    const aiResult = await openAIResponse.json(),;
+    let matchResult,;
+    ;
+    try {;
+      // Extract JSON from the response;
+      const content = aiResult.choices[0].message.content,;
+      matchResult = JSON.parse(content),;
+      ;
+      // Validate required fields;
+      if (!matchResult.score || !matchResult.summary || !matchResult.suggestion) {;
+        throw new Error("Invalid response format"),;
+      }
+    } catch (error) {;
+      console.error("Error parsing AI response:", error),;
+      throw new Error("Failed to parse AI analysis results"),;
+    }
+;
+    // 6. Update the application with the match results;
+    const { error:updateError } = await supabase;
+      .from("job_applications");
+      .update({;
+        match_score:matchResult.score,;
+        match_summary:matchResult.summary,;
+        match_breakdown:matchResult.breakdown,;
+        match_suggestion:matchResult.suggestion,;
+        scored_at:new Date().toISOString();
+      });
+      .eq("id", applicationId),;
+;
+    if (updateError) {;
+      throw new Error(`Failed to update application with score:${updateError.message}`),;
+    }
+;
+    // 7. Return the match results;
+    return new Response(;
+      JSON.stringify({ ;
+        success:true, ;
+        matchResult ;
+      }),;
+      { ;
+        status:200, ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;
+  } catch (error) {;
+    console.error("Error in resume-scorer function:", error),;
+    return new Response(;
+      JSON.stringify({ error:error.message }),;
+      { ;
+        status:500, ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;  }
+}),;
+ serve (async (req) => {
+  //Handle CORS preflight requests if (req.method === "OPTIONS") {
+  
+}const supabase = createClient (supabaseUrl, supabaseAnonKey);
+try {
+  const {
+  applicationId 
+}= await req.json ();
+if (!applicationId) {
+  
+}//1. Fetch the application with job details and resume content const {
+  data: application, error: appError 
+}= await supabase .from ("job applications") job id;
+talent id;
+cover letter;
+resume id;
+job: jobs (title, description, skills);
+talent profile:profiles!talent id (bio, skills) `) let resumeSkills: string[] = [];
+headline;
+resume skills!inner (name, category, years experience);
+work history!inner (company name, role title, start date, end date, description);
+education!inner (institution, degree, field of study) `) 
+}else if (resume) {
+  //Format resume content for analysis resumeContent = ` Summary: $ {
+  resume.summary || "" 
+}Headline: $ {
+  resume.headline || "" 
+}Work Experience: $ {
+  resume.work history.map ( (job: any) => `$ {
+  job.role title 
+}at $ {
+  job.company name 
+}($ {
+  new Date (job.start date) .getFullYear () 
+}- $ {
+  job.end date ? new Date (job.end date) .getFullYear () : 'Present' 
+}) $ {
+  job.description || "" 
+}`) .join (" \n\n") 
+}Education: $ {
+  resume.education.map ( (edu: any) => `$ {
+  edu.degree 
+}in $ {
+  edu.field of study || "" 
+}from $ {
+  edu.institution 
+}`) .join (" \n") 
+}Skills: `;
+}
+}//3. If no resume content, use talent profile and cover letter `;
+resumeSkills = application.talent profile?.skills || [];
+}//4. Prepare job details # Resume Content $ {
+  resumeContent 
+}Compare the resume to the job description and provide: 1. A match score between 0-100 (where 100 is a perfect match) 2. A brief summary of why this score was given (1-2 sentences) 3. A detailed breakdown of how well the candidate's skills and experience align with job requirements 4. A suggestion categorization: " Strongly Recommended", " Recommended for Review", or " Low Match"Respond in JSON format with the following structure: 
+};
+" suggestion": " Recommended for Review" 
+}` 
+}];
+temperature: 0.5 
+}) 
+});
+}//6. Update the application with the match results const {
+  error: updateError 
+}= await supabase .from (" job applications") .update ({
+  match score: matchResult.score;
+match summary: matchResult.summary;
+match breakdown: matchResult.breakdown;
+match suggestion: matchResult.suggestion;
+scored at: new Date () .toISOString () 
+}) if (updateError) {
+  throw new Error (`Failed to update application with score: $ {
+  updateError.message 
+}`) 
+}//7. Return the match results return new Response (return new Response (JSON.stringify ({
+  error: error.message 
+});
+{
+  status: 500;
+headers: {
+  ...corsHeaders, " Content-Type": " application/json" 
+}
+}) 
+}
+});
+  }
+});
+  }
+});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

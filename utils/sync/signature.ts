@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import crypto from "crypto";
 
 
 }
 export function getSyncSecret(): string | null {
+=======
+
+
+}
+=======export function getSyncSecret(): string | null {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
 }
@@ -49,18 +56,26 @@ export function verifySignature(
 }
 
 export function generateNonce(): string {
+<<<<<<< HEAD
   return crypto.randomBytes(16).toString("hex");
 
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");
   verify: (signature: string, message: string, address: string) => false,
+=======
+  return crypto.randomBytes(16).toString("hex");  verify: (signature: string, message: string, address: string) => false,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   sign: (message: string, private_key: string) => '',
   recover: (signature: string, message: string) => '';
 }
 
 export function hashData(data: string): string {
   return crypto.createHash("sha256").update(data).digest("hex");
+<<<<<<< HEAD
 }
 };
 
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

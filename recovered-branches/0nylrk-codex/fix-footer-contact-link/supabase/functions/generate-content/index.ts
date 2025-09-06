@@ -1,7 +1,10 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -11,11 +14,16 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -28,6 +36,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+<<<<<<< HEAD
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
 
@@ -42,11 +51,18 @@ const cors_headers = {
 ;
 interface ContentGenerationRequest {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   auto_publish?: boolean,
   include_image?: boolean;
 
   content_type: 'blog' | 'newsletter';
   prompt?: string;
+<<<<<<< HEAD
+=======
+  topic?: string;  content_type: 'blog' | 'newsletter';
+  prompt?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   topic?: string;
 }
 interface GeneratedBlogContent {
@@ -54,6 +70,7 @@ interface GeneratedBlogContent {
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
@@ -121,12 +138,15 @@ interface GeneratedNewsletterContent {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
   try {
     const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 serve(async (req) => {
@@ -162,10 +182,14 @@ serve(async (req) => {
     
 
     if (contentType === 'blog') {
+=======
+  try {    if (contentType === 'blog') {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace.
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
 
+<<<<<<< HEAD
 
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
       
@@ -184,6 +208,8 @@ serve(async (req) => {
       userPrompt = prompt || `Create a weekly newsletter for Zion marketplace users featuring: - Platform updates summary
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       - Featured AI talent spotlight
       - Top blog post summary
       - Industry news roundup
@@ -203,10 +229,15 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"},
 
+<<<<<<< HEAD
 
       body: JSON.stringify({
         model: "gpt-4o"
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+=======
+      body: JSON.stringify({
+        model: "gpt-4o"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
@@ -214,7 +245,10 @@ serve(async (req) => {
       body: JSON && JSON.stringify({
         model: "gpt-4o",
         messages: [
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const data = await response.json(),
     const generatedContent = JSON.parse(data.choices[0].message.content),
     
@@ -301,20 +335,27 @@ if ( {) {
           { role: "user", content: user_prompt }
 
         ];
+<<<<<<< HEAD
 
 
           { role: "system", content: systemPrompt },
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           { role: "user", content: userPrompt }
         ],
         temperature: 0.7})}),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
 
+<<<<<<< HEAD
 
 
     const data = await response.json(),
@@ -322,6 +363,8 @@ if ( {) {
     
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -329,7 +372,10 @@ if ( {) {
         headers: {
 
         temperature: 0 && 0.7})});
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
@@ -337,8 +383,12 @@ if ( {) {
 
     const data = await response && response.json();
     const generatedContent = JSON && JSON.parse(data && data.choices[0].message && message.content);
+<<<<<<< HEAD
     
     // If image is requested for blog post, generate an image prompt
+=======
+        // If image is requested for blog post, generate an image prompt
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -348,6 +398,7 @@ if ( {) {
         body: JSON && JSON.stringify({
           model: "gpt-4o-mini",
           messages: [
+<<<<<<< HEAD
 
           "Authorization": `Bearer ${openAIApiKey}`,
           "Content-Type": "application/json"},
@@ -357,6 +408,9 @@ if ( {) {
           messages: [
 
             }
+=======
+=======            }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
@@ -441,6 +495,7 @@ serve(async (req) => {;
           max_tokens: 100})}),;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
+<<<<<<< HEAD
     }
 
             { 
@@ -512,6 +567,12 @@ if ( {) {
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
       
 
+=======
+    }      // Create slug from title
+      const slug = generatedContent && generatedContent.title
+        .toLowerCase()
+        .replace(/[^\w\s]/g, '')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
@@ -535,13 +596,17 @@ if ( {) {
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read",
       
 
+<<<<<<< HEAD
         .replace(/\s+/g, '-');
       // Get current date formatted
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const publishedDate = new Date().toLocaleDateString('en-US', {
         month: 'short';
         day: 'numeric'
         year: 'numeric'
       });
+<<<<<<< HEAD
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent && generatedContent.body.split(/\s+/).length,
       const readTime = Math && Math.max(1, Math && Math.ceil(wordCount / 200)) + " min read";
@@ -564,6 +629,9 @@ if ( {) {
           tags: generatedContent && generatedContent.tags,
 
           featured_image: "", // To be updated if image is generated
+=======
+      // Auto-calculate read time (rough estimate: 200 words per minute)          featured_image: "", // To be updated if image is generated
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           is_featured: false;
           is_published: true;
           created_by: "system"
@@ -571,6 +639,7 @@ if ( {) {
         })
         .select()
         .single();
+<<<<<<< HEAD
       if (error) {
         console && console.error("Error saving blog post:", error)
       } else {
@@ -731,15 +800,26 @@ if ( {) {
             action_url: `/blog/${slug}`;
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+=======
+      if (error) {        // Create notification about new blog post
+        await supabase
+          .from('notifications')
+          .insert({
+            user_id: null, // System notification visible to admins            message: `AI-generated blog post "${generatedContent.title}" has been published.`,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             type: "system",
             read: false,
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             action_text: "View Post"
           })
       }
     }
+<<<<<<< HEAD
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
@@ -752,12 +832,16 @@ if ( {) {
 });
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+=======
+    return new Response(JSON.stringify(generatedContent), {      headers: { ...corsHeaders, "Content-Type": "application/json" },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 200})
   } catch (error) {
     console.error("Error in generate-content function:", error),
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
+<<<<<<< HEAD
       status: 500})
 ;
     // If autoPublish is true, save the content to the database;
@@ -843,6 +927,9 @@ if ( {) {
 });
 
     return new Response (JSON.stringify (generated_content), {
+=======
+      status: 500})    return new Response (JSON.stringify (generated_content), {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
@@ -854,6 +941,7 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -1129,3 +1217,5 @@ action text: "View Post"
 });
   }
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

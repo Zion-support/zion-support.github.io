@@ -3,8 +3,11 @@ import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -15,12 +18,16 @@ function FeaturedListingsSection() {
   const featured_listings = [;
     {
 
+<<<<<<< HEAD
 
       id: "advanced-nlp-model",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "Advanced NLP Model for Text Analysis",
       description: "State-of-the-art natural language processing with 98% accuracy",
       price: 4999,
       currency: "$",
+<<<<<<< HEAD
 
 
       author: {
@@ -45,11 +52,14 @@ function FeaturedListingsSection() {
       reviewCount: 89,
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
 
+<<<<<<< HEAD
 
     },
 
@@ -291,10 +301,33 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             </p>;
           </div>)}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
+=======
+    },
+      author: {
+        name: "DataMinds Consulting"
+        id: "dataminds-consulting"
+      }      tags: ["API", "Sentiment", "Analytics"];
+      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
+      createdAt: "2024-01-05T11:15:00.000Z"
+      rating: 4.6
+      reviewCount: 72    <section id="featured" className="py - 12 px - 4 bg - zion - blue-dark">;
+      <div className="container mx-auto">;
+        {show_title && (
+          <div className="text - center mb-12">;
+            <GradientHeading className="text - 3xl md:text - 4xl font - bold mb-4">;
+              Featured Listings;
+            </GradientHeading>;
+            <p className="text - zion - slate - light max - w-3xl mx-auto">;
+              Discover our handpicked selection of top AI products and services;
+            </p>;
+          </div>)}
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {featured_listings.map ((listing) => (
             <ProductListingCard;
               key={listing.id}
               listing={listing}
+<<<<<<< HEAD
               view="grid";
 
 import { ProductListingCard } from "@/components/ProductListingCard",;
@@ -402,10 +435,13 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           </div>;
         )}
             <ProductListingCard
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               key={listing.id}
               listing={listing}
 
               view="grid"
+<<<<<<< HEAD
               onRequestQuote={() => {}}
               view="grid"
               onRequestQuote={() => {}}
@@ -417,6 +453,9 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             <ProductListingCard;
               key={listing.id}
               listing={listing}
+=======
+              onRequestQuote={() => {}}              listing={listing}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               view="grid"
               onRequestQuote={() => {}}
             />
@@ -433,6 +472,7 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
 
               view="grid"
@@ -490,3 +530,6 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 ;
     </section>);
 }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

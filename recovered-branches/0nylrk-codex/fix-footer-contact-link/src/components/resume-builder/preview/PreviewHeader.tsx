@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, FileText, Link } from "lucide-react";
 import { PdfExportButton } from "../PdfExportButton";
@@ -5,12 +6,29 @@ import { Resume } from "@/types/resume";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface PreviewHeaderProps {
+=======
+import { Button  } from '@/components/ui/button';
+import { ArrowLeft, FileText, Link  } from 'lucide-react';
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types/resume';
+import { useState  } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft, FileText, Link} from 'lucide-react';
+import {PdfExportButton} from '../PdfExportButton';
+import {Resume} from '@/types/resume';
+import {useState} from 'react';
+import {useIsMobile} from '@/hooks/use-mobile';interface PreviewHeaderProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   resume: Resume;
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleBrowserPrint = () => {
     setIsPrinting(true);
     // Inject print-specific CSS only for the duration of printing
@@ -30,6 +48,7 @@ interface PreviewHeaderProps {;
   onBack: () => void;
 }
 ;
+<<<<<<< HEAD
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
@@ -38,6 +57,8 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
     const style = document.createElement("style");
     style.innerHTML = `
       @media print {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         body * {
           visibility: hidden;
         }
@@ -62,11 +83,18 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
 
     // Remove the temporary style element after printing
     setTimeout(() => {
+<<<<<<< HEAD
       document.head.removeChild(style);
       setIsPrinting(false);
     }, 1000);
   };
 
+=======
+      document.head.removeChild(style),
+      setIsPrinting(false)
+    }, 1000)
+  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}
@@ -75,6 +103,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
+<<<<<<< HEAD
 
       <div
         className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
@@ -85,6 +114,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           variant="outline"
           onClick={handleBrowserPrint}
           disabled={isPrinting}
+=======
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
+        <PdfExportButton resume={resume} />
+        <Button 
+          variant="outline" 
+          onClick={handleBrowserPrint}           disabled={isPrinting}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
@@ -96,6 +132,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           Add to Profile
         </Button>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -107,6 +144,9 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   );
 }
     document.head.append_child (style);
+=======
+    </div>    document.head.append_child (style);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     // Trigger print dialog;
     window.print ();
@@ -122,8 +162,13 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
     <div;
       className={`flex ${is_mobile ? "flex - col" : "justify - between"} items-${is_mobile ? "stretch" : "center"} gap - 3`}
     >;
+<<<<<<< HEAD
       <Button variant="outline" on_click={on_back} className="gap - 2 no - print">;
         <ArrowLeft className="h - 4 w - 4" />;
+=======
+      <Button variant="outline" on_click={on_back} className="gap - 2 no-print">;
+        <ArrowLeft className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         Back;
       </Button>;
       <div;
@@ -134,6 +179,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           variant="outline";
           on_click={handleBrowserPrint}
           disabled={is_printing}
+<<<<<<< HEAD
           className="gap - 2";
         >;
           <FileText className="h - 4 w - 4" />;
@@ -141,6 +187,15 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
         </Button>;
         <Button variant="outline" className="gap - 2">;
           <Link className="h - 4 w - 4" />;
+=======
+          className="gap-2";
+        >;
+          <FileText className="h - 4 w-4" />;
+          Print;
+        </Button>;
+        <Button variant="outline" className="gap-2">;
+          <Link className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Add to Profile;
         </Button>;
       </div>;
@@ -175,3 +230,7 @@ document.head.appendChild (style);
   )
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

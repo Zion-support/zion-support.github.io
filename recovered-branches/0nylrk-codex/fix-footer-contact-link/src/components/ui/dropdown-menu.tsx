@@ -1,13 +1,19 @@
 
 
+<<<<<<< HEAD
 import * as React from "react"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -17,6 +23,7 @@ const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup
 const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
+<<<<<<< HEAD
     inset?: boolean
 import * as React from &quot;react & quot;
 import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
@@ -57,6 +64,9 @@ const DropdownMenuSubTrigger = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {;
     inset?:boolean;
   }
+=======
+    inset?: boolean  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
@@ -65,6 +75,7 @@ const DropdownMenuSubTrigger = React.forwardRef<;
 
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -82,6 +93,12 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
       className
@@ -90,6 +107,7 @@ className={cn(
   >;
     {children}
 
+<<<<<<< HEAD
 
     <ChevronRight className="ml-auto h-4 w-4" />
 
@@ -99,6 +117,10 @@ className={cn(
 
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
     <ChevronRight className="ml-auto h-4 w-4" />
+=======
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   </DropdownMenuPrimitive.SubTrigger>
 ))
 DropdownMenuSubTrigger.displayName =
@@ -109,6 +131,7 @@ const DropdownMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.SubContent
     ref={ref}
+<<<<<<< HEAD
     className={cn(
 
 
@@ -116,12 +139,16 @@ const DropdownMenuSubContent = React.forwardRef<
 
 
       className
+=======
+    className={cn(      className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )}
     {...props}
   />;
 ));
 DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
+<<<<<<< HEAD
 const DropdownMenuContent = React.forwardRef<;
 
 
@@ -159,6 +186,9 @@ const DropdownMenuContent = React.forwardRef<;
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
         className
+=======
+const DropdownMenuContent = React.forwardRef<;        className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
       {...props}
     />;
@@ -166,8 +196,11 @@ const DropdownMenuContent = React.forwardRef<;
 ));
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
+<<<<<<< HEAD
 
 className={cn (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -211,10 +244,13 @@ const DropdownMenuItem = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean;
 
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn(;
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",;
       inset && "pl-8",;
@@ -276,6 +312,7 @@ const DropdownMenuItem = React.forwardRef<;
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -298,6 +335,12 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
       className
@@ -308,6 +351,7 @@ className={cn(
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
 
+<<<<<<< HEAD
 
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
 
@@ -326,6 +370,10 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+=======
+  React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -359,6 +407,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
+<<<<<<< HEAD
     {children}
 
 
@@ -478,6 +527,9 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?:boolean;
   }
+=======
+    {children}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
@@ -486,6 +538,7 @@ const DropdownMenuLabel = React.forwardRef<;
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -508,6 +561,12 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "px-2 py-1.5 text-sm font-semibold",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
       className
@@ -517,6 +576,7 @@ className={cn(
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 
 
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
@@ -527,6 +587,11 @@ const DropdownMenuSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 className={cn (
+=======
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+=======className={cn (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -541,6 +606,7 @@ const DropdownMenuSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 
 />));
 DropdownMenuSeparator.display_name = DropdownMenuPrimitive.Separator.display_name;
@@ -549,17 +615,23 @@ const DropdownMenuShortcut = ({
   ...props;
 }: React.HTMLAttributes < HTMLSpanElement>) =>: any {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <span;
       className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
       {...props}
     />);
+<<<<<<< HEAD
 }
 
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
 ;
 export {
   DropdownMenu,
+=======
+}  DropdownMenu,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -573,10 +645,13 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
+<<<<<<< HEAD
 
 
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   DropdownMenuRadioGroup}
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut";
 ;
@@ -663,4 +738,7 @@ React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator> > ( ({
   DropdownMenuRadioGroup}
 ;
 ;
+<<<<<<< HEAD
   DropdownMenuRadioGroup}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

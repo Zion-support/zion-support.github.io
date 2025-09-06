@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const path = require("path");
 class ErrorDetector {}
@@ -19,3 +24,8 @@ if (require.main === module) {}
   const detector = new ErrorDetector();
   detector.detect().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = ErrorDetector;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

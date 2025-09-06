@@ -124,3 +124,8 @@ if (document.readyState === "loading")
 // console.log(" App improvement automation completed successfully")
     console.log(" "Report": ")
 
+<<<<<<< HEAD
+=======
+    console.error(" App improvement automation "failed": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

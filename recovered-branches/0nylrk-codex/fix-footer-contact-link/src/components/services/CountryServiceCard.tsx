@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -7,6 +8,8 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -14,6 +17,7 @@ import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
 interface CountryServiceCardProps {
 
   country: CountryPricing
@@ -63,10 +67,13 @@ function CountryServiceCard() {
     const emojiMap: Record<string, string> = {;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const emojiMap: Record<string, string> = {;
 
     const emojiMap: Record<string, string> = {
     const emojiMap: Record<string, string> = {;
+<<<<<<< HEAD
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
       "Canada": "🇨🇦";
@@ -75,6 +82,12 @@ function CountryServiceCard() {
       "Germany": "🇩🇪", ;
 
       "Germany": "🇩🇪", ;
+=======
+      "United Kingdom": "🇬🇧";
+      "Canada": "🇨🇦";
+      "Australia": "🇦🇺";
+      "Germany": "🇩🇪",      "Germany": "🇩🇪", ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       "Germany": "🇩🇪", ;
       "Germany": "🇩🇪",
@@ -90,6 +103,7 @@ function CountryServiceCard() {
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
 
+<<<<<<< HEAD
 
 
     const emojiMap: Record<string string> = {
@@ -98,6 +112,8 @@ function CountryServiceCard() {
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -114,17 +130,22 @@ function CountryServiceCard() {
     return emojiMap[countryName] |emojiMap["default"]
   }
   // Get response time estimate based on country
+<<<<<<< HEAD
   const getResponseTime = (countryName: string): string => {
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     
     
     if (tier1.includes(countryName)) {
+=======
+  const getResponseTime = (countryName: string): string => {    if (tier1.includes(countryName)) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return "4 hours"
     } else if (tier2.includes(countryName)) {
       return "6 hours"
     } else {
       return "8-24 hours"
+<<<<<<< HEAD
     }
 
 
@@ -133,6 +154,9 @@ function CountryServiceCard() {
 
 
   return (
+=======
+    }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
@@ -176,6 +200,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "Singapore": "🇸🇬",;
       "South Korea": "🇰🇷",;
       "South Africa": "🇿🇦",;
+<<<<<<< HEAD
       // Default if no flag is found;
       "default": "🌐";
     };
@@ -190,6 +215,8 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     if (tier1 && tier1.includes(countryName)) {;
       return "4 hours";
     } else if (tier2 && tier2.includes(countryName)) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return "6 hours";
     } else {;
       return "8-24 hours";
@@ -200,6 +227,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     <CardclassName={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
+<<<<<<< HEAD
         : "bg-zion-blue-dark border-zion-blue-light"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -350,3 +378,13 @@ isPopular?: boolean
 }
 ;
 ;
+=======
+        : "bg-zion-blue-dark border-zion-blue-light"        : "bg-zion-blue-dark border-zion-blue-light"
+    }`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex items-center justify-between">;
+          <div className="flex items-center space-x-2">;          </div>;
+        </div>;
+      </CardContent>;
+      <CardFooter>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

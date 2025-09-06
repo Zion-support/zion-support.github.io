@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api.tsx
 <<<<<<< HEAD
 =======
@@ -37,6 +38,8 @@ const apiFeatures = [
   }
 ];
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function API() {
   const apiEndpoints = [
     {
@@ -144,33 +147,10 @@ console.log(deployment.url);`, description: 'Deploy your application to the clou
       requests: 'Unlimited', burst: '1,000/minute', features: ['Unlimited access', 'Dedicated support', 'Custom limits']
     }
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function APIPage() {
   return (
-<<<<<<< HEAD
-    <Layout
-      title="API - Zion Tech Group"
-      description="Powerful APIs for integrating with Zion Tech Group services. Build amazing applications with our developer-friendly APIs."
-      keywords="API, REST API, developer tools, integration, SDK"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              API Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful APIs for integrating with Zion Tech Group services. 
-              Build amazing applications with our developer-friendly APIs.
-            </p>
-          </motion.div>
-=======
     <>
       <Head>
         <title>API Reference - Zion Tech Group</title>
@@ -205,7 +185,7 @@ export default function APIPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {apiFeatures.map((feature, index) => (
@@ -235,15 +215,6 @@ export default function APIPage() {
             ))}
           </div>
 
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-blue-600 rounded-xl p-8 text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-=======
         {/* API Endpoints */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -425,7 +396,7 @@ export default function APIPage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -447,9 +418,13 @@ export default function APIPage() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Code,
   Check,
   Globe,
@@ -730,6 +705,7 @@ export default function APIPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api.tsx
@@ -773,8 +749,10 @@ export default function APIPage() {
     </MainLayout>);
 }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>
 </>
   );
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

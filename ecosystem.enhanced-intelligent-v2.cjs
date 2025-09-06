@@ -26,6 +26,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // AI-Powered Code Analysis & Auto-Fixing
+    {
+      name: 'ai-code-analyzer',
+      script: 'node',
+      args: 'scripts/automation/ai-code-analyzer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      max_memory_restart: '512M',
+      restart_delay: 10000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // AI-Powered Code Analysis & Auto-Fixing;
     {}
       "name": 'ai-code-analyzer',
@@ -39,6 +56,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // AI-Powered Code Analysis & Auto-Fixing
+    {
+      name: 'ai-code-analyzer',
+      script: 'node',
+      args: 'scripts/automation/ai-code-analyzer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      max_memory_restart: '512M',
+      restart_delay: 10000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
@@ -51,6 +86,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Smart Performance Optimizer
+    {
+      name: 'smart-performance-optimizer',
+      script: 'node',
+      args: 'scripts/automation/smart-performance-optimizer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      max_memory_restart: '1G',
+      restart_delay: 15000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Smart Performance Optimizer;
     {}
       "name": 'smart-performance-optimizer',
@@ -64,6 +116,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Smart Performance Optimizer
+    {
+      name: 'smart-performance-optimizer',
+      script: 'node',
+      args: 'scripts/automation/smart-performance-optimizer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      max_memory_restart: '1G',
+      restart_delay: 15000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
@@ -76,6 +146,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Intelligent Dependency Manager
+    {
+      name: 'intelligent-dependency-manager',
+      script: 'node',
+      args: 'scripts/automation/intelligent-dependency-manager.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 0 * * 0', // Weekly on Sunday at midnight
+      max_memory_restart: '512M',
+      restart_delay: 20000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Intelligent Dependency Manager;
     {}
       "name": 'intelligent-dependency-manager',
@@ -89,6 +176,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Intelligent Dependency Manager
+    {
+      name: 'intelligent-dependency-manager',
+      script: 'node',
+      args: 'scripts/automation/intelligent-dependency-manager.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 0 * * 0', // Weekly on Sunday at midnight
+      max_memory_restart: '512M',
+      restart_delay: 20000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
@@ -102,6 +207,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Smart Deployment Automation
+    {
+      name: 'smart-deployment-automation',
+      script: 'node',
+      args: 'scripts/automation/smart-deployment-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      max_memory_restart: '1G',
+      restart_delay: 30000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Smart Deployment Automation;
     {}
       "name": 'smart-deployment-automation',
@@ -115,6 +237,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 30000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Smart Deployment Automation
+    {
+      name: 'smart-deployment-automation',
+      script: 'node',
+      args: 'scripts/automation/smart-deployment-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      max_memory_restart: '1G',
+      restart_delay: 30000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
@@ -128,6 +268,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Intelligent Repository Manager
+    {
+      name: 'intelligent-repository-manager',
+      script: 'node',
+      args: 'scripts/automation/intelligent-repository-manager.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      max_memory_restart: '512M',
+      restart_delay: 10000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Intelligent Repository Manager;
     {}
       "name": 'intelligent-repository-manager',
@@ -141,6 +298,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Intelligent Repository Manager
+    {
+      name: 'intelligent-repository-manager',
+      script: 'node',
+      args: 'scripts/automation/intelligent-repository-manager.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      max_memory_restart: '512M',
+      restart_delay: 10000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
@@ -154,6 +329,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Advanced Development Workflow
+    {
+      name: 'advanced-development-workflow',
+      script: 'node',
+      args: 'scripts/automation/advanced-development-workflow.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Advanced Development Workflow;
     {}
       "name": 'advanced-development-workflow',
@@ -167,6 +359,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Advanced Development Workflow
+    {
+      name: 'advanced-development-workflow',
+      script: 'node',
+      args: 'scripts/automation/advanced-development-workflow.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
@@ -179,6 +389,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Intelligent CI/CD Orchestrator
+    {
+      name: 'intelligent-cicd-orchestrator',
+      script: 'node',
+      args: 'scripts/automation/intelligent-cicd-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      max_memory_restart: '1G',
+      restart_delay: 15000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Intelligent CI/CD Orchestrator;
     {}
       "name": 'intelligent-cicd-orchestrator',
@@ -192,6 +419,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Intelligent CI/CD Orchestrator
+    {
+      name: 'intelligent-cicd-orchestrator',
+      script: 'node',
+      args: 'scripts/automation/intelligent-cicd-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      max_memory_restart: '1G',
+      restart_delay: 15000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
@@ -204,6 +449,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Enhanced CI/CD Automation
+    {
+      name: 'enhanced-ci-cd-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-ci-cd-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '1G',
+      restart_delay: 10000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Enhanced CI/CD Automation;
     {}
       "name": 'enhanced-ci-cd-automation',
@@ -217,6 +479,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 10000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Enhanced CI/CD Automation
+    {
+      name: 'enhanced-ci-cd-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-ci-cd-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '1G',
+      restart_delay: 10000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
@@ -229,6 +509,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Enhanced Testing Automation
+    {
+      name: 'enhanced-testing-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-testing-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      max_memory_restart: '1G',
+      restart_delay: 20000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Enhanced Testing Automation;
     {}
       "name": 'enhanced-testing-automation',
@@ -242,6 +539,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 20000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Enhanced Testing Automation
+    {
+      name: 'enhanced-testing-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-testing-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      max_memory_restart: '1G',
+      restart_delay: 20000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
@@ -254,6 +569,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Enhanced Security Automation
+    {
+      name: 'enhanced-security-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-security-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      max_memory_restart: '512M',
+      restart_delay: 25000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Enhanced Security Automation;
     {}
       "name": 'enhanced-security-automation',
@@ -267,6 +599,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 25000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Enhanced Security Automation
+    {
+      name: 'enhanced-security-automation',
+      script: 'node',
+      args: 'scripts/automation/enhanced-security-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      max_memory_restart: '512M',
+      restart_delay: 25000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
@@ -279,6 +629,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Project Health Monitor
+    {
+      name: 'project-health-monitor',
+      script: 'node',
+      args: 'scripts/automation/project-health-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Project Health Monitor;
     {}
       "name": 'project-health-monitor',
@@ -292,6 +659,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Project Health Monitor
+    {
+      name: 'project-health-monitor',
+      script: 'node',
+      args: 'scripts/automation/project-health-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
@@ -304,6 +689,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // PM2 Sync Automation
+    {
+      name: 'pm2-sync-automation',
+      script: 'node',
+      args: 'scripts/automation/pm2-sync-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/1 * * * *', // Every minute
+      max_memory_restart: '1G',
+      restart_delay: 2000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // PM2 Sync Automation;
     {}
       "name": 'pm2-sync-automation',
@@ -317,6 +719,24 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 2000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // PM2 Sync Automation
+    {
+      name: 'pm2-sync-automation',
+      script: 'node',
+      args: 'scripts/automation/pm2-sync-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/1 * * * *', // Every minute
+      max_memory_restart: '1G',
+      restart_delay: 2000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
@@ -329,6 +749,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Link Checker Automation
+    {
+      name: 'link-checker-automation',
+      script: 'node',
+      args: 'scripts/automation/link-checker-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      max_memory_restart: '512M',
+      restart_delay: 30000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Link Checker Automation;
     {}
       "name": 'link-checker-automation',
@@ -342,6 +779,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Link Checker Automation
+    {
+      name: 'link-checker-automation',
+      script: 'node',
+      args: 'scripts/automation/link-checker-automation.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      max_memory_restart: '512M',
+      restart_delay: 30000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
@@ -354,6 +809,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // TypeScript Syntax Fixer
+    {
+      name: 'typescript-syntax-fixer',
+      script: 'node',
+      args: 'scripts/automation/typescript-syntax-fixer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      max_memory_restart: '256M',
+      restart_delay: 5000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // TypeScript Syntax Fixer;
     {}
       "name": 'typescript-syntax-fixer',
@@ -367,6 +839,24 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // TypeScript Syntax Fixer
+    {
+      name: 'typescript-syntax-fixer',
+      script: 'node',
+      args: 'scripts/automation/typescript-syntax-fixer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Every 10 minutes
+      max_memory_restart: '256M',
+      restart_delay: 5000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
@@ -379,6 +869,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Console Error Fixer
+    {
+      name: 'console-error-fixer',
+      script: 'node',
+      args: 'scripts/automation/console-error-fixer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '256M',
+      restart_delay: 3000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Console Error Fixer;
     {}
       "name": 'console-error-fixer',
@@ -392,6 +899,24 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 3000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Console Error Fixer
+    {
+      name: 'console-error-fixer',
+      script: 'node',
+      args: 'scripts/automation/console-error-fixer.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      max_memory_restart: '256M',
+      restart_delay: 3000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
@@ -404,6 +929,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Quality Checks
+    {
+      name: 'quality-checks',
+      script: 'node',
+      args: 'scripts/automation/quality-checks.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      max_memory_restart: '256M',
+      restart_delay: 10000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Quality Checks;
     {}
       "name": 'quality-checks',
@@ -417,6 +959,24 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 10000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Quality Checks
+    {
+      name: 'quality-checks',
+      script: 'node',
+      args: 'scripts/automation/quality-checks.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/15 * * * *', // Every 15 minutes
+      max_memory_restart: '256M',
+      restart_delay: 10000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
@@ -429,6 +989,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Security Audit
+    {
+      name: 'security-audit',
+      script: 'node',
+      args: 'scripts/automation/security-audit.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      max_memory_restart: '512M',
+      restart_delay: 20000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Security Audit;
     {}
       "name": 'security-audit',
@@ -442,6 +1019,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Security Audit
+    {
+      name: 'security-audit',
+      script: 'node',
+      args: 'scripts/automation/security-audit.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      max_memory_restart: '512M',
+      restart_delay: 20000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
@@ -454,6 +1049,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Continuous Improvement
+    {
+      name: 'continuous-improvement',
+      script: 'node',
+      args: 'scripts/automation/continuous-improvement.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 2 * * *', // Daily at 2 AM
+      max_memory_restart: '256M',
+      restart_delay: 60000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Continuous Improvement;
     {}
       "name": 'continuous-improvement',
@@ -467,6 +1079,24 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 60000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Continuous Improvement
+    {
+      name: 'continuous-improvement',
+      script: 'node',
+      args: 'scripts/automation/continuous-improvement.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 2 * * *', // Daily at 2 AM
+      max_memory_restart: '256M',
+      restart_delay: 60000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
@@ -479,6 +1109,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Daily Build Test
+    {
+      name: 'daily-build-test',
+      script: 'node',
+      args: 'scripts/automation/daily-build-test.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 1 * * *', // Daily at 1 AM
+      max_memory_restart: '512M',
+      restart_delay: 120000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Daily Build Test;
     {}
       "name": 'daily-build-test',
@@ -492,6 +1139,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 120000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Daily Build Test
+    {
+      name: 'daily-build-test',
+      script: 'node',
+      args: 'scripts/automation/daily-build-test.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 1 * * *', // Daily at 1 AM
+      max_memory_restart: '512M',
+      restart_delay: 120000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
@@ -504,6 +1169,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Health Check
+    {
+      name: 'health-check',
+      script: 'node',
+      args: 'scripts/automation/health-check.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/2 * * * *', // Every 2 minutes
+      max_memory_restart: '256M',
+      restart_delay: 5000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Health Check;
     {}
       "name": 'health-check',
@@ -517,6 +1199,24 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Health Check
+    {
+      name: 'health-check',
+      script: 'node',
+      args: 'scripts/automation/health-check.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/2 * * * *', // Every 2 minutes
+      max_memory_restart: '256M',
+      restart_delay: 5000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
@@ -529,6 +1229,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Security Scanner
+    {
+      name: 'security-scanner',
+      script: 'node',
+      args: 'scripts/automation/security-scanner.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      max_memory_restart: '512M',
+      restart_delay: 30000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Security Scanner;
     {}
       "name": 'security-scanner',
@@ -542,6 +1259,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Security Scanner
+    {
+      name: 'security-scanner',
+      script: 'node',
+      args: 'scripts/automation/security-scanner.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      max_memory_restart: '512M',
+      restart_delay: 30000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
@@ -554,6 +1289,23 @@ module.exports = {}
       time: true
     },
 
+<<<<<<< HEAD
+=======
+    // Performance Monitor
+    {
+      name: 'performance-monitor',
+      script: 'node',
+      args: 'scripts/automation/performance-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/3 * * * *', // Every 3 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Performance Monitor;
     {}
       "name": 'performance-monitor',
@@ -567,6 +1319,24 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
+<<<<<<< HEAD
+=======
+    // Performance Monitor
+    {
+      name: 'performance-monitor',
+      script: 'node',
+      args: 'scripts/automation/performance-monitor.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/3 * * * *', // Every 3 minutes
+      max_memory_restart: '512M',
+      restart_delay: 5000,
+      env: {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
@@ -580,6 +1350,21 @@ module.exports = {}
     }
   ],
 
+<<<<<<< HEAD
+=======
+  // PM2 Deploy configuration
+  deploy: {
+    production: {
+
+  // PM2 Deploy configuration
+  deploy: {
+    production: {
+  // PM2 Deploy configuration;
+  "deploy": {}
+    production: {}
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       user: 'node',
       host: 'your-production-server.com',
       ref: 'origin/main',

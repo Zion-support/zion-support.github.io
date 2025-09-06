@@ -1,12 +1,18 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';
+const Tabs = TabsPrimitive.Root;import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Tabs = TabsPrimitive.Root;
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
 
+<<<<<<< HEAD
 
 
 import { cn } from "@/lib/utils"
@@ -51,21 +57,32 @@ const TabsList = React.forwardRef<;
     className={cn(
       className
     )}
+=======
+import { cn } from "@/lib/utils"
+
+const Tabs = TabsPrimitive.Root
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {...props}
   />;
 ));
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.T</typeof>rigger>
 >(({ className, ...props }, ref) => (
   <TabsPrimitive.Trigger
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 TabsList && TabsList.displayName = TabsPrimitive && TabsPrimitive.List.displayName;
 
 const TabsTrigger = React && React.forwardRef<;
@@ -74,6 +91,7 @@ const TabsTrigger = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <TabsPrimitive&& TabsPrimitive.Trigger
 
+<<<<<<< HEAD
 
 const TabsTrigger = React.forwardRef<;
   React.ElementRef<typeof TabsPrimitive.Trigger>,;
@@ -119,11 +137,14 @@ const TabsContent = React.forwardRef<;
 
 
     ref={ref}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn(
       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
     ref={ref}
     className={cn(
       'mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+<<<<<<< HEAD
       className
     )}
     {...props}
@@ -142,6 +163,9 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
+=======
+      classNameexport { Tabs, TabsList, TabsTrigger, TabsContent };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as TabsPrimitive from '@radix - ui / react - tabs';
 ;
 import {cn} from '@/lib / utils';
@@ -189,6 +213,7 @@ TabsContent.display_name = TabsPrimitive.Content.display_name;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+<<<<<<< HEAD
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 ;
 export { Tabs, TabsList, TabsTrigger, TabsContent }import * as React from "react" import * as TabsPrimitive from "@radix-ui/react-tabs" const Tabs = TabsPrimitive.Root const TabsList = React.forwardRef< React.ElementRef<typeof TabsPrimitive.List>;
@@ -228,3 +253,5 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }
 export { Tabs, TabsList, TabsTrigger, TabsContent };
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

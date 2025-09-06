@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useSkills() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -15,12 +19,16 @@ export function useSkills() {;
 
 
   const { user } = useAuth();
+=======
+export function useSkills() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills')
+<<<<<<< HEAD
       return false
 
 
@@ -78,6 +86,12 @@ export function useSkills() {;
 
 
 ;
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('resume_skills')
+        .insert({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -103,12 +117,16 @@ export function useSkills() {;
       setError('You must be logged in to delete skills'),;
       return false;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
     }
     
@@ -202,6 +220,13 @@ export function useSkills() {;
 
 
 import {useState} from 'react';
+=======
+          return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not delete skill')
+    } finally {
+      setIsLoading(false)import {useState} from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -218,6 +243,7 @@ function use_skills() {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
       set_error ('You must be logged in to add skills'),
       return false;
@@ -299,3 +325,6 @@ if (throw error) {
     setIsLoading (true);
     set_error (null);
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

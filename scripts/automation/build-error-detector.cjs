@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -111,3 +115,9 @@ this.log("� Report "generated": ${reportFile}")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
 
+<<<<<<< HEAD
+=======
+      this.log("� Build Error Detector completed!")
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

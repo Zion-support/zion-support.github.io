@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React, { useState } from "react";
@@ -12,6 +13,8 @@ import {Switch} from "@/components/ui/switch";
 import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
 import {Loader2, ShieldCheck, Download} from "lucide-react";
 import {toast} from "sonner";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -23,6 +26,7 @@ import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
 import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 import { Loader2, ShieldCheck, Download } from "lucide-react",
+<<<<<<< HEAD
 import { toast } from "sonner",
 interface SmartContractDeploymentProps {
 
@@ -47,12 +51,16 @@ export function SmartContractDeployment({
   solidityCode,
   onDeploy,
   isDeploying
+=======
+import { toast } from "sonner",  isDeploying
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
 
     network: 'none'
     useEscrow: true
     deployToChain: false
+<<<<<<< HEAD
     walletAddress: ''
 
 import React, { useState } from './react';
@@ -136,6 +144,9 @@ if ( {) {
           <div className="flex items-center space-x-2">
 
               checked={deploymentOptions.deployToChain}
+=======
+    walletAddress: ''              checked={deploymentOptions.deployToChain}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
@@ -150,6 +161,7 @@ import { Input } from "@/components/ui/input",;
 import { Switch } from "@/components/ui/switch",;
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
 import { Loader2, ShieldCheck, Download } from "lucide-react",;
+<<<<<<< HEAD
 import { toast } from "sonner",;
   }
 
@@ -173,6 +185,9 @@ export function SmartContractDeployment(): any ({ ;
   solidityCode;
   onDeploy;
   isDeploying;
+=======
+import { toast } from "sonner",;  isDeploying;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
     network: 'none',;
@@ -210,6 +225,7 @@ export function SmartContractDeployment(): any ({ ;
     URL && URL.revokeObjectURL(url);
     document && document.body.removeChild(a);
 
+<<<<<<< HEAD
     toast && toast.success("Solidity contract downloaded");
   };
 
@@ -219,13 +235,26 @@ export function SmartContractDeployment(): any ({ ;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
   }
+=======
+    toast && toast.success("Solidity contract downloaded")
+};
+
+  return (    <Card className="w-full">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <ShieldCheck className="h-5 w-5 text-primary" />;
+  }  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
               })}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
@@ -261,9 +290,12 @@ export function SmartContractDeployment(): any ({ ;
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               })}
 
             />;
@@ -280,6 +312,7 @@ export function SmartContractDeployment(): any ({ ;
 
                     ...deploymentOptions;
                     network: value as BlockchainNetwork;
+<<<<<<< HEAD
                   })}
 
 
@@ -331,6 +364,8 @@ export function SmartContractDeployment(): any ({ ;
                   })}
 
                   className="flex flex-col space-y-1";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 >;
                   <div className="flex items-center space-x-2">;
                     <RadioGroupItem value="ethereum" id="ethereum" />;
@@ -343,6 +378,7 @@ export function SmartContractDeployment(): any ({ ;
                 </RadioGroup>;
               </div>;
 
+<<<<<<< HEAD
               <div className="space-y-2">;
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
                 <Input
@@ -359,12 +395,21 @@ export function SmartContractDeployment(): any ({ ;
                   value={deploymentOptions.walletAddress || ''}
 
                   })}
+=======
+                <Input 
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions.walletAddress || ''}                  })}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
               </div>;
 
               <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;
                     walletAddress: e.target.value
@@ -376,6 +421,7 @@ export function SmartContractDeployment(): any ({ ;
                 />;
               </div>;
               <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
@@ -411,6 +457,11 @@ export function SmartContractDeployment(): any ({ ;
                     ...deploymentOptions,;
                     useEscrow:checked;
                   onCheckedChange={(checked) => setDeploymentOptions({
+=======
+                  id="use-escrow"
+                  checked={deploymentOptions.useEscrow}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     ...deploymentOptions;
                     useEscrow: checked
                   onCheckedChange={(checked) => setDeploymentOptions({;
@@ -423,12 +474,16 @@ export function SmartContractDeployment(): any ({ ;
               </div>;
             </>;
           )}
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </Button>;
       </CardFooter>;
     </Card>;
   );
 
+<<<<<<< HEAD
 
           <div className="rounded-md bg-muted p-4">;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
@@ -440,6 +495,11 @@ export function SmartContractDeployment(): any ({ ;
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
+=======
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Switch;
               id="deploy - blockchain";
               checked={deployment_options.deployToChain}
@@ -452,7 +512,11 @@ export function SmartContractDeployment(): any ({ ;
           </div>;
           {deployment_options.deployToChain && (
             <>;
+<<<<<<< HEAD
               <div className="space - y-2">;
+=======
+              <div className="space-y-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Label > Select blockchain network</Label>;
                 <RadioGroup;
                   default_value={deployment_options.network}
@@ -460,6 +524,7 @@ export function SmartContractDeployment(): any ({ ;
                     ...deployment_options;
                     network: value as BlockchainNetwork;
                   })}
+<<<<<<< HEAD
                   className="flex flex - col space - y-1";
                 >;
                   <div className="flex items - center space - x-2">;
@@ -467,12 +532,25 @@ export function SmartContractDeployment(): any ({ ;
                     <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
                   </div>;
                   <div className="flex items - center space - x-2">;
+=======
+                  className="flex flex - col space-y-1";
+                >;
+                  <div className="flex items - center space-x-2">;
+                    <RadioGroupItem value="ethereum" id="ethereum" />;
+                    <Label html_for="ethereum">Ethereum (higher fees, more secure)</Label>;
+                  </div>;
+                  <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <RadioGroupItem value="polygon" id="polygon" />;
                     <Label html_for="polygon">Polygon (lower fees, faster)</Label>;
                   </div>;
                 </RadioGroup>;
               </div>;
+<<<<<<< HEAD
               <div className="space - y-2">;
+=======
+              <div className="space-y-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Label html_for="wallet - address">Wallet address for transactions</Label>;
                 <Input;
                   id="wallet - address";
@@ -484,7 +562,11 @@ export function SmartContractDeployment(): any ({ ;
                   })}
                 />;
               </div>;
+<<<<<<< HEAD
               <div className="flex items - center space - x-2">;
+=======
+              <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Switch;
                   id="use - escrow";
                   checked={deployment_options.use_escrow}
@@ -496,6 +578,7 @@ export function SmartContractDeployment(): any ({ ;
                 <Label html_for="use - escrow">Use escrow for payments</Label>;
               </div>;
             </>)}
+<<<<<<< HEAD
           <div className="rounded - md bg - muted p - 4">;
             <h4 className="text - sm font - medium mb - 2">Smart Contract Preview</h4>;
             <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font - mono">;
@@ -505,10 +588,17 @@ export function SmartContractDeployment(): any ({ ;
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
               <pre>{solidityCode.slice(0, 500)}...</pre>;
+=======
+          <div className="rounded - md bg - muted p-4">;
+            <h4 className="text - sm font - medium mb-2">Smart Contract Preview</h4>;
+            <div className="max - h-52 overflow - y-auto bg - background p - 3 rounded text - xs font-mono">;
+              <pre>{solidity_code.slice (0, 500)}...</pre>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 
 
 
@@ -599,4 +689,8 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 }
 ;
 }
+=======
+}
+;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;

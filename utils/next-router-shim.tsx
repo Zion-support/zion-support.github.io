@@ -1,32 +1,37 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 module.exports = {},
 
 
 module.exports = {},;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 module.exports = {},;
 
 module.exports = {},;
 module.exports = {}
 module.exports = {},;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
@@ -61,6 +66,10 @@ export const useHistory = () => ({ push: (url: string) => (window.location.href 
 export const useParams = () => ({})
 export const NavLink = Link;
 export default {} as Record<string, unknown>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

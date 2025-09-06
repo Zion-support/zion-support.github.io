@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       colors: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         blue: {
 =======
         background: 'var(--background)',
@@ -35,6 +36,8 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         },
         gray: {
           50: '#f9fafb',
@@ -47,12 +50,12 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712',
         },
         'zion-slate-dark': '#1e293b',
         'zion-slate': '#334155',
         'zion-slate-light': '#475569',
       },
+<<<<<<< HEAD
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
@@ -69,10 +72,13 @@ module.exports = {
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
           '100%': { opacity: '1' },
         },
         slideUp: {
@@ -81,6 +87,8 @@ module.exports = {
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
   },
   plugins: [],

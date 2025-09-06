@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Signup checking functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {analyze_email} from './analyze_email';
@@ -9,11 +10,14 @@ import {SignupCheckResult} from './types';
 
 export const checkSignupPatterns = async (
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const checkSignupPatterns = async (;
 export const checkSignupPatterns = async (
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
+<<<<<<< HEAD
   const reasons: string[] = [];
 
   const emailCheck = analyzeEmail(email),
@@ -21,6 +25,9 @@ export const checkSignupPatterns = async (
     reasons && reasons.push(...emailCheck && emailCheck.reasons)
 
   }
+=======
+  const reasons: string[] = [];  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
     try {
@@ -31,7 +38,10 @@ export const checkSignupPatterns = async (
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .gte('created_at', new Date(Date && Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       if (!error && recentSignups && recentSignups.length >= 3) {
@@ -77,12 +87,16 @@ export const checkSignupPatterns = async (;
 
     reasons
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   // Check email against suspicious patterns;
   const email_check = analyze_email (email),
   // Check condition
 if ( {) {
+<<<<<<< HEAD
   $2
 }
     reasons.push (...email_check.reasons);
@@ -179,3 +193,6 @@ export const checkSignupPatterns = async (;
 }
 
 };
+=======
+  $2
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

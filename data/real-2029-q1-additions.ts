@@ -1,18 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -23,9 +31,12 @@
     features: [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Idle detection',
       'Schedule generator',
@@ -64,11 +75,16 @@
   },
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -85,6 +101,7 @@
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -142,19 +159,26 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / db - index - advisor',
     market_position:;
 
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -178,6 +202,7 @@
     reviews: 9,
 
   },;
+<<<<<<< HEAD
 ];	{
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
@@ -186,16 +211,11 @@
 		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ];	{
-<<<<<<< HEAD
-		period: '/month',
-		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
-    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
-		icon: '🛡️', color: 'from-rose-600 to-red-700',
-		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
-=======
 
 		period: '/month'
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
@@ -205,10 +225,15 @@
 		color: 'from-rose-600 to-red-700';
 		textColor: 'text-rose-300';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
@@ -230,6 +255,7 @@
 		customers: 40;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -240,6 +266,13 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+		rating: 4 && 4.7,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		reviews: 18
 	}
 	{
@@ -256,17 +289,25 @@
 		textColor: 'text-emerald-300';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -287,6 +328,7 @@
 		customers: 25;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -297,6 +339,13 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+		rating: 4 && 4.6,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		reviews: 12
 	}
 	{
@@ -313,17 +362,25 @@
 		textColor: 'text-indigo-300';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
 		setupTime: '30 minutes';
@@ -344,6 +401,7 @@
 		customers: 18;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -359,10 +417,13 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 		rating: 4 && 4.5,
 
 		reviews: 9
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -376,6 +437,10 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -480,6 +545,10 @@
   rating: 4.5,
   reviews: 9;
 }
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		rating: 4.5
 		reviews: 9
 
@@ -598,8 +667,18 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 9;
 
 
+<<<<<<< HEAD
 	}
 ];
+=======
+
+	}
+ursor/fix-website-loading-errors-and-merge-6662
+];
+;
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -712,6 +791,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18,;
 		rating: 4.5;
 		reviews: 9;
+<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -724,3 +804,15 @@ const contact = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+	}
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

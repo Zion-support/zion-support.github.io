@@ -1,11 +1,16 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+<<<<<<< HEAD
 import {Resend} from "npm: resend@2 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+=======
+import {Resend} from "npm: resend@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Resend} from "npm: resend@2.0.0";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
@@ -17,6 +22,9 @@ import { Resend } from "npm: resend@2.0.0",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+=======
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));  "Access-Control-Allow-Origin": "*",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
@@ -25,6 +33,7 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
   try {
       to: [to];
       subject
@@ -96,6 +105,9 @@ serve(async (req) => {;
 });
 
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+=======
+  try {import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Resend } from 'npm: resend@2.0.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
@@ -126,7 +138,12 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
 
+=======
+  }
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const { to, subject, html } = await req.json(),
 
     const emailResponse = await resend.emails.send({
@@ -146,9 +163,12 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
   }
 });
   }
 });
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });

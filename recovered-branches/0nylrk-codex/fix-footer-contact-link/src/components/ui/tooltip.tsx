@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {cn} from '@/lib/utils';
 const TooltipProvider = TooltipPrimitive.Provider;
 const Tooltip = TooltipPrimitive.Root;
 const TooltipTrigger = TooltipPrimitive.Trigger;
+<<<<<<< HEAD
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import * as React from "react"
@@ -11,6 +15,8 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const TooltipProvider = TooltipPrimitive.Provider
@@ -18,6 +24,7 @@ const TooltipProvider = TooltipPrimitive.Provider
 const Tooltip = TooltipPrimitive.Root
 
 const TooltipTrigger = TooltipPrimitive.Trigger
+<<<<<<< HEAD
 
 const TooltipContent = React.forwardRef<
   React.ElementRef<typeof TooltipPrimitive.Content>
@@ -33,6 +40,15 @@ const TooltipContent = React.forwardRef<
     className={cn(
 
 
+=======
+const TooltipContent = React.forwardRef<
+  React.ElementRef<typeof TooltipPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
+></typeof>(({ className, sideOffset = 4, ...props }, ref) => (    ref={ref}
+    sideOffset={sideOffset}
+    className={cn(
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const TooltipProvider = TooltipPrimitive && TooltipPrimitive.Provider;
 
 const Tooltip = TooltipPrimitive && TooltipPrimitive.Root;
@@ -48,6 +64,7 @@ const TooltipContent = React && React.forwardRef<;
     sideOffset={sideOffset}
     className={cn(
       'z-50 overflow-hidden rounded-md border bg-popover px-3 py-1 && 1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+<<<<<<< HEAD
 
       className
 
@@ -77,6 +94,9 @@ const TooltipContent = React.forwardRef<;
       className;
       className
     )}
+=======
+      className    )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {...props}
   />;
 ));
@@ -84,14 +104,20 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
 
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 import * as TooltipPrimitive from '@radix - ui / react - tooltip';
 ;
@@ -118,6 +144,7 @@ const TooltipContent = React.forward_ref<;
 TooltipContent.display_name = TooltipPrimitive.Content.display_name;
 ;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+<<<<<<< HEAD
 ;
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 ;
@@ -145,3 +172,6 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

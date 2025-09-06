@@ -51,6 +51,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (!content.includes('
       return false;
     }
@@ -68,6 +69,8 @@ function resolveMergeConflicts(filePath) {
     
     // Clean up any remaining conflict markers
     content = content.replace(/
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -98,6 +101,7 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
             if (content.includes('
               conflictedFiles.push(fullPath);
             }
@@ -151,3 +155,5 @@ try {
   console.error('❌ Error during cleanup:', error);
   process.exit(1);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

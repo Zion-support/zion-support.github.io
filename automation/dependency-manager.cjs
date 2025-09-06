@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,15 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -391,6 +401,7 @@ if ( {})
 module.exports = DependencyManager;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 module.exports = DependencyManager;
@@ -431,3 +442,14 @@ module.exports = DependencyManager;
 module.exports = DependencyManager;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+module.exports = DependencyManager;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

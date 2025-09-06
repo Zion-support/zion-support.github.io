@@ -6,6 +6,6 @@ const CommunityDiscussion.js = ({ className }) => {
       <h1>CommunityDiscussion.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

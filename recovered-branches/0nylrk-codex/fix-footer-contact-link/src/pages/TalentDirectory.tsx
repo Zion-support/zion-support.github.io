@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -34,6 +37,7 @@ import {X} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {;
+<<<<<<< HEAD
   const navigate = useNavigate();
 
   // Use our custom hook to manage state;
@@ -43,6 +47,9 @@ export default function TalentDirectory() {;
   // Use our custom hook to manage state
   const {
     filteredTalents;
+=======
+  const navigate = useNavigate();    filteredTalents;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     isLoading;
     searchTerm;
 import React, { useState } from './react';
@@ -83,6 +90,7 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
+<<<<<<< HEAD
 
 
 
@@ -93,6 +101,8 @@ function TalentDirectory() {
   const {
 
     filteredTalents,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     isLoading,
     searchTerm,
     setSearchTerm,
@@ -125,7 +135,10 @@ function TalentDirectory() {
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   
   const viewProfile = (id: string) => {
@@ -134,8 +147,11 @@ function TalentDirectory() {
   },
   
 
+<<<<<<< HEAD
     selected_talent;
     setSelectedTalent;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -145,6 +161,7 @@ function TalentDirectory() {
             <p className="text-zion-slate-light">
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
+<<<<<<< HEAD
           </div>
 
 
@@ -307,15 +324,37 @@ export default function TalentDirectory() {;
 
 
             {/* Results */}
+=======
+          </div>          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">;
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
+              <FilterSidebar            {/* Results */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <TalentResults;
               filtered_talents={filtered_talents}
               is_loading={is_loading}
               view_profile={view_profile}
+<<<<<<< HEAD
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
 
                 selected_skills;
+=======
+
+            
+
+            ;
+            {/* Results */}
+            <TalentResults;
+              filteredTalents={filteredTalents}
+              isLoading={isLoading}
+              viewProfile={viewProfile}
+              handleRequestHire={handleRequestHire}
+              saved_talents={saved_talents}
+              handleToggleSave={handleToggleSave}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 toggle_skill;
                 selected_availability;
                 toggle_availability;
@@ -324,8 +363,12 @@ export default function TalentDirectory() {;
                 price_range;
 
                 setPriceRange;
+<<<<<<< HEAD
                 experience_range;
               activeFiltersProps={{;
+=======
+                experience_range;              activeFiltersProps={{;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 selectedSkills,;
                 toggleSkill,;
                 selectedAvailability,;
@@ -337,10 +380,13 @@ export default function TalentDirectory() {;
 
                 experienceRange;
                 setExperienceRange;
+<<<<<<< HEAD
 
                 setPriceRange;
                 experience_range;
                 setExperienceRange;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -353,6 +399,7 @@ export default function TalentDirectory() {;
                 setExperienceRange
                 clearFilters}}
             />;
+<<<<<<< HEAD
 
 
               handleRequestHire={handleRequestHire}
@@ -414,6 +461,8 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar;
                     search_term={search_term}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     setSearchTerm={setSearchTerm}
                   <FilterSidebar
                     searchTerm={searchTerm}
@@ -437,6 +486,7 @@ export default function TalentDirectory() {;
                   />;
                 </div>;
 
+<<<<<<< HEAD
               </div>)}
           </div>;
         </div>;
@@ -447,6 +497,9 @@ export default function TalentDirectory() {;
 ;
 
               </div>;
+=======
+              </div>)}              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             )}
           </div>
         </div>
@@ -602,3 +655,7 @@ return (<AppLayout> <div className="container mx-auto px-4 py-8" > <div classNam
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

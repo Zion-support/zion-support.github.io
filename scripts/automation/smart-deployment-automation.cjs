@@ -46,6 +46,11 @@ class SmartDeploymentAutomation {}
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
 
+<<<<<<< HEAD
+=======
+        
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -186,3 +191,8 @@ if ( {})
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = SmartDeploymentAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

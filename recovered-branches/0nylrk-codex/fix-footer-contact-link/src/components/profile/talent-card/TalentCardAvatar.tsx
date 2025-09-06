@@ -5,6 +5,7 @@ interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
+<<<<<<< HEAD
 }
 
 export function TalentCardAvatar({
@@ -31,6 +32,19 @@ export function TalentCardAvatar({
 }
 
 }
+=======
+
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+
+import React from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+
+interface TalentCardAvatarProps {
+  profilePicture?: string,
+  fullName: string}
+
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
@@ -51,6 +65,7 @@ function TalentCardAvatar() {
   }
 ;
 
+<<<<<<< HEAD
 
 
   return (
@@ -82,3 +97,5 @@ fullName: string
 }
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

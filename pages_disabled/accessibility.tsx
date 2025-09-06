@@ -430,7 +430,11 @@ export default function AccessibilityPage() {
                   <p className="text-gray-600 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
+<<<<<<< HEAD
                 </div>
+=======
+=                </div>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >:pages-disabled/accessibility.tsx.disabled
               </motion.div>
             </div>

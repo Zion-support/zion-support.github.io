@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -21,6 +22,12 @@ export interface ModerationFlag {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -30,31 +37,31 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-<<<<<<< HEAD
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
 }
+<<<<<<< HEAD
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
 =======
 }
 // Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
+<<<<<<< HEAD
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
 <<<<<<< HEAD
@@ -64,28 +71,33 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
 
-<<<<<<< HEAD
-=======
   await upsertFlag(flag);
   return flag;
 
 }
 
-=======
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -95,14 +107,17 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
-=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 
 
 // Mock data storage - replace with actual database
@@ -111,9 +126,14 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   // Mock implementation - replace with actual database logic
@@ -153,14 +173,19 @@ export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' |
 let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export async function createFlag(
@@ -215,6 +240,10 @@ export async function updateFlagStatus(
 <<<<<<< HEAD
 =======
 =======
+=======
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   status: ModerationFlag['status'],
   admin_notes?: string): Promise < FlaggedContent | undefined> {
   const flag = await getFlagById (id);
@@ -222,7 +251,6 @@ export async function updateFlagStatus(
 if (return undefined) {
   $2
 }
-=======
     reason: data.reason || '',
     userEmail: data.userEmail || '',
     status: 'pending',
@@ -233,8 +261,6 @@ if (return undefined) {
   flags.push(flag);
   return flag;
 }
-<<<<<<< HEAD
-=======
 
 export async function updateFlagStatus(
   id: string, 
@@ -243,20 +269,27 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -268,3 +301,10 @@ export async function updateFlagStatus(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

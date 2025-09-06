@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
 import { Card, CardContent } from '@/components / ui / card';
@@ -33,11 +37,14 @@ const testimonials = [;
     avatar: "https://i.pravatar.cc / 150?img = 28",
     company: "AI Systems"},
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
 
+<<<<<<< HEAD
 
 
 import {
@@ -52,6 +59,8 @@ import { Quote } from "lucide-react",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -77,7 +86,10 @@ const testimonials = [
     role: "Operations Manager, EcoTech Systems",
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -88,6 +100,7 @@ export function TestimonialCarousel() {
             Discover how Zion is transforming the tech and AI marketplace ecosystem
           </p>
         </div>
+<<<<<<< HEAD
         <div className="max-w-5xl mx-auto px-8">
 const testimonials = [;
   {;
@@ -302,11 +315,18 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
             </div>;
+=======
+        <div className="max-w-5xl mx-auto px-8">            </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Carousel>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
     </section>);
 }
 ;
+=======
+    </section>);}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;

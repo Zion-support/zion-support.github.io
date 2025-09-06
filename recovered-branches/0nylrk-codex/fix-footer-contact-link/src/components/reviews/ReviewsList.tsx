@@ -13,6 +13,7 @@ export function ReviewsList({
 }: ReviewsListProps) {
   if (isLoading) {
     return (
+<<<<<<< HEAD
       <div className="space-y-4">
         {Array(3)
           .fill(0)
@@ -20,6 +21,14 @@ export function ReviewsList({
             <div
               key={i}
               className="border rounded-lg p-4 bg-card animate-pulse"
+=======
+      <div className="space-y-4">;
+        {Array (3);
+          .fill (0);
+          .map ((_, i) => (
+            <div;
+              key={i}              className="border rounded-lg p-4 bg-card animate-pulse"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="h-10 w-10 rounded-full bg-muted"></div>
@@ -49,6 +58,7 @@ export function ReviewsList({
       </div>
     );
   }
+<<<<<<< HEAD
 
       </div>
     );
@@ -86,6 +96,8 @@ if ( {) {
     </div>);
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 

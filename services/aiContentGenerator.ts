@@ -3,6 +3,7 @@ export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
+<<<<<<< HEAD
   length: 'short' | 'medium' | 'long';
 
   keywords?: string[],
@@ -16,6 +17,9 @@ export interface ContentGenerationRequest {
   keywords?: string[],
   target_audience?: string;
 }
+=======
+  length: 'short' | 'medium' | 'long';}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface ContentGenerationResponse {
   content: string;
   word_count: number;
@@ -24,6 +28,7 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
+<<<<<<< HEAD
 
     description: string,
     tags: string[];
@@ -36,6 +41,11 @@ export interface ContentTemplate {
     title: string;
 
     description: string
+=======
+  metadata: {
+    title: string,
+  description: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     tags: string[]
   }
@@ -43,6 +53,7 @@ export interface ContentTemplate {
 export interface ContentTemplate {
 
 export interface ContentTemplate {;
+<<<<<<< HEAD
     description: string,
     tags: string[];
 
@@ -261,6 +272,19 @@ This is a ${request && request.length} ${request && request.type} about ${reques
 ${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
     return {
+=======
+  id: string;
+  name: string,
+  description: string;
+  type: string;      }
+      {
+        id: 'social - media - campaign';
+        name: 'Social Media Campaign',
+  description: 'Complete social media content strategy and posts';
+      {
+        id: 'landing - page - copy';
+        name: 'Landing Page Copy';    return {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
@@ -269,6 +293,7 @@ ${request && request.topic} represents a significant opportunity for organizatio
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ]
       metadata: {
+<<<<<<< HEAD
         title: `${request && request.topic} - Complete Guide`;
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
         tags: [request && request.topic, request && request.type, 'guidetutorial']
@@ -327,6 +352,17 @@ ${request.topic} represents a significant opportunity for organizations looking 
     // Mock content analysis;
     return {
       seo_score: Math.floor (Math.random () * 30) + 70;
+=======
+        title: `${request && request.topic} - Complete Guide`,
+  description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']      }
+    }
+  }  async analyzeContent(content: string): Promise<{
+    seoScore: number;
+    readabilityScore: number;
+    suggestions: string[]
+    keywordDensity: Record<string, number>      seo_score: Math.floor (Math.random () * 30) + 70;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
         'Add more headings for better structure_include internal links to related content_optimize meta description';
@@ -335,6 +371,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
+<<<<<<< HEAD
 ;
   async analyzeContent(content: string): Promise<{;
     seoScore: number,;
@@ -344,6 +381,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }> {;
     // Mock content analysis;
     return {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
       suggestions: [;
@@ -352,6 +391,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       keywordDensity: {;
         'content': 2.1,;
         'seo': 1.8,;
+<<<<<<< HEAD
         'marketing': 1.5;
 
 
@@ -368,18 +408,25 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
 // Pricing tiers for the AI Content Generator;
+=======
+        'marketing': 1.5;// Pricing tiers for the AI Content Generator;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     period: '/month',
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
 
   }
+<<<<<<< HEAD
   professional: {
     name: 'Professional';
     price: 99;
@@ -392,11 +439,14 @@ export const AI_CONTENT_PRICING = {
 
 
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   enterprise: {
     name: 'Enterprise';
     price: 299;
 
     period: '/month',
+<<<<<<< HEAD
 
     period: '/month',
 
@@ -417,10 +467,15 @@ export const AI_CONTENT_PRICING = {;
     period: '/month',;
 
 
+=======
+    period: '/month',
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     features: [;
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
 
+<<<<<<< HEAD
   },;
   },;
   professional: {;
@@ -452,6 +507,9 @@ export const AI_CONTENT_PRICING = {;
   }
 };
   }
+=======
+  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
   }

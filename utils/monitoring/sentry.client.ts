@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if (typeof window !== 'undefined') {Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
     tracesSampleRate: 0.1;
@@ -7,6 +10,7 @@ if (typeof window !== 'undefined') {Sentry.init({;
 import * as Sentry from '@sentry/react',;
 import * as Sentry from '@sentry/react';
 
+<<<<<<< HEAD
 
 import * as Sentry from '@sentry / react',
 // Check condition
@@ -32,11 +36,14 @@ import * as Sentry from '@sentry/react',;
 import * as Sentry from '@sentry/react';
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
+<<<<<<< HEAD
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
 
 
@@ -50,3 +57,6 @@ if (typeof window !== 'undefined') {;
 }
 }
 }
+=======
+    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

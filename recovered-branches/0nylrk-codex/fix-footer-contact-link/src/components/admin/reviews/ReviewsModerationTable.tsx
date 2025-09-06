@@ -7,6 +7,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -20,6 +21,8 @@ import { Review, ReviewStatus } from "@/types/reviews",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Table,
   TableBody,
@@ -41,14 +44,19 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 interface ReviewsModerationTableProps {
+=======
+import { Button } from "@/components/ui/button",interface ReviewsModerationTableProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   reviews: Review[]
   isLoading: boolean
 
   onRefresh: () => void
 }
 
+<<<<<<< HEAD
 
 
 
@@ -60,6 +68,8 @@ interface ReviewsModerationTableProps {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ReviewsModerationTable({;
   reviews;
   isLoading;
@@ -67,13 +77,17 @@ export function ReviewsModerationTable({
   reviews,
   isLoading,
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
+<<<<<<< HEAD
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
@@ -101,11 +115,14 @@ export function ReviewsModerationTable({
       setViewDetailsOpen(false)
     },
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
+<<<<<<< HEAD
         variant: "destructive"})
 
     }}),
@@ -157,19 +174,28 @@ export function ReviewsModerationTable({
     updateReviewStatus({ reviewId, status: "approved" })
 
   },
+=======
+        variant: "destructive"})  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
 
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
@@ -178,11 +204,27 @@ export function ReviewsModerationTable({
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
+<<<<<<< HEAD
 
 
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
 
+=======
+interface ReviewsModerationTableProps {;
+  reviews: Review[],;
+  isLoading: boolean,;
+  onRefresh: () => void;
+}
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status}: {;
+      reviewId: string,;
+      status: ReviewStatus;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -190,6 +232,10 @@ import { format } from "date-fns",;
 import { toast } from "@/hooks/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Review, ReviewStatus } from "@/types/reviews",;
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Table,;
   TableBody,;
@@ -212,6 +258,7 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
 
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
@@ -232,6 +279,28 @@ export function ReviewsModerationTable(): any ({;
       status}: {;
       reviewId: string,;
       status: ReviewStatus;
+=======
+;
+interface ReviewsModerationTableProps {;
+  reviews:Review[],;
+  isLoading:boolean,;
+  onRefresh:() => void;
+}
+;
+export function ReviewsModerationTable({;
+  reviews,;
+  isLoading,;
+  onRefresh} ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
+;
+  const { mutate:updateReviewStatus, isPending } = useMutation({;
+    mutationFn:async ({;
+      reviewId,;
+      status} {;
+      reviewId:string,;
+      status:ReviewStatus;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }) => {;
       const { error } = await supabase;
         .from("reviews");
@@ -239,6 +308,7 @@ export function ReviewsModerationTable(): any ({;
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
+<<<<<<< HEAD
 
     };
     onSuccess: (data) => {;
@@ -258,18 +328,24 @@ export function ReviewsModerationTable(): any ({;
   const getStatusColor = (status: ReviewStatus) => {;
     switch (status) {;
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "rejected":;
         return "bg-red-100 text-red-800 hover:bg-red-200",;
       default:;
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
     }
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const getInitials = (name: string) => {;
     return name;
       .split(" ");
       .map((n) => n[0]);
       .join("");
+<<<<<<< HEAD
       .toUpperCase();
   };
 
@@ -277,6 +353,14 @@ export function ReviewsModerationTable(): any ({;
 
     return (
         .eq("id", reviewId);
+=======
+      .toUpperCase()
+};
+
+  if (isLoading) {;
+
+    return (        .eq("id", reviewId);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (error) throw error;
       return { reviewId, status }
     return (
@@ -286,9 +370,12 @@ export function ReviewsModerationTable(): any ({;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
+<<<<<<< HEAD
     );
   }
     return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
@@ -298,6 +385,7 @@ export function ReviewsModerationTable(): any ({;
     );
   }
 
+<<<<<<< HEAD
 
   const handleApprove = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "approved" });
@@ -332,6 +420,21 @@ export function ReviewsModerationTable(): any ({;
 
 
 import { useState } from './react';
+=======
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "approved" })
+};
+
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "rejected" })
+};
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review),;
+    setViewDetailsOpen(true)
+};
+
+  const renderStars = (rating: number) => {;import { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
 import { format } from './date - fns';
@@ -378,11 +481,19 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="space - y-4">;
         <div className="h - 12 w - full bg - muted rounded animate - pulse" />;
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
         <div className="h - 16 w - full bg - muted rounded animate - pulse" />;
+=======
+      <div className="space-y-4">;
+        <div className="h - 12 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
+        <div className="h - 16 w - full bg - muted rounded animate-pulse" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>);
   }
   // Check condition
@@ -390,9 +501,15 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="py - 10 text - center">;
         <h3 className="text - lg font - medium mb - 2">No reviews to moderate</h3>;
         <p className="text - muted - foreground">;
+=======
+      <div className="py - 10 text-center">;
+        <h3 className="text - lg font - medium mb-2">No reviews to moderate</h3>;
+        <p className="text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           All reviews have been processed. Check back later for new submissions.;
         </p>;
   const handle_reject = (review_id: string) =>: any {
@@ -410,6 +527,7 @@ if ( {) {
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
+<<<<<<< HEAD
   return (
     <>;
       <Table>;
@@ -469,12 +587,19 @@ if ( {) {
                         {review.reviewer_profile?.display_name || "User"}
                       </span>;
                           : <User className="h-4 w-4" />}
+=======
+  return (    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;                          : <User className="h-4 w-4" />}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </AvatarFallback>;
                     )}
                     )}
                   </div>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review && review.created_at), "MMM d, yyyy")}
@@ -490,18 +615,25 @@ if ( {) {
                 {review && review.report_count > 0 ? (;
                   <Badge variant="destructive">{review && review.report_count}</Badge>;
                 ) : (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   "None";
                 )}
               </TableCell>;
               <TableCell className="text-right">;
                 <div className="flex justify-end gap-2">;
                   {review && review.status === "pending" && (;
+<<<<<<< HEAD
                     <>;
                   {review && review.status === "pending" && (;
+=======
+                    <>;                  {review && review.status === "pending" && (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <>;
                       <Button
                         size="sm"
                         variant="outline"
+<<<<<<< HEAD
                         className="h-8 w-8 p-0"
                         onClick={() => handleApprove(review && review.id)}
                         disabled={isPending}
@@ -514,6 +646,9 @@ if ( {) {
                         className="h-8 w-8 p-0"
                         onClick={() => handleReject(review && review.id)}
                         disabled={isPending}
+=======
+                        className="h-8 w-8 p-0"                        disabled={isPending}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       >;
                         <X className="h-4 w-4 text-red-500" />;
                       </Button>;
@@ -524,8 +659,12 @@ if ( {) {
                       <Button
                         variant="ghost"
                         size="sm"
+<<<<<<< HEAD
                         className="h-8 w-8 p-0">;
                         <MoreHorizontal className="h-4 w-4" />;
+=======
+                        className="h-8 w-8 p-0">;                        <MoreHorizontal className="h-4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent align="end">;
@@ -542,21 +681,33 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>;
                       )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
             <TableHead > Status</TableHead>;
             <TableHead > Reports</TableHead>;
+<<<<<<< HEAD
             <TableHead className="text - right">Actions</TableHead>;
+=======
+            <TableHead className="text-right">Actions</TableHead>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </TableRow>;
         </TableHeader>;
         <TableBody>;
           {reviews.map ((review) => (
             <TableRow key={review.id}>;
               <TableCell>;
+<<<<<<< HEAD
                 <div className="flex items - center gap - 2">;
                   <Avatar className="h - 8 w - 8">;
+=======
+                <div className="flex items - center gap-2">;
+                  <Avatar className="h - 8 w-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
@@ -565,13 +716,22 @@ if ( {) {
                       <AvatarFallback>;
                         {review.reviewer_profile?.display_name;
                           ? get_initials (review.reviewer_profile.display_name);
+<<<<<<< HEAD
                           : <User className="h - 4 w - 4" />}
+=======
+                          : <User className="h - 4 w-4" />}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </AvatarFallback>)}
                   </Avatar>;
                   <div>;
                     {review.is_anonymous ? (
+<<<<<<< HEAD
                       <span className="text - sm font - medium">Anonymous</span>) : (
                       <span className="text - sm font - medium">;
+=======
+                      <span className="text - sm font-medium">Anonymous</span>) : (
+                      <span className="text - sm font-medium">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         {review.reviewer_profile?.display_name || "User"}
                       </span>)}
                   </div>;
@@ -594,27 +754,48 @@ if ( {) {
                   <Badge variant="destructive">{review.report_count}</Badge>) : (
                   "None")}
               </TableCell>;
+<<<<<<< HEAD
               <TableCell className="text - right">;
                 <div className="flex justify - end gap - 2">;
+=======
+              <TableCell className="text-right">;
+                <div className="flex justify - end gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {review.status === "pending" && (
                     <>;
                       <Button;
                         size="sm";
                         variant="outline";
+<<<<<<< HEAD
                         className="h - 8 w - 8 p - 0";
                         on_click={() => handle_approve (review.id)}
                         disabled={is_pending}
                       >;
                         <Check className="h - 4 w - 4 text - green - 500" />;
+=======
+                        className="h - 8 w - 8 p-0";
+                        on_click={() => handle_approve (review.id)}
+                        disabled={is_pending}
+                      >;
+                        <Check className="h - 4 w - 4 text - green-500" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </Button>;
                       <Button;
                         size="sm";
                         variant="outline";
+<<<<<<< HEAD
                         className="h - 8 w - 8 p - 0";
                         on_click={() => handle_reject (review.id)}
                         disabled={is_pending}
                       >;
                         <X className="h - 4 w - 4 text - red - 500" />;
+=======
+                        className="h - 8 w - 8 p-0";
+                        on_click={() => handle_reject (review.id)}
+                        disabled={is_pending}
+                      >;
+                        <X className="h - 4 w - 4 text - red-500" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </Button>;
                     </>)}
                   <DropdownMenu>;
@@ -622,9 +803,15 @@ if ( {) {
                       <Button;
                         variant="ghost";
                         size="sm";
+<<<<<<< HEAD
                         className="h - 8 w - 8 p - 0";
                       >;
                         <MoreHorizontal className="h - 4 w - 4" />;
+=======
+                        className="h - 8 w - 8 p-0";
+                      >;
+                        <MoreHorizontal className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </Button>;
                     </DropdownMenuTrigger>;
                     <DropdownMenuContent align="end">;
@@ -635,6 +822,7 @@ if ( {) {
                         <DropdownMenuItem on_click={() => updateReviewStatus ({ review_id: review.id, status: "rejected" })}>;
                           Mark as rejected;
                         </DropdownMenuItem>)}
+<<<<<<< HEAD
                       {review.status === "rejected" && (
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
@@ -714,6 +902,14 @@ if ( {) {
                 <div className="flex items-center gap-2">;
                   <Avatar>;
                     {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
+=======
+                      {review.status === "rejected" && (                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+        </TableBody>;
+      </Table>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
                         alt={selectedReview && selectedReview.reviewer_profile.display_name || ""}
@@ -752,6 +948,7 @@ if ( {) {
                   {selectedReview && selectedReview.communication_rating && (;
                     <Badge variant="outline">;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
+<<<<<<< HEAD
                     </Badge>;
 
                   )}
@@ -1199,3 +1396,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
     </>
   )
 }
+=======
+                    </Badge>;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

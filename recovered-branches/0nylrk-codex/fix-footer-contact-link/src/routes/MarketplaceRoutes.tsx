@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -21,6 +22,34 @@ import VideoCall from "@/pages/VideoCall";
 const MarketplaceRoutes = () => {
 const MarketplaceRoutes = () => {;
   return (
+=======
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Marketplace from "@/pages/Marketplace",
+import Categories from "@/pages/Categories",
+import CategoryDetail from "@/pages/CategoryDetail",
+import Featured from "@/pages/Featured",
+import ListingDetail from "@/pages/ListingDetail",
+import EquipmentPage from "@/pages/EquipmentPage",
+import EquipmentDetail from "@/pages/EquipmentDetail",
+import PostJob from "@/pages/PostJob",
+import JobDetails from "@/pages/JobDetails",
+import PublishProduct from "@/pages/PublishProduct",
+import ServicesPage from "@/pages/ServicesPage",
+import RequestQuote from "@/pages/RequestQuote",
+import AIMatcher from "@/pages/AIMatcher",
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
+import SearchPage from "@/pages/SearchPage",
+import ProjectRoom from "@/pages/ProjectRoom";
+import VideoCall from "@/pages/VideoCall";
+
+import ProjectRoom from "@/pages/ProjectRoom",
+import VideoCall from "@/pages/VideoCall",
+const MarketplaceRoutes = () => {
+  return (
+    <Routes>  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Routes>;
       {/* Marketplace Routes */}
       <Route path="/marketplace" element={<Marketplace />} />
@@ -58,7 +87,10 @@ const MarketplaceRoutes = () => {;
           </ProtectedRoute>
         }
       />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* Service Routes */}
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
@@ -91,6 +123,7 @@ const MarketplaceRoutes = () => {;
         }
       />
     </Routes>
+<<<<<<< HEAD
   );
 };
 
@@ -179,10 +212,48 @@ const MarketplaceRoutes = () =>: any {
       {/* Video Call Routes */}
       <Route;
         path="/call/:room_id";
+=======
+  )
+}
+export default MarketplaceRoutes;
+
+},
+
+export default MarketplaceRoutes,
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Marketplace from "@/pages/Marketplace",;
+import Categories from "@/pages/Categories",;
+import CategoryDetail from "@/pages/CategoryDetail",;
+import Featured from "@/pages/Featured",;
+import ListingDetail from "@/pages/ListingDetail",;
+import EquipmentPage from "@/pages/EquipmentPage",;
+import EquipmentDetail from "@/pages/EquipmentDetail",;
+import PostJob from "@/pages/PostJob",;
+import JobDetails from "@/pages/JobDetails",;
+import PublishProduct from "@/pages/PublishProduct",;
+import ServicesPage from "@/pages/ServicesPage",;
+import RequestQuote from "@/pages/RequestQuote",;
+import AIMatcher from "@/pages/AIMatcher",;
+import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",;
+import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
+import SearchPage from "@/pages/SearchPage",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import VideoCall from "@/pages/VideoCall",;
+const MarketplaceRoutes = () => {
+const MarketplaceRoutes = () => {;
+  return (
+    <Routes>;
+      {/* Marketplace Routes */}
+      {/* Job Routes */}
+      <Route
+        path="/post-job"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         element={
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
+<<<<<<< HEAD
         }
       />;
     </Routes>);
@@ -191,6 +262,18 @@ const MarketplaceRoutes = () =>: any {
 export default MarketplaceRoutes;
 ;
   ),;
+=======
+        } ;
+      />;
+    </Routes>
+};
+
+}
+};
+
+},
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },;
 ;
 export default MarketplaceRoutes,; const MarketplaceRoutes = () => {
@@ -231,4 +314,7 @@ export default MarketplaceRoutes;
   );
 },;
 export default MarketplaceRoutes;
+<<<<<<< HEAD
 export default MarketplaceRoutes;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

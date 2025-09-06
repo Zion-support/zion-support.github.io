@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   export default React,
   // Basic overloads for useRef to handle common cases;
@@ -13,6 +14,12 @@
   export function useState<S>(
     initialState: S | (() => S)
     initialState: S | (() => S);
+=======
+  export type Dispatch<A> = (value: A) => void;
+  export type SetStateAction<S> = S | ((prevState: S) => S)
+  export function useState<S>(
+    initialState: S | (() => S);    initialState: S | (() => S);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -21,8 +28,12 @@
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
+<<<<<<< HEAD
     render: (props: P, ref: Ref<T>) => ReactElement | null
   ): any;
+=======
+    render: (props: P, ref: Ref<T>) => ReactElement | null  ): any;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef < T>(initial_value: T): { current: T }
@@ -69,6 +80,7 @@ declare module 'react' {
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
+<<<<<<< HEAD
 
 
   export type ReactElement = any,
@@ -244,3 +256,9 @@ declare module 'react/jsx-runtime' {;
   export const Fragment: any;
 }
 
+=======
+}
+declare module 'react-dom' {
+  export * from 'react-dom / index';
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

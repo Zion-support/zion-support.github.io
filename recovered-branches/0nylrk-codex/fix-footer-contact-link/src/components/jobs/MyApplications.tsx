@@ -12,6 +12,7 @@ export function MyApplications() {;
 
   const getStatusBadge = (status: ApplicationStatus) => {;
     switch (status) {;
+<<<<<<< HEAD
 
     switch (status) {
 import { useState } from './react';
@@ -35,6 +36,9 @@ function MyApplications() {
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
 import { useState } from "react",
+=======
+    switch (status) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -118,6 +122,7 @@ export function MyApplications() {
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
@@ -139,10 +144,14 @@ export function MyApplications() {
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
       case "new": return <Badge variant="secondary">New</Badge>;
+=======
+  }      case "new": return <Badge variant="secondary">New</Badge>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "viewed":;
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
 
+<<<<<<< HEAD
 
   },
   
@@ -150,6 +159,12 @@ export function MyApplications() {
 
   if (isLoading) {
       case "rejected":;
+=======
+  },
+  
+
+  if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
@@ -164,7 +179,10 @@ export function MyApplications() {
     );
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (error) {;
 
     return (
@@ -174,7 +192,10 @@ export function MyApplications() {
     );
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (applications && applications.length === 0) {;
 
     return (
@@ -191,9 +212,13 @@ export function MyApplications() {
     );
   }
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",;
+=======
+=======import { useState } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -255,6 +280,7 @@ export function MyApplications() {;
               {getStatusBadge(application.status)}
             </div>
             <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </p>;
           </CardHeader>;
@@ -270,6 +296,9 @@ export function MyApplications() {;
               )}
               
               <div className="flex justify-between items-center">
+=======
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}              <div className="flex justify-between items-center">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Button
                   variant="outline"
                   size="sm"
@@ -281,8 +310,11 @@ export function MyApplications() {;
                   </Link>
                 </Button>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="grid gap-4 md:grid-cols-2">;
       {applications && applications.map((application) => (;
@@ -300,6 +332,7 @@ export function MyApplications() {;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-3">;
+<<<<<<< HEAD
               {application && application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
                   {application && application.cover_letter}
@@ -355,3 +388,8 @@ export function MyApplications() {;
 
 
 
+=======
+
+                <Button 
+                  variant="default" 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled
-=======
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -24,7 +8,7 @@ totalSize: number;
       process.env.NODE_ENV === 'development' ||
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -78,24 +62,6 @@ if ( {) {
 if (return) {
   $2
 }
-<<<<<<< HEAD
-    setIsCollecting (true);
-    try {
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType(
-        'resource'
-      ) as PerformanceResourceTiming[]
-      const scriptEntries = resourceEntries.filter(
-        entry =>
-          entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
-      )
-      // Calculate bundle information
-      let totalSize = 0
-      let totalLoadTime = 0
-      const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = []
-=======
 import React, { useState, useEffect } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -120,7 +86,7 @@ export function BundleAnalyzer() {
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
@@ -140,7 +106,6 @@ totalSize += size;
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-=======
     setIsVisible (true);
     collectBundleInfo ();
   }, []);
@@ -150,18 +115,16 @@ totalSize += size;
     try {
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -225,14 +188,10 @@ totalSize += size;
       collectBundleInfo()
     }
   }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -263,10 +222,9 @@ export function BundleAnalyzer() {;
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,;
   if (!isAllowed) {;
     return null;
-=======
   if (!shouldShow) {
     return null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 ;
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),;
@@ -350,21 +308,17 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
 
 
-<<<<<<< HEAD
-=======
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
@@ -373,22 +327,11 @@ export function BundleAnalyzer() {;
           <Package className="w-4 h-4 mr-2" />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           Bundle Analyzer
         </Button>
       </div>
     )
-<<<<<<< HEAD
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
-                className='h-6 w-6 p-0'>;
-                <Zap className='w-3 h-3' />;
-              </Button>;
-              <Button
-                variant='ghost'
-                size='sm'
-                onClick={toggleAnalyzer}
-=======
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
@@ -423,7 +366,7 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
                 ✕
@@ -466,8 +409,6 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className="h-2" />
               </div>
               <div>
-<<<<<<< HEAD
-=======
 
                 className='h-6 w-6 p-0'>;
   // Check condition
@@ -517,13 +458,11 @@ if ( {) {
                 className='h - 6 w - 6 p - 0'              >;
 
                 ✕;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
-<<<<<<< HEAD
-=======
 
 
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
@@ -536,7 +475,7 @@ if ( {) {
                           {chunk.name}
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -544,15 +483,9 @@ if ( {) {
                           </Badge>
                         )}
                       </div>
-<<<<<<< HEAD
-                      <Badge
-                        className={getSizeColor(chunk.size)}
-                        variant='outline'
-                      >
-=======
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
                         {formatSize(chunk.size)}
                       </Badge>
@@ -576,17 +509,10 @@ if ( {) {
 } 
 
 }
-<<<<<<< HEAD
-            <div className="text-xs text-muted-foreground">
-              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
-            </div>;
-          )}
-<<<<<<< HEAD
-=======
 
 
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </CardContent>;
       </Card>;
     </div>;
@@ -677,13 +603,10 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
         </CardContent>
       </Card>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

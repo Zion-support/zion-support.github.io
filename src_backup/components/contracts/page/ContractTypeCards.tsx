@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,15 +26,14 @@ export function ContractTypeCards({
   onSmartClick: () => void
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-=======
 <CardTitle className="flex items-center gap-2">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             <FileText className="h-5 w-5" />
             Standard Contracts
           </CardTitle>
@@ -46,12 +42,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           <ul className="space-y-2">
             <li className="text-sm">✓ Legally binding templates</li>
             <li className="text-sm">✓ Milestone-based payment terms</li>
@@ -60,14 +53,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
-<<<<<<< HEAD
-=======
           <Button variant="outline" onClick={onStandardClick}>
 
 
           <Button variant="outline" onClick={onStandardClick}>
 
-=======
 <ul className='space-y-2'>
             <li className='text-sm'>✓ Legally binding templates</li>
             <li className='text-sm'>✓ Milestone-based payment terms</li>
@@ -77,26 +67,11 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
           <Button variant='outline' onClick={onStandardClick}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             Create Standard Contract
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD
-      
-      <Card>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
-
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
-          <div className="flex justify-between items-center">
-            <CardTitle className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" />
-              Smart Contracts
-            </CardTitle>
-            <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
-=======
 <Card>
         <CardHeader className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg'>
           <div className='flex justify-between items-center'>
@@ -105,7 +80,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
               Smart Contracts
             </CardTitle>
             <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Blockchain Powered
             </span>
           </div>
@@ -114,9 +89,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
           <ul className="space-y-2">
 
@@ -133,8 +105,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
             onClick={onSmartClick}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 <ul className='space-y-2'>
             <li className='text-sm'>✓ All standard contract features</li>
             <li className='text-sm'>✓ Automatic escrow payment release</li>
@@ -147,30 +118,16 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <Button
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'
             onClick={onSmartClick}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Create Smart Contract
           </Button>
         </CardFooter>
       </Card>
     </div>
-<<<<<<< HEAD
 
 
-import { Button } from '@/components/ui/button';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -179,8 +136,6 @@ import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
   onSmartClick: () => void;
-<<<<<<< HEAD
-=======
 
 export function ContractTypeCards(): any ({;
   onStandardClick,;
@@ -202,15 +157,18 @@ interface ContractTypeCardsProps {;
 
 export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from '@/components / ui / button';
 =======
 import { Button } from '@/components/ui/ button';
@@ -253,7 +211,7 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -261,8 +219,6 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-=======
 
           <ul className='space - y-2'>;
             <li className='text - sm'>✓ Legally binding templates</li>;
@@ -304,7 +260,7 @@ function ContractTypeCards() {
             </CardTitle>;
             <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               Blockchain Powered;
             </span>;
           </div>;
@@ -313,8 +269,6 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-=======
 
           <ul className='space - y-2'>;
             <li className='text - sm'>✓ All standard contract features</li>;
@@ -340,17 +294,11 @@ function ContractTypeCards() {
             on_click = {onSmartClick, }
           >;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD
-    </div>;
-  );
-};
-}
-=======
 
   );
 }
@@ -359,8 +307,7 @@ function ContractTypeCards() {
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

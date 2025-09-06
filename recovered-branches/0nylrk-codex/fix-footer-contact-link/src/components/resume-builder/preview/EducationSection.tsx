@@ -2,6 +2,7 @@
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
+<<<<<<< HEAD
 
 
 import {Education} from '@/types/resume';
@@ -14,6 +15,11 @@ interface EducationSectionProps {
   const sortedEducation = [...education].sort((a, b) => {;
 
 
+=======
+import {Education} from '@/types/resume';
+import {format} from 'date-fns';
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Education  } from '@/types/resume';
 import { format } from 'date-fns';
 import {Education} from '@/types/resume';
@@ -28,9 +34,12 @@ interface EducationSectionProps {
 }
 
   const sortedEducation = [...education].sort((a, b) => {;
+<<<<<<< HEAD
 
 
     if (a.is_current && !b.is_current) return -1;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
@@ -39,11 +48,15 @@ interface EducationSectionProps {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy')
 
 
 
 import { Education } from '@/types/resume',;
+=======
+      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
   education: Education[];
@@ -61,6 +74,7 @@ export function EducationSection({ education }: EducationSectionProps) {;
   const formatDate = (date: Date | string | undefined) => {;
     if (!date) return '',;
     if (typeof date === 'string') {;
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy');
 
 
@@ -181,3 +195,9 @@ if (return null) {
     </div>
   )
 }
+=======
+      return format(new Date(date), 'MMM yyyy');    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedEducation.length === 0) return null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

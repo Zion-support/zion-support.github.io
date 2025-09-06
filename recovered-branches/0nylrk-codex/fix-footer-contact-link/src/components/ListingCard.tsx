@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 interface ListingCardProps {;
 interface ListingCardProps {
+<<<<<<< HEAD
 
   id?: string;
   title: string,;
@@ -61,12 +65,17 @@ export function ListingCard({ ;
 
   tags?: string[];
   author?: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Link
       to={`/profile/${profileId}`}
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -77,6 +86,7 @@ interface ListingCardProps {
   author?: string,
   authorImage?: string,
   className?: string,
+<<<<<<< HEAD
   profileType?: 'service' | 'talent'
 
 import { cn } from "@/lib/utils",;
@@ -164,6 +174,9 @@ export function ListingCard({;
 
 
         {author && (
+=======
+  profileType?: 'service' | 'talent'        {author && (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (
               <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />
@@ -180,6 +193,7 @@ export function ListingCard({;
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
+<<<<<<< HEAD
 
       </div>;
     </Link>;
@@ -307,3 +321,5 @@ profileType = 'service'
     </Link>
   )
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

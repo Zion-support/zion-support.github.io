@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 :src.broken/pages/Blog.js
 :src.broken/pages/Blog.js
 import { useState, useEffect } from "react";
+=======
+:src.broken/pages/Blog.jsimport { useState, useEffect } from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -114,8 +118,11 @@ export default function Blog() {
             </div>
           </div>
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function Blog() {
     return (
         <div className="min-h-screen bg-background p-8">
@@ -160,6 +167,9 @@ export default function Blog() {
       </div>
     </>);
     );
+<<<<<<< HEAD
       </div>
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

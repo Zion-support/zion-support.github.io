@@ -7,6 +7,7 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle,;
+<<<<<<< HEAD
 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,8 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 interface Integration {;
 import React, { useState } from './react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {
   Dialog
@@ -27,6 +30,7 @@ import {
   DialogHeader
   DialogTitle
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {
   Dialog,
   DialogContent,
@@ -43,6 +47,8 @@ import { Switch  } from '@/components / ui / switch';
 import { toast  } from './sonner';
   DialogTitle,;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {;
   Dialog,;
@@ -59,6 +65,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 
 import { Switch } from "@/components/ui/switch";
+<<<<<<< HEAD
 import { toast } from "sonner";
 interface Integration {
   id: string;
@@ -110,6 +117,12 @@ export function IntegrationConnectionModal(): any ({;
     toast && toast.info(`Disconnected from ${integration && integration.name}`);
     onClose();
   };
+=======
+import { toast } from "sonner";    // In a real application, this would revoke the OAuth token;
+    toast && toast.info(`Disconnected from ${integration && integration.name}`);
+    onClose()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleSaveSettings = () => {;
     // In a real application, this would save the sync settings;
@@ -117,7 +130,10 @@ export function IntegrationConnectionModal(): any ({;
 
     onClose();
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
@@ -165,7 +181,11 @@ import { Switch } from "@/components/ui/switch",;
 import { toast } from "sonner",;
 interface Integration {;
   id: string,;
+<<<<<<< HEAD
   name: string,;
+=======
+  name: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   logoUrl?: string,;
   status: "connected" | "warning" | "disconnected",;
@@ -214,8 +234,11 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     onClose()
   },
   
+<<<<<<< HEAD
     onClose();
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -226,6 +249,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             className="h-12 w-12 rounded"
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
+<<<<<<< HEAD
             }}
 
 
@@ -240,12 +264,19 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+=======
+            }}            </DialogDescription>
+          </div>
+        </DialogHeader>
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {integration.status === "connected" ||
 
         integration.status === "warning" ? (
 
         {(integration.status === "connected" || integration.status === "warning") ? (
 
+<<<<<<< HEAD
 
 
         {integration.status === "connected" |
@@ -254,10 +285,13 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
         
         {(integration.status === "connected" || integration.status === "warning") ? (
         
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {(integration.status === "connected" || integration.status === "warning") ? (
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
+<<<<<<< HEAD
                 <h3 className="text-sm font-medium">Sync Settings</h3>
 
 
@@ -279,10 +313,18 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
                     }
+=======
+                <h3 className="text-sm font-medium">Sync Settings</h3>                  <Checkbox 
+                    id="autoCreateContacts" 
+                    checked={syncSettings.autoCreateContacts} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})                    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   />
                   <Label htmlFor="autoCreateContacts">
                     Auto-create contacts in {integration.name}
                   </Label>
+<<<<<<< HEAD
                 </div>
 
 
@@ -301,6 +343,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
+=======
+                </div>                  <Checkbox 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     id="pushNotes" 
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
@@ -308,6 +353,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
+<<<<<<< HEAD
                 </div>
 
 
@@ -347,6 +393,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
+=======
+                </div>                  <Checkbox 
+                    id="syncJobDetails" 
+                    checked={syncSettings.syncJobDetails} 
+                    onCheckedChange={(checked) => 
+                      setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})                    }
+                  />
+                  <Label htmlFor="syncJobDetails">Sync job details</Label>
+                </div>                  <Checkbox 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     id="syncApplicantData" 
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
@@ -355,6 +411,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
+<<<<<<< HEAD
               </div>
 
 
@@ -478,6 +535,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               <Button variant="outline" onClick={handleDisconnect} type="button">
                 Disconnect
               </Button>
+=======
+              </div>              </Button>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button onClick={handleSaveSettings} type="button">
                 Save Settings
               </Button>
@@ -486,6 +546,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
         ) : (
           <>
             <div className="space-y-4 py-4">
+<<<<<<< HEAD
               <p className="text-sm">
 
 
@@ -518,12 +579,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
             <DialogFooter>
+=======
+              <p className="text-sm">            <DialogFooter>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
                   ? "Connecting..."
                   : `Connect to ${integration.name}`}
               </Button>
             </DialogFooter>
+<<<<<<< HEAD
           </>
 
 
@@ -685,6 +750,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     </Dialog>;
   );
   last_sync?: string;
+=======
+          </>  last_sync?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 interface IntegrationConnectionModalProps {
   is_open: boolean;
@@ -731,12 +799,21 @@ function IntegrationConnectionModal() {
 ;
   return (
     <Dialog open={is_open} onOpenChange={on_close}>;
+<<<<<<< HEAD
       <DialogContent className="sm:max - w-md">;
         <DialogHeader className="flex flex - row items - center gap - 4">;
           <img;
             src={integration.logo_url}
             alt={`${integration.name} logo`}
             className="h - 12 w - 12 rounded";
+=======
+      <DialogContent className="sm:max-w-md">;
+        <DialogHeader className="flex flex - row items - center gap-4">;
+          <img;
+            src={integration.logo_url}
+            alt={`${integration.name} logo`}
+            className="h - 12 w-12 rounded";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_error={(e) => {
               (e.target as HTMLImageElement).src = "/placeholder.svg";
             }}
@@ -754,10 +831,17 @@ function IntegrationConnectionModal() {
         {integration.status === "connected" ||;
         integration.status === "warning" ? (
           <>;
+<<<<<<< HEAD
             <div className="grid gap - 4 py - 4">;
               <div className="space - y-4">;
                 <h3 className="text - sm font - medium">Sync Settings</h3>;
                 <div className="flex items - center space - x-2">;
+=======
+            <div className="grid gap - 4 py-4">;
+              <div className="space-y-4">;
+                <h3 className="text - sm font-medium">Sync Settings</h3>;
+                <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Checkbox;
                     id="autoCreateContacts";
                     checked={sync_settings.autoCreateContacts}
@@ -772,7 +856,11 @@ function IntegrationConnectionModal() {
                     Auto - create contacts in {integration.name}
                   </Label>;
                 </div>;
+<<<<<<< HEAD
                 <div className="flex items - center space - x-2">;
+=======
+                <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Checkbox;
                     id="push_notes";
                     checked={sync_settings.push_notes}
@@ -785,7 +873,11 @@ function IntegrationConnectionModal() {
                   />;
                   <Label html_for="push_notes">Push notes and comments</Label>;
                 </div>;
+<<<<<<< HEAD
                 <div className="flex items - center space - x-2">;
+=======
+                <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Checkbox;
                     id="syncJobDetails";
                     checked={sync_settings.syncJobDetails}
@@ -798,7 +890,11 @@ function IntegrationConnectionModal() {
                   />;
                   <Label html_for="syncJobDetails">Sync job details</Label>;
                 </div>;
+<<<<<<< HEAD
                 <div className="flex items - center space - x-2">;
+=======
+                <div className="flex items - center space-x-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Checkbox;
                     id="syncApplicantData";
                     checked={sync_settings.syncApplicantData}
@@ -812,9 +908,15 @@ function IntegrationConnectionModal() {
                   <Label html_for="syncApplicantData">Sync applicant data</Label>;
                 </div>;
               </div>;
+<<<<<<< HEAD
               <div className="space - y-2">;
                 <h3 className="text - sm font - medium">API Details</h3>;
                 <p className="text - xs text - muted - foreground">;
+=======
+              <div className="space-y-2">;
+                <h3 className="text - sm font-medium">API Details</h3>;
+                <p className="text - xs text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Last synced:{" "}
                   {integration.last_sync;
                     ? new Date (integration.last_sync).toLocaleString ();
@@ -822,7 +924,11 @@ function IntegrationConnectionModal() {
                 </p>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <DialogFooter className="flex items - center justify - between">;
+=======
+            <DialogFooter className="flex items - center justify-between">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button;
                 variant="outline";
                 on_click={handle_disconnect}
@@ -836,15 +942,26 @@ function IntegrationConnectionModal() {
             </DialogFooter>;
           </>) : (
           <>;
+<<<<<<< HEAD
             <div className="space - y-4 py - 4">;
               <p className="text - sm">;
+=======
+            <div className="space - y-4 py-4">;
+              <p className="text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Connect your {integration.name} account to sync job contacts,
                 applicants, and more. You'll be redirected to {integration.name}{" "}
                 to authorize this connection.;
               </p>;
+<<<<<<< HEAD
               <div className="space - y-4">;
                 <h3 className="text - sm font - medium">What will be synced:</h3>;
                 <ul className="list - disc pl - 4 text - sm space - y-1">;
+=======
+              <div className="space-y-4">;
+                <h3 className="text - sm font-medium">What will be synced:</h3>;
+                <ul className="list - disc pl - 4 text - sm space-y-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <li > Contact information</li>;
                   <li > Job details and descriptions</li>;
                   <li > Applicant data and status</li>;
@@ -864,6 +981,7 @@ function IntegrationConnectionModal() {
     </Dialog>);
 
 }
+<<<<<<< HEAD
 }
 ;
 
@@ -907,3 +1025,5 @@ return (<Dialog open= {
 }
 ;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

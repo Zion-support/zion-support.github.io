@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface AccessibilityProps {
   className?: string;
 }
@@ -305,7 +308,11 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 export default Accessibility;

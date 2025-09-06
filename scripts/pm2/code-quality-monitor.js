@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,11 @@
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -40,6 +46,7 @@
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,13 +98,14 @@ const monitor = new CodeQualityMonitor();
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
     severity: 'medium'})}; // Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {analysis.issues.push({; line: lineNum, type: 'console-statement', message: 'Console statement found - should be removed in production'
     severity: 'medium'})}; // TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found'
     severity: 'low'})}; // Unused imports (basic check); if (line.match(/^import.*from/) && !line.includes('//')) {const importMatch = line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {; analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}}); return analysis} catch (error) {this.log(`Error analyzing file ${filePath}: ${error.message}`); return null}}; async walkDirectory(dir) {const analyses = []; try {; const items = fs.readdirSync(dir); for (const item of items) {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {; if (!fullPath.includes('node_modules') &&; !fullPath.includes('.git') &&; !fullPath.includes('dist') &&; !fullPath.includes('build') &&; !fullPath.includes('.next') &&; !fullPath.includes('coverage') &&; !fullPath.includes('logs')) {; const subAnalyses = await this.walkDirectory(fullPath); analyses.push(...subAnalyses)}} else if (stat.isFile()) {const ext = path.extname(fullPath); if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {; const analysis = await this.analyzeFile(fullPath); if (analysis) {; analyses.push(analysis)}}}}} catch (error) {this.log(`Error walking directory ${dir}: ${error.message}`)}; return analyses}; generateReport(analyses) {const totalFiles = analyses.length; const totalIssues = analyses.reduce((sum, analysis) = > sum + analysis.issues.length, 0); const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 }; analyses.forEach(analysis = > {analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] |0) + 1; // Count by severity; issuesBySeverity[issue.severity]++})}); const report = {timestamp: new Date().toISOString(), summary: {
-=======
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length,
@@ -124,7 +132,7 @@ const monitor = new CodeQualityMonitor();
 ; analyses.forEach(analysis = > {; analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       , totalFiles; totalIssues; issuesByType; issuesBySeverity
     }
     files: analyses.filter(analysis = > analysis.issues.length > 0)
@@ -137,6 +145,7 @@ const monitor = new CodeQualityMonitor();
 } catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`); process.exit(1)}}}
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
+<<<<<<< HEAD
 <<<<<<< HEAD
 monitor.run().catch(error = > {process.exit(1)});
 }};
@@ -195,6 +204,11 @@ monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 };
 ;
@@ -974,6 +988,7 @@ monitor.run().catch(error = > {; process.exit(1)});
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   process.exit(1)
@@ -991,3 +1006,10 @@ monitor.run().catch(error = > {; process.exit(1)});
   process.exit(1)
 }),
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+monitor.run().catch(error = > {; process.exit(1)});
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

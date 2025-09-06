@@ -1,10 +1,26 @@
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+=======
+import { useEffect  } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
  */
 
+<<<<<<< HEAD
 
 export function usePageViewTracking() {
 
@@ -134,3 +150,7 @@ export function usePageViewTracking() {;
   }, [location.pathname]);
 }
 ;
+=======
+export function usePageViewTracking() {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

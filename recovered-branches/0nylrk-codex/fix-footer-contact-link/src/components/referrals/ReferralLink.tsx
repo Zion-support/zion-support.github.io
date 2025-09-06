@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {useState} from "react";
@@ -15,6 +16,8 @@ import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -26,13 +29,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+<<<<<<< HEAD
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
   referralLink: string;
+=======
+import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";  referralLink: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onCopy: () => void;
   onShare: (platform: "twitter" | "facebook" | "linkedin") => void;
 }
 
+<<<<<<< HEAD
 export function ReferralLink({
   referralLink,
   onCopy,
@@ -46,6 +54,22 @@ export function ReferralLink({
     setTimeout(() => setCopied(false), 2000);
   };
 
+=======
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false),
+  
+  const handleCopy = () => {
+    onCopy(),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -60,6 +84,7 @@ export function ReferralLink({
       </CardHeader>
       <CardContent>
         <div className="flex flex-col space-y-3">
+<<<<<<< HEAD
           <div className="flex space-x-2">
             <Input
               value={referralLink}
@@ -237,5 +262,8 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
 }
 ;
   )
+=======
+          <div className="flex space-x-2">  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 

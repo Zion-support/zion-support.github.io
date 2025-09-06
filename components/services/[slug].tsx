@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -15,9 +16,12 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
- 
- 
 =======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+ 
+ 
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../../components/layout/Layout';
@@ -35,7 +39,7 @@ import { realServicesQ12025  } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = any;
 export default ServiceDetail
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -50,6 +54,7 @@ fallback: false
   service: Service
 }) {
   return (<Layout> <Head> <title> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   service.name
@@ -85,6 +90,9 @@ null;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   service.name
 }| Zion Tech Group</title>
 }
@@ -102,14 +110,22 @@ null;
 }| Zion Tech Group</title> ;
 };
 null;
+<<<<<<< HEAD
 2)
 2) 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -139,12 +155,26 @@ null;
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+<<<<<<< HEAD
+=======
+  service.marketPosition
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi
+  service.marketPosition 
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 }</p>
 }{
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +187,9 @@ null;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }function getAllServices(): any () : Service[] {;
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) ;
 }return {;
@@ -185,17 +218,18 @@ type Service = typeof enhancedRealMicroSaasServices[number];
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
 };
 export default ServiceDetail
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 export default ServiceDetail
 export default ServiceDetail
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
@@ -265,6 +299,12 @@ export default ServiceDetail;
   service.name
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 
+=======
+  service.name
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default ServiceDetail
@@ -272,11 +312,16 @@ export default ServiceDetail
 
 export default ServiceDetail
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   service.name 
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 
 };
 ;
@@ -287,6 +332,13 @@ export default ServiceDetail
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+};
+;
+}
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   return enhancedRealMicroSaasServices .concat (extra_services as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]);
 }return {
@@ -347,6 +399,7 @@ export default ServiceDetail;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -354,3 +407,8 @@ export default ServiceDetail;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

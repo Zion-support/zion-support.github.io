@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 interface SidebarProps {
@@ -21,24 +19,12 @@ export default function Sidebar({
   visibilityFilter
   onChangeVisibility
 }: SidebarProps) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
             <button
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
-<<<<<<< HEAD
-      <nav className="space-y-3">
-        {spec.sections.map((section) => (
-          <div key={section.id}>
-            <div className="text-sm font-medium mb-1">{section.title}</div>
-            <ul className="space-y-1">
-              {section.endpoints
-                .filter((e) => e.versions.includes(selectedVersion))
-                .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
-                .map((e) => (
-                  <li key={e.id}>
-=======
             >
               {v}
             </button>
@@ -84,7 +70,7 @@ export default function Sidebar({
                       <span className='font-mono'>{e.path}</span>
                     </button>
                   </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
             </ul>;
           </div>;
@@ -112,9 +98,9 @@ function Sidebar() {
               className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}
             >;
               {v}
-            </button>          ))}        <div className="text - lg font - semibold">Zion OS API</div>;
-        <div className="text - xs text - high - contrast - muted">Version</div>;
-        <div className="flex gap - 2 mt - 2 flex - wrap">;
+            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
+        <div className="text - xs text - high-contrast-muted">Version</div>;
+        <div className="flex gap - 2 mt-2 flex-wrap">;
           {spec.versions.map ((v) => (
             <button key={v} on_click={() => onChangeVersion (v)} className={`px - 2 py - 1 rounded border text - xs ${selected_version === v ? 'bg - high - contrast - tertiary border - high - contrast - accent' : 'bg - high - contrast - tertiary border - high - contrast - secondary'}`}>{v}</button>;
         </div>;
@@ -147,11 +133,11 @@ function Sidebar() {
                     : e.visibility === visibility_filter);
                 .map (e => (                  <li key={e.id}>        </select>;
       </div>;
-      <nav className="space - y-3">;
+      <nav className="space-y-3">;
         {spec.sections.map ((section) => (
           <div key={section.id}>;
-            <div className="text - sm font - medium mb - 1">{section.title}</div>;
-            <ul className="space - y-1">;
+            <div className="text - sm font-medium mb-1">{section.title}</div>;
+            <ul className="space-y-1">;
               {section.endpoints;
                 .filter ((e) => e.versions.includes (selected_version));
                 .filter ((e) => visibility_filter === 'all' ? true : e.visibility === visibility_filter);
@@ -164,8 +150,8 @@ function Sidebar() {
                       <span className='mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80'>;
                         {e.method}
                       </span>;
-                      <span className='font - mono'>{e.path}</span>                    </button>                      <span className="mr - 2 inline - block w - 10 text - center text-[10px] opacity - 80">{e.method}</span>;
-                      <span className="font - mono">{e.path}</span>;
+                      <span className='font - mono'>{e.path}</span>                    </button>                      <span className="mr - 2 inline - block w - 10 text-center text-[10px] opacity-80">{e.method}</span>;
+                      <span className="font-mono">{e.path}</span>;
                     </button>;
                   </li>))}
             </ul>;
@@ -183,8 +169,5 @@ function Sidebar() {
 }
     </aside>
   );
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

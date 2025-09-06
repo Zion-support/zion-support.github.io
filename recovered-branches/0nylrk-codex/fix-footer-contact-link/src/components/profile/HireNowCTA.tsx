@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 interface HireNowCTAProps {;
   talentProfile: {;
     id: string,;
@@ -44,11 +48,16 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
     id: string
 
 
+=======
+    id: string
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
+<<<<<<< HEAD
 
     hourly_rate?: number
   }
@@ -60,11 +69,14 @@ interface HireNowCTAProps {
   const handleOpenModal = () => {
     setModalOpen(true)
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
   const [modalOpen, setModalOpen] = useState(false);
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false),
 
+<<<<<<< HEAD
 
 
 
@@ -78,6 +90,12 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile);
+=======
+  const handleOpenModal = () => {
+    setModalOpen(true)
+
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const handleCloseModal = () => {
@@ -90,17 +108,23 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
 
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
+<<<<<<< HEAD
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
       <div className="mb-4">
@@ -126,6 +150,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
           Schedule Interview
         </Button>
+<<<<<<< HEAD
       </div>
 
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
@@ -220,6 +245,9 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
         </Button>;
 
         <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+=======
+      </div>        <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Schedule Interview;
         </Button>;
       </div>;
@@ -236,6 +264,7 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
           availability_type: 'full_time'
           timezone: ''
           hourly_rate: talentProfile.hourly_rate
+<<<<<<< HEAD
         } : null}
       />
     </div>
@@ -245,6 +274,12 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
 
       <HireRequestModal
 
+=======
+
+      <HireRequestModal
+
+      <HireRequestModal
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       <HireRequestModal 
       <HireRequestModal 
@@ -252,6 +287,7 @@ export function HireNowCTA({ talentProfile } HireNowCTAProps) {;
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
+<<<<<<< HEAD
 
           id: talentProfile.id,
           user_id: talentProfile.id,
@@ -326,16 +362,22 @@ function HireNowCTA() {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
 
   const fields = [;
+<<<<<<< HEAD
   const fields = [;
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
@@ -343,13 +385,21 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
+=======
+    'availability_type';
+  ];
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     totalFields++;
   });
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   return Math && Math.min(Math && Math.round((completedFields / totalFields) * 100), 100);
 }
@@ -371,6 +421,7 @@ if (return 0) {
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
+<<<<<<< HEAD
 ;
   let completed_fields = 0;
   let total_fields = 0,
@@ -464,3 +515,6 @@ return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-
   return Math.min(Math.round((completedFields / totalFields) * 100), 100);
 }
 ;
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

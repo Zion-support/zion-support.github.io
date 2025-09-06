@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -16,14 +17,42 @@ import type { NextApiRequest } from 'next';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import type { NextApiRequest } from 'next';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Session {
 
 export interface Session {;
   userId: string;
+<<<<<<< HEAD
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+
+}
+export function getSessionFromReq(req: NextApiRequest): Session | null {
+  // Mock implementation - replace with actual session logic;
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return null;
+  }
+  
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { userId: 'admin-1', email: 'admin@zion.os', role: 'admin' };
+  }
+  
+  return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 export interface Session {
@@ -33,6 +62,11 @@ export interface Session {
 }
 
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
@@ -42,14 +76,28 @@ export interface Session {
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
 
+<<<<<<< HEAD
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
+=======
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -164,6 +212,10 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function getSessionFromReq (req: NextApiRequest): Session | null {
   // Mock implementation - replace with actual session logic;
   const auth_header = req.headers.authorization;
@@ -193,6 +245,7 @@ export const is_admin = () =>: any {
   return true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -206,19 +259,22 @@ export const is_admin = () =>: any {
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-};
 =======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+};
+
 
 <<<<<<< HEAD
-}
-;
-=======
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
@@ -227,20 +283,23 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
-=======
 // Stub admin auth utility - placeholder for missing functionality
 export const requireAdminAuth = () => {
   // Placeholder implementation
   return true;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const isAdmin = () => {
   // Placeholder implementation;
   return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 };
@@ -248,6 +307,7 @@ export const isAdmin = () => {
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -258,3 +318,12 @@ export const isAdmin = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -3,8 +3,12 @@
   window_size: number;
 
 }
+<<<<<<< HEAD
 export interface RateLimitRule {
 export interface RateLimitConfig {
+=======
+export interface RateLimitRule {export interface RateLimitConfig {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -17,6 +21,7 @@ export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+<<<<<<< HEAD
 }
 export interface RateLimitRule {
 
@@ -34,6 +39,9 @@ export interface RateLimitRule {
   updated_at: Date;
 
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface RateLimitStats {
   endpoint: string;
   method: string;
@@ -42,6 +50,7 @@ export interface RateLimitStats {
   averageResponseTime: number;
   last_request: Date;
   current_usage: {
+<<<<<<< HEAD
     minute: number;
 
     hour: number,
@@ -88,27 +97,36 @@ export interface RateLimitViolation {
   id: string;
   api_key: string;
   endpoint: string;
+=======
+    minute: number;  endpoint: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
 
+<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
 export class APIRateLimiterService {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
+<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
@@ -124,6 +142,7 @@ export class APIRateLimiterService {
       }
 
       return await response && response.json()
+<<<<<<< HEAD
 
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
@@ -164,6 +183,14 @@ if ( {) {
         createdAt: new Date(),
 
         updatedAt: new Date()
+=======
+  }
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+    try {
+      // Mock response for demo;
+      return {
+        ...rule;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -238,6 +265,7 @@ export class APIRateLimiterService {;
 ;
       if (!response.ok) {;
         throw new Error(`Failed to create rate limit rule:${response.statusText}`),;
+<<<<<<< HEAD
         updatedAt: new Date()
       }
     }
@@ -257,6 +285,10 @@ export class APIRateLimiterService {;
 
 
         id: `rule_${Date.now ()}`;
+=======
+    }
+  }        id: `rule_${Date.now ()}`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         created_at: new Date (),
         updated_at: new Date ();
       }
@@ -274,6 +306,7 @@ if ( {) {
 }
         throw new Error (`Failed to fetch rate limit rules: ${response.status_text}`);
       }
+<<<<<<< HEAD
       return await response.json ();
     } catch (error) {
       // Mock rules for demo;
@@ -297,6 +330,11 @@ if ( {) {
           updated_at: new Date ();
 
 
+=======
+      return await response.json ();    } catch (error) {
+      // Mock rules for demo;
+      return [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
         {
           id: 'rule_2';
@@ -306,6 +344,7 @@ if ( {) {
           config: {
             requestsPerMinute: 10;
             requestsPerHour: 100;
+<<<<<<< HEAD
             requestsPerDay: 1000;
 
 
@@ -317,6 +356,9 @@ if ( {) {
           updated_at: new Date ();
 
         }
+=======
+            requestsPerDay: 1000;        }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ];
     }
   }
@@ -465,15 +507,21 @@ export class APIRateLimiterService {;
           updatedAt: new Date();
           created_at: new Date (),
           updated_at: new Date ();
+<<<<<<< HEAD
 
           created_at: new Date (),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           updated_at: new Date ();
 
         }
       ];
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -491,6 +539,7 @@ export class APIRateLimiterService {;
       // Mock update for demo
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
+<<<<<<< HEAD
         throw new Error('Rule not found')
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
@@ -564,16 +613,25 @@ if ( {) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
 
       }
+=======
+        throw new Error('Rule not found')      }
+    }
+  }      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
       throw error
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
+<<<<<<< HEAD
         headers: {
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
@@ -681,6 +739,9 @@ if ( {) {
       }
       return await response.json ();
     } catch (error) {
+=======
+        headers: {    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Mock stats for demo;
       return [;
         {
@@ -718,17 +779,23 @@ export interface RateLimitConfig {;
     }
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }
         }
       ]
     }
   }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
@@ -744,6 +811,7 @@ export interface RateLimitConfig {;
       }
 
       return await response && response.json()
+<<<<<<< HEAD
 
 
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
@@ -774,6 +842,8 @@ if ( {) {
 
       return await response && response.json()
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {
       // Mock API key creation for demo;
       return {
@@ -794,6 +864,7 @@ if ( {) {
         created_at: new Date ();
         last_used: new Date (),
         is_active: true;
+<<<<<<< HEAD
       }
     }
   }
@@ -820,36 +891,51 @@ if ( {) {
       return await response.json ();
     } catch (error) {
       // Mock API keys for demo;
+=======
+    }
+  }
+  async getAPIKeys (): Promise < APIKey[]> {=======      // Mock API keys for demo;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return [;
         {
           id: 'key_1';
           name: 'Web Application';
           key: 'zion_web123';
           permissions: ['readwrite'];
+<<<<<<< HEAD
           rate_limit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             burst_limit: 50,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
         {
           id: 'key_2';
           name: 'Mobile App';
           key: 'zion_mobile456';
           permissions: ['read'];
+<<<<<<< HEAD
           rate_limit: {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
 
+<<<<<<< HEAD
 
           rateLimit: {
             requestsPerMinute: 50;
@@ -893,6 +979,10 @@ if ( {) {
   }
 
 
+=======
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             burst_limit: 25,
             window_size: 60;
           }
@@ -900,14 +990,18 @@ if ( {) {
           last_used: new Date (),
           is_active: true;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       ];
     }
   }
 
+<<<<<<< HEAD
 
 
 
@@ -939,10 +1033,13 @@ if ( {) {
         throw new Error (`Failed to fetch violations: ${response.status_text}`);
       }
       return await response.json ();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {
       // Mock violations for demo;
       return [;
         {
+<<<<<<< HEAD
           id: 'violation_1';
 
 
@@ -1006,12 +1103,16 @@ if ( {) {
           ipAddress: '10 && 10.0.0 && 0.50',
           userAgent: 'ZionMobileApp/1 && 1.0'
           api_key: 'zion_web123';
+=======
+          id: 'violation_1';          api_key: 'zion_web123';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           endpoint: '/api / users';
           method: 'GET',
           timestamp: new Date (Date.now () - 1000 * 60 * 30), // 30 minutes ago;
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+<<<<<<< HEAD
 
 
         }
@@ -1066,12 +1167,15 @@ if ( {) {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
+<<<<<<< HEAD
 
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
@@ -1183,24 +1287,37 @@ export const API_RATE_LIMITER_PRICING = {
     ];
 
   }
+=======
+    overview: {
+      total_requests: number;
+      blocked_requests: number;
+      active_rules: number,  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     features: [;
       'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
       'API access';
     ];
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
 
+<<<<<<< HEAD
 
 
 
@@ -1546,3 +1663,7 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 };
 }
 ;
+=======
+  }
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

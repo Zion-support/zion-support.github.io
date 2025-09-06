@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -18,6 +21,7 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
@@ -40,6 +44,8 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
   startDate: z.date({
 
@@ -51,8 +57,12 @@ const formSchema = z && z.object({;
   endDate: z && z.date().optional(),;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
+<<<<<<< HEAD
   additionalClauses: z && z.array(z && z.string()).default([])}),;
   talent;
+=======
+  additionalClauses: z && z.array(z && z.string()).default([])}),;  talent;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   clientName;
   initialValues;
   onFormValuesChange;
@@ -63,6 +73,7 @@ const formSchema = z && z.object({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
+<<<<<<< HEAD
 
 interface ContractFormProps {
   talent: TalentProfile,
@@ -111,6 +122,8 @@ export function ContractForm({
       additionalClauses: ["nda", "ip"]}});
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { toast } = useToast(),
 
   const form = useForm<ContractFormValues>({
@@ -124,12 +137,16 @@ export function ContractForm({
       additionalClauses: ["nda", "ip"]}}),
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
 
+<<<<<<< HEAD
 
         const typedKey = key as keyof ContractFormValues,
         form.setValue(typedKey, initialValues[typedKey])
@@ -234,6 +251,11 @@ export function ContractForm({;
   
 
 
+=======
+          const typedKey = key as keyof ContractFormValues,
+        form.setValue(typedKey, initialValues[typedKey])
+      })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -241,6 +263,7 @@ export function ContractForm({;
         values
         talent
         clientName
+<<<<<<< HEAD
         generatedMilestones
 
 
@@ -252,10 +275,14 @@ export function ContractForm({;
     } catch (error) {
       console.error("Error generating contract:", error);
       );
+=======
+        generatedMilestones      );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ),
       
       onContractGenerated(contract)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating contract:", error),
       toast({
         title: "Contract Generation Failed"
@@ -571,6 +598,12 @@ if (!== "milestone") {) {
           />
           <Button 
             type="submit" 
+=======
+      console.error("Error generating contract:", error),            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -580,6 +613,7 @@ if (!== "milestone") {) {
               </>;
             ) : (;
               "Generate Contract";
+<<<<<<< HEAD
             )}
 
           </Button>;
@@ -650,11 +684,15 @@ if (!== "milestone") {) {
           onClick={() => form.reset()}
           disabled={isGenerating}
         >;
+=======
+            )}        >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Reset Form;
         </Button>;
       </DialogFooter>;
 
     </>);
+<<<<<<< HEAD
 }
 
     </>;
@@ -704,3 +742,6 @@ talent.full name
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

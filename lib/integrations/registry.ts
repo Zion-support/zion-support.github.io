@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -9,6 +10,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -17,23 +20,29 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
-=======
-<<<<<<< HEAD
-=======
 import { IntegrationProviderMeta } from "./types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: "salesforce"
     name: "Salesforce"
@@ -49,9 +58,12 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: "zoho",
     name: "Zoho CRM",
@@ -59,10 +71,15 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "All - in - one CRM",
   },
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -85,6 +102,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -105,12 +123,15 @@ export function getProviderById(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 import { IntegrationProviderMeta } from './types';
-=======
 import { IntegrationProviderMeta  } from './types';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -119,10 +140,9 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
-<<<<<<< HEAD
-  { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
-];
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -133,12 +153,15 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -150,6 +173,11 @@ export function getProviderById (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: "bamboohr",
     name: "BambooHR",
@@ -161,6 +189,7 @@ export function getProviderById (
 export function getProviderById(
 
   id: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,16 +207,21 @@ export function getProviderById(
 <<<<<<< HEAD
 =======
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

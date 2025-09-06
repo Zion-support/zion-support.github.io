@@ -1,17 +1,21 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
+<<<<<<< HEAD
 
 export function QuickActions() {
 
@@ -56,6 +60,14 @@ export function QuickActions() {
 
     },
 
+=======
+      id: "post-job",
+      label: "Post New Job",
+      icon: <FileText className="h-5 w-5 mr-2" />,
+      description: "Create a new job posting",      color: "bg-blue-100 dark:bg-blue-900/20"
+    }
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     {
       id: "schedule"
@@ -63,6 +75,7 @@ export function QuickActions() {
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+<<<<<<< HEAD
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -101,6 +114,11 @@ export function QuickActions() {;
   return (;
 
     <Card>;
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
         <CardDescription>Fast access to common tasks</CardDescription>;
@@ -117,8 +135,12 @@ export function QuickActions() {;
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;
+<<<<<<< HEAD
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
+=======
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </Button>;
           ))}
         </div>;
@@ -126,6 +148,7 @@ export function QuickActions() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -194,11 +217,14 @@ function QuickActions() {
   );
 }
     <Card>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <CardTitle > Quick Actions</CardTitle>;
         <CardDescription > Fast access to common tasks</CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
         <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
           {actions.map (action => (
             <Button;
@@ -211,24 +237,35 @@ function QuickActions() {
                   {action.icon}
 
 
+=======
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap-4">;
+          {actions.map (action => (
+          {actions.map(action => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           ))}
         </div>
       </CardContent>
     </Card>
   )
 }
+<<<<<<< HEAD
   ),;}
  const actions = [ {
   return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
 }</div> </CardContent> </Card>) 
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

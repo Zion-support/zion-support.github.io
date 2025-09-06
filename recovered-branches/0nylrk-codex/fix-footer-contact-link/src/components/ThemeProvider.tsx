@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -51,11 +52,23 @@ export function ThemeProvider({
   useEffect(() => {
     const root = window.document.documentElement
 
+=======
+type Theme = "dark" | "light" | "system"
+
+type ThemeProviderProps = {
+  children: React.ReactNode
+  defaultTheme?: Theme
+}    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+  )
+  useEffect(() => {
+    const root = window.document.documentElement
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
         .matches
         ? &quot;dark&quot;
+<<<<<<< HEAD
         : &quot;light&quot;
     root.classList.remove("light", "dark")
 
@@ -67,12 +80,16 @@ export function ThemeProvider({
 
 
       root.classList.add(systemTheme)
+=======
+        : &quot;light&quot;      root.classList.add(systemTheme)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return
     }
     root.classList.add(theme)
   }, [theme])
   const value = {
     theme
+<<<<<<< HEAD
     setTheme: (theme: Theme) => {
       localStorage.setItem(&quot;theme&quot;, theme)
       setTheme(theme)
@@ -256,5 +273,8 @@ export const useTheme = () => {
 }
 ;
   return context
+=======
+    setTheme: (theme: Theme) => {  return context
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;

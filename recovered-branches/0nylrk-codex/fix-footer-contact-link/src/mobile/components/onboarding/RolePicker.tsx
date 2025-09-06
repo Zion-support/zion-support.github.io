@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from "lucide-react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import React, { useState } from './react';
@@ -12,6 +15,7 @@ import { Briefcase, Users, Check } from './lucide-react';
 type UserRole = "talent" | "client" | null;
 ;
 
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -206,3 +210,9 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 }
 ;
 
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Briefcase, Users, Check } from "lucide-react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

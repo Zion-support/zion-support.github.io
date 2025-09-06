@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Star
   Quote
   Users
@@ -11,18 +9,13 @@ import {
   TrendingUp
   CheckCircle;
 
-
   Star,
   Quote,
   Users,
   Award,
 } from 'lucide-react';
-<<<<<<< HEAD
-
-interface Testimonial {;
-=======
 interface Testimonial {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   title: string;
@@ -30,13 +23,11 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-<<<<<<< HEAD
-=======
   category: string
 }
 
 const EnhancedTestimonialsSection: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   category: string;  id: string
   name: string
   title: string
@@ -45,15 +36,6 @@ const EnhancedTestimonialsSection: React.FC;
   rating: number
   avatar: string
   category: string
-<<<<<<< HEAD
-  category: string;  id: string,
-  name: string,
-  title: string,
-  company: string,
-  content: string,
-  rating: number,
-  avatar: string,
-=======
 }
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
@@ -134,66 +116,11 @@ content:
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         key={i}
         className={`w - 4 h - 4 ${
           i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
-  return (
-    <section className="py-24 px-6 relative overflow-hidden">;
-      {/* Background */}
-        {/* Stats Section */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>;
-          {stats && stats.map((stat, index) => (;
-            <div key={index} className='text-center group'>;
-              <div className='w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>;
-                <stat && stat.icon className='w-10 h-10 text-blue-400' />;
-              </div>;
-              <div className='text-3xl font-bold text-white mb-2'>;
-                {stat && stat.number}
-              </div>;
-              <p className='text-blue-300 font-medium'>{stat && stat.label}</p>            </div>          {stats && stats.map((stat, index) => (;
-            <div key={index} className="text-center group">;
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">;
-                <stat && stat.icon className="w-10 h-10 text-blue-400" />;
-              </div>;
-              <div className="text-3xl font-bold text-white mb-2">{stat && stat.number}</div>;
-              <p className="text-blue-300 font-medium">{stat && stat.label}</p>;
-            </div>;
-                    {testimonial.avatar}
-                  </div>;
-                  <div className='flex - 1'>;
-                    <div className='font - semibold text - white'>;
-                      {testimonial.name}
-                    </div>;
-                    <div className='text - sm text - white / 70'>;
-                      {testimonial.title}
-                    </div>;
-                    <div className='text - xs text - blue - 400'>;
-                      {testimonial.company}
-                  "{testimonial.content}"
-                </p>
-                {/* Author Info */}
-                    {testimonial.avatar}
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-white/70">{testimonial.title}</div>
-                    <div className="text-xs text-blue-400">{testimonial.company}</div>
-                  </div>
-
-                </div>
-                {/* Category Badge */}
-
-                <div className="mt-4">
-
-                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
-                    {testimonial.category}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
       />
 ));
   };
@@ -234,7 +161,7 @@ content:
         </div>
         {/* Testimonials Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {testimonials.map(testimonial => (
 
             <div
@@ -248,27 +175,14 @@ content:
               {/* Content */}
               <div className='p-8'>
                 {/* Rating */}
-<<<<<<< HEAD
-                <div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
-                </div>
-                {/* Testimonial Text */}
-                <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
-                </p>
-
-                {/* Author Info */}
-
-=======
                 <div className='flex items-center gap-1 mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {renderStars(testimonial.rating)}
                 </div>
 
                 {/* Testimonial Text */}
-<<<<<<< HEAD
-
-=======
 <p className='text-white/80 text-sm leading-relaxed mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -334,24 +248,9 @@ content:
                 </div>;
               </div>;
               {/* Hover Effect */}
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <div className='text-center mt-16'>;
-          <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
-              Ready to Join Our Success Stories?;
-            </h3>;
-            <p className='text-white/70 mb-6 max-w-2xl mx-auto'>;
-              Experience the same transformative results that our clients have;
-              achieved. Let's discuss how Zion Tech Group can accelerate your;
-              innovation journey.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-
-=======
 <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -368,29 +267,12 @@ content:
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
-<<<<<<< HEAD
-                href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion'
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
-                Start Your Success Story;
-              </a>;
-            </h3>
-            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-              Experience the same transformative results that our clients have achieved.
-              Let's discuss how Zion Tech Group can accelerate your innovation journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Client Success Story Discussion"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">;
-                Start Your Success Story;
-              </a>;
-=======
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
               >
                 Start Your Success Story
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
@@ -400,28 +282,6 @@ href='tel:+13024640950'
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-export default EnhancedTestimonialsSection;
-    </section>);
-}
-;
-export default EnhancedTestimonialsSection);
-}
-;
-export default EnhancedTestimonialsSection;
-;
-  );
-export default EnhancedTestimonialsSection;  )
-}
-export default EnhancedTestimonialsSection;
-
-export default EnhancedTestimonialsSection;
-=======
         {/* Trust Indicators */}
 <div className='mt-16 text-center'>
           <div className='inline-flex items-center gap-8 text-white/60 text-sm'>
@@ -450,4 +310,4 @@ export default EnhancedTestimonialsSection;
 };
 
 export default EnhancedTestimonialsSection;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

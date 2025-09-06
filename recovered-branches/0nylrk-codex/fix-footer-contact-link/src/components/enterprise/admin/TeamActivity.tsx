@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Table,;
   TableBody,;
@@ -8,15 +11,23 @@ import {;
   TableHeader,;
   TableRow,;
 
+<<<<<<< HEAD
 
 import React from "react";
 import {
 
   Table
+=======
+import React from "react";
+import {
+
+=======  Table
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   TableBody
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
   TableRow
   Table,
   TableBody,
@@ -208,6 +219,11 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
 
+=======
+  TableRow} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, Search } from "lucide-react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const getCategoryBadge = (category: string) => {
@@ -220,14 +236,19 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
+<<<<<<< HEAD
 
   return (
   return (
+=======
+  return (  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
+<<<<<<< HEAD
             <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
             <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
             <Input
@@ -237,6 +258,13 @@ export function TeamActivity() {;
 
 
 import React from "react",;
+=======
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+            <Input
+              type="search"
+              placeholder="Search activities..."
+              className="w-[200px] md:w-[300px] pl-9"import React from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Table,;
   TableBody,;
@@ -316,8 +344,13 @@ export function TeamActivity() {;
       candidates: { variant: "outline" },;
       team: { variant: "secondary" },;
       billing: { variant: "destructive" }};
+<<<<<<< HEAD
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   };
+=======
+    return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -329,7 +362,10 @@ export function TeamActivity() {;
               type="search";
               placeholder="Search activities...";
               className="w-[200px] md:w-[300px] pl-9";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
           </div>;
           <Button variant="outline" size="icon" className="h-10 w-10">;
@@ -337,6 +373,7 @@ export function TeamActivity() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
       <div className="rounded-md border">;
         <Table>;
@@ -390,6 +427,8 @@ export function TeamActivity() {;
     </div>
   )
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   const getCategoryBadge = (category: string) =>: any {
     const category_styles: Record<;
@@ -406,6 +445,7 @@ export function TeamActivity() {;
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Recent Team Activity</h3>;
@@ -424,6 +464,26 @@ export function TeamActivity() {;
         </div>;
       </div>;
       <div className="rounded - md border">;
+=======
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Recent Team Activity</h3>;
+        <div className="flex items - center gap-2">;
+          <div className="relative">;
+            <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+            <Input;
+              type="search";
+              placeholder="Search activities...";
+              className="w-[200px] md:w-[300px] pl-9";
+            />;
+          </div>;
+          <Button variant="outline" size="icon" className="h - 10 w-10">;
+            <CalendarIcon className="h - 4 w-4" />;
+          </Button>;
+        </div>;
+      </div>;
+      <div className="rounded-md border">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -437,21 +497,33 @@ export function TeamActivity() {;
           <TableBody>;
             {activities.map ((activity) => (
               <TableRow key={activity.id}>;
+<<<<<<< HEAD
                 <TableCell className="font - medium">{activity.user}</TableCell>;
                 <TableCell>{activity.action}</TableCell>;
                 <TableCell>;
                   <span className="font - medium">{activity.target}</span>;
+=======
+                <TableCell className="font-medium">{activity.user}</TableCell>;
+                <TableCell>{activity.action}</TableCell>;
+                <TableCell>;
+                  <span className="font-medium">{activity.target}</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </TableCell>;
 
     </div>);
 
+<<<<<<< HEAD
 }
                   {formatDate(activity.timestamp)}
+=======
+}                  {formatDate(activity.timestamp)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
+<<<<<<< HEAD
       </div>
 
       
@@ -592,3 +664,6 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 ;
 }
+=======
+      </div>}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

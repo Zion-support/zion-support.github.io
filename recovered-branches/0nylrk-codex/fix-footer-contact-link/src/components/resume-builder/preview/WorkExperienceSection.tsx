@@ -2,6 +2,7 @@
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
+<<<<<<< HEAD
 
 
 import {WorkExperience} from '@/types/resume';
@@ -14,6 +15,11 @@ interface WorkExperienceSectionProps {
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
 
+=======
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -28,9 +34,12 @@ interface WorkExperienceSectionProps {
 }
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+<<<<<<< HEAD
 
 
     if (a.is_current && !b.is_current) return -1;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
@@ -39,11 +48,15 @@ interface WorkExperienceSectionProps {
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy')
 
 
 
 import { WorkExperience } from '@/types/resume',;
+=======
+      return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
@@ -61,6 +74,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   const formatDate = (date: Date | string | undefined) => {;
     if (!date) return '',;
     if (typeof date === 'string') {;
+<<<<<<< HEAD
       return format(new Date(date), 'MMM yyyy');
 
 
@@ -180,3 +194,9 @@ if (return null) {
     </div>
   )
 }
+=======
+      return format(new Date(date), 'MMM yyyy');    }
+    return format(date, 'MMM yyyy')
+  }
+  if (sortedWorkExperience.length === 0) return null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

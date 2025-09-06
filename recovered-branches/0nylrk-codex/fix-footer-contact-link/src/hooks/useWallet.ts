@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 import type { Wallet, TokenTransaction } from '@/types/tokens';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function useWallet() {;
   const { user } = useAuth();
   const [wallet, setWallet] = useState<Wallet | null>(null),
@@ -13,7 +16,10 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
 import type { Wallet, TokenTransaction } from '@/types / tokens';
@@ -56,6 +62,7 @@ if ( {) {
       set_wallet (data);
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
+<<<<<<< HEAD
       set_error (err.message);
 
     } finally {
@@ -70,6 +77,9 @@ if ( {) {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
         amount;
+=======
+      set_error (err.message);        amount;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         transaction_type: 'earn';
         reason: reason |null
         created_at: new Date().toISOString()}
@@ -78,12 +88,15 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
+<<<<<<< HEAD
       prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -164,6 +177,7 @@ if (return) {
     fetch_wallet ();
     fetch_transactions ();
   }, [user?.id]);
+<<<<<<< HEAD
 ;
   return {
     wallet;
@@ -172,6 +186,9 @@ if (return) {
     error;
 
 import { useEffect, useState } from 'react',;
+=======
+;import { useEffect, useState } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import type { Wallet, TokenTransaction } from '@/types/tokens',;
@@ -267,6 +284,7 @@ export function useWallet() {;
     error,;
     fetchWallet,;
 
+<<<<<<< HEAD
 
 
     fetchTransactions;
@@ -387,3 +405,9 @@ export function useWallet() {;
 }
 }
 }
+=======
+    fetchTransactions;
+    earnTokens;
+
+    spendTokens}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

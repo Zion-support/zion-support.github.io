@@ -1,5 +1,6 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+<<<<<<< HEAD
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
@@ -14,16 +15,28 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -59,6 +72,8 @@ serve(async (req) => {
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 serve(async (req) => {;
@@ -88,10 +103,17 @@ serve(async (req) => {;
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
+<<<<<<< HEAD
 
 
     // Create the smart contract prompt for OpenAI
     let prompt = `
+=======
+    // Create the smart contract prompt for OpenAI
+    let prompt = `
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:    // Create the smart contract prompt for OpenAI
+    let prompt = `
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
@@ -116,6 +138,7 @@ serve(async (req) => {;
       `
     }
 
+<<<<<<< HEAD
 
 
     
@@ -238,10 +261,23 @@ if ( {) {
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+=======
+    
+
+    prompt += `
+    Format the code properly with comments explaining each section. Include a simple deployment script.
+    `;
+    // Call OpenAI API        model: 'gpt-4o';
+        messages: [
+          {
+            role: 'system'
+            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'}        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )
   }
 });
 
+<<<<<<< HEAD
 
     console.error ('Error generating smart contract:', error);
     return new Response (
@@ -249,6 +285,8 @@ if ( {) {
         success: false,
         error: error.message || 'Failed to generate smart contract';
       });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {
         status: 500
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
@@ -256,6 +294,7 @@ if ( {) {
   }
 });
 
+<<<<<<< HEAD
 
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
@@ -399,3 +438,5 @@ if (additionalClauses && additionalClauses.length > 0) {
 }
 });
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

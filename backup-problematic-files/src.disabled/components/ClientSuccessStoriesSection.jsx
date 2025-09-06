@@ -6,6 +6,6 @@ const ClientSuccessStoriesSection = ({ className }) => {
       <h1>ClientSuccessStoriesSection</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -1,5 +1,6 @@
 // AI Matchmaking utility functions;
 
+<<<<<<< HEAD
 export interface MatchResultItem {
 export interface MatchResultItem {
 
@@ -41,13 +42,25 @@ export interface MatchResult {;
 }
 export interface MatchResult {
   item: MatchResultItem;
+=======
+export interface MatchResultItem {export interface MatchResultItem {
+
+export interface MatchResultItem {;
+export interface MatchResultItem {// AI Matchmaking utility functions
+export interface MatchResultItem {
+
+export interface MatchResultItem {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   score: number;
   matched_skills: string[],
   reason: string;
 }
 // Sample data for testing when API is not available;
 const sample_data: MatchResultItem[] = [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface MatchResult {
 
 export interface MatchResult {;
@@ -56,6 +69,7 @@ export interface MatchResult {
   score: number;
   {
     id: "talent - 1";
+<<<<<<< HEAD
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
@@ -105,6 +119,24 @@ export interface MatchResult {;
 
 
 
+=======
+    title: "Senior AI Engineer",
+  description: "Experienced AI engineer with expertise in machine learning and computer vision";
+    category: "Talent - Engineering";
+
+  }
+  {
+    id: "service - 1";
+    title: "AI Model Training",
+  description: "Custom AI model training service with data preparation and deployment";
+    category: "Services - AI Development";  }
+  {
+    id: "equipment - 1";
+    title: "NVIDIA A100 GPU Server",
+  description: "High - performance GPU server for AI model training and inference";
+    category: "Equipment - Hardware";
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -132,6 +164,7 @@ const sampleData: MatchResultItem[] = [
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ];
+<<<<<<< HEAD
 // Function to find matches based on query and type
 
 export async function findMatches(
@@ -145,10 +178,14 @@ export async function findMatches(
   type: string = "",
   limit: number = 5
 ): Promise<MatchResult[]> {
+=======
+// Function to find matches based on query and type): Promise<MatchResult[]> {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 
 
     await new Promise(resolve => setTimeout(resolve, 1000)),
@@ -180,6 +217,8 @@ export async function findMatches(
     console && console.error("Error in matchmaking:", error);
 
     return []
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -194,24 +233,39 @@ export async function findMatches(
 const sampleData: MatchResultItem[] = [;
   {;
     id: "talent-1",;
+<<<<<<< HEAD
     title: "Senior AI Engineer",;
     description: "Experienced AI engineer with expertise in machine learning and computer vision",;
+=======
+    title: "Senior AI Engineer",,
+  description: "Experienced AI engineer with expertise in machine learning and computer vision",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Talent - Engineering",;
     price: 120,;
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
   },;
   {;
     id: "service-1",;
+<<<<<<< HEAD
     title: "AI Model Training",;
     description: "Custom AI model training service with data preparation and deployment",;
+=======
+    title: "AI Model Training",,
+  description: "Custom AI model training service with data preparation and deployment",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Services - AI Development",;
     price: 5000,;
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
   },;
   {;
     id: "equipment-1",;
+<<<<<<< HEAD
     title: "NVIDIA A100 GPU Server",;
     description: "High-performance GPU server for AI model training and inference",;
+=======
+    title: "NVIDIA A100 GPU Server",,
+  description: "High-performance GPU server for AI model training and inference",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Equipment - Hardware",;
     price: 15000,;
     skills: ["GPU Computing", "High Performance", "AI Hardware"];
@@ -266,6 +320,7 @@ export async function find_matches (
     let filtered_items = sample_data;
     // Check condition
 if ( {) {
+<<<<<<< HEAD
   $2
 
       matchedSkills: item.skills?.slice(0, 2) || [],
@@ -298,3 +353,7 @@ if ( {) {
     return [];
   }
 }
+=======
+  $2  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

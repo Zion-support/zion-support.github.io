@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +16,24 @@ import { ProfileData } from '@/types/profile';
       {
 
           'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+=======
+import { ProfileData } from '@/types/profile';
+
+
+      {
+
+        id: 'p2',
+        title: 'Sentiment Analysis API',
+        description:;
+          'Created an API for real - time sentiment analysis of customer feedback, processing over 50, 000 reviews daily with 94% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1555421689 - 491a97ff2040?auto = format & fit = crop & w=600 & h=400',
+
+        tags: ['NLP', 'API', 'Python'],
+        date: 'May 2023',
+      },
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {
 
           'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
@@ -44,17 +63,16 @@ import { ProfileData } from '@/types/profile';
     projects: [
       {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import { ProfileData } from '@/types/profile';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       {
         id: 'p1'
         title: 'Facial Recognition System'
@@ -1187,6 +1205,8 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     experience: [;
       {
         id: 'e1',
@@ -1336,6 +1356,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
         'Limited availability for short-term consulting projects and infrastructure assessments.'
       availableHours: [
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         id: 'p2',
         title: 'DevOps Automation Pipeline',
         description:;
@@ -1595,6 +1619,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
       },
     ],
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     experience: [;
       {
         id: 'e1',
@@ -1745,6 +1773,10 @@ export const MOCK_TALENTS: ProfileData[] = [;
     ],
     availability: {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 'limited',
       message:;
         'Available for part - time projects only (up to 20 hours per week).',
@@ -1794,6 +1826,10 @@ contactEmail: "james && james.wilson@example && example.com"
 current: true 
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 hourly_rate: 150;
 contact_email: "alexandra.chen@example.com";
 }
@@ -1808,6 +1844,10 @@ available_hours: [ {
   day: "Wednesday", hours: "1:00 PM - 5:00 PM";
 }
 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   day: "Friday", hours: "1:00 PM - 5:00 PM";
 }
 hourly_rate: 135;
@@ -2182,6 +2222,7 @@ contact_email: "david.martinez@example.com";
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -2190,10 +2231,16 @@ contact_email: "david.martinez@example.com";
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -2204,3 +2251,7 @@ contact_email: "david.martinez@example.com";
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

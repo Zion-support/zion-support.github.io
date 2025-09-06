@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import {
   Card
@@ -14,10 +12,8 @@ import { Button } from '@/components/ui/button'
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface JobMatchCardProps {
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import {;
   Card,;
@@ -33,23 +29,11 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-<<<<<<< HEAD
-
-export function JobMatchesCard(): any ({;
-  match,;
-  onApply,;
-  onDecline,;
-  showApplied = false,;
-}: JobMatchCardProps) {;
-  const job = match && match.job;
-
-<<<<<<< HEAD
-=======
 
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
@@ -61,7 +45,7 @@ export function JobMatchesCard(): any ({;
 }
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
@@ -69,11 +53,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
 
 
-=======
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">
@@ -188,10 +171,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             ${job.budget.min} - ${job.budget.max}
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -278,6 +259,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </CardFooter>;
     </Card>;
@@ -394,10 +376,11 @@ if (return null) {
 }
 <<<<<<< HEAD
 =======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+;
+
       </CardFooter>
     </Card>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

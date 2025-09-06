@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Certification  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useCertifications() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -15,12 +19,16 @@ export function useCertifications() {;
 
 
   const { user } = useAuth();
+=======
+export function useCertifications() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add certifications')
+<<<<<<< HEAD
       return false
 
 
@@ -70,6 +78,12 @@ export function useCertifications() {;
 
 
 ;
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('certifications')
+        .insert({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -97,12 +111,16 @@ export function useCertifications() {;
       setError('You must be logged in to update certifications'),;
       return false;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
     }
     
@@ -300,6 +318,16 @@ export function useCertifications() {;
 
 
 import {useState} from 'react';
+=======
+          return showSuccessToast("Certification updated", "Your certification has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update certification')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('certifications')
+        .delete()import {useState} from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -320,7 +348,10 @@ if ( {) {
       set_error ('You must be logged in to add certifications'),
       return false;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },;
   return {;
     isLoading,;
@@ -328,6 +359,7 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 
 
 
@@ -433,6 +465,10 @@ if (throw error) {
   }
 }
   }
+=======
+  }
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     setIsLoading (true);
     set_error (null);

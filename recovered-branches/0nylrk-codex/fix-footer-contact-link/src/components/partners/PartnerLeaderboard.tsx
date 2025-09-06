@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
+<<<<<<< HEAD
 
 interface LeaderboardEntry {
 
@@ -21,6 +25,8 @@ interface LeaderboardEntry {
   referrals: number,
   earnings: number,
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -31,6 +37,7 @@ export function PartnerLeaderboard() {
       id: "1"
       rank: 1
       name: "AI Tech Guru"
+<<<<<<< HEAD
       avatar: "", // URL would be here
 
 
@@ -55,6 +62,9 @@ export function PartnerLeaderboard() {
 
 
     {
+=======
+      avatar: "", // URL would be here    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       id: "2"
       rank: 2
@@ -65,6 +75,7 @@ export function PartnerLeaderboard() {
 
       badges: ["silver"]
 
+<<<<<<< HEAD
 
     },
 
@@ -84,6 +95,9 @@ export function PartnerLeaderboard() {
     },
 
 
+=======
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
 
       id: "4"
@@ -95,15 +109,21 @@ export function PartnerLeaderboard() {
 
       badges: []
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   ];
   // Function to render rank badge
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -136,6 +156,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from "lucide-react",;
+<<<<<<< HEAD
 
 
 
@@ -157,6 +178,8 @@ interface LeaderboardEntry {;
 }
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -167,9 +190,14 @@ export function PartnerLeaderboard() {;
       avatar: "", // URL would be here;
       referrals: 178,;
       earnings: 4500,;
+<<<<<<< HEAD
       badges: ["gold", "trending"];
     };
     };
+=======
+      badges: ["gold", "trending"]
+};    };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {;
       id: "2",;
       rank: 2,;
@@ -177,9 +205,14 @@ export function PartnerLeaderboard() {;
       avatar: "",;
       referrals: 145,;
       earnings: 3625,;
+<<<<<<< HEAD
       badges: ["silver"];
     };
     };
+=======
+      badges: ["silver"]
+};    };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {;
       id: "3",;
       rank: 3,;
@@ -187,9 +220,14 @@ export function PartnerLeaderboard() {;
       avatar: "",;
       referrals: 124,;
       earnings: 3100,;
+<<<<<<< HEAD
       badges: ["bronze"];
     };
     };
+=======
+      badges: ["bronze"]
+};    };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {;
       id: "4",;
       rank: 4,;
@@ -197,9 +235,14 @@ export function PartnerLeaderboard() {;
       avatar: "",;
       referrals: 98,;
       earnings: 2450,;
+<<<<<<< HEAD
       badges: [];
     };
     };
+=======
+      badges: []
+};    };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {;
       id: "5",;
       rank: 5,;
@@ -209,6 +252,7 @@ export function PartnerLeaderboard() {;
       earnings: 2175,;
       badges: ["newcomer"];
     }
+<<<<<<< HEAD
   ];
 
   ];
@@ -310,6 +354,9 @@ function PartnerLeaderboard() {
 
 
                   }`}
+=======
+  ];                  }`}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">
@@ -335,6 +382,7 @@ function PartnerLeaderboard() {
                       {entry.badges.includes("gold") && (
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
+<<<<<<< HEAD
                         </Badge>
 
       case 3:;
@@ -437,6 +485,9 @@ function PartnerLeaderboard() {
       </Card>;
 
             )}
+=======
+                        </Badge>            )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>
         </CardContent>
       </Card>
@@ -516,6 +567,7 @@ function PartnerLeaderboard() {
             </Badge>;
           </div>;
         </CardContent>;
+<<<<<<< HEAD
       </Card>;
 
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -551,11 +603,15 @@ function PartnerLeaderboard() {
               <li > Co - marketing opportunities</li>;
 
             </ul>;
+=======
+      </Card>;            </ul>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </CardContent>;
       </Card>;
 
     </div>);
+<<<<<<< HEAD
 }
 
     </div>;
@@ -608,3 +664,6 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 }
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

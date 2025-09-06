@@ -296,3 +296,8 @@ monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
 
+<<<<<<< HEAD
+=======
+});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

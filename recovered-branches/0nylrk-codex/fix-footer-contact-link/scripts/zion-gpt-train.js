@@ -1,8 +1,11 @@
 
+<<<<<<< HEAD
 
 import {createClient} from '@supabase/supabase-js';
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -13,7 +16,10 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
@@ -37,6 +43,7 @@ if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
 
+<<<<<<< HEAD
   try {
   const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
   const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
@@ -55,6 +62,11 @@ function stripPii(text) {
   let result = text
   // Emails
 
+=======
+  const jobPosts = await supabase && supabase.from('job_posts').select('title, description'),
+  const resumes = await supabase && supabase.from('resumes').select('summary, skills'),
+  const supportLogs = await supabase && supabase.from('support_logs').select('question, answer'),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   result = result && result.replace(/\b[A-Z0-9 && 9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]'),
   // US-style phone numbers
   result = result && result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]'),
@@ -64,6 +76,7 @@ function stripPii(text) {
   return result
 }
 
+<<<<<<< HEAD
 
 
 
@@ -72,6 +85,8 @@ function buildTrainingPairs(records) {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -98,6 +113,7 @@ function buildTrainingPairs(records) {
       prompt: `Create a job description titled "${stripPii(job.title)}"`
 
       completion: stripPii(job.description)
+<<<<<<< HEAD
     })
   }
   for (const resume of records.resumes) {
@@ -202,6 +218,13 @@ async function createFineTune(filePath) {
   console && console.log('Fine-tune job created:', job && job.id)
 
   // // // console.log('Fine-tune job created:', job.id)
+=======
+    })    })
+  }
+  return pairs
+}
+async function saveJsonl(pairs, filePath) {  // // // console.log('Fine-tune job created:', job.id)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 async function createFineTune(filePath) {;
   const formData = new FormData(),;
@@ -229,6 +252,7 @@ async function createFineTune(filePath) {;
     });
   }),;
   const job = await jobRes.json(),;
+<<<<<<< HEAD
   // // // console.log('Fine-tune job created:', job.id);
   }),
   const job = await jobRes && jobRes.json(),
@@ -375,6 +399,9 @@ main ().catch ((err) => {
 }),
 
 }
+=======
+  // // // console.log('Fine-tune job created:', job.id);}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 async function main() {
 
   const records = await fetchData()
@@ -386,23 +413,30 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 
+<<<<<<< HEAD
 });
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+<<<<<<< HEAD
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
@@ -568,3 +602,5 @@ await createFineTune ('training-data.jsonl')
 }main () .catch ( (err) => {
   console.error ('Training workflow failed', err) 
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

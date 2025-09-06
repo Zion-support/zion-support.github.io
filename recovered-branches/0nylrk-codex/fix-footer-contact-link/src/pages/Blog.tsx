@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -17,6 +20,7 @@ import { Search } from "lucide-react";
 const BLOG_POSTS: BlogPost[] = [
   {
 import { BlogPost } from "@/types/blog",
+<<<<<<< HEAD
 import { Search } from "lucide-react",
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
@@ -34,6 +38,9 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 <h2>1. Multimodal AI Systems</h2>
+=======
+import { Search } from "lucide-react",<h2>1. Multimodal AI Systems</h2>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
 <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
@@ -45,8 +52,11 @@ const BLOG_POSTS: BlogPost[] = [
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
 
+<<<<<<< HEAD
 
       name: "Dr. Alicia Zhang",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
     },
@@ -64,7 +74,10 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -81,6 +94,7 @@ const BLOG_POSTS: BlogPost[] = [
     title: "How to Optimize Your AI Service Listings for Maximum Visibility"
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
+<<<<<<< HEAD
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
@@ -146,6 +160,9 @@ const BLOG_POSTS: BlogPost[] = [
 
 
   {
+=======
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
     slug: "ai-ethics-frameworks"
@@ -160,6 +177,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Deployment with Human Oversight</h2>
 <p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
 <h2>Continuous Ethical Evaluation</h2>
+<<<<<<< HEAD
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
     author: {
@@ -210,6 +228,13 @@ const BLOG_POSTS: BlogPost[] = [
 
 
   {
+=======
+<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
+    author: {
+      name: "Dr. James Peterson"
+      title: "AI Ethics Officer"
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
     slug: "ai-compute-optimization"
@@ -224,6 +249,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Training Efficiency Optimization</h2>
 <p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
 <h2>Inference Serving Architecture</h2>
+<<<<<<< HEAD
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
 <p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
     author: {
@@ -455,6 +481,13 @@ const CATEGORIES = [
 ],
 
   return (
+=======
+<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
+    author: {
+      name: "Michael Wong"
+      title: "ML Infrastructure Architect"
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>
       <SEO
         title="Blog - AI & Tech Insights"
@@ -472,6 +505,7 @@ const CATEGORIES = [
             </p>
           </div>
 
+<<<<<<< HEAD
 
 
           {/* Featured Post Section - Only show if there are featured posts */}
@@ -717,6 +751,8 @@ const CATEGORIES = [
 
 
           
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Header } from "@/components/Header",;
@@ -905,6 +941,7 @@ const CATEGORIES = [;
   "Recruitment",;
   "Infrastructure";
 ],;
+<<<<<<< HEAD
 
 export default function Blog() {;
   const [searchQuery, setSearchQuery] = useState("");
@@ -932,6 +969,8 @@ export default function Blog() {;
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://app && app.ziontechgroup.com/blog"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       />;
       <Header />;
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
@@ -943,6 +982,7 @@ export default function Blog() {;
             </p>;
           </div>;
 
+<<<<<<< HEAD
 
 
           {/* Featured Post Section - Only show if there are featured posts */}
@@ -951,17 +991,25 @@ export default function Blog() {;
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (;
             <div className="mb-16">;
+=======
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts && featuredPosts.length > 0 && (;            <div className="mb-16">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div className="aspect-video overflow-hidden rounded-lg">;
                   <img
                     src={featuredPosts[0].featuredImage} 
                     alt={featuredPosts[0].title}
+<<<<<<< HEAD
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   <img ;
                     src={featuredPosts[0].featuredImage} ;                    alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300";
                     alt={featuredPosts[0].title}
+=======
+                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"                    alt={featuredPosts[0].title}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />;
                 </div>;
@@ -980,7 +1028,10 @@ export default function Blog() {;
                     <img
                       src={featuredPosts[0].author && author.avatarUrl} 
                       alt={featuredPosts[0].author && author.name}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="w-10 h-10 rounded-full mr-3"
                     />;
                     <div>;
@@ -995,8 +1046,12 @@ export default function Blog() {;
                   <Button
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
+<<<<<<< HEAD
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
                     <img ;
+=======
+                    <Link to={`/blog/${featuredPosts[0].slug}`}>;                    <img ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       src={featuredPosts[0].author.avatarUrl} ;                      alt={featuredPosts[0].author.name}
                       className="w-10 h-10 rounded-full mr-3";
                     />;
@@ -1012,6 +1067,7 @@ export default function Blog() {;
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit";
                   >;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
+<<<<<<< HEAD
                       Read Article;
                     </Link>;
                   </Button>;
@@ -1020,6 +1076,8 @@ export default function Blog() {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -1028,6 +1086,7 @@ export default function Blog() {;
                 <Input
                   type="text"
                   placeholder="Search articles..."
+<<<<<<< HEAD
                   value={searchQuery}
 
                   onChange={(e) => setSearchQuery(e && e.target.value)}
@@ -1247,11 +1306,15 @@ export default function Blog() {;
 
 
           )}
+=======
+                  value={searchQuery}          )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>
       </div>
       <Footer />
     </>
   )
+<<<<<<< HEAD
 }
                     </p>;
                     <div className="flex items-center">;
@@ -1292,6 +1355,9 @@ export default function Blog() {;
           )}
           )}
         </div>;
+=======
+}        </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>;
       <Footer />;
     </>;
@@ -1301,16 +1367,26 @@ export default function Blog() {;
 }
                 </Card>))}
             </div>) : (
+<<<<<<< HEAD
             <div className="text - center py - 16">;
               <h3 className="text - xl font - bold text - white mb - 2">No articles found</h3>;
               <p className="text - zion - slate - light mb - 6">Try adjusting your search or filter criteria</p>;
+=======
+            <div className="text - center py-16">;
+              <h3 className="text - xl font - bold text - white mb-2">No articles found</h3>;
+              <p className="text - zion - slate - light mb-6">Try adjusting your search or filter criteria</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button;
                 variant="outline";
                 on_click={() => {
                   setSearchQuery ("");
                   setSelectedCategory ("All Categories");
                 }}
+<<<<<<< HEAD
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+=======
+                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 Clear all filters;
               </Button>;
@@ -1320,6 +1396,7 @@ export default function Blog() {;
       <Footer />;
     </>);
 }
+<<<<<<< HEAD
   ),; }];
 //Categories for filtering "All Categories";
 "Trends";
@@ -1408,4 +1485,6 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
   );
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

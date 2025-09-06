@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -7,12 +8,15 @@ import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
+<<<<<<< HEAD
 import { TalentGrid } from "@/components/talent/TalentGrid",
 interface TalentResultsProps {
 
@@ -31,6 +35,9 @@ import {ActiveFilters} from "@/components/talent/ActiveFilters";
 import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
     selectedSkills: string[],
+=======
+import { TalentGrid } from "@/components/talent/TalentGrid",    selectedSkills: string[],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
     toggleAvailability: (availability: string) => void,
@@ -41,6 +48,7 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
 
+<<<<<<< HEAD
     clearFilters: () => void
   }
 }
@@ -48,6 +56,8 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function TalentResults({;
   filteredTalents;
   isLoading;
@@ -65,6 +75,7 @@ export function TalentResults({
   handleToggleSave,
   isAuthenticated,
 
+<<<<<<< HEAD
 
 
   activeFiltersProps
@@ -96,6 +107,11 @@ interface TalentResultsProps {;
     toggleRegion: (region: string) => void,;
     priceRange: [number, number];
 
+=======
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
@@ -103,6 +119,7 @@ interface TalentResultsProps {;
   }
 }
 
+<<<<<<< HEAD
 
 export function TalentResults(): any ({;
 
@@ -152,13 +169,25 @@ export function TalentResults(): any ({;
 }
 
 ;
+=======
+export function TalentResults(): any ({;      />;
+    </div>;
+  );
+}
+;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
 }
+<<<<<<< HEAD
 
 ;
 ;
 
 }
+=======
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

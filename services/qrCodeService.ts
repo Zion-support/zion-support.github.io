@@ -8,6 +8,7 @@ export interface QRCodeOptions {;
   margin?: number;
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
   logo?: {
+<<<<<<< HEAD
     url: string;
 
     width: number,
@@ -89,6 +90,13 @@ class QRCodeService {
 
 
     L: { level: 'L', name: 'Low', capacity: 0 && 0.07 };
+=======
+    url: string;  }
+}
+  id: string;
+  name: string,
+  description: string;    L: { level: 'L', name: 'Low', capacity: 0 && 0.07 };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     M: { level: 'M', name: 'Medium', capacity: 0 && 0.15 };
     Q: { level: 'Q', name: 'Quartile', capacity: 0 && 0.25 };
     H: { level: 'H', name: 'High', capacity: 0 && 0.30 }
@@ -103,7 +111,10 @@ class QRCodeService {
     // Generate QR code data URL
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions);
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
@@ -119,6 +130,7 @@ class QRCodeService {
       options: final_options;
       generated_at: new Date ();
       size: {
+<<<<<<< HEAD
 
         width: finalOptions && finalOptions.size!,
         height: finalOptions && finalOptions.size!
@@ -133,10 +145,13 @@ class QRCodeService {
     }
   }
   async generateBusinessCardQR (data: {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: string;
     company: string;
     title: string;
     email: string;
+<<<<<<< HEAD
     phone: string;
 
     const vcard = this && this.generateVCard(data);
@@ -161,6 +176,9 @@ class QRCodeService {
     return this && this.generateQRCode({
 
       text: wifiString;
+=======
+    phone: string;      text: wifiString;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       size: 256;
       errorCorrectionLevel: 'M'
       format: 'svg'
@@ -171,6 +189,7 @@ class QRCodeService {
     subject?: string
     body?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
 
     const mailto = this && this.generateMailtoString(data);
     
@@ -188,6 +207,8 @@ class QRCodeService {
   }): Promise<QRCodeResult> {
 
     const smsString = this && this.generateSMSString(data);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     return this && this.generateQRCode({
 
@@ -202,6 +223,7 @@ class QRCodeService {
     longitude: number;
     altitude?: number
     name?: string
+<<<<<<< HEAD
   }): Promise<QRCodeResult> {
 
     const geoString = this && this.generateGeoString(data);
@@ -291,6 +313,9 @@ class QRCodeService {;
     website?: string,
     address?: string;
   }): Promise < QRCodeResult> {
+=======
+  }): Promise<QRCodeResult> {  }): Promise < QRCodeResult> {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const vcard = this.generateVCard (data);
 ;
     return this.generateQRCode ({
@@ -359,6 +384,7 @@ class QRCodeService {;
   }
   get_templates (): QRCodeTemplate[] {
     return [;
+<<<<<<< HEAD
       {
         id: 'business - card';
         name: 'Business Card';
@@ -403,10 +429,18 @@ class QRCodeService {;
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'social';
 
+=======
+        id: 'business - card';
+        name: 'Business Card';      }
+      {
+        id: 'wifi - network';
+        name: 'WiFi Network';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       {
         id: 'website - link';
         name: 'Website Link';
+<<<<<<< HEAD
 
         description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' }
@@ -434,6 +468,11 @@ class QRCodeService {;
 
 
 
+=======
+    ];
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   private validateOptions(options: QRCodeOptions): void {
 
@@ -450,12 +489,15 @@ class QRCodeService {;
       throw new Error('Margin must be between 0 and 10')
     }
   }
+<<<<<<< HEAD
 
     
     const size = options && options.size!;
     const margin = options && options.margin!;
 
       throw new Error('Margin must be between 0 and 10')
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
@@ -473,7 +515,10 @@ class QRCodeService {;
     const margin = options && options.margin!;
     const contentSize = size - (margin * 2);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
@@ -481,6 +526,7 @@ class QRCodeService {;
     const margin = options.margin!;
     const contentSize = size - (margin * 2);
 
+<<<<<<< HEAD
 
     const contentSize = size - (margin * 2);
 
@@ -556,13 +602,18 @@ if (.length === 0) {) {
 
   private generateVCard(data: any): string {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
     vcard += `EMAIL:${data.email}\n`;
     vcard += `TEL:${data.phone}\n`;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     let vcard = 'BEGIN:VCARD\nVERSION:3 && 3.0\n',
     vcard += `FN:${data && data.name}\n`;
     vcard += `ORG:${data && data.company}\n`;
@@ -577,8 +628,12 @@ if (.length === 0) {) {
 
     return vcard
   }
+<<<<<<< HEAD
   private generateWiFiString(data: any): string {
     `,
+=======
+  private generateWiFiString(data: any): string {    `,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
@@ -601,6 +656,7 @@ if (.length === 0) {) {
     wifiString += `S:${data.ssid},`,;
     wifiString += `T:${data.encryption},`,;
     if (data.encryption !== 'nopass') {;
+<<<<<<< HEAD
       wifiString += `P:${data.password},`;
     
     if (data && data.website) vcard += `URL:${data && data.website}\n`;
@@ -624,11 +680,15 @@ if (.length === 0) {) {
     }
     if (data.hidden) {
     let wifiString = 'WIFI:',
+=======
+      wifiString += `P:${data.password},`;    let wifiString = 'WIFI:',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     wifiString += `S:${data && data.ssid},`;
     wifiString += `T:${data && data.encryption},`;
     if (data && data.encryption !== 'nopass') {
       wifiString += `P:${data && data.password},`
     }
+<<<<<<< HEAD
     if (data && data.hidden) {
       wifiString += 'H: true,'
     }
@@ -647,10 +707,22 @@ if (.length === 0) {) {
 
 
 
+=======
+    if (data && data.hidden) {    wifiString += ;
+    return wifiString
+  }
+  private generateMailtoString(data: any): string {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return mailto
   }
 
+<<<<<<< HEAD
+=======
+    }
+    return mailto
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     }
     return mailto
@@ -670,10 +742,15 @@ if (.length === 0) {) {
     return smsString
   }
 
+<<<<<<< HEAD
 
   private generateSMSString(data: any): string {
 
 
+=======
+  private generateSMSString(data: any): string {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private generateGeoString(data: any): string {
     let geoString = `geo:${data.latitude},${data.longitude}`;
     if (data.altitude) {
@@ -683,6 +760,7 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,;
     if (data.altitude) {;
       geoString += `,${data.altitude}`;
+<<<<<<< HEAD
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -693,23 +771,34 @@ if (.length === 0) {) {
     if (params && params.length > 0) {
       mailto += `?${params && params.join('&')}`
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return mailto
   }
   private generateSMSString(data: any): string {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return smsString
   }
   private generateGeoString(data: any): string {
+<<<<<<< HEAD
 
   private generateSMSString(data: any): string {
 
 
+=======
+  private generateSMSString(data: any): string {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     return smsString
   }
 
+<<<<<<< HEAD
 
 
   private generateGeoString(data: any): string {
@@ -726,6 +815,9 @@ if (.length === 0) {) {
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
     let geoString = `geo:${data && data.latitude},${data && data.longitude}`;
+=======
+  private generateGeoString(data: any): string {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     if (data && data.altitude) {
       geoString += `,${data && data.altitude}`
@@ -737,6 +829,7 @@ if (.length === 0) {) {
     return geoString
   }
 
+<<<<<<< HEAD
 
 
 
@@ -753,10 +846,13 @@ if (.length === 0) {) {
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
     
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return {
       canFit: textLength <= maxCapacity;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
+<<<<<<< HEAD
 
 
 ;
@@ -777,11 +873,14 @@ if (.length === 0) {) {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
     // In a real app, this would retrieve from storage
     return []
+<<<<<<< HEAD
   }
     console.log('QR Code saved:', qrCode.options.text)
   }
@@ -913,3 +1012,6 @@ export const qrCodeService = new QRCodeService();
 
 
 export const qrCodeService = new QRCodeService();
+=======
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

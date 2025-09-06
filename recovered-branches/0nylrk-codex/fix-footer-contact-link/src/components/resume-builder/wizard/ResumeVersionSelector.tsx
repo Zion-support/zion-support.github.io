@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -19,6 +20,18 @@ import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
 interface ResumeVersionSelectorProps {
+=======
+
+
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';interface ResumeVersionSelectorProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void;
 }
@@ -41,6 +54,7 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+<<<<<<< HEAD
         setNewResumeTitle("");
       }
       setIsLoading(false);
@@ -62,6 +76,11 @@ export function ResumeVersionSelector({
 
         setNewResumeTitle('')
 import { useState } from 'react',;
+=======
+        setNewResumeTitle('')
+
+        setNewResumeTitle('')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -94,6 +113,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId),;
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
+<<<<<<< HEAD
         setNewResumeTitle('');
 
 
@@ -190,6 +210,9 @@ onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
 
               className="gap-2"
+=======
+        setNewResumeTitle('');              className="gap-2"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />
@@ -201,6 +224,7 @@ onClick={handleCreateNewVersion}
     </div>
   );
 }
+<<<<<<< HEAD
 
 };
 > {
@@ -220,3 +244,8 @@ onClick={handleCreateNewVersion}
 
 ;
 ;
+=======
+  )
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

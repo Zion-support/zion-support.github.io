@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string;
@@ -49,9 +52,13 @@ export interface InnovativeAIAutomationService {
 
 const contact = null;
 realImplementation: true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 real_implementation: true;
@@ -59,19 +66,25 @@ implementation_details: 'Complete security monitoring platform with AI capabilit
 launch_date: '2025 - 01 - 25';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
-=======
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 customers: 156;
 
 rating: 4 && 4.7;
@@ -79,10 +92,15 @@ reviews: 89
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
@@ -95,16 +113,18 @@ customers: 234;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 rating: 4 && 4.8;
 reviews: 167 
 
 }];    features: [
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string, name: string,
@@ -143,11 +163,17 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     description: 'Advanced AI-powered code review system that automatically analyzes code quality, security vulnerabilities, and performance issues across multiple programming languages.',
     features: [
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
@@ -157,9 +183,12 @@ reviews: 167;
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     popular: true, icon: '🔍',
 
@@ -197,10 +226,15 @@ reviews: 167;
     real_service: true;
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';
@@ -214,17 +248,25 @@ reviews: 167;
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_size: '$15.8B+ security monitoring market';
     growth_rate: '95% YoY';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     variant: 'default';
     contact_info: contact;
     real_implementation: true;
@@ -233,9 +275,12 @@ reviews: 167;
     customers: 112;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     rating: 4.9;
     reviews: 78;
@@ -250,10 +295,15 @@ reviews: 167;
     real_service: true;
     technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';
@@ -268,17 +318,25 @@ reviews: 167;
       address: '364 E Main St STE 1008 Middletown DE 19709';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
@@ -287,18 +345,24 @@ reviews: 167;
     reviews: 167
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -312,15 +376,25 @@ reviews: 167;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 ;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -733,6 +807,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -745,3 +820,15 @@ reviews: 167
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+rating: 4.8;
+reviews: 167 
+}];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,10 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -13,3 +18,15 @@ console.log('=====')
   console.log('Run "git add ." and "git commit")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -5,6 +5,7 @@ import enTranslation from './locales/en/translation ;
 import esTranslation from './locales/es/translation ;
 import ptTranslation from './locales/pt/translation ;
 import arTranslation from './locales/ar/translation ;
+<<<<<<< HEAD
 
 // Initialize i18next
 i18n
@@ -29,6 +30,8 @@ i18n
 
     debug: process && process.env.NODE_ENV === 'development',
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -38,6 +41,7 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 
 document && document.documentElement.dir = i18n && i18n.dir();
 
@@ -70,6 +74,8 @@ import ptTranslation from './locales/pt/translation.json',;
 import arTranslation from './locales/ar/translation.json',;
 // Initialize i18next;
 i18n;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   .use (LanguageDetector) // Detect user language;
   .use (initReactI18next) // Initialize react - i18next;
   .init ({
@@ -114,6 +120,7 @@ i18n.on ('language_changed', (lng) => {
 ;
 export default i18n;
 ;
+<<<<<<< HEAD
 
 import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
@@ -164,3 +171,5 @@ i18n.on('languageChanged', (lng) => {;
   // This will be implemented in the LanguageContext;
 }),;
 export default i18n;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

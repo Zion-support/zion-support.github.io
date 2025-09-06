@@ -48,3 +48,8 @@ const path = require('path')
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
 
+<<<<<<< HEAD
+=======
+      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

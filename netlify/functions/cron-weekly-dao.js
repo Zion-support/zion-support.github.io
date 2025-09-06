@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp && resp.json();
 
@@ -8,6 +9,8 @@
     const data = await resp && resp.json();
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
@@ -30,6 +33,7 @@ const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const base_url = process.env.URL || process.env.DEPLOY_URL || '';
     const resp = await fetch (`${base_url}/api / dao / metrics`);
@@ -66,6 +70,8 @@ if ( {) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 exports.handler = async function() {
   try {
@@ -77,7 +83,6 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN,
     const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
     const content = fs.readFileSync(cachePath, 'utf-8'),
-=======
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
     const data = await resp.json();
@@ -87,14 +92,19 @@ exports.handler = async function() {
 
     const cachePath = path.join(process.cwd(), 'datadaometrics.json');
     const content = fs.readFileSync(cachePath, 'utf-8');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
       status_code: 200,
       body: JSON.stringify ({ ok: true, updated_at: data.updated_at }),
@@ -124,9 +134,12 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, updatedAt: data && data.updatedAt }),
@@ -156,11 +169,15 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-},
 =======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+},
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

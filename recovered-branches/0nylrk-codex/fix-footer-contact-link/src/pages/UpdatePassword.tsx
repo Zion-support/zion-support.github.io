@@ -27,6 +27,7 @@ const updatePasswordSchema = z;
 type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {;
+<<<<<<< HEAD
 
   const [isLoading, setIsLoading] = useState(false);
   const [accessToken, setAccessToken] = useState<string | null>(null);
@@ -38,6 +39,8 @@ export default function UpdatePassword() {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { useNavigate, useLocation } from "react-router-dom",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -70,6 +73,7 @@ import {
 import { toast } from "@/hooks/use-toast",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
 import { cleanupAuthState } from "@/utils/authUtils",
 // Form validation schema;
 const updatePasswordSchema = z;
@@ -130,6 +134,9 @@ export default function UpdatePassword() {
   const location = useLocation(),
 
   // Initialize react-hook-form
+=======
+import { cleanupAuthState } from "@/utils/authUtils",  // Initialize react-hook-form
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const form = useForm<UpdatePasswordFormValues>({
     resolver: zodResolver(updatePasswordSchema)
     defaultValues: {
@@ -137,12 +144,19 @@ export default function UpdatePassword() {
       confirmPassword: ""}})
   useEffect(() => {
     // Extract access token from URL hash
+<<<<<<< HEAD
 
 
+=======
+    } else {
+      setError("No access token found. Please request a new password reset link.")
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const hashParams = new URLSearchParams(location.hash.substring(1)),
     const token = hashParams.get("access_token"),
     
 
+<<<<<<< HEAD
 
     if (token) {
       setAccessToken(token)
@@ -212,12 +226,23 @@ if ( {) {
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
+=======
+    if (token) {
+      setAccessToken(token)
+=======    } else {
+      set_error ("No access token found. Please request a new password reset link.");
+    }
+
+  }, [location]),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
       setError("No access token found. Please request a new password reset link.")
       return
 
+<<<<<<< HEAD
 
   // Initialize react-hook-form;
   const form = useForm<UpdatePasswordFormValues>({;
@@ -226,10 +251,13 @@ if ( {) {
       password: "",;
       confirmPassword: ""}}),;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));
     const token = hashParams && hashParams.get("access_token");
+<<<<<<< HEAD
 
     if (token) {;
       setAccessToken(token);
@@ -241,6 +269,8 @@ if ( {) {
     cleanupAuthState();
   }, [location]);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -331,27 +361,38 @@ export default function UpdatePassword() {;
     // Clean up auth state to prevent issues;
     cleanupAuthState();
   }, [location]),;
+<<<<<<< HEAD
   // Form submission handler;
   const onSubmit = async (data: UpdatePasswordFormValues) => {;
     if (!accessToken) {;
       setError("No access token found. Please request a new password reset link."),;
       return;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     }
 
   },
 
+<<<<<<< HEAD
 
   return (
 
 
+=======
+  return (
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
         setError(error.message),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return
       }
       // Show success message and clean up auth state
@@ -373,7 +414,10 @@ export default function UpdatePassword() {;
       setError(error.message |"An unexpected error occurred")
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -386,8 +430,13 @@ export default function UpdatePassword() {;
 
       if (error) {;
         toast({;
+<<<<<<< HEAD
           title: "Password update failed",;
           description: error && error.message,;
+=======
+          title: "Password update failed",,
+  description: error && error.message,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive"}),;
         setError(error && error.message);
         return;
@@ -396,6 +445,7 @@ export default function UpdatePassword() {;
       // Show success message and clean up auth state;
       setSuccess(true);
       toast({;
+<<<<<<< HEAD
         title: "Password updated successfully",;
         description: "You can now log in with your new password."}),;
 
@@ -507,13 +557,29 @@ export default function UpdatePassword() {;
                       control={form.control}
                       name="password";
                     <FormField
+=======
+        title: "Password updated successfully",,
+  description: "You can now log in with your new password."}),;
+
+      // Clean auth state and redirect after a delay;
+      cleanupAuthState();
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              {error && (;
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
+                  <p className="text-sm">{error}</p>;                    <FormField
+                      control={form && form.control}
+                      name="password"                    <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       control={form && form.control}
                       name="password"
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>;
                           <FormControl>;
+<<<<<<< HEAD
                             <Input
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               disabled={isLoading}
@@ -551,7 +617,10 @@ export default function UpdatePassword() {;
                               type="password"
                               className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                               placeholder="••••••••"
+<<<<<<< HEAD
                               disabled={isLoading}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               {...field}
                             />;
                           </FormControl>;
@@ -560,6 +629,7 @@ export default function UpdatePassword() {;
                       )}
 
                     />;
+<<<<<<< HEAD
 
 
                     <FormField
@@ -595,6 +665,8 @@ export default function UpdatePassword() {;
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -653,6 +725,7 @@ if ( {) {
   return (
     <>;
       <Header />;
+<<<<<<< HEAD
       <div className="flex min - h-screen bg - zion - blue">;
         <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:px - 20 xl:px - 24">;
           <div className="mx - auto w - full max - w-sm lg:w - 96">;
@@ -670,6 +743,25 @@ if ( {) {
                   <p className="text - sm">{error}</p>;
                   <Button;
                     className="mt - 3 text - xs";
+=======
+      <div className="flex min - h-screen bg - zion-blue">;
+        <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:px - 20 xl:px-24">;
+          <div className="mx - auto w - full max - w-sm lg:w-96">;
+            <div className="text - center mb-10">;
+              <h2 className="text - 3xl font - bold tracking - tight text-white">;
+                Update your password;
+              </h2>;
+              <p className="mt - 2 text - sm text - zion - slate-light">;
+                Enter your new password below.;
+              </p>;
+            </div>;
+            <div className="bg - zion - blue - dark rounded - lg p-6">;
+              {error && (
+                <div className="mb - 6 p - 4 bg - red - 500 / 20 border border - red - 500 / 50 rounded - md text-white">;
+                  <p className="text-sm">{error}</p>;
+                  <Button;
+                    className="mt - 3 text-xs";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     variant="outline";
                     on_click={() => navigate ('/forgot - password')}
                   >;
@@ -677,6 +769,7 @@ if ( {) {
                   </Button>;
                 </div>)}
               {success ? (
+<<<<<<< HEAD
                 <div className="text - center py - 8">;
                   <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">;
                     <LockKeyhole className="h - 6 w - 6 text - zion - purple" />;
@@ -686,27 +779,54 @@ if ( {) {
                     Your password has been successfully updated.;
                   </p>;
                   <p className="mt - 2 text - sm text - zion - slate - light">;
+=======
+                <div className="text - center py-8">;
+                  <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb-4">;
+                    <LockKeyhole className="h - 6 w - 6 text - zion-purple" />;
+                  </div>;
+                  <h3 className="text - lg font - medium text-white">Password updated</h3>;
+                  <p className="mt - 2 text - sm text - zion - slate-light">;
+                    Your password has been successfully updated.;
+                  </p>;
+                  <p className="mt - 2 text - sm text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Redirecting you to login...;
                   </p>;
                 </div>) : (
                 <Form {...form}>;
+<<<<<<< HEAD
                   <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+=======
+                  <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <FormField;
                       control={form.control}
                       name="password";
                       render={({ field }) => (
                         <FormItem>;
+<<<<<<< HEAD
                           <FormLabel className="text - zion - slate - light">New Password</FormLabel>;
                           <FormControl>;
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+=======
+                          <FormLabel className="text - zion - slate-light">New Password</FormLabel>;
+                          <FormControl>;
+                            <Input;
+                              type="password";
+                              className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
                           </FormControl>;
+<<<<<<< HEAD
                           <FormMessage className="text - red - 400" />;
+=======
+                          <FormMessage className="text - red-400" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         </FormItem>)}
                     />;
                     <FormField;
@@ -714,26 +834,43 @@ if ( {) {
                       name="confirm_password";
                       render={({ field }) => (
                         <FormItem>;
+<<<<<<< HEAD
                           <FormLabel className="text - zion - slate - light">Confirm Password</FormLabel>;
                           <FormControl>;
                             <Input;
                               type="password";
                               className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+=======
+                          <FormLabel className="text - zion - slate-light">Confirm Password</FormLabel>;
+                          <FormControl>;
+                            <Input;
+                              type="password";
+                              className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               placeholder="••••••••";
                               disabled={is_loading}
                               {...field}
                             />;
                           </FormControl>;
+<<<<<<< HEAD
                           <FormMessage className="text - red - 400" />;
+=======
+                          <FormMessage className="text - red-400" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         </FormItem>)}
                     />;
                     <Button;
                       type="submit";
+<<<<<<< HEAD
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
+=======
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       disabled={is_loading || !access_token}
                     >;
                       {is_loading ? "Updating..." : "Update Password"}
                     </Button>;
+<<<<<<< HEAD
                     <div className="text - center">;
                       <Button;
                         variant="link";
@@ -753,14 +890,25 @@ if ( {) {
                         variant="link";
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0";
                         onClick={() => navigate("/login")}
+=======
+                    <div className="text-center">;
+                      <Button;
+                        variant="link";
+                        className="text - sm font - medium text - zion - cyan hover:text - zion - cyan - light p-0";
+                        on_click={() => navigate ("/login")}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         type="button";
                       >;
                         Back to login;
                       </Button>;
                     </div>;
+<<<<<<< HEAD
                   </form>;
 
                       name="confirmPassword";
+=======
+                  </form>;                      name="confirmPassword";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>;
@@ -778,15 +926,19 @@ if ( {) {
                   </form>
                 </Form>
               )}
+<<<<<<< HEAD
 
             </div>;
           </div>;
         </div>;
         <div className="hidden lg: block relative w-0 flex-1">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">;
             <div className="flex flex-col justify-center items-center h-full px-8">;
               <div className="max-w-md text-center">;
                 <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>;
+<<<<<<< HEAD
                 <p className="text-lg text-white/80">;
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.;
                 </p>;
@@ -804,6 +956,9 @@ if ( {) {
     </>);
 }
 }
+=======
+                <p className="text-lg text-white/80">;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </>);
     </>;
   ); import {
@@ -832,8 +987,13 @@ refresh token: ''
 });
 if (error) {
   toast ({
+<<<<<<< HEAD
   title: "Password update failed";
 description: error.message;
+=======
+  title: "Password update failed",
+  description: error.message;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 setError (error.message);
 return;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
@@ -855,7 +1015,10 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

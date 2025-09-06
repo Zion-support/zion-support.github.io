@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Q4Service {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,10 +12,15 @@ export interface Q4Service {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-  id: string;
 =======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  id: string;
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -24,6 +30,7 @@ id: string;
   popular?: boolean;
   icon?: string;
   color?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,6 +49,8 @@ id: string;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   text_color?: string;
   link: string;
   market_position?: string;
@@ -51,10 +60,15 @@ id: string;
   category: string;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     mobile: string;
     email: string;
     address: string;
@@ -63,21 +77,30 @@ id: string;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   real_implementation: boolean;
   implementation_details?: string;
   launch_date?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   customers?: number;
   rating?: number;
   reviews?: number;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -87,15 +110,22 @@ const contact = {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Affiliate programs',
       'Influencer tracking',
       'Partnership analytics',
@@ -104,9 +134,12 @@ const contact = {
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     marketSize: '$1.5B affiliate software',
 
@@ -127,10 +160,15 @@ const contact = {
       'Server - side tracking with webhook ingestion and fraud - scoring pipeline.',
     launch_date: '2025 - 10 - 01',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     customers: 120,
     rating: 4 && 4.7,
     reviews: 48,
@@ -148,6 +186,10 @@ const contact = {
     features: [;
       'Multi - speaker diarization',
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -164,6 +206,7 @@ const contact = {
       'Multi-speaker diarization',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -172,6 +215,11 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Timestamps and filler removal',
       'Chapter detection and show notes',
       'Embeddings and semantic search',
@@ -215,6 +263,7 @@ const contact = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -223,6 +272,10 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
@@ -317,6 +370,7 @@ const contact = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -325,6 +379,10 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'returns - automation - saas',
     name: 'E‑commerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -334,6 +392,10 @@ const contact = {
       'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
     features: [;
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
@@ -362,6 +424,7 @@ const contact = {
     features: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -370,6 +433,11 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Customer returns portal',
       'Prepaid label generation',
       'RMA approval rules',
@@ -424,6 +492,7 @@ const contact = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -432,6 +501,10 @@ const contact = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
@@ -518,6 +591,7 @@ export const real2025Q4Additions = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -526,6 +600,10 @@ export const real2025Q4Additions = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -547,6 +625,7 @@ export const real2025Q4Additions = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -555,6 +634,10 @@ export const real2025Q4Additions = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -587,6 +670,7 @@ export const real2025Q4Additions = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -595,6 +679,10 @@ export const real2025Q4Additions = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'edge - personalization - engine',
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -632,6 +720,7 @@ export const real2025Q4Additions = [;
   },
 ];
 
+<<<<<<< HEAD
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -680,6 +769,10 @@ export const real2025Q4Additions = [;
       'Calendar with SMS/email reminders',
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
+=======
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Basic reporting',
     ],
@@ -831,6 +924,13 @@ export const real2025Q4Additions = [
     icon: '⚡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
+<<<<<<< HEAD
+=======
+    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
+    marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -838,9 +938,12 @@ export const real2025Q4Additions = [
     realService: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -854,10 +957,15 @@ export const real2025Q4Additions = [
     real_service: true,
     technology: ['Edge runtime, KV / Redis, Next.js'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     integrations: ['Shopify, Stripe, Segment'],
     use_cases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 515% via real - time variants.',
@@ -877,9 +985,12 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'One-PR one-env automation',
     id: 'devx - preview - environments',
@@ -892,10 +1003,15 @@ export const real2025Q4Additions = [
     features: [;
       'One - PR one - env automation',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Seed data and fixtures',
       'Smoke tests and screenshots',
       'Secrets and policies as code',
@@ -903,9 +1019,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🚀',
 
     color: 'from - blue - 600 to - indigo - 700',
@@ -917,10 +1036,15 @@ export const real2025Q4Additions = [
     trial_days: 14,
     setup_time: '1–3 days',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Developer Tools',
     real_service: true,
     technology: ['Docker, K8s, IaC'],
@@ -942,11 +1066,13 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'real - time - log - anomaly - guard',
     name: 'Real - time Log Anomaly Guard',
     tagline: 'Detect anomalies and regressions with LLM - assisted alerts',
@@ -956,10 +1082,15 @@ export const real2025Q4Additions = [
       'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Streaming ingestion and rules',
       'Anomaly detection and drift',
       'LLM summaries and hints',
@@ -968,9 +1099,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📈',
 
     color: 'from - rose - 600 to - red - 700',
@@ -982,10 +1116,15 @@ export const real2025Q4Additions = [
     trial_days: 7,
     setup_time: 'Same day',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Observability',
     real_service: true,
     technology: ['Loki / Elastic, OpenTelemetry, LLMs'],
@@ -1007,11 +1146,13 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'governed - feature - flags',
     name: 'Governed Feature Flags',
     tagline: 'Audit - ready flags with policies, approvals, and rollbacks',
@@ -1021,10 +1162,15 @@ export const real2025Q4Additions = [
       'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Policies and approvals',
       'Change logs and RBAC',
       'SLO - based rollbacks',
@@ -1033,9 +1179,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🏳️',
 
     technology: ['Edge runtime, KV/Redis, Next.js'],
@@ -1160,10 +1309,15 @@ export const real2025Q4Additions = [
     trial_days: 14,
     setup_time: '1 day',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Developer Tools',
     real_service: true,
     technology: ['Edge, SDKs, Audit logs'],
@@ -1185,11 +1339,13 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'email - sequence - copilot',
     name: 'Email Sequence Copilot',
     tagline: 'On - brand outbound with warm - up, scoring, and safety',
@@ -1199,10 +1355,15 @@ export const real2025Q4Additions = [
       'Compose, schedule, and monitor outbound sequences with domain warm - up, safety guardrails, and reply intent scoring.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Sequence composer and AI draft',
       'Warm - up and safety checks',
       'Reply intent and routing',
@@ -1211,9 +1372,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '✉️',
 
     color: 'from - fuchsia - 600 to - pink - 700',
@@ -1224,10 +1388,15 @@ export const real2025Q4Additions = [
     trial_days: 7,
     setup_time: 'Same day',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Growth & Marketing',
     real_service: true,
     technology: ['Postmaster, LLMs, ESP APIs'],
@@ -1249,11 +1418,13 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'data - contracts - guardrails',
     name: 'Data Contracts Guardrails',
     tagline: 'Schema governance, lineage, and backward - compat checks',
@@ -1263,10 +1434,15 @@ export const real2025Q4Additions = [
       'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI / CD.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Schema registry and versioning',
       'Back / forward compatibility checks',
       'Lineage and ownership',
@@ -1275,9 +1451,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧮',
 
     category: 'Developer Tools',
@@ -1366,10 +1545,15 @@ export const real2025Q4Additions = [
     trial_days: 14,
     setup_time: '3–5 days',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Data & Analytics',
     real_service: true,
     technology: ['dbt, Kafka, OpenLineage'],
@@ -1391,9 +1575,12 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
@@ -1460,10 +1647,15 @@ export const real2025Q4Additions = [
     trial_days: 0,
     setup_time: '1 week',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Enterprise IT',
     real_service: true,
     technology: ['Okta, Entra, Auth0, SCIM'],
@@ -1485,11 +1677,13 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'ai - sales - pipeline - insights',
     name: 'AI Sales Pipeline Insights',
     tagline: 'Forecast hygiene, stage risks, and next - best actions',
@@ -1499,10 +1693,15 @@ export const real2025Q4Additions = [
       'Connect CRM to compute forecast hygiene, risk scores, and next - best actions with weekly reports and alerts.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Risk scoring and hygiene checks',
       'Stage SLAs and alerts',
       'Next - best action copilot',
@@ -1510,9 +1709,12 @@ export const real2025Q4Additions = [
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📊',
 
     category: 'Enterprise IT',
@@ -1562,10 +1764,15 @@ export const real2025Q4Additions = [
     trial_days: 7,
     setup_time: '2–3 days',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Business Automation',
     real_service: true,
     technology: ['CRM APIs, LLMs, Dashboards'],
@@ -1574,9 +1781,12 @@ export const real2025Q4Additions = [
     roi: 'Increase forecast accuracy and win rates.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     category: 'Business Automation',
     realService: true,
@@ -1603,15 +1813,21 @@ export const real2025Q4Additions = [
     implementation_details: 'Data sync, scoring, weekly reviews.',
     launch_date: '2025 - 03 - 04',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     customers: 14,
     rating: 4 && 4.5,
     reviews: 10,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1629,10 +1845,10 @@ export const real2025Q4Additions = [
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
     id: 'secure - webhook - relay',
-=======
     customers: 14,
     rating: 4.5,
     reviews: 10
@@ -1669,10 +1885,15 @@ export const real2025Q4Additions = [
     trial_days: 14,
     setup_time: 'Same day',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Developer Tools',
     real_service: true,
     technology: ['Queues, HMAC, Workers'],
@@ -1694,6 +1915,7 @@ export const real2025Q4Additions = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1708,10 +1930,10 @@ export const real2025Q4Additions = [
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
     id: 'managed - postgres - ha - lite',
-=======
     category: 'Developer Tools',
     realService: true,
     technology: ['Queues, HMAC, Workers'],
@@ -1761,10 +1983,15 @@ export const real2025Q4Additions = [
     trial_days: 7,
     setup_time: '3–5 days',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Enterprise IT',
     real_service: true,
     technology: ['Postgres, Patroni / Cloud - native HA'],
@@ -1783,14 +2010,16 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 9,
   },
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700';
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
     mobile: string, email: string,
     address: string,
     website: string
@@ -1799,6 +2028,7 @@ export const real2025Q4Additions = [
   launchDate?: string;
   customers?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1989,10 +2219,13 @@ export const real2025Q4Additions = [
 =======
 <<<<<<< HEAD
 =======
+=======
+
+  reviews?: number;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     rating: 4 && 4.6,
 
-=======
     category: 'Enterprise IT',
     realService: true,
     technology: ['Postgres, Patroni/Cloud-native HA'],
@@ -2009,9 +2242,13 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     reviews: 9
   }
 ];
@@ -2286,7 +2523,13 @@ export const realQ4Services2025: RealQ4Service[] = [
     reviews: 28,
   },
 ];
+<<<<<<< HEAD
 }
+=======
+
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -2305,8 +2548,13 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
+<<<<<<< HEAD
     marketPosition:;
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
+=======
+    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -2704,6 +2952,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
+<<<<<<< HEAD
     reviews: 9
   }
 ];
@@ -2712,6 +2961,15 @@ export const real2025Q4Additions = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    reviews: 9
+  }
+];
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 mobile: string;
     email: string;
     address: string;
@@ -2726,6 +2984,10 @@ mobile: string;
 }
 
 const contact = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

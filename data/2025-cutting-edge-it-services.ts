@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -15,9 +16,11 @@ export const cuttingEdgeITServices2025 = [
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -431,6 +434,7 @@ id: 'quantum-cloud-infrastructure-platform',
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
@@ -446,10 +450,16 @@ id: 'quantum-cloud-infrastructure-platform',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const cuttingEdgeITServices2025 = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -496,10 +506,16 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },;
@@ -520,10 +536,18 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -531,10 +555,14 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
+origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -554,6 +582,10 @@ export const cuttingEdgeITServices2025 = [
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -761,6 +793,7 @@ export const cuttingEdgeITServices2025 = [;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -779,20 +812,25 @@ export const cuttingEdgeITServices2025 = [;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }
 ];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

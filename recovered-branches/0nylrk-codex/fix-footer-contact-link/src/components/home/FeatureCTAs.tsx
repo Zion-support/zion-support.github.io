@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+<<<<<<< HEAD
 
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -105,10 +109,24 @@ export function FeatureCTAs() {
 
 
     {
+=======
+    {
+      title: "AI Talent Matching",
+      description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
+      icon: <Search className="h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue-700" />,
+      link: "/marketplace",
+      badge: "Popular",
+      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
+    }
+    {
+      title: "Services Marketplace"
+      description: "Discover professional tech and AI services for your business needs, from development to consulting.";    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "Community Hub"
       description: "Connect with like-minded professionals, share insights, and stay updated with industry trends.";
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
       link: "/community"
+<<<<<<< HEAD
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     }
     },
@@ -164,10 +182,14 @@ export function FeatureCTAs() {
       details: "Scale your talent acquisition with white - labeled solutions, analytics dashboards, and dedicated account managers.";
 
     }
+=======
+      details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       title: "Developer Tools"
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.";
 
+<<<<<<< HEAD
       icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray - 700" />,
       link: "/developers",
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";
@@ -219,11 +241,20 @@ export function FeatureCTAs() {
 
 
     {
+=======
+      icon: <Code className="h - 10 w - 10 p - 2 rounded - md bg - gray - 100 text - gray-700" />,
+      link: "/developers",
+      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.";    }
+    {
+      title: "Project Management"
+      description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.";    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />
       link: "/zion-hire-ai"
       badge: "Premium"
+<<<<<<< HEAD
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
 
 export function FeatureCTAs() {;
@@ -309,13 +340,20 @@ export function FeatureCTAs() {;
       badge: "Premium",;
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
       icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
+=======
+      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red-700" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       link: "/dashboard / projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
     }
     {
       title: "Zion Hire AI",
       description: "AI - powered recruiting assistant to streamline your hiring process and find better matches.",
+<<<<<<< HEAD
       icon: <Clock className="h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700" />,
+=======
+      icon: <Clock className="h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet-700" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       link: "/zion - hire - ai",
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
@@ -323,6 +361,7 @@ export function FeatureCTAs() {;
   ];
 ;
   return (
+<<<<<<< HEAD
 
     <section className="py - 16 bg - gradient - to - b from - background to - background / 90">;
       <div className="container mx - auto px - 4">;
@@ -447,6 +486,8 @@ export function FeatureCTAs() {;
   ];
   return (;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <section className="py-16 bg-gradient-to-b from-background to-background/90">;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -464,6 +505,7 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
+<<<<<<< HEAD
 
 
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
@@ -513,6 +555,20 @@ export function FeatureCTAs() {;
                   <Link to={feature.link}>;
                     <span > Explore {feature.title}</span>;
                     <ArrowRight className="h - 4 w - 4" />;
+=======
+                </div>;
+                <CardTitle className="mt-4">{feature.title}</CardTitle>;
+                <CardDescription className="line - clamp-2">{feature.description}</CardDescription>;
+              </CardHeader>;
+              <CardContent>;
+                <p className="text - sm text - muted-foreground">{feature.details}</p>;
+              </CardContent>;
+              <CardFooter>;
+                <Button as_child className="w - full gap-1">;
+                  <Link to={feature.link}>;
+                    <span > Explore {feature.title}</span>;
+                    <ArrowRight className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </Link>;
                 </Button>;
               </CardFooter>;
@@ -520,6 +576,7 @@ export function FeatureCTAs() {;
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 }
   ),;}
  import {
@@ -568,3 +625,6 @@ Clock const features = [ {
     </section>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

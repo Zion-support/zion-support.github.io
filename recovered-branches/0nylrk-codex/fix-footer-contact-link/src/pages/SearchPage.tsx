@@ -22,7 +22,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -30,6 +33,7 @@ import {generateSearchSuggestions} from "@/data/marketplaceData";
 import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 export default function SearchPage() {;
 
   const [params] = useSearchParams();
@@ -106,6 +110,11 @@ export default function SearchPage() {
 
 
   return (
+=======
+export default function SearchPage() {;    if (initial) {
+      search(initial)
+    }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
@@ -114,6 +123,7 @@ export default function SearchPage() {
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
+<<<<<<< HEAD
 
           />;
         </form>;
@@ -157,6 +167,8 @@ export default function SearchPage() {;
 
           />;
         </form>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -180,6 +192,7 @@ export default function SearchPage() {;
       </main>;
     </AppLayout>;
   );
+<<<<<<< HEAD
 }
 
 import { useEffect, useState } from './react';
@@ -292,3 +305,6 @@ if ( {) {
     </AppLayout>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

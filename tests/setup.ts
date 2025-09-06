@@ -3,10 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 
 interface SetupProps {
@@ -54,11 +58,14 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 
 interface SetupProps {
@@ -74,9 +81,14 @@ export default function Setup({ }: SetupProps) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { afterEach, vi } from 'vitest'
@@ -86,8 +98,13 @@ afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
 })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

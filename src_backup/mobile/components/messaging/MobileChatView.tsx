@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-id: string;
-=======
 
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -27,7 +24,7 @@ import { useRouter } from 'next/router'
 import { toast } from 'sonner'
 interface Message {
   id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   content: string;
   timestamp: string;
   isMe: boolean;
@@ -47,6 +44,7 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -459,6 +457,8 @@ export function MobileChatView(): any ({;
                     : 'text - muted - foreground')}
               >;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -466,7 +466,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   const router = null;
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {message.timestamp}
 
                 {message.isMe && message.status && (;
@@ -583,57 +583,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-
-            placeholder='Type a message...';
-            className='flex-1'          />;
-
-          <Button
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage && newMessage.trim()}
-            className={!newMessage && newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'>;
-            <Send className='h-5 w-5' />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>;
   );
-}
-
-                  </span>)}
-              </div>;
-            </div>;
-          </div>))}
-      </div>;
-      <div className='sticky bottom - 0 bg - background border - t border - border p - 2'>;
-        <div className='flex items - center gap - 2'>;
-          <Button variant='ghost' size='icon' aria - label='Attach file'>;
-            <PaperclipIcon className='h - 5 w - 5' />;
-          </Button>;
-          <Input;
-            value={new_message}
-            on_change={e => setNewMessage (e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...';
-            className='flex - 1'          />;
-          <Button;
-            size='icon';
-            on_click={handle_send}
-            disabled={!new_message.trim ()}
-            className={!new_message.trim () ? 'opacity - 50' : ''}
-            aria - label='Send message'          >;
-            <Send className='h - 5 w - 5' />;
-          </Button>;
-        </div>;
-      </div>;
-    </div>);
-}
-
-}
-;
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

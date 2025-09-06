@@ -12,7 +12,11 @@ export default function InteractiveCard({title;
 import React, { useState } from 'react',;
 import Link from 'next/link',;
 interface InteractiveCardProps {;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   icon: string,;
   href: string,;
@@ -30,6 +34,7 @@ export default function InteractiveCard({;
   className = '',;
   children;
 }: InteractiveCardProps) {;
+<<<<<<< HEAD
   const [isHovered, setIsHovered] = useState(false),;
   return (;
     <Link;
@@ -39,6 +44,9 @@ export default function InteractiveCard({;
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
     <Link;
+=======
+  const [isHovered, setIsHovered] = useState(false),;    <Link;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
       onMouseEnter={() => setIsHovered (true)}
@@ -58,13 +66,20 @@ export default function InteractiveCard({;
           </p>;
           {/* Custom children or default arrow */}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
+<<<<<<< HEAD
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
               <span>Learn More</span>
+=======
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">              <span>Learn More</span>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
@@ -90,6 +105,7 @@ export default function InteractiveCard({;
       className={class_name}
 >;
       {stats && (
+<<<<<<< HEAD
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -97,6 +113,8 @@ export default function InteractiveCard({;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>)}
     </InteractiveCard>);
@@ -114,6 +132,7 @@ export default function InteractiveCard({;
         ))}
       </div>;
       {/* Quote */}
+<<<<<<< HEAD
       </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
@@ -121,6 +140,9 @@ export default function InteractiveCard({;
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
       </blockquote>
+=======
+      </blockquote>      </blockquote>      </blockquote>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
         <div className="font-semibold text-white">{author}</div>
@@ -129,5 +151,9 @@ export default function InteractiveCard({;
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

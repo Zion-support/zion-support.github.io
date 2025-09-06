@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -8,6 +11,7 @@ import { JobMatch } from "@/types/jobs",
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
   const [isProcessing, setIsProcessing] = useState(false),
 
 
@@ -50,6 +54,9 @@ function useJobMatches() {
             key_projects
           *,
           talent_profile:talent_id(
+=======
+  const [isProcessing, setIsProcessing] = useState(false),          talent_profile:talent_id(
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             id,
             user_id,
             full_name,
@@ -58,6 +65,7 @@ function useJobMatches() {
             hourly_rate,
             bio,
             years_experience,
+<<<<<<< HEAD
             key_projects,
 
 
@@ -135,11 +143,21 @@ if (throw error) {
 
 
 
+=======
+            key_projects,            skills
+          )
+        `)
+        .eq("job_id", jobId)  const triggerAIMatching = async () => {
+    setIsProcessing(true),
+    try {
+      const response = await supabase.functions.invoke('job-talent-matcher', {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
 
       const response = await supabase.functions.invoke ('job - talent - matcher', {
         body: { job_id }});
@@ -231,6 +249,10 @@ export function useJobMatches(jobId: string) {;
   }
 }
 
+=======
+  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -244,8 +266,13 @@ export function useJobMatches(jobId: string) {;
     } catch (error) {
       console.error ("Error triggering AI matching:", error);
       toast ({
+<<<<<<< HEAD
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later.",
+=======
+        title: "Matching Failed",
+  description: "Could not process talent matching. Please try again later.",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {
       setIsProcessing (false);
@@ -266,5 +293,9 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
 
   }
+<<<<<<< HEAD
 }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

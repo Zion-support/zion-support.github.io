@@ -1,16 +1,20 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 interface EmptyStateProps {
 
@@ -43,12 +47,19 @@ interface EmptyStateProps {;
 export function EmptyState(): any ({;
 
   icon;
+=======
+import { Link } from "react-router-dom",  icon;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   title;
   description;
   action;
   secondaryAction;
+<<<<<<< HEAD
   className}: EmptyStateProps) {;
     text: string,
+=======
+  className}: EmptyStateProps) {;    text: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     href?: string,
     onClick?: () => void
   },
@@ -61,17 +72,21 @@ export function EmptyState(): any ({;
   className?: string
 }
 
+<<<<<<< HEAD
 
 
   className}: EmptyStateProps) {
   className?: string
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function EmptyState({;
   icon;
   title;
   description;
   action;
+<<<<<<< HEAD
   secondaryAction;
 
 export function EmptyState({
@@ -89,6 +104,11 @@ export function EmptyState({
       className={cn(
 
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
+=======
+  secondaryAction;    <div
+
+      className={cn(        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         className
 import React from "react",;
@@ -97,7 +117,11 @@ import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 interface EmptyStateProps {;
   icon: React.ReactNode,;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   action?: {;
     text: string,;
@@ -126,6 +150,7 @@ export function EmptyState({;
         className;
       )}
     >
+<<<<<<< HEAD
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
@@ -151,32 +176,45 @@ export function EmptyState({;
               size="lg" 
 
               className="bg-zion-purple hover:bg-zion-purple-light"
+=======
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">              className="bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
 
+<<<<<<< HEAD
 
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
+=======
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               onClick={action.onClick}
             >
               {action.text}
             </Button>
           )
         )}
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
               <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
             </Button>
+<<<<<<< HEAD
           ) : (
 
 
@@ -194,6 +232,9 @@ export function EmptyState({;
               variant="outline" 
 
               size="lg"
+=======
+          ) : (              size="lg"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
               {secondaryAction && secondaryAction.text}
@@ -204,6 +245,7 @@ export function EmptyState({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
 import React from './react';
@@ -332,3 +374,6 @@ className?: string
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

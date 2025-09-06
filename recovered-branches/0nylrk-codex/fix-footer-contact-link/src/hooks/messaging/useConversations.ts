@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -11,13 +12,23 @@ import {toast} from '@/hooks/use-toast';
 
 
 // Allow either UserProfile or UserDetails
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
+<<<<<<< HEAD
  */
 export function useConversations(
   user: UserWithProfile;
+=======
+ */  user: UserWithProfile;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
       if (error) throw error;
@@ -26,6 +37,7 @@ export function useConversations(
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
+<<<<<<< HEAD
         
 
   setIsLoading: (loading: boolean) => void) {
@@ -64,11 +76,15 @@ if (throw error) {
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
 
           }
+=======
+                  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
 
             content: conv.last_message,
+<<<<<<< HEAD
             created_at: conv.last_message_time;
 
           } : undefined;
@@ -318,6 +334,12 @@ export function useConversations(;
       }
       
       }
+=======
+            created_at: conv.last_message_time;        }
+      });
+      setConversations(formattedConversations);
+      // Calculate total unread count      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       }
       
@@ -329,7 +351,10 @@ export function useConversations(;
         .from('messages')
         .insert({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -342,18 +367,28 @@ export function useConversations(;
       await fetchConversations(),
       
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console && console.error('Error creating conversation:', error);
       toast({
 
+<<<<<<< HEAD
 
+=======
+          read: false
+        });
+      // Update conversations list
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
+<<<<<<< HEAD
       toast({
         title: "Failed to create conversation";
         description: "Please try again later"
@@ -766,3 +801,6 @@ conversationId = newConversation.id
     createConversation}
 }
 }
+=======
+      toast({}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

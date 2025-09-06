@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+<<<<<<< HEAD
 export function useEducation() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -15,12 +19,16 @@ export function useEducation() {;
 
 
   const { user } = useAuth();
+=======
+export function useEducation() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add education')
+<<<<<<< HEAD
       return false
 
 
@@ -73,6 +81,12 @@ export function useEducation() {;
 
 
 ;
+=======
+      return false    try {
+      const { error } = await supabase
+        .from('education')
+        .insert({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -85,8 +99,13 @@ export function useEducation() {;
           field_of_study: education.field_of_study,;
           start_date: formatDateForDB(education.start_date),;
           end_date: education.is_current ? null : formatDateForDB(education.end_date),;
+<<<<<<< HEAD
           is_current: education.is_current,;
           description: education.description,;
+=======
+          is_current: education.is_current,,
+  description: education.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           institution_logo_url: education.institution_logo_url,;
           location: education.location;
         }),;
@@ -103,12 +122,16 @@ export function useEducation() {;
       setError('You must be logged in to update education'),;
       return false;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
     
     }
     
@@ -321,6 +344,16 @@ export function useEducation() {;
 
 
 import {useState} from 'react';
+=======
+          return showSuccessToast("Education updated", "Your education has been updated")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update education')
+    } finally {
+      setIsLoading(false)    try {
+      const { error } = await supabase
+        .from('education')
+        .delete()import {useState} from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -341,7 +374,10 @@ if ( {) {
       set_error ('You must be logged in to add education'),
       return false;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },;
   return {;
     isLoading,;
@@ -349,6 +385,7 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
 
 
 
@@ -460,6 +497,10 @@ if (throw error) {
   }
 }
   }
+=======
+  }
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     setIsLoading (true);
     set_error (null);

@@ -236,3 +236,8 @@ if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = HealthChecker;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

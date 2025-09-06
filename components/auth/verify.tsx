@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,10 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Verify Email</h1>;
@@ -26,6 +31,7 @@
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -45,6 +51,12 @@
 }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 
 export default function VerifyEmailPage() {
@@ -54,6 +66,7 @@ export default function VerifyEmailPage() {
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Please verify your email to continue.
       </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );export default function VerifyEmailPage() {
@@ -91,6 +104,8 @@ function VerifyEmailPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -102,6 +117,10 @@ function VerifyEmailPage() {
 
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function VerifyEmailPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -115,10 +134,13 @@ export default function VerifyEmailPage() {
     <div className="container mx-auto px-4 py-10">
       <h1 className="text-2xl font-semibold">Verify Email</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
+<<<<<<< HEAD
 
     </div>
   );
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>
   );
 
@@ -132,6 +154,7 @@ export default function VerifyEmailPage() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -142,3 +165,11 @@ export default function VerifyEmailPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

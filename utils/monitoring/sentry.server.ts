@@ -9,6 +9,7 @@ if (.get_client ()) {) {
     enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
 
+<<<<<<< HEAD
 
 
 
@@ -31,3 +32,8 @@ if (!Sentry.getCurrentHub().getClient()) {;
 }
 
 }
+=======
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

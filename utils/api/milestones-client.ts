@@ -1,6 +1,10 @@
 export interface Milestone {
   id: string;
+<<<<<<< HEAD
   title: string;
+=======
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   status: 'pending' | 'in-progress' | 'completed';
   dueDate: string;
@@ -8,7 +12,11 @@ export interface Milestone {
 }
 
 export interface CreateMilestonePayload {
+<<<<<<< HEAD
   title: string;
+=======
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   dueDate: string;
 }
@@ -47,8 +55,21 @@ export async function updateMilestoneStatus(
   
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+<<<<<<< HEAD
 }
 }
+=======
+}}
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
+  return res.json();}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export async function createMilestone(projectId: string, payload: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -82,6 +103,7 @@ export async function fetchMilestones(projectId: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
   }
 }
 export async /**
@@ -131,6 +153,9 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 
 }
+=======
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {;

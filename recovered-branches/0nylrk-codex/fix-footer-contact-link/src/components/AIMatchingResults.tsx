@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,6 +10,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
+<<<<<<< HEAD
 import {cn} from "@/lib/utils";
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
@@ -203,12 +207,16 @@ export function AIMatchingResults({;
     return (
     return (
       <div className="space-y-4">;
+=======
+import {cn} from "@/lib/utils";      <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
+<<<<<<< HEAD
       </div>;
     );
   }
@@ -274,6 +282,9 @@ export function AIMatchingResults({;
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
 import { useState } from './react';
+=======
+      </div>;import { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -320,12 +331,21 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="space - y-4">;
         <Skeleton className="h - 10 w - full" />;
         <div className="space - y-3">;
           <Skeleton className="h-[120px] w - full" />;
           <Skeleton className="h-[120px] w - full" />;
           <Skeleton className="h-[120px] w - full" />;
+=======
+      <div className="space-y-4">;
+        <Skeleton className="h - 10 w-full" />;
+        <div className="space-y-3">;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+          <Skeleton className="h-[120px] w-full" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </div>);
   }
@@ -334,6 +354,7 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <Card className="bg - zion - blue - dark border - zion - blue - light text - center p - 6">;
         <CardContent className="pt - 6">;
           <BarChart3 className="h - 12 w - 12 mx - auto text - zion - slate - light mb - 3" />;
@@ -345,11 +366,25 @@ if ( {) {
             <div className="bg - zion - blue - light / 20 p - 3 rounded - md text - left">;
               <p className="text - xs text - zion - slate - light">Your search:</p>;
               <p className="text - sm text - white">{project_description}</p>;
+=======
+      <Card className="bg - zion - blue - dark border - zion - blue - light text - center p-6">;
+        <CardContent className="pt-6">;
+          <BarChart3 className="h - 12 w - 12 mx - auto text - zion - slate - light mb-3" />;
+          <p className="text - white font - medium mb-2">No matches found</p>;
+          <p className="text - zion - slate - light text - sm mb-4">;
+            Try adjusting your search criteria or description for better results.;
+          </p>;
+          {project_description && (
+            <div className="bg - zion - blue - light / 20 p - 3 rounded - md text-left">;
+              <p className="text - xs text - zion - slate-light">Your search:</p>;
+              <p className="text - sm text-white">{project_description}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>)}
         </CardContent>;
       </Card>);
   }
   return (
+<<<<<<< HEAD
     <div className="space - y-4">;
       <Tabs default_value="all" value={active_tab} onValueChange={setActiveTab} className="w - full">;
         <TabsList className="bg - zion - blue - dark border border - zion - blue - light grid grid - cols - 4 w - full">;
@@ -363,19 +398,42 @@ if ( {) {
             Services ({categories.services.length});
           </TabsTrigger>;
           <TabsTrigger value="equipment" className="data-[state = active]:bg - zion - purple / 20">;
+=======
+    <div className="space-y-4">;
+      <Tabs default_value="all" value={active_tab} onValueChange={setActiveTab} className="w-full">;
+        <TabsList className="bg - zion - blue - dark border border - zion - blue - light grid grid - cols - 4 w-full">;
+          <TabsTrigger value="all" className="data-[state = active]:bg - zion-purple / 20">;
+            All ({categories.all.length});
+          </TabsTrigger>;
+          <TabsTrigger value="talent" className="data-[state = active]:bg - zion-purple / 20">;
+            Talent ({categories.talent.length});
+          </TabsTrigger>;
+          <TabsTrigger value="services" className="data-[state = active]:bg - zion-purple / 20">;
+            Services ({categories.services.length});
+          </TabsTrigger>;
+          <TabsTrigger value="equipment" className="data-[state = active]:bg - zion-purple / 20">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Equipment ({categories.equipment.length});
           </TabsTrigger>;
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
+<<<<<<< HEAD
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
+=======
+          <TabsContent key={tab} value={tab} className="mt - 4 space-y-3">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
 
+<<<<<<< HEAD
 
   return (
     <div className="space-y-4">;
+=======
+  return (    <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">;
           <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">;
@@ -409,16 +467,24 @@ if ( {) {
                         match && match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match && match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
 
+<<<<<<< HEAD
                         "bg-green-500"
                         "bg-green-500"
+=======
+                        "bg-green-500"                        "bg-green-500"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
                             {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
+<<<<<<< HEAD
                             ) : (;
                             {match && match.image ? (;
+=======
+                            ) : (;                            {match && match.image ? (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               <AvatarImage src={match && match.image} />;
                             ) : (;
                               <AvatarFallback className="bg-zion-purple/20">;
@@ -438,8 +504,12 @@ if ( {) {
                                 <div className="text-right ml-2">;
                                   <div className="font-medium text-white">${match && match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
+<<<<<<< HEAD
                                     {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}
                                   </div>;
+=======
+                                    {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}                                  </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                 </div>;
                               )}
                             </div>;
@@ -453,8 +523,12 @@ if ( {) {
 
                                   {skill}
                                 </Badge>;
+<<<<<<< HEAD
                               ))}
                             ;
+=======
+                              ))}                            ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
                                 {match.category}
@@ -464,6 +538,7 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
+<<<<<<< HEAD
                                   {skill}
                                 </Badge>;
                               ))}
@@ -482,4 +557,6 @@ if ( {) {
       </Tabs>;
     </div>);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

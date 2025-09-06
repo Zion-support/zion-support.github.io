@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 
@@ -15,10 +16,13 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
+<<<<<<< HEAD
 
     "authorization, x-client-info, apikey, content-type"},
 
@@ -29,18 +33,29 @@ serve(async (req: Request) => {
   if (req && req.method === "OPTIONS") {
 
 const corsHeaders = {
+=======
+    "authorization, x-client-info, apikey, content-type"},
+
+serve(async (req: Request) => {
+  // Handle CORS
+  if (req && req.method === "OPTIONS") {const corsHeaders = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
+<<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 204
       headers: corsHeaders})
   }
   try {
+<<<<<<< HEAD
     const supabase = createClient(
       supabaseUrl;
       supabaseServiceKey
@@ -59,6 +74,9 @@ serve(async (req: Request) => {
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     if (error) {
+=======
+    const supabase = createClient(    if (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
         JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
@@ -72,6 +90,7 @@ serve(async (req: Request) => {
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
+<<<<<<< HEAD
       .eq("status", "pending")
 
 
@@ -96,6 +115,9 @@ serve(async (req: Request) => {
 
 
     if (pendingJobs && pendingJobs.length > 0) {
+=======
+      .eq("status", "pending")    if (pendingJobs && pendingJobs.length > 0) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
@@ -104,6 +126,7 @@ serve(async (req: Request) => {
             method: "POST";
             headers: {
 
+<<<<<<< HEAD
 
 
               "Content-Type": "application/json",
@@ -129,17 +152,28 @@ serve(async (req: Request) => {
 
             .eq("id", job && job.id);
           if (updateError) {
+=======
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${supabaseServiceKey}`};
+            body: JSON && JSON.stringify(job && job.payload)}
+        );          if (updateError) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             console && console.error("Failed to update job status:", updateError)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
+<<<<<<< HEAD
         } else {
           console && console.error("Failed to send reminder for job:", job && job.id);
           // Update job status to failed
+=======
+        } else {          // Update job status to failed
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           await supabase
             .from("scheduled_jobs")
             .update({
               status: "failed"})
+<<<<<<< HEAD
             .eq("id", job && job.id)
             .eq("id", job && job.id)
         }
@@ -178,6 +212,16 @@ serve(async (req: Request) => {
 
 
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+=======
+            .eq("id", job && job.id)            .eq("id", job && job.id)
+        }
+      }
+    }
+    return new Response(      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
@@ -189,6 +233,7 @@ const cors_headers = {
 ;
 serve (async (req: Request) => {
 
+<<<<<<< HEAD
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -323,6 +368,10 @@ if ( {) {
 });
 ;
 
+=======
+  }
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1",;
 ;

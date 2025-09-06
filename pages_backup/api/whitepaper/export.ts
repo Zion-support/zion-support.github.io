@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,6 +8,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export default async /**
  * handler - Function description
@@ -35,17 +40,17 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
   const base64 = Buffer.from(html, 'utf-8').toString('base64')
   const url = `data: text/html,base64,${base64}`
-<<<<<<< HEAD
-
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -54,8 +59,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' });
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -72,6 +78,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default async function handler(req, res) {
   try {
@@ -79,6 +87,7 @@ export default async function handler(req, res) {
   const { markdown, tokenName } = req.body || {},
   if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
 
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
@@ -86,6 +95,13 @@ export default async function handler(req, res) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
+=======
+
+
+}
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -115,6 +131,7 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 =======
@@ -126,11 +143,20 @@ function escape_html() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/whitepaper/export.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -203,3 +229,9 @@ function escapeHtml(str: string) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/whitepaper/export.ts
+=======
+main
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

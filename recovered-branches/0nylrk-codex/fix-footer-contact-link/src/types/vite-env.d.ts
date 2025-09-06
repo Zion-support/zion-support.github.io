@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
   // add more env variables as needed;
 }
@@ -25,6 +26,8 @@ declare module 'lovable - tagger' {
 // Add Node.js globals;
 
 interface ImportMetaEnv {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   readonly VITE_APP_TITLE: string,;
   readonly VITE_SUPABASE_URL: string,;
   readonly VITE_SUPABASE_ANON_KEY: string,;
@@ -58,6 +61,7 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+<<<<<<< HEAD
 
 
 
@@ -87,3 +91,5 @@ declare let process: {;
 };
   }
 };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,10 +1,14 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Dialog;
   DialogContent;
   DialogDescription;
+<<<<<<< HEAD
   DialogHeader;
 import React, { useState } from 'react',
 import {
@@ -15,6 +19,9 @@ import {
 
 
   DialogTitle} from "@/components/ui/dialog",
+=======
+  DialogHeader;  DialogTitle} from "@/components/ui/dialog",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
@@ -22,7 +29,10 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -33,6 +43,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
+<<<<<<< HEAD
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -54,6 +65,14 @@ export function HireConfirmationModal(): any ({ ;
   onClose, ;
   candidateData, ;
 import React, { useState } from 'react';
+=======
+  isOpen;
+export function HireConfirmationModal({ ;
+
+  isOpen;
+  onClose, ;
+  candidateData, ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   application;
   onConfirm;
   isSubmitting = false;
@@ -62,9 +81,13 @@ import React, { useState } from 'react';
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
   const { user } = useAuth();
 
 import React, { useState } from 'react',
+=======
+  const { user } = useAuth();import React, { useState } from 'react',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Dialog,
   DialogContent,
@@ -78,7 +101,10 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -131,6 +157,7 @@ export function HireConfirmationModal({;
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;
+<<<<<<< HEAD
         title: 'Required fields missing',;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
@@ -422,6 +449,22 @@ if ( {) {
   };
 
 ;
+=======
+        title: 'Required fields missing',,
+  description: 'Please fill in both project name and description.',;
+        variant: 'destructive'}),;
+      return;            return;
+          }
+          console && console.error('Error updating availability:', error);
+          toast({;
+            title: 'Error updating availability',,
+  description: 'Failed to update candidate availability status.',;
+            variant: 'destructive'}),;
+          setIsLoading(false);
+          return;
+        }
+      };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     // Create a new project;
     try {;
@@ -432,16 +475,26 @@ if ( {) {
             client_id: user.id,;
             talent_id: talentData.user_id,;
             job_id: application?.job_id || null,;
+<<<<<<< HEAD
             title: projectName,;
             description: projectDescription,;
+=======
+            title: projectName,,
+  description: projectDescription,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             status: 'active',;
             payment_terms: 'hourly'}]);
         .select();
         .single(),;
       if (projectError) {;
         toast({;
+<<<<<<< HEAD
           title: 'Error creating project',;
           description: projectError.message,;
+=======
+          title: 'Error creating project',,
+  description: projectError.message,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: 'destructive'}),;
         setIsLoading(false),;
         return;
@@ -459,8 +512,13 @@ if ( {) {
             status: 'active'}]),;
       if (hiringError) {;
         toast({;
+<<<<<<< HEAD
           title: 'Error creating hiring record',;
           description: hiringError.message,;
+=======
+          title: 'Error creating hiring record',,
+  description: hiringError.message,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: 'destructive'}),;
         setIsLoading(false),;
         return;
@@ -475,8 +533,13 @@ if ( {) {
             .eq('id', talentData.id),;
           if (availabilityError) {;
             toast({;
+<<<<<<< HEAD
               title: 'Error updating availability',;
               description: availabilityError.message,;
+=======
+              title: 'Error updating availability',,
+  description: availabilityError.message,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               variant: 'destructive'}),;
             setIsLoading(false),;
             return;
@@ -484,33 +547,50 @@ if ( {) {
         } catch (error) {;
           console.error('Error updating availability:', error),;
           toast({;
+<<<<<<< HEAD
             title: 'Error updating availability',;
             description: 'Failed to update candidate availability status.',;
+=======
+            title: 'Error updating availability',,
+  description: 'Failed to update candidate availability status.',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: 'destructive'}),;
           setIsLoading(false),;
           return;
         }
       }
 ;
+<<<<<<< HEAD
 
 
       toast({;
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
+=======
+      toast({;
+        title: 'Candidate hired successfully',,
+  description: `${talentData && talentData.full_name} has been hired for the project.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       onConfirm();
       onClose();
     } catch (error) {;
       console && console.error('Error hiring candidate:', error);
       toast({;
+<<<<<<< HEAD
         title: 'Error hiring candidate',;
         description: 'Failed to hire candidate. Please try again.',;
         variant: 'destructive'});
+=======
+        title: 'Error hiring candidate',,
+  description: 'Failed to hire candidate. Please try again.',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setIsLoading(false);
     }
 
   },
 
+<<<<<<< HEAD
 
 
 
@@ -722,10 +802,19 @@ export function HireConfirmationModal({ ;
           </div>;
           <div className="flex items-center space-x-2">;
             <input
+=======
+  return (
+  }
+
+  return (              id="projectDescription"
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e && e.target.value)}            <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               type="checkbox"
               id="updateAvailability"
               className="h-4 w-4"
               checked={updateAvailability}
+<<<<<<< HEAD
               onChange={(e) => setUpdateAvailability(e && e.target.checked)}
             />;
             <label
@@ -878,3 +967,6 @@ if (!projectName || !projectDescription) {
 }
 }
 ;
+=======
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

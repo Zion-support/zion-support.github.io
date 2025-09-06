@@ -9,6 +9,7 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
+<<<<<<< HEAD
 export function FilterSidebar(): any ({;
 
   searchTerm;
@@ -45,6 +46,9 @@ import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
   searchTerm,
+=======
+export function FilterSidebar(): any ({;  searchTerm,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   setSearchTerm,
   selectedSkills,
   toggleSkill,
@@ -64,6 +68,7 @@ export function FilterSidebar({
 
   isMobileFilterOpen
 }: FilterSidebarProps) {
+<<<<<<< HEAD
   return (
     <>;
       {/* Filter header */}
@@ -103,6 +108,8 @@ export function FilterSidebar({;
     <>;
       {/* Filter header */}
   isMobileFilterOpen
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: FilterSidebarProps) {
   return (
     <>;
@@ -120,6 +127,7 @@ export function FilterSidebar({;
         >
           Clear All
         </Button>
+<<<<<<< HEAD
       </div>
 
 
@@ -175,6 +183,9 @@ export function FilterSidebar({;
 
 
       {/* Search */}
+=======
+      </div>      {/* Search */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
@@ -228,8 +239,14 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
 }
       <div className="flex items-center justify-between mb-6">;
+=======
+  return (
+    <>;
+      {/* Filter header */}      <div className="flex items-center justify-between mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
@@ -296,8 +313,12 @@ export function FilterSidebar({;
 
       {isMobileFilterOpen && (;
         <Button
+<<<<<<< HEAD
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
+=======
+          onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         >;
           Apply Filters;
         </Button>;
@@ -305,9 +326,12 @@ export function FilterSidebar({;
     </>;
   );
 }
+<<<<<<< HEAD
   return (
     <>;
       {/* Filter header */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -326,20 +350,31 @@ function FilterSidebar() {
   return (
     <>;
       {/* Filter header */}
+<<<<<<< HEAD
       <div className="flex items - center justify - between mb - 6">;
         <h3 className="text - lg font - semibold text - white flex items - center">;
           <Filter className="h - 4 w - 4 mr - 2 text - zion - purple" />;
+=======
+      <div className="flex items - center justify - between mb-6">;
+        <h3 className="text - lg font - semibold text - white flex items-center">;
+          <Filter className="h - 4 w - 4 mr - 2 text - zion-purple" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Filters;
         </h3>;
         <Button;
           variant="ghost";
           size="sm";
           on_click={clear_filters}
+<<<<<<< HEAD
           className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent";
+=======
+          className="h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg-transparent";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         >;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
 }
   ),;}
  export function FilterSidebar ({
@@ -442,3 +477,6 @@ isMobileFilterOpen
 }</>) 
 }
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

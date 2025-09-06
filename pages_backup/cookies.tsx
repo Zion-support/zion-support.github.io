@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/cookies.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,9 @@ export default function CookiesPage() {
 <<<<<<< HEAD:pages_backup/cookies.tsx
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -317,36 +321,19 @@ origin/automation-improvements-final
       </div>;
 
 
-=======
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
-<<<<<<< HEAD
-export default function CookiesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
-      <div className="container mx-auto px-4 py-24 text-white">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
-          <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
-          <ul className="list-disc list-inside text-gray-300 space-y-1">
-            <li>Purpose: performance and security</li>
-<li>Purpose: performance and security</li>
-            <li>Retention: session or short‑term</li>
-            <li>Opt‑out: browser settings and extensions</li>
-          </ul>
-=======
         canonical='https://ziontechgroup.com/cookies/'
       />
       <div className='container mx-auto px-4 py-24 text-white'>
@@ -369,15 +356,19 @@ export default function CookiesPage() {
             </a>
           </p>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/cookies.tsx
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
       </Layout>
     </>;
@@ -388,29 +379,4 @@ origin/automation-improvements-final
   );
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-}
-}
-}
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-    </>);
-;
-<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

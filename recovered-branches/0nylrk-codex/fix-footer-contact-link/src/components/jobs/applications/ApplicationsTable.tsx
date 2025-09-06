@@ -16,6 +16,7 @@ import {StatusBadge} from "./StatusBadge";
 import {Briefcase, User} from "lucide-react";
 import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
 import {useState} from "react";
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 interface ApplicationsTableProps {;
   applications: JobApplication[],;
@@ -61,16 +62,25 @@ interface ApplicationsTableProps {;
   onViewScore: (application: JobApplication) => void;
 }
 export function ApplicationsTable({
+=======
+import {toast} from "@/hooks/use-toast";export function ApplicationsTable({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   applications
   processingId
   onViewApplication
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApplicationsTable(): any ({ ;
   applications, ;
   processingId, ;
   onViewApplication, ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onStatusChange;
   onViewScore;
 }: ApplicationsTableProps) {;
@@ -78,7 +88,10 @@ export function ApplicationsTable(): any ({ ;
 
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApplicationsTable({ 
   applications, 
   processingId, 
@@ -86,6 +99,7 @@ export function ApplicationsTable({
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
     setHireModalOpen(true)
+<<<<<<< HEAD
 
   },
   
@@ -235,6 +249,8 @@ export function ApplicationsTable({;
     });
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>;
       <div className="rounded-md border">;
@@ -248,6 +264,7 @@ export function ApplicationsTable({;
               <TableHead className="text-right">Actions</TableHead>;
             </TableRow>;
           </TableHeader>;
+<<<<<<< HEAD
           <TableBody>;
             {applications && applications.map((application) => (;
               <TableRow key={application && application.id}>;
@@ -283,6 +300,9 @@ export function ApplicationsTable({;
                   {application && application.match_score !== undefined && application && application.match_score !== null ? (;
                     <ClickableBadge
                       variant="outline"
+=======
+          <TableBody>;                      variant="outline"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >;
@@ -291,6 +311,7 @@ export function ApplicationsTable({;
                   ) : (;
                     <span className="text-muted-foreground text-sm">Not scored</span>;
                   )}
+<<<<<<< HEAD
 
                 </TableCell>;
                 <TableCell className="text-right">;
@@ -298,11 +319,14 @@ export function ApplicationsTable({;
                     <ClickableBadge
                       variant="outline" 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
                       onClick={() => handleHireClick(application)}
                     >;
                       <Briefcase className="h-3 w-3 mr-1" /> Hire;
                     </ClickableBadge>;
+<<<<<<< HEAD
 
                         <img;
                           src={application.talent_profile.profile_picture_url}
@@ -348,6 +372,8 @@ export function ApplicationsTable({;
                     </ClickableBadge>;
                     <ApplicationActions;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       application={application}
                       processing_id={processing_id}
                       onViewApplication={onViewApplication}
@@ -360,13 +386,17 @@ export function ApplicationsTable({;
         </Table>;
       </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
         application={selectedApplication |undefined}
         onConfirm={handleHireConfirmed}
+<<<<<<< HEAD
 
       />;
     </>;
@@ -374,6 +404,8 @@ export function ApplicationsTable({;
 }
 
       {/* Hire Confirmation Modal */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <HireConfirmationModal;
         isOpen={hireModalOpen}
         onClose={() => setHireModalOpen(false)}
@@ -381,7 +413,10 @@ export function ApplicationsTable({;
         onConfirm={handleHireConfirmed}
       />;
     </>;
+<<<<<<< HEAD
               </TableRow>))}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </TableBody>;
         </Table>;
       </div>;
@@ -393,6 +428,7 @@ export function ApplicationsTable({;
         on_confirm={handleHireConfirmed}
       />;
     </>);
+<<<<<<< HEAD
 }
   ),;}
 };
@@ -447,3 +483,6 @@ export function ApplicationsTable({;
     </>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

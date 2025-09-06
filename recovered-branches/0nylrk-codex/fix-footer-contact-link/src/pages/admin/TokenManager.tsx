@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
 
 import {useEffect, useState} from 'react';
 
 
 
 import { useEffect, useState  } from 'react';
+=======
+import {useEffect, useState} from 'react';
+
+=======import { useEffect, useState  } from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -29,6 +35,7 @@ import {TokenTransaction} from '@/types/tokens';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 export default function TokenManager() {;
 
 
@@ -154,6 +161,9 @@ export default function TokenManager() {;
   };
 
       .limit(100);
+=======
+export default function TokenManager() {;      .limit(100);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!error) setTransactions(data || []);
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
@@ -161,23 +171,35 @@ export default function TokenManager() {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ userId, amount })});
+<<<<<<< HEAD
     if (res && res.ok) {;
       toast({;
         title: 'Success',;
         description: 'Transaction processed';
+=======
+    if (res && res.ok) {;      toast({;
+        title: 'Success',,
+  description: 'Transaction processed';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
       fetchTransactions();
     } else {;
       const err = await res && res.json();
       toast({;
+<<<<<<< HEAD
         title: 'Error',;
         description: err && err.error || 'Failed',;
+=======
+        title: 'Error',,
+  description: err && err.error || 'Failed',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: 'destructive';
       });
     }
 
   },
 
+<<<<<<< HEAD
 
 
 
@@ -238,11 +260,14 @@ export default function TokenManager() {;
             <Tabs default_value="history">;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
               <TabsList>;
                 <TabsTrigger value="history">Transaction History</TabsTrigger>;
               </TabsList>;
               <TabsContent value="history">;
+<<<<<<< HEAD
 
                 <ul className="space - y-2">;
                   {transactions.map (tx => (
@@ -262,3 +287,11 @@ export default function TokenManager() {;
     </ProtectedRoute>);
 
 }
+=======
+                <ul className="space-y-2">;
+                  {transactions.map (tx => (
+                    <li key={tx.id} className="flex justify - between border - b py - 2 text-white">;
+                      <span>{tx.user_id}</span>;
+                      <span>{tx.transaction_type === 'earn' ? '+' : '-'}{tx.amount}</span>;
+                    </li>))}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

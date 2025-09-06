@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -119,6 +120,9 @@ if ( {) {
 
 
   return (
+=======
+  },  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         }
       }
@@ -144,13 +148,19 @@ if ( {) {
           />
         </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   };
   },
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
   }
@@ -222,12 +232,16 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
 
           <Textarea
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Textarea 
 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
+<<<<<<< HEAD
 
 
 
@@ -239,6 +253,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           disabled={isEnhancing || !bulkSkills.trim()}
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           className="gap-2"
         >
           {isEnhancing ? (
@@ -277,6 +293,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           Categorize with AI;
         </Button>;
 
+<<<<<<< HEAD
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
@@ -289,6 +306,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 },
 
 
+=======
+},
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
     }
   }
@@ -302,6 +323,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="bg - muted / 40 p - 6 rounded - lg">;
       <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;
       <div className="space - y-4">;
@@ -309,6 +331,15 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
           <Textarea;
             className="min - h-24";
+=======
+    <div className="bg - muted / 40 p - 6 rounded-lg">;
+      <h3 className="text - md font - medium mb-4">Bulk Add & AI Categorization</h3>;
+      <div className="space-y-4">;
+        <div className="space-y-2">;
+          <label className="text - sm font-medium">Enter multiple skills (comma separated)</label>;
+          <Textarea;
+            className="min-h-24";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             placeholder="Python, React, TypeScript, Project Management, Communication...";
             value={bulk_skills}
             on_change={(e) => setBulkSkills (e.target.value)}
@@ -317,6 +348,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
         <Button;
           on_click={handleCategorizeSkills}
           disabled={is_enhancing || !bulk_skills.trim ()}
+<<<<<<< HEAD
           className="gap - 2";
         >;
           {is_enhancing ? (
@@ -325,6 +357,16 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           Categorize with AI;
         </Button>;
         <p className="text - xs text - muted - foreground mt - 1">;
+=======
+          className="gap-2";
+        >;
+          {is_enhancing ? (
+            <Loader2 className="h - 4 w - 4 animate-spin" />) : (
+            <Sparkles className="h - 4 w-4" />)}
+          Categorize with AI;
+        </Button>;
+        <p className="text - xs text - muted - foreground mt-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -332,6 +374,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
     </div>);
 }
 ;
+<<<<<<< HEAD
         ;
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
@@ -358,3 +401,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 },
 };
 },
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

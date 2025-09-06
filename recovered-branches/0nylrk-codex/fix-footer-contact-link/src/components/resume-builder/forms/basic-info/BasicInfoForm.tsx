@@ -9,6 +9,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
 
   resumeId?: string;
 
@@ -16,14 +17,20 @@ export interface BasicInfoFormProps {;
 
   onSave: (data: BasicInfoFormData) => void,;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void;
 }
 
+<<<<<<< HEAD
 
 export function BasicInfoForm(): any ({;
 
+=======
+export function BasicInfoForm(): any ({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -59,15 +66,19 @@ export function BasicInfoForm({;
   yearsExperience = 0;
 export function BasicInfoForm({
 
+<<<<<<< HEAD
 
 export function BasicInfoForm(): any ({;
 
   resumeId;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
 
 
 
@@ -77,11 +88,14 @@ export function BasicInfoForm(): any ({;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   resumeId,
   initialData = {},
   onSave,
   skills = [],
   yearsExperience = 0,
+<<<<<<< HEAD
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -109,6 +123,12 @@ export function BasicInfoForm(): any ({;
           form.setValue(key as keyof BasicInfoFormData, value as any)
 
 import React, { useState, useEffect } from "react",;
+=======
+    if (initialData) {
+      Object.entries(initialData).forEach(([key, value]) => {
+        if (value !== undefined) {
+          form.setValue(key as keyof BasicInfoFormData, value as any)import React, { useState, useEffect } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { Button } from "@/components/ui/button",;
@@ -132,6 +152,7 @@ export function BasicInfoForm({;
   initialData = {},;
   onSave,;
   skills = [],;
+<<<<<<< HEAD
   yearsExperience = 0,;
 
   onComplete;
@@ -167,6 +188,9 @@ export function BasicInfoForm({;
   };
 
   }, [initialData, form]),;
+=======
+  yearsExperience = 0,;  }, [initialData, form]),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
@@ -176,9 +200,12 @@ export function BasicInfoForm({;
 
   },
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
     <Form {...form}>;
@@ -189,6 +216,7 @@ export function BasicInfoForm({;
 
           <div className="pt-4 border-t border-gray-200">;
             <h3 className="text-lg font-medium mb-4">Rate Information</h3>;
+<<<<<<< HEAD
 
 
 
@@ -257,15 +285,22 @@ export function BasicInfoForm({;
 
   return (
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <RateOptimizationSection
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
 
+<<<<<<< HEAD
 
               yearsExperience={yearsExperience || 0}
 
 
+=======
+              yearsExperience={yearsExperience || 0}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -275,12 +310,18 @@ export function BasicInfoForm({;
   }
   };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       });
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -304,7 +345,10 @@ export function BasicInfoForm({;
               skills={skills}
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
+<<<<<<< HEAD
               location={form.getValues("location")}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               rateType="hourly"
             />
           </div>
@@ -314,6 +358,7 @@ export function BasicInfoForm({;
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 
               yearsExperience={yearsExperience || 0}
@@ -332,6 +377,9 @@ export function BasicInfoForm({;
 
 
 }
+=======
+  )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -369,5 +417,8 @@ function BasicInfoForm() {
       ...initial_data}});
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

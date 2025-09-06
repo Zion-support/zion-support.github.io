@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -12,6 +15,7 @@ import {ExportPanel} from "./ExportPanel";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -46,11 +50,17 @@ export type AppMetadataValues = {
   platform: AppPlatform;
 };
   platform: AppPlatform
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace"
   shortDescription: "Hire top AI talent or find global IT jobs on the go."
+<<<<<<< HEAD
   longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+=======
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
   version: "1.0.0"
   platform: "ios"
@@ -86,6 +96,7 @@ export const MetadataManager: React.FC = () => {
   
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
   
+<<<<<<< HEAD
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
@@ -169,6 +180,11 @@ export const MetadataManager: React.FC = () => {
 
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
+=======
+    setIsSaving(true)
+    try {
+      // This would be implemented with actual API calls in production    <div className="bg-zion-blue-dark rounded-lg p-6">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Tabs defaultValue="ios" className="w-full">
         <div className="flex justify-between items-center mb-6">
           <TabsList className="bg-zion-blue">
@@ -180,10 +196,13 @@ export const MetadataManager: React.FC = () => {
             </TabsTrigger>
           </TabsList>
 
+<<<<<<< HEAD
 
           <Button 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -218,7 +237,10 @@ export const MetadataManager: React.FC = () => {
     </div>
   )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -229,6 +251,7 @@ import { ChangelogManager } from "./ChangelogManager",;
 import { ExportPanel } from "./ExportPanel",;
 import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
+<<<<<<< HEAD
 export type AppPlatform = "ios" | "android",;
 
 export type AppMetadataValues = {;
@@ -274,12 +297,19 @@ export const MetadataManager: React.FC = () => {;
       toast && toast.error("Failed to save metadata");
       console && console.error(error);
     } finally {;
+=======
+export type AppPlatform = "ios" | "android",;    } finally {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setIsSaving(false);
     }
   };
 
+<<<<<<< HEAD
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">;
+=======
+  return (    <div className="bg-zion-blue-dark rounded-lg p-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
           <TabsList className="bg-zion-blue">;
@@ -289,6 +319,7 @@ export const MetadataManager: React.FC = () => {;
             <TabsTrigger value="android" onClick={() => setCurrentPlatform("android")}>;
               Google Play (Android);
             </TabsTrigger>;
+<<<<<<< HEAD
           </TabsList>;
 
           <Button
@@ -299,10 +330,14 @@ export const MetadataManager: React.FC = () => {;
         </div>;
 
         <TabsContent value="ios" className="mt-0">;
+=======
+          </TabsList>;        <TabsContent value="ios" className="mt-0">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;
               <ChangelogManager platform="ios" />;
+<<<<<<< HEAD
             </div>;
 
             <div className="space-y-6">;
@@ -330,6 +365,9 @@ export const MetadataManager: React.FC = () => {;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={androidForm.getValues()} />;
     } catch (error) {
+=======
+            </div>;    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast.error ("Failed to save metadata");
       console.error (error);
     } finally {
@@ -339,6 +377,7 @@ export const MetadataManager: React.FC = () => {;
             </div>;
           </div>;
         </TabsContent>;
+<<<<<<< HEAD
       </Tabs>;
 
 
@@ -348,6 +387,13 @@ export const MetadataManager: React.FC = () => {;
     </div>);
 }
 ;
+=======
+      </Tabs>
+};
+    </div>);
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
     </div>);
 }
@@ -375,5 +421,11 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
 }> </div> </div> </TabsContent> </div> </div> </TabsContent> </Tabs> </div>) 
 };
     </div>;
+<<<<<<< HEAD
   );
 };
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

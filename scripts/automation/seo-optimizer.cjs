@@ -343,3 +343,8 @@ if ( {})
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = SEOOptimizer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

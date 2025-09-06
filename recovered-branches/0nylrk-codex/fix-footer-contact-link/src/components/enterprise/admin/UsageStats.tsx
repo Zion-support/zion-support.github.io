@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
+<<<<<<< HEAD
   CardTitle
   Card,
   CardContent,
@@ -132,6 +136,9 @@ export function UsageStats() {
 
         
         <Card>
+=======
+  CardTitle        <Card>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
             <CardDescription>
@@ -141,10 +148,14 @@ export function UsageStats() {
           <CardContent className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
+<<<<<<< HEAD
                 <div className="text-sm font-medium">
                   Monthly contact credits
                 </div>
                 <div className="text-sm font-medium">Monthly contact credits</div>
+=======
+                <div className="text-sm font-medium">Monthly contact credits</div>                <div className="text-sm font-medium">Monthly contact credits</div>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -163,6 +174,7 @@ export function UsageStats() {
               Save Changes
             </Button>
           </CardFooter>
+<<<<<<< HEAD
         </Card>
 
 
@@ -174,6 +186,9 @@ export function UsageStats() {
         </Card>
         
         <Card>
+=======
+        </Card>        <Card>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -197,6 +212,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
+<<<<<<< HEAD
           <CardFooter>
             <Button size="sm" onClick={handleSaveChanges}>
               Save Changes
@@ -286,6 +302,12 @@ export function UsageStats() {
     </div>
 
   )
+=======
+          <CardFooter>            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
+          </CardFooter>
+        </Card>
+      </div>  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
 import { Badge } from "@/components/ui/badge",;
@@ -304,42 +326,62 @@ import { Progress } from "@/components/ui/progress",;
 export function UsageStats() {;
   const handleSaveChanges = () => {;
     toast({;
+<<<<<<< HEAD
       title: "Limits updated";
       description: "The new usage limits have been saved successfully."});
   };
+=======
+      title: "Limits updated",
+  description: "The new usage limits have been saved successfully."})
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
 
     <div className="space-y-8">;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
+<<<<<<< HEAD
     });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
       </div>;
+<<<<<<< HEAD
 
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
         <Card>;
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
 
+<<<<<<< HEAD
           <CardContent className="space - y-4">;
             <div>;
               <div className="flex items - center justify - between mb - 2">;
                 <div className="text - sm font - medium">;
 
+=======
+          <CardContent className="space-y-4">;
+            <div>;
+              <div className="flex items - center justify - between mb-2">;
+                <div className="text - sm font-medium">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Monthly job posting limit;
                 </div>;
                 <Badge variant="outline">25 / 50</Badge>;
               </div>;
+<<<<<<< HEAD
 
               <Progress value={50} className="h - 2" />;
             </div>;
@@ -350,6 +392,8 @@ export function UsageStats() {;
                   <Input type="number" min="1" default_value="50" />;
 
                 </div>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>;
             </div>;
           </CardContent>;
@@ -364,6 +408,7 @@ export function UsageStats() {;
 
         <Card>;
           <CardHeader>;
+<<<<<<< HEAD
             <CardTitle > Candidate Contacts</CardTitle>;
 
             <CardDescription>;
@@ -443,10 +488,14 @@ export function UsageStats() {;
             <CardTitle > Budget Controls</CardTitle>;
 
             <CardDescription>;
+=======
+            <CardTitle > AI Features</CardTitle>;            <CardDescription>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
 
+<<<<<<< HEAD
           <CardContent className="space - y-4">;
             <div>;
               <div className="flex items - center justify - between mb - 2">;
@@ -509,6 +558,27 @@ export function UsageStats() {;
       </div>;
     </div>);
 }
+=======
+          <CardContent className="space-y-4">;
+            <div>;
+              <div className="flex items - center justify - between mb-2">;
+                <div className="text - sm font-medium">Monthly budget</div>;
+                <Badge variant="outline">$1, 250 / $5, 000</Badge>;
+              </div>;
+              <Progress value={25} className="h-2" />;
+            </div>;
+            <div className="grid gap-4">;
+              <div className="grid grid - cols - 3 items - center gap-4">;
+                <div className="text-sm">Monthly budget:</div>;
+                <div className="col - span-2">;
+                  <Input type="number" min="0" step="100" default_value="5000" />;
+                </div>;
+              </div>;
+              <div className="grid grid - cols - 3 items - center gap-4">;
+                <div className="text-sm">Alert threshold:</div>;
+                <div className="col - span-2">;
+                  <select className="w - full flex h - 10 rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring-ring">;  );}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
         <Button > Contact Us</Button>;
       </div>;

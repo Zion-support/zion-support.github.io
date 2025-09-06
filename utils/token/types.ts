@@ -1,22 +1,31 @@
 
+<<<<<<< HEAD
 export type TokenSymbol = "ZION$",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export type TokenSymbol = "ZION$";
 export type TokenSymbol = "ZION$",;
 export type TokenSymbol = "ZION$";
+<<<<<<< HEAD
 export type TokenSymbol = "ZION$",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   | "redeem",;
 export interface TokenTransaction {;
   id: string,;
@@ -29,10 +38,13 @@ export interface TokenTransaction {;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
+<<<<<<< HEAD
 }
 export interface TokenConfig {symbol: TokenSymbol;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   | "redeem",
 export interface TokenTransaction {
   id: string,
@@ -42,6 +54,7 @@ export interface TokenTransaction {
   reason: string,
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
+<<<<<<< HEAD
 }
 export interface Wallet {
   user_id: string,
@@ -50,6 +63,8 @@ export interface Wallet {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 
@@ -59,6 +74,7 @@ export interface WalletSummary {
   transactions: TokenTransaction[];
   config: TokenConfig;
 
+<<<<<<< HEAD
 
 
 }
@@ -129,7 +145,13 @@ export interface WalletSummary {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

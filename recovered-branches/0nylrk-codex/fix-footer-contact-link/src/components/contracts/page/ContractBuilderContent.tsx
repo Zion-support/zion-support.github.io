@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -8,6 +11,7 @@ import { ContractHeader  } from './ContractHeader';
 import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
@@ -25,6 +29,9 @@ export function ContractBuilderContent() {;
 
 
 // Mock data for demo purposes
+=======
+import { useAuth } from '@/hooks/useAuth';// Mock data for demo purposes
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const mockTalent: TalentProfile = {
   id: 'talent-123'
@@ -36,6 +43,7 @@ const mockTalent: TalentProfile = {
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
+<<<<<<< HEAD
 
 // Mock data for demo purposes
 
@@ -44,6 +52,8 @@ export function ContractBuilderContent() {;
 
 
   const { user } = useAuth();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
     {
@@ -62,6 +72,7 @@ export function ContractBuilderContent() {;
       date: '2025-05-10'
       isSmartContract: false
     }
+<<<<<<< HEAD
   ]);
 
 
@@ -142,6 +153,15 @@ export function ContractBuilderContent() {;
       <ContractTypeCards 
 
 
+=======
+  ]);  const handleViewContract = (contractId: string) => {
+    console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details
+
+      
+      <ContractTypeCards 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />
@@ -156,6 +176,7 @@ import {ContractBuilder} from '@/components / contracts / ContractBuilder';
 import {ContractHeader} from './ContractHeader';
 import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
+<<<<<<< HEAD
 
 
       {showBuilderType === 'smart' && (;
@@ -163,6 +184,13 @@ import {RecentContractsTable} from './RecentContractsTable';
         <SmartContractBuilder
           isOpen={true}
           onClose={() => setShowBuilderType('none')}          talent={mockTalent}
+=======
+        <ContractBuilder
+          isOpen={true}
+          onClose={() => setShowBuilderType('none')}          talent={mockTalent}
+          clientName={user?.displayName || 'Client'}          isOpen={true}
+          onClose={() => setShowBuilderType('none')}          talent={mockTalent}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           clientName={user?.displayName || 'Client'}
           onContractGenerated={handleContractGenerated}
         />;
@@ -180,6 +208,7 @@ import {RecentContractsTable} from './RecentContractsTable';
 
     </>;
   );
+<<<<<<< HEAD
 }
 
 import {TalentProfile} from '@/types / talent';
@@ -314,3 +343,6 @@ function ContractBuilderContent() {
     </>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

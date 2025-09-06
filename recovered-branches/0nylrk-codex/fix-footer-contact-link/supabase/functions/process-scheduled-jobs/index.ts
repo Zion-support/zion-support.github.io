@@ -1,20 +1,34 @@
 
+<<<<<<< HEAD
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+<<<<<<< HEAD
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -89,6 +103,11 @@ const cors_headers = {
           break;
         // Add more job types as needed
     Deno.env.get("SUPABASE_URL") ?? "",
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+serve(async (req) => {    Deno.env.get("SUPABASE_URL") ?? "",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -99,7 +118,10 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 serve (async (req) => {
   // Check condition
@@ -147,6 +169,7 @@ if ( {) {
           break;
         case 'subscription_check':;
           // Check subscription status;
+<<<<<<< HEAD
           break;
 
         case 'resume_scoring':;
@@ -186,6 +209,12 @@ if ( {) {
 
 
 
+=======
+          break;      status: 500})
+  }
+});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
@@ -196,8 +225,11 @@ if ( {) {
   }
 }),
 
+<<<<<<< HEAD
 
 async function processOnboardingReminder(supabase, userId, milestone, role) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Update job status;
       await supabase_admin;
         .from ('scheduled_jobs');
@@ -215,6 +247,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})
   }
+<<<<<<< HEAD
   try {
 
     // Create notification for user
@@ -239,6 +272,9 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     });
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
+=======
+  try {      skills_added: "Add your skills to get better job matches",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       availability_set: "Set your availability to receive project offers",
       job_posted: "Post your first job to start finding talent",
       match_viewed: "Check out your AI matched talent recommendations",
@@ -256,6 +292,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       type: 'onboarding_reminder',
       read: false
     }),
+<<<<<<< HEAD
     
 
 
@@ -381,11 +418,21 @@ async function processResumeScoring(supabase, applicationId) {;
 
 
     if (application) {
+=======
+        // Notify the client that their application has been scored
+    const { data: application } = await supabase
+      .from("job_applications")
+      .select("job_id")
+      .eq("id", applicationId)    if (application) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data: job } = await supabase
         .from("jobs")
         .select("client_id, title")
 
+<<<<<<< HEAD
       match_viewed: "Check out your AI matched talent recommendations",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       talent_invited: "Invite talent to your job posting to get responses";
     }
 ;
@@ -414,6 +461,7 @@ function processResumeScoring() {
   try {
     // Call the resume - scorer function to process the application;
     const response = await fetch (
+<<<<<<< HEAD
       `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;
       {
         method: "POST";
@@ -474,6 +522,9 @@ if ( {) {
           related_id: applicationId
         .single(),
         
+=======
+      `${Deno.env.get ("SUPABASE_URL")}/functions / v1 / resume - scorer`;        
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (job) {
         // Create notification for the client
         await supabase.from("notifications").insert({
@@ -483,12 +534,16 @@ if ( {) {
           type: "application_scored",
           related_id: applicationId,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           read: false
         })
       }
     }
   } catch (error) {
+<<<<<<< HEAD
     console && console.error("Error processing resume scoring:", error)
     console && console.error("Error processing resume scoring:", error)
   }
@@ -505,10 +560,18 @@ async function processContentGeneration(supabase, contentType) {
 
     console && console.log(`Starting scheduled content generation for ${contentType}`);
     // Call the content generation function
+=======
+    console && console.error("Error processing resume scoring:", error)    console && console.error("Error processing resume scoring:", error)
+  }
+}
+async function processContentGeneration(supabase, contentType) {
+  try {    // Call the content generation function
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const response = await fetch(
       `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`;
       {
         method: "POST";
+<<<<<<< HEAD
         headers: {
 
           "Content-Type": "application/json",
@@ -539,6 +602,9 @@ async function processContentGeneration(supabase, contentType) {
     console && console.log(`Successfully generated ${contentType} content`);
     
     // If it's a newsletter, send a test email to the admin
+=======
+        headers: {    // If it's a newsletter, send a test email to the admin
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (contentType === 'newsletter') {
       // Get admin email from profiles
       const { data: adminProfiles } = await supabase
@@ -550,6 +616,7 @@ async function processContentGeneration(supabase, contentType) {
         const adminEmail = adminProfiles[0].email;
         // Send test newsletter to admin
         await fetch(
+<<<<<<< HEAD
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;
         })}
     );
@@ -559,6 +626,9 @@ async function processContentGeneration(supabase, contentType) {
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
 ;
+=======
+          `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
     const { data: application } = await supabase;
@@ -611,6 +681,7 @@ async function processContentGeneration(supabase, contentType) {;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
 
+<<<<<<< HEAD
 
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
@@ -693,6 +764,10 @@ async function processContentGeneration(_supabase, _contentType) {_try {
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
             body: JSON.stringify({
               subject: contentData.subject;
+=======
+    const contentData = await response && response.json();
+    console && console.log(`Successfully generated ${contentType} content`);              subject: contentData.subject;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
@@ -701,15 +776,22 @@ async function processContentGeneration(_supabase, _contentType) {_try {
             body: JSON && JSON.stringify({
               subject: contentData && contentData.subject;
               previewText: contentData && contentData.previewText;
+<<<<<<< HEAD
               body: contentData && contentData.body;
               testMode: true,
               testEmail: adminEmail
+=======
+              body: contentData && contentData.body;              testEmail: adminEmail
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             })}
         );
         // Create notification for admin
         await supabase && supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
           type: "system"
@@ -761,6 +843,7 @@ async function processContentGeneration(_supabase, _contentType) {_try {
     }
     
     return contentData
+<<<<<<< HEAD
   } catch (error) {
 
           related_id: application_id,
@@ -776,6 +859,9 @@ async function processContentGeneration(_supabase, _contentType) {_try {
 
 
 }
+=======
+  } catch (error) {}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 async /**
  * processContentGeneration - Function description
  */
@@ -783,8 +869,13 @@ function processContentGeneration() {
   try {
     console.log (`Starting scheduled content generation for ${content_type}`);
 ;
+<<<<<<< HEAD
 
 
 
   }
+=======
+  }
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

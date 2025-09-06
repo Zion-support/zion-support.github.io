@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -14,8 +15,10 @@ export type InnovativeMicroSaas = {
 export type InnovativeMicroSaas = {;
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type InnovativeMicroSaas = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   description: string;
   tagline?: string;
@@ -39,6 +42,7 @@ export type InnovativeMicroSaas = any;
   launchDate?: string;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
@@ -57,6 +61,10 @@ export type InnovativeMicroSaas = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -78,8 +86,9 @@ export type InnovativeMicroSaas = {
 
   },
   {
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,6 +99,8 @@ export type InnovativeMicroSaas = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -104,6 +115,7 @@ export type InnovativeMicroSaas = {
       'Export to ERP',
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,6 +137,8 @@ export type InnovativeMicroSaas = {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
@@ -134,16 +148,20 @@ export type InnovativeMicroSaas = {
   {
 
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
       'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
-=======
     id: 'local-seo-reviews-booster'
     name: 'Local SEO Reviews Booster'
     description:
@@ -184,11 +202,12 @@ export type InnovativeMicroSaas = {
     name: 'Candidate Screening Copilot'
     description:
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Human Resources',
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,6 +229,10 @@ export type InnovativeMicroSaas = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
@@ -223,6 +246,7 @@ export type InnovativeMicroSaas = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -231,6 +255,11 @@ export type InnovativeMicroSaas = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -265,6 +294,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -275,6 +305,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+		rating: 4 && 4.7,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		launchDate: '2025-12-01'
 	}
 	{
@@ -288,6 +325,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Local rankingReputation management'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -298,6 +336,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		realService: true
 	}
 	{
@@ -311,6 +356,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Accounting automationFinance ops'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -321,6 +367,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		realService: true
 	}
 	{
@@ -332,6 +385,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
+<<<<<<< HEAD
 	}
 ];
 
@@ -342,11 +396,14 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 ];
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 
 		realService: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -365,6 +422,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 name: string;
 description: string;
 tagline?: string;
@@ -440,12 +501,23 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {;
 	}
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export type InnovativeMicroSaas = {;
+	}
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];
 ;
 
 export type InnovativeMicroSaas = {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 	id: string,;
 	name: string,;
 	description: string,;
@@ -520,88 +592,18 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
+<<<<<<< HEAD
 	}
 ];
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-export type InnovativeMicroSaas = {;
-	id: string,;
-	name: string,;
-	description: string,;
-	tagline?: string,;
-	category:;
-		| 'Content Marketing';
-		| 'Business Operations';
-		| 'Marketing Automation';
-		| 'Customer Success';
-		| 'Sales Automation';
-		| 'Financial Technology';
-		| 'Human Resources';
-		| 'Supply Chain Management';
-		| 'Customer Support',;
-	pricing: { starter: string, professional?: string, enterprise?: string },;
-	features: string[],;
-	integrations?: string[],;
-	useCases?: string[],;
-	link: string,;
-	realService?: boolean,;
-	rating?: number,;
-	launchDate?: string;
-},;
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-	{;
-		id: 'podcast-transcription-seo-suite',;
-		name: 'Podcast Transcription & SEO Suite',;
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',;
-		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
-		category: 'Content Marketing',;
-		pricing: { starter: '$39/mo' },;
-		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;
-		integrations: ['YouTubeSpotifyWordPress'],;
-		useCases: ['Content repurposingSEO growth'],;
-		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite',;
-		realService: true,;
-		rating: 4.7,;
-		launchDate: '2025-12-01';
-	},;
-	{;
-		id: 'local-seo-reviews-booster',;
-		name: 'Local SEO Reviews Booster',;
-		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
-		category: 'Marketing Automation',;
-		pricing: { starter: '$29/mo' },;
-		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;
-		integrations: ['Google Business ProfileYelp'],;
-		useCases: ['Local rankingReputation management'],;
-		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster',;
-		realService: true;
-	},;
-	{;
-		id: 'smart-invoice-reconciliation',;
-		name: 'Smart Invoice Reconciliation',;
-		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
-		category: 'Financial Technology',;
-		pricing: { starter: '$59/mo' },;
-		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;
-		integrations: ['QuickBooksXeroStripe'],;
-		useCases: ['Accounting automationFinance ops'],;
-		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation',;
-		realService: true;
-	},;
-	{;
-		id: 'candidate-screening-copilot',;
-		name: 'Candidate Screening Copilot',;
-		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
-		category: 'Human Resources',;
-		pricing: { starter: '$69/mo' },;
-		features: ['Resume parsingJD matchingQuestion setsATS sync'],;
-		integrations: ['GreenhouseLever'],;
-		useCases: ['Faster hiringBias reduction'],;
-		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
-		realService: true;
+
 	}
 ];
 
+<<<<<<< HEAD
 export type InnovativeMicroSaas = {
   id: string;
   name: string;
@@ -782,11 +784,19 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     useCases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -9,7 +9,10 @@ function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         replacement: ''
       },
       // Fix malformed function declarations
@@ -62,6 +65,31 @@ function findAndFixApiFiles(dir) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
 
+<<<<<<< HEAD
+=======
+    // Fix merge conflict markers
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Fix unterminated strings
+      if (line.includes('"') && !line.match(/".*"/)) {
+        if (line.includes('"') && !line.includes('\\"')) {
+          lines[i] = line.replace(/"([^"]*)$/, '"$1"');
+          modified = true;
+        }
+      }
+      
+      // Fix unterminated template literals
+      if (line.includes('`') && !line.match(/`.*`/)) {
+        lines[i] = line.replace(/`([^`]*)$/, '`$1`');
+        modified = true;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     }
 
@@ -72,4 +100,40 @@ function findAndFixApiFiles(dir) {
   } catch (error) {
     console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
   }
+<<<<<<< HEAD
+=======
+  return false;
+}
+
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
+    return fixSyntaxErrors(filePath);
+  }
+  return false;
+}
+
+// Get all files with syntax errors
+const files = execSync('find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to check`);
+
+for (const file of files) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+}
+
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Syntax error fixing complete!');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

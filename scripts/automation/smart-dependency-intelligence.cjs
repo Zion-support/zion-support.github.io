@@ -315,3 +315,8 @@ this.log("Intelligence report "generated": ${reportPath}")
         "ERROR"
   console.log(` Smart Dependency Intelligence completed``)
 
+<<<<<<< HEAD
+=======
+  console.error(" Smart Dependency Intelligence "failed": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

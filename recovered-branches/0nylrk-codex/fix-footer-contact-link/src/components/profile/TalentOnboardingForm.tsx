@@ -1,25 +1,35 @@
 
 
+<<<<<<< HEAD
 
 
 // Define the form schema with validation
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters");
     keyProjects: z.array(
       z.object({
+<<<<<<< HEAD
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
 
@@ -40,6 +50,10 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
+=======
+        title: z.string().min(2, "Project title is required"),
+  description: z.string().min(10, "Project description is required")})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -88,7 +102,10 @@ type TalentFormValues = z && z.infer<typeof talentSchema>;
 
 export function TalentOnboardingForm() {;
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -113,12 +130,16 @@ export function TalentOnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ).min(1, "Add at least one key project"),
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
+<<<<<<< HEAD
     skillsList: z.string().min(2, "Add at least one skill"),
     toolsUsed: z.string().optional()}),
   
@@ -138,6 +159,18 @@ type TalentFormValues = z.infer<typeof talentSchema>,
 
 
   const form = useForm<TalentFormValues>({
+=======
+    skillsList: z.string().min(2, "Add at least one skill");
+    toolsUsed: z.string().optional()})
+  // Step 4: Availability & Preferences
+  availability: z.object({
+    availabilityType: z.string().min(1, "Select your availability");
+    timezone: z.string().min(1, "Timezone is required");
+    hourlyRate: z.string().optional()
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
@@ -167,6 +200,7 @@ type TalentFormValues = z.infer<typeof talentSchema>,
       name: "availability.portfolioLinks"
       control: form.control})
   // Handle profile picture upload
+<<<<<<< HEAD
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
 
 
@@ -279,6 +313,18 @@ export function TalentOnboardingForm() {;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
   const totalSteps = 4,;
 
+=======
+  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {    // Preview the image
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      setProfilePictureUrl(reader.result as string)    if (cvError) {
+      console.error("Error uploading CV:", cvError);
+      throw new Error("Failed to upload CV")
+
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+
+  const totalSteps = 4;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -300,6 +346,7 @@ export function TalentOnboardingForm() {;
         portfolioLinks: [{ url: "" }],;
         cv: undefined}},;
     mode: "onChange"}),;
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",;
@@ -439,6 +486,8 @@ export function TalentOnboardingForm() {;
     // Get the public URL;
     const { data: { publicUrl } } = supabase && supabase.storage;
     const file = e.target.files?.[0],;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!file) return,;
     ;
     // Preview the image;
@@ -469,14 +518,22 @@ export function TalentOnboardingForm() {;
       .from('resumes');
       .getPublicUrl(fileName);
 
+<<<<<<< HEAD
     return publicUrl;
   };
+=======
+    return publicUrl
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
 
   return null;
+<<<<<<< HEAD
 import React, { useState } from './react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
@@ -505,8 +562,13 @@ const talent_schema = z.object ({
     bio: z.string ().min (50, "Bio must be at least 50 characters");
     key_projects: z.array (
       z.object ({
+<<<<<<< HEAD
         title: z.string ().min (2, "Project title is required");
         description: z.string ().min (10, "Project description is required")})).min (1, "Add at least one key project");
+=======
+        title: z.string ().min (2, "Project title is required"),
+  description: z.string ().min (10, "Project description is required")})).min (1, "Add at least one key project");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     yearsOfExperience: z.string ().min (1, "Years of experience is required")});
 ;
   // Step 3: Skills & Tech Stack;
@@ -612,6 +674,7 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+<<<<<<< HEAD
 }
 
 
@@ -794,3 +857,6 @@ return publicUrl;
 }
 }
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

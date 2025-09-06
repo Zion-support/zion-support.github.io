@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,11 @@ import type { NextApiRequest } from 'next';
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import type { NextApiRequest } from 'next';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
@@ -28,10 +34,13 @@ export function extractClientIp(req: NextApiRequest): string | null {;
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export function getClientIp(req: any): string {
 
 export function getClientIp(req: any): string {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import type { NextApiRequest } from 'next';
@@ -44,6 +53,7 @@ import type { NextApiRequest } from 'next';
 export function getClientIp(req: any): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -55,11 +65,19 @@ export function getClientIp(req: any): string {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,10 +88,17 @@ export function getClientIp(req: any): string {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -86,6 +111,12 @@ export function getClientIp(req: any): string {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+  return remoteAddress |'unknown';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   // Check IP reputation
@@ -291,6 +322,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -300,3 +332,9 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

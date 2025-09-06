@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-isOpen;
-  onClose;
-  talent;
-  clientName;
-
-  onContractGenerated;
-}: ContractBuilderProps) {;
-  const [activeTab, setActiveTab] = useState<string>("form");
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
-    undefined;
-  );
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-<<<<<<< HEAD
-=======
 
   const handleLoadTemplate = (templateData: ContractFormValues,) => {;
     setFormValues(templateData);
@@ -34,8 +17,7 @@ isOpen;
         onClose={() => {;
           setShowSmartContractBuilder(false);          onClose();
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import { useState } from 'react';
 import {
   Dialog,
@@ -75,25 +57,14 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
           onClose()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-=======
       />
     )
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   return (
@@ -108,7 +79,6 @@ import { ContractPreview } from "./components/ContractPreview",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-=======
       />;
     );
   }
@@ -120,7 +90,7 @@ import { ContractPreview } from "./components/ContractPreview",
 
 
             
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
             <div className="flex gap-2">
@@ -133,8 +103,6 @@ import { ContractPreview } from "./components/ContractPreview",
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-<<<<<<< HEAD
-=======
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -150,7 +118,7 @@ import { ContractPreview } from "./components/ContractPreview",
 
             <div className="flex gap-2">;
               <Button
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 variant="outline" 
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
@@ -167,20 +135,6 @@ import { ContractPreview } from "./components/ContractPreview",
               <Button
                 variant="secondary"
                 size="sm"
-<<<<<<< HEAD
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => setShowSmartContractBuilder(true)}
-              >
-                Smart Contract Builder
-              </Button>
-            </div>
-          </div>
-            <ContractForm
-
-            <ContractForm 
-=======
                 onClick = {() => setShowSmartContractBuilder(true),}
 
               >;
@@ -195,21 +149,12 @@ import { ContractPreview } from "./components/ContractPreview",
 
             <ContractForm 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
-<<<<<<< HEAD
-            />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <ContractPreview
-
-              <ContractPreview 
-=======
 
             />;
           </TabsContent>;
@@ -221,17 +166,11 @@ import { ContractPreview } from "./components/ContractPreview",
 
               <ContractPreview 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-<<<<<<< HEAD
-              />
-            )}
-          </TabsContent>
-        </Tabs>
-=======
               />;
             )}
 
@@ -239,79 +178,18 @@ import { ContractPreview } from "./components/ContractPreview",
         </Tabs>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-<<<<<<< HEAD
-        />
-      </DialogContent>
-    </Dialog>
-<<<<<<< HEAD
-  )
-}
-}/>)
-}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {
-  talent
-}clientName= {
-  clientName
-}initialValues= {
-  formValues
-}onFormValuesChange= {
-  setFormValues
-}onContractGenerated= {
-  handleContractGenerated
-}/> </TabsContent> />)
-}</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen
-}onClose= {
-  () => setTemplateManagerOpen (false)
-}onSelectTemplate= {
-  handleLoadTemplate
-}currentValues= {
-  formValues
-}/> </DialogContent> </Dialog>)
-}"}
-          
-          <TabsContent value="form" className="pt-4">
-            <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
-            />
-          </TabsContent>
-          
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <ContractPreview 
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
-                status="ready"
-              />
-            )}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         />;
       </DialogContent>;
     </Dialog>;
   );
-<<<<<<< HEAD
-}
-;
-=======
 
   handleContractGenerated;
 }/> </TabsContent> />);
@@ -327,8 +205,7 @@ import { ContractPreview } from "./components/ContractPreview",
 }"}
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 
 };
@@ -355,4 +232,4 @@ import { ContractPreview } from "./components/ContractPreview",
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 }"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

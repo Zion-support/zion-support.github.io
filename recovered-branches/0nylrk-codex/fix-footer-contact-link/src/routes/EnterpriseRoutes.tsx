@@ -5,9 +5,13 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
+<<<<<<< HEAD
 const EnterpriseRoutes = () => {
 const EnterpriseRoutes = () => {;
 import {Fragment} from "react";
+=======
+const EnterpriseRoutes = () => {import {Fragment} from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Route, Routes} from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
 import EnterpriseAdmin from "../pages/EnterpriseAdmin";
@@ -52,6 +56,7 @@ import CompanyWorkspace from "../pages/CompanyWorkspace",;
 import EnterpriseBilling from "../pages/EnterpriseBilling",;
 import ZionHireAI from "../pages/ZionHireAI",;
 
+<<<<<<< HEAD
 
 
 
@@ -75,6 +80,16 @@ const EnterpriseRoutes = () => {;
 };
 
 
+=======
+const EnterpriseRoutes = () => {
+const EnterpriseRoutes = () => {;
+      <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+      <Route path="/hire-ai" element={<ZionHireAI />} />
+    </Routes>
+  )
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
@@ -100,6 +115,7 @@ const EnterpriseRoutes = () =>: any {
 ;
 export default EnterpriseRoutes;
 ;
+<<<<<<< HEAD
   ),;
 },;
 ;export default EnterpriseRoutes,
@@ -128,3 +144,5 @@ export default EnterpriseRoutes;
   );
 },;
 export default EnterpriseRoutes;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

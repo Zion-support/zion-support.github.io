@@ -4,6 +4,7 @@ import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 import { EmptyStateCard } from "./EmptyStateCard",
+<<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes",
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
@@ -38,24 +39,31 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 
   onToggleArchive
 }) => {
+=======
+import type { QuoteRequest } from "@/types/quotes",}) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (isLoading) {
     return (
       <div className="text-center py-20">
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+<<<<<<< HEAD
 
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
 type QuoteRequestsListProps = {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   quotes: QuoteRequest[],;
   isLoading: boolean,;
   isArchived: boolean,;
   onViewDetails: (quote: QuoteRequest) => void,;
   onMarkAsResponded: (id: string) => void,;
   onToggleArchive: (id: string, isArchived: boolean) => void;
+<<<<<<< HEAD
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
@@ -78,20 +86,26 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
   is_archived;
   onViewDetails;
     return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
       </div>;
     );
 
+<<<<<<< HEAD
 
 
   }
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (quotes && quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
 }
+<<<<<<< HEAD
 
 
   }
@@ -120,6 +134,8 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
     </div>;
   );
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -133,8 +149,13 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="text - center py - 20">;
         <p className="text - zion - slate - light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+=======
+      <div className="text - center py-20">;
+        <p className="text - zion - slate-light">Loading {is_archived ? 'archived' : 'your'} hire requests...</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>);
   }
   // Check condition
@@ -144,7 +165,11 @@ if ( {) {
     return <EmptyStateCard type={is_archived ? 'archived' : 'active'} />;
   }
   return (
+<<<<<<< HEAD
     <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
+=======
+    <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-5">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {quotes.map (quote => (
         <QuoteRequestCard;
           key={quote.id}
@@ -153,6 +178,7 @@ if ( {) {
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
 
+<<<<<<< HEAD
 
 
     </div>;
@@ -206,8 +232,14 @@ quotes, isLoading, isArchived, onViewDetails, onMarkAsResponded, onToggleArchive
   )
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>;
   );
     </div>;
   );
+<<<<<<< HEAD
 };
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+<<<<<<< HEAD
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
@@ -14,16 +15,28 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -33,6 +46,8 @@ serve(async (req) => {
     const { scope, startDate, endDate, projectType } = await req && req.json();
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -49,6 +64,7 @@ serve(async (req) => {;
     if (!apiKey) {;
       throw new Error('OPENAI_API_KEY is not set');
 
+<<<<<<< HEAD
 
 
     }
@@ -58,6 +74,9 @@ serve(async (req) => {;
     
     
   }
+=======
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
@@ -65,6 +84,7 @@ serve(async (req) => {;
       throw new Error('OPENAI_API_KEY is not set')
     }
     // Parse request body
+<<<<<<< HEAD
     
     // Create prompt for OpenAI
     const prompt = `
@@ -178,15 +198,24 @@ if ( {) {
       throw new Error(data && data.error?.message || 'Failed to generate milestones')
 
     }
+=======
+                content: 'You are a project management expert that breaks work into appropriate milestones.'}
+          {
+            role: 'user'
+            content: prompt}];    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data && data.choices[0].message && message.content.trim();
       // Try to parse the response as JSON
+<<<<<<< HEAD
 
       const milestones = JSON && JSON.parse(content);
       
       return new Response(JSON && JSON.stringify({ milestones }), {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
@@ -195,6 +224,7 @@ if ( {) {
     }
   } catch (error) {
     console && console.error('Error generating milestones:', error);
+<<<<<<< HEAD
     return new Response(
 
       JSON && JSON.stringify({ error: error && error.message || 'Failed to generate milestones' });
@@ -348,6 +378,9 @@ serve(async (req) => {;
       throw new Error(data.error?.message || 'Failed to generate milestones'),;
     }
 ;
+=======
+    return new Response(;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Parse the AI-generated content to ensure it's valid JSON;
     try {;
       const content = data.choices[0].message.content.trim(),;
@@ -371,3 +404,7 @@ serve(async (req) => {;
   }
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

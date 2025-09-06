@@ -1,8 +1,11 @@
+
 <<<<<<< HEAD
 
 
 
-
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const advancedMicroSaasExpansion2025V2 = [
   {
 
@@ -12,19 +15,19 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$299 / month',
       'Multi - format content generation',
-=======
 name: 'AI Content Factory Pro',
     description: 'Advanced AI-powered content creation and management platform',
     category: 'AI & Data',
     pricing: '$299/month',
     features: [
       'Multi-format content generation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Brand voice customization',
       'Content calendar management',
       'Performance analytics',
     ],
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     name: 'AI Content Marketing Automation',
@@ -238,13 +241,15 @@ name: 'AI Content Factory Pro',
     ]
   }
       'Real-time monitoring',
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: 'AI Threat Detection',
     description: 'Advanced AI threat detection system',
     category: 'Cybersecurity',
     pricing: '$549 / month',
     features: [;
       'Real - time monitoring',
-=======
   {
     name: 'AI Content Marketing Automation',
     description: 'Intelligent content marketing workflow automation',
@@ -456,16 +461,22 @@ name: 'AI Content Factory Pro',
     pricing: '$549/month',
     features: [
       'Real-time monitoring',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Threat intelligence',
       'Automated response',
       'Incident management',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
   }
 ];
+=======
+
+];      'Real - time monitoring_threat intelligence_automated response_incident management';
+    ];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
@@ -639,6 +650,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
 
+<<<<<<< HEAD
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -813,6 +825,11 @@ export const advancedMicroSaasExpansion2025V2 = [;
   }
 ];
   },
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 ;
@@ -988,6 +1005,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1000,3 +1018,15 @@ export const advancedMicroSaasExpansion2025V2 = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

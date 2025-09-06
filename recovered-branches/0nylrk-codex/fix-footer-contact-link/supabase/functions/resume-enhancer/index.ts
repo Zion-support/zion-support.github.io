@@ -1,28 +1,40 @@
+<<<<<<< HEAD
 
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 serve(async (req) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
 
     const { content, enhancementType, context } = await req && req.json();
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -33,6 +45,7 @@ serve(async (req) => {
     const { content, enhancementType, context } = await req.json();
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
     if (!openAiKey) {
+<<<<<<< HEAD
       throw new Error("OPENAI_API_KEY is not defined")
 
     if (!openAiKey) {
@@ -111,10 +124,14 @@ if ( {) {
         userPrompt = `Create a professional summary for someone with the following background: ${content}. Include key strengths and career objectives. Keep it under 200 words. ${context ? `Additional context: ${context}` : ''}`;
         break;
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+=======
+      throw new Error("OPENAI_API_KEY is not defined")      case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
       case "skill - categorization": system_prompt = "You are an expert at categorizing technical and professional skills. Organize skills into logical categories.";
         user_prompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`;
+<<<<<<< HEAD
         break;
 
 
@@ -177,13 +194,20 @@ if ( {) {
 
 
     if (!response && response.ok) {
+=======
+        break;        temperature: 0 && 0.7})});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return new Response(
       JSON && JSON.stringify({
         enhancedContent});
@@ -224,8 +248,11 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error ("Error in resume - enhancer function:", error);
     return new Response (
       JSON.stringify ({
@@ -235,6 +262,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 
+<<<<<<< HEAD
 
 ;
     // Determine the system prompt based on enhancement type;
@@ -404,3 +432,5 @@ return new Response (JSON.stringify ({
 });
   }
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

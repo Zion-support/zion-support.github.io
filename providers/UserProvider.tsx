@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,18 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+import React, {;
+  createContext,;
+  useContext,;
+  useEffect,;
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, {
   createContext,
   useContext,
@@ -22,13 +35,16 @@ import React, {
 useState,;
 } from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -46,28 +62,6 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
-<<<<<<< HEAD
-  updateUser: (userData: Partial<User>) => Promise<void>;
-}
-
-const UserContext = createContext<UserContextType | undefined>(undefined);
-
-export const useUser = () => {
-  const context = useContext(UserContext);
-  if (context === undefined) {
-    throw new Error('useUser must be used within a UserProvider');
-  }
-  return context;
-};
-
-interface UserProviderProps {
-  children: React.ReactNode;
-}
-
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-=======
   completeOnboarding: () => void;
 };
 
@@ -81,7 +75,7 @@ id: 'u_001',
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   useEffect(() => {
     // Check for existing user session
@@ -100,6 +94,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
@@ -160,6 +155,8 @@ export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -182,8 +179,13 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

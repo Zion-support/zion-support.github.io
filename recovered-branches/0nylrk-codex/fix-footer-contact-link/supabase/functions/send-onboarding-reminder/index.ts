@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -11,19 +12,32 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+=======
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+
+import {Resend} from "npm: resend@1.0.0";
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
 
+<<<<<<< HEAD
 
 
 const corsHeaders = {
@@ -72,6 +86,13 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
       return new Response(
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type"}      return new Response(
+        JSON && JSON.stringify({ error: "Missing required fields" });      return new Response(
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
@@ -83,6 +104,7 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+<<<<<<< HEAD
 
 
       .single(),
@@ -138,11 +160,19 @@ serve(async (req: Request) => {
       subject: "Complete your next step on Zion AI Marketplace",
 
       html: `
+=======
+      return new Response(
+        JSON && JSON.stringify({ error: "User not found", details: userError });    const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
+      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
+    ] |"complete your next step";
+    // Send email      html: `
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
           <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
+<<<<<<< HEAD
           <div style="margin: 30px 0,">
             <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
               Continue my setup
@@ -164,10 +194,14 @@ serve(async (req: Request) => {
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
+=======
+          <div style="margin: 30px 0,">          status: 500
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create notification in database
+<<<<<<< HEAD
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(
       "create_notification";
       {
@@ -213,12 +247,23 @@ if ( {) {
       {
 
 
+=======
+    const { data: notification, error: notificationError } = await supabase && supabase.rpc(      "create_notification";
+      {
+
+      JSON && JSON.stringify({        message: "Reminder sent successfully",
+        notification_id: notification});
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -337,6 +382,7 @@ serve(async (req: Request) => {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
 
+<<<<<<< HEAD
 
 
 
@@ -550,3 +596,8 @@ if (notificationError) {
     );
   }
 });
+=======
+  }
+});
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

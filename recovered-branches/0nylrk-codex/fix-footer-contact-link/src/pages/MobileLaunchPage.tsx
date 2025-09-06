@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout";
@@ -9,6 +10,30 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
 const MobileLaunchPage: React.FC = () => {
+=======
+
+
+import React from "react";
+import {SEO} from "@/components/SEO";
+import {AppLayout} from "@/layout/AppLayout";
+import {MobileLaunchHero} from "@/components/mobile-app/MobileLaunchHero";
+import {MobileFeatureShowcase} from "@/components/mobile-app/MobileFeatureShowcase";
+import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
+import {MobileEmailCapture} from "@/components/mobile-app/MobileEmailCapture";
+import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
+import {QrCodeDownload} from "@/components/mobile-app/QrCodeDownload";
+import {CommunityTrust} from "@/components/mobile-app/CommunityTrust";
+import React from "react",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero",
+import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase",
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
+import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
+import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
+import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",const MobileLaunchPage: React.FC = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <AppLayout>
       <SEO
@@ -16,6 +41,7 @@ const MobileLaunchPage: React.FC = () => {
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
+<<<<<<< HEAD
       />
 
       <MobileLaunchHero />
@@ -70,6 +96,11 @@ const MobileLaunchPage: React.FC = () => {
 export default MobileLaunchPage;
 ;
 
+=======
+export default MobileLaunchPage;
+
+export default MobileLaunchPage,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { SEO } from "@/components/SEO",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -80,6 +111,7 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
+<<<<<<< HEAD
 ;
 const MobileLaunchPage:React.FC = () => {;
   return (;
@@ -114,3 +146,7 @@ export default MobileLaunchPage,; const MobileLaunchPage: React.FC = () => {
   );
 },;
 export default MobileLaunchPage;
+=======
+const MobileLaunchPage: React.FC = () => {;
+  return (;export default MobileLaunchPage;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

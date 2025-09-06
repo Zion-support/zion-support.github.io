@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
 import {SEO} from '@/components / SEO';
@@ -13,11 +16,14 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -46,14 +52,20 @@ import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
+<<<<<<< HEAD
   const { user } = useAuth();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     try {;
       const saved = localStorage && localStorage.getItem('account_settings');
@@ -62,6 +74,7 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed && parsed.displayWeb3);
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from 'react',
@@ -95,6 +108,8 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -121,6 +136,7 @@ export default function AccountSettings() {;
         const parsed = JSON.parse(saved),;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
+<<<<<<< HEAD
         setEnableBackup(!!parsed.enableBackup);
 
       }
@@ -136,10 +152,20 @@ export default function AccountSettings() {;
   const handleSave = () => {
     setIsSubmitting(true);
   }, []),
+=======
+        setEnableBackup(!!parsed.enableBackup);    } catch (e) {;
+      console && console.error('Error loading account settings', e);
+    }
+  const handleSave = () => {
+    setIsSubmitting(true);
+  }, []),
+  }, []),  }, []),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }, []),
 
   const handleSave = () => {
     setIsSubmitting(true),
+<<<<<<< HEAD
 
     // Simulate API call
     setTimeout(() => {
@@ -155,6 +181,8 @@ export default function AccountSettings() {;
       try {;
         localStorage && localStorage.setItem(;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -166,6 +194,7 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
+<<<<<<< HEAD
 
     }, 1000);
   };
@@ -174,11 +203,14 @@ export default function AccountSettings() {;
     try {;
       // Check if wallet is available;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
+<<<<<<< HEAD
 
 
           'account_settings',
@@ -271,6 +303,17 @@ export default function AccountSettings() {;
   },
 
 
+=======
+      toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
+    } catch (error: any) {;
+      toast && toast.error(error && error.message || 'Failed to connect wallet');
+    }
+  }
+  },
+  };
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
     <>;
@@ -287,6 +330,7 @@ export default function AccountSettings() {;
             </CardHeader>;
             <CardContent className="space-y-6">;
               <div className="space-y-2">;
+<<<<<<< HEAD
                 <Label htmlFor="email">Email Address</Label>;
 
   return (
@@ -328,6 +372,9 @@ export default function AccountSettings() {;
                     type="button"
                     className="flex items-center gap-1">;
                     <Wallet className="h-4 w-4" />;
+=======
+                <Label htmlFor="email">Email Address</Label>;                    <Wallet className="h-4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Connect;
                   </Button>;
                 </div>;
@@ -341,6 +388,7 @@ export default function AccountSettings() {;
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
+<<<<<<< HEAD
 
                 <Switch
                   id="displayWeb3"
@@ -502,6 +550,12 @@ export default function AccountSettings() {;
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
                 </p>;
+=======
+                <Switch
+                  id="displayWeb3"
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}                </p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>;
             </CardContent>;
           </Card>;
@@ -510,6 +564,7 @@ export default function AccountSettings() {;
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 }
 
     </>;
@@ -560,3 +615,6 @@ try {
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

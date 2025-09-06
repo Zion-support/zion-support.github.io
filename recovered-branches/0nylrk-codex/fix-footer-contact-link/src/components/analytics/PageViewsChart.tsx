@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
+<<<<<<< HEAD
 
 import {;
   Card,;
@@ -25,18 +26,24 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 }
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
 
 export function PageViewsChart(): any ({;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   data,;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
+<<<<<<< HEAD
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -60,6 +67,8 @@ export function PageViewsChart(): any ({;
     </Card>
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
@@ -77,6 +86,7 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+<<<<<<< HEAD
 
 
 
@@ -86,12 +96,17 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+=======
+          data={data || []}
+          dataKeys={["views"]}          onTimeRangeChange={onTimeRangeChange}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />;
       </CardContent>;
     </Card>;
   );
     </Card>;
 
+<<<<<<< HEAD
 
   );
 import React from './react';
@@ -131,3 +146,5 @@ function PageViewsChart() {
       </CardContent>;
     </Card>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

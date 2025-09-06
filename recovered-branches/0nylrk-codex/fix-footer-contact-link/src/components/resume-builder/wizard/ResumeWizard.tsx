@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
 import {Tabs} from '@/components / ui / tabs';
@@ -10,6 +13,7 @@ import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 import {Button} from '@/components / ui / button';
 import {Resume} from '@/types / resume';
 
+<<<<<<< HEAD
 // Import components;
 
 
@@ -18,6 +22,9 @@ import {Resume} from '@/types / resume';
 // Import components;
 
 import { useState, useEffect  } from 'react';
+=======
+// Import components;import { useState, useEffect  } from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
 import { Tabs  } from '@/components/ui/tabs';
@@ -46,13 +53,17 @@ import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Resume} from '@/types/resume';
 // Import components
+<<<<<<< HEAD
 import {ResumeProgress} from './ResumeProgress';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {EmptyResumeState} from './EmptyResumeState';
 import {CreateResumeForm} from './CreateResumeForm';
 import {ResumeSteps} from './ResumeSteps';
 import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
+<<<<<<< HEAD
 import {RESUME_STEPS} from './constants';
 
 
@@ -71,6 +82,9 @@ import {RESUME_STEPS} from './constants';
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
 
   // Use the extracted hook for progress calculation
+=======
+import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
   const handleResumeChange = (resumeId: string) => {
@@ -78,7 +92,10 @@ import {RESUME_STEPS} from './constants';
   }
 
   };
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
 import { Tabs } from '@/components/ui/tabs',;
@@ -106,6 +123,7 @@ export function ResumeWizard() {;
     createResume;
   } = useResume(),;
   const [activeTab, setActiveTab] = useState('basic-info'),;
+<<<<<<< HEAD
   const [showNewResumeForm, setShowNewResumeForm] = useState(false),;
 
   // Use the extracted hook for progress calculation;
@@ -183,6 +201,9 @@ export function ResumeWizard() {;
     )
   }
   if (error) {
+=======
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false),;  if (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <Alert variant="destructive" className="mb-6">
         <AlertCircle className="h-4 w-4" />
@@ -191,6 +212,7 @@ export function ResumeWizard() {;
       </Alert>
     )
 
+<<<<<<< HEAD
 
 
   }
@@ -198,10 +220,15 @@ export function ResumeWizard() {;
   }
   if (showNewResumeForm) {
 
+=======
+  }
+  if (showNewResumeForm) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
   if (showNewResumeForm) {;
+<<<<<<< HEAD
     return (
       <CreateResumeForm
 
@@ -276,6 +303,8 @@ export function ResumeWizard() {;
   if (isLoading) {;
     return (;
       <div className="flex justify-center items-center h-64">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
@@ -287,17 +316,21 @@ export function ResumeWizard() {;
       </Alert>;
   }
   if (showNewResumeForm) {
+<<<<<<< HEAD
 
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
 
   if (showNewResumeForm) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <CreateResumeForm
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
+<<<<<<< HEAD
       />;
     );
   }
@@ -330,6 +363,8 @@ export function ResumeWizard() {;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps
               steps={RESUME_STEPS} 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               activeTab={activeTab} 
               onChange={setActiveTab} 
             />;
@@ -340,6 +375,7 @@ export function ResumeWizard() {;
 
                 activeTab={activeTab}
                 resume={resume as Resume}
+<<<<<<< HEAD
           ;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps ;
@@ -351,10 +387,13 @@ export function ResumeWizard() {;
             {resume && (;
               <ResumeStepContent ;
                 activeTab={activeTab}                resume={resume as Resume}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
             )}
+<<<<<<< HEAD
               <ResumeStepContent
               <ResumeStepContent 
                 activeTab={activeTab}
@@ -364,6 +403,8 @@ export function ResumeWizard() {;
               />;
             )}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -423,8 +464,13 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="flex justify - center items - center h - 64">;
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+=======
+      <div className="flex justify - center items - center h-64">;
+        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>);
   }
   // Check condition
@@ -432,8 +478,13 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <Alert variant="destructive" className="mb - 6">;
         <AlertCircle className="h - 4 w - 4" />;
+=======
+      <Alert variant="destructive" className="mb-6">;
+        <AlertCircle className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <AlertTitle > Error</AlertTitle>;
         <AlertDescription>{error}</AlertDescription>;
       </Alert>);
@@ -456,26 +507,45 @@ if ( {) {
       />);
   }
   return (
+<<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4">;
         <h1 className="text - 2xl font - bold">Resume Builder</h1>;
         <div className="flex gap - 4 flex - wrap items - center">;
+=======
+    <div className="space-y-6">;
+      <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap-4">;
+        <h1 className="text - 2xl font-bold">Resume Builder</h1>;
+        <div className="flex gap - 4 flex - wrap items-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {resume && <ResumeVersionSelector current_resume={resume} onResumeChange={handleResumeChange} />}
           <Button;
             on_click={() => setShowNewResumeForm (true)}
             variant="outline";
             size="sm";
+<<<<<<< HEAD
             className="gap - 2";
           >;
             <FilePlus className="h - 4 w - 4" />;
+=======
+            className="gap-2";
+          >;
+            <FilePlus className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Create New;
           </Button>;
         </div>;
       </div>;
       <Card>;
+<<<<<<< HEAD
         <CardContent className="pt - 6">;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
             <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+=======
+        <CardContent className="pt-6">;
+          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb-6">;
+            <h2 className="text - xl font-semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <ResumeProgress resume={resume} progress={progress} />;
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
@@ -533,8 +603,11 @@ const [showNewResumeForm, setShowNewResumeForm] = useState (false);
 }
   );
 }
+<<<<<<< HEAD
               />;
             )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export /**
  * ResumeWizard - Function description
  */
@@ -547,7 +620,11 @@ function ResumeWizard() {
     fetch_resume;
     create_resume;
   } = use_resume ();
+<<<<<<< HEAD
 ;
 
 
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

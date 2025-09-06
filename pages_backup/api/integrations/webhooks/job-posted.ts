@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
@@ -9,6 +10,11 @@
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -16,8 +22,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
 
   const state = readState();
   const crms = state && state.connections.filter(
@@ -26,12 +30,17 @@ export default async function handler(
       c && c.providerId === "hubspot" ||
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive"
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -59,8 +68,6 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
-<<<<<<< HEAD
-=======
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
       level: "info"
@@ -83,12 +90,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     s && s.events.push({
       id: `${Date && Date.now()}-job-posted`
       type: "zion && zion.job.posted"
@@ -97,15 +109,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   });
 
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -141,6 +156,10 @@ export default async function handler(req, res) {
   res.status(200).json({ ok: true, results })
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
       level: "info"
@@ -170,6 +189,7 @@ export default async function handler(req, res) {
   }
   res.status(200).json({ ok: true, results });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
@@ -179,6 +199,10 @@ export default async function handler(req, res) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 res.status(200).json({ ok: true, results });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -225,6 +249,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/webhooks/job-posted.ts
 <<<<<<< HEAD
 =======
@@ -232,6 +257,10 @@ export default async function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
 import { crm } from '[^']*';
@@ -242,6 +271,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const state = null;
   res.status(200).json({ ok: true, results })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/job-posted.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

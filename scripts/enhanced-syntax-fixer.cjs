@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require('child_process')
   console.log(' Starting Enhanced Syntax Fixer...')
@@ -19,3 +25,8 @@ const { execSync } = require('child_process')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
     const reportPath = 'enhanced-syntax-fix-report.json;'
 
+<<<<<<< HEAD
+=======
+    console.error(' Enhanced syntax fixer "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

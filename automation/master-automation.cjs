@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -11,20 +12,19 @@
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -33,6 +33,13 @@ const { execSync } = require('child_process');
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -46,18 +53,22 @@ const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
-
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -66,6 +77,7 @@ class MasterAutomation {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -119,6 +131,15 @@ class MasterAutomation {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  log(message) {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -142,18 +163,24 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
-  async runCommand(command, description) {
-  async runCommand(command, description) {
-
-
-
-
   async runCommand(command, description) {
 =======
-<<<<<<< HEAD
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  async runCommand(command, description) {
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
   async runCommand(command, description) {
   async runCommand(command, description) {
 
@@ -175,6 +202,8 @@ class MasterAutomation {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -185,31 +214,23 @@ class MasterAutomation {}
 
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-    try {
-      const { stdout, stderr } = await execAsync(command, { 
-        cwd: process.cwd(), 
-        timeout: 30000, 
-        ...options 
-      });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -219,6 +240,30 @@ class MasterAutomation {}
         ...options}
 });
 
+<<<<<<< HEAD
+=======
+class MasterAutomation {
+  constructor() {
+    this.logFile = path.join(__dirname, "logs", "master-automation.log");
+    this.pm2Processes = ["error-monitor", "lint-fixer", "build-monitor", "git-automation"];
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async runCommand(command, options = {}) {
+    try {
+      const { stdout, stderr } = await execAsync(command, {
+        timeout: 30000, 
+        ...options 
+      });
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
@@ -310,6 +355,7 @@ class MasterAutomation {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -322,6 +368,9 @@ class MasterAutomation {}
   }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 =======
@@ -346,6 +395,7 @@ class MasterAutomation {}
         return { success: false, results };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -354,6 +404,11 @@ class MasterAutomation {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       }
     }
@@ -362,6 +417,7 @@ class MasterAutomation {}
     return { success: true, results };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       }
@@ -378,12 +434,18 @@ class MasterAutomation {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 
       return {}
         success: false,
@@ -492,11 +554,15 @@ class MasterAutomation {}
     if (!pm2Status) {}
       this.log('PM2 is not running, attempting to start processes...');
 
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -641,6 +707,10 @@ class MasterAutomation {}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -662,7 +732,89 @@ class MasterAutomation {}
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+<<<<<<< HEAD
 
+=======
+      return { 
+        success: false, 
+        stdout: error.stdout || "", 
+        stderr: error.stderr || "",
+        error: error.message
+      };
+    }
+  }
+
+  async checkPM2Status() {
+    try {
+      const { stdout } = await this.runCommand("pm2 list --format json");
+      const processes = JSON.parse(stdout);
+      return processes.filter(p => p.status === "online").length > 0;
+    } catch (error) {
+      this.log(`PM2 status check failed: ${error.message}`);
+      return false;
+    }
+  }
+
+  async getPM2Processes() {
+    try {
+      const { stdout } = await this.runCommand("pm2 list --format json");
+      return JSON.parse(stdout);
+    } catch (error) {
+      this.log(`Failed to get PM2 processes: ${error.message}`);
+      return [];
+    }
+  }
+
+  async startPM2Processes() {
+    this.log("Starting PM2 processes...");
+    for (const process of this.pm2Processes) {
+      try {
+        await this.runCommand(`pm2 start ecosystem.config.cjs --only ${process}`);
+        this.log(`Started ${process}`);
+      } catch (error) {
+        this.log(`Failed to start ${process}: ${error.message}`);
+      }
+    }
+  }
+
+  async stopPM2Processes() {
+    this.log("Stopping PM2 processes...");
+    for (const process of this.pm2Processes) {
+      try {
+        await this.runCommand(`pm2 stop ${process}`);
+        this.log(`Stopped ${process}`);
+      } catch (error) {
+        this.log(`Failed to stop ${process}: ${error.message}`);
+      }
+    }
+  }
+
+  async restartPM2Processes() {
+    this.log("Restarting PM2 processes...");
+    await this.stopPM2Processes();
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    await this.startPM2Processes();
+  }
+
+  async getPM2Logs(processName, lines = 50) {
+    try {
+      const { stdout } = await this.runCommand(`pm2 logs ${processName} --lines ${lines} --nostream`);
+      return stdout;
+    } catch (error) {
+      this.log(`Failed to get logs for ${processName}: ${error.message}`);
+      return "";
+    }
+  }
+
+  async performHealthCheck() {
+    this.log("Performing health check...");
+    
+    // Check if PM2 is running
+    const pm2Status = await this.checkPM2Status();
+    if (!pm2Status) {
+      this.log("PM2 is not running, attempting to start processes.");
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       await this.startPM2Processes();
       return;
     }
@@ -672,6 +824,58 @@ class MasterAutomation {}
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
+=======
+    if (runningProcesses < expectedProcesses) {
+      this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
+      await this.restartPM2Processes();
+    }
+
+    this.log("Health check completed.");
+  }
+
+  async monitorProcesses() {
+    this.log("Monitoring processes...");
+    
+    const pm2Status = await this.checkPM2Status();
+    if (!pm2Status) {
+      this.log('PM2 is not running, attempting to start processes...');
+      await this.startPM2Processes();
+      return;
+    }
+
+    const processes = await this.getPM2Processes();
+    const expectedProcesses = this.pm2Processes.length;
+    const runningProcesses = processes.length;
+
+    if (runningProcesses < expectedProcesses) {
+      this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting...`);
+      await this.restartPM2Processes();
+    }
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      pm2Status,
+      totalProcesses: runningProcesses,
+      expectedProcesses,
+      processes: processes.map(p => ({
+        name: p.name,
+        status: p.status,
+        uptime: p.uptime,
+        memory: p.memory,
+        cpu: p.cpu
+      })),
+      logs: {
+        errorMonitor: await this.getPM2Logs("error-monitor", 20),
+        lintFixer: await this.getPM2Logs("lint-fixer", 20),
+        buildMonitor: await this.getPM2Logs("build-monitor", 20),
+        gitAutomation: await this.getPM2Logs("git-automation", 20)
+      }
+    };
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
     // Calculate summary
@@ -692,7 +896,31 @@ class MasterAutomation {}
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
+<<<<<<< HEAD
 
+=======
+  }
+  async start() {
+
+
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved to: ${reportFile}`);
+    return report;
+  }
+
+  async start() {
+
+
+    this.log("Master Automation started");
+    // Ensure logs directory exists
+    const logsDir = path.join(__dirname, "logs");
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+    // Start PM2 processes
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
   async start() {}
     this.log('Master Automation started');
@@ -708,6 +936,181 @@ class MasterAutomation {}
 
     // Perform initial health check;
     await this.performHealthCheck();
+<<<<<<< HEAD
+=======
+    // Set up periodic health checks every 30 minutes
+    setInterval(async () => {
+      await this.performHealthCheck();
+    }, 30 * 60 * 1000);
+    // Set up daily report generation
+    setInterval(async () => {
+      this.log("Generating daily report.");
+      await this.generateReport();
+    }, 24 * 60 * 60 * 1000);
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+
+  }
+
+  async status() {
+    this.log('📊 Checking automation status...');
+
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+
+  }
+
+  async status() {
+    this.log('📊 Checking automation status...');
+
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+  }
+  async status() {
+    this.log('📊 Checking automation status...');
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+// CLI interface
+
+
+
+
+// CLI interface
+if (require.main === module) {
+  const automation = new MasterAutomation();
+  const command = process.argv[2];
+
+  switch (command) {
+
+
+    case "start":
+      automation.start().catch(error => {
+        console.error("Master Automation failed: ", error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     // Set up periodic health checks every 30 minutes;
     setInterval()
@@ -739,31 +1142,183 @@ if (require.main === module) {}
 
   switch (command) {}
     case 'start':
+<<<<<<< HEAD
+
+=======
+  }
+
+  async generateReport() {
+    return await this.monitorProcesses();
+  }
+
+  async start() {
+    this.log('Master Automation started');
+    
+    // Ensure logs directory exists
+    const logsDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+
+    // Start PM2 processes
+    await this.startPM2Processes();
+
+    // Perform initial health check
+    await this.performHealthCheck();
+
+    // Set up periodic health checks every 30 minutes
+    setInterval(async () => {
+      await this.performHealthCheck();
+    }, 30 * 60 * 1000);
+
+    this.log("Master Automation is running. Health checks every 30 minutes.");
+  }
+
+  async stop() {
+    this.log("Stopping Master Automation...");
+    await this.stopPM2Processes();
+    this.log("Master Automation stopped.");
+  }
+}
+
+// CLI interface
+if (require.main === module) {
+  const automation = new MasterAutomation();
+  const command = process.argv[2];
+
+  switch (command) {
+    case "start":
+      automation.start().catch(error => {
+        console.error("Master Automation failed: ", error);
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        process.exit(1);
+      }
+});
+      break;
+<<<<<<< HEAD
+=======
+    case "stop":
+      automation.stop().catch(error => {
+        console.error("Failed to stop Master Automation: ", error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
+=======
+    case "restart":
+      automation.restartPM2Processes().catch(error => {
+        console.error("Failed to restart processes: ", error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
+=======
+    case "status":
+      automation.monitorProcesses().catch(error => {
+        console.error("Failed to get status: ", error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
+=======
+    case "report":
+      automation.generateReport().catch(error => {
+        console.error("Failed to generate report: ", error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
+=======
+    default:
+      console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
 
-        process.exit(1);
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class MasterAutomation {
+  constructor() {
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();
+  }
+
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+
+    // Write to log file
+    const logFile = path.join(this.logsDir, 'master-automation.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+
+  async runCommand(command, description) {
+    try {
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { success: false, error: error.message };
+    }
+  }
+
+  async runBuildProcess() {
+    this.log('🚀 Starting build process...');
+
+    const steps = [
+      { command: 'npm install', description: 'Installing dependencies' },
+      { command: 'npm run build', description: 'Building application' },
+      { command: 'npm run test:smoke', description: 'Running smoke tests' },
+    ];
+
+    const results = [];
+    for (const step of steps) {
+      const result = await this.runCommand(step.command, step.description);
+      results.push({ ...step, result });
+
+      if (!result.success) {
+        this.log(`❌ Build process failed at: ${step.description}`, 'error');
+        return { success: false, results };
       }
-});
-      break;
+    }
+
+    this.log('✅ Build process completed successfully');
+    return { success: true, results };
+  }
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -777,7 +1332,29 @@ if (require.main === module) {}
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
 
+=======
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
 
     this.log('✅ Quality checks completed');
@@ -823,6 +1400,10 @@ if (require.main === module) {}
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -841,6 +1422,7 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -850,6 +1432,12 @@ if (require.main === module) {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -871,6 +1459,10 @@ if (require.main === module) {}
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -888,6 +1480,7 @@ if (require.main === module) {}
     );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -898,13 +1491,13 @@ if (require.main === module) {}
   }
 <<<<<<< HEAD
 
-  async start() {
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async start() {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -915,6 +1508,11 @@ if (require.main === module) {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -926,6 +1524,7 @@ if (require.main === module) {}
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -934,6 +1533,11 @@ if (require.main === module) {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -965,6 +1569,7 @@ if (require.main === module) {}
     }, 24 * 60 * 60 * 1000);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -974,18 +1579,20 @@ if (require.main === module) {}
     this.log('🏁 Master Automation completed');
     return report;
 <<<<<<< HEAD
-
 =======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
 <<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   async status() {
@@ -1034,6 +1641,7 @@ if (require.main === module) {}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1050,6 +1658,10 @@ if (require.main === module) {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 
@@ -1146,15 +1758,13 @@ if (require.main === module) {}
 
 <<<<<<< HEAD
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 <<<<<<< HEAD
-
-
-// CLI interface
-=======
-<<<<<<< HEAD
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
 // CLI interface
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -1165,6 +1775,8 @@ if (require.main === module) {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
@@ -1172,14 +1784,15 @@ if (require.main === module) {
   switch (command) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-=======
 <<<<<<< HEAD
 =======
-=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -1188,6 +1801,8 @@ if (require.main === module) {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -1253,6 +1868,10 @@ if (require.main === module) {}
 
 module.exports = MasterAutomation;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case 'start':
       automation
         .start()
@@ -1277,19 +1896,45 @@ module.exports = MasterAutomation;
           process.exit(1);
         });
       break;
+<<<<<<< HEAD
 
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
 
       process.exit(1);
+=======
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
+    default:
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
   }
 }
 
 module.exports = MasterAutomation;
+module.exports = MasterAutomation;
+
+
+    default: 
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+      process.exit(1);
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+  }
+}
+
+<<<<<<< HEAD
+module.exports = MasterAutomation;
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     default: 
       console.log('Usage: node master-automation.cjs [start|status]');
       process.exit(1);
@@ -1306,6 +1951,8 @@ module.exports = MasterAutomation;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -1315,37 +1962,25 @@ module.exports = MasterAutomation;
 module.exports = MasterAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
-module.exports = MasterAutomation;
-
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 module.exports = MasterAutomation;
 
-=======
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+module.exports = MasterAutomation;
+
+
+module.exports = MasterAutomation;
+
 <<<<<<< HEAD
-=======
-=======
-module.exports = MasterAutomation;
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-module.exports = MasterAutomation;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
-module.exports = MasterAutomation;
-
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -1354,3 +1989,11 @@ module.exports = MasterAutomation;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+module.exports = MasterAutomation;
+
+
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

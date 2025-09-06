@@ -44,6 +44,7 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
 
 import React from "react";
 import {Link} from "react-router-dom";
@@ -95,14 +96,23 @@ export const MobileAppHero: React.FC = () => {;
           </div>;
 
           <div className="flex-1 flex justify-center">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="relative w-64 h-auto">;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </div>
     </section>
   );
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };

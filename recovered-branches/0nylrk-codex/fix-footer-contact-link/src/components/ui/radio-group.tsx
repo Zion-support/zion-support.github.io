@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 import * as React from "react"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 
 
 const RadioGroup = React.forwardRef<
@@ -52,6 +56,20 @@ className={cn(
       <RadioGroupPrimitive.Indicator className=&quot;flex items-center justify-center&quot;>
         <Circle className=&quot;h-2.5 w-2.5 fill-current text-current&quot; />
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+=======
+const RadioGroup = React.forwardRef<
+  React.ElementRef<typeof RadioGroupPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
+>(({ className, ...props }, ref) => {className={cn(
+        &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;,
+      className={cn(
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+      )}
+      {...props}
+    >
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Circle className="h-2.5 w-2.5 fill-current text-current" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
@@ -80,6 +98,7 @@ className={cn (
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
 export { RadioGroup, RadioGroupItem }
+<<<<<<< HEAD
 
 
 export { RadioGroup, RadioGroupItem }
@@ -88,6 +107,9 @@ export { RadioGroup, RadioGroupItem }
 ;
 export { RadioGroup, RadioGroupItem }
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export { RadioGroup, RadioGroupItem }
 ;
 export { RadioGroup, RadioGroupItem };
@@ -137,3 +159,7 @@ React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item> > ( ({
 }) RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName export {
   RadioGroup, RadioGroupItem 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -10,6 +10,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -22,6 +23,9 @@ interface FeatureCardProps {id: number;
   isActive: boolean;
   onClick: () => void;
 }
+=======
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export /**
  * FeatureCard - Function description
  */
@@ -46,8 +50,12 @@ if ( {) {
   $2
 }
           e.prevent_default ();
+<<<<<<< HEAD
           on_click ();
           e.preventDefault();
+=======
+          on_click ();          e.preventDefault();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           onClick();
         }
       }}
@@ -56,6 +64,7 @@ if ( {) {
       aria - pressed={is_active}
       aria - label={`${title} - ${description}`}
     >;
+<<<<<<< HEAD
       <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 200">;
         {icon}
       </div>;
@@ -69,6 +78,21 @@ if ( {) {
         <Link;
           href={href}
           className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 rounded";
+=======
+      <div className="w - 12 h - 12 rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration-200">;
+        {icon}
+      </div>;
+      <h3 className="text - xl font - semibold mb - 2 group - hover:text - white transition-colors">;
+        {title}
+      </h3>;
+      <p className="text - gray - 400 group - hover:text - gray - 300 transition-colors">;
+        {description}
+      </p>;
+      <div className="mt - 4 opacity - 0 group - hover:opacity - 100 transition - opacity duration-200">;
+        <Link;
+          href={href}
+          className="text - sm font - medium hover:underline focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue-500 rounded";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           on_click={(e) => e.stop_propagation ()}
         >;
           Learn more →;

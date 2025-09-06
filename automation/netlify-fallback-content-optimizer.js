@@ -2,6 +2,7 @@
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node
@@ -16,23 +17,30 @@ exports.handler = async (_event, _context) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
         // Basic fallback logic
         const result = {
             statusCode: 200
             body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 message: 'content-optimizer executed locally as fallback'
@@ -77,12 +85,13 @@ exports.handler = async (_event, _context) => {
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             statusCode: 500,
             body: JSON && JSON.stringify({
                 error: 'Fallback execution failed',
                 message: error && error.message
 
-=======
                 message: 'content-optimizer executed locally as fallback';
                 timestamp: new Date().toISOString();
                 fallback: true
@@ -96,7 +105,7 @@ exports.handler = async (_event, _context) => {
             body: JSON.stringify({
                 error: 'Fallback execution failed';
                 message: error.message
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             })
 
             status_code: 200,
@@ -125,6 +134,7 @@ exports.handler = async (_event, _context) => {
 
 ;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -134,6 +144,11 @@ exports.handler = async (_event, _context) => {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;
@@ -164,20 +179,27 @@ exports.handler = async (_event, _context) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

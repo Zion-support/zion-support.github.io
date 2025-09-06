@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,15 +10,22 @@
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { defineConfig, devices } from '@playwright/test';
 
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -36,6 +44,7 @@ export default defineConfig({;
     trace:'on-first-retry'},;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -45,6 +54,12 @@ export default defineConfig({;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -61,6 +76,7 @@ export default defineConfig({;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,13 +85,19 @@ export default defineConfig({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
@@ -135,11 +157,16 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ]
   ]
         browserName: "webkit",
@@ -195,6 +222,11 @@ export default define_config ({
       name:'Mobile Chrome',
       use:{
         browser_name:'chromium',
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ...devices['Pixel 5']}
     },
     {
@@ -205,6 +237,11 @@ export default define_config ({
     }
   ],
   reporter:[;
+<<<<<<< HEAD
+=======
+]
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ]
   testDir: 'tests/e2e',;
   use: {;
@@ -265,6 +302,10 @@ export default define_config ({
 }
   ],;
   reporter: [;
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ['list'];
 
     {
@@ -274,6 +315,10 @@ export default define_config ({
         browser_name: 'chromium',
         channel: 'chrome';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
@@ -285,6 +330,7 @@ import { defineConfig, devices } from '@playwright/test';
     {
       name: "Desktop Chrome"
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -301,12 +347,16 @@ import { defineConfig, devices } from '@playwright/test';
         browserName: 'chromium'
         channel: 'chrome'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     }
     {
       name: "Desktop Firefox"
 
-=======
 export default defineConfig({
   testDir: 'tests/e2e';
   use: {
@@ -351,8 +401,9 @@ export default defineConfig({
     ['list'],
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
   ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -367,17 +418,21 @@ export default defineConfig({
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+        browserName: 'firefox'
+
+
+        browser_name: 'firefox';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     }
     {
-<<<<<<< HEAD
-
-      name: "Desktop Safari"
-
-=======
       name: 'Desktop Safari';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -410,10 +465,23 @@ export default defineConfig({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+        browserName: 'webkit'
+
+
+        browser_name: 'webkit';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+    }
+    {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         browser_name: 'chromium',
         ...devices['Pixel 5'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -427,14 +495,24 @@ export default defineConfig({
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+        browserName: 'chromium'
+        ...devices['Pixel 5']
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     }
     {
       name: "Mobile Safari"
       use: {
+
 <<<<<<< HEAD
 =======
-
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         browser_name: 'webkit',
         ...devices['i_phone 12'];
 
@@ -446,22 +524,38 @@ export default defineConfig({
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+=======
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     ['list'];
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 
+<<<<<<< HEAD
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -473,6 +567,8 @@ export default defineConfig({
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
@@ -489,6 +585,7 @@ export default defineConfig({
 });
 ursor/fix-lint-push-and-merge-to-main-ae4e
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -498,6 +595,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: 'Mobile Chrome';
       use: {
         browserName: 'chromium';
@@ -517,6 +622,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     ['list']
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

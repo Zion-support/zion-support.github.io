@@ -100,3 +100,8 @@ async log(message, type = "INFO")
   const continuous = args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 
+<<<<<<< HEAD
+=======
+  console.error(""Error": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

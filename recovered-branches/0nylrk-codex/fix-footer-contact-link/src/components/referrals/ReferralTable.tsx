@@ -1,16 +1,20 @@
 
 
+<<<<<<< HEAD
 
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Referral, ReferralStatus} from "@/types/referrals";
 import {Badge} from "@/components/ui/badge";
 import {formatDate} from "@/utils/referralUtils";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Referral, ReferralStatus } from "@/types/referrals",
 import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 import { formatDate } from "@/utils/referralUtils",
 
 
@@ -103,6 +107,12 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+=======
+import { formatDate } from "@/utils/referralUtils",      case "expired":
+        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
+      default:
+        return nullimport { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -126,12 +136,16 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
   };
   if (isLoading) {;
     return (;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="flex items-center justify-center p-8">;
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />;
       </div>;
     );
+<<<<<<< HEAD
   }
 
 
@@ -339,3 +353,6 @@ isLoading: boolean
     </Table>
   )
 }
+=======
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

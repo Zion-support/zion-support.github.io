@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -22,6 +25,7 @@ const OpenAppRedirect: React.FC = () => {
     const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
       const isAndroid = /Android/.test(navigator.userAgent);
+<<<<<<< HEAD
       // App scheme URLs (these would be your actual app's URL schemes)
       const appScheme = "zion: //"
       const androidAppUrl = "market: //details?id=app.zion.marketplace";
@@ -98,10 +102,14 @@ const OpenAppRedirect: React.FC = () => {;
         timeout = window && window.setTimeout(() => {;
 
           setStatus('timeout');
+=======
+      // App scheme URLs (these would be your actual app's URL schemes)          setStatus('timeout');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           if (isAndroid) {;
             window && window.location.href = androidAppUrl;
           } else if (isiOS) {;
             window && window.location.href = iosAppUrl;
+<<<<<<< HEAD
           }
 
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
@@ -240,6 +248,15 @@ const OpenAppRedirect: React.FC = () => {;
       <div className="text-center p-8">;
         <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
 
+=======
+          }    
+    attemptAppOpen()
+  }, [navigate]),
+          noindex={true}
+      />;
+      <div className="text-center p-8">;
+        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {status === 'redirecting' && (;
           <>;
             <h1 className="text-2xl font-bold mb-2">Opening Zion App...</h1>;
@@ -248,7 +265,10 @@ const OpenAppRedirect: React.FC = () => {;
             </p>;
           </>;
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {status === 'timeout' && (;
           <>;
             <h1 className="text-2xl font-bold mb-2">App Not Installed</h1>;
@@ -257,7 +277,10 @@ const OpenAppRedirect: React.FC = () => {;
             </p>;
           </>;
         )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {status === 'failed' && (;
           <>;
             <h1 className="text-2xl font-bold mb-2">Opening App Failed</h1>;
@@ -273,6 +296,7 @@ const OpenAppRedirect: React.FC = () => {;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 };
 
@@ -283,10 +307,15 @@ const OpenAppRedirect: React.FC = () => {;
 export default OpenAppRedirect;
 
       </div>;
+=======
+  )
+};      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>;
   );
 },;
 
+<<<<<<< HEAD
 export default OpenAppRedirect;
 
 import React, { useEffect, useState } from './react';
@@ -358,3 +387,10 @@ return (<div className="min-h-screen flex items-center justify-center bg-zion-bl
 export default OpenAppRedirect;
 export default OpenAppRedirect;
 export default OpenAppRedirect;
+=======
+      }
+export default OpenAppRedirect;export default OpenAppRedirect;
+      }
+export default OpenAppRedirect;
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

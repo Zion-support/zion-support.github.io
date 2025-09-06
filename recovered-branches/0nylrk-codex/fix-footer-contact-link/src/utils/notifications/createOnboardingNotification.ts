@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
@@ -20,17 +21,30 @@ import {OnboardingNotificationParams} from './types';
 export async function createOnboardingNotification({;
   userId;
   missingMilestone;
+=======
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
+
+/**
+ * Creates an onboarding notification for a user
+ */
+export async function createOnboardingNotification({  missingMilestone;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userRole
 }: OnboardingNotificationParams) {
 
   try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   let title = '';
   let message = '';
   let actionUrl = '';
   let actionText = '';
   if (userRole === 'talent') {
     switch (missingMilestone) {
+<<<<<<< HEAD
       case 'profile_completed':
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
@@ -85,6 +99,9 @@ export async function createOnboardingNotification({;
 
 }
 import { createNotification } from './createNotification',;
+=======
+      case 'profile_completed':import { createNotification } from './createNotification',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { OnboardingNotificationParams } from './types',;
 /**;
  * Creates an onboarding notification for a user;
@@ -145,6 +162,7 @@ export async function createOnboardingNotification({;
     }
   }
 ;
+<<<<<<< HEAD
         break,;
     }
   }
@@ -196,5 +214,11 @@ case 'talent invited':
 }
 ;
 }
+=======
+    }
+  }
+  ;
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 }

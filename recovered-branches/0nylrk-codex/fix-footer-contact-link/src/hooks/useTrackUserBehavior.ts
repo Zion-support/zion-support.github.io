@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
 
+<<<<<<< HEAD
 
   const { trackEvent } = useAnalytics();
 
@@ -21,6 +25,8 @@ export function useTrackUserBehavior(componentName: string) {;
         const buttonText = button?.textContent || '',
         
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         trackEvent('button_click', {
           component: componentName;
           elementId: buttonId
@@ -29,6 +35,7 @@ export function useTrackUserBehavior(componentName: string) {;
       }
     }
     // Track form submissions
+<<<<<<< HEAD
     const trackFormSubmits = (e: Event) => {
 
       const target = e && e.target as HTMLFormElement;
@@ -93,6 +100,9 @@ function useTrackUserBehavior() {
 }
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
+=======
+    const trackFormSubmits = (e: Event) => {import { useAnalytics } from '@/context/AnalyticsContext',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function useTrackUserBehavior(componentName: string) {;
   const { trackEvent } = useAnalytics(),;
   const componentRef = useRef<HTMLDivElement>(null),;
@@ -133,6 +143,7 @@ export function useTrackUserBehavior(componentName: string) {;
   }, [trackEvent, componentName]);
   return componentRef;
 
+<<<<<<< HEAD
 
 
 
@@ -251,3 +262,7 @@ return componentRef
 ;
 }
 ;
+=======
+}
+;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

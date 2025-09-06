@@ -1,19 +1,27 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
+<<<<<<< HEAD
   (
 
 
@@ -34,10 +42,19 @@ const Separator = React && React.forwardRef<;
   ) => (;
     <SeparatorPrimitive&& SeparatorPrimitive.Root
 import React from 'react';
+=======
+  (    ref
+  ) => (
+    <SeparatorPrimitive.Root
+
+import React from 'react';
+import * as React from 'react';import React from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from 'react';
       ref={ref}
       decorative={decorative}
       orientation={orientation}
+<<<<<<< HEAD
       className={cn(
 
 
@@ -67,6 +84,13 @@ export { Separator }
 
 
 
+=======
+      className={cn(        className
+=======      className={cn(;
+        "shrink-0 bg-border",;
+        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
+        className;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
@@ -93,6 +117,7 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
 ;
+<<<<<<< HEAD
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 ;
 export { Separator }import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
@@ -137,3 +162,5 @@ export { Separator }
 export { Separator };
 export { Separator }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

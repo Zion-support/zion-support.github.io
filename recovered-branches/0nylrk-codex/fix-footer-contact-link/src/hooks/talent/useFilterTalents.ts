@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
+<<<<<<< HEAD
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -28,10 +32,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       prev && prev.includes(availability) 
         ? prev && prev.filter(a => a !== availability)
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
+<<<<<<< HEAD
 
     setSelectedRegions(prev => 
       prev && prev.includes(region) 
@@ -224,15 +231,28 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       case 'experience':
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
         break;
+=======
+    
+
+    // Filter by price range
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+    });
+    // Filter by experience range        break;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       default: // Default sorting by relevance (no specific order)
         break
     }
 
+<<<<<<< HEAD
 
 
     
 
 
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -248,6 +268,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     setExperienceRange;
     sortOption;
     setSortOption;
+<<<<<<< HEAD
     toggleSkill;
 
 ;
@@ -561,7 +582,14 @@ export function useFilterTalents(talents:TalentProfile[]) {;
 }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
 }
     toggleAvailability;
+=======
+    toggleSkill;    toggleAvailability;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     toggleRegion;
 
     clearFilters}
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import {
   Dialog,
@@ -35,6 +36,20 @@ export function HireRequestModal({
 
 
             Hire {talent.full_name}
+=======
+
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+
+import React from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { HireRequestForm } from "./HireRequestForm",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",            Hire {talent.full_name}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </DialogTitle>
         </DialogHeader>
 
@@ -51,8 +66,12 @@ export function HireRequestModal({
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
+<<<<<<< HEAD
         <HireRequestForm 
         <HireRequestForm
+=======
+        <HireRequestForm         <HireRequestForm
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

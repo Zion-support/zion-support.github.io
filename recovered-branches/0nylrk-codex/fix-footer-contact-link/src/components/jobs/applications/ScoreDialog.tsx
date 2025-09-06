@@ -1,10 +1,13 @@
 
 
+<<<<<<< HEAD
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Dialog;
   DialogContent;
@@ -15,6 +18,7 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+<<<<<<< HEAD
 interface ScoreDialogProps {
 
   open: boolean
@@ -58,6 +62,8 @@ export function ScoreDialog(): any ({;
         {application && (
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
@@ -68,8 +74,11 @@ export function ScoreDialog(): any ({;
 
           <ApplicationScoreCard 
 
+<<<<<<< HEAD
           <ApplicationScoreCard
           <ApplicationScoreCard ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
@@ -78,6 +87,7 @@ export function ScoreDialog(): any ({;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -139,3 +149,6 @@ onScoreUpdated
     </Dialog>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

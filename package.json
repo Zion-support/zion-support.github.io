@@ -2,29 +2,25 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
-  },
-  "dependencies": {
-=======
-    "dev": "vite",
-    "build": "vite build",
     "build:netlify": "node scripts/build-with-error-handling.js",
 =======
     "dev": "vite",
     "build": "vite build",
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next build",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
@@ -36,20 +32,22 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-    "prepare": "echo 'Husky prepare script disabled'"
+    "prepare": "echo 'Husky prepare script disabled'",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
   },
   "dependencies": {
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-    "@next/swc-linux-x64-gnu": "^15.5.2",
+    "@next/swc-linux-x64-gnu": "^14.2.32",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -73,59 +71,40 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
+<<<<<<< HEAD
     "@stripe/stripe-js": "^7.9.0",
 <<<<<<< HEAD
     "@sendgrid/mail": "^8.1.5",
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    "@sendgrid/mail": "^8.1.5",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     "@supabase/ssr": "^0.6.1",
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
     "@supabase/supabase-js": "^2.57.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
-<<<<<<< HEAD
     "framer-motion": "^12.23.12",
-    "lucide-react": "^0.536.0",
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  }
-}
-=======
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "framer-motion": "^12.23.12",
+    "lightningcss": "^1.30.1",
     "lucide-react": "^0.536.0",
     "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.8.2"
+    "react-router-dom": "^7.8.2",
+    "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
-    "@tailwindcss/postcss": "^4.1.13",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -146,7 +125,6 @@
     "lighthouse": "^12.8.2",
     "postcss": "^8.5.6",
     "rollup": "^4.50.0",
-    "tailwindcss": "^4.1.13",
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
@@ -185,7 +163,10 @@
   "license": "MIT"
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
 =======
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

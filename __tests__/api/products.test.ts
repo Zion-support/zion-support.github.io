@@ -54,23 +54,6 @@ describe('/api/products API Endpoint', () => {
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
-<<<<<<< HEAD
-      const mockRawResults = [{
-          "id": 'product-gpt-high-score',
-          "name_similarity": 0.9,
-          "description_similarity": 0.5
-        },
-        {
-          "id": 'product-other',
-          "name_similarity": 0.2,
-          "description_similarity": 0.1
-        },
-        {
-          "id": 'product-gpt-medium-score',
-          "name_similarity": 0.82,
-          "description_similarity": 0.85
-        }
-=======
       const mockRawResults = [
         {
           id: 'product-gpt-high-score',
@@ -87,7 +70,7 @@ describe('/api/products API Endpoint', () => {
           name_similarity: 0.82,
           description_similarity: 0.85,
         },
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       ];
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
       // So, product-gpt-high-score (0.9) should come first, then product-gpt-medium-score (0.85)
@@ -185,8 +168,12 @@ describe('/api/products API Endpoint', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           "id"
 =======
 });
@@ -204,15 +191,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 });
 });
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+main
+
+
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
@@ -223,3 +207,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 });
 });
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

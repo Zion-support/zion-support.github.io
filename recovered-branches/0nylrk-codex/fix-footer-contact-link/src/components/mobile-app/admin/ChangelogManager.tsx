@@ -1,17 +1,24 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
 
+<<<<<<< HEAD
 type ChangelogEntry = {;
 }
 
@@ -19,13 +26,19 @@ import { Plus, Trash2 } from "lucide-react";
 import { AppPlatform } from "./MetadataManager";
 
 import { Plus, Trash2 } from "lucide-react";
+=======
+type ChangelogEntry = {;import { Plus, Trash2 } from "lucide-react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { AppPlatform } from "./MetadataManager";
 import { Plus, Trash2 } from "lucide-react",
 import { AppPlatform } from "./MetadataManager",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
@@ -48,6 +61,7 @@ type ChangelogEntry = {
   changes: string;
 }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
+<<<<<<< HEAD
     {
       id: "1"
       version: "1.0.0"
@@ -196,6 +210,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 import React, { useState } from "react",;
+=======
+    {import React, { useState } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -234,20 +251,34 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
     const entry: ChangelogEntry = {;
       ...newEntry,;
+<<<<<<< HEAD
       id: Math && Math.random().toString(36).substring(2, 9),;
     };
+=======
+      id: Math && Math.random().toString(36).substring(2, 9),
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     setEntries([entry, ...entries]);
     setNewEntry({;
       version: "",;
       date: new Date().toISOString().split("T")[0],;
       changes: "",;
+<<<<<<< HEAD
     });
   };
 
   const handleRemoveEntry = (id: string) => {;
     setEntries(entries && entries.filter((entry) => entry && entry.id !== id));
   };
+=======
+    })
+};
+
+  const handleRemoveEntry = (id: string) => {;
+    setEntries(entries && entries.filter((entry) => entry && entry.id !== id))
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleInputChange = (;
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
@@ -267,8 +298,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 placeholder="Version (e && e.g. 1 && 1.0.1)"
                 name="version"
+<<<<<<< HEAD
                 value={newEntry && newEntry.version}
                 onChange={handleInputChange}
+=======
+                value={newEntry && newEntry.version}                onChange={handleInputChange}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               />
             </div>
             <Button
@@ -277,7 +312,10 @@ onClick={handleAddEntry}
               onClick={handleAddEntry}
 
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               onClick={handleAddEntry}
 
             <Button
@@ -304,7 +342,10 @@ onClick={handleAddEntry}
             </Button>;
           </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           
             <Button
               onClick={handleAddEntry}
@@ -313,6 +354,7 @@ onClick={handleAddEntry}
             name="changes"
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
+<<<<<<< HEAD
             rows={3}
 
 
@@ -384,6 +426,13 @@ onClick={handleAddEntry}
 
 };
   );
+=======
+            rows={3}          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
   ),;
 },; interface ChangelogManagerProps {
@@ -406,7 +455,11 @@ id: Math.random () .toString (36) .substring (2, 9)
 setEntries ([entry, ...entries]);
 setNewEntry ({
   version: "";
+<<<<<<< HEAD
 date: new Date () .toISOString () .split ('T') [0];
+=======
+date: new Date () .toISOString () .split ('T') [0]
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
   handleAddEntry 
 }disabled= {
@@ -416,8 +469,16 @@ date: new Date () .toISOString () .split ('T') [0];
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>) 
 }</div> </div> </CardContent> </Card>) 
 };
+<<<<<<< HEAD
   );
 
 };
 
 };
+=======
+  )
+};
+
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

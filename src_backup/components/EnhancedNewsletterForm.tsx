@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -29,8 +32,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function EnhancedNewsletterForm() {
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
+<<<<<<< HEAD
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
@@ -38,6 +42,24 @@ export function EnhancedNewsletterForm() {
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState('');
+
+main
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { toast } = useToast();
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -45,18 +67,32 @@ export function EnhancedNewsletterForm() {
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
+<<<<<<< HEAD
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast.error("Invalid email");
+=======
+
+    const trimmed = email.trim();
+    if (!EMAIL_REGEX.test(trimmed)) {
+      toast({
+        title: 'Invalid email',
+        description: 'Please enter a valid email address.',
+        variant: 'destructive'
+      });
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return;
     }
 
     setIsSubmitting(true);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     try {
+<<<<<<< HEAD
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -94,6 +130,9 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -111,6 +150,7 @@ export function EnhancedNewsletterForm() {
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
 =======
@@ -121,6 +161,13 @@ export function EnhancedNewsletterForm() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/EnhancedNewsletterForm.tsx
+=======
+
+
+
+  const EMAIL_REGEX = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -135,7 +182,20 @@ export function EnhancedNewsletterForm() {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+
+      {isSubmitted ? (
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
+          <p className="text-white font-medium">Thank you for subscribing!</p>
+          <p className="text-zion-slate-light mt-1">
+            We&apos;ll keep you updated with the latest from Zion.
+          </p>
+
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
@@ -153,10 +213,18 @@ export function EnhancedNewsletterForm() {
 
       
 
+<<<<<<< HEAD
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+<<<<<<< HEAD
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>
       ) : (
         <form
@@ -205,10 +273,17 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 
 
+=======
+
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -294,7 +369,14 @@ export function EnhancedNewsletterForm() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+
+
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -347,11 +429,15 @@ export function EnhancedNewsletterForm() {
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/EnhancedNewsletterForm.tsx
 >>>>>>> main
 <<<<<<< HEAD
 =======
 =======
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -467,13 +553,14 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+main
+
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/EnhancedNewsletterForm.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

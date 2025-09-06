@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { Resume  } from '@/types/resume';
 import { useFetchResume  } from './useFetchResume';
@@ -9,6 +12,7 @@ import { useEducation  } from './useEducation';
 import { useSkills  } from './useSkills';
 import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
+<<<<<<< HEAD
 export function useResume() {
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
@@ -23,6 +27,9 @@ export function useResume() {;
 
 
   const [resume, setResume] = useState<Resume | null>(null);
+=======
+export function useResume() {  const [resume, setResume] = useState<Resume | null>(null);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
@@ -31,6 +38,7 @@ export function useResume() {;
   const skillsOperations = useSkills();
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
+<<<<<<< HEAD
   // Determine overall loading state
 
   const isLoading = 
@@ -57,12 +65,18 @@ export function useResume() {;
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
   // Override the fetch resume function to update local state
+=======
+  // Determine overall loading state  // Override the fetch resume function to update local state
+  const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
     if (result) {
       setResume(result)
     }
     return result
+<<<<<<< HEAD
   }
   return {
     // State;
@@ -130,6 +144,9 @@ export function useResume() {;
 // Export all hooks;
 export * from './useFetchResume';
 export * from './useResumeActions';
+=======
+  }export * from './useResumeActions';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export * from './useWorkExperience';
 export * from './use_education';
 export * from './use_skills';
@@ -137,10 +154,15 @@ export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
 
+<<<<<<< HEAD
 
 ;
 
 
+=======
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -222,7 +244,11 @@ export * from './useEducation',;
 export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
+<<<<<<< HEAD
 export * from './useResumeUtils';
 
 
 ;
+=======
+export * from './useResumeUtils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

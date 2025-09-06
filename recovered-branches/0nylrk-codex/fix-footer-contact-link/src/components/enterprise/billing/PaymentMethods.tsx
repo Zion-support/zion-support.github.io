@@ -8,6 +8,7 @@ import {;
   CardHeader,;
   CardTitle,;
 
+<<<<<<< HEAD
 
 import React from "react";
 import {
@@ -19,10 +20,15 @@ import {
   CardHeader
   CardTitle
   Card,
+=======
+import React from "react";
+import {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,;
 
 } from "@/components/ui/card";
@@ -34,6 +40,13 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 
 
 } from "@/components/ui/card";
+=======
+  CardTitle,;} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CreditCard, Plus, Trash } from "lucide-react";
+
+=======} from "@/components/ui/card";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
@@ -55,6 +68,7 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: false
     }
   ];
+<<<<<<< HEAD
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -65,20 +79,26 @@ import { CreditCard, Plus, Trash } from "lucide-react";
     },
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "pm-2",
       type: "credit_card",
       brand: "Mastercard",
       last4: "8888",
       expMonth: 4,
+<<<<<<< HEAD
       expYear: 2026,
 
       isDefault: false}
@@ -149,6 +169,13 @@ import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
 ;
 export function PaymentMethods() {;
+=======
+      expYear: 2026,  )
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { CreditCard, Plus, Trash } from "lucide-react",;export function PaymentMethods() {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Mock payment methods;
   const paymentMethods = [;
     {;
@@ -159,8 +186,12 @@ export function PaymentMethods() {;
       expMonth: 12,;
       expYear: 2025,;
       isDefault: true,;
+<<<<<<< HEAD
     },;
       isDefault: true,;
+=======
+    },;      isDefault: true,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },;
     {;
       id: "pm-2",;
@@ -168,6 +199,7 @@ export function PaymentMethods() {;
       brand: "Mastercard",;
       last4: "8888",;
       expMonth: 4,;
+<<<<<<< HEAD
       expYear: 2026,;
       isDefault: false,;
     },;
@@ -214,17 +246,25 @@ function PaymentMethods() {
 
         <CardTitle > Payment Methods</CardTitle>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
 
+<<<<<<< HEAD
 
 
 
   );
   );
       <CardContent className="space - y-4">;
+=======
+  );
+  );
+      <CardContent className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {payment_methods.map ((method) => (
           <div;
             key={method.id}
@@ -232,6 +272,7 @@ function PaymentMethods() {
               method.is_default ? "bg - muted border - primary" : "border - border";
             }`}
           >;
+<<<<<<< HEAD
             <div className="flex items - center space - x-4">;
               <div className="h - 10 w - 10 rounded - md border border - border flex items - center justify - center bg - background">;
                 <CreditCard className="h - 5 w - 5" />;
@@ -245,22 +286,47 @@ function PaymentMethods() {
                     </span>)}
                 </p>;
                 <p className="text - sm text - muted - foreground">;
+=======
+            <div className="flex items - center space-x-4">;
+              <div className="h - 10 w - 10 rounded - md border border - border flex items - center justify - center bg-background">;
+                <CreditCard className="h - 5 w-5" />;
+              </div>;
+              <div>;
+                <p className="font-medium">;
+                  {method.brand} •••• {method.last4}
+                  {method.is_default && (
+                    <span className="ml - 2 text - xs rounded - full bg - primary / 20 text - primary px - 2 py-0.5">;
+                      Default;
+                    </span>)}
+                </p>;
+                <p className="text - sm text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Expires {method.exp_month}/{method.exp_year}
                 </p>;
               </div>;
             </div>;
+<<<<<<< HEAD
             <div className="flex gap - 2">;
+=======
+            <div className="flex gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {!method.is_default && (
                 <Button size="sm" variant="ghost">;
                   Set Default;
                 </Button>)}
+<<<<<<< HEAD
               <Button size="sm" variant="ghost" className="text - destructive">;
                 <Trash className="h - 4 w - 4" />;
+=======
+              <Button size="sm" variant="ghost" className="text-destructive">;
+                <Trash className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Button>;
             </div>;
           </div>))}
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
         <Button className="gap - 1">;
           <Plus className="h - 4 w - 4" />;
           Add Payment Method;
@@ -349,3 +415,12 @@ function PaymentMethods() {
 ;
 }
 }
+=======
+        <Button className="gap-1">;
+          <Plus className="h - 4 w-4" />;
+          Add Payment Method;
+        </Button>;
+      </CardFooter>;
+}
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

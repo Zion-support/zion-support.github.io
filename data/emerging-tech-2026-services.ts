@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -10,7 +13,6 @@ export interface EmergingTech2026Service {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -24,6 +26,7 @@ export interface EmergingTech2026Service {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -122,6 +125,12 @@ export interface EmergingTech2026Service {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  contactInfo: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -151,6 +160,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 <<<<<<< HEAD
@@ -158,6 +168,13 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -166,6 +183,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 180;
     rating: 4.8,
     reviews: 120;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -179,6 +197,13 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -575,6 +600,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -583,11 +609,15 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+
+
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     mobile: string;
     email: string;
     address: string;
@@ -1237,7 +1267,11 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     reviews: 120
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

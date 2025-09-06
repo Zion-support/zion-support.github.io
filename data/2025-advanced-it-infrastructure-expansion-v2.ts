@@ -1,8 +1,11 @@
+
 <<<<<<< HEAD
 
 
 
-
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -13,7 +16,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     pricing: '$399 / month',
       'Automated deployment',
       'Self - healing infrastructure',
-=======
 name: 'Autonomous DevOps Platform',
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -21,11 +23,12 @@ name: 'Autonomous DevOps Platform',
     features: [
       'Automated deployment',
       'Self-healing infrastructure',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Performance optimization',
       'Cost management',
     ],
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     name: 'Autonomous IT Operations',
@@ -397,6 +400,8 @@ name: 'Autonomous DevOps Platform',
   }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
@@ -630,7 +635,6 @@ name: 'Autonomous DevOps Platform',
     category: 'Space Technology',
     pricing: '$749 / month',
     features: [;
-=======
   {
     name: 'Autonomous IT Operations',
     description: 'AI-powered IT operations automation',
@@ -1225,7 +1229,7 @@ name: 'Autonomous DevOps Platform',
     category: 'Space Technology',
     pricing: '$749/month',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Resource mapping',
       'Intelligence analysis',
       'Planning tools',
@@ -1233,30 +1237,27 @@ name: 'Autonomous DevOps Platform',
     ],
   },
   {
-<<<<<<< HEAD
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Zero-Trust Security',
     description: 'Comprehensive zero-trust security platform',
     category: 'Cybersecurity',
     pricing: '$599/month',
     features: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
@@ -1269,6 +1270,10 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     pricing: '$399/month',;
     features: [;
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
+=======
+];      'Identity verification_access control_threat detection_performance monitoring';
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ];
 
   },;
@@ -1730,6 +1735,14 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 ;
@@ -2202,6 +2215,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -2213,3 +2227,14 @@ export const advancedITInfrastructureExpansion2025V2 = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

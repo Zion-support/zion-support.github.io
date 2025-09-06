@@ -1,15 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedFintechSolution2025 {
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -28,10 +30,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Advanced AI - powered credit risk assessment platform that uses machine learning and alternative data sources to provide more accurate credit scoring and risk analysis.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Alternative data analysis',
       'Machine learning models',
       'Real - time scoring',
@@ -44,6 +51,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Regulatory compliance',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +124,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    icon: '💳',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -159,9 +173,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Cross-border payments',
       'Real-time settlement',
@@ -178,10 +195,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Real - time settlement',
       'Multi - currency support',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Smart contracts',
       'Compliance tools',
       'API integration',
@@ -194,11 +216,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     icon: '⛓️',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / blockchain - payment - processing - platform',
@@ -226,10 +250,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     variant: 'blockchain - futuristic',
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -246,11 +275,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'quantum - financial - modeling - platform',
     name: 'Quantum Financial Modeling Platform',
     tagline: 'Quantum computing for advanced financial modeling',
@@ -260,10 +291,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Revolutionary quantum financial modeling platform that leverages quantum computing to solve complex financial optimization problems and risk calculations.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Quantum algorithms',
       'Portfolio optimization',
       'Risk modeling',
@@ -279,11 +315,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     icon: '⚛️',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - financial - modeling - platform',
@@ -313,10 +351,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     variant: 'quantum - financial',
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -333,11 +376,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'ai - powered - insurance - underwriting',
     name: 'AI - Powered Insurance Underwriting',
     tagline: 'Intelligent insurance risk assessment and pricing',
@@ -347,10 +392,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Advanced AI - powered insurance underwriting platform that uses machine learning to assess risk, determine pricing, and automate the underwriting process.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'AI risk assessment',
       'Automated underwriting',
       'Predictive modeling',
@@ -366,11 +416,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     icon: '🛡️',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - powered - insurance - underwriting',
@@ -400,10 +452,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     variant: 'ai - finance - enterprise',
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -420,11 +477,13 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     id: 'regtech - compliance - automation - platform',
     name: 'RegTech Compliance Automation Platform',
     tagline: 'Automated regulatory compliance and reporting',
@@ -434,10 +493,15 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real - time updates and AI - powered insights.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Regulatory monitoring',
       'Automated reporting',
       'Compliance tracking',
@@ -453,6 +517,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     icon: '📋',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -462,6 +527,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
@@ -476,6 +547,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -485,6 +557,10 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
@@ -571,20 +647,42 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     growthRate: '40% annual growth'
     variant: 'fintech'
     contactInfo: {
+<<<<<<< HEAD
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
     launchDate: '2025-02-12'
     customers: 89
     rating: 4.5
     reviews: 52
   }
+=======
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
+    launchDate: '2025-02-12',
+    customers: 89,
+    rating: 4.5,
+    reviews: 52,
+  },;
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {
   id: string;
@@ -836,35 +934,45 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     rating: 4 && 4.5,
-=======
     rating: 4.5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 52
 
-=======
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -944,6 +1052,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -952,6 +1061,11 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -960,6 +1074,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
@@ -976,6 +1091,19 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 ;
   }
 ];
+=======
+
+
+
+
+  }
+ursor/fix-website-loading-errors-and-merge-6662
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -1233,6 +1361,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89,;
     rating: 4.5;
     reviews: 52;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1244,3 +1373,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

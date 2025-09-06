@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-=======
 return <OnboardingTracker steps={steps} />
 
 import React from 'react';
@@ -21,36 +14,51 @@ function TalentOnboardingSteps() {
   const steps: OnboardingStep[] = [;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const steps: OnboardingStep[] = [
     {
       id: "profile",
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
+<<<<<<< HEAD
       action: "Update",
     },
       action: "Update",
     },
+=======
+      action: "Update"},
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
+<<<<<<< HEAD
       action: "Add Skills",
     },
       action: "Add Skills",
     },
+=======
+      action: "Add Skills"},
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
+<<<<<<< HEAD
       action: "Set",
     },
     {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
@@ -58,14 +66,20 @@ function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
+<<<<<<< HEAD
+=======
+      action: "Set"},
+    {
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   const { user } = useAuth();
   const onboardingStatus = null;
   return <OnboardingTracker steps={steps} />
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

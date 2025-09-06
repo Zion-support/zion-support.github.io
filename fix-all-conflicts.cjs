@@ -15,6 +15,7 @@ function fixMergeConflicts(filePath) {
       let inConflict = false;
       let takeHead = true;
 
+<<<<<<< HEAD
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
@@ -28,6 +29,13 @@ function fixMergeConflicts(filePath) {
 
         if (!inConflict || (inConflict && takeHead)) {
           resolvedLines.push(line);
+=======
+      // Remove merge conflict markers
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       }
       fs.writeFileSync(filePath, resolvedLines.join('\n'), 'utf8');

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,11 +10,18 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -27,6 +35,13 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface KycProfile {
   user_id: string;
 
@@ -34,8 +49,13 @@ export interface KycProfile {
 export interface KycProfile {;
 
   userId: string;
+<<<<<<< HEAD
 export interface KycProfile {
   user_id: string;
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -55,15 +75,17 @@ export interface KycProfile {
     action: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     details?: any
 
   }>;
 
-=======
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
   userId: string;
@@ -88,11 +110,17 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
@@ -100,6 +128,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -109,6 +138,12 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -121,50 +156,61 @@ if ( {) {
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   
-<<<<<<< HEAD
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
-=======
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
     missing && missing.push('dateOfBirth');
   }
   return { ok: missing && missing.length === 0, missing };  
   if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
     missing && missing.push('businessRegistrationNumber');
-=======
 
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -178,9 +224,12 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ok: missing && missing.length === 0,
 
     missing
@@ -188,20 +237,36 @@ if ( {) {
   }
 
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface KycDocumentMeta {;
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export interface KycDocumentMeta {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
+<<<<<<< HEAD
 }
 export interface KycProfile {
+=======
+
+}
+
+export interface KycProfile {;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -223,6 +288,7 @@ export interface KycProfile {
     details?: any
   }>;
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,6 +316,10 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
@@ -272,6 +342,7 @@ if ( {) {
     missing.push ('dateOfBirth');
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -288,22 +359,23 @@ if ( {) {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-
-
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   return { ok: missing.length === 0, missing };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

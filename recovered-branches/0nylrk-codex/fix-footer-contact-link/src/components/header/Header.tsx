@@ -9,6 +9,7 @@ import { useWhitelabel  } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import { useState } from "react";
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
@@ -54,6 +55,9 @@ export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
   customTheme?: {
+=======
+import { useState } from "react";  customTheme?: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     primaryColor: string
     backgroundColor: string
@@ -61,8 +65,11 @@ export interface HeaderProps {
   }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -95,6 +102,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     backgroundColor: '#0f172a', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined),
+<<<<<<< HEAD
   
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
@@ -133,11 +141,18 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             searchSuggestions={searchSuggestions}
 
           {!hideLogin && <UserMenu />}
+=======
+            <EnhancedSearchInput
+            value={query}
+            onChange={setQuery}
+            searchSuggestions={searchSuggestions}          {!hideLogin && <UserMenu />}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>
       </div>
     </header>
   )
 }
+<<<<<<< HEAD
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -218,6 +233,8 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
           <LanguageSelector />;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           {!hideLogin && <UserMenu />}
         </div>
@@ -250,6 +267,7 @@ function Header() {
   const navigate = use_navigate ();
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
+<<<<<<< HEAD
 ;
   // If we have a white - label tenant and no specific custom_theme is provided;
   // use the tenant's primary color;
@@ -417,3 +435,6 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 }</div> </div> </header>) 
 }
 ;
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 
 
 
+=======
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export function ApiErrorCodes() {
 
   const errorExample = `{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -17,6 +28,7 @@ export function ApiErrorCodes() {;
     {;
       "field": "title";
 
+<<<<<<< HEAD
 
     },
 
@@ -29,13 +41,23 @@ export function ApiErrorCodes() {
   "error": "validation_error";
   "message": "The request was invalid";
 import React from "react",
+=======
+    },
+
+    {
+      "field": "budget.min";
+      "error": "Budget minimum must be greater than 0"import React from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -44,6 +66,7 @@ export function ApiErrorCodes() {
   "details": [
     {
       "field": "title",
+<<<<<<< HEAD
       "error": "Title is required"
       "error": "Title is required";
     };
@@ -101,12 +124,16 @@ function ApiErrorCodes() {
 
 
   const errorCodes = [
+=======
+      "error": "Title is required"  const errorCodes = [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       status: 400
       code: "validation_error"
       message: "The request was invalid. Check the details for specific field errors."
       details: "Includes field-specific validation errors."
 
+<<<<<<< HEAD
 
     },
 
@@ -121,10 +148,14 @@ function ApiErrorCodes() {
     },
 
 
+=======
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       status: 401
       code: "invalid_token"
       message: "Invalid or expired API key."
+<<<<<<< HEAD
       details: "The provided API key is incorrect, expired, or revoked."
 
 
@@ -142,11 +173,15 @@ function ApiErrorCodes() {
 
 
     {
+=======
+      details: "The provided API key is incorrect, expired, or revoked."    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 404
       code: "not_found"
       message: "The requested resource was not found."
       details: "The specified ID does not exist or is not accessible."
 
+<<<<<<< HEAD
 
     },
 
@@ -161,10 +196,14 @@ function ApiErrorCodes() {
     },
 
 
+=======
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       status: 429
       code: "rate_limit_exceeded"
       message: "Rate limit exceeded. Try again later."
+<<<<<<< HEAD
       details: "Includes retry_after parameter indicating when to retry."
 
 
@@ -182,21 +221,30 @@ function ApiErrorCodes() {
 
 
     {
+=======
+      details: "Includes retry_after parameter indicating when to retry."    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 503
       code: "service_unavailable"
       message: "Service temporarily unavailable."
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
 
+<<<<<<< HEAD
 
   ],
 
 
 
+=======
+  ],
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const rateLimits = [
     {
       endpoint: "All GET endpoints"
       limit: "100 requests per minute"
+<<<<<<< HEAD
       notes: "Aggregate limit across all GET endpoints"
 
 
@@ -204,10 +252,14 @@ function ApiErrorCodes() {
 
 
     {
+=======
+      notes: "Aggregate limit across all GET endpoints"    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       endpoint: "All POST endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all POST endpoints"
 
+<<<<<<< HEAD
 
     },
 
@@ -240,10 +292,18 @@ function ApiErrorCodes() {
 
 
     {
+=======
+    },
+    {
+      endpoint: "All DELETE endpoints"
+      limit: "15 requests per minute"
+      notes: "Aggregate limit across all DELETE endpoints"    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
 
+<<<<<<< HEAD
 
     },
 
@@ -490,12 +550,24 @@ export function ApiErrorCodes() {;
 
         <h2>Error Format</h2>;
         <p>;
+=======
+    },
+
+          If you're encountering persistent errors or need higher rate limits, please 
+          <a href="#" className="text-zion-cyan"> contact our support team</Link>.        </p>
+      </div>
+    </ApiDocsLayout>
+  )        <h2>Error Format</h2>;        <p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
         </p>;
 
+<<<<<<< HEAD
         <CodeBlock code={errorExample} language="json" showLineNumbers={true} />;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <p>;
           Most errors include:;
         </p>;
@@ -507,7 +579,10 @@ export function ApiErrorCodes() {;
         </ul>;
 
         <h2>Common Error Codes</h2>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="overflow-x-auto mb-8">;
           <table className="w-full border-collapse">;
             <thead>;
@@ -531,8 +606,12 @@ export function ApiErrorCodes() {;
                   <td className="py-2 px-4 text-white font-mono">{error && error.code}</td>;
                   <td className="py-2 px-4 text-zinc-300">{error && error.message}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error && error.details}</td>;
+<<<<<<< HEAD
                 </tr>;
               ))}
+=======
+                </tr>;              ))}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </tbody>;
           </table>;
         </div>;
@@ -554,8 +633,12 @@ export function ApiErrorCodes() {;
 
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
 
+<<<<<<< HEAD
         <h2>Rate Limits</h2>;
     }
+=======
+        <h2>Rate Limits</h2>;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 }`;
   const rateLimitExample = `{
@@ -568,6 +651,7 @@ export function ApiErrorCodes() {;
     }
   ];
   return (
+<<<<<<< HEAD
     <ApiDocsLayout>;
       <div className="max - w-3xl prose prose - invert">;
         <h1 > Error Codes & Rate Limits</h1>;
@@ -609,6 +693,14 @@ export function ApiErrorCodes() {;
                   <td className="py - 2 px - 4 text - white font - mono">{error.code}</td>;
                   <td className="py - 2 px - 4 text - zinc - 300">{error.message}</td>;
                   <td className="py - 2 px - 4 text - zinc - 400 text - sm">{error.details}</td>;
+=======
+                      {error.status}
+                    </span>;
+                  </td>;
+                  <td className="py - 2 px - 4 text - white font-mono">{error.code}</td>;
+                  <td className="py - 2 px - 4 text - zinc-300">{error.message}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 400 text-sm">{error.details}</td>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </tr>))}
             </tbody>;
           </table>;
@@ -627,6 +719,7 @@ export function ApiErrorCodes() {;
         </p>;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         <h2 > Rate Limits</h2>;
+<<<<<<< HEAD
                   <td className="py-2 px-4 text-white font-mono">{error.code}</td>;
                   <td className="py-2 px-4 text-zinc-300">{error.message}</td>;
                   <td className="py-2 px-4 text-zinc-400 text-sm">{error.details}</td>;
@@ -654,10 +747,13 @@ export function ApiErrorCodes() {;
         <CodeBlock code={rateLimitExample} language="json" showLineNumbers={true} />;
         ;
         <h2>Rate Limits</h2>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
+<<<<<<< HEAD
 
 ;
 
@@ -671,19 +767,37 @@ export default ApiErrorCodes;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Endpoint</th>;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Limit</th>;
                 <th className="text - left py - 2 px - 4 text - zinc - 300 font - medium">Notes</th>;
+=======
+}export default ApiErrorCodes;
+
+        <div className="overflow - x-auto mb-8">;
+          <table className="w - full border-collapse">;
+            <thead>;
+              <tr className="border - b border - zinc-800">;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Endpoint</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Limit</th>;
+                <th className="text - left py - 2 px - 4 text - zinc - 300 font-medium">Notes</th>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </tr>;
             </thead>;
             <tbody>;
               {rate_limits.map ((limit, index) => (
                 <tr key={index} className={index < rate_limits.length - 1 ? "border - b border - zinc - 800" : ""}>;
+<<<<<<< HEAD
                   <td className="py - 2 px - 4 text - white font - mono">{limit.endpoint}</td>;
                   <td className="py - 2 px - 4 text - zinc - 300">{limit.limit}</td>;
                   <td className="py - 2 px - 4 text - zinc - 400 text - sm">{limit.notes}</td>;
+=======
+                  <td className="py - 2 px - 4 text - white font-mono">{limit.endpoint}</td>;
+                  <td className="py - 2 px - 4 text - zinc-300">{limit.limit}</td>;
+                  <td className="py - 2 px - 4 text - zinc - 400 text-sm">{limit.notes}</td>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </tr>))}
             </tbody>;
           </table>;
         </div>;
         <h3 > Rate Limit Headers</h3>;
+<<<<<<< HEAD
         <p>;
           All API responses include headers to help you track your rate limit usage:;
         </p>;
@@ -710,6 +824,30 @@ export default ApiErrorCodes;
 }
 export default ApiErrorCodes;
 ;
+=======
+        ;
+        <div className="overflow-x-auto mb-8">;
+          <table className="w-full border-collapse">;
+            <thead>;
+              <tr className="border-b border-zinc-800">;
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Endpoint</th>;
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Limit</th>;
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Notes</th>;
+              </tr>;
+            </thead>;
+            <tbody>;
+              {rateLimits.map((limit, index) => (;
+                <tr key={index} className={index < rateLimits.length - 1 ? "border-b border-zinc-800" : ""}>;
+                  <td className="py-2 px-4 text-white font-mono">{limit.endpoint}</td>;
+                  <td className="py-2 px-4 text-zinc-300">{limit.limit}</td>;
+                  <td className="py-2 px-4 text-zinc-400 text-sm">{limit.notes}</td>;
+                </tr>;
+              ))}
+            </tbody>;
+          </table>;
+        </div>;
+        <h3>Rate Limit Headers</h3>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>;
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>;
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>;
@@ -729,3 +867,7 @@ export default ApiErrorCodes;
           <a href="#" className="text-zion-cyan"> contact our support team</a>.;
         </p>;
 export default ApiErrorCodes;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

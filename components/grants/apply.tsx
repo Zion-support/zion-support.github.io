@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import {useState} from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -36,6 +40,13 @@ export default function ApplyGrantPage() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -49,6 +60,7 @@ const categories: GrantCategory[] = [
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -59,6 +71,14 @@ export default function ApplyGrantPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -69,6 +89,7 @@ const categories: GrantCategory[] = [;
 export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -77,6 +98,10 @@ export default function ApplyGrantPage() {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -87,34 +112,40 @@ export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
 const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -185,11 +216,16 @@ function ApplyGrantPage() {
 }
       router.push (`/grants/${data.id}`);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (e: any) {
       set_error (e.message);
     } finally {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -222,7 +258,10 @@ function ApplyGrantPage() {
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           program;
           projectName;
           teamInfo;
@@ -230,12 +269,18 @@ function ApplyGrantPage() {
           timeline;
           budgetAmount: Number(budgetAmount || 0),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -251,11 +296,14 @@ function ApplyGrantPage() {
           region;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           sector: (sector as any) || undefined,;
           submit})});
@@ -267,6 +315,7 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 =======
@@ -275,6 +324,9 @@ function ApplyGrantPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
@@ -316,6 +368,7 @@ function ApplyGrantPage() {
           <button
             disabled={loading}
             onClick={() => save(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,6 +454,9 @@ program,
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold mb-4'>
@@ -517,6 +573,10 @@ program,
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
     }
 
@@ -527,6 +587,12 @@ program,
   return (
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -550,6 +616,7 @@ program,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -559,6 +626,10 @@ program,
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -574,11 +645,12 @@ program,
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
 
-<<<<<<< HEAD
-=======
 
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }            </select>
           </label>
@@ -629,13 +701,14 @@ program,
       </div>
     </EnhancedLayout>
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
   );
 
 );
 }
   );
+<<<<<<< HEAD
 }
   );
 }
@@ -649,3 +722,13 @@ program,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+}
+  );
+}
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

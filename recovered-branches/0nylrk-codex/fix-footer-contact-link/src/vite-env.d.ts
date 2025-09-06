@@ -1,6 +1,9 @@
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -25,6 +28,7 @@ declare module 'path' {export function resolve(...paths: string[]): string;
 declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
+<<<<<<< HEAD
 // Add Node.js globals;
 declare let __dirname: string;
 declare let process: {env: {;
@@ -146,6 +150,9 @@ declare module '@/components / FeatureCard' {
     class_name?: string,
 
     key?: number | string;
+=======
+// Add Node.js globals;    key?: number | string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 // ListingScoreCard type fixes;
@@ -173,6 +180,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     role: 'user' | 'assistant',
     message: string,
     timestamp?: Date,
+<<<<<<< HEAD
 
     key?: string | number;
 
@@ -196,6 +204,13 @@ declare module '@/components / ProductListingCard' {
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
 declare module '@livekit / components - react' {
+=======
+    key?: string | number;
+
+}
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   export interface VideoCallProps {
     room?: string,
     token?: string,
@@ -211,6 +226,7 @@ declare module '@livekit / components - styles' {
 ;
 
 declare module '@livekit/components-styles' {;
+<<<<<<< HEAD
 
   // Empty stub for the styles;
 }
@@ -262,3 +278,7 @@ declare module '@livekit/components-styles' {;
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
+=======
+  // Empty stub for the styles;
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -4,7 +4,10 @@ import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card
 import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
 import {format} from 'date - fns';
 import {Skeleton} from '@/components / ui / skeleton';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -19,6 +22,7 @@ interface Activity {
   comment: string | null
   created_at: string
 
+<<<<<<< HEAD
   milestone: {
 
 
@@ -48,6 +52,9 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 
     title: string;
   }
+=======
+  milestone: {  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   created_by_profile: {
     display_name: string,
     avatar_url: string | null;
@@ -88,6 +95,7 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
 
 import {supabase} from '@/integrations/supabase/client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -98,6 +106,8 @@ interface MilestoneActivitiesProps {;
   projectId: string;
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface Activity {;
   id: string,;
   milestone_id: string,;
@@ -108,9 +118,14 @@ interface Activity {;
   comment: string | null,;
   created_at: string,;
   milestone: {;
+<<<<<<< HEAD
     title: string;
   };
   created_by_profile: {;
+=======
+    title: string
+};  created_by_profile: {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     display_name: string,;
     avatar_url: string | null;
   }
@@ -124,7 +139,10 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     async function fetchActivities() {;
       try {;
         setIsLoading(true);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const { data, error } = await supabase;
           .from('milestone_activities');
           .select(`;
@@ -145,17 +163,26 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
       }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (projectId) {;
       fetchActivities();
     }
 
+<<<<<<< HEAD
 
 
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
 
+=======
+  }, [projectId]),;
+  function getActivityDescription(activity: Activity): string {;
+    switch (activity.action) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'created':;
         return 'created a new milestone',;
       case 'status_changed':;
@@ -165,11 +192,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       } catch (err) {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
+<<<<<<< HEAD
         setIsLoading(false);
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
       }
+=======
+        setIsLoading(false);      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     if (projectId) {
       fetchActivities()
@@ -183,8 +214,11 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       fetchActivities();
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -202,9 +236,13 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return 'added a deliverable';
       default:;
 
+<<<<<<< HEAD
 
   if (isLoading) {;
 
+=======
+  if (isLoading) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
@@ -222,6 +260,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 </div>
               </div>
             </CardContent>
+<<<<<<< HEAD
           </Card>
   if (isLoading) {;
 
@@ -233,6 +272,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
         return activity.action.replace(/_/g, ' ');
     }
+=======
+          </Card>    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   if (isLoading) {
@@ -362,6 +404,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
     ),;
   }
 
+<<<<<<< HEAD
 
 
   if (activities.length === 0) {
@@ -388,10 +431,14 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
   if (activities && activities.length === 0) {;
 
     return (
+=======
+  if (activities.length === 0) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
+<<<<<<< HEAD
       </Card>;
     );
   }
@@ -435,6 +482,9 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 
           </div>;
         </CardContent>;
+=======
+      </Card>;        </CardContent>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </Card>;
     </div>;
   );
@@ -446,7 +496,11 @@ if ( {) {
       fetch_activities ();
     }
   }, [project_id]);
+<<<<<<< HEAD
 ;
 
 
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

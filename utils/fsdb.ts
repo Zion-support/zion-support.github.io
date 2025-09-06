@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -12,11 +13,15 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -40,6 +45,8 @@ export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -63,9 +70,13 @@ export function generateCaseId(): string {
   return `DSP-${y}${m}${d}-${suffix}`;
 
 async function ensureBaseFiles() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -73,6 +84,7 @@ async function ensureBaseFiles() {
       return JSON.parse(content);
     }
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -96,19 +108,27 @@ async function ensureBaseFiles() {
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     }
   } catch (error) {
     console.error('Error reading file:', error);
-=======
 
   await writeAllDisputes(all);
   } catch (error) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export function writeJson<T>(filePath: string, data: T): void {
   try {
@@ -118,20 +138,37 @@ export function writeJson<T>(filePath: string, data: T): void {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Error writing file:", error);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Error writing file:", error);
+=======
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
@@ -141,6 +178,7 @@ export function writeJson<T>(filePath: string, data: T): void {
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -178,19 +216,27 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -232,12 +278,16 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,10 +298,15 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -270,6 +325,9 @@ export interface FSDocument {
   updatedAt: Date;
   version: number;
 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export interface FSCollection {
   name: string;
@@ -479,6 +537,7 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -490,3 +549,10 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

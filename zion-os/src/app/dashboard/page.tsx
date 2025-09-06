@@ -2,6 +2,7 @@
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
 "use client";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
@@ -14,6 +15,8 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
     }
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {return (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
@@ -22,6 +25,7 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
       </div>;
     );
   }
+<<<<<<< HEAD
   if (!isAuthenticated) {return null;
   }
 ;
@@ -36,10 +40,20 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
         <h1 className="text-3xl font-bold text-white mb-2">;
         </h1>;
         <p className="text - zinc - 300 text - lg">;
+=======
+  if (!isAuthenticated) {return null
+};
+  if (!isAuthenticated) {;
+    return null;
+  }
+;        </h1>;
+        <p className="text - zinc - 300 text-lg">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Ready to continue building your digital economy? Here's what you can do next.;
         </p>;
       </div>;
       {/* Quick Actions */}
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
         <Link;
           href="/multiverse / launch";
@@ -51,12 +65,26 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
             </div>;
             <h3 className="font - semibold text - white text - lg">Launch New Instance</h3>;
             <p className="text - zinc - 400 text - sm">;
+=======
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">;
+        <Link;
+          href="/multiverse / launch";
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - blue - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration-200";
+        >;
+          <div className="text - center space-y-3">;
+            <div className="w - 16 h - 16 bg - blue - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition-transform">;
+              <span className="text-3xl">🚀</span>;
+            </div>;
+            <h3 className="font - semibold text - white text-lg">Launch New Instance</h3>;
+            <p className="text - zinc - 400 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Create a new digital economy with marketplace and governance tools;
             </p>;
           </div>;
         </Link>;
         <Link;
           href="/admin / instances";
+<<<<<<< HEAD
           className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - purple - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
         >;
           <div className="text - center space - y-3">;
@@ -65,12 +93,23 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
             </div>;
             <h3 className="font - semibold text - white text - lg">Manage Instances</h3>;
             <p className="text - zinc - 400 text - sm">;
+=======
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - purple - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration-200";
+        >;
+          <div className="text - center space-y-3">;
+            <div className="w - 16 h - 16 bg - purple - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition-transform">;
+              <span className="text-3xl">⚙️</span>;
+            </div>;
+            <h3 className="font - semibold text - white text-lg">Manage Instances</h3>;
+            <p className="text - zinc - 400 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Monitor and configure your deployed instances and settings;
             </p>;
           </div>;
         </Link>;
         <Link;
           href="/docs";
+<<<<<<< HEAD
           className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - green - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration - 200";
         >;
           <div className="text - center space - y-3">;
@@ -79,12 +118,23 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
             </div>;
             <h3 className="font - semibold text - white text - lg">Documentation</h3>;
             <p className="text - zinc - 400 text - sm">;
+=======
+          className="group p - 6 bg - zinc - 800 / 50 rounded - xl border border - zinc - 700 / 50 hover:border - green - 500 / 50 hover:bg - zinc - 800 / 70 transition - all duration-200";
+        >;
+          <div className="text - center space-y-3">;
+            <div className="w - 16 h - 16 bg - green - 600 / 20 rounded - full flex items - center justify - center mx - auto group - hover:scale - 110 transition-transform">;
+              <span className="text-3xl">📚</span>;
+            </div>;
+            <h3 className="font - semibold text - white text-lg">Documentation</h3>;
+            <p className="text - zinc - 400 text-sm">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Learn more about features and best practices;
             </p>;
           </div>;
         </Link>;
       </div>;
       {/* Recent Activity */}
+<<<<<<< HEAD
       <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;
         <h2 className="text - xl font - semibold text - white mb - 4">Recent Activity</h2>;
         <div className="space - y-3">;
@@ -97,10 +147,25 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
             <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
             <span > Onboarding completed. You're ready to start building!</span>;
             <span className="text - zinc - 500">Just now</span>;
+=======
+      <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc-700 / 30">;
+        <h2 className="text - xl font - semibold text - white mb-4">Recent Activity</h2>;
+        <div className="space-y-3">;
+          <div className="flex items - center gap - 3 text - sm text - zinc-400">;
+            <div className="w - 2 h - 2 bg - blue - 500 rounded-full"></div>;
+            <span > Welcome to Zion OS! Your account has been created successfully.</span>;
+            <span className="text - zinc-500">Just now</span>;
+          </div>;
+          <div className="flex items - center gap - 3 text - sm text - zinc-400">;
+            <div className="w - 2 h - 2 bg - green - 500 rounded-full"></div>;
+            <span > Onboarding completed. You're ready to start building!</span>;
+            <span className="text - zinc-500">Just now</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </div>;
       {/* Account Info */}
+<<<<<<< HEAD
       <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc - 700 / 30">;
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -117,6 +182,24 @@ export default function DashboardPage() {const { user, isAuthenticated, isLoadin
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Member Since</label>;
             <p className="text - white">Today</p>;
+=======
+      <div className="bg - zinc - 800 / 30 rounded - xl p - 6 border border - zinc-700 / 30">;
+        <h2 className="text - xl font - semibold text - white mb-4">Account Information</h2>;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+          <div>;
+          </div>;
+          <div>;
+            <label className="block text - sm font - medium text - zinc - 400 mb-1">Email</label>;
+            <p className="text-white">{user?.email}</p>;
+          </div>;
+          <div>;
+            <label className="block text - sm font - medium text - zinc - 400 mb-1">Role</label>;
+            <p className="text-white capitalize">{user?.role}</p>;
+          </div>;
+          <div>;
+            <label className="block text - sm font - medium text - zinc - 400 mb-1">Member Since</label>;
+            <p className="text-white">Today</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </div>;

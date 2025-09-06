@@ -27,11 +27,16 @@ interface ApplicationRowProps {;
 
 export function ApplicationRow(): any ({;
 
+<<<<<<< HEAD
 export function ApplicationRow({;
+=======
+export function ApplicationRow({;export function ApplicationRow({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
   onViewScore;
 }: ApplicationRowProps) {;
 }
@@ -47,18 +52,25 @@ export function ApplicationRow({;
 
   return (
     <TableRow key={application && application.id}>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
   onStatusChange,
 }
 
 
+=======
+  onStatusChange,}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   onViewScore
 }: ApplicationRowProps) {
   return (
+<<<<<<< HEAD
     <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
@@ -119,6 +131,16 @@ export function ApplicationRow({
         <ApplicationActions
 
 import { formatDistanceToNow } from "date-fns",;
+=======
+
+    <TableRow key={application && application.id}>;  return (
+
+    <TableRow key={application && application.id}>;        )}
+      </TableCell>
+      <TableCell className="text-right">
+        <ApplicationActions
+  return (import { formatDistanceToNow } from "date-fns",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link } from "react-router-dom",;
 import { Calendar, User, FileText, BarChart } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -152,8 +174,12 @@ export function ApplicationRow({;
             {application && application.talent_profile?.profile_picture_url ? (;
               <img
                 src={application && application.talent_profile.profile_picture_url} 
+<<<<<<< HEAD
                 alt={application && application.talent_profile.full_name} 
               />;
+=======
+                alt={application && application.talent_profile.full_name}               />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ) : (;
               <User className="h-5 w-5 text-gray-400" />;
             )}
@@ -163,8 +189,12 @@ export function ApplicationRow({;
               {application && application.talent_profile?.full_name || "Unknown"}
             </div>;
             <div className="text-xs text-muted-foreground">;
+<<<<<<< HEAD
               {application && application.talent_profile?.professional_title || "Talent"}
             </div>;
+=======
+              {application && application.talent_profile?.professional_title || "Talent"}            </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </TableCell>;
@@ -180,8 +210,12 @@ export function ApplicationRow({;
       <TableCell>;
         <Button
           variant="ghost" 
+<<<<<<< HEAD
           size="sm" 
           onClick={() => onViewScore(application)}
+=======
+          size="sm"           onClick={() => onViewScore(application)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           className="flex items-center gap-1";
         >;
           <BarChart className="h-4 w-4 mr-1" />;
@@ -195,8 +229,16 @@ export function ApplicationRow({;
               <FileText className="h-4 w-4 mr-1" /> View;
             </a>;
           </Button>;
+<<<<<<< HEAD
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
+=======
+        ) : (;          <span className="text-muted-foreground text-sm">No resume</span>;
+        )}
+      </TableCell>;
+      <TableCell className="text-right">;
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         )}
       </TableCell>;
       <TableCell className="text-right">;
@@ -225,13 +267,19 @@ function ApplicationRow() {
   return (
     <TableRow key={application.id}>;
       <TableCell>;
+<<<<<<< HEAD
         <div className="flex items - center gap - 3">;
           <Avatar className="h - 9 w - 9">;
+=======
+        <div className="flex items - center gap-3">;
+          <Avatar className="h - 9 w-9">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {application.talent_profile?.profile_picture_url ? (
               <img;
                 src={application.talent_profile.profile_picture_url}
                 alt={application.talent_profile.full_name}
               />) : (
+<<<<<<< HEAD
               <User className="h - 5 w - 5 text - gray - 400" />)}
           </Avatar>;
           <div>;
@@ -239,15 +287,27 @@ function ApplicationRow() {
               {application.talent_profile?.full_name || "Unknown"}
             </div>;
             <div className="text - xs text - muted - foreground">;
+=======
+              <User className="h - 5 w - 5 text - gray-400" />)}
+          </Avatar>;
+          <div>;
+            <div className="font-medium">;
+              {application.talent_profile?.full_name || "Unknown"}
+            </div>;
+            <div className="text - xs text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {application.talent_profile?.professional_title || "Talent"}
             </div>;
           </div>;
         </div>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
         <div className="flex items - center gap - 1">;
           <Calendar className="h - 4 w - 4 text - muted - foreground" />;
           <span>{formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}</span>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </TableCell>;
       <TableCell>;
@@ -258,6 +318,7 @@ function ApplicationRow() {
           variant="ghost";
           size="sm";
           on_click={() => onViewScore (application)}
+<<<<<<< HEAD
           className="flex items - center gap - 1";
         >;
           <BarChart className="h - 4 w - 4 mr - 1" />;
@@ -338,3 +399,13 @@ onViewScore: (application: JobApplication) => void
     </TableRow>
   )
 }
+=======
+          className="flex items - center gap-1";
+        >;
+          <BarChart className="h - 4 w - 4 mr-1" />;          <ScoreBadge application={application} />;
+        </Button>;
+      </TableCell>;
+      <TableCell>;          processing_id={processing_id}
+          onViewApplication={onViewApplication}
+          onStatusChange={onStatusChange}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

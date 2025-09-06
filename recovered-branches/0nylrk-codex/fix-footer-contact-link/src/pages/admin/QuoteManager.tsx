@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -29,6 +32,7 @@ import {useAdminQuotes} from "@/hooks/useAdminQuotes";
 import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 import {Navigate} from "react-router-dom";
 
 import type { QuoteRequest } from "@/types/quotes";
@@ -49,6 +53,9 @@ export default function QuoteManager() {;
   const {;
 
 import React, { useState } from "react",
+=======
+import {Navigate} from "react-router-dom";import React, { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
@@ -62,6 +69,7 @@ import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+<<<<<<< HEAD
   const [showDetails, setShowDetails] = useState(false);
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -89,6 +97,9 @@ function QuoteManager() {
 ;
   const {
     quotes;
+=======
+  const [showDetails, setShowDetails] = useState(false);    quotes;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     is_loading;
     error;
     status_filter;
@@ -108,6 +119,7 @@ import {
   QuotesFilter,
   QuotesTable
 } from "@/components/admin/quotes",
+<<<<<<< HEAD
 
 export default function QuoteManager() {
   const { user } = useAuth(),
@@ -117,6 +129,8 @@ export default function QuoteManager() {
   const [showDetails, setShowDetails] = useState(false),
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
     quotes,
     isLoading,
@@ -131,6 +145,7 @@ export default function QuoteManager() {
     setDateRange,
     updateStatus,
     toggleArchive,
+<<<<<<< HEAD
     deleteQuote
 
   } = useAdminQuotes(),
@@ -182,6 +197,9 @@ export default function QuoteManager() {
             
             
 import React, { useState } from "react",;
+=======
+    deleteQuote            
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
@@ -207,7 +225,10 @@ export default function QuoteManager() {;
   const isAdmin = user?.userType === 'admin',;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function QuoteManager() {;
   const { user } = useAuth(),;
   const isAdmin = user?.userType === 'admin',;
@@ -215,6 +236,7 @@ export default function QuoteManager() {;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 ;
+<<<<<<< HEAD
   const {;
     quotes,;
     isLoading,;
@@ -244,6 +266,8 @@ export default function QuoteManager() {;
     setShowDetails(true);
   },;
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Count quotes by status;
   const statusCounts = {;
     new:quotes.filter(q => q.status === 'new').length,;
@@ -258,6 +282,7 @@ export default function QuoteManager() {;
     setShowDetails(true);
   },;
 ;
+<<<<<<< HEAD
   const handleResetFilters = () => {;
     setStatusFilter('all'),;
     setArchiveFilter('all'),;
@@ -270,6 +295,8 @@ export default function QuoteManager() {;
 ;
   return (;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -283,6 +310,7 @@ export default function QuoteManager() {;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
 
+<<<<<<< HEAD
 
 
             {/* Status Summary Cards */}
@@ -297,6 +325,11 @@ export default function QuoteManager() {;
               searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
+=======
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -337,6 +370,7 @@ function QuoteManager() {
     date_range;
     setDateRange;
   }
+<<<<<<< HEAD
   return (
             {/* Filters */}
             <QuotesFilter
@@ -429,28 +463,42 @@ function QuoteManager() {
           </div>
         </div>
         {/* Quote Details Modal */}
+=======
+  return (                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}        {/* Quote Details Modal */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
 
+<<<<<<< HEAD
 
             setSelectedQuote(null)
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 }
           onClose={() => {;
             setShowDetails(false);
@@ -561,6 +609,8 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             setShowDetails(false),;
             setSelectedQuote(null),;
           }}
@@ -634,3 +684,7 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

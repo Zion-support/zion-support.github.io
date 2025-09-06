@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export type FilterType =
+=======
+import React from 'react';
+import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
+
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+
+interface NotificationFilterProps {
+  filter: FilterType,
+  onFilterChange: (filter: FilterType) => void
+import React from 'react',;
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
+interface NotificationFilterProps {;
+  filter: FilterType,;
+  onFilterChange: (filter: FilterType) => void;export type FilterType =
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   | "all"
   | "unread"
   | "onboarding"
@@ -43,6 +60,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
   );
+<<<<<<< HEAD
 };
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
@@ -75,6 +93,12 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
     </div>);
 }
 ;
+=======
+
+  )
+},
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),;
 },; export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 <Tabs defaultValue= {

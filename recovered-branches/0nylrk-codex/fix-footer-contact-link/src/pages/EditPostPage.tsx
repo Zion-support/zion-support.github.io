@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import {useState, useEffect} from "react";
@@ -11,6 +12,8 @@ import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumPost, ForumCategory} from "@/types/community";
 import {useAuth} from "@/hooks/useAuth";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -22,9 +25,12 @@ import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface PostFormValues {
 
   title: string
@@ -34,6 +40,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+<<<<<<< HEAD
 
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
@@ -136,17 +143,30 @@ export default function EditPostPage() {
 
 
   if (isLoading) {
+=======
+export default function EditPostPage() {;
+  const { postId } = useParams() as { postId?: string };  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);  if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   useEffect(() => {;
     // In a real app, we would fetch the post data here;
     // For now, we'll just use the mock data;
     setIsLoading(false);
   }, [postId]);
+<<<<<<< HEAD
 
   if (isLoading) {;
     return (
     return (;
 
+=======
+  if (isLoading) {;
+    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (isLoading) {;
     return (
       <AppLayout>;
@@ -158,12 +178,15 @@ export default function EditPostPage() {
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
 
 
   if (!post) {;
 
     return (
       <AppLayout>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="container py-8">;
           <h1>Post not found</h1>;
           <Button asChild className="mt-4">;
@@ -172,6 +195,7 @@ export default function EditPostPage() {
         </div>;
       </AppLayout>;
     );
+<<<<<<< HEAD
   }
 
     );
@@ -206,6 +230,9 @@ export default function EditPostPage() {
     return (
       <AppLayout>;
         <div className="container py-8">;
+=======
+  }    return (        <div className="container py-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
           <p className="mb-4">You don't have permission to edit this post.</p>;
           <Button asChild>;
@@ -215,12 +242,15 @@ export default function EditPostPage() {
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
 
 
   },
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
   }
   const handleSubmit = async (values: PostFormValues) => {
@@ -229,6 +259,7 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update
       toast({
         title: "Post updated"
+<<<<<<< HEAD
         description: "Your post has been updated successfully"
 
 
@@ -237,6 +268,9 @@ export default function EditPostPage() {
 
 
       // Redirect back to the post
+=======
+        description: "Your post has been updated successfully"      // Redirect back to the post
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       navigate(`/community/post/${postId}`)
     } catch (error) {
       toast({
@@ -245,6 +279,7 @@ export default function EditPostPage() {
         variant: "destructive"
       })
 
+<<<<<<< HEAD
 
   const initialValues: Partial<PostFormValues> = {;
     title: post && post.title,;
@@ -252,6 +287,14 @@ export default function EditPostPage() {
     categoryId: post && post.categoryId as ForumCategory,;
     tags: post && post.tags.join(", ");
   };
+=======
+  return (  const initialValues: Partial<PostFormValues> = {;
+    title: post && post.title,;
+    content: post && post.content,;
+    categoryId: post && post.categoryId as ForumCategory,;
+    tags: post && post.tags.join(", ")
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleSubmit = async (values: PostFormValues) => {;
     try {;
@@ -259,37 +302,66 @@ export default function EditPostPage() {
       // For now, we'll just simulate a successful update;
 
       toast({;
+<<<<<<< HEAD
         title: "Post updated",;
         description: "Your post has been updated successfully";
+=======
+        title: "Post updated",,
+  description: "Your post has been updated successfully";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
 
       // Redirect back to the post;
       navigate(`/community/post/${postId}`);
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description: "There was a problem updating your post",;
+=======
+        title: "Error",,
+  description: "There was a problem updating your post",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
       });
 
     }
+<<<<<<< HEAD
   }
     }
 
   },
 
 
+=======
+  }    }
+
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
     <AppLayout>;
 
+<<<<<<< HEAD
 
   return (
+=======
+  return (
+    <AppLayout>;
+    }
+  }
+  },
+
+  return (
+    <AppLayout>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
 
+<<<<<<< HEAD
 
         <PostForm
           initialValues={initialValues}
@@ -307,6 +379,15 @@ export default function EditPostPage() {
   )
 
 import { useState, useEffect } from "react",;
+=======
+        <PostForm
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          isEditing={true}        />
+      </div>
+    </AppLayout>
+  )import { useState, useEffect } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
@@ -406,15 +487,25 @@ export default function EditPostPage() {;
       // Here we would normally update the post in the database;
       // For now, we'll just simulate a successful update;
       toast({;
+<<<<<<< HEAD
         title: "Post updated",;
         description: "Your post has been updated successfully";
+=======
+        title: "Post updated",,
+  description: "Your post has been updated successfully";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }),;
       // Redirect back to the post;
       navigate(`/community/post/${postId}`);
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description: "There was a problem updating your post";
+=======
+        title: "Error",,
+  description: "There was a problem updating your post";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
       });
     }
@@ -425,10 +516,14 @@ export default function EditPostPage() {;
         title="Edit Post | Community Forum | Zion AI Marketplace";
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
+<<<<<<< HEAD
 
       />;
 
       />;
+=======
+      />;      />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -440,6 +535,7 @@ export default function EditPostPage() {;
           </Link>;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
+<<<<<<< HEAD
         </div>;
 
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
@@ -631,3 +727,6 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
   );
 }
 ;
+=======
+        </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -8,8 +8,11 @@ import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 
   show_name?: boolean;
@@ -19,6 +22,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
   size = 44;
+<<<<<<< HEAD
   showDesc = false,;
   earnedDate}) => {;
   const meta = getBadgeMeta(badge);
@@ -59,6 +63,10 @@ import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+=======
+
+  badge: BadgeKey
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
@@ -69,6 +77,7 @@ interface BadgeEarnedProps {
   showDesc?: boolean,
   earnedDate?: string
 }
+<<<<<<< HEAD
 
 
 
@@ -112,6 +121,11 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           justifyContent: "center"}}
         className="shadow hover-scale"
 
+=======
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
+      <div
+        style={{
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
@@ -119,6 +133,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
 
+<<<<<<< HEAD
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
@@ -158,6 +173,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {meta.name}
         </span>
         title={meta && meta.name}>;
@@ -175,6 +192,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       )}
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
+<<<<<<< HEAD
       )}
 
 
@@ -326,3 +344,6 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
     </div>;
   );
 };
+=======
+      )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

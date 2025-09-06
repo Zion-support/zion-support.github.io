@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -11,6 +12,11 @@ interface EnhancedLayoutProps {
   \"children\": ReactNode;
 }
 interface EnhancedLayoutProps {
+=======
+interface EnhancedLayoutProps {
+  \"children\": ReactNode;
+}interface EnhancedLayoutProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   \"children\": ReactNode;
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
@@ -23,6 +29,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <EnhancedFooter />
     </div>
   );
+<<<<<<< HEAD
 }
 
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
@@ -37,6 +44,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+=======
+} import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";

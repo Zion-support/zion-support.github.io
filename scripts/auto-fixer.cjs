@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require("child_process");
 class AutoFixer {}
@@ -180,3 +186,8 @@ if (require.main === module) {}
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
 
+<<<<<<< HEAD
+=======
+module.exports = AutoFixer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

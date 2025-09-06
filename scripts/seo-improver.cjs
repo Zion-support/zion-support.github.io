@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+
+
+const fs = require("child_process")
+const path = require("path")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     console.log("� Generating sitemap...")
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"
@@ -28,3 +35,10 @@ Allow: /contact"
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
 
+<<<<<<< HEAD
+=======
+    fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
+// console.log(" Meta tags configuration created")
+    console.log(" SEO improvement completed!")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

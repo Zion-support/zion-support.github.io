@@ -8,8 +8,12 @@
   const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
   document && document.getElementById('output').textContent = res && res.answer
 
+<<<<<<< HEAD
 }
 // Attach handlers once the DOM is fully loaded to avoid null element errors
+=======
+}// Attach handlers once the DOM is fully loaded to avoid null element errors
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
@@ -25,6 +29,7 @@ document && document.addEventListener('DOMContentLoaded', () => {
 
   })
 
+<<<<<<< HEAD
 
 }
 
@@ -57,6 +62,8 @@ async function ask() {
   document.getElementById('output').textContent = res.answer
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -77,6 +84,7 @@ document && document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 
+<<<<<<< HEAD
 
 
   })
@@ -117,6 +125,10 @@ document.addEventListener ('DOMContentLoaded', () => {
   })
 
 }),
+=======
+  })
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 ;
@@ -132,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {;
   document.getElementById('view-notifications')?.addEventListener('click', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
+<<<<<<< HEAD
 }),;
 
 
@@ -146,3 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type:'view-notifications' }),;
   }),;
 }),; 
+=======
+}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

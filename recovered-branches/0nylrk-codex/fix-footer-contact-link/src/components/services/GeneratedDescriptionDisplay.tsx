@@ -5,16 +5,22 @@ import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
 
+<<<<<<< HEAD
 import React, { useState } from "react",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -27,6 +33,7 @@ import {
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
+<<<<<<< HEAD
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void;
@@ -41,14 +48,21 @@ export function GeneratedDescriptionDisplay({
   const [editedDescription, setEditedDescription] = useState(description);
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
     toast({
       title: "Description Saved",
       description: "Your edited description has been saved.",
+<<<<<<< HEAD
     });
   };
+=======
+    })
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -113,6 +127,7 @@ export function GeneratedDescriptionDisplay({;
     onSave(editedDescription),;
     setIsEditing(false),;
 
+<<<<<<< HEAD
     toast({;
       title: "Description Saved",;
       description: "Your edited description has been saved.";
@@ -121,15 +136,26 @@ export function GeneratedDescriptionDisplay({;
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+=======
+      title: "Description Saved",,
+  description: "Your edited description has been saved.";
+    })
+};
+
+  return (    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <CardTitle className="text-white flex items-center justify-between">;
           Generated Description;
           <Button
             variant="outline" 
             size="sm" 
+<<<<<<< HEAD
           <Button ;
             variant="outline" ;
             size="sm" ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -142,14 +168,21 @@ export function GeneratedDescriptionDisplay({;
                 <Check className="h-4 w-4 mr-1" />;
                 Done;
               </>;
+<<<<<<< HEAD
             ) : (;
             ) :(;
+=======
+            ) : (;            ) :(;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <>;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
             )}
+<<<<<<< HEAD
 import React, { useState } from './react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
 import {
@@ -163,6 +196,7 @@ import { Textarea  } from '@/components / ui / textarea';
 import { Check, Pencil  } from './lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
+<<<<<<< HEAD
   on_save: (edited_description: string) => void;
 }
 export /**
@@ -223,13 +257,25 @@ function GeneratedDescriptionDisplay() {
   );
 }
 
+=======
+  on_save: (edited_description: string) => void;            Save Changes;
+          </Button>;
+        </CardFooter>;
+      )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {is_editing ? (
           <Textarea;
             value={edited_description}
             on_change={(e) => setEditedDescription (e.target.value)}
+<<<<<<< HEAD
             className="bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none";
           />) : (
           <div className="bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap">;
+=======
+            className="bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize-none";
+          />) : (
+          <div className="bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre-wrap">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {edited_description}
           </div>)}
       </CardContent>;
@@ -237,7 +283,11 @@ function GeneratedDescriptionDisplay() {
         <CardFooter>;
           <Button;
             on_click={handle_save}
+<<<<<<< HEAD
             className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
+=======
+            className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text-white";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >;
             Save Changes;
           </Button>;

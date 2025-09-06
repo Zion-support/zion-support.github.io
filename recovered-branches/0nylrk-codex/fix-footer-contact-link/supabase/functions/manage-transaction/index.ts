@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
@@ -29,6 +33,11 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -44,6 +53,7 @@ serve(async (req) => {
     const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
     
 
+<<<<<<< HEAD
     if (!user?.id) throw new Error("User not authenticated");
 
   ),
@@ -127,11 +137,16 @@ serve(async (req) => {;
       throw new Error("Transaction not found"),;
     }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .single(),
     
     if (fetchError || !transaction) {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!transactionId) {
       throw new Error("Transaction ID is required")
     }
@@ -139,6 +154,7 @@ serve(async (req) => {;
     const { data: transaction, error: fetchError } = await supabaseAdmin
       .from("transactions")
       .select("*")
+<<<<<<< HEAD
       .eq("id", transactionId)
 
     const isClient = transaction && transaction.user_id === user && user.id;
@@ -179,16 +195,26 @@ serve(async (req) => {;
     const isProvider = transaction.provider_id === user.id,
     
     // Clients can cancel or request refunds, providers can only release funds
+=======
+      .eq("id", transactionId)    // Clients can cancel or request refunds, providers can only release funds
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
 
+<<<<<<< HEAD
 
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
 
       apiVersion: "2023-10-16"});
     let result;
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
+=======
+    const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
+
+      apiVersion: "2023-10-16"});
+    let result;import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Stripe from "https://esm.sh / stripe@14.21.0",
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 const cors_headers = {
@@ -263,6 +289,7 @@ if ( {) {
 ;
     let result;
 ;
+<<<<<<< HEAD
 
 
 
@@ -281,6 +308,8 @@ if ( {) {
       apiVersion: "2023-10-16"}),
 
     switch (action) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'release':;
         // Only providers or admins can release escrow funds;
         // Check condition
@@ -288,6 +317,7 @@ if ( {) {
   $2
 }
           throw new Error ("Only service providers can release funds from escrow");
+<<<<<<< HEAD
         }
 
 
@@ -448,6 +478,12 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
 
 
+=======
+        }  } catch (error) {
+    console.error("Transaction management error:", error.message);
+    return new Response(JSON.stringify({ error: error.message }), {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 500})
   }
 });
@@ -460,6 +496,7 @@ const corsHeaders = {;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
 serve(async (req) => {;
   if (req.method === "OPTIONS") {;
+<<<<<<< HEAD
     return new Response(null, { headers: corsHeaders });
   }
 
@@ -479,6 +516,10 @@ serve(async (req) => {;
 });
 
 ;
+=======
+    return new Response(null, { headers: corsHeaders })
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'cancel':;
         // Only allow cancellation for pending transactions;
         // Check condition
@@ -515,7 +556,10 @@ if ( {) {
 
   }
 });
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 });
 ;
@@ -657,5 +701,8 @@ if ( {) {
       status: 500});
   }
 });
+<<<<<<< HEAD
   }
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

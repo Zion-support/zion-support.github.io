@@ -1,17 +1,24 @@
 
 
+<<<<<<< HEAD
 import { GripVertical } from "lucide-react"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as ResizablePrimitive from "react-resizable-panels"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const ResizablePanelGroup = ({
   className
   ...props
 }: React.ComponentProps<typeof ResizablePrimitive.PanelGroup>) => (
   <ResizablePrimitive.PanelGroup
+<<<<<<< HEAD
     className={cn(
 
 
@@ -19,6 +26,9 @@ const ResizablePanelGroup = ({
 
 
       className
+=======
+    className={cn(      className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )}
     {...props}
   />
@@ -34,6 +44,7 @@ const ResizableHandle = ({
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
 
+<<<<<<< HEAD
 
       "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
 
@@ -59,6 +70,9 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 
+=======
+      "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { GripVertical } from &quot;lucide-react & quot;
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
 ;
@@ -68,6 +82,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 ;
@@ -102,3 +117,6 @@ const ResizableHandle = ({
   </ResizablePrimitive.PanelResizeHandle>);
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+=======
+export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

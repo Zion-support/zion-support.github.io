@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -81,10 +82,16 @@ interface MilestoneCardProps {;
 export function MilestoneCard(): any ({ ;
   id;
   projectId;
+=======
+  id: string,;
+  projectId: string,;
+  title: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   title, ;
   description, ;
   amount, ;
   status, ;
+<<<<<<< HEAD
 
   dueDate;
   onApprove;
@@ -97,6 +104,8 @@ export function MilestoneCard(): any ({ ;
     switch (status) {;
       case 'completed':;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -107,8 +116,13 @@ export function MilestoneCard(): any ({ ;
       default: return 'bg-gray-500';
     }
   }
+<<<<<<< HEAD
 
 
+=======
+      }
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <Card>;
@@ -121,6 +135,7 @@ export function MilestoneCard(): any ({ ;
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
+<<<<<<< HEAD
 
           </div>;
           <div className="flex gap-2">;
@@ -157,6 +172,8 @@ export function MilestoneCard(): any ({ ;
           )}
 
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </p>;
             )}
           </div>;
@@ -206,6 +223,7 @@ export function MilestoneCard(): any ({ ;
             />;
           )}
 
+<<<<<<< HEAD
 
 
           )}
@@ -259,6 +277,8 @@ export function MilestoneCard(): any ({ ;
             </Button>;
           )}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {isUnderDispute && (;
             <Button variant="outline" size="sm" disabled>;
               Actions frozen due to dispute;
@@ -267,10 +287,13 @@ export function MilestoneCard(): any ({ ;
         </div>;
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   );
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 import React from 'react';
@@ -317,6 +340,7 @@ function getStatusBadgeColor() {
   }
   return (
     <Card>;
+<<<<<<< HEAD
       <CardHeader className="pb - 2">;
         <div className="flex justify - between items - start">;
           <div>;
@@ -327,6 +351,18 @@ function getStatusBadgeColor() {
               </p>)}
           </div>;
           <div className="flex gap - 2">;
+=======
+      <CardHeader className="pb-2">;
+        <div className="flex justify - between items-start">;
+          <div>;
+            <CardTitle className="text-xl">{title}</CardTitle>;
+            {due_date && (
+              <p className="text - sm text - muted-foreground">;
+                Due: {format (new Date (due_date), 'MMM d, yyyy')}
+              </p>)}
+          </div>;
+          <div className="flex gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor ()} text - white`}>;
               {status.replace ('_ ')}
             </Badge>;
@@ -335,6 +371,7 @@ function getStatusBadgeColor() {
           </div>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent className="pb - 2">;
         {description && (
           <p className="text - muted - foreground">{description}</p>)}
@@ -343,6 +380,16 @@ function getStatusBadgeColor() {
         </div>;
       </CardContent>;
       <CardFooter className="pt - 2 flex justify - between">;
+=======
+      <CardContent className="pb-2">;
+        {description && (
+          <p className="text - muted-foreground">{description}</p>)}
+        <div className="mt-4">;
+          <p className="text - xl font-bold">${amount.to_fixed (2)}</p>;
+        </div>;
+      </CardContent>;
+      <CardFooter className="pt - 2 flex justify-between">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div>;
           {status !== 'completed' && status !== 'rejected' && (
             <RaiseDisputeButton;
@@ -352,6 +399,7 @@ function getStatusBadgeColor() {
               size="sm";
             />)}
         </div>;
+<<<<<<< HEAD
         <div className="flex gap - 2">;
           {status === 'pending' && on_reject && !isUnderDispute && (
             <Button variant="outline" size="sm" on_click={() => on_reject (id)}>;
@@ -360,6 +408,16 @@ function getStatusBadgeColor() {
           {status === 'pending' && on_approve && !isUnderDispute && (
             <Button variant="default" size="sm" on_click={() => on_approve (id)}>;
               <Check className="h - 4 w - 4 mr - 1" /> Approve;
+=======
+        <div className="flex gap-2">;
+          {status === 'pending' && on_reject && !isUnderDispute && (
+            <Button variant="outline" size="sm" on_click={() => on_reject (id)}>;
+              <X className="h - 4 w - 4 mr-1" /> Reject;
+            </Button>)}
+          {status === 'pending' && on_approve && !isUnderDispute && (
+            <Button variant="default" size="sm" on_click={() => on_approve (id)}>;
+              <Check className="h - 4 w - 4 mr-1" /> Approve;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </Button>)}
           {isUnderDispute && (
             <Button variant="outline" size="sm" disabled>;
@@ -369,6 +427,7 @@ function getStatusBadgeColor() {
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
   ),;}
  interface MilestoneCardProps {
   id: string;
@@ -413,3 +472,5 @@ case 'rejected':
   );
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

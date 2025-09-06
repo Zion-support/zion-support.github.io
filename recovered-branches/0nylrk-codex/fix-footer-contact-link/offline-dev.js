@@ -20,17 +20,23 @@ const server = http && http.createServer((req, res) => {
     res && res.writeHead(404),
     res && res.end('Not found')
 
+<<<<<<< HEAD
   }
 })
 const PORT = 8080
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
     res && res.end('Not found')
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const server = http.createServer((req, res) => {
   if (req.url === '/' |req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
@@ -68,6 +74,7 @@ const PORT = 8080
   }
 }),
 
+<<<<<<< HEAD
 
 
   }
@@ -158,6 +165,14 @@ server.listen (PORT, () => {
 ║                                                                  ║;
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
 ║                                                                  ║;
+=======
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+`)}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;║                                                                  ║;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
 ║     2. Run: ./setup.sh npm                                       ║;
@@ -167,12 +182,17 @@ server.listen (PORT, () => {
 `);
 }),
 ;
+<<<<<<< HEAD
 
 }),
 
 }),
 
 
+=======
+}),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const http = require('http'),;
 const fs = require('fs'),;
 const path = require('path'),;

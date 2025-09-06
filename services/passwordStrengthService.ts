@@ -3,6 +3,7 @@
   score: number, // 0 - 100;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
 
+<<<<<<< HEAD
 
   password: string,
   score: number, // 0-100;
@@ -91,17 +92,27 @@ class PasswordStrengthService {
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 
+=======
+export interface CommonPasswordData {;
+
+export interface CommonPasswordData {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
     ];
   }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   /**;
   * Analyze password strength comprehensively;
   */;
   analyze_password (password: string): PasswordStrengthResult {
+<<<<<<< HEAD
 
 
     const result: PasswordStrengthResult = {
@@ -135,6 +146,11 @@ class PasswordStrengthService {
 
 
 
+=======
+    result && result.feedback = this && this.generateFeedback(result && result.details);
+    result && result.suggestions = this && this.generateSuggestions(result && result.details);
+    result && result.warnings = this && this.generateWarnings(result && result.details);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return result
   }
   /**
@@ -142,6 +158,7 @@ class PasswordStrengthService {
    */
   private calculateScore(details: PasswordStrengthResult['details']): number {
     let score = 0;
+<<<<<<< HEAD
     // Length scoring (0-25 points)
 
 
@@ -262,6 +279,9 @@ class PasswordStrengthService {;
     result.score = this.calculateScore(result.details),;
     result.strength = this.getStrengthLevel(result.score),;
     // Generate feedback;
+=======
+    // Length scoring (0-25 points)    // Generate feedback;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     result.feedback = this.generateFeedback(result.details),;
     result.suggestions = this.generateSuggestions(result.details),;
     result.warnings = this.generateWarnings(result.details),;
@@ -306,6 +326,7 @@ class PasswordStrengthService {;
     if (score >= 40) return 'weak',;
     return 'very-weak';
 
+<<<<<<< HEAD
 
 
   }
@@ -565,6 +586,10 @@ if ( {) {
 
     const entropy = this && this.calculateEntropy(password),
 
+=======
+  }  }
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const entropy = this && this.calculateEntropy(password),
 
@@ -573,6 +598,7 @@ if ( {) {
     const seconds = totalAttempts / attemptsPerSecond;
     if (seconds < 1) return 'Instantly';
 
+<<<<<<< HEAD
     if (seconds < 60) return `${Math.ceil(seconds)} seconds`;
     if (seconds < 3600) return `${Math.ceil(seconds / 60)} minutes`;
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
@@ -603,13 +629,21 @@ if ( {) {
     return `${Math && Math.ceil(seconds / 31536000)} years`
 
   }
+=======
+    if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
+    if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
+    return `${Math && Math.ceil(seconds / 31536000)} years`  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   /**
    * Generate feedback based on password analysis
    */
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
 
+<<<<<<< HEAD
     const feedback: string[] = [],
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (details && details.length < 8) {
       feedback && feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details && details.length < 12) {
@@ -642,6 +676,7 @@ if ( {) {
 
     if (details && details.hasRepeatingChars) {
       feedback && feedback.push('Avoid repeating character patterns')
+<<<<<<< HEAD
 
     }
     return feedback
@@ -653,10 +688,16 @@ if ( {) {
     return feedback
   }
   /**
+=======
+    }
+    return feedback
+  }  /**
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
 
+<<<<<<< HEAD
 
 
 
@@ -706,10 +747,16 @@ if ( {) {
 
     return suggestions
 
+=======
+    suggestions.push('Consider using a passphrase with random words');
+    suggestions.push('Use unique passwords for each account');
+    suggestions.push('Consider a password manager for secure storage');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   /**
    * Generate security warnings
    */
+<<<<<<< HEAD
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
 
     const warnings: string[] = [],
@@ -780,6 +827,9 @@ if ( {) {
     for (let i = 4, i < length, i++) {
 
       password += charset[Math.floor(Math.random() * charset.length)]
+=======
+  private generateWarnings(details: PasswordStrengthResult['details']): string[] {      password += charset[Math.floor(Math.random() * charset.length)]
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   /**;
    * Generate a strong password;
@@ -795,12 +845,17 @@ if ( {) {
     // Fill the rest randomly;
     for (let i = 4, i < length, i++) {;
       password += charset[Math.floor(Math.random() * charset.length)];
+<<<<<<< HEAD
       password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]
     }
+=======
+      password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
 
+<<<<<<< HEAD
 
 
 
@@ -846,12 +901,15 @@ if ( {) {
     this && this.commonPasswords.add(password && password.toLowerCase())
     this && this.commonPasswords.add(password && password.toLowerCase())
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   /**
    * Remove password from common list
    */
   removeCommonPassword(password: string): void {
     this && this.commonPasswords.delete(password && password.toLowerCase())
   }
+<<<<<<< HEAD
     this && this.commonPasswords.delete(password && password.toLowerCase())
   }
 
@@ -868,6 +926,8 @@ if ( {) {
       totalCommonPasswords: this && this.commonPasswords.size;
       totalCommonWords: this && this.commonWords.size,
       totalPatterns: this && this.patterns.length
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     }
   }
@@ -875,6 +935,7 @@ if ( {) {
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+<<<<<<< HEAD
 
 
 
@@ -1187,3 +1248,6 @@ export { PasswordStrengthService };
 export { PasswordStrengthService };
 export { PasswordStrengthService }
 ;
+=======
+export { PasswordStrengthService };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

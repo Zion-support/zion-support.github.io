@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 export interface Version {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   major: number;
   minor: number;
   patch: number;
@@ -16,7 +19,11 @@ export function parseVersion(versionString: string): Version {
   };
 }
 
+<<<<<<< HEAD
 }
+=======
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function nextVersionFor(
   state: MultiverseState,
   entityKey: string
@@ -24,6 +31,7 @@ export function nextVersionFor(
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
+<<<<<<< HEAD
 
 export function nextVersionFor(
   currentVersion: string,
@@ -72,3 +80,19 @@ export interface Version {
 };
 
 }
+=======
+// Versioning utilities;
+export const versioning = {
+  // Add versioning functionality here;
+  get_version: () => '1.0.0',
+  compare_versions: (v1: string, v2: string) => 0,
+  increment_version: (version: string) => version;
+}
+// Versioning utilities;
+export const versioning = {
+  // Add versioning functionality here;
+  get_version: () => '1.0.0',
+  compare_versions: (v1: string, v2: string) => 0,
+  increment_version: (version: string) => version;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

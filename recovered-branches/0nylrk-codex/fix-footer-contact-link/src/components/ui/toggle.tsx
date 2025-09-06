@@ -1,5 +1,6 @@
 
 import * as React from "react"
+<<<<<<< HEAD
 import * as TogglePrimitive from "@radix-ui/react-toggle"
 
 import { cva, type VariantProps } from "class-variance-authority"
@@ -23,16 +24,26 @@ const toggleVariants = cva(
 
         default: "bg-transparent"
         default: "bg-transparent",
+=======
+import * as TogglePrimitive from "@radix-ui/react-toggle"const toggleVariants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
+  {
+    variants: {
+      variant: {        default: "bg-transparent",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         outline:;
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"};
         outline:
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"}
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"},
+<<<<<<< HEAD
 
 
         default: "bg-transparent",
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -45,6 +56,7 @@ const toggleVariants = cva(
 type ToggleRef = React.ElementRef<typeof TogglePrimitive.Root>
 type ToggleProps = React.ComponentPropsWithoutRef<typeof TogglePrimitive.Root> &
   VariantProps<typeof toggleVariants>
+<<<<<<< HEAD
 
 import * as React from './react';
 import * as TogglePrimitive from "@radix - ui / react - toggle";
@@ -87,6 +99,8 @@ export { Toggle, toggleVariants };
 ;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
     <TogglePrimitive.Root
@@ -94,6 +108,7 @@ import * as React from "react";
 import * as TogglePrimitive from "@radix-ui/react-toggle";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 
 const toggleVariants = cva(;
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",;
@@ -119,6 +134,8 @@ type ToggleProps = React && React.ComponentPropsWithoutRef<typeof TogglePrimitiv
 const Toggle = React && React.forwardRef<ToggleRef, ToggleProps>(;
   ({ className, variant, size, ...props }, ref) => (;
     <TogglePrimitive&& TogglePrimitive.Root
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ref={ref}
       className={cn(toggleVariants({ variant, size, className }))}
       {...props}
@@ -129,6 +146,7 @@ const Toggle = React && React.forwardRef<ToggleRef, ToggleProps>(;
 Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayName;
 
 export { Toggle, toggleVariants }
+<<<<<<< HEAD
 
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
@@ -178,3 +196,5 @@ export { Toggle, toggleVariants }
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
 export { Toggle, toggle_variants }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

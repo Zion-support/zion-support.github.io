@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 // These would be replaced with actual screenshots
@@ -10,6 +11,8 @@
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,6 +31,7 @@ export const AppScreenshots: React.FC = () => {;
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null),
+<<<<<<< HEAD
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -70,6 +74,8 @@ export const AppScreenshots: React.FC = () => {;
           <div 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -82,6 +88,7 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
+<<<<<<< HEAD
 
                   className="w-full h-full object-cover"
                 />
@@ -89,11 +96,16 @@ export const AppScreenshots: React.FC = () => {;
             ))}
           </div>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -101,10 +113,14 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 
 
 },
+=======
+  )},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -125,6 +141,7 @@ export const AppScreenshots: React.FC = () => {;
         behavior: "smooth"});
     }
   };
+<<<<<<< HEAD
   return (;
 
     <section className="py-16 bg-zion-blue-dark">;
@@ -161,12 +178,18 @@ export const AppScreenshots: React.FC = () => {;
   }
   return (
                   className="w-full h-full object-cover"
+=======
+  return (;                  className="w-full h-full object-cover"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 />;
               </div>;
             ))}
 
           </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button
             variant="ghost" 
             size="icon" 
@@ -178,10 +201,15 @@ export const AppScreenshots: React.FC = () => {;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   );
 
 };
 import React, { useRef } from './react';
+=======
+  )
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
 // These would be replaced with actual screenshots;
@@ -207,11 +235,19 @@ if ( {) {
   }
 ;
   return (
+<<<<<<< HEAD
     <section className="py - 16 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">App Screenshots</h2>;
           <p className="text - lg text - gray - 300 max - w-2xl mx - auto">;
+=======
+    <section className="py - 16 bg - zion - blue-dark">;
+      <div className="container mx - auto px-4">;
+        <div className="text - center mb-12">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-4">App Screenshots</h2>;
+          <p className="text - lg text - gray - 300 max - w-2xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
@@ -219,6 +255,7 @@ if ( {) {
           <Button;
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
             className="absolute left - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
             on_click={() => scroll ("left")}
           >;
@@ -227,32 +264,58 @@ if ( {) {
           <div;
             ref={scrollContainerRef}
             className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap - mandatory";
+=======
+            className="absolute left - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text-white";
+            on_click={() => scroll ("left")}
+          >;
+            <ChevronLeft className="h - 6 w-6" />;
+          </Button>;
+          <div;
+            ref={scrollContainerRef}
+            className="flex overflow - x-auto gap - 4 py - 8 px - 4 scrollbar - hide snap - x snap-mandatory";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             style={{ scrollbar_width: "none", msOverflowStyle: "none" }}
           >;
             {mock_screenshots.map ((screenshot) => (
               <div;
                 key={screenshot.id}
+<<<<<<< HEAD
                 className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion - purple / 30";
+=======
+                className="flex - shrink - 0 w - 60 h-[500px] snap - center rounded - xl overflow - hidden border - 2 border - zion-purple / 30";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 <img;
                   src={screenshot.src}
                   alt={screenshot.alt}
+<<<<<<< HEAD
                   className="w - full h - full object - cover";
+=======
+                  className="w - full h - full object-cover";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 />;
               </div>))}
           </div>;
           <Button;
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
             className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text - white";
             on_click={() => scroll ("right")}
           >;
             <ChevronRight className="h - 6 w - 6" />;
+=======
+            className="absolute right - 0 top - 1/2 -translate - y-1 / 2 z - 10 bg - zion - blue - dark / 70 text-white";
+            on_click={() => scroll ("right")}
+          >;
+            <ChevronRight className="h - 6 w-6" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </div>;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 ;
           ;
           <div ;
@@ -303,5 +366,7 @@ Take a visual tour through the Zion app's intuitive interface. </p> </div> <div 
 };
 };
 };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };

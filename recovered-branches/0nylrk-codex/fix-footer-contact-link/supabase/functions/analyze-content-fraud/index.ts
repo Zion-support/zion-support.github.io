@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
 import {corsHeaders} from "../_shared/cors ;
@@ -23,12 +24,17 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
 
 
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
+import {corsHeaders} from "../_shared/cors ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+<<<<<<< HEAD
 interface AnalyzeRequest {
   content: string,
   contentType: string,
@@ -68,6 +74,12 @@ const initializeServices = () => {
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
     throw new Error("Missing required environment variables")
 
+=======
+  content: string,
+  contentType: string,
+  flagId?: string  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
+    throw new Error("Missing required environment variables")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     throw new Error("Missing required environment variables")
 ;
 
@@ -94,6 +106,7 @@ const initialize_services = () =>: any {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     throw new Error ("Missing required environment variables");
 
   }
@@ -196,6 +209,9 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   }
   if (!request.contentType) {
     throw new Error("No content type provided")
+=======
+    throw new Error ("Missing required environment variables");    throw new Error("No content type provided")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return request
 }
@@ -213,6 +229,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
 
+<<<<<<< HEAD
 
 },
 
@@ -224,12 +241,17 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
 
 
 },
+=======
+},
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
+<<<<<<< HEAD
 
 
         "Content-Type": "application/json",
@@ -244,12 +266,21 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
         model: "gpt-4o-mini",
         messages: [
 
+=======
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${openaiApiKey}`},
+
+      body: JSON.stringify({
+        model: "gpt-4o-mini"
+=======        messages: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
 
+<<<<<<< HEAD
 
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
@@ -263,6 +294,12 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       console.error("OpenAI API error:", data.error);
 
     const analysisText = data.choices[0]?.message?.content |"";
+=======
+          { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
+          { role: "user", content: prompt }
+        ],
+        temperature: 0.3,    const analysisText = data.choices[0]?.message?.content |"";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     const analysisText = data.choices[0]?.message?.content || "";
     console.log("OpenAI analysis result:", analysisText);
@@ -287,6 +324,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     let explanation = "No issues detected.";
     
     if (analysisText && analysisText.includes("SUSPICIOUS")) {
+<<<<<<< HEAD
 
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
@@ -452,6 +490,8 @@ serve(async (req) => {
     // Parse and validate request
   explanation: string
 ): Promise<void> => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!flagId) return
   const { error } = await supabase
     .from("fraud_flags")
@@ -468,6 +508,7 @@ serve(async (req) => {
   console && console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 };
 
+<<<<<<< HEAD
 
 
 
@@ -629,6 +670,11 @@ serve(async (req) => {;
     return new Response(JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
     })
+=======
+// Main request handler
+serve(async (req) => {
+  // Handle CORS preflight requests    })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
 
     console && console.error("Error analyzing content:", error);
@@ -639,6 +685,7 @@ serve(async (req) => {;
     return new Response(
       JSON && JSON.stringify({ 
         error: error && error.message || "An unexpected error occurred",
+<<<<<<< HEAD
 
         success: false});
       {
@@ -900,3 +947,9 @@ serve(_async (req) => {_// Handle CORS preflight requests
     );
   }
 });
+=======
+        success: false});
+      {
+        status: statusCode
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

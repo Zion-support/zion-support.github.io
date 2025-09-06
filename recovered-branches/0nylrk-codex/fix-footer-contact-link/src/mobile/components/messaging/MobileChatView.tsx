@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -10,6 +13,7 @@ import {Input} from "@/components/ui/input";
 import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 import {toast} from "sonner";
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -92,6 +96,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }
   };
 import React, { useState } from "react",;
+=======
+import {toast} from "sonner";  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -104,6 +114,7 @@ interface Message {;
   content: string,;
   timestamp: string,;
   isMe: boolean,;
+<<<<<<< HEAD
 
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -138,6 +149,8 @@ interface Message {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   sender?: string,;
   avatar?: string,;
   status?: 'sent' | 'delivered' | 'read';
@@ -155,26 +168,41 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 
+<<<<<<< HEAD
 
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
 
+=======
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface MobileChatViewProps {;
   contact: {;
     id: string,;
     name: string,;
     avatar?: string;
+<<<<<<< HEAD
     status?: string;
   };
+=======
+    status?: string
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   messages: Message[],;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
 
 export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+<<<<<<< HEAD
 
   const [newMessage, setNewMessage] = useState("");
 
@@ -210,11 +238,21 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
 
   const startVideoCall = () => {
+=======
+  const [newMessage, setNewMessage] = useState("");
+
+  const navigate = useNavigate();
+      onSendMessage(newMessage);      setNewMessage("");
+    }  const startVideoCall = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
@@ -230,12 +268,16 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
 
+<<<<<<< HEAD
 
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
@@ -311,6 +353,16 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <div className={cn(
 
                 "text-xs mt-1 flex justify-end";
+=======
+  const startAudioCall = () => {
+    const roomId = `mobile-audio-${contact.id}`,
+    toast.success("Starting audio call", {
+      description: `Connecting with ${contact.name}...`                  : "bg-muted rounded-tl-none"
+              )}
+            >
+              <p>{message.content}</p>
+              <div className={cn(                "text-xs mt-1 flex justify-end";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   },;
   const startVideoCall = () => {;
@@ -321,6 +373,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       onSendMessage(newMessage);
       setNewMessage("");
     }
+<<<<<<< HEAD
     status?: string;
   }
   messages: Message[],
@@ -431,6 +484,12 @@ if ( {) {
                   <span className="ml - 1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
 
+=======
+                {message.timestamp}
+                {message.is_me && message.status && (
+                  <span className="ml-1">;
+                    {message.status === 'read' ? '✓✓' : '✓'}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
@@ -440,6 +499,7 @@ if ( {) {
   };
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
+<<<<<<< HEAD
     toast && toast.success("Starting video call", {;
       description: `Connecting with ${contact && contact.name}...`;
     });
@@ -457,6 +517,24 @@ if ( {) {
 
   return (
   return (
+=======
+    toast && toast.success("Starting video call", {,
+  description: `Connecting with ${contact && contact.name}...`;
+    });
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`)
+};
+  const startAudioCall = () => {;
+    const roomId = `mobile-audio-${contact && contact.id}`;
+    toast && toast.success("Starting audio call", {,
+  description: `Connecting with ${contact && contact.name}...`;
+    });
+    // Navigate to video call page with audio-only flag;
+    navigate(`/call/${roomId}?audioOnly=true`)
+};
+
+  return (  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React, { useState } from "react",;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
@@ -507,8 +585,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
+<<<<<<< HEAD
     toast.success("Starting video call", {;
       description:`Connecting with ${contact.name}...`;
+=======
+    toast.success("Starting video call", {,
+  description:`Connecting with ${contact.name}...`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }),;
     ;
     // Navigate to video call page;
@@ -517,28 +600,44 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
   ;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
+<<<<<<< HEAD
     toast.success("Starting audio call", {;
       description:`Connecting with ${contact.name}...`;
+=======
+    toast.success("Starting audio call", {,
+  description:`Connecting with ${contact.name}...`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }),;
     ;
     // Navigate to video call page with audio-only flag;
     navigate(`/call/${roomId}?audioOnly=true`),;
   },;
   ;
+<<<<<<< HEAD
   return (;
       description: `Connecting with ${contact.name}...`;
+=======
+  return (,
+  description: `Connecting with ${contact.name}...`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }),;
     // Navigate to video call page;
     navigate(`/call/${roomId}`);
   },;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
+<<<<<<< HEAD
     toast.success("Starting audio call", {;
       description: `Connecting with ${contact.name}...`;
+=======
+    toast.success("Starting audio call", {,
+  description: `Connecting with ${contact.name}...`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }),;
     // Navigate to video call page with audio-only flag;
     navigate(`/call/${roomId}?audioOnly=true`);
   },;
+<<<<<<< HEAD
   return (;
     <div className="flex flex-col h-full pb-safe">;
       <header className="sticky top-0 z-10 bg-background border-b border-border">;
@@ -561,6 +660,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
           </div>;
 
           ;
+=======
+  return (;          ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="flex items-center flex-1 gap-3 mx-2">;
             <Avatar>;
               <AvatarImage src={contact.avatar} alt={contact.name} />;
@@ -572,6 +674,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                 {contact.status || "Online"}
               </p>;
             </div>;
+<<<<<<< HEAD
           </div>;
           <div className="flex">;
             <Button variant="ghost" size="icon" onClick={startAudioCall}>;
@@ -614,6 +717,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               )}>;
               )}>;
               <p>{message && message.content}</p>;
+=======
+          </div>;              )}>;              <p>{message && message.content}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
                 message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
@@ -622,6 +728,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                 {message && message.isMe && message && message.status && (;
                   <span className="ml-1">;
                     {message && message.status === 'read' ? '✓✓' : '✓'}
+<<<<<<< HEAD
                   </span>;
 
                   </span>;
@@ -637,19 +744,26 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
                 )}
+=======
+                  </span>;                )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>;
             </div>;
           </div>;
         ))}
 
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="sticky bottom-0 bg-background border-t border-border p-2">;
         <div className="flex items-center gap-2">;
           <Button variant="ghost" size="icon">;
             <PaperclipIcon className="h-5 w-5" />;
           </Button>;
 
+<<<<<<< HEAD
 
           <Input
             value={newMessage}
@@ -665,6 +779,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             onClick={handleSend}
             disabled={!newMessage && newMessage.trim()}
             className={!newMessage && newMessage.trim() ? "opacity-50" : ""}>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Send className="h-5 w-5" />;
           </Button>;
         </div>;
@@ -672,23 +788,37 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </span>)}
               </div>;
             </div>;
           </div>))}
       </div>;
+<<<<<<< HEAD
       <div className="sticky bottom - 0 bg - background border - t border - border p - 2">;
         <div className="flex items - center gap - 2">;
           <Button variant="ghost" size="icon">;
             <PaperclipIcon className="h - 5 w - 5" />;
+=======
+      <div className="sticky bottom - 0 bg - background border - t border - border p-2">;
+        <div className="flex items - center gap-2">;
+          <Button variant="ghost" size="icon">;
+            <PaperclipIcon className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
           <Input;
             value={new_message}
             on_change={(e) => setNewMessage (e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message...";
+<<<<<<< HEAD
             className="flex - 1";
+=======
+            className="flex-1";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           />;
           <Button;
             size="icon";
@@ -696,17 +826,24 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             disabled={!new_message.trim ()}
             className={!new_message.trim () ? "opacity - 50" : ""}
           >;
+<<<<<<< HEAD
             <Send className="h - 5 w - 5" />;
+=======
+            <Send className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 }
 ;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 
@@ -756,3 +893,7 @@ setNewMessage ("") contact.avatar
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

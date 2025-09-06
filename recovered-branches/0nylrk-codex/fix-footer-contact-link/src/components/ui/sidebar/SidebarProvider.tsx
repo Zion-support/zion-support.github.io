@@ -5,9 +5,12 @@ interface SidebarContextType {
   open: () => void;
   close: () => void;
 }
+<<<<<<< HEAD
 
 }
 const SidebarContext = create_context < SidebarContextType>({
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   is_open: true,
   toggle: () => {},
   open: () => {},
@@ -27,12 +30,20 @@ export function SidebarProvider({
 }: SidebarProviderProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
+<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(defaultOpen);
+=======
+export function SidebarProvider({ 
+  children, 
+  defaultOpen = true 
+}: SidebarProviderProps) {;  const [isOpen, setIsOpen] = useState(defaultOpen);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
       <div
         className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
@@ -138,3 +149,33 @@ return (<SidebarContext.Provider value= {
 }
 ;
 ;
+=======
+
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+
+import React, { createContext, useContext, useState } from "react",;
+
+interface SidebarContextType {;
+  isOpen: boolean,;
+  toggle: () => void,;
+  open: () => void,;
+  close: () => void;
+}
+const SidebarContext = createContext<SidebarContextType>({;
+  isOpen: true,;
+  toggle: () => {},;
+  open: () => {},;
+  close: () => {}}),;
+
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const toggle = () => setIsOpen(!isOpen);
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
+  return (;
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;        {children}
+      </div>
+    </SidebarContext.Provider>
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

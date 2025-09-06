@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 // Extend FeatureCardProps to include key for mapping
 declare module "@/components/FeatureCard" {
   export interface FeatureCardProps {
+<<<<<<< HEAD
     title: string;
     description: string;
     icon: ReactNode;
@@ -17,6 +18,13 @@ declare module "@/components/ListingScoreCard" {
   export interface ListingScoreCardProps {
     title: string;
     description: string;
+=======
+    title: string,
+  description: string;
+    icon: ReactNode;
+    title: string,
+  description: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: string;
     image?: string;
     tags?: string[];
@@ -24,6 +32,7 @@ declare module "@/components/ListingScoreCard" {
     author_image?: string;
     ai_score?: number;
     rating?: number;
+<<<<<<< HEAD
     reviewCount?: number;
     key?: string | number;
     variant?: string;
@@ -50,6 +59,10 @@ declare module "@/components/ProductListingCard" {
   }
 }
     author_image?: string;
+=======
+  }
+}    author_image?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ai_score?: number;
     rating?: number;
   }

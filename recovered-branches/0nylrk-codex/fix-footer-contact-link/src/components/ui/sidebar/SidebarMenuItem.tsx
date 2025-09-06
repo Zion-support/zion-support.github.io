@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
@@ -15,6 +16,30 @@ export function SidebarMenuItem({
       {children}
 
 
+=======
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string;
+  children?: React.ReactNode;
+  className?: string;
+  children?: React && React.ReactNode;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function SidebarMenuItem(): any ({ className, children, ...props }: SidebarMenuItemProps) {;
   return (
     <li
@@ -27,12 +52,16 @@ export function SidebarMenuItem(): any ({ className, children, ...props }: Sideb
 
     </li>);
 }
+<<<<<<< HEAD
     </li>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }
 ;
 
 }
+<<<<<<< HEAD
 export function SidebarMenuItem({
   className
   children
@@ -49,6 +78,8 @@ export function SidebarMenuItem({
 ;
   )
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     </li>);
 }

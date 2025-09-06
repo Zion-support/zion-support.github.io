@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
@@ -29,6 +33,11 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",serve(async (req) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
@@ -43,6 +52,7 @@ serve(async (req) => {
     const { 
       amount, 
 
+<<<<<<< HEAD
       serviceId = null;
       providerId = null;
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
@@ -92,6 +102,9 @@ if ( {) {
     } = requestData;
   ),
 
+=======
+      providerId = null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     // Retrieve the request body
     const requestData = await req.json(),
@@ -107,12 +120,16 @@ if ( {) {
     } = requestData,
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
+<<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
@@ -360,12 +377,22 @@ serve(async (req) => {;
 
 
     return new Response(JSON && JSON.stringify({ url: session && session.url }), {
+=======
+    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+      apiVersion: "2023-10-16"}),
+
+      metadata: {
+        userId: user && user.id;
+        serviceId: serviceId;
+        providerId: providerId;    return new Response(JSON && JSON.stringify({ url: session && session.url }), {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
     console && console.error("Checkout error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
+<<<<<<< HEAD
 
       status: 500})
   }
@@ -374,6 +401,8 @@ serve(async (req) => {;
               name: product_name,
               description: product_description;
             }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -420,6 +449,7 @@ if ( {) {
       status: 500})
 
   }
+<<<<<<< HEAD
 });
 ;
 
@@ -605,3 +635,6 @@ unit amount: amount * 100, //Convert to cents status: 500
       status: 500});
   }
 });
+=======
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

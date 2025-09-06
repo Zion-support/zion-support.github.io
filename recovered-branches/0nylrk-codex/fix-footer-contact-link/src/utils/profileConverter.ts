@@ -2,6 +2,7 @@
 
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 
 import { ProfileData } from "@/types/profile";
 import { TalentProfile } from "@/types/talent";
@@ -61,6 +62,12 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
     years_experience: 3, // Default value;
+=======
+import { ProfileData } from "@/types/profile";
+import { TalentProfile } from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",    years_experience: 3, // Default value;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
                       profile.availability?.status === 'limited' ? 'part_time' : 'unavailable';
@@ -69,10 +76,15 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
   }
+<<<<<<< HEAD
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 ;
 
+<<<<<<< HEAD
 
 
 import { ProfileData } from "@/types/profile",;
@@ -127,4 +139,6 @@ average rating: profile.rating || 0
 }
 ;
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -3,11 +3,16 @@
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
+<<<<<<< HEAD
 
 export function Footer() {
   return (
@@ -20,6 +25,10 @@ import { Link } from "react-router-dom",;
 export function Footer() {;
   return (;
   return (
+=======
+export function Footer() {
+  return (  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -67,8 +76,12 @@ export function Footer() {;
                 target="_blank"
                 rel="noopener noreferrer"
 
+<<<<<<< HEAD
                 className="text-zion-slate hover:text-zion-cyan transition-colors">;
                 <Github className="h-5 w-5" />;
+=======
+                className="text-zion-slate hover:text-zion-cyan transition-colors">;                <Github className="h-5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
             </div>;
           </div>;
@@ -79,7 +92,10 @@ export function Footer() {;
             </h3>;
             <ul className="space-y-2">;
               <li>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Link
                   to="/marketplace"
                   className="text-zion-slate hover:text-zion-cyan transition-colors">;
@@ -91,6 +107,7 @@ export /**
  */
 function Footer() {
   return (
+<<<<<<< HEAD
     <footer className="bg - zion - blue - dark border - t border - zion - blue - light pt - 12 pb - 8">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
@@ -105,49 +122,96 @@ function Footer() {
               artificial intelligence.;
             </p>;
             <div className="flex space - x-4">;
+=======
+    <footer className="bg - zion - blue - dark border - t border - zion - blue - light pt - 12 pb-8">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">;
+          <div>;
+            <div className="mb-4">;
+              <span className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text-transparent">;
+                ZION;
+              </span>;
+            </div>;
+            <p className="text - zion - slate mb - 4 max-w-xs">;
+              The world's first free marketplace dedicated to high - tech and;
+              artificial intelligence.;
+            </p>;
+            <div className="flex space-x-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <a;
                 href="https://twitter.com / lovable_dev";
                 target="_blank";
                 rel="noopener noreferrer";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan transition - colors";
               >;
                 <Twitter className="h - 5 w - 5" />;
+=======
+                className="text - zion - slate hover:text - zion - cyan transition-colors";
+              >;
+                <Twitter className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
               <a;
                 href="https://www.linkedin.com / company / zion - marketplace";
                 target="_blank";
                 rel="noopener noreferrer";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan transition - colors";
               >;
                 <Linkedin className="h - 5 w - 5" />;
+=======
+                className="text - zion - slate hover:text - zion - cyan transition-colors";
+              >;
+                <Linkedin className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
               <a;
                 href="https://www.facebook.com / zionmarketplace";
                 target="_blank";
                 rel="noopener noreferrer";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan transition - colors";
               >;
                 <Facebook className="h - 5 w - 5" />;
+=======
+                className="text - zion - slate hover:text - zion - cyan transition-colors";
+              >;
+                <Facebook className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
               <a;
                 href="https://instagram.com";
                 target="_blank";
                 rel="noopener noreferrer";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan transition - colors";
               >;
                 <Instagram className="h - 5 w - 5" />;
+=======
+                className="text - zion - slate hover:text - zion - cyan transition-colors";
+              >;
+                <Instagram className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
               <a;
                 href="https://github.com";
                 target="_blank";
                 rel="noopener noreferrer";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan transition - colors";
               >;
                 <Github className="h - 5 w - 5" />;
+=======
+                className="text - zion - slate hover:text - zion - cyan transition-colors";
+              >;
+                <Github className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </a>;
             </div>;
           </div>;
           <div>;
+<<<<<<< HEAD
             <h3 className="text - white font - semibold mb - 4 text - lg">;
               Marketplace;
             </h3>;
@@ -156,11 +220,22 @@ function Footer() {
                 <Link;
                   to="/marketplace";
                   className="text - zion - slate hover:text - zion - cyan transition - colors";
+=======
+            <h3 className="text - white font - semibold mb - 4 text-lg">;
+              Marketplace;
+            </h3>;
+            <ul className="space-y-2">;
+              <li>;
+                <Link;
+                  to="/marketplace";
+                  className="text - zion - slate hover:text - zion - cyan transition-colors";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 >;
                   Products;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 
                 <Link;
                   to="/services";
@@ -292,10 +367,19 @@ function Footer() {
               Stay updated with the latest news on tech, AI, and marketplace;
               opportunities.;
             </p>;
+=======
+                </Link>;
+              </li>;
+              <li>;                  Careers;
+                </Link>;
+              </li>;
+              <li>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <NewsletterForm />;
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <div className="mt - 12 pt - 8 border - t border - zion - blue - light">;
           <div className="flex flex - col md: flex - row justify - between items - center">;
             <p className="text - zion - slate text - sm">;
@@ -306,17 +390,37 @@ function Footer() {
               <Link;
                 to="/privacy";
                 className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
+=======
+        <div className="mt - 12 pt - 8 border - t border - zion - blue-light">;
+          <div className="flex flex - col md: flex - row justify - between items-center">;
+            <p className="text - zion - slate text-sm">;
+              &copy, {new Date ().getFullYear ()} Zion Tech Group. All rights;
+              reserved.;
+            </p>;
+            <div className="flex space - x-6 mt - 4 md: mt-0">;
+              <Link;
+                to="/privacy";
+                className="text - zion - slate hover:text - zion - cyan text - sm transition-colors";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 Privacy Policy;
               </Link>;
               <Link;
                 to="/terms";
+<<<<<<< HEAD
                 className="text - zion - slate hover:text - zion - cyan text - sm transition - colors";
               >;
 
                 Terms of Service;
               </Link>;
                 Terms of Service;
+=======
+                className="text - zion - slate hover:text - zion - cyan text - sm transition-colors";
+              >;
+
+                Terms of Service;
+              </Link>;                Terms of Service;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Link>;
             </div>;
           </div>;
@@ -399,6 +503,7 @@ export function Footer() {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
     </footer>;
   );
@@ -416,3 +521,7 @@ export function Footer() {;
     </footer>;
   );
 }
+=======
+    </footer>;
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

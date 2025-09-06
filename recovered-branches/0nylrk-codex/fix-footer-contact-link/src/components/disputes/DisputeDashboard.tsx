@@ -7,6 +7,7 @@ import {;
   CardHeader,;
   CardTitle,;
 
+<<<<<<< HEAD
 
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -77,6 +78,14 @@ export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes(),
 
   useEffect(() => {
+=======
+import { useDisputes } from "@/hooks/useDisputes";
+import { DisputesList } from "./DisputesList";
+import {} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     refetch()
   }, [refetch]),
 
@@ -84,6 +93,7 @@ export function DisputeDashboard() {
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
 
+<<<<<<< HEAD
 
 
   return (
@@ -101,6 +111,12 @@ export function DisputeDashboard() {
         </div>
         
 } from "@/components/ui/card";
+=======
+  return (
+
+        
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
         <Button onClick={refetch} variant="outline">
@@ -108,6 +124,7 @@ import { ShieldAlert } from "lucide-react";
         </Button>
       </div>
 
+<<<<<<< HEAD
 
       
 
@@ -117,6 +134,10 @@ import { ShieldAlert } from "lucide-react";
 
       
       
+=======
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -126,6 +147,7 @@ import { ShieldAlert } from "lucide-react";
             </CardTitle>
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent>
 
     <div className="container mx-auto p-4 space-y-6">;
@@ -436,6 +458,17 @@ function DisputeDashboard() {
               ></div>;
 
             </div>;
+=======
+          <CardContent>        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg font-medium flex justify-between items-center">
+              <span>Under Review</span>
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+            </CardTitle>
+            <CardDescription>Being actively processed</CardDescription>
+          </CardHeader>
+          <CardContent>            </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </CardContent>;
         </Card>;
       </div>;
@@ -444,6 +477,7 @@ function DisputeDashboard() {
     </div>);
 
 }
+<<<<<<< HEAD
 }
 ;
 
@@ -478,3 +512,5 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 }
 ;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

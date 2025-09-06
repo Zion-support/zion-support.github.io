@@ -27,6 +27,7 @@ interface ContractBuilderProps {;
 
 export function ContractBuilder(): any ({;
 
+<<<<<<< HEAD
 export function ContractBuilder({;
   isOpen;
   onClose;
@@ -121,6 +122,13 @@ if ( {) {
 }
 
 
+=======
+export function ContractBuilder({;export function ContractBuilder({;
+  isOpen;
+  onClose;
+  talent;
+  clientName;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   onContractGenerated
 }: ContractBuilderProps) {
@@ -129,6 +137,7 @@ if ( {) {
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+<<<<<<< HEAD
 
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
@@ -150,6 +159,29 @@ if ( {) {
           onClose(),;
         }}
         talent={talent}
+=======
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData)
+  }
+  const handleContractGenerated = (contract: string) => {
+    setGeneratedContract(contract);
+    setActiveTab("preview")
+    if (onContractGenerated) {
+      onContractGenerated(contract)
+    }
+  }
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);
+
+          onClose()
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         client_name={client_name}
         onContractGenerated={onContractGenerated}
 
@@ -157,11 +189,14 @@ if ( {) {
     )
   }
 
+<<<<<<< HEAD
 
 
 
   return (
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -174,15 +209,22 @@ if ( {) {
             <div className="flex gap-2">;
               <Button
                 variant="outline" 
+<<<<<<< HEAD
                 size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
+=======
+                size="sm"                onClick={() => setTemplateManagerOpen(true)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
                 Templates;
               </Button>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",;
 import { Dialog, DialogContent } from "@/components/ui/dialog",;
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
@@ -235,6 +277,7 @@ export function ContractBuilder({;
         }}
         talent={talent}
         client_name={client_name}
+<<<<<<< HEAD
         onContractGenerated={onContractGenerated}
       />
     )
@@ -300,6 +343,11 @@ export function ContractBuilder({;
             <ContractForm;
 
               talent={talent}
+=======
+        onContractGenerated={onContractGenerated}                variant="secondary"
+                size="sm"
+                onClick={() => setShowSmartContractBuilder(true)}              talent={talent}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
@@ -309,6 +357,7 @@ export function ContractBuilder({;
           </TabsContent>;
 
           <TabsContent value="preview" className="pt-4">;
+<<<<<<< HEAD
             {generatedContract && (;
 
               <ContractPreview
@@ -324,6 +373,9 @@ export function ContractBuilder({;
 
 
         <TemplateManager
+=======
+            {generatedContract && (;        <TemplateManager
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
@@ -333,6 +385,7 @@ export function ContractBuilder({;
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 
             />;
@@ -358,6 +411,9 @@ export function ContractBuilder({;
 }
 
   ),; interface ContractBuilderProps {
+=======
+}  ),; interface ContractBuilderProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isOpen: boolean;
 onClose: () => void;
 talent: TalentProfile;
@@ -380,7 +436,10 @@ const handleContractGenerated = (contract: string) => {
   if (onContractGenerated) {
   onContractGenerated (contract) 
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 return (<SmartContractBuilder isOpen= {
@@ -418,3 +477,7 @@ return (<SmartContractBuilder isOpen= {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

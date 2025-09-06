@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -7,10 +8,13 @@ import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
@@ -26,6 +30,8 @@ export const useUploadDeliverable = () => {
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
     
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -44,6 +50,7 @@ export const useUploadDeliverable = () => {
       
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
       
+<<<<<<< HEAD
 
       const { error } = await supabase
         .from('project_milestones')
@@ -394,3 +401,8 @@ isSubmitting
 };
   }
 };
+=======
+      // Create activity record
+      await recordMilestoneActivity(
+      return null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

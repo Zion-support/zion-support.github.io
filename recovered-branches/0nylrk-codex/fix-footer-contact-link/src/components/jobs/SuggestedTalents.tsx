@@ -8,7 +8,10 @@ interface SuggestedTalentsProps {
   jobTitle?: string
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
@@ -20,10 +23,15 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
 
+<<<<<<< HEAD
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
   const [talents, setTalents] = useState([]);
+=======
+export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -33,6 +41,7 @@ export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsPr
       const { data, error } = await supabase;
         .from("suggested_talents");
         .select(;
+<<<<<<< HEAD
           `;
 
   const fetchSuggestedTalents = async () => {
@@ -82,6 +91,9 @@ function SuggestedTalents() {
           *;
           talent_profile: talent_id(
             id;
+=======
+          `;            id;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             user_id;
             full_name;
             professional_title;
@@ -92,6 +104,7 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
+<<<<<<< HEAD
 
             category,;
             company_name;
@@ -102,10 +115,13 @@ function SuggestedTalents() {
         .eq("job_id", jobId);
       if (error) throw error;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setTalents(data || []);
     } catch (error) {;
       console && console.error("Error fetching suggested talents:", error);
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description:;
           "Failed to load suggested talents. Please try again later.",;
@@ -133,6 +149,12 @@ interface SuggestedTalentsProps {
       const { data, error } = await supabase
         .from("suggested_talents")
 
+=======
+        title: "Error",,
+  description:;
+          "Failed to load suggested talents. Please try again later.",;
+        variant: "destructive",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .select(`
           *,
           talent_profile:talent_id(
@@ -159,7 +181,10 @@ interface SuggestedTalentsProps {
     } catch (error) {
       console.error("Error fetching suggested talents:", error),
       toast({
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
@@ -170,12 +195,16 @@ interface SuggestedTalentsProps {
 
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
     toast({
 
+<<<<<<< HEAD
 
 
         title: "Error",
@@ -347,20 +376,34 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       skills: talent.talent_profile?.skills || []}
   }),
   };
+=======
+  const handleViewProfile = (talentId: string) => {
+    // Implement logic to view talent profile
+    // // // console.log("View talent profile:", talentId),
+    toast({  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleViewProfile = (talentId: string) => {;
     // Implement logic to view talent profile;
     console && console.log("View talent profile:", talentId);
     toast({;
+<<<<<<< HEAD
       title: "View Profile",;
       description: `Navigating to talent profile: ${talentId}`,;
     });
   };
+=======
+      title: "View Profile",,
+  description: `Navigating to talent profile: ${talentId}`,;
+    })
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleInvite = (talentId: string) => {;
     // Implement logic to invite talent;
     console && console.log("Invite talent:", talentId);
     toast({;
+<<<<<<< HEAD
       title: "Invite Talent",;
       description: `Inviting talent: ${talentId}`,;
     });
@@ -531,13 +574,32 @@ interface SuggestedTalentsProps {;
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
         </CardTitle>;
+=======
+      title: "Invite Talent",,
+  description: `Inviting talent: ${talentId}`,;
+    })
+};
+
+  const handleRefresh = () => {;
+    setIsProcessing(true);
+    fetchSuggestedTalents().finally(() => {;
+      setIsProcessing(false);
+    });      <CardContent className="pt-6">
+        {isLoading ? (
+          <div>Loading suggested talents...</div>
+        ) : talents.length === 0 ? (
+  return (        </CardTitle>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </CardHeader>;
 
       <CardContent className="pt-6">;
         {isLoading ? (;
           <div>Loading suggested talents...</div>;
         ) : talents && talents.length === 0 ? (;
+<<<<<<< HEAD
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <EmptyMatchesCard
             onRefresh={handleRefresh}
             isProcessing={isProcessing}
@@ -567,20 +629,32 @@ interface SuggestedTalentsProps {;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
     <Card className="border - zion - blue - light bg - zion - blue">;
+=======
+    <Card className="border - zion - blue - light bg - zion-blue">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <CardTitle>;
           {job_title ? `Talents for ${job_title}` : "Suggested Talents"}
         </CardTitle>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent className="pt - 6">;
+=======
+      <CardContent className="pt-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {is_loading ? (
           <div > Loading suggested talents...</div>) : talents.length === 0 ? (
           <EmptyMatchesCard;
             on_refresh={handle_refresh}
             is_processing={is_processing}
           />) : (
+<<<<<<< HEAD
           <div className="space - y-4">;
+=======
+          <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {transformed_talents.map ((talent) => (
               <JobMatchCard;
                 key={talent.id}
@@ -594,13 +668,17 @@ interface SuggestedTalentsProps {;
                 category={talent.category}
                 match_percent={talent.match_percent}
                 skills={talent.skills}
+<<<<<<< HEAD
 
                 onApply={() => handleViewProfile(talent.id)}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onViewDetails={() => handleViewProfile(talent.id)}
                 onInvite={() => handleInvite(talent.id)}
               />
             ))}
           </div>
+<<<<<<< HEAD
         )}
 
                 match_percent={talent.match_percent}
@@ -693,3 +771,6 @@ const handleViewProfile = (talentId: string) => {
 }</div>) 
 }</CardContent> </Card>) 
 }
+=======
+        )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

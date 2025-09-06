@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import {formatDistanceToNow} from "date-fns";
@@ -12,6 +13,8 @@ import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
 import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -23,6 +26,7 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
 import { ForumPost } from "@/types/community",
+<<<<<<< HEAD
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
 interface PostCardProps {
 
@@ -38,6 +42,9 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 
 
       post.isFeatured && "bg-zion-purple/5"
+=======
+import { ProfileBadge } from "@/components/profile/ProfileBadge",      post.isFeatured && "bg-zion-purple/5"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
         <Avatar className="h-10 w-10">
@@ -50,6 +57,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
               {post.title}
             </Link>
             {post.isAnswered && (
+<<<<<<< HEAD
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
             )}
             {post && post.isPinned && (;
@@ -121,6 +129,9 @@ export const PostCard = ({ post, compact = false } PostCardProps) => {;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
+=======
+              <CheckCircle className="h-4 w-4 text-green-500 ml-2" />import { Link } from "react-router-dom",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -169,6 +180,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
 
+<<<<<<< HEAD
 
                 {tag}
               </Badge>
@@ -339,6 +351,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) =>: any {
 ;
 export default PostCard;
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),;
 },;
 ;
@@ -398,9 +412,16 @@ export default PostCard;
 
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   );
 };
 export default PostCard;
 
 
+=======
+  )
+};
+export default PostCard;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default PostCard;

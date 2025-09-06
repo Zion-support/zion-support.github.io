@@ -157,3 +157,8 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
 
+<<<<<<< HEAD
+=======
+  console.error(" AI Code Optimizer "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

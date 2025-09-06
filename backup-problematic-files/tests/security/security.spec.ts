@@ -1,7 +1,7 @@
 // Security.spec utility
 export const Security.spec = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 interface Security.specProps {

@@ -8,6 +8,7 @@ interface FraudDetectionMiddlewareProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -28,6 +29,10 @@ interface FraudDetectionMiddlewareProps {;
 
 
 }
+=======
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 // Interface for the context;
 interface FraudDetectionContextType {;
@@ -41,7 +46,10 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     userId: string
     messageId: string
     content: string
@@ -56,6 +64,7 @@ interface FraudDetectionContextType {;
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
 
+<<<<<<< HEAD
 export const FraudDetectionContext = React.createContext(
 
 
@@ -63,6 +72,9 @@ export const FraudDetectionContext = React.createContext(
 
 
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+=======
+export const FraudDetectionContext = React.createContext(export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
     userId: string
@@ -72,6 +84,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
 
+<<<<<<< HEAD
 
       // First do a quick local check using the fraud detection service
 
@@ -126,12 +139,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         // Flag the content for review;
         await monitorContent(;
 
+=======
+      // First do a quick local check using the fraud detection service
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           userId;
           userEmail;
           'message';
           messageId;
           content;
         );
+<<<<<<< HEAD
 
           userId,
           userEmail,
@@ -239,6 +256,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           toast({;
             title: "Message Flagged",;
             description: "Your message contains content that may violate our terms of service.",;
+=======
+        // If it's dangerous, show a warning to the user;
+        if (quickCheck && quickCheck.severity === 'dangerous') {;
+          toast({;
+            title: "Message Flagged",,
+  description: "Your message contains content that may violate our terms of service.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: "destructive",;
             duration: 5000;
           });
@@ -264,8 +288,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       if (data && data.classification === 'dangerous') {;
         toast({;
+<<<<<<< HEAD
           title: "Message Blocked",;
           description: data && data.explanation || "This message contains prohibited content.",;
+=======
+          title: "Message Blocked",,
+  description: data && data.explanation || "This message contains prohibited content.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive";
         });
         return { ;
@@ -275,6 +304,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       */;
       return { isSafe: true }
+<<<<<<< HEAD
 
 
   // Create the context value;
@@ -288,6 +318,8 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
     } catch (error) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
@@ -300,7 +332,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     <FraudDetectionContext.Provider value={contextValue}>;
       {children}
     </FraudDetectionContext.Provider>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -311,12 +346,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
     </FraudDetectionContext && FraudDetectionContext.Provider>;
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 // Hook to use the fraud detection context;
 export const useFraudDetection = () => {;
   const context = React && React.useContext(FraudDetectionContext);
+<<<<<<< HEAD
   if (context === undefined) {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
@@ -599,4 +639,9 @@ explanation: data.explanation
 };
 // Hook to use the fraud detection context 
 };
+=======
+    throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
+  }
+  return context
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };

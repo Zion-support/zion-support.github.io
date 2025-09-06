@@ -12,8 +12,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 import { format } from "date-fns";
 interface QuoteDetailsProps {
+=======
+import React from "react",
+import { 
+  Dialog,
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+import { format } from "date-fns",interface QuoteDetailsProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void;
@@ -113,8 +131,11 @@ if (return "Not specified") {
       return format (new Date (date_string), "PPP");
     } catch (e) {
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -196,7 +217,11 @@ if (return "Not specified") {
         </div>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
       return date_string;
@@ -205,9 +230,15 @@ if (return "Not specified") {
 ;
   return (
     <Dialog open={is_open} onOpenChange={(open) => !open && on_close ()}>;
+<<<<<<< HEAD
       <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
           <DialogTitle className="text - 2xl flex items - center justify - between">;
+=======
+      <DialogContent className="max - w-3xl max - h-[90vh] overflow-y-auto">;
+        <DialogHeader>;
+          <DialogTitle className="text - 2xl flex items - center justify-between">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <span>{quote.project_name}</span>;
             <QuoteStatusBadge status={quote.status} />;
           </DialogTitle>;
@@ -215,6 +246,7 @@ if (return "Not specified") {
             Quote request submitted on {format_date (quote.created_at)}
           </DialogDescription>;
         </DialogHeader>;
+<<<<<<< HEAD
         <Separator className="my - 4" />;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
           <Card>;
@@ -229,12 +261,29 @@ if (return "Not specified") {
                 </div>;
                 <div className="flex items - center gap - 2">;
                   <Mail className="h - 4 w - 4 text - gray - 500" />;
+=======
+        <Separator className="my-4" />;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+          <Card>;
+            <CardContent className="pt-6">;
+              <h3 className="text - lg font - medium mb-3">;
+                Requester Information;
+              </h3>;
+              <div className="space-y-2">;
+                <div className="flex items - center gap-2">;
+                  <User className="h - 4 w - 4 text - gray-500" />;
+                  <span>{quote.requester_name}</span>;
+                </div>;
+                <div className="flex items - center gap-2">;
+                  <Mail className="h - 4 w - 4 text - gray-500" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <span>{quote.requester_email}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
           <Card>;
+<<<<<<< HEAD
             <CardContent className="pt - 6">;
               <h3 className="text - lg font - medium mb - 3">Project Timeline</h3>;
               <div className="space - y-2">;
@@ -244,12 +293,24 @@ if (return "Not specified") {
                 </div>;
                 <div className="flex items - center gap - 2">;
                   <Clock className="h - 4 w - 4 text - gray - 500" />;
+=======
+            <CardContent className="pt-6">;
+              <h3 className="text - lg font - medium mb-3">Project Timeline</h3>;
+              <div className="space-y-2">;
+                <div className="flex items - center gap-2">;
+                  <Calendar className="h - 4 w - 4 text - gray-500" />;
+                  <span > Start date: {format_date (quote.start_date)}</span>;
+                </div>;
+                <div className="flex items - center gap-2">;
+                  <Clock className="h - 4 w - 4 text - gray-500" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <span > Timeline: {quote.timeline}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
         <Card className="mt - 6">;
           <CardContent className="pt - 6">;
             <h3 className="text - lg font - medium mb - 3">Project Details</h3>;
@@ -262,6 +323,20 @@ if (return "Not specified") {
             <div className="mt - 6 flex items - center gap - 2">;
               <DollarSign className="h - 4 w - 4 text - gray - 500" />;
               <span className="font - medium">Budget: </span>;
+=======
+        <Card className="mt-6">;
+          <CardContent className="pt-6">;
+            <h3 className="text - lg font - medium mb-3">Project Details</h3>;
+            <p className="mb-4">{quote.project_summary}</p>;
+            {quote.project_description && (
+              <>;
+                <h4 className="font - medium mt-4">Additional Details</h4>;
+                <p>{quote.project_description}</p>;
+              </>)}
+            <div className="mt - 6 flex items - center gap-2">;
+              <DollarSign className="h - 4 w - 4 text - gray-500" />;
+              <span className="font-medium">Budget: </span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {quote.budget_display ||;
                 (quote.budget_min && quote.budget_max;
                   ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -271,7 +346,11 @@ if (return "Not specified") {
             </div>;
           </CardContent>;
         </Card>;
+<<<<<<< HEAD
         <div className="mt - 6 flex justify - end">;
+=======
+        <div className="mt - 6 flex justify-end">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button on_click={on_close}>Close</Button>;
         </div>;
       </DialogContent>;

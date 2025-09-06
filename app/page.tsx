@@ -1,38 +1,32 @@
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
-  description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services. 500+ services including AI automation, blockchain solutions, and cloud infrastructure.',
-  keywords: 'AI solutions, micro SaaS, IT services, enterprise software, blockchain, cloud computing, automation, machine learning, software development',
-  authors: [{ name: 'Zion Tech Group' }],
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services. Transform your business with cutting-edge technology.',
+  keywords: 'AI services, micro SaaS, IT services, automation, technology solutions, business transformation',
   openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Zion Tech Group',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.',
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services.',
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+  },
+  alternates: {
+    canonical: 'https://ziontechgroup.com',
   },
 };
 
+<<<<<<< HEAD
 interface CardProps {
   title: string;
   href: string;
@@ -100,6 +94,8 @@ function Card({ title, href, description, bullets, icon }: CardProps) {
   );
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function HomePage() {
   return (
 <<<<<<< HEAD
@@ -109,11 +105,12 @@ export default function HomePage() {
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           Zion Tech Group
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with
-          our comprehensive suite of intelligent services.
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Leading provider of AI-powered solutions, micro SaaS platforms, and comprehensive IT services. 
+          Transform your business with cutting-edge technology.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
           <Link
             href="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -153,12 +150,24 @@ export default function HomePage() {
             href="/services"
             className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors"
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          <Link 
+            href="/services" 
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Visit Main Site
-          </a>
+            Explore Services
+          </Link>
+          <Link 
+            href="/contact" 
+            className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          >
+            Get Started
+          </Link>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Featured Services */}
       <section className="py-12" role="main" aria-labelledby="services-heading">
@@ -253,40 +262,41 @@ export default function HomePage() {
             </h3>
             <p className="text-gray-600">
               Rapid development and deployment with agile methodologies
+=======
+      {/* Services Overview */}
+      <section className="py-16" role="region" aria-labelledby="services-heading">
+        <h2 id="services-heading" className="text-3xl font-bold text-center mb-12">
+          Our Services
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
+            <p className="text-gray-600 mb-4">
+              Harness the power of artificial intelligence to automate processes, 
+              gain insights, and drive innovation.
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </p>
+            <Link href="/services/ai" className="text-blue-600 hover:underline">
+              Learn More →
+            </Link>
           </div>
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🔒</span>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Secure & Reliable
-            </h3>
-            <p className="text-gray-600">
-              Enterprise-grade security and 99.9% uptime guarantee
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Micro SaaS</h3>
+            <p className="text-gray-600 mb-4">
+              Scalable software-as-a-service solutions tailored to your specific 
+              business needs and requirements.
             </p>
+            <Link href="/services/micro-saas" className="text-blue-600 hover:underline">
+              Learn More →
+            </Link>
           </div>
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🎯</span>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Custom Solutions
-            </h3>
-            <p className="text-gray-600">
-              Tailored solutions that fit your specific business needs
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Services</h3>
+            <p className="text-gray-600 mb-4">
+              Comprehensive IT support, infrastructure management, and technology 
+              consulting services.
             </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📞</span>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              24/7 Support
-            </h3>
-            <p className="text-gray-600">
-              Round-the-clock technical support and maintenance
-            </p>
+<<<<<<< HEAD
 =======
       {/* Services Section */}
       <section className="py-16 bg-gray-50">
@@ -385,11 +395,17 @@ export default function HomePage() {
               ]}
             />
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+            <Link href="/services/it" className="text-blue-600 hover:underline">
+              Learn More →
+            </Link>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="text-center py-16" role="complementary" aria-labelledby="cta-heading">
         <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
@@ -399,13 +415,18 @@ export default function HomePage() {
           Let&apos;s discuss your project and create a custom solution that drives
           real business value. Our team has delivered 1000+ successful
           projects across various industries.
+=======
+      <section className="bg-gray-900 text-white py-16 rounded-lg text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Let's discuss how our AI, micro SaaS, and IT services can help you achieve your goals.
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Contact us to get started with your project"
+        <Link 
+          href="/contact" 
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block"
         >
-          Get Started Today
+          Contact Us Today
         </Link>
 =======
       <section className="py-16 bg-blue-600">
@@ -425,13 +446,6 @@ export default function HomePage() {
         </div>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       </section>
-=======
-export default function Home() {
-  return (
-    <div>
-      <h1>Zion Tech Group</h1>
-      <p>AI, Micro SaaS, and IT Services</p>
->>>>>>> 8fd25f885ef5f7c479ebfaa3c8ff4946200161f8
     </div>
-  )
+  );
 }

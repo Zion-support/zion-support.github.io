@@ -8,6 +8,7 @@ import {
   TableHeader
   TableRow
 } from "./ui/table";
+<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -33,6 +34,8 @@ import {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -41,6 +44,7 @@ import {
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
                   <TableHead className="text-white">Service</TableHead>
+<<<<<<< HEAD
                   <TableHead className="text-white text-center">
                     Traditional Providers
                   </TableHead>
@@ -52,6 +56,12 @@ import {
                   </TableHead>
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
+=======
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
+                  <TableHead className="text-white text-center">With Zion</TableHead>
+                  <TableHead className="text-white text-center">Savings</TableHead>                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
+                  <TableHead className="text-white text-center">With Zion</TableHead>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <TableHead className="text-white text-center">Savings</TableHead>
                 </TableRow>
               </TableHeader>
@@ -74,15 +84,24 @@ export /**
  */
 function ComparisonSection() {
   return (
+<<<<<<< HEAD
     <section className="py - 20 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="text - center mb - 12">;
           <GradientHeading > Compare & Save</GradientHeading>;
           <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto">;
+=======
+    <section className="py - 20 bg - zion - blue-dark">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+        <div className="text - center mb-12">;
+          <GradientHeading > Compare & Save</GradientHeading>;
+          <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             See how Zion can drastically reduce your IT costs compared to;
             traditional providers;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="max - w-4xl mx - auto">;
           <div className="bg - zion - blue - light rounded - lg border border - zion - purple / 20 overflow - hidden">;
             <Table>;
@@ -96,6 +115,21 @@ function ComparisonSection() {
                     With Zion;
                   </TableHead>;
                   <TableHead className="text - white text - center">;
+=======
+        <div className="max - w-4xl mx-auto">;
+          <div className="bg - zion - blue - light rounded - lg border border - zion - purple / 20 overflow-hidden">;
+            <Table>;
+              <TableHeader>;
+                <TableRow className="border - b border - zion-purple / 20">;
+                  <TableHead className="text-white">Service</TableHead>;
+                  <TableHead className="text - white text-center">;
+                    Traditional Providers;
+                  </TableHead>;
+                  <TableHead className="text - white text-center">;
+                    With Zion;
+                  </TableHead>;
+                  <TableHead className="text - white text-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Savings;
                   </TableHead>;
                 </TableRow>;
@@ -107,6 +141,7 @@ function ComparisonSection() {
                     traditional: "$1, 200 / mo",
                     zion: "$650 / mo",
                     savings: "45%",
+<<<<<<< HEAD
                   },
 
                   {
@@ -164,19 +199,39 @@ function ComparisonSection() {
 
             
             
+=======
+                  },                      {item.service}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - slate-light">;
+                      {item.traditional}
+                    </TableCell>;
+                    <TableCell className="text - center text - zion - cyan font-semibold">;
+                      {item.zion}
+                    </TableCell>;
+                    <TableCell className="text - center text - green - 400 font-bold">;
+                      {item.savings}
+
+            
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
 
   );
+=======
+      </div>  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
+<<<<<<< HEAD
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 
 import { GradientHeading } from "./GradientHeading";
@@ -204,6 +259,9 @@ export function ComparisonSection() {;
         </div>;
 
         <div className="max-w-4xl mx-auto">;
+=======
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
             <Table>;
               <TableHeader>;
@@ -217,6 +275,7 @@ export function ComparisonSection() {;
                   </TableHead>;
                   <TableHead className="text-white text-center">;
                     Savings;
+<<<<<<< HEAD
                   </TableHead>;
                 </TableRow>;
               </TableHeader>;
@@ -290,10 +349,24 @@ export function ComparisonSection() {;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
 
               Calculate Your Savings;
+=======
+                  </TableHead>;                </TableRow>;
+              </TableHeader>;
+              <TableBody>;
+                {[;          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
+            <div className="flex items-start">;
+              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
+              <p className="text-white">;                  Results may vary based on specific requirements and service;
+                  levels;
+                </span>;
+              </p>;
+            </div>;              Calculate Your Savings;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
     </section>
@@ -318,5 +391,16 @@ export function ComparisonSection() {;
 }
 ;
   );
+=======
+  );
+}
+;
+    </section>
+
+    </section>;
+  );
+    </section>);
+}  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;

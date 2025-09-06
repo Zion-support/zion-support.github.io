@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { Star, Flag, User } from "lucide-react";
@@ -7,6 +8,34 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
+=======
+interface ReviewCardProps {
+  review: Review;
+  onReport: (reviewId: string, reason: string) => Promise<boolean>
+}
+
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+import {  Dialog,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -52,9 +81,14 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         ))}
 
       </div>
+<<<<<<< HEAD
     );
   };
 
+=======
+    )
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const renderStars = (rating?: number) => {
     if (!rating) return null;
 
@@ -69,6 +103,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
       </div>
     )
   },
+<<<<<<< HEAD
   
   const getInitials = (name: string) => {
     return name
@@ -81,6 +116,9 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
   return (
     <div className="border rounded-lg p-4 bg-card">
+=======
+      <div className="border rounded-lg p-4 bg-card">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
@@ -98,10 +136,13 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
                 />
               ) : (
                 <AvatarFallback>
+<<<<<<< HEAD
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
                 </AvatarFallback>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               )}
             </Avatar>;
           )}
@@ -110,6 +151,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
+<<<<<<< HEAD
                 : review.reviewer_profile?.display_name || "User"}
             </div>
             <div className="text-sm text-muted-foreground">
@@ -121,6 +163,10 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         </div>
 
         <div className="flex">{renderStars(review.rating)}</div>
+=======
+          {renderStars(review.rating)}
+        </div>        <div className="flex">{renderStars(review.rating)}</div>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>
 
       <div className="mb-4">
@@ -142,6 +188,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
+<<<<<<< HEAD
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -171,6 +218,10 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 
+=======
+          <div className="flex flex-wrap gap-2">
+            {review.communication_rating && (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">
@@ -320,6 +371,7 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
 
             )}
 
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -327,6 +379,12 @@ export function ReviewCard(): any ({ review, onReport }: ReviewCardProps) {;
         </div>;
 
 
+=======
+          </div>;
+        </div>;
+        </div>;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
 
       <div className="mt-3 flex justify-end">
@@ -429,6 +487,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 }
 }
 ;
+<<<<<<< HEAD
 
   );
 }
@@ -439,3 +498,7 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
 ;
 ;
 
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

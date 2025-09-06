@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
@@ -13,11 +14,17 @@ import { cn } from "@/lib/utils"
 
 const ToastProvider = ToastPrimitives.Provider
 
+=======
+import { cn } from "@/lib/utils"
+
+const ToastProvider = ToastPrimitives.Provider
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
 ></typeof>(({ className, ...props }, ref) => (
   <ToastPrimitives.Viewport
+<<<<<<< HEAD
 
 const ToastProvider = ToastPrimitives && ToastPrimitives.Provider;
 
@@ -68,6 +75,8 @@ const ToastViewport = React.forwardRef<
     {...props}
   />
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ))
 ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
@@ -84,14 +93,18 @@ const toastVariants = cva(
       variant: "default"}}
 )
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
     VariantProps<typeof toastVa</typeof>riants>
 >(({ className, variant, ...props }, ref) => {
 
+<<<<<<< HEAD
 
   
 
@@ -104,6 +117,14 @@ const Toast = React.forwardRef<
 
 
     />
+=======
+  
+
+    VariantProps<typeof toastVariants>
+>(({ className, variant, ...props }, ref) => {
+
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 });
 Toast.displayName = ToastPrimitives.Root.displayName;
@@ -112,8 +133,11 @@ const ToastAction = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPr</typeof>imitives.Action>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Action
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ToastViewport && ToastViewport.displayName = ToastPrimitives && ToastPrimitives.Viewport.displayName;
 
 const toastVariants = cva(;
@@ -139,7 +163,10 @@ const Toast = React && React.forwardRef<;
     VariantProps<typeof toastVa</typeof>riants>;
 >(({ className, variant, ...props }, ref) => {;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <ToastPrimitives.Root
       ref={ref}
@@ -157,10 +184,13 @@ const ToastAction = React && React.forwardRef<;
 
   <ToastPrimitives.Action;
 
+<<<<<<< HEAD
 
 
 
 import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from 'react';
 import * as ToastPrimitives from '@radix - ui / react - toast';
 import {cva, type, VariantProps} from 'class - variance - authority';
@@ -173,6 +203,7 @@ import {X} from 'lucide-react';
     {...props}
   />;
 ));
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
@@ -186,13 +217,18 @@ import {X} from 'lucide-react';
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const ToastClose = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Close>
   React.ComponentPropsWithoutRef<type</typeof>of ToastPrimitives.Close>
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Close
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ToastAction && ToastAction.displayName = ToastPrimitives && ToastPrimitives.Action.displayName;
 
 const ToastClose = React && React.forwardRef<;
@@ -201,6 +237,7 @@ const ToastClose = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives&& ToastPrimitives.Close
 
+<<<<<<< HEAD
     ref={ref}
     className={cn(
       'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
@@ -227,10 +264,13 @@ const ToastClose = React.forwardRef<;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const ToastTitle = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Title>
   React.ComponentPropsWithou</typeof>tRef<typeof ToastPrimitives.Title>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <ToastPrimitives.Title
 ;
 import {cn} from '@/lib / utils';
@@ -324,10 +364,14 @@ const ToastTitle = React.forwardRef<;
 
 
     ref={ref}
+=======
+  <ToastPrimitives.Title    ref={ref}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn('text-sm font-semibold', className)}
     {...props}
   />
 ));
+<<<<<<< HEAD
 ToastTitle.displayName = ToastPrimitives.Title.displayName;
 
 
@@ -366,6 +410,13 @@ export {
     className={cn('text-sm opacity-90', className)}
     {...props}
   />
+=======
+ToastTitle.displayName = ToastPrimitives.Title.displayName;const ToastDescription = React.forwardRef<
+  React.ElementRef<typeof ToastPrimitives.Description>
+  React.ComponentPropsWit</typeof>houtRef<typeof ToastPrimitives.Description>
+>(({ className, ...props }, ref) => (
+  <ToastPrimitives.Description  />
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
@@ -386,6 +437,7 @@ export {
   ToastClose
   ToastAction
 }
+<<<<<<< HEAD
     ref={ref}
     className={cn ('text - sm font - semibold', class_name)}
     {...props}
@@ -400,6 +452,8 @@ const ToastDescription = React.forward_ref<;
     ref={ref}
     className={cn ('text - sm opacity - 90', class_name)}
     {...props}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   type ToastProps,
   type ToastActionElement,
   ToastProvider,
@@ -408,6 +462,7 @@ const ToastDescription = React.forward_ref<;
   ToastTitle,
   ToastDescription,
   ToastClose,
+<<<<<<< HEAD
   ToastAction,
 }
 ;
@@ -421,6 +476,8 @@ function use_toast() {
     // Accept a loosely typed props object to allow custo</typeof > m fields like `description`;
     toast: (props: any) => {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ToastDescription && ToastDescription.displayName = ToastPrimitives && ToastPrimitives.Description.displayName;
 
 type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
@@ -429,6 +486,7 @@ type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
 // Using the base `ReactElement` type here avoids compilation errors while;
 // still representing a valid React element returned by `ToastAction`.;
 type ToastActionElement = React && React.ReactElement;
+<<<<<<< HEAD
 
 export {;
   type ToastProps,;
@@ -464,6 +522,10 @@ export function useToast() {
   ToastDescription,;
   ToastClose,;
   ToastAction,;
+=======
+  ToastClose,;
+  ToastAction,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 // Add useToast hook export;
@@ -473,9 +535,14 @@ export function useToast() {;
     toast: (props: any) => {;
       // Implementation of toast functionality;
       console && console.log('Toast:', props);
+<<<<<<< HEAD
     },;
   };
 
+=======
+    },
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Implementation of toast functionality;
       console.log ('Toast:', props);
@@ -488,14 +555,18 @@ const ToastDescription = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <ToastPrimitives.Description;
 
+<<<<<<< HEAD
 
     ref={ref}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn('text-sm opacity-90', className)}
     {...props}
   />
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
+<<<<<<< HEAD
 
 export {;
   type ToastProps,;
@@ -525,3 +596,5 @@ export function useToast() {;
       // // // console.log("Toast:", props);
     }}
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -8,6 +8,11 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class SyntaxErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -22,6 +27,11 @@ class SyntaxErrorFixer {}
     this.fixesSkipped = 0;
     this.fixedFiles = new Set();
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.syntaxPatterns = {}
       unterminatedStrings: []
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,`
@@ -54,6 +64,11 @@ class SyntaxErrorFixer {}
       service: 'syntax-error-fixer'
     };
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -85,6 +100,11 @@ class SyntaxErrorFixer {}
       
       this.log('info', 'Syntax Error Fixer Service started successfully');
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Keep the process alive;
       setInterval(async () => {}
         await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {}
@@ -99,6 +119,11 @@ class SyntaxErrorFixer {}
       'fixed-files'
     ];
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -114,6 +139,11 @@ class SyntaxErrorFixer {}
       this.fixesSkipped = 0;
       this.fixedFiles.clear();
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Find files with syntax issues;
       const filesWithIssues = await this.findFilesWithSyntaxIssues();
       
@@ -130,6 +160,11 @@ class SyntaxErrorFixer {}
         
         await Promise.all(batch.map(file => this.fixFileSyntax(file)));
 
+<<<<<<< HEAD
+=======
+        
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         // Small delay between batches;
         if (i + batchSize < filesWithIssues.length) {}
           await new Promise(resolve => setTimeout(resolve, 1000))};
@@ -145,6 +180,11 @@ class SyntaxErrorFixer {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const filesWithIssues = [];
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     for (const dir of sourceDirs) {}
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -194,6 +234,11 @@ class SyntaxErrorFixer {}
     const doubleQuotes = (content.match(/"/g) || []).length;
     const backticks = (content.match(/`/g) || []).length;
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {}
       return true};
     // Check for unterminated comments;
@@ -210,6 +255,11 @@ class SyntaxErrorFixer {}
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {}
       return true};
     // Check for malformed imports/exports;
@@ -243,6 +293,11 @@ class SyntaxErrorFixer {}
         
         this.log('info', `Successfully fixed syntax issues in: ${filePath}`);
 
+<<<<<<< HEAD
+=======
+        
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         // Verify the fix;
         if (await this.verifyFix(filePath)) {}
           this.log('info', `Fix verification passed for: ${filePath}`)} else {`}
@@ -419,6 +474,11 @@ class SyntaxErrorFixer {}
     const openParens = (fixed.match(/\(/g) || []).length;
     const closeParens = (fixed.match(/\)/g) || []).length;
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Add missing closing braces;
     if (openBraces > closeBraces) {}
       const missing = openBraces - closeBraces;
@@ -519,6 +579,11 @@ class SyntaxErrorFixer {}
 
     this.log('info', `Syntax fix report generated: ${reportPath}`);
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return report};
   generateRecommendations() {}
     const recommendations = [];
@@ -586,3 +651,8 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 
+<<<<<<< HEAD
+=======
+});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -67,6 +68,29 @@ export function EducationForm(): any ({ ;
     let success;
     let success;
     if (editingId) {;
+=======
+    let success;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
+  const [editingId, setEditingId] = useState<string | null>(null),;
+  // Helper function to format dates to string;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const handleAddOrUpdate = async (data: any) => {;
+    const educationData: Education = {;
+      institution: data.institution,;
+      degree: data.degree,;
+      field_of_study: data.field_of_study,;
+      start_date: data.start_date,;
+      end_date: data.is_current ? undefined : (data.end_date || undefined),;
+      is_current: data.is_current,,
+  description: data.description,;
+      location: data.location},;
+    let success,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
@@ -75,6 +99,7 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     }
 
+<<<<<<< HEAD
 
 
 
@@ -100,23 +125,35 @@ export function EducationForm(): any ({ ;
     } else {
       onBack()
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     if (success) {;
       setEditingId(null);
     }
 
+<<<<<<< HEAD
 
   };
 
 
+=======
+  };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
+<<<<<<< HEAD
     // Form reset happens in the child component;
   };
 
   const handleDelete = async (id: string) => {;
+=======
+    // Form reset happens in the child component
+};  const handleDelete = async (id: string) => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
     }
@@ -131,6 +168,7 @@ export function EducationForm(): any ({ ;
 
   },
 
+<<<<<<< HEAD
 
 
   },
@@ -152,6 +190,10 @@ export function EducationForm(): any ({ ;
 
   return (
 
+=======
+  },
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       <EducationList 
         educationEntries={educationEntries} 
@@ -160,6 +202,7 @@ export function EducationForm(): any ({ ;
         onDelete={handleDelete}
       />
 
+<<<<<<< HEAD
 
 
 
@@ -228,6 +271,12 @@ export function EducationForm(): any ({ ;
 ;
       {!editingId && educationEntries.length > 0 && (;
         <div className="flex justify-end">;
+=======
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Education' : 'Add Education'}
+        </h3>        <div className="flex justify-end">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button type="button" onClick={onComplete}>;
             Next;
           </Button>;
@@ -235,6 +284,7 @@ export function EducationForm(): any ({ ;
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
 
 export /**
@@ -371,3 +421,6 @@ if ( {) {
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

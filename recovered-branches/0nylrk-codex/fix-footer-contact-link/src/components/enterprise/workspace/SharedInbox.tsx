@@ -1,14 +1,18 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 export function SharedInbox() {
   // Mock messages
@@ -76,6 +80,9 @@ export function SharedInbox() {;
       unread: false;
       id: "msg-1",
 import React from './react';
+=======
+import { Badge } from "@/components/ui/badge",import React from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 export /**
@@ -94,7 +101,10 @@ function SharedInbox() {
     }
     },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "msg-2"
       from: "Talent Support"
@@ -112,9 +122,13 @@ function SharedInbox() {
     }
   ],
 
+<<<<<<< HEAD
   return (
 
 import React from "react",;
+=======
+  return (import React from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() {;
@@ -145,15 +159,20 @@ export function SharedInbox() {;
       unread: false;
     }
   ];
+<<<<<<< HEAD
   return (;
 
     <Card>;
+=======
+  return (;    <Card>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <div className="flex items-center justify-between">;
           <div>;
             <CardTitle>Shared Inbox</CardTitle>;
             <CardDescription>Team messages and notifications</CardDescription>;
           </div>;
+<<<<<<< HEAD
           <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;
         </div>;
       </CardHeader>;
@@ -188,10 +207,17 @@ export function SharedInbox() {;
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
             View All Messages;
+=======
+          <Badge className="bg-blue-500">{messages && messages.filter(m => m && m.unread).length} New</Badge>;        </div>;
+      </CardHeader>;
+      <CardContent className="p-0">;
+        <div className="divide-y divide-border">;            View All Messages;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </button>;
         </div>;
       </CardContent>;
 
+<<<<<<< HEAD
 
 
 
@@ -199,6 +225,12 @@ export function SharedInbox() {;
     </Card>);
 }
 }
+=======
+}
+;
+    </Card>);
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Card>);
 }
     </Card>);
@@ -244,7 +276,10 @@ flex items-center justify-between" > <div> <CardTitle>Shared Inbox</CardTitle> <
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </Card>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

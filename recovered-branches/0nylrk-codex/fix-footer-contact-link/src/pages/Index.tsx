@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -23,9 +26,12 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
+<<<<<<< HEAD
 export default function Index() {;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 import { Header } from "@/components/Header",
@@ -72,6 +78,7 @@ export default function Index() {
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
 
+<<<<<<< HEAD
 
 export default function Index() {;
 
@@ -83,6 +90,15 @@ export default function Index() {;
     },
 
 
+=======
+export default function Index() {;
+
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+
+    },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     },
     {
@@ -91,6 +107,7 @@ export default function Index() {;
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 
+<<<<<<< HEAD
 
     },
 
@@ -105,10 +122,14 @@ export default function Index() {;
     },
 
 
+=======
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
+<<<<<<< HEAD
       link: "/equipment"
 
 
@@ -126,10 +147,14 @@ export default function Index() {;
 
 
     {
+=======
+      link: "/equipment"    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
+<<<<<<< HEAD
   const toolsFeatures = [;
     {;
       title: t("home && home.tool_ai_matcher"),;
@@ -238,6 +263,43 @@ function Index() {
 
 
 import { Header } from "@/components/Header",;
+=======
+    {;
+      title: t("home && home.tool_ai_matcher"),,
+  description: t("home && home.tool_ai_matcher_desc"),;
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,;
+      link: "/match"
+};
+    {;
+      title: t("home && home.tool_talent"),,
+  description: t("home && home.tool_talent_desc"),;
+      icon: <Users className="h-6 w-6 text-zion-purple" />,;
+      link: "/talent"
+};
+    {;
+      title: t("home && home.tool_services"),,
+  description: t("home && home.tool_services_desc"),;
+      icon: <Zap className="h-6 w-6 text-zion-cyan" />,;
+      link: "/services"
+};
+    {;
+      title: t("home && home.tool_equipment"),,
+  description: t("home && home.tool_equipment_desc"),;
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,;
+      link: "/equipment"
+};
+    {;
+      title: t("home && home.tool_analytics"),,
+  description: t("home && home.tool_analytics_desc"),;
+      icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,;
+      link: "/analytics"
+};
+    {;
+      title: "Mobile App",,
+  description: "Take Zion with you on the go with our mobile app for iOS and Android",;
+      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
+      link: "/mobile-launch";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",;
@@ -273,38 +335,68 @@ export default function Index() {;
   // Tools and features showcase;
   const toolsFeatures = [;
     {;
+<<<<<<< HEAD
       title: t("home.tool_ai_matcher"),;
       description: t("home.tool_ai_matcher_desc"),;
+=======
+      title: t("home.tool_ai_matcher"),,
+  description: t("home.tool_ai_matcher_desc"),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,;
       link: "/match";
     },;
     {;
+<<<<<<< HEAD
       title: t("home.tool_talent"),;
       description: t("home.tool_talent_desc"),;
+=======
+      title: t("home.tool_talent"),,
+  description: t("home.tool_talent_desc"),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Users className="h-6 w-6 text-zion-purple" />,;
       link: "/talent";
     },;
     {;
+<<<<<<< HEAD
       title: t("home.tool_services"),;
       description: t("home.tool_services_desc"),;
+=======
+      title: t("home.tool_services"),,
+  description: t("home.tool_services_desc"),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Zap className="h-6 w-6 text-zion-cyan" />,;
       link: "/services";
     },;
     {;
+<<<<<<< HEAD
       title: t("home.tool_equipment"),;
       description: t("home.tool_equipment_desc"),;
+=======
+      title: t("home.tool_equipment"),,
+  description: t("home.tool_equipment_desc"),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Settings className="h-6 w-6 text-zion-purple" />,;
       link: "/equipment";
     },;
     {;
+<<<<<<< HEAD
       title: t("home.tool_analytics"),;
       description: t("home.tool_analytics_desc"),;
+=======
+      title: t("home.tool_analytics"),,
+  description: t("home.tool_analytics_desc"),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />,;
       link: "/analytics";
     },;
     {;
+<<<<<<< HEAD
       title: "Mobile App",;
       description: "Take Zion with you on the go with our mobile app for iOS and Android",;
+=======
+      title: "Mobile App",,
+  description: "Take Zion with you on the go with our mobile app for iOS and Android",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />;
       link: "/mobile-launch";
     }
@@ -337,7 +429,10 @@ export default function Index() {;
                 </div>;
               </Link>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ))}
           </div>
         </div>
@@ -357,6 +452,7 @@ export default function Index() {;
       <FloatingCTA />
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 }
     <div className="min-h-screen bg-zion-blue text-white">;
@@ -422,6 +518,9 @@ export default function Index() {;
       <HeroSection />;
       ;
       {/* Quick Access Tools Section */}
+=======
+  )      {/* Quick Access Tools Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <section className="py-16 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">;
           <div className="text-center mb-12">;
@@ -446,8 +545,12 @@ export default function Index() {;
                 <p className="text-zion-slate-light mb-4">{feature && feature.description}</p>;
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
                   <span>{t("general && general.explore")}</span>;
+<<<<<<< HEAD
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
+=======
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;                </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Link>;
             ))}
           </div>;
@@ -475,8 +578,12 @@ export default function Index() {;
     </div>;
   );
 }
+<<<<<<< HEAD
   return (
     <div className="min - h-screen bg - zion - blue text - white">;
+=======
+    <div className="min - h-screen bg - zion - blue text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <SEO;
         title={t ("home.seo_title")}
         description={t ("home.seo_description")}
@@ -486,6 +593,7 @@ export default function Index() {;
       <Header />;
       <HeroSection />;
       {/* Quick Access Tools Section */}
+<<<<<<< HEAD
       <section className="py - 16 bg - zion - blue - dark">;
         <div className="container mx - auto px - 4">;
           <div className="text - center mb - 12">;
@@ -493,6 +601,15 @@ export default function Index() {;
               {t ("home.explore_tools")}
             </h2>;
             <p className="text - zion - slate - light text - xl max - w-3xl mx - auto">;
+=======
+      <section className="py - 16 bg - zion - blue-dark">;
+        <div className="container mx - auto px-4">;
+          <div className="text - center mb-12">;
+            <h2 className="text - 3xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb-4">;
+              {t ("home.explore_tools")}
+            </h2>;
+            <p className="text - zion - slate - light text - xl max - w-3xl mx-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {t ("home.tools_description")}
             </p>;
           </div>;
@@ -501,6 +618,7 @@ export default function Index() {;
               <Link;
                 key={index}
                 to={feature.link}
+<<<<<<< HEAD
                 className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration - 300";
               >;
                 <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb - 4">;
@@ -508,6 +626,15 @@ export default function Index() {;
                 </div>;
                 <h3 className="text - xl font - bold text - white mb - 2">{feature.title}</h3>;
                 <p className="text - zion - slate - light mb - 4">{feature.description}</p>;
+=======
+                className="bg - zion - blue border border - zion - blue - light hover:border - zion - purple / 50 rounded - lg p - 6 transition - all duration-300";
+              >;
+                <div className="bg - zion - blue - dark rounded - full w - 12 h - 12 flex items - center justify - center mb-4">;
+                  {feature.icon}
+                </div>;
+                <h3 className="text - xl font - bold text - white mb-2">{feature.title}</h3>;
+                <p className="text - zion - slate - light mb-4">{feature.description}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>;
                   <span>{t ("general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`} />;
@@ -519,8 +646,12 @@ export default function Index() {;
       <CategoriesSection />;
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
+<<<<<<< HEAD
       <FeaturesGuideSection />;
       <HowItWorksSection />;
+=======
+      <FeaturesGuideSection />;      <HowItWorksSection />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
@@ -532,6 +663,7 @@ export default function Index() {;
       <Footer />;
     </div>);
 }
+<<<<<<< HEAD
       ;
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
@@ -608,4 +740,6 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 }<SocialShareSection /> <WaitlistSection /> <FloatingCTA /> <Footer /> </div>) 
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

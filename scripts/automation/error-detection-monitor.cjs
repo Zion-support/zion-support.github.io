@@ -211,3 +211,8 @@ if (require.main === module) {}
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
 
+<<<<<<< HEAD
+=======
+module.exports = ErrorDetectionMonitor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

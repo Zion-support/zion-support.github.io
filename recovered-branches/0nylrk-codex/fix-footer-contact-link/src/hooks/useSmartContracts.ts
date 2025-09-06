@@ -8,6 +8,7 @@ import { TalentProfile  } from '@/types/talent';
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useSmartContracts() {
   const { user } = useAuth();
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
 
 import {useState} from 'react';
@@ -39,6 +40,9 @@ export function useSmartContracts() {
   
   const generateSolidityContract = async (
     values: ContractFormValues
+=======
+  const [isLoading, setIsLoading] = useState(false);    values: ContractFormValues
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
@@ -49,7 +53,10 @@ export function useSmartContracts() {
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
 
         body: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
           startDate: values && values.startDate.toISOString();
@@ -59,8 +66,12 @@ export function useSmartContracts() {
           additionalClauses: values && values.additionalClauses || []}
 
       });
+<<<<<<< HEAD
       if (error) throw error;
           talentName: talent.full_name,
+=======
+      if (error) throw error;          talentName: talent.full_name,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           clientName: clientName,
           projectName: values.projectName,
           scopeSummary: values.scopeSummary,
@@ -74,7 +85,10 @@ export function useSmartContracts() {
       if (error) throw error,
       
 
+<<<<<<< HEAD
       if (data && data.solidityCode) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return data.solidityCode
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -122,6 +136,7 @@ if ( {) {
       } else {
         throw new Error ("Failed to generate Solidity contract");
       }
+<<<<<<< HEAD
     } catch (err: any) {
 
       console.error ("Error generating Solidity contract:", err);
@@ -168,6 +183,9 @@ if ( {) {
       setDeploymentStatus('success');
       toast.success("Smart contract deployed successfully!");
       return mockSmartContractInfo
+=======
+    } catch (err: any) {      return mockSmartContractInfo
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
@@ -181,6 +199,7 @@ if ( {) {
     isLoading;
 
     deploymentStatus
+<<<<<<< HEAD
   }
 }
       setDeploymentStatus('deploying'),
@@ -210,6 +229,8 @@ if ( {) {
       toast.success("Smart contract deployed successfully!"),
       
       return mockSmartContractInfo
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
@@ -324,13 +345,17 @@ export function useSmartContracts() {;
         id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
 
+<<<<<<< HEAD
         networkName: options && options.network;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
         deployedAddress: `0x${Array && Array.from({length: 40}, () => 
           Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
         contractType: 'escrow';
         createdAt: new Date().toISOString();
         createdBy: user && user.id,
+<<<<<<< HEAD
 
         status: 'deployed'
       }
@@ -341,12 +366,15 @@ export function useSmartContracts() {;
       toast && toast.success("Smart contract deployed successfully!");
       
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return mockSmartContractInfo
     } catch (err: any) {
       console && console.error("Error deploying smart contract:", err);
       toast && toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
       return null
+<<<<<<< HEAD
     }
   }
   return {
@@ -594,3 +622,6 @@ deploymentStatus
   }
 }
 ;
+=======
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

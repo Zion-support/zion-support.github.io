@@ -8,7 +8,10 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +19,7 @@ import { format  } from 'date-fns';
 import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
@@ -35,6 +39,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const navigate = useNavigate();
 
 import { useState, useEffect } from 'react',
+=======
+import { useAuth } from "@/hooks/useAuth";import { useState, useEffect } from 'react',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { format } from 'date-fns',
@@ -43,6 +50,7 @@ import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
 
+<<<<<<< HEAD
 
 export interface JobPostingProps {
   job_id?: string;
@@ -85,6 +93,17 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       job_type: '';
       salary_range: '';
       description: '';
+=======
+export interface JobPostingProps {
+  job_id?: string;
+  on_success?: () => void;
+}      title: '';
+      company: '';
+      location: '';
+      job_type: '';
+      salary_range: '',
+  description: '';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       responsibilities: '';
       qualifications: '';
       benefits: '';
@@ -96,6 +115,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       category: '';
 
       toast && toast.error("You must be logged in to post a job");
+<<<<<<< HEAD
       navigate("/login"),
 
       return
@@ -108,12 +128,16 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 
 
       const jobData = {
+=======
+      navigate("/login"),      const jobData = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
 
         is_remote: isRemote,
         user_id: user && user.id};
+<<<<<<< HEAD
 
 
       if (onSuccess) {
@@ -332,6 +356,8 @@ if ( {) {
       navigate("/login"),
       return
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       return job_data;
     } catch (error: any) {
@@ -341,7 +367,10 @@ if ( {) {
     } finally {
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setIsLoading (false);
     }
   }
@@ -354,6 +383,7 @@ if ( {) {
     is_remote;
     setIsRemote;
     initial_values;
+<<<<<<< HEAD
     setInitialValues;
     submit_job;
   }
@@ -386,6 +416,9 @@ if ( {) {
     setInitialValues;
     submitJob
 ;
+=======
+    setInitialValues;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return jobData;
     } catch (error: any) {;
       console.error("Error in job form submission:", error),;
@@ -419,3 +452,7 @@ if ( {) {
 };
   }
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

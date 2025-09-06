@@ -72,3 +72,8 @@ process.on("SIGINT")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 
+<<<<<<< HEAD
+=======
+  console.error(" Failed to start continuous quality "checks": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -10,6 +10,7 @@ import {;
 
 } from "@/components/ui/card";
 
+<<<<<<< HEAD
 
 import { Button  } from '@/components / ui / button';
 import {
@@ -94,6 +95,17 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       
       
       <Card>
+=======
+import { Button  } from '@/components / ui / button';
+import {
+import { Button } from "@/components/ui/button";
+import {
+
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {      <Card>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
@@ -119,12 +131,16 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
+<<<<<<< HEAD
   return (
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
@@ -140,10 +156,14 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
   return (;
 
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
+=======
+  return (    <div className="grid md:grid-cols-2 gap-6 mb-10">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
 } from "@/components/ui/card";
 
 interface ContractTypeCardsProps {
@@ -152,12 +172,15 @@ interface ContractTypeCardsProps {;
   onSmartClick: () => void
 }
             Standard Contracts;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </CardTitle>;
           <CardDescription>;
             Generate traditional legal agreements for your projects;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 
           <ul className="space - y-2">;
             <li className="text - sm">✓ Legally binding templates</li>;
@@ -169,12 +192,15 @@ interface ContractTypeCardsProps {;
         <CardFooter>;
           <Button variant="outline" on_click={onStandardClick}>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
 
       <Card>;
+<<<<<<< HEAD
         <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
           <div className="flex justify - between items - center">;
             <CardTitle className="flex items - center gap - 2">;
@@ -207,20 +233,40 @@ interface ContractTypeCardsProps {;
           >;
 
           >;
+=======
+        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded-t-lg">;
+          <div className="flex justify - between items-center">;
+            <CardTitle className="flex items - center gap-2">;
+              <ShieldCheck className="h - 5 w - 5 text-primary" />;
+              Smart Contracts;
+            </CardTitle>;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded-full">;          </ul>;
+        </CardContent>;
+        <CardFooter>;
+          <Button;
+          >;          >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 
     </div>);
 
 }
     </div>);
+=======
+}    </div>);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>);
 }
     </div>;
@@ -239,4 +285,7 @@ onSmartClick: () => void
   );
 }
 ;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

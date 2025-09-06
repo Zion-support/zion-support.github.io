@@ -7,15 +7,36 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
+<<<<<<< HEAD
 
 
   return (
+=======
+  return (
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from "./ChatBotPanel",
+import { MessageSquare, Info, X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 
+=======
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       {/* Fixed button in the bottom right */}
       {!isOpen && (
@@ -28,6 +49,7 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+<<<<<<< HEAD
 
 
       {/* Support panel */}
@@ -43,6 +65,8 @@ export function SupportWidget() {;
     <>
   return (
 import React, { useState } from "react",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
@@ -87,6 +111,7 @@ import { useTheme } from "@/hooks/useTheme",;
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
 
+<<<<<<< HEAD
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -95,6 +120,8 @@ import { useTheme } from "@/hooks/useTheme",;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -109,6 +136,7 @@ import { useTheme } from "@/hooks/useTheme",;
               <Button
                 variant="ghost"
                 size="icon"
+<<<<<<< HEAD
                 className="h-8 w-8 rounded-full"
                 onClick={() => window && window.location.href = "/help"}
                 aria-label="Help center";
@@ -127,17 +155,24 @@ import { useTheme } from "@/hooks/useTheme",;
                 className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
+=======
+                className="h-8 w-8 rounded-full"                aria-label="Close support";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 <X className="h-5 w-5" />;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <ChatBotPanel />;
         </div>;
       )}
     </>;
   );
+<<<<<<< HEAD
 }
 
 import React, { useState } from './react';
@@ -238,3 +273,6 @@ const {
     </>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

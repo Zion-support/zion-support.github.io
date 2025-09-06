@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
+<<<<<<< HEAD
 import { useMessages } from './useMessages';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
@@ -179,4 +183,11 @@ export function useMessagingOperations(user: UserWithProfile) {;
   }
 }
   }
+=======
+import { useMessages } from './useMessages';// Allow either UserProfile or UserDetails
+
+type UserWithProfile = UserProfile | UserDetails | null;
+/**
+ * Hook that combines all messaging operations  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -217,3 +217,8 @@ export * from "@testing-"library/react""
   "analyzerMode": "static"
           "openAnalyzer"
 
+<<<<<<< HEAD
+=======
+    fs.writeFileSync(path.join(this.projectRoot, ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

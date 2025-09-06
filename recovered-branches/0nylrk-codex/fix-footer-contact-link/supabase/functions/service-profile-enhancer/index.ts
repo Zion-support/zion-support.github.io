@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
 
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
@@ -11,16 +15,23 @@ interface ServiceProfileData {
   title: string;
   bio: string;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
+<<<<<<< HEAD
   services?: string[],
   location: string
 }
@@ -64,13 +75,19 @@ serve(async (req) => {
         JSON.stringify({
 
           error: "Missing required service provider data"}),
+=======
+  services?: string[],          error: "Missing required service provider data"}),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 interface ServiceProfileData {;
   name: string,;
   title: string,;
   bio: string,;
   services?: string[],;
+<<<<<<< HEAD
   location: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 serve (async (req) => {
   try {
@@ -105,6 +122,7 @@ if ( {) {
     // Get OpenAI API key from environment
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!apiKey) {
+<<<<<<< HEAD
       return new Response(
 
     // Get OpenAI API key from environment;
@@ -133,6 +151,11 @@ if ( {) {
       )
     }
         { headers, status: 500 }
+=======
+      return new Response(        { headers, status: 500 }
+      );
+    }        { headers, status: 500 }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       );
     }
     const prompt = `
@@ -144,8 +167,11 @@ if ( {) {
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
 
+<<<<<<< HEAD
 
     ${providerData.services && providerData.services.length > 0
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ${providerData.services && providerData.services.length > 0 
       ? `Current Services: ${providerData.services.join(", ")}`
 
@@ -154,17 +180,22 @@ if ( {) {
     Location: ${providerData && providerData.location}
     Current Bio: ${providerData && providerData.bio}
     ${providerData && providerData.services && providerData && providerData.services.length > 0 
+<<<<<<< HEAD
       ? `Current Services: ${providerData && providerData.services.join(", ")}`
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
 
 
       : "No services listed yet."}
+=======
+      ? `Current Services: ${providerData && providerData.services.join(", ")}`      : "No services listed yet."}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     Focus on highlighting their unique value proposition, expertise, and professionalism.
     Only respond with JSON in this exact format: {
       "summary": "Professional summary goes here..."
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
+<<<<<<< HEAD
     `;
     Only respond with JSON in this exact format:
     {
@@ -200,6 +231,9 @@ if ( {) {
             role: "system"
     const prompt = `;
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+=======
+    `;    You are an expert in creating professional service profiles. Based on the following information about a service provider, create:;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     1. A concise yet compelling professional summary (max 250 words);
     2. A list of 5 - 10 specific services they could offer based on their description;
     Service Provider Name: ${provider_data.name}
@@ -226,6 +260,7 @@ if ( {) {
         messages: [;
           {
             role: "system",
+<<<<<<< HEAD
 
             content: "You are an expert at creating professional service descriptions for marketplaces."}
           {
@@ -285,12 +320,18 @@ if ( {) {
     
     if (!response && response.ok) {
       console && console.error("OpenAI API error:", responseData);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return new Response(
         JSON && JSON.stringify({
           error: "Failed to generate enhanced profile content",
 
+<<<<<<< HEAD
           details: responseData});
           details: responseData});
+=======
+          details: responseData});          details: responseData});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     const response_data = await response.json ();
 ;
@@ -305,6 +346,7 @@ if ( {) {
           details: response_data});
         { headers, status: 500 }
       );
+<<<<<<< HEAD
     }
         { headers, status: 500 }
       );
@@ -401,6 +443,9 @@ if ( {) {
 
         JSON && JSON.stringify({
 
+=======
+    }    try {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           error: "Failed to parse AI response",
           raw: responseData && responseData.choices[0]?.message?.content});
@@ -408,10 +453,14 @@ if ( {) {
       return new Response (
         JSON.stringify ({
           error: "Failed to parse AI response",
+<<<<<<< HEAD
 
 
 
           raw: response_data.choices[0]?.message?.content});
+=======
+          raw: response_data.choices[0]?.message?.content});          raw: response_data.choices[0]?.message?.content});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         { headers, status: 500 }
       );
     }
@@ -426,6 +475,7 @@ if ( {) {
           "Content - Type": "application / json",
           "Access - Control - Allow - Origin": "*"},
         status: 500;
+<<<<<<< HEAD
 
     console.error("Function error:", error),
     return new Response(
@@ -447,6 +497,11 @@ if ( {) {
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+=======
+    console.error("Function error:", error),
+    return new Response(
+      JSON.stringify({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         error: "Internal server error"}),
       { 
         headers: {
@@ -457,6 +512,7 @@ if ( {) {
       }
     );
   }
+<<<<<<< HEAD
 });
 
 
@@ -661,3 +717,6 @@ raw: responseData.choices[0]?.message?.content
   }
 });
 
+=======
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

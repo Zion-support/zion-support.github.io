@@ -493,3 +493,8 @@ if (require.main === module) {}
     process.exit(1)})};
 ;
 
+<<<<<<< HEAD
+=======
+module.exports = IntelligentConflictResolver;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

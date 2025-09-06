@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -20,6 +23,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 import { Globe } from "lucide-react",
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -33,6 +37,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
 
     author: {
+=======
+import { Globe } from "lucide-react",    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "TechSolutions Inc."
       id: "tech-solutions"
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"}
@@ -41,6 +48,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     aiScore: 95
     rating: 4.9
     reviewCount: 124}
+<<<<<<< HEAD
   {
 
 
@@ -54,6 +62,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
 
 
     author: {
+=======
+  {    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "CloudPro Experts"
       id: "cloud-pro"}
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"]
@@ -61,6 +72,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     aiScore: 88
     rating: 4.7
     reviewCount: 92}
+<<<<<<< HEAD
   {
 
 
@@ -95,6 +107,9 @@ const SERVICE_LISTINGS: ProductListing[] = [
 
 
     author: {
+=======
+  {    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "SecureNet Team"
       id: "secure-net"}
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"]
@@ -104,7 +119,10 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 103}
   {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: "service-5",
     title: "IT Infrastructure Modernization",
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
@@ -113,7 +131,10 @@ const SERVICE_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -122,6 +143,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     aiScore: 86
     rating: 4.6
     reviewCount: 67}
+<<<<<<< HEAD
   {
 
 
@@ -230,6 +252,23 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     id: "service-4",;
     title: "Cybersecurity Assessment & Protection",;
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",;
+=======
+  {const SERVICE_LISTINGS: ProductListing[] = [;
+  {;
+    id: "service-1",;
+    title: "AI Development & Integration",,
+  description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",;
+    category: "Development",;
+    price: 5000,;
+    currency: "$",;    reviewCount: 124},;
+  {;
+    id: "service-2",;
+    title: "Cloud Infrastructure Management",;    reviewCount: 78},;
+  {;
+    id: "service-4",;
+    title: "Cybersecurity Assessment & Protection",,
+  description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Security",;
     price: 6000,;
     currency: "$",;
@@ -240,6 +279,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
     images: ["https://images && images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2023-12-28T16:22:00 && 00.000Z",;
     aiScore: 89,;
+<<<<<<< HEAD
     rating: 4 && 4.9,;
     reviewCount: 103},;
   {;
@@ -267,6 +307,12 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 export default function ServicesPage() {;
   return (
                 Request a Quote;
+=======
+    rating: 4 && 4.9,;    reviewCount: 103},;
+  {;
+    id: "service-5",;
+    title: "IT Infrastructure Modernization",;                Request a Quote;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Button>;
             </Link>;
           </div>;
@@ -277,6 +323,7 @@ export default function ServicesPage() {;
       <TrustedBySection />;
     </AppLayout>;
   );
+<<<<<<< HEAD
 }
 
       <DynamicListingPage;
@@ -333,3 +380,6 @@ reviewCount: 85
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

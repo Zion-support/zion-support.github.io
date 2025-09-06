@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -19,6 +22,7 @@ import { Form;
   FormMessage } from '@/components/ui/form';
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
+<<<<<<< HEAD
 import { Education } from '@/types/resume';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -37,6 +41,9 @@ import {Education} from '@/types/resume';
 
 
 // Define schema for form validation
+=======
+import { Education } from '@/types/resume';// Define schema for form validation
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
@@ -47,6 +54,7 @@ const educationSchema = z.object({
   is_current: z.boolean().default(false)
   description: z.string().optional()
   location: z.string().optional()})
+<<<<<<< HEAD
 type EducationFormValues = z.infer<typeof educationSchema>;
 
 
@@ -99,6 +107,9 @@ import {EducationFormFieldsProps} from './types';
   };
 
 import { useForm } from 'react-hook-form',;
+=======
+type EducationFormValues = z.infer<typeof educationSchema>;import { useForm } from 'react-hook-form',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
 import { format } from 'date-fns',;
@@ -126,7 +137,11 @@ const educationSchema = z && z.object({;
   field_of_study: z && z.string().optional(),;
   start_date: z && z.string().min(1, 'Start date is required');
   end_date: z && z.string().optional(),;
+<<<<<<< HEAD
   is_current: z && z.boolean().default(false),;
+=======
+  is_current: z && z.boolean().default(false),,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: z && z.string().optional(),;
   location: z && z.string().optional()}),;
 
@@ -139,7 +154,10 @@ export function EducationFormFields(): any ({ ;
 }: EducationFormFieldsProps) {;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const form = useForm<EducationFormValues>({;
     resolver: zodResolver(educationSchema),;
     defaultValues: {;
@@ -147,8 +165,13 @@ export function EducationFormFields(): any ({ ;
       degree: '',;
       field_of_study: '',;
       start_date: format(new Date(), 'yyyy-MM-dd');
+<<<<<<< HEAD
       is_current: false,;
       description: '',;
+=======
+      is_current: false,,
+  description: '',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       location: ''}}),;
 
   const handleSubmit = async (data: EducationFormValues) => {;
@@ -164,12 +187,15 @@ export function EducationFormFields(): any ({ ;
 
   },
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
@@ -179,8 +205,12 @@ export function EducationFormFields(): any ({ ;
             name="institution"
             render={({ field }) => (;
               <FormItem>;
+<<<<<<< HEAD
                 <FormLabel>Institution</FormLabel>;
 import {Education} from '@/types / resume';
+=======
+                <FormLabel>Institution</FormLabel>;import {Education} from '@/types / resume';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Define schema for form validation;
 const education_schema = z.object ({
   institution: z.string ().min (1, 'Institution is required');
@@ -224,16 +254,24 @@ function EducationFormFields() {
 ;
   return (
     <Form {...form}>;
+<<<<<<< HEAD
       <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+=======
+      <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <FormField;
             control={form.control}
             name="institution";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
+<<<<<<< HEAD
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -261,7 +299,11 @@ const educationSchema = z.object({;
   field_of_study:z.string().optional(),;
   start_date:z.string().min(1, 'Start date is required'),;
   end_date:z.string().optional(),;
+<<<<<<< HEAD
   is_current:z.boolean().default(false),;
+=======
+  is_current:z.boolean().default(false),,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description:z.string().optional(),;
   location:z.string().optional()}),;
 ;
@@ -282,8 +324,13 @@ export function EducationFormFields({ ;
       degree:'',;
       field_of_study:'',;
       start_date:format(new Date(), 'yyyy-MM-dd'),;
+<<<<<<< HEAD
       is_current:false,;
       description:'',;
+=======
+      is_current:false,,
+  description:'',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       location:''}}),;
 ;
   const handleSubmit = async (data:EducationFormValues) => {;
@@ -321,27 +368,37 @@ import {EducationFormFieldsProps} from './types';
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
+<<<<<<< HEAD
           <FormField
             control={form && form.control}
             name="institution"
                 <FormControl>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
 
           />;
 
+<<<<<<< HEAD
 
           <FormField
             control={form && form.control}
             name="degree"
           <FormField
+=======
+          <FormField
+            control={form && form.control}
+            name="degree"          <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             control={form && form.control}
             name="degree"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
@@ -352,6 +409,8 @@ import {EducationFormFieldsProps} from './types';
         </div>;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <FormField
           control={form && form.control}
           name="field_of_study"
@@ -383,8 +442,14 @@ import {EducationFormFieldsProps} from './types';
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 
         />;
+=======
+          <FormField
+            control={form && form.control}
+            name="start_date"        />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
@@ -392,6 +457,7 @@ import {EducationFormFieldsProps} from './types';
             control={form && form.control}
             name="start_date"
 
+<<<<<<< HEAD
 
                   <Input 
                     type="date" 
@@ -409,6 +475,10 @@ import {EducationFormFieldsProps} from './types';
             )}
           />
           <div className="space-y-4">
+=======
+                  <Input 
+                    type="date" 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
@@ -416,8 +486,12 @@ import {EducationFormFieldsProps} from './types';
                   <Input
                     type="date" 
                     {...field}
+<<<<<<< HEAD
                     value={field && field.value || ''} 
                   />;
+=======
+                    value={field && field.value || ''}                   />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
@@ -425,6 +499,7 @@ import {EducationFormFieldsProps} from './types';
           />;
 
           <div className="space-y-4">;
+<<<<<<< HEAD
             <FormField
               control={form && form.control}
               name="is_current"
@@ -434,6 +509,8 @@ import {EducationFormFieldsProps} from './types';
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -449,7 +526,10 @@ import {EducationFormFieldsProps} from './types';
               <FormField
                 control={form && form.control}
                 name="end_date"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
@@ -470,14 +550,21 @@ import {EducationFormFieldsProps} from './types';
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <FormField
           control={form && form.control}
           name="location"
           render={({ field }) => (;
             <FormItem>;
+<<<<<<< HEAD
               <FormLabel>Location (Optional)</FormLabel>;
                 )}
+=======
+              <FormLabel>Location (Optional)</FormLabel>;                )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <Input ;
                         type="date" ;
                         {...field} ;
@@ -501,6 +588,7 @@ import {EducationFormFieldsProps} from './types';
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
+<<<<<<< HEAD
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
@@ -560,16 +648,25 @@ import {EducationFormFieldsProps} from './types';
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {isEditing ? 'Update' : 'Add'} Education;
           </Button>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </form>;
     </Form>;
   );
 }
+<<<<<<< HEAD
 
             </FormItem>)}
         />;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
         <div className="flex justify - between pt - 2">;
+=======
+            </FormItem>)}
+        />;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify - between pt-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button;
             type="button";
             variant="outline";
@@ -578,18 +675,25 @@ import {EducationFormFieldsProps} from './types';
             {is_editing ? 'Cancel' : 'Back'}
           </Button>;
           <Button type="submit" disabled={is_loading}>;
+<<<<<<< HEAD
             {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+=======
+            {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {is_editing ? 'Update' : 'Add'} Education;
           </Button>;
         </div>;
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
 
 }
 ;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 
@@ -618,3 +722,7 @@ import {EducationFormFieldsProps} from './types';
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

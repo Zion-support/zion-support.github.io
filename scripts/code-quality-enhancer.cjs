@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -19,13 +20,11 @@ s*(w+)/g, '
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Skip directories that can'
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      // Skip directories that can'
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -634,7 +633,11 @@ if (require.main === module) {
 }
 
 module.exports = CodeQualityEnhancer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

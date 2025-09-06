@@ -4,7 +4,10 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
@@ -13,6 +16,7 @@ import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+<<<<<<< HEAD
 ;
 interface TalentProfileData {
   name: string;
@@ -27,6 +31,9 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 interface TalentProfileData {
+=======
+;interface TalentProfileData {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   title: string;
   bio: string;
@@ -59,6 +66,7 @@ interface EnhancedProfile {;
     devops: string[],;
     platforms: string[],;
     softSkills: string[],;
+<<<<<<< HEAD
     other: string[];
   location?: string;
 
@@ -185,13 +193,23 @@ serve(_async (req) => {_// Handle CORS preflight requests
             Skills: ${talentData.skills.join()}
 
             Name: ${talentData && talentData.name}
+=======
+    other: string[];            Name: ${talentData.name}
+            Title: ${talentData.title}
+            Bio: ${talentData.bio}
+            Skills: ${talentData.skills.join()}
+              "summary": "The professional summary text (100-150 words)",            Name: ${talentData && talentData.name}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Title: ${talentData && talentData.title}
             Bio: ${talentData && talentData.bio}
             Skills: ${talentData && talentData.skills.join()}
             Location: ${talentData && talentData.location || 'Not specified'}
             
+<<<<<<< HEAD
 
               "summary": "The professional summary text (100-150 words)",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
               "categorizedSkills": {
@@ -249,6 +267,7 @@ if ( {) {
                 "soft_skills": ["skill1", "skill2"];
                 "other": ["skill1", "skill2"];
               }
+<<<<<<< HEAD
             }
 
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
@@ -273,6 +292,9 @@ if ( {) {
     
 
     // Parse the JSON response
+=======
+            }    // Parse the JSON response
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     let enhancedProfile: EnhancedProfile
     try {
       enhancedProfile = JSON && JSON.parse(responseContent)
@@ -282,7 +304,10 @@ if ( {) {
 
     console && console.error("Error in talent-profile-enhancer function:", error);
 
+<<<<<<< HEAD
         ],;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         temperature: 0.7,;
         response_format: { type: "json_object" }
       })}),;
@@ -305,11 +330,17 @@ if ( {) {
     return new Response(;
       JSON.stringify(enhancedProfile),;
 
+<<<<<<< HEAD
 
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
 
+=======
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -329,6 +360,7 @@ if ( {) {
     console.error("Error in talent-profile-enhancer function:", error),
     
     return new Response(
+<<<<<<< HEAD
 
 
 
@@ -425,6 +457,17 @@ if ( {) {
 
 
     }
+=======
+      JSON && JSON.stringify(enhancedProfile);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  } catch (error) {
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return new Response(
       JSON && JSON.stringify(enhancedProfile);
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -443,4 +486,7 @@ if ( {) {
 }) 
 }
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Table;
   TableBody;
   TableCell;
   TableHead;
+<<<<<<< HEAD
   TableHeader;
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Button} from "@/components/ui/button";
@@ -15,11 +19,15 @@ import {Input} from "@/components/ui/input";
 import {toast} from "@/hooks/use-toast";
 
 import React from "react",
+=======
+  TableHeader;import React from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
+<<<<<<< HEAD
   TableHeader,
 
   TableRow} from "@/components/ui/table",
@@ -37,16 +45,25 @@ import { toast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 export function InvoiceHistory() {
+=======
+  TableHeader,  TableRow} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Download, FileText, Search } from "lucide-react",export function InvoiceHistory() {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Mock invoice data
 
   const invoices = [
     {
 
+<<<<<<< HEAD
 
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "INV-1234"
       date: "May 1, 2025";
       amount: "$1,999.00";
@@ -86,13 +103,17 @@ export function InvoiceHistory() {
       date: "May 1, 2025";
       amount: "$1,999.00";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "INV-1234",;
       date: "May 1, 2025";
       amount: "$1,999.00";
 
       id: "INV-1234",
       date: "May 1, 2025",
+<<<<<<< HEAD
       amount: "$1,999.00",
       status: "paid",
       period: "May 2025"},
@@ -200,10 +221,20 @@ export function InvoiceHistory() {;
 
     }
   }
+=======
+      amount: "$1,999.00",  const handleDownloadInvoice = (invoiceId: string) => {
+    // In a real app, this would trigger a download of the invoice PDF
+    toast({
+      title: "Downloading invoice"
+      description: `Downloading invoice ${invoiceId} as PDF.`})      case "paid": return <Badge className="bg-green-500">Paid</Badge>;
+      case "pending":;
+        return <Badge variant="outline">Pending</Badge>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
 
   },
 
+<<<<<<< HEAD
 
   return (
       case "paid": return <Badge className="bg-green-500">Paid</Badge>;
@@ -263,6 +294,12 @@ export function InvoiceHistory() {;
                     <Button
                       variant="outline"
                       size="sm"
+=======
+  return (                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-8 gap-1"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
                       className="h-8 gap-1">;
                       <FileText className="h-3 && 3.5 w-3 && 3.5" />;
@@ -324,7 +361,11 @@ function InvoiceHistory() {
 ;
   const getBadgeForStatus = (status: string) =>: any {
     switch (status) {
+<<<<<<< HEAD
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
+=======
+      case "paid": return <Badge className="bg - green-500">Paid</Badge>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "pending":;
         return <Badge variant="outline">Pending</Badge>;
       case "overdue":;
@@ -335,6 +376,7 @@ function InvoiceHistory() {
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Invoice History</h3>;
@@ -348,6 +390,21 @@ function InvoiceHistory() {
         </div>;
       </div>;
       <div className="rounded - md border">;
+=======
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Invoice History</h3>;
+        <div className="relative">;
+          <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted-foreground" />;
+          <Input;
+            type="search";
+            placeholder="Search invoices...";
+            className="w-[200px] md:w-[300px] pl-9";
+          />;
+        </div>;
+      </div>;
+      <div className="rounded-md border">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -356,17 +413,26 @@ function InvoiceHistory() {
               <TableHead > Billing Period</TableHead>;
               <TableHead > Amount</TableHead>;
               <TableHead > Status</TableHead>;
+<<<<<<< HEAD
               <TableHead className="text - right">Actions</TableHead>;
+=======
+              <TableHead className="text-right">Actions</TableHead>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </TableRow>;
           </TableHeader>;
           <TableBody>;
             {invoices.map ((invoice) => (
               <TableRow key={invoice.id}>;
+<<<<<<< HEAD
                 <TableCell className="font - medium">{invoice.id}</TableCell>;
+=======
+                <TableCell className="font-medium">{invoice.id}</TableCell>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <TableCell>{invoice.date}</TableCell>;
                 <TableCell>{invoice.period}</TableCell>;
                 <TableCell>{invoice.amount}</TableCell>;
                 <TableCell>{getBadgeForStatus (invoice.status)}</TableCell>;
+<<<<<<< HEAD
                 <TableCell className="text - right">;
                   <div className="flex justify - end gap - 2">;
                     <Button;
@@ -377,6 +443,17 @@ function InvoiceHistory() {
                     >;
                       <Download className="h - 3.5 w - 3.5" />;
             {invoices.map((invoice) => (;
+=======
+                <TableCell className="text-right">;
+                  <div className="flex justify - end gap-2">;
+                    <Button;
+                      variant="outline";
+                      size="sm";
+                      className="h - 8 gap-1";
+                      on_click={() => handleDownloadInvoice (invoice.id)}
+                    >;
+                      <Download className="h - 3.5 w-3.5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <TableRow key={invoice.id}>;
                 <TableCell className="font-medium">{invoice.id}</TableCell>;
                 <TableCell>{invoice.date}</TableCell>;
@@ -392,6 +469,7 @@ function InvoiceHistory() {
                       onClick={() => handleDownloadInvoice(invoice.id)}
                     >;
                       <Download className="h-3.5 w-3.5" />;
+<<<<<<< HEAD
                       PDF;
                     </Button>;
                     <Button;
@@ -401,6 +479,8 @@ function InvoiceHistory() {
                     >;
                       <FileText className="h - 3.5 w - 3.5" />;
                       className="h-8 gap-1";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     >;
                       <FileText className="h-3.5 w-3.5" />;
                       className="h-8 gap-1";
@@ -409,6 +489,7 @@ function InvoiceHistory() {
                     </Button>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
 
 import React from "react",;
 import {;
@@ -546,18 +627,23 @@ export function InvoiceHistory() {;
         </Button>;
         <div className="text-sm text-muted-foreground">;
           Showing 1 - 6 of 12 invoices;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
         <Button variant="outline" size="sm">;
           Next;
         </Button>;
       </div>;
 
+<<<<<<< HEAD
 
 
 
 }
     </div>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </div>);
     </div>;
@@ -620,7 +706,11 @@ period: "Jan 2025"
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </div>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

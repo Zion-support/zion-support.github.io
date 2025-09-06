@@ -48,6 +48,7 @@ describe('App', () => {
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -66,6 +67,21 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
+
+
+
+});
+
+
+
+});
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -74,10 +90,15 @@ describe('App', () => {
     // Simple test that just checks if the component can be imported
     expect(true).toBe(true);
   });
+});
+
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+});
 <<<<<<< HEAD
-});
-=======
-});
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -91,3 +112,6 @@ describe('App', () => {
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

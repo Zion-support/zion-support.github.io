@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import Fastify from 'fastify';
@@ -13,10 +16,9 @@ import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit';
@@ -27,9 +29,13 @@ const app = null;
       .split(',')
       .map(s => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       cb(null, true);
       return;
     }
@@ -37,21 +43,22 @@ const app = null;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   });
 
-=======
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
   return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
 
   return { text: completion.output_text }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
 },
   methods: ['GET', 'POST', 'OPTIONS'],
 });
@@ -73,9 +80,13 @@ const completion = await openai.responses.create({
     input: prompt,
   });
   return { text: completion.output_text };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });
 
 
@@ -85,6 +96,7 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -122,6 +134,8 @@ if (return { description }) {
   });
   return { saved: Boolean (user_id), description }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!userId) return { description };
 await withUser(userId, async client => {
     await client.query(
@@ -131,48 +145,61 @@ await withUser(userId, async client => {
     );
   });
   return { saved: Boolean(userId), description };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 app && app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req && req.query as any).q as string;
   const country = (req && req.query as any).country as string | undefined;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-<<<<<<< HEAD
-  const rows = await withUser(userId, async (client) => {
-=======
 const rows = await withUser(userId, async client => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const res = await client.query(
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
@@ -182,6 +209,7 @@ const rows = await withUser(userId, async client => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -191,30 +219,39 @@ const rows = await withUser(userId, async client => {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
     return res && res.rows
   });
   return { results: rows }
-=======
 LIMIT 25`,
       [country || null, q || null]
     );
     return res.rows;
   });
   return { results: rows };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req && req.params as any).name as string;
 
   const userId = getUserId(req);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -256,6 +293,12 @@ app.log.error(err);
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+});
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -269,18 +312,21 @@ app.get('/notifications', async (req: any, reply: any) => {
   return { items }
 });
 
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 });
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
 
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -374,13 +420,13 @@ app.log.error (err);
 =======
 <<<<<<< HEAD
 =======
-
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
     const res = await client.query(
@@ -410,6 +456,10 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err);
 (process as any).exit(1);
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {Button} from "@/components/ui/button";
 import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
@@ -16,6 +17,8 @@ import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -37,8 +40,12 @@ interface TalentRateRecommenderProps {;
   rateType: "hourly" | "fixed";
 }
 
+<<<<<<< HEAD
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 interface TalentRateRecommenderProps {
+=======
+export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;interface TalentRateRecommenderProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   skills;
   years_experience;
@@ -57,6 +64,7 @@ interface TalentRateRecommenderProps {
         yearsExperience,;
         location};
 
+<<<<<<< HEAD
 
       const result = await getTalentRateSuggestion(params);
       setSuggestion(result);
@@ -69,6 +77,9 @@ interface TalentRateRecommenderProps {
   };
 
   const [isLoading, setIsLoading] = useState(false);
+=======
+      const result = await getTalentRateSuggestion(params);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
@@ -80,11 +91,15 @@ interface TalentRateRecommenderProps {
       const result = await getTalentRateSuggestion(params);
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 interface TalentRateRecommenderProps {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number) => void,
+<<<<<<< HEAD
   rateType: "hourly" | "fixed"
 
 import React, { useState } from "react",;
@@ -125,6 +140,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     if (skills.length === 0 || yearsExperience <= 0) {
       return
   skills,;
+=======
+  rateType: "hourly" | "fixed"  skills,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   yearsExperience,;
   location,;
   onSuggestionApplied,;
@@ -134,9 +152,13 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const { user } = useAuth(),;
   const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
+<<<<<<< HEAD
       return;
 
     }
+=======
+      return;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     setIsLoading(true),
     try {
@@ -145,6 +167,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         yearsExperience,
         location},
 
+<<<<<<< HEAD
       const result = await getTalentRateSuggestion(params),
 
       setSuggestion(result)
@@ -156,6 +179,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   };
 
 ;
+=======
+      const result = await getTalentRateSuggestion(params),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     try {;
       const params: TalentRateParams = {;
@@ -170,7 +196,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },;
+<<<<<<< HEAD
   };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -184,6 +213,7 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           suggestionType: 'talent',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
+<<<<<<< HEAD
           actualValue: suggestedRate,;
           accepted: true;
         });
@@ -208,12 +238,19 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     }
   }
   return (
+=======
+          accepted: true;
+        });
+      }
+    }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="space-y-4">;
       <div>;
         {!suggestion && !isLoading ? (;
           <Button
             type="button"
             variant="outline"
+<<<<<<< HEAD
             onClick={generateSuggestion}
 
 }
@@ -232,6 +269,9 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
           <PricingSuggestionBox
   onSuggestionApplied,
+=======
+            onClick={generateSuggestion}  onSuggestionApplied,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   rate_type}) => {
   const [is_loading, setIsLoading] = useState (false);
   const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
@@ -287,7 +327,11 @@ if ( {) {
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="space - y-4">;
+=======
+    <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div>;
         {!suggestion && !is_loading ? (
           <Button;
@@ -295,15 +339,22 @@ if ( {) {
             variant="outline";
             on_click={generate_suggestion}
             disabled={skills.length === 0 || years_experience <= 0}
+<<<<<<< HEAD
             className="w - full";
           >;
             <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+=======
+            className="w-full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Optimize Rate with AI;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>) : (
           <PricingSuggestionBox;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 
+<<<<<<< HEAD
 
 
 
@@ -459,3 +510,5 @@ return (<div className="space-y-4" > <div> {
     </div>;
   );
 };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

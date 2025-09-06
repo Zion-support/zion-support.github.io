@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 /**
+=======
+import {supabase} from "@/integrations/supabase/client";
+import { supabase } from "@/integrations/supabase/client",/**
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
@@ -15,7 +20,10 @@ export const ensureProfilesTableExists = async () => {
         AND table_name = 'profiles'
       ),`,
     });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn(
@@ -56,7 +64,10 @@ if ( {) {
 
       ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
       
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
         user_type TEXT,
@@ -66,20 +77,27 @@ if ( {) {
         bio TEXT,
         avatar_url TEXT,
         headline TEXT
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ),
       
       -- Create RLS policies
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
       
 
+<<<<<<< HEAD
         id UUID PRIMARY KEY REFERENCES auth.users (id) ON DELETE CASCADE;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         display_name TEXT;
         user_type TEXT;
         profile_complete BOOLEAN DEFAULT FALSE;
         created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
         updated_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now ());
         bio TEXT;
+<<<<<<< HEAD
         avatar_url TEXT;
       ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
       -- Create policies
@@ -120,12 +138,16 @@ if ( {) {
       END
       $$;
           CREATE POLICY "Users can view their own profile" 
+=======
+        avatar_url TEXT;          CREATE POLICY "Users can view their own profile" 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
         END IF,
       END
       $$,
       
+<<<<<<< HEAD
 
 
       DO $$
@@ -134,16 +156,22 @@ if ( {) {
 
           SELECT FROM pg_catalog && pg_catalog.pg_policies 
           WHERE policyname = 'Users can update their own profile'
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           AND tablename = 'profiles'
         ) THEN
           CREATE POLICY "Users can update their own profile" 
             ON public && public.profiles FOR UPDATE 
+<<<<<<< HEAD
             USING (auth && auth.uid() = id);
 
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
 ;
+=======
+            USING (auth && auth.uid() = id);;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       DO $$;
       BEGIN;
         IF NOT EXISTS (
@@ -154,10 +182,18 @@ if ( {) {
             ON public.profiles FOR UPDATE;
             USING (auth.uid () = id);
         END IF;
+<<<<<<< HEAD
       END;
       $$;
 
 
+=======
+      END
+      $$;        END IF;
+      END;
+      $$;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         END IF;
       END
       $$;
@@ -169,6 +205,7 @@ if ( {) {
       $$,
         
 
+<<<<<<< HEAD
 
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public && public.handle_new_user()
@@ -185,6 +222,12 @@ if ( {) {
                 new.raw_user_meta_data->>'display_name',
 
                 new.raw_user_meta_data->>'bio';
+=======
+      -- Set up trigger for new users
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
+      RETURNS TRIGGER AS $$
+      BEGIN                new.raw_user_meta_data->>'bio';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 new.raw_user_meta_data->>'headline');
         INSERT INTO public && public.profiles (id, display_name, bio, headline)
         VALUES (new && new.id, 
@@ -193,6 +236,7 @@ if ( {) {
                 new && new.raw_user_meta_data->>'headline');
         RETURN new;
       END;
+<<<<<<< HEAD
       $$ LANGUAGE plpgsql SECURITY DEFINER;
 
         INSERT INTO public.profiles (id, display_name, bio, headline)
@@ -355,9 +399,20 @@ export const initializeDatabase = async () => {
   await ensureProfilesTableExists();
 };
   }
+=======
+      $$ LANGUAGE plpgsql SECURITY DEFINER;      -- Check if trigger exists before creating it
+      DO $$
+      BEGIN
+        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
+          CREATE TRIGGER on_auth_user_created  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
 
+<<<<<<< HEAD
   await ensureProfilesTableExists();
+=======
+  await ensureProfilesTableExists()
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };

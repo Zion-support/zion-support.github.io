@@ -405,16 +405,16 @@ setShowCreateDialog (false);
 //Toggle a scope selection const toggleScope = (scope: ApiKeyScope) => {";
   setSelectedScopes (prev => prev.includes (scope) ? prev.filter (s => s !== scope) -H "Authorization: Bearer $ {;
   key ";
-}" \\ -H "Content-Type: application/json"` ;
+}" \\ -H "Content-Type: application/json"` 
 };
 //Reset form when dialog closes const handleDialogClose = () => {";
   setKeyName ("");
 setSelectedScopes ([]);
-setShowCreateDialog (false) ;
+setShowCreateDialog (false) 
 };";
  return `curl -X GET " https://api.ziontechgroup.com/v1/jobs"\\ -H " Authorization: Bearer $ {;
   key ";
-}"\\ -H " Content-Type: application/json"`;
+}"\\ -H " Content-Type: application/json"`
 };";
 //Reset form when dialog closes </CardTitle> <CardDescription className=" text-zinc-400"> Create and manage API keys for accessing the Zion APIs. </CardDescription> </CardHeader> <CardContent> </p> <Dialog open= {;
   showCreateDialog ;

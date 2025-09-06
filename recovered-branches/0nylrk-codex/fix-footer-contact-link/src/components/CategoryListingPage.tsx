@@ -1,10 +1,14 @@
 
 
+<<<<<<< HEAD
 
 
 
 import React from 'react';
 import {useState} from "react";
+=======
+import React from 'react';import {useState} from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -12,6 +16,7 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+<<<<<<< HEAD
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
 
 // Example listing type;
@@ -33,6 +38,9 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
 // Example listing type
 import { useState } from "react",
+=======
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";import { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -132,11 +140,18 @@ export function CategoryListingPage({
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
+<<<<<<< HEAD
 
 // Example listing type;
 interface Listing {;
   id: string,;
   title: string,;
+=======
+// Example listing type;
+interface Listing {;
+  id: string,;
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   category: string,;
 
@@ -150,6 +165,7 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
+<<<<<<< HEAD
 // Example listing type
 interface Listing {
   id: string,
@@ -196,20 +212,30 @@ interface Listing {;
   createdAt: string;
 
 }
+=======
+// Example listing type}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 }
 ;
 
 interface CategoryListingPageProps {;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   listings: Listing[],;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <Header />
@@ -293,6 +319,7 @@ export function CategoryListingPage({;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 
+<<<<<<< HEAD
 
 
 
@@ -395,19 +422,26 @@ export function CategoryListingPage({;
                     </SelectItem>;
                   ))}
 
+=======
+              {description}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
+<<<<<<< HEAD
                 <ListingScoreCard
 ;
           {/* Results Count */}
@@ -434,6 +468,13 @@ export function CategoryListingPage({;
                   rating={listing.rating}
                   key={listing.id}
                   title={listing.title}
+=======
+                <ListingScoreCard          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}                  title={listing.title}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   description={listing.description}
                   category={listing.subcategory |listing.category}
                   image={listing.image}
@@ -442,7 +483,10 @@ export function CategoryListingPage({;
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </p>;
           </div>;
 
@@ -466,6 +510,7 @@ export function CategoryListingPage({;
               ))}
 
                   setSearchQuery(""),
+<<<<<<< HEAD
 
                   setSelectedFilter(filterOptions[0].value)
                   author_image={listing.author_image}
@@ -473,10 +518,13 @@ export function CategoryListingPage({;
                   rating={listing.rating}
                 }}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
+<<<<<<< HEAD
             </div>
 
 
@@ -529,6 +577,9 @@ export function CategoryListingPage({;
               </Button>;
             </div>;
           )}
+=======
+            </div>          )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </div>;
       <Footer />;
@@ -537,16 +588,26 @@ export function CategoryListingPage({;
                   review_count={listing.review_count}
                 />))}
             </div>) : (
+<<<<<<< HEAD
             <div className="text - center py - 20">;
               <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
               <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
+=======
+            <div className="text - center py-20">;
+              <h3 className="text - xl font - bold text - white mb-2">No listings found</h3>;
+              <p className="text - zion - slate - light mb-6">Try adjusting your filters or search query</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button;
                 variant="outline";
                 on_click={() => {
                   setSearchQuery ("");
                   setSelectedFilter (filter_options[0].value);
                 }}
+<<<<<<< HEAD
                 className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+=======
+                className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 Clear all filters;
               </Button>;
@@ -555,6 +616,7 @@ export function CategoryListingPage({;
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
   ),; //Example listing type interface Listing {
   id: string;
 title: string;
@@ -700,4 +762,6 @@ case 'z-a': return (<> <Header /> <div className="min-h-screen bg-zion-blue py-1
       <Footer />
     </>
   )
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -1,5 +1,6 @@
 
 // Use the centralized icon wrapper to avoid missing icons;
+<<<<<<< HEAD
 
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -13,10 +14,13 @@ import {Notification, NotificationType} from '@/context/notifications';
 
 
 export const getTypeIcon = (type: NotificationType) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 
+<<<<<<< HEAD
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -47,14 +51,20 @@ export const getTypeIcon = (type: NotificationType) => {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
 
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
+<<<<<<< HEAD
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+=======
+    case 'message':;      return <span className="text-blue-500">💬</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
     case 'booking_confirmation':;
@@ -66,6 +76,7 @@ export const getTypeIcon = (type: NotificationType) => {;
   }
 };
 
+<<<<<<< HEAD
 interface NotificationItemProps {
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
@@ -131,6 +142,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       onMarkAsRead(notification.id)
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
+=======
+interface NotificationItemProps {export const NotificationItem: React.FC<NotificationItemProps> = ({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   notification,;
   onMarkAsRead,;
   onDismiss;
@@ -138,6 +152,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const navigate = useNavigate(),;
   const handleClick = () => {;
     if (!notification.read) {;
+<<<<<<< HEAD
       onMarkAsRead(notification.id);
 
     }
@@ -147,6 +162,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     }
 
     }
+=======
+      onMarkAsRead(notification.id);    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
@@ -158,7 +176,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   };
   },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface NotificationItemProps {;
   notification: Notification,;
   onMarkAsRead: (id: string) => Promise<void>,;
@@ -184,6 +205,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
   return (
     <div
       className={cn(
+<<<<<<< HEAD
 
         "p-3 border-b border-zion-blue-light relative group"
         !notification && notification.read ? "bg-zion-blue-dark/30" : ""
@@ -227,6 +249,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
             </p>
             {notification.action_url && notification.action_text && (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div
       className={cn(
@@ -234,6 +258,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
+<<<<<<< HEAD
                 onClick={handleClick}>;
                 {notification && notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />;
@@ -245,10 +270,13 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       </div>;
 
       {/* Action buttons that appear on hover */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
+<<<<<<< HEAD
               <Button
                 variant="ghost" 
                 size="icon" 
@@ -266,10 +294,26 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
     </div>);
 }
 ;
+=======
+            </TooltipContent>;
+          </Tooltip>;
+        </TooltipProvider>;
+      </div>
+};
+    </div>);
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
     </div>);
 }
 ;
     </div>;
+<<<<<<< HEAD
   );
 };
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

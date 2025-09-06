@@ -21,6 +21,7 @@ interface PricingTier {
   popular?: boolean,
   cta: string,
   cta_link: string;
+<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface PricingTier {name: string;
@@ -32,6 +33,9 @@ interface PricingTier {name: string;
   cta: string;
   ctaLink: string;
 }
+=======
+=======}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ServicePricing {
   service_name: string,
   category: string,
@@ -269,11 +273,18 @@ function PricingPage() {
     ? service_pricing;
     : service_pricing.filter (service => service.category === selected_category);
   return (
+<<<<<<< HEAD
     <div className="space - y-8">;
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">Pricing & Plans</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
   const filteredServices = selectedCategory === "All";
+=======
+    <div className="space-y-8">;
+      <div className="text - center space-y-4">;
+        <h1 className="text - 4xl font-bold">Pricing & Plans</h1>;
+        <p className="text - xl opacity - 80 max - w-3xl mx-auto">;  const filteredServices = selectedCategory === "All";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
   return (;
@@ -285,8 +296,13 @@ function PricingPage() {
         </p>;
       </div>;
       {/* Category Filter */}
+<<<<<<< HEAD
       <div className="flex justify - center">;
         <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p - 1">;
+=======
+      <div className="flex justify-center">;
+        <div className="flex flex - wrap gap - 2 bg - zinc - 800 rounded - lg p-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {categories.map (category => (
             <button;
               key={category}
@@ -297,6 +313,7 @@ function PricingPage() {
         </div>;
       </div>;
       {/* Services Pricing */}
+<<<<<<< HEAD
       <div className="space - y-12">;
         {filtered_services.map ((service, service_index) => (
           <div key={service_index} className="space - y-6">;
@@ -312,28 +329,58 @@ function PricingPage() {
                   {service.features.map ((feature, index) => (
                     <li key={index} className="flex items - center gap - 2">;
                       <span className="w - 2 h - 2 bg - blue - 500 rounded - full"></span>;
+=======
+      <div className="space-y-12">;
+        {filtered_services.map ((service, service_index) => (
+          <div key={service_index} className="space-y-6">;
+            <div className="text - center space-y-2">;
+              <h2 className="text - 2xl font-bold">{service.service_name}</h2>;
+              <p className="text - lg opacity-80">{service.description}</p>;
+            </div>;
+            {/* Features & Benefits */}
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+              <div>;
+                <h3 className="text - lg font - semibold mb-3">Key Features</h3>;
+                <ul className="space-y-2">;
+                  {service.features.map ((feature, index) => (
+                    <li key={index} className="flex items - center gap-2">;
+                      <span className="w - 2 h - 2 bg - blue - 500 rounded-full"></span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {feature}
                     </li>))}
                 </ul>;
               </div>;
               <div>;
+<<<<<<< HEAD
                 <h3 className="text - lg font - semibold mb - 3">Benefits</h3>;
                 <ul className="space - y-2">;
                   {service.benefits.map ((benefit, index) => (
                     <li key={index} className="flex items - center gap - 2">;
                       <span className="w - 2 h - 2 bg - green - 500 rounded - full"></span>;
+=======
+                <h3 className="text - lg font - semibold mb-3">Benefits</h3>;
+                <ul className="space-y-2">;
+                  {service.benefits.map ((benefit, index) => (
+                    <li key={index} className="flex items - center gap-2">;
+                      <span className="w - 2 h - 2 bg - green - 500 rounded-full"></span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {benefit}
                     </li>))}
                 </ul>;
               </div>;
             </div>;
             {/* Pricing Tiers */}
+<<<<<<< HEAD
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+=======
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {service.tiers.map ((tier, tier_index) => (
                 <div;
                   }`}
                 >;
                   {tier.popular && (
+<<<<<<< HEAD
                     <div className="absolute -top - 3 left - 1/2 transform -translate - x-1 / 2">;
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font - medium">;
                         Most Popular;
@@ -352,6 +399,26 @@ function PricingPage() {
                       </li>))}
                   </ul>;
                   <div className="mt - 6">;
+=======
+                    <div className="absolute -top - 3 left - 1/2 transform -translate-x-1 / 2">;
+                      <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font-medium">;
+                        Most Popular;
+                      </span>;
+                    <div>;
+                      <span className="text - 3xl font-bold">{tier.price}</span>;
+                      <span className="text - lg opacity-80">{tier.period}</span>;
+                    </div>;
+                    <p className="text - sm opacity-80">{tier.description}</p>;
+                  </div>;
+                  <ul className="space - y-3 mt-6">;
+                    {tier.features.map ((feature, index) => (
+                      <li key={index} className="flex items - center gap - 2 text-sm">;
+                        <span className="w - 2 h - 2 bg - green - 500 rounded-full"></span>;
+                        {feature}
+                      </li>))}
+                  </ul>;
+                  <div className="mt-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <a;
                       }`}
                     >;
@@ -363,6 +430,7 @@ function PricingPage() {
           </div>))}
       </div>;
       {/* Additional Services */}
+<<<<<<< HEAD
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white">;
         <div className="text - center space - y-4">;
           <h2 className="text - 2xl font - bold">Need Custom Solutions?</h2>;
@@ -381,17 +449,42 @@ function PricingPage() {
             <div>;
               <h3 className="font - semibold">Consulting Services</h3>;
               <p className="text - sm opacity - 90">Strategic guidance from $150 / hour</p>;
+=======
+      <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text-white">;
+        <div className="text - center space-y-4">;
+          <h2 className="text - 2xl font-bold">Need Custom Solutions?</h2>;
+          <p className="opacity-90">;
+            We offer custom development, enterprise solutions, and specialized services tailored to your specific needs.;
+          </p>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text-center">;
+            <div>;
+              <h3 className="font-semibold">Custom Development</h3>;
+              <p className="text - sm opacity-90">Tailored solutions from $5, 000+</p>;
+            </div>;
+            <div>;
+              <h3 className="font-semibold">Enterprise Solutions</h3>;
+              <p className="text - sm opacity-90">Custom pricing for large organizations</p>;
+            </div>;
+            <div>;
+              <h3 className="font-semibold">Consulting Services</h3>;
+              <p className="text - sm opacity-90">Strategic guidance from $150 / hour</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
           <a;
             href="mailto:kleber@ziontechgroup.com";
+<<<<<<< HEAD
             className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition - colors";
+=======
+            className="inline - block px - 6 py - 3 bg - white text - purple - 600 rounded - lg font - semibold hover:bg - gray - 100 transition-colors";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >;
             Get Custom Quote;
           </a>;
         </div>;
       </div>;
       {/* Contact Information */}
+<<<<<<< HEAD
       <div className="text - center space - y-4">;
         <h2 className="text - 2xl font - bold">Questions About Pricing?</h2>;
         <p className="opacity - 80">;
@@ -409,6 +502,25 @@ function PricingPage() {
           <div>;
             <h3 className="font - semibold">Address</h3>;
             <p className="opacity - 80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
+=======
+      <div className="text - center space-y-4">;
+        <h2 className="text - 2xl font-bold">Questions About Pricing?</h2>;
+        <p className="opacity-80">;
+          Our team is here to help you choose the right plan for your business.;
+        </p>;
+        <div className="grid grid - cols - 1 md: grid - cols - 3 gap-4">;
+          <div>;
+            <h3 className="font-semibold">Phone</h3>;
+            <p className="opacity-80">+1 302 464 0950</p>;
+          </div>;
+          <div>;
+            <h3 className="font-semibold">Email</h3>;
+            <p className="opacity-80">kleber@ziontechgroup.com</p>;
+          </div>;
+          <div>;
+            <h3 className="font-semibold">Address</h3>;
+            <p className="opacity-80">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </div>;

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-=======
 import React from 'react';
 export default function Page() {
   return (
@@ -34,4 +26,4 @@ export default function Page() {
       </div>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

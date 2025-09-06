@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import {useState, useEffect} from "react";
+=======
+import React from 'react';import {useState, useEffect} from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useNavigate} from "react-router-dom";
 import {GradientHeading} from "@/components/GradientHeading";
 import {ProductListingCard} from "@/components/ProductListingCard";
@@ -11,6 +15,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Slider} from "@/components/ui/slider";
 import {ProductListing, ListingView} from "@/types/listings";
 import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
@@ -91,12 +96,19 @@ interface PriceRange {;
 
 interface DynamicListingPageProps {;
   title: string,;
+=======
+import {toast} from "@/hooks/use-toast";  min: number,;
+  max: number;
+}interface DynamicListingPageProps {;
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   categorySlug: string,;
   listings: ProductListing[],;
   categoryFilters: { label: string, value: string }[],;
   initialPrice?: PriceRange;
 }
+<<<<<<< HEAD
 
 export function DynamicListingPage(): any ({;
   title;
@@ -117,6 +129,8 @@ export function DynamicListingPage(): any ({;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -127,6 +141,7 @@ export function DynamicListingPage(): any ({;
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
+<<<<<<< HEAD
 
 
   useEffect(() => {
@@ -168,6 +183,8 @@ export function DynamicListingPage(): any ({;
       listing.price >= currentPriceFilter[0] && 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -194,8 +211,11 @@ export function DynamicListingPage(): any ({;
               category: listing.category
               image: listing.images?.[0]
 
+<<<<<<< HEAD
 
 }: DynamicListingPageProps) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
   const [selectedCategory, setSelectedCategory] = useState("all"),;
@@ -203,6 +223,7 @@ export function DynamicListingPage(): any ({;
   const [isLoading, setIsLoading] = useState(false),;
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
+<<<<<<< HEAD
 
   useEffect(() => {;
     const listingsWithPrice = allListings && allListings.filter(l => l && l.price !== null);
@@ -247,17 +268,25 @@ export function DynamicListingPage(): any ({;
 
     const listing = allListings && allListings.find(item => item && item.id === listingId);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setTimeout(() => {;
       setIsLoading(false),;
       if (listing) {;
         toast({;
+<<<<<<< HEAD
           title: "Quote Requested",;
           description: `Your quote request for ${listing && listing.title} has been sent.`;
+=======
+          title: "Quote Requested",,
+  description: `Your quote request for ${listing && listing.title} has been sent.`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         });
 
         navigate("/request-quote", {;
           state: { ;
             serviceType: categorySlug, ;
+<<<<<<< HEAD
             specificItem: {;
 
 import { useState, useEffect } from './react';
@@ -362,6 +391,9 @@ if ( {) {
               image: listing.images?.[0];
 
               id: listing.id,;
+=======
+            specificItem: {;              id: listing.id,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
@@ -369,6 +401,7 @@ if ( {) {
             }
           }
         });
+<<<<<<< HEAD
       }
 
   return (
@@ -392,16 +425,22 @@ if ( {) {
   },;
   return (;
   return (
+=======
+      }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+<<<<<<< HEAD
 
 
 
             {description}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -410,10 +449,14 @@ if ( {) {
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>
                     {categoryFilters.map((filter) => (
+<<<<<<< HEAD
                       <SelectItem key={filter.value} value={filter.value} className="text-white">
 
 
           </p>;
+=======
+                      <SelectItem key={filter.value} value={filter.value} className="text-white">          </p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
@@ -428,6 +471,7 @@ if ( {) {
                   Category;
                 </label>;
                 <Select
+<<<<<<< HEAD
                   value={selectedCategory} 
                   onValueChange={(value: string) => {;
                     console && console.log("Category selected:", value);
@@ -465,6 +509,9 @@ if ( {) {
                 <div className="mt-6 px-2">;
 
                   <Slider
+=======
+            {description}                    setSelectedCategory(value);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     defaultValue={[priceRange && priceRange.min, priceRange && priceRange.max]}
                     min={priceRange && priceRange.min}
                     max={priceRange && priceRange.max}
@@ -500,7 +547,10 @@ if ( {) {
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
                     className="mb-4"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   useEffect_(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
@@ -608,6 +658,7 @@ value={selectedCategory}
                     ))}
                   </SelectContent>
                 </Select>
+<<<<<<< HEAD
               </div>
               
               <div className="mb-6">
@@ -766,6 +817,8 @@ value={selectedCategory}
                         setSelectedRating (rating);
                       }}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className={`${;
                         selectedRating === rating ;
                           ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
@@ -805,11 +858,15 @@ value={selectedCategory}
                           <span className="ml-1">& Up</span>;
                         </div>;
 
+<<<<<<< HEAD
 
 
                       )}
                         </div>;                      )}
                     </Button>;
+=======
+                      )}                    </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   ))}
 
                 </div>;
@@ -817,7 +874,10 @@ value={selectedCategory}
 
               <Button
                 variant="outline" 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       )}
                     </Button>;
                   ))}
@@ -831,18 +891,25 @@ value={selectedCategory}
                   console && console.log("Resetting filters");
                   setSearchQuery("");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button 
                 variant="outline" 
 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
+<<<<<<< HEAD
 
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onClick={() => {
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all")
+<<<<<<< HEAD
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
@@ -851,6 +918,9 @@ value={selectedCategory}
 
 
                   setSelectedRating(null)
+=======
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]);                  setSelectedRating(null)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 }}
               >
                 Reset Filters
@@ -861,6 +931,7 @@ value={selectedCategory}
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
+<<<<<<< HEAD
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   setSelectedCategory("all"),;
                   setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
@@ -1097,6 +1168,9 @@ value={selectedCategory}
             {isLoading ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
             {isLoading ? (;
+=======
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />            {isLoading ? (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {[1, 2, 3, 4].map((i) => (;
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -1119,16 +1193,20 @@ value={selectedCategory}
                 {filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
+<<<<<<< HEAD
                 {filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <ProductListingCard 
 
                     key={listing.id}
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
+<<<<<<< HEAD
 
 
                     listing={listing}
@@ -1138,6 +1216,8 @@ value={selectedCategory}
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     key={listing.id}
                     listing={listing}
                     view={view}
@@ -1156,6 +1236,7 @@ value={selectedCategory}
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
 
+<<<<<<< HEAD
                     setSelectedRating(null)
                     setSearchQuery(""),
                     setSelectedCategory("all"),
@@ -1164,10 +1245,14 @@ value={selectedCategory}
 
 
               </div>;
+=======
+                    setSelectedRating(null)              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ) : (;
               <div className="text-center py-20">;
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+<<<<<<< HEAD
                 <Button
                   variant="outline" 
                   onClick={() => {;
@@ -1175,6 +1260,8 @@ value={selectedCategory}
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
                     setSelectedRating(null);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ) :filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" :"grid-cols-1"}`}>;
                 {filteredListings.map((listing) => (;
@@ -1196,10 +1283,13 @@ value={selectedCategory}
                     setSelectedCategory("all"),;
                     setCurrentPriceFilter([priceRange.min, priceRange.max]),;
                     setSelectedRating(null),;
+<<<<<<< HEAD
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
                   }}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                 >;
                   Clear all filters;
@@ -1210,13 +1300,18 @@ value={selectedCategory}
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
                   onClick={() => {;
+=======
+  );                  onClick={() => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     setSearchQuery(""),;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
 
+<<<<<<< HEAD
 
                   on_click={() => {
                     setSearchQuery ("");
@@ -1225,6 +1320,10 @@ value={selectedCategory}
                     setSelectedRating (null);
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+=======
+                  }}
+                  className="border - zion - purple text - zion - purple hover:bg - zion-purple / 10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 >;
                   Clear all filters;
                 </Button>;
@@ -1232,6 +1331,7 @@ value={selectedCategory}
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>);
   ),;  const [selectedRating, setSelectedRating] = useState<number | null> (null);
 useEffect ( () => {
@@ -1319,3 +1419,6 @@ return (<div className="min-h-screen bg-zion-blue py-12 px-4"> <div className="c
     </div>
   )
 }
+=======
+    </div>);}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

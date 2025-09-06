@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 declare module "@radix - ui / react - hover - card";
@@ -12,22 +13,32 @@ declare module "@radix - ui / react - toggle";
 declare module '@tanstack / react - query';
 declare module 'react - day - picker' {
 
+=======
+declare module '@tanstack/react-query';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 declare module '@tanstack/react-query';
 
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
+<<<<<<< HEAD
 
   // Minimal placeholder for the DayPicker component used in the app;
+=======
+}  // Minimal placeholder for the DayPicker component used in the app;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // The actual library provides full typings but we stub them here so the;
   // TypeScript compiler can understand the imports without requiring the real;
   // type definitions.;
   // eslint - disable - next - line @typescript - eslint / no - explicit - any;
   export const DayPicker: any;
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
@@ -41,11 +52,18 @@ declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
 
+<<<<<<< HEAD
 
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
 
+=======
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
@@ -64,8 +82,12 @@ declare module '@tanstack/react-query',;
 declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
+<<<<<<< HEAD
     to?: Date;
 
+=======
+    to?: Date
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 declare module 'sonner';
@@ -76,6 +98,7 @@ import {FC, SVGProps} from 'react';
 ;
   export interface DateRange {;
     from?: Date;
+<<<<<<< HEAD
     to?: Date
   }
   // Minimal placeholder for the DayPicker component used in the app
@@ -88,11 +111,15 @@ import {FC, SVGProps} from 'react';
 };
 declare module 'sonner';
 declare module 'lucide-react' {
+=======
+    to?: Datedeclare module 'lucide-react' {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {FC, SVGProps} from 'react';
 
   export type LucideProps = SVGProps < SVGSVGElement>;
   export type LucideIcon = FC < LucideProps>;
+<<<<<<< HEAD
 ;
 
   export const AlertCircle: LucideIcon;
@@ -300,13 +327,19 @@ import {FC, SVGProps} from 'react';
   const icons: { [key: string]: LucideIcon }
   export default icons;
 }
+=======
+;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
 
   export const jsPDF: any,
   export default jsPDF;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 declare module '@hookform / resolvers / zod';
 declare module '@radix - ui / react - accordion';
@@ -339,6 +372,7 @@ declare module 'clsx' {
   export type ClassValue = any;
   export default function clsx (...classes: ClassValue[]): string;
 }
+<<<<<<< HEAD
 declare module 'embla - carousel - react';
 declare module 'framer-motion';
 declare module 'i18next';
@@ -421,6 +455,9 @@ declare module 'react-hook-form' {
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
   export interface UseFormReturn<
+=======
+declare module 'embla - carousel - react';  export interface UseFormReturn<
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   export interface UseFormReturn<;
     TFieldValues extends FieldValues = FieldValues;
@@ -437,6 +474,7 @@ declare module 'react-hook-form' {
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
+<<<<<<< HEAD
   export interface ControllerProps<
 
   export function useForm<;
@@ -797,6 +835,9 @@ declare module 'react-hook-form' {;
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath < TFieldValues> = FieldPath < TFieldValues>,
   > {
+=======
+  export interface ControllerProps<  > {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: TName;
     control?: Control < TFieldValues>;
     rules?: any;
@@ -806,6 +847,7 @@ declare module 'react-hook-form' {;
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
+<<<<<<< HEAD
 
   export const Controller: ComponentType<ControllerProps<any, any>>
 
@@ -814,13 +856,25 @@ declare module 'react-hook-form' {;
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
+=======
+  export const Controller: ComponentType<ControllerProps<any, any>>
+
+  export interface FormProviderProps<;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
+<<<<<<< HEAD
 
   export const FormProvider: ComponentType < FormProviderProps < any>>;
+=======
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';  export const FormProvider: ComponentType < FormProviderProps < any>>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn < TFieldValues>;
@@ -835,6 +889,7 @@ declare module 'semver';
 declare module 'ws';
 declare module 'recharts';
 
+<<<<<<< HEAD
 
 }
 declare module 'react - i18next';
@@ -1176,5 +1231,7 @@ declare module 'tailwind-merge';
 declare module 'next-themes';
 declare module 'tailwind-merge';
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 declare module 'react - i18next';
 declare module 'react-dom / client';

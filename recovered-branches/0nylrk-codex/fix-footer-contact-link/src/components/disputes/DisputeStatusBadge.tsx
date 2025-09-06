@@ -2,6 +2,7 @@
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+<<<<<<< HEAD
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 import { Badge } from '@/components / ui / badge';
 import { ShieldAlert } from './lucide-react';
@@ -40,6 +41,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute";
 export /**
+=======
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {export /**
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  * DisputeStatusBadge - Function description
  */
 function DisputeStatusBadge() {
@@ -58,7 +62,10 @@ function DisputeStatusBadge() {
       message = "This dispute has been closed";
       break;
 
+<<<<<<< HEAD
       variant = "secondary",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       message = "This dispute is under review by our team",
       break,
     case 'resolved':
@@ -70,6 +77,7 @@ function DisputeStatusBadge() {
       variant = "outline",
       message = "This dispute has been closed",
       break,
+<<<<<<< HEAD
 
 
     default:
@@ -89,6 +97,8 @@ function DisputeStatusBadge() {
     </Tooltip>
   )
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -112,16 +122,20 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       variant = "outline",;
       message = "This dispute has been closed";
       break;
+<<<<<<< HEAD
 
     default:;
       break;
   }
 
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
           <ShieldAlert className="h-3 w-3" />;
+<<<<<<< HEAD
           <span>Under Dispute</span>;
         </Badge>;
       </TooltipTrigger>;
@@ -168,3 +182,6 @@ message
 ;
     </Tooltip>);
 }
+=======
+          <span>Under Dispute</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

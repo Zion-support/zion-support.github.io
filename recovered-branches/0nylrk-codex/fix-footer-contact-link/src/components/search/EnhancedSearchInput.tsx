@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+<<<<<<< HEAD
 import {SearchSuggestion} from "@/types/search";
 interface EnhancedSearchInputProps {;
   value: string,;
@@ -96,6 +100,14 @@ export function EnhancedSearchInput({
 
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
+=======
+import {SearchSuggestion} from "@/types/search";  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);  // Filter suggestions based on input value
+  useEffect(() => {
+    if (!value) {
+      // Show recent searches when input is emptyimport { Search, X } from "lucide-react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Input } from "@/components/ui/input",;
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
 import { SearchSuggestion } from "@/types/search",;
@@ -141,8 +153,11 @@ export function EnhancedSearchInput({;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -151,6 +166,7 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);
     setIsFocused(false)
+<<<<<<< HEAD
     inputRef.current?.blur()
   },
   
@@ -163,6 +179,9 @@ export function EnhancedSearchInput({;
         />
 
   // Filter suggestions based on input value;
+=======
+    inputRef.current?.blur()  // Filter suggestions based on input value;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
@@ -199,8 +218,13 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion);
     setIsFocused(false),;
+<<<<<<< HEAD
     inputRef && inputRef.current?.blur();
   };
+=======
+    inputRef && inputRef.current?.blur()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <div className="relative w-full" ref={containerRef}>;
@@ -211,12 +235,15 @@ export function EnhancedSearchInput({;
         <Input
           ref={inputRef}
           type="text"
+<<<<<<< HEAD
 
 
 
         <Input
           ref={inputRef}
           type="text"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Input
           ref={inputRef}
           type="text"
@@ -227,8 +254,13 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion),;
     setIsFocused(false);
+<<<<<<< HEAD
     inputRef.current?.blur();
   };
+=======
+    inputRef.current?.blur()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="relative w-full" ref={containerRef}>;
       <div className="relative">;
@@ -238,16 +270,24 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
+<<<<<<< HEAD
 
 
         <Input
           ref={inputRef}
+=======
+        <Input
+          ref={inputRef}
+          type="text"        <Input
+          ref={inputRef}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           type="text"
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
           <button
+<<<<<<< HEAD
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
           >;
@@ -270,6 +310,9 @@ export function EnhancedSearchInput({;
 }
 
 import React, { useState, useEffect, useRef } from './react';
+=======
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"import React, { useState, useEffect, useRef } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
 import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
@@ -335,10 +378,17 @@ function handleClickOutside() {
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="relative w - full" ref={container_ref}>;
       <div className="relative">;
         <Search;
           className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+=======
+    <div className="relative w-full" ref={container_ref}>;
+      <div className="relative">;
+        <Search;
+          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />;
         <Input;
           ref={input_ref}
@@ -347,6 +397,7 @@ function handleClickOutside() {
           on_change={(e) => on_change (e.target.value)}
           on_focus={() => setIsFocused (true)}
           placeholder={placeholder}
+<<<<<<< HEAD
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
         />;
         {value && (
@@ -355,6 +406,16 @@ function handleClickOutside() {
             on_click={() => on_change ('')}
           >;
             <X className="h - 4 w - 4" />;
+=======
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion-slate";
+        />;
+        {value && (
+          <button;
+            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text-white";
+            on_click={() => on_change ('')}
+          >;
+            <X className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -364,6 +425,7 @@ function handleClickOutside() {
         visible={is_focused}
       />;
     </div>);
+<<<<<<< HEAD
 }
   ),;}
  interface EnhancedSearchInputProps {
@@ -406,3 +468,6 @@ if (!value) {
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

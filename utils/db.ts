@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-  }
-  return default_value;
-=======
 import fs from 'fs';
 import path from 'path';
 function getFilePath(fileName: string): string {
   return path.join(process.cwd(), 'data', `${fileName}.json`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
@@ -26,16 +25,23 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
   fs && fs.renameSync(tmpPath, filePath);
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -43,6 +49,10 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -52,6 +62,10 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface QueryResult<T = any> {
   rows: T[];
   rowCount: number;
@@ -86,12 +100,17 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
   } catch (error) {
     console.error('Error reading file:', error);
+<<<<<<< HEAD
   }
   return defaultValue;
 }
@@ -121,6 +140,14 @@ export const db = new DatabaseManager(defaultConfig);
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  }
+  return defaultValue;
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -134,6 +161,7 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -144,12 +172,19 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -170,12 +205,16 @@ import path from 'path';
 =======
 
 =======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import fs from 'fs';
 import path from 'path';
 
 
 }
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -184,3 +223,10 @@ import path from 'path';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

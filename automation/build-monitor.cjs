@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,19 +31,32 @@ const fs = require("fs");"const path = require("path");"const { exec } = require
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const execAsync = promisify(exec);
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-const execAsync = promisify(exec);
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -63,6 +77,8 @@ const execAsync = promisify(exec);
 const execAsync = promisify(exec);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -83,6 +99,7 @@ const execAsync = promisify(exec);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -104,6 +121,17 @@ const execAsync = promisify(exec);
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+const execAsync = promisify(exec);
+
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -113,6 +141,7 @@ class BuildMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -147,6 +176,15 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -155,6 +193,7 @@ class BuildMonitor {}
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -177,6 +216,12 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -191,27 +236,21 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
 <<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -232,6 +271,7 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -247,6 +287,15 @@ class BuildMonitor {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -262,6 +311,7 @@ class BuildMonitor {}
       this.log(`Build completed successfully in ${duration}ms`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,6 +332,12 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -294,27 +350,21 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
 <<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -334,6 +384,7 @@ class BuildMonitor {}
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -354,6 +405,12 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -383,27 +440,21 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
 <<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return buildResult;
     };
   };
@@ -414,6 +465,7 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -436,6 +488,12 @@ class BuildMonitor {}
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -455,27 +513,21 @@ class BuildMonitor {}
 
 <<<<<<< HEAD
 
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
 <<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -566,29 +618,23 @@ class BuildMonitor {}
   async optimizeBuild() {}
     try {}
       this.log('Optimizing build...');
-
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-
 <<<<<<< HEAD
 =======
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -606,6 +652,8 @@ class BuildMonitor {}
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -671,6 +719,7 @@ if (require.main === module) {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 };
 module.exports = BuildMonitor;
@@ -703,6 +752,11 @@ module.exports = BuildMonitor;
 module.exports = BuildMonitor;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 const monitor = new BuildMonitor();
 monitor.start().catch(error => {
@@ -713,6 +767,7 @@ monitor.start().catch(error => {
 };
 });
 };
+<<<<<<< HEAD
 
 module.exports = BuildMonitor;
 <<<<<<< HEAD
@@ -727,12 +782,23 @@ module.exports = BuildMonitor;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+module.exports = BuildMonitor;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });
 };
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 module.exports = BuildMonitor;
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

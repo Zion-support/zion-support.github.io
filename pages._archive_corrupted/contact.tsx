@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -7,6 +8,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -19,6 +22,7 @@ import {
   Send,
   MessageCircle,
   Globe
+<<<<<<< HEAD
 } from 'lucide-react'
 
 } from 'lucide-react';
@@ -30,6 +34,8 @@ const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
@@ -71,11 +77,15 @@ const "ContactPage": React.FC = () => {
     "Cloud & DevOps Solutions",
     "Blockchain Technology",
     "Digital Transformation",
+<<<<<<< HEAD
     "Consulting & Strategy"
 
 
   ]
   return (
+=======
+    "Consulting & Strategy"  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>
       <SEO title=\"Contact Us - Zion Tech Group\"
         description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\"
@@ -122,6 +132,7 @@ const "ContactPage": React.FC = () => {
               </motion.div>
             </div>
           </section>
+<<<<<<< HEAD
   ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
@@ -199,12 +210,18 @@ const "ContactPage": React.FC = () => {;
                 <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+<<<<<<< HEAD
 const "Contact": NextPage = () => {
   const contactInfo = [{
+=======
+const "Contact": NextPage = () => {  const contactInfo = [{
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: Mail,
       \"title\": \'Email Us\',
       \"details\": \'info@ziontechgroup.com\',
@@ -304,8 +321,12 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"firstName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       First Name *
+<<<<<<< HEAD
                     </label>
       {/* Hero Section */}
+=======
+                    </label>      {/* Hero Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center\">;
@@ -367,8 +388,12 @@ const "Contact": NextPage = () => {
                   <div>
                     <label htmlFor=\"lastName\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                       Last Name *
+<<<<<<< HEAD
                     </label>
                     <input
+=======
+                    </label>                    <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       type=\"text\"
                       id=\"lastName\"
                       name=\"lastName\"
@@ -380,8 +405,12 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Email Address *
+<<<<<<< HEAD
                   </label>
                   <input
+=======
+                  </label>                  <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     type=\"email\"
                     id=\"email\"
                     name=\"email\"
@@ -392,8 +421,12 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Company
+<<<<<<< HEAD
                   </label>
                   <input
+=======
+                  </label>                  <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     type=\"text\"
                     id=\"company\"
                     name=\"company\"
@@ -403,8 +436,12 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Phone Number
+<<<<<<< HEAD
                   </label>
                   <input
+=======
+                  </label>                  <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     type=\"tel\"
                     id=\"phone\"
                     name=\"phone\"
@@ -435,8 +472,12 @@ const "Contact": NextPage = () => {
                 <div>
                   <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                     Message *
+<<<<<<< HEAD
                   </label>
                   <textarea
+=======
+                  </label>                  <textarea
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     id=\"message\"
                     name=\"message\"
                     rows={6}
@@ -541,6 +582,7 @@ const "Contact": NextPage = () => {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* FAQ Section */}
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
@@ -549,6 +591,9 @@ const "Contact": NextPage = () => {
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 What is your typical project timeline?
+=======
+      {/* FAQ Section */}                What is your typical project timeline?
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </h3>
               <p className=\"text-gray-600\">
                 Project timelines vary depending on complexity and scope. Simple websites 
@@ -559,10 +604,14 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
+<<<<<<< HEAD
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
                 Do you provide ongoing support?
+=======
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                Do you provide ongoing support?
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </h3>
               <p className=\"text-gray-600\">
                 Yes, we offer comprehensive support and maintenance packages to ensure 
@@ -573,10 +622,14 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
+<<<<<<< HEAD
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
                 What technologies do you specialize in?
+=======
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                What technologies do you specialize in?
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </h3>
               <p className=\"text-gray-600\">
                 We work with modern technologies including React, Node.js, Python, 
@@ -587,10 +640,14 @@ const "Contact": NextPage = () => {
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
+<<<<<<< HEAD
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
 
 
                 How do you ensure project quality?
+=======
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">                How do you ensure project quality?
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </h3>
               <p className=\"text-gray-600\">
                 We follow industry best practices including code reviews, automated 
@@ -602,7 +659,11 @@ const "Contact": NextPage = () => {
         </div>
       </section>
     </MainLayout>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
           {/* Contact Information */}
           <section className=\"py-20\">
@@ -620,6 +681,7 @@ const "Contact": NextPage = () => {
                   Multiple ways to reach us for your convenience
                 </p>
               </motion.div>
+<<<<<<< HEAD
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -750,14 +812,19 @@ const "Contact": NextPage = () => {
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {contactInfo.map((info, index) => (
                   <motion.div
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -816,9 +883,12 @@ const "Contact": NextPage = () => {
               <div className="max-w-4xl mx-auto">
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
@@ -857,6 +927,7 @@ const "Contact": NextPage = () => {
                       <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Email Address *
                       </label>
+<<<<<<< HEAD
                       <input type=\"email\"
                         id=\"email\"
                         name=\"email\"
@@ -869,11 +940,41 @@ const "Contact": NextPage = () => {
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 
+=======
+                      <input type=\"email\"                        id=\"email\"
+                        name=\"email\"
+                        required
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                       />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
+<<<<<<< HEAD
+=======
+                        placeholder=\"your && your.email@example && example.com\"
+                       />;
+                    </div>;
+                  </div>;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">;
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">;
+                    <div>;
+                      <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">;
+                        Phone Number;
+                      </label>;
+                      <inputtype=\"tel\"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -884,6 +985,7 @@ const "Contact": NextPage = () => {
                       <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Company
                       </label>
+<<<<<<< HEAD
                       <input type=\"text\"
                         id=\"company\"
                         name=\"company\"
@@ -897,6 +999,12 @@ const "Contact": NextPage = () => {
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                       Service Interest
+=======
+                      <input type=\"text\"                        id=\"company\"
+                        name=\"company\"
+                        className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+                        placeholder=\"Your company name\"                      Service Interest
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </label>
                     <select
                       id=\"service\"
@@ -911,6 +1019,7 @@ const "Contact": NextPage = () => {
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
                       Service Interest
                     </label>
                        />;
@@ -939,6 +1048,13 @@ const "Contact": NextPage = () => {
                       Message *
                     </label>
                       Message *
+=======
+                  <div className=\"mb-6\">
+                    <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">                      Message *
+                    </label>                      Message *
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </label>
                     </select>;
                   </div>;
@@ -959,7 +1075,10 @@ const "Contact": NextPage = () => {
                   </div>
                   <motion.button
                     type=\"submit\"
+<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
@@ -969,6 +1088,7 @@ const "Contact": NextPage = () => {
                     Send Message
                   </motion.button>
                 </motion.form>
+<<<<<<< HEAD
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
@@ -986,6 +1106,9 @@ const "Contact": NextPage = () => {
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">        {/* Hero Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"text-center\">
@@ -1023,6 +1146,7 @@ const "Contact": NextPage = () => {
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
@@ -1049,6 +1173,12 @@ const "Contact": NextPage = () => {
 
 
                 {isSubmitted ? (
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>                {isSubmitted ? (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
@@ -1066,8 +1196,12 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"name\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Full Name *
+<<<<<<< HEAD
                         </label>
                         <input
+=======
+                        </label>                        <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           type=\"text\"
                           id=\"name\"
                           name=\"name\"
@@ -1081,8 +1215,12 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"email\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Email Address *
+<<<<<<< HEAD
                         </label>
                         <input
+=======
+                        </label>                        <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           type=\"email\"
                           id=\"email\"
                           name=\"email\"
@@ -1090,6 +1228,7 @@ const "Contact": NextPage = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+<<<<<<< HEAD
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           placeholder=\"your@email.com\"
@@ -1099,10 +1238,39 @@ const "Contact": NextPage = () => {
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+=======
+                        />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                          value={formData && formData.email}
+                          onChange={handleInputChange}
+                          className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
+<<<<<<< HEAD
+=======
+                          placeholder=\"your@email && email.com\"
+                        />;
+                      </div>;
+                    </div>;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">;
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+                      <div>;
+                        <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
+                          Company;
+                        </label>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1116,8 +1284,12 @@ const "Contact": NextPage = () => {
                       <div>
                         <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Phone Number
+<<<<<<< HEAD
                         </label>
                         <input
+=======
+                        </label>                        <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           type=\"tel\"
                           id=\"phone\"
                           name=\"phone\"
@@ -1148,8 +1320,12 @@ const "Contact": NextPage = () => {
                     <div>
                       <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                         Message *
+<<<<<<< HEAD
                       </label>
                       <textarea
+=======
+                      </label>                      <textarea
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         id=\"message\"
                         name=\"message\"
                         required
@@ -1181,20 +1357,27 @@ const "Contact": NextPage = () => {
                 )}
               </div>
               {/* Contact Information */}
+<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
               <div className=\"space-y-8\">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
                   <p className=\"text-lg text-gray-300 mb-8\">
                     We\'re here to help you succeed. Reach out to us through any of the channels below, and we\'ll respond promptly.
                   </p>
                 </div>
+<<<<<<< HEAD
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
 
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+=======
+                <div className="space-y-6">                    <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
                         <info.icon className=\"w-6 h-6 text-white\" />
                       </div>
@@ -1208,7 +1391,10 @@ const "Contact": NextPage = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {/* Services Overview */}
           <section className="py-20">
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
@@ -1308,12 +1494,16 @@ export default ContactPage
                 ))}
 
 export default ContactPage
+<<<<<<< HEAD
           </div>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </section>
       </div>
     </>
   );
 }
+<<<<<<< HEAD
 export default ContactPage
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
           </div>
@@ -1321,6 +1511,9 @@ export default ContactPage
       </div>
     </>
               </div>;
+=======
+=======              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </section>;
         </main>;
@@ -1337,6 +1530,9 @@ export default ContactPage;
 
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

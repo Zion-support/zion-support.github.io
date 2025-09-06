@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -111,9 +114,13 @@ export function redeemToCredits(
 export function getAllTransactions() {
   return tokenStore.getTransactions();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -122,7 +129,13 @@ export function getConfig() {
     totalSupply: 1000000
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenTransaction {;
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   userId: string;
 
@@ -142,6 +155,7 @@ export interface TokenTransaction {
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -185,6 +199,14 @@ export function issueTokens(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -194,18 +216,18 @@ export function issueTokens(
   };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -214,6 +236,12 @@ export function issueTokens(
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   transactions.push(transaction);
   return transaction;
 }
@@ -229,6 +257,7 @@ export function redeemTokens(
     amount: -amount, // Negative for redemption
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -239,6 +268,28 @@ export function redeemTokens(
   };
 
     type: "redeem",
+=======
+
+;
+export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+  return transaction;
+}
+export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount: -amount, // Negative for redemption;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     type: 'redeem',
     reason,
 <<<<<<< HEAD
@@ -247,28 +298,37 @@ export function redeemTokens(
 ;
   transactions.push (transaction);
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     type: 'redeem',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     reason,
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     timestamp: Date.now(),
   };
+<<<<<<< HEAD
 
   transactions.push(transaction);
   return transaction;
 
   transactions.push(transaction);
   return transaction;
+=======
+  
+
+  transactions.push(transaction);
+ursor/fix-website-loading-errors-and-merge-6662
+  return transaction;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,6 +362,8 @@ export function setConfig(
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -385,14 +447,15 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
-<<<<<<< HEAD
-=======
-=======
   };
   
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   transactions.push(transaction);
   return transaction;
 }
@@ -401,32 +464,44 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+main
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 }
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -12,6 +12,7 @@ interface TalentCardAvailabilityProps {;
 }
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+<<<<<<< HEAD
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 
@@ -59,12 +60,23 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Full-time',;
       case 'part-time':;
         return 'Part-time',;
+=======
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
+};
+  // Format availability status;
+  const getAvailabilityColor = (status: string) => {;
+    switch (status) {;
+      case 'full-time':;        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'project-based':;
         return 'Project',;
       default:;
         return status;
 
     }
+<<<<<<< HEAD
 
   },
 
@@ -75,6 +87,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Part-time';
     }
 
+=======
+  },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -86,6 +101,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
   return (
 
+<<<<<<< HEAD
     <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
       <Clock className="h-3 w-3" />;
       <span>{getAvailabilityLabel(availabilityType)}</span>;
@@ -115,3 +131,6 @@ function TalentCardAvailability() {
 
 
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

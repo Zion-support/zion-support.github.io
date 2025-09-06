@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -18,6 +21,7 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
+<<<<<<< HEAD
 
     icon: "Briefcase"
   }
@@ -35,12 +39,18 @@ const categories: ForumCategoryInfo[] = [
   },
 
   {
+=======
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
     icon: "MessageSquare"
 
 
@@ -164,6 +174,9 @@ const categories: ForumCategoryInfo[] = [;
 
 const iconMap = {;
 import { Link } from './react-router-dom';
+=======
+    icon: "MessageSquare"import { Link } from './react-router-dom';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
@@ -212,6 +225,7 @@ const icon_map = {
   Code;
   FileText;
 
+<<<<<<< HEAD
   Megaphone;
 };
 
@@ -378,4 +392,6 @@ export const ForumCategories = () => {;
 export default ForumCategories;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default ForumCategories;

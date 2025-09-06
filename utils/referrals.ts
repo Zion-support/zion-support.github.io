@@ -37,6 +37,7 @@ if (return, ) {
       headers: { 'Content - Type': 'application / json' }
       body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
+<<<<<<< HEAD
   } catch {}
     await fetch('/api/referrals/track', {;
       method: 'POST',;
@@ -48,3 +49,6 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  } catch {}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

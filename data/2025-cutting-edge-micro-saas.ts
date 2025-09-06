@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -8,9 +9,11 @@ export const cuttingEdgeMicroSaasServices2025 = [
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -433,6 +436,7 @@ id: 'customer-success-ai-pro',
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -440,6 +444,10 @@ id: 'customer-success-ai-pro',
       'Risk Management Standards'
     ]
   }
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const cuttingEdgeMicroSaasServices2025 = [
   {
 
@@ -488,6 +496,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -496,6 +505,10 @@ export const cuttingEdgeMicroSaasServices2025 = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -703,6 +716,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -721,16 +735,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Basel III',
       'Solvency II',
       'Dodd-Frank',
@@ -739,8 +754,12 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }
 ];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

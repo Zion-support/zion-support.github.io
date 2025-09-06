@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/test/setup.ts
 <<<<<<< HEAD
 =======
@@ -44,20 +45,24 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
+<<<<<<< HEAD
 global && global.ResizeObserver = class ResizeObserver {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-=======
 // Global test setup
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
@@ -69,26 +74,29 @@ global.IntersectionObserver = jest.fn().mockImplementation(() => ({
 // Mock console methods
 global.console = {
   ...console, warn: jest.fn(), error: jest.fn(), };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
-
 beforeAll(() => {
   console.error = (...args: any[]) => {
+<<<<<<< HEAD
     if (
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
     if (
       typeof args[0] === "string" &&
       args[0].includes("Warning: ReactDOM.render is no longer supported")
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ) {
       return;
     }
 
     originalError && originalError.call(console, ...args);
   };
+<<<<<<< HEAD
 
   console.warn = (...args: any[]) => {
     if (
@@ -159,6 +167,8 @@ if (
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ) {
       return;
     }
@@ -168,6 +178,7 @@ if (
 });
 
 afterAll(() => {
+<<<<<<< HEAD
   console.error = originalError;
   console.warn = originalWarn;
 });
@@ -195,3 +206,5 @@ after_all (() => {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/test/setup.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

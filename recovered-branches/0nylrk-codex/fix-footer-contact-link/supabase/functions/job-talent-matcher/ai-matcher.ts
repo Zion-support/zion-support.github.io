@@ -1,16 +1,26 @@
+<<<<<<< HEAD
 
 import {JobData, TalentProfile, MatchResult} from "./types ;
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
+=======
+import { JobData, TalentProfile, MatchResult } from "./types.ts";
+// Get openAI API key from environment variablesimport { JobData, TalentProfile, MatchResult } from "./types.ts";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Get openAI API key from environment variables
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
+<<<<<<< HEAD
 
 
 // Get openAI API key from environment variables
+=======
+// Get openAI API key from environment variables
+const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",// Get openAI API key from environment variables
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const openAiApiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
@@ -24,6 +34,7 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
  * @returns Array of normalized skills
  */
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
+<<<<<<< HEAD
 
 
   try {
@@ -269,6 +280,21 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
     `;
+=======
+  try {
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+=======    const skillsString = skills && skills.join(", ");
+    
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+          {
+            role: "system"
+            content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."    return normalizedSkills
+  } catch (error) {
+    console && console.error("Error in normalizeSkillsWithAI:", error);
+    // If AI normalization fails, return the original skills
+    return skills    `;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents.map((talent, index) => {
       return `
@@ -278,17 +304,21 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
 
+<<<<<<< HEAD
 
     // Create talent profiles text for AI evaluation
     const talentProfilesText = talents && talents.map((talent, index) => {
       return `
         Talent ${index + 1} ID: ${talent.id}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
         Bio Summary: ${talent.bio ? talent.bio.substring (0, 100) + "..." : "No bio"}
         Skills: ${Array.is_array (talent.skills) ? talent.skills.join (", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
         Hourly Rate: ${talent.hourly_rate ? "$" + talent.hourly_rate : "Not specified"}
+<<<<<<< HEAD
 
         Talent ${index + 1} ID: ${talent && talent.id}
         Name: ${talent && talent.full_name}
@@ -301,19 +331,25 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
 
       `
     }).join("\n\n");
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         Availability: ${talent.availability_type |"Not specified"}
       `
 
     }).join("\n\n"),
     
 
+<<<<<<< HEAD
     // Send request to OpenAI for matching
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openAiApiKey}`
 
+<<<<<<< HEAD
 
       },
 
@@ -347,16 +383,26 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         model: "gpt-4o-mini",
         model: "gpt-4o-mini";
         messages: [
+=======
+        model: "gpt-4o-mini";        messages: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {
             role: "system"
             content: `You are an AI talent matcher for a job marketplace. Based on the job details and talent profiles provided, identify the top 5 matching talents (or fewer if there aren't 5 good matches). For each match, provide:
             1. The talent ID
             2. A match score from 0-100
             3. A list of matched skills
+<<<<<<< HEAD
             4. A brief reason for the match (2-3 sentences)
 
 
               {
+=======
+            4. A brief reason for the match (2-3 sentences)            
+            Return your response in JSON format only, with no additional text:
+            
+            [              {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 "talentId": "talent-id-1";
                 "score": 85
                 "matchedSkills": ["skill1", "skill2"];
@@ -365,10 +411,13 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
               ...
             ]`
           }
+<<<<<<< HEAD
             
             Return your response in JSON format only, with no additional text:
             
             [
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {
                 "talentId": "talent-id-1";
                 "score": 85
@@ -376,11 +425,15 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
                 "reason": "Brief reason for match"
               }
               ...
+<<<<<<< HEAD
             ]`
           },
 
 
           {
+=======
+            ]`          {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             role: "user"
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles:\n${talentProfilesText}`
           }
@@ -388,6 +441,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
             role: "user",
             content: `Job Details:\n${jobDetailsText}\n\n_talent Profiles:\n${talentProfilesText}`;
           }
+<<<<<<< HEAD
 
         ];
         temperature: 0 && 0.4,
@@ -459,6 +513,14 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     // Calculate a basic match score
 
     console.error("Error in findBestMatches:", error),
+=======
+        temperature: 0 && 0.4,
+    }
+    return aiResponse
+  } catch (error) {
+    // If AI matching fails, perform a basic skill matching
+    return performBasicSkillMatching(jobDetails, talents)    console.error("Error in findBestMatches:", error),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
@@ -548,9 +610,13 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       talentId: talent.id,;
       score: matchScore;
       matchedSkills: matchedSkills;
+<<<<<<< HEAD
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
     const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
     
+=======
+      reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return {
       talentId: talent && talent.id;
@@ -559,8 +625,11 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       matchedSkills: matchedSkills,
       reason: `Matched ${matchedSkills && matchedSkills.length} out of ${requiredSkills && requiredSkills.length} required skills.`
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return {
       talentId: talent && talent.id;
       score: matchScore;
@@ -569,7 +638,11 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score
   .sort((a, b) => b && b.score - a && a.score) // Sort by score (highest first)
   .slice(0, 5), // Get top 5 matches
+<<<<<<< HEAD
 ;
+=======
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const data = await response.json ();
 ;
     // Check condition
@@ -626,6 +699,7 @@ export function performBasicSkillMatching (job_details: any, talents: TalentProf
   .filter (match => match.score > 30) // Only include matches with at least 30% score;
   .sort ((a, b) => b.score - a.score) // Sort by score (highest first);
   .slice (0, 5), // Get top 5 matches;
+<<<<<<< HEAD
 }
 }
 
@@ -879,3 +953,6 @@ return normalizedSkills;
   .slice(0, 5), // Get top 5 matches
 }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -5,6 +5,7 @@ export type Json =;
   | boolean;
   | null;
   | { [key: string]: Json | undefined }
+<<<<<<< HEAD
   | Json[];
 
 export type Database = {
@@ -130,6 +131,9 @@ export type Database = {
         Row: {;
 
           api_key_id: string | null;
+=======
+  | Json[];          api_key_id: string | null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           created_at: string;
           endpoint: string;
           id: string;
@@ -140,8 +144,12 @@ export type Database = {
           user_agent: string | null;
           user_id: string | null;
         }
+<<<<<<< HEAD
         Insert: {
         Insert: {
+=======
+        Insert: {        Insert: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -152,6 +160,7 @@ export type Database = {
           status_code: number;
           user_agent?: string | null;
           user_id?: string | null;
+<<<<<<< HEAD
         }
         Update: {
           api_key_id?: string | null;
@@ -685,6 +694,12 @@ export type Database = {
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
+=======
+        }            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"            columns: ["resume_id"]
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
@@ -694,9 +709,13 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
+<<<<<<< HEAD
           }
           },
 
+=======
+          }          },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           {
             foreignKeyName: "job_applications_resume_id_fkey";
@@ -719,8 +738,13 @@ export type Database = {
           category: string;
           client_id: string;
           created_at: string;
+<<<<<<< HEAD
           deadline: string | null;
           description: string;
+=======
+          deadline: string | null,
+  description: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           id: string;
           skills: string[];
           status: string;
@@ -732,8 +756,13 @@ export type Database = {
           category: string;
           client_id: string;
           created_at?: string;
+<<<<<<< HEAD
           deadline?: string | null;
           description: string;
+=======
+          deadline?: string | null,
+  description: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           id?: string;
           skills?: string[];
           status?: string;
@@ -795,13 +824,17 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
             isOneToOne: false;
             referenced_relation: "project_milestones";
             referenced_columns: ["id"];
 
+<<<<<<< HEAD
           }
           }
 
@@ -1209,6 +1242,12 @@ export type Database = {
 
           }
 
+=======
+          }          }
+
+          },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           },
           {
             foreignKeyName: "project_milestones_project_id_fkey";
@@ -1217,13 +1256,17 @@ export type Database = {
             referenced_relation: "projects";
             referenced_columns: ["id"];
           {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             foreignKeyName: "project_notes_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
 
+<<<<<<< HEAD
           }
           }
 
@@ -1297,6 +1340,16 @@ export type Database = {
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
           }
+=======
+          }          }
+
+          },
+
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "jobs"
+            referencedColumns: ["id"]          }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -1372,17 +1425,23 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             foreignKeyName: "quote_requests_requester_id_fkey";
             columns: ["requester_id"];
             isOneToOne: false;
             referenced_relation: "profiles";
             referenced_columns: ["id"];
+<<<<<<< HEAD
 
           }
 
           },
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -1390,6 +1449,7 @@ export type Database = {
             referenced_relation: "profiles";
             referenced_columns: ["id"];
           }];
+<<<<<<< HEAD
       }
 
 
@@ -1421,6 +1481,13 @@ export type Database = {
 
         }
         Relationships: [;
+=======
+      }          code?: string;
+          created_at?: string;
+          id?: string;
+          updated_at?: string;
+          user_id?: string;        Relationships: [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {
             foreignKeyName: "referral_codes_user_id_fkey";
             columns: ["user_id"];
@@ -1461,6 +1528,7 @@ export type Database = {
           user_id?: string;
         }
         Relationships: [;
+<<<<<<< HEAD
           {
 
 
@@ -1469,10 +1537,14 @@ export type Database = {
 
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
+=======
+          {            foreignKeyName: "referral_rewards_referral_id_fkey"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
+<<<<<<< HEAD
 
             foreignKeyName: "referral_rewards_partner_id_fkey";
             columns: ["partner_id"];
@@ -1557,11 +1629,14 @@ export type Database = {
 
           {
             foreignKeyName: "referrals_referral_code_fkey"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
 
+<<<<<<< HEAD
 
           },
 
@@ -1596,6 +1671,9 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
+=======
+          },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -1604,6 +1682,7 @@ export type Database = {
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
           }];
+<<<<<<< HEAD
       }
 
 
@@ -1611,6 +1690,9 @@ export type Database = {
         Row: {;
 
           clicked_at: string | null;
+=======
+      }          clicked_at: string | null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           email_body: string;
           email_subject: string;
           id: string;
@@ -1619,8 +1701,12 @@ export type Database = {
           sent_at: string | null;
           user_id: string;
         }
+<<<<<<< HEAD
         Insert: {
         Insert: {
+=======
+        Insert: {        Insert: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -1629,6 +1715,7 @@ export type Database = {
           reminder_type: string;
           sent_at?: string | null;
           user_id: string;
+<<<<<<< HEAD
         }
         Update: {
           clicked_at?: string | null;
@@ -1644,6 +1731,9 @@ export type Database = {
 
         }
         Relationships: [;
+=======
+        }        Relationships: [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
@@ -1683,13 +1773,17 @@ export type Database = {
         }
         Relationships: [;
           {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             foreignKeyName: "review_reports_reporter_id_fkey";
             columns: ["reporter_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
 
+<<<<<<< HEAD
           }
           }
 
@@ -1767,10 +1861,17 @@ export type Database = {
 
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
+=======
+          }          }
+
+          },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
+<<<<<<< HEAD
 
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
@@ -2287,6 +2388,8 @@ export type Database = {
         Returns: {;
 
           user_id: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           email: string;
           display_name: string;
           user_type: string;
@@ -2296,9 +2399,12 @@ export type Database = {
           onboarding_status: Json;
         }[];
 
+<<<<<<< HEAD
 
 
       }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
         Returns: undefined;
@@ -2313,11 +2419,14 @@ export type Database = {
         }
         Returns: string;
       }
+<<<<<<< HEAD
 
 
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
         Args: Record < PropertyKey, never>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         Returns: undefined;
       }
       flag_suspicious_content: {
@@ -2351,6 +2460,7 @@ export type Database = {
       }
       get_current_tenant_id: {
         Args: Record < PropertyKey, never>;
+<<<<<<< HEAD
         Returns: string;
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
@@ -2392,13 +2502,20 @@ export type Database = {
     }
     Enums: {
       api_key_scope:;
+=======
+        Returns: string;      api_key_scope:;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
         | "quotes:write";
         | "webhooks:manage";
+<<<<<<< HEAD
       fraud_severity: "safe" | "suspicious" | "dangerous";
       fraud_severity: "safe" | "suspicious" | "dangerous";
+=======
+      fraud_severity: "safe" | "suspicious" | "dangerous";      fraud_severity: "safe" | "suspicious" | "dangerous";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       quote_request_status:;
         | "new";
         | "in_review";
@@ -2406,6 +2523,7 @@ export type Database = {
         | "responded";
         | "closed";
         | "archived";
+<<<<<<< HEAD
       referral_status: "pending" | "completed" | "expired";
     }
     CompositeTypes: {
@@ -2415,10 +2533,13 @@ export type Database = {
 }
 
 type DefaultSchema = Database[Extract < keyof Database, "public">];
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type Tables<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
 
+<<<<<<< HEAD
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2442,6 +2563,8 @@ export type Tables<;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           date: string
           event_type: string
           count: number
@@ -2500,6 +2623,7 @@ export type Tables<
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
+<<<<<<< HEAD
 
 
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2520,10 +2644,13 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ? R
       : never
     : never
 export type TablesInsert<
+<<<<<<< HEAD
   DefaultSchemaTableNameOrOptions extends
 
       ? R;
@@ -2768,11 +2895,15 @@ export type Enums<;
     | keyof DefaultSchema["Enums"];
 
     | { schema: keyof Database }
+=======
+  DefaultSchemaTableNameOrOptions extends    | { schema: keyof Database }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
+<<<<<<< HEAD
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
 
 
@@ -2800,6 +2931,9 @@ export type CompositeTypes<;
     | keyof DefaultSchema["CompositeTypes"];
 
     | { schema: keyof Database }
+=======
+> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }    | { schema: keyof Database }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
   }
@@ -2807,6 +2941,7 @@ export type CompositeTypes<;
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
 
+<<<<<<< HEAD
 
     | keyof DefaultSchema["CompositeTypes"]
 
@@ -2814,12 +2949,19 @@ export type CompositeTypes<;
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
+=======
+    | keyof DefaultSchema["CompositeTypes"]
+
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
+<<<<<<< HEAD
 
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
@@ -2848,6 +2990,9 @@ export const Constants = {
 
 ;
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export const Constants = {
   public: {
@@ -2855,7 +3000,11 @@ export const Constants = {
 
       api_key_scope: [
 
+<<<<<<< HEAD
         "archived"],
+=======
+;        "archived"],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
       referral_status:"pending" | "completed" | "expired";
@@ -2988,4 +3137,7 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

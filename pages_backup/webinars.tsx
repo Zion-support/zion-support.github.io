@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/webinars.tsx
 <<<<<<< HEAD
 =======
@@ -31,6 +32,8 @@ import React from 'react';
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react',;
 import SEO from '../components/SEO',;
 import React from 'react';
@@ -38,16 +41,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function WebinarsPage() {
-<<<<<<< HEAD
-import React from 'react';
-import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Head from 'next/head';
-import Layout from '../components/Layout';
-
-export default function WebinarsPage() {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -65,6 +59,7 @@ export default function WebinarsPage() {
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </> 
 import SEO from '../components/SEO';
 export default function WebinarsPage() {
@@ -79,32 +74,48 @@ origin/automation-improvements-final
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/webinars.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/webinars.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 		<>
 			<SEO title=&quot;Webinars | Zion Tech Group&quot; description=&quot;Upcoming webinars and on-demand sessions.&quot; canonical=&quot;/webinars&quot; />
 			<div className=&quot;container mx-auto px-4 py-16&quot;>
 				<h1 className=&quot;text-4xl font-bold mb-4&quot;>Webinars</h1>
 				<p className=&quot;text-gray-300&quot;>No upcoming webinars at this time. Check back soon.</p>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/webinars.tsx
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 			</div>
 		</>
 	)
 
 }
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -133,6 +144,7 @@ origin/automation-improvements-final
   }
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/webinars.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -144,3 +156,11 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/webinars.tsx
+=======
+
+
+
+
+ <> <SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" /> <div className="container mx-auto px-4 py-16" > <h1 className="text-4xl font-bold mb-4" >Webinars</h1> <p className="text-gray-300" >No upcoming webinars at this time. Check back soon.</p> </div> </>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

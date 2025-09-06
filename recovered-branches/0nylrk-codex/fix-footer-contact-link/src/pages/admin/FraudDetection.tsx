@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -16,8 +19,11 @@ import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
 
+<<<<<<< HEAD
 
 // Import refactored components
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   FraudStatsCards,
   FraudFilters,
@@ -25,12 +31,16 @@ import {
   FraudTabContent
 } from "@/components/admin/fraud-detection",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
 
+<<<<<<< HEAD
 
 export default function FraudDetection() {;
   const [flags, setFlags] = useState<FraudFlag[]>([]);
@@ -51,6 +61,8 @@ export default function FraudDetection() {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -61,6 +73,7 @@ export default function FraudDetection() {
     actioned_count: 0})
   // Fetch fraud flags
   const fetchFraudFlags = async () => {
+<<<<<<< HEAD
     setIsLoading(true);
     setIsLoading(true);
     try {
@@ -246,13 +259,24 @@ export default function FraudDetection() {;
 
 
       toast({
+=======
+    setIsLoading(true);    setIsLoading(true);
+    try {
+      const { data, error } = await supabase
+        .from("fraud_flags")
+        .select("*")      toast({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
       // Refresh the data
       fetchFraudFlags()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error updating fraud flag:", error);
       console.error("Error updating fraud flag:", error),
+=======
+      console.error("Error updating fraud flag:", error),      console.error("Error updating fraud flag:", error),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Error"
         description: "Failed to update flag"
@@ -264,6 +288,7 @@ export default function FraudDetection() {;
     setSeverityFilter(null);
     setContentTypeFilter(null)
 
+<<<<<<< HEAD
 
   },
 
@@ -348,11 +373,16 @@ export default function FraudDetection() {;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               disabled={isLoading}
             >
               Refresh Data
@@ -367,6 +397,7 @@ export default function FraudDetection() {;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
+<<<<<<< HEAD
           </TabsList>
 
 
@@ -380,6 +411,10 @@ export default function FraudDetection() {;
       toast({;
         title: "Flag updated",;
         description: `Action '${action}' was applied successfully.`}),;
+=======
+          </TabsList>        title: "Flag updated",,
+  description: `Action '${action}' was applied successfully.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Refresh the data;
       fetchFraudFlags();
@@ -387,8 +422,13 @@ export default function FraudDetection() {;
     } catch (error) {;
       console && console.error("Error updating fraud flag:", error);
       toast({;
+<<<<<<< HEAD
         title: "Error",;
         description: "Failed to update flag",;
+=======
+        title: "Error",,
+  description: "Failed to update flag",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   };
@@ -397,8 +437,13 @@ export default function FraudDetection() {;
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
+<<<<<<< HEAD
     setContentTypeFilter(null);
   };
+=======
+    setContentTypeFilter(null)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
 
@@ -409,7 +454,10 @@ export default function FraudDetection() {;
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
@@ -420,16 +468,20 @@ export default function FraudDetection() {;
               Monitor suspicious activities and protect the marketplace from fraud and abuse;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className="mt-4 md:mt-0">;
             <Button
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
               disabled={isLoading}>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Refresh Data;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
@@ -615,11 +667,14 @@ if (throw error) {
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ;
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         ;
         <Tabs defaultValue="all" className="mb-8">;
+<<<<<<< HEAD
         .eq("id", flagId);
       if (error) throw error;
           <TabsList>;
@@ -649,6 +704,8 @@ if (throw error) {
             <Card>;
               <CardContent className="p-0">;
             {/* Flags Table */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Card>;
               <CardContent className="p-0">;
                 <FraudFlagsTable
@@ -657,19 +714,29 @@ if (throw error) {
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               reset_filters={reset_filters}
             />;
             {/* Flags Table */}
             <Card>;
+<<<<<<< HEAD
               <CardContent className="p - 0">;
+=======
+              <CardContent className="p-0">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FraudFlagsTable;
                   flags={filtered_flags}
                   is_loading={is_loading}
                   has_filters={has_filters}
                   reset_filters={reset_filters}
                   on_action={handle_action}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 />;
               </CardContent>;
             </Card>;
@@ -687,6 +754,7 @@ if (throw error) {
         </Tabs>;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
 }
 
           ;
@@ -794,3 +862,6 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

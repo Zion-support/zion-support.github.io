@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -11,6 +12,17 @@ const path = require('path');
 
 
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔒 Running security audit...');
+console.log('✅ Security audit completed');
+
+#!/usr/bin/env node
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -167,7 +179,6 @@ class SecurityAuditor {
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -482,29 +493,20 @@ class SecurityAuditor {
     } catch (error) {
       this.log(`❌ Security audit failed: ${error.message}`, 'error');
       throw error;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 }
 
-<<<<<<< HEAD
-// Run the security auditor
-const auditor = new SecurityAuditor();
-auditor.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+main
+
 // Run the auditor
 if (require.main === module) {
   const auditor = new SecurityAuditor();
@@ -512,6 +514,10 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

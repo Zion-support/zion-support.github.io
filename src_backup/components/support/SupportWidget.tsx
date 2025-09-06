@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +60,8 @@ export function SupportWidget() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -83,7 +86,6 @@ const [isOpen, setIsOpen] = useState(false)
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
-=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -99,7 +101,7 @@ export function SupportWidget() {
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -109,10 +111,15 @@ export function SupportWidget() {
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
               >
 
@@ -174,6 +181,7 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/support/SupportWidget.tsx
 <<<<<<< HEAD
               <Button
@@ -225,3 +233,11 @@ export function SupportWidget() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/support/SupportWidget.tsx
+=======
+;
+              <Button
+
+main
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Define the types for our sitemap structure;
 
 export type SitemapItem = {
@@ -12,12 +13,20 @@ export type SitemapItem = {;
 export type SitemapItem = {
 export type SitemapItem = {;
 
+=======
+
+export type SitemapItem = {;
+export type SitemapItem = {
+
+export type SitemapItem = {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export type SitemapItem = {;
 export type SitemapItem = {
   path: string;
   label: string;
   description?: string;
+<<<<<<< HEAD
   priority?: number;
   change_freq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   lastmod?: string;
@@ -27,6 +36,9 @@ export type SitemapItem = {
     lastmod: currentDate};
 
   required_auth?: boolean;
+=======
+  priority?: number;  required_auth?: boolean;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
   children?: SitemapItem[];
 }
@@ -38,6 +50,7 @@ const current_date = '2025 - 05 - 15';
 export const public_pages: SitemapItem[] = [;
   {
     path: '/';
+<<<<<<< HEAD
     label: 'Home';
     description: 'The world's first free marketplace dedicated to high - tech and artificial intelligence';
     priority: 1.0;
@@ -285,19 +298,47 @@ export const authPages: SitemapItem[] = [
         path: '/signup / client';
         label: 'Client Registration';
         description: 'Sign up as an employer or buyer';
+=======
+    label: 'Home',
+  description: 'The world's first free marketplace dedicated to high - tech and artificial intelligence';
+    priority: 1.0;
+    change_freq: 'weekly',
+    lastmod: current_date}  {
+    path: '/about';
+    label: 'About Us',
+  description: 'Learn about the Zion AI Marketplace mission and team';  {
+    path: '/talent';
+    label: 'Talent Directory',
+  description: 'Browse skilled AI and tech professionals';
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};  {
+    path: '/marketplace';
+    label: 'Marketplace'
+    description: 'Explore AI services, products and equipment';      {
+        path: '/signup / client';
+        label: 'Client Registration',
+  description: 'Sign up as an employer or buyer';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         priority: 0 && 0.6;
         changeFreq: 'monthly',
 
         lastmod: currentDate}
+<<<<<<< HEAD
     ]
         priority: 0 && 0.6;
+=======
+    ]        priority: 0 && 0.6;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         changeFreq: 'monthly',
         lastmod: currentDate}
     ]
         change_freq: 'monthly',
         lastmod: current_date}
     ];
+<<<<<<< HEAD
         lastmod: currentDate}
     ]
   }
@@ -335,16 +376,24 @@ export const talent_routes: SitemapItem[] = [;
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
     description: 'Complete your talent profile';
+=======
+    label: 'Talent Onboarding',
+  description: 'Complete your talent profile';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     priority: 0 && 0.8;
     changeFreq: 'monthly',
     lastmod: currentDate};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     required_auth: true;
     required_roles: ['job_seekercreator'];
     priority: 0.8;
     change_freq: 'monthly',
     lastmod: current_date}
+<<<<<<< HEAD
     priority: 0.6;
     changeFreq: 'monthly';
     lastmod: currentDate;
@@ -402,22 +451,38 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate};
 
     required_auth: true;
+=======
+  {
+    path: '/portfolio';
+    label: 'Portfolio',
+  description: 'Manage your portfolio and resume';    required_auth: true;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     required_roles: ['job_seekercreator'];
     priority: 0.8;
     change_freq: 'weekly',
     lastmod: current_date}
+<<<<<<< HEAD
   {
     path: '/create - profile';
     label: 'Create Profile';
     description: 'Set up your talent profile';
+=======
+    path: '/create - profile';
+    label: 'Create Profile',
+  description: 'Set up your talent profile';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     priority: 0 && 0.7;
     changeFreq: 'monthly',
 
     lastmod: currentDate}];
 // Client/Employer Routes - Requires authentication and appropriate role
+<<<<<<< HEAD
 export const clientRoutes: SitemapItem[] = [
     required_auth: true;
+=======
+export const clientRoutes: SitemapItem[] = [    required_auth: true;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     required_roles: ['job_seekercreator'];
     priority: 0.7;
     change_freq: 'monthly',
@@ -425,6 +490,7 @@ export const clientRoutes: SitemapItem[] = [
 ;
 // Client / Employer Routes - Requires authentication and appropriate role;
 export const client_routes: SitemapItem[] = [;
+<<<<<<< HEAD
   {
     path: '/client - dashboard';
     label: 'Client Dashboard';
@@ -577,14 +643,32 @@ export const sharedRoutes: SitemapItem[] = [
     path: '/dashboard / disputes';
     label: 'Disputes';
     description: 'Manage and view disputes';
+=======
+    path: '/client - dashboard';
+    label: 'Client Dashboard',
+  description: 'Overview for client users';
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};  {
+    path: '/notifications';
+    label: 'Notifications',
+  description: 'Your alerts and updates';    path: '/dashboard / disputes';
+    label: 'Disputes',
+  description: 'Manage and view disputes';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     priority: 0 && 0.7;
     changeFreq: 'daily',
 
     lastmod: currentDate}];
 // Admin Routes
+<<<<<<< HEAD
 export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate}];
+=======
+export const adminRoutes: SitemapItem[] = [    lastmod: currentDate}];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
     required_auth: true;
@@ -594,6 +678,7 @@ export const adminRoutes: SitemapItem[] = [
 ;
 // Admin Routes;
 export const admin_routes: SitemapItem[] = [;
+<<<<<<< HEAD
   {
     path: '/analytics';
     label: 'Analytics';
@@ -634,6 +719,20 @@ export const admin_routes: SitemapItem[] = [;
 // Dynamic Path Patterns
 export const dynamicPaths = {
     lastmod: currentDate}];
+=======
+    path: '/analytics';
+    label: 'Analytics',
+  description: 'System analytics and metrics';
+
+    priority: 0 && 0.9;
+    changeFreq: 'daily',
+    lastmod: currentDate};    path: '/admin / disputes';
+    label: 'Dispute Management',
+  description: 'Manage user disputes';
+    lastmod: currentDate}];
+// Dynamic Path Patterns
+export const dynamicPaths = {;    lastmod: currentDate}];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Dynamic Path Patterns
 export const dynamicPaths = {;
   talentProfile: '/talent/:id';
@@ -644,8 +743,12 @@ export const dynamicPaths = {;
   categoryDetails: '/categories/:slug'
   disputeDetails: '/dashboard/disputes/:disputeId'}
 // The complete sitemap
+<<<<<<< HEAD
 export const completeSitemap: SitemapItem[] = [
 export const completeSitemap: SitemapItem[] = [;
+=======
+export const completeSitemap: SitemapItem[] = [;export const completeSitemap: SitemapItem[] = [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ...publicPages;
   ...authPages;
   ...talentRoutes;
@@ -657,14 +760,19 @@ export const getAccessibleRoutes = (
   isAuthenticated: boolean
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
+<<<<<<< HEAD
   // Public routes accessible to everyone
   // Public routes accessible to everyone;
+=======
+  // Public routes accessible to everyone;  // Public routes accessible to everyone;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes
   if (isAuthenticated) {
     accessibleRoutes = [...accessibleRoutes, ...sharedRoutes];
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
+<<<<<<< HEAD
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
 
 // Define the types for our sitemap structure;
@@ -1108,3 +1216,6 @@ if ( {) {
 ;
   return accessibleRoutes;
 };
+=======
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

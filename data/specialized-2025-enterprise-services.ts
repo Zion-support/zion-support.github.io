@@ -1,19 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -45,6 +51,7 @@ export interface SpecializedEnterpriseService {
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     website: string;
   }
@@ -53,22 +60,27 @@ export interface SpecializedEnterpriseService {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   customers: number;
   rating: number;
   reviews: number;
@@ -77,9 +89,12 @@ export interface SpecializedEnterpriseService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   market_advantage: string;
 ;
@@ -89,10 +104,15 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -106,11 +126,13 @@ const contact = {
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
   id: string, name: string,
@@ -143,19 +165,28 @@ const contact = {
 
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Consciousness simulation engine',
       'Cognitive architecture modeling',
       'Emotional intelligence algorithms',
@@ -170,10 +201,13 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   marketAdvantage: string
 }
 
@@ -196,9 +230,13 @@ const contact = null;
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/ai-consciousness-research'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -226,6 +264,7 @@ const contact = null;
     implementationDetails:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     icon: '🧠',
@@ -235,6 +274,12 @@ const contact = null;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    icon: '🧠',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -265,6 +310,7 @@ const contact = null;
     implementation_details:;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -273,6 +319,11 @@ const contact = null;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -280,9 +331,12 @@ const contact = null;
     reviews: 18,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Quantum-enhanced ML algorithms',
     benefits: [;
@@ -314,10 +368,15 @@ const contact = null;
     features: [;
       'Quantum - enhanced ML algorithms',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Quantum optimization solvers',
       'Hybrid quantum - classical computing',
       'Quantum feature selection',
@@ -331,9 +390,12 @@ const contact = null;
     popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '⚛️',
 
       'Multi-quantum backend platform with hybrid computing capabilities',
@@ -409,10 +471,15 @@ const contact = null;
       'Hash - based signatures',
       'Code - based cryptography',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Multivariate cryptography',
       'Quantum key distribution',
       'Hybrid encryption systems',
@@ -423,9 +490,12 @@ const contact = null;
     popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔒',
 
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
@@ -465,7 +535,6 @@ const contact = null;
     rating: 4 && 4.8,
     reviews: 56,
 
-=======
     benefits: [;
       'Future - proof security',
       'Quantum - resistant algorithms',
@@ -494,10 +563,15 @@ const contact = null;
       'Advanced AI platform for satellite constellation management, enabling autonomous satellite operations, data processing, and mission optimization.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Autonomous satellite operations',
       'Constellation optimization',
       'AI - powered mission planning',
@@ -512,9 +586,12 @@ const contact = null;
     popular: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️',
 
       'Custom satellite orchestration platform with AI-powered optimization',
@@ -554,7 +631,6 @@ const contact = null;
     rating: 4 && 4.9,
     reviews: 8,
 
-=======
     benefits: [;
       '400% operation optimization',
       '60% mission cost reduction',
@@ -583,10 +659,15 @@ const contact = null;
       'Cutting - edge brain - computer interface platform that enables direct communication between the human brain and computers for research and medical applications.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Neural signal processing',
       'Brain - computer communication',
       'Cognitive enhancement tools',
@@ -601,9 +682,12 @@ const contact = null;
     popular: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧬',
 
       'Advanced BCI platform with medical-grade hardware and research tools',
@@ -643,7 +727,6 @@ const contact = null;
     rating: 5 && 5.0,
     reviews: 5,
 
-=======
     benefits: [;
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
@@ -672,10 +755,15 @@ const contact = null;
       'Revolutionary IoT platform that autonomously manages, optimizes, and secures IoT devices and networks using advanced AI and machine learning.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Autonomous device management',
       'Self - healing networks',
       'AI - powered optimization',
@@ -690,9 +778,12 @@ const contact = null;
     popular: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🌐',
 
       'Industrial-grade autonomous IoT platform with AI-powered management',
@@ -732,7 +823,6 @@ const contact = null;
     rating: 4 && 4.7,
     reviews: 45,
 
-=======
     benefits: [;
       '70% management cost reduction',
       '50% operational efficiency',
@@ -752,6 +842,7 @@ const contact = null;
   },
   // Advanced Analytics Services;
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -789,6 +880,10 @@ const contact = null;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Advanced ML algorithms',
       'Predictive modeling',
       'Time series forecasting',
@@ -804,11 +899,13 @@ const contact = null;
     icon: '📊',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
@@ -816,14 +913,20 @@ const contact = null;
       'Leading AI - powered predictive analytics platform for enterprise',
     target_audience:;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Businesses, Financial services, Retail companies, Manufacturing companies',
     trial_days: 21,
     setup_time: '2 - 3 weeks',
     category: 'Advanced Analytics & AI',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -847,13 +950,18 @@ const contact = null;
     implementationDetails:
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Enterprise-grade predictive analytics platform with custom model development',
     launchDate: '2024-05-01',
@@ -876,7 +984,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Enterprise - grade predictive analytics platform with custom model development',
     launch_date: '2024 - 05 - 01',
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
@@ -889,12 +997,17 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -912,6 +1025,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -947,6 +1061,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
 =======
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -1014,12 +1130,9 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Advanced predictive analytics platform with custom ML model development'
-  }
-=======
       'Advanced predictive analytics platform with custom ML model development',
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1048,6 +1161,17 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -1099,19 +1223,27 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_advantage: 'Advanced quantum ML platform with hybrid computing capabilities';
   }
 ;
   // Advanced Cybersecurity Services;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
@@ -1126,9 +1258,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🔒';
 
     color: 'from - red - 600 to - orange - 600';
@@ -1139,10 +1274,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 30;
     setup_time: '3 - 4 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Advanced Cybersecurity';
     real_service: true;
     technology: ['Post - quantum algorithms, Lattice cryptography, Hash functions, Python, C++, Rust'];
@@ -1168,9 +1308,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_advantage: 'Comprehensive quantum - resistant cryptography platform with migration support';
   }
@@ -1178,10 +1321,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
   // Space Technology Services;
 
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -1195,9 +1343,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     popular: false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🛰️';
 
     color: 'from - indigo - 600 to - purple - 600';
@@ -1208,10 +1359,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 14;
     setup_time: '8 - 12 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Space Technology';
     real_service: true;
     technology: ['AI / ML, Orbital mechanics, Satellite protocols, Python, C++, Space systems'];
@@ -1237,19 +1393,27 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_advantage: 'Advanced AI satellite orchestration with autonomous capabilities';
   }
 ;
   // Neural Interface Services;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
@@ -1264,9 +1428,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧬';
 
     color: 'from - pink - 600 to - rose - 600';
@@ -1277,10 +1444,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 7;
     setup_time: '12 - 16 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Neural Technology & BCI';
     real_service: true;
     technology: ['Neural signal processing, Machine learning, Neuroscience, Python, C++, Neural hardware'];
@@ -1306,19 +1478,27 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_advantage: 'Advanced BCI platform with medical - grade capabilities and research tools';
   }
 ;
   // Advanced IoT Services;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
@@ -1333,9 +1513,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     popular: false;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🌐';
 
     color: 'from - teal - 600 to - cyan - 600';
@@ -1346,10 +1529,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     trial_days: 30;
     setup_time: '4 - 6 weeks';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: 'Advanced IoT & Edge Computing';
     real_service: true;
     technology: ['AI / ML, IoT protocols, Edge computing, Python, Kubernetes, Docker'];
@@ -1375,19 +1563,27 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_advantage: 'Advanced autonomous IoT platform with AI - powered management capabilities';
   }
 ;
   // Advanced Analytics Services;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
@@ -1402,9 +1598,12 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     popular: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📊';
 
     color: 'from - green - 600 to - emerald - 600';
@@ -1418,10 +1617,15 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     real_service: true;
     technology: ['Python, TensorFlow, PyTorch, Scikit - learn, React, Node.js'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%';
@@ -1445,6 +1649,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     market_advantage: 'Advanced predictive analytics platform with custom ML model development';
   }
 ];
+<<<<<<< HEAD
 ;
 =======
 <<<<<<< HEAD
@@ -1470,3 +1675,23 @@ export default specializedEnterpriseServices;
 =======
 export default specializedEnterpriseServices;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+export default specializedEnterpriseServices;
+
+
+
+
+
+export default specializedEnterpriseServices;
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export default specializedEnterpriseServices;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

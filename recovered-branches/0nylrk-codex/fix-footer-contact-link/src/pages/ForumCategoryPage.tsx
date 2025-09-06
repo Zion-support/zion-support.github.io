@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -14,6 +17,7 @@ import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
 
+<<<<<<< HEAD
 
 
     adminOnly: false
@@ -58,6 +62,12 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Briefcase"
   },
     adminOnly: false,
+=======
+    adminOnly: false
+
+    icon: "Briefcase"
+  }    adminOnly: false,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: "Briefcase"
   },
   "project-help": {
@@ -67,6 +77,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
 
+<<<<<<< HEAD
     icon: "MessageSquare"
 
 
@@ -180,10 +191,14 @@ const postsByCategory: Record < string, ForumPost[]> = {
       is_featured: true;
 
     }
+=======
+    icon: "MessageSquare"    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
+<<<<<<< HEAD
 
       author_id: "user6",
       author_name: "James Wilson",
@@ -195,6 +210,8 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2,
       reply_count: 6;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -230,6 +247,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
   "project - help": [;
     {
 
+<<<<<<< HEAD
 
       id: "3",
       title: "Looking for feedback on my automated testing approach",
@@ -284,6 +302,8 @@ const postsByCategory: Record < string, ForumPost[]> = {
       is_featured: true;
     }
     {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "7",
       title: "Comparing different vector embedding models",
       content: "I've been experimenting with these different embedding models and here are my findings...",
@@ -296,6 +316,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 31,
       downvotes: 0,
 
+<<<<<<< HEAD
 
       replyCount: 9
 
@@ -319,6 +340,9 @@ const postsByCategory: Record < string, ForumPost[]> = {
       reply_count: 3;
     }
     {
+=======
+      replyCount: 9    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
       content: "I think the job matching could be improved by considering these additional factors...",
@@ -331,6 +355,7 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 17,
       downvotes: 3,
 
+<<<<<<< HEAD
 
       replyCount: 5
 
@@ -1282,3 +1307,13 @@ export default function ForumCategoryPage() {;
 
 
 
+=======
+      replyCount: 5  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;              value={searchQuery}
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,8 +1,11 @@
+
 <<<<<<< HEAD
 
 
 
-
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const advancedITServices2025 = [
   {
 
@@ -11,7 +14,10 @@ export const advancedITServices2025 = [
     marketSize: '$15 && 15.7B',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: 'quantum-cloud-infrastructure-platform',
     name: 'QuantumCloud Infrastructure',
     description:
@@ -420,9 +426,13 @@ id: 'quantum-cloud-infrastructure-platform',
           'Dedicated support'
         ]
       }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     category: 'IT Operations'
     tags: [
@@ -616,6 +626,7 @@ id: 'quantum-cloud-infrastructure-platform',
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
@@ -643,10 +654,27 @@ id: 'quantum-cloud-infrastructure-platform',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+    }
+    marketSize: '$15.7B'
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    targetAudience:
+      'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
+    competitiveAdvantage:
+      'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
+  },;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
 
@@ -654,12 +682,18 @@ id: 'quantum-cloud-infrastructure-platform',
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     market_size: '$15.7B',
     target_audience:;
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -880,6 +914,7 @@ id: 'quantum-cloud-infrastructure-platform',
     marketSize: '$15.7B',;
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
+<<<<<<< HEAD
     }
     market_size: '$15.7B',
     target_audience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
@@ -890,6 +925,16 @@ id: 'quantum-cloud-infrastructure-platform',
   }
 ];
 ;
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const advancedITServices2025 = [;
   {;
@@ -1121,6 +1166,7 @@ export const advancedITServices2025 = [;
     marketSize: '$15.7B',;
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1134,3 +1180,16 @@ export const advancedITServices2025 = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

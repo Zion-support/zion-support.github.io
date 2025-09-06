@@ -31,6 +31,7 @@ const serviceProfileSchema = z && z.object({;
 type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
 
 export function ServiceProviderRegistrationForm() {;
+<<<<<<< HEAD
 
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,6 +41,8 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -74,6 +77,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 // Define form schema;
 const serviceProfileSchema = z && z.object({;
@@ -111,11 +115,15 @@ const serviceProfileSchema = z.object({
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
 
     message: "Rate must be a number"}),
+=======
+import { useAuth } from "@/hooks/useAuth",    message: "Rate must be a number"}),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
+<<<<<<< HEAD
 
 
 export function ServiceProviderRegistrationForm() {;
@@ -131,6 +139,8 @@ export function ServiceProviderRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -146,6 +156,7 @@ export function ServiceProviderRegistrationForm() {
       website: ""}})
   // Handle adding service tags
   const handleAddService = () => {
+<<<<<<< HEAD
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
@@ -171,13 +182,22 @@ export function ServiceProviderRegistrationForm() {
 
   };
 
+=======
+    const serviceInput = form.getValues("services"),
+    if (serviceInput && !serviceTags.includes(serviceInput)) {      setServiceTags([...serviceTags, serviceInput]),
+      form.setValue("services", "")
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
     if (!formData.bio |formData.bio.length < 20) {
   };
+<<<<<<< HEAD
 import React, { useState } from "react",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
@@ -223,7 +243,10 @@ export function ServiceProviderRegistrationForm() {;
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
   // Initialize form with default values;
@@ -247,6 +270,7 @@ export function ServiceProviderRegistrationForm() {;
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
     }
+<<<<<<< HEAD
 
     const serviceInput = form.getValues("services"),;
     if (serviceInput && !serviceTags.includes(serviceInput)) {;
@@ -254,6 +278,11 @@ export function ServiceProviderRegistrationForm() {;
       form.setValue("services", "");
     }
   },;
+=======
+    } finally {
+      setIsGenerating (false);
+    }  },;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Handle removing service tags;
   const handleRemoveService = (service: string) => {;
     setServiceTags(serviceTags.filter((s) => s !== service));
@@ -275,6 +304,7 @@ export function ServiceProviderRegistrationForm() {;
       },;
       reader.readAsDataURL(file);
     }
+<<<<<<< HEAD
   },
 
 
@@ -292,10 +322,14 @@ export function ServiceProviderRegistrationForm() {;
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
   // Generate enhanced profile with AI
+=======
+  },  // Generate enhanced profile with AI
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const generateEnhancedProfile = async () => {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
+<<<<<<< HEAD
       return
 
 
@@ -458,13 +492,32 @@ if ( {) {
 
 
 
+=======
+      return      toast({
+        title: "Enhanced Profile Generated"
+        description: "AI has created a professional bio and suggested additional services for your profile."})
+    } catch (error: any) {
+      console.error("Error generating enhanced profile:", error),      console.error("Error generating enhanced profile:", error),
+      toast({
+        title: "Generation failed"
+        description: error.message |"There was an error generating your enhanced profile. Please try again."
+        variant: "destructive"})        }
+      }
+    }
+
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       }
     }
   }
   },
 
+<<<<<<< HEAD
   // Handle form submission
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
       toast({
@@ -472,6 +525,7 @@ if ( {) {
         description: "Please add at least one service to your profile."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 
   };
     }
@@ -522,10 +576,13 @@ if ( {) {
       }
     }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },;
   // Handle form submission;
   const onSubmit = async (values: ServiceFormValues) => {;
     if (serviceTags.length === 0) {;
+<<<<<<< HEAD
 
       toast({;
         title: "Services required",;
@@ -533,6 +590,8 @@ if ( {) {
         variant: "destructive"}),;
       return;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   // Handle form submission;
   const on_submit = async (values: ServiceFormValues) => {
@@ -548,7 +607,10 @@ if ( {) {
     }
     setIsSubmitting (true);
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -556,6 +618,7 @@ if ( {) {
   $2
 }
         throw new Error ("User not authenticated");
+<<<<<<< HEAD
       }
 
       // Enhance profile if not already done;
@@ -577,6 +640,9 @@ if ( {) {
     setIsSubmitting(true),;
 
     try {;
+=======
+      }    try {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // For actual implementation with Supabase;
       if (!user?.id) {;
         throw new Error("User not authenticated");
@@ -599,13 +665,17 @@ if ( {) {
               }
             }
           });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
 
+<<<<<<< HEAD
 
 
           }
@@ -620,6 +690,8 @@ if ( {) {
 
 
           }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -629,6 +701,7 @@ if ( {) {
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
 
+<<<<<<< HEAD
 
 
       }
@@ -701,17 +774,28 @@ if ( {) {
 
 
 
+=======
+      }
+
+      // Get user email for notification;
+      const { data: userData } = await supabase && supabase.auth.getUser(),;
+      const userEmail = userData && userData.user?.email;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .select(),
 
       if (error) throw error,
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
+<<<<<<< HEAD
         .insert({
 
 
@@ -814,6 +898,9 @@ if ( {) {
 
 
             }
+=======
+        .insert({            }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           })
         } catch (emailError) {
           console.error("Failed to send notification email:", emailError),
@@ -835,12 +922,16 @@ if ( {) {
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
     }
 
   },
 
 
   return (
+=======
+    }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -940,9 +1031,13 @@ if ( {) {
                             </div>
                           </FormControl>
                           <FormMessage className="text-red-400" />
+<<<<<<< HEAD
                         </FormItem>
 
 ;
+=======
+                        </FormItem>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
       const userEmail = userData.user?.email,;
@@ -961,8 +1056,11 @@ if ( {) {
         .eq('id', user.id);
         .select(),;
       if (error) throw error,;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
 
@@ -970,6 +1068,7 @@ if ( {) {
       const { error: serviceError } = await supabase;
         .from('service_profiles');
         .insert({;
+<<<<<<< HEAD
           user_id: user && user.id,;
           services: finalServices,;
           hourly_rate: Number(values && values.hourlyRate),;
@@ -984,6 +1083,8 @@ if ( {) {
       if (userEmail && values && values.enhancedProfile) {;
         try {;
           await supabase && supabase.functions.invoke('send-email', {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             body: {;
               to: userEmail,;
               subject: "Your Zion Service Profile Is Ready",;
@@ -1009,6 +1110,7 @@ if ( {) {
             }
           });
         } catch (emailError) {;
+<<<<<<< HEAD
           console && console.error("Failed to send notification email:", emailError);
           // Continue with submission even if email fails;
         }
@@ -1018,6 +1120,10 @@ if ( {) {
       toast({;
         title: "Profile Created Successfully",;
         description: "Your service provider profile has been published and is now visible in the directory."}),;
+=======
+        title: "Profile Created Successfully",,
+  description: "Your service provider profile has been published and is now visible in the directory."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Redirect to service provider dashboard or profile page;
       setTimeout(() => {;
@@ -1027,6 +1133,7 @@ if ( {) {
     } catch (error: any) {;
       console && console.error("Error creating profile:", error);
       toast({;
+<<<<<<< HEAD
         title: "Error Creating Profile",;
         description: error && error.message || "There was an error creating your profile. Please try again.",;
         variant: "destructive"});
@@ -1052,14 +1159,29 @@ if ( {) {
             <CardContent className="space-y-8">;
 
               {/* Basic Information */}
+=======
+        title: "Error Creating Profile",,
+  description: error && error.message || "There was an error creating your profile. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      setIsSubmitting(false);
+    }
+  }
+
+  return (              {/* Basic Information */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                   <div className="col-span-1">;
                     <FormField
                       control={form && form.control}
+<<<<<<< HEAD
                       name="name"
                     <FormField
+=======
+                      name="name"                    <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       control={form && form.control}
                       name="name"
                       render={({ field }) => (;
@@ -1068,6 +1190,7 @@ if ( {) {
                           <FormControl>;
                             <div className="relative">;
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+<<<<<<< HEAD
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
@@ -1133,6 +1256,8 @@ if ( {) {
                           <FormControl>;
                             <div className="relative">;
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     />;
                   </div>;
                   <div className="col-span-1">;
@@ -1142,6 +1267,7 @@ if ( {) {
                               <Input;
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="Your full name";
+<<<<<<< HEAD
                                 {...field}
                               />;
                             </div>;
@@ -1186,6 +1312,8 @@ if ( {) {
                       control={form.control}
                       name="location";
                       render={({ field }) => (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
                           <FormControl>;
@@ -1201,6 +1329,7 @@ if ( {) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
         <Form {...form}>;
+<<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)}>;
             <CardContent className="space - y-8">;
               {/* Basic Information */}
@@ -1312,6 +1441,8 @@ if ( {) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
         <Form {...form}>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
               {/* Basic Information */}
@@ -1405,6 +1536,7 @@ if ( {) {
                     />;
                   </div>;
 
+<<<<<<< HEAD
                   <div className="col-span-1">;
 
                     <FormField
@@ -1453,6 +1585,9 @@ if ( {) {
                 </div>;
                 ;
                 {/* Upload Avatar */}
+=======
+                  <div className="col-span-1">;                {/* Upload Avatar */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
                   <div className="flex items-center gap-6">;
@@ -1465,8 +1600,12 @@ if ( {) {
                             className="w-full h-full object-cover"
                           />;
                         </AspectRatio>;
+<<<<<<< HEAD
                       ) : (;
                         <div className="flex items-center justify-center h-full">;
+=======
+                      ) : (;                        <div className="flex items-center justify-center h-full">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <UserRound className="h-10 w-10 text-zion-slate opacity-50" />;
                         </div>;
                       )}
@@ -1475,6 +1614,7 @@ if ( {) {
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">;
                       <Upload className="mr-2 h-4 w-4" />;
+<<<<<<< HEAD
                       <span>Upload Photo</span>;
 
                       <input
@@ -1502,6 +1642,12 @@ if ( {) {
                 </div>;
               </div>;
 
+=======
+                      <span>Upload Photo</span>;                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
+                  </p>;
+                </div>;
+              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {/* Bio Section */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Service Description</h3>;
@@ -1520,6 +1666,7 @@ if ( {) {
                       </FormControl>;
                       <FormMessage className="text-red-400" />;
                       <FormDescription className="text-zion-slate">;
+<<<<<<< HEAD
                         {field && field.value?.length || 0}/1000 characters;
                       </FormDescription>;
                     </FormItem>;
@@ -1584,10 +1731,17 @@ if ( {) {
                 {form && form.watch("enhancedProfile") && (;
                   <div className="flex justify-end">;
 
+=======
+                        {field && field.value?.length || 0}/1000 characters;                      </FormDescription>;
+                    </FormItem>;
+                  )}
+                />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
                       onClick={generateEnhancedProfile}
                       disabled={isGenerating}>;
                       <Sparkles className="mr-2 h-4 w-4" />;
@@ -1630,6 +1784,9 @@ if ( {) {
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
                                 {service}
                               </Badge>;
+=======
+                      onClick={generateEnhancedProfile}                              </Badge>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             ))}
                           </div>;
                         </div>;
@@ -1641,6 +1798,7 @@ if ( {) {
               </div>;
 
               <Separator className="bg-zion-blue-light/50" />;
+<<<<<<< HEAD
 
 
               {/* Services and Availability */}
@@ -1759,6 +1917,8 @@ if ( {) {
                           type="button"
                           onClick={() => handleRemoveService(service)}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0 && 0.5";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           <X className="h-3 w-3" />;
                         </button>;
@@ -1767,6 +1927,7 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
+<<<<<<< HEAD
 
                   </div>;
                 </div>;
@@ -1777,10 +1938,16 @@ if ( {) {
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
                 {/* Pricing and Availability Section */}
+=======
+                  </div>;
+                </div>;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;
                   <FormField
                     control={form && form.control}
+<<<<<<< HEAD
                     name="hourlyRate"
                     render={({ field }) => (;
                       <FormItem>;
@@ -1885,13 +2052,20 @@ if ( {) {
                             <div className="flex items-center space-x-2">;
 
                               <input
+=======
+                    name="hourlyRate"                              <input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                 type="radio"
                                 id="limited"
                                 value="limited"
 
                                 checked={field && field.value === "limited"}
+<<<<<<< HEAD
                                 onChange={() => field && field.onChange("limited")}
                                 className="text-zion-purple focus:ring-zion-purple";
+=======
+                                onChange={() => field && field.onChange("limited")}                                className="text-zion-purple focus:ring-zion-purple";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               />;
                               <label htmlFor="limited" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-yellow-500"></div>;
@@ -1899,6 +2073,7 @@ if ( {) {
                               </label>;
                             </div>;
 
+<<<<<<< HEAD
                             <div className="flex items-center space-x-2">;
 
                               <input
@@ -1955,11 +2130,15 @@ if ( {) {
                             </div>;
                             <div className="flex items - center space - x-2">;
                               <input;
+=======
+                            <div className="flex items-center space-x-2">;                              <input;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
                                 checked={field.value === "unavailable"}
                                 on_change={() => field.on_change ("unavailable")}
+<<<<<<< HEAD
                                 className="text - zion - purple focus:ring - zion - purple";
                               />;
                               <label html_for="unavailable" className="text - white flex items - center gap - 2">;
@@ -1969,11 +2148,18 @@ if ( {) {
                               />;
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
+=======
+                                className="text - zion - purple focus:ring - zion-purple";
+                              />;
+                              <label html_for="unavailable" className="text - white flex items - center gap-2">;
+                                <div className="h - 2 w - 2 rounded - full bg - red-500"></div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
+<<<<<<< HEAD
 
                   />;
                 </div>;
@@ -2131,3 +2317,5 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

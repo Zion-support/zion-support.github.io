@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -12,6 +15,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering"
     price: 150
     currency: "$"
+<<<<<<< HEAD
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
@@ -22,6 +26,9 @@ import { ProductListing } from "@/types/listings",
 
 
 // Sample talent listings
+=======
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];// Sample talent listings
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-1",
@@ -30,8 +37,12 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering",
     price: 150,
     currency: "$",
+<<<<<<< HEAD
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
     author: {
+=======
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Alexandra Chen"
       id: "alexandra-chen"
       avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100"}
@@ -40,6 +51,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     aiScore: 97
     rating: 4.9
     reviewCount: 43}
+<<<<<<< HEAD
   {
 
 
@@ -106,11 +118,17 @@ const TALENT_LISTINGS: ProductListing[] = [;
     title: "Data Scientist",
 
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
+=======
+  {    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: "talent-3",
     title: "Data Scientist",
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
@@ -119,6 +137,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
 
+<<<<<<< HEAD
     author: {
 
     author: {
@@ -199,6 +218,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
 
 
+=======
+    author: {    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
+    category: "Security"
+    price: 165
+    currency: "$"
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -208,7 +234,10 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.8
     reviewCount: 42}
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
@@ -266,12 +295,19 @@ const TALENT_FILTERS = [
   {
     id: "talent - 6",
     title: "AI Ethics Consultant",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
+<<<<<<< HEAD
+=======
+    author: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -281,15 +317,19 @@ const TALENT_FILTERS = [
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
 
+<<<<<<< HEAD
     author: {
 
 
 
     <DynamicListingPage 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
 
+<<<<<<< HEAD
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
@@ -300,6 +340,8 @@ const TALENT_FILTERS = [
     author: {
 
 export default function TalentsPage() {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <DynamicListingPage
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
@@ -308,8 +350,13 @@ import { ProductListing } from "@/types/listings",;
 const TALENT_LISTINGS: ProductListing[] = [;
   {;
     id: "talent-1",;
+<<<<<<< HEAD
     title: "Senior AI Engineer",;
     description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems.",;
+=======
+    title: "Senior AI Engineer",,
+  description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Engineering",;
     price: 150,;
     currency: "$",;
@@ -325,8 +372,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 43},;
   {;
     id: "talent-2",;
+<<<<<<< HEAD
     title: "DevOps Specialist",;
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",;
+=======
+    title: "DevOps Specialist",,
+  description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "DevOps",;
     price: 135,;
     currency: "$",;
@@ -342,8 +394,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 37},;
   {;
     id: "talent-3",;
+<<<<<<< HEAD
     title: "Data Scientist",;
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",;
+=======
+    title: "Data Scientist",,
+  description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Data Science",;
     price: 145,;
     currency: "$",;
@@ -358,8 +415,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 29},;
   {;
     id: "talent-4",;
+<<<<<<< HEAD
     title: "Cybersecurity Expert",;
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",;
+=======
+    title: "Cybersecurity Expert",,
+  description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Security",;
     price: 165,;
     currency: "$",;
@@ -375,8 +437,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 31},;
   {;
     id: "talent-5",;
+<<<<<<< HEAD
     title: "Full-Stack Developer",;
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",;
+=======
+    title: "Full-Stack Developer",,
+  description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Development",;
     price: 125,;
     currency: "$",;
@@ -391,8 +458,13 @@ const TALENT_LISTINGS: ProductListing[] = [;
     reviewCount: 42},;
   {;
     id: "talent-6",;
+<<<<<<< HEAD
     title: "AI Ethics Consultant",;
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",;
+=======
+    title: "AI Ethics Consultant",,
+  description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category: "Consulting",;
     price: 180,;
     currency: "$",;
@@ -466,3 +538,7 @@ function TalentsPage() {
 }
 }/>) 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

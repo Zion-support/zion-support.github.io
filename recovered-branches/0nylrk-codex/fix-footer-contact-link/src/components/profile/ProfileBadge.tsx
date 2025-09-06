@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+<<<<<<< HEAD
 
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
@@ -17,6 +21,8 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -37,7 +43,10 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
@@ -47,6 +56,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
+<<<<<<< HEAD
   )
 
 
@@ -159,3 +169,6 @@ className)
   );
 }
 ;
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

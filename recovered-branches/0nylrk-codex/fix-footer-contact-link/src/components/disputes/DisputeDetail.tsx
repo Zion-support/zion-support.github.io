@@ -15,6 +15,7 @@ import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-
 import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
 export function DisputeDetail() {;
+<<<<<<< HEAD
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
@@ -135,6 +136,16 @@ export function DisputeDetail() {
 
   };
 
+=======
+  // useParams may be untyped in this environment, so avoid passing a;  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?: string };
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();  }
+  const handleResolveDispute = async () => {
+    if (!disputeId) return
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -202,6 +213,7 @@ export function DisputeDetail() {;
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
+<<<<<<< HEAD
     
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
@@ -240,6 +252,16 @@ export function DisputeDetail() {;
     setIsSending(true),
 
     try {
+=======
+        if (!resolution.summary) {
+      toast.error("Please provide a resolution summary");
+      return
+    }
+    if (!resolution.summary) {
+      toast.error("Please provide a resolution summary"),
+      return
+    }    try {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
@@ -253,6 +275,7 @@ export function DisputeDetail() {;
       setIsSending(false)
   }
 
+<<<<<<< HEAD
 
   },;
 
@@ -264,6 +287,12 @@ export function DisputeDetail() {;
       return;
     }
 
+=======
+  },
+};
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({;
@@ -274,6 +303,7 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString();
       });
     }
+<<<<<<< HEAD
   };
 
   const handleSendMessage = async () => {;
@@ -328,6 +358,12 @@ export function DisputeDetail() {;
   }
 
 
+=======
+  };  }
+
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -339,8 +375,11 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
 
       case "open": return "default",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "under_review": return "secondary",
 
       case "resolved": return "outline", // Changed from "success" to "outline"
@@ -350,8 +389,12 @@ export function DisputeDetail() {;
 ;
 
   if (!dispute) {;
+<<<<<<< HEAD
     return (
 ;
+=======
+    return (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (!dispute) {;
   }
@@ -375,6 +418,7 @@ export function DisputeDetail() {;
 ;
   if (!dispute) {;
     return (;
+<<<<<<< HEAD
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
@@ -386,11 +430,16 @@ export function DisputeDetail() {;
 
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     switch (status) {;
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -532,8 +581,13 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="p - 8 text - center">;
         <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full"></div>;
+=======
+      <div className="p - 8 text-center">;
+        <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded-full"></div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <p > Loading dispute details...</p>;
       </div>);
   }
@@ -542,9 +596,15 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="p - 8 text - center">;
         <p > Dispute not found</p>;
         <Button on_click={() => navigate ("/dashboard / disputes")} className="mt - 4">;
+=======
+      <div className="p - 8 text-center">;
+        <p > Dispute not found</p>;
+        <Button on_click={() => navigate ("/dashboard / disputes")} className="mt-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Back to Disputes;
         </Button>;
       </div>);
@@ -558,7 +618,10 @@ if ( {) {
       default: return "default";
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -684,14 +747,18 @@ export function DisputeDetail() {;
       case "closed": return "outline";
       default: return "default";
     }
+<<<<<<< HEAD
 
   },;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
+<<<<<<< HEAD
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 
 
@@ -741,10 +808,16 @@ export function DisputeDetail() {;
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
+=======
+            <Badge variant={getStatusBadgeVariant(dispute.status)}>;      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green-900">;
+          <Check className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
 
+<<<<<<< HEAD
 
       
 
@@ -803,17 +876,31 @@ export function DisputeDetail() {;
         <div className="lg:col - span - 2">;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
             <TabsList className="mb - 6">;
+=======
+      
+          </AlertDescription>;
+        </Alert>)}
+      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-6">;
+        <div className="lg:col - span-2">;
+          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+            <TabsList className="mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <TabsTrigger value="overview">Overview</TabsTrigger>;
               <TabsTrigger value="messages">Messages</TabsTrigger>;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {is_admin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
+<<<<<<< HEAD
             <TabsContent value="overview" className="space - y-6">;
+=======
+            <TabsContent value="overview" className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Card>;
                 <CardHeader>;
                   <CardTitle > Dispute Details</CardTitle>;
                   <CardDescription > Information about this dispute case</CardDescription>;
                 </CardHeader>;
+<<<<<<< HEAD
                 <CardContent className="space - y-4">;
                   <div>;
                     <h3 className="font - medium">Reason</h3>;
@@ -864,6 +951,42 @@ export function DisputeDetail() {;
           </p>;
         </div>;
 
+=======
+                <CardContent className="space-y-4">;
+                  <div>;
+                    <h3 className="font-medium">Reason</h3>;
+                    <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font-medium">Description</h3>;
+                    <p className="whitespace - pre-wrap">{dispute.description}</p>;
+                  </div>;
+                  <div>;
+                    <h3 className="font-medium">Project</h3>;
+                    <p>{dispute.project?.title || "Unknown Project"}</p>;
+                    <p className="text - sm text - muted-foreground">{dispute.project?.scope_summary}</p>;
+                  </div>;
+                  {dispute.milestone_id && (
+                    <div>;
+                      <h3 className="font-medium">Related Milestone</h3>;
+                      <p className="text-sm">Milestone ID: {dispute.milestone_id}</p>;
+                    </div>)}
+                  <div>;
+                    <h3 className="font-medium">Timeline</h3>;
+                    <ul className="space - y-2 mt-2">;
+                      <li className="flex gap - 2 items-center">;
+                        <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">1</Badge>;
+                        <span > Created on {format (new Date (dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                      </li>;
+                      {dispute.status !== "open" && (
+                        <li className="flex gap - 2 items-center">;
+                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">2</Badge>;
+                          <span > Under review</span>;
+                        </li>)}
+                        <li className="flex gap - 2 items-center">;
+                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
+                            {dispute.status !== "open" ? "3" : "2"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
@@ -875,6 +998,7 @@ export function DisputeDetail() {;
           )}
         </div>;
       </div>;
+<<<<<<< HEAD
 
       {dispute && dispute.status === "resolved" && dispute && dispute.resolution_summary && (;
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;
@@ -886,6 +1010,8 @@ export function DisputeDetail() {;
         </Alert>;
       )}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -895,7 +1021,10 @@ export function DisputeDetail() {;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -925,7 +1054,10 @@ export function DisputeDetail() {;
                       <p className="text-sm">Milestone ID: {dispute && dispute.milestone_id}</p>;
                     </div>;
                   )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <div>;
                     <h3 className="font-medium">Timeline</h3>;
                     <ul className="space-y-2 mt-2">;
@@ -934,8 +1066,12 @@ export function DisputeDetail() {;
                         <span>Created on {format(new Date(dispute && dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
 
+<<<<<<< HEAD
                       {dispute && dispute.status !== "open" && (;
                         <li className="flex gap-2 items-center">;
+=======
+                      {dispute && dispute.status !== "open" && (;                        <li className="flex gap-2 items-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
@@ -946,16 +1082,24 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
                             {dispute && dispute.status !== "open" ? "3" : "2"}
                           </Badge>;
+<<<<<<< HEAD
                           <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>;
+=======
+                          <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;                        </li>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       )}
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
 
+<<<<<<< HEAD
               {dispute && dispute.status === "resolved" && (;
                 <Card>;
+=======
+              {dispute && dispute.status === "resolved" && (;                <Card>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
@@ -968,11 +1112,15 @@ export function DisputeDetail() {;
                           Resolution: {dispute && dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     )}
                   </CardContent>;
                 </Card>;
               )}
+<<<<<<< HEAD
 
                           </Badge>;
                           <span > Resolved on {format (new Date (dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
@@ -1010,10 +1158,17 @@ export function DisputeDetail() {;
                       <div className="text - center py - 12">;
                         <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
                         <p className="text - muted - foreground">No messages yet</p>;
+=======
+                    {messages.length === 0 ? (
+                      <div className="text - center py-12">;
+                        <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb-2" />;
+                        <p className="text - muted-foreground">No messages yet</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </div>) : (
                       messages;
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
+<<<<<<< HEAD
                           const isCurrentUser = user?.id === msg.user_id;
             <TabsContent value="messages" className="space-y-6">;
               <Card>;
@@ -1058,10 +1213,14 @@ export function DisputeDetail() {;
 
                           return (
                     )}
+=======
+                          const isCurrentUser = user?.id === msg.user_id;                    )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
+<<<<<<< HEAD
                     <Textarea
                       placeholder="Type your message here..."
                       value={message}
@@ -1070,6 +1229,8 @@ export function DisputeDetail() {;
                       disabled={isSending}
 
                             <div;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}
                             >;
@@ -1080,13 +1241,19 @@ export function DisputeDetail() {;
                                     : 'bg - muted';
                                 } p - 4 rounded - lg`}
                               >;
+<<<<<<< HEAD
                                 <div className="flex items - center gap - 2 mb - 2">;
                                   <Avatar className="h - 6 w - 6">;
+=======
+                                <div className="flex items - center gap - 2 mb-2">;
+                                  <Avatar className="h - 6 w-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                     <AvatarImage src={msg.user_profile?.avatar_url} />;
                                     <AvatarFallback>;
                                       {msg.user_profile?.display_name?.[0] || '?'}
                                     </AvatarFallback>;
                                   </Avatar>;
+<<<<<<< HEAD
                                   <span className="text - sm font - medium">;
                                     {msg.user_profile?.display_name || 'Unknown User'}
                                   </span>;
@@ -1095,17 +1262,32 @@ export function DisputeDetail() {;
                                   </span>;
                                 </div>;
                                 <p className="whitespace - pre - wrap">{msg.message}</p>;
+=======
+                                  <span className="text - sm font-medium">;
+                                    {msg.user_profile?.display_name || 'Unknown User'}
+                                  </span>;
+                                  <span className="text - xs opacity-70">;
+                                    {format (new Date (msg.created_at), 'MMM d, h:mm a')}
+                                  </span>;
+                                </div>;
+                                <p className="whitespace - pre-wrap">{msg.message}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               </div>;
                             </div>);
                         }))}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
+<<<<<<< HEAD
                   <div className="w - full space - y-4">;
+=======
+                  <div className="w - full space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Textarea;
                       placeholder="Type your message here...";
                       value={message}
                       on_change={(e) => set_message (e.target.value)}
+<<<<<<< HEAD
                       className="min - h-[100px]";
                       disabled={is_sending}
                     />;
@@ -1113,6 +1295,14 @@ export function DisputeDetail() {;
                       <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
                         {is_sending ? "Sending..." : "Send Message"}
                       </Button>;
+=======
+                      className="min-h-[100px]";
+                      disabled={is_sending}
+                    />;
+                    <div className="flex justify-end">;
+                      <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
+                        {is_sending ? "Sending..." : "Send Message"}                      </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </div>;
                   </div>;
                 </CardFooter>;
@@ -1125,20 +1315,31 @@ export function DisputeDetail() {;
                   <CardDescription > Files related to this dispute</CardDescription>;
                 </CardHeader>;
                 <CardContent>;
+<<<<<<< HEAD
                   <div className="text - center py - 12">;
                     <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
                     <p className="text - muted - foreground">No attachments available</p>;
                   </div>;
+=======
+                  <div className="text - center py-12">;
+                    <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb-2" />;
+                    <p className="text - muted-foreground">No attachments available</p>;                  </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </CardContent>;
               </Card>;
             </TabsContent>;
             {is_admin && (
+<<<<<<< HEAD
               <TabsContent value="admin" className="space - y-6">;
+=======
+              <TabsContent value="admin" className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Admin Actions</CardTitle>;
                     <CardDescription > Handle this dispute as an administrator</CardDescription>;
                   </CardHeader>;
+<<<<<<< HEAD
                   <CardContent className="space - y-6">;
                     <div>;
                       <h3 className="font - medium mb - 2">Change Status</h3>;
@@ -1147,25 +1348,43 @@ export function DisputeDetail() {;
                           variant="outline";
                           on_click={() => handleStatusChange ("open")}
                           disabled={dispute.status === "open"}
+=======
+                  <CardContent className="space-y-6">;
+                    <div>;
+                      <h3 className="font - medium mb-2">Change Status</h3>;
+                      <div className="flex gap-2">;
+                        <Button;
+                          variant="outline";
+                          on_click={() => handleStatusChange ("open")}                          disabled={dispute.status === "open"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Mark as Open;
                         </Button>;
                         <Button;
                           variant="outline";
+<<<<<<< HEAD
                           on_click={() => handleStatusChange ("under_review")}
                           disabled={dispute.status === "under_review"}
+=======
+                          on_click={() => handleStatusChange ("under_review")}                          disabled={dispute.status === "under_review"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Mark as Under Review;
                         </Button>;
                         <Button;
                           variant="outline";
+<<<<<<< HEAD
                           on_click={() => handleStatusChange ("closed")}
                           disabled={dispute.status === "closed"}
+=======
+                          on_click={() => handleStatusChange ("closed")}                          disabled={dispute.status === "closed"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Close Dispute;
                         </Button>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
                     {dispute.status !== "resolved" && (
                       <div>;
@@ -1222,6 +1441,15 @@ export function DisputeDetail() {;
                               addDisputeMessage(disputeId!, message, true).then(() => {
 
                     />;
+=======
+                    {dispute.status !== "resolved" && (
+                      <div>;
+                        <h3 className="font - medium mb-2">Resolve Dispute</h3>;
+                        <div className="space-y-4">;
+                          <Textarea;
+                            placeholder="Enter resolution summary...";
+                            value={resolution.summary}                    />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
                         {isSending ? "Sending..." : "Send Message"}
@@ -1306,11 +1534,15 @@ export function DisputeDetail() {;
                               </select>;
                             </div>;
                           </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
                     )}
+<<<<<<< HEAD
 
                     ;
                     <div>;
@@ -1428,11 +1660,14 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages);
 
                                 setMessage("")
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               })
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
 
+<<<<<<< HEAD
                             }
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
                           </div>;
@@ -1442,6 +1677,9 @@ export function DisputeDetail() {;
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
                         )}
                       </div>;
+=======
+                            }                      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       ;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
@@ -1577,6 +1815,7 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages),;
                                 setMessage(""),;
                               }),;                            }
+<<<<<<< HEAD
                           }}
                         >;
                           Add Admin Note;
@@ -1590,6 +1829,8 @@ export function DisputeDetail() {;
         </div>;
 
         <div className="space-y-6">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Card>;
             <CardHeader>;
               <CardTitle>Parties Involved</CardTitle>;
@@ -1597,8 +1838,12 @@ export function DisputeDetail() {;
             <CardContent className="space-y-6">;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
+<<<<<<< HEAD
                   <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;
                   <AvatarFallback>C</AvatarFallback>;
+=======
+                  <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;                  <AvatarFallback>C</AvatarFallback>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Client</p>;
@@ -1614,14 +1859,22 @@ export function DisputeDetail() {;
 
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
+<<<<<<< HEAD
                   <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;
                   <AvatarFallback>T</AvatarFallback>;
+=======
+                  <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;                  <AvatarFallback>T</AvatarFallback>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
                     {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
                   </p>;
+=======
+                    {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}                  </p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </div>;
             </CardContent>;
@@ -1631,6 +1884,7 @@ export function DisputeDetail() {;
             <CardHeader>;
               <CardTitle > Case Information</CardTitle>;
             </CardHeader>;
+<<<<<<< HEAD
             <CardContent className="space - y-4 text - sm">;
               <div className="flex justify - between">;
                 <span className="font - medium">Case ID:</span>;
@@ -1642,10 +1896,24 @@ export function DisputeDetail() {;
               </div>;
               <div className="flex justify - between">;
                 <span className="font - medium">Status:</span>;
+=======
+            <CardContent className="space - y-4 text-sm">;
+              <div className="flex justify-between">;
+                <span className="font-medium">Case ID:</span>;
+                <span className="font-mono">{dispute.id}</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span className="font-medium">Created:</span>;
+                <span>{format (new Date (dispute.created_at), "MMM d, yyyy")}</span>;
+              </div>;
+              <div className="flex justify-between">;
+                <span className="font-medium">Status:</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Badge variant={getStatusBadgeVariant (dispute.status)}>;
                   {dispute.status.replace ('_ ')}
                 </Badge>;
               </div>;
+<<<<<<< HEAD
               <div className="flex justify - between">;
                 <span className="font - medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
@@ -1800,3 +2068,8 @@ formatDistanceToNow (new Date (dispute.created at), {
 }
 }
 ;
+=======
+              <div className="flex justify-between">;
+                <span className="font-medium">Raised by:</span>;
+                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

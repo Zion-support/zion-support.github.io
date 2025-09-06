@@ -4,6 +4,7 @@ import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
+<<<<<<< HEAD
 
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
@@ -50,10 +51,23 @@ export function FeaturesGuideSection() {
       buttonText: "Try AI Matcher"
 
 
+=======
+export function FeaturesGuideSection() {
+  const features = [
+    {
+      id: "ai-matcher"
+      title: "AI Matcher"
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />      ]
+      link: "/match"
+      buttonText: "Try AI Matcher"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function FeaturesGuideSection() {;
   const features = [;
     {;
       id: "ai-matcher",;
+<<<<<<< HEAD
       title: "AI Matcher",;
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
@@ -107,13 +121,21 @@ function FeaturesGuideSection() {
       instructions: [;
         "Access the talent directory from the main navigation",
         "Use filters to narrow down by skills, experience, and pricing";
+=======
+      title: "AI Matcher",,
+  description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;        "Use filters to narrow down by skills, experience, and pricing";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles";
       ];
 
       link: "/talents",
       button_text: "Explore Talents";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
@@ -127,7 +149,11 @@ function FeaturesGuideSection() {
       id: "talent - directory",
       title: "Talent Directory",
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
+<<<<<<< HEAD
       icon: <Users className="h - 10 w - 10 text - zion - purple" />,
+=======
+      icon: <Users className="h - 10 w - 10 text - zion-purple" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [;
         "Access the talent directory from the main navigation",
         "Use filters to narrow down by skills, experience, and pricing";
@@ -136,6 +162,7 @@ function FeaturesGuideSection() {
       ];
       link: "/talents"
       buttonText: "Explore Talents"
+<<<<<<< HEAD
     }
     {
       id: "services"
@@ -170,10 +197,17 @@ function FeaturesGuideSection() {
         "Request customized quotes for specific requirements",
 
         "Book and manage services through your dashboard"
+=======
+    {
+      id: "services"
+      title: "Services Marketplace"
+      description: "Discover professional services for your AI and tech needs, from development to consulting.";        "Book and manage services through your dashboard"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ]
       link: "/services"
       buttonText: "View Services"
 
+<<<<<<< HEAD
 
     },
 
@@ -210,12 +244,21 @@ function FeaturesGuideSection() {
       button_text: "Browse Equipment";
 
     }
+=======
+    },
+        "Search the equipment catalog by category or specifications";
+        "Check availability and rental / purchase options";
+        "Request quotes for bulk orders or specialized equipment";    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: "analytics"
       title: "Marketplace Analytics"
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
     {
       id: "analytics",
@@ -223,6 +266,7 @@ function FeaturesGuideSection() {
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
 
+<<<<<<< HEAD
 
       instructions: [
         "Access analytics from your user dashboard";
@@ -392,6 +436,21 @@ function FeaturesGuideSection() {
         "Complete the guided form and publish your listing";
       ];
       icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,
+=======
+      instructions: [
+        "Access analytics from your user dashboard";
+        "View interactive charts on market trends and rates";
+        "Export reports for your business planning";      instructions: [
+        "Access analytics from your user dashboard",
+        "View interactive charts on market trends and rates",
+        "Export reports for your business planning",      ]
+      link: "#"
+      buttonText: "Chat with Assistant"
+      action: "openChat"        "Choose between talent profile, service, or equipment listing";
+        "Complete the guided form and publish your listing";
+      ];
+      icon: <BarChart3 className="h - 10 w - 10 text - zion-cyan" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [;
         "Access analytics from your user dashboard";
         "View interactive charts on market trends and rates";
@@ -405,7 +464,11 @@ function FeaturesGuideSection() {
       id: "ai - assistant",
       title: "Zion AI Assistant",
       description: "Get real - time help, recommendations, and marketplace guidance from our AI assistant.";
+<<<<<<< HEAD
       icon: <MessageSquare className="h - 10 w - 10 text - zion - purple" />,
+=======
+      icon: <MessageSquare className="h - 10 w - 10 text - zion-purple" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [;
         "Click on the chat icon in the bottom right corner";
         "Ask questions about available services or talents";
@@ -420,7 +483,11 @@ function FeaturesGuideSection() {
       id: "publishing",
       title: "List Your Services",
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+<<<<<<< HEAD
       icon: <Plus className="h - 10 w - 10 text - zion - cyan" />,
+=======
+      icon: <Plus className="h - 10 w - 10 text - zion-cyan" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [;
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard",
@@ -434,7 +501,11 @@ function FeaturesGuideSection() {
       id: "help - center",
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
+<<<<<<< HEAD
       icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,
+=======
+      icon: <HelpCircle className="h - 10 w - 10 text - zion-purple" />,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       instructions: [;
         "Visit our comprehensive knowledge base";
         "Watch video tutorials on specific features";
@@ -447,6 +518,7 @@ function FeaturesGuideSection() {
   ];
 ;
   return (
+<<<<<<< HEAD
 
     <section className="py - 20 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
@@ -459,6 +531,8 @@ function FeaturesGuideSection() {
               >
 
 import { Link } from "react-router-dom",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { Button } from "./ui/button",;
@@ -477,8 +551,13 @@ export function FeaturesGuideSection() {;
   const features = [;
     {;
       id: "ai-matcher",;
+<<<<<<< HEAD
       title: "AI Matcher",;
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+=======
+      title: "AI Matcher",,
+  description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace",;
@@ -491,8 +570,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "talent-directory",;
+<<<<<<< HEAD
       title: "Talent Directory",;
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
+=======
+      title: "Talent Directory",,
+  description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Users className="h-10 w-10 text-zion-purple" />,;
       instructions: [;
         "Access the talent directory from the main navigation",;
@@ -505,8 +589,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "services",;
+<<<<<<< HEAD
       title: "Services Marketplace",;
       description: "Discover professional services for your AI and tech needs, from development to consulting.",;
+=======
+      title: "Services Marketplace",,
+  description: "Discover professional services for your AI and tech needs, from development to consulting.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Browse service categories on the marketplace",;
@@ -519,8 +608,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "equipment",;
+<<<<<<< HEAD
       title: "Equipment Catalog",;
       description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
+=======
+      title: "Equipment Catalog",,
+  description: "Rent or buy specialized hardware and tech equipment for AI development and research.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Settings className="h-10 w-10 text-zion-purple" />,;
       instructions: [;
         "Search the equipment catalog by category or specifications",;
@@ -533,8 +627,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "analytics",;
+<<<<<<< HEAD
       title: "Marketplace Analytics",;
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
+=======
+      title: "Marketplace Analytics",,
+  description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Access analytics from your user dashboard",;
@@ -547,8 +646,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "ai-assistant",;
+<<<<<<< HEAD
       title: "Zion AI Assistant",;
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
+=======
+      title: "Zion AI Assistant",,
+  description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,;
       instructions: [;
         "Click on the chat icon in the bottom right corner",;
@@ -562,8 +666,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "publishing",;
+<<<<<<< HEAD
       title: "List Your Services",;
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
+=======
+      title: "List Your Services",,
+  description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Create or log in to your account",;
@@ -576,8 +685,13 @@ export function FeaturesGuideSection() {;
     },;
     {;
       id: "help-center",;
+<<<<<<< HEAD
       title: "Help & Resources",;
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
+=======
+      title: "Help & Resources",,
+  description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
       instructions: [;
         "Visit our comprehensive knowledge base",;
@@ -595,12 +709,16 @@ export function FeaturesGuideSection() {;
         <div className="text-center mb-12">;
           <GradientHeading>Your Complete Guide to Zion</GradientHeading>;
           <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Discover all the powerful tools and features available to help you navigate;
             the world of AI and tech services;
           </p>;
         </div>;
+<<<<<<< HEAD
         <Tabs default_value="ai - matcher" className="w - full max - w-5xl mx - auto">;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
             {features.slice (0, 4).map (feature => (
@@ -693,19 +811,26 @@ export function FeaturesGuideSection() {;
             </TabsContent>;
           ))}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
+<<<<<<< HEAD
               <TabsTrigger
                 key={feature.id}
+=======
+              <TabsTrigger                key={feature.id}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 value={feature.id}
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
 
+<<<<<<< HEAD
 
                 {feature.title}
 
@@ -739,6 +864,14 @@ export function FeaturesGuideSection() {;
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild
+=======
+                {feature.title}
+                key={feature.id}
+                value={feature.id}
+                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion-cyan";
+              >;
+                {feature.title}            asChild
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >
             <Link to="/marketplace">
               Explore Full Marketplace
@@ -749,6 +882,7 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 
 };
 
@@ -809,12 +943,20 @@ export function FeaturesGuideSection() {;
 };
 
 
+=======
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </Tabs>;
         ;
         <div className="mt-12 text-center">;
           <Button ;
             variant="outline" ;
+<<<<<<< HEAD
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";
+=======
+            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
         </Tabs>;
         <div className="mt-12 text-center">;
@@ -834,7 +976,11 @@ export function FeaturesGuideSection() {;
     </section>);
 
 }
+<<<<<<< HEAD
 }
 
 }
 }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

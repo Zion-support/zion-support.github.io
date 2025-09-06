@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
@@ -11,6 +12,8 @@ export function useConversationState() {;
 
 
   const [conversations, setConversations] = useState<Conversation[]>([]);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
@@ -39,9 +42,13 @@ function useConversationState() {
     conversations;
     set_conversations;
     unread_count;
+<<<<<<< HEAD
     setUnreadCount;
 
     activeConversation;
+=======
+    setUnreadCount;    activeConversation;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;
@@ -69,5 +76,9 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
+<<<<<<< HEAD
 }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

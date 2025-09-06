@@ -1,9 +1,12 @@
 
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
   } = useMessaging();
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
@@ -58,8 +61,12 @@ import {toast} from 'sonner';
 
   useEffect(() => {
     // Fetch conversations when component mounts
+<<<<<<< HEAD
     const loadData = async () => {
 import {Button} from '@/components / ui / button';
+=======
+    const loadData = async () => {import {Button} from '@/components / ui / button';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {use_navigate} from 'react-router-dom';
 export default /**
  * MessagingInbox - Function description
@@ -87,6 +94,7 @@ function MessagingInbox() {
         toast.error ("Failed to load messages. Please try again.");
       }
 
+<<<<<<< HEAD
 
     },
     
@@ -114,6 +122,8 @@ function MessagingInbox() {
     navigate(`/call/${roomId}`)
   }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -128,8 +138,11 @@ function MessagingInbox() {
   },
   
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -139,10 +152,14 @@ function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
+<<<<<<< HEAD
             {activeConversation && (
 
 
               <Button
+=======
+            {activeConversation && (              <Button
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
@@ -160,6 +177,7 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
@@ -183,6 +201,8 @@ export default function MessagingInbox() {;
   const navigate = useNavigate(),;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     // Fetch conversations when component mounts;
     const loadData = async () => {;
@@ -207,6 +227,7 @@ export default function MessagingInbox() {;
     setActiveCall(roomId);
 
     // Show toast notification;
+<<<<<<< HEAD
     toast && toast.success("Starting video call", {;
       description: "Initializing video call connection...";
     });
@@ -217,6 +238,17 @@ export default function MessagingInbox() {;
 
   return (
     <ProtectedRoute>;
+=======
+    toast && toast.success("Starting video call", {,
+  description: "Initializing video call connection...";
+    });
+
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`)
+};
+
+  return (    <ProtectedRoute>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
           <div className="flex justify-between items-center mb-6">;
@@ -226,12 +258,16 @@ export default function MessagingInbox() {;
             </h1>;
 
             {activeConversation && (;
+<<<<<<< HEAD
               <Button
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
+<<<<<<< HEAD
             )}
 
           </div>;
@@ -240,13 +276,20 @@ export default function MessagingInbox() {;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 
               {/* Conversations List */}
+=======
+            )}              {/* Conversations List */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
                   <div className="animate-pulse">Loading conversations...</div>;
                 </div>;
+<<<<<<< HEAD
               ) : (;
 
     }
+=======
+              ) : (;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     load_data ();
   }, [fetch_conversations]);
@@ -273,16 +316,25 @@ if ( {) {
 ;
   return (
     <ProtectedRoute>;
+<<<<<<< HEAD
       <div className="min - h-screen bg - zion - blue">;
         <div className="container mx - auto py - 8 px - 4">;
           <div className="flex justify - between items - center mb - 6">;
             <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
               <MessageSquare className="h - 6 w - 6" />;
+=======
+      <div className="min - h-screen bg - zion-blue">;
+        <div className="container mx - auto py - 8 px-4">;
+          <div className="flex justify - between items - center mb-6">;
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>;
+              <MessageSquare className="h - 6 w-6" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Messages;
             </h1>;
             {active_conversation && (
               <Button;
                 on_click={startVideoCall}
+<<<<<<< HEAD
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light";
               >;
                 <Video className="h - 4 w - 4" />;
@@ -335,13 +387,36 @@ if ( {) {
 ;
 
   ),; useEffect ( () => {
+=======
+                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple-light";
+              >;
+                <Video className="h - 4 w-4" />;
+                Start Call;
+              </Button>)}
+          </div>;
+          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow-hidden">;
+            <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>;
+              {/* Conversations List */}
+              {is_loading ? (
+                <div className="flex - 1 flex items - center justify - center p-8">;
+                  <div className="animate-pulse">Loading conversations...</div>;
+                </div>) : (
+                <ConversationsList;
+              <ConversationDetailView />;
+            </div>;
+          </div>;
+        </div>;  ),; useEffect ( () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   //Fetch conversations when component mounts const loadData = async () => {
   try {
   
 }
 
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 }, [fetchConversations]);

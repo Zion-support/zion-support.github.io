@@ -2,15 +2,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { agendaItems } from '../../../../data/expo/agenda';
 
-=======
 import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string };
@@ -18,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ) {
   const { id } = req.query as { id?: string }
 ) {;
@@ -27,8 +29,8 @@ export default async function handler(
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res.setHeader('Content-Type', 'text/plain');
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string }
   res.status(200).send(transcript);export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -40,10 +42,13 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +56,10 @@ export default async function handler(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -58,6 +67,7 @@ export default async function handler(
 
   res.status(200).send(transcript)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -68,6 +78,10 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
   const { id } = req && req.query as { id?: string };
   const item = agendaItems && agendaItems.find(i => i && i.id === id);
@@ -83,6 +97,7 @@ export default async function handler(
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -95,6 +110,12 @@ export default async function handler(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -122,6 +143,7 @@ function handler() {
   res.status (200).send (transcript);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -131,31 +153,34 @@ function handler() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-}
-
-
-
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+}
+
+
+
 }
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -176,3 +201,11 @@ function handler() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  res.status(200).send(transcript);
+  res.status(200).send(transcript)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

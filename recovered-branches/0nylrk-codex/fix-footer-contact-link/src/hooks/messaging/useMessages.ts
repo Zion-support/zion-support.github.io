@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -11,13 +12,23 @@ import {toast} from '@/hooks/use-toast';
 
 
 // Allow either UserProfile or UserDetails
+=======
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
+<<<<<<< HEAD
  */
 export function useMessages(
   user: UserWithProfile;
+=======
+ */  user: UserWithProfile;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   active_conversation: Conversation | null;
   active_messages: Message[];
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -28,6 +39,7 @@ export function useMessages(
 
       
       if (unreadMessages && unreadMessages.length > 0) {
+<<<<<<< HEAD
 
         await markAsRead(conversationId)
       }
@@ -77,6 +89,12 @@ if ( {) {
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
 import { UserProfile, UserDetails } from '@/types/auth',;
+=======
+        await markAsRead(conversationId)
+      }
+    } catch (error) {
+      console && console.error('Error fetching messages:', error)import { UserProfile, UserDetails } from '@/types/auth',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
 import { toast } from '@/hooks/use-toast',;
@@ -118,8 +136,11 @@ export function useMessages(;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
@@ -129,6 +150,7 @@ export function useMessages(;
 
   };
 
+<<<<<<< HEAD
 
   }
   };
@@ -143,6 +165,8 @@ export function useMessages(;
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -152,8 +176,12 @@ export function useMessages(;
         .insert({
           conversation_id: conversationId;
           sender_id: user && user.id;
+<<<<<<< HEAD
           recipient_id: conversation && conversation.user_id;
           sender_id: user && user.id;
+=======
+          recipient_id: conversation && conversation.user_id;          sender_id: user && user.id;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           recipient_id: conversation && conversation.user_id;
           content;
           created_at: new Date().toISOString()
@@ -165,11 +193,15 @@ export function useMessages(;
       // Update active messages if this conversation is selected
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
+<<<<<<< HEAD
       }
 
 
 
   },;
+=======
+      }  },;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   /**;
    * Send a message to an existing conversation;
    */;
@@ -198,6 +230,7 @@ export function useMessages(;
       // Update active messages if this conversation is selected;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
+<<<<<<< HEAD
       }
 
 
@@ -258,6 +291,12 @@ export function useMessages(;
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
 
         .eq('recipient_id', user && user.id)
+=======
+      }      
+      // Update conversations list
+      await fetchConversations(),
+              .eq('recipient_id', user && user.id)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .eq('read', false);
       if (error) throw error;
       // Update active messages to show they've been read
@@ -267,11 +306,15 @@ export function useMessages(;
       setConversations(prev =>
         prev.map(conv =>
           conv.id === conversationId
+<<<<<<< HEAD
             ? { ...conv, unread_count: 0 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             : conv
         )
       );
       // Recalculate unread count
+<<<<<<< HEAD
       setUnreadCount(prev => {
 
         const updatedConversations = conversations && conversations.map(conv => 
@@ -289,10 +332,18 @@ export function useMessages(;
     } catch (error) {
       console && console.error('Error marking messages as read:', error)
       console && console.error('Error marking messages as read:', error)
+=======
+      setUnreadCount(prev => {          0
+        )
+      })
+    } catch (error) {
+      console && console.error('Error marking messages as read:', error)      console && console.error('Error marking messages as read:', error)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
   return {
     loadMessages;
+<<<<<<< HEAD
     sendMessage;
 
     markAsRead
@@ -354,6 +405,9 @@ if ( {) {
 
 
   }
+=======
+    sendMessage;  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   /**;
   * Mark messages as read;
@@ -411,6 +465,7 @@ if (throw error) {
   }
 }
 }
+<<<<<<< HEAD
 
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -616,3 +671,5 @@ return updatedConversations.reduce ( (total, conv) => total + (conv.unread count
   }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

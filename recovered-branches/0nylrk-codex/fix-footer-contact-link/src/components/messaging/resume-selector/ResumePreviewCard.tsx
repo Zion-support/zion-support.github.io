@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -18,6 +21,7 @@ export function ResumePreviewCard({
 }: ResumePreviewCardProps) {
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
+<<<<<<< HEAD
 import { Resume } from "@/types/resume",
 interface ResumePreviewCardProps {
   resume: Resume,
@@ -254,3 +258,10 @@ function ResumePreviewCard() {
       </CardContent>;
     </Card>);
 }
+=======
+import { Resume } from "@/types/resume",  return (  return (
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">;
+      <CardContent className="p-4">;
+        <div className="flex justify-between items-start mb-2">;
+          <div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

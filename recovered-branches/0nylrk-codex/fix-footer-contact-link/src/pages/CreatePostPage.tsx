@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -12,13 +13,40 @@ interface PostFormValues {
   categoryId: ForumCategory;
   tags: string;
 }
+=======
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
+interface PostFormValues {
+
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+<<<<<<< HEAD
 
   // Get category from URL query params if available
+=======
+export default function CreatePostPage() {
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();  // Get category from URL query params if available
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const initialCategory = searchParams.get("category") as ForumCategory | null;
 
   const initialValues: Partial<PostFormValues> = {
@@ -49,16 +77,25 @@ export default function CreatePostPage() {;
     }
   }
     }
+<<<<<<< HEAD
 
   },
 
 
+=======
+  }
+    }
+
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <AppLayout>
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
+<<<<<<< HEAD
       />
 
       <div className="container py-8">
@@ -120,6 +157,8 @@ export default function CreatePostPage() {;
       />;
 
       <div className="container py-8">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
@@ -127,6 +166,7 @@ export default function CreatePostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
+<<<<<<< HEAD
 
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
 
@@ -136,6 +176,8 @@ export default function CreatePostPage() {;
   );
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -195,6 +237,7 @@ function CreatePostPage() {
         description="Create a new discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, create post, new thread";
       />;
+<<<<<<< HEAD
       <div className="container py - 8">;
         <div className="flex items - center gap - 3 mb - 6">;
           <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
@@ -204,10 +247,22 @@ function CreatePostPage() {
           <span className="text - sm font - medium">Create Post</span>;
         </div>;
         <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>;
+=======
+      <div className="container py-8">;
+        <div className="flex items - center gap - 3 mb-6">;
+          <Link to="/community" className="text - sm text - muted - foreground hover:text-foreground">;
+            Forum;
+          </Link>;
+          <span className="text - muted-foreground">/</span>;
+          <span className="text - sm font-medium">Create Post</span>;
+        </div>;
+        <h1 className="text - 3xl font - bold mb-8">Create New Post</h1>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
 }
+<<<<<<< HEAD
 
         ;
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
@@ -244,3 +299,6 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 }/> </div> </AppLayout>) 
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

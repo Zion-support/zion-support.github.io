@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+<<<<<<< HEAD
     .join('\n');
 
 
@@ -32,6 +36,9 @@ export function buildPrintableHtml (project: BookProject): string {
     `);
 
     .join('\n\n');
+=======
+    .join('\n');    .join('\n\n');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
@@ -39,6 +46,7 @@ export function buildPrintableHtml (project: BookProject): string {
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
 
+<<<<<<< HEAD
 
 
 
@@ -53,6 +61,10 @@ export function buildPrintableHtml (project: BookProject): string {
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return `<!doctype html>;
 <html>;
 <head>;
@@ -60,6 +72,7 @@ export function buildPrintableHtml (project: BookProject): string {
 <title>${escape_html (meta.title)}</title>;
 <style>;
 
+<<<<<<< HEAD
 
 
 
@@ -68,6 +81,8 @@ function escapeHtml(s: string): string {;
   return s;
 
   @page { margin: 1in   } catch (error) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -138,6 +153,7 @@ function escapeHtml(s: string): string {;
   }
 }
 
+<<<<<<< HEAD
 </style>;
 </head>;
 <body>;
@@ -148,6 +164,8 @@ function escapeHtml(s: string): string {;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ${barcode}
   </section>;
   ${quotes_html}
@@ -156,6 +174,7 @@ function escapeHtml(s: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 
 
     <div>${escapeHtml(meta.publisher || '')}</div>;
@@ -185,11 +204,14 @@ function escapeHtml(s: string): string {;
 }
 </body>;
 </html>`;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -229,4 +251,6 @@ function escape_html (string: string): string {
   }
 
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

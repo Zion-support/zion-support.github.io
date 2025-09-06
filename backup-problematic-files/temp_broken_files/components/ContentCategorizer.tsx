@@ -33,7 +33,7 @@ interface ContentItem {
 }
 interface ContentCategory {id: string;
   name: string;
-  icon: any;
+  icon: any,
   description: string;
   color: string;
   count: number;
@@ -207,55 +207,55 @@ const contentItems: ContentItem[] = [
   const categories: ContentCategory[] = [;
     {id: 'all';
       name: 'All Content';
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
+      icon: Globe,
+  description: 'Complete collection of autonomous content';
       color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
     }
     {id: 'seo';
       name: 'SEO & Analytics';
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
+      icon: BarChart3,
+  description: 'Search optimization and performance analytics';
       color: 'from-green-500 to-emerald-500';
       count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
     }
     {id: 'security';
       name: 'Security & Compliance';
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
+      icon: Shield,
+  description: 'Security assessments and compliance reports';
       color: 'from-red-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
     }
     {id: 'ai';
       name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'AI model performance and insights';
+      icon: Brain,
+  description: 'AI model performance and insights';
       color: 'from-purple-500 to-pink-500';
       count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
     }
     {id: 'features';
       name: 'Feature Updates';
-      icon: Zap;
-      description: 'New features and system updates';
+      icon: Zap,
+  description: 'New features and system updates';
       color: 'from-yellow-500 to-orange-500';
       count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
     }
     {id: 'monitoring';
       name: 'System Monitoring';
-      icon: Cpu;
-      description: 'Infrastructure and system health';
+      icon: Cpu,
+  description: 'Infrastructure and system health';
       color: 'from-indigo-500 to-purple-500';
       count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
     }
     {id: 'analytics';
       name: 'User Analytics';
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
+      icon: TrendingUp,
+  description: 'User behavior and engagement insights';
       color: 'from-teal-500 to-cyan-500';
       count: contentItems.filter(item => item.category === 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];

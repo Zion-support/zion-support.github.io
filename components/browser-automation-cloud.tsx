@@ -27,11 +27,15 @@ import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -42,11 +46,16 @@ export default function BrowserAutomationCloudPage() {
     'Webhook callbacks and REST API',;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -109,6 +118,7 @@ export default function BrowserAutomationCloudPage() {
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -121,6 +131,13 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -192,6 +209,7 @@ function BrowserAutomationCloudPage() {
       </main>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,6 +225,11 @@ function BrowserAutomationCloudPage() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -237,6 +260,7 @@ function BrowserAutomationCloudPage() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -244,6 +268,8 @@ function BrowserAutomationCloudPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
@@ -255,27 +281,9 @@ import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
-<<<<<<< HEAD
-
-export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
-
-  const features = [
-    'Parallel Playwright/Puppeteer execution'
-    'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
-    'Rotating proxies and geo targeting'
-    'Webhook callbacks and REST API'
-=======
 	const features = null;
 	return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return (
     <>
@@ -336,12 +344,8 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
-  );	return (
-
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -373,6 +377,7 @@ export default function BrowserAutomationCloudPage() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -393,3 +398,13 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+	),
+}
+	),
+}
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

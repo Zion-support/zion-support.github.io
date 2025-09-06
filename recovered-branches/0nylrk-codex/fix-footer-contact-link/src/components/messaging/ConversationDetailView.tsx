@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -10,6 +13,7 @@ import { AspectRatio  } from '@/components/ui/aspect-ratio';
 import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
+<<<<<<< HEAD
 export function ConversationDetailView() {
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
@@ -24,6 +28,9 @@ export function ConversationDetailView() {;
 
 
   const { user } = useAuth();
+=======
+export function ConversationDetailView() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
     activeConversation;
 
@@ -37,9 +44,13 @@ export function ConversationDetailView() {;
     if (activeConversation) {
       loadMessages(activeConversation.id)
     }
+<<<<<<< HEAD
   }, [activeConversation?.id, loadMessages]);
 
 import React, { useState, useEffect, useRef } from 'react',;
+=======
+  }, [activeConversation?.id, loadMessages]);import React, { useState, useEffect, useRef } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -65,11 +76,14 @@ export function ConversationDetailView() {;
     }
   }, [activeConversation?.id, loadMessages]),
 
+<<<<<<< HEAD
 import {format} from 'date-fns';
 
 
 
 import {format} from 'date - fns';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect, useRef } from 'react';
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
@@ -82,6 +96,7 @@ import {DateDivider} from './DateDivider';
 
   }, [activeConversation?.id, loadMessages]),
 
+<<<<<<< HEAD
 
 
   
@@ -90,6 +105,8 @@ import {DateDivider} from './DateDivider';
   }, [activeMessages]),
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
@@ -101,21 +118,36 @@ import {DateDivider} from './DateDivider';
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
+<<<<<<< HEAD
   useEffect(() => {;
+=======
+  
+  if (!activeConversation) {  useEffect(() => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     scrollToBottom();
   }, [activeMessages]);
 
   const scrollToBottom = () => {;
+<<<<<<< HEAD
     messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+=======
+    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleSendMessage = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!messageText && messageText.trim() || !activeConversation) return,;
 
     await sendMessage(activeConversation && activeConversation.id, messageText);
+<<<<<<< HEAD
     setMessageText('');
   };
+=======
+    setMessageText('')
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (!activeConversation) {;
   
@@ -131,10 +163,15 @@ import {DateDivider} from './DateDivider';
     );
   }
 
+<<<<<<< HEAD
 
   
 
 
+=======
+  
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -148,6 +185,7 @@ import {DateDivider} from './DateDivider';
         messages: [message]
       })
     }
+<<<<<<< HEAD
   });
 
 
@@ -165,11 +203,15 @@ import {DateDivider} from './DateDivider';
     } else {;
       groupedMessages && groupedMessages.push({;
         date: messageDate,;
+=======
+  });        date: messageDate,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         messages: [message];
       });
     }
 
   }),
+<<<<<<< HEAD
 
 
 
@@ -362,16 +404,30 @@ import {DateDivider} from './DateDivider';
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
           >;
             Send;
+=======
+  
+  const hasContextData = activeConversation.context_data && 
+    (activeConversation.context_data.title || activeConversation.context_data.description),
+  return (
+    <div className="flex-1 flex flex-col h-full">;
+      {/* Header */}            </div>;
+          </div>;
+        </div>;
+      </div>;            Send;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </form>;
       </div>;
 
+<<<<<<< HEAD
 
 
 
 }
     </div>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </div>);
     </div>;
@@ -409,7 +465,11 @@ import {DateDivider} from './DateDivider';
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </div>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

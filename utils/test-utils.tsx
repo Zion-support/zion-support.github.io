@@ -31,7 +31,10 @@ import React from 'react';
 });
 export const createMockProps = (overrides = {}) => ({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </ThemeProvider>;
   );
 },;
@@ -58,6 +61,7 @@ export const mockNextRouter = () => ({;
   defaultLocale: 'en',;
   domainLocales: [],;
   isPreview: false;
+<<<<<<< HEAD
 
 });
 export const createMockProps = (overrides = {}) => ({;
@@ -65,5 +69,9 @@ export const createMockProps = (overrides = {}) => ({;
 
 
 
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 });

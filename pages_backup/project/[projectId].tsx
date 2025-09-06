@@ -1,106 +1,9 @@
-<<<<<<< HEAD
-
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
-export default function ProjectPage() {
-  const router = useRouter()
-  const { projectId } = router.query as { projectId?: string }
-  const [project, setProject] = useState<any | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [note, setNote] = useState("")
-  const headers = {
-    "x-demo-user-role": "client"
-    "x-demo-user-id": "client-1"
-    // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent"
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
-export default function ProjectPage() {
-  const router = useRouter(),
-  const { projectId } = router.query as { projectId?: string },
-  const [project, setProject] = useState<any | null>(null),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-  const [note, setNote] = useState(""),
-
-  const headers = {
-    "x-demo-user-role": "client",
-    "x-demo-user-id": "client-1",
-    // For talent view demo, swap role and provide slug
-    // "x-demo-user-role": "talent",
-    // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
-  useEffect(() => {
-    async function load() {
-      if (!projectId) return
-      try {
-      } catch (e: any) {
-        set_error (e.message);
-      } finally {
-
-        setLoading(false)
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    load()
-  }, [projectId]),
-  const [showFeedback, setShowFeedback] = useState(false),
-  async function addNote() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
-    const json = await res.json(),
-    if (json.ok) {
-      setProject(json.project)
-      setNote("")
-      setShowFeedback(true)
-  }
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH"
-      headers: { "Content-Type": "application/json", ...headers }
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })})
-    const json = await res.json()
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
-    const json = await res.json(),
-    if (json.ok) {
-      setProject(json.project)
-
-=======
 import { useEffect, useState } from "react",
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       setShowFeedback(true)
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
@@ -216,52 +119,6 @@ export default function ProjectPage() {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
-<<<<<<< HEAD
-
-  );
-};
-
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <FeedbackModal;
-        isOpen={showFeedback  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        onClose={() => setShowFeedback(false)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        userHeaders={headers  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      />;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
             )}
           </div>
         </div>
@@ -275,4 +132,4 @@ export default function ProjectPage() {
     </div>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

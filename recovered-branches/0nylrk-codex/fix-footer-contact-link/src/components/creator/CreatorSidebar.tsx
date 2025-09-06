@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
 
 import {;
@@ -10,8 +13,12 @@ import {;
   Home,;
   Mail,;
   Search,;
+<<<<<<< HEAD
   Settings,;
   Bell,
+=======
+  Settings,;  Bell,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FileText,
   Home,
   Mail,
@@ -19,8 +26,12 @@ import {;
   Settings,
 
   Users,;
+<<<<<<< HEAD
 } from "lucide-react";
   Bell,
+=======
+} from "lucide-react";  Bell,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FileText,
   Home,
   Mail,
@@ -38,6 +49,7 @@ import {;
   SidebarGroupLabel,;
   SidebarGroupContent,;
 
+<<<<<<< HEAD
 
 
 } from "@/components/ui/sidebar";
@@ -102,6 +114,8 @@ import {
 
         
         
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -111,8 +125,12 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
+<<<<<<< HEAD
                   </a>
                   </Link>
+=======
+                  </Link>                  </Link>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -120,12 +138,17 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
+<<<<<<< HEAD
                   </a>
                   </Link>
+=======
+                  </Link>                  </Link>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
+<<<<<<< HEAD
         </SidebarGroup>
 
 
@@ -146,21 +169,31 @@ import {
                   </a>
                   </Link>
                 </SidebarMenuButton>
+=======
+        </SidebarGroup>                </SidebarMenuButton>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
+<<<<<<< HEAD
                   </a>
                   </Link>
+=======
+                  </Link>                  </Link>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }
   )
@@ -175,6 +208,7 @@ import {;
   SidebarGroupLabel,;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
+<<<<<<< HEAD
   return (;
   SidebarGroupContent} from "@/components/ui/sidebar",;
 ;
@@ -305,3 +339,9 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
   );
 }
 ;
+=======
+  return (;                  </a>;
+                </SidebarMenuButton>;
+              </SidebarMenuItem>;
+              <SidebarMenuItem>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -17,6 +18,11 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string },
 
 
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -24,34 +30,39 @@ export function assertTalentOrClientForOffer(
   if (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     u && u.role === 'talent' &&
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -84,16 +95,39 @@ export interface AuthContext {
   permissions: string[];
   sessionId?: string;
 }
+<<<<<<< HEAD
+=======
+  err && err.statusCode = 403;
+  throw err;export function requireAuth(req: any): User {
+
+  const user = getUserFromRequest(req);
+  if (!user) {
+
+    throw new Error('Authentication required')
+
+  }
+  return user;
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
+<<<<<<< HEAD
 export function getUserFromRequest (req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
   const auth_header = req.headers.authorization;
   if () {) {
   $2
 
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     return null;
   }
@@ -141,6 +175,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -154,3 +189,12 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  err.statusCode = 403;
+  throw err;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

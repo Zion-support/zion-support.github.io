@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -6,6 +7,27 @@ import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelR
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
+=======
+import React, { useState } from 'react';
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm";
+import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function WhitelabelManager() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { useAuth } from "@/hooks/useAuth";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
@@ -15,6 +37,7 @@ export default function WhitelabelManager() {
   const isAdmin = user?.role === "admin";
 
   if (!isAdmin) {
+<<<<<<< HEAD
     return <Navigate to="/unauthorized" />;
   }
   return (
@@ -132,10 +155,32 @@ export default function WhitelabelManager() {
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
 ;
+=======
+    return <Navigate to="/unauthorized" />
+  }
+  return (
+
+import React, { useState } from 'react',;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function WhitelabelManager() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState("tenants"),;
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+  if (!isAdmin) {;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
+<<<<<<< HEAD
   }
   return (
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
@@ -157,6 +202,8 @@ export default function WhitelabelManager() {
                   To use a custom domain with your white - label instance, you need to configure the DNS records.;
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>;
                 <table>;
                   <thead>;
@@ -165,6 +212,7 @@ export default function WhitelabelManager() {
                       <th > Record Type</th>;
                       <th > Name</th>;
                       <th > Value</th>;
+<<<<<<< HEAD
                       <th > TTL</th>;
 
                     </tr>;
@@ -196,6 +244,9 @@ export default function WhitelabelManager() {
                   You can assign tenant administrators who will have access to manage their white - label instance,
 
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.;
+=======
+                      <th > TTL</th>;                  including content, users, and analytics. Tenant admins cannot access data from other tenants.;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>;
               </div>;
             </TabsContent>;
@@ -204,12 +255,15 @@ export default function WhitelabelManager() {
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 
 
 
 }
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </>);
 }
@@ -225,7 +279,11 @@ including content, users, and analytics. Tenant admins cannot access data from o
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -25,7 +25,10 @@ import React from 'react';
 interface AICodeReviewProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function AICodeReview({ }: AICodeReviewProps) {
@@ -36,10 +39,14 @@ export default function AICodeReview({ }: AICodeReviewProps) {
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/AICodeReview.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function AICodeReview({ }: AICodeReviewProps) {
 }
 }
 :temp_exclude/src.pages.disabled/AICodeReview.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function AICodeReview({ }: AICodeReviewProps) {
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

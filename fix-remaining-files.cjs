@@ -4,7 +4,11 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
+<<<<<<< HEAD
 
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1222,4 +1226,11 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
 
+=======
+main
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

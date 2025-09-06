@@ -11,8 +11,12 @@ import {toast} from "sonner";
 export function WebhookManager() {;
   const { ;
     webhooks;
+<<<<<<< HEAD
     loading, ;
 import React, { useEffect, useState } from "react",
+=======
+    loading, ;import React, { useEffect, useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -26,6 +30,7 @@ export function WebhookManager() {
   const {
     webhooks;
 
+<<<<<<< HEAD
     loading
 
     error;
@@ -41,12 +46,16 @@ export function WebhookManager() {
 
 
   const [newWebhook, setNewWebhook] = useState({
+=======
+    loading  const [newWebhook, setNewWebhook] = useState({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     name: ""
     url: ""
     selectedEvent: "" as WebhookEventType
     eventTypes: [] as WebhookEventType[]
 
+<<<<<<< HEAD
     secret: ""
 
 
@@ -68,6 +77,9 @@ export function WebhookManager() {
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
   ],
+=======
+    secret: ""  ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   useEffect(() => {
     fetchWebhooks()
@@ -77,7 +89,10 @@ export function WebhookManager() {
     if (!newWebhook.selectedEvent) return,
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
@@ -88,11 +103,14 @@ export function WebhookManager() {
       selectedEvent: "" as WebhookEventType
     })
 
+<<<<<<< HEAD
 
   },
   
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
@@ -101,6 +119,7 @@ export function WebhookManager() {
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
       selectedEvent: "" as WebhookEventType
+<<<<<<< HEAD
     })
   }
   },
@@ -131,6 +150,9 @@ export function WebhookManager() {
 
 
     // Reset form
+=======
+    })    // Reset form
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setNewWebhook({
       name: ""
       url: ""
@@ -138,6 +160,7 @@ export function WebhookManager() {
       eventTypes: []
       secret: ""
     })
+<<<<<<< HEAD
 
 
   },
@@ -151,6 +174,17 @@ export function WebhookManager() {
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   }
+=======
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    await testWebhook(webhookId, eventType)
+  }
+  },
+  
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    await testWebhook(webhookId, eventType)
+  },
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <div className="space-y-8">
@@ -173,9 +207,13 @@ export function WebhookManager() {
               />
             </div>
             <div className="space-y-2">
+<<<<<<< HEAD
               <Label htmlFor="webhook-url">URL</Label>
 
 import React, { useEffect, useState } from "react",;
+=======
+              <Label htmlFor="webhook-url">URL</Label>import React, { useEffect, useState } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -251,11 +289,19 @@ export function WebhookManager() {;
       selectedEvent: "" as WebhookEventType,;
       eventTypes: [],;
       secret: "";
+<<<<<<< HEAD
     });
   };
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
     await testWebhook(webhookId, eventType);
   };
+=======
+    })
+};
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {;
+    await testWebhook(webhookId, eventType)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="space-y-8">;
       <Card>;
@@ -264,6 +310,7 @@ export function WebhookManager() {;
           <CardDescription>;
             Define webhooks to notify external systems when events occur in Zion.;
           </CardDescription>;
+<<<<<<< HEAD
         </CardHeader>;
         <CardContent className="space-y-4">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -387,6 +434,9 @@ export function WebhookManager() {;
 
 
               placeholder="A secret key to verify the webhook source"
+=======
+        </CardHeader>;              placeholder="A secret key to verify the webhook source"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
             />
@@ -403,17 +453,25 @@ export function WebhookManager() {;
       </Card>
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
+<<<<<<< HEAD
               If provided, this secret will be used to sign the webhook payload.;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </p>;
           </div>;
         </CardContent>;
         <CardFooter>;
           <Button on_click={handleCreateWebhook}>;
+<<<<<<< HEAD
             <Save className="h - 4 w - 4 mr - 2" /> Create Webhook;
+=======
+            <Save className="h - 4 w - 4 mr-2" /> Create Webhook;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </CardFooter>;
       </Card>;
       <div>;
+<<<<<<< HEAD
         <h3 className="text - lg font - medium mb - 4">Your Webhooks</h3>;
         {loading ? (
           <p > Loading webhooks...</p>) : error ? (
@@ -435,6 +493,21 @@ export function WebhookManager() {;
 
 
                           size="sm"
+=======
+        <h3 className="text - lg font - medium mb-4">Your Webhooks</h3>;
+          <p > Loading webhooks...</p>) : error ? (
+          <p className="text - red-500">{error}</p>) : webhooks.length === 0 ? (
+          <p > No webhooks configured yet. Create your first webhook above.</p>) : (
+          <div className="space-y-4">;
+            {webhooks.map (webhook => (
+              <Card key={webhook.id}>;
+                <CardHeader className="pb-2">;
+                  <div className="flex justify - between items-start">;
+                    <div>;
+                      <CardTitle className="text-lg">{webhook.name}</CardTitle>;
+                      <CardDescription className="truncate max-w-md">;
+                        {webhook.url}                          size="sm"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
                           {webhook.is_active ? 'Disable' : 'Enable'}
@@ -451,6 +524,7 @@ export function WebhookManager() {;
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
 
+<<<<<<< HEAD
 
                             {eventOptions.find(e => e.value === event)?.label || event}
 
@@ -509,6 +583,9 @@ export function WebhookManager() {;
                       <CardTitle className="text-lg">{webhook && webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
                         {webhook && webhook.url}
+=======
+                            {eventOptions.find(e => e.value === event)?.label || event}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </CardDescription>;
                     </div>;
                     <div className="flex items-center">;
@@ -522,8 +599,12 @@ export function WebhookManager() {;
                           size="sm"
                           onClick={() => toggleWebhook(webhook && webhook.id, !webhook && webhook.is_active)}
                         >;
+<<<<<<< HEAD
                           {webhook && webhook.is_active ? 'Disable' : 'Enable'}
                         <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
+=======
+                          {webhook && webhook.is_active ? 'Disable' : 'Enable'}                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' :'bg-gray-400'}`}></div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <span className="text-sm">{webhook.is_active ? 'Active' :'Inactive'}</span>;
                       </div>;
                       <div className="flex-shrink-0">;
@@ -539,25 +620,40 @@ export function WebhookManager() {;
                   </div>;
                 </CardHeader>;
 
+<<<<<<< HEAD
                 <CardContent className="py - 2">;
                   <div className="flex flex - col space - y-2">;
                     <div>;
                       <Label className="text - sm">Events</Label>;
                       <div className="flex flex - wrap gap - 2 mt - 1">;
+=======
+                <CardContent className="py-2">;
+                  <div className="flex flex - col space-y-2">;
+                    <div>;
+                      <Label className="text-sm">Events</Label>;
+                      <div className="flex flex - wrap gap - 2 mt-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         {webhook.event_types.map (event => (
                           <ClickableBadge key={event} variant="secondary">;
                             {event_options.find (e => e.value === event)?.label || event}
                           </ClickableBadge>))}
                       </div>;
                     </div>;
+<<<<<<< HEAD
                     <div className="text - xs text - muted - foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
 
+=======
+                    <div className="text - xs text - muted-foreground">;
+                      {webhook.last_triggered_at;
+                        ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         : 'Never triggered'}
                     </div>;
                   </div>;
                 </CardContent>;
+<<<<<<< HEAD
 
                     onClick={() => deleteWebhook(webhook && webhook.id)}
                   >;
@@ -590,6 +686,8 @@ export function WebhookManager() {;
 
 
                       ))}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -597,6 +695,7 @@ export function WebhookManager() {;
               </Card>;
             ))}
           </div>;
+<<<<<<< HEAD
         )}
 
 
@@ -632,6 +731,9 @@ export function WebhookManager() {;
                     {testResult && testResult.responseBody || '<empty>'}
                     {testResult.responseBody || '<empty>'}
                   </pre>;
+=======
+        )}                  </pre>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </div>;
             </CardContent>;
@@ -639,5 +741,9 @@ export function WebhookManager() {;
           </Card>)}
       </div>;
     </div>);
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

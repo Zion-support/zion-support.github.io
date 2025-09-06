@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -34,6 +35,14 @@ export interface Milestone {;
 
 
   isMilestoneStatus,;
+=======
+  Project,
+  Milestone,
+  MilestoneStatus,
+  isMilestoneStatus
+main
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -67,10 +76,15 @@ export interface Project {
     authorId: string;
     createdAtIso: string;
   }>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   createdAt: string;
   updatedAt: string;
 }
 
+<<<<<<< HEAD
 export interface CreateProjectPayload {
   title: string;
   description: string;
@@ -137,10 +151,14 @@ export async function deleteProject(projectId: string): Promise<void> {
 =======
 
 =======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -151,6 +169,12 @@ import { CurrentUser } from './auth';
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Milestone {
   id: string;
   title: string;
@@ -164,13 +188,18 @@ export interface Milestone {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-  return projects.find(p => p.id === id) |null;
-
-  return projects && projects.find(p => p && p.id === id) || null,
-=======
 <<<<<<< HEAD
 =======
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return projects.find(p => p.id === id) |null;
 
@@ -185,6 +214,8 @@ export interface Milestone {
 
   return projects && projects.find(p => p && p.id === id) || null,
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export function getAllProjects(): Project[] {
 
@@ -194,23 +225,35 @@ export function getProjectById(id: string): Project | null {;
 
 export function getAllProjects(): Project[] {;
 
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -218,6 +261,12 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -228,6 +277,12 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -237,11 +292,19 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
   if (!project) return null,
   
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     ...milestone,
@@ -250,20 +313,23 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     updatedAt: new Date().toISOString();
 
 
   };
 
-=======
   }
 
+<<<<<<< HEAD
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -272,6 +338,13 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
+=======
+
+
+  project.milestones.push(newMilestone);
+  project.updatedAt = new Date().toISOString();
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   project && project.milestones[idx] = next;
   project && project.updatedAt = now;
   saveProject(project);
@@ -279,6 +352,11 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project && project.milestones.push(newMilestone);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return newMilestone;
 }
 
@@ -293,12 +371,21 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
   if (!milestone) return null,
   
   Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return milestone;
 }
 
@@ -313,12 +400,191 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
 
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
   if (index === -1) return false,
   
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
   
+<<<<<<< HEAD
+=======
+
+  projectMembers.push(member);
+  return member;
+}
+
+export function getProjectMembers(projectId: string): ProjectMember[] {
+  return projectMembers.filter(m => m.projectId === projectId);
+}
+
+export function removeProjectMember(projectId: string, userId: string): boolean {
+  const index = projectMembers.findIndex(m => m.projectId === projectId && m.userId === userId);
+  if (index >= 0) {
+    projectMembers.splice(index, 1);
+    return true;
+  }
+  return false;
+}
+
+export function updateProjectMemberRole(projectId: string, userId: string, role: ProjectMember['role']): boolean {
+  const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
+  if (member) {
+    member.role = role;
+    return true;
+  }
+  return false;
+}
+
+// Utility functions
+export function isClient(project: Project, userId: string): boolean {
+  return project.clientId === userId;
+}
+
+export function isTalent(project: Project, user: { talentSlug?: string }): boolean {
+  return user.talentSlug === project.talentSlug;
+}
+
+export function isProjectMember(projectId: string, userId: string): boolean {
+  return projectMembers.some(m => m.projectId === projectId && m.userId === userId);
+}
+
+export function getProjectRole(projectId: string, userId: string): ProjectMember['role'] | null {
+  const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
+  return member ? member.role : null;
+}
+
+export function canEditProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
+  return isClient(project, user.id) || isTalent(project, user) || isProjectMember(project.id, user.id);
+}
+
+export function canViewProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
+  return canEditProject(project, user);
+}
+
+export function getProjectStatus(project: Project): string {
+  if (project.status === 'COMPLETED') return 'Completed';
+  if (project.status === 'CANCELLED') return 'Cancelled';
+  if (project.status === 'PAUSED') return 'Paused';
+  
+  const now = new Date();
+  const overdueMilestones = project.timeline.filter(m => 
+    m.dueDate && new Date(m.dueDate) < now && m.status !== 'COMPLETED'
+  );
+  
+  if (overdueMilestones.length > 0) return 'Overdue';
+  return 'Active';
+}
+
+export function calculateProjectProgress(project: Project): number {
+  if (project.timeline.length === 0) return 0;
+  
+  const completedMilestones = project.timeline.filter(m => m.status === 'COMPLETED').length;
+  return Math.round((completedMilestones / project.timeline.length) * 100);
+}
+
+export function getProjectStats(project: Project): {
+  totalAmount: number;
+  completedAmount: number;
+  pendingAmount: number;
+  progress: number;
+  overdueCount: number;
+} {
+  const totalAmount = project.timeline.reduce((sum, m) => sum + m.amount, 0);
+  const completedAmount = project.timeline
+    .filter(m => m.status === 'COMPLETED')
+    .reduce((sum, m) => sum + m.amount, 0);
+  const pendingAmount = totalAmount - completedAmount;
+  const progress = calculateProjectProgress(project);
+  const overdueCount = project.timeline.filter(m => 
+    m.dueDate && new Date(m.dueDate) < new Date() && m.status !== 'COMPLETED'
+  ).length;
+  
+  return {
+    totalAmount,
+    completedAmount,
+    pendingAmount,
+    progress,
+    overdueCount
+  };
+}
+
+export function searchProjects(query: string, userId?: string): Project[] {
+  const allProjects = userId ? 
+    [...getProjectsByClient(userId), ...getProjectsByTalent(userId)] : 
+    getAllProjects();
+  
+  const searchTerm = query.toLowerCase();
+  return allProjects.filter(project => 
+    project.title.toLowerCase().includes(searchTerm) ||
+    project.summary.toLowerCase().includes(searchTerm) ||
+    project.talentSlug.toLowerCase().includes(searchTerm)
+  );
+}
+
+export function getRecentProjects(userId: string, limit: number = 10): Project[] {
+  const userProjects = [...getProjectsByClient(userId), ...getProjectsByTalent(userId)];
+  return userProjects
+    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
+    .slice(0, limit);
+}
+
+export function getProjectTimeline(projectId: string): Array<{
+  type: 'milestone' | 'note' | 'document';
+  id: string;
+  title: string;
+  description?: string;
+  timestamp: string;
+  author?: string;
+}> {
+  const project = getProject(projectId);
+  if (!project) return [];
+  
+  const timeline = [];
+  
+  // Add milestones
+  project.timeline.forEach(milestone => {
+    timeline.push({
+      type: 'milestone',
+      id: milestone.id,
+      title: milestone.title,
+      description: milestone.description,
+      timestamp: milestone.dueDate || milestone.createdAt,
+      author: 'System'
+    });
+  });
+  
+  // Add notes
+  project.notes.forEach(note => {
+    timeline.push({
+      type: 'note',
+      id: note.id,
+      title: 'Note added',
+      description: note.content,
+      timestamp: note.createdAtIso,
+      author: note.authorId
+    });
+  });
+  
+  // Add documents
+  project.documents.forEach(doc => {
+    timeline.push({
+      type: 'document',
+      id: doc.id,
+      title: `Document uploaded: ${doc.name}`,
+      timestamp: doc.uploadedAtIso,
+      author: 'System'
+    });
+  });
+  
+  return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Mock storage;
 const projects: Project[] = [];
 ;
@@ -385,6 +651,7 @@ if (return false) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -392,15 +659,18 @@ if (return false) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json');
 
 type DbShape = { projects: Project[] };
@@ -492,9 +762,13 @@ export function updateMilestone(
   project.updatedAt = now;
   saveProject(project);
   return next;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

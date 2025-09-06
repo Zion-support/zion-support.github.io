@@ -49,3 +49,8 @@ const path = require('path')
         "command": 'grep -r "aria-" --include="*.tsx" --include="*.jsx"
         "description"
 
+<<<<<<< HEAD
+=======
+      this.log(` Test suite "failed"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

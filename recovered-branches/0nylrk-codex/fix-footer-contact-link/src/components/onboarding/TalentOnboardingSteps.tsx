@@ -4,11 +4,25 @@ import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
+<<<<<<< HEAD
 export function TalentOnboardingSteps() {;
 
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
+=======
+export function TalentOnboardingSteps() {
+  const { user } = useAuth(),
+  const onboardingStatus = useOnboardingStatus(),
+  
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function TalentOnboardingSteps() {
+  const { user } = useAuth();  const onboardingStatus = useOnboardingStatus();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const steps: OnboardingStep[] = [
     {
@@ -32,6 +46,7 @@ export function TalentOnboardingSteps() {;
       link: "/profile/availability",
       action: "Set",
     },
+<<<<<<< HEAD
     {
 
 
@@ -182,3 +197,6 @@ return <OnboardingTracker steps= {
   return <OnboardingTracker steps={steps} />;
 }
 
+=======
+    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

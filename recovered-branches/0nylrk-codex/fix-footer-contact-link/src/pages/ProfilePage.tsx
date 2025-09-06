@@ -22,6 +22,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+<<<<<<< HEAD
 
 
 export default function ProfilePage() {
@@ -29,6 +30,20 @@ export default function ProfilePage() {
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
 
+=======
+import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/components/ui/use-toast";
+import {SEO} from "@/components/SEO";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "@/components/profile/HireNowCTA";
+import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,13 +51,17 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setIsLoading(true),
       setIsError(false),
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
+<<<<<<< HEAD
           .eq("id", profileId)
 
           .single(),
@@ -59,10 +78,14 @@ export default function ProfilePage() {
           throw error;
         }
         setProfileData(data);
+=======
+          .eq("id", profileId)        setProfileData(data);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       } catch (error) {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
+<<<<<<< HEAD
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive",
@@ -77,6 +100,52 @@ export default function ProfilePage() {
     }
 
 
+=======
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
+          variant: "destructive"})
+      } finally {
+        setIsLoading(false)
+import { useState, useEffect } from "react",;
+import { useParams } from "react-router-dom",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/components/ui/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+import {;
+  Star,;
+  MapPin,;
+  Clock,;
+  Link as LinkIcon,;
+  Github,;
+  Twitter,;
+  Linkedin,;
+  CheckCircle2;
+} from "lucide-react",;
+
+export default function ProfilePage() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true);
+      setIsError(false);
+      try {;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -85,6 +154,7 @@ export default function ProfilePage() {
     );
   }
 
+<<<<<<< HEAD
 
   if (isError || !profileData) {;
 
@@ -105,6 +175,9 @@ export default function ProfilePage() {
 
   return (
     <>;
+=======
+  if (isError || !profileData) {;    <>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
@@ -115,6 +188,7 @@ export default function ProfilePage() {
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
       />;
       <AppHeader />;
       <div className="container mx-auto px-4 py-8">;
@@ -161,6 +235,14 @@ export default function ProfilePage() {
                     </div>;                  )}
                 </div>;
                 ;
+=======
+  return (
+    <>;
+      <SEO      />;
+      <AppHeader />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="grid grid-cols-12 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -204,6 +286,7 @@ export default function ProfilePage() {
                         {skill}
                       </Badge>
                     ))}
+<<<<<<< HEAD
                   </div>;
                 </div>;
               )}
@@ -218,6 +301,14 @@ export default function ProfilePage() {
             </div>
 
             {/* Portfolio Section */}
+=======
+            </div>;
+            {/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;            {/* Portfolio Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
@@ -229,8 +320,13 @@ export default function ProfilePage() {
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< HEAD
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
                       <LinkIcon className="h-4 w-4 mr-2" />;
+=======
+              </div>;
+            </div>;                      <LinkIcon className="h-4 w-4 mr-2" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {link}
                     </a>
                   ))
@@ -254,7 +350,10 @@ export default function ProfilePage() {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
               <div className="flex space-x-4">;
+<<<<<<< HEAD
                 {profileData && profileData.github_link && (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <a
                     href={profileData && profileData.github_link}
                     target="_blank"
@@ -263,6 +362,7 @@ export default function ProfilePage() {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
+<<<<<<< HEAD
 
                   </Link>
 
@@ -270,6 +370,8 @@ export default function ProfilePage() {
                     className="text-zion-cyan hover:text-white transition-colors">;
                     <Github className="h-6 w-6" />;
                   </a>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -287,19 +389,26 @@ export default function ProfilePage() {
                     rel="noopener noreferrer"
                   </Link>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
               </div>
             </div>
           </div>
 
+<<<<<<< HEAD
                     className="text-zion-cyan hover:text-white transition-colors">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Linkedin className="h-6 w-6" />;
                   </a>;
                 )}
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
@@ -380,5 +489,7 @@ if (isLoading) {
   );
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 

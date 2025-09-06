@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { UseFormReturn } from "react-hook-form";
 
 import {;
@@ -9,6 +12,7 @@ import {;
   FormItem,;
   FormLabel,;
   FormControl,;
+<<<<<<< HEAD
   FormDescription,;
 
   FormField,
@@ -22,22 +26,29 @@ import {;
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
+=======
+  FormDescription,;} from "@/components/ui/form";import { Checkbox } from "@/components/ui/checkbox";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function AdditionalClausesFields({
   form
 }: AdditionalClausesFieldsProps) {
   return (
     <FormField
 
+<<<<<<< HEAD
 
 
 
@@ -84,6 +95,9 @@ export function AdditionalClausesFields(): any ({;
       control={form && form.control}
       name="additionalClauses"
       render={() => (;
+=======
+      name="additionalClauses"      render={() => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <FormItem>;
           <div className="mb-4">;
             <FormLabel>Additional Clauses</FormLabel>;
@@ -102,6 +116,7 @@ export function AdditionalClausesFields(): any ({;
                           ? field && field.onChange([...currentValues, "nda"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter((value) => value !== "nda"),;
+<<<<<<< HEAD
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
@@ -134,11 +149,16 @@ export function AdditionalClausesFields(): any ({;
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
                       onCheckedChange={(checked) => {;
+=======
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+            <FormField;                      onCheckedChange={(checked) => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
 
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
@@ -149,6 +169,8 @@ export function AdditionalClausesFields(): any ({;
                               currentValues.filter((value) => value !== 'nda');
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             );
                       }}
                     />
@@ -164,16 +186,20 @@ export function AdditionalClausesFields(): any ({;
                 </FormItem>
               )}
 
+<<<<<<< HEAD
             />
             <FormField
             />;
             <FormField;
               control={form.control}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             );
                       }}
                     />;
                   </FormControl>;
 
+<<<<<<< HEAD
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Confidentiality (NDA)</FormLabel>;
 
@@ -195,12 +221,19 @@ export function AdditionalClausesFields(): any ({;
             <FormField
               control={form && form.control}
               name="additionalClauses"
+=======
+                  <div className="space - y-1 leading-none">;
+                    <FormLabel > Confidentiality (NDA)</FormLabel>;              name="additionalClauses"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       checked={field && field.value?.includes("ip")}
 
                               currentValues.filter((value) => value !== "ip"),
@@ -210,6 +243,7 @@ export function AdditionalClausesFields(): any ({;
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
                         return checked;
+<<<<<<< HEAD
 
                 </FormItem>)}
             />;
@@ -258,6 +292,8 @@ export function AdditionalClausesFields(): any ({;
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             );
                       }}
                     />
@@ -277,12 +313,16 @@ export function AdditionalClausesFields(): any ({;
             />;
             <FormField;
 
+<<<<<<< HEAD
               control={form.control}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             );
                       }}
                     />;
                   </FormControl>;
 
+<<<<<<< HEAD
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Intellectual Property Transfer</FormLabel>;
 
@@ -304,10 +344,15 @@ export function AdditionalClausesFields(): any ({;
             <FormField
               control={form && form.control}
               name="additionalClauses"
+=======
+                  <div className="space - y-1 leading-none">;
+                    <FormLabel > Intellectual Property Transfer</FormLabel>;              name="additionalClauses"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               render={({ field }) => (;
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
 
                       checked={field && field.value?.includes("termination")}
                       onCheckedChange={(checked) => {;
@@ -342,6 +387,8 @@ export function AdditionalClausesFields(): any ({;
                                 (value) => value !== "termination",
                               ),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                 (value) => value !== "termination",
                               ),
 
@@ -351,6 +398,7 @@ export function AdditionalClausesFields(): any ({;
                         return checked;
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
+<<<<<<< HEAD
                               currentValues.filter((value) => value !== 'termination');
 
 
@@ -393,6 +441,14 @@ export function AdditionalClausesFields(): any ({;
             <FormField
               control={form && form.control}
 
+=======
+                              currentValues.filter((value) => value !== 'termination');                    <FormDescription>;
+                      Define conditions for ending the contract;
+                    </FormDescription>;
+                  </div>;
+            <FormField
+              control={form && form.control}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
             <FormField;
 
@@ -405,6 +461,7 @@ export function AdditionalClausesFields(): any ({;
                   <FormControl>;
                     <Checkbox
 
+<<<<<<< HEAD
 
 
                                 (value) => value !== "revisions"
@@ -413,6 +470,8 @@ export function AdditionalClausesFields(): any ({;
                               ),
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
                         const currentValues = field && field.value || [];
@@ -423,13 +482,17 @@ export function AdditionalClausesFields(): any ({;
                                 (value) => value !== "revisions",;
                               ),;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </FormItem>)}
             />;
             <FormField;
               control={form.control}
               name="additional_clauses";
                                 (value) => value !== "revisions",
+<<<<<<< HEAD
                               ),
                                 (value) => value !== "revisions",
                               ),
@@ -459,6 +522,9 @@ export function AdditionalClausesFields(): any ({;
 
 
                             );
+=======
+                              ),                            );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       }}
                     />
                   </FormControl>
@@ -482,15 +548,23 @@ export function AdditionalClausesFields(): any ({;
                     />;
                   </FormControl>;
 
+<<<<<<< HEAD
                   <div className="space - y-1 leading - none">;
                     <FormLabel > Revisions & Amendments</FormLabel>;
 
+=======
+                  <div className="space - y-1 leading-none">;
+                    <FormLabel > Revisions & Amendments</FormLabel>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <FormDescription>;
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     />;
   );
                 </FormItem>)}
@@ -506,4 +580,8 @@ export function AdditionalClausesFields(): any ({;
                       Define how changes to the contract are handled;
                     </FormDescription>;
                   </div>;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

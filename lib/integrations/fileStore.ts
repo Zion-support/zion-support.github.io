@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -7,28 +7,33 @@
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
-=======
 
-=======
 import fs from 'fs';
 import path from 'path';
 import { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
@@ -54,6 +59,7 @@ function ensureDataDir (): void {
     const initial: IntegrationsState = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -67,15 +73,22 @@ function ensureDataDir (): void {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       connections: [],
       logs: [],
       overrides: [],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 export function readState(): IntegrationsState {
@@ -83,6 +96,7 @@ export function readState(): IntegrationsState {
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
     return JSON && JSON.parse(raw) as IntegrationsState;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -102,23 +116,25 @@ export function readState(): IntegrationsState {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-=======
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(STATE_FILE)) {
     const initial: IntegrationsState = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       connections: []
       logs: []
@@ -137,6 +153,8 @@ export function readState(): IntegrationsState {;
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       connections: [],
       logs: [],
       overrides: [],
@@ -147,7 +165,7 @@ export function readState(): IntegrationsState {;
 }
 
 export function readState(): IntegrationsState {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ensureDataDir();
   const current = readState();
   (mutator(current),
@@ -156,6 +174,7 @@ export function readState(): IntegrationsState {
 export function read_state (): IntegrationsState {
   ensureDataDir ();
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const raw = fs.readFileSync (STATE_FILE, "utf8");
@@ -170,37 +189,47 @@ return JSON.parse(raw) as IntegrationsState;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    const raw = fs.readFileSync(STATE_FILE, 'utf8');
+return JSON.parse(raw) as IntegrationsState;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     return { connections: [], logs: [], overrides: [], events: [] };
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function writeState(
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
 
 
   ensureDataDir();
   const current = readState();
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 <<<<<<< HEAD
-
-  (mutator(current),
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(current, null, 2), "utf8"));
-
   return current;
 }
 
@@ -235,11 +264,17 @@ export function write_state (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   mutator(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

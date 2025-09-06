@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,13 +15,15 @@ import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Web3Login } from './Web3Login';
 import { useState } from 'react';
 import { openAuthPopup } from '@/api/authSocial';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,44 +32,53 @@ export function SocialLogin() {
     window.location.href = "/auth/google";
   };
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   return (
     <div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
-<<<<<<< HEAD
-=======
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 return (
     <div className='mt-6'>
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </div>
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Or continue with
           </span>
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -116,14 +128,17 @@ function SocialLogin() {
         </div>;
       </div>;
 
+
+
 <<<<<<< HEAD
-=======
-
-
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"
@@ -133,6 +148,7 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
+<<<<<<< HEAD
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -162,9 +178,11 @@ function SocialLogin() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -173,16 +191,20 @@ function SocialLogin() {
               <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />
               <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999 C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />
               <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </svg>
           )}
-<<<<<<< HEAD
-=======
         </Button>;
         <Button
+<<<<<<< HEAD
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -191,9 +213,11 @@ function SocialLogin() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </Button>
         <Web3Login />
       </div>
@@ -201,26 +225,30 @@ function SocialLogin() {
   );
 };
 
-<<<<<<< HEAD
-=======
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup('facebook')}
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </Button>
         <Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+<<<<<<< HEAD
           onClick={() => openAuthPopup("twitter")}
           onClick={() => openAuthPopup("twitter")}
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
@@ -232,10 +260,16 @@ function SocialLogin() {
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+          onClick={() => openAuthPopup('twitter')}
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
 =======
@@ -249,87 +283,26 @@ function SocialLogin() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </Button>
         <Web3Login />
       </div>
     </div>
-<<<<<<< HEAD
-  )
-
-          disabled={isLoading}        >;
-          <span className='sr-only'>Sign in with Twitter</span>;
-          <Twitter className='h-5 w-5' />;
 
 
-import { Facebook, Twitter, Loader2 } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Web3Login } from "./Web3Login",;
-import { useState } from "react",;
-import { openAuthPopup } from "@/api/authSocial",;
-export function SocialLogin() {;
-  const [isLoading, setIsLoading] = useState(false),;
-  const handleGoogle = () => {;
-    setIsLoading(true);
-    window.location.href = '/auth/google';
-  };
-  return (;
-    <div className="mt-6">;
-      <div className="relative">;
-        <div className="absolute inset-0 flex items-center">;
-          <div className="w-full border-t border-zion-blue-light" />;
-        </div>;
-        <div className="relative flex justify-center text-sm">;
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
-        </div>;
-      </div>;
-      <div className="mt-6 grid grid-cols-4 gap-3">;
-        <Button;
-          type="button";
-          variant="outline";
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={handleGoogle}
-          disabled={isLoading}
-        >;
-          <span className="sr-only">Sign in with Google</span>;
-          {isLoading ? (;
-            <Loader2 className="h-5 w-5 animate-spin" />;
-          ) : (;
-            <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">;
-              <path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z" fill="#EA4335" />;
-              <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />;
-              <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999 C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />;
-              <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />;
-            </svg>;
-          )}
-        </Button>;
-        <Button;
-          type="button";
-          variant="outline";
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => openAuthPopup('facebook')}
-          disabled={isLoading}
-        >;
-          <span className="sr-only">Sign in with Facebook</span>;
-          <Facebook className="h-5 w-5" />;
-        </Button>;
-        <Button;
-          type="button";
-          variant="outline";
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
-          onClick={() => openAuthPopup('twitter')}
-          disabled={isLoading}
-        >;
-          <span className="sr-only">Sign in with Twitter</span>;
-          <Twitter className="h-5 w-5" />;
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
 =======
@@ -342,6 +315,11 @@ export function SocialLogin() {;
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/auth/login/SocialLogin.tsx
+=======
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
@@ -403,7 +381,6 @@ export function SocialLogin() {;
     </div>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

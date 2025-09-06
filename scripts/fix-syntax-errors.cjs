@@ -1,13 +1,13 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * Syntax Error Fixer;
- * Automatically fixes common syntax errors in the codebase;
- */
 
+<<<<<<< HEAD
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+=======
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 
@@ -33,7 +33,6 @@ const path = require('path')
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -85,11 +84,12 @@ class SyntaxErrorFixer {
         }
       }
       
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
       return false;
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   fixCommonErrors(content) {
     // Fix unterminated strings
@@ -113,6 +113,13 @@ class SyntaxErrorFixer {
     // Fix merge conflict markers
     content = content.replace(/
 
+=======
+
+
+
+
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     
@@ -204,7 +211,6 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
-=======
   async fixESLintErrors() {
     this.log('🔍 Running ESLint with auto-fix...');
     
@@ -360,4 +366,4 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd

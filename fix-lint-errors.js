@@ -12,6 +12,7 @@ function fixSyntaxErrors(content) {}
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -351,6 +352,8 @@ function fixUndefinedVariables(content, filePath) {}
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"}
     fixed = "import { useEffect } from 'react';\n" + fixed;",
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Function to fix common lint errors
 function fixLintErrors(content) {
   let fixed = content;
@@ -399,24 +402,12 @@ function fixLintErrors(content) {
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {
     fixed += '\n}'.repeat(openBraces - closeBraces);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 
   return fixed;
 }
 
-<<<<<<< HEAD
-// Function to remove unused variables;
-  return fixed;
-}
-// Function to fix undefined variables (add basic, imports),
-function fixUndefinedVariables(content, filePath) {}
-  let fixed = content;,
-  // Common _React patterns;
-  if (content.includes('_React') && !content.includes("import _React")) {"}
-    if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
-      fixed = "import _React from 'react';\n" + fixed;",
-=======
 // Main function
 async function main() {
   // Get all TypeScript/JavaScript files
@@ -442,7 +433,7 @@ async function main() {
     } catch (error) {
       console.error(`Error processing ${file}:`, error.message);
       errorCount++;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
   }
   // Common Next.js patterns;
@@ -602,6 +593,7 @@ origin/main
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Function to remove unused variables;
 function removeUnusedVariables(content) {
   // Remove common unused variable patterns}
@@ -614,6 +606,9 @@ function removeUnusedVariables(content) {
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Function to fix undefined variables (add basic, imports)
 function fixUndefinedVariables(content, filePath) {}
@@ -1758,6 +1753,7 @@ if (&&) {
 #!/usr/bin/env node; function fixLintErrors(content) { let fixed = content; fixed = fixed.replace(/import\s+[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (; imports &&; !imports.includes(",") &&; imports.trim().split(/\s+/).length > 1; ) { const cleanImports = imports.trim().split(/\s+/).join(","); return match.replace(imports,cleanImports)} return match; fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,(match,imports) => { if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) { const cleanImports = imports.trim().split(/\s+/).join(); return match.replace(imports,cleanImports)} ); fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^]+$/gm,match => { if (!match.endsWith(";")) { return match + ";"} return match}); fixed = fixed.replace(; /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,"export default function $1() {"; ); const openBraces = (fixed.match(/\{/g) || []).length; const closeBraces = (fixed.match(/\}/g) || []).length; if (openBraces > closeBraces) { fixed += "\n}".repeat(openBraces - closeBraces)} ; return fixed} ; async function $1() { const files = await glob("src*.{ts,tsx,js,jsx}",{ ignore: ["node_modules/**"]}); console.log(``Found ${files.length} files to process...``); let fixedCount = 0; let errorCount = 0; for (const file of files) { try { const content = fs.readFileSync(file,"utf8"); const fixed = fixLintErrors(content); if (content !== fixed) { fs.writeFileSync(file,fixed,"utf8"); console.log(``Fixed: ${file}``); fixedCount++,} } catch (error) { console.error(`Error processing ${file}:`,error.message); errorCount++,} } ; console.log(``\nCompleted: ${fixedCount} files fixed,${errorCount} errors``)} ; main().catch(console.error)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1769,3 +1765,8 @@ main().catch(console.error);
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main().catch(console.error);
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -6,6 +6,6 @@ const RequestQuote = ({ className }) => {
       <h1>RequestQuote</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

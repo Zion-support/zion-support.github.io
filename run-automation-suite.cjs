@@ -3,6 +3,10 @@
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class AutomationSuiteRunner { constructor() { this.projectRoot = process.cwd(); this.reportsDir = path.join(this.projectRoot, "automation-reports");" this.logFile = path.join(this.reportsDir, "automation-suite.log"); this.ensureDirectories(); } ensureDirectories() { if (!fs.existsSync(this.reportsDir)) {'"'"
+<<<<<<< HEAD
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 #!/usr/bin/env node
 /**

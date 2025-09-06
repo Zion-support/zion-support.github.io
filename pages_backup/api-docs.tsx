@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -64,10 +65,94 @@ const apiEndpoints = [
       '/api/analytics/metrics',
       '/api/analytics/reports'
     ]
+=======
+
+
+import { motion } from 'framer-motion';
+import React from 'react';
+import Head from 'next/head';
+
+
+
+import Link from 'next/link';
+import { 
+  ArrowRight,
+  Server,
+  Lock,
+  Brain,
+  Cloud;
+} from 'lucide-react';
+const apiEndpoints = [
+  {
+    title: 'Authentication API'
+    description: 'Secure authentication and authorization endpoints'
+    icon: Lock
+    methods: ['POST', 'GET', 'PUT', 'DELETE']
+    endpoint: '/api/auth'
+  }
+  {
+    title: 'AI Services API'
+    description: 'Access to all AI-powered services and models'
+    icon: Brain
+    methods: ['POST', 'GET']
+    endpoint: '/api/ai'
+  }
+  {
+    title: 'Micro SaaS API'
+    description: 'Manage micro SaaS applications and subscriptions'
+    icon: Cloud
+    methods: ['POST', 'GET', 'PUT', 'DELETE']
+    endpoint: '/api/micro-saas'
+  }
+  {
+    title: 'IT Services API'
+    description: 'Infrastructure and IT service management'
+    icon: Server
+    methods: ['POST', 'GET', 'PUT']
+    endpoint: '/api/it-services'
+import { ;
+  ArrowRight,;
+  Server,;
+  Lock,;
+  Brain,;
+  Cloud;
+} from 'lucide-react';
+
+const apiEndpoints = [;
+  {;
+    title: 'Authentication API',;
+    description: 'Secure authentication and authorization endpoints',;
+    icon: Lock,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/auth';
+  },;
+  {;
+    title: 'AI Services API',;
+    description: 'Access to all AI-powered services and models',;
+    icon: Brain,;
+    methods: ['POST', 'GET'],;
+    endpoint: '/api/ai';
+  },;
+  {;
+    title: 'Micro SaaS API',;
+    description: 'Manage micro SaaS applications and subscriptions',;
+    icon: Cloud,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/micro-saas';
+  },;
+  {;
+    title: 'IT Services API',;
+    description: 'Infrastructure and IT service management',;
+    icon: Server,;
+    methods: ['POST', 'GET', 'PUT'],;
+    endpoint: '/api/it-services';
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 
 export default function APIDocsPage() {
+<<<<<<< HEAD
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -161,6 +246,8 @@ export default function APIDocsPage() {
 }
 <<<<<<< HEAD:pages_backup/api-docs.tsx
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function ApiDocsPage() {
   return (
     <>
@@ -254,47 +341,15 @@ export default function APIDocsPage() {;
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-
-      </Head>
-      <div className="container mx-auto px-4 py-16 text-gray-200">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
-
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">;
-              Our developer support team is here to help you integrate our APIs successfully.;
-            </p>;
-            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-              Contact Developer Support;
-            </Link>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </div>;
-  );
-        <meta name="description" content="API reference and guides." />
-        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-=======
 <meta name='description' content='API reference and guides.' />
         <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
@@ -306,42 +361,14 @@ export default function ApiDocsPage() {
           for the full reference.
         </p>
       </div>
-<<<<<<< HEAD
-);
-origin/main
-    </>
-  )
-}
-}
-    </Layout>;
-);
-    </>
-  )
-    </>
-  )
-import React from 'react';
-import Head from 'next/head';
-export default function ApiDocsPage(req, res) {
-  try {
-  return (;
-    <>;
-      <Head>;
-        <title>API Docs | Zion Tech Group</title>;
-        <meta name='description' content='API reference and guides.' />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
-      </Head>;
-      <div className="container mx-auto px-4 py-16 text-gray-200">;
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     </Layout>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api-docs.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

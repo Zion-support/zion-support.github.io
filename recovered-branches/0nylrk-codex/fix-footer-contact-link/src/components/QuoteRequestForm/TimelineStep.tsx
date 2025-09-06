@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -26,6 +27,40 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
         <div className="space-y-4">
+=======
+
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+import {useState} from "react";
+import {format} from "date-fns";
+import {Calendar} from "@/components/ui/calendar";
+import {Button} from "@/components/ui/button";
+import {Label} from "@/components/ui/label";
+import {CalendarIcon} from "@/components/icons";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {cn} from "@/lib/utils";
+import {QuoteFormData} from "@/types/quotes";
+
+import {useState} from "react";
+import {format} from "date-fns";
+import {Calendar} from "@/components/ui/calendar";
+import {Button} from "@/components/ui/button";
+import {Label} from "@/components/ui/label";
+import {CalendarIcon} from "@/components/icons";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {cn} from "@/lib/utils";
+import {QuoteFormData} from "@/types/quotes";
+
+import { useState } from "react",
+import { format } from "date-fns",
+import { Calendar } from "@/components/ui/calendar",
+import { Button } from "@/components/ui/button",
+import { Label } from "@/components/ui/label",
+import { CalendarIcon } from "@/components/icons",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils",
+import { QuoteFormData } from "@/types/quotes",        <div className="space-y-4">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="flex items-center space-x-4">
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -57,6 +92,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           </div>
 
           {formData.timeline === "fixed" && (
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -192,6 +228,10 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
               </div>
 
               <div>
+=======
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">          {formData.timeline === "fixed" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Label className="block mb-2 text-zion-slate-light">
                   End Date
                 </Label>
@@ -199,10 +239,14 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
+<<<<<<< HEAD
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light",
                       )}
+=======
+                      className={cn(                      )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
                       {formData.endDate ? (
@@ -222,6 +266,7 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
                       onSelect={(date) => updateFormData({ endDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
+<<<<<<< HEAD
                       disabled={(date) =>
                         date < (formData.startDate || new Date())
                       }
@@ -236,6 +281,20 @@ export function TimelineStep(): any ({ formData, updateFormData }: TimelineStepP
     </div>
   );
 }
+=======
+import { useState } from "react",;
+import { format } from "date-fns",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Button } from "@/components/ui/button",;
+import { Label } from "@/components/ui/label",;
+import { CalendarIcon } from "@/components/icons",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { cn } from "@/lib/utils",;
+import { QuoteFormData } from "@/types/quotes",;
+interface TimelineStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   return (;
@@ -277,6 +336,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       variant="outline";
                       className={cn(;
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
+<<<<<<< HEAD
                     <Button;
                       variant="outline";
                       className={cn(;
@@ -287,12 +347,18 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       <CalendarIcon className="mr-2 h-4 w-4" />;
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
                       {formData.startDate ? format(formData.startDate, "PPP") :<span>Pick a date</span>}
+=======
+                      variant="outline";
+                      className={cn(;
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
                     <Calendar;
                       mode="single";
                       selected={formData.startDate}
+<<<<<<< HEAD
                       onSelect={(date) => updateFormData({ startDate: date })}
 
                       initialFocus;
@@ -330,13 +396,20 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   )
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
+=======
+                      onSelect={(date) => updateFormData({ startDate: date })}                      <CalendarIcon className="mr - 2 h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {form_data.end_date ? (
                         format (form_data.end_date, "PPP")) : (
                         <span > Pick a date</span>)}
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent;
+<<<<<<< HEAD
                     className="w - auto p - 0 bg - zion - blue - dark border border - zion - blue - light";
+=======
+                    className="w - auto p - 0 bg - zion - blue - dark border border - zion - blue-light";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     align="start";
                   >;
                     <Calendar;
@@ -344,6 +417,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       selected={form_data.end_date}
                       on_select={(date) => updateFormData ({ end_date: date })}
                       initial_focus;
+<<<<<<< HEAD
                       className="p - 3 pointer - events - auto";
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ());
@@ -389,3 +463,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
   );
 }
 ;
+=======
+                      className="p - 3 pointer - events-auto";
+                      disabled={(date) =>;
+                        date < (form_data.start_date || new Date ())
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

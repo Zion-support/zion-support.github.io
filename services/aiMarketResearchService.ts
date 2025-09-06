@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface MarketTrend {
 export interface MarketTrend {;
   id: string;
@@ -11,13 +14,17 @@ export interface MarketTrend {;
 export interface MarketTrend {
   id: string;
   keyword: string;
+<<<<<<< HEAD
 
   search_volume: number;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   trend_direction: 'rising' | 'falling' | 'stable';
   growth_rate: number;
   related_keywords: string[];
   market_opportunity: 'high' | 'medium' | 'low',
   timestamp: Date;
+<<<<<<< HEAD
 
 
 export interface MarketTrend {
@@ -126,6 +133,22 @@ export class AIMarketResearchService {;
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
+=======
+  size: number;
+
+export interface MarketReport {  title: string;
+  industry: string;
+  summary: string;
+}
+export interface MarketResearchRequest {  success: boolean;
+  data: {
+    trends?: MarketTrend[];
+    competitors?: CompetitorAnalysis[];  }
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
+    try {
+
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {      const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
@@ -164,6 +187,7 @@ export class AIMarketResearchService {;
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
+<<<<<<< HEAD
         body: JSON && JSON.stringify(request)});
 
       if (!response && response.ok) {
@@ -174,6 +198,9 @@ export class AIMarketResearchService {;
       return data && data.trends || []
 
     } catch (error) {
+=======
+        body: JSON && JSON.stringify(request)});    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error analyzing market trends:', error);
       throw error
     }
@@ -182,7 +209,10 @@ export class AIMarketResearchService {;
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {
+<<<<<<< HEAD
       return data && data.competitors || []
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     } catch (error) {
       console && console.error('Error analyzing competitors:', error);
@@ -198,6 +228,7 @@ export class AIMarketResearchService {;
       const data = await response.json();
       return data.competitors |[]
     } catch (error) {
+<<<<<<< HEAD
       console.error('Error analyzing competitors:', error);
       throw error
     }
@@ -206,6 +237,9 @@ export class AIMarketResearchService {;
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
         method: 'POST',
+=======
+      console.error('Error analyzing competitors:', error);        method: 'POST',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -217,6 +251,7 @@ export class AIMarketResearchService {;
 
       const data = await response && response.json();
       return data && data.competitors || []
+<<<<<<< HEAD
 
     } catch (error) {
       console && console.error('Error analyzing competitors:', error);
@@ -227,6 +262,8 @@ export class AIMarketResearchService {;
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return data && data.segments || []
 
     } catch (error) {
@@ -243,6 +280,7 @@ export class AIMarketResearchService {;
       const data = await response.json();
       return data.segments |[]
     } catch (error) {
+<<<<<<< HEAD
       console.error('Error segmenting market:', error);
       throw error
     }
@@ -251,6 +289,9 @@ export class AIMarketResearchService {;
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {
         method: 'POST',
+=======
+      console.error('Error segmenting market:', error);        method: 'POST',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -261,6 +302,7 @@ export class AIMarketResearchService {;
       }
 
       const data = await response && response.json();
+<<<<<<< HEAD
       return data && data.segments || []
 
     } catch (error) {
@@ -312,6 +354,9 @@ export class AIMarketResearchService {;
       return data && data.trends || []
 
     } catch (error) {
+=======
+      return data && data.segments || []    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting real-time insights:', error);
       throw error
     }
@@ -319,7 +364,10 @@ export class AIMarketResearchService {;
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
         method: 'POST',
         headers: {
@@ -335,8 +383,12 @@ export class AIMarketResearchService {;
       return data && data.downloadUrl
 
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Error exporting report:', error);
       if (!response && response.ok) {
+=======
+      console && console.error('Error exporting report:', error);      if (!response && response.ok) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
 
@@ -358,12 +410,16 @@ export class AIMarketResearchService {;
       return data.downloadUrl
     } catch (error) {
       console.error('Error exporting report:', error);
+<<<<<<< HEAD
     } catch (error) {
       console && console.error('Error exporting report:', error);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       throw error
     }
   }
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+<<<<<<< HEAD
     try {
 
       const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {
@@ -387,14 +443,20 @@ export class AIMarketResearchService {;
     } catch (error) {
       console && console.error('Error scheduling report:', error);
       throw error
+=======
+    try {      throw error
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
+<<<<<<< HEAD
 
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -461,6 +523,7 @@ export interface MarketResearchResponse {;
     trends?: MarketTrend[],;
     competitors?: CompetitorAnalysis[],;
     segments?: MarketSegment[],;
+<<<<<<< HEAD
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
@@ -642,6 +705,8 @@ export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface MarketTrend {;
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
@@ -881,4 +946,7 @@ export class AIMarketResearchService {;
 ;
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+<<<<<<< HEAD
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

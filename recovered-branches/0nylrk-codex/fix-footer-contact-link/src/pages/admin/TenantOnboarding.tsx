@@ -10,6 +10,7 @@
     custom_domain: ""
     is_co_branded: true
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +34,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -52,6 +55,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   const [formData, setFormData] = useState({;
     brand_name: "",;
     subdomain: "",;
@@ -145,6 +149,8 @@ export default function TenantOnboarding() {;
     } finally {;
       setIsSubmitting(false);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -174,16 +180,131 @@ export default function TenantOnboarding() {
     company_size: ""
     industry: ""
     custom_domain: ""
+<<<<<<< HEAD
+=======
+    is_co_branded: true  });
+
+  // Check if user has admin role;
+  const isAdmin = user?.role === "admin";
+
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" />;
+  }
+
+  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e && e.target;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSelectChange = (name: string, value: string) => {;
+    setFormData(prev => ({ ...prev, [name]: value }))
+};
+
+  const handleSwitchChange = (name: string, checked: boolean) => {;
+    setFormData(prev => ({ ...prev, [name]: checked }))
+};
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true),;
+
+    try {;
+      // Generate subdomain if not provided;
+      const subdomain = formData && formData.subdomain || formData && formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Create landing page copy;
+      const landingPageCopy = {;
+        headline: "AI Hiring Assistant",;
+        subtitle: `Find the best talent for your ${formData && formData.industry || "company"}`,;
+        cta: "Get Started"
+};
+      // Submit to Supabase;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .insert({;
+          brand_name: formData && formData.brand_name,;
+          subdomain: subdomain,;
+          custom_domain: formData && formData.custom_domain || null,;
+          primary_color: formData && formData.primary_color,;
+          logo_url: formData && formData.logo_url || null,;
+          theme_preset: formData && formData.theme_preset,;
+          landing_page_copy: landingPageCopy,;
+          is_active: true,;
+          account_manager_id: user && user.id,;
+          dns_verified: false,;
+          email_template_override: null;
+        });
+        .select('id, brand_name, subdomain');
+        .single();
+
+      if (error) throw error;
+
+      toast && toast.success("Tenant created successfully!", {,
+  description: `${data && data.brand_name} is now available at ${data && data.subdomain}.ziontechmarketplace && ziontechmarketplace.com`;
+      });
+
+      // Reset form;
+      setFormData({;
+        brand_name: "",;
+        subdomain: "",;
+        logo_url: "",;
+        primary_color: "#9b87f5",;
+        theme_preset: "light",;
+        company_size: "",;
+        industry: "",;
+        custom_domain: "",;
+        is_co_branded: true;
+      });
+
+    } catch (error: any) {;
+      console && console.error("Error creating tenant:", error);
+      toast && toast.error("Failed to create tenant", { ,
+  description: error && error.message ;
+      });
+    } finally {;
+      setIsSubmitting(false);import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+import { supabase } from "@/integrations/supabase/client";
+import { Switch } from "@/components/ui/switch";
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     is_co_branded: true
   });
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
   }),
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
+<<<<<<< HEAD
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
@@ -221,6 +342,12 @@ export default function TenantOnboarding() {
       
 
       // Submit to Supabase
+=======
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" />
+  }
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert({
@@ -236,6 +363,7 @@ export default function TenantOnboarding() {
           dns_verified: false
           email_template_override: null
         })
+<<<<<<< HEAD
         .select('id, brand_name, subdomain')
 
         .single(),
@@ -248,6 +376,9 @@ export default function TenantOnboarding() {
       
 
       // Reset form
+=======
+        .select('id, brand_name, subdomain')      // Reset form
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setFormData({
         brand_name: ""
         subdomain: ""
@@ -259,6 +390,7 @@ export default function TenantOnboarding() {
         custom_domain: ""
         is_co_branded: true
       })
+<<<<<<< HEAD
     } catch (error: any) {
 
       console.error("Error creating tenant:", error),
@@ -266,12 +398,16 @@ export default function TenantOnboarding() {
         description: error.message 
 
       })
+=======
+    } catch (error: any) {      })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsSubmitting(false)
     }
 
   },
 
+<<<<<<< HEAD
 
   return (
 
@@ -280,10 +416,13 @@ export default function TenantOnboarding() {
 
     }
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>;
       <SEO
         title="Tenant Onboarding - Zion AI Marketplace"
+<<<<<<< HEAD
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
       />;
       <Header />;
@@ -311,10 +450,14 @@ export default function TenantOnboarding() {
   }
 
                     <TabsTrigger value="company">Company Info</TabsTrigger>;
+=======
+        description="Onboard a new white-label tenant to the Zion AI Marketplace platform."                    <TabsTrigger value="company">Company Info</TabsTrigger>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
 
+<<<<<<< HEAD
                       />;
                     </div>;
 
@@ -324,17 +467,28 @@ export default function TenantOnboarding() {
                         name="industry" 
                         value={formData && formData.industry} 
                         onValueChange={(value) => handleSelectChange("industry", value)}
+=======
+                        placeholder="hire && hire.yourcompany.com"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         placeholder="Acme Corporation";
                         required;
                       />;
                     </div>;
+<<<<<<< HEAD
                     <div className="space - y-2">;
+=======
+                    <div className="space-y-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <Label html_for="industry">Industry</Label>;
                       <Select;
                         name="industry";
                         value={form_data.industry}
                         onValueChange={(value) => handleSelectChange ("industry", value)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
@@ -352,13 +506,20 @@ export default function TenantOnboarding() {
                       </Select>;
                     </div>;
 
+<<<<<<< HEAD
                     <div className="space - y-2">;
+=======
+                    <div className="space-y-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <Label html_for="company_size">Company Size</Label>;
                       <Select;
                         name="company_size";
                         value={form_data.company_size}
                         onValueChange={(value) => handleSelectChange ("company_size", value)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select company size" />;
@@ -370,15 +531,22 @@ export default function TenantOnboarding() {
                           <SelectItem value="51 - 200">51 - 200 employees</SelectItem>;
                           <SelectItem value="201 - 500">201 - 500 employees</SelectItem>;
                           <SelectItem value="501 - 1000">501 - 1000 employees</SelectItem>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <SelectItem value="1000+">1000+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
                   </TabsContent>;
 
+<<<<<<< HEAD
                         placeholder="https://example && example.com/logo && logo.png"
                       />;
+=======
+                        placeholder="https://example && example.com/logo && logo.png"                      />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended);
                       </p>;
@@ -387,7 +555,10 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">;
                       <Label htmlFor="primary_color">Primary Brand Color</Label>;
                       <div className="flex items-center gap-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <Input
                           id="primary_color"
                           name="primary_color"
@@ -411,6 +582,7 @@ export default function TenantOnboarding() {
                       <Select
                         name="theme_preset" 
                         value={formData && formData.theme_preset} 
+<<<<<<< HEAD
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
                         placeholder="hire && hire.yourcompany.com"
 
@@ -419,6 +591,13 @@ export default function TenantOnboarding() {
                         placeholder="hire && hire.yourcompany.com"
 
 
+=======
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}                        placeholder="hire && hire.yourcompany.com"
+
+=======
+                        placeholder="hire && hire.yourcompany.com"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -496,8 +675,13 @@ export default function TenantOnboarding() {;
         .select('id, brand_name, subdomain');
         .single(),;
       if (error) throw error,;
+<<<<<<< HEAD
       toast.success("Tenant created successfully!", {;
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
+=======
+      toast.success("Tenant created successfully!", {,
+  description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }),;
       // Reset form;
       setFormData({;
@@ -513,8 +697,13 @@ export default function TenantOnboarding() {;
       });
     } catch (error: any) {;
       console.error("Error creating tenant:", error);
+<<<<<<< HEAD
       toast.error("Failed to create tenant", {;
         description: error.message;
+=======
+      toast.error("Failed to create tenant", {,
+  description: error.message;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
     } finally {;
       setIsSubmitting(false);
@@ -654,6 +843,7 @@ export default function TenantOnboarding() {;
                         id="logo_url"
                         name="logo_url"
                         value={formData && formData.logo_url}
+<<<<<<< HEAD
                         onChange={handleInputChange}
                         placeholder="https://example.com/logo.png";
 
@@ -749,6 +939,9 @@ export default function TenantOnboarding() {;
                     {is_submitting ? "Creating..." : "Create Tenant"}
 
                   </Button>;
+=======
+                        onChange={handleInputChange}                  </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </form>;
             </CardContent>;
@@ -757,12 +950,15 @@ export default function TenantOnboarding() {;
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 
 
 
 }
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </>);
     </>;
@@ -808,8 +1004,13 @@ data, error
 }= await supabase .from ('whitelabel tenants') .insert ({
   brand name: formData.brand name, subdomain: subdomain, custom domain: formData.custom domain || null, primary color: formData.primary color, logo url: formData.logo url || null, theme preset: formData.theme preset, landing page copy: landingPageCopy, is active: true, account manager id: user.id, dns verified: false, email template override: null 
 }) .select ('id, brand name, subdomain') .single ();
+<<<<<<< HEAD
 if (error) throw error;
 description: error.message 
+=======
+if (error) throw error,
+  description: error.message 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }) 
 }finally {
   setIsSubmitting (false) 
@@ -821,7 +1022,11 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

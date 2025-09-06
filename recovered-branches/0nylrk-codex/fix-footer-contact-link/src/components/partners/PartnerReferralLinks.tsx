@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,6 +11,7 @@ import {toast} from "@/hooks/use-toast";
 import {useReferrals} from "@/hooks/useReferrals";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Label} from "@/components/ui/label";
+<<<<<<< HEAD
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 
 export function PartnerReferralLinks() {;
@@ -28,6 +32,13 @@ export function PartnerReferralLinks() {;
 
   
   const handleCopyLink = (link: string) => {
+=======
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
+  const [customParam, setCustomParam] = useState<string>("");  const handleCopyLink = (link: string) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     navigator.clipboard.writeText(link)
     toast({
       title: "Link copied!"
@@ -35,7 +46,10 @@ export function PartnerReferralLinks() {;
       variant: "default"
     })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   
   const handleGenerateLink = () => {
@@ -43,7 +57,10 @@ export function PartnerReferralLinks() {;
       const url = new URL(baseLink),
       
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
@@ -54,6 +71,7 @@ export function PartnerReferralLinks() {;
       }
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`
+<<<<<<< HEAD
         link: url.toString()
 
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
@@ -247,6 +265,15 @@ export function PartnerReferralLinks() {;
   return (
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
+=======
+        link: url.toString()      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam("");
+    }  const handleDownloadLinks = () => {
+    const allLinks = [
+      { name: "Default", link: baseLink }
+      ...generatedLinks      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
@@ -254,12 +281,16 @@ export function PartnerReferralLinks() {;
               variant="outline" 
               size="sm" 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button 
               variant="outline" 
               size="sm" 
 
               onClick={handleDownloadLinks}
+<<<<<<< HEAD
               className="flex items-center gap-2">;
             <Button
               variant="outline" 
@@ -273,6 +304,9 @@ export function PartnerReferralLinks() {;
               className="flex items-center gap-2";
             >;
       "Name,Link";
+=======
+              className="flex items-center gap-2">;      "Name,Link";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
     ].join("\n");
               onClick={handleDownloadLinks}
@@ -288,6 +322,7 @@ export function PartnerReferralLinks() {;
             <Input
               value={baseLink}
               readOnly
+<<<<<<< HEAD
               className="font-mono text-sm"
 
             />;
@@ -463,6 +498,9 @@ if ( {) {
                 >;
 
                   <SelectTrigger id="campaign">;
+=======
+              className="font-mono text-sm"                  <SelectTrigger id="campaign">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
                   <SelectContent>;
@@ -476,12 +514,17 @@ if ( {) {
                 </Select>;
               </div>;
 
+<<<<<<< HEAD
               <div className="grid gap - 2">;
+=======
+              <div className="grid gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;
                   id="custom";
                   placeholder="spring_campaign, video_123, etc.";
                   value={custom_param}
+<<<<<<< HEAD
                   on_change={(e) => setCustomParam (e.target.value)}
 
                 />;
@@ -537,6 +580,9 @@ if ( {) {
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
+=======
+                  on_change={(e) => setCustomParam (e.target.value)}                variant="outline"                className="flex items-center gap-2";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >;
                 <Plus className="h-4 w-4" />;
                 Create First Link;
@@ -546,12 +592,17 @@ if ( {) {
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
                     <span>{item.name || "Campaign Link"}</span>;
+=======
+  );                    <span>{item.name || "Campaign Link"}</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                 </CardTitle>;
               </CardHeader>;
                   >;
+<<<<<<< HEAD
                     <Copy className="h - 4 w - 4" />;
                     <span className="sr - only">Copy</span>;
                   </Button>;
@@ -628,3 +679,10 @@ document.body.removeChild (link);
     </div>
   )
 }
+=======
+                    <Copy className="h - 4 w-4" />;
+                    <span className="sr-only">Copy</span>;
+                  </Button>;
+                </div>;
+              </CardContent>;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

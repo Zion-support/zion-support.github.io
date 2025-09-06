@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -6,6 +7,8 @@ import type { UserDetails as AuthUserDetails } from "@/types / auth";
 // Define types for our context;
 export interface UserDetails {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id?: string;
   name?: string;
   email?: string;
@@ -16,8 +19,11 @@ export interface UserDetails {
   profile_complete?: boolean;
   role?: string;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id?: string;
   name?: string;
   email?: string;
@@ -87,6 +93,7 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
+<<<<<<< HEAD
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -104,6 +111,8 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 export interface AuthContextType {;
@@ -123,6 +132,7 @@ export interface AuthContextType {;
   loginWithFacebook: () => Promise<void>,;
   loginWithTwitter: () => Promise<void>,;
   loginWithWeb3: () => Promise<void>;
+<<<<<<< HEAD
 }
 
 
@@ -303,6 +313,12 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithGoogle = async () => {
     // // // console.log("Google login requested"),
     // Mock implementation
+=======
+}  // Mock auth functions for now - these would connect to Supabase in a real implementation
+
+  const signIn = async (email: string, password: string) => {
+    // This would be replaced with actual Supabase auth    // Mock implementation
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setUser({
       id: "google-user-id"
       email: "google@example.com"
@@ -310,6 +326,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Google User"
       profileComplete: true
     })
+<<<<<<< HEAD
 
 
   },
@@ -319,6 +336,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
   const loginWithFacebook = async () => {
+=======
+  const loginWithFacebook = async () => {
+    // // // console.log("Facebook login requested"),  const loginWithFacebook = async () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // // // console.log("Facebook login requested"),
     // Mock implementation
     setUser({
@@ -328,6 +349,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       name: "Facebook User"
       profileComplete: true
     })
+<<<<<<< HEAD
 
 
   },
@@ -337,6 +359,10 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
   const loginWithTwitter = async () => {
+=======
+  const loginWithTwitter = async () => {
+    // // // console.log("Twitter login requested"),  const loginWithTwitter = async () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // // // console.log("Twitter login requested"),
     // Mock implementation
     setUser({
@@ -352,8 +378,13 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
   const signOut = async () => {;
     // This would be replaced with actual Supabase auth;
     console && console.log("Sign out attempted");
+<<<<<<< HEAD
     setUser(null);
   };
+=======
+    setUser(null)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {;
     // This would be replaced with actual Supabase auth;
@@ -365,12 +396,18 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
 
   },
 
+<<<<<<< HEAD
 
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
 
+=======
+    // // // console.log("Web3 login requested"),
+    const ethereum = (window as any).ethereum,
+    if (!ethereum) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -387,6 +424,7 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
+<<<<<<< HEAD
 
 
 // Custom hook to use the auth context
@@ -395,6 +433,8 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console.warn("No wallet detected"),
       return
 ;
@@ -432,12 +472,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     });
     return { error: null }
   };
@@ -450,6 +496,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     // Mock implementation;
     console && console.log("Profile update requested with:", data);
     if (user) {;
+<<<<<<< HEAD
       setUser({ ...user, ...data });
   permissions?: string[];
   company_id?: string;
@@ -626,6 +673,13 @@ if ( {) {
   },;
   };
   const loginWithFacebook = async () => {;
+=======
+      setUser({ ...user, ...data });      displayName: "Google User",;
+      name: "Google User",;
+      profileComplete: true;
+    })
+};  },;  const loginWithFacebook = async () => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console && console.log("Facebook login requested");
     // Mock implementation;
     setUser({ ;
@@ -634,15 +688,21 @@ if ( {) {
       displayName: "Facebook User", ;
       name: "Facebook User",;
       profileComplete: true;
+<<<<<<< HEAD
     });
   },;
   };
+=======
+    })
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const loginWithTwitter = async () => {;
     console && console.log("Twitter login requested");
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
       email: "twitter@example.com",;
+<<<<<<< HEAD
 
       displayName: "Twitter User",;
       name: "Twitter User",;
@@ -658,6 +718,12 @@ if ( {) {
       return;
     }
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+=======
+      displayName: "Twitter User",;
+      name: "Twitter User",;
+      profileComplete: true;
+    });      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const address = accounts[0];
       await ethereum.request ({
         method: 'personal_sign',
@@ -668,6 +734,7 @@ if ( {) {
         display_name: address,
         profile_complete: true;
       });
+<<<<<<< HEAD
 
     } catch (err) {
       console.error ('Web3 login failed', err);
@@ -1005,3 +1072,12 @@ export function useAuth(): AuthContextType {;
 }
 ;
 ;
+=======
+    } catch (err) {
+      console.error ('Web3 login failed', err);
+    }
+  }    isLoading;
+    signIn;
+    signOut;
+    signUp;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

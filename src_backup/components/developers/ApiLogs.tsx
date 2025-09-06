@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -21,8 +18,7 @@ function ApiLogs() {
 }
   );
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -210,4 +206,4 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

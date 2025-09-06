@@ -12,6 +12,7 @@ import {BudgetFields} from "./BudgetFields";
 export interface HireRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
+<<<<<<< HEAD
 
   initialJobTitle?: string;
   userDetails?: {;
@@ -21,6 +22,8 @@ export interface HireRequestFormProps {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { useHireRequestForm, FormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
@@ -37,6 +40,7 @@ export interface HireRequestFormProps {
   talent: TalentProfile
   onClose: () => void
 
+<<<<<<< HEAD
   initialJobTitle?: string;
 import { TimelineField } from "./TimelineField",
 import { BudgetFields } from "./BudgetFields",
@@ -67,6 +71,16 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
     initialJobTitle;
     userDetails
+=======
+  initialJobTitle?: string;  onSubmitSuccess?: () => void
+}
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
+    initialJobTitle;
+    userDetails
+  });    initialJobTitle;
+    userDetails
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   });
   return (
     <Form {...form}>
@@ -88,6 +102,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             disabled={isSubmitting}
           >
             Cancel
+<<<<<<< HEAD
           </Button>
 
           <Button
@@ -293,3 +308,6 @@ return (<Form {
     </Form>
   )
 }
+=======
+          </Button>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

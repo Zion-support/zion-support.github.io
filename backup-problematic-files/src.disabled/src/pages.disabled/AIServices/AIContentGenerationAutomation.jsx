@@ -6,6 +6,6 @@ const AIContentGenerationAutomation = ({ className }) => {
       <h1>AIContentGenerationAutomation</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

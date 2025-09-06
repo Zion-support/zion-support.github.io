@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -10,6 +11,9 @@
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -54,6 +58,10 @@
 // Run the enhanced performance monitor
 main();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -107,7 +115,6 @@ console.log('=')
       "action"
       log('warn', 'Performance "Alerts")
       log('info', 'Performance "Recommendations")
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -300,4 +307,4 @@ monitor
     console.error('❌ Performance monitoring failed:', error.message);
     process.exit(1);
   });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

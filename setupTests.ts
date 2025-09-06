@@ -1,18 +1,27 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom/vitest';
 
 
 
 
 
+=======
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 const "@testing-library/jest-dom/vitest";''"
@@ -30,6 +39,7 @@ const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
@@ -40,4 +50,6 @@ import '@testing-library/jest-dom/vitest';''
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const user = {;
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
@@ -29,8 +32,13 @@
       : [];
     if (!milestones.length) return null;
     return milestones.map((m) => ({;
+<<<<<<< HEAD
       title: String(m.title).slice(0, 120);
       description: String(m.description |"").slice(0, 2000);
+=======
+      title: String(m.title).slice(0, 120),
+  description: String(m.description |"").slice(0, 2000);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       suggestedDueDateIso: String(m.suggestedDueDateIso);
       estimatedEffortHours: Math.max(1, parseInt(String(m.estimatedEffortHours), 10) |8);
       tags: ["AI Suggested"];
@@ -64,6 +72,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
       suggestedDueDateIso: due.toISOString();
       estimatedEffortHours;
       tags: ["AI Suggested"];
+<<<<<<< HEAD
     });
     phaseStart = due;
   }
@@ -163,6 +172,9 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
+=======
+    });  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
   // Check condition
@@ -222,6 +234,7 @@ if (return null, ) {
     return null;
   }
 }
+<<<<<<< HEAD
 function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date (input.startDateIso),
   const end = new Date (input.endDateIso),
@@ -253,6 +266,10 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
       tags: ["AI Suggested"];
     }),
     phase_start = due;
+=======
+  return milestones;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return milestones;
 }

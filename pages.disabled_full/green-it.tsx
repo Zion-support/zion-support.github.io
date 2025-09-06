@@ -3,3 +3,7 @@ const Head from "next/head"; import Link from "next/link"; export default functi
 import React from 'react';
 interface GreenitProps {
   // Add props here as needed
+<<<<<<< HEAD
+=======
+=>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

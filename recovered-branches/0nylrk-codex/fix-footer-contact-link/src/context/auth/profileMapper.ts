@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import type { UserProfile } from "@/types/auth",
 
@@ -10,6 +11,10 @@ import type { UserProfile } from "@/types/auth",
 // in this file.
 export interface SupabaseUser {
 
+=======
+import type { UserProfile } from "@/types/auth",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,
   email?: string | null;
 }
@@ -19,7 +24,10 @@ export interface SupabaseUser {
 export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
 
   return {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 /**
  * Maps Supabase profile data to our app's user model
  */
@@ -45,6 +53,7 @@ export interface SupabaseUser {
     avatar_url: profile && profile.avatar_url || undefined,
     avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
     role: profile && profile.user_type // Map user_type to role for backward compatibility
+<<<<<<< HEAD
 
     email: user.email || "";
     display_name: profile.display_name || "";
@@ -58,10 +67,13 @@ export interface SupabaseUser {
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   return {
 
+<<<<<<< HEAD
 import type { UserProfile } from "@/types/auth",;
 ;
   return {;
@@ -75,6 +87,8 @@ import type { UserProfile } from "@/types/auth",;
     bio: profile.bio || undefined;
     headline: profile.headline || undefined;
     avatar_url: profile.avatar_url || undefined,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
   }
@@ -84,3 +98,7 @@ import type { UserProfile } from "@/types/auth",;
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

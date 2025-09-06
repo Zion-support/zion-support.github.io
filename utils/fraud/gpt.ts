@@ -1,15 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {
       return {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
       return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -38,6 +42,8 @@
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         label: 'SUSPICIOUS',
         reason: 'Unrecognized label from GPT',
@@ -52,24 +58,29 @@
   } catch {
     return {
 
-=======
 // GPT-based fraud classification utilities
 export interface GptClassification {
   label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
   confidence: number; // 0-100
 
   reasoning: string;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5,
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -83,10 +94,17 @@ export interface GptClassification {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
   }export interface GptResult {;
 <<<<<<< HEAD
@@ -117,6 +135,15 @@ export interface GptClassification {
   label: string;
   confidence: number;
   reasoning: string
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+  label: string;
+  confidence: number;
+  reasoning: string
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -130,11 +157,18 @@ export interface GptClassification {
   }
 
 }
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 
 }
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -147,3 +181,14 @@ export interface GptClassification {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import v1 from "../../../data/api-docs/v1";
-import { EndpointSpec } from "../../../data/api-docs/types";
-function toOpenApi() {
-  const paths: Record<string, any> = {}
-  v1.sections.forEach((section) => {
-    section.endpoints.forEach((ep: EndpointSpec) => {
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
       paths[ep.path] = paths[ep.path] || {},
@@ -62,23 +51,13 @@ import v1 from '../../../data/api-docs/v1';
                 content: {
                   "application/json": { schema: ep.requestBodySchema }
                 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }
             : undefined
           responses: {
             "200": {
               description: "OK"
               content: {
-<<<<<<< HEAD
-                },
-              },
-            },
-          },
-          security:;
-            ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
-              ? [{ bearer_auth: [] }];
-              : [],
-=======
                 }
               }
             }
@@ -87,7 +66,7 @@ import v1 from '../../../data/api-docs/v1';
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : []
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   });
 
 ;
@@ -104,44 +83,6 @@ import v1 from '../../../data/api-docs/v1';
     paths
 
     components: {
-<<<<<<< HEAD
-
-        bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
-      }
-    }
-  }
-
-}
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-
-}
-
-  res.status(200).json(toOpenApi());
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const openapi = {
-    openapi: '3.0.3'
-    info: {
-      title: 'Zion Tech Group API'
-      version: '1.0.0'
-      description: 'API documentation for Zion Tech Group services'
-    }
-}
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-
-}
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(toOpenApi())
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-=======
       securitySchemes: {
         bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' },
       },
@@ -158,4 +99,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,5 +1,6 @@
 import React from 'react';
 import * as React from 'react';
+<<<<<<< HEAD
 
 
 
@@ -29,11 +30,19 @@ const Card = React && React.forwardRef<;
       "rounded-lg border bg-card text-card-foreground shadow-sm",
 
   <div
+=======
+    ref={ref}
+    className={cn(
+      'rounded-lg border bg-card text-card-foreground shadow-sm'  <div
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref={ref}
     className={cn(
       'rounded-lg border bg-card text-card-foreground shadow-sm'
       "rounded-lg border bg-card text-card-foreground shadow-sm",
+<<<<<<< HEAD
       className
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )}
     {...props}
   />
@@ -43,6 +52,7 @@ Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
+<<<<<<< HEAD
   React.HTMLAttributes<HTMLDivElement>
 
 
@@ -80,30 +90,41 @@ const CardTitle = React.forwardRef<
 
 >(({ className, ...props }, ref) => (
 CardHeader && CardHeader.displayName = 'CardHeader';
+=======
+  React.HTMLAttributes<HTMLDivElement>CardHeader && CardHeader.displayName = 'CardHeader';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const CardTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
 >(({ className, ...props }, ref) => (;
   <h3
+<<<<<<< HEAD
     ref={ref}
   />;
+=======
+    ref={ref}  />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ));
   <h3
     ref={ref}
     className={cn(
       'text-2xl font-semibold leading-none tracking-tight'
       "text-2xl font-semibold leading-none tracking-tight",
+<<<<<<< HEAD
 
       className
     )}
     {...props}
   />
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ))
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<
+<<<<<<< HEAD
   HTMLParagraphElement,
 
 
@@ -130,6 +151,9 @@ const Card = React.forward_ref<;
   <p
     ref={ref}
     className={cn (
+=======
+  HTMLParagraphElement,    className={cn (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'rounded - lg border bg - card text - card - foreground shadow - sm',
       class_name)}
     {...props}
@@ -166,6 +190,7 @@ const CardFooter = React.forwardRef<
   />
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
+<<<<<<< HEAD
     {...props}
 
 CardDescription && CardDescription.displayName = 'CardDescription';
@@ -351,3 +376,6 @@ export {
 };
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
+=======
+    {...props}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

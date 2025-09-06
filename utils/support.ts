@@ -4,14 +4,21 @@
 }
   logEvent: (event: any) => null,
   getArticles: () => [],
+<<<<<<< HEAD
   getArticleById: (id: string) => null;
+=======
+  getArticleById: (id: string) => null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface IntentMatch {
   intentMatched: boolean;
   matchedArticleIds: string[];
@@ -77,8 +84,15 @@ export function searchArticles(
   get_articles: () => [],
 }
 }
+<<<<<<< HEAD
 }
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
+=======
+}export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here;
+  return null;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
+<<<<<<< HEAD
   title: string;
   description: string;
 
@@ -71,6 +75,17 @@ export async function generateContract(
     ? generatedMilestones.map(m => ({
 
         title: m.title,
+=======
+  title: string,
+  description: string;
+
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
+import { ContractFormValues } from "../components/ContractForm",
+interface Milestone {
+  title: string,
+  description: string,
+  dueDate: string,        title: m.title,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         description: m.description,
         dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
@@ -93,6 +108,7 @@ export async function generateContract(
   
 
   if (data.success && data.contract) {
+<<<<<<< HEAD
     return data.contract
   
   if (data && data.success && data && data.contract) {
@@ -105,12 +121,20 @@ export async function generateContract(
   
   if (error) {
     throw error
+=======
+    return data.contract  } else {
+    throw new Error("Failed to generate contract")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
 import { ContractFormValues } from "../components/ContractForm",;
 interface Milestone {;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   dueDate: string,;
   estimatedHours: number;
@@ -126,8 +150,13 @@ export async function generateContract(;
   // Prepare milestone data if we have AI-generated milestones;
   const milestoneData = generatedMilestones.length > 0;
     ? generatedMilestones.map(m => ({;
+<<<<<<< HEAD
         title: m.title,;
         description: m.description,;
+=======
+        title: m.title,,
+  description: m.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         dueDate: m.dueDate,;
         estimatedHours: m.estimatedHours;
       }));
@@ -155,6 +184,7 @@ export async function generateContract(;
   if (data && data.success && data && data.contract) {
     return data && data.contract
   } else {
+<<<<<<< HEAD
     throw new Error("Failed to generate contract")
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -221,6 +251,10 @@ if ( {) {
   }
 }
   } else {
+=======
+    throw new Error("Failed to generate contract")  }
+}  } else {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     throw new Error ("Failed to generate contract");
   }
 }
@@ -232,3 +266,7 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

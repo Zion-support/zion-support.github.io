@@ -17,7 +17,10 @@ export interface UserDetails {
 
   permissions?: string[];
   company_id?: string;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -38,8 +41,11 @@ export interface UserDetails {;
 
   permissions?: string[];
   company_id?: string;
+<<<<<<< HEAD
 
   bio?: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   created_at?: string;
   updated_at?: string;
 }
@@ -60,6 +66,7 @@ export interface UserDetails {;
 }
 
   permissions?: string[],
+<<<<<<< HEAD
   company_id?: string;
   permissions?: string[],
   companyId?: string;
@@ -107,6 +114,9 @@ export interface AuthContextType {;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
 }
+=======
+  company_id?: string;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface UserDetails {;
   id?: string,;
   name?: string,;
@@ -139,6 +149,7 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
+<<<<<<< HEAD
 }
 ;
 // Update AuthContextType definition to match implementation;
@@ -192,6 +203,8 @@ export interface UserDetails {;
 
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface UserDetails {;
 
 }
@@ -253,3 +266,7 @@ export interface AuthContextType {;
 ;
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

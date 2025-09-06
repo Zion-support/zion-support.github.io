@@ -133,3 +133,8 @@ this.log(" Found ${branches.length} cursor branches to process")
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
 
+<<<<<<< HEAD
+=======
+  console.error(" Auto merge conflict resolution "failed": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

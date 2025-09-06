@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SkillCategoryProps } from "./types";
 import { SkillItem } from "./SkillItem";
 export const SkillCategory = ({
@@ -6,6 +7,11 @@ export const SkillCategory = ({
   onDelete,
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null;
+=======
+import {SkillCategoryProps} from './types';
+import {SkillItem} from './SkillItem';
+export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;  if (!skills || skills.length === 0) return null;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <div className="space-y-2">
@@ -21,6 +27,7 @@ export const SkillCategory = ({
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
   );
@@ -82,4 +89,7 @@ category
       </div>;
     </div>;
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };

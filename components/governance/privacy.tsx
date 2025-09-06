@@ -13,4 +13,7 @@ function GovernancePrivacy() {
       <a href=&quot;/dao / zkvote & quot; className=&quot;inline - block px - 4 py - 2 rounded bg - black text - white & quot;>Open ZK Vote</a>;
     </div>);
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -12,6 +15,7 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -33,13 +37,18 @@ import {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -51,6 +60,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       displayName: ""
       bio: ""
       headline: ""}})
+<<<<<<< HEAD
   const getTypeLabel = () => {
 
 
@@ -113,6 +123,9 @@ function ProfileSetup() {
     switch (user_type) {
       case "service_provider": return "Service Provider";
       case "talent":;
+=======
+  const getTypeLabel = () => {      case "talent":;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return "Talent";
       case "client":;
         return "Client";
@@ -121,10 +134,15 @@ function ProfileSetup() {
     }
   }
 
+<<<<<<< HEAD
 
     switch (userType) {
       case "serviceProvider": return "Service Provider",
 
+=======
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     switch (userType) {
       case "serviceProvider": return "Service Provider",
 
@@ -138,8 +156,11 @@ function ProfileSetup() {
 
   },
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
           <FormField
@@ -161,10 +182,14 @@ function ProfileSetup() {
       default:;
         return "User";
     }
+<<<<<<< HEAD
   };
   return (;
 
     <div className="space-y-6">;
+=======
+  }    <div className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
         <p className="text-zion-slate-light mt-2">;
@@ -174,7 +199,10 @@ function ProfileSetup() {
 
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onComplete)} className="space-y-6">;
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <FormField
             control={form && form.control}
             name="displayName"
@@ -182,6 +210,7 @@ function ProfileSetup() {
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <div className="relative">;
                     <Input
                       placeholder="Your full name"
@@ -207,6 +236,9 @@ function ProfileSetup() {
                   <div className="relative">;
                     <Input
                       placeholder={`e && e.g., ${
+=======
+                  <div className="relative">;                      placeholder={`e && e.g., ${
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -214,38 +246,82 @@ function ProfileSetup() {
             name="display_name";
             render={({ field }) => (
               <FormItem>;
+<<<<<<< HEAD
                 <FormLabel className="text - zion - slate - light">Full Name</FormLabel>;
+=======
+                <FormLabel className="text - zion - slate-light">Full Name</FormLabel>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FormControl>;
                   <div className="relative">;
                     <Input;
                       placeholder="Your full name";
+<<<<<<< HEAD
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
                       }`}
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+=======
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+                      }`}
+                      className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {...field}
                     />;
           <FormField
             control={form && form.control}
             name="bio"
+<<<<<<< HEAD
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea
+=======
+          />;
+          <FormField
+            control={form && form.control}
+            name="bio"
+                    <Input;
+                      placeholder={`e.g., ${;
+                        userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :;
+                        userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :;
+                        "Creative Director at XYZ Studios";
+                      }`}
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple";
+                      {...field}
+                    />;
+                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                  </div>;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;            )}
+          />;
+          ;
+          <FormField;
+            control={form.control}
+            name="bio";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     placeholder={`Tell us about your ${
                       user_type === "service_provider" ? "services and expertise" :;
                       user_type === "talent" ? "skills and experience" :;
                       "business and needs";
                     }`}
+<<<<<<< HEAD
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
                   />;
                 </FormControl>;
 
+=======
+                    className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min-h-[120px]";
+                    {...field}
+                  />;
+                </FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           />;
 
           <Button
             type="submit"
+<<<<<<< HEAD
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
@@ -255,16 +331,22 @@ function ProfileSetup() {
             className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
           >;
             Complete Profile;
+=======
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;          >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </form>;
       </Form>;
 
+<<<<<<< HEAD
 
 
 
 }
     </div>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </div>);
     </div>;
@@ -300,7 +382,11 @@ getTypeLabel ()
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </div>);
 }
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

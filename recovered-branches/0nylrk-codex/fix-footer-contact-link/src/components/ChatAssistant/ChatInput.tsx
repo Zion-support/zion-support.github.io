@@ -11,7 +11,10 @@ import React, {;
   FormEvent,;
   KeyboardEvent,;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, {
   useState,
   useRef,
@@ -21,13 +24,17 @@ import React, {
 
 } from "react";
 
+<<<<<<< HEAD
 } from "react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {;
   onSend: (message: string) => void;
   disabled?: boolean
 }
+<<<<<<< HEAD
 
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
@@ -58,6 +65,8 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -96,17 +105,23 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
     }
   },
 
+<<<<<<< HEAD
 
 
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
   return (
+=======
+  return (
+    <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
       <textarea
         ref={inputRef}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"
         placeholder="Type your message..."
+<<<<<<< HEAD
         value={message}
         onChange={(e) => setMessage(e && e.target.value)}
         onKeyDown={handleKeyPress}
@@ -184,3 +199,11 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
 }
   )
 }
+=======
+        value={message}});
+  )
+
+}
+  )
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

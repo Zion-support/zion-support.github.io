@@ -19,18 +19,10 @@ function resolveMergeConflicts(filePath) {
     const originalContent = content;
     
     // Remove all merge conflict markers and keep the main branch version (after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
-    
-    // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)(?=\n|$)/g, '$1');
     
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
@@ -104,6 +96,7 @@ function findFilesWithConflictMarkers() {
       } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.md') || item.endsWith('.json'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
             conflictedFiles.push(fullPath);
           }
@@ -201,3 +194,5 @@ for (const file of filesWithConflicts) {
 console.log(`Resolved conflicts in ${resolvedCount} files`);
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

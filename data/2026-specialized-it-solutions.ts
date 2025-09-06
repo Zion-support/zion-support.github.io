@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -8,9 +9,11 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface SpecializedITSolution2026 {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -40,6 +43,7 @@ id: string;
     email: string;
     address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -67,10 +71,15 @@ id: string;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -82,6 +91,8 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string
   },
   realImplementation: boolean;
@@ -633,7 +644,7 @@ const contact = null;
     contactInfo: contact
     realImplementation: true
     implementationDetails:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
@@ -660,6 +671,7 @@ export const getPopularSpecializedITSolutions2026 = () => {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -673,6 +685,14 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ];
@@ -685,6 +705,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -939,6 +960,15 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 <<<<<<< HEAD
 =======
 =======
+=======
+  return specializedITSolutions2026.filter(solution => {;
+    const price = parseInt(solution.price.replace('$', ''));
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return price >= minPrice && price <= maxPrice;
+  });
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
@@ -951,7 +981,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
   return specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
   })
 };
@@ -960,6 +990,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1033,6 +1064,8 @@ export interface SpecializedITSolution2026 {;
   rating: number,;
   reviews: number;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export const getPopularSpecializedITSolutions2026 = () =>: any {
   return specializedITSolutions2026.filter (solution => solution.popular);
@@ -1049,10 +1082,19 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 }
 ;
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface SpecializedITSolution2026 {;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1066,3 +1108,6 @@ export interface SpecializedITSolution2026 {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

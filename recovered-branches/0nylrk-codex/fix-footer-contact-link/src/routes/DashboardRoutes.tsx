@@ -20,9 +20,13 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
+<<<<<<< HEAD
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
 import {Fragment} from "react";
+=======
+const DashboardRoutes = () => {import {Fragment} from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Dashboard from "@/pages/Dashboard";
@@ -273,6 +277,7 @@ import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
 const DashboardRoutes = () => {
 const DashboardRoutes = () => {;
+<<<<<<< HEAD
   return (
     <Routes>;
       {/* Dashboard Routes */}
@@ -328,6 +333,8 @@ const DashboardRoutes = () => {;
         path="/project/:id"
         element={
           <ProtectedRoute>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <ProjectDetails />;
           </ProtectedRoute>;
         }
@@ -411,8 +418,12 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/developers"
+<<<<<<< HEAD
         element={
           <ProtectedRoute>;
+=======
+        element={          <ProtectedRoute>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <DeveloperPortal />;
           </ProtectedRoute>;
         }
@@ -430,15 +441,20 @@ const DashboardRoutes = () => {;
         }
       />
       <Route
+<<<<<<< HEAD
         path="/contract-builder"
 
         }
+=======
+        path="/contract-builder"        }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       />;
     </Routes>);
 }
 ;
 export default DashboardRoutes;
 ;
+<<<<<<< HEAD
       />
       <Route
         path="/wallet"
@@ -468,3 +484,5 @@ export default DashboardRoutes;
   );
 },;
 export default DashboardRoutes;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

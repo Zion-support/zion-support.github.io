@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -71,16 +72,22 @@ export interface TalentCardProps {;
 export function TalentCard(): any ({;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function TalentCard(): any ({;
 
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
+<<<<<<< HEAD
   onToggleSave;
 
 
   isAuthenticated;
+=======
+  onToggleSave;  isAuthenticated;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: TalentCardProps) {;
   const navigate = useNavigate();
 
@@ -109,6 +116,7 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
+<<<<<<< HEAD
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 
@@ -151,6 +159,14 @@ export function TalentCard(): any ({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 
+=======
+  const skills = talent && talent.skills?.slice(0, 5) || [];
+
+  return (              <Button
+                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
@@ -158,11 +174,14 @@ export function TalentCard(): any ({;
             </div>;
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
 
+<<<<<<< HEAD
 
 
             
 
             {/* Location & Availability */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -177,8 +196,11 @@ export function TalentCard(): any ({;
                 </div>;
               )}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
         </div>;
@@ -188,13 +210,17 @@ export function TalentCard(): any ({;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
+<<<<<<< HEAD
                 </div>;
               )}
                 <span
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
+<<<<<<< HEAD
               ))}
 
               {(talent && talent.skills?.length || 0) > 5 && (;
@@ -223,11 +249,22 @@ export function TalentCard(): any ({;
 
 
             )}
+=======
+              ))}              )}
+            </div>;
+          </div>;
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           </div>;
 
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
+<<<<<<< HEAD
 
           </div>;
           <div className="flex items-center gap-2">;
@@ -237,19 +274,26 @@ export function TalentCard(): any ({;
           <div className="flex items-center gap-2">
             {isAuthenticated && (
             )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
+<<<<<<< HEAD
               </Button>;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+=======
+              </Button>;                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Hire;
               </Button>;
             )}
             <Button
               size="sm"
+<<<<<<< HEAD
               variant="ghost"
 
               onClick={(e) => {
@@ -464,10 +508,17 @@ if ( {) {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
             </Button>;
+=======
+              variant="ghost"            </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </div>;
 
     </Card>);
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

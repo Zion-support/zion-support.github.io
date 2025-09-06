@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -19,6 +20,8 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { 
   Card;
   CardContent;
@@ -37,6 +40,7 @@ import {
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
@@ -57,11 +61,16 @@ interface PostFormValues {
 interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
+=======
+import { Textarea } from "@/components/ui/textarea",
+import { ForumCategory } from "@/types/community",  onSubmit: (values: PostFormValues) => void,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isEditing?: boolean
 }
 
 export const PostForm = ({;
   initialValues;
+<<<<<<< HEAD
   onSubmit;
 
 import { useState } from "react",;
@@ -100,6 +109,9 @@ interface PostFormProps {;
 
 
   initialValues?: Partial<PostFormValues>;
+=======
+  onSubmit;  initialValues?: Partial<PostFormValues>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
@@ -110,6 +122,7 @@ export const PostForm = ({
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -186,10 +199,13 @@ export const PostForm = ({
   const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       await on_submit (values);
     } finally {
 
+<<<<<<< HEAD
 
   }
       title: initialValues?.title || "",
@@ -212,6 +228,15 @@ export const PostForm = ({
     }
   }
   return (
+=======
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+    try {
+      await on_submit (values);
+    } finally {    }
+  }  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card>;
       <CardHeader>;
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
@@ -236,7 +261,11 @@ export const PostForm = ({
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
           <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+=======
+          <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField;
               control={form.control}
               name="title";
@@ -250,7 +279,10 @@ export const PostForm = ({
 
             />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField
               control={form && form.control}
               name="content"
@@ -270,7 +302,10 @@ export const PostForm = ({
               )}
             />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField
               control={form && form.control}
               name="categoryId"
@@ -293,7 +328,10 @@ export const PostForm = ({
 
             />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField
               control={form && form.control}
               name="tags"
@@ -317,8 +355,11 @@ export const PostForm = ({
     }
   }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   return (
     <Card>;
@@ -345,7 +386,11 @@ export const PostForm = ({
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
           <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
+=======
+          <form className="space-y-6" on_submit={form.handle_submit (handle_submit)}>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField;
               control={form.control}
               name="title";
@@ -482,7 +527,11 @@ export const PostForm = ({
                   <FormControl>;
                     <Textarea;
                       placeholder="Write your post content here...";
+<<<<<<< HEAD
                       className="min - h-[200px]";
+=======
+                      className="min-h-[200px]";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {...field}
                     />;
                   </FormControl>;
@@ -497,7 +546,11 @@ export const PostForm = ({
                   <FormLabel > Category</FormLabel>;
                   <FormControl>;
                     <select;
+<<<<<<< HEAD
                       className="w - full p - 2 border rounded - md";
+=======
+                      className="w - full p - 2 border rounded-md";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {...field}
                     >;
                       <option value="getting - hired">Getting Hired</option>;
@@ -526,6 +579,7 @@ export const PostForm = ({
             />;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
+<<<<<<< HEAD
 
             </Button>;
           </form>;
@@ -728,5 +782,8 @@ export default PostForm,
 export default PostForm;
 export default PostForm,
 export default PostForm;
+=======
+    </Card>);export default PostForm;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default PostForm,
 

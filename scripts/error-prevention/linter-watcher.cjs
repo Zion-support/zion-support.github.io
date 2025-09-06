@@ -19,6 +19,11 @@ class LinterWatcher {}
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
@@ -40,6 +45,11 @@ class LinterWatcher {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -63,6 +73,11 @@ class LinterWatcher {}
         "cwd": process.cwd();
       };);
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -102,3 +117,8 @@ if ( {})
   
   watcher.start().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = LinterWatcher;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

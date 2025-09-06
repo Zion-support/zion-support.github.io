@@ -25,7 +25,10 @@ import React from 'react';
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
@@ -36,10 +39,14 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
     </div>
   );
 
+<<<<<<< HEAD
 
 
 }
 
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 :src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
 }
 }
@@ -47,6 +54,7 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
 }
 }
 :temp_exclude/src.pages.disabled/AdvancedInnovativeServicesShowcase2025.jsx
+<<<<<<< HEAD
 }
 
 
@@ -60,3 +68,5 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

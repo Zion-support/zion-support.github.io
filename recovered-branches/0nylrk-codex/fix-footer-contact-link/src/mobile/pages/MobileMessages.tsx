@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React, { useState } from "react";
@@ -7,12 +8,15 @@ import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileConversationList} from "../components/messaging/MobileConversationList";
 import {MobileChatView} from "../components/messaging/MobileChatView";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
 import { MobileConversationList } from "../components/messaging/MobileConversationList",
+<<<<<<< HEAD
 import { MobileChatView } from "../components/messaging/MobileChatView",
 // Mock data for demonstration
 
@@ -130,6 +134,9 @@ import {MobileConversationList} from "../components/messaging/MobileConversation
 import {MobileChatView} from "../components/messaging/MobileChatView";
 // Mock data for demonstration;
 const mockConversations = [;
+=======
+import { MobileChatView } from "../components/messaging/MobileChatView",const mockConversations = [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {;
     id: "1",;
     name: "Sarah Johnson",;
@@ -163,8 +170,12 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
+<<<<<<< HEAD
 
 ;
+=======
+;;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -185,6 +196,7 @@ const mockMessages: Message[] = [;
     isMe: false,;
     status: "read"},;
   {;
+<<<<<<< HEAD
     id: "4",;
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
     timestamp: "10:40 AM",;
@@ -223,6 +235,9 @@ export function MobileMessages() {;
 
 
   return (
+=======
+    id: "4",;  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
         <MobileChatView;
@@ -245,7 +260,10 @@ export function MobileMessages() {;
     isMe: false,
     status: "read"}],
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
@@ -256,6 +274,7 @@ export function MobileMessages() {;
             name: currentContact?.name || "",
             status: "Online"
 
+<<<<<<< HEAD
           }}
           messages={messages}
           on_back={handle_back}
@@ -270,19 +289,31 @@ export function MobileMessages() {;
             />;
           </main>;
 
+=======
+              onSelectConversation={handleSelectConversation}
+            />;
+          </main>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <BottomNavigation />;
         </>;
       )}
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />) : (
         <>;
           <MobileHeader;
             title="Messages";
           />;
+<<<<<<< HEAD
           <main className="flex - 1 overflow - y-auto">;
+=======
+          <main className="flex - 1 overflow-y-auto">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <MobileConversationList;
               conversations={mock_conversations}
               onSelectConversation={handleSelectConversation}
@@ -292,6 +323,7 @@ export function MobileMessages() {;
         </>)}
     </div>);
 }
+<<<<<<< HEAD
   ),;}
    id: string;
 content: string;
@@ -345,3 +377,5 @@ isMe: true;
     </div>
   )
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

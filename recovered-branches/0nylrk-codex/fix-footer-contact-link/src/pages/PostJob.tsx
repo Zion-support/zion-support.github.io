@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Header } from "@/components/header";
 import { Footer } from "@/components/Footer";
 import { JobPostingForm } from "@/components/jobs";
@@ -11,12 +12,32 @@ import {
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
+=======
+import {Header} from "@/components/header";
+import {Footer} from "@/components/Footer";
+import {JobPostingForm} from "@/components/jobs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
+export default function PostJob() {;
+import { Header } from "@/components/header",
+import { Footer } from "@/components/Footer",
+import { JobPostingForm } from "@/components/jobs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
+<<<<<<< HEAD
 
   if (isLoading) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
@@ -56,6 +77,7 @@ export default function PostJob() {
   );
 }
     return (
+<<<<<<< HEAD
       <div className="flex items - center justify - center min - h-screen">;
         <div className="animate - pulse">Loading...</div>;
       </div>);
@@ -72,6 +94,13 @@ export default function PostJob() {
           <CardHeader>;
             <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
 
+=======
+      <div className="flex items - center justify - center min-h-screen">;
+        <div className="animate-pulse">Loading...</div>;
+      </div>);
+  }
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -93,6 +122,7 @@ export default function PostJob() {;
     ),;
   }
   ;
+<<<<<<< HEAD
   return (;
     <>;
       <SEO ;
@@ -158,5 +188,9 @@ if (isLoading) {
 }
 ;
       {is_mobile && <div className="h - 16"></div>}
+=======
+  return (;;
+      {is_mobile && <div className="h-16"></div>}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </>);
 }

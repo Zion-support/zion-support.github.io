@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
@@ -34,3 +40,8 @@
 // console.log(`"Warnings"`)
     console.log("=")
 
+<<<<<<< HEAD
+=======
+    console.log(`� Report saved "to"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

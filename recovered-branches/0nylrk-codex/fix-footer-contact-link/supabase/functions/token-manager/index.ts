@@ -1,12 +1,16 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
+<<<<<<< HEAD
 }
 
 
@@ -17,6 +21,9 @@ const supabase = createClient(supabaseUrl, serviceKey);
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
+=======
+}import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
@@ -30,6 +37,7 @@ interface TokenRequest {
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
+<<<<<<< HEAD
 
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
@@ -75,6 +83,14 @@ if ( {) {
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
 });
+=======
+  }
+  if (action === 'earn') {
+    return await changeBalance(userId, amount, 'earn', reason)
+  } else if (action === 'burn') {});
+async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
+  try {});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
   try {
   const { data: wallet, error: walletError } = await supabase
@@ -83,8 +99,12 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     .eq('user_id', userId)
     .single();
   if (walletError && walletError.code !== 'PGRST116') {
+<<<<<<< HEAD
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+=======
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -94,12 +114,17 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .from('wallets')
       .update({ balance, updated_at: new Date().toISOString() })
       .eq('user_id', userId);
+<<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+=======
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } else {
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
+<<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
 
@@ -216,6 +241,8 @@ if ( {) {
   return new Response (JSON.stringify ({ success: true, balance }), { status: 200 });
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0",;
 ;
@@ -309,4 +336,7 @@ if (wallet) {
 ;
 }
 ;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
@@ -26,16 +27,29 @@ const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl || !supabaseServiceKey) {
 
   throw new Error('Required environment variables are not set')
+=======
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
+
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
+import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
   if (req && req.method === 'OPTIONS') {
   if (req && req.method === 'OPTIONS') {
+=======
+  if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
+<<<<<<< HEAD
   try {
 
     const url = new URL(req && req.url);
@@ -50,6 +64,9 @@ serve(async (req) => {
 
 
     if (!hostname && !subdomainParam) {
+=======
+  try {    if (!hostname && !subdomainParam) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info
@@ -64,8 +81,12 @@ serve(async (req) => {
         .single();
       if (error) {
         console && console.error('Database error:', error);
+<<<<<<< HEAD
         throw new Error(`Database error: ${error && error.message}`)
         console && console.error('Database error:', error);
+=======
+        throw new Error(`Database error: ${error && error.message}`)        console && console.error('Database error:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         throw new Error(`Database error: ${error && error.message}`)
       }
       tenantInfo = data as TenantInfo
@@ -79,14 +100,19 @@ serve(async (req) => {
         .single();
       // If no match on custom domain, try subdomain
       if (!data && !error) {
+<<<<<<< HEAD
         const subdomain = hostname && hostname.split('.')[0];
         const subdomain = hostname && hostname.split('.')[0];
+=======
+        const subdomain = hostname && hostname.split('.')[0];        const subdomain = hostname && hostname.split('.')[0];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
             .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
             .eq('subdomain', subdomain)
             .eq('is_active', true)
+<<<<<<< HEAD
             .single();
 
 
@@ -95,6 +121,9 @@ serve(async (req) => {
 
   logo_url: string | null,
   theme_preset: string;
+=======
+            .single();  theme_preset: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'GET, POST, OPTIONSAccess - Control - Allow - Headers': 'Content - Type, Authorization, x - client - info_access - Control - Max - Age': '86400'}
@@ -169,6 +198,7 @@ if ( {) {
         .eq ('is_active', true);
         .single ();
 ;
+<<<<<<< HEAD
       // If no match on custom domain, try subdomain;
 
       if (!data && !error) {;
@@ -186,6 +216,9 @@ if ( {) {
 
 
       // Check condition
+=======
+      // If no match on custom domain, try subdomain;      // Check condition
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if ( {) {
   $2
 }
@@ -204,6 +237,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
             tenant_info = subdomain_result.data as TenantInfo;
           }
         }
@@ -241,6 +275,9 @@ if ( {) {
 
         status: 'error'
     return new Response (
+=======
+            tenant_info = subdomain_result.data as TenantInfo;    return new Response (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       JSON.stringify ({
         tenant: tenant_info,
         status: 'success';
@@ -256,6 +293,7 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
+<<<<<<< HEAD
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({
@@ -301,11 +339,19 @@ if ( {) {
 });
 
           'Content - Type': 'application / json',
+=======
+      });
+      {
+        status: 500;
+        headers: {  }
+});          'Content - Type': 'application / json',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           ...cors_headers}}
     );
   }
 });
 ;
+<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
 ;
@@ -438,3 +484,5 @@ if (subdomainParam) {
   }
 });
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

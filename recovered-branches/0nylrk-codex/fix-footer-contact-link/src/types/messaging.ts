@@ -12,6 +12,7 @@ export interface Conversation {
   created_at: string;
   read: boolean;
   sender_name?: string;
+<<<<<<< HEAD
   sender_avatar?: string;
 
   attachment_url?: string
@@ -31,11 +32,15 @@ export interface Conversation {
     user_type?: string;
 
   }
+=======
+  sender_avatar?: string;  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   avatar_url?: string;
   last_message?: {
 
     content: string,
+<<<<<<< HEAD
     created_at: string;
 
   }
@@ -118,6 +123,9 @@ export interface MessagingContextType {
   /**;
 
    * Set the currently active conversation. Passing `null` will clear the;
+=======
+    created_at: string;   * Set the currently active conversation. Passing `null` will clear the;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
    * selection.;
    */;
   setActiveConversation: (value: Conversation | null) => void,;
@@ -125,6 +133,10 @@ export interface MessagingContextType {
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

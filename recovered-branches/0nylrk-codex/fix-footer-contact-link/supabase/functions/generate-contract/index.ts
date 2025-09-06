@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -9,10 +10,15 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
+=======
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -27,22 +33,32 @@ interface Milestone {
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
 interface Milestone {;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   dueDate: string,;
   estimatedHours: number;
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
 
+<<<<<<< HEAD
 
 
 
@@ -77,6 +93,11 @@ serve(async (req) => {
 
 
 ;
+=======
+  try {
+
+=======;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {;
     // Get the OpenAI API key from environment variables;
     const apiKey = Deno.env.get('OPENAI_API_KEY'),;
@@ -99,6 +120,7 @@ serve(async (req) => {
     } = await req.json(),;
     // Create the contract prompt for OpenAI;
     let prompt = `;
+<<<<<<< HEAD
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
 
 
@@ -142,6 +164,9 @@ serve(async (req) => {
       body: JSON && JSON.stringify({
 
         `
+=======
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;        `
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
       prompt += `
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
@@ -156,6 +181,7 @@ serve(async (req) => {
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
       body: JSON.stringify({
+<<<<<<< HEAD
         model: 'gpt-4o';
         messages: [
           {
@@ -174,6 +200,11 @@ serve(async (req) => {
         `;
       }),;
       prompt += `;
+=======
+        messages: [
+          {
+            role: 'system'      prompt += `;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
     }
@@ -191,7 +222,10 @@ serve(async (req) => {
     return new Response(JSON && JSON.stringify({ 
       success: true, 
       contract 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
     `;
@@ -209,6 +243,7 @@ serve(async (req) => {
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
           {
             role: 'user'
+<<<<<<< HEAD
             content: prompt}];
 ;
     const data = await response.json ();
@@ -272,11 +307,17 @@ if ( {) {
 
 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+=======
+            content: prompt}];        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )
   }
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error ('Error generating contract:', error);
     return new Response (
       JSON.stringify ({
@@ -290,6 +331,7 @@ if ( {) {
   }
 });
 ;
+<<<<<<< HEAD
 
 
     console.error('Error generating contract:', error),
@@ -304,3 +346,5 @@ if ( {) {
     )  }
 }),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

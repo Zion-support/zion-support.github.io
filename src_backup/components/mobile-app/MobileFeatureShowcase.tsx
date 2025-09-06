@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-=======
 {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 
 import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
@@ -19,48 +14,40 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
 
 
-<<<<<<< HEAD
-=======
     },
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
       description: "Monitor project progress and approve milestones directly from your phone."
 
 
-<<<<<<< HEAD
-=======
     },
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
       description: "Chat with candidates or clients and receive notifications in real-time."
 
 
-<<<<<<< HEAD
-=======
     },
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
-<<<<<<< HEAD
-=======
 
 
 import React from 'react';
@@ -96,7 +83,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
     }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     {
       icon: <Star className="h - 8 w - 8 text - zion - purple" />,
       title: "AI - Match Instantly",
@@ -118,21 +105,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
-<<<<<<< HEAD
-
-  return (
-    <section id="features" className="py-16 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-            Everything You Need On The Go
-          </h2>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
-          </p>
-        </div>
-        
-=======
     }
 
   ],
@@ -144,7 +116,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
         
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
@@ -169,10 +141,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
               className="bg - zion - blue - dark border border - zion - blue - light p - 6 rounded - lg hover: border - zion - purple / 50 transition - all duration - 300"            >;
               <div className="mb - 4">;
                 {feature.icon}
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
@@ -213,10 +183,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
     }
   ];
   return (;
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     <section id="features" className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -227,8 +195,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
           </p>;
         </div>;
-<<<<<<< HEAD
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features.map((feature, index) => (;
             <div;
@@ -242,27 +208,12 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>;
             </div>;
           ))}
-<<<<<<< HEAD
-        </div>;
-      </div>;
-    </section>;
-  );
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-
-
-'"},
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
         </div>
       </div>
     </section>
   );
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

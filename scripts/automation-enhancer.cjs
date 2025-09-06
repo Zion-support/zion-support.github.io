@@ -88,3 +88,8 @@ const path = require("path")
       "enhancements"
       "totalEnhancements"
 
+<<<<<<< HEAD
+=======
+    const reportPath = path.join(this.projectRoot, ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

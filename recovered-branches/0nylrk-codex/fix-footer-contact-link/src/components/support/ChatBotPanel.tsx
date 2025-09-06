@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React, { useState, useRef, useEffect } from "react";
@@ -13,6 +14,8 @@ import {ChatMessage} from "./ChatMessage";
 import {QuickReplyButton} from "./QuickReplyButton";
 import {Send, Loader2} from "lucide-react";
 import {useTheme} from "@/hooks/useTheme";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useRef, useEffect } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -26,9 +29,12 @@ import { Send, Loader2 } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { Send, Loader2 } from "lucide-react",
 import { useTheme } from "@/hooks/useTheme",
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -39,6 +45,7 @@ type Message = {
   id: string
   content: string
   sender: "user" | "bot"
+<<<<<<< HEAD
   timestamp: Date
 
 import React, { useState, useRef, useEffect } from "react";
@@ -74,10 +81,14 @@ export function ChatBotPanel() {;
       timestamp: new Date()}]),;
 
   const [inputValue, setInputValue] = useState("");
+=======
+  timestamp: Date  const [inputValue, setInputValue] = useState("");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
   const { theme } = useTheme();
 
 
@@ -92,6 +103,12 @@ export function ChatBotPanel() {
 
 
   // Auto-scroll to bottom when messages change
+=======
+  const { theme } = useTheme();    {
+      id: "welcome",
+      content: "Hi! How can I help you?",
+      sender: "bot",  // Auto-scroll to bottom when messages change
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
@@ -121,6 +138,7 @@ export function ChatBotPanel() {
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
+<<<<<<< HEAD
 
         }
       } else {;
@@ -189,6 +207,8 @@ function ChatBotPanel() {
         // After 3 failed attempts, suggest escalation
         if (failedAttempts >= 2) {
           suggestEscalation()
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       timestamp: new Date ()}]),
   const [input_value, setInputValue] = useState ("");
   const [is_loading, setIsLoading] = useState (false);
@@ -253,6 +273,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
           suggest_escalation ();
 
 import React, { useState, useRef, useEffect } from "react",;
@@ -362,6 +383,9 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {;
         suggestEscalation();
         variant: "destructive",
+=======
+          suggest_escalation ();        variant: "destructive",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Communication Error",
         description: "We're having trouble connecting to our support service."}),
       
@@ -373,8 +397,13 @@ export function ChatBotPanel() {;
       console.error("Error in AI chat:", error),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Communication Error",;
         description: "We're having trouble connecting to our support service."}),;
+=======
+        title: "Communication Error",,
+  description: "We're having trouble connecting to our support service."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
         suggestEscalation();
@@ -386,6 +415,7 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {
         suggestEscalation()
 
+<<<<<<< HEAD
       }
     } finally {
       setIsLoading(false)
@@ -400,11 +430,17 @@ export function ChatBotPanel() {;
 
   };
   },
+=======
+  };
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 
           "Content-Type": "application/json"},
@@ -506,6 +542,14 @@ if ( {) {
 
 
   const suggestEscalation = () => {
+=======
+      
+
+      const data = await response.json();
+      return {
+        success: true
+        message: data.message  const suggestEscalation = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
       content: 
@@ -518,6 +562,7 @@ if ( {) {
     // Log this interaction for the support team
     logSupportEscalation()
   },
+<<<<<<< HEAD
 
   const logSupportEscalation = async () => {
     try {
@@ -528,6 +573,8 @@ if ( {) {
       // // // console.log("Support escalation triggered", { 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
@@ -536,8 +583,12 @@ if ( {) {
       })
 
         success: false,
+<<<<<<< HEAD
         message: "I'm experiencing technical difficulties. Please try again later.";
       }
+=======
+        message: "I'm experiencing technical difficulties. Please try again later.";      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 ;
@@ -563,6 +614,7 @@ if ( {) {
           sender: m.sender,
           timestamp: m.timestamp;
         }));
+<<<<<<< HEAD
       });
 
     } catch (error) {
@@ -583,20 +635,28 @@ if ( {) {
 
 
   const handleEscalateToLiveAgent = () => {
+=======
+      });  const handleEscalateToLiveAgent = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setMessages((prev) => [
       ...prev
       {
         id: `user-${Date.now()}`
         content: "I'd like to speak with a human agent"
         sender: "user"
+<<<<<<< HEAD
         timestamp: new Date()
 
 
       {
+=======
+        timestamp: new Date()      {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         id: `bot-${Date.now()}`
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot"
         timestamp: new Date()
+<<<<<<< HEAD
       }
     ]);
       },
@@ -621,6 +681,9 @@ if ( {) {
 
 
   const handleEmailSupport = () => {
+=======
+      }  const handleEmailSupport = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setMessages((prev) => [
       ...prev
       {
@@ -629,6 +692,7 @@ if ( {) {
         sender: "user"
         timestamp: new Date()
 
+<<<<<<< HEAD
 
       },
 
@@ -678,12 +742,16 @@ if ( {) {
   },
 
 
+=======
+      },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+<<<<<<< HEAD
 
   },;
 
@@ -700,6 +768,8 @@ if ( {) {
     logSupportEscalation();
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const logSupportEscalation = async () => {;
     try {;
       // Send the conversation to the backend for logging;
@@ -717,8 +787,13 @@ if ( {) {
   };
 
   const handleQuickReply = (text: string) => {;
+<<<<<<< HEAD
     handleSendMessage(text);
   };
+=======
+    handleSendMessage(text)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleEscalateToLiveAgent = () => {;
     setMessages((prev) => [;
@@ -727,21 +802,35 @@ if ( {) {
         id: `user-${Date && Date.now()}`,;
         content: "I'd like to speak with a human agent",;
         sender: "user",;
+<<<<<<< HEAD
         timestamp: new Date();
       };
       {;
         id: `bot-${Date && Date.now()}`,;
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";
         sender: "bot",;
+=======
+        timestamp: new Date()
+};
+      {;
+        id: `bot-${Date && Date.now()}`,;
+        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.";        sender: "bot",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         timestamp: new Date();
       }
     ]);
 
     // In a real implementation, this would trigger a live chat request;
     toast({;
+<<<<<<< HEAD
       title: "Support request submitted",;
       description: "A support agent will be with you shortly."});
   };
+=======
+      title: "Support request submitted",,
+  description: "A support agent will be with you shortly."})
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleEmailSupport = () => {;
     setMessages((prev) => [;
@@ -750,14 +839,20 @@ if ( {) {
         id: `user-${Date && Date.now()}`,;
         content: "I'd like to email support",;
         sender: "user",;
+<<<<<<< HEAD
         timestamp: new Date();
       };
+=======
+        timestamp: new Date()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {;
         id: `bot-${Date && Date.now()}`,;
         content: "Please send your question to support@ziontechgroup && ziontechgroup.com. Our team will get back to you within 24 hours.",;
         sender: "bot",;
         timestamp: new Date();
       }
+<<<<<<< HEAD
     ]);
   };
 
@@ -771,10 +866,19 @@ if ( {) {
 
 
               key={message.id}
+=======
+    ])
+};
+
+    <div className="flex flex-col h-full">;
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
+        <div className="flex flex-col gap-4">;              key={message.id}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               message={message.content}
               isUser={message.sender === "user"}
               timestamp={message.timestamp}
             />
+<<<<<<< HEAD
           ))}
 
           
@@ -784,6 +888,9 @@ if ( {) {
           
           
           {isLoading && (
+=======
+          ))}          {isLoading && (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
             </div>
@@ -796,6 +903,7 @@ if ( {) {
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
             {QUICK_REPLIES.map((reply) => (
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
@@ -827,6 +935,9 @@ if ( {) {
 
 
       {failedAttempts >= 3 && (
+=======
+            {QUICK_REPLIES.map((reply) => (      {failedAttempts >= 3 && (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
             Need more help?
@@ -860,6 +971,7 @@ if ( {) {
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       )}
 
 
@@ -892,6 +1004,9 @@ if ( {) {
 
 
                 : "bg-white border-gray-200"
+=======
+      )}                : "bg-white border-gray-200"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             )}
           />
           <Button
@@ -907,6 +1022,7 @@ if ( {) {
     </div>
   )
 
+<<<<<<< HEAD
 
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
@@ -966,6 +1082,11 @@ if ( {) {
             size="icon"
             disabled={isLoading || !inputValue && inputValue.trim()}
             className="bg-zion-cyan hover: bg-zion-cyan/80 text-white">;
+=======
+              theme === "dark" ;
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Send className="h-4 w-4" />;
           </Button>;
         </form>;
@@ -973,6 +1094,7 @@ if ( {) {
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
@@ -998,6 +1120,14 @@ if ( {) {
     </div>);
 }
   ); type Message = {
+=======
+}
+            onChange={(e) => setInputValue(e && e.target.value)}
+            placeholder="Type your question...";
+            className={cn(;
+              "flex-1";
+;  ); type Message = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
 content: string;
 export function ChatBotPanel () {
@@ -1111,6 +1241,9 @@ timestamp: new Date ()
   );
 }
 ;
+<<<<<<< HEAD
             className={cn(;
               "flex-1";
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

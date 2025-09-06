@@ -21,16 +21,25 @@ const featuredPosts: ForumPost[] = [;
     authorName: "Alex Johnson",;
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
+<<<<<<< HEAD
     categoryId: "ai-tools",;
     tags: ["machine-learning", "fine-tuning", "gpt"];
+=======
+    categoryId: "ai-tools",;    tags: ["machine-learning", "fine-tuning", "gpt"];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
     upvotes: 48,;
     downvotes: 2,;
     replyCount: 12,;
     isAnswered: true,;
+<<<<<<< HEAD
     isFeatured: true;
   };
+=======
+    isFeatured: true
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {;
     id: "2",;
     title: "How to build an effective AI talent profile?",;
@@ -48,6 +57,7 @@ const featuredPosts: ForumPost[] = [;
     isPinned: true,;
     isFeatured: true;
 
+<<<<<<< HEAD
 
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
@@ -313,6 +323,15 @@ export default function CommunityPage() {;
     </AppLayout>);
 }
 }
+=======
+      <SEO
+        title="Community Forum | Zion AI Marketplace"
+        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
+        keywords="community, forum, discussion, AI marketplace, questions, answers"            <TabsTrigger value="categories">Categories</TabsTrigger>;
+            <TabsTrigger value="featured">Featured</TabsTrigger>;
+            <TabsTrigger value="recent">Recent</TabsTrigger>;
+          </TabsList>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </AppLayout>);
 }
     </AppLayout>);

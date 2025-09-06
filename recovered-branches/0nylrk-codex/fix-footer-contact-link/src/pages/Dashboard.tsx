@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -27,6 +28,20 @@ export default function Dashboard() {
 
 
 
+=======
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CommunityDiscussion} from "@/components/CommunityDiscussion";
+import {Badge} from "@/components/ui/badge";
+import {UserCheck, Bell, MessageSquare, LogOut, Send, Settings} from "lucide-react";
+import {createTestNotification, createOnboardingNotification, createSystemNotification} from "@/utils/notifications";
+import {NotificationCenter} from "@/components/NotificationCenter";
+import {useToast} from "@/hooks/use-toast";
+import {Link} from "react-router-dom";
+export default function Dashboard() {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const { user, logout } = useAuth();
   const { toast } = useToast();
@@ -48,6 +63,7 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
+<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast",
 import { Link } from "react-router-dom",
 export default function Dashboard() {
@@ -68,6 +84,17 @@ export default function Dashboard() {
       toast({;
         title: "Error creating test notification",;
         description: "Something went wrong",;
+=======
+    const result = await createTestNotification(user && user.id);
+    if (result && result.success) {;
+      toast({;
+        title: "Test notification created",,
+  description: "Check your notification center"});
+    } else {;
+      toast({;
+        title: "Error creating test notification",,
+  description: "Something went wrong",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
 
   const handleTestNotification = async () => {
@@ -153,10 +180,14 @@ export default function Dashboard() {
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
+<<<<<<< HEAD
                       <a href="/wallet" className="hover:underline">
                         View Wallet
                       </a>
                     </span>
+=======
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>                    </span>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>
 
                   <div className="flex justify-between items-center">
@@ -179,6 +210,7 @@ export default function Dashboard() {
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
+<<<<<<< HEAD
                         await createOnboardingNotification({
 
 
@@ -544,6 +576,9 @@ if ( {) {
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
                   <CommunityDiscussion />;
+=======
+                        await createOnboardingNotification({                  <CommunityDiscussion />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </div>;
             </div>;
@@ -554,6 +589,7 @@ if ( {) {
 
     </>);
 }
+<<<<<<< HEAD
 
     </>;
   ),; export default function Dashboard () {
@@ -585,3 +621,6 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

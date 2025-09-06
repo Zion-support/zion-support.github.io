@@ -2,8 +2,12 @@
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
+<<<<<<< HEAD
 import {NotificationContextType} from './types';
 export const useNotifications = (): NotificationContextType => {
+=======
+import {NotificationContextType} from './types';export const useNotifications = (): NotificationContextType => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
@@ -15,6 +19,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   const notificationOps = useNotificationOperations(user?.id);
   // Load notifications when user changes
   useEffect(() => {
+<<<<<<< HEAD
     notificationOps.fetchNotifications();
 
 export const useNotifications = (): NotificationContextType => {;
@@ -23,22 +28,35 @@ export const useNotifications = (): NotificationContextType => {;
     throw new Error('useNotifications must be used within a NotificationProvider')
 
 import {supabase} from '@/integrations/supabase/client';
+=======
+    notificationOps.fetchNotifications();import {supabase} from '@/integrations/supabase/client';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useAuth} from '@/hooks/useAuth';
 import {useNotificationOperations} from './useNotificationOperations';
 import {NotificationContextType} from './types';
 
+<<<<<<< HEAD
 
 export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+=======
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -52,6 +70,7 @@ const defaultContext: NotificationContextType = {;
   markAllAsRead: async () => {},;
   dismissNotification: async () => {},;
   setFilter: () => {},;
+<<<<<<< HEAD
   fetchNotifications: async () => {}},;
 
 // Cast the default context value to avoid issues when React types are missing.;
@@ -81,15 +100,22 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {
     notificationOps.fetchNotifications();
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+=======
+  fetchNotifications: async () => {}},;export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth(),
   const notificationOps = useNotificationOperations(user?.id),
   
   // Load notifications when user changes
+<<<<<<< HEAD
   useEffect(() => {
     notificationOps.fetchNotifications(),
     
     // Set up real-time subscription for new notifications
     if (user) {
+=======
+  useEffect(() => {    if (user) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const channel = supabase
         .channel('notifications-changes')
         .on('postgres_changes'
@@ -97,6 +123,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             event: '*'
             schema: 'public'
             table: 'notifications'
+<<<<<<< HEAD
             filter: `user_id=eq.${user.id}`
 
           (payload) => {
@@ -131,6 +158,9 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 
 
     // Set up real-time subscription for new notifications;
+=======
+            filter: `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (user) {;
       const channel = supabase;
         .channel('notifications-changes');
@@ -139,13 +169,19 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             event: '*', ;
             schema: 'public',;
             table: 'notifications',;
+<<<<<<< HEAD
             filter: `user_id=eq.${user && user.id}`;
           };
+=======
+            filter: `user_id=eq.${user && user.id}`
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           (payload) => {;
             console && console.log('Notification change received:', payload);
             notificationOps && notificationOps.fetchNotifications();
           }
         );
+<<<<<<< HEAD
         .subscribe();
 
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
@@ -248,6 +284,9 @@ if ( {) {
     <NotificationContext && NotificationContext.Provider value={notificationOps}>;
       {children}
 ;
+=======
+        .subscribe();;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <NotificationContext.Provider value={notification_ops}>;
       {children}
@@ -294,5 +333,11 @@ if ( {) {
     <NotificationContext.Provider value={notificationOps}>;
       {children}
     </NotificationContext.Provider>;
+<<<<<<< HEAD
   );
 };
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -458,3 +458,8 @@ if (require.main === module) {}
     };
   }, 60000)};
 
+<<<<<<< HEAD
+=======
+module.exports = ImprovedPM2SyncAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

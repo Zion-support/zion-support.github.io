@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React from 'react';
 
@@ -15,15 +18,21 @@ import Link from 'next/link';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Automate SOC 2 readiness with continuous controls, evidence;
             pipelines, and prebuilt auditor workflows. Integrates with cloud;
             providers and ticketing systems.;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,12 +46,13 @@ import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
-=======
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -59,7 +69,7 @@ export default function SOC2ComplianceAutomationPage() {
 						))}
 					</div>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <SEO
@@ -78,12 +88,18 @@ export default function SOC2ComplianceAutomationPage() {
           </p>
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {
                 title: 'Controls Library'
                 desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.'
@@ -105,6 +121,7 @@ export default function SOC2ComplianceAutomationPage() {
                 desc: 'Assign remediation tasks, SLAs, and approvals.'
               }
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -140,6 +157,12 @@ export default function SOC2ComplianceAutomationPage() {
                 desc: 'Share evidence securely with auditors; immutable logs.',;
               },;
             ].map(f => (;
+=======
+                title: 'Audit Room'
+                desc: 'Share evidence securely with auditors; immutable logs.'
+              }
+            ].map(f => (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
               <div
                 key={f.title}
@@ -151,7 +174,10 @@ export default function SOC2ComplianceAutomationPage() {
             ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>
           <div className='mt-12'>
             <h2 className='text-2xl font-semibold'>Pricing</h2>
@@ -238,12 +264,17 @@ export default function SOC2ComplianceAutomationPage() {
       </section>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
@@ -252,6 +283,7 @@ export default function SOC2ComplianceAutomationPage() {
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -369,6 +401,11 @@ export default function SOC2ComplianceAutomationPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -397,6 +434,7 @@ export default function SOC2ComplianceAutomationPage() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -406,11 +444,18 @@ export default function SOC2ComplianceAutomationPage() {
 
 }
 
+=======
+
+}
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -421,3 +466,10 @@ export default function SOC2ComplianceAutomationPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

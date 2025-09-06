@@ -11,3 +11,8 @@ console.log(' Starting auto import/export fixer...')
         content = content.replace(/from\s+['"]@\/([^'"]+)['"]/g, "
         content = content.replace(/from\s+['"]([^'')]
 
+<<<<<<< HEAD
+=======
+  console.error(' Auto import/export fixer failed to "start")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

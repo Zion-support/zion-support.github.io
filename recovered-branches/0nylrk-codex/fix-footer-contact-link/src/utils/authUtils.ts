@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 
 
 import {supabase} from "@/integrations/supabase/client";
+=======
+import type { UserDetails } from "@/types/auth";
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import type { UserDetails } from "@/types/auth";
 
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
+<<<<<<< HEAD
 
 
 
@@ -16,6 +23,8 @@ import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 import type { UserDetails } from "@/types/auth";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 /**
@@ -25,6 +34,7 @@ import type { UserDetails } from "@/types/auth",
 
 export const cleanupAuthState = () => {
 
+<<<<<<< HEAD
 
   // Remove standard auth tokens
 
@@ -50,6 +60,9 @@ export const cleanupAuthState = () => {
     }
   })
 }
+=======
+  // Remove standard auth tokens
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -68,6 +81,7 @@ export const cleanupAuthState = () => {;
   // Remove from sessionStorage if in use;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
+<<<<<<< HEAD
       sessionStorage.removeItem(key);
 
 
@@ -90,6 +104,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .eq("campaign_type", "welcome_series")
 
 
+=======
+      sessionStorage.removeItem(key);    }
+  })
+},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
@@ -101,6 +120,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
           status: "pending";
           payload: {
           }
+<<<<<<< HEAD
         });
             user_id: user.id,
             email_type: "welcome_series",
@@ -111,11 +131,15 @@ export const checkNewRegistration = async (user: UserDetails) => {
         
 
       // Create entry in email_campaigns table
+=======
+        });      // Create entry in email_campaigns table
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       await supabase
         .from("email_campaigns")
         .insert({
 
             user_type: user.user_type || "unknown",
+<<<<<<< HEAD
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
           user_id: user.id,
           campaign_type: "welcome_series",
@@ -124,6 +148,12 @@ export const checkNewRegistration = async (user: UserDetails) => {
 
 
             user_id: user.id,
+=======
+            display_name: user.display_name || user.email?.split ("@")[0] || "User";          user_id: user.id,
+          campaign_type: "welcome_series",
+          template_name: "welcome_email",
+          template_data: {            user_id: user.id,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
@@ -154,6 +184,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             user_id: user.id,;
             email_type: "welcome_series",;
             user_type: user.userType || "unknown",;
+<<<<<<< HEAD
             display_name: user.displayName || user.email?.split("@")[0] || "User";
 
           }
@@ -272,3 +303,6 @@ export const checkNewRegistration = async (user:UserDetails) => {;
 };
   }
 };
+=======
+            display_name: user.displayName || user.email?.split("@")[0] || "User";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -10,6 +13,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
+<<<<<<< HEAD
 import {useNavigate} from "react-router-dom";
 interface PaymentButtonProps {;
   amount: number,;
@@ -40,6 +44,9 @@ interface PaymentButtonProps {
 export function PaymentButton(): any ({;
 
   amount;
+=======
+import {useNavigate} from "react-router-dom";  amount;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   serviceId;
   providerId;
 
@@ -51,6 +58,7 @@ export function PaymentButton(): any ({;
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 
   const handlePaymentClick = async () => {;
     if (!isAuthenticated) {;
@@ -173,6 +181,11 @@ export function PaymentButton({;
 
 
       }
+=======
+  amount: number
+  serviceId: string
+  providerId: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
@@ -183,13 +196,18 @@ export function PaymentButton({;
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
+<<<<<<< HEAD
       
       
       if (error) {
+=======
+            if (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         throw error
       }
       if (data?.url) {
         // Open Stripe checkout in a new tab
+<<<<<<< HEAD
         window.open(data.url, '_blank')
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -281,6 +299,9 @@ if ( {) {
       }
 
       // Reset button state after a short delay
+=======
+        window.open(data.url, '_blank')      // Reset button state after a short delay
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
@@ -289,9 +310,12 @@ if ( {) {
       className={cn(
         "relative min-w-[120px]";
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
       // Call the create-checkout edge function;
@@ -306,6 +330,7 @@ if ( {) {
 
       if (error) {;
         throw error;
+<<<<<<< HEAD
       }
 
       if (data?.url) {;
@@ -337,23 +362,38 @@ if ( {) {
   return (;
     <Button;
       onClick={handlePaymentClick}
+=======
+      }      toast({;
+        title: "Payment error",,
+  description: "There was a problem initiating your payment. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      // Reset button state after a short delay;      onClick={handlePaymentClick}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
 
         "relative min-w-[120px]"
 
+<<<<<<< HEAD
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]"
+<<<<<<< HEAD
         className
       )}>;
       {isProcessing ? (;
@@ -368,6 +408,8 @@ if ( {) {
     </Button>;
   );
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Button>;
   );
     </Button>;
@@ -382,9 +424,12 @@ if ( {) {
   );
     </Button>;
   );
+<<<<<<< HEAD
 
 
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   return (
     <Button;
@@ -396,12 +441,17 @@ if ( {) {
     >;
       {is_processing ? (
         <>;
+<<<<<<< HEAD
           <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" />;
+=======
+          <Loader2 className="h - 4 w - 4 mr - 2 animate-spin" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Processing...;
         </>) : (
         button_text)}
     </Button>);
 }
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -576,3 +626,5 @@ return (<Button)
 }
 ;
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

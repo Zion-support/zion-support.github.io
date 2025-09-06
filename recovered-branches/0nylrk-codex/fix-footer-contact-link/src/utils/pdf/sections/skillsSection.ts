@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
@@ -11,11 +12,18 @@ export function addSkillsSection(;
 
 
   doc: jsPDF;
+=======
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(  doc: jsPDF;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   skills: Skill[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
   if (skills && skills.length === 0) return startY;
   
   let yPos = startY;
@@ -35,12 +43,17 @@ export function addSkillsSection(;
     const category = skill && skill.category || 'Other';
 
   yPos += 8;
+=======
+  yPos += 8;
+  // Group skills by category  yPos += 8;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Group skills by category
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
     return acc
+<<<<<<< HEAD
   }, {} as Record<string, typeof skills>);
 
 
@@ -104,6 +117,9 @@ export function addSkillsSection(;
     doc && doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines && skillLines.length * 5) + 10
   }
+=======
+  }, {} as Record<string, typeof skills>);  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return yPos + 5
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types / resume';
@@ -156,6 +172,7 @@ if ( {) {
     y_pos += (skill_lines.length * 5) + 10;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 }
 }
 
@@ -216,3 +233,6 @@ return yPos + 5
   return yPos + 5
 }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

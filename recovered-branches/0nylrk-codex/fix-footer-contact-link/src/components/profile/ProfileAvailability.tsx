@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
@@ -7,6 +8,8 @@ interface ProfileAvailabilityProps {
   availability: Availability;
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
@@ -30,6 +33,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
+<<<<<<< HEAD
   };
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge",
@@ -75,6 +79,11 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 
     }
   }
+=======
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   };
 import { Availability } from "@/types/profile",
@@ -106,6 +115,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable';
       default: return '';
     }
+<<<<<<< HEAD
   },
 
   return (
@@ -129,6 +139,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
           variant="outline" 
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
+=======
+  },        >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {getStatusText(availability.status)}
         </Badge>
         {availability.nextAvailable && availability.status !== 'available' && (
@@ -153,7 +166,10 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot.hours}</span>
                 </div>
               </div>
+<<<<<<< HEAD
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
 
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
@@ -194,6 +210,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
     </div>;
   );
+<<<<<<< HEAD
 }
 
 
@@ -281,3 +298,6 @@ function ProfileAvailability() {
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

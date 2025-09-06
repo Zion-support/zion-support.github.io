@@ -1,15 +1,22 @@
 
+<<<<<<< HEAD
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {JobData, MatchResult} from "./types ;
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
+<<<<<<< HEAD
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+=======
+=======import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 // Initialize the Supabase client
@@ -18,6 +25,7 @@ const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {JobData, MatchResult} from "./types.ts";
+<<<<<<< HEAD
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {JobData, MatchResult} from "./types ;
@@ -71,12 +79,20 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     console.error("Error in processJobMatching:", error),
     throw error
   }
+=======
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";    // Use OpenAI to find best matches
+    const bestMatches = await findBestMatches(jobDetails, talents);
+    return bestMatches
+  } catch (error) {
+    console && console.error("Error in processJobMatching:", error);  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 /**
  * Stores match results in the database and creates notifications
  * @param jobId The ID of the job
  * @param matchedTalents Array of match results
  */
+<<<<<<< HEAD
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {
   const matchInsertPromises = matchedTalents && matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
@@ -93,12 +109,16 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       .insert({
 
     if (matchError) {
+=======
+export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {    if (matchError) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
 
       await supabase && supabase.rpc('create_notification', {
         _user_id: match && match.talentId;
+<<<<<<< HEAD
         _title: "New Job Match",
 
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
@@ -185,6 +205,10 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 }
 
   await Promise.all(matchInsertPromises);
+=======
+        _title: "New Job Match",  
+  await Promise.all(matchInsertPromises)  await Promise.all(matchInsertPromises);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
@@ -208,8 +232,13 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
 ;
     // Prepare job details for matching prompt;
     const job_details = {
+<<<<<<< HEAD
       title: job.title;
       description: job.description;
+=======
+      title: job.title,
+  description: job.description;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       category: job.category;
       skills: jobSkillsNormalized,
       budget: job.budget;
@@ -255,6 +284,7 @@ if ( {) {
         _related_id: job_id;
       });
     }
+<<<<<<< HEAD
   });
 ;
   await Promise.all (matchInsertPromises);
@@ -262,6 +292,9 @@ if ( {) {
 }
 ;
 /**;
+=======
+  });/**;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  * Stores match results in the database and creates notifications;
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
@@ -315,8 +348,13 @@ export async function processJobMatching(job:JobData, talents:any[]):Promise<Mat
     ;
     // Prepare job details for matching prompt;
     const jobDetails = {;
+<<<<<<< HEAD
       title:job.title,;
       description:job.description,;
+=======
+      title:job.title,,
+  description:job.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       category:job.category,;
       skills:jobSkillsNormalized,;
       budget:job.budget;
@@ -375,6 +413,10 @@ await Promise.all (matchInsertPromises)
 ;
 }
 ;
+<<<<<<< HEAD
   await Promise.all (matchInsertPromises);
 }
 ;
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

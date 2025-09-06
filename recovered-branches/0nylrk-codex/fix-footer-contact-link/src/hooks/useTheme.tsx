@@ -3,6 +3,7 @@ import React from "react";
 
 export const useTheme = () => {
   return {
+<<<<<<< HEAD
     theme: "dark",
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
   };
@@ -24,6 +25,8 @@ export const useTheme = () => {;
   }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 
@@ -43,4 +46,8 @@ export const use_theme = () =>: any {
 
     theme: "dark",
 
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

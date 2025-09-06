@@ -2,6 +2,7 @@ import { ApiDocsSpec } from './types';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -17,14 +18,14 @@ export default v1;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const baseUrl = 'https://api && api.zion.os';
-=======
-<<<<<<< HEAD
-=======
 
 
 const v1: ApiDocsSpec = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -51,8 +52,30 @@ const v1: ApiDocsSpec = {
         }
       ]
     },
-
 =======
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+        }
 id: 'auth-login-jwt',
           title: 'JWT Login',
           description: 'Obtain a JWT by providing credentials.',
@@ -111,7 +134,7 @@ id: 'auth-login-jwt',
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       id: 'talent'
       title: 'Talent Profiles'
 
@@ -127,19 +150,6 @@ id: 'auth-login-jwt',
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
           samples: [
-<<<<<<< HEAD
-
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
-            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
-
-          ],
-          versions: ['v1']
-        }
-      ]
-    },
-
-=======
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`,
@@ -158,7 +168,7 @@ id: 'auth-login-jwt',
       ],
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       id: 'jobs'
       title: 'Job Listings'
 
@@ -175,10 +185,13 @@ id: 'auth-login-jwt',
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 const baseUrl = 'https://api.zion.os';
@@ -208,11 +221,17 @@ const v1: ApiDocsSpec = {
             }
           }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       ];
     }
@@ -224,24 +243,32 @@ const v1: ApiDocsSpec = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   ];
 
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-  ];
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -250,6 +277,8 @@ const v1: ApiDocsSpec = {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 export default v1;
   ];
@@ -257,6 +286,7 @@ export default v1;
 ;
 export default v1;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -267,6 +297,12 @@ export default v1;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
@@ -476,6 +512,10 @@ export default v1;
 };
 
 export default v1;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

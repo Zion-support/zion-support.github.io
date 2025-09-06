@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -8,9 +9,11 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Service {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   description: string;
   category: string;
@@ -24,6 +27,7 @@ id: string;
   implementationTime: string;
   roi: string;
   link: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -179,11 +183,12 @@ id: string;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   {
 
-=======
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     description:;
@@ -214,16 +219,22 @@ id: string;
     ],
     target_audience: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Pharmaceutical companies',
       'Agricultural companies',
       'Industrial biotech firms',
       'Research institutions',
       'Environmental companies',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -276,6 +287,8 @@ id: string;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_size: '$22.8B by 2027',
     competitive_advantage:;
@@ -284,7 +297,6 @@ id: string;
     implementation_time: '8 - 12 weeks',
     roi: '1500% within 24 months',
 
-=======
     link: 'https://ziontechgroup.com / services / synthetic - biology - platform',
     tags: [;
       'Synthetic Biology',
@@ -325,16 +337,22 @@ id: string;
     ],
     target_audience: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Medical device companies',
       'Environmental monitoring firms',
       'Navigation companies',
       'Research institutions',
       'Industrial companies',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -384,8 +402,9 @@ id: string;
 <<<<<<< HEAD
 =======
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     market_size: '$16.5B by 2027',
     competitive_advantage:;
       'Only quantum sensors network with multi - application support',
@@ -431,16 +450,22 @@ id: string;
     ],
     target_audience: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Medical device companies',
       'Research institutions',
       'Assistive technology firms',
       'Gaming companies',
       'Healthcare providers',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -464,8 +489,9 @@ id: string;
 <<<<<<< HEAD
 =======
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     market_size: '$28.9B by 2027',
     competitive_advantage: 'Most advanced brain - computer interface platform',
     implementation_time: '10 - 12 weeks',
@@ -524,7 +550,6 @@ id: string;
     implementation_time: '4 - 6 weeks',
     roi: '1000% within 18 months',
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - internet - security',
     tags: [;
       'Quantum Security',
@@ -565,10 +590,15 @@ id: string;
     ],
     target_audience: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
@@ -577,9 +607,12 @@ id: string;
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_size: '$19.8B by 2027',
     competitive_advantage:;
@@ -594,11 +627,16 @@ id: string;
   },
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -637,9 +675,12 @@ id: string;
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     market_size: '$21.3B by 2027',
     competitive_advantage:;
@@ -648,7 +689,6 @@ id: string;
     implementation_time: '8 - 10 weeks',
     roi: '1100% within 20 months',
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
     tags: [;
       'Materials Science',
@@ -689,10 +729,15 @@ id: string;
     ],
     target_audience: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Investment banks',
       'Hedge funds',
       'Asset managers',
@@ -701,11 +746,13 @@ id: string;
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     market_size: '$18.9B by 2027',
     competitive_advantage:;
       'Only quantum financial modeling platform with real - time analysis',
@@ -721,6 +768,7 @@ id: string;
     ],
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -769,6 +817,9 @@ id: string;
 =======
 
 =======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string, name: string,
   description: string, category: string,
   price: string, features: string[],
@@ -780,10 +831,9 @@ id: string;
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   tags: string[]
 }
 
@@ -1030,9 +1080,13 @@ export const emergingTech2027Services: Service[] = [
     ];
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
@@ -1041,16 +1095,19 @@ export const emergingTech2027Services: Service[] = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
 
-=======
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
@@ -1084,21 +1141,20 @@ export const emergingTech2027Services: Service[] = [
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
   }
-<<<<<<< HEAD
-
-=======
 
 export interface Service {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1109,6 +1165,10 @@ export interface Service {;
   }
 ];
 export interface Service {;
+=======
+export interface Service {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,;
   name: string,;
   description: string,;
@@ -1376,6 +1436,7 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1384,13 +1445,21 @@ export const emergingTech2027Services: Service[] = [;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+
+
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

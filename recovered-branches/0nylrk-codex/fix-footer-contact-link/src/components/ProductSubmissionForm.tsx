@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -15,6 +18,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 // Define the form schema with zod;
 const productSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
@@ -94,11 +98,14 @@ export function ProductSubmissionForm() {;
 
 // Define the form schema with zod
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
 
+<<<<<<< HEAD
     message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
   image: z.instanceof(File).optional(),
@@ -247,6 +254,11 @@ export function ProductSubmissionForm() {;
     
 
 
+=======
+    setIsSubmitting(true),
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       // Create the product listing
       const productData = {
@@ -265,8 +277,11 @@ export function ProductSubmissionForm() {;
         .insert([productData])
         .select('id')
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       }
       
@@ -284,12 +299,20 @@ export function ProductSubmissionForm() {;
     } finally {
       setIsSubmitting(false)
 
+<<<<<<< HEAD
 
     try {;
       // Create the product listing;
       const productData = {;
         title: values && values.title,;
         description: values && values.description,;
+=======
+    try {;
+      // Create the product listing;
+      const productData = {;
+        title: values && values.title,,
+  description: values && values.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         price: parseFloat(values && values.price),;
         category: values && values.category,;
         currency: "USD", // Default currency;
@@ -340,20 +363,31 @@ export function ProductSubmissionForm() {;
 
       // Show success message;
       toast({;
+<<<<<<< HEAD
         title: "Product Published!",;
         description: "Your product has been successfully published on Zion."}),;
+=======
+        title: "Product Published!",,
+  description: "Your product has been successfully published on Zion."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Redirect to product page;
       navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
         title: "Publication Failed",;
         description: error instanceof Error ? error && error.message : "An unknown error occurred",;
+=======
+        title: "Publication Failed",,
+  description: error instanceof Error ? error && error.message : "An unknown error occurred",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
 
     }
+<<<<<<< HEAD
   }
     }
 
@@ -418,6 +452,13 @@ export function ProductSubmissionForm() {;
 
 
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+=======
+  }    }
+
+  },
+
+  return (    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
           Manual Creation;
@@ -427,6 +468,7 @@ export function ProductSubmissionForm() {;
           AI-Powered Creation;
         </TabsTrigger>;
       </TabsList>;
+<<<<<<< HEAD
 
       <TabsContent value="manual">;
         <Form {...form}>;
@@ -630,6 +672,8 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
             <FormField
               control={form && form.control}
@@ -644,7 +688,10 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
+<<<<<<< HEAD
                   <FormControl>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
                   <FormDescription>;
@@ -654,12 +701,17 @@ if ( {) {
 
                 </FormItem>;
 
+<<<<<<< HEAD
 
               )}
 
             />;
 
 
+=======
+            />;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField
               control={form && form.control}
               name="description"
@@ -671,17 +723,27 @@ if ( {) {
                     <Textarea
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
+<<<<<<< HEAD
                       {...field} 
                     />;
+=======
+                      {...field}                     />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
+<<<<<<< HEAD
 
                 </FormItem>)}
             />;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+=======
+                </FormItem>)}
+            />;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <FormField;
                 control={form.control}
                 name="price";
@@ -689,6 +751,7 @@ if ( {) {
                   <FormItem>;
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 
                     </FormControl>;
@@ -775,17 +838,26 @@ if ( {) {
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
+=======
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;                  <FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
 
             />;
 
+<<<<<<< HEAD
 
             <FormField
               control={form && form.control}
               name="image"
 
+=======
+            <FormField
+              control={form && form.control}
+              name="image"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
@@ -808,16 +880,20 @@ if ( {) {
                         <img
                           src={imagePreview} 
                           alt="Preview" 
+<<<<<<< HEAD
 
             <FormField
               control={form && form.control}
               name="image"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
                     </div>;
                   )}
                 </FormItem>;
+<<<<<<< HEAD
               )}
 
             />;
@@ -986,3 +1062,6 @@ return (<Tabs value= {
     </Tabs>
   )
 }
+=======
+              )}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

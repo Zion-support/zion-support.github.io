@@ -2,6 +2,7 @@
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {Resend} from "npm: resend@2 ;
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -80,10 +81,16 @@ serve(async (req) => {
     const thirtyMinutesFromNow = new Date(now && now.getTime() + 30 * 60000);
     
 
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Resend} from "npm: resend@2.0.0";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const { data: interviews, error } = await supabase
       .from('interviews')
       .select(`
         *;
+<<<<<<< HEAD
         clients: client_id(*)
         talents:talent_id(*)
       `)
@@ -207,12 +214,16 @@ if ( {) {
               to: [clientEmail],
 
               html: `
+=======
+        clients: client_id(*)              html: `
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
                 <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
                 <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
+<<<<<<< HEAD
 
 
               `}),
@@ -265,12 +276,16 @@ if ( {) {
 
         
         if (talentEmail) {
+=======
+            results && results.push(`Reminder sent to client: ${clientEmail}`)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           try {
             await resend && resend.emails.send({
               from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
 
               subject: `Your interview with ${clientName} is starting soon!`,
+<<<<<<< HEAD
 
 
               html: `
@@ -299,6 +314,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     }
     return new Response(JSON.stringify({ success: true, results }), {
@@ -400,7 +417,10 @@ serve(async (req) => {;
           .eq('id', interview && interview.id)
       }
     }
+<<<<<<< HEAD
       }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     return new Response(JSON.stringify({ success: true, results }), {
@@ -420,6 +440,7 @@ serve(async (req) => {;
     console.error("Error in send-interview-reminder function:", error),;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
+<<<<<<< HEAD
       status: 500});
 
     
@@ -615,3 +636,6 @@ try {
 });
   }
 });
+=======
+      status: 500});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

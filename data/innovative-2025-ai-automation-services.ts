@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -8,9 +9,11 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface InnovativeAIAutomationService {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -40,22 +43,17 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-
-=======
     website: string
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-=======
   reviews: number
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   reviews: number;
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
@@ -392,48 +390,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-    }
-    realImplementation: true
-    implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-    launchDate: '2025-03-01', customers: 35
-    rating: 4.9
-
-    reviews: 28
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-
-
-  }
-
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-
-  reviews: number;
-=======
     
     },
     realImplementation: true;
@@ -441,7 +397,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     launchDate: '2025-03-01';
     customers: 35;
     rating: 4.9;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const innovative2025AIAutomationServices: InnovativeAIAutomationService[] =
   [
     // AI-Powered Autonomous Business Process Orchestrator
@@ -759,20 +715,13 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       },
       realImplementation: true,
       implementationDetails:
-<<<<<<< HEAD
-        'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
-      launchDate: '2025-03-01'
-      customers: 35
-      rating: 4.9
-      reviews: 28
-    }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01',
       customers: 35,
       rating: 4.9,
       reviews: 28,
+<<<<<<< HEAD
 <<<<<<< HEAD
     },;
   ];    features: [
@@ -804,10 +753,29 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 
     reviews: 28
   }
+=======
+
+
+  }
+
+
+export interface InnovativeAIAutomationService {;
+
+  }
+
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   }
 ];
 export interface InnovativeAIAutomationService {;
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,;
   name: string,;
   tagline: string,;
@@ -1068,6 +1036,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     customers: 35,;
     rating: 4.9,;
     reviews: 28;
+<<<<<<< HEAD
   }
 ];
 ;
@@ -1097,11 +1066,24 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
   ];
     reviews: 28
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

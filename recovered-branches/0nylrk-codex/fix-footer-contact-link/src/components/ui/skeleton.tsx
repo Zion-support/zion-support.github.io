@@ -2,6 +2,7 @@
 function Skeleton({
   className
   ...props
+<<<<<<< HEAD
 }: React.HTMLAttributes<HTMLDivElement>) {
 import { cn } from &quot;@/lib / utils & quot;
 ;
@@ -48,3 +49,6 @@ export { Skeleton };
 export { Skeleton }
 ;
 ;
+=======
+}: React.HTMLAttributes<HTMLDivElement>) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

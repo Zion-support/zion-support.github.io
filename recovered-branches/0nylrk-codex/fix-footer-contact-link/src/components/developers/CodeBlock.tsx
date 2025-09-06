@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   code: string
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
@@ -9,6 +12,7 @@ interface CodeBlockProps {;
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
+<<<<<<< HEAD
 }
 
 
@@ -40,6 +44,9 @@ interface CodeBlockProps {
 }
 export function CodeBlock({
   code;
+=======
+}  code;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   language = 'bash';
   showLineNumbers = false;
@@ -47,6 +54,7 @@ export function CodeBlock({
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
 
+<<<<<<< HEAD
 
 
 import {useState} from 'react';
@@ -66,10 +74,19 @@ export function CodeBlock({
   language = 'bash',
   showLineNumbers = false,
 
+=======
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";export function CodeBlock({ 
+  code,
+  language = 'bash',
+  showLineNumbers = false,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
+<<<<<<< HEAD
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -92,6 +109,10 @@ export function CodeBlock({
 
 
   return (
+=======
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
@@ -104,6 +125,7 @@ export function CodeBlock({
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
               <div key={i} className="h-6 leading-6">
+<<<<<<< HEAD
 
 import { useState } from 'react',;
 import { Check, Copy } from 'lucide-react',;
@@ -123,15 +145,23 @@ export function CodeBlock({;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false),;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {;
       setCopied(false);
+<<<<<<< HEAD
     }, 2000);
   };
 
   return (
+=======
+    }, 2000)
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
       className
@@ -145,6 +175,7 @@ export function CodeBlock({;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
+<<<<<<< HEAD
               </div>;
             ))}
           </div>;
@@ -156,6 +187,8 @@ export function CodeBlock({;
         onClick={handleCopyClick}
         aria-label="Copy code">;
         {copied ? <Check size={16} /> : <Copy size={16} />}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </button>;
       {language && (;
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
@@ -165,6 +198,7 @@ export function CodeBlock({;
     </div>;
   );
 }
+<<<<<<< HEAD
   );
 }
 
@@ -173,6 +207,11 @@ export function CodeBlock({;
 ;
 
 
+=======
+
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default CodeBlock;
 
 import {useState} from 'react';
@@ -190,6 +229,7 @@ export /**
 function CodeBlock() {
   const [copied, set_copied] = useState (false);
 ;
+<<<<<<< HEAD
 export default CodeBlock;
 ;
   ),;}
@@ -268,3 +308,6 @@ export default CodeBlock;
 
 ;
 export default CodeBlock;
+=======
+export default CodeBlock;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

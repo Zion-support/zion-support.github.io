@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,8 @@
 <<<<<<< HEAD
   contactInfo: {
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -12,7 +15,6 @@ export interface AdvancedAIAutomationService {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -30,15 +32,24 @@ export interface AdvancedAIAutomationService {
     mobile: string, email: string,
     address: string,
     website: string
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -52,6 +63,7 @@ export interface AdvancedAIAutomationService {
     customers: 89;
     rating: 4.8,
     reviews: 38;
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
@@ -66,6 +78,13 @@ export interface AdvancedAIAutomationService {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     realImplementation: true
     implementationDetails:
@@ -251,6 +270,7 @@ export interface AdvancedAIAutomationService {
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
     launchDate: '2024-10-01'
     customers: 89
@@ -259,6 +279,8 @@ export interface AdvancedAIAutomationService {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     mobile: string;
     email: string;
     address: string;
@@ -551,11 +573,12 @@ export interface AdvancedAIAutomationService {
     },
     realImplementation: true,
     implementationDetails:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
     launchDate: '2024-10-01',
     customers: 89,
     rating: 4.8,
+<<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 38,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -575,11 +598,14 @@ export interface AdvancedAIAutomationService {
     rating: 4.8
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     reviews: 38,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 38
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -590,6 +616,10 @@ export interface AdvancedAIAutomationService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -852,6 +882,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,;
     rating: 4.8;
     reviews: 38;
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -869,3 +900,13 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

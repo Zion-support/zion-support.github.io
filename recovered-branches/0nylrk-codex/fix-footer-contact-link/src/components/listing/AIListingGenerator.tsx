@@ -1,8 +1,11 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +13,7 @@ import {Sparkles} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
+<<<<<<< HEAD
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -91,10 +95,14 @@ import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
 interface GeneratedContent {;
+=======
+import {LoadingContentSkeleton} from "./LoadingContentSkeleton",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
+<<<<<<< HEAD
     max: number;
   };
   keyPoints: string[];
@@ -105,16 +113,23 @@ interface AIListingGeneratorProps {;
   initialValues?: {;
 
     title?: string;
+=======
+    max: number;    title?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
 
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
@@ -182,6 +197,11 @@ function AIListingGenerator() {
 
 
       setGeneratedContent(data.generated);
+=======
+      if (data.error) {
+        throw new Error(data.error)
+      }      setGeneratedContent(data.generated);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -192,6 +212,7 @@ function AIListingGenerator() {
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
+<<<<<<< HEAD
       })
 ;
       // Check condition
@@ -285,6 +306,9 @@ if ( {) {
   return (
 
     <div className="space-y-6">;
+=======
+      })    <div className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
           <CardTitle className="flex items-center text-white">;
@@ -304,7 +328,10 @@ if ( {) {
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -321,6 +348,7 @@ if ( {) {
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 
 
@@ -354,6 +382,8 @@ if ( {) {
         <CardContent>;
 ;
           <AIListingForm;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_submit={handle_generate}
             is_loading={is_loading}
             initial_values={initial_values}
@@ -409,14 +439,24 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 ;
       setGeneratedContent(data.generated),;
       toast({;
+<<<<<<< HEAD
         title:"Content Generated",;
         description:"AI has created optimized listing content for you.";
+=======
+        title:"Content Generated",,
+  description:"AI has created optimized listing content for you.";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }),;
     } catch (error) {;
       console.error("Error generating content:", error),;
       toast({;
+<<<<<<< HEAD
         title:"Generation Failed",;
         description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+=======
+        title:"Generation Failed",,
+  description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant:"destructive";
       }),;
     } finally {;
@@ -429,8 +469,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
     if (generatedContent && onApplyGenerated) {;
       onApplyGenerated(generatedContent),;
       toast({;
+<<<<<<< HEAD
         title: "Content Applied";
         description: "The generated content has been applied to your listing.";
+=======
+        title: "Content Applied",
+  description: "The generated content has been applied to your listing.";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
     }
   };
@@ -465,3 +510,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

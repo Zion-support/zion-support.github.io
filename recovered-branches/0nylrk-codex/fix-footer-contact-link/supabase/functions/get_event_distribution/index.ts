@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 
@@ -6,10 +7,19 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+<<<<<<< HEAD
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
 const corsHeaders = {
@@ -48,6 +58,11 @@ serve(async (req) => {
 
 
     // Parse the request body
+=======
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
@@ -55,16 +70,22 @@ serve(async (req) => {
 
       .gte("created_at", startDate && startDate.toISOString());
 
+<<<<<<< HEAD
 
 
       .gte("created_at", startDate.toISOString()),
 
 
       .gte("created_at", startDate && startDate.toISOString());
+=======
+      .gte("created_at", startDate.toISOString()),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (error) {
       console && console.error("Error fetching analytics data:", error);
       throw error
     }
+<<<<<<< HEAD
     // Group events by date and event type
 
 
@@ -154,6 +175,9 @@ serve(async (req) => {;
 
       status: 200})
   } catch (error) {
+=======
+    // Group events by date and event type  } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console && console.error("Error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: {
@@ -234,11 +258,17 @@ if ( {) {
         ...cors_headers,
         "Content - Type": "application / json"}
       status: 500});
+<<<<<<< HEAD
 
+=======
+  }
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
 
+<<<<<<< HEAD
 
   }
 });
@@ -339,4 +369,9 @@ data.forEach ( (event) => {
   }
 });
   }
+=======
+  }
+});
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });

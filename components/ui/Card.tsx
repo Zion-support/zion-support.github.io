@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -21,6 +22,8 @@ export default function Card({ children, className = '' }: CardProps) {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -63,7 +66,6 @@ const CardTitle = React.forwardRef<
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
       className,
-=======
 import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
@@ -105,20 +107,15 @@ CardHeader.displayName = "CardHeader";
 
 const CardTitle = null;
       className
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     )}
     {...props}
   />;
 ));
 CardTitle.displayName = "CardTitle";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
-=======
 const CardDescription = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -129,28 +126,13 @@ const CardDescription = null;
 ));
 CardDescription.displayName = "CardDescription";
 
-<<<<<<< HEAD
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-=======
 const CardContent = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
-<<<<<<< HEAD
-CardContent && CardContent.displayName = "CardContent";
 
-
-const CardFooter = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-
-  <div
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -226,11 +208,8 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
-<<<<<<< HEAD
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 CardContent.displayName = "CardContent";
 
 const CardFooter = null;
@@ -248,8 +227,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
   hover?: boolean
 }
 const Card: React.FC<CardProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 export {
   Card,
   CardHeader,
@@ -258,6 +236,10 @@ export {
   CardDescription,
   CardContent,
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

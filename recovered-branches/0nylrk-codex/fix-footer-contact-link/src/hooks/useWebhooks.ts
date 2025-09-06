@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
+<<<<<<< HEAD
 
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -28,12 +32,17 @@ export interface Webhook {;
 
 export interface Webhook {
   id: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   created_at: string,
   last_triggered_at: string | null
 }
@@ -44,6 +53,7 @@ export interface TestWebhookResult {;
   responseBody: string
 }
 
+<<<<<<< HEAD
 export function useWebhooks() {;
 
 
@@ -62,12 +72,20 @@ export function useWebhooks() {;
     const url = env && env.VITE_SUPABASE_URL || env && env.SUPABASE_URL;
 
     return `${url}/functions/v1/webhook-manager`
+=======
+export function useWebhooks() {;    return `${url}/functions/v1/webhook-manager`
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   // Fetch user's webhooks
   const fetchWebhooks = async () => {
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
+=======
+      setWebhooks(result.webhooks |[])
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
@@ -81,16 +99,22 @@ export function useWebhooks() {;
     setError(null),
     
 
+<<<<<<< HEAD
       setWebhooks(result.webhooks |[])
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const result = await response && response.json();
       
       if (!response && response.ok) {
@@ -98,11 +122,15 @@ export function useWebhooks() {;
       }
 
       setWebhooks(result && result.webhooks || [])
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET'
         headers: {
+<<<<<<< HEAD
     } catch (err) {
       console && console.error('Error fetching webhooks:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -114,6 +142,8 @@ export function useWebhooks() {;
 
 
         title: "Error fetching webhooks",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
   created_at: string,
   last_triggered_at: string | null;
@@ -226,15 +256,19 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to fetch webhooks');
       }
 
+<<<<<<< HEAD
 
 
 
 
       setWebhooks(result.webhooks || [])
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+<<<<<<< HEAD
       toast({
 
         variant: "destructive",
@@ -267,11 +301,15 @@ export function useWebhooks() {;
         body: JSON && JSON.stringify({
 
           name;
+=======
+      toast({          name;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           url;
           eventTypes
           secret
         })
       });
+<<<<<<< HEAD
 
 
       const result = await response && response.json();
@@ -288,6 +326,8 @@ export function useWebhooks() {;
       
       return result && result.webhook
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err) {
       console && console.error('Error creating webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -295,6 +335,7 @@ export function useWebhooks() {;
         variant: "destructive";
 
         title: "Error creating webhook",
+<<<<<<< HEAD
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
 
@@ -356,6 +397,14 @@ if ( {) {
       // Add the new webhook to the list;
       set_webhooks (prev => [result.webhook, ...prev]);
 ;
+=======
+        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})      // Add the new webhook to the list
+      setWebhooks(prev => [result.webhook, ...prev]),
+      
+      toast({
+      // Add the new webhook to the list;
+      set_webhooks (prev => [result.webhook, ...prev]);        title: "Webhook Created",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast ({
         title: "Webhook Created",
     } catch (err) {
@@ -372,6 +421,7 @@ if ( {) {
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
 
 
   },
@@ -414,14 +464,30 @@ if ( {) {
       toast({;
         title: "Webhook Created",;
         description: "Your webhook has been created successfully."}),;
+=======
+  }  },
+
+  // Toggle webhook active status
+  const toggleWebhook = async (webhookId: string, isActive: boolean) => {;
+      // Add the new webhook to the list;
+      setWebhooks(prev => [result.webhook, ...prev]),;
+      toast({;
+        title: "Webhook Created",,
+  description: "Your webhook has been created successfully."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return result.webhook;
     } catch (err) {;
       console.error('Error creating webhook:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error creating webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error creating webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -450,6 +516,7 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to update webhook');
       }
+<<<<<<< HEAD
 
       // Update the webhook in the list
 
@@ -465,13 +532,21 @@ if ( {) {
         title: isActive ? "Webhook Activated" : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
       )),
+=======
+      toast({
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated"
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
 
+<<<<<<< HEAD
       return result
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err) {
       console && console.error('Error toggling webhook:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
@@ -485,7 +560,10 @@ if ( {) {
 
         title: "Error updating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const result = await response && response.json();
       
       if (!response && response.ok) {
@@ -548,14 +626,20 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 
         variant: "destructive",
         title: "Error updating webhook",
 
+=======
+        variant: "destructive",
+        title: "Error updating webhook",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -589,6 +673,8 @@ if ( {) {
       setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
       
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -612,9 +698,12 @@ if ( {) {
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
@@ -624,16 +713,26 @@ if ( {) {
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook;
       )),;
       toast({;
+<<<<<<< HEAD
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",;
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),;
+=======
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated",,
+  description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return result;
     } catch (err) {;
       console.error('Error toggling webhook:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error updating webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error updating webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -662,15 +761,19 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to delete webhook');
       }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
       toast({
         title: "Webhook Deleted",
         description: "The webhook has been deleted successfully."}),
+<<<<<<< HEAD
       
       return result
     } catch (err) {
@@ -695,6 +798,9 @@ if ( {) {
 
         variant: "destructive";
 ;
+=======
+      ;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Delete webhook;
   const delete_webhook = async (webhook_id: string) => {
     // Check condition
@@ -749,14 +855,20 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 
         variant: "destructive",
         title: "Error deleting webhook",
 
+=======
+        variant: "destructive",
+        title: "Error deleting webhook",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -822,14 +934,26 @@ if ( {) {
       toast({;
         title: "Webhook Deleted",;
         description: "The webhook has been deleted successfully."}),;
+=======
+      // Remove the webhook from the list;
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
+      toast({;
+        title: "Webhook Deleted",,
+  description: "The webhook has been deleted successfully."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return result;
     } catch (err) {;
       console.error('Error deleting webhook:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error deleting webhook",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error deleting webhook",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -859,13 +983,17 @@ if ( {) {
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to test webhook');
       }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Store test result
       setTestResult({
         status: result.status,
         statusText: result.statusText,
+<<<<<<< HEAD
         responseBody: result.responseBody
       }),
       
@@ -957,18 +1085,25 @@ if ( {) {
         title: "Error testing webhook",
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {
+=======
+        responseBody: result.responseBody    } finally {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       set_loading (false);
     }
   }
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
         title: "Error testing webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
     }
   }
+<<<<<<< HEAD
   return {
     webhooks;
     loading;
@@ -1467,8 +1602,17 @@ clearTestResult: () => setTestResult (null)
   }
 }
   }
+=======
+    webhooks;
+    loading;
+    error;  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

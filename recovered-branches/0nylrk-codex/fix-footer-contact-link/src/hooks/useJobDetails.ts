@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
+<<<<<<< HEAD
 
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -40,10 +44,13 @@ export function useJobDetails(jobId: string | undefined) {;
   return {
     job;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     isLoading;
     error;
     loadJobDetails
   }
+<<<<<<< HEAD
 }
 
 
@@ -152,3 +159,6 @@ export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .s
 }export default useJobDetails;
 ;
 export default useJobDetails;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-=======
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -15,7 +8,7 @@ import {
   TableCell;
   TableHead;
   TableHeader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -26,24 +19,8 @@ import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast",
 import Image from 'next/image', // Import next/image
 
-<<<<<<< HEAD
-interface ApplicationsTableProps {
-  applications: JobApplication[],
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
-  onViewScore: (application: JobApplication) => void
-}
 
-// Sub-component for avatar to handle its own error state
-const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-  const [avatarError, setAvatarError] = useState(false),
-  const talentName = application.talent_profile?.full_name || "Candidate",
-
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -62,10 +39,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -85,19 +58,14 @@ import React, { useState } from 'react'; // Import React and useState;
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ApplicationsTableProps {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import { format } from 'date - fns';
 import { JobApplication } from '@/types/ jobs';
@@ -150,14 +118,12 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
   const [avatarError, setAvatarError] = useState(false),;
   const talentName = application && application.talent_profile?.full_name || "Candidate",;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
-<<<<<<< HEAD
-=======
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
         <Image
@@ -173,7 +139,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -226,18 +192,6 @@ function ApplicationsTable() {
       description: 'Offer has been sent to the talent.',
     });
 
-<<<<<<< HEAD
-      ) : (
-        <User className="h-4 w-4" />
-      )}
-    </AvatarPrimitive>
-  )
-
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-
-=======
   }
     </AvatarPrimitive>;
   );
@@ -272,7 +226,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -287,16 +241,12 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
-<<<<<<< HEAD
-
-=======
   
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 }
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
 
@@ -337,8 +287,6 @@ const ApplicationAvatar = null;
                     </div>;
                   </div>;
                 </TableCell>;
-<<<<<<< HEAD
-=======
 
           </TableBody>;
         </Table>;
@@ -350,73 +298,10 @@ const ApplicationAvatar = null;
         onClose = {() => setHireModalOpen(false),}
         application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
-<<<<<<< HEAD
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  applications,
-  processingId,
-  onViewApplication,
-},
-
-export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
-
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-
-},
-
-export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-
-  const [hireModalOpen, setHireModalOpen] = useState(false),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application),
-    setHireModalOpen(true)
-  },
-  
-  const handleHireConfirmed = () => {
-    toast({
-      title: "Hiring process initiated",
-      description: "Offer has been sent to the talent."
-    })
-  },
-  
-
-
-
-  return (
-    <>
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Candidate</TableHead>
-              <TableHead className="hidden md:table-cell">Applied</TableHead>
-              <TableHead className="hidden md:table-cell">Status</TableHead>
-              <TableHead className="hidden lg:table-cell">Match Score</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-
-<<<<<<< HEAD
-=======
             {applications.map((application) => (
               <TableRow key={application.id}>
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -485,119 +370,15 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
-<<<<<<< HEAD
-=======
       />;
     </>;
-=======
       />
     </>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
   /* Using Renamed AvatarPrimitive */ ;
 }{;
-<<<<<<< HEAD
-  application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
-  application && application.talent profile && profile.profile picture url 
-                <TableCell className='hidden md:table - cell'>;
-                  {format (new Date (application.created_at), 'PP')}
-                </TableCell>;
-                <TableCell className="hidden md:table-cell">;
-                  {format(new Date(application.created_at), "PP")}
-                </TableCell>;
-                <TableCell className="hidden md:table-cell">;
-                  <StatusBadge status={application.status} />;
-                </TableCell>;
-                <TableCell className="hidden lg:table-cell">;
-                  {application.match_score !== undefined && application.match_score !== null ? (;
-                    <ClickableBadge;
-                      variant="outline";
-                      className="cursor-pointer";
-                      onClick={() => onViewScore(application)}
-                    >;
-                      {application.match_score}%;
-                    </ClickableBadge>;
-                  ) : (;
-                    <span className="text-muted-foreground text-sm">Not scored</span>;
-                  )}
-                </TableCell>;
-                <TableCell className="text-right">;
-                  <div className="flex items-center justify-end gap-2">;
-                    <ClickableBadge;
-                      variant="outline";
-                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700";
-                      onClick={() => handleHireClick(application)}
-                    >;
-                      <Briefcase className="h-3 w-3 mr-1" /> Hire;
-                    </ClickableBadge>;
-                    <ApplicationActions;
-                      application={application}
-                      processingId={processingId}
-                      onViewApplication={onViewApplication}
-                      onStatusChange={onStatusChange}
-                    />;
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-            ))}
-          </TableBody>;
-        </Table>;
-      </div>;
-      <HireConfirmationModal;
-        isOpen={hireModalOpen}
-        onClose={() => setHireModalOpen(false)}
-        application={selectedApplication || undefined}
-        onConfirm={handleHireConfirmed}
-      />;
-
-  32;
-}//for h - 8 w - 8 height= {
-  32 ";
-}//for h - 8 w - 8 className="rounded - full object - cover" on_error= {
-  () => setAvatarError (true);
-}priority= {
-  false ";
-}h - 4 w - 4"/>);
-}</AvatarPrimitive>);
-}";
-return (<> <div className=" rounded - md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table - cell" >Status</TableHead> <TableHead className="hidden lg:table - cell" >Match Score</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  applications.map ( (application) => (<TableRow key= {
-  application.id;
-}> <TableCell> </div> </div> </div> </TableCell> on_click={
-  () => onViewScore (application);
-}> {
-  application.match score ";
-}% </ClickableBadge>) : (<span className="text - muted - foreground text - sm" >Not scored</span>) ";
-}</TableCell> <TableCell className="text - right" > <div className="flex items - center justify - end gap - 2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr - 1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application;
-}processing_id= {
-  processing_id;
-
-}onViewApplication= {
-  onViewApplication;
-}onStatusChange= {
-
-
-
-  onStatusChange;
-}/> </div> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> <HireConfirmationModal is_open= {
-  hireModalOpen;
-}on_close= {
-  () => setHireModalOpen (false);
-}application= {
-  selected_application || undefined;
-}on_confirm= {
-  handleHireConfirmed;
-}/> </>);
-}'"}
-    </>;
-  );
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
   application.talent profile.profile picture url ;
 }alt= {;
@@ -640,4 +421,4 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed ;
 }/> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

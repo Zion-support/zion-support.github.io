@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -11,7 +14,10 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   enhancementType: EnhancementType;
   content?: string;
   context?: string
@@ -28,6 +34,7 @@ type EnhancementType =;
   | 'proposal';
   | 'general';
 ;
+<<<<<<< HEAD
 
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
@@ -61,6 +68,8 @@ export interface AIEnhancementOptions {
       const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           content;
           enhancementType;
           context
@@ -76,9 +85,14 @@ export interface AIEnhancementOptions {
 
       setError(errorMessage);
       toast({
+<<<<<<< HEAD
         title: "AI Enhancement Failed";
         description: errorMessage
 import { useState } from 'react',;
+=======
+        title: "AI Enhancement Failed",
+  description: errorMessageimport { useState } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
 type EnhancementType =;
@@ -115,6 +129,7 @@ export function useAIContentEnhancer() {;
         }
       }),;
       if (error) {;
+<<<<<<< HEAD
         throw new Error(error.message);
 
 
@@ -128,12 +143,18 @@ export function useAIContentEnhancer() {;
         title: "AI Enhancement Failed",
         description: errorMessage,
         variant: "destructive"
+=======
+        throw new Error(error.message);        variant: "destructive"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
       console && console.error('Enhancement error:', err);
       return null
     } finally {
       setIsEnhancing(false)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   context?: string,
   instructions?: string;
 }
@@ -142,6 +163,7 @@ export /**
  */
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
+<<<<<<< HEAD
   const [error, set_error] = useState < string | null>(null);
 
 
@@ -194,3 +216,7 @@ if ( {) {
     error;
   }
 }
+=======
+  const [error, set_error] = useState < string | null>(null);  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

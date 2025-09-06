@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -10,6 +11,8 @@ export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -17,16 +20,20 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
 
   
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false,
     
     try {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .delete()
+<<<<<<< HEAD
       return false
 export const useDeleteMilestone = () =>: any {
   const { user } = use_auth ();
@@ -70,6 +77,8 @@ export const useDeleteMilestone = () => {;
     deleteMilestone;
     isSubmitting;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       toast && toast.success("Milestone deleted successfully");
       
@@ -78,6 +87,7 @@ export const useDeleteMilestone = () => {;
       console && console.error("Error deleting milestone:", err);
       toast && toast.error("Failed to delete milestone: " + err && err.message),
 
+<<<<<<< HEAD
       return false
 export const useDeleteMilestone = () =>: any {
   const { user } = use_auth ();
@@ -111,6 +121,12 @@ if (throw error) {
     }
 
 
+=======
+      return false    } finally {
+      setIsSubmitting (false);
+    }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -125,7 +141,10 @@ if (throw error) {
     } finally {
       setIsSubmitting(false)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 ;
   return {
@@ -133,10 +152,14 @@ if (throw error) {
     is_submitting;
   }
 }
+<<<<<<< HEAD
 ;
   }
 };
   }
 };
   }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };

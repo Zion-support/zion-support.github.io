@@ -13,6 +13,7 @@ import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
+<<<<<<< HEAD
 export function addWorkExperienceSection(;
 
   doc: jsPDF;
@@ -81,6 +82,9 @@ export function addWorkExperienceSection(;
     return dateB.getTime() - dateA.getTime()
   });
   for (const work of sortedWorkExperience) {
+=======
+export function addWorkExperienceSection(;  for (const work of sortedWorkExperience) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
@@ -106,8 +110,12 @@ export function addWorkExperienceSection(;
     if (work && work.location) {
       doc && doc.text(work && work.location, 70, yPos + 10)
     }
+<<<<<<< HEAD
     
     if (work && work.description) {
+=======
+        if (work && work.description) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(work && work.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
@@ -116,7 +124,10 @@ export function addWorkExperienceSection(;
 
     } else {
       yPos += 20
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -179,6 +190,7 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 
 
     }
@@ -372,3 +384,5 @@ doc.text (dateText, 20, yPos + 10);
   return yPos + 5
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

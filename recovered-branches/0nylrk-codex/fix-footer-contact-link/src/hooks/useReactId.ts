@@ -2,12 +2,16 @@
 
 import * as React from "react"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
  * React version is used where `useId` is unavailable, this hook provides
  * a small fallback that mimics the API using `useRef`.
+<<<<<<< HEAD
  */
 
 import * as React from &quot;react & quot;
@@ -41,3 +45,6 @@ if ( {) {
 ;
 
 
+=======
+ */
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -52,6 +53,37 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   
+=======
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReviewsList } from "@/components/reviews/ReviewsList",
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
+import { useReviews } from "@/hooks/useReviews",
+import { Project } from "@/types/projects",
+import { useAuth } from "@/hooks/useAuth",  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -86,7 +118,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
+<<<<<<< HEAD
                 {canLeaveReview ? (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
                     <p className="text-sm text-muted-foreground mb-3">
@@ -105,6 +140,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       Your review is{" "}
                       {userReview.status === "approved"
                         ? "published"
+<<<<<<< HEAD
                         : "pending approval"}
                     </p>
                     {userReview.status === "pending" && (
@@ -252,6 +288,9 @@ function ProjectReviewSection() {
       </CardContent>
       {/* Review Modal */}
       {(isClient || isTalent) && (;
+=======
+                        : "pending approval"}      {(isClient || isTalent) && (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       {(isClient || isTalent) && (
 
@@ -282,6 +321,7 @@ function ProjectReviewSection() {
       {(isClient || isTalent) && (
         <LeaveReviewModal
           projectId={project.id}
+<<<<<<< HEAD
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           isOpen={isReviewModalOpen}
@@ -292,6 +332,8 @@ function ProjectReviewSection() {
   );
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;
@@ -308,11 +350,19 @@ function ProjectReviewSection() {
               onReportReview={report_review}
             />;
           </div>) : (
+<<<<<<< HEAD
           <div className="bg - muted / 20 rounded - lg p - 6 text - center">;
             <h3 className="font - medium mb - 2">;
               Reviews will be available once the project is completed;
             </h3>;
             <p className="text - sm text - muted - foreground">;
+=======
+          <div className="bg - muted / 20 rounded - lg p - 6 text-center">;
+            <h3 className="font - medium mb-2">;
+              Reviews will be available once the project is completed;
+            </h3>;
+            <p className="text - sm text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               After the project is marked as completed, both parties will be;
               able to leave reviews;
             </p>;

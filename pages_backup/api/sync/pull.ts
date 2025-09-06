@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';
 ;
@@ -24,10 +21,15 @@ function handler() {
     events
     scope: requested_scope});
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/pull.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -36,6 +38,11 @@ function handler() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/pull.ts
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -72,19 +79,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-<<<<<<< HEAD
-    instanceId: state.config.instanceId,
-    lastSyncedAt: state.lastSyncedAt,
-    events,
-=======
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   if (req.method !== "POST" && req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -143,6 +144,7 @@ function handler() {
     lastSyncedAt: state.lastSyncedAt
     events
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/pull.ts
 <<<<<<< HEAD
 =======
@@ -150,3 +152,7 @@ function handler() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/pull.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

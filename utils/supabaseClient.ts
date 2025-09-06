@@ -11,6 +11,7 @@ export function getSupabaseClient(): ZionSupabase {try {;
       }
       return browser_client;
     }
+<<<<<<< HEAD
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
@@ -67,3 +68,5 @@ export function getSupabaseClient(): ZionSupabase {;
     return undefined;
   }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

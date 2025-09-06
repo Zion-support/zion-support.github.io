@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
@@ -28,12 +29,22 @@ export const quoteRequestService = {
 
 
 
+=======
+import {supabase} from "@/integrations/supabase/client";
+
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+
+import { supabase } from '@/integrations / supabase / client';
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
+<<<<<<< HEAD
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -81,12 +92,19 @@ export const quoteRequestService = {
   getById: async (id: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
+=======
+    return data && data.map((item: any) => ({
+
+      .select(`;
+        *;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .select(`
         *,
         talent:talent_id (
           display_name
         )
       `)
+<<<<<<< HEAD
       .eq('id', id)
       .single();
     if (error) throw error;
@@ -119,6 +137,25 @@ if (throw error) {
         talent:talent_id (
 
       talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+=======
+      .select(`
+        *,
+
+        talent:talent_id (
+
+        talent:talent_id (
+    return data && data.map((item: any) => ({
+
+      .order('created_at', { ascending: false });
+    if (error) throw error;
+    // Format the data to include talent_name
+    return data.map((item: any) => ({
+      ...item
+      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
+  }
+      ...item,
+      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
   
 
@@ -127,14 +164,19 @@ if (throw error) {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
+<<<<<<< HEAD
       updates && updates.replied_at = new Date().toISOString()
     }
+=======
+      updates && updates.replied_at = new Date().toISOString()    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
       const { data } = await supabase
         .from('quote_requests')
         .select('viewed_at')
         .eq('id', id)
+<<<<<<< HEAD
         .single();
 
       
@@ -142,6 +184,9 @@ if (throw error) {
         updates && updates.viewed_at = new Date().toISOString()
 
       }
+=======
+        .single();      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     const { data, error } = await supabase
       .from('quote_requests')
@@ -171,7 +216,10 @@ if (throw error) {
     return true
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .single(),
     
     if (error) throw error,
@@ -188,7 +236,10 @@ if (throw error) {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
   // Get all quote requests (for admin);
@@ -280,6 +331,7 @@ export const quoteRequestService = {;
       .delete();
       .eq('id', id),;
     if (error) throw error;
+<<<<<<< HEAD
     return true;
 
       .order('created_at', { ascending: false }),
@@ -368,3 +420,6 @@ if (throw error) {
   }
 };
 };
+=======
+    return true;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

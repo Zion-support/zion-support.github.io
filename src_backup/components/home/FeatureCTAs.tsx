@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -170,7 +167,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
   const features = [
     {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       key: 'ai_talent_matching',
       descriptionKey: 'ai_talent_matching_desc',
       detailsKey: 'ai_talent_matching_details',
@@ -243,7 +240,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       icon: <Calendar className = "h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
     };
-=======
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -263,7 +259,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
       link: '/project-milestones'
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
@@ -273,8 +269,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       badge: 'premium'
     }
 
-<<<<<<< HEAD
-=======
   ];
 
       >;
@@ -300,42 +294,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
                   {feature && feature.badge && (;
                     <Badge
                       variant='secondary'
-<<<<<<< HEAD
-                      className='bg-primary/20 text-primary'>                      {t(`badges.${feature && feature.badge}`)}
-                    </Badge>;
-                  )}
-                </div>;
-                    <Badge variant="secondary" className="bg-primary/20 text-primary">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  return (
-    <section
-      className={cn(
-        "py-16 bg-gradient-to-b from-background to-background/90"
-
-=======
                       className='bg-primary/20 text-primary'
                     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         className
       )}
-<<<<<<< HEAD
-      style={style}
-    >
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-3">
-            {t('home.features_heading')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('home.features_subheading')}
-          </p>
-        </div>
-                      {t(`badges.${feature.badge}`)}
-                    </Badge>
-                  )}
-                </div>
-<<<<<<< HEAD
-=======
       style={style}>;
       <div className="container mx-auto px-4">;
         <div className="mb-12 text-center">;
@@ -359,75 +322,47 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
-=======
 <CardTitle className='mt-4'>
                   {t(`features.${feature.key}`)}
                 </CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className='line-clamp-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {t(`features.${feature.descriptionKey}`)}
 
                   </CardDescription>;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 )}
               </CardHeader>
               <CardContent>
                 {feature.detailsKey && (
-<<<<<<< HEAD
-
-
-                  <p className="text-sm text-muted-foreground">
-=======
 <p className='text-sm text-muted-foreground'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {t(`features.${feature.detailsKey}`)}
                   </p>;
 
                 )}
               </CardContent>
               <CardFooter>
-<<<<<<< HEAD
-                <Button asChild className="w-full gap-1">
-
-
-
-=======
 <Button asChild className='w-full gap-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-<<<<<<< HEAD
-                    <span>
-                      {t('general.explore')} {t(`features.${feature.key}`)}
-                    </span>
-<<<<<<< HEAD
-                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
-                    href={feature.link}
-                    aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-                    className="cursor-pointer"
-                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
-                  >
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
-=======
                     <ArrowRight className='h-4 w-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 ;
@@ -457,7 +392,7 @@ import { Button } from '@/components/ui/ button';
 import { Badge } from '@/components/ui/ badge';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   ArrowRight,
   Users,
   Zap,
@@ -724,13 +659,10 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
         </div>
       </div>
     </section>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

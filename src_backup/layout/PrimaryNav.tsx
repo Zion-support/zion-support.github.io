@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -43,6 +41,7 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from 'react';
@@ -156,6 +155,8 @@ export function PrimaryNav() {;
         );    }
   };
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const { user } = useAuth(),;
@@ -184,7 +185,7 @@ export function PrimaryNav() {;
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
     }
   },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
 
         data-testid='header'>;
@@ -221,18 +222,10 @@ export function PrimaryNav() {;
           
 
           {/* Actions container with responsive layout */}
-<<<<<<< HEAD
-          <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
-            {/* Search form with clamped width */}
-            <form
-              onSubmit={handleSubmit}
-              className='flex-shrink-0'
-              style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
-=======
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -302,25 +295,6 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
-<<<<<<< HEAD
-                    router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
-                  } else if (;
-                    sugg && sugg.type === 'doc' &&;
-                    sugg && sugg.slug &&;
-                    sugg && sugg.slug.startsWith('/');
-                  ) {;
-                    // Documentation suggestions navigate directly to their path;
-                    router && router.push(sugg && sugg.slug);
-                  } else if (sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
-                    // Blog posts navigate to blog detail page;
-                    router && router.push(`/blog/${sugg && sugg.slug}`);
-                  } else {;
-                    // Default: search results page with query parameter;
-                    router && router.push(`/search?q=${encodeURIComponent(sugg && sugg.text)}`);
-                  }
-                  setQuery('');
-
-=======
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
                     // Documentation suggestions navigate directly to their path;
@@ -333,7 +307,7 @@ if ( {) {
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
                   }
                   setQuery(''),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
                     window && window.gtag('event', 'search_suggestion_click', {;
@@ -491,20 +465,13 @@ if ( {) {
                     {t('auth && auth.login')}
                   </Link>;
                   <Link
-<<<<<<< HEAD
-                    href='/signup'
-                    className='text-sm hover:text-primary whitespace-nowrap'>;
-                    {t('auth && auth.signup')}
-                  </Link>;
-                </>;
-=======
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>
                 </>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               )}
               {isLoggedIn && <UserMenu />}
 
@@ -543,7 +510,6 @@ if ( {) {
                 }}
               >;
 
-=======
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -552,7 +518,7 @@ export function PrimaryNav() {
                   setLoginOpen(true)
                 }}
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {t('auth.login')}
               </Link>
             )}
@@ -630,25 +596,13 @@ export function PrimaryNav() {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-<<<<<<< HEAD
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (;
-        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
-=======
           </button>
         </div>
       </header>
       {mobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-60 pt-16">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          <div
-<<<<<<< HEAD
 
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-    </>;
-=======
+          <div
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
@@ -663,7 +617,7 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 
 };
@@ -671,16 +625,6 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }setQuery ('');
 //Track analytics event ;
 
-<<<<<<< HEAD
-}searchSuggestions= {;
-  suggestions ;
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <LinkonClick={
-  (e) => {;
-  > {';
-  t ('auth && auth.login') ";
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
-  t ('auth && auth.signup') ;
-=======
 
 }searchSuggestions= {;
   suggestions ;
@@ -690,335 +634,36 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
   t ('auth.login') ";
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
   t ('auth.signup') ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link> </>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> </div> <ModeToggle /> <LanguageSelector /> {";
-<<<<<<< HEAD
-  !isLoggedIn && (<Linkhref="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
-  (e) => {;
-  e && e.preventDefault ();
-setLoginOpen (true) ;
-}';
-}t ('auth && auth.login') ;
-=======
   !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={;
   (e) => {;
   e.preventDefault ();
 setLoginOpen (true) ;
 }';
 }t ('auth.login') ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link>) ;
 }{;
   isLoggedIn && <UserMenu /> ;
 }</div> {;
   /* Mobile menu button */ ";
 }<button) : (<Menu className="h-6 w-6" />) ";
-<<<<<<< HEAD
-}</button> </div> </header> <divclassName="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
-  () => setMobileMenuOpen (false) ";
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenuunreadCount= {
-  unreadCount 
-}onClose= {
-=======
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
   () => setMobileMenuOpen (false) ";
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
   unreadCount ;
 }onClose= {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   () => setMobileMenuOpen (false) ;
 }openLoginModal= {;
   (returnToPath) => setLoginOpen (true) ;
 }/> </div> </div>) ;
 }{;
-<<<<<<< HEAD
-  isMobile && <MobileBottomNavunreadCount= {
-  unreadCount 
-}/> ;
-}<LoginModalisOpen= {
-  loginOpen 
-}onOpenChange= {
-  setLoginOpen 
-}/> </>) ;
-}'"  { opacity: 0,;
-  height: 0;
-}}
-              animate = {;
 
-  { opacity: 1,;
-  height: 'auto';
-}}
-              exit = {;
-
-  { opacity: 0,;
-  height: 0;
-}}
-              transition={{ duration: 0 && 0.3 }}";
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
-              <div className="px-4 py-6 space-y-4">;
-                {services && services.map((category, index) => (;
-                  <div key={index}>";
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
-                      {category && category.category}
-                    </h3>";
-                    <div className="space-y-2 ml-4">;
-                      {category && category.items.map((service: unknown, serviceIndex: unknown ;
-                        <Link
-                          key={serviceIndex}
-                          to={service && service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}>;
-                          {service && service.name}
-                        </Link>;
-                      ))}
-                    </div>;
-                  </div>;
-                ))}
-
-                <div className="pt-4 border-t border-white/10 space-y-2">;
-                  <Linkto="/solutions"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}>;
-                    Solutions;
-                  </Link>;
-                  <Linkto="/about"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}>;
-                    About;
-                  </Link>;
-                  <Linkto="/blog"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}>;
-                    Blog;
-                  </Link>;
-                  <Linkto="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}>;
-                    Contact;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          )};
-        </AnimatePresence>;
-      </nav>;
-    </header>;
-  )}
-'"`;
-
-}
-
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
-}setQuery ('')
-//Track analytics event
-}searchSuggestions= {
-  suggestions
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
-  (e) => {
-  > {'
-  t ('auth.login') "
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
-  t ('auth.signup')
-}</Link> </>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> </div> <ModeToggle /> <LanguageSelector /> {"
-  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
-  (e) => {
-  e.preventDefault ()
-setLoginOpen (true)
-}'
-}t ('auth.login')
-}</Link>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> {
-  /* Mobile menu button */ "
-}<button) : (<Menu className="h-6 w-6" />) "
-}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
-  () => setMobileMenuOpen (false) "
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount
-}onClose= {
-  () => setMobileMenuOpen (false)
-}openLoginModal= {
-  (returnToPath) => setLoginOpen (true)
-}/> </div> </div>)
-}{
-  isMobile && <MobileBottomNav unreadCount= {
-<<<<<<< HEAD
-  unreadCount
-
-  unreadCount 
-
-
-}/>
-}<LoginModal isOpen= {
-  loginOpen
-}onOpenChange= {
-  setLoginOpen
-}/> </>)
-}'"  { opacity: 0
-  height: 0
-}}
-              animate = {
-  { opacity: 1
-  height: 'auto'
-}}
-              exit = {
-  { opacity: 0
-  height: 0
-          <button;
-            className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
-            on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
-            aria - expanded={mobileMenuOpen}
-            aria - label={t ('general.toggle_mobile_menu')}          >;
-            {mobileMenuOpen ? (
-              <X className='h - 6 w - 6' />) : (
-              <Menu className='h - 6 w - 6' />)}
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
-          <div;
-            className='absolute inset - 0 bg - black / 50 backdrop - blur - sm';
-            on_click={() => setMobileMenuOpen (false)}
-            aria - hidden='true'          />;
-          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>;
-            <MobileMenu;
-              unread_count={unread_count}
-              on_close={() => setMobileMenuOpen (false)}
-              openLoginModal={returnToPath => setLoginOpen (true)}            />;
-          </div>;
-        </div>)}
-      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>);
-}
-return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
-}set_query ('');
-//Track analytics event;
-}search_suggestions= {
-  suggestions;
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link on_click={
-  (e) => {
-  > {';
-  t ('auth.login') ";
-}</Link> <Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" > {';
-  t ('auth.signup');
-}</Link> </>);
-}{
-  isLoggedIn && <UserMenu />;
-}</div> </div> <ModeToggle /> <LanguageSelector /> {";
-  !isLoggedIn && (<Link href="/auth / login" className="text - sm hover:text - primary" data - testid="login - link" on_click={
-  (e) => {
-  e.prevent_default ();
-setLoginOpen (true);
-}';
-}t ('auth.login');
-}</Link>);
-}{
-  isLoggedIn && <UserMenu />;
-}</div> {
-  /* Mobile menu button */ ";
-}<button) : (<Menu className="h - 6 w - 6" />) ";
-}</button> </div> </header> <div className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={
-  () => setMobileMenuOpen (false) ";
-}aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" > <MobileMenu unread_count= {
-  unread_count;
-}on_close= {
-  () => setMobileMenuOpen (false);
-}openLoginModal= {
-  (returnToPath) => setLoginOpen (true);
-}/> </div> </div>);
-}{
-  is_mobile && <MobileBottomNav unread_count= {
-  unread_count;
-}/>;
-}<LoginModal is_open= {
-  login_open;
-}onOpenChange= {
-  setLoginOpen;
-}/> </>);
-}'"  { opacity: 0,
-  height: 0;
-}}
-              animate = {
-  { opacity: 1,
-  height: 'auto';
-}}
-              exit = {
-  { opacity: 0,
-  height: 0;
-}}
-              transition={{ duration: 0.3 }}";
-              className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";
-              <div className="px - 4 py - 6 space - y-4">;
-                {services.map ((category, index) => (
-                  <div key={index}>";
-                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">;
-                      {category.category}
-
-
-
-
-;
-
-                    </h3>";
-                    <div className="space - y-2 ml - 4">;
-                      {category.items.map ((service: unknown, service_index: unknown;
-                        <Link;
-                          key={service_index}
-                          to={service.path}";
-                          className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                          on_click={( setIsOpen (false)}
-                        >;
-                          {service.name}
-                        </Link>))}
-                    </div>;
-                  </div>))}
-                <div className="pt - 4 border - t border - white / 10 space - y-2">;
-                  <Link                    to="/solutions";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Solutions;
-                  </Link>;
-                  <Link                    to="/about";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    About;
-                  </Link>;
-                  <Link                    to="/blog";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Blog;
-                  </Link>;
-                  <Link                    to="/contact";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Contact;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-    </header>)}
-'"`;
-}
-
-;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   isMobile && <MobileBottomNav unreadCount= {;
   unreadCount ;
 }/> ;
@@ -1028,4 +673,4 @@ setLoginOpen (true);
   setLoginOpen ;
 }/> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

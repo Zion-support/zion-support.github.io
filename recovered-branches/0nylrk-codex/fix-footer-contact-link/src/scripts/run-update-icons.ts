@@ -2,7 +2,10 @@
 const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
 
 console && console.log('Running icon import updater...');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
@@ -14,7 +17,10 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
     console && console.error(`Error executing script: ${error}`);
     return
   }
+<<<<<<< HEAD
   if (stderr) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console && console.error(stderr)
   }
 });
@@ -56,6 +62,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   
   console && console.log('Icon imports updated successfully!')
 
+<<<<<<< HEAD
 });
 
 
@@ -117,3 +124,5 @@ return
 });
 });
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -9,6 +9,7 @@ export function useResumeBasic() {;
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
+<<<<<<< HEAD
     // From useFetchResume
     isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;
     error: fetchResumeOperations.error |resumeActions.error;
@@ -40,6 +41,9 @@ export function useResumeBasic() {;
 }
     isLoading: fetchResumeOperations && fetchResumeOperations.isLoading || resumeActions && resumeActions.isLoading;
     error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+=======
+    // From useFetchResume    error: fetchResumeOperations && fetchResumeOperations.error || resumeActions && resumeActions.error;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     resume: fetchResumeOperations && fetchResumeOperations.resume;
     fetchResume: fetchResumeOperations && fetchResumeOperations.fetchResume;
     

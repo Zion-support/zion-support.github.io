@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -9,15 +12,19 @@ import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 
+<<<<<<< HEAD
 
 export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react",
@@ -36,6 +43,8 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   
   const clientId = userId || user?.id,
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
@@ -43,6 +52,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     }
     try {
 
+<<<<<<< HEAD
   
   const clientId = userId || user?.id,
 
@@ -51,6 +61,13 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       
 
 
+=======
+      setIsLoading(true),
+      
+
+  
+  const clientId = userId || user?.id,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false),
@@ -60,6 +77,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setIsLoading(true);
       setIsLoading(true),
       
+<<<<<<< HEAD
       let query = supabase
         .from("jobs")
         .select("*")
@@ -148,11 +166,17 @@ if (throw fetch_error) {
 
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
+=======
+        .from("jobs")
+        .select("*")
+        .eq("client_id", clientId)    try {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { error: updateError } = await supabase
         .from("jobs")
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
 
 
       
@@ -160,6 +184,8 @@ if (throw fetch_error) {
       
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Update local state
       setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
       toast && toast.success("Job status updated successfully");
@@ -168,6 +194,7 @@ if (throw fetch_error) {
       console && console.error("Error updating job status:", err);
       toast && toast.error("Failed to update job status");
       return false
+<<<<<<< HEAD
     }
 
 
@@ -190,6 +217,9 @@ if (throw fetch_error) {
 
 
       // Update local state
+=======
+    }      // Update local state
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
       toast && toast.success("Job deleted successfully");
       return true
@@ -211,7 +241,10 @@ if (throw fetch_error) {
     update_job,
     getJobById;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -303,12 +336,17 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
+<<<<<<< HEAD
 
 
   }
 }
 ;
   }
+=======
+  }
+};  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
   }
 };

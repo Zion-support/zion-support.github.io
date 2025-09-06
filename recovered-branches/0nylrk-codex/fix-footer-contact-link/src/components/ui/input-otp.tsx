@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
 
 
+=======
+import { cn } from "@/lib/utils"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input - otp';
 import {Dot} from 'lucide-react';
@@ -9,14 +13,18 @@ import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
+<<<<<<< HEAD
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
 
 const InputOTP = React && React.forwardRef<;
@@ -106,15 +114,26 @@ const InputOTPSlot = React && React.forwardRef<;
   />;
 ));
       {char}
+=======
+></typeof>(({ className, containerClassName, ...props }, ref) => (  <OTPInput
+    ref={ref}
+    containerClassName={cn(      {char}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
         </div>;
       )}
+<<<<<<< HEAD
 
     </div>
 
   )
+=======
+    </div>;
+  );
+});  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 })
 InputOTPSlot.displayName = "InputOTPSlot"
 
@@ -122,12 +141,18 @@ const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >(({ ...props }, ref) => (
   <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 InputOTPSlot && InputOTPSlot.displayName = 'InputOTPSlot';
 
 const InputOTPSeparator = React && React.forwardRef<;
@@ -141,6 +166,7 @@ const InputOTPSeparator = React && React.forwardRef<;
 InputOTPSeparator && InputOTPSeparator.displayName = 'InputOTPSeparator';
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+<<<<<<< HEAD
 
     </div>;
   );
@@ -207,6 +233,11 @@ InputOTPSeparator.displayName = "InputOTPSeparator"
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
+=======
+))
+InputOTPSeparator.displayName = "InputOTPSeparator"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 InputOTP.displayName = "InputOTP";
 ;
 const InputOTPGroup = React.forwardRef<;

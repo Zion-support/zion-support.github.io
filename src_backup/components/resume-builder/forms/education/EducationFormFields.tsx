@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -19,6 +20,8 @@ import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -29,6 +32,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import { Button } from '@/components/ui/ button';
@@ -37,12 +41,16 @@ import { Input } from '@/components/ui/ input';
 import { Checkbox } from '@/components/ui/ checkbox';
 import { Alert, AlertDescription } from '@/components/ui/ alert';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
 <<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/ form';
@@ -96,6 +104,8 @@ function EducationFormFields() {
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
@@ -123,7 +133,7 @@ import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Form {...form}>;
 
@@ -255,11 +265,8 @@ const educationSchema = null;
 
 
             )}
-<<<<<<< HEAD
-          />;
-=======
           />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 
           <div className='space-y-4'>;
             <FormField
@@ -269,16 +276,6 @@ const educationSchema = null;
 
 
                     <Checkbox
-<<<<<<< HEAD
-                      checked = {field && field.value,}
-                      onCheckedChange = {field && field.onChange,}
-                    />;
-                  </FormControl>;
-                  <div className='space-y-1 leading-none'>;
-                    <FormLabel>I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>;
-=======
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -287,7 +284,7 @@ const educationSchema = null;
                     <FormLabel>I am currently studying here</FormLabel>
                   </div>
                 </FormItem>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               )}
 
             />;
@@ -397,11 +394,8 @@ const educationSchema = null;
 
 
         <FormField
-<<<<<<< HEAD
-          control={form && form.control}
-=======
           control={form.control}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
@@ -460,50 +454,5 @@ const educationSchema = null;
         </div>
       </form>
     </Form>
-<<<<<<< HEAD
-  )
-
-        />;
-
-        {error && (;
-          <Alert variant='destructive'>;
-            <AlertDescription>{error}</AlertDescription>;
-          </Alert>;
-        )}
-
-        <div className='flex justify-between pt-2'>;
-          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
-          </Button>;
-
-          <Button type='submit' disabled={isLoading}>;
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-            {isEditing ? 'Update' : 'Add'} Education;
-          </Button>;
-        </div>;
-      </form>;
-    </Form>;
   );
-}
-
-            </FormItem>)}
-        />;
-        {error && (
-          <Alert variant='destructive'>;
-            <AlertDescription>{error}</AlertDescription>;
-          </Alert>)}
-        <div className='flex justify - between pt - 2'>;
-          <Button type='button' variant='outline' on_click={on_cancel}>            {is_editing ? 'Cancel' : 'Back'}
-          </Button>;
-          <Button type='submit' disabled={is_loading}>;
-            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
-            {is_editing ? 'Update' : 'Add'} Education;
-          </Button>;
-        </div>;
-      </form>;
-    </Form>);
-}
-
-}
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,10 +1,16 @@
 
 
+<<<<<<< HEAD
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 
 
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate  } from 'react-router-dom';
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect, useCallback } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {toast} from "sonner";
@@ -20,6 +26,7 @@ import {useJobs} from "@/hooks/useJobs";
 import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
+<<<<<<< HEAD
 
 
 
@@ -68,6 +75,14 @@ export function JobPostingForm(): any ({ jobId, onSuccess }: JobPostingFormProps
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
 
+=======
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",  const navigate = useNavigate();
+  const { createJob, updateJob, getJobById } = useJobs();
+  const [isFormLoading, setIsFormLoading] = useState(false);
+  const [editorContent, setEditorContent] = useState("");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
@@ -82,8 +97,11 @@ function JobPostingForm() {
   const [isFormLoading, setIsFormLoading] = useState (false);
   const [editor_content, setEditorContent] = useState ("");
 ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
 
   const {;
@@ -96,9 +114,12 @@ function JobPostingForm() {
     is_remote;
     setIsRemote;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
     form,
     isLoading,
@@ -108,6 +129,7 @@ function JobPostingForm() {
     setEndDate,
     isRemote,
     setIsRemote,
+<<<<<<< HEAD
     submitJob
 
   } = useJobForm({ jobId, onSuccess }),
@@ -117,6 +139,9 @@ function JobPostingForm() {
 
 
   useEffect(() => {
+=======
+    submitJob  useEffect(() => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (jobId) {
       setIsFormLoading(true),
       getJobById(jobId)
@@ -140,6 +165,7 @@ function JobPostingForm() {
                   // @ts-ignore - We know these fields exist in our form
                   setValue(key, value as any)
                 } catch (e) {
+<<<<<<< HEAD
                   // Skip fields that don't exist in our form
 
 import React, { useState, useEffect, useCallback } from 'react',;
@@ -251,13 +277,22 @@ export function JobPostingForm({ jobId, onSuccess } JobPostingFormProps) {;
               } else if (key === 'description') {;
                 setEditorContent(value as string);
                 setEditorContent(value as string),;
+=======
+                  // Skip fields that don't exist in our form      setIsFormLoading(true);              } else if (key === 'is_remote') {;
+                setIsRemote(value as boolean);
+              } else if (key === 'description') {;
+                setEditorContent(value as string),;                setEditorContent(value as string),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 setValue('description', value as string);
               } else {;
                 try {;
                   // @ts-ignore - We know these fields exist in our form;
                   setValue(key, value as any);
                 } catch (e) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     submit_job;
   } = useJobForm ({ job_id, on_success });
 ;
@@ -305,6 +340,7 @@ if ( {) {
                 try {
                   // @ts - ignore - We know these fields exist in our form;
                   set_value (key, value as any);
+<<<<<<< HEAD
                 } catch (e) {
 
                   // Skip fields that don't exist in our form;
@@ -331,10 +367,14 @@ if ( {) {
     setValue('description', value)
 
   }, [setValue]),
+=======
+                } catch (e) {  }, [setValue]),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
 
+<<<<<<< HEAD
 
     try {
       const jobData = await submitJob(values)
@@ -343,6 +383,8 @@ if ( {) {
         toast.success("Job updated successfully!")
       } else {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
@@ -350,7 +392,10 @@ if ( {) {
 
         });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleEditorChange = useCallback((value: string) => {;
     setEditorContent(value),;
     setValue('description', value);
@@ -365,8 +410,12 @@ if ( {) {
       if (jobId) {;
 
         await updateJob(jobId, jobData);
+<<<<<<< HEAD
         toast && toast.success("Job updated successfully!");
         await updateJob(jobId, jobData);
+=======
+        toast && toast.success("Job updated successfully!");        await updateJob(jobId, jobData);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         toast && toast.success("Job updated successfully!");
       } else {;
         await createJob(jobData);
@@ -377,6 +426,7 @@ if ( {) {
       if (onSuccess) {;
         onSuccess();
       }
+<<<<<<< HEAD
     } catch (error: any) {;
       console && console.error("Error creating/updating job:", error);
       toast && toast.error(error && error.message || "Failed to post job");
@@ -404,10 +454,13 @@ if ( {) {
         await updateJob(jobId, jobData),;
         toast.success("Job updated successfully!");
       } else {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         await createJob(jobData),;
         toast.success("Job posted successfully!"),;
         form.reset(),;
         setEditorContent("");
+<<<<<<< HEAD
       }
 
 
@@ -544,6 +597,12 @@ if ( {) {
               type="checkbox";
               id="isRemote";
               checked={isRemote}
+=======
+      }              type="checkbox"
+              id="isRemote"
+              checked={isRemote}              className="mr-2"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
@@ -557,6 +616,7 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting |isFormLoading}>
           {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+<<<<<<< HEAD
 
 
 
@@ -564,11 +624,14 @@ if ( {) {
 
 
         <DescriptionFields 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           control={form.control} 
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
+<<<<<<< HEAD
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
 
 
@@ -677,3 +740,12 @@ if ( {) {
 ;
 ;
 }
+=======
+          {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}            />;
+            Remote;
+          </Label>;
+        </div>;
+}}
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

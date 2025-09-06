@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-=======
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -14,6 +13,11 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/members.ts
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -93,6 +97,7 @@ import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (!companyId |typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
@@ -111,11 +116,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     const r: EnterpriseRole = role || "viewer";
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
+=======
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
 <<<<<<< HEAD
 =======
@@ -128,6 +139,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/members.ts
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -196,6 +212,7 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/enterprise/companies/[companyId]/members.ts
 <<<<<<< HEAD
 =======
@@ -203,6 +220,10 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/members.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     const member = store.addMember(companyId, name, email, r);
@@ -220,6 +241,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   if (req.method === 'GET') {
     const { memberId, role } = req.body || {};
@@ -232,13 +257,12 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
   if (!companyId || typeof companyId !== 'string') {
     return res.status(400).json({ error: 'companyId required' })
   }
   const company = null;
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'member_not_found' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
   } catch (error) {
@@ -249,6 +273,7 @@ if ( {) {
 ;
   if (req.method === 'GET') {
     const { memberId } = req.query;
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const ok = store.removeMember(companyId, memberId);
@@ -285,13 +310,14 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
 if (!memberId || typeof memberId !== 'string')
       return res.status(400).json({ error: 'memberId required' });
     const ok = store.removeMember(companyId, memberId);
@@ -303,8 +329,12 @@ if (!memberId || typeof memberId !== 'string')
   return res.status(405).json({ error: 'method_not_allowed' });
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/enterprise/companies/[companyId]/members.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

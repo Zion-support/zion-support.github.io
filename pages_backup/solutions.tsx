@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ import {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -42,7 +45,6 @@ const solutions = [
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
   }
 ];
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -164,35 +166,10 @@ export default function Solutions() {
     'Professional Services',
     'Non-Profit Organizations',
   ];
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function SolutionsPage() {
   return (
-<<<<<<< HEAD
-    <Layout
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for businesses of all sizes"
-      keywords="solutions, enterprise, cloud, AI, technology solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Technology{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to meet your business needs and drive growth.
-=======
     <>
       <Head>
         <title>Solutions - Zion Tech Group</title>
@@ -220,34 +197,12 @@ export default function SolutionsPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 From startups to enterprises, we provide tailored technology
                 solutions that drive growth, efficiency, and innovation.
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Solutions Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{solution.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
-=======
         {/* Solutions Overview */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -279,7 +234,7 @@ export default function SolutionsPage() {
                   <p className="text-gray-600 mb-6">{solution.description}</p>
 
                   <ul className="space-y-2 mb-6">
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -287,9 +242,6 @@ export default function SolutionsPage() {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                </motion.div>
-=======
 
                   <Link
                     href={solution.href}
@@ -299,12 +251,13 @@ export default function SolutionsPage() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -335,8 +288,10 @@ export default function SolutionsPage() {
                   View All Services
 <<<<<<< HEAD:pages_backup/solutions.tsx
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -585,7 +540,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 </a>
               </div>
             </motion.div>
-=======
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -698,7 +652,7 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 View Our Services
               </Link>
             </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
         {/* Solution Capabilities */}
@@ -901,21 +855,28 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </Layout>
   );
 }
 <<<<<<< HEAD:pages_backup/solutions.tsx
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </UltraAdvancedFuturisticBackground>
   )
 
@@ -954,11 +915,8 @@ export default Solutions,
 
 },
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -976,8 +934,13 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
 export default Solutions;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

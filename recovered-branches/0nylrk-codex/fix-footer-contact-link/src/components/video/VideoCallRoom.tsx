@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+<<<<<<< HEAD
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
 import './video-call ;
 interface Participant {;
@@ -93,6 +97,12 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
     if (onToggleVideo) {;
       onToggleVideo(newVideoState);
 interface Participant {
+=======
+import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';  onLeave;
+  onToggleMute;
+  onToggleVideo;
+  onToggleScreenShare;interface Participant {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,
   name: string,
   avatar?: string,
@@ -100,12 +110,15 @@ interface Participant {
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
+<<<<<<< HEAD
 
 
     }
 
 
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
 
 import React, { useState } from 'react',;
@@ -178,6 +191,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     // If turning video back on, ensure we're not in audio-only mode
     if (newVideoState) {
       setIsAudioOnly(false)
+<<<<<<< HEAD
     }
 
     }
@@ -199,6 +213,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
   };
 
+=======
+    }    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
@@ -221,15 +240,21 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onLeave()
     }
 
+<<<<<<< HEAD
   };
 
 
   };
+=======
+  }
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
+<<<<<<< HEAD
     if (onToggleScreenShare) {;
       onToggleScreenShare(newScreenShareState);
     }
@@ -246,6 +271,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onToggleScreenShare) {;
       onToggleScreenShare(newScreenShareState);
     }
+=======
+    }
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);    if (onToggleScreenShare) {;
+      onToggleScreenShare(newScreenShareState);
+    }
+
+  };
+
+  const handleToggleAudioOnly = () => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
@@ -254,6 +290,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       }
     }
 
+<<<<<<< HEAD
   };
 
   const handleLeaveCall = () => {;
@@ -267,6 +304,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
@@ -275,11 +314,15 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
 
+<<<<<<< HEAD
             Room: {roomId}
     }
 
 
 
+=======
+            Room: {roomId}    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
   return (
@@ -399,6 +442,7 @@ if ( {) {
 ;
   return (
     <Card className={`w - full ${class_name || 'max - w-5xl mx - auto'}`}>;
+<<<<<<< HEAD
       <CardHeader className="flex flex - row items - center justify - between bg - zion - blue - dark rounded - t-lg p - 4">;
         <div className="flex items - center space - x-2">;
           <CardTitle className="text - white">Video Call</CardTitle>;
@@ -411,10 +455,25 @@ if ( {) {
             {format_duration (call_duration)}
           </Badge>;
           <Badge variant="outline" className="text - white">;
+=======
+      <CardHeader className="flex flex - row items - center justify - between bg - zion - blue - dark rounded - t-lg p-4">;
+        <div className="flex items - center space-x-2">;
+          <CardTitle className="text-white">Video Call</CardTitle>;
+          <Badge variant="outline" className="text - white border - zion - purple bg - zion - blue-light">;
+            Room: {room_id}
+          </Badge>;
+        </div>;
+        <div className="flex items - center space-x-2">;
+          <Badge variant="secondary" className="bg - zion - blue - light text-white">;
+            {format_duration (call_duration)}
+          </Badge>;
+          <Badge variant="outline" className="text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {participants.length} participant{participants.length !== 1 ? 's' : ''}
           </Badge>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
       <CardContent className="p - 0">;
         <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
 
@@ -530,6 +589,16 @@ if ( {) {
           <Button
             variant="outline"
             size="icon"
+=======
+      <CardContent className="p-0">;
+        <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-4">;
+          {participants.length > 0 ? (
+            participants.map ((participant) => (
+              <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow-hidden relative">;
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (          </Button>;
+
+          <Button
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           
           <Button 
 
@@ -539,6 +608,7 @@ if ( {) {
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
 
+<<<<<<< HEAD
           </Button>;
 
           <Button
@@ -575,6 +645,8 @@ if ( {) {
             variant="destructive" 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -603,6 +675,7 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
   );
   );
 
@@ -622,10 +695,30 @@ if ( {) {
                     <Avatar className="h - 20 w - 20">;
                       <AvatarImage src={participant.avatar} alt={participant.name} />;
                       <AvatarFallback className="bg - zion - purple text - white text - 2xl">;
+=======
+  );  );
+
+},
+
+};
+                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text-white">;
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h - 12 w - 12 opacity-50" />;
+                  </div>) : participant.isScreenSharing ? (
+                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text-white">;
+                    {/* Placeholder for screen share */}
+                    <ScreenShare className="h - 12 w - 12 opacity-50" />;
+                  </div>) : (
+                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify-center">;
+                    <Avatar className="h - 20 w-20">;
+                      <AvatarImage src={participant.avatar} alt={participant.name} />;
+                      <AvatarFallback className="bg - zion - purple text - white text-2xl">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         {participant.name.char_at (0).toUpperCase ()}
                       </AvatarFallback>;
                     </Avatar>;
                   </div>)}
+<<<<<<< HEAD
                 <div className="video - metadata flex items - center space - x-2">;
                   <span>{participant.name}</span>;
                   {participant.is_muted && <MicOff className="h - 4 w - 4" />}
@@ -636,15 +729,35 @@ if ( {) {
               <Video className="h - 16 w - 16 mb - 4 opacity - 30" />;
               <p className="text - center text - lg mb - 2">No participants yet</p>;
               <p className="text - center text - sm text - gray - 300">;
+=======
+                <div className="video - metadata flex items - center space-x-2">;
+                  <span>{participant.name}</span>;
+                  {participant.is_muted && <MicOff className="h - 4 w-4" />}
+                  {participant.is_host && <Badge variant="secondary" className="text-xs">Host</Badge>}
+                </div>;
+              </div>))) : (
+            <div className="col - span - full flex flex - col items - center justify - center py - 12 text-white">;
+              <Video className="h - 16 w - 16 mb - 4 opacity-30" />;
+              <p className="text - center text - lg mb-2">No participants yet</p>;
+              <p className="text - center text - sm text - gray-300">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Share the meeting link to invite others;
               </p>;
             </div>)}
         </div>;
+<<<<<<< HEAD
         <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space - x-3">;
           <Button;
             variant="outline";
             size="icon";
             className="video - button rounded - full h - 10 w - 10";
+=======
+        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space-x-3">;
+          <Button;
+            variant="outline";
+            size="icon";
+            className="video - button rounded - full h - 10 w-10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_click={handleToggleMute}
           >;
             {is_muted ? <MicOff /> : <Mic />}
@@ -652,7 +765,11 @@ if ( {) {
           <Button;
             variant="outline";
             size="icon";
+<<<<<<< HEAD
             className="video - button rounded - full h - 10 w - 10";
+=======
+            className="video - button rounded - full h - 10 w-10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_click={handleToggleVideo}
           >;
             {isVideoEnabled ? <Video /> : <VideoOff />}
@@ -660,7 +777,11 @@ if ( {) {
           <Button;
             variant="outline";
             size="icon";
+<<<<<<< HEAD
             className="video - button rounded - full h - 10 w - 10";
+=======
+            className="video - button rounded - full h - 10 w-10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_click={handleToggleScreenShare}
           >;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
@@ -668,7 +789,11 @@ if ( {) {
           <Button;
             variant="outline";
             size="icon";
+<<<<<<< HEAD
             className="video - button rounded - full h - 10 w - 10";
+=======
+            className="video - button rounded - full h - 10 w-10";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_click={handleToggleAudioOnly}
           >;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
@@ -676,15 +801,23 @@ if ( {) {
           <Button;
             variant="destructive";
             size="icon";
+<<<<<<< HEAD
             className="video - button video - button - danger rounded - full h - 10 w - 10";
             on_click={handleLeaveCall}
           >;
             <Phone className="rotate - 135" />;
+=======
+            className="video - button video - button - danger rounded - full h - 10 w-10";
+            on_click={handleLeaveCall}
+          >;
+            <Phone className="rotate-135" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </div>;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 ;
   ),;
 },; interface Participant {
@@ -747,3 +880,6 @@ if (onToggleVideo) {
 },
 };
 },
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

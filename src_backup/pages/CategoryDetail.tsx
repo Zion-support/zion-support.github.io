@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -21,7 +19,7 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -262,19 +260,9 @@ function generateInnovationListing (index: number): ProductListing {
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
-<<<<<<< HEAD
-  const seoDescription = null;
-    category.description || 'Explore listings in this category.'
-
-        setCategory(currentCategory)
-        innovationCounterRef.current = 0
-    : 'Category | Zion Marketplace'
-  const seoDescription = null;
-    category.description || 'Explore listings in this category.'
-=======
   const seoDescription =
     category.description |'Explore listings in this category.'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -331,8 +319,6 @@ function generateInnovationListing (index: number): ProductListing {
               ))}
             </div>
           )}
-<<<<<<< HEAD
-=======
           </div>
         </div>
       </Suspense>
@@ -349,4 +335,4 @@ return (<> <NextSeo title= {;
 }</div>) ;
 }</div> </div> </Suspense> </>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

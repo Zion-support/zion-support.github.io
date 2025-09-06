@@ -17,6 +17,7 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (!content.includes('
     
     // Clean up any remaining conflict markers
@@ -88,3 +89,7 @@ function main() {
 
 // Run the resolution
 main();
+=======
+    
+    // Clean up any remaining conflict markers
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

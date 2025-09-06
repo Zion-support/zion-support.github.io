@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
 import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
+<<<<<<< HEAD
 import {MilestoneStatus} from './types';
 
 export const use_milestones = (project_id?: string) =>: any {
@@ -45,6 +49,9 @@ if (return null, ) {
 
 
 import { useState } from 'react',;
+=======
+import {MilestoneStatus} from './types';import { useState } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
 import { useUpdateMilestone } from './useUpdateMilestone',;
@@ -76,12 +83,17 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
+<<<<<<< HEAD
 
 
   }
 }
 ;
 
+=======
+  }
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -124,5 +136,8 @@ export const useMilestones = (projectId?:string) => {;
 };
   }
 };
+<<<<<<< HEAD
   }
 };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -31,3 +31,8 @@ const { execSync } = require('child_process')
         this.log(` ${fixer.name} "failed"`)
       this.log(` ${fixer.name} "crashed"`)
 
+<<<<<<< HEAD
+=======
+      this.log(`Error processing fixer "queue"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

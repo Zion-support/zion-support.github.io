@@ -17,8 +17,11 @@ export function ProjectDetailsStep({
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
+<<<<<<< HEAD
 
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -57,6 +60,7 @@ export function ProjectDetailsStep({
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
+<<<<<<< HEAD
 
 
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
@@ -71,6 +75,8 @@ export function ProjectDetailsStep({
           Contact Information
         </h3>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -124,6 +130,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
+<<<<<<< HEAD
 
 
 value={formData.contactInfo.name}
@@ -145,6 +152,9 @@ value={formData.contactInfo.name}
           </div>
 
           <div>
+=======
+              value={formData.contactInfo.name}          <div>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
@@ -172,6 +182,7 @@ value={formData.contactInfo.name}
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
 
               value={formData.contactInfo.email}
               onChange={(e) =>
@@ -187,6 +198,8 @@ value={formData.contactInfo.name}
           </div>
 
           <div>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
             </Label>
@@ -208,19 +221,39 @@ value={formData.contactInfo.name}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
+import { QuoteFormData  } from '@/types / quotes';
+import { Input  } from '@/components / ui / input';
+import { Label  } from '@/components / ui / label';
+import { Textarea  } from '@/components / ui / textarea';
+interface ProjectDetailsStepProps {
+  form_data: QuoteFormData;
+  updateFormData: (data: Partial < QuoteFormData>) => void;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />;
           </div>;
         </div>;
       </div>;
       <div>;
+<<<<<<< HEAD
         <h3 className="text - xl font - semibold text - white mb - 4">;
           Contact Information;
         </h3>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
             <Label html_for="name" className="text - zion - slate - light">;
+=======
+        <h3 className="text - xl font - semibold text - white mb-4">;
+          Contact Information;
+        </h3>;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+          <div>;
+            <Label html_for="name" className="text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Name;
             </Label>;
             <Input;
@@ -235,11 +268,19 @@ value={formData.contactInfo.name}
                   },
                 });
               }
+<<<<<<< HEAD
               className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
             />;
           </div>;
           <div>;
             <Label html_for="company" className="text - zion - slate - light">;
+=======
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="company" className="text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Company;
             </Label>;
             <Input;
@@ -254,11 +295,19 @@ value={formData.contactInfo.name}
                   },
                 });
               }
+<<<<<<< HEAD
               className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
             />;
           </div>;
           <div>;
             <Label html_for="email" className="text - zion - slate - light">;
+=======
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="email" className="text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Email;
             </Label>;
             <Input;
@@ -274,11 +323,19 @@ value={formData.contactInfo.name}
                   },
                 });
               }
+<<<<<<< HEAD
               className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
             />;
           </div>;
           <div>;
             <Label html_for="phone" className="text - zion - slate - light">;
+=======
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="phone" className="text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Phone;
             </Label>;
             <Input;
@@ -293,13 +350,18 @@ value={formData.contactInfo.name}
                   },
                 });
               }
+<<<<<<< HEAD
               className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text - white";
+=======
+              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
             />;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
     </div>);
 }
 
@@ -343,3 +405,8 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 ;
 }
 ;
+=======
+    </div>);}
+
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,30 +1,11 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
-  try {
-    // Mock design map data
-    const designMap = {
-      route: '/design-system',
-      products: ['zion-os', 'zion-gpt', 'zion-marketplace'],
-      tokens: {
-        colors: {
-          primary: '#3B82F6',
-          secondary: '#8B5CF6',
-          accent: '#F59E0B'
-        },
-        typography: {
-          fontSizes: {
-            sm: '0.875rem',
-            base: '1rem',
-            lg: '1.125rem',
-            xl: '1.25rem'
-          }
-        }
-      }
-    };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+
+<<<<<<< HEAD
     res.status(200).json(designMap);
     return;
   } catch (e: unknown) {
@@ -34,6 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   getZionDesignMap
   buildTokenSet
@@ -50,6 +33,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   try {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 <<<<<<< HEAD
 =======
@@ -58,6 +42,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default async function handler(req, res) {
   try {
     const base = getZionDesignMap();
@@ -113,6 +101,7 @@ export default async function handler(req, res) {
 import { getZionDesignMap, buildTokenSet, fetchLovableTokens } from '../../utils/design-map';
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 <<<<<<< HEAD
 =======
@@ -123,6 +112,12 @@ export default async function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   getZionDesignMap,
   buildTokenSet,
@@ -134,14 +129,19 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const base = getZionDesignMap();
     const [localTokens, cmsTokens] = await Promise.all([;
       buildTokenSet();
       fetchLovableTokens()]);
     const tokens = {;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 <<<<<<< HEAD
 =======
@@ -149,6 +149,9 @@ export default async function handler(
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
       colors: { ...localTokens.colors, ...(cmsTokens?.colors |{}) }
@@ -157,12 +160,17 @@ export default async function handler(
   } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
       colors: { ...localTokens.colors, ...(cmsTokens?.colors || {}) };
       typography: {;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes || {}) }}}
 ;
     res.status(200).json({ route: base.route, products: base.products, tokens });
@@ -176,6 +184,7 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -218,31 +227,38 @@ export default async function handler(
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/design-map.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/design-map.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

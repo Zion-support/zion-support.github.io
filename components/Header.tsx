@@ -236,6 +236,7 @@ const Header = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Header;
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -382,3 +383,6 @@ export default function Header() {
     </header>
   );
 }
+=======
+export default Header;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

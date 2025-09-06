@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -6,10 +7,19 @@ interface CreateKeyRequest {
   name: string;
   scopes: string[]
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+=======
+interface CreateKeyRequest {
+  name: string;
+  scopes: string[]
+interface CreateKeyRequest {
+  name: string;
+  scopes: string[]import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
 interface CreateKeyRequest {
@@ -31,6 +41,15 @@ interface RegenerateKeyRequest {;
   keyId: string;
 }
 
+=======
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',interface CreateKeyRequest {
+  name: string,
+  scopes: string[],
+  expiresAt?: string | null;
+interface RegenerateKeyRequest {;
+  keyId: string;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   expiresAt?: string | null
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
@@ -41,18 +60,25 @@ interface CreateKeyRequest {
 }
 interface RegenerateKeyRequest {
   key_id: string;
+<<<<<<< HEAD
 }
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
+=======
+}const supabase = createClient(supabaseUrl, supabaseKey);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
+<<<<<<< HEAD
 
 serve(async (req) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
@@ -68,6 +94,7 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
+<<<<<<< HEAD
       headers: {
 
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
@@ -99,6 +126,9 @@ if ( {) {
     }
     // Parse URL to determine action
     // Handle different actions
+=======
+      headers: {    // Handle different actions
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (req && req.method === 'POST') {
       if (path === 'create') {
         const { name, scopes, expiresAt } = await req && req.json() as CreateKeyRequest;
@@ -119,17 +149,24 @@ if ( {) {
         return await getApiLogs(user && user.id, limit, offset)
       }
     }
+<<<<<<< HEAD
 
 
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
     console && console.error('Error processing request:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
+<<<<<<< HEAD
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
+=======
+      status: 500,      headers: { 'Content-Type': 'application/json' }})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 });
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
@@ -141,8 +178,12 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     // Use database function to generate API key
 
     const { data: keyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix });
+<<<<<<< HEAD
     
     if (keyGenError || !keyData) {
+=======
+        if (keyGenError || !keyData) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error generating API key:', keyGenError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to generate API key' }), {
         status: 500,
@@ -152,6 +193,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     // Store the key in the database (hash it first)
 
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
+<<<<<<< HEAD
     
     if (hashError || !hashData) {
       console && console.error('Error hashing API key:', hashError);
@@ -179,6 +221,12 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         key_hash: hash_data;
         name: name;
         headers: { 'Content-Type': 'application/json' }})
+=======
+        if (hashError || !hashData) {
+      console && console.error('Error hashing API key:', hashError);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to process API key' }), {
+        status: 500,        headers: { 'Content-Type': 'application/json' }})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     // Return the created key (only shown once)
     return new Response(JSON && JSON.stringify({
@@ -188,6 +236,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
     }), {
       status: 201
       headers: { 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
   } catch (error) {
 
     console && console.error('Error in createApiKey:', error);
@@ -283,6 +332,9 @@ async function regenerateApiKey(userId: string, keyId: string) {
     // Return the regenerated key
     return new Response(JSON && JSON.stringify({
       ...updateData[0];
+=======
+  } catch (error) {      ...updateData[0];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       key: newKeyData, // Include the full key (only shown once)
       message: 'API key regenerated successfully. Save this key as it won\'t be shown again.'
     }), {
@@ -292,6 +344,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
 
     console && console.error('Error in regenerateApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
+<<<<<<< HEAD
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
@@ -475,6 +528,9 @@ if ( {) {
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
+=======
+      status: 500,      headers: { 'Content-Type': 'application/json' }})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 async function getApiLogs(userId: string, limit = 50, offset = 0) {
@@ -486,6 +542,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .eq('user_id', userId);
     if (keyError) {
 
+<<<<<<< HEAD
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
 ;
@@ -762,6 +819,10 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
         headers: { 'Content-Type': 'application/json' }})
+=======
+    // Get logs for those keys
+    const ids = keyIds && keyIds.map(k => k && k.id);        headers: { 'Content-Type': 'application/json' }})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
@@ -770,6 +831,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
+<<<<<<< HEAD
     const { data: logs, error: logsError, count } = await supabase
       .from('api_logs')
       .select('*', { count: 'exact' })
@@ -793,6 +855,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -803,6 +867,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     console.error ('Error in revokeApiKey:', error);
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
+<<<<<<< HEAD
       headers: { 'Content - Type': 'application / json' }});
 ;
     // Get logs for those keys;
@@ -1260,3 +1325,7 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
   }
 }
 ;
+=======
+      headers: { 'Content - Type': 'application / json' }});  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

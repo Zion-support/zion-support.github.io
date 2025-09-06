@@ -8,9 +8,14 @@ import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 interface BrowseItem {;
   id: string,;
   title: string,;
+<<<<<<< HEAD
   subtitle: string,;
   description: string,;
 import React, { useState } from "react",
+=======
+  subtitle: string,,
+  description: string,;import React, { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -22,6 +27,7 @@ interface BrowseItem {
   description: string
   location?: string;
   badges: string[]
+<<<<<<< HEAD
 
   price?: string;
   image?: string;
@@ -208,6 +214,18 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
   image?: string;
   match?: number;
 
+=======
+    setSavedItems((prev) =>
+      prev.includes(id)
+        ? prev.filter(itemId => itemId !== id)
+        : [...prev, id]
+    )
+  price?: string;
+  image?: string;
+  match?: number;
+  },
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="space-y-4 pb-24">;
       {items && items.map((item) => (;
@@ -218,10 +236,13 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                 <div className="flex items-center gap-3">;
                   {type === "talents" ? (;
                     <Avatar className="h-12 w-12">;
+<<<<<<< HEAD
                       <AvatarImage src={item && item.image} />;
                       <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
                     </Avatar>;
                   ) : (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
@@ -232,6 +253,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
 
                 <button
@@ -250,6 +272,8 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -259,7 +283,11 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 interface BrowseItem {;
   id: string,;
   title: string,;
+<<<<<<< HEAD
   subtitle: string,;
+=======
+  subtitle: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   location?: string,;
   badges: string[],;
@@ -282,8 +310,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
       prev.includes(id);
         ? prev.filter(itemId => itemId !== id);
         : [...prev, id];
+<<<<<<< HEAD
     );
   };
+=======
+    )
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="space-y-4 pb-24">;
       {items.map((item) => (;
@@ -320,6 +353,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 </button>;
               </div>;
 
+<<<<<<< HEAD
               <div className="mt-3 flex flex-wrap gap-1">;
 
 
@@ -336,6 +370,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
 
                     {badge}
+=======
+              <div className="mt-3 flex flex-wrap gap-1">;                    {badge}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </Badge>;
                 ))}
 
@@ -367,6 +404,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
                 {item && item.match && (;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
+<<<<<<< HEAD
                     {item && item.match}% match;
                 {item && item.badges.map((badge, index) => (;
                   <Badge
@@ -414,6 +452,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;
                     {item.match}% match;
                   </div>;
+=======
+                    {item && item.match}% match;                  </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
               </div>;
             </div>;
@@ -422,8 +463,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
               <Button
                 size="sm"
+<<<<<<< HEAD
                 onClick={() => onViewDetails(item && item.id)}
                     {badge}
+=======
+                onClick={() => onViewDetails(item && item.id)}                    {badge}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </Badge>;
                 ))}
               <Button
@@ -440,6 +485,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 
     </div>;
   );
+<<<<<<< HEAD
 }
 
   time_posted?: string;
@@ -628,3 +674,6 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

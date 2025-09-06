@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -25,18 +26,27 @@ export async function POST(request: NextRequest) {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
       {
         message: 'Onboarding completed successfully'
         user: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -47,6 +57,7 @@ export async function POST(request: NextRequest) {
       { status: 200 },
     );
   } catch (error) {
+<<<<<<< HEAD
     console.error("Onboarding completion error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
@@ -82,6 +93,10 @@ export async function POST(request: NextRequest) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -117,6 +132,7 @@ export async function POST(request: NextRequest) {;
       { error: "Internal server error" };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -140,6 +156,12 @@ export async function POST(request: NextRequest) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       { status: 500 }
     );
   }
@@ -172,14 +194,21 @@ export async function POST(request: NextRequest) { try {
       { error: 'Failed to complete onboarding' },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       { status: 500 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      { status: 500 }
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
   }
 }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

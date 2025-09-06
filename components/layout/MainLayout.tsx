@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -18,11 +22,16 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -129,10 +138,14 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+<<<<<<< HEAD
       
 import React, { ReactNode } from 'react';
 import Header from '../Header';
@@ -149,6 +162,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -158,4 +174,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

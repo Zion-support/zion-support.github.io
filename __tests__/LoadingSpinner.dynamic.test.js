@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,19 +26,27 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'; describe('LoadingSpinnerdynamic',() => { test('renders without crashing',() => { render(<LoadingSpinnerdynamic />); expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<LoadingSpinnerdynamic />)}); test('handles user interactions',() => { render(<LoadingSpinnerdynamic />)}); test('applies correct styling',() => { render(<LoadingSpinnerdynamic />)})});
+
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('LoadingSpinnerdynamic', () => {
   test('renders without crashing', () => {
     render(<LoadingSpinnerdynamic />);
     expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   test('displays correct content', () => {
     render(<LoadingSpinnerdynamic />);
@@ -102,6 +111,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   test('displays correct content', () => {
     render(<LoadingSpinnerdynamic />);
@@ -118,8 +129,13 @@ import _React from 'react';  import '@testing-library/jest-dom'; import LoadingS
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

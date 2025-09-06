@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -37,21 +40,29 @@ import {Handshake, MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
+<<<<<<< HEAD
 import {toast} from "@/hooks/use-toast";
 export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
 
   const navigate = useNavigate();
+=======
+import {toast} from "@/hooks/use-toast";  const navigate = useNavigate();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
+<<<<<<< HEAD
   const { isAuthenticated, user } = useAuth();
 
 
 
 import React, { useState, useEffect } from "react",
+=======
+  const { isAuthenticated, user } = useAuth();import React, { useState, useEffect } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
@@ -70,8 +81,11 @@ import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -88,6 +102,7 @@ export default function TalentProfilePage() {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false),
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
+<<<<<<< HEAD
   const { isAuthenticated, user } = useAuth(),
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
@@ -116,6 +131,9 @@ export default function TalentProfilePage() {
 
 
   // Handle loading error gracefully
+=======
+  const { isAuthenticated, user } = useAuth(),  // Handle loading error gracefully
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {
     if (error) {
       toast({
@@ -123,7 +141,10 @@ export default function TalentProfilePage() {
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/components/profile/TalentProfile",;
@@ -173,14 +194,20 @@ export default function TalentProfilePage() {;
   useEffect(() => {;
     if (error) {;
       toast({;
+<<<<<<< HEAD
         title: "Error loading profile",;
         description: "There was a problem loading this talent profile. Please try again.",;
+=======
+        title: "Error loading profile",,
+  description: "There was a problem loading this talent profile. Please try again.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
 
+<<<<<<< HEAD
 
   }
   if (error |!profile) {
@@ -208,6 +235,12 @@ export default function TalentProfilePage() {;
 
 
   const handleMessageTalent = () => {
+=======
+  }
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
+  }  const handleMessageTalent = () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!isAuthenticated) {
       toast({
         title: "Authentication required"
@@ -216,6 +249,7 @@ export default function TalentProfilePage() {;
       navigate('/login', { state: { from: `/talent/${id}` } })
       return
     }
+<<<<<<< HEAD
     setIsMessageModalOpen(true)
 
 
@@ -344,10 +378,17 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile
         profile={profile} 
+=======
+    setIsMessageModalOpen(true)  // Handle loading error gracefully;
+  useEffect(() => {;
+    if (error) {;
+      toast({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
+<<<<<<< HEAD
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;
@@ -359,10 +400,13 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 
             onClick={handleMessageTalent}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -510,10 +554,18 @@ if ( {) {
       
       
       {/* Request to Hire Modal */}
+=======
+            onClick={handleMessageTalent}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;      {/* Request to Hire Modal */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
+<<<<<<< HEAD
         userDetails={userProfile}
 
       />;
@@ -644,3 +696,6 @@ const handleMessageTalent = () => {
 }/> </div>) 
 }
 ;
+=======
+        userDetails={userProfile}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

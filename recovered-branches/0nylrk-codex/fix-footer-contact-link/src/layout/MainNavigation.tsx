@@ -3,12 +3,16 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 interface MainNavigationProps {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 import { MessageSquare } from "lucide-react",
   isAdmin?: boolean;
   unreadCount?: number;
@@ -64,10 +68,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
     {
+=======
+import { MessageSquare } from "lucide-react",  const links = [
+    {
+      name: "Home"
+      href: "/"
+      matches: (path: string) => path === "/"    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
 
+<<<<<<< HEAD
 
     },
 
@@ -102,6 +114,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
   // Add authenticated-only links
+=======
+    },
+    {
+      name: "Equipment"
+      href: "/equipment"
+      matches: (path: string) => path.startsWith("/equipment")  // Add authenticated-only links
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (isAuthenticated) {
     links.push({
       name: "Dashboard"
@@ -118,7 +137,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     })
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -131,6 +153,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+<<<<<<< HEAD
 
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
@@ -147,10 +170,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user,;
   const location = useLocation(),;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const links = [;
     {;
       name: "Home",;
       href: "/",;
+<<<<<<< HEAD
       matches: (path: string) => path === "/";
     };
     {;
@@ -173,6 +199,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: "/equipment",;
       matches: (path: string) => path && path.startsWith("/equipment");
     };
+=======
+      matches: (path: string) => path === "/"
+};
+    {;
+      name: "Marketplace",;
+      href: "/marketplace",;
+      matches: (path: string) => path && path.startsWith("/marketplace")
+};
+    {;
+      name: "Categories",;
+      href: "/categories",;
+      matches: (path: string) => path && path.startsWith("/categories")
+};
+    {;
+      name: "Talent",;
+      href: "/talent",;
+      matches: (path: string) => path && path.startsWith("/talent") && !path && path.includes("/talent-dashboard")
+};
+    {;
+      name: "Equipment",;
+      href: "/equipment",;
+      matches: (path: string) => path && path.startsWith("/equipment")
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {;
       name: "Community",;
       href: "/community",;
@@ -182,8 +232,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   // Add authenticated-only links;
   if (isAuthenticated) {;
+<<<<<<< HEAD
     links && links.push({;
       name: "Dashboard",;
+=======
+    links && links.push({;      name: "Dashboard",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       href: "/dashboard",;
       matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard";
     });
@@ -198,11 +252,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     });
   }
 
+<<<<<<< HEAD
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
 
         {links && links.map((link) => (;
+=======
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+
+=======        {links && links.map((link) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <li key={link && link.name}>;
             <Link
               to={link && link.href}
@@ -307,21 +368,28 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               )}
             >
               {link.name}
             </Link>
           </li>
         ))}
+<<<<<<< HEAD
 
 
 
         {/* Messages link with unread counter */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {isAuthenticated && (;
           <li>;
             <Link
               to="/messages"
+<<<<<<< HEAD
               className={cn(
 
 
@@ -346,6 +414,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
             >;
               {link.name}
             </Link>;
+=======
+              className={cn(            </Link>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </li>;
         ))}
         {/* Messages link with unread counter */}
@@ -366,6 +437,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
               )}
             >;
+<<<<<<< HEAD
               <MessageSquare className="w-4 h-4 mr-1" />;
               Messages;
               {unreadCount > 0 && (;
@@ -377,6 +449,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                 </span>;
               )}
                 </span>;
+=======
+              )}                </span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               )}
             </Link>;
           </li>;
@@ -385,6 +460,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
       </ul>;
     </nav>;
   );
+<<<<<<< HEAD
 }
 
 import { Link, use_location } from './react-router-dom';
@@ -592,3 +668,6 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
     </nav>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

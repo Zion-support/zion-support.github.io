@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-const partners: Partner[] = [ {
-  name: 'Gov Partner'
-}
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 {
   name: 'Venture Partner'
 }
@@ -48,118 +43,12 @@ export default function SummitPage() {;
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD
-  ];
 
-  const partners: Partner[] = [;
-    { name: 'Gov Partner' },;
-    { name: 'Venture Partner' },;
-    { name: 'University Partner' },;
-
-  ];
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-
-import Head from 'next/head';
-import React from 'react';
-type Speaker = {
-  name: string,
-  title: string,
-  avatarUrl: string,
-  bio: string,
-  twitter?: string;
-  linkedin?: string;
-  highlight?: boolean
-};
-
-type Partner = {
-  name: string,
-  logoUrl?: string
-};
-
-const EVENT_START_ISO = '2025-11-12T16: 00:00Z',
-
-function useCountdown(targetIso: string) {
-  const [remainingMs, setRemainingMs] = React.useState<number>(() => {
-    return new Date(targetIso).getTime() - Date.now()
-  });
-
-  React.useEffect(() => {
-    const id = setInterval(() => {
-      setRemainingMs(new Date(targetIso).getTime() - Date.now())
-    }, 1000);
-    return () => clearInterval(id)
-  }, [targetIso]);
-
-  const isPast = remainingMs <= 0;
-  const totalSec = Math.max(0, Math.floor(remainingMs / 1000));
-  const days = Math.floor(totalSec / 86400);
-  const hours = Math.floor((totalSec % 86400) / 3600);
-  const minutes = Math.floor((totalSec % 3600) / 60);
-  const seconds = totalSec % 60;
-
-  return { isPast, days, hours, minutes, seconds }
-}
-
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<'youtube' | 'twitch' | 'twitter'>('youtube');
-  const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
-  const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
-  const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
       title: 'Founder, Zion',
-<<<<<<< HEAD
-    avatarUrl: '/favicon.svg',
-      bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-  'Content - Type': 'application / json';
-}
-body: JSON.stringify ({
-  ...form, source: 'summit - page';
-});
-});
-const data = await res.json ();
-if (throw new Error (data?.error || 'Failed')) {
-  $2
-}
-set_result ({
-  ok: true;
-});
-set_form ({
-  name: '', email: '', role: '', country: '';
-});
-}catch (err: any) {
-  set_result ({
-  error: err?.message || 'Unexpected error';
-});
-}finally {
-  set_submitting (false);
-export default /**
- * SummitPage - Function description
- */
-function SummitPage() {
-  const [platform, set_platform] = React.useState<;
-    'youtube' | 'twitch' | 'twitter';
-  >('youtube');
-  const [embed_id, setEmbedId] = React.useState < string>('dQw4w9WgXcQ');
-  const { is_past, days, hours, minutes, seconds } =;
-    use_countdown (EVENT_START_ISO);
-  const [form, set_form] = React.useState ({
-    name: '',
-    email: '',
-    role: '',
-    country: '',
-    setResult(null),;
-    try {;
-      const res = await fetch('/api/summit/register', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-=======
 avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
@@ -194,26 +83,12 @@ twitter: 'https://twitter.com',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ ...form, source: 'summit-page' }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
-<<<<<<< HEAD
-    } catch (err: any) {;
-      setResult({ error: err?.message || 'Unexpected error' });
-    } finally {;
-      setSubmitting(false);    }
-  const livestreamEmbed = () => {;
-    if (platform === 'youtube') {;
-
-  const livestreamEmbed = () => {
-    if (platform === 'youtube') {
-      return (
-        <iframe
-          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
-=======
     } catch (err: any) {
       setResult({ error: err?.message |'Unexpected error' });
     } finally {
@@ -242,7 +117,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
@@ -264,8 +139,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             </a>;
             <a
               href='#agenda'
-<<<<<<< HEAD
-=======
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
@@ -282,23 +155,13 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
             <li>Opening Keynote — Launching Zion Protocol</li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-<<<<<<< HEAD
-          <h2 className="text-2xl font-bold mb-4">Event Info</h2>
-          <ul className="space-y-2">
-            <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
-            <li><span className="font-medium">Time:</span> 16:00 UTC</li>
-            <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
-            <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
-          </ul>
-
-=======
 <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
           <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
           <ul className='space-y-2'>
@@ -317,7 +180,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
               Globalized
             </li>
           </ul>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
 
@@ -340,10 +203,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
-<<<<<<< HEAD
-              <p className="mt-3 text-sm">{s.bio}</p>
-      <section
-=======
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
                 {s.twitter && (
@@ -373,7 +232,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       </section>
 
 <section
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
         <div className='flex items-center justify-between'>;
@@ -452,25 +311,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           {partners.map (p => (
             <div;
               key={p.name}
-<<<<<<< HEAD
-              className='h - 16 rounded - md border border - dashed border - gray - 300 dark:border - gray - 700 flex items - center justify - center text - sm opacity - 70';
-            >;
-              {p.logo_url ? (
-                <img src={p.logo_url} alt={p.name} className='max - h-12' />) : (
-                p.name)}            </div>))}
-        </div>;
-      </section>;
-      <section;
-        id='livestream';
-        className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <div className='flex flex - col md:flex - row md:items - center md:justify - between gap - 4'>;
-          <h2 className='text - 2xl font - bold'>Livestream</h2>;
-          <div className='flex flex - wrap items - center gap - 2'>;
-            <select;
-              aria - label='Platform';
-              className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-=======
               className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
             >
               {p.logoUrl ? (
@@ -493,7 +333,7 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             <select
               aria-label='Platform'
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               value={platform}
               on_change={e => set_platform (e.target.value as any)}
             >;
@@ -644,10 +484,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             >
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
-<<<<<<< HEAD
-            {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
-            {result?.error && <span className="text-red-600">{result.error}</span>}
-=======
             {result?.ok && (
               <span className='text-green-600'>
                 Thank you! You are registered.
@@ -656,104 +492,11 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </section>
 
-<<<<<<< HEAD
-}
-}
-}
-      <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
-        <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
-      </section>
-    </>
-  )
-}
-              value={embed_id}
-              on_change={e => setEmbedId (e.target.value)}
-            />;
-            {is_past ? (
-              <span className='px - 3 py - 2 rounded bg - green - 600 text - white'>;
-                Watch Replay;
-              </span>) : (
-              <span className='px - 3 py - 2 rounded bg - blue - 600 text - white'>;
-                Live in {days}d {hours}h {minutes}m {seconds}s;
-              </span>)}
-          </div>;
-        </div>;
-        <div className='mt - 4'>{livestream_embed ()}</div>;
-      </section>;
-      <section;
-        id='register';
-        className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
-      >;
-        <h2 className='text - 2xl font - bold mb - 4'>Register</h2>;
-        <form on_submit={on_submit} className='grid md:grid - cols - 2 gap - 4'>;
-          <div>;
-            <label className='block text - sm mb - 1'>Name</label>;
-            <input;
-              required;
-              className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-              value={form.name}
-              on_change={e => set_form ({ ...form, name: e.target.value })}
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm mb - 1'>Email</label>;
-            <input;
-              type='email';
-              required;
-              className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-              value={form.email}
-              on_change={e => set_form ({ ...form, email: e.target.value })}
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm mb - 1'>Role</label>;
-            <input;
-              required;
-              className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-              value={form.role}
-              on_change={e => set_form ({ ...form, role: e.target.value })}
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm mb - 1'>Country</label>;
-            <input;
-              required;
-              className='w - full px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
-              value={form.country}
-              on_change={e => set_form ({ ...form, country: e.target.value })}
-            />;
-          </div>;
-          <div className='md:col - span - 2 flex items - center gap - 3'>;
-            <button;
-              type='submit';
-              disabled={submitting}
-              className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black border border - gray - 200 dark:border - gray - 800 disabled:opacity - 50';
-            >;
-              {submitting ? 'Submitting...' : 'Submit Registration'}
-            </button>;
-            {result?.ok && (
-              <span className='text - green - 600'>;
-                Thank you! You are registered.;
-              </span>)}
-            {result?.error && (
-              <span className='text - red - 600'>{result.error}</span>)}          </div>;
-        </form>;
-      </section>;
-      <section className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark: border - gray - 800 bg - white dark:bg - black'>;
-        <h2 className='text - xl font - semibold'>;
-          AI Session Summaries (Optional);
-        </h2>;
-        <p className='text - sm opacity - 70 mt - 2'>;
-          Auto - generated summaries and ZionGPT moderation prompts coming soon.;
-        </p>;
-      </section>;
-=======
 <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
@@ -764,4 +507,4 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

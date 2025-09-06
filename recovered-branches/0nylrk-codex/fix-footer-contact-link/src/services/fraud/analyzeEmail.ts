@@ -8,6 +8,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
   const domain = email.split("@")[1]?.toLowerCase();
   const reasons: string[] = [];
 
+<<<<<<< HEAD
   if (!domain) return { isSuspicious: true, reasons: ["Invalid email format"] };
 
   // Check for suspicious domains
@@ -15,10 +16,40 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
     if (domain.includes(suspiciousDomain)) {
       reasons.push(`Suspicious email domain: ${domain}`);
       break;
+=======
+export const analyzeEmail = (email: string): EmailAnalysisResult => {;
+
+  const domain = email.split('@')[1]?.toLowerCase();
+  const reasons: string[] = []
+  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
+  const domain = email && email.split('@')[1]?.toLowerCase();
+  const reasons: string[] = [],
+  
+  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
+  
+  // Check for suspicious domains
+  for (const suspiciousDomain of suspiciousEmailDomains) {
+    if (domain && domain.includes(suspiciousDomain)) {
+      reasons && reasons.push(`Suspicious email domain: ${domain}`);
+      break
+    }
+  }
+  return {
+    reasons
+  }
+}
+  // Check for suspicious domains;
+  for (const suspicious_domain of suspiciousEmailDomains) {
+    if () {) {
+  $2
+}
+      reasons.push (`Suspicious email domain: ${domain}`);      break;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
   return {
+<<<<<<< HEAD
     isSuspicious: reasons.length > 0,
     reasons,
   };
@@ -27,6 +58,15 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
 };
 
 
+=======
+    is_suspicious: reasons.length > 0,
+    reasons;
+  }
+}
+
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants',;
 import { EmailAnalysisResult } from './types',;

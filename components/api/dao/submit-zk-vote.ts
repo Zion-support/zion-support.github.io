@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 export default async /**
  * handler - Function description
@@ -36,3 +37,9 @@ export default async function handler(
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+  }
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -73,3 +73,8 @@
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
 
+<<<<<<< HEAD
+=======
+    console.error('Failed to start Intelligent Repository "Manager")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

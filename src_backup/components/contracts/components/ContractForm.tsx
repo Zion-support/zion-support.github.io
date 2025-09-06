@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Form } from "@/components/ui/form";
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useToast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { generateContract } from "../utils/contractUtils";
-import { ProjectDetailsFields } from "./ProjectDetailsFields";
-import { PaymentTermsFields } from "./PaymentTermsFields";
-import { AdditionalClausesFields } from "./AdditionalClausesFields";
-import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -30,7 +16,6 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
         talent, ;
         clientName, ;
 
-=======
 export type ContractFormValues = z.infer<typeof formSchema" > interface ContractFormProps {"
   talent: TalentProfile;
    clientName: string;
@@ -39,7 +24,7 @@ export type ContractFormValues = z.infer<typeof formSchema" > interface Contract
    onContractGenerated: (contractContent: string) => void;
    deployOptions?: DeploymentOptions
    onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
   );
 }
@@ -81,8 +66,7 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
 
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -173,4 +157,4 @@ talent.full name ;
 }"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

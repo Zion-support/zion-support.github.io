@@ -4,6 +4,7 @@ import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
+<<<<<<< HEAD
   // Fetch auth status and saved talents
   const {
     isAuthenticated;
@@ -96,6 +97,9 @@ function useTalentDirectory() {
     toggleSection
 
   } = useUIState(),
+=======
+  // Fetch auth status and saved talents  } = useUIState(),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return {
     // Talents and loading state
@@ -131,7 +135,10 @@ function useTalentDirectory() {
     savedTalents,
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Actions
     toggleSkill;
     toggleAvailability;
@@ -140,8 +147,12 @@ function useTalentDirectory() {
     toggleSection;
     handleToggleSave
 
+<<<<<<< HEAD
     expanded_sections;
 import { useAuthStatus } from "./talent/useAuthStatus",;
+=======
+    expanded_sections;import { useAuthStatus } from "./talent/useAuthStatus",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useTalentData } from "./talent/useTalentData",;
 import { useFilterTalents } from "./talent/useFilterTalents",;
 import { useUIState } from "./talent/useUIState",;
@@ -224,8 +235,14 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
+<<<<<<< HEAD
 
 
+=======
+  }
+}
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 }
@@ -243,7 +260,11 @@ export function useTalentDirectory() {;
     toggle_section;
     handleToggleSave;
   }
+<<<<<<< HEAD
 }
   }
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;

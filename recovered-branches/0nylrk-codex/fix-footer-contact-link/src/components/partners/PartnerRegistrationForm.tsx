@@ -13,6 +13,7 @@ import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 
+<<<<<<< HEAD
 
 
 import { useState } from "react",
@@ -32,6 +33,8 @@ import { supabase } from "@/integrations/supabase/client",
 
 
 const partnerFormSchema = z.object({
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
@@ -45,6 +48,7 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+<<<<<<< HEAD
 
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -90,6 +94,11 @@ const partnerFormSchema = z && z.object({;
   payout_method: z && z.string(),;
   bio: z && z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 
+=======
+export function PartnerRegistrationForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { user } = useAuth(),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -98,13 +107,19 @@ const partnerFormSchema = z && z.object({;
         variant: "destructive"})
       return
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }
         ])
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -129,6 +144,7 @@ const partnerFormSchema = z.object({;
   audience_size: z.string(),;
   payout_method: z.string(),;
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
+<<<<<<< HEAD
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
 
 export function PartnerRegistrationForm() {;
@@ -144,6 +160,9 @@ export function PartnerRegistrationForm() {;
   const { user } = useAuth(),;
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
+=======
+type PartnerFormValues = z.infer<typeof partnerFormSchema>,;    resolver: zodResolver(partnerFormSchema),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     defaultValues: {;
       name: "",;
       website: "",;
@@ -158,6 +177,7 @@ export function PartnerRegistrationForm() {;
   const checkExistingPartner = async () => {;
     const { data: existingPartner } = await supabase;
       .from('partner_profiles');
+<<<<<<< HEAD
       .select('id');
       .eq('user_id', user && user.id);
       .single();
@@ -195,11 +215,15 @@ export function PartnerRegistrationForm() {;
       return true;
     }
     }
+=======
+      .select('id');    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsSubmitting(true);
     try {;
       // Check if they already have a partner profile;
       const hasExistingPartner = await checkExistingPartner();
       if (hasExistingPartner) return;
+<<<<<<< HEAD
 
 import { useState } from './react';
 import { z } from './zod';
@@ -295,14 +319,20 @@ if (return) {
         .from ('partner_profiles');
         .insert ([;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {
             user_id: user.id
             name: data.name
             website: data.website |null
+<<<<<<< HEAD
             social_media: {
 
 
       // Insert new partner profile;
+=======
+            social_media: {      // Insert new partner profile;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
@@ -324,6 +354,7 @@ if (return) {
           }
         ]);
         .select();
+<<<<<<< HEAD
       if (error) throw error;
 
 
@@ -337,15 +368,24 @@ if (return) {
     } catch (error: any) {
       console.error('Error submitting partner application:', error);
       toast({
+=======
+      if (error) throw error;        await supabase.rpc('generate_referral_code', { user_id: user.id })
+      }
+    } catch (error: any) {      toast({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
 
         variant: "destructive"})
     } finally {
+<<<<<<< HEAD
       setIsSubmitting(false)
 
 
     }
+=======
+      setIsSubmitting(false)    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
@@ -368,11 +408,15 @@ if (return) {
                     </FormControl>
                     <FormMessage />
                   </FormItem>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ]);
         .select(),;
       if (error) throw error,;
 
+<<<<<<< HEAD
       toast({;
         title: "Application submitted!",;
         description: "Your partner application has been submitted for review.",;
@@ -399,6 +443,8 @@ if (return) {
       setIsSubmitting(false);
     }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
@@ -444,13 +490,18 @@ if ( {) {
     }
   }
   return (
+<<<<<<< HEAD
     <Card className="bg - zion - blue - dark border - zion - blue - light">;
+=======
+    <Card className="bg - zion - blue - dark border - zion - blue-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>;
         <CardTitle > Partner Registration</CardTitle>;
         <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
+<<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
@@ -523,6 +574,11 @@ if ( {) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
+=======
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -530,14 +586,20 @@ if ( {) {
 
                 />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FormField
                   control={form && form.control}
                   name="instagram"
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Instagram (Optional)</FormLabel>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 />;
                 <FormField;
 
@@ -554,6 +616,7 @@ if ( {) {
                 />;
               </div>;
 
+<<<<<<< HEAD
               <div className="grid sm:grid-cols-2 gap-4">;
 
                 <FormField
@@ -620,6 +683,9 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
                       <FormControl>;
+=======
+              <div className="grid sm:grid-cols-2 gap-4">;                      <FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
@@ -627,6 +693,7 @@ if ( {) {
                 />;
               </div>;
 
+<<<<<<< HEAD
 
               <FormField
                 control={form && form.control}
@@ -654,6 +721,10 @@ if ( {) {
               <div className="grid sm:grid-cols-2 gap-4">;
 
                 <FormField
+=======
+              <FormField
+                control={form && form.control}                <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   control={form && form.control}
                   name="audience_size"
                   render={({ field }) => (;
@@ -662,7 +733,11 @@ if ( {) {
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
                   </FormItem>)}
               />;
+<<<<<<< HEAD
               <div className="grid sm:grid - cols - 2 gap - 4">;
+=======
+              <div className="grid sm:grid - cols - 2 gap-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FormField;
                   control={form.control}
                   name="audience_size";
@@ -675,6 +750,7 @@ if ( {) {
                         <SelectContent>;
 
                 />;
+<<<<<<< HEAD
 
 
                 <FormField
@@ -732,6 +808,8 @@ if ( {) {
               <FormField
                 control={form && form.control}
                 name="bio"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       />;
                     </FormControl>;
                     <FormDescription>;
@@ -739,6 +817,7 @@ if ( {) {
                     </FormDescription>;
                     <FormMessage />;
 
+<<<<<<< HEAD
 
             <Button 
               type="submit" 
@@ -748,6 +827,11 @@ if ( {) {
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
 
+=======
+            <Button 
+              type="submit" 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -756,6 +840,7 @@ if ( {) {
             </div>;
             <Button;
               type="submit";
+<<<<<<< HEAD
               className="w - full bg - zion - purple hover:bg - zion - purple - dark";
               disabled={is_submitting}
             >;
@@ -859,4 +944,13 @@ data: existingCode
 }
 
 
+=======
+              className="w - full bg - zion - purple hover:bg - zion - purple-dark";
+              disabled={is_submitting}
+            >;
+              {is_submitting ? "Submitting..." : "Submit Application"}
+};
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

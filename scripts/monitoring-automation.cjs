@@ -33,3 +33,8 @@ const path = require('path')
         "severity"
                 console.error('Failed to load "metrics")
 
+<<<<<<< HEAD
+=======
+    console.error('Monitoring automation "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

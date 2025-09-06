@@ -55,3 +55,8 @@ const { execSync } = require("child_process")
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
 
+<<<<<<< HEAD
+=======
+      console.log("\n� High Priority "Recommendations": ")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

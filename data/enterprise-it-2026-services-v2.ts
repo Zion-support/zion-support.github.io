@@ -1,14 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface EnterpriseIt2026ServiceV2 {
 
+
 export interface EnterpriseIt2026ServiceV2 {;
+<<<<<<< HEAD
 
 export interface EnterpriseIt2026ServiceV2 {
 <<<<<<< HEAD
@@ -21,22 +29,26 @@ export interface EnterpriseIt2026ServiceV2 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
+=======
+ursor/fix-website-loading-errors-and-merge-6662
 
-=======
-=======
 export interface EnterpriseIt2026ServiceV2 {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 export interface EnterpriseIt2026ServiceV2 {;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -70,12 +82,14 @@ export interface EnterpriseIt2026ServiceV2 {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
-=======
     website: string
   },
   realImplementation: boolean;
@@ -125,16 +139,19 @@ export interface EnterpriseIt2026ServiceV2 {;
     rating: 4.8;
     reviews: 520
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -152,23 +169,32 @@ export interface EnterpriseIT2026ServiceV2 {
   contactInfo: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -184,6 +210,8 @@ export interface EnterpriseIT2026ServiceV2 {
     reviews: 180
   }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Seamlessly manage and orchestrate across all cloud providers',
@@ -827,25 +855,14 @@ export interface EnterpriseIT2026ServiceV2 {
     },
     realImplementation: true,
     implementationDetails:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
     reviews: 180,
-<<<<<<< HEAD
-  },;
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.';
-    launchDate: '2026-05-01';
-    customers: 280;
-    rating: 4.9
 
+<<<<<<< HEAD
     reviews: 180
   }
 <<<<<<< HEAD
@@ -855,6 +872,8 @@ export interface EnterpriseIT2026ServiceV2 {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -886,11 +905,17 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -901,6 +926,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 =======
@@ -915,6 +941,13 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1353,6 +1386,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
+<<<<<<< HEAD
   }
 ];
   }
@@ -1363,11 +1397,24 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 ];
     reviews: 180
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

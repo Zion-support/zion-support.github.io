@@ -1,13 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 
+<<<<<<< HEAD
 
 
 
@@ -24,6 +28,8 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 export async function createNotification({
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId,
   title,
   message,
@@ -34,7 +40,10 @@ export async function createNotification({
 
   actionText = null
 }: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   actionText = null
 }: {
   userId: string;
@@ -43,6 +52,7 @@ export async function createNotification({
   type: NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
+<<<<<<< HEAD
   actionUrl?: string | null
   userId: string,
   title: string,
@@ -53,6 +63,9 @@ export async function createNotification({
   actionUrl?: string | null,
 
   actionText?: string | null
+=======
+  actionUrl?: string | null  actionText?: string | null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }) {
   void actionUrl;
   void actionText;
@@ -60,13 +73,17 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   actionText?: string | null
 }) {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
+<<<<<<< HEAD
     const { data, error } = await supabase.rpc('create_notification', {
       _user_id: userId;
       _title: title;
@@ -75,6 +92,8 @@ export async function createNotification({
       _related_id: relatedId
     });
     if (error) throw error;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       _user_id: userId,
       _title: title,
       _message: message,
@@ -84,12 +103,15 @@ export async function createNotification({
     
     if (error) throw error,
     
+<<<<<<< HEAD
 
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -131,23 +153,35 @@ export async function createNotification({;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
 
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+=======
+    return { success: false, error }
+  }
+}      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       talentNotification,
 
 success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 
     return { success: false, error }
   }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {;
     console.error('Error creating notification:', error),;
   } catch (error) {;
@@ -159,6 +193,7 @@ success: talentNotification && talentNotification.success && adminNotification &
 
 /**
  * Creates a hire request notification for admin and talent
+<<<<<<< HEAD
  */
 
 ;
@@ -365,6 +400,12 @@ function createTestNotification() {
     'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
   }
   const actions = {
+=======
+ */  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
+  }
+  const messages = {  const actions = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
     'booking_confirmation': { url: '/bookings', text: 'View Booking' }
@@ -373,9 +414,12 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   return create_notification ({
     user_id;
@@ -385,9 +429,13 @@ function createTestNotification() {
     send_email: true;
     action_url: actions[random_type].url,
     action_text: actions[random_type].text;
+<<<<<<< HEAD
   });
 
 }
+=======
+  });}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 /**;
  * Creates a system notification for a user;
@@ -406,13 +454,17 @@ export async function createSystemNotification({;
   actionUrl?: string | null,;
   actionText?: string | null,;
   sendEmail?: boolean;
+<<<<<<< HEAD
 } {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId:string,;
   title:string,;
   message:string,;
   actionUrl?:string | null,;
   actionText?:string | null,;
   sendEmail?:boolean;
+<<<<<<< HEAD
 }) {;
   return createNotification({;
     userId,;
@@ -424,12 +476,15 @@ export async function createSystemNotification({;
     actionText;
   });
     type:'system',;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     sendEmail,;
     actionUrl,;
     actionText;
   }),;
 }
 ;
+<<<<<<< HEAD
 /**;
  * Demo function to create test notifications for the current user;
  */;
@@ -466,6 +521,8 @@ export async function createTestNotification(userId: string) {;
 ;
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export async function createTestNotification(userId:string) {;
   const types:NotificationType[] = ['messagequote_request', 'booking_confirmationhire_request', 'onboardingsystem'],;
   const randomType = types[Math.floor(Math.random() * types.length)],;

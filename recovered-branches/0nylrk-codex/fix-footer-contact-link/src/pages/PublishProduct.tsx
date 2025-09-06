@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
@@ -11,6 +12,35 @@ export default function PublishProduct() {
   // Show loading while checking authentication
   if (isLoading) {
 
+=======
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
+import { useAuth } from "@/hooks/useAuth",import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
+import { Navigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  
+
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+  // Show loading while checking authentication
+  if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -19,6 +49,7 @@ export default function PublishProduct() {
       </div>
     );
   }
+<<<<<<< HEAD
 
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
@@ -34,6 +65,36 @@ export default function PublishProduct() {
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
+=======
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
+  }
+;
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+  }
+;
+  return (;
+
+    <div className="min-h-screen flex flex-col bg-zion-blue">;      <SEO
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
@@ -59,8 +120,13 @@ export default function PublishProduct() {
   );
 }
     return (
+<<<<<<< HEAD
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">;
         <div className="animate - pulse text - zion - purple text - lg">;
+=======
+      <div className="flex justify - center items - center min - h-screen bg - zion-blue">;
+        <div className="animate - pulse text - zion - purple text-lg">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Loading...;
         </div>;
       </div>);
@@ -73,13 +139,18 @@ if ( {) {
     return <Navigate to="/login" state={{ from: '/publish' }} replace />;
   }
   return (
+<<<<<<< HEAD
     <div className="min - h-screen flex flex - col bg - zion - blue">;
+=======
+    <div className="min - h-screen flex flex - col bg - zion-blue">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <SEO;
         title="Publish Your Product";
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.";
         keywords="publish product, sell online, digital marketplace, AI tools, tech services";
       />;
       <Header />;
+<<<<<<< HEAD
       <main className="flex - 1 p - 6 md:p - 10">;
         <div className="max - w-4xl mx - auto">;
           <h1 className="text - 3xl font - bold text - white mb - 2">Publish on Zion</h1>;
@@ -90,12 +161,22 @@ if ( {) {
           ;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
+=======
+      <main className="flex - 1 p - 6 md:p-10">;
+        <div className="max - w-4xl mx-auto">;
+          <h1 className="text - 3xl font - bold text - white mb-2">Publish on Zion</h1>;
+          <p className="text - zion - slate mb-8">;
+            Share your products, services, or digital assets with the Zion community.;
+          </p>;
+          <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <ProductSubmissionForm />;
           </div>;
         </div>;
       </main>;
       <Footer />;
 
+<<<<<<< HEAD
 
 
 
@@ -103,6 +184,12 @@ if ( {) {
     </div>);
 }
 }
+=======
+}
+;
+    </div>);
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>);
 }
     </div>);
@@ -123,7 +210,10 @@ if ( {) {
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
     </div>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

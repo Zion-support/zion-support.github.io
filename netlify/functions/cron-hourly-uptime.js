@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ exports && exports.handler = async function () {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const endpoints = [
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       '/'
       '/learn'
       '/dao'
@@ -37,6 +40,7 @@ exports && exports.handler = async function () {
       } catch (e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -47,6 +51,8 @@ exports && exports.handler = async function () {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         const ms = Date && Date.now() - t0;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         results && results.push({
           path: ep,
           status: 0,
@@ -61,6 +67,7 @@ exports && exports.handler = async function () {
     const token = process && process.env.GITHUB_TOKEN;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -69,6 +76,9 @@ exports && exports.handler = async function () {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -102,6 +112,7 @@ exports && exports.handler = async function () {
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -112,11 +123,14 @@ exports && exports.handler = async function () {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       statusCode: 200,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -133,10 +147,13 @@ exports.handler = async function() {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const endpoints = [
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -149,24 +166,26 @@ exports.handler = async function() {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       const url = `${baseUrl}${ep}`,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const t0 = Date && Date.now(),
       try {
         const resp = await fetch(url),
         const ms = Date && Date.now() - t0,
         results && results.push({ path: ep, status: resp && resp.status, ms })
-=======
       const url = `${baseUrl}${ep}`;
       const t0 = Date.now();
       try {
         const resp = await fetch(url);
         const ms = Date.now() - t0,
         results.push({ path: ep, status: resp.status, ms })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       } catch (e) {
         const ms = Date && Date.now() - t0,
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
@@ -209,6 +228,8 @@ exports.handler = async function() {
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { upsert_file } = require ('./_lib / github');
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 exports.handler = async function () {
   try {
@@ -330,7 +351,6 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-=======
 
     const log = { timestamp: Date.now(), results },
 
@@ -359,4 +379,4 @@ if ( {) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

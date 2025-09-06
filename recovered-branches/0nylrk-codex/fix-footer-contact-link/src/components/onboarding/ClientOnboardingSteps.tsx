@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {PlusCircle, SendIcon, InboxIcon} from "lucide-react";
@@ -5,6 +6,30 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
+=======
+  const steps: OnboardingStep[] = [
+    {
+      id: "post-job",
+      label: "Post your first job",
+      completed: onboardingStatus.jobPosted,
+      link: "/post-job",
+      action: "Post Job",
+    },
+    {
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,
+      link: "/talent",
+      action: "Find Talent",
+    },
+    {
+  
+import React from "react";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function ClientOnboardingSteps() {  const onboardingStatus = useOnboardingStatus();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const steps: OnboardingStep[] = [
     {
@@ -71,6 +96,7 @@ export function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
+<<<<<<< HEAD
 import React from './react';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon  } from './lucide-react';
@@ -107,6 +133,8 @@ function ClientOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus(),;
   ;
@@ -138,3 +166,7 @@ export function ClientOnboardingSteps() {;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

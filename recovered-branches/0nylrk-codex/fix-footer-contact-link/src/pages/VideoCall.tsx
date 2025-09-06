@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -39,6 +40,35 @@ export default function VideoCall() {
     id: string
     name: string
     avatar?: string;
+=======
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
+import {useState, useEffect} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';
+import {Button} from '@/components/ui/button';
+import {toast} from 'sonner';
+export default function VideoCall() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+import {useState, useEffect} from 'react';
+import {use_params, use_navigate} from 'react-router-dom';
+import {Header} from '@/components / Header';
+import {Footer} from '@/components / Footer';
+import {SEO} from '@/components / SEO';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {Button} from '@/components / ui / button';
+import {toast} from 'sonner';    avatar?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
@@ -90,7 +120,19 @@ export default function VideoCall() {;
       isMuted: false;
     }
 
+<<<<<<< HEAD
 
+=======
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true);
+      setIsJoining(false);
+    setHasJoined(false);
+    toast && toast.info("Call ended", {,
+  description: "You have left the meeting";
+    });
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -103,7 +145,10 @@ export default function VideoCall() {;
       })
     }, 1500)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ]);
   const handleJoinCall = () => {;
     setIsJoining(true);
@@ -114,6 +159,7 @@ export default function VideoCall() {;
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`,
       });
+<<<<<<< HEAD
     }, 1500);
   };
 
@@ -197,6 +243,16 @@ export default function VideoCall() {;
               onLeave={handleLeaveCall}
             />
 
+=======
+    }, 1500)
+};
+
+  const handleLeaveCall = () => {;
+    setHasJoined(false);
+    toast && toast.info("Call ended", {,
+  description: "You have left the meeting";
+    });
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">
               <Button
@@ -209,10 +265,16 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+<<<<<<< HEAD
       </main>
       <Footer />
     </>
   );
+=======
+      </main>;
+      <Footer />;
+    </>;  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
       id: 'user - 1',
@@ -222,6 +284,7 @@ export default function VideoCall() {;
     }
   ]);
 ;
+<<<<<<< HEAD
 ;
   const handleLeaveCall = () =>: any {
     setHasJoined (false);
@@ -292,3 +355,6 @@ export default function VideoCall() {;
 ;
 ;
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

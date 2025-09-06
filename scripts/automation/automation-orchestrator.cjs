@@ -147,3 +147,8 @@ const path = require("path")
   console.error(" Failed to save "report": ")
       console.log(" Automation Orchestrator started")
 
+<<<<<<< HEAD
+=======
+  console.error(" Orchestrator "error")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

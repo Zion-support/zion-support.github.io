@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
 import {Button} from '@/components/ui/button';
@@ -27,12 +28,18 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+=======
+
+export function AIEnhancementPanel({;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
 
+<<<<<<< HEAD
 
 
 export function AIEnhancementPanel({;
@@ -53,14 +60,22 @@ export function AIEnhancementPanel({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
     const result = await enhanceContent(options);
+=======
+export function AIEnhancementPanel({;    const result = await enhanceContent(options);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (result) {
       setGeneratedContent(result)
     }
 
+<<<<<<< HEAD
   };
 
 
   };
+=======
+  }
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -101,6 +116,7 @@ export function AIEnhancementPanel({;
 
   },
 
+<<<<<<< HEAD
 
 
 
@@ -108,10 +124,13 @@ export function AIEnhancementPanel({;
 
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (result) {;
       setGeneratedContent(result);
     }
 
+<<<<<<< HEAD
 
 
 
@@ -164,6 +183,9 @@ export function AIEnhancementPanel({;
   return (
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
+=======
+  return (      <CardHeader>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardTitle className="flex items-center gap-2">;
           <Sparkles className="h-5 w-5 text-primary" />;
           {title}
@@ -173,6 +195,7 @@ export function AIEnhancementPanel({;
         {/* Input area */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Content to enhance</label>;
+<<<<<<< HEAD
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
@@ -183,6 +206,8 @@ export function AIEnhancementPanel({;
         </div>;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -194,6 +219,7 @@ export function AIEnhancementPanel({;
 
           />;
         </div>;
+<<<<<<< HEAD
 
 
         {/* Instructions input (optional) */}
@@ -220,6 +246,8 @@ export function AIEnhancementPanel({;
           disabled={isEnhancing || !options.content && !options.context}
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         >
           {isEnhancing ? (
             <>
@@ -252,6 +280,7 @@ export function AIEnhancementPanel({;
               Generate Enhanced Content;
             </>;
           )}
+<<<<<<< HEAD
         </Button>;
 
         {/* Output area */}
@@ -278,13 +307,19 @@ export function AIEnhancementPanel({;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e && e.target.value)}
                 className="min-h-[200px]";
+=======
+        </Button>;                className="min-h-[200px]";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               />;
             </div>;
           </div>;
         )}
 
       </CardContent>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {generatedContent && (;
         <CardFooter className="flex justify-between">;
           {onClose && (;
@@ -292,8 +327,12 @@ export function AIEnhancementPanel({;
               Cancel;
             </Button>;
 
+<<<<<<< HEAD
           )}
           <Button onClick={handleApply}>;
+=======
+          )}          <Button onClick={handleApply}>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Apply to Form;
           </Button>;
         </CardFooter>;
@@ -301,6 +340,7 @@ export function AIEnhancementPanel({;
 
     </Card>;
   );
+<<<<<<< HEAD
 }
 
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
@@ -509,3 +549,6 @@ if ( {) {
     </Card>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

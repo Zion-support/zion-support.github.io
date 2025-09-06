@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Service {
   id: string,
   name: string,
@@ -12,6 +15,7 @@ export interface Service {
     enterprise: string,
 export interface Service {id: string;
   name: string;
+<<<<<<< HEAD
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
   description: string;
   features: string[];
@@ -20,10 +24,20 @@ export interface Service {id: string;
     professional: string;
     enterprise: string;
     custom?: string;
+=======
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
+  description: string;
+  features: string[];  pricing: {;
+    starter: string;
+    professional: string;
+    enterprise: string;
+=======    custom?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     address: string;
   }
 }
 export const services: Service[] = [;
+<<<<<<< HEAD
   // AI Services;
 
   {
@@ -403,3 +417,6 @@ export const getCategories = () => {;
 
 
 
+=======
+  // AI Services;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,13 +1,19 @@
 
 
+<<<<<<< HEAD
 import * as React from "react"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
 import { Check, ChevronRight, Circle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const ContextMenu = ContextMenuPrimitive.Root
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 const ContextMenuGroup = ContextMenuPrimitive.Group
@@ -17,6 +23,7 @@ const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup
 const ContextMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
+<<<<<<< HEAD
     inset?: boolean
 import * as React from &quot;react & quot;
 import * as ContextMenuPrimitive from &quot;@radix - ui / react - context - menu & quot;
@@ -57,6 +64,9 @@ const ContextMenuSubTrigger = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {;
     inset?:boolean;
   }
+=======
+    inset?: boolean  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >(({ class_name, inset, children, ...props }, ref) => (
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
@@ -65,6 +75,7 @@ const ContextMenuSubTrigger = React.forwardRef<;
 
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -82,6 +93,12 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
       className
@@ -90,6 +107,7 @@ className={cn(
   >;
     {children}
 
+<<<<<<< HEAD
 
     <ChevronRight className="ml-auto h-4 w-4" />
 
@@ -99,6 +117,10 @@ className={cn(
 
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
     <ChevronRight className="ml-auto h-4 w-4" />
+=======
+    <ChevronRight className="ml-auto h-4 w-4" />
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   </ContextMenuPrimitive.SubTrigger>
 ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -108,6 +130,7 @@ const ContextMenuSubContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ContextMenuPrimitive.SubContent
     ref={ref}
+<<<<<<< HEAD
     className={cn(
 
 
@@ -115,11 +138,15 @@ const ContextMenuSubContent = React.forwardRef<
 
 
       className
+=======
+    className={cn(      className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     )}
     {...props}
   />;
 ));
 ContextMenuSubContent.displayName = ContextMenuPrimitive.SubContent.displayName;
+<<<<<<< HEAD
 const ContextMenuContent = React.forwardRef<;
 
 
@@ -156,6 +183,9 @@ const ContextMenuContent = React.forwardRef<;
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
         className
+=======
+const ContextMenuContent = React.forwardRef<;        className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
       {...props}
     />;
@@ -163,8 +193,11 @@ const ContextMenuContent = React.forwardRef<;
 ));
 ContextMenuContent.displayName = ContextMenuPrimitive.Content.displayName;
 const ContextMenuItem = React.forwardRef<;
+<<<<<<< HEAD
 
 className={cn (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -205,10 +238,13 @@ const ContextMenuItem = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
     inset?: boolean;
 
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn(;
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",;
       inset && "pl-8",;
@@ -267,6 +303,7 @@ const ContextMenuItem = React.forwardRef<;
 
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -289,6 +326,12 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
       className
@@ -299,6 +342,7 @@ className={cn(
 ContextMenuItem.displayName = ContextMenuPrimitive.Item.displayName;
 const ContextMenuCheckboxItem = React.forwardRef<;
 
+<<<<<<< HEAD
 
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
 
@@ -317,6 +361,10 @@ const ContextMenuCheckboxItem = React.forwardRef<;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+=======
+  React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
@@ -350,6 +398,7 @@ className={cn (
         <Check className=&quot;h - 4 w - 4&quot; />;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
+<<<<<<< HEAD
     {children}
 
 
@@ -469,6 +518,9 @@ const ContextMenuLabel = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?:boolean;
   }
+=======
+    {children}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >(({ class_name, inset, ...props }, ref) => (
   <ContextMenuPrimitive.Label;
     ref={ref}
@@ -477,6 +529,7 @@ const ContextMenuLabel = React.forwardRef<;
 
     className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
+<<<<<<< HEAD
       inset && "pl-8",
 
 
@@ -499,6 +552,12 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
     className={cn(
+=======
+      inset && "pl-8",    className={cn(
+      "px-2 py-1.5 text-sm font-semibold text-foreground",
+      inset && "pl-8",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "px-2 py-1.5 text-sm font-semibold text-foreground",
       inset && "pl-8",
       className
@@ -508,6 +567,7 @@ className={cn(
 ));
 ContextMenuLabel.displayName = ContextMenuPrimitive.Label.displayName;
 const ContextMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 
 
   React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
@@ -518,6 +578,11 @@ const ContextMenuSeparator = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
 className={cn (
+=======
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+=======className={cn (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
       inset && &quot;pl - 8&quot;,
       class_name)}
@@ -532,6 +597,7 @@ const ContextMenuSeparator = React.forward_ref<;
     ref={ref}
     className={cn (&quot;-mx - 1 my - 1 h - px bg - border & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 
 
         "ml-auto text-xs tracking-widest text-muted-foreground",
@@ -602,6 +668,10 @@ ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
 
 export {
+=======
+ContextMenuShortcut.displayName = "ContextMenuShortcut"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
@@ -616,10 +686,13 @@ export {
   ContextMenuSub,
   ContextMenuSubContent,
   ContextMenuSubTrigger,
+<<<<<<< HEAD
 
 
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ContextMenuRadioGroup}
 ContextMenuShortcut.displayName = "ContextMenuShortcut";
 ;

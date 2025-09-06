@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -15,9 +18,13 @@ import React from 'react';
   isOpen;
   onClose;
   onApply;
+<<<<<<< HEAD
   defaultOptions;
 
 import React from 'react',;
+=======
+  defaultOptions;import React from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Dialog,;
   DialogContent,;
@@ -34,6 +41,7 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
+<<<<<<< HEAD
 
   title: string
   isOpen: boolean
@@ -69,6 +77,13 @@ export function AIEnhancementDialog({
   };
 
 
+=======
+}: AIEnhancementDialogProps) {;
+  const handleApply = (content: string) => {;
+    onApply(content),;
+    onClose()
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   return (
@@ -87,6 +102,7 @@ export function AIEnhancementDialog({
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 }
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
@@ -142,3 +158,6 @@ function AIEnhancementDialog() {
     </Dialog>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

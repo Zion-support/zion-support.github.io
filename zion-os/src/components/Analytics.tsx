@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -13,6 +16,7 @@ export /**
 function Analytics() {
   useEffect (() => {
 
+<<<<<<< HEAD
 
 "use client",;
 import { useEffect } from "react",;
@@ -53,10 +57,13 @@ if ( {) {
             const firstInputEntry = entry as FirstInputEntry,;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+<<<<<<< HEAD
       // Cumulative Layout Shift monitoring;
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
@@ -83,6 +90,9 @@ if ( {) {
         observer2.disconnect();
 
       }
+=======
+      // Cumulative Layout Shift monitoring;      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }, []);
   return null, // This component doesn't render anything;

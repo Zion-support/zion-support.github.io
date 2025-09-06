@@ -181,3 +181,8 @@ if ( {})
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = PM2SyncAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

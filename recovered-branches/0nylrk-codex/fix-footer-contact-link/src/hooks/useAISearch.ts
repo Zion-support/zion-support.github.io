@@ -4,11 +4,14 @@ import {JOB_POSTS} from "@/data/jobsData";
 import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from './react';
 import { TALENT_PROFILES } from '@/data / talent_data';
 import { JOB_POSTS } from '@/data / jobs_data';
@@ -18,6 +21,7 @@ export interface SearchResult {
   type: "talent" | "job" | "project";
   title: string,
   description: string;
+<<<<<<< HEAD
 
 
 }
@@ -32,6 +36,8 @@ interface SearchFilters {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
@@ -51,7 +57,11 @@ import { PROJECTS } from "@/data/projectsData",;
 export interface SearchResult {;
   id: string,;
   type: "talent" | "job" | "project",;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
 }
 ;
@@ -66,6 +76,7 @@ interface SearchFilters {;
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
+<<<<<<< HEAD
 
   const search = async (query: string) => {
     setLoading(true),
@@ -79,6 +90,8 @@ export function useAISearch() {
 
 
 export /**
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  * useAISearch - Function description
  */
 function useAISearch() {
@@ -87,10 +100,14 @@ function useAISearch() {
 ;
   const search = async (query: string) => {
     set_loading (true);
+<<<<<<< HEAD
     try {
 
 
           method: "POST",
+=======
+    try {          method: "POST",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
       ),
@@ -99,10 +116,15 @@ function useAISearch() {
 
       const items: SearchResult[] = [],
 
+<<<<<<< HEAD
 
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
           method: "POST",
+=======
+      const matchSkill = (skills: string[] | undefined) => {
+        if (!filters.skills |filters.skills.length === 0) return true          method: "POST",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           headers: { "Content-Type": "application/json" };
           body: JSON && JSON.stringify({ query })}
       );
@@ -116,18 +138,26 @@ function useAISearch() {
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       },
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
+<<<<<<< HEAD
           if (!matchSkill(t.skills)) return;
         return skills?.some((s) =>
+=======
+          if (!matchSkill(t.skills)) return;        return skills?.some((s) =>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,
+<<<<<<< HEAD
           if (!matchSkill(t.skills)) return,
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
         })
@@ -143,6 +173,9 @@ function useAISearch() {
         PROJECTS.forEach((p) => {
           items.push({ id: p.id, type: "project", title: p.job?.title |"Project", description: p.scope_summary })
       };
+=======
+          if (!matchSkill(t.skills)) return,      };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
         TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
           if (filters && filters.location && !t && t.location?.toLowerCase().includes(filters && filters.location.toLowerCase())) return;
@@ -158,6 +191,7 @@ function useAISearch() {
       }
       if (!filters && filters.type || filters && filters.type === "project" || filters && filters.type === "all") {
         PROJECTS && PROJECTS.forEach((p) => {
+<<<<<<< HEAD
           items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
         })
       }
@@ -175,6 +209,12 @@ function useAISearch() {
   }
 
       const response = await fetch (
+=======
+          items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })        })
+      }
+      setResults(items)
+    } catch (err) {      const response = await fetch (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
         {
           method: "POST",
@@ -193,7 +233,10 @@ if (return true, ) {
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -221,6 +264,7 @@ export function useAISearch() {;
         TALENT_PROFILES.forEach((t) => {;
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,;
           if (!matchSkill(t.skills)) return,;
+<<<<<<< HEAD
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
         });
 
@@ -277,3 +321,7 @@ if ( {) {
 ;
   return { results, loading, search }
 }
+=======
+          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });  return { results, loading, search }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -23,7 +23,10 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
 
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
+<<<<<<< HEAD
 const faqs = [
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     question: "How do I publish my AI product or service on Zion?"
     answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
@@ -52,10 +55,22 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
 
 
 const faqs = [
   {
+=======
+const faqs = [
+  {
+    question: "How do I publish my AI product or service on Zion?"
+    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
+  {
+    question: "What types of AI jobs can I find or post on Zion?"
+    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}
+  {const faqs = [
+  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     question: "How do I publish my AI product or service on Zion?",
     answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},
   {
@@ -73,6 +88,7 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
+<<<<<<< HEAD
 
 export function FaqSection() {;
   return (
@@ -139,6 +155,10 @@ export function FaqSection() {;
 
 };
 
+=======
+export function FaqSection() {;
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -166,9 +186,12 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
+<<<<<<< HEAD
   return (;
 
     <section className="py-20 bg-zion-blue" id="faq">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading>Frequently Asked Questions</GradientHeading>;
@@ -190,8 +213,12 @@ export function FaqSection() {;
                   {faq && faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
+<<<<<<< HEAD
                   {faq && faq.answer}
                 </AccordionContent>;
+=======
+                  {faq && faq.answer}                </AccordionContent>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </AccordionItem>;
             ))}
           </Accordion>;
@@ -200,7 +227,10 @@ export function FaqSection() {;
     </section>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -209,6 +239,7 @@ export function FaqSection() {;
     </section>);
 }
 
+<<<<<<< HEAD
 
 ;
   ),;}
@@ -247,3 +278,5 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
 }
 ;
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

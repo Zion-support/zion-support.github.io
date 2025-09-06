@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
+<<<<<<< HEAD
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
@@ -33,12 +37,23 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
 interface WizardStep {;
   title: string,;
+=======
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+import {cn} from '@/lib/utils';
+interface WizardStep {;
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   icon: React && React.ReactNode,;
   action: {;
     text: string,;
+<<<<<<< HEAD
     url: string;
   };
+=======
+    url: string
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   skipText?: string;
 }
 
@@ -49,6 +64,7 @@ interface OnboardingWizardProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -80,6 +96,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const { user } = useAuth();
 
 import { useState, useEffect } from 'react',;
+=======
+export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;import { useState, useEffect } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -88,7 +107,11 @@ import Rocket from 'lucide-react/dist/esm/icons/rocket',;
 import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
 import { cn } from '@/lib/utils',;
 interface WizardStep {;
+<<<<<<< HEAD
   title: string,;
+=======
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   icon: React.ReactNode,;
   action: {;
@@ -103,6 +126,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
 
 
 }
@@ -274,6 +298,8 @@ function OnboardingWizard() {
     },
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -282,11 +308,15 @@ function OnboardingWizard() {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       },
       skipText: "Skip for now"
     },
 
+<<<<<<< HEAD
 
     {
       title: "Enable AI matchmaking"
@@ -294,6 +324,8 @@ function OnboardingWizard() {
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -344,9 +376,12 @@ function OnboardingWizard() {
     }
   },
 
+<<<<<<< HEAD
 
   
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   
   
@@ -360,6 +395,7 @@ function OnboardingWizard() {
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
+<<<<<<< HEAD
       title: "Post your first job",;
       description: "Describe the talent you need for your project",;
       icon: <FileText className="h-6 w-6 text-zion-purple" />,;
@@ -382,6 +418,30 @@ function OnboardingWizard() {
     {;
       title: "Contact talent",;
       description: "Reach out to the talent that fits your needs",;
+=======
+      title: "Post your first job",,
+  description: "Describe the talent you need for your project",;
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,;
+      action: {;
+        text: "Post a Job",;
+        url: "/post-job"
+};
+      skipText: "I'll do this later"
+};
+    {;
+      title: "View suggested matches",,
+  description: "Our AI system will find the best talent matches",;
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,;
+      action: {;
+        text: "View Matches",;
+        url: "/talent"
+};
+      skipText: "Skip for now"
+};
+    {;
+      title: "Contact talent",,
+  description: "Reach out to the talent that fits your needs",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,;
       action: {;
         text: "Browse Talent",;
@@ -391,6 +451,7 @@ function OnboardingWizard() {
   ];
   const talentSteps: WizardStep[] = [;
     {;
+<<<<<<< HEAD
       title: "Complete your profile",;
       description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />,;
@@ -423,6 +484,40 @@ function OnboardingWizard() {
     {;
       title: "Enable AI matchmaking",;
       description: "Let our AI find the perfect opportunities for you",;
+=======
+      title: "Complete your profile",,
+  description: "Add your skills, experience, and preferences";
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,;
+      action: {;
+        text: "Edit Profile",;
+        url: "/profile"
+};
+      skipText: "I'll do this later"
+};
+    {;
+      title: "Define skills & availability",,
+  description: "Let clients know when you're available and what you can do",;
+      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,;
+      action: {;
+        text: "Set Availability",;
+        url: "/profile?tab=skills"
+};
+      skipText: "Skip for now"
+};
+    {;
+      title: "Preview your profile",,
+  description: "See how clients will view your profile",;
+      icon: <Eye className="h-6 w-6 text-zion-purple" />,;
+      action: {;
+        text: "Preview Profile",;
+        url: `/talent/${user?.id}`
+};
+      skipText: "Skip for now"
+};
+    {;
+      title: "Enable AI matchmaking",,
+  description: "Let our AI find the perfect opportunities for you",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;
       action: {;
         text: "Enable Matchmaking",;
@@ -451,6 +546,7 @@ function OnboardingWizard() {
     }
   };
 
+<<<<<<< HEAD
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
@@ -490,6 +586,15 @@ function OnboardingWizard() {
         <div className="flex flex-col items-center text-center p-4">;
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
 
+=======
+  return (    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
+      <CardHeader>;
+        <CardTitle className="text-center text-white">;
+          {type === 'client' ? ;
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";            "Ready to find top IT talent?" :;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -504,6 +609,7 @@ function OnboardingWizard() {
           {steps[currentStep].action && action.text}
         </Button>;
 
+<<<<<<< HEAD
         {steps[currentStep].skipText && (;
 
           <Button
@@ -691,3 +797,6 @@ skipText: "Skip for now"
     </Card>
   )
 }
+=======
+        {steps[currentStep].skipText && (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

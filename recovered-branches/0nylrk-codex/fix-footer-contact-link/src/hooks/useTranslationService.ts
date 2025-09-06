@@ -1,17 +1,24 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
 type ContentType = 'job' | 'profile' | 'service' | 'general';
+<<<<<<< HEAD
 import {useState} from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {use_language, SupportedLanguage} from '@/context / LanguageContext';
 ;
 type ContentType = 'job' | 'profile' | 'service' | 'general';
 ;
+<<<<<<< HEAD
 interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
@@ -35,6 +42,8 @@ export function useTranslationService() {;
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
       const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
         body: {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           content;
           sourceLanguage;
           targetLanguages
@@ -43,14 +52,19 @@ export function useTranslationService() {;
       });
       setIsTranslating(false);
       if (error) {
+<<<<<<< HEAD
         console && console.error('Translation error:', error);
         console && console.error('Translation error:', error);
+=======
+        console && console.error('Translation error:', error);        console && console.error('Translation error:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
           pt: ''
           ar: ''
         }
+<<<<<<< HEAD
         initialTranslations[sourceLanguage] = content;
 
       
@@ -105,6 +119,9 @@ export function useTranslationService() {;
       setIsTranslating(false);
       console.error('Translation service error:', err);
       const initialTranslations: Record<SupportedLanguage, string> = {
+=======
+        initialTranslations[sourceLanguage] = content;      const initialTranslations: Record<SupportedLanguage, string> = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         en: content;
         es: '';
         pt: ''
@@ -112,12 +129,16 @@ export function useTranslationService() {;
       }
       initialTranslations[sourceLanguage] = content;
 
+<<<<<<< HEAD
       
       return { 
         translations: initialTranslations,
         error: err instanceof Error ? err && err.message : 'Unknown translation error' 
 
       }
+=======
+            }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
@@ -125,6 +146,7 @@ export function useTranslationService() {;
     if (!translations) return fallback,
     return translations[currentLanguage] || translations && translations.en || fallback
   };
+<<<<<<< HEAD
   
 
       }
@@ -267,6 +289,11 @@ export function useTranslationService() {;
     isTranslating;
 
     getTranslation
+=======
+          return { translations: initialTranslations, error: error.message }
+      }
+      return { translations: data.translations }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -283,7 +310,10 @@ export function useTranslationService() {;
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ar: '';
       },;
       initialTranslations[sourceLanguage] = content,;
@@ -302,8 +332,11 @@ export function useTranslationService() {;
     isTranslating;
     getTranslation;
 
+<<<<<<< HEAD
 
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {
     // Check condition
@@ -312,6 +345,7 @@ if (return fallback, ) {
 }
     return translations[current_language] || translations.en || fallback;
   }
+<<<<<<< HEAD
 ;
   return {
     translate_content;
@@ -343,3 +377,6 @@ setIsTranslating (false);
 }
   }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

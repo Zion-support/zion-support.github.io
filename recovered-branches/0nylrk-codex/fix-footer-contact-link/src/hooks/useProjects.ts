@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import {useState, useEffect} from "react";
@@ -12,6 +13,8 @@ export function useProjects() {;
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -27,6 +30,7 @@ export function useProjects() {
   const { user } = useAuth(),
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true),
+<<<<<<< HEAD
   const [error, setError] = useState<string | null>(null),
 
 
@@ -47,10 +51,14 @@ export function useProjects() {
 
 
       // Build the query based on user type
+=======
+  const [error, setError] = useState<string | null>(null),      // Build the query based on user type
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
+<<<<<<< HEAD
         .select(`
 
       
@@ -83,6 +91,12 @@ export function useProjects() {
       
 
       // Transform the data to match our project types
+=======
+        .select(`        query = query.eq("talent_id", user.id)
+      } else if (user.userType === "employer" |user.userType === "buyer") {
+        query = query.eq("client_id", user.id)
+      }      // Transform the data to match our project types
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const transformedData = data && data.map((project: any) => ({
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -152,7 +166,10 @@ if (throw fetch_error) {
       console && console.error("Error fetching projects:", err);
       setError("Failed to fetch projects: " + err && err.message),
       toast && toast.error("Failed to fetch projects")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsLoading (false);
     }
@@ -160,6 +177,7 @@ if (throw fetch_error) {
 
 ;
   const getProjectById = async (project_id: string): Promise < Project | null> => {
+<<<<<<< HEAD
 
         talent_profile: project && project.talent_profile ? {
           ...project && project.talent_profile,
@@ -179,12 +197,17 @@ if (throw fetch_error) {
     }
   }
     try {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase;
         .from ("projects");
         .select (`;
           *;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       })),
       
       setProjects(transformedData as Project[]),
@@ -192,6 +215,7 @@ if (throw fetch_error) {
     } catch (err: any) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
+<<<<<<< HEAD
 
       toast.error("Failed to fetch projects")
     } finally {
@@ -201,12 +225,17 @@ if (throw fetch_error) {
   },
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -218,10 +247,15 @@ if (throw fetch_error) {
       if (error) throw error,
       
 
+<<<<<<< HEAD
 
       // Transform the data to match our project types
       const transformedProject = {
           job:jobs (title, description);
+=======
+      // Transform the data to match our project types
+      const transformedProject = {          job:jobs (title, description);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles ! client_id (display_name, avatar_url);
         `);
@@ -238,6 +272,7 @@ if (throw error) {
 
         talent_profile: data && data.talent_profile ? {
           ...data && data.talent_profile,
+<<<<<<< HEAD
           full_name: data && data.talent_profile.display_name
 
         ...data;
@@ -282,6 +317,13 @@ if (throw error) {
       toast.success(`Project status updated to ${status}`),
 
       return true
+=======
+          full_name: data && data.talent_profile.display_name  const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
+    try {
+      const { error } = await supabase
+        .from("projects")
+        .update({ status })      return true
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
@@ -296,6 +338,7 @@ if (throw error) {
     } catch (err: any) {
       console.error ("Error fetching project:", err);
       toast.error ("Failed to fetch project details");
+<<<<<<< HEAD
       return null;
     }
   }
@@ -560,4 +603,10 @@ getProjectById;
 updateProjectStatus 
 }
   }
+=======
+      return null;  return {
+    projects;
+    is_loading;
+    error;  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

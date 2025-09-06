@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+interface QuickReplyButtonProps {
+  text: string;
+  onClick: () => void
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -5,16 +12,23 @@ interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
 }
+<<<<<<< HEAD
 
 export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProps) {;
   return (
+=======
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Button
 
       variant="outline"
       size="sm"
       className={cn(
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200",
       )}
@@ -51,6 +65,7 @@ function QuickReplyButton() {
       {text}
     </Button>);
 }
+<<<<<<< HEAD
     </Button>
   );
 }
@@ -97,6 +112,8 @@ import React from "react",
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void

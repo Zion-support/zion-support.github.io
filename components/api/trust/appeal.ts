@@ -1,19 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
-<<<<<<< HEAD
-
-export default async function handler(
-  req: NextApiRequest
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
@@ -23,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { userId, message, contactEmail } = req.body || {};
   if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' });
   const appeal: TrustAppeal;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
@@ -46,6 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase && supabase.from('trust_appeals').insert(appeal);
   } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
@@ -67,19 +66,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const appeal: TrustAppeal = {
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
 
-=======
 
   return res.status(200).json({ ok: true, appeal });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -90,10 +93,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return res && res.status(200).json({ ok: true, appeal });
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -106,6 +112,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -159,6 +168,7 @@ return res.status (200).json ({ ok: true, appeal });
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,11 +177,15 @@ return res.status (200).json ({ ok: true, appeal });
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 return res.status(200).json({ ok: true, appeal });
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   return res.status(200).json({ ok: true, appeal });
 }
 <<<<<<< HEAD
@@ -183,3 +197,7 @@ return res.status(200).json({ ok: true, appeal });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

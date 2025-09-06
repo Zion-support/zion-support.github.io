@@ -3,8 +3,11 @@ import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
 export default defineConfig({
+<<<<<<< HEAD
 
       '@': path ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup && setup.ts',
@@ -19,6 +22,7 @@ export default define_config ({
       '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
+<<<<<<< HEAD
     setup_files: './tests / setup.ts',
 
   resolve: {;
@@ -29,6 +33,9 @@ export default define_config ({
     setupFiles: './tests/setup.ts',
 
 import { defineConfig } from 'vitest/config',;
+=======
+    setup_files: './tests / setup.ts',import { defineConfig } from 'vitest/config',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import path from 'node: path',;
 export default defineConfig({;
   resolve: {;
@@ -37,7 +44,11 @@ export default defineConfig({;
   test: {;
     environment: 'jsdom',;
     setupFiles: './tests/setup.ts';
+<<<<<<< HEAD
     globals: true}});
 ;
     globals: true}});
     globals: true}});
+=======
+    globals: true}});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

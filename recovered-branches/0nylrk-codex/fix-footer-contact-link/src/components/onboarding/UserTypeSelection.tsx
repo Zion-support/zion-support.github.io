@@ -1,14 +1,18 @@
 
 
+<<<<<<< HEAD
 
 
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Star, User } from "lucide-react",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 interface UserTypeOption {
 
@@ -45,11 +49,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
     {
+=======
+import { Button } from "@/components/ui/button",    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       id: "talent"
       name: "Talent"
       description: "I want to showcase my skills and find opportunities"
 
+<<<<<<< HEAD
       icon: Star
 
 
@@ -163,15 +171,28 @@ function UserTypeSelection() {
           const is_selected = selected_type === type.id,
 
 
+=======
+      icon: Star          const Icon = type.icon;
+          const is_selected = selected_type === type.id,
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
 
           return (
             <Button;
+<<<<<<< HEAD
               key={type.id}
 
           return (
+=======
+              key={type.id}          return (
+            <Button;
+              key={type.id}
+
+=======          return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button;
               key={type.id}
               }`}
@@ -183,6 +204,7 @@ function UserTypeSelection() {
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
 
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -222,6 +244,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   ],;
   return (;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -229,7 +253,10 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
           This helps us personalize your experience;
         </p>;
       </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="grid gap-4 md: grid-cols-3">;
         {userTypes && userTypes.map((type) => {;
           const Icon = type && type.icon;
@@ -242,6 +269,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               variant="outline";
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
                 isSelected ;
+<<<<<<< HEAD
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
@@ -252,11 +280,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             <Button;
               key={type.id}
               }`}
+=======
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;              }`}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />;
               </div>;
               <div className="text-center">;
+<<<<<<< HEAD
                 <h4 className="font-medium">{type && type.name}</h4>;
                 <p className="text-sm text-zion-slate-light mt-1">;
                   {type && type.description}
@@ -267,10 +299,15 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         })}
 
       </div>;
+=======
+
+}      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </div>;
   );
 
 }
+<<<<<<< HEAD
               on_click={() => on_select (type.id)}
               variant="outline";
               className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${
@@ -314,4 +351,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 }
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

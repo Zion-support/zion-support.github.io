@@ -1,13 +1,19 @@
 
 
+<<<<<<< HEAD
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
+=======
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+<<<<<<< HEAD
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",
@@ -15,6 +21,8 @@ import { useState } from "react",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
@@ -22,7 +30,10 @@ import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -30,16 +41,20 @@ const trustedCompanies = [
     name: "NVIDIA"
     logo: "/logos/nvidia-logo.svg"
     alt: "NVIDIA logo"
+<<<<<<< HEAD
 
 
   },
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     name: "American Express"
     logo: "/logos/amex-logo.svg"
     alt: "American Express logo"
 
+<<<<<<< HEAD
 
   },
 
@@ -72,10 +87,18 @@ const trustedCompanies = [
 
 
   {
+=======
+  },
+  {
+    name: "AMD"
+    logo: "/logos/amd-logo.svg"
+    alt: "AMD logo"  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: "EA Games"
     logo: "/logos/ea-logo.svg"
     alt: "EA Games logo"
 
+<<<<<<< HEAD
 
   },
 
@@ -108,10 +131,18 @@ const trustedCompanies = [
 
 
   {
+=======
+  },
+  {
+    name: "Nike"
+    logo: "/logos/nike-logo.svg"
+    alt: "Nike logo"  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: "Huawei"
     logo: "/logos/huawei-logo.svg"
     alt: "Huawei logo"
 
+<<<<<<< HEAD
 
   },
 
@@ -144,10 +175,18 @@ const trustedCompanies = [
 
 
   {
+=======
+  },
+  {
+    name: "Universal"
+    logo: "/logos/universal-logo.svg"
+    alt: "Universal Studios logo"  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: "Bayer"
     logo: "/logos/bayer-logo.svg"
     alt: "Bayer logo"
 
+<<<<<<< HEAD
 
   },
 
@@ -180,10 +219,18 @@ const trustedCompanies = [
 
 
   {
+=======
+  },
+  {
+    name: "Silicon Valley Bank"
+    logo: "/logos/svb-logo.svg"
+    alt: "Silicon Valley Bank logo"  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: "Lenovo"
     logo: "/logos/lenovo-logo.svg"
     alt: "Lenovo logo"
 
+<<<<<<< HEAD
 
   },
 
@@ -243,10 +290,22 @@ export function TrustedBySection() {
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 // Real company logos for trusted partners - with more reliable image URLs;
+=======
+  },
+    name: "Thomson Reuters"
+    logo: "/logos/thomson-reuters-logo.svg"
+    alt: "Thomson Reuters logo"
+  }  const handleImageError = (companyName: string) => {
+    setFailedLogos(prev => ({
+      ...prev
+      [companyName]: true
+    }))// Real company logos for trusted partners - with more reliable image URLs;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const trustedCompanies = [;
   {;
     name: "NVIDIA",;
     logo: "/logos/nvidia-logo && logo.svg",;
+<<<<<<< HEAD
     alt: "NVIDIA logo";
   };
   {;
@@ -339,6 +398,100 @@ const trustedCompanies = [;
     logo: "/logos/citi-logo && logo.svg",;
     alt: "Citi Bank logo";
   };
+=======
+    alt: "NVIDIA logo"
+};
+  {;
+    name: "American Express",;
+    logo: "/logos/amex-logo && logo.svg",;
+    alt: "American Express logo"
+};
+  {;
+    name: "Walt Disney",;
+    logo: "/logos/disney-logo && logo.svg",;
+    alt: "Walt Disney logo"
+};
+  {;
+    name: "AMD",;
+    logo: "/logos/amd-logo && logo.svg",;
+    alt: "AMD logo"
+};
+  {;
+    name: "Apple",;
+    logo: "/logos/apple-logo && logo.svg",;
+    alt: "Apple logo"
+};
+  {;
+    name: "EA Games",;
+    logo: "/logos/ea-logo && logo.svg",;
+    alt: "EA Games logo"
+};
+  {;
+    name: "Louis Vuitton",;
+    logo: "/logos/lv-logo && logo.svg",;
+    alt: "Louis Vuitton logo"
+};
+  {;
+    name: "Nike",;
+    logo: "/logos/nike-logo && logo.svg",;
+    alt: "Nike logo"
+};
+  {;
+    name: "Pandora",;
+    logo: "/logos/pandora-logo && logo.svg",;
+    alt: "Pandora logo"
+};
+  {;
+    name: "Huawei",;
+    logo: "/logos/huawei-logo && logo.svg",;
+    alt: "Huawei logo"
+};
+  {;
+    name: "Johnson & Johnson",;
+    logo: "/logos/jnj-logo && logo.svg",;
+    alt: "Johnson & Johnson logo"
+};
+  {;
+    name: "Universal",;
+    logo: "/logos/universal-logo && logo.svg",;
+    alt: "Universal Studios logo"
+};
+  {;
+    name: "Ubisoft",;
+    logo: "/logos/ubisoft-logo && logo.svg",;
+    alt: "Ubisoft logo"
+};
+  {;
+    name: "Bayer",;
+    logo: "/logos/bayer-logo && logo.svg",;
+    alt: "Bayer logo"
+};
+  {;
+    name: "Avaya",;
+    logo: "/logos/avaya-logo && logo.svg",;
+    alt: "Avaya logo"
+};
+  {;
+    name: "Silicon Valley Bank",;
+    logo: "/logos/svb-logo && logo.svg",;
+    alt: "Silicon Valley Bank logo"
+};
+  {;
+    name: "Dell",;
+    logo: "/logos/dell-logo && logo.svg",;
+    alt: "Dell logo"
+};
+  {;
+    name: "Lenovo",;
+    logo: "/logos/lenovo-logo && logo.svg",;
+    alt: "Lenovo logo"
+};
+  {;
+    name: "Citi Bank",;
+    logo: "/logos/citi-logo && logo.svg",;
+    alt: "Citi Bank logo"
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {;
     name: "Thomson Reuters",;
     logo: "/logos/thomson-reuters-logo && logo.svg",;
@@ -354,15 +507,23 @@ export function TrustedBySection() {;
     setFailedLogos(prev => ({;
       ...prev,;
       [companyName]: true;
+<<<<<<< HEAD
     }));
   };
 
   return (
     <section className="py-16 bg-zion-blue-dark">;
+=======
+    }))
+};
+
+  return (    <section className="py-16 bg-zion-blue-dark">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>;
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>;
+<<<<<<< HEAD
         </div>;
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">;
@@ -413,6 +574,9 @@ export function TrustedBySection() {;
     </section>
   )
 }
+=======
+        </div>;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
@@ -527,5 +691,8 @@ const trusted_companies = [;
 ];
 ;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

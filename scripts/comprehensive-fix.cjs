@@ -25,7 +25,14 @@ function fixFile(filePath) {
     
     // Remove all merge conflict markers
 
+<<<<<<< HEAD
     content = content.replace(/
+=======
+
+
+
+    content = content.replace(/[^\n]+\n?/g, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

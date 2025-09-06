@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
@@ -64,6 +65,8 @@ export function ProfileRatings({
         </div>
 
         <div className="md:w-2/3">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">
@@ -78,10 +81,13 @@ export function ProfileRatings({
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
+<<<<<<< HEAD
               />
             </TabsContent>
 
             <TabsContent value="positive">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
                 isLoading={isLoading}
@@ -102,11 +108,64 @@ export function ProfileRatings({
     </div>
   );
 }
+<<<<<<< HEAD
 
 
 }
 
     </div>;
+=======
+;
+  // Fetch reviews when component mounts;
+  useEffect (() => {
+    fetchUserReviews (user_id);
+  }, [user_id]);
+;
+  return (
+    <div className="space-y-6">;
+      <div className="flex flex - col md:flex - row gap-6">;
+        <div className="md:w-1/3">;
+          <ReviewStats;
+            average_rating={average_rating}
+            total_reviews={rating_count}
+            rating_distribution={rating_distribution}
+          />;
+        </div>;
+        <div className="md:w-2/3">;
+          <Tabs default_value="all">;
+            <TabsList className="mb-4">;
+              <TabsTrigger value="all">;
+                All Reviews ({reviews.length});
+              </TabsTrigger>;
+              <TabsTrigger value="positive">Positive</TabsTrigger>;
+              <TabsTrigger value="critical">Critical</TabsTrigger>;
+            </TabsList>;
+            <TabsContent value="all">;
+              <ReviewsList;
+                reviews={reviews}
+                is_loading={is_loading}
+                onReportReview={report_review}
+              />;
+            </TabsContent>;
+            <TabsContent value="positive">;
+              <ReviewsList;
+                reviews={reviews.filter ((r) => r.rating >= 4)}
+                is_loading={is_loading}
+                onReportReview={report_review}
+              />;
+            </TabsContent>;
+            <TabsContent value="critical">;
+              <ReviewsList;
+                reviews={reviews.filter ((r) => r.rating < 4)}
+                is_loading={is_loading}
+                onReportReview={report_review}
+
+              />;
+            </TabsContent>;
+          </Tabs>;
+        </div>;
+      </div>;    </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; interface ProfileRatingsProps {
   userId: string;
 averageRating?: number;

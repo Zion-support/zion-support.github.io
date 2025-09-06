@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,8 +8,11 @@
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/zapier/jobs-posted.ts
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = null;
   res.status(200).json({ events })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ events });
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/zapier/jobs-posted.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
 ;
@@ -57,6 +64,10 @@ import { readState } from "../../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET");
     return res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { since } = req.query as { since?: string }
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
@@ -69,6 +80,7 @@ const events = state && state.events.filter(
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 =======
 =======
@@ -76,6 +88,10 @@ const events = state && state.events.filter(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/zapier/jobs-posted.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -113,6 +129,7 @@ function handler() {
   );
   res.status (200).json ({ events });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/zapier/jobs-posted.ts
 <<<<<<< HEAD
 =======
@@ -123,3 +140,8 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/zapier/jobs-posted.ts
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

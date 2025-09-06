@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -12,6 +13,15 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
+=======
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { AIMatchmaker } from "@/components/AIMatchmaker",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",import { toast } from "@/hooks/use-toast";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
   const navigate = useNavigate();
@@ -20,6 +30,7 @@ export default function AIMatcherPage() {
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service";
+<<<<<<< HEAD
     const category = match.item.category.toLowerCase();
 
     if (
@@ -47,6 +58,38 @@ export default function AIMatcherPage() {
   };
 
   return (
+=======
+    const category = match.item.category.toLowerCase()
+    if (category.includes("talent") |category === "engineering" |
+        category === "data science" |category === "development") {
+import { toast } from "@/hooks/use-toast",
+import { MatchResult } from "@/lib/ai-matchmaking",
+export default function AIMatcherPage() {
+  const navigate = useNavigate(),
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+  
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service",
+    const category = match.item.category.toLowerCase(),
+    
+    if (category.includes("talent") || category === "engineering" || 
+        category === "data science" || category === "development") {
+      itemType = "talent"
+    } else if (category.includes("equipment") |category === "hardware") {
+      itemType = "equipment"
+    }
+    toast({
+      title: "Match Selected"
+      description: `You've selected ${match.item.title}`})
+    // Navigate to the quote request page with the selected item
+    navigate("/request-quote", {
+      state: {
+        serviceType: itemType
+        specificItem: match.item
+      }
+    })  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -122,6 +165,7 @@ if (|| category === "hardware") {) {
   return (
     <>;
       <Header />;
+<<<<<<< HEAD
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
         <div className="container mx - auto">;
           <div className="text - center mb - 12">;
@@ -144,11 +188,36 @@ if (|| category === "hardware") {) {
                   <SelectItem value="service" className="text - white">Services</SelectItem>;
                   <SelectItem value="talent" className="text - white">Talent</SelectItem>;
                   <SelectItem value="equipment" className="text - white">Equipment</SelectItem>;
+=======
+      <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text - center mb-12">;
+            <GradientHeading > AI Matchmaker</GradientHeading>;
+            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx-auto">;
+              Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
+            </p>;
+          </div>;
+          <div className="max - w-4xl mx-auto">;
+            <div className="mb-8">;
+              <label className="block text - sm font - medium text - zion - slate - light mb-2">;
+                I'm looking for:;
+              </label>;
+              <Select value={selected_category} onValueChange={setSelectedCategory}>;
+                <SelectTrigger className="bg - zion - blue border border - zion - blue - light text-white">;
+                  <SelectValue placeholder="All Categories" />;
+                </SelectTrigger>;
+                <SelectContent className="bg - zion - blue - dark border border - zion - blue-light">;
+                  <SelectItem value="all" className="text-white">All Categories</SelectItem>;
+                  <SelectItem value="service" className="text-white">Services</SelectItem>;
+                  <SelectItem value="talent" className="text-white">Talent</SelectItem>;
+                  <SelectItem value="equipment" className="text-white">Equipment</SelectItem>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </SelectContent>;
               </Select>;
             </div>;
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
+<<<<<<< HEAD
               onMatchSelect={handleMatchSelect}
             ;
             <AIMatchmaker ;
@@ -184,3 +253,6 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 }
 ;
 ;
+=======
+              onMatchSelect={handleMatchSelect}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

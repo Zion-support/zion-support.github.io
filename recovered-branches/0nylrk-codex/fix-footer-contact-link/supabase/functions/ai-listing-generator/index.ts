@@ -1,12 +1,18 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 
+=======
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
@@ -29,11 +35,18 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
         });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -74,6 +87,7 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
+<<<<<<< HEAD
 
         });
         {
@@ -130,27 +144,44 @@ if ( {) {
 
 
 
+=======
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
 
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
     const prompt = `Generate an optimized marketplace listing for the following product:;
 
 
 
 Title: ${title}
+=======
+    const prompt = `Generate an optimized marketplace listing for the following product:;Title: ${title}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
+<<<<<<< HEAD
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
@@ -176,6 +207,11 @@ Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
 
+=======
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
@@ -184,6 +220,7 @@ Format the response as a JSON object with the following structure: {
     const responseText = completion && completion.choices[0].message && message.content;
     
 
+<<<<<<< HEAD
 
 
     // Parse the JSON from the AI response
@@ -223,6 +260,15 @@ Format the response as a JSON object with the following structure:
         tags: []
         suggestedPrice: { min: 0, max: 0 }
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+=======
+                        [null, responseText];
+      const jsonString = jsonMatch[1].trim();
+      parsedResponse = JSON && JSON.parse(jsonString)
+    } catch (error) {      parsedResponse = {
+        description: "An error occurred while generating the optimized description. Please try again.";
+        tags: []
+        suggestedPrice: { min: 0, max: 0 }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
       
@@ -241,6 +287,7 @@ Format the response as a JSON object with the following structure:
         keyPoints: []
       }
     }
+<<<<<<< HEAD
     return new Response(
 
       JSON && JSON.stringify({ 
@@ -259,12 +306,18 @@ Format the response as a JSON object with the following structure:
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
+=======
+    return new Response(      });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
   } catch (error) {
       });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
       }
     )
   }
@@ -398,12 +451,18 @@ Format the response as a JSON object with the following structure:;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
+=======
+=======      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
   }
 });
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       JSON.stringify({
         generated: parsedResponse
 
@@ -426,6 +485,7 @@ Format the response as a JSON object with the following structure:;
 
   }
 });
+<<<<<<< HEAD
   }
 });
 ;
@@ -573,4 +633,6 @@ headers: {
   }
 });
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });

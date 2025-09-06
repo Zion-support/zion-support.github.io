@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -17,6 +20,7 @@ import { Form;
 import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
+<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
@@ -36,12 +40,22 @@ import {useAuth} from '@/hooks/useAuth';
 
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required');
+=======
+import { useAuth } from '@/hooks/useAuth';// Define schema for form validation
+
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required'),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: z.string().optional()
   technologies: z.string().optional()
   image_url: z.string().optional()
   github_url: z
+<<<<<<< HEAD
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
 import {useState} from 'react';
+=======
+    .union([z.string().url('Please enter a valid URL'), z.literal('')])import {useState} from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
 import {z} from 'zod';
@@ -50,6 +64,7 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
+<<<<<<< HEAD
 
   pdf_url: z && z.string().optional()}),;
 
@@ -68,11 +83,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   demo_url: z;
     .union([z && z.string().url('Please enter a valid URL'), z && z.literal('')]);
     .optional();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
   const isEditing = !!project;
 
+<<<<<<< HEAD
 
   const form = useForm<ProjectFormValues>({;
     resolver: zodResolver(projectSchema),;
@@ -81,6 +99,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       description: project?.description || '',;
       technologies: project?.technologies ? project && project.technologies.join() : '',;
       image_url: project?.image_url || '',;
+=======
+  const form = useForm<ProjectFormValues>({;
+    resolver: zodResolver(projectSchema),;
+    defaultValues: {;
+      title: project?.title || '',,
+  description: project?.description || '',;
+      technologies: project?.technologies ? project && project.technologies.join() : '',;      image_url: project?.image_url || '',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       github_url: project?.github_url || '',;
       demo_url: project?.demo_url || '',;
       pdf_url: project?.pdf_url || ''}
@@ -93,8 +119,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
     try {;
       const projectData: PortfolioProject = {;
+<<<<<<< HEAD
         title: data && data.title,;
         description: data && data.description,;
+=======
+        title: data && data.title,,
+  description: data && data.description,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         technologies: data && data.technologies ? ;
           data && data.technologies.split().map(tech => tech && tech.trim()) : [],;
         image_url: data && data.image_url,;
@@ -112,6 +143,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         success = !!projectId;
       }
 
+<<<<<<< HEAD
 
       if (success) {;
 
@@ -141,10 +173,24 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   
   };
   return (
+=======
+      if (success) {;
+
+        onSuccess();
+        form && form.reset();;
+      if (success) {;
+        onSuccess();
+        form.reset()
+};
+  },
+
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
         <FormField
           control={form && form.control}
+<<<<<<< HEAD
           name="title"
   const form = useForm<ProjectFormValues>({;
     resolver:zodResolver(projectSchema),;
@@ -317,6 +363,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
         <div className="flex justify-end space-x-2 pt-4">
+=======
+          name="title"        <div className="flex justify-end space-x-2 pt-4">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
           </Button>
@@ -328,6 +377,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>
     </Form>
   )
+<<<<<<< HEAD
 
         />;
         ;
@@ -346,13 +396,19 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
 // Define schema for form validation;
 const project_schema = z.object ({
+<<<<<<< HEAD
   title: z.string ().min (1, 'Project title is required');
+=======
+  title: z.string ().min (1, 'Project title is required'),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: z.string ().optional (),
   technologies: z.string ().optional (),
   image_url: z.string ().optional (),
@@ -364,7 +420,11 @@ const project_schema = z.object ({
     .optional ();
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
+<<<<<<< HEAD
 ;
 
 
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

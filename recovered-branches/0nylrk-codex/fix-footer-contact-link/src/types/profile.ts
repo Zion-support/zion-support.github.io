@@ -3,10 +3,16 @@ export interface ProfileSkill {
   level: number; // 1-5
   endorsements?: number;
 }
+<<<<<<< HEAD
 
 }
   id: string;
   title: string;
+=======
+}
+  id: string;
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   image_url?: string;
   tags?: string[];
@@ -21,6 +27,7 @@ export interface ProfileSkill {
 export interface ProfileExperience {
   id: string;
   role: string;
+<<<<<<< HEAD
   company: string;
   description: string;
   startDate: string;
@@ -39,6 +46,14 @@ export interface Availability {
   availableHours?: { day: string; hours: string }[];
 }
 
+=======
+  company: string,
+  description: string;
+  status: 'available' | 'limited' | 'unavailable';
+  next_available?: string;
+  message?: string,
+  available_hours?: { day: string, hours: string }[];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export interface ProfileData {
   id: string;
@@ -80,6 +95,7 @@ export interface ProfileData {;
   experience: ProfileExperience[];
   availability: Availability;
   hourlyRate?: number;
+<<<<<<< HEAD
   contactEmail?: string;
 }
   hourlyRate?: number
@@ -95,6 +111,13 @@ export interface ProfileSkill {;
 export interface ProfileProject {;
   id: string,;
   title: string,;
+=======
+  contactEmail?: string
+};
+export interface ProfileProject {;
+  id: string,;
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   imageUrl?: string,;
   tags?: string[],;
@@ -105,7 +128,11 @@ export interface ProfileProject {;
 export interface ProfileExperience {;
   id: string,;
   role: string,;
+<<<<<<< HEAD
   company: string,;
+=======
+  company: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   startDate: string,;
   endDate?: string,;
@@ -139,4 +166,7 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

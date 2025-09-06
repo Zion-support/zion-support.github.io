@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -14,16 +15,19 @@ export const TALENT_PROFILES = [
     id: '1',
     slug: 'sample - talent',
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Stub talent data - placeholder for missing functionality
 id: '1',
     slug: 'sample-talent',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Sample Talent',
     title: 'Full Stack Developer',
     category: 'Development',
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
+<<<<<<< HEAD
 <<<<<<< HEAD
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
@@ -44,6 +48,8 @@ id: '1',
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
@@ -72,15 +78,14 @@ export const TALENT_PROFILES = [;
 
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     skills: ['React', 'Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -98,6 +103,10 @@ export const TALENT_PROFILES = [;
     translations: {},
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

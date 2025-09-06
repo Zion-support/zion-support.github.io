@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -35,6 +36,8 @@ if ( {) {
         
         activitiesMap[milestone.id] = activitiesData || []
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -49,6 +52,7 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
+<<<<<<< HEAD
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -62,6 +66,8 @@ if ( {) {
   $2
 }
       setIsLoading (false);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return;
     }
     try {
@@ -87,6 +93,7 @@ if (throw milestones_error) {
           .from ('milestone_activities');
           .select (`;
             *;
+<<<<<<< HEAD
             created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
       }
@@ -196,3 +203,6 @@ if ( {) {
 
 ;
 
+=======
+            created_by_profile:profiles ! user_id (display_name, avatar_url);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

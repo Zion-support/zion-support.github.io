@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 // Marketplace types
@@ -10,6 +11,8 @@ export interface Offer {;
 export interface Offer {;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -35,6 +38,7 @@ export interface PaymentTerms {
   }>;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -44,12 +48,15 @@ export interface PaymentTerms {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";
   status: "ACTIVE" | "COMPLETED" | "CANCELLED";
 
@@ -57,11 +64,17 @@ export interface PaymentTerms {
 
 
   timeline: any[];
+=======
+  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface ProjectNote {
   id: string;
   authorId: string;
@@ -70,7 +83,10 @@ export interface ProjectNote {
   createdAtIso: string;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

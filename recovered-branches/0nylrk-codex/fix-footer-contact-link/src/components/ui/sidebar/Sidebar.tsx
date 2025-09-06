@@ -1,15 +1,33 @@
+<<<<<<< HEAD
 
 
+=======
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
+<<<<<<< HEAD
 
   className?: string;
   children?: React && React.ReactNode;
 }
 
 
+=======
+  children?: React && React.ReactNode;
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function Sidebar(): any ({ className, children, ...props }: SidebarProps) {;
   return (
     <div
@@ -21,15 +39,21 @@ export function Sidebar(): any ({ className, children, ...props }: SidebarProps)
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200";
 
         className
+<<<<<<< HEAD
         className
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       className={cn(
         "flex flex-col h-screen bg-background border-r border-border shrink-0 w-64 overflow-y-auto transition-all duration-200"
         className
+<<<<<<< HEAD
 
 
 import React from "react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -40,11 +64,17 @@ interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
 
+<<<<<<< HEAD
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
 
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {cn} from "@/lib/utils";
 interface SidebarProps extends React && React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
@@ -81,6 +111,7 @@ export function Sidebar({ className, children, ...props }: SidebarProps) {;
 
     </div>;
   );
+<<<<<<< HEAD
 }
 
 import React from './react';
@@ -144,3 +175,6 @@ children?: React.ReactNode
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

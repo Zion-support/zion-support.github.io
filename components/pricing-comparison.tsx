@@ -1,10 +1,6 @@
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
-<<<<<<< HEAD
-
-  const serviceComparisons = [
-=======
 starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month',
@@ -50,7 +46,7 @@ pros: ['Affordable', 'Good for beginners', 'Basic features'],
       color: 'from-purple-500 to-indigo-600',
       icon: '🤖',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       service: 'Cloud Monitoring',
       zionPricing: {
@@ -77,113 +73,6 @@ pros: [
           rating: '4.5/5',
 pros: ['Good APM', 'User-based pricing', 'Reliable'],
           cons: [
-<<<<<<< HEAD
-            'Higher pricing',
-            'Limited customization',
-            'No unlimited plan',
-          ],
-          savings: 'Save $20/month with Zion',
-        },        {
-          name: 'Copy.ai',
-          pricing: '$36/month',
-          rating: '4.6/5',
-          pros: ['Unlimited words', 'Good value', 'Simple interface'],
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
-          savings: 'Save $17/month with Zion',
-        },        {
-          name: 'Writesonic',
-          pricing: '$19/month',
-          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
-          cons: ['Higher pricingLimited customizationNo unlimited plan'],
-          savings: 'Save $20/month with Zion';
-        };
-          name: 'Copy.ai',
-          pricing: '$36/month',
-          rating: '4.6/5',
-          pros: ['Unlimited words', 'Good value', 'Simple interface'],
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
-          savings: 'Save $17/month with Zion',
-        },          pros: ['Unlimited wordsGood valueSimple interface'],
-          cons: ['Basic featuresLimited templatesNo advanced SEO'],
-          savings: 'Save $17/month with Zion'
-        },        {
-          name: 'Writesonic'
-          pricing: '$19/month'
-          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations']
-          cons: ['Higher pricingLimited customizationNo unlimited plan']
-          savings: 'Save $20/month with Zion'
-        }
-          name: 'Copy.ai'
-          pricing: '$36/month'
-          rating: '4.6/5'
-          pros: ['Unlimited words', 'Good value', 'Simple interface']
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
-          savings: 'Save $17/month with Zion'
-        },          pros: ['Unlimited wordsGood valueSimple interface']
-          cons: ['Basic featuresLimited templatesNo advanced SEO']
-          savings: 'Save $17/month with Zion'
-        }
-          name: 'Writesonic'
-          pricing: '$19/month'
-          rating: '4.4/5'
-          pros: ['Affordable', 'Good for beginners', 'Basic features']
-          cons: ['Limited features', 'Basic AI models', 'No team features']
-          savings: 'Same price, better features'
-        }
-      ]
-        'AI-powered content generation'
-        'Multiple content formats'
-        'SEO optimization'
-        'Team collaboration'
-        'API access'
-        'Custom templates'
-      ]
-      color: 'from-purple-500 to-indigo-600'
-      icon: '🤖'
-    };
-    {;
-      insight: 'Professional features at startup-friendly prices',;
-      icon: <Zap className="w-6 h-6" />,;
-      color: 'text-purple-400';
-    };
-    {;
-      insight: 'Enterprise-grade reliability without enterprise pricing',;
-      icon: <Star className="w-6 h-6" />,;
-      color: 'text-yellow-400';
-      insight: 'Zion services are 30 - 60% more affordable than market leaders',
-      icon: <DollarSign className='w - 6 h - 6' />,
-      color: 'text - green - 400',
-    },
-    {
-      insight: 'All plans include free trials and no hidden fees',
-      icon: <Check className='w - 6 h - 6' />,
-      color: 'text - blue - 400',
-    },
-    {
-      insight: 'Professional features at startup - friendly prices',
-      icon: <Zap className='w - 6 h - 6' />,
-      color: 'text - purple - 400',
-    },
-    {
-      insight: 'Enterprise - grade reliability without enterprise pricing',
-      icon: <Star className='w - 6 h - 6' />,
-      color: 'text - yellow - 400',
-    },  ];    {
-      insight: 'All plans include free trials and no hidden fees',
-      icon: <Check className="w - 6 h - 6" />,
-      color: 'text - blue - 400';
-    }
-    {
-      insight: 'Professional features at startup - friendly prices',
-      icon: <Zap className="w - 6 h - 6" />,
-      color: 'text - purple - 400';
-    }
-    {
-      insight: 'Enterprise - grade reliability without enterprise pricing',
-      icon: <Star className="w - 6 h - 6" />,
-      color: 'text - yellow - 400';
-    }
-=======
             'Expensive for teams',
             'Limited server monitoring',
             'Complex setup',
@@ -262,7 +151,7 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
       color: 'from-blue-500 to-cyan-600',
       icon: '🚀',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const marketInsights = [
     {
@@ -281,31 +170,6 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-purple-400',
     },
     {
-<<<<<<< HEAD
-      insight: 'Enterprise-grade reliability without enterprise pricing'
-      icon: <Star className='w-6 h-6' />
-      color: 'text-yellow-400'
-    },  ];    {
-      insight: 'All plans include free trials and no hidden fees'
-      icon: <Check className="w-6 h-6" />
-      color: 'text-blue-400'
-    }
-    {
-      insight: 'Professional features at startup-friendly prices'
-      icon: <Zap className="w-6 h-6" />
-      color: 'text-purple-400'
-    }
-    {
-      insight: 'Enterprise-grade reliability without enterprise pricing'
-      icon: <Star className="w-6 h-6" />
-      color: 'text-yellow-400'
-    <>;
-      <Head>;
-        <title>;
-          Pricing Comparison - Zion Tech Group | How We Stack Up Against the;
-          Competition;
-        </title>;
-=======
       insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className='w-6 h-6' />,
       color: 'text-yellow-400',
@@ -332,7 +196,7 @@ icon: <DollarSign className='w-6 h-6' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
       <div className='min-h-screen bg-black'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -355,38 +219,15 @@ icon: <DollarSign className='w-6 h-6' />,
                 href='#comparison'
                 variant='primary'
                 size='lg'
-<<<<<<< HEAD
-                className='bg-indigo-600 hover:bg-indigo-700 text-white'>;
-                View Comparison;
-              </Button>;
-=======
                 className='bg-indigo-600 hover:bg-indigo-700 text-white'
               >
                 View Comparison
               </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 href='/pricing'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
-                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'>                href="#comparison";
-                variant="primary";
-                size="lg";
-                className="bg-indigo-600 hover:bg-indigo-700 text-white";
-                View Comparison;
-              </Button>;
-              <Button
-                View Our Pricing
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-                  key={index}
-                  className="text - center group hover:scale - 105 transition - transform duration - 300";
-                >;
-                  <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
-=======
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
               >
                 View Our Pricing
@@ -414,7 +255,7 @@ href='/pricing'
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {insight.icon}
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
@@ -427,19 +268,6 @@ href='/pricing'
         </section>
 
         {/* Detailed Comparison */}
-<<<<<<< HEAD
-
-        <section id="comparison" className="py-24 bg-gray-800">
-
-              ))}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                Detailed Service Comparison
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See exactly how each service compares in features, pricing, and value.
-=======
 <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -454,7 +282,7 @@ href='/pricing'
             {serviceComparisons.map((service, serviceIndex) => (
 <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
                     {service && service.icon}
@@ -483,13 +311,13 @@ href='/pricing'
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg - gray - 800">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="text - center mb - 20">;
-              <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 8">;
+            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg-gray-800">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-20">;
+              <h2 className="text - 3xl sm:text - 4xl font - bold text-white mb-8">;
                 Detailed Service Comparison;
               </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
                 See exactly how each service compares in features, pricing, and value.;
             </div>;
             {service_comparisons.map ((service, service_index) => (
@@ -516,52 +344,6 @@ href='/pricing'
                     </span>;
                     <span>;
                       Enterprise:{' '}
-<<<<<<< HEAD
-                      </span>;
-                    </span>;
-                  </div>;
-                </div>;
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{service.service}</h3>
-                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">
-                    <span>Starter: <span className="text-green-400 font-semibold">{service.zionPricing.starter}</span></span>
-                    <span>Professional: <span className="text-blue-400 font-semibold">{service.zionPricing.professional}</span></span>
-                    <span>Enterprise: <span className="text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                        </div>;
-                        <div className='text-center'>;
-                          <p className='text-green-400 font-semibold mb-2'>;
-                            Starting at;
-                          </p>;
-                          <p className='text-2xl font-bold text-white'>;
-                            {service && service.zionPricing.starter}
-                          </p>                        </div>                    {service && service.icon}
-                  </div>;
-                  <h3 className="text-3xl font-bold text-white mb-4">{service && service.service}</h3>;
-                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">;
-                    <span>Starter: <span className="text-green-400 font-semibold">{service && service.zionPricing.starter}</span></span>;
-                    <span>Professional: <span className="text-blue-400 font-semibold">{service && service.zionPricing.professional}</span></span>;
-                    <span>Enterprise: <span className="text-purple-400 font-semibold">{service && service.zionPricing.enterprise}</span></span>;
-                  </div>;
-                </div>;
-                  {/* Zion Service */}
-                  <div className="lg:col-span-1">;
-                    <Card className="h-full border-2 border-green-500 bg-green-500/5">;
-                      <div className="text-center p-6">;
-                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4">;
-                          Zion {service && service.service}
-                        </div>;
-                        <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>;
-                        <div className="space-y-3 mb-6">;
-                          {service && service.features.map((feature, featureIndex) => (;
-                            <div key={featureIndex} className="flex items-center text-gray-300">;
-                              <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-                              <span className="text-sm">{feature}</span>;
-                            </div>;
-                          ))}
-=======
                       <span className='text-purple-400 font-semibold'>
                         {service.zionPricing.enterprise}
                       </span>
@@ -611,7 +393,7 @@ href='/pricing'
                           </div>
                           <div className='flex items-center justify-center mb-4'>
                             {[...Array(5)].map((_, i) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -621,13 +403,10 @@ href='/pricing'
                                 }`}
                               />;
                             ))}
-<<<<<<< HEAD
-
-=======
 <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -643,36 +422,10 @@ href='/pricing'
                                 {competitor.pros.map((pro, proIndex) => (
                                   <li
                                     key={proIndex}
-<<<<<<< HEAD
-                                    className='flex items-center'>;
-                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;
-                          <div className="mb-4">;
-                            <p className="text-lg font-semibold text-white">{competitor && competitor.pricing}</p>;
-                          </div>;
-                          <div className="space-y-2 mb-4 text-xs">;
-                            <div>;
-                              <p className="text-green-400 font-medium mb-1">Pros:</p>;
-                              <ul className="text-gray-300 space-y-1">;
-                                {competitor && competitor.pros.map((pro, proIndex) => (;
-                                  <li key={proIndex} className="flex items-center">;
-                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
-                          </div>
-                          <div className="mb-4">
-                            <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
-                          </div>
-                          <div className="space-y-2 mb-4 text-xs">
-                            <div>
-                              <p className="text-green-400 font-medium mb-1">Pros:</p>
-                              <ul className="text-gray-300 space-y-1">
-                                {competitor.pros.map((pro, proIndex) => (
-                                  <li key={proIndex} className="flex items-center">
-                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-
-=======
                                     className='flex items-center'
                                   >
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                     {pro}
                                   </li>;
                                 ))}
@@ -680,13 +433,6 @@ href='/pricing'
                               </ul>
                             </div>
                             <div>
-<<<<<<< HEAD
-                              <p className="text-red-400 font-medium mb-1">Cons:</p>
-                              <ul className="text-gray-300 space-y-1">
-                                {competitor.cons.map((con, conIndex) => (
-                                  <li key={conIndex} className="flex items-center">
-                                    <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
-=======
 <p className='text-red-400 font-medium mb-1'>
                                 Cons:
                               </p>
@@ -697,7 +443,7 @@ href='/pricing'
                                     className='flex items-center'
                                   >
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                     {con}
                                   </li>
                                 ))}
@@ -732,14 +478,11 @@ href='/pricing'
                               </ul>
                             </div>
                           </div>
-<<<<<<< HEAD
-                            <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
-=======
 <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
                               {competitor.savings}
                             </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                         </div>
                       </Card>
@@ -749,16 +492,6 @@ href='/pricing'
               </div>;
             ))}
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-            </h2>;
-            <p className='text - xl text - indigo - 100 mb - 12'>;
-              Start your free trial today and see why thousands of businesses;
-              choose Zion.;
-            </p>;
-=======
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
@@ -768,54 +501,29 @@ href='/pricing'
               choose Zion.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
                 size='lg'
-<<<<<<< HEAD
-                className='bg-white text-indigo-600 hover:bg-gray-100'>;
-                Try AI Content Generator;
-              </Button>;
-=======
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try AI Content Generator
               </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 href='/cloud-monitoring'
                 variant='secondary'
                 size='lg'
-<<<<<<< HEAD
-                className='bg-white text-indigo-600 hover:bg-gray-100'>;
-                Try Cloud Monitoring;
-              </Button>;
-=======
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try Cloud Monitoring
               </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 href='/devops-automation'
                 variant='secondary'
                 size='lg'
-<<<<<<< HEAD
-                Try DevOps Automation
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-                className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-                Try AI Content Generator
-              </Button>
-
-=======
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try DevOps Automation
@@ -827,4 +535,4 @@ href='/devops-automation'
     </>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

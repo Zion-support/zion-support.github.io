@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -29,6 +32,7 @@ import { KanbanColumn } from "./KanbanColumn",;
 import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
+<<<<<<< HEAD
   index: number;
 }
 ;
@@ -40,6 +44,9 @@ interface DropResult {;
 
 
   droppableId: string
+=======
+  index: number;  droppableId: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   index: number
 }
@@ -76,11 +83,16 @@ const COLUMNS = [
 interface KanbanBoardProps {
   jobId?: string
 
+<<<<<<< HEAD
 
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
+=======
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -105,6 +117,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return
     }
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -128,12 +141,15 @@ interface DropResult {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {;
     id: "new",;
+<<<<<<< HEAD
     title: "Applied",;
     description: "New applications"},;
   {;
@@ -152,11 +168,32 @@ const COLUMNS = [;
     id: "rejected",;
     title: "Rejected",;
     description: "Not moving forward"}],;
+=======
+    title: "Applied",,
+  description: "New applications"},;
+  {;
+    id: "shortlisted",;
+    title: "Shortlisted",,
+  description: "Candidates selected for review"},;
+  {;
+    id: "interview",;
+    title: "Interview",,
+  description: "Scheduled for interview"},;
+  {;
+    id: "hired",;
+    title: "Hired",,
+  description: "Successful candidates"},;
+  {;
+    id: "rejected",;
+    title: "Rejected",,
+  description: "Not moving forward"}],;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface KanbanBoardProps {;
   jobId?: string;
 }
 
+<<<<<<< HEAD
 export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
@@ -340,6 +377,19 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
+=======
+  // Initialize columns with applications based on their status;
+  useEffect(() => {;
+    if (applications) {;
+      // Group applications by status;  }
+
+  },
+      // Get the application that was dragged;
+    const application = applications && applications.find(app => app && app.id === draggableId);
+    if (!application) return;
+
+    // Update the application status in the database;            <CardHeader>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Skeleton className="h-8 w-24" />;
             </CardHeader>;
             <CardContent>;
@@ -347,6 +397,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
             </CardContent>;
           </Card>;
 
+<<<<<<< HEAD
 
 
         ))}
@@ -371,6 +422,12 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
     return (;
     return (
       <Card className="text-center py-16">;
+=======
+      </div>;
+    );
+  }
+    return (      <Card className="text-center py-16">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
           <p className="text-muted-foreground mb-6">;
@@ -381,6 +438,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
     );
   }
 
+<<<<<<< HEAD
 
 
   return (
@@ -389,6 +447,8 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
         {COLUMNS && COLUMNS.map(column => (;
           <KanbanColumn
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -510,10 +570,17 @@ if ( {) {
         {Array.from ({ length: is_mobile ? 1 : 5 }).map ((_, i) => (
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
+<<<<<<< HEAD
               <Skeleton className="h - 8 w - 24" />;
             </CardHeader>;
             <CardContent>;
               <Skeleton className="h-[400px] w - full" />;
+=======
+              <Skeleton className="h - 8 w-24" />;
+            </CardHeader>;
+            <CardContent>;
+              <Skeleton className="h-[400px] w-full" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </CardContent>;
           </Card>))}
       </div>);
@@ -523,10 +590,17 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <Card className="text - center py - 16">;
         <CardContent>;
           <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;
           <p className="text - muted - foreground mb - 6">;
+=======
+      <Card className="text - center py-16">;
+        <CardContent>;
+          <h3 className="text - lg font - semibold mb-2">No applications yet</h3>;
+          <p className="text - muted - foreground mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
@@ -536,6 +610,7 @@ if ( {) {
     <DragDropContext onDragEnd={handleDragEnd}>;
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
+<<<<<<< HEAD
           <KanbanColumn;
 
             key={column.id}
@@ -562,10 +637,14 @@ if ( {) {
 }
 
             applications={columns[column.id] || []}
+=======
+          <KanbanColumn;            applications={columns[column.id] || []}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
+<<<<<<< HEAD
 }
 
   ),; interface DnDLocation {
@@ -663,3 +742,6 @@ if (isLoading) {
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-name: string;
-=======
 import React from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -14,7 +11,7 @@ export interface Benefit {
 }
 export interface Testimonial {
   name: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   role?: string;
   text: string;
   avatar?: string
@@ -30,6 +27,7 @@ interface ServiceLandingTemplateProps {;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -102,6 +100,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
+=======
+  heroImage,
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description,
   benefits,
 
@@ -173,6 +177,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
       {benefits.length > 0 && (
+<<<<<<< HEAD
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
@@ -197,6 +202,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -227,7 +234,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {benefit && benefit.icon}
                     </div>;
 
-=======
   title;
   subtitle;
   heroImage;
@@ -299,7 +305,7 @@ className='rounded-full mr-4'
                         <p className='text-sm text-gray-400'>{t.role}</p>
                       )}
                     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -308,10 +314,15 @@ className='rounded-full mr-4'
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
 
 
@@ -329,12 +340,20 @@ className='rounded-full mr-4'
                 </div>;
 
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
             </div>;
           </div>;
         </section>;
+=======
+            </div>
+          </div>
+        </section>
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
 
                     </div>)}
@@ -361,12 +380,23 @@ className='rounded-full mr-4'
         </section>)}
 
       {stats.length > 0 && (
+<<<<<<< HEAD
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              {stats.map((stat, index) => (
+                <div key={index}>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     {stat.value}
 
 
@@ -383,12 +413,20 @@ className='rounded-full mr-4'
                 </div>;
 
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
             </div>;
           </div>;
         </section>;
+=======
+            </div>
+          </div>
+        </section>
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
 
 
@@ -403,8 +441,15 @@ className='rounded-full mr-4'
 
           <a
             href={ctaLink}
+<<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+=======
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+          >
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {ctaText}
 
           </a>;
@@ -428,6 +473,7 @@ className='rounded-full mr-4'
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
+<<<<<<< HEAD
                   </div>
                   </div>
 <<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
@@ -441,6 +487,12 @@ className='rounded-full mr-4'
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
+=======
+                  </div>;
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -450,6 +502,7 @@ className='rounded-full mr-4'
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -502,15 +555,23 @@ className='rounded-full mr-4'
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
+=======
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ))}
           </div>
         </div>
@@ -522,6 +583,7 @@ className='rounded-full mr-4'
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
+<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
           <a href={ctaLink}>{ctaText}</a>
 <<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
@@ -535,6 +597,12 @@ className='rounded-full mr-4'
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/services/ServiceLandingTemplate.tsx
+=======
+          <a href={ctaLink}>{ctaText}</Link>
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </Button>
       </section>
     </div>
@@ -566,7 +634,6 @@ className='rounded-full mr-4'
 }
 
 },
-=======
 <section className='py-12 bg-zion-blue-dark text-center'>
         <Button
           size='lg'
@@ -580,4 +647,4 @@ className='rounded-full mr-4'
 );
 };
 "
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

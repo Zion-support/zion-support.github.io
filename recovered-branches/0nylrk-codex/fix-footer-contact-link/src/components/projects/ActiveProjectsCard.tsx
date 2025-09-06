@@ -12,9 +12,12 @@ export function ActiveProjectsCard() {;
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useEffect, useState } from "react",
 import { Link } from "react-router-dom",
 import { BriefcaseIcon, Clock } from "lucide-react",
@@ -32,6 +35,7 @@ import { Project } from "@/types/projects",
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+<<<<<<< HEAD
   
   useEffect(() => {
     if (projects && !isLoading) {
@@ -48,6 +52,9 @@ export function ActiveProjectsCard() {
   
 
   if (isLoading) {
+=======
+    if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <Card>
         <CardHeader>
@@ -61,6 +68,7 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -131,11 +139,18 @@ export function ActiveProjectsCard() {;
 
             ))}
           </div>;
+=======
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const active = projects && projects.filter(p => ;
+        ['offer_acceptedin_progress'].includes(p && p.status);          </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </CardContent>;
       </Card>;
     );
   }
 
+<<<<<<< HEAD
 
   
 
@@ -292,3 +307,10 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
 
 
 
+=======
+  
+
+  if (activeProjects.length === 0) {
+
+  if (activeProjects && activeProjects.length === 0) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

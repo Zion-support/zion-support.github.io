@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -9,6 +12,7 @@ import { SEO } from "@/components/SEO",
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 interface AnalyticsContainerProps {
   children: React.ReactNode
@@ -42,11 +46,15 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   
   // If still loading auth status, show loading
   if (isLoading) {
+=======
+import { useAuth } from "@/hooks/useAuth",  if (isLoading) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
     )
+<<<<<<< HEAD
   }
 
   
@@ -261,3 +269,6 @@ export function AnalyticsContainer({ children } AnalyticsContainerProps) {;
 }
 ;
 }
+=======
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

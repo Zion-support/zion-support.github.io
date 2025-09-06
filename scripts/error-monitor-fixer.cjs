@@ -27,3 +27,8 @@ const { execSync } = require('child_process')
       execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
 
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

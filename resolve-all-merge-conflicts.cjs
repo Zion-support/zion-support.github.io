@@ -5,6 +5,7 @@ const { execSync } = require('child_process');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
@@ -20,6 +21,8 @@ function resolveMergeConflicts(filePath) {
     // Handle incomplete conflicts (missing closing markers)
     content = content.replace(/[\s\S]*?
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve modify/delete conflicts by removing the files
@@ -53,8 +56,6 @@ function resolveModifyDeleteConflicts() {
   }
 }
 
-<<<<<<< HEAD
-=======
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -119,6 +120,7 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
+<<<<<<< HEAD
         content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g, '');
         content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
 =======
@@ -128,6 +130,10 @@ function resolveContentConflicts() {
         // Clean up any remaining conflict markers
         content = content.replace(/
         content = content.replace(/
+=======
+        
+        // Clean up any remaining conflict markers
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         
         // Write the cleaned content
         fs.writeFileSync(file, content);
@@ -164,86 +170,16 @@ function resolveAddAddConflicts() {
         
         // Remove conflict markers and keep both versions
 <<<<<<< HEAD
+<<<<<<< HEAD
         content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, (match) => {
           const parts = match.split('=======');
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           if (parts.length === 2) {
-            const headPart = parts[0].replace(/<<<<<<< HEAD\s*/, '');
-            const mainPart = parts[1].replace(/\s*>>>>>>> [a-f0-9]+/, '');
-            return headPart + mainPart;
-          }
-          return match;
-        });
-        
-        // Write the cleaned content
-        fs.writeFileSync(file, content);
-        execSync(`git add ${file}`);
-        resolvedCount++;
-      } catch (error) {
-        console.error(`Error resolving ${file}:`, error.message);
-      }
-    }
-  });
-  
-  return resolvedCount;
-}
 
-// Function to clean up temp_conflicts directory
-function cleanupTempConflicts() {
-  console.log('🧹 Cleaning up temp_conflicts directory...');
-  
-  try {
-    if (fs.existsSync('temp_conflicts')) {
-      execSync('rm -rf temp_conflicts');
-      console.log('Removed temp_conflicts directory');
-    }
-  } catch (error) {
-    console.error('Error cleaning up temp_conflicts:', error.message);
-  }
-}
 
-// Main execution
-async function main() {
-  try {
-    console.log('Starting merge conflict resolution...');
-    
-    // Resolve different types of conflicts
-    const modifyDeleteCount = resolveModifyDeleteConflicts();
-    const contentCount = resolveContentConflicts();
-    const addAddCount = resolveAddAddConflicts();
-    
-    // Clean up temp files
-    cleanupTempConflicts();
-    
-    console.log(`\n✅ Conflict resolution summary:`);
-    console.log(`- Modify/delete conflicts resolved: ${modifyDeleteCount}`);
-    console.log(`- Content conflicts resolved: ${contentCount}`);
-    console.log(`- Add/add conflicts resolved: ${addAddCount}`);
-    
-    // Check if there are any remaining conflicts
-    try {
-      const statusOutput = execSync('git status --porcelain', { encoding: 'utf8' });
-      const remainingConflicts = statusOutput.split('\n').filter(line => line.includes('CONFLICT'));
-      
-      if (remainingConflicts.length === 0) {
-        console.log('\n🎉 All conflicts resolved! Ready to commit.');
-        
-        // Commit the merge
-        execSync('git commit -m "Resolve merge conflicts: automated resolution of modify/delete and content conflicts"');
-        console.log('✅ Merge committed successfully!');
-      } else {
-        console.log(`\n⚠️  ${remainingConflicts.length} conflicts still remain:`);
-        remainingConflicts.forEach(conflict => console.log(`  - ${conflict}`));
-      }
-    } catch (error) {
-      console.error('Error checking remaining conflicts:', error.message);
-    }
-    
-  } catch (error) {
-    console.error('Error during conflict resolution:', error.message);
-    process.exit(1);
-  }
-}
 
+<<<<<<< HEAD
 main();
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -255,3 +191,5 @@ main();
         content = content.replace(/
           const parts = match.split('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

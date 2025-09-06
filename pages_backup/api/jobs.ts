@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -12,6 +12,9 @@ import { rateLimit } from "../../utils/rateLimit";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from '[^']*';
 import { readJsonFile, writeJsonFile } from '[^']*';
@@ -21,9 +24,13 @@ const FILE = null;
   res.status(405).end('Method Not Allowed')
 }
 export default async function handler(
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -32,16 +39,9 @@ export default async function handler(
   if (!rateLimit(req, res)) return;
 
 
-<<<<<<< HEAD
-  if (req && req.method === "GET") {
-    const jobs = readJsonFile<Job[]>(FILE, []);
-<<<<<<< HEAD
-    res && res.status(200).json({ jobs });
-    return;
-=======
     res.status(200).json({ jobs });
 return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
     }
     const nowIso = new Date().toISOString();
@@ -102,8 +102,7 @@ return;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
@@ -117,8 +116,15 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     res.status(200).json({ jobs });
   if (req && req.method === "GET") {
+<<<<<<< HEAD
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+    const jobs = readJsonFile<Job[]>(FILE, []);
+    res && res.status(200).json({ jobs });
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return;
     } catch (error) {
     console.error("Error:", error);
@@ -227,6 +233,7 @@ if ( {) {
 }
     const {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title
       description
       category
@@ -248,6 +255,8 @@ if ( {) {
     const job: Job = {
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 required_skills = []
       budgetMinUsd
       budgetMaxUsd
@@ -265,7 +274,6 @@ required_skills = []
 category: String(category || "")
       requiredSkills: Array && Array.isArray(requiredSkills)
         ? requiredSkills && requiredSkills.map(String)
-=======
       title,
       description,
       category,
@@ -288,10 +296,14 @@ id: uuidv4(),
       category: String(category || ''),
       requiredSkills: Array.isArray(requiredSkills)
         ? requiredSkills.map(String)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         : []
       budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined
       budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       deliveryDeadlineIso: deliveryDeadlineIso
         ? String(deliveryDeadlineIso)
         : undefined
@@ -309,6 +321,7 @@ id: uuidv4(),
           (s) =>
         )
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
         job && job.category = "Cloud";
       else job && job.category = "General";
@@ -330,6 +343,13 @@ id: uuidv4(),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs.ts
+=======
+
+    res.status(201).json({ job });
+    return
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   } catch (error) {
     console.error("Error:", error);
@@ -348,6 +368,7 @@ id: uuidv4(),
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 <<<<<<< HEAD
 =======
@@ -356,6 +377,10 @@ id: uuidv4(),
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   res && res.setHeader("Allow", "GET, POST");
@@ -363,6 +388,10 @@ id: uuidv4(),
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       client_email
     } = req.body || {}
     // Check condition
@@ -450,21 +479,30 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/jobs.ts
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -472,6 +510,12 @@ export default async function handler(req, res) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         job.category = 'Cloud';
       else job.category = 'General';
     }
@@ -486,6 +530,10 @@ return;
   res.status(405).end('Method Not Allowed');
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/jobs.ts
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

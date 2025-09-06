@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,11 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dev/source-map.ts
+=======
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -38,6 +44,10 @@ export default function handler(req: any, res: any) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
@@ -59,6 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/dev/source-map.ts
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';,
@@ -70,10 +81,13 @@ import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dev/source-map.ts
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 ;
 export default /**
  * handler - Function description
@@ -100,11 +114,8 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
-<<<<<<< HEAD
-      res.status(400).json({ error: "Invalid path" }),
-=======
       res.status(400).json({ error: "Invalid path" })
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -167,9 +178,8 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
-=======
   const identity = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");
@@ -192,3 +202,10 @@ export default function handler(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

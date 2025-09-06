@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-landing-zone'));
-  if (!service) return null;
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-export default function CloudLandingZonePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-landing-zone'))
-  if (!service) return null,
-=======
 import {
   Phone,
   Mail,
@@ -37,7 +17,7 @@ export default function CloudLandingZonePage() {
   );
   if (!service) return null;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -67,9 +47,6 @@ export default function CloudLandingZonePage() {
               <p className='text-slate-300 mb-6'>{service.description}</p>
               <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 {service.features.slice(0, 12).map((feat, i) => (
-<<<<<<< HEAD
-                  <li key={i} className="flex items-start space-x-3 text-slate-2 00 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
-=======
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-2 00 w-5 h-5 text-indigo-400 mt-0.5'
@@ -78,7 +55,7 @@ export default function CloudLandingZonePage() {
                     <span>{feat}</span>
                   </li>
                 ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </ul>
             </div>
             <div className='bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit'>
@@ -98,12 +75,6 @@ export default function CloudLandingZonePage() {
                   {service.rating.toFixed(1)}
                 </div>
               </div>
-<<<<<<< HEAD
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
-=======
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -124,24 +95,12 @@ export default function CloudLandingZonePage() {
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-;
-;
-
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

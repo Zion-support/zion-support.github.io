@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import type { NextPage } from 'next';
-import type { Review } from '../../types/reviews';
-
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
-const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([])
-  const [all, setAll] = useState<Review[]>([])
-  const [adminKey, setAdminKey] = useState('')
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews')
-    const data = await res.json()
-    if (res.ok) {
-      setAll(data.reviews)
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-  }
-  useEffect(() => { refresh() }, [])
-=======
 const ADMIN_KEY = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST'
@@ -31,48 +11,8 @@ const ADMIN_KEY = null;
     });
     if (res.ok) refresh();
   }
-<<<<<<< HEAD
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
-const AdminReviewsPage: NextPage = () => {;
-  const [pending, setPending] = useState<Review[]>([]);
-  const [all, setAll] = useState<Review[]>([]);
-  const [adminKey, setAdminKey] = useState('');
-  async function refresh() {;
-    const res = await fetch('/api/admin/debug/reviews');
-    const data = await res.json();
-    if (res.ok) {;
-      setAll(data.reviews);
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
-
-    if (res.ok) refresh()
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  useEffect(() => { refresh() }, []),;
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
-    const res = await fetch('/api/reviews/moderate', {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
-      body: JSON.stringify({ action, reviewId })}),;
-    if (res.ok) refresh();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <main className='max-w-5xl mx-auto p-6 space-y-6'>
       <h1 className='text-2xl font-semibold'>Review Moderation</h1>
@@ -123,26 +63,8 @@ const AdminReviewsPage: NextPage = () => {;
         </pre>
       </section>
     </main>
-<<<<<<< HEAD
-  )
-
-},
-export default AdminReviewsPage,
-},
-
-},
-export default AdminReviewsPage,
-
-},
-export default AdminReviewsPage,
-},
-
-export default AdminReviewsPage,;
-export default AdminReviewsPage,
-
-=======
   );
 };
 
 export default AdminReviewsPage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -4,6 +4,11 @@
  * Real-time monitoring of PM2 processes and system health;
  */
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const express = require('express')
 const pm2 = require('pm2')
 const fs = require('fs')
@@ -13,3 +18,8 @@ const path = require('path')
                 "status"
                 console.error('Error fetching "data")
 
+<<<<<<< HEAD
+=======
+                "
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

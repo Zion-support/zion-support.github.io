@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const fs = require("$1")
 const path = require("$1")
@@ -85,3 +89,8 @@ NEXT_PUBLIC_API_URL="http"
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
 
+<<<<<<< HEAD
+=======
+  console.error("Fatal "error")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

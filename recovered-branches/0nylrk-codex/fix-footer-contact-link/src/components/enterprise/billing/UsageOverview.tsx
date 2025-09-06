@@ -1,17 +1,21 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Progress} from "@/components/ui/progress";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 
 export function UsageOverview() {
   // Mock usage data
@@ -99,6 +103,15 @@ export function UsageOverview() {;
 
 
 import React from "react",;
+=======
+      used: 32,
+      total: 100,
+      percentage: 32
+};
+      percentage: 32
+    }
+    },import React from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Progress } from "@/components/ui/progress",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -127,7 +140,10 @@ export function UsageOverview() {;
     }
   };
   return (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card>;
       <CardHeader>;
         <CardTitle>Usage Overview</CardTitle>;
@@ -138,9 +154,13 @@ export function UsageOverview() {;
           <TabsList className="mb-4">;
             <TabsTrigger value="current">Current Period</TabsTrigger>;
             <TabsTrigger value="historical">Historical</TabsTrigger>;
+<<<<<<< HEAD
           </TabsList>;
 
           <TabsContent value="current" className="space-y-6">;
+=======
+          </TabsList>;          <TabsContent value="current" className="space-y-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <div className="flex items-center justify-between">;
@@ -150,6 +170,7 @@ export function UsageOverview() {;
                   </p>;
                 </div>;
                 <Progress value={usage && usage.jobPosts.percentage} className="h-2" />;
+<<<<<<< HEAD
               </div>;
 
               <div className="space-y-2">;
@@ -163,6 +184,9 @@ export function UsageOverview() {;
               </div>;
 
               <div className="space-y-2">;
+=======
+              </div>;              <div className="space-y-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="flex items-center justify-between">;
                   <p className="text-sm font-medium">Messages Sent</p>;
                   <p className="text-sm text-muted-foreground">;
@@ -170,6 +194,7 @@ export function UsageOverview() {;
                   </p>;
                 </div>;
                 <Progress value={usage && usage.messaging.percentage} className="h-2" />;
+<<<<<<< HEAD
               </div>;
 
               <div className="space-y-2">;
@@ -184,12 +209,16 @@ export function UsageOverview() {;
             </div>;
 
             <div className="pt-4 text-sm text-muted-foreground">;
+=======
+              </div>;            <div className="pt-4 text-sm text-muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <p>Current billing period: May 1, 2025 - May 31, 2025</p>;
               <p className="mt-1">Usage resets at the beginning of each billing period.</p>;
             </div>;
           </TabsContent>;
 
           <TabsContent value="historical">;
+<<<<<<< HEAD
             <div className="py-10 text-center text-muted-foreground">;
     }
   }
@@ -285,3 +314,9 @@ export function UsageOverview() {;
 ;
     </Card>);
 }
+=======
+            <div className="py-10 text-center text-muted-foreground">;    }
+  }
+
+  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

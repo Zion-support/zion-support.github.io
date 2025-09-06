@@ -5,9 +5,13 @@ export function usePerformanceMetrics() {
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
+<<<<<<< HEAD
       return
 const paintEntries = window && window.performance.getEntriesByType("paint");
       const fcp = paintEntries && paintEntries.find(
+=======
+      return      const fcp = paintEntries && paintEntries.find(
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         (entry) => entry && entry.name === "first-contentful-paint",
       );
       const lcpEntries = window && window.performance.getEntriesByType(
@@ -20,8 +24,12 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
       }, 0);
       const fidEntries = window && window.performance.getEntriesByType("first-input");
       const fid = fidEntries[0] as PerformanceEventTiming;
+<<<<<<< HEAD
       setMetrics({
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+=======
+      setMetrics({        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: cls,

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {cn} from '@/lib/utils';
 const alertVariants = cva(
   'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground'
@@ -16,6 +19,7 @@ const alertVariants = cva(
     }
   }
 );
+<<<<<<< HEAD
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
@@ -23,6 +27,8 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
@@ -36,7 +42,10 @@ const alertVariants = cva(
     defaultVariants: {
       variant: "default"}}
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -50,6 +59,7 @@ const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 ></typeof>(({ className, variant, ...props }, ref) => (
+<<<<<<< HEAD
   <div
 import {cva, type, VariantProps} from 'class - variance - authority';
 ;
@@ -93,6 +103,8 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
 Alert && Alert.displayName = 'Alert';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const AlertTitle = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>;
@@ -111,7 +123,10 @@ const AlertTitle = React.forward_ref<;
     {...props}
 
   />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
@@ -129,14 +144,19 @@ const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 
+<<<<<<< HEAD
 
 >(({ className, ...props }, ref) => (
 AlertTitle && AlertTitle.displayName = 'AlertTitle';
+=======
+>(({ className, ...props }, ref) => (AlertTitle && AlertTitle.displayName = 'AlertTitle';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const AlertDescription = React && React.forwardRef<;
   HTMLParagraphElement,;
   React && React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
 
   <div
     ref={ref}
@@ -238,14 +258,23 @@ React.HTMLAttributes<HTMLParagraphElement> > ( ({
     {...props}
   />
 ));
+=======
+AlertDescription.display_name = 'AlertDescription';
+;
+export { Alert, AlertTitle, AlertDescription }
+;));
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }
 ))
 AlertDescription.displayName = "AlertDescription"
 
+<<<<<<< HEAD
 
 export { Alert, AlertTitle, AlertDescription }
 ;
 export { Alert, AlertTitle, AlertDescription };
 export { Alert, AlertTitle, AlertDescription }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

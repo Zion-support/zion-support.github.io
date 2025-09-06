@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -12,6 +15,7 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -49,10 +53,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
 
+<<<<<<< HEAD
 },
 
 
@@ -63,17 +70,24 @@ type DisputesListProps = {
     switch (status) {
       case "open": return "default",
       case "under_review":
+=======
+},      case "under_review":
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         return "outline",
       default:
         return "default"
     }
 
   },
+<<<<<<< HEAD
 
 
   if (isLoading) {
@@ -138,6 +152,8 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "under_review":;
         return "secondary",;
       case "resolved":;
@@ -174,6 +190,7 @@ function DisputesList() {
         return "secondary",
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
+<<<<<<< HEAD
       case "closed":;
         return "outline";
       default:;
@@ -184,6 +201,9 @@ function DisputesList() {
 
               ))}
             </TableBody>;
+=======
+      case "closed":;            </TableBody>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Table>;
         </div>;
       </div>;
@@ -230,6 +250,7 @@ function DisputesList() {
         >;
           Resolved;
         </Button>;
+<<<<<<< HEAD
           onClick={() => setStatusFilter("closed")}
 
   }
@@ -394,6 +415,9 @@ if ( {) {
                 </TableCell>;
                 <TableCell>;
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+=======
+          onClick={() => setStatusFilter("closed")}                  <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     {dispute.status.replace('_ ')}
                   </Badge>;
                 </TableCell>;
@@ -425,7 +449,10 @@ export function DisputesList ({
   switch (status) {
   
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 if (isLoading) {
@@ -449,3 +476,7 @@ if (isLoading) {
 }</TableBody> </Table> </div> </div>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

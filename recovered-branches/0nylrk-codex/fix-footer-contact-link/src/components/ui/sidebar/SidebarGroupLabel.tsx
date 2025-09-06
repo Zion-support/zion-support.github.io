@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   children?: React.ReactNode;
@@ -20,10 +21,19 @@ export function SidebarGroupLabel({
     >
       {children}
     </div>
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }
     </div>);
 }
+<<<<<<< HEAD
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -58,3 +68,5 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 }
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

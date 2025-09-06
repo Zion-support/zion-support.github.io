@@ -1,6 +1,10 @@
     <a;
       href={`#${target_id}`}
+<<<<<<< HEAD
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
+=======
+      className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z-50";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     >;
       {children}
     </a>);
@@ -8,7 +12,11 @@
     <div;
       role={role}
       aria - live={aria_live}
+<<<<<<< HEAD
       className="sr - only";
+=======
+      className="sr-only";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       aria - atomic="true";
     >;
       {message}
@@ -38,6 +46,7 @@
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
+<<<<<<< HEAD
             e.preventDefault();
             firstElement.focus();
           }
@@ -131,6 +140,17 @@ function ProgressIndicator() {
       <div className="w - full bg-[var (--border)] rounded - full h - 2">;
         <div;
           className="bg-[var (--accent)] h - 2 rounded - full transition - all duration - 300";
+=======
+            e.preventDefault();            firstElement.focus();
+          }
+        }
+      }        <span>{label}</span>;
+        <span>{percentage}%</span>;
+      </div>;
+      <div className="w - full bg-[var (--border)] rounded - full h-2">;
+        <div;
+          className="bg-[var (--accent)] h - 2 rounded - full transition - all duration-300";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           style={{ width: `${percentage}%` }}
           role="progressbar";
           aria - valuenow={value}
@@ -142,9 +162,16 @@ function ProgressIndicator() {
     </div>);
 }
   return (;
+<<<<<<< HEAD
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
+=======
+    <div className="border border-[var(--border)] rounded-lg">;  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+      <button;
+        className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify-between";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         on_click={() => setIsExpanded (!is_expanded)}
         aria - expanded={is_expanded}
         aria - controls={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
@@ -158,15 +185,24 @@ function ProgressIndicator() {
         }`}
         aria - hidden={!is_expanded}
       >;
+<<<<<<< HEAD
         <div className="px - 4 pb - 3">;
+=======
+        <div className="px - 4 pb-3">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           {children}
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   return (
     <div className="relative inline - block">;
   return (;
+=======
+  return (;
+    <div className="relative inline-block">;  return (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
@@ -185,7 +221,11 @@ function ProgressIndicator() {
           role="tooltip";
         >;
           {content}
+<<<<<<< HEAD
           <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate - 45" />;
+=======
+          <div className="absolute w - 2 h - 2 bg - gray - 900 transform rotate-45" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>)}
     </div>);
 }

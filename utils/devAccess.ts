@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -9,6 +10,9 @@ export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   roles: DevRole[];
@@ -16,17 +20,25 @@ export interface DevIdentity {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -49,6 +61,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -60,14 +73,17 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  if (token && adminToken && token === adminToken) {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return { isAuthenticated: false, roles: [] }
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -80,6 +96,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -88,6 +105,13 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -107,6 +131,7 @@ export function requireRoles(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -117,6 +142,12 @@ export function requireRoles(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -285,6 +316,7 @@ if ( {) {
   }
   return identity;
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -300,3 +332,14 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

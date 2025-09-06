@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,7 +43,10 @@ export default function RequestsPanel() {;
   const [showDetails, setShowDetails] = useState(false);
 
   const {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -71,6 +77,7 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -89,6 +96,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
 
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 import type { QuoteRequest } from "@/types/quotes",
@@ -100,7 +110,10 @@ export default function RequestsPanel() {
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
     quotes,
     unreadCount,
@@ -120,19 +133,26 @@ export default function RequestsPanel() {
     setShowDetails(true),
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
 
+<<<<<<< HEAD
 
   },
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
+<<<<<<< HEAD
 
   return (
     <ProtectedRoute>
@@ -142,6 +162,8 @@ export default function RequestsPanel() {
           <div className="container mx-auto">
             <RequestsHeader
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -172,6 +194,7 @@ export default function RequestsPanel() {;
     markAsResponded,;
     toggleArchive;
   } = useTalentQuotes(),;
+<<<<<<< HEAD
 
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
@@ -280,15 +303,22 @@ function RequestsPanel() {
     markAsResponded;
   return (
     <ProtectedRoute>;
+=======
+  return (    <ProtectedRoute>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
+<<<<<<< HEAD
 
             <RequestsHeader;
 
 
             <RequestsHeader
+=======
+            <RequestsHeader            <RequestsHeader
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -296,7 +326,10 @@ function RequestsPanel() {
               setArchiveFilter={setArchiveFilter}
 
             />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -304,6 +337,7 @@ function RequestsPanel() {
                 <TabsTrigger value="archived">Archived</TabsTrigger>;
               </TabsList>;
 
+<<<<<<< HEAD
               <TabsContent value="active">;
 
                 <QuoteRequestsList
@@ -320,6 +354,9 @@ function RequestsPanel() {
               <TabsContent value="archived">;
 
                 <QuoteRequestsList
+=======
+              <TabsContent value="active">;                <QuoteRequestsList
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   quotes={archivedQuotes}
                   isLoading={isLoading}
                   isArchived={true}
@@ -333,6 +370,7 @@ function RequestsPanel() {
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
         {/* Quote Details Modal */}
         <QuoteDetails
@@ -514,3 +552,9 @@ const [showDetails, setShowDetails] = useState (false);
 }<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
 }
 }
+=======
+        {/* Quote Details Modal */}
+        <QuoteDetails
+          quote={selectedQuote}
+          isOpen={showDetails}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

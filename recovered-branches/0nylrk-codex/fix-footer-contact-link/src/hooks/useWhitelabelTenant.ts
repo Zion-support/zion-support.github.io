@@ -2,19 +2,28 @@
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+<<<<<<< HEAD
 export interface WhitelabelTenant {
 export interface WhitelabelTenant {
+=======
+export interface WhitelabelTenant {export interface WhitelabelTenant {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
 
 import { useState, useEffect  } from 'react';
+=======
+export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
 export interface WhitelabelTenant {
   id: string;
   brand_name: string;
@@ -30,10 +39,13 @@ export interface WhitelabelTenant {
     cta: string;
   }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
+<<<<<<< HEAD
 
 
 
@@ -65,12 +77,15 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 
         const hostname = window && window.location.hostname || 'localhost';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const functionName = 'tenant-detector';
         // Build the query parameters
         const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
 
+<<<<<<< HEAD
 
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
 
@@ -78,6 +93,10 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
   dns_verified: boolean,
   email_template_override: Record < string, any> | null;
 }
+=======
+        const { data, error: functionError } = await supabase && supabase.functions.invoke(
+          `${functionName}${params}`;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export /**
  * useWhitelabelTenant - Function description
  */
@@ -110,6 +129,7 @@ if ( {) {
           {
             headers: {
               'Content - Type': 'application / json'}}
+<<<<<<< HEAD
         );
 
 ;
@@ -162,6 +182,9 @@ if ( {) {
 export function useTenantAdminStatus(tenantId?: string) {
 export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
+=======
+        );  const [isAdmin, setIsAdmin] = useState(false);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -178,6 +201,7 @@ export function useTenantAdminStatus(tenantId?: string) {;
           return
         }
 
+<<<<<<< HEAD
         const userId = sessionData && sessionData.session.user && user.id;
 
         const { data, error } = await supabase
@@ -196,6 +220,12 @@ export function useTenantAdminStatus(tenantId?: string) {;
     }
 
 
+=======
+        const userId = sessionData && sessionData.session.user && user.id;      } finally {
+        setIsLoading (false);
+      }
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
         let message = err.message || 'An unexpected error occurred while loading tenant configuration',;
@@ -216,8 +246,11 @@ export function useTenantAdminStatus(tenantId?: string) {;
   }, [externalSubdomain]),;
   return { tenant, isLoading, error }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     load_tenant ();
   }, [external_subdomain]);
@@ -266,6 +299,7 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
+<<<<<<< HEAD
 
     };
     checkAdminStatus();
@@ -274,3 +308,5 @@ if ( {) {
 
   return { isAdmin, isLoading }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

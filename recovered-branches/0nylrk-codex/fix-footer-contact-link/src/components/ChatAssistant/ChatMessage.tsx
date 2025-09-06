@@ -2,6 +2,7 @@
 
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+<<<<<<< HEAD
 
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
@@ -13,6 +14,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
@@ -40,16 +43,22 @@ interface ChatMessageProps {
   message: string,
   timestamp?: Date,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   timestamp?: Date;
   key?: string | number;
 }
 
+<<<<<<< HEAD
 
 
 export function ChatMessage(): any ({ role, message, timestamp }: ChatMessageProps) {;
   const isUser = role === 'user';
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const isUser = role === 'user';
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
@@ -83,6 +92,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
 
           : "bg-zion-cyan/10 text-white rounded-tl-none"
+<<<<<<< HEAD
 
         "max-w-[80%] px-4 py-2 rounded-lg",
         isUser 
@@ -151,12 +161,23 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
           <div className="text-xs text-zion-slate mt-1 text-right">;
             {timestamp && timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>;
+=======
+        "max-w-[80%] px-4 py-2 rounded-lg",
+        isUser 
+          ? "bg-zion-purple/20 text-white rounded-tr-none"       )}>;
+        <div className="whitespace-pre-wrap">{message}</div>;
+        {timestamp && (;
+          <div className="text-xs text-zion-slate mt-1 text-right">;          </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         )}
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; interface ChatMessageProps {
   role: 'user' | 'assistant';
 message: string;
@@ -200,27 +221,47 @@ function ChatMessage() {
         "h - 8 w - 8 border";
         is_user ? "border - zion - purple / 20" : "border - zion - cyan / 20")}>;
         {is_user ? (
+<<<<<<< HEAD
           <AvatarFallback className="bg - zion - purple / 20 text - white">U</AvatarFallback>) : (
+=======
+          <AvatarFallback className="bg - zion - purple / 20 text-white">U</AvatarFallback>) : (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <AvatarImage;
             src="https://placehold.co / 32x32?text = AI";
             alt="AI Assistant";
           />)}
+<<<<<<< HEAD
         {!is_user && <AvatarFallback className="bg - zion - cyan / 20 text - white">AI</AvatarFallback>}
+=======
+        {!is_user && <AvatarFallback className="bg - zion - cyan / 20 text-white">AI</AvatarFallback>}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </Avatar>;
       <div className={cn (
         "max - w-[80%] px - 4 py - 2 rounded - lg";
         is_user;
           ? "bg - zion - purple / 20 text - white rounded - tr - none";
           : "bg - zion - cyan / 10 text - white rounded - tl - none")}>;
+<<<<<<< HEAD
         <div className="whitespace - pre - wrap">{message}</div>;
         {timestamp && (
           <div className="text - xs text - zion - slate mt - 1 text - right">;
+=======
+        <div className="whitespace - pre-wrap">{message}</div>;
+        {timestamp && (
+          <div className="text - xs text - zion - slate mt - 1 text-right">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {timestamp.toLocaleTimeString ([], { hour: '2 - digit', minute: '2 - digit' })}
           </div>)}
       </div>;
     </div>);
+<<<<<<< HEAD
 
 }
 }
 
 }
+=======
+}}
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

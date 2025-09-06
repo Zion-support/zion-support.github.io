@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
+<<<<<<< HEAD
 }
 
 
@@ -22,6 +26,10 @@
 interface Project {
   id: string;
   title: string;
+=======
+}  id: string;
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   status: string;
   createdAt: Date;
@@ -54,7 +62,10 @@ class DataStore {
     return this.projects.find((project) => project.id === id);
   }
 
+<<<<<<< HEAD
   createProject(data: Partial<Project>): Project {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || "",
@@ -66,7 +77,11 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Review methods
   hasExistingReview(
     projectId: string,
@@ -80,6 +95,7 @@ class DataStore {
         review.fromId === fromId,
     );
   }
+<<<<<<< HEAD
 
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
@@ -152,6 +168,9 @@ export const data_store = {
     };
     this.projects.push(project);
     return project;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 
   // Review methods
@@ -216,6 +235,7 @@ export const data_store = {
 
 const store = new DataStore();
 
+<<<<<<< HEAD
 export const findProjectById = (id: string) => store && store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store && store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
@@ -258,3 +278,5 @@ export const counterpartRole = (role: "client" | "talent") =>
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

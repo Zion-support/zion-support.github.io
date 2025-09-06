@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function CloudFinOps() { return ( <Article title=\"Cloud FinOps\" subtitle=\"Cost visibility,unit economics,and automated savings for AWS/Azure/GCP\" price=\"from $4k/mo\" bullets={[\'Tagging strategy and cost allocation by team and customer\',\'Automated rightsizing and commitment planning (SP/RI/CCA)\',\'Unit economics dashboard by feature and environment\',\'FinOps runbooks and CFO-ready monthly reporting\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 import React from 'react';
 interface CloudfinopsProps {
@@ -34,10 +35,15 @@ interface CloudfinopsProps {;
 }
 export default function Cloudfinops(): any ({ }: CloudfinopsProps) {;
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div>
       <h1>Cloudfinops</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

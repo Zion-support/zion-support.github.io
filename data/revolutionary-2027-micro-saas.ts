@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -8,9 +9,11 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Revolutionary2027MicroSaas {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -22,8 +25,8 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     address: string;
   }
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
@@ -70,15 +73,22 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       "Revolutionary features";
       "Transformative capabilities";
       "Advanced technology";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Innovation platform";
       "Future - ready solutions";
     ];
@@ -86,10 +96,14 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export interface Revolutionary2027MicroSaas {;
 
@@ -98,7 +112,6 @@ export interface Revolutionary2027MicroSaas {;
     link: "/services/2027-revolutionary-micro-saas",
     category: "Revolutionary 2027 Micro SAAS",
     realImplementation: true,
-=======
     address: string
   }
 }
@@ -120,10 +133,11 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
     link: "/services/2027-revolutionary-micro-saas";
     category: "Revolutionary 2027 Micro SAAS";
     realImplementation: true;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
 
 
+<<<<<<< HEAD
     }
   }
 <<<<<<< HEAD
@@ -138,6 +152,14 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+    }
+  }
+;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Revolutionary2027MicroSaas {;
   };
 
@@ -171,6 +193,10 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
       "Transformative capabilities";
       "Advanced technology";
       "Innovation platform";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,;
   name: string,;
   tagline: string,;
@@ -203,17 +229,23 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
       "Innovation platform",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Future-ready solutions"
     ],
     link: "/services/2027-revolutionary-micro-saas",
     category: "Revolutionary 2027 Micro SAAS",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
     }
   }
 ;
@@ -244,3 +276,19 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+
+
+    }
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

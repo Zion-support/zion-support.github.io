@@ -45,7 +45,10 @@ export function ResumeTab(): any ({;
   onApply,;
   isSubmitting = false,;
 }: ResumeTabProps) {;
+<<<<<<< HEAD
       {onApply && (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="mt-6">
           <Button
             onClick={onApply}
@@ -55,7 +58,10 @@ import React from 'react',
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
@@ -83,6 +89,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     }
 
     if (onSelectResume) {;
+<<<<<<< HEAD
       onSelectResume(resume && resume.id);
 
   selectedResumeId?: string | null;
@@ -256,3 +263,13 @@ isSubmitting?: boolean
   );
 }
 }
+=======
+      onSelectResume(resume && resume.id);      {onApply && (
+        <div className="mt-6">
+          <Button 
+            onClick={onApply} 
+            disabled={!selectedResumeId || isSubmitting}          {!selectedResumeId && (
+            <p className="text-sm text-muted-foreground mt-2">
+              Please select a resume to continue
+            </p>}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

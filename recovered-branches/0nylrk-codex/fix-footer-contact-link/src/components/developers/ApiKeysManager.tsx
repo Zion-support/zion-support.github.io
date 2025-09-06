@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function ApiKeysManager() {;
   const { ;
     keys;
@@ -15,13 +16,19 @@ export function ApiKeysManager() {;
 
 
   const [showCreateDialog, setShowCreateDialog] = useState(false);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
 
+<<<<<<< HEAD
 
   // Create key form state;
 
+=======
+  // Create key form state;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
@@ -30,16 +37,22 @@ export function ApiKeysManager() {;
     fetchApiKeys();
   });
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -52,6 +65,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
 
 import CodeBlock from "./CodeBlock",
+<<<<<<< HEAD
 export function ApiKeysManager() {
 
   const { ;
@@ -76,6 +90,9 @@ export function ApiKeysManager() {
     keys;
 
   const { 
+=======
+export function ApiKeysManager() {  const { 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     keys,
     loading, 
     newApiKey,
@@ -98,7 +115,10 @@ export function ApiKeysManager() {
   useState(() => {
     fetchApiKeys()
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }),
   
   const handleCreateKey = async () => {
@@ -106,6 +126,7 @@ export function ApiKeysManager() {
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
+<<<<<<< HEAD
     setSelectedScopes([])
   }
   }),
@@ -128,6 +149,9 @@ export function ApiKeysManager() {
   
 
   const handleRevokeKey = async (keyId: string) => {
+=======
+    setSelectedScopes([])  const handleRevokeKey = async (keyId: string) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
   }
@@ -147,6 +171,7 @@ export function ApiKeysManager() {
       prev.includes(scope)
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
+<<<<<<< HEAD
     )
 
 
@@ -155,6 +180,9 @@ export function ApiKeysManager() {
 
 
   const getExampleCode = (key: string) => {
+=======
+    )  const getExampleCode = (key: string) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
@@ -164,6 +192,7 @@ export function ApiKeysManager() {
     setSelectedScopes([]);
     setShowCreateDialog(false)
 
+<<<<<<< HEAD
 
   },
 
@@ -216,6 +245,10 @@ export function ApiKeysManager() {
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
 
 import { useState } from "react",;
+=======
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
@@ -254,6 +287,7 @@ export function ApiKeysManager() {;
 
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
+<<<<<<< HEAD
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
     setKeyName("");
@@ -301,6 +335,15 @@ export function ApiKeysManager() {;
   };
 
   return (
+=======
+    setShowCreateDialog(false);
+    setKeyName("");
+    setSelectedScopes([])
+};  const handleRevokeKey = async (keyId: string) => {;
+    await revokeApiKey(keyId),;
+    setShowDeleteConfirm(null)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -316,6 +359,7 @@ export function ApiKeysManager() {;
           <p className="text-sm text-zinc-400">;
             You have {keys && keys.length} API {keys && keys.length === 1 ? 'key' : 'keys'}
           </p>;
+<<<<<<< HEAD
 
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>;
             <DialogTrigger asChild>;
@@ -354,12 +398,15 @@ export function ApiKeysManager() {;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <Checkbox 
                           id={scope.value} 
 
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
+<<<<<<< HEAD
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
@@ -369,6 +416,8 @@ export function ApiKeysManager() {;
   });
 
                         <Label
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           htmlFor={scope && scope.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">;
                           {scope && scope.label}
@@ -383,8 +432,12 @@ export function ApiKeysManager() {;
 
               <DialogFooter>;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>;
+<<<<<<< HEAD
                 <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;
                         </Label>;
+=======
+                <Button onClick={handleCreateKey} disabled={keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0}>;                        </Label>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </div>;
                     ))}
                   Create Key;
@@ -394,8 +447,11 @@ export function ApiKeysManager() {;
           </Dialog>;
         </div>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {/* API Keys List */}
         <div className="space-y-4">;
           {loading ? (;
@@ -425,14 +481,19 @@ export function ApiKeysManager() {;
                   </div>;
 
                   <DropdownMenu>;
+<<<<<<< HEAD
                     <DropdownMenuTrigger asChild>;
                       </div>;
+=======
+                    <DropdownMenuTrigger asChild>;                      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </div>;
                   </div>;
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
         {/* New API Key Alert */}
         {newApiKey && (
+<<<<<<< HEAD
           <div className="mb - 6 p - 4 border border - green - 800 bg - green - 900 / 30 rounded - md">;
             <div className="flex justify - between items - start mb - 2">;
               <span className="font - medium flex items - center">;
@@ -453,10 +514,31 @@ export function ApiKeysManager() {;
             <CodeBlock code={newApiKey} className="mb - 3" />;
             <div className="text - sm text - zinc - 400">;
               <span className="font - medium">Example usage:</span>;
+=======
+          <div className="mb - 6 p - 4 border border - green - 800 bg - green - 900 / 30 rounded-md">;
+            <div className="flex justify - between items - start mb-2">;
+              <span className="font - medium flex items-center">;
+                <Check size={16} className="mr - 2 text - green-500" /> New API Key Generated;
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h - 6 w-6";
+                on_click={clearNewApiKey}              >;
+                <X size={14} />;
+              </Button>;
+            </div>;
+            <p className="text - sm text - zinc - 300 mb-2">;
+              This key will only be displayed once. Please save it securely.;
+            </p>;
+            <CodeBlock code={newApiKey} className="mb-3" />;
+            <div className="text - sm text - zinc-400">;
+              <span className="font-medium">Example usage:</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
             <CodeBlock code={getExampleCode (newApiKey)} language="bash" />;
           </div>)}
         {/* API Keys List */}
+<<<<<<< HEAD
         <div className="space - y-4">;
           {loading ? (
             <div className="text - center py - 8 text - zinc - 500">Loading API keys...</div>) : keys.length === 0 ? (
@@ -475,6 +557,25 @@ export function ApiKeysManager() {;
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
                         {key.is_active ? (
                       <DropdownMenuItem
+=======
+        <div className="space-y-4">;
+          {loading ? (
+            <div className="text - center py - 8 text - zinc-500">Loading API keys...</div>) : keys.length === 0 ? (
+            <div className="text - center py - 8 text - zinc-500">;
+              <Key className="mx - auto mb - 2 opacity-30" size={24} />;
+              <p > No API keys found.</p>;
+              <p className="text - sm mt-1">Create one to access the Zion APIs.</p>;
+            </div>) : (
+            keys.map ((key) => (
+              <div key={key.id} className="p - 4 border border - zinc - 800 rounded-lg">;
+                <div className="flex items - center justify-between">;
+                  <div className="flex items-center">;
+                    <div>;
+                      <h3 className="font-medium">{key.name}</h3>;
+                      <div className="flex items - center space - x-2 mt-1">;
+                        <span className="text - sm text - zinc - 400 font-mono">{key.key_prefix}••••••••••••</span>;
+                        {key.is_active ? (                      <DropdownMenuItem
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         onClick={() => setShowRegenerateConfirm(key && key.id)}
                         className="cursor-pointer";
                         disabled={!key && key.is_active}
@@ -507,6 +608,7 @@ export function ApiKeysManager() {;
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
                       {scope}
                     </Badge>;
+<<<<<<< HEAD
                   ))}
                 <div className="mt - 3 flex flex - wrap gap - 2">;
                   {key.scopes.map ((scope) => (
@@ -703,13 +805,20 @@ export function ApiKeysManager() {;
               This action will invalidate the existing key and generate a new one.;
               Any applications using this key will need to be updated.;
             </AlertDialogDescription>;
+=======
+                  ))}            </AlertDialogDescription>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
               Cancel;
             </AlertDialogCancel>;
+<<<<<<< HEAD
             <AlertDialogAction
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
+=======
+            <AlertDialogAction              onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               className="bg-blue-600 hover:bg-blue-700";
             >;
               Regenerate;
@@ -720,12 +829,17 @@ export function ApiKeysManager() {;
 
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog
+<<<<<<< HEAD
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
+=======
+        open={showDeleteConfirm !== null}         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
+<<<<<<< HEAD
             <AlertDialogDescription className="text-zinc-400">;
                       </p>;
                     </PopoverContent>;
@@ -753,3 +867,6 @@ export function ApiKeysManager() {;
     </Card>);
 }
 
+=======
+            <AlertDialogDescription className="text-zinc-400">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

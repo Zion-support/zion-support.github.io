@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require("child_process");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const path = require("path");
 class FileRestorer {}
@@ -110,3 +115,8 @@ if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = FileRestorer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -17,6 +17,7 @@ export interface MilestoneInput {
   start_date: string;
   end_date: string | null,
   project_type: string;
+<<<<<<< HEAD
 
 }
 
@@ -24,12 +25,22 @@ export interface MilestoneInput {
 export interface GeneratedMilestone {;
 
   title: string;
+=======
+}
+
+export interface GeneratedMilestone {;
+
+  title: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
 
       setIsGenerating(true),
 
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function useMilestoneGenerator() {
 
   const [isGenerating, setIsGenerating] = useState(false);
@@ -43,13 +54,17 @@ export function useMilestoneGenerator() {
 
       setIsGenerating(true),
       const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
+<<<<<<< HEAD
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
     try {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
+<<<<<<< HEAD
 
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
   due_date: string;
@@ -162,4 +177,10 @@ export function useMilestoneGenerator() {;
     clearGeneratedMilestones}
 }
     clearGeneratedMilestones}
+=======
+        isAiGenerated: true}));      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({    } finally {
+      setIsGenerating (false);
+    }
+  }    clearGeneratedMilestones}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

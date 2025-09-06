@@ -4,6 +4,7 @@ export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'd
 ;
 
 export interface Dispute {
+<<<<<<< HEAD
 
 export interface Dispute {;
 
@@ -42,6 +43,12 @@ export interface DisputeMessage {;
 
 
 export interface DisputeMessage {
+=======
+export interface Dispute {
+export interface DisputeMessage {;
+
+export interface DisputeMessage {export interface DisputeMessage {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   dispute_id: string;
   user_id: string;
@@ -56,12 +63,18 @@ export interface DisputeMessage {
   }
 }
 
+<<<<<<< HEAD
 
 
 export interface DisputeAttachment {;
 
 
 export interface DisputeAttachment {
+=======
+export interface DisputeAttachment {;
+
+export interface DisputeAttachment {export interface DisputeAttachment {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -70,6 +83,7 @@ export interface DisputeAttachment {
   file_type: string;
   file_size: number;
 
+<<<<<<< HEAD
   created_at: string,
   url?: string;
 }
@@ -104,12 +118,15 @@ export type DisputeReason =
   | 'other';
 export const disputeReasonLabels: Record<DisputeReason, string> = {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
+<<<<<<< HEAD
 
   contract_terms: 'Contract Terms Disagreement',
 
@@ -120,13 +137,19 @@ other: 'Other Issue'};
 
 other: 'Other Issue'};
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
   id: string,;
   project_id: string,;
   milestone_id?: string,;
   raised_by: string,;
+<<<<<<< HEAD
   reason_code: string,;
+=======
+  reason_code: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   created_at: string,;
   updated_at: string,;
@@ -189,6 +212,9 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
   other: 'Other Issue'};
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

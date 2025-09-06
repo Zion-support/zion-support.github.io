@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
@@ -11,7 +14,10 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -19,6 +25,7 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
+<<<<<<< HEAD
 
 
 
@@ -84,6 +91,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   )
 
 },
+=======
+  setArchiveFilter;
+}) => {;
+  return (},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import {;
@@ -118,11 +130,15 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
+<<<<<<< HEAD
       </div>;
 
       <div className="flex gap-3 mt-4 md:mt-0">;
@@ -150,6 +166,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 
             <SelectValue placeholder="Active Only" />;
+=======
+      </div>;            <SelectValue placeholder="Active Only" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value="active">Active Only</SelectItem>;
@@ -157,6 +176,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="all">All Requests</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
       </div>;
 
     </div>);
@@ -242,3 +262,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
 };
 
 export default RequestsHeader;
+=======
+      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

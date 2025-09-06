@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require('child_process')
       "status"
@@ -34,3 +40,8 @@ const { execSync } = require('child_process')
           "type"
     console.log('\n Error Fixing "Summary")
 
+<<<<<<< HEAD
+=======
+    console.error('Error fixing "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

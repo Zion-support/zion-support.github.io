@@ -1,11 +1,18 @@
 
 
+<<<<<<< HEAD
 
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
 
 
   projectId: string
+=======
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
+
+=======  projectId: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
@@ -19,6 +26,7 @@ import {PaymentSummary} from '../PaymentSummary';
   onUploadDeliverable: (id: string, file: File) => Promise<any>
 
 import {MilestonesList} from '../MilestonesList';
+<<<<<<< HEAD
 import {PaymentSummary} from '../PaymentSummary';
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
@@ -31,6 +39,9 @@ import { toast } from "sonner",
 
 
 interface MilestoneManagerProps {
+=======
+import {PaymentSummary} from '../PaymentSummary';interface MilestoneManagerProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   projectId: string,
   milestones: Milestone[],
   activities: Record<string MilestoneActivity[]>,
@@ -44,6 +55,7 @@ interface MilestoneManagerProps {
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   refetch: () => Promise<void>
+<<<<<<< HEAD
 }
 
 
@@ -51,6 +63,9 @@ interface MilestoneManagerProps {
 
 export function MilestoneManager({;
   projectId;
+=======
+}  projectId;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   milestones;
   activities;
   isLoading;
@@ -74,6 +89,7 @@ export function MilestoneManager({
   onCreateMilestone,
   onUpdateStatus,
   onDeleteMilestone,
+<<<<<<< HEAD
   onUploadDeliverable,
 
 
@@ -154,6 +170,9 @@ function MilestoneManager() {
       <div className="lg:col - span - 2">;
         <MilestonesList;
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+=======
+  onUploadDeliverable,      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast.success("Milestone approved"),
       await refetch()
     } catch (error) {
@@ -162,6 +181,7 @@ function MilestoneManager() {
     }
 
   },
+<<<<<<< HEAD
   
 
   const handleMilestoneRejected = async (milestoneId: string) => {
@@ -189,6 +209,9 @@ function MilestoneManager() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
 import React from 'react',;
+=======
+  import React from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -248,6 +271,7 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList;
+<<<<<<< HEAD
 
 } MilestoneManagerProps) {;
   const handleMilestoneApproved = async (milestoneId:string) => {;
@@ -277,12 +301,15 @@ export function MilestoneManager({;
       <div className="lg:col-span-2">;
         <MilestonesList ;
           milestones={milestones}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
+<<<<<<< HEAD
           onUploadDeliverable={onUploadDeliverable}
 
         />;
@@ -291,12 +318,18 @@ export function MilestoneManager({;
         <PaymentSummary
           milestones={milestones} 
           paymentTerms={paymentTerms}
+=======
+          onUploadDeliverable={onUploadDeliverable}          paymentTerms={paymentTerms}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -309,9 +342,13 @@ export function MilestoneManager({;
         />;
       </div>;
     </div>);
+<<<<<<< HEAD
 }
 
   ),; interface MilestoneManagerProps {
+=======
+}  ),; interface MilestoneManagerProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   projectId: string;
 milestones: Milestone[];
 activities: Record<string MilestoneActivity[]>;
@@ -331,7 +368,10 @@ refetch: () => Promise<void>
   try {
   
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 const handleMilestoneRejected = async (milestoneId: string) => {
@@ -378,3 +418,7 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

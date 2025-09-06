@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Table;
   TableBody;
@@ -14,6 +17,7 @@ import {
   DialogDescription;
   DialogFooter;
   DialogHeader;
+<<<<<<< HEAD
   DialogTitle;
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
@@ -28,6 +32,9 @@ export function TeamManagement() {;
   const [newMemberEmail, setNewMemberEmail] = useState("");
 
 import React, { useState } from "react",
+=======
+  DialogTitle;import React, { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Table,
   TableBody,
@@ -41,13 +48,18 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,
 
   DialogTrigger} from "@/components/ui/dialog",
+=======
+  DialogTitle,  DialogTrigger} from "@/components/ui/dialog",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
 
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react",
@@ -110,21 +122,29 @@ export function TeamManagement() {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
 
+<<<<<<< HEAD
 
   },
 
 
 
+=======
+  },
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
+<<<<<<< HEAD
       description: `A new invitation has been sent to ${memberEmail}`})
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -204,6 +224,9 @@ export function TeamManagement() {;
 
 
   return (
+=======
+      description: `A new invitation has been sent to ${memberEmail}`})  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Team Members</h3>;
@@ -291,6 +314,7 @@ if ( {) {
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="space - y-6">;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Team Members</h3>;
@@ -298,6 +322,15 @@ if ( {) {
           <DialogTrigger as_child>;
             <Button className="gap - 2">;
               <UserPlus className="h - 4 w - 4" />;
+=======
+    <div className="space-y-6">;
+      <div className="flex items - center justify-between">;
+        <h3 className="text - xl font-medium">Team Members</h3>;
+        <Dialog open={isAddingMember} onOpenChange={setIsAddingMember}>;
+          <DialogTrigger as_child>;
+            <Button className="gap-2">;
+              <UserPlus className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Add Team Member;
             </Button>;
           </DialogTrigger>;
@@ -308,8 +341,12 @@ if ( {) {
               </DialogDescription>;
             </DialogHeader>;
 
+<<<<<<< HEAD
                   className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;
                           .join("")}
+=======
+                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;                          .join("")}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </span>
                     </div>
                     <div>
@@ -345,6 +382,7 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import {;
@@ -451,12 +489,15 @@ export function TeamManagement() {;
               <div className="grid grid-cols-4 items-center gap-4">;
                 <Label htmlFor="email" className="text-right">;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Email;
                 </Label>;
                 <Input;
                   id="email";
                   type="email";
                   placeholder="colleague@company.com";
+<<<<<<< HEAD
                   className="col - span - 3";
                   value={newMemberEmail}
                   on_change={(e) => setNewMemberEmail (e.target.value)}
@@ -473,6 +514,14 @@ export function TeamManagement() {;
                   Role;
                 </Label>;
                   <option value="admin">Admin</option>;
+=======
+                  className="col - span-3";
+                  value={newMemberEmail}
+                  on_change={(e) => setNewMemberEmail (e.target.value)}                />;
+              </div>;
+              <div className="grid grid - cols - 4 items - center gap-4">;
+                <Label html_for="role" className="text-right">;                  <option value="admin">Admin</option>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
                   <option value="viewer">Viewer</option>;
@@ -484,6 +533,7 @@ export function TeamManagement() {;
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
+<<<<<<< HEAD
               <Button on_click={handleAddMember}>Send Invitation</Button>;
 
             </DialogFooter>;
@@ -557,6 +607,15 @@ export function TeamManagement() {;
 
 
 
+=======
+              <Button on_click={handleAddMember}>Send Invitation</Button>;                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" : "outline"}
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" :"outline"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                         onClick={() => handleRemoveMember(member.id)}
                       >
@@ -573,6 +632,7 @@ export function TeamManagement() {;
     </div>
   )
 }
+<<<<<<< HEAD
                 <TableCell>{member.lastActive}</TableCell>;
                 <TableCell className="text-right">;
                   <div className="flex justify-end gap-2">;
@@ -647,4 +707,6 @@ setIsAddingMember (false);
 }</TableBody> </Table> </div> </div>) 
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

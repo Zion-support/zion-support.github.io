@@ -64,3 +64,8 @@ await this.log(" ESLint configuration fixed")
             "timestamp": new Date().toISOString()")}
 });")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
 
+<<<<<<< HEAD
+=======
+  await this.log(")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

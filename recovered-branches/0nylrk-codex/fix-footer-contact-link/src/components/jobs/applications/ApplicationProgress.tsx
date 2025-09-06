@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -14,6 +17,7 @@ export function ApplicationProgress({
   className
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 interface ApplicationProgressProps {
   status: ApplicationStatus,
@@ -23,11 +27,17 @@ interface ApplicationProgressProps {
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
 
   // Define the progress value based on status
+=======
+import { cn } from "@/lib/utils",  // Define the progress value based on status
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const getProgressValue = () => {
     switch (status) {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApplicationProgress(): any ({;
   status,;
   className,;
@@ -36,7 +46,10 @@ export function ApplicationProgress(): any ({;
   const getProgressValue = () => {;
     switch (status) {;
       case "new":;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot  } from './lucide-react';
@@ -53,6 +66,7 @@ function ApplicationProgress() {
   const getProgressValue = () =>: any {
     switch (status) {
       case "new":;
+<<<<<<< HEAD
         return 20;
       case "viewed":;
         return 40;
@@ -70,12 +84,15 @@ function ApplicationProgress() {
   }
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "new": return 20,
       case "viewed": return 40,
       case "shortlisted": return 60,
       case "interview": return 80,
       case "hired": return 100,
       case "rejected": return 100,
+<<<<<<< HEAD
       default: return 0
 
     }
@@ -92,6 +109,9 @@ function ApplicationProgress() {
       
       
       <div className="flex justify-between text-xs text-muted-foreground">
+=======
+      default: return 0      <div className="flex justify-between text-xs text-muted-foreground">
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
           <span className="mt-1">Submitted</span>
@@ -117,6 +137,7 @@ function ApplicationProgress() {
   );
 }
 
+<<<<<<< HEAD
 
 
 
@@ -141,6 +162,12 @@ function StatusIcon({
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
+=======
+  )
+}
+    }
+  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
   const statusRank: Record<ApplicationStatus number> = {
@@ -153,6 +180,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
+<<<<<<< HEAD
 
 
   if (currentRank < statusRank_) {
@@ -164,6 +192,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   } else {
     // This step is upcoming
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
@@ -192,7 +222,10 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
     <div className={cn("w-full space-y-2", className)}>;
       <Progress value={progressValue} className="h-2" />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="flex justify-between text-xs text-muted-foreground">;
         <div className="flex flex-col items-center">;
           <StatusIcon status={status} current="new" />;
@@ -227,17 +260,27 @@ function StatusIcon(): any ({;
   current: ApplicationStatus;
 }) {;
   // Helper to determine if this step is active, completed, or inactive;
+<<<<<<< HEAD
   const statusRank: Record<ApplicationStatus, number> = {;
     new: 1,;
+=======
+  const statusRank: Record<ApplicationStatus, number> = {;    new: 1,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     viewed: 2,;
     shortlisted: 3,;
     interview: 4,;
     hired: 5,;
+<<<<<<< HEAD
     rejected: 5,;
   };
 
     rejected: 5},;
     }
+=======
+    rejected: 5,
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
@@ -251,6 +294,7 @@ function StatusIcon(): any ({;
   } else {;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+<<<<<<< HEAD
   }
 
 ;
@@ -378,3 +422,6 @@ return (<div className= {
 }
 ;
 }
+=======
+  }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

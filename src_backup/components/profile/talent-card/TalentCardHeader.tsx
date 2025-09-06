@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-yearsExperience
-=======
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -20,7 +17,7 @@ export function TalentCardHeader({
   profilePicture;
   availabilityType;
   yearsExperience
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
@@ -41,8 +38,6 @@ export function TalentCardHeader(): any ({;
         <div className='flex items-center justify-between'>;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
-
-      
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -54,29 +49,11 @@ export function TalentCardHeader(): any ({;
             )}
 
           </h3>
-<<<<<<< HEAD
 
-    </div>;
-  );
-};
-
-
-}
-          </h3>;
-
-          <TalentCardAvailability availabilityType={availabilityType} />;
-        </div>;
-<<<<<<< HEAD
-
-        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
-=======
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </div>;
   );
 }
-
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
@@ -116,11 +93,10 @@ function TalentCardHeader() {
     </div>);
 }
 ;
-=======
           <TalentCardAvailability availabilityType={availabilityType} />
         </div>
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

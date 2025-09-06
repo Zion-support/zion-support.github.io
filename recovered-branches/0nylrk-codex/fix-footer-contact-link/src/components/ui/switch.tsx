@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Switch = React.forwardRef<
@@ -16,12 +23,16 @@ const Switch = React.forwardRef<
 ></typeof>(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Switch = React && React.forwardRef<;
   React && React.ElementRef<typeof SwitchPrimitives && SwitchPrimitives.Root>,;
   React && React.ComponentPropsWithoutRef<typeof SwitchPrimitives && SwitchPrimitives.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <SwitchPrimitives&& SwitchPrimitives.Root
+<<<<<<< HEAD
 
     className={cn(
       'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input'
@@ -139,3 +150,5 @@ export { Switch }
 export { Switch };
 export { Switch }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

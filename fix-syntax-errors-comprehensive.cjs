@@ -1,32 +1,50 @@
 
+<<<<<<< HEAD
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
     let originalContent = content;
+=======
+const fixes = [];
 
-    // Fix triple quotes in imports
-    content = content.replace(/import\s+[^;]+;'''/g, (match) => {
-        fixes++;
-        return match.replace(/;'''$/, ';');
-    });
+function fixFile(filePath, description, fixFunction) {
+    console.log(`\n🔍 Checking: ${filePath}`);
+    
+    if (!fs.existsSync(filePath)) {
+        console.log(`⚠️  File not found: ${filePath}`);
+        return;
+    }
+    
+console.log('🔧 Starting comprehensive syntax error fixing...');
 
-    // Fix "Reac t" -> "React"
-    content = content.replace(/Reac\s+t/g, 'React');
-    fixes += (originalContent.match(/Reac\s+t/g) || []).length;
+const fs = require('fs');
+const path = require('path');
 
-    // Fix unterminated string constants
-    content = content.replace(/from\s+'react';'''/g, "from 'react';");
-    content = content.replace(/from\s+'[^']+';'''/g, (match) => {
-        fixes++;
-        return match.replace(/;'''$/, ';');
-    });
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix malformed JSX closing tags
-    content = content.replace(/<\/HTMLDivElement>/g, '');
-    content = content.replace(/<\/HTMLInputElement>/g, '');
-    content = content.replace(/<\/HTMLParagraphElement>/g, '');
-    content = content.replace(/<\/h3>/g, '');
+    // Fix common syntax errors
 
+    // Fix unnecessary escape characters
+    content = content.replace(/\\:/g, ':');
+    content = content.replace(/\\,/g, ',');
+    content = content.replace(/\\;/g, ';');
+    content = content.replace(/\\}/g, '}');
+    content = content.replace(/\\{/g, '{');
+    content = content.replace(/\\\[/g, '[');
+    content = content.replace(/\\\]/g, ']');
+    content = content.replace(/\\\(/g, '(');
+    content = content.replace(/\\\)/g, ')');
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+
+
+<<<<<<< HEAD
     // Fix malformed return statements
     content = content.replace(/return\s*\(\s*<div[^>]*>\s*\/\*[^*]*\*\/\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
         fixes++;
@@ -54,6 +72,8 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -65,6 +85,11 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -98,7 +123,14 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     );
 });
 
+<<<<<<< HEAD
     content = content.replace(/([^;}])\s*$/gm, '$1;');
+=======
+    // Fix missing semicolons at end of statements
+ursor/automate-test-improve-and-merge-code-59d5
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
@@ -107,6 +139,68 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 
+<<<<<<< HEAD
+=======
+}
+
+// Function to process a single file
+function processFile(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const { "content": fixedContent, fixes } = fixSyntaxErrors(content, filePath);
+        
+        if (fixes > 0) {
+            fs.writeFileSync(filePath, fixedContent, 'utf8');
+            
+            return fixes;
+        }
+        return 0;
+    } catch (error) {
+        console.error("❌ Error processing ${filePath}:", error.message);
+        return 0;
+    }
+}
+
+// Main execution
+async function main() {
+    const patterns = ['src/**/*.tsx',
+        'src/**/*.ts',
+        'src/**/*.jsx',
+        'src/**/*.js',
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'pages/**/*.tsx',
+        'pages/**/*.ts',
+        'pages/**/*.jsx',
+        'pages/**/*.js'
+    ];
+
+    let totalFixes = 0;
+    let filesProcessed = 0;
+
+    for (const pattern of patterns) {
+        const files = glob.sync(pattern, { "ignore": ['node_modules/**', '.next/**', 'dist/**'] });
+        
+        for (const file of files) {
+            if (fs.existsSync(file)) {
+                const fixes = processFile(file);
+                totalFixes += fixes;
+                filesProcessed++;
+            }
+        }
+    }
+
+    
+    
+    
+    
+    if (totalFixes > 0) {
+        
+    } else {
+        
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -114,6 +208,33 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     
     return fixed;
 });
+<<<<<<< HEAD
+=======
+console.log(`Total fixes applied: ${fixes.length}`);
+
+if (fixes.length > 0) {
+    console.log('\nFixed files:');
+    fixes.forEach(fix => {
+        console.log(`  ✅ ${fix.file}: ${fix.description}`);
+    });
+} else {
+    console.log('\n✅ No syntax errors found - all files are clean!');
+}
+
+console.log('\n🎯 Syntax error fixing completed!');
+origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
+
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+ursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
@@ -175,3 +296,39 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
+      fixedCount += processDirectory(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      if (fixSyntaxErrors(filePath)) fixedCount++;
+    }
+  }
+
+  return fixedCount;
+}
+
+console.log('Starting comprehensive syntax error fixes...');
+const fixedCount = processDirectory('.');
+console.log(`Fixed ${fixedCount} files`);
+ursor/automate-test-improve-and-merge-code-59d5
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -7,6 +8,8 @@ import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
@@ -27,6 +30,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
+<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 export function EnterprisePricingTable() {
 
@@ -55,6 +59,9 @@ export function EnterprisePricingTable() {
       price: "$1,999";
 
       name: "Business"
+=======
+import { Badge } from "@/components/ui/badge",      name: "Business"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       price: "$1,999";
       billing: "/month"
       description: "Ideal for growing companies"
@@ -63,11 +70,15 @@ export function EnterprisePricingTable() {
       name: "Business",;
       price: "$1,999";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Business",;
       price: "$1,999";
 
       name: "Business",
+<<<<<<< HEAD
       price: "$1,999",
       billing: "/month",
       description: "Ideal for growing companies",
@@ -139,12 +150,20 @@ import {;
 import { Badge } from "@/components/ui/badge",;
 
 export function EnterprisePricingTable() {;
+=======
+      price: "$1,999",export function EnterprisePricingTable() {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const plans = [;
     {;
       name: "Teams",;
       price: "$599",;
+<<<<<<< HEAD
       billing: "/month",;
       description: "Perfect for small teams",;
+=======
+      billing: "/month",,
+  description: "Perfect for small teams",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       users: "Up to 10 users",;
       popular: false,;
       features: [;
@@ -158,6 +177,7 @@ export function EnterprisePricingTable() {;
         { name: "Custom integrations", included: false },;
         { name: "Dedicated success manager", included: false }]},;
     {;
+<<<<<<< HEAD
       name: "Business",;
       price: "$1,999";
       billing: "/month",;
@@ -194,6 +214,9 @@ export function EnterprisePricingTable() {;
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">;
+=======
+      name: "Business",;    <section id="pricing" className="py-20 px-4 md:px-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto max-w-7xl">;
         <div className="text-center mb-12">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>;
@@ -201,6 +224,7 @@ export function EnterprisePricingTable() {;
             Choose the perfect plan for your team size and requirements;
           </p>;
         </div>;
+<<<<<<< HEAD
 
         <div className="overflow-x-auto">;
           <Table className="border rounded-lg">;
@@ -216,6 +240,8 @@ export function EnterprisePricingTable() {;
 
 
                       )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
                         <span className="text-2xl font-bold">{plan && plan.price}</span>;
@@ -247,8 +273,12 @@ export function EnterprisePricingTable() {;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) : (;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
+<<<<<<< HEAD
                       )}
                 {plans.map((plan) => (;
+=======
+                      )}                {plans.map((plan) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <TableHead key={plan.name} className="text-center">;
                     <div className="flex flex-col items-center">;
                       {plan.popular && (;
@@ -261,6 +291,7 @@ export function EnterprisePricingTable() {;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) :(;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;                      )}
+<<<<<<< HEAD
                     </TableCell>;
                   ))}
                 </TableRow>;
@@ -278,6 +309,8 @@ export function EnterprisePricingTable() {;
   );
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -340,6 +373,7 @@ function EnterprisePricingTable() {
         { name: "Custom integrations", included: true },
         { name: "Dedicated success manager", included: true }]}],
   return (
+<<<<<<< HEAD
     <section id="pricing" className="py - 20 px - 4 md:px - 6">;
       <div className="container mx - auto max - w-7xl">;
         <div className="text - center mb - 12">;
@@ -350,10 +384,23 @@ function EnterprisePricingTable() {
         </div>;
         <div className="overflow - x-auto">;
           <Table className="border rounded - lg">;
+=======
+    <section id="pricing" className="py - 20 px - 4 md:px-6">;
+      <div className="container mx - auto max-w-7xl">;
+        <div className="text - center mb-12">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb-4">Enterprise Plans</h2>;
+          <p className="text - xl text - muted - foreground max - w-2xl mx-auto">;
+            Choose the perfect plan for your team size and requirements;
+          </p>;
+        </div>;
+        <div className="overflow-x-auto">;
+          <Table className="border rounded-lg">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <TableHeader>;
               <TableRow>;
                 <TableHead className="w-[200px]">Plan Features</TableHead>;
                 {plans.map ((plan) => (
+<<<<<<< HEAD
                   <TableHead key={plan.name} className="text - center">;
                     <div className="flex flex - col items - center">;
                       {plan.popular && (
@@ -369,6 +416,23 @@ function EnterprisePricingTable() {
                         {plan.description}
                       </p>;
                       <p className="text - sm font - medium mt - 2">{plan.users}</p>;
+=======
+                  <TableHead key={plan.name} className="text-center">;
+                    <div className="flex flex - col items-center">;
+                      {plan.popular && (
+                        <Badge className="mb - 2 bg - zion-purple">Most Popular</Badge>)}
+                      <span className="font - bold text-xl">{plan.name}</span>;
+                      <div className="flex items - baseline mt-1">;
+                        <span className="text - 2xl font-bold">{plan.price}</span>;
+                        <span className="text - sm text - muted - foreground ml-1">;
+                          {plan.billing}
+                        </span>;
+                      </div>;
+                      <p className="text - sm text - muted - foreground mt-1">;
+                        {plan.description}
+                      </p>;
+                      <p className="text - sm font - medium mt-2">{plan.users}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <Button;
                         className={`mt - 4 w - full ${plan.popular ? 'bg - zion - purple hover:bg - zion - purple / 90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
@@ -382,6 +446,7 @@ function EnterprisePricingTable() {
             <TableBody>;
               {plans[0].features.map ((feature, index) => (
                 <TableRow key={feature.name}>;
+<<<<<<< HEAD
                   <TableCell className="font - medium">{feature.name}</TableCell>;
                   {plans.map ((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text - center">;
@@ -566,3 +631,10 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
     </section>
   )
 }
+=======
+                  <TableCell className="font-medium">{feature.name}</TableCell>;
+                  {plans.map ((plan) => (
+                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
+                      {plan.features[index].included ? (
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,12 +1,18 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 
+=======
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
@@ -29,11 +35,18 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 serve(async (req) => {
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";serve(async (req) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
         });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -74,6 +87,7 @@ serve(async (req) => {;
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required field: title" 
+<<<<<<< HEAD
 
         });
         {
@@ -130,18 +144,31 @@ if ( {) {
 
 
 
+=======
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }        }
+      );
+    }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
 
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
+<<<<<<< HEAD
     const prompt = `Create a professional and detailed service description for the following service:;
 
 
@@ -163,6 +190,11 @@ The description should: 1. Be approximately 200-300 words
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    const prompt = `Create a professional and detailed service description for the following service:;Title: ${title}
+Key Features: ${keyFeatures || "Not specified"}
+Target Audience: ${targetAudience || "General users"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error ("Error in generate - service - description:", error);
 ;
     return new Response (
@@ -174,6 +206,7 @@ The description should: 1. Be approximately 200-300 words
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
 Key Features: ${keyFeatures || "Not specified"}
+<<<<<<< HEAD
 Target Audience: ${targetAudience || "General users"}
 ;
 The description should: 1. Be approximately 200-300 words;
@@ -262,6 +295,9 @@ The description should: 1. Be approximately 200 - 300 words;
         headers: { ...cors_headers, "Content - Type": "application / json" }
 
       }
+=======
+Target Audience: ${targetAudience || "General users"}      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );
 
 5. Include a compelling opening and closing statement`,
@@ -295,9 +331,12 @@ The description should: 1. Be approximately 200 - 300 words;
 });
 
 ;
+<<<<<<< HEAD
 
   }
 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;

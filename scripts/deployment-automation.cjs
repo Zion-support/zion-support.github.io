@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * Deployment Automation;
- * Automates deployment processes;
- */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs')
 const { execSync } = require('child_process')
@@ -21,13 +16,10 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.error('Deployment automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    console.error('Deployment automation "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -158,7 +150,6 @@ class DeploymentAutomation {
     } catch (error) {
       this.log(`💥 Deployment Automation Failed: ${error.message}`);
       process.exit(1);
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -561,17 +552,11 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
       
       await this.generateReport();
       return false;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 }
 
-<<<<<<< HEAD
-// Run the automation
-const automation = new DeploymentAutomation();
-automation.run();
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 // Run the deployment automation
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
@@ -579,7 +564,11 @@ if (require.main === module) {
 }
 
 module.exports = DeploymentAutomation;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

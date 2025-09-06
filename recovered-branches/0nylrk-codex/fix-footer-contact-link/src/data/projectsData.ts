@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
@@ -11,6 +12,13 @@ export const PROJECTS: Project[] = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import { Project } from "@/types/projects";
+export const PROJECTS: Project[] = [
+  {
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     job: {
@@ -23,7 +31,6 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
-=======
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -38,9 +45,10 @@ export const PROJECTS: Project[] = [
       title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
       full_name: "Alexandra Chen";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,6 +57,16 @@ export const PROJECTS: Project[] = [
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       professional_title: "Senior AI Engineer";
+=======
+
+import { Project } from "@/types/projects",
+export const PROJECTS: Project[] = [
+import { Project } from '@/types/projects';
+import { Project } from "@/types/projects",
+export const PROJECTS: Project[] = [
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       professional_title: "Senior AI Engineer"
     }
@@ -56,16 +74,25 @@ export const PROJECTS: Project[] = [
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     id: "project-1",
     client_id: "client-1",
@@ -82,8 +109,11 @@ export const PROJECTS: Project[] = [
       description: "Develop dashboards using React and integrate ML models"
     },
     talent_profile: {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -95,6 +125,10 @@ export const PROJECTS: Project[] = [
     talent_profile: {
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -117,16 +151,25 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
+<<<<<<< HEAD
 
     }
   }
 ];
 
 
+=======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     }
   }
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 ];
@@ -137,6 +180,7 @@ export const PROJECTS: Project[] = [;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -144,3 +188,8 @@ export const PROJECTS: Project[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

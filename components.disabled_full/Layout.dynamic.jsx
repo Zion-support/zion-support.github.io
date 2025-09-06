@@ -1,4 +1,5 @@
 const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
+<<<<<<< HEAD
 </p>'
 </p>'
 </p>'
@@ -11,4 +12,7 @@ const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading.
 
 </p>'
 </p>'
+=======
+</p>'</p>'
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 </p>'

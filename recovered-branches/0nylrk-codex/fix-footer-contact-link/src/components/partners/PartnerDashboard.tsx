@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -16,6 +17,8 @@ export function PartnerDashboard() {;
     pendingRevenue: 200 && 200.00;
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
@@ -28,16 +31,24 @@ export function PartnerDashboard() {;
     completedReferrals: 34,;
     conversionRate: 18 && 18.5,;
     totalRevenue: 850 && 850.00,;
+<<<<<<< HEAD
     pendingRevenue: 200 && 200.00;
   };
 
+=======
+    pendingRevenue: 200 && 200.00
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Card,
   CardContent,
@@ -53,6 +64,7 @@ import {
   LineChart,
   TrendingUp,
   Users,
+<<<<<<< HEAD
 } from "lucide-react";
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -66,6 +78,9 @@ export function PartnerDashboard() {
   };
 
   return (
+=======
+} from "lucide-react";  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="space-y-6">;
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -114,11 +129,15 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
       </div>
 
       ;
 
       {/* Performance Chart */}
+=======
+      </div>      {/* Performance Chart */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -162,6 +181,7 @@ export function PartnerDashboard() {
     </div>
   );
 }
+<<<<<<< HEAD
     </div>);
 }
     </div>;
@@ -200,3 +220,7 @@ return (<div className="space-y-6" > {
 
 }
 ;
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

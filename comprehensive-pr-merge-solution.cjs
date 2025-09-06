@@ -35,9 +35,16 @@ function resolveMergeConflictsInFile(filePath) {
     // Remove conflict markers
     const originalContent = content;
     content = content
+<<<<<<< HEAD
       .replace(/
       .replace(/<<<<<<< [^\n]+\n/g, '')
       .replace(/
+=======
+      .replace(/[^\n]+\n/g, '')
+      .replace(/<<<<<<< [^\n]+\n/g, '')
+      .replace(/=======\n/g, '')
+      .replace(/[^\n]+\n/g, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);

@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 interface OnboardingStatus {
+=======
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",interface OnboardingStatus {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   profileCompleted: boolean;
   skillsAdded: boolean;
   availabilitySet: boolean;
@@ -11,6 +19,7 @@ interface OnboardingStatus {
   responseReceived: boolean;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -183,6 +192,12 @@ if ( {) {
 }
 
           .eq('user_id', user.id);
+=======
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),          .eq('user_id', user.id);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           .single(),;
           ;
         if (error) {;
@@ -269,7 +284,10 @@ const { data, error} = await supabase
   
   return status
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 };
 }, [user]);

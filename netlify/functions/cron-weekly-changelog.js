@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
 const { upsertFile } = require('./_lib/github');
 async function fetchJson(url, token) {
   const resp = await fetch(url, {
@@ -18,7 +20,7 @@ async function fetchJson(url, token) {
 
   const resp = await fetch(url, {
     headers: token
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ? {
 
           Authorization: `token ${token}`,
@@ -33,10 +35,15 @@ async function fetchJson(url, token) {
   return resp.json ();
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
@@ -45,9 +52,12 @@ exports.handler = async function () {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
@@ -57,15 +67,21 @@ exports && exports.handler = async function () {
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     if (!owner || !repo || !token) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return {
         statusCode: 200,
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,37 +94,43 @@ exports && exports.handler = async function () {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+    const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+    const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   } catch (e) {
   }
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 
-<<<<<<< HEAD
-=======
 },
 
-=======
       path: 'data / reports / changelog / weekly - changelog.json',
       content: JSON.stringify (summary, null, 2),
       message: 'chore (automation): weekly changelog summary',
       token,
-=======
     if (!owner |!repo |!token) {
       return {
         statusCode: 200
@@ -142,20 +164,19 @@ authors: Object.entries(byAuthor)
       content: JSON.stringify(summary, null, 2)
       message: 'chore(automation): weekly changelog summary'
       token
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     return {
       status_code: 200,
       body: JSON.stringify ({ ok: true, commits: commits.length }),
     }
-<<<<<<< HEAD
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -164,10 +185,16 @@ authors: Object.entries(byAuthor)
   }
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -189,10 +216,16 @@ authors: Object.entries(byAuthor)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

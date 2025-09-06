@@ -1,6 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+=======
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
+origin/automation-improvements-final
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -29,6 +44,11 @@ class ErrorBoundary extends React.Component {
 }
 
 
+<<<<<<< HEAD
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -42,6 +62,11 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
 origin/automation-improvements-final
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -55,10 +80,13 @@ import { motion } from "framer-motion";
   MapPin,
   Users,;
 
+<<<<<<< HEAD
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
 import React from 'react';
@@ -71,6 +99,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from 'lucide-react';
 
 
@@ -106,7 +138,10 @@ import {
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];
 
   const rights = [
@@ -114,7 +149,10 @@ import {
       title: 'Access',
       description: 'Request access to your personal information',
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       icon: <Eye className='w-6 h-6' />,
     },
@@ -143,6 +181,10 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className='w-6 h-6' />,
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -170,8 +212,14 @@ import {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
+<<<<<<< HEAD
   ];
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -190,10 +238,18 @@ import {
   Users
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/automation-improvements-final
 
+<<<<<<< HEAD
 export default function PrivacyPage() {
 export default function PrivacyPage() {;
   return (
@@ -206,13 +262,32 @@ export default function PrivacyPage() {;
       </div>
     </MainLayout>
 
+=======
+
+export default function PrivacyPage() {
+export default function PrivacyPage() {;
+  return (
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+  return (
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -225,8 +300,42 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
+=======
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Privacy Policy
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and
+                protect your information.
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Privacy Policy</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Your privacy is important to us. Learn how we collect, use, and protect your information.
+origin/automation-improvements-final
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+import React from 'react';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
+return (
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -239,6 +348,7 @@ origin/automation-improvements-final
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -257,10 +367,21 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
 
+=======
 
 
 
 
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -268,6 +389,10 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {/* Content Section */}
         <section className="py-16 px-4">;
           <div className="max-w-4xl mx-auto">;
@@ -361,7 +486,6 @@ const PrivacyPage: React.FC = () => {
 }
   ],
   return (
-=======
 import {
   Shield,
   Lock,
@@ -464,46 +588,11 @@ icon: <Eye className='w-6 h-6' />,
   ];
 
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-<<<<<<< HEAD
-        <main className="relative z-10 pt-8">
-          {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Privacy Policy
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Your privacy is our priority. Learn how we protect and handle your personal information.
-                </p>
-                <div className="flex items-center justify-center gap-4 text-gray-400">
-                  <Shield className="w-6 h-6" />
-=======
 <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
@@ -522,89 +611,12 @@ icon: <Eye className='w-6 h-6' />,
                 </p>
                 <div className='flex items-center justify-center gap-4 text-gray-400'>
                   <Shield className='w-6 h-6' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
             </div>
           </section>
-<<<<<<< HEAD
-          {/* Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <h2 className="text-4xl font-bold mb-6 text-white">
-                    Our Commitment to Privacy
-                  </h2>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    At Zion Tech Group, we are committed to protecting your privacy and ensuring the security
-                    of your personal information. This Privacy Policy explains how we collect, use, disclose,
-                    and safeguard your information when you use our services.
-                  </p>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    We believe in transparency and want you to understand how your information is handled.
-                    This policy applies to all users of our website, services, and applications.
-                  </p>
-                  <div className="flex items-center gap-4 text-cyan-400">
-                    <Lock className="w-6 h-6" />
-                    <span className="font-medium">Your data is safe with us</span>
-                  </div>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="relative"
-                >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
-                    <div className="text-center space-y-6">
-                      <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
-                        <Shield className="w-12 h-12 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">Data Protection</h3>
-                      <p className="text-gray-300">Enterprise-grade security for your information</p>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-cyan-400">256-bit</div>
-                          <div className="text-gray-400">Encryption</div>
-                        </div>
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-400">99.9%</div>
-                          <div className="text-gray-400">Uptime</div>
-=======
 
           {/* Overview */}
 <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
@@ -667,7 +679,7 @@ className='relative'
                             99.9%
                           </div>
                           <div className='text-gray-400'>Uptime</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
                       </div>
                     </div>
@@ -676,6 +688,7 @@ className='relative'
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Privacy Principles */  } catch (error) {
     console.error("Error:", error);
@@ -1008,6 +1021,10 @@ className='relative'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           {/* Privacy Principles */}
 <section className='py-20 px-4'>
@@ -1020,15 +1037,20 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as
                   when you create an account, use our services, or contact us
                   for support.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1037,15 +1059,17 @@ className='text-center mb-16'
 <<<<<<< HEAD
 
 =======
-
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
 
 
 
                 <h3 className="text-xl font-semibold mb-4">
                   Personal Information
                 </h3>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1053,11 +1077,17 @@ className='text-center mb-16'
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6">Information We Collect</h2>
                 <p className="mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1069,18 +1099,33 @@ className='text-center mb-16'
 
 
 
+=======
+
+
+                <h3 className="text-xl font-semibold mb-4">
+                  Usage Information
+                </h3>
+
+                <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+origin/automation-improvements-final
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>Name and contact information</li>
                   <li>Email address</li>
@@ -1093,6 +1138,7 @@ origin/automation-improvements-final
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1110,6 +1156,10 @@ origin/automation-improvements-final
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1121,27 +1171,27 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
+
+
+
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
-=======
               </motion.div>
 
               <div className='grid md:grid-cols-2 gap-8'>
@@ -1186,14 +1236,14 @@ className='text-center mb-16'
               >
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Your Privacy Rights
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </h2>
                 <p className="mb-6">
                   We use the information we collect to provide, maintain, and
                   improve our services.
                 </p>
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">How We Use Your Information</h2>
@@ -1217,6 +1267,12 @@ origin/automation-improvements-final
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+origin/automation-improvements-final
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <ul className="list-disc pl-6 mb-6">
                   <li>Provide and maintain our services</li>
                   <li>Process transactions</li>
@@ -1229,24 +1285,25 @@ origin/automation-improvements-final
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
+
+
+
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -1254,6 +1311,7 @@ origin/automation-improvements-final
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1271,10 +1329,18 @@ origin/automation-improvements-final
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
                 <p className="mb-6">
                   We do not sell, trade, or otherwise transfer your personal information to third parties 
                   without your consent, except as described in this policy.
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1302,6 +1368,8 @@ origin/automation-improvements-final
                 <p className="mb-6">
 <<<<<<< HEAD:pages_backup/privacy.tsx
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 origin/automation-improvements-final
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
@@ -1327,16 +1395,23 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1352,6 +1427,12 @@ origin/automation-improvements-final
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+origin/automation-improvements-final
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>
                 <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
                 <p className="mb-6">
@@ -1370,6 +1451,7 @@ origin/automation-improvements-final
                   If you have any questions about this Privacy Policy, please
                   contact us at:
                 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1405,6 +1487,10 @@ origin/automation-improvements-final
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -1416,7 +1502,6 @@ origin/automation-improvements-final
                   </div>
                   <div className="flex items-start">
                     <Users className="w-5 h-5 text-blue-600 mr-3 mt-1" />
-=======
               </motion.div>
 
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -1456,7 +1541,7 @@ className='space-y-12'
                   </h2>
 
                   <div className='space-y-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div>
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Information Collection
@@ -1613,6 +1698,7 @@ className='space-y-12'
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1636,6 +1722,16 @@ className='space-y-12'
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+                <p className="text-sm text-gray-600 mt-8">
+main
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Last updated: January 2024
                 </p>
               </div>
@@ -1643,13 +1739,16 @@ className='space-y-12'
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+=======
+    </MainLayout>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   );
 }
 
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025';
 
+<<<<<<< HEAD
   const privacySections = [
     {
       title: 'Information We Collect',
@@ -1762,6 +1861,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </section>
     </MainLayout>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               transition={{ duration: 0 && 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8 md:p-12">;
               <div className="prose prose-lg max-w-none">;
@@ -1789,6 +1890,7 @@ export default /**
  */
 function PrivacyPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1844,10 +1946,16 @@ function PrivacyPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   We collect information you provide directly to us, such as;
                   when you create an account, use our services, or contact us;
                   for support.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1855,6 +1963,8 @@ function PrivacyPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 <h3 className="text - xl font - semibold mb - 4">;
                   Personal Information;
@@ -1896,6 +2006,7 @@ function PrivacyPage() {
                 </h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1904,10 +2015,15 @@ function PrivacyPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   We do not sell, trade, or otherwise transfer your personal;
                   information to third parties without your consent, except as;
                   described in this policy.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1915,6 +2031,8 @@ function PrivacyPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Data Security</h2>;
                 <p className="mb - 6">;
@@ -1925,6 +2043,7 @@ function PrivacyPage() {
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Your Rights</h2>;
                 <p className="mb - 6">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1933,10 +2052,15 @@ function PrivacyPage() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   You have the right to access, update, or delete your personal;
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -1944,6 +2068,8 @@ function PrivacyPage() {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -2561,7 +2687,6 @@ className="space-y-12"
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
-=======
               </motion.div>
             </div>
           </section>
@@ -2581,7 +2706,7 @@ className="space-y-12"
                   If you have any questions about this Privacy Policy or our
                   data practices, please don't hesitate to contact us.
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <a
                     href='mailto:kleber@ziontechgroup.com'
@@ -2595,6 +2720,7 @@ className="space-y-12"
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <User className='w-5 h-5' />                    Contact Form
                   </a>
 =======
@@ -2603,6 +2729,10 @@ className="space-y-12"
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </MainLayout>;
   );
 }
@@ -2622,6 +2752,7 @@ className="space-y-12"
                     <User className="w-5 h-5" />
                     Contact Form
                   </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -2647,6 +2778,14 @@ className="space-y-12"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+                    <User className='w-5 h-5' />
+                    Contact Form
+                  </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>
               </motion.div>
             </div>
@@ -2654,6 +2793,7 @@ className="space-y-12"
         </main>
       </Layout>
     </ErrorBoundary>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD:pages_backup/privacy.tsx
@@ -2674,6 +2814,13 @@ export default PrivacyPage;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 };
 
@@ -2684,6 +2831,12 @@ export default PrivacyPage;
 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+<<<<<<< HEAD
+=======
+<h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <p className="mb - 6">;
                   If you have any questions about this Privacy Policy, please;
                   contact us at:;
@@ -2709,6 +2862,7 @@ export default PrivacyPage;
 <p className="text - sm text - gray - 600 mt - 8">;
                   Last updated: January 2024;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 <<<<<<< HEAD
 =======
@@ -2723,6 +2877,8 @@ export default PrivacyPage;
       </div>;
     </MainLayout>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
@@ -2748,6 +2904,7 @@ export default PrivacyPage;
   );
 },;
 export default PrivacyPage;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/privacy.tsx
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
@@ -2763,3 +2920,14 @@ export default PrivacyPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/privacy.tsx
+=======
+
+main
+
+
+
+);
+};
+export default PrivacyPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import axios from 'axios';
-import { Loader2 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { logErrorToProduction } from '@/utils/productionLogger';export function ITServiceRequestHero() {;
-;export function ITServiceRequestHero(): any (...args[]):  {;
-=======
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -82,6 +68,7 @@ export function ITServiceRequestHero() {;
   const { toast } = useToast();
   const { t } = useTranslation();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -115,6 +102,8 @@ function ITServiceRequestHero() { export function ITServiceRequestHero (...args[
     if () {) {
   $2
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleSubmit = null;
 import { useTranslation } from 'react-i18next'
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
@@ -130,7 +119,7 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   const containerVariants = {
   hidden: { opacity: 0
   y: 20
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
       setIsSubmitting (true);
       // Simulate API call;
@@ -238,14 +227,7 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section
       className="py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]"
@@ -307,8 +289,6 @@ if ( {) {
                 {t(
                   'onsite_form.email_helper'
                   "We'll confirm your request here."
-<<<<<<< HEAD
-=======
                 onChange={e => setEmail(e && e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required;
               />;
@@ -316,7 +296,7 @@ if ( {) {
                 {t(;
                   'onsite_form && onsite_form.email_helper',;
                   "We'll confirm your request here.";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                 )}
               </p>;
               <Input
@@ -532,16 +512,10 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" />
 }Request Service </Button> </form> </div>
 }'"
-<<<<<<< HEAD
-
-}
-}
-<<<<<<< HEAD
-=======
 
 ;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import React, { useState } from "react",;
 import Image from "next/image",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -726,8 +700,6 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }Request Service </Button> </form> </div> ;
 }'";
 }
-<<<<<<< HEAD
-=======
 }
 
 
@@ -765,6 +737,5 @@ py - 16 md:py - 24 border - b border - zion - purple / 20 bg-[radial - gradient 
 }
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import js from "@eslint/js",
@@ -7,6 +8,8 @@ import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -14,6 +17,7 @@ export default tseslint.config(
     files: ["**/*.{ts,tsx}"]
     languageOptions: {
       ecmaVersion: 2020
+<<<<<<< HEAD
       globals: globals.browser}
 export default tseslint && tseslint.config(
   { ignores: ["dist"] },
@@ -31,11 +35,20 @@ export default tseslint && tseslint.config(
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
 
       "react-refresh/only-export-components": [
+=======
+      globals: globals.browser}    plugins: {
+      "react-hooks": reactHooks
+      "react-refresh": reactRefresh}
+    rules: {      "react-refresh/only-export-components": [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import js from "@eslint/js",;
 import globals from "globals",;
 import reactHooks from "eslint-plugin-react-hooks",;
@@ -108,8 +121,14 @@ export default tseslint.config(;
       ...reactHooks.configs.recommended.rules,;
       "react-refresh/only-export-components":[;
         "warn",;
+<<<<<<< HEAD
         { allowConstantExport:true }],;
       "@typescript-eslint/no-unused-vars":"off"}}
 ),; export default tseslint.config ("@typescript-eslint/no-unused-vars": "off" 
 }
 });
+=======
+        { allowConstantExport: true }];
+      "@typescript-eslint/no-unused-vars": "off"}}
+);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

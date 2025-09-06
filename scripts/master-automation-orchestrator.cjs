@@ -1,5 +1,13 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -12,6 +20,7 @@ console.log('=====')
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
   console.log('\n "Recommendations")
 
+<<<<<<< HEAD
 <
 
 <<<<<<< HEAD
@@ -44,6 +53,8 @@ class MasterAutomationOrchestrator {
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
     this.ensureDirectories();
@@ -64,7 +75,7 @@ class MasterAutomationOrchestrator {
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -72,44 +83,6 @@ class MasterAutomationOrchestrator {
         encoding: 'utf8',
         ...options,
       });
-<<<<<<< HEAD
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-      };
-    }
-  }
-
-  async runScript(scriptPath, description) {
-    this.log(`\n🔄 Running: ${description}`);
-    
-    try {
-      const result = await this.runCommand(`node ${scriptPath}`, description);
-      
-      this.results.scripts.push({
-        name: description,
-        path: scriptPath,
-        success: result.success,
-        error: result.error
-      });
-      
-      if (result.success) {
-        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
-      } else {
-        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`${description}: ${result.error}`);
-      }
-      
-      return result;
-    } catch (error) {
-      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
-      this.results.errors.push(`${description}: ${error.message}`);
-=======
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -340,7 +313,7 @@ class MasterAutomationOrchestrator {
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success: false, error: error.message };
     }
   }
@@ -544,12 +517,6 @@ class MasterAutomationOrchestrator {
   }
 }
 
-<<<<<<< HEAD
-// Run the master automation orchestrator
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-=======
 // Run the automation
 if (require.main === module) {
   const automation = new MasterAutomationOrchestrator();
@@ -562,10 +529,11 @@ if (require.main === module) {
       process.exit(1);
     }
   });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 module.exports = MasterAutomationOrchestrator;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -575,3 +543,8 @@ module.exports = MasterAutomationOrchestrator;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

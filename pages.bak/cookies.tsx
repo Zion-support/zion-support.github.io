@@ -4,9 +4,12 @@ import React from 'react';
 interface CookiesProps {
   // Add props here as needed
 
+<<<<<<< HEAD
 
 
 import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import * as React from 'react';
 
@@ -20,10 +23,14 @@ export default function Cookies({ }: CookiesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 }
 }
 export default function Cookies({ }: CookiesProps) {
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -64,7 +71,11 @@ export default function Cookies(): any ({ }: CookiesProps) {;
       <h1>Cookies</h1>;
       <p>This component is currently under development.</p>;
     </div>;
+<<<<<<< HEAD
   );
 }
 }
 }
+=======
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

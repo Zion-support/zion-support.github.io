@@ -4,6 +4,7 @@ import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped
+<<<<<<< HEAD
   const { jobId } = useParams() as { jobId?: string }
 
 
@@ -32,6 +33,9 @@ export default function JobDetails() {;
 
 
 import React, { useState, useEffect } from 'react',
+=======
+  const { jobId } = useParams() as { jobId?: string }import React, { useState, useEffect } from 'react',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -53,10 +57,15 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+<<<<<<< HEAD
 
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
+=======
+  
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
@@ -103,7 +112,10 @@ export default function JobDetails() {
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
+<<<<<<< HEAD
   if (isLoading) {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -111,11 +123,17 @@ export default function JobDetails() {
     );
   }
 
+<<<<<<< HEAD
 
   if (error || !job) {;
 
     return (
       <>;
+=======
+  if (error || !job) {;
+
+    return (      <>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Header />;
         <div className="container mx-auto px-4 py-16 text-center">;
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
@@ -127,7 +145,10 @@ export default function JobDetails() {
     );
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleApply = () => {;
     if (!isAuthenticated) {;
       toast && toast.error("Please log in to apply for this job");
@@ -136,7 +157,10 @@ export default function JobDetails() {
       return;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const handleApplySuccess = async (appliedJobId: string) => {
@@ -148,13 +172,19 @@ export default function JobDetails() {
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const isOwnJob = user?.id === job.client_id,
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <SEO
@@ -198,6 +228,7 @@ export default function JobDetails() {
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
+<<<<<<< HEAD
                       <Badge key={i} variant="secondary">
 
 
@@ -255,17 +286,29 @@ export default function JobDetails() {;
 ;
 
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
+=======
+                      <Badge key={i} variant="secondary">    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast && toast.error("Only job seekers can apply for jobs");
       return;
     }
   const handleApplySuccess = async (appliedJobId: string) => {;
     toast && toast.success("Application submitted successfully!"),;
+<<<<<<< HEAD
     setIsApplyModalOpen(false);
   };
   const formatBudget = (budget: any) => {;
     if (!budget) return "Not specified",;
     return `$${budget && budget.min} - $${budget && budget.max}`;
   };
+=======
+    setIsApplyModalOpen(false)
+};
+  const formatBudget = (budget: any) => {;
+    if (!budget) return "Not specified",;
+    return `$${budget && budget.min} - $${budget && budget.max}`
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>;
       <SEO
@@ -274,6 +317,7 @@ export default function JobDetails() {;
       />;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
         <div className="mb-6">;
           <Button
             variant="outline" 
@@ -285,6 +329,13 @@ export default function JobDetails() {;
         </div>;
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+=======
+        <div className="mb-6">;            onClick={() => navigate('/jobs')}
+          >;
+            ← Back to Jobs;
+          </Button>;
+        </div>;        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
@@ -296,12 +347,17 @@ export default function JobDetails() {;
                       <span>Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}</span>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
                   <Badge>{job && job.category}</Badge>;
                 </div>;
+=======
+                  <Badge>{job && job.category}</Badge>;                </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
+<<<<<<< HEAD
                   <div className="whitespace-pre-wrap">;
                     {job && job.description}
                   </div>;
@@ -381,15 +437,21 @@ export default function JobDetails() {;
                 </div>;
 
                 <div className="flex items-start">;
+=======
+                  <div className="whitespace-pre-wrap">;                <div className="flex items-start">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
                     <p className="text-sm text-muted-foreground">Deadline</p>;
                     <p className="font-medium">;
+<<<<<<< HEAD
                       {job && job.deadline ? new Date(job && job.deadline).toLocaleDateString() : "Flexible"}
                     </p>;
                   </div>;
                 </div>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="flex items-start">;
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />;
                   <div className="ml-3">;
@@ -397,6 +459,7 @@ export default function JobDetails() {;
                     <p className="font-medium">Freelance / Remote</p>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
                 {!isOwnJob && (;
                   <Button
@@ -424,6 +487,10 @@ export default function JobDetails() {;
 
 
                 {isOwnJob && (
+=======
+                  <Button 
+                    className="w-full mt-4"                 {isOwnJob && (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
@@ -433,6 +500,7 @@ export default function JobDetails() {;
           </div>
         </div>
       </main>
+<<<<<<< HEAD
       <Footer />
 
                 {isOwnJob && (;
@@ -720,3 +788,6 @@ const isOwnJob = user?.id === job.client id;
     </>
   )
 }
+=======
+      <Footer />
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

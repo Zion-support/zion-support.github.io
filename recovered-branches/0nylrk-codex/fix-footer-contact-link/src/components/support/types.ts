@@ -3,11 +3,23 @@ export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
   lastUpdated: string;
+=======
+import {ReactNode} from "react";
+export interface HelpArticle {;
+  id: string;
+  title: string;
+  content: string;
+}
+
+export interface HelpCategory {;  lastUpdated: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   tags: string[];
 }
 
 export interface HelpCategory {;
+<<<<<<< HEAD
 
   lastUpdated: string;
   tags: string[];
@@ -41,3 +53,5 @@ export interface SupportTicket {;
 ;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

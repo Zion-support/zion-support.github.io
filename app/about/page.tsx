@@ -1,33 +1,40 @@
-export const metadata = {
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
   title: 'About | Zion Tech Group',
-  description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.',
+  description: 'Learn about Zion Tech Group\'s mission, vision, and commitment to delivering cutting-edge AI, micro SaaS, and IT solutions.',
+  keywords: 'about, company, mission, vision, AI solutions, micro SaaS, IT services',
 };
 
 export default function AboutPage() {
   return (
-    <div className="animate-fade-in">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            About Zion Tech Group
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're a team of engineers, designers, and strategists who believe that 
-            technology should be accessible, powerful, and transformative for every business.
+            We are a leading technology company dedicated to transforming businesses 
+            through innovative AI solutions, micro SaaS platforms, and comprehensive IT services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
             <p className="text-lg text-gray-600 mb-6">
-              To democratize access to enterprise-grade technology solutions, making AI, 
-              cloud infrastructure, and software development accessible to businesses of all sizes.
+              To empower businesses with cutting-edge technology solutions that drive 
+              innovation, efficiency, and growth. We believe in the transformative power 
+              of AI and technology to solve complex business challenges.
             </p>
             <p className="text-lg text-gray-600">
-              We believe that every company, regardless of size, should have access to 
-              the same powerful tools and technologies that drive innovation at the world's 
-              largest enterprises.
+              Our team of experts is committed to delivering exceptional value through 
+              personalized solutions that meet the unique needs of each client.
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
@@ -70,24 +77,46 @@ export default function AboutPage() {
               business operations to create unprecedented value and opportunities.
             </p>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              To be the global leader in AI-powered business solutions, setting the 
+              standard for innovation, reliability, and customer satisfaction in the 
+              technology services industry.
+            </p>
+            <p className="text-lg text-gray-600">
+              We envision a future where every business can leverage advanced technology 
+              to achieve unprecedented success and growth.
+            </p>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>
         </div>
 
-        <div className="bg-blue-50 rounded-xl p-8 mb-16">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to transform your business?
-            </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Let's discuss how we can help you achieve your goals with our 
-              comprehensive technology solutions.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Contact Us Today
-            </a>
+        <div className="bg-gray-50 rounded-lg p-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Values</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
+              <p className="text-gray-600">
+                We continuously push the boundaries of what's possible with technology, 
+                always seeking new and better ways to solve problems.
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Excellence</h3>
+              <p className="text-gray-600">
+                We are committed to delivering the highest quality solutions and 
+                maintaining the highest standards in everything we do.
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Partnership</h3>
+              <p className="text-gray-600">
+                We work closely with our clients as partners, understanding their 
+                goals and challenges to deliver tailored solutions.
+              </p>
+            </div>
           </div>
         </div>
       </div>

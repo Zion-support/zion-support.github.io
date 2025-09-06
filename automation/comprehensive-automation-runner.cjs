@@ -36,6 +36,7 @@ class ComprehensiveAutomationRunner {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -45,6 +46,10 @@ class ComprehensiveAutomationRunner {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log('🚀 Starting Comprehensive Automation Runner...');
 
 class ComprehensiveAutomationRunner {
@@ -76,6 +81,7 @@ class ComprehensiveAutomationRunner {
     } catch (error) {
       this.log(`❌ ${scriptName} failed: ${error.message}`);
       return { success: false, script: scriptName, error: error.message };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -92,39 +98,45 @@ class ComprehensiveAutomationRunner {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
 
   async runAllAutomations() {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('
+    this.log('🚀 Starting Comprehensive Automation Runner...');
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 =======
-<<<<<<< HEAD
-    this.log('🎯 Starting Comprehensive Automation Runner');
-    this.log('==========================================');
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     const scripts = [
-      { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
-      { path: 'enhanced-automation-suite.cjs', name: 'Enhanced Automation Suite' },
       { path: 'automation/performance-optimizer.cjs', name: 'Performance Optimizer' },
-      { path: 'automation/security-enhancer.cjs', name: 'Security Enhancer' },
-      { path: 'automation/accessibility-improver.cjs', name: 'Accessibility Improver' }
+      { path: 'automation/security-scanner.cjs', name: 'Security Scanner' },
+      { path: 'automation/seo-optimizer.cjs', name: 'SEO Optimizer' },
+      { path: 'automation/health-check.cjs', name: 'Health Check' },
+      { path: 'automation/code-quality-monitor.cjs', name: 'Code Quality Monitor' }
     ];
 
     for (const script of scripts) {
       if (fs.existsSync(script.path)) {
         await this.runScript(script.path, script.name);
       } else {
-        this.log(`⚠️ Script not found: ${script.path}`, 'WARNING');
+        this.log(`⚠️  Script not found: ${script.path}`, 'WARNING');
       }
     }
+<<<<<<< HEAD
+=======
   }
 
   async runTests() {
@@ -177,12 +189,17 @@ this.log('🎯 Starting Comprehensive Automation Runner');
 // Run the comprehensive automation
 const runner = new ComprehensiveAutomationRunner();
 runner.run().catch(console.error);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const automations = [
       { name: 'Master Orchestrator', path: 'automation/master-orchestrator.cjs' },
       { name: 'Comprehensive App Improvement Suite', path: 'automation/comprehensive-app-improvement-suite.cjs' },
@@ -229,14 +246,20 @@ runner.run().catch(console.error);
 // Run all automations
 const runner = new ComprehensiveAutomationRunner();
 runner.runAllAutomations().catch(console.error);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     this.log('🎯 Starting Comprehensive Automation Runner');
     this.log('📋 Running all automation scripts...');
 
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -251,6 +274,9 @@ runner.runAllAutomations().catch(console.error);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const scripts = [
       { path: 'automation/master-orchestrator.cjs', name: 'Master Orchestrator' },
       { path: 'automation/comprehensive-app-improvement-suite.cjs', name: 'Comprehensive App Improvement Suite' },
@@ -263,6 +289,7 @@ runner.runAllAutomations().catch(console.error);
     for (const script of scripts) {
       await this.runScript(script.path, script.name);
     }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
     this.generateReport();
   }
@@ -272,32 +299,42 @@ runner.runAllAutomations().catch(console.error);
     const duration = endTime - this.startTime;
     
     const report = {
-      timestamp: endTime.toISOString(),
-      duration: `${Math.round(duration / 1000)}s`,
+      startTime: this.startTime.toISOString(),
+      endTime: endTime.toISOString(),
+      duration: `${duration}ms`,
       totalScripts: this.results.length,
       successful: this.results.filter(r => r.success).length,
       failed: this.results.filter(r => !r.success).length,
-      successRate: `${Math.round((this.results.filter(r => r.success).length / this.results.length) * 100)}%`,
       results: this.results
     };
 
-    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-runner-report.json');
+    const reportPath = path.join(this.projectRoot, 'automation-reports', 'comprehensive-automation-report.json');
+    const reportDir = path.dirname(reportPath);
+    
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    }
+    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-    this.log(`\n📊 Comprehensive Automation Runner completed!`);
-    this.log(`📈 Success Rate: ${report.successRate}`);
-    this.log(`⏱️ Duration: ${report.duration}`);
-    this.log(`📄 Report saved to: ${reportPath}`);
+    
+    this.log(`\n📊 Automation Report Generated:`);
+    this.log(`   Total Scripts: ${report.totalScripts}`);
+    this.log(`   Successful: ${report.successful}`);
+    this.log(`   Failed: ${report.failed}`);
+    this.log(`   Duration: ${report.duration}`);
+    this.log(`   Report saved to: ${reportPath}`);
   }
 }
 
-// Run the automation runner
+// Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.runAllAutomations().catch(console.error);
 }
 
+<<<<<<< HEAD
 module.exports = ComprehensiveAutomationRunner;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -309,3 +346,11 @@ module.exports = ComprehensiveAutomationRunner;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+=======
+module.exports = ComprehensiveAutomationRunner;
+main
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -3,6 +3,11 @@
  * Fix Team Page - Targeted fix for team.tsx;
  */
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -84,3 +89,8 @@ const fs = require('fs')
               "display"
               "border"
 
+<<<<<<< HEAD
+=======
+              "transition"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

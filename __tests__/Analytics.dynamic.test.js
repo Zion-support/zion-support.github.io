@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,32 +16,30 @@
 
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+
 <<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-
-
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Analyticsdynamic from '../components/Analytics.dynamic';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('Analyticsdynamic', () => {
   test('renders without crashing', () => {
     render(<Analyticsdynamic />);
@@ -52,10 +51,14 @@ describe('Analyticsdynamic', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
@@ -92,12 +95,6 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 });
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
   test('displays correct content', () => {
     render(<Analyticsdynamic />);
@@ -114,6 +111,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
@@ -123,3 +121,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Analytic
 });
 import _React from 'react';  import '@testing-library/jest-dom'; import Analyticsdynamic from '../components/Analytics.dynamic'; describe('Analyticsdynamic',() => { test('renders without crashing',() => { render(<Analyticsdynamic />); expect(screen.getByTestId('analytics.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Analyticsdynamic />)}); test('handles user interactions',() => { render(<Analyticsdynamic />)}); test('applies correct styling',() => { render(<Analyticsdynamic />)})});
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

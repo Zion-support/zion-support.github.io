@@ -6,6 +6,6 @@ const FaqSection.js = ({ className }) => {
       <h1>FaqSection.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

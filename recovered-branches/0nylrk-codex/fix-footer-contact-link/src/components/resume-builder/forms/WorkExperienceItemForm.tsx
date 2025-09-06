@@ -16,9 +16,13 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+<<<<<<< HEAD
 
 
 import { useState } from 'react',
+=======
+import { useState } from 'react',import { useState } from 'react',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -32,6 +36,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
+<<<<<<< HEAD
 import { CalendarIcon, Loader2 } from "lucide-react",
 
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
@@ -69,6 +74,9 @@ interface WorkExperienceItemFormProps {
 
 
 export function WorkExperienceItemForm({;
+=======
+import { CalendarIcon, Loader2 } from "lucide-react",export function WorkExperienceItemForm({;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({
@@ -78,6 +86,7 @@ export function WorkExperienceItemForm({
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
+<<<<<<< HEAD
 
 
 
@@ -226,12 +235,16 @@ export function WorkExperienceItemForm({;
   };
 
   return (
+=======
+  onCancel}: WorkExperienceItemFormProps) {  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleFormSubmit)} className="space-y-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <FormField
               control={form && form.control}
+<<<<<<< HEAD
               name="company_name"
       company_name: values.company_name,  // Required;
       role_title: values.role_title,      // Required;
@@ -256,6 +269,9 @@ export function WorkExperienceItemForm({;
               control={form.control}
               name="company_name";
   onCancel}: WorkExperienceItemFormProps) {;
+=======
+              name="company_name"  onCancel}: WorkExperienceItemFormProps) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   return (
     <>;
@@ -266,15 +282,22 @@ export function WorkExperienceItemForm({;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Input placeholder="e && e.g. Acme Corporation" {...field} />;
                   </FormControl>;
+=======
+                    <Input placeholder="e && e.g. Acme Corporation" {...field} />;                  </FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <FormMessage />;
                 </FormItem>;
               )}
 
             />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField
               control={form && form.control}
               name="role_title"
@@ -295,8 +318,12 @@ export function WorkExperienceItemForm({;
 
             <FormField
               control={form && form.control}
+<<<<<<< HEAD
               name="location"
               render={({ field }) => (;
+=======
+              name="location"              render={({ field }) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <FormItem>;
                   <FormLabel>Location</FormLabel>;
                   <FormControl>;
@@ -305,7 +332,10 @@ export function WorkExperienceItemForm({;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
@@ -370,8 +400,13 @@ function WorkExperienceItemForm() {
       role_title: values.role_title,      // Required;
       start_date: values.start_date,      // Required;
       end_date: values.end_date,          // Optional;
+<<<<<<< HEAD
       is_current: values.is_current,      // Required;
       description: values.description,    // Optional;
+=======
+      is_current: values.is_current,      // Required,
+  description: values.description,    // Optional;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       location: values.location,          // Optional;
     }
 ;
@@ -386,8 +421,13 @@ function WorkExperienceItemForm() {
   return (
     <>;
       <Form {...form}>;
+<<<<<<< HEAD
         <form on_submit={form.handle_submit (handleFormSubmit)} className="space - y-6">;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+=======
+        <form on_submit={form.handle_submit (handleFormSubmit)} className="space-y-6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField;
               control={form.control}
               name="company_name";
@@ -408,7 +448,11 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
           </div>;
+<<<<<<< HEAD
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+=======
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormField;
               control={form.control}
               name="location";
@@ -416,13 +460,20 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="is_current";
               render={({ field }) => (
+<<<<<<< HEAD
                 <FormItem className="flex flex - col">;
                   <FormLabel > Current Position</FormLabel>;
                   <div className="flex items - center gap - 2 h - 10">;
+=======
+                <FormItem className="flex flex-col">;
+                  <FormLabel > Current Position</FormLabel>;
+                  <div className="flex items - center gap - 2 h-10">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Switch;
                       checked={field.value}
 
             />;
+<<<<<<< HEAD
 
 
             <FormField
@@ -515,6 +566,11 @@ function WorkExperienceItemForm() {
                 control={form && form.control}
                 name="end_date"
               <FormField
+=======
+              <FormField
+                control={form && form.control}
+                name="end_date"              <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 control={form && form.control}
                 name="end_date"
                 render={({ field }) => (;
@@ -531,6 +587,7 @@ function WorkExperienceItemForm() {
                             )}>;
                             {field && field.value ? (;
                               format(field && field.value, "MMM yyyy");
+<<<<<<< HEAD
                             ) : (;
                               <span>Select date</span>;
                           <Button
@@ -576,6 +633,14 @@ function WorkExperienceItemForm() {
             control={form && form.control}
             name="description"
           <FormField
+=======
+                            ) : (;                              <span>Select date</span>;                        />;
+                      </PopoverContent>;
+                    </Popover>;
+                    <FormMessage />;          <FormField
+            control={form && form.control}
+            name="description"          <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             control={form && form.control}
             name="description"
             render={({ field }) => (;
@@ -587,6 +652,7 @@ function WorkExperienceItemForm() {
                       options={{
 
                         enhancementType: "work-description",
+<<<<<<< HEAD
                         content: field && field.value || "",
 
                     <AIEnhancementButton
@@ -644,6 +710,9 @@ function WorkExperienceItemForm() {
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs";
                     >;
+=======
+                        content: field && field.value || "",                    >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       AI Writer;
                     </Button>;
                   </div>;
@@ -652,6 +721,7 @@ function WorkExperienceItemForm() {
 
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
+<<<<<<< HEAD
                     className="min - h-[150px]";
 
                     {...field}
@@ -707,6 +777,9 @@ function WorkExperienceItemForm() {
 ;
 
 
+=======
+                    className="min-h-[150px]";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 
@@ -724,15 +797,24 @@ function WorkExperienceItemForm() {
       />;
     </>;
   ),;}
+<<<<<<< HEAD
  is current: z.boolean () .default (false);
 description: z.string () .optional ();
+=======
+ is current: z.boolean () .default (false),
+  description: z.string () .optional ();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 location: z.string () .optional () 
 });
 type FormValues = z.infer<typeof formSchema>;
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience) 
 };
+<<<<<<< HEAD
 setIsEnhancementDialogOpen (false);
+=======
+setIsEnhancementDialogOpen (false)
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
@@ -754,3 +836,7 @@ setIsEnhancementDialogOpen (false);
 }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

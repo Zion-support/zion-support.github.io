@@ -1,5 +1,10 @@
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -15,7 +20,13 @@ function resolveMergeConflicts(filePath) {
     
     // Check if file has merge conflicts
 
+<<<<<<< HEAD
     if (!content.includes('
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         conflictType = 'incoming';
         continue;
@@ -64,5 +75,11 @@ function findConflictedFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 
+<<<<<<< HEAD
           if (content.includes('
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

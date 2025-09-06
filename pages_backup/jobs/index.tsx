@@ -19,32 +19,8 @@ import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(t);
-  }, []);
-  const jobs = [
-;
-  const jobs = [;
-    {
-      slug: 'senior - ai - engineer',
-      title: 'Senior AI Engineer',
-      subtitle: 'Remote • Contract',
-      description: 'Build and optimize LLM - powered features in production.',
-    },
-    {
-      slug: 'mlops - specialist',
-      title: 'MLOps Specialist',
-      subtitle: 'Remote • Part - time',
-      description: 'Design pipelines for training / inference at scale.',
-    },
-  ];
-;
-=======
   useEffect(() => { const t = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
@@ -80,36 +56,6 @@ export default function JobsListPage() {
                   title={j.title}
                   subtitle={j.subtitle}
                   description={j.description}
-<<<<<<< HEAD
-                  footer={<span className='text - blue - 600'>View Job →</span>}
-                />              </a>;
-            </Link>))}
-        </div>)}
-    </div>);
-;
-
-
-}
-
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </div>;
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
                   footer={<span className='text-blue-600'>View Job →</span>}
                 />
               </a>
@@ -119,4 +65,4 @@ export default function JobsListPage() {
       )}
     </div>
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

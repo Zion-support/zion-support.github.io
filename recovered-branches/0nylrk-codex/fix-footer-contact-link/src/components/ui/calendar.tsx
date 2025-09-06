@@ -2,14 +2,20 @@
 
 import React from 'react';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
+<<<<<<< HEAD
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
@@ -17,7 +23,10 @@ import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 function Calendar({
   className,
   classNames,
@@ -91,6 +100,7 @@ function Calendar({;
         day_hidden: "invisible",;
         ...classNames}}
       components={{;
+<<<<<<< HEAD
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 
 
@@ -121,6 +131,12 @@ function Calendar() {
       showOutsideDays={showOutsideDays}
 
 
+=======
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;  return (
+    <DayPicker;
+      showOutsideDays={showOutsideDays}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           buttonVariants({ variant: "outline" }),
           "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
 
@@ -133,6 +149,7 @@ function Calendar() {
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+<<<<<<< HEAD
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -159,6 +176,12 @@ function Calendar() {
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
 
+=======
+=======        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {...props}
     />;
   );
@@ -169,7 +192,10 @@ Calendar.displayName = "Calendar",
 export { Calendar },
 Calendar.displayName = "Calendar";
 export { Calendar };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       className={cn ("p - 3", class_name)}
       class_names={{
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0",
@@ -199,8 +225,13 @@ export { Calendar };
         day_hidden: "invisible",
         ...class_names}}
       components={{
+<<<<<<< HEAD
         IconLeft: ({ ..._props }) => <ChevronLeft className="h - 4 w - 4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w - 4" />}}
+=======
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h - 4 w-4" />,
+        IconRight: ({ ..._props }) => <ChevronRight className="h - 4 w-4" />}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {...props}
     />);
 }
@@ -208,6 +239,7 @@ Calendar.display_name = "Calendar";
 ;
 export { Calendar }
 ;
+<<<<<<< HEAD
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
       {...props}
@@ -217,12 +249,15 @@ export { Calendar }
 Calendar.displayName = "Calendar";
 export { Calendar }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 Calendar.displayName = "Calendar",
 
 export { Calendar },
 Calendar.displayName = "Calendar";
 
 export { Calendar };
+<<<<<<< HEAD
 import * as React from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
 import { DayPicker } from "react-day-picker",;
@@ -311,3 +346,5 @@ day hidden: "invisible";
 }
 export { Calendar };
 export { Calendar };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

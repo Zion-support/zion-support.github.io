@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -17,6 +18,8 @@ import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useState } from "react",
 import { Link } from "react-router-dom",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -25,6 +28,7 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 
+<<<<<<< HEAD
 
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
@@ -33,6 +37,8 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
@@ -45,6 +51,7 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
@@ -61,6 +68,8 @@ interface ApplicationActionsProps {;
 
 export function ApplicationActions(): any ({;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ApplicationActions({;
   application;
   processingId;
@@ -68,6 +77,7 @@ export function ApplicationActions({;
 export function ApplicationActions({
   application,
   processingId,
+<<<<<<< HEAD
   onViewApplication,
   application;
   processingId;
@@ -105,20 +115,31 @@ export function ApplicationActions({
 }: ApplicationActionsProps) {
   return (
             size="sm"
+=======
+  onViewApplication,            size="sm"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
               <Loader2 className="h-4 w-4 animate-spin" />;
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+<<<<<<< HEAD
             )}
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
 
+=======
+            )}              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       <Button 
         variant="default" 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         size="sm"
         asChild
       >
@@ -127,6 +148,7 @@ export function ApplicationActions({
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   )
 
           </Button>;
@@ -234,6 +256,9 @@ function ApplicationActions() {
 }
 
 ;
+=======
+  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       ;
       <Button ;
@@ -252,3 +277,7 @@ function ApplicationActions() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

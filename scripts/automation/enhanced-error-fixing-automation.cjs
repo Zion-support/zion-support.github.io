@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           this.log(`Fixing merge conflicts in ${file}`);
           
           // Simple merge conflict resolution - keep the HEAD version
@@ -8,7 +11,12 @@
           let inConflict = false;
           
           for (const line of lines) {
+<<<<<<< HEAD
             if (line.includes("
+=======
+              continue;
+            } else if (line.includes("")) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               inConflict = false;
               continue;
             } else if (!inConflict) {
@@ -95,6 +103,12 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 #!/usr/bin/env node;
 const fs = require("fs")
@@ -269,3 +283,9 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 
+<<<<<<< HEAD
+=======
+        "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

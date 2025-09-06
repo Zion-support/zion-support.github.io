@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -9,6 +10,8 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -17,6 +20,7 @@ import { SeverityDisplay } from "./SeverityDisplay",
 import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
+<<<<<<< HEAD
 import { EmptyFraudState } from "./EmptyFraudState",
 interface FraudFlagsTableProps {
 
@@ -48,12 +52,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   resetFilters,
   onAction
 }) => {
+=======
+import { EmptyFraudState } from "./EmptyFraudState",}) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (isLoading) {
     return (
 
       <div className="flex justify-center items-center h-64">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
+<<<<<<< HEAD
     )
 
 import React from "react";
@@ -64,11 +72,15 @@ import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
 import React from "react",;
+=======
+    )import React from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
+<<<<<<< HEAD
 import { EmptyFraudState } from "./EmptyFraudState",;
 
 interface FraudFlagsTableProps {;
@@ -89,10 +101,14 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   if (isLoading) {;
     return (
       <div className="flex justify-center items-center h-64">;
+=======
+import { EmptyFraudState } from "./EmptyFraudState",;      <div className="flex justify-center items-center h-64">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
 
+<<<<<<< HEAD
 
 
   }
@@ -142,6 +158,12 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               {flag.gpt_explanation || (
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
     <Table>;
+=======
+  }
+  if (flags.length === 0) {
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
+  }    <Table>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <TableHeader>;
         <TableRow>;
           <TableHead>Severity</TableHead>;
@@ -168,17 +190,22 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               {flag && flag.content_excerpt}
             </TableCell>;
             <TableCell>;
+<<<<<<< HEAD
               <Badge variant="outline">{flag && flag.content_type}</Badge>;
             </TableCell>;
             <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;
             <TableCell className="max-w-xs truncate">;
               {flag && flag.gpt_explanation || (;
                 <span className="text-muted-foreground text-xs">Not analyzed</span>;
+=======
+              <Badge variant="outline">{flag && flag.content_type}</Badge>;                <span className="text-muted-foreground text-xs">Not analyzed</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return (
               )}
             </TableCell>;
             <TableCell>;
+<<<<<<< HEAD
               {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
             </TableCell>;
             <TableCell>;
@@ -193,6 +220,8 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 }
 
               }>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {flag && flag.status}
               </Badge>;
             </TableCell>;
@@ -200,6 +229,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
               <ActionButtons
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
+<<<<<<< HEAD
                 onAction={onAction} 
               />;
             </TableCell>;
@@ -383,3 +413,6 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
     </Table>;
   );
 };
+=======
+                onAction={onAction} 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -18,6 +18,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   );
 };
 
@@ -55,6 +56,15 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
           <Button on_click={onCreateClick} className="gap - 2">;
             <FilePlus className="h - 4 w - 4" />;
             Create Resume;
+=======
+  )
+};
+
+  );
+}
+
+};            Create Resume;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Button>;
         </div>;
       </CardContent>;
@@ -62,8 +72,11 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
     </Card>);
 }
 ;
+<<<<<<< HEAD
 
 
 export default EmptyResumeState;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

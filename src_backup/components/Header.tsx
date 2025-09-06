@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Menu, X, Search } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import SearchModal from './SearchModal';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 import { Menu, X } from 'lucide-react';
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,18 +14,15 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
 import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-=======
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
@@ -94,18 +82,9 @@ const Header: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Header;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 export default Header;
-=======
-export default Header;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-export default Header;
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+

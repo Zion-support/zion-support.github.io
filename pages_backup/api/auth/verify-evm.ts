@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import jwt from "jsonwebtoken";
-import { ethers } from "ethers";
-const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
 import { ethers } from 'ethers';
 const JWT_SECRET = null;
     return res.status(200).json({ ok: true })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -21,6 +15,7 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
@@ -29,6 +24,10 @@ export default async function handler(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -36,12 +35,15 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
@@ -61,6 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -68,6 +71,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -81,11 +89,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       "Set-Cookie"
       `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
     );
-<<<<<<< HEAD
-    return res && res.status(200).json({ ok: true });
-=======
     return res.status(200).json({ ok: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
@@ -96,6 +101,7 @@ export default async function handler(req, res) {
 
 
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +111,10 @@ export default async function handler(req, res) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -154,6 +164,7 @@ function handler() {
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
@@ -162,6 +173,10 @@ function handler() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 
@@ -170,12 +185,15 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 <<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
@@ -217,6 +235,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/auth/verify-evm.ts
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -228,3 +247,11 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
+=======
+
+
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

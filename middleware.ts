@@ -4,13 +4,10 @@ import type { NextRequest } from 'next/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function middleware(request: NextRequest) {
-=======
-export function middleware(_request: NextRequest) {
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-  return NextResponse.next();
-=======
-export function middleware(_request: NextRequest) {
   const response = NextResponse.next();
 
   // Security headers
@@ -36,11 +33,14 @@ export function middleware(_request: NextRequest) {
   response.headers.set('Content-Security-Policy', csp);
 
   return response;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 export function middleware(request: NextRequest) {
   return NextResponse.next();
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export const config = {

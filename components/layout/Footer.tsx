@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
@@ -371,11 +372,16 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -392,6 +398,8 @@ const Footer: React.FC = () => {
               <Link href="/cookies" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
@@ -400,16 +408,26 @@ const Footer: React.FC = () => {
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
+<<<<<<< HEAD
             </div>
           </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+=======
+
+            </div>
+          </div>
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>
       </div>
     </footer>
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

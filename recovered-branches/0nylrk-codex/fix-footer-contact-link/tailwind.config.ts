@@ -6,9 +6,12 @@ import animatePlugin from "tailwindcss-animate";
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -17,7 +20,10 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+<<<<<<< HEAD
 import { Config } from './tailwindcss';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
 import animate_plugin from './tailwindcss - animate';
@@ -31,20 +37,31 @@ const config: Config = {
   safelist: ['border - border'];
   theme: {
     container: {
+<<<<<<< HEAD
 
 
   theme: {
+=======
+      center: true;
+      padding: "2rem"  theme: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     container: {
       center: true;
       padding: "2rem"
       screens: {
         "2xl": "1400px"}}
+<<<<<<< HEAD
       center: true,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -52,17 +69,22 @@ const config: Config = {
         ring: "hsl (var (--ring))";
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
+<<<<<<< HEAD
         primary: {
 
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
       keyframes: {
+=======
+        primary: {      keyframes: {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "accordion-down": {
           from: { height: "0" }
           to: { height: "var(--radix-accordion-content-height)" }}
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
+<<<<<<< HEAD
       animation: {
 
         "accordion-down": "accordion-down 0 && 0.2s ease-out",
@@ -123,11 +145,15 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out"}}},
 
   plugins: [
+=======
+      animation: {  plugins: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
 
+<<<<<<< HEAD
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -363,6 +389,10 @@ export default config;
 export default config;
 export default config;
           text_align: 'left'}}
+=======
+export default config;
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       add_utilities (new_utilities);
     })]}
 ;

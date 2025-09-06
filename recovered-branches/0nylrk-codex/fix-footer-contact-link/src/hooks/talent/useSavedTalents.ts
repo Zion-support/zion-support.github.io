@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Fetch saved talents
   useEffect(() => {
 
@@ -35,12 +38,16 @@ export function useSavedTalents() {
         return
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Fetch saved talents
   useEffect(() => {
 
     const fetchSavedTalents = async () => {
+<<<<<<< HEAD
       if (!isAuthenticated |!userDetails.id) {
         setIsLoading(false);
         return
@@ -56,11 +63,15 @@ export function useSavedTalents() {
           
 
         if (savedError) throw savedError;
+=======
+      if (!isAuthenticated |!userDetails.id) {        if (savedError) throw savedError;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
 
           
+<<<<<<< HEAD
           if (talentIds && talentIds.length > 0) {
 
             // Fetch full talent profiles for saved talents
@@ -71,6 +82,9 @@ export function useSavedTalents() {
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
 import { useState, useEffect } from './react';
+=======
+          if (talentIds && talentIds.length > 0) {import { useState, useEffect } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
 import { toast } from '@/hooks / use - toast';
@@ -135,6 +149,7 @@ if (throw talent_error) {
         }
       } catch (error) {
       } finally {
+<<<<<<< HEAD
         setIsLoading (false);
       }
     }
@@ -201,13 +216,31 @@ if ( {) {
 
 
 
+=======
+        setIsLoading (false);      });
+      return;
+    }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
     
 
+<<<<<<< HEAD
 
 
         variant: "destructive"
+=======
+    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
+  // Toggle save talent
+  const toggleSaveTalent = async (talent: TalentProfile) => {
+    if (!isAuthenticated |!userDetails.id |!talent.id) {
+      toast({
+        title: "Authentication required",
+  description: "Please log in to save talents to your favorites"
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",        variant: "destructive"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }),
       return
     }
@@ -215,11 +248,15 @@ if ( {) {
     
     const isSaved = savedTalentIds.includes(talent.id),
     
+<<<<<<< HEAD
     try {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (isSaved) {
         // Remove from saved_talents
         const { error } = await supabase
           .from('saved_talents')
+<<<<<<< HEAD
           .delete()
 
           .eq('user_id', userDetails.id)
@@ -248,19 +285,35 @@ if ( {) {
           title: "Removed from favorites"
           description: `${talent.full_name} has been removed from your favorites`})
       } else {
+=======
+          .delete()      } else {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
+<<<<<<< HEAD
 
             user_id: userDetails && userDetails.id,
+=======
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);            user_id: userDetails && userDetails.id,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             talent_id: talent && talent.id});
           
 
         if (error) throw error;
         setSavedTalents(prev => [...prev, talent]);
 
+<<<<<<< HEAD
 
+=======
+            user_id: userDetails.id
+            talent_id: talent.id});
+        if (error) throw error;
+        setSavedTalents(prev => [...prev, talent]);
+        setSavedTalentIds(prev => [...prev, talent.id]);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             user_id: userDetails.id,
             talent_id: talent.id}),
           
@@ -270,11 +323,17 @@ if ( {) {
         setSavedTalentIds(prev => [...prev, talent.id]),
         
 
+<<<<<<< HEAD
 
         toast({
           title: "Added to favorites"
           description: `${talent.full_name} has been added to your favorites`})
         setSavedTalentIds(prev => [...prev, talent && talent.id]);
+=======
+        toast({
+          title: "Added to favorites"
+          description: `${talent.full_name} has been added to your favorites`})        setSavedTalentIds(prev => [...prev, talent && talent.id]);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         
         toast({
           title: "Added to favorites",
@@ -283,6 +342,7 @@ if ( {) {
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
+<<<<<<< HEAD
 
       toast({
         title: "Error";
@@ -298,6 +358,10 @@ if ( {) {
   };
 
 
+=======
+  };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return {
     savedTalents;
     savedTalentIds;
@@ -308,8 +372,13 @@ if ( {) {
       } catch (error) {;
         console.error('Error fetching saved talents:', error),;
         toast({;
+<<<<<<< HEAD
           title: "Error loading favorites",;
           description: "There was a problem loading your saved talents.",;
+=======
+          title: "Error loading favorites",,
+  description: "There was a problem loading your saved talents.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive";
         });
       } finally {;
@@ -322,6 +391,7 @@ if ( {) {
   const toggleSaveTalent = async (talent: TalentProfile) => {;
     if (!isAuthenticated || !userDetails.id || !talent.id) {;
       toast({;
+<<<<<<< HEAD
         title: "Authentication required",;
         description: "Please log in to save talents to your favorites",;
         variant: "destructive";
@@ -453,4 +523,12 @@ if (throw error) {
   }
 }
   }
+=======
+        title: "Authentication required",,
+  description: "Please log in to save talents to your favorites",;
+        variant: "destructive";
+      }),;
+      return;
+    }  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

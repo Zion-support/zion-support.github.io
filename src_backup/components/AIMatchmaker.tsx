@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Sparkles, Search } from 'lucide-react'
-import React from 'react';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -13,32 +9,13 @@ import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  serviceType?: string
-onMatchSelect?: (match: any) => void
-className?: string
-}if (!query.trim () ) {
-  toast ({
-  return;
-}setIsMatchmaking (true)
-setHasSearched (true)
-serviceType
-3)
-}catch (error) {'
-  logErrorToProduction ('Error during AI matching:', {
-  data: error
-})
-toast ({
-=======
 
 
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
@@ -56,114 +33,14 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
 
-<<<<<<< HEAD
-  const handleSearch = async () => {
-    if (!query.trim()) {
-      toast({
-        title: "Please enter a description",
-        description: "Tell us what you're looking for so we can find matches.",
-      })
-      return;
-    }
-    setIsMatchmaking(true)
-    setHasSearched(true)
-    try {
-      logInfo('Starting AI matching', { data: { query, serviceType } })
-      // Get AI matches
-      const results = await findMatches(query, serviceType, 3)
-      logInfo('AI matching results:', { data: results })
-      setMatches(results)
-      toast({
-        title: 'Matches Found'
-        description: `Found ${results.length} matches based on your description.`
-      })
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error })
-      toast({
-        title: 'Matching Error'
-        description:
-          "We couldn't find matches for your request. Please try again."
-        variant: 'destructive'
-      })
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
-    } finally {
-      setIsMatchmaking(false)
-        variant: "destructive"}),
-      return
-    }
-
-    setIsMatchmaking(true),
-    setHasSearched(true),
-    
-    try {
-      logInfo("Starting AI matching", { data: { query, serviceType } }),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      ),
-      
-      logInfo('AI matching results:', { data: results }),
-      setMatches(results),
-      
-      toast({
-        title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`})
-    } catch (error) {
-      logErrorToProduction('Error during AI matching:', { data: error }),
-      toast({
-        title: "Matching Error",
-        description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive"}),
-      // Set empty matches to show no results found UI
-      setMatches([])
-    } finally {
-      setIsMatchmaking(false)
-
-
-=======
 
 
       // Set empty matches to show no results found UI
@@ -248,7 +125,7 @@ function AIMatchmaker() {
 
       setIsMatchmaking(false)
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -278,47 +155,6 @@ toast ({;
   setIsMatchmaking (false) ;import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {;
   serviceType?: string,;
-<<<<<<< HEAD
-  onMatchSelect?: (match: any) => void,;
-  className?: string;
-}
-;
-export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
-  const [query, setQuery] = useState(""),;
-  const [isMatchmaking, setIsMatchmaking] = useState(false),;
-  const [matches, setMatches] = useState([] as MatchResult[]),;
-  const [hasSearched, setHasSearched] = useState(false),;
-  const handleSearch = async () => {;
-    if (!query.trim()) {;
-      toast({;
-        title: "Please enter a description",;
-        description: "Tell us what you're looking for so we can find matches.",;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsMatchmaking(true),;
-    setHasSearched(true),;
-    try {;
-      logInfo("Starting AI matching", { data: { query, serviceType } }),;
-      // Get AI matches;
-      const results = await findMatches(;
-        query,;
-        serviceType,;
-        3;
-      ),;
-      logInfo('AI matching results:', { data: results }),;
-      setMatches(results),;
-      toast({;
-        title: "Matches Found",;
-        description: `Found ${results.length} matches based on your description.`});
-    } catch (error) {;
-      logErrorToProduction('Error during AI matching:', { data: error }),;
-      toast({;
-        title: "Matching Error",;
-        description: "We couldn't find matches for your request. Please try again.",;
-        variant: "destructive"}),;
-=======
   onMatchSelect?: (match: any,) => void,;
   className?: string;
 }
@@ -367,31 +203,22 @@ export function AIMatchmaker(): any ({;
           "We couldn't find matches for your request. Please try again.",;
         variant: 'destructive',;
       });
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       // Set empty matches to show no results found UI;
       setMatches([]);
     } finally {;
       setIsMatchmaking(false);
     }
-<<<<<<< HEAD
-  },;
-  const handleItemSelect = (item: any) => {;
-    if (onMatchSelect) {;
-      // Find the original MatchResult that contains this item;
-      const matchResult = matches.find(match => match.item.id === item.id),;
-=======
   };
 
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {;
       // Find the original MatchResult that contains this item;
       const matchResult = matches && matches.find(match => match && match.item.id === item && item.id),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       if (matchResult) {;
         onMatchSelect(matchResult);
       }
     }
-<<<<<<< HEAD
-=======
 
   const handleItemSelect = (item: any) =>: any {    // Check condition
 if ( {) {
@@ -423,41 +250,34 @@ if ( {) {
       </CardHeader>;
       <CardContent>;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   },
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
-=======
   serviceType?: string;
   onMatchSelect?: (match: any) => void;
   className?: string
 }
 
 export function AIMatchmaker({ serviceType;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+
+origin/cursor/automate-test-improve-and-merge-code-2533
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
           Describe what you're looking for and our AI will find the best matches
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </p>
       </CardHeader>
       <CardContent>
@@ -474,21 +294,16 @@ export function AIMatchmaker({ serviceType;
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
-<<<<<<< HEAD
-=======
 
 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               {isMatchmaking ? (;
                 <>Analyzing your needs...</>;
               ) : (;
                 <>;
-<<<<<<< HEAD
-
-=======
                   <Search className='h-4 w-4 mr-2' />;
                   Find Matches;
                 </>;
@@ -499,7 +314,7 @@ export function AIMatchmaker({ serviceType;
 
           {hasSearched && (;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -509,18 +324,12 @@ export function AIMatchmaker({ serviceType;
 
 }
 }
-<<<<<<< HEAD
-              projectDescription={query}
-            />;
-          )}
-<<<<<<< HEAD
-=======
 
               projectDescription={query}
             />;
           )}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         </div>;
       </CardContent>;
     </Card>;
@@ -561,13 +370,10 @@ export function AIMatchmaker({ serviceType;
         </div>;
       </CardContent>;
     </Card>);
-<<<<<<< HEAD
-=======
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
         </div>
       </CardContent>
     </Card>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

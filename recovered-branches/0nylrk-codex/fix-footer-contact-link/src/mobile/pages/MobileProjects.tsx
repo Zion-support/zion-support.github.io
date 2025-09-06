@@ -1,16 +1,20 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
+<<<<<<< HEAD
 import { MobileProjectView } from "../components/projects/MobileProjectView",
 // Mock data
 
@@ -70,13 +74,22 @@ const milestonesData = [;
 ];
 
 export function MobileProjects() {;
+=======
+import { MobileProjectView } from "../components/projects/MobileProjectView",const milestonesData = [;
+  {;
+    id: "milestone-1",;
+    title: "Initial Design Concepts",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title="Project Details"
         showBack
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   startDate: "Oct 15, 2023",
   endDate: "Jan 15, 2024",
@@ -109,6 +122,7 @@ const milestonesData = [
     dueDate: "Dec 30, 2023",
     status: "pending" as const,
     paymentStatus: "pending" as const,
+<<<<<<< HEAD
 
     amount: "$5,000"
   }
@@ -123,6 +137,8 @@ export function MobileProjects() {
       />
       <main className="py-4">
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -173,15 +189,21 @@ export function MobileProjects() {;
         <MobileProjectView 
           project={projectData} 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           milestones={milestonesData}
         />
       </main>
       <BottomNavigation />
     </div>
   )
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       />;
 
       <main className="py-4">;
@@ -195,6 +217,7 @@ export function MobileProjects() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 import React from './react';
@@ -272,6 +295,11 @@ function MobileProjects() {
 ;
 
 
+=======
+};
+;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -289,7 +317,11 @@ const projectData = {;
   endDate:"Jan 15, 2024",;
   status:"in_progress",;
   totalAmount:"$12,000",;
+<<<<<<< HEAD
   progress:60,;
+=======
+  progress:60,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description:"Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
 },;
 ;
@@ -347,3 +379,7 @@ export function MobileProjects() {;
 }
 };
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

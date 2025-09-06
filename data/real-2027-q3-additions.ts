@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -7,6 +7,8 @@
 
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -14,27 +16,15 @@ export const real2027Q3Additions = [
     tagline: 'Agentless network-wide discovery and enrichment'
     price: '$149'
     period: '/month'
-=======
 id: 'it-asset-discovery-agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment',
     price: '$149',
     period: '/month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
     features: [
-<<<<<<< HEAD
-      'Streaming replication and automatic failover'
-      'PITR backups with retention policies'
-      'Performance tuning and query insights'
-      'Security hardening and auditing'
-    ]
-    category: 'Cloud & Infrastructure'
-    link: '/managed-postgres-ha'
-    realService: true
-  }
-=======
       'Agentless subnet scanning and SaaS discovery',
       'OS, version, and CVE enrichment',
       'CMDB, ServiceNow, and Jira export',
@@ -45,7 +35,7 @@ id: 'it-asset-discovery-agent',
     realService: true,
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'managed-postgres-ha',
     name: 'Managed Postgres HA',
@@ -207,17 +197,6 @@ id: 'it-asset-discovery-agent',
     description:
       'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
     features: [
-<<<<<<< HEAD
-      'Auto triage and severity suggestion'
-      'Channel orchestration (Slack/Teams)'
-      'Timeline and comms templates'
-      'Postmortem drafts and actions'
-    ]
-    category: 'Operations'
-    link: '/incident-copilot'
-    realService: true
-  }
-=======
       'Terraform plan diffs as PR comments',
       'Change approval workflows',
       'Selective auto-remediation',
@@ -228,7 +207,7 @@ id: 'it-asset-discovery-agent',
     realService: true,
     roi: 'Prevent config drift incidents and reduce compliance toil.',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'incident-copilot',
     name: 'Incident Copilot',
@@ -238,17 +217,6 @@ id: 'it-asset-discovery-agent',
     description:
       'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
     features: [
-<<<<<<< HEAD
-      'Web and doc ingestion with citations'
-      'Competitor profiles and matrices'
-      'Alerts for launches and pricing changes'
-      'Export to Slides/Docs'
-    ]
-    category: 'AI & Data'
-    link: '/ai-market-research'
-    realService: true
-  }
-=======
       'Auto triage and severity suggestion',
       'Channel orchestration (Slack/Teams)',
       'Timeline and comms templates',
@@ -259,7 +227,7 @@ id: 'it-asset-discovery-agent',
     realService: true,
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-market-research',
     name: 'AI Market Research',
@@ -269,17 +237,6 @@ id: 'it-asset-discovery-agent',
     description:
       'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [
-<<<<<<< HEAD
-      'Lead enrichment and routing'
-      'Multichannel sequences'
-      'AI-generated replies with approvals'
-      'Pipeline analytics'
-    ]
-    category: 'Sales & Marketing'
-    link: '/ai-sales-automation'
-    realService: true
-  }
-=======
       'Web and doc ingestion with citations',
       'Competitor profiles and matrices',
       'Alerts for launches and pricing changes',
@@ -290,7 +247,7 @@ id: 'it-asset-discovery-agent',
     realService: true,
     roi: 'Save 10–20 analyst hours per week while increasing coverage.',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-sales-automation',
     name: 'AI Sales Automation',
@@ -319,17 +276,6 @@ id: 'it-asset-discovery-agent',
     description:
       'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [
-<<<<<<< HEAD
-      'Templates and brand voices'
-      'SEO scoring and suggestions'
-      'Collaboration and approvals'
-      'WordPress/Shopify integrations'
-    ]
-    category: 'Content & Marketing'
-    link: '/ai-content-generator'
-    realService: true
-  }
-=======
       'Smart clause detection and summaries',
       'Risk scoring and deviations',
       'Playbook alignment and suggestions',
@@ -340,7 +286,7 @@ id: 'it-asset-discovery-agent',
     realService: true,
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.',
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'ai-content-generator',
     name: 'AI Content Generator',
@@ -369,18 +315,6 @@ id: 'it-asset-discovery-agent',
     description:
       'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [
-<<<<<<< HEAD
-      'Discovery via traffic/specs'
-      'OWASP API Top 10 checks'
-      'PR annotations and CI gating'
-      'Change detection and drift alerts'
-    ]
-    category: 'Security & Identity'
-    link: '/api-security-scanner'
-    realService: true
-    roi: 'Prevent high-severity API incidents and cut MTTR.'
-  }
-=======
       'Aggregate and forensic reports',
       'Source identification and alignment',
       'Policy simulation and enforcement guides',
@@ -400,7 +334,7 @@ id: 'it-asset-discovery-agent',
     description:
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
@@ -410,6 +344,7 @@ id: 'it-asset-discovery-agent',
     link: '/api-security-scanner',
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
@@ -428,11 +363,16 @@ id: 'it-asset-discovery-agent',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const real2027Q3Additions = [
   {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -443,6 +383,10 @@ export const real2027Q3Additions = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -761,6 +705,10 @@ export const real2027Q3Additions = [;
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -782,6 +730,7 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
+<<<<<<< HEAD
   }
 ];
 ;
@@ -802,6 +751,17 @@ export const real2027Q3Additions = [;
 ];
 ;
 
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+;
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -1057,6 +1017,7 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1070,3 +1031,16 @@ export const real2027Q3Additions = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,28 +1,39 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
+<<<<<<< HEAD
 import React from "react";
+=======
+=======import React from "react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const testimonials = [
   {
     name: "Alex Johnson"
     role: "AI Developer"
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
+<<<<<<< HEAD
     avatar: "/placeholder.svg"
 
 import React from './react';
@@ -54,11 +65,19 @@ const testimonials = [;
 
 
   {
+=======
+    avatar: "/placeholder.svg"  }
+  {
+    name: "Sarah Williams"
+    role: "Tech Recruiter"
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";  {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     name: "Michael Chen"
     role: "Full Stack Developer"
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful."
     rating: 4
     avatar: "/placeholder.svg"
+<<<<<<< HEAD
   }
 
 
@@ -85,6 +104,9 @@ export const AppTestimonials: React.FC = () => {
 
 
                     <Star
+=======
+  }                    <Star
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
@@ -105,6 +127,7 @@ export const AppTestimonials: React.FC = () => {
               </CardFooter>
             </Card>
 
+<<<<<<< HEAD
 
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -136,6 +159,11 @@ const testimonials = [;
 
 export const AppTestimonials: React.FC = () => {;
   return (
+=======
+import React from "react",;
+import { Star } from "lucide-react",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -143,6 +171,7 @@ export const AppTestimonials: React.FC = () => {;
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">;
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
           </p>;
+<<<<<<< HEAD
         </div>;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -153,10 +182,14 @@ export const AppTestimonials: React.FC = () => {;
                   {Array && Array.from({ length: 5 }).map((_, i) => (;
                     <Star
                       key={i}
+=======
+        </div>;                      key={i}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />;
                   ))}
                 </div>;
+<<<<<<< HEAD
                 <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
               </CardContent>;
               <CardFooter className="border-t border-zion-purple/20 pt-4">;
@@ -262,3 +295,6 @@ export const AppTestimonials: React.FC = () => {
     </section>;
   );
 };
+=======
+                <p className="text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

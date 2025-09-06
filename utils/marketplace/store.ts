@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Marketplace data store utilities
 
@@ -18,6 +19,14 @@ export interface Project {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+// Marketplace data store utilitiesexport interface Project {;
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   title: string;
   summary: string;
@@ -32,25 +41,34 @@ export interface Project {
     description: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     status: 'pending' | 'in_progress' | 'completed' | 'overdue'
 
-=======
     due_date: string;
     status: 'pending' | 'in_progress' | 'completed' | 'overdue',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,21 +81,32 @@ export interface Project {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    uploadedAtIso: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }>;
   budget?: {
     total: number;
     currency: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     type: 'fixed' | 'hourly' | 'milestone'
   }
   createdAt: string;
   updatedAt: string
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -90,16 +119,27 @@ export interface Offer {
 <<<<<<< HEAD
 =======
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 export interface Offer {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -115,6 +155,7 @@ export interface Offer {;
       amount: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -125,6 +166,13 @@ export interface Offer {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+      dueDate: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }>;
   }
   agreementUrl?: string;
@@ -142,24 +190,20 @@ export interface Offer {;
   notes?: string,
 <<<<<<< HEAD
 <<<<<<< HEAD
-}
-export interface Application {
-=======
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export interface Application {
-<<<<<<< HEAD
-=======
-=======
   notes?: string
 }
 
 
 export interface Application {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -167,11 +211,17 @@ export interface Application {;
 }
 export interface Application {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -185,11 +235,19 @@ export interface Application {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  notes?: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   cover_letter?: string;
   proposed_rate?: number;
   proposed_timeline?: string;
   portfolio_items?: string[];
   notes?: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -208,17 +266,29 @@ export interface Message {
 <<<<<<< HEAD
 =======
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   notes?: string
 }
 
 
 export interface Message {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   conversationId: string;
   senderId: string;
@@ -230,6 +300,7 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+<<<<<<< HEAD
   is_read: boolean,
 <<<<<<< HEAD
 }
@@ -238,24 +309,23 @@ export interface Conversation {
 <<<<<<< HEAD
   is_read: boolean,
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   isRead: boolean
 
-=======
   is_read: boolean,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export interface Conversation {
-<<<<<<< HEAD
-=======
-=======
   isRead: boolean
 }
 
 
 export interface Conversation {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -263,10 +333,16 @@ export interface Conversation {;
 }
 export interface Conversation {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -279,6 +355,13 @@ export interface Conversation {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  createdAtIso: string
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -290,9 +373,12 @@ class MarketplaceStore {
   async createProject(project: Project): Promise<Project> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.projects.set(project.id, project);
     return project;
   }
@@ -300,11 +386,14 @@ class MarketplaceStore {
 
     return this.projects.get(id) |null
 
-=======
     return this && this.projects.get(id) || null,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
 
@@ -313,11 +402,16 @@ class MarketplaceStore {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!project) return null
     const updatedProject = {
       ...project
@@ -325,9 +419,12 @@ class MarketplaceStore {
       updatedAt: new Date().toISOString()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     };
 
@@ -339,17 +436,24 @@ class MarketplaceStore {
 
     return this.projects.delete(id)
 
-=======
     return this && this.projects.delete(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getProjectsByClient(clientId: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
 
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
 
@@ -357,11 +461,17 @@ class MarketplaceStore {
 
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getAllProjects(): Promise<Project[]> {
     return Array && Array.from(this && this.projects.values());
@@ -374,17 +484,23 @@ class MarketplaceStore {
   async getOffer(id: string): Promise<Offer | null> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.offers.get(id) |null
 
-=======
     return this && this.offers.get(id) || null,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 
@@ -392,10 +508,15 @@ class MarketplaceStore {
     const updatedOffer = { ...offer, ...updates }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.offers.set(id, updatedOffer);
     const offer = this && this.offers.get(id);
     if (!offer) return null,
@@ -407,23 +528,33 @@ class MarketplaceStore {
   async deleteOffer(id: string): Promise<boolean> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.offers.delete(id)
 
-=======
     return this && this.offers.delete(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getOffersByClient(clientId: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
 
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
 
@@ -431,11 +562,17 @@ class MarketplaceStore {
 
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getAllOffers(): Promise<Offer[]> {
     return Array && Array.from(this && this.offers.values());
@@ -448,17 +585,23 @@ class MarketplaceStore {
   async getApplication(id: string): Promise<Application | null> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.applications.get(id) |null
 
-=======
     return this && this.applications.get(id) || null,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 
@@ -466,10 +609,15 @@ class MarketplaceStore {
     const updatedApplication = { ...application, ...updates }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.applications.set(id, updatedApplication);
     const application = this && this.applications.get(id);
     if (!application) return null,
@@ -481,23 +629,33 @@ class MarketplaceStore {
   async deleteApplication(id: string): Promise<boolean> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.applications.delete(id)
 
-=======
     return this && this.applications.delete(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getApplicationsByProject(projectId: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
 
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
 
@@ -505,11 +663,17 @@ class MarketplaceStore {
 
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getAllApplications(): Promise<Application[]> {
     return Array && Array.from(this && this.applications.values());
@@ -522,17 +686,23 @@ class MarketplaceStore {
   async getMessage(id: string): Promise<Message | null> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.messages.get(id) |null
 
-=======
     return this && this.messages.get(id) || null,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
@@ -540,10 +710,15 @@ class MarketplaceStore {
     const updatedMessage = { ...message, ...updates }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -553,22 +728,30 @@ class MarketplaceStore {
     return updatedMessage;
   }
   async deleteMessage(id: string): Promise<boolean> {
+<<<<<<< HEAD
     return this && this.messages.delete(id),
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
     return this && this.messages.delete(id),
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.messages.delete(id)
 
-=======
     return this && this.messages.delete(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values())
@@ -578,18 +761,26 @@ class MarketplaceStore {
   async getMessagesByUser(userId: string): Promise<Message[]> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.senderId === userId || m && m.recipientId === userId)
       .sort((a, b) => new Date(b && b.sentAtIso).getTime() - new Date(a && a.sentAtIso).getTime());
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getAllMessages(): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values());
@@ -602,17 +793,23 @@ class MarketplaceStore {
   async getConversation(id: string): Promise<Conversation | null> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.conversations.get(id) |null
 
-=======
     return this && this.conversations.get(id) || null,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
@@ -620,10 +817,15 @@ class MarketplaceStore {
     const updatedConversation = { ...conversation, ...updates }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.conversations.set(id, updatedConversation);
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
@@ -633,22 +835,30 @@ class MarketplaceStore {
     return updatedConversation;
   }
   async deleteConversation(id: string): Promise<boolean> {
+<<<<<<< HEAD
     return this && this.conversations.delete(id),
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
     return this && this.conversations.delete(id),
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return this.conversations.delete(id)
 
-=======
     return this && this.conversations.delete(id),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
     return Array && Array.from(this && this.conversations.values())
@@ -663,20 +873,27 @@ class MarketplaceStore {
     // Find existing conversation between these two users
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         return conversation
 
-=======
     for (const conversation of this && this.conversations.values()) {
       if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -852,6 +1069,7 @@ if (return null, ) {
       if (&& conversation.participants.includes (userId2)) {) {
   $2
 }
+<<<<<<< HEAD
         return conversation,
       }
     }
@@ -860,6 +1078,13 @@ if (return null, ) {
 =======
 <<<<<<< HEAD
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+        return conversation,
+origin/cursor/automate-test-improve-and-merge-code-382a
+      }
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
       participants: [userId1, userId2],
@@ -870,14 +1095,20 @@ if (return null, ) {
 
     return this && this.createConversation(conversation);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -890,6 +1121,13 @@ if (return null, ) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+    message.readAtIso = new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     this.messages.set(messageId, message);
 
     message && message.isRead = true;
@@ -898,6 +1136,7 @@ if (return null, ) {
     return true;
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -911,6 +1150,13 @@ if (return null, ) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+      .length
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
     // Create new conversation;
@@ -938,19 +1184,41 @@ if (return false) {
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
+<<<<<<< HEAD
       .length,
   }
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+      .length,
+origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+
+    )
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
       project && project.summary.toLowerCase().includes(lowercaseQuery)
     ),
+<<<<<<< HEAD
   }
   async searchOffers(query: string): Promise<Offer[]> {
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+  async searchOffers(query: string): Promise<Offer[]> {
+
+    )
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
     ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -961,6 +1229,11 @@ if (return false) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   // Cleanup methods
   async clearAll(): Promise<void> {
@@ -978,9 +1251,12 @@ if (return false) {
     totalMessages: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     totalConversations: number
 
@@ -994,10 +1270,15 @@ if (return false) {
       totalConversations: this && this.conversations.size
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 // Singleton instance
@@ -1006,24 +1287,33 @@ export const marketplaceStore = new MarketplaceStore();
 export async function createProject(project: Project): Promise<Project> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return marketplaceStore.createProject(project)
 
-=======
   return marketplaceStore && marketplaceStore.createProject(project),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
 
   return marketplaceStore && marketplaceStore.getProject(id),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1042,18 +1332,45 @@ export async function updateProject(id: string, updates: Partial<Project>): Prom
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getProject(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
+<<<<<<< HEAD
 }
 export async function deleteProject(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteProject(id),
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
   return marketplaceStore && marketplaceStore.createOffer(offer),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteProject(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteProject(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteProject(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+
+  return marketplaceStore.createOffer(offer)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createOffer(offer),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function getOffer(id: string): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.getOffer(id),
@@ -1063,21 +1380,48 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
   return marketplaceStore.getOffer(id)
 
   return marketplaceStore && marketplaceStore.getOffer(id),
+<<<<<<< HEAD
 }
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getOffer(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
+<<<<<<< HEAD
 }
 export async function deleteOffer(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteOffer(id),
 }
 export async function createApplication(application: Application): Promise<Application> {
   return marketplaceStore && marketplaceStore.createApplication(application),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteOffer(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteOffer(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteOffer(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createApplication(application: Application): Promise<Application> {
+
+  return marketplaceStore.createApplication(application)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createApplication(application),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function getApplication(id: string): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.getApplication(id),
@@ -1087,21 +1431,48 @@ export async function updateApplication(id: string, updates: Partial<Application
   return marketplaceStore.getApplication(id)
 
   return marketplaceStore && marketplaceStore.getApplication(id),
+<<<<<<< HEAD
 }
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getApplication(id)
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
+<<<<<<< HEAD
 }
 export async function deleteApplication(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteApplication(id),
 }
 export async function createMessage(message: Message): Promise<Message> {
   return marketplaceStore && marketplaceStore.createMessage(message),
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+}
+export async function deleteApplication(id: string): Promise<boolean> {
+
+  return marketplaceStore.deleteApplication(id)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.deleteApplication(id),
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function createMessage(message: Message): Promise<Message> {
+
+  return marketplaceStore.createMessage(message)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return marketplaceStore && marketplaceStore.createMessage(message),
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function getMessage(id: string): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.getMessage(id),
@@ -1111,6 +1482,7 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return marketplaceStore.getMessage(id)
 
   return marketplaceStore && marketplaceStore.getMessage(id),
+<<<<<<< HEAD
 }
 
 
@@ -1200,17 +1572,38 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 
 
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+}
+  return marketplaceStore.getMessage(id)
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+  return marketplaceStore.updateMessage(id, updates);
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteMessage(id)
 
   return marketplaceStore && marketplaceStore.deleteMessage(id),
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 // Utility functions
 
 
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     conversationId,
     senderId,
     recipientId,
@@ -1366,6 +1759,7 @@ export function createMessageData (
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1387,6 +1781,15 @@ export function generate_id (prefix: string = 'item'): string {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import fs from 'fs';
 import path from 'path';
 import { MarketplaceDb, Offer, Project } from './types';
@@ -1461,6 +1864,10 @@ export function saveProject(project: Project): Project {
 export function getProjectById(id: string): Project | undefined {
   const db = readDb();
   return db.projects.find(p => p.id === id);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

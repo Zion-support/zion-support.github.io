@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
@@ -15,20 +16,34 @@ export async function createNotification({;
   actionUrl = null;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId;
   title;
   message;
   type;
 
+<<<<<<< HEAD
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+=======
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId,
   title,
   message,
@@ -37,7 +52,10 @@ export async function createNotification({
   sendEmail = false,
   actionUrl = null,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -46,7 +64,10 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
@@ -70,12 +91,15 @@ export async function createNotification({
     
     if (error) throw error,
     
+<<<<<<< HEAD
 
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
@@ -108,6 +132,7 @@ export async function createNotification({;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
 
+<<<<<<< HEAD
 
 
         body: { user_id: userId, notification_id: notificationId }
@@ -180,3 +205,9 @@ if ( {) {
 ;
 
 
+=======
+        body: { user_id: userId, notification_id: notificationId }
+      })
+    }
+    return { success: true, notificationId: data }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

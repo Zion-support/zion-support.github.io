@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
@@ -18,3 +24,8 @@ console.log('\n App Optimization "Summary")
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
 
+<<<<<<< HEAD
+=======
+  console.log('\n "Recommendations")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

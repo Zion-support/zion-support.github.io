@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -37,6 +40,7 @@ import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
 import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
+<<<<<<< HEAD
 export default function TranslationManager() {;
 
   const { t, i18n } = useTranslation();
@@ -70,11 +74,15 @@ export default function TranslationManager() {
   const { translateContent, isTranslating } = useTranslationService();
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
+=======
+export default function TranslationManager() {;  const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [translations, setTranslations] = useState<Record<string, any>>({});
   const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 
 
 
@@ -82,10 +90,15 @@ export default function TranslationManager() {
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace);
     supportedLanguages.forEach(lang => {
+=======
+    supportedLanguages.forEach(lang => {
+      const res = i18n.getResourceBundle(lang.code, selectedNamespace),    supportedLanguages.forEach(lang => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
+<<<<<<< HEAD
           return Object.keys(obj).reduce((acc, key) => {
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components / Header';
@@ -221,6 +234,74 @@ if ( {) {
 
 
     const allKeys = new Set<string>();
+=======
+          return Object.keys(obj).reduce((acc, key) => {  useEffect(() => {;
+    // For demo purposes, we're using the loaded translations from i18next;
+    const currentTranslations: Record<string, any> = {};
+              acc[`${pre}${key}`] = obj[key]
+
+            }
+            return acc
+          }, {} as Record<string, string>)
+        }
+        currentTranslations[lang.code] = flattenObject(res)
+      }
+    });
+    setTranslations(currentTranslations);
+    // Get all unique keys across all languages
+    const allKeys = new Set<string>();
+    Object.values(currentTranslations).forEach(langTranslations => {
+      Object.keys(langTranslations).forEach(key => allKeys.add(key))
+    });
+    setFilteredKeys(Array.from(allKeys))
+  }, [selectedNamespace, i18n]);
+  // Filter keys based on search query
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      // Get all unique keys across all languages
+      const allKeys = new Set<string>();
+      Object.values(translations).forEach(langTranslations => {
+        Object.keys(langTranslations).forEach(key => allKeys.add(key))
+      });
+      setFilteredKeys(Array.from(allKeys));
+      return
+    }
+    const query = searchQuery.toLowerCase().trim();
+    const filtered: string[] = []
+    // Search in keys and values
+    Object.values(translations).forEach(langTranslations => {
+      Object.entries(langTranslations).forEach(([key, value]) => {
+        if (
+          key.toLowerCase().includes(query) |
+          (typeof value === 'string' && value.toLowerCase().includes(query))
+        ) {
+          filtered.push(key)
+        }
+      })
+    });
+    setFilteredKeys([...new Set(filtered)])
+  }, [searchQuery, translations]);
+  const handleEdit = (key: string) => {
+    setEditingKey(key)
+    // Initialize edited translations for this key
+    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
+    supportedLanguages.forEach(lang => {
+      initialEdits[lang.code] = translations[lang.code]?.[key] |''
+    });
+    setEditedTranslations({
+      ...editedTranslations;
+      [key]: initialEdits
+    })
+  }
+  const handleSave = (key: string) => {
+    setIsSaving(true)
+    // In a real application, you would save these to your backend
+    setTimeout(() => {
+      // Update translations with edited values
+      const updatedTranslations = { ...translations }
+      supportedLanguages.forEach(lang => {
+        if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
@@ -231,7 +312,10 @@ if ( {) {
   useEffect(() => {;
     if (!searchQuery && searchQuery.trim()) {;
       // Get all unique keys across all languages;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
@@ -239,8 +323,14 @@ if ( {) {
       setFilteredKeys(Array && Array.from(allKeys));
       return;
     }
+<<<<<<< HEAD
 
           }, {} as Record<string string>);
+=======
+        }
+      })
+    });          }, {} as Record<string string>);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         },;
         currentTranslations[lang.code] = flattenObject(res);
       }
@@ -274,6 +364,7 @@ if ( {) {
           key.toLowerCase().includes(query) ||;
           (typeof value === 'string' && value.toLowerCase().includes(query));
         ) {;
+<<<<<<< HEAD
           filtered.push(key);
         }
       })
@@ -396,6 +487,12 @@ if ( {) {
       if (error) {
         toast({
           title: t('translation.translation_failed')
+=======
+          filtered.push(key);      toast({
+        title: t("translation.saved")
+        description: t("translation.changes_saved")})
+    }, 1000)          title: t('translation.translation_failed')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           description: error
           variant: "destructive"})
         return
@@ -403,6 +500,7 @@ if ( {) {
       // Update edited translations with auto-translated content
       setEditedTranslations({
 
+<<<<<<< HEAD
 
     if (!sourceText) {;
       toast({;
@@ -592,6 +690,18 @@ if ( {) {
                 <div className="relative flex-1">;
                   <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
         ...editedTranslations;
+=======
+      }),
+      
+
+      <SEO
+        title={t('translation.manager_title')}
+      <SEO 
+        title={t('translation.manager_title')}               {/* Search and filter */}
+              <div className="flex flex-col sm:flex-row gap-4">;
+                <div className="relative flex-1">;
+                  <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;        ...editedTranslations;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         [key]: translatedText;
       });
               {/* Search and filter */}
@@ -602,6 +712,7 @@ if ( {) {
                     type="search"
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
+<<<<<<< HEAD
                     value={searchQuery}
 
 
@@ -655,6 +766,9 @@ if ( {) {
                 <Tabs
                   defaultValue="translation" 
                   value={selectedNamespace}
+=======
+                    value={searchQuery}                  value={selectedNamespace}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   onValueChange={(value) => setSelectedNamespace(value)}
                   className="w-full sm:w-auto";
                 >;
@@ -679,8 +793,12 @@ if ( {) {
                   </div>;
                 ) : (;
                   <div className="divide-y">;
+<<<<<<< HEAD
                     {filteredKeys && filteredKeys.map((key) => (;
                       <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">;
+=======
+                    {filteredKeys && filteredKeys.map((key) => (;                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <div className="p-3 break-words">{key}</div>;
                         {editingKey === key ? (;
                           <div className="p-3">;
@@ -714,6 +832,7 @@ if ( {) {
                               <Button
                                 size="sm" 
 
+<<<<<<< HEAD
                               {supportedLanguages.map((lang) => (;
                                 <div key={lang.code}>;
                                   <div className="flex items-center gap-2 mb-1">;
@@ -744,12 +863,18 @@ if ( {) {
 
                               <Button ;
                                 size="sm" ;
+=======
+                              <Button 
+                                size="sm" 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                   )}
                                 </div>
                               ))}
                               <Button
                                 size="sm" 
 
+<<<<<<< HEAD
 
                               <Button 
                                 size="sm" 
@@ -788,14 +913,21 @@ if ( {) {
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
+=======
+                              <Button 
+                                size="sm"                                 disabled={isTranslating}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               >;
                                 {isTranslating ? (;
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
+<<<<<<< HEAD
 
                                 {t('translation && translation.auto_translate')}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               </Button>;
                             </div>;
                           </div>;
@@ -811,13 +943,17 @@ if ( {) {
                                     {translations[lang && lang.code]?.[key] || t('translation && translation.missing')}
                                   </span>;
                                 </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               ))}
                               {getMissingLanguages(key).length > 0 && (;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;
                                   <AlertTriangle className="h-4 w-4" />;
                                   {t('translation && translation.missing_languages', { count: getMissingLanguages(key).length })}
                                 </div>;
+<<<<<<< HEAD
                               )}
                             </div>;
                           </div>;
@@ -825,6 +961,13 @@ if ( {) {
                         <div className="p-3 flex items-center justify-end">;
                           {editingKey === key ? null : (;
                                 ) : (;
+=======
+                              )}                            </div>;
+                          </div>;
+                        )}
+                        <div className="p-3 flex items-center justify-end">;
+                          {editingKey === key ? null : (;                                ) : (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
                         )}
@@ -835,6 +978,7 @@ if ( {) {
                               variant="outline"
                               onClick={() => handleEdit(key)}
                             >;
+<<<<<<< HEAD
                               {t('translation && translation.edit')}
                             </Button>;
                           )}
@@ -1177,6 +1321,11 @@ if ( {) {
   )
 }
                             >;
+=======
+                              {t('translation && translation.edit')}                            </Button>;
+                          )}
+                        </div>;                            >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               {t('translation && translation.edit')}
                             </Button>;
                           )}
@@ -1189,6 +1338,7 @@ if ( {) {
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 }
 
     </>;
@@ -1338,3 +1488,6 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -3,6 +3,7 @@ export interface SearchSuggestion {
   type: "product" | "category" | "tag" | "skill" | "person" | "recent";
   iconUrl?: string;
 }
+<<<<<<< HEAD
 export interface SearchHighlight {
   before: string;
   match: string;
@@ -13,6 +14,15 @@ export interface FilterOptions {
     label: string;
     value: string;
   }[];
+=======
+;
+export interface SearchHighlight {;
+  before: string,;
+  match: string,;
+  type: 'product' | 'category' | 'tag' | 'skill' | 'person' | 'recent',
+  icon_url?: string;
+}  }[];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   locations: {
     label: string;
     value: string;
@@ -23,12 +33,16 @@ export interface FilterOptions {
   }[];
   ratingOptions: number[];
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface SearchSuggestion {;
 
 }
 ;
+<<<<<<< HEAD
 }
 
 export interface SearchSuggestion {;
@@ -79,6 +93,8 @@ export interface FilterOptions {;
 }
 ;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export interface SearchSuggestion {
   text: string;

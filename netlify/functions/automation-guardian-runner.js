@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -9,6 +10,8 @@
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const abs = path.resolve(__dirname, '....', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
@@ -23,10 +26,11 @@ exports.handler = async () => {
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return status
   }
   // Generate sitemap for crawling
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,6 +41,14 @@ exports.handler = async () => {
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
+=======
+
+
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+
+ursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
@@ -51,12 +63,15 @@ exports && exports.handler = async () => {
     if (stdout) logs && logs.push(stdout),
     if (stderr) logs && logs.push(stderr),
     logs && logs.push(`exit=${status}`),
+<<<<<<< HEAD
     return status
   }
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return status
   }
@@ -65,11 +80,17 @@ exports && exports.handler = async () => {
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
@@ -80,6 +101,7 @@ exports && exports.handler = async () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -96,6 +118,8 @@ exports && exports.handler = async () => {
 },
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
@@ -109,12 +133,18 @@ exports && exports.handler = async () => {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description
@@ -158,7 +188,6 @@ function log_step() {
   // Attempt to push any changes;
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-=======
   logStep('git:sync', () => runNode('automation/git-sync.cjs'))
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
@@ -166,4 +195,4 @@ function log_step() {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

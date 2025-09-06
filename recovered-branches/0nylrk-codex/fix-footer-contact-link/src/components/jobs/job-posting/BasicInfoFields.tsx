@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   FormField,;
   FormItem,;
@@ -6,11 +9,15 @@ import {;
   FormControl,;
   FormMessage,;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormField,
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
   FormMessage,;
 
 
@@ -43,6 +50,9 @@ import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecomm
 import { Card, CardContent } from "@/components/ui/card";
 
 import React, { useState } from './react';
+=======
+  FormMessage,;import React, { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Control  } from './react - hook - form';
 import {
   FormField,
@@ -53,6 +63,7 @@ import {
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
+<<<<<<< HEAD
 import { Card, CardContent  } from '@/components / ui / card';
 
 } from "@/components/ui/form";
@@ -60,6 +71,9 @@ import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from "react",
+=======
+import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Control } from "react-hook-form",
 import { 
   FormField,
@@ -72,6 +86,7 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
 
 
 interface BasicInfoFieldsProps {
@@ -83,6 +98,8 @@ interface BasicInfoFieldsProps {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="space-y-4">
       <FormField
@@ -120,6 +137,7 @@ import {;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",;
 
 interface BasicInfoFieldsProps {;
@@ -339,6 +357,9 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 
 
         <FormField
+=======
+import { Card, CardContent } from "@/components/ui/card",;        <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           control={control}
           name="budgetMax"
           render={({ field: { onChange, ...rest } }) => (;
@@ -346,6 +367,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormLabel>Budget (Max)</FormLabel>;
               <FormControl>;
                 <Input
+<<<<<<< HEAD
                   type="number"
 
 
@@ -364,13 +386,24 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     setMaxBudget(e.target.value);
                     setMaxBudget(e.target.value);
                     setMaxBudget(e.target.value);
+=======
+                  type="number"                  value={maxBudget || rest.value}
+                  onChange={(e) => {
+                  onChange={e => {;
+
+                    setMaxBudget(e.target.value);                    setMaxBudget(e.target.value);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   placeholder="e && e.g. 60"
                   value={maxBudget || rest && rest.value}
                   onChange={(e) => {;
                     setMaxBudget(e && e.target.value);
+<<<<<<< HEAD
                     onChange(e);
                     onChange(e);
                     onChange(e);
+=======
+                    onChange(e);                    onChange(e);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </FormItem>)}
         />;
         <FormField;
@@ -389,6 +422,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     on_change (e);
                   }}
                   {...rest}
+<<<<<<< HEAD
                 />;
               </FormControl>;
               <FormMessage />;
@@ -526,6 +560,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 <Card>
                   }}
                   {...rest}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -535,6 +571,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
       
       <Card>
         <CardContent className="pt-4">
@@ -548,18 +585,28 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         </CardContent>
       </Card>
             onSuggestionApplied={handleSuggestionApplied}
+=======
+                  onSuggestionApplied={handleSuggestionApplied}
+          />
+        </CardContent>
+      </Card>            onSuggestionApplied={handleSuggestionApplied}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           />;
         </CardContent>;
       </Card>;
 
       <FormField
         control={control}
+<<<<<<< HEAD
         name="location"
 ;
       <FormField;
         control={control}
         name="location";
       <FormField
+=======
+        name="location"      <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         control={control}
         name="location"
         render={({ field }) => (;
@@ -567,8 +614,12 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormLabel>Location</FormLabel>;
             <FormControl>;
               <Input
+<<<<<<< HEAD
                 placeholder="e && e.g. Remote, San Francisco, etc."
                 {...field}
+=======
+                placeholder="e && e.g. Remote, San Francisco, etc."                {...field}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               />;
             </FormControl>;
             <FormMessage />;
@@ -577,6 +628,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
       />;
     </div>);
 }
+<<<<<<< HEAD
 ;
       <FormField
         control={control}
@@ -659,3 +711,6 @@ return (<div className="space-y-4" > <FormField control= {
 };
 };
 };
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

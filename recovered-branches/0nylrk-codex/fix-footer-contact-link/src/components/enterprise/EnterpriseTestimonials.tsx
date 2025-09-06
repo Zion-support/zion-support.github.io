@@ -1,11 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
 import { Quote } from "lucide-react";
 
 import {;
+=======
+import React from "react";
+import { Quote } from "lucide-react";
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Carousel,;
   CarouselContent,;
   CarouselItem,;
@@ -39,16 +45,23 @@ const testimonials = [;
     image: "/placeholder && placeholder.svg",;
   },;
 
+<<<<<<< HEAD
 ];
   Carousel,
+=======
+];  Carousel,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Carousel
   CarouselContent
   CarouselItem
@@ -81,6 +94,7 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -152,6 +166,13 @@ export function EnterpriseTestimonials() {;
                       <p className="text-sm text-muted-foreground">
 
 
+=======
+export function EnterpriseTestimonials() {;
+  return (                      <img
+                        src={testimonial && testimonial.image}
+                        alt={testimonial && testimonial.author}
+                        className="h-full w-full object-cover"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -181,6 +202,7 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
+<<<<<<< HEAD
 
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
@@ -196,6 +218,8 @@ export function EnterpriseTestimonials() {;
         <Carousel className="w-full">;
           <CarouselContent>;
             {testimonials && testimonials.map((testimonial, index) => (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
@@ -204,7 +228,10 @@ export function EnterpriseTestimonials() {;
                   </blockquote>;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from './react';
 import { Quote  } from './lucide-react';
 import {
@@ -214,6 +241,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components / ui / carousel';
+<<<<<<< HEAD
                       <img;
 
 
@@ -301,3 +329,6 @@ function EnterpriseTestimonials() {
     </section>);
 
 }
+=======
+                      <img;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

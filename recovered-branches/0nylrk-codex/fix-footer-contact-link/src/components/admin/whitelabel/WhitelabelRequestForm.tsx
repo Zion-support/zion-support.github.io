@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
           headline: values.headline
           subtitle: values.subtitle
@@ -13,6 +14,12 @@
 
 
       // Submit to Supabase
+=======
+          headline: values.headline
+          subtitle: values.subtitle
+          cta: values.cta}
+      }      // Submit to Supabase
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase
         .from('whitelabel_tenants')
         .insert(tenantData)
@@ -29,6 +36,7 @@
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+<<<<<<< HEAD
 
 import {useForm} from 'react-hook-form';
 import {z} from 'zod';
@@ -41,11 +49,18 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
+=======
+  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
 
   };
 
+<<<<<<< HEAD
   };
+=======
+=======  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -59,6 +74,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
 import { toast } from '@/hooks/use-toast',;
 import { supabase } from '@/integrations/supabase/client',;
+<<<<<<< HEAD
 
 // Form schema;
 const formSchema = z && z.object({;
@@ -144,6 +160,8 @@ export function WhitelabelRequestForm() {;
         title: 'Error creating tenant';
         description: error.message || 'Something went wrong'});
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   return (
@@ -161,8 +179,11 @@ export function WhitelabelRequestForm() {;
 import React from 'react';
     }
   }
+<<<<<<< HEAD
 
   return (
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
@@ -247,6 +268,7 @@ if (throw error) {
   }
 ;
   return (
+<<<<<<< HEAD
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
         <CardTitle > Create White - Label Instance</CardTitle>;
@@ -272,6 +294,11 @@ if (throw error) {
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
+=======
+    <Card className="w - full max-w-2xl">;
+      <CardHeader>;
+        <CardTitle > Create White - Label Instance</CardTitle>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
@@ -279,13 +306,19 @@ if (throw error) {
       <CardContent>;
         <Form {...form}>;
 
+<<<<<<< HEAD
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
+=======
+          <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
+            <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <FormField;
                 control={form.control}
                 name="brand_name";
                 render={({ field }) => (
                   <FormItem>;
+<<<<<<< HEAD
                     <FormLabel > Brand Name</FormLabel>;
 
                     <FormControl>;
@@ -344,6 +377,12 @@ if (throw error) {
               <FormField
                 control={form && form.control}
                 name="primary_color"
+=======
+                    <FormLabel > Brand Name</FormLabel>;                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Custom Domain (Optional)</FormLabel>;
+                    <FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Primary Brand Color</FormLabel>;
@@ -356,15 +395,19 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
+<<<<<<< HEAD
 
               />;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </FormItem>;
                 )}
               <FormField
                 control={form && form.control}
                 name="theme_preset"
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Subdomain</FormLabel>;
@@ -443,11 +486,15 @@ if (throw error) {
 
 
                 <FormField
+=======
+                render={({ field }) => (                <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   control={form && form.control}
                   name="headline"
                       <FormControl>;
                         <Input placeholder="AI Marketplace" {...field} />;
                       </FormControl>;
+<<<<<<< HEAD
                       <FormMessage />;
 
                 />;
@@ -465,11 +512,15 @@ if (throw error) {
 
 
                 <FormField
+=======
+                      <FormMessage />;                <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   control={form.control}
                   name="cta";
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > CTA Button Text</FormLabel>;
+<<<<<<< HEAD
                   </FormItem>;
                 )}
               />;
@@ -528,12 +579,19 @@ if (throw error) {
       <CardFooter className="bg - muted / 50 text - xs text - muted - foreground">;
 
         <p>;
+=======
+                      <FormControl>;
+                        <Input placeholder="Get Started" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;        <p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
 
     </Card>);
+<<<<<<< HEAD
 }
 
     </Card>;
@@ -579,3 +637,6 @@ return (<Card className="w-full max-w-2xl" > <CardHeader> <CardTitle>Create Whit
 }
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

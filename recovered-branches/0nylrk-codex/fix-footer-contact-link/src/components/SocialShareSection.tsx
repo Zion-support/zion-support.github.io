@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
@@ -39,6 +42,7 @@ export function SocialShareSection() {
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
+<<<<<<< HEAD
   
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
@@ -61,10 +65,14 @@ export function SocialShareSection() {
 
 
   const shareLinks = [
+=======
+    const shareLinks = [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       name: "Twitter"
       icon: <Twitter className="h-5 w-5" />
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
+<<<<<<< HEAD
       onClick: shareToTwitter
 
 
@@ -82,11 +90,15 @@ export function SocialShareSection() {
 
 
     {
+=======
+      onClick: shareToTwitter    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
 
+<<<<<<< HEAD
 
     },
 
@@ -100,6 +112,9 @@ export function SocialShareSection() {
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
+=======
+    },
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }],
 
   return (
@@ -115,6 +130,7 @@ import {toast} from "./ui/use-toast";
               <Button
                 key={index}
                 className={`${link.color} text-white`}
+<<<<<<< HEAD
                 size="sm"
 
 
@@ -266,6 +282,20 @@ function SocialShareSection() {
             <p className="text - zion - slate - light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
           <div className="flex flex - wrap gap - 3">;
+=======
+                size="sm"    {;
+      name: "LinkedIn",;
+      icon: <Linkedin className="h-5 w-5" />,;
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",;
+      onClick: shareToLinkedIn;    <section className="py - 12 bg - zion-blue">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+        <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p-6">;
+          <div>;
+            <h3 className="text - xl font - bold text - white mb-2">Share Zion with Your Network</h3>;
+            <p className="text - zion - slate-light">Help others discover the future of AI & tech marketplace</p>;
+          </div>;
+          <div className="flex flex - wrap gap-3">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {share_links.map ((link, index) => (
               <Button;
                 key={index}
@@ -281,6 +311,7 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -368,3 +399,5 @@ export function SocialShareSection() {;
 ;
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

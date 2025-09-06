@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import { cn } from "@/lib/utils"
@@ -52,6 +53,10 @@ import {Search} from 'lucide-react';
       "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground",;
       className;
     )}
+=======
+import { cn } from "@/lib/utils"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {...props}
   />;
 ));
@@ -62,16 +67,20 @@ Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayNam
 
 interface CommandDialogProps;
 
+<<<<<<< HEAD
 
 
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {;
 Command.displayName = CommandPrimitive.displayName;
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
+<<<<<<< HEAD
 
     <Dialog {...props}>
       <DialogContent className='overflow-hidden p-0 shadow-lg'>
@@ -81,6 +90,8 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Dialog {...props}>;
       <DialogContent className='overflow-hidden p-0 shadow-lg'>;
@@ -91,6 +102,7 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
     </Dialog>;
   );
 
+<<<<<<< HEAD
 
 
 
@@ -99,6 +111,11 @@ const CommandInput = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
 
 >(({ className, ...props }, ref) => (
+=======
+const CommandInput = React.forwardRef<
+  React.ElementRef<typeof CommandPrimitive.Input>,
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>>(({ className, ...props }, ref) => (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />
     <CommandPrimitive.Input
@@ -109,6 +126,7 @@ const CommandInput = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <div className='flex items-center border-b px-3' cmdk-input-wrapper=''>;
     <Search className='mr-2 h-4 w-4 shrink-0 opacity-50' />;
+<<<<<<< HEAD
     <CommandPrimitive&& CommandPrimitive.Input
       ref={ref}
       className={cn(
@@ -125,11 +143,17 @@ const CommandInput = React && React.forwardRef<;
 
 
 const CommandList = React.forwardRef<
+=======
+    <CommandPrimitive&& CommandPrimitive.Inputconst CommandList = React.forwardRef<
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   React.ElementRef<typeof CommandPrimitive.List>
   React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive.List>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.List
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 CommandInput && CommandInput.displayName = CommandPrimitive && CommandPrimitive.Input.displayName;
 
 const CommandList = React && React.forwardRef<;
@@ -137,6 +161,7 @@ const CommandList = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<type</typeof>of CommandPrimitive && CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
 
+<<<<<<< HEAD
 ;
 import {cn} from '@/lib / utils';
 import {Dialog, DialogContent} from '@/components / ui / dialog';
@@ -245,6 +270,8 @@ const CommandEmpty = React.forward_ref<;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref={ref}
     className='py - 6 text - center text - sm';
     {...props}
@@ -289,12 +316,15 @@ const CommandGroup = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Group>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Group;
+<<<<<<< HEAD
     ref={ref}
     className='py - 6 text - center text - sm';
     {...props}
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     ref={ref}
     className={cn(
@@ -316,17 +346,23 @@ const CommandGroup = React && React.forwardRef<;
   />;
 ));
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const CommandSeparator = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Separator>
   React.Compone</typeof>ntPropsWithoutRef<typeof CommandPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref={ref}
     className={cn('-mx-1 h-px bg-border', className)}
     {...props}
@@ -346,6 +382,7 @@ const CommandItem = React && React.forwardRef<;
  </typeof> React && React.ComponentPropsWithoutRef<typeof CommandPrimitive && CommandPrimitive.Item>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive&& CommandPrimitive.Separator
+<<<<<<< HEAD
   <CommandPrimitive&& CommandPrimitive.Item
 
 
@@ -401,6 +438,8 @@ export {;
   CommandItem,;
   CommandShortcut,;
   />));
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 CommandEmpty.display_name = CommandPrimitive.Empty.display_name;
 ;
@@ -427,13 +466,19 @@ const CommandSeparator = React.forward_ref<;
     ref={ref}
     className={cn ('-mx - 1 h - px bg - border', class_name)}
     {...props}
+<<<<<<< HEAD
 
 const CommandSeparator = React.forwardRef<;
+=======
+      className
+    )}const CommandSeparator = React.forwardRef<;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   React.ElementRef<typeof CommandPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Separator;
 
+<<<<<<< HEAD
 
 
     ref={ref}
@@ -467,6 +512,11 @@ const CommandItem = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.Item;
 
+=======
+    {...props}
+  />
+));
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     ref={ref}
     className={cn(
@@ -474,11 +524,15 @@ const CommandItem = React.forwardRef<;
       className
     )}
     {...props}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   />
 
 ))
 
+<<<<<<< HEAD
 
 CommandItem && CommandItem.displayName = CommandPrimitive && CommandPrimitive.Item.displayName;
 
@@ -563,3 +617,9 @@ export {
   CommandSeparator,
 }
 ;
+=======
+  CommandSeparator,
+};
+  CommandSeparator}
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

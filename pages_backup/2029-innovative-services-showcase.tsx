@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { 
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
-  Phone, Mail, MapPin
-} from 'lucide-react',;
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-
-export default function InnovativeServicesShowcase2029() {
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-=======
   Brain,
   Atom,
   Target,
@@ -40,76 +8,12 @@ import { motion } from 'framer-motion';
   Mail,
   MapPin,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-<<<<<<< HEAD
-export default function InnovativeServicesShowcase2029() {
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029
-    ...emergingTechBreakthroughServices2029
-    ...practicalBusinessSolutionServices2029
-      icon: Brain
-      color: 'from-violet-600 via-purple-600 to-indigo-600'
-      services: aiAutonomousEcosystemServices2029
-    }
-    {
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star,
-  Phone, Mail, MapPin;
-} from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components / layout / UltraFuturisticFooter2029',
-import { aiAutonomousEcosystemServices2029 } from '../data / 2029 - ai - autonomous - ecosystem',
-import { emergingTechBreakthroughServices2029 } from '../data / 2029 - emerging - tech - breakthroughs',
-import { practicalBusinessSolutionServices2029 } from '../data / 2029 - practical - business - solutions',
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-},
-export default /**
- * InnovativeServicesShowcase2029 - Function description
- */
-function InnovativeServicesShowcase2029() {
-  const all_services = [;
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029;
-    {;
-      title: '⚛️ Emerging Tech Breakthroughs',;
-      icon: Atom,;
-      color: 'from-indigo-600 via-blue-600 to-cyan-600',;
-      services: emergingTechBreakthroughServices2029;
-    },;
-    {;
-      title: '🎯 Practical Business Solutions',;
-      icon: Target,;
-      color: 'from-cyan-600 via-teal-600 to-emerald-600',;
-      services: practicalBusinessSolutionServices2029;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-  ],
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="container mx-auto px-4 text-center">
-=======
 
 };
 
@@ -165,7 +69,7 @@ services: practicalBusinessSolutionServices2029,
         {/* Hero Section */}
         <section className='py-32 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -186,39 +90,6 @@ services: practicalBusinessSolutionServices2029,
 <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
                 2029 Innovative Services
               </h1>
-<<<<<<< HEAD
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems
-
-                Experience the future of technology with our revolutionary AI autonomous ecosystems,
-        <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-  ],
-  return (
-    <>;
-      <Head>;
-        <title > 2029 Innovative Services Showcase - Zion Tech Group</title>;
-        <meta name="description" content="Discover our cutting - edge 2029 innovative services including AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transform your business with next - generation technology." />;
-        <meta name="keywords" content="2029 services, AI autonomous, emerging technology, business solutions, Zion Tech Group" />;
-        <link rel="canonical" href="https://ziontechgroup.com / 2029 - innovative - services - showcase" />;
-      </Head>;
-      <div className="min - h-screen bg - black text - white">;
-        <UltraFuturisticNavigation2029 />;
-        {/* Hero Section */}
-        <section className="py - 32 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-                Experience the future of technology with our revolutionary AI autonomous ecosystems,
-=======
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
                 Experience the future of technology with our revolutionary AI
                 autonomous ecosystems, emerging tech breakthroughs, and
@@ -236,7 +107,7 @@ services: practicalBusinessSolutionServices2029,
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
                 >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -252,42 +123,6 @@ services: practicalBusinessSolutionServices2029,
           </div>
         </section>
         {/* Services Overview */}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-        {/* Services Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Revolutionary Service Categories
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-
-
-
-
-                revolutionize different aspects of business and technology.
-=======
 <section
           id='services'
           className='py-20 bg-gradient-to-b from-black to-gray-900'
@@ -307,7 +142,7 @@ viewport={{ once: true }}
                 Our 2029 services are organized into three cutting-edge
                 categories, each designed to revolutionize different aspects of
                 business and technology.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 
@@ -330,15 +165,6 @@ viewport={{ once: true }}
                     >
                       <category.icon className='w-8 h-8 text-white' />
                     </div>
-<<<<<<< HEAD
-                    <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                    <p className="text-gray-300 mb-6">
-
-
-
-
-                      and accelerate your success in the digital age.
-=======
                     <h3 className='text-2xl font-bold text-white mb-4'>
                       {category.title}
                     </h3>
@@ -346,7 +172,7 @@ viewport={{ once: true }}
                       {category.services.length} cutting-edge services designed
                       to transform your business and accelerate your success in
                       the digital age.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                     <div className='text-sm text-gray-400'>
                       Starting from $
@@ -359,50 +185,6 @@ viewport={{ once: true }}
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 bg-black">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }} className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Featured Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-
-
-
-
-                and creating new possibilities for businesses worldwide.
-=======
               ))}
             </div>
           </div>
@@ -424,7 +206,7 @@ viewport={{ once: true }}
                 Explore our most innovative and transformative services that are
                 reshaping industries and creating new possibilities for
                 businesses worldwide.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
 
@@ -465,15 +247,6 @@ viewport={{ once: true }}
                   <div className='flex flex-wrap gap-2 mb-6'>
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
-<<<<<<< HEAD
-                        key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
-
-
-                  </div>
-
-
-                  <div className="flex gap-4">
-=======
                         key={catIndex}
                         className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
                       >
@@ -483,7 +256,7 @@ viewport={{ once: true }}
                   </div>
 
 <div className='flex gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       href={`/services/${service.id}`}
                       className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
@@ -499,31 +272,6 @@ viewport={{ once: true }}
                     </Link>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }} className="text-center mt-16">
-=======
               ))}
             </div>
             <motion.div
@@ -533,7 +281,7 @@ viewport={{ once: true }}
 viewport={{ once: true }}
               className='text-center mt-16'
             >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Link
                 href='/services'
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg'
@@ -544,64 +292,15 @@ viewport={{ once: true }}
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-        <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-                Join the future of technology with our innovative 2029 services. 
-                Join the future of technology with our innovative 2029 services.
-        <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
-          <div className="container mx-auto px-4 text-center">
-=======
         {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
           <div className='container mx-auto px-4 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-        {/* Contact CTA */}
-        <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-
-
-
-
-                Contact us today to discover how we can revolutionize your business operations.
-=======
             >
 <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
                 Ready to Transform Your Business?
@@ -610,7 +309,7 @@ viewport={{ once: true }}
                 Join the future of technology with our innovative 2029 services.
                 Contact us today to discover how we can revolutionize your
                 business operations.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
 
               <div className='grid md:grid-cols-3 gap-8 mb-12'>
@@ -649,46 +348,5 @@ viewport={{ once: true }}
         <UltraFuturisticFooter2029 />
       </div>
     </>
-<<<<<<< HEAD
-            >;
-              <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
-                Join the future of technology with our innovative 2029 services.;
-                Contact us today to discover how we can revolutionize your business operations.;
-              </p>;
-              <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;
-                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
-                  <Phone className="w - 6 h - 6 text - purple - 400" />;
-                  <span>{contact_info.mobile}</span>;
-                </div>;
-                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
-                  <Mail className="w - 6 h - 6 text - blue - 400" />;
-                  <span>{contact_info.email}</span>;
-                </div>;
-                <div className="flex items - center justify - center gap - 4 text - gray - 300">;
-                  <MapPin className="w - 6 h - 6 text - green - 400" />;
-                  <span>{contact_info.address}</span>;
-                </div>;
-              </div>;
-              <div className="flex flex - wrap justify - center gap - 4">;
-                <Link;
-                  href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - full hover: from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - lg">;
-                  Contact Us Now;
-                  <ArrowRight className="ml - 2 h - 5 w - 5" />;
-                </Link>;
-                <Link;
-                  href="/pricing" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
-                  View Pricing;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        <UltraFuturisticFooter2029 />;
-
-
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

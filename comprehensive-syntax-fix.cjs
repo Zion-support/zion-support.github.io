@@ -1,11 +1,56 @@
 
 
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
           content = content.replace(/
+=======
+const { execSync } = require('child_process');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixMergeConflicts() {
+    this.log('🔧 Fixing merge conflicts...');
+    
+    const files = [
+      'tsconfig.json',
+      '.eslintrc.js',
+      'package.json'
+    ];
+
+    for (const file of files) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          
+          // Remove merge conflict markers
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -260,6 +305,43 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
+<<<<<<< HEAD
+=======
+ursor/automate-test-improve-and-merge-code-59d5
+const { execSync } = require('child_process');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           content = content.replace(/
 
+<<<<<<< HEAD
+=======
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixMergeConflicts() {
+    this.log('🔧 Fixing merge conflicts...');
+    
+    const files = [
+      'tsconfig.json',
+      '.eslintrc.js',
+      'package.json'
+    ];
+
+    for (const file of files) {
+      const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+        try {
+          let content = fs.readFileSync(filePath, 'utf8');
+          
+          // Remove merge conflict markers
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

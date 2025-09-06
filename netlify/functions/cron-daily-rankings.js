@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
           0
@@ -55,10 +58,15 @@ if ( {) {
         repo,
         path: 'data / marketplace / rankings - daily.json',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         content,
         message: 'chore (automation): daily rankings update',
         token,
@@ -68,9 +76,12 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 exports.handler = async function() {
   try {
@@ -78,14 +89,13 @@ exports.handler = async function() {
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
     const entries = Object.values(users).map((u) => ({
-=======
       statusCode: 200
       body: JSON.stringify({ ok: true, topCount: top.length })
     }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       userId: u.userId,
       name: u.name || u.userId,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc, p) => acc + (p.percent || 0), 0)
@@ -104,10 +114,15 @@ exports.handler = async function() {
       name: u.name || u.user_id,
       points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
@@ -116,6 +131,7 @@ exports.handler = async function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -124,20 +140,25 @@ exports.handler = async function() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
   $2
 }
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
-=======
 
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2);
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+<<<<<<< HEAD
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
@@ -148,6 +169,8 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -182,15 +205,15 @@ if ( {) {
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, topCount: top && top.length }) }
 
-=======
 
 
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -217,3 +240,11 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

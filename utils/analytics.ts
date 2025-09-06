@@ -20,7 +20,10 @@ export async function trackEvent(payload: TrackEventPayload) {
     console.error('Failed to track event:', error);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
   name: string;
@@ -44,16 +47,22 @@ function track_event() {
 
   }
 }
+<<<<<<< HEAD
 
 
 
 
     await fetch('/api/analytics/events/track', {;
+=======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
 
+<<<<<<< HEAD
 
   }
 }
@@ -67,6 +76,10 @@ export async function trackEvent(payload: TrackEventPayload) {;
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+=======
+  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -78,6 +91,7 @@ export async function trackEvent(payload: TrackEventPayload) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 
@@ -85,3 +99,6 @@ export async function trackEvent(payload: TrackEventPayload) {;
 }
   }
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -5,10 +5,20 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
+<<<<<<< HEAD
+=======
+console.log('==');
+
+console.log('==');
+console.log('=====================================');
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
 
     .replace(/
     .replace(/
@@ -16,6 +26,25 @@ function removeMergeConflictMarkers(content) {
 
     .replace(/
 }
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+
+
+
+
+
+
+    .replace(/[a-f0-9]+/g, '');
+}
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -95,8 +124,19 @@ function processFile(filePath) {
 
     // Check for merge conflict markers
 
+<<<<<<< HEAD
     if (content.includes('
 
+=======
+
+
+
+
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             files.push(fullPath);
           }
         } catch (error) {
@@ -140,6 +180,11 @@ function processFile(filePath) {
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
+<<<<<<< HEAD
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Main execution
 async function main() {

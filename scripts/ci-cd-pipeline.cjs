@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require('child_process')
 console.log(' Starting CI/CD Pipeline...')
@@ -64,3 +70,8 @@ console.log(' Starting CI/CD Pipeline...')
 // console.log(`   - Successful "Stages"`)
 console.log(`   - Failed "Stages"`)
 
+<<<<<<< HEAD
+=======
+  console.log('� Application "URL")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

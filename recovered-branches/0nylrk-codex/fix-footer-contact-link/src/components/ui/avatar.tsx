@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Avatar = React.forwardRef<
@@ -22,6 +29,7 @@ const Avatar = React && React.forwardRef<;
 ></typeof>(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Root
     ref={ref}
+<<<<<<< HEAD
     className={cn(
 
 
@@ -39,19 +47,32 @@ const Avatar = React && React.forwardRef<;
 
 
 
+=======
+    className={cn(    {...props}
+  />;
+));
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <AvatarPrimitive.Image
 const AvatarImage = React.forwardRef<;
+=======
+  <AvatarPrimitive.Imageconst AvatarImage = React.forwardRef<;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
@@ -109,13 +130,20 @@ const AvatarImage = React.forward_ref<;
     ref={ref}
     className={cn ('aspect - square h - full w - full', class_name)}
     {...props}
+<<<<<<< HEAD
 
 const AvatarImage = React.forwardRef<;
+=======
+    ref={ref}
+    className={cn(
+      'flex h-full w-full items-center justify-center rounded-full bg-muted'const AvatarImage = React.forwardRef<;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
 
+<<<<<<< HEAD
 
 
     ref={ref}
@@ -241,3 +269,5 @@ export { Avatar, AvatarImage, AvatarFallback }
 export { Avatar, AvatarImage, AvatarFallback };
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

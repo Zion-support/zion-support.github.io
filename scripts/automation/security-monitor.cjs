@@ -228,3 +228,8 @@ class $1 {}
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 
+<<<<<<< HEAD
+=======
+monitor.run().catch(console.error);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

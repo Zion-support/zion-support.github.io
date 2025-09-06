@@ -8,6 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
@@ -30,6 +31,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  const data = readJsonFile('updates && updates.json', [] as any[]);
+  res && res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+  const data = readJsonFile('updates && updates.json', [] as any[]);
+  res && res.status(200).json(data)
+}
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -52,6 +70,7 @@ function handler() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +80,12 @@ function handler() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -79,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -89,3 +115,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

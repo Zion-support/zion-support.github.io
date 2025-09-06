@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
   const u = updates.find((x: any) => x.id === id),
@@ -18,12 +21,12 @@ import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 import PDFDocument from "pdfkit";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -41,6 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
@@ -50,6 +55,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
@@ -69,19 +78,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     `attachment, filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
   );
   const doc = new PDFDocument({ size: "A4", margin: 50 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
   const id = null;
   doc.end()
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -94,6 +105,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -102,6 +114,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -129,28 +144,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
-=======
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
 }
-=======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -161,6 +183,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -201,6 +227,7 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -215,6 +242,13 @@ function handler() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  doc.end();
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   doc.end();
 
 
@@ -222,13 +256,18 @@ function handler() {
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
   doc.end();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -241,3 +280,11 @@ doc.end();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+doc.end();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

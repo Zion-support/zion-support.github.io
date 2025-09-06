@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Resume  } from '@/types/resume';
 import { jsPDF  } from 'jspdf';
 import 'jspdf-autotable';
@@ -11,6 +14,7 @@ import { addWorkExperienceSection  } from './sections/workExperienceSection';
 import { addEducationSection  } from './sections/educationSection';
 import { addCertificationsSection  } from './sections/certificationsSection';
 import { addPortfolioSection } from './sections/portfolioSection';
+<<<<<<< HEAD
 export interface ExportOptions {
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
@@ -27,6 +31,9 @@ export interface ExportOptions {;
 
 
   theme: 'light' | 'dark';
+=======
+export interface ExportOptions {  theme: 'light' | 'dark';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   includePortfolio?: boolean;
 
   maxProjects?: number
@@ -42,12 +49,18 @@ export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
 
+<<<<<<< HEAD
 
 
 ): Promise<Blob> {;
   const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
 
 
+=======
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -59,6 +72,7 @@ export async function exportResumeToPDF(
   await loadCustomFonts(doc, fontFamily);
   // Set up colors based on theme
   const colors = getPdfThemeColors(theme);
+<<<<<<< HEAD
   // Set background color
 
   doc && doc.setFillColor(colors && colors.background);
@@ -107,6 +121,9 @@ const default_options: ExportOptions = {
   max_projects: 2,
   font_family: 'default';
 }
+=======
+  // Set background color}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export async function exportResumeToPDF (
   resume: Resume,
@@ -149,6 +166,7 @@ if ( {) {
     current_y = addPortfolioSection (doc, resume.portfolio_projects, colors, current_y, max_projects);
   }
   return doc.output ('blob');
+<<<<<<< HEAD
 }
 
 import { Resume } from '@/types/resume',;
@@ -245,3 +263,6 @@ export async function exportResumeToPDF(;
   }
   return doc.output('blob')
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

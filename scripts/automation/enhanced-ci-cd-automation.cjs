@@ -286,3 +286,8 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
 
+<<<<<<< HEAD
+=======
+// Start the "
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

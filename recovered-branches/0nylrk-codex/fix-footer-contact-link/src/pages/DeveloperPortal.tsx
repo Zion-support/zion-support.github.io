@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import {
@@ -16,6 +17,25 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager";
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
 import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
+=======
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { 
+  BookOpen,
+  Code, 
+  Key, 
+  List, 
+  LucideIcon, 
+  Terminal, 
+  Webhook 
+} from "lucide-react",
+
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",interface TabDefinition {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   label: string;
   icon: LucideIcon;
@@ -31,7 +51,10 @@ export function DeveloperPortal() {;
 
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -42,6 +65,7 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
+<<<<<<< HEAD
 
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
@@ -76,6 +100,11 @@ export function DeveloperPortal() {
             const Icon = tab.icon,
 
             return (
+=======
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+              return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <button
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
@@ -85,6 +114,7 @@ export function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
 
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
@@ -257,3 +287,9 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 ;
+=======
+      <div className="border - b border - zinc - 800 mb-8">;
+        <div className="flex flex - wrap -mb-px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

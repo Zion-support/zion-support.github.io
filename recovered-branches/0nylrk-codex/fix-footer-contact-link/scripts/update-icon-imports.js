@@ -11,6 +11,7 @@ const glob = require ('glob'),
 /**
 
  * 
+<<<<<<< HEAD
  * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
 
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
@@ -117,6 +118,12 @@ console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
  * updateIconImportsInFile - Function description
+=======
+ * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
+    )
+    // Only write if changes were made
+    if (content !== updatedContent) { * updateIconImportsInFile - Function description
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  */
 function updateIconImportsInFile() {
   try {
@@ -153,7 +160,10 @@ if (updated_files++) {
 console.log (`\n🎉 Updated icon imports in ${updated_files} files`),
 console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
@@ -201,6 +211,7 @@ console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+<<<<<<< HEAD
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
 // Find all TypeScript/JavaScript/JSX/TSX files;
@@ -237,3 +248,6 @@ files.forEach (file => {
   const updated = updateIconImportsInFile (file);
 if (updated) updatedFiles++ 
 });
+=======
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

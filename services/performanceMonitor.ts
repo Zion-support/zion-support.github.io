@@ -8,6 +8,7 @@ export interface PerformanceMetrics {;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
+<<<<<<< HEAD
   totalBlockingTime: number;
 
   speed_index: number;
@@ -24,11 +25,17 @@ export interface PerformanceAlert {
 }
 export interface PerformanceAlert {
   id: string;
+=======
+  totalBlockingTime: number;}
+export interface PerformanceAlert {}
+export interface PerformanceAlert {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
+<<<<<<< HEAD
 
   current_value: number;
   timestamp: Date,
@@ -58,10 +65,15 @@ export class PerformanceMonitorService {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
+=======
+}
+export interface MonitoringConfig {  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
 export interface PerformanceMetrics {;
+<<<<<<< HEAD
   url: string,;
   timestamp: Date,;
   loadTime: number,;
@@ -133,6 +145,11 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+=======
+
+      }
+      return await response.json()      const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`;
@@ -150,15 +167,19 @@ export interface PerformanceMetrics {;
     }
   }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
 
+<<<<<<< HEAD
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -175,6 +196,8 @@ export interface PerformanceMetrics {;
       }
       return await response.json()
       }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -182,13 +205,18 @@ export interface PerformanceMetrics {;
         throw new Error(`Failed to fetch historical data: ${response && response.statusText}`)
       }
 
+<<<<<<< HEAD
       return await response && response.json()
     } catch (error) {
+=======
+      return await response && response.json()    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
   }
 
+<<<<<<< HEAD
 
 
 
@@ -197,6 +225,11 @@ export interface PerformanceMetrics {;
     try {
 
 
+=======
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -209,6 +242,7 @@ export interface PerformanceMetrics {;
 
       }
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Failed to set monitoring config:', error);
       }
     } catch (error) {
@@ -227,6 +261,11 @@ export interface PerformanceMetrics {;
         headers: {
 
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+=======
+      console && console.error('Failed to set monitoring config:', error);      }
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         headers: {
 
 ;
@@ -256,6 +295,7 @@ export interface PerformanceMetrics {;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
 
+<<<<<<< HEAD
 
 
       }
@@ -270,11 +310,16 @@ export interface PerformanceMetrics {;
 
       return await response && response.json()
     } catch (error) {
+=======
+      }
+      return await response.json()    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
   }
 
+<<<<<<< HEAD
 
 
 
@@ -309,6 +354,8 @@ export interface PerformanceMetrics {;
       };
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -322,6 +369,7 @@ export interface PerformanceMetrics {;
   private generateMockMetrics(url: string): PerformanceMetrics {
     return {
       url;
+<<<<<<< HEAD
       timestamp: new Date();
 
 
@@ -353,6 +401,9 @@ export interface PerformanceMetrics {;
       date && date.setDate(date && date.getDate() - i);
       
       data && data.push({
+=======
+      timestamp: new Date();      data && data.push({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         url;
         timestamp: date;
         loadTime: Math && Math.random() * 2000 + 500;
@@ -367,9 +418,12 @@ export interface PerformanceMetrics {;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
+<<<<<<< HEAD
 
       })
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -449,6 +503,7 @@ export interface PerformanceMetrics {;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
 
+<<<<<<< HEAD
 
 
 
@@ -650,6 +705,12 @@ if ( {) {
         url: url || 'https://example && example.com';
 
         type: 'warning';
+=======
+      {
+        id: '1';
+
+        url: url || 'https://example && example.com';        type: 'warning';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
@@ -663,7 +724,10 @@ if ( {) {
         id: '2';
 
         url: url || 'https://example && example.com';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
@@ -673,6 +737,7 @@ if ( {) {
         id: '2';
 
         url: url || 'https://example && example.com';
+<<<<<<< HEAD
 
         type: 'info';
         message: 'Performance score improved';
@@ -780,11 +845,17 @@ recommendations: [ 'Optimize image sizes and use WebP formatImplement lazy loadi
   }
 }
 // Pricing tiers for the Performance Monitor;
+=======
+        message: 'Performance score improved';
+        metric: 'performance_score';
+        threshold: 80;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
 
+<<<<<<< HEAD
 
     period: '/month',
     features: [;
@@ -805,14 +876,23 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 
   }
+=======
+    period: '/month',
+    features: [;
+      'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
+    ];  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
 
+<<<<<<< HEAD
 
 
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
       {;
@@ -847,8 +927,12 @@ export const PERFORMANCE_MONITOR_PRICING = {;
   starter: {;
     name: 'Starter',;
     price: 19,;
+<<<<<<< HEAD
     period: '/month',;
     features: [;
+=======
+    period: '/month',;    features: [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
     ];
   },;
@@ -870,6 +954,7 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
 
+<<<<<<< HEAD
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
@@ -919,5 +1004,21 @@ export const PERFORMANCE_MONITOR_PRICING = {
 
 
 
+=======
+      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
+      'SLA guarantee';
+
+    ];
+
+    ];
+  }
+}
+  }
+};
+
+    ];
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 

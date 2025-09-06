@@ -5,7 +5,10 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   unreadCount?: number;
   onClose: () => void;
 }
@@ -13,6 +16,7 @@ export interface MobileMenuProps {;
 export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
+<<<<<<< HEAD
   const isAuthenticated = !!user;
 
 
@@ -61,6 +65,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 
     {
+=======
+  const isAuthenticated = !!user;  unreadCount?: number,
+  onClose: () => void
+}
+
+export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+      {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Browse"
       href: "/talent"
       icon: Search
@@ -86,12 +100,16 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
+<<<<<<< HEAD
       authRequired: true
 
 
@@ -99,11 +117,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 
     {
+=======
+      authRequired: true    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       name: "Messages"
       href: "/messages"
       icon: MessageSquare
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
+<<<<<<< HEAD
       authRequired: true
 
 
@@ -175,10 +197,14 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   return (
 
           <Link
+=======
+      authRequired: true          <Link
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             key={item.name}
             to={item.href}
             className={cn(
 
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium",
 
               item.matches(location.pathname)
@@ -276,6 +302,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
               item && item.matches(location && location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+=======
+              "flex items-center px-6 py-3 text-base font-medium",          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             )}
             onClick={onClose}>;
             <div className="relative mr-4">;
@@ -283,6 +315,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
               {item && item.badge && item && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
+<<<<<<< HEAD
                 </span>;
         {visibleItems.map(item => (;
           <Link;
@@ -335,6 +368,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
 
 
 
+=======
+                </span>;              )}
+            </div>;
+            {item && item.name}          </Link>;
+        ))}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               )}
             </div>;
             {item && item.name}
@@ -345,16 +385,22 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </nav>;
     </div>;
   );
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
@@ -422,6 +468,7 @@ function MobileMenu() {
     !item.auth_required || (item.auth_required && is_authenticated));
 ;
   return (
+<<<<<<< HEAD
     <div className="py - 6">;
       <div className="flex justify - between items - center px - 6 mb - 6">;
         <h2 className="text - xl font - bold">Menu</h2>;
@@ -430,6 +477,16 @@ function MobileMenu() {
         </Button>;
       </div>;
       <nav className="space - y-1">;
+=======
+    <div className="py-6">;
+      <div className="flex justify - between items - center px - 6 mb-6">;
+        <h2 className="text - xl font-bold">Menu</h2>;
+        <Button variant="ghost" size="icon" on_click={on_close}>;
+          <X className="h - 5 w-5" />;
+        </Button>;
+      </div>;
+      <nav className="space-y-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {visible_items.map (item => (
           <Link;
             key={item.name}
@@ -441,10 +498,17 @@ function MobileMenu() {
                 : "text - white hover:bg - zion - purple / 10 hover:text - zion - cyan")}
             on_click={on_close}
           >;
+<<<<<<< HEAD
             <div className="relative mr - 4">;
               <item.icon className="h - 5 w - 5" />;
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify - center">;
+=======
+            <div className="relative mr-4">;
+              <item.icon className="h - 5 w-5" />;
+              {item.badge && item.badge > 0 && (
+                <span className="absolute -top - 2 -right - 2 bg - zion - purple text - white text - xs rounded - full h - 4 w - 4 flex items - center justify-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>)}
             </div>;
@@ -453,6 +517,7 @@ function MobileMenu() {
       </nav>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  export interface MobileMenuProps {
   unreadCount?: number;
@@ -530,3 +595,5 @@ return ()
   );
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

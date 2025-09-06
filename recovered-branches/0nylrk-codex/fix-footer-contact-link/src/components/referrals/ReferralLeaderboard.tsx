@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -49,6 +50,13 @@ function ReferralLeaderboard() {
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
                         ? "bg-slate-200 text-slate-800"
+=======
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",                        ? "bg-slate-200 text-slate-800"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         : entry.rank === 3
                           ? "bg-amber-200 text-amber-800"
                           : "bg-muted text-muted-foreground"
@@ -56,12 +64,20 @@ function ReferralLeaderboard() {
                 >;
                   {entry.rank}
                 </div>;
+<<<<<<< HEAD
                 <span className="font - medium">{entry.name}</span>;
               </div>;
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+=======
+                <span className="font-medium">{entry.name}</span>;
+              </div>;
+              <span className="text-sm">;
+                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Award } from "lucide-react",;
 ;
 interface LeaderboardEntry {;
@@ -85,8 +101,13 @@ export function ReferralLeaderboard() {;
   return (;
     <Card>;
       <CardHeader>;
+<<<<<<< HEAD
         <CardTitle className="flex items - center gap - 2">;
           <Award className="h - 5 w - 5" />;
+=======
+        <CardTitle className="flex items - center gap-2">;
+          <Award className="h - 5 w-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Leaderboard;
         </CardTitle>;
         <CardDescription > Top referrers this month</CardDescription>;
@@ -98,6 +119,7 @@ export function ReferralLeaderboard() {;
               key={entry && entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
+<<<<<<< HEAD
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
@@ -112,6 +134,8 @@ export function ReferralLeaderboard() {;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
                       : entry && entry.rank === 2
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       ? "bg-slate-200 text-slate-800"
                       : entry && entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
@@ -123,6 +147,7 @@ export function ReferralLeaderboard() {;
               </div>;
               <span className="text-sm">;
                 {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
+<<<<<<< HEAD
               </span>;
             </div>;
           ))}
@@ -133,6 +158,8 @@ export function ReferralLeaderboard() {;
 }
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <span className="font-medium">{entry.name}</span>;
               </div>;
               <span className="text-sm">;

@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+<<<<<<< HEAD
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
@@ -10,6 +11,35 @@ export async function createJob(jobData: any) {
     throw new Error(error && error.message || "Failed to create job")
 
 
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+      .select()
+      .single();
+    if (error) throw error;
+    return data
+  } catch (error: any) {
+    console.error("Error creating job:", error);
+    throw new Error(error.message |"Failed to create job")
+      .single(),
+      
+    if (error) throw error,
+    return data
+  } catch (error: any) {
+    console.error("Error creating job:", error),
+    throw new Error(error.message || "Failed to create job")
+    console && console.error("Error creating job:", error);
+    throw new Error(error && error.message || "Failed to create job")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .select()
       .single();
 
@@ -39,6 +69,7 @@ export async function updateJob(jobId: string, jobData: any) {
 export async function getJobById(jobId: string) {
   try {
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("jobs")
       .select("*")
       .eq("id", jobId)
@@ -46,6 +77,25 @@ export async function getJobById(jobId: string) {
 
     if (error) throw error;
     return data;
+=======
+      .from('jobs')
+      .select('*')
+    return data
+  } catch (error: any) {
+    console && console.error("Error fetching job:", error);
+    toast && toast.error("Failed to load job details");
+    return null
+    const { data, error } = await supabase;
+      .from ('jobs');
+      .insert ([job_data]);
+      .select ();
+      .single ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}    return data;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error: any) {
     console.error("Error fetching job:", error);
     toast.error("Failed to load job details");
@@ -95,10 +145,15 @@ if (throw error) {
     toast.error ("Failed to load job details");
     return null;
   }
+<<<<<<< HEAD
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 ;
 
+<<<<<<< HEAD
 
   const {
   data, error 
@@ -127,4 +182,6 @@ if (throw error) {
 }
 ;
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

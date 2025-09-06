@@ -26,6 +26,7 @@ interface EquipmentSpecification {
 
 }
 
+<<<<<<< HEAD
 
 }
 // Sample data - in a real app this would come from an API
@@ -66,6 +67,17 @@ interface EquipmentDetails {;
   brand: string,;
   category: string,;
 import { useState } from './react';
+=======
+}
+// Sample data - in a real app this would come from an API
+const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
+  "pro-camera-x1000": {interface EquipmentDetails {;
+  id: string,;
+  name: string,,
+  description: string,;
+  brand: string,;
+  category: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_params } from './react-router-dom';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -92,6 +104,7 @@ interface EquipmentDetails {
   currency: string,;
   rating?: number;
 
+<<<<<<< HEAD
 
 
 }
@@ -110,12 +123,20 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
     images: [
+=======
+    images: [
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
+      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";    images: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
+<<<<<<< HEAD
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ]
     price: 6999
     currency: "$"
@@ -123,6 +144,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     reviewCount: 87
     inStock: true
     expectedShipping: "3-5 business days"
+<<<<<<< HEAD
     specifications: [
 
 
@@ -161,20 +183,31 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     ];
     features: [;
       "Advanced 8K full-frame sensor";
+=======
+    specifications: [      "Advanced 8K full-frame sensor";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "16+ stops of dynamic range";
       "Internal RAW recording";
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
+<<<<<<< HEAD
 
       "Weather-sealed magnesium alloy body",;
 
       "Multiple assist tools: false color, waveform, vectorscope";
+=======
+    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",      "Multiple assist tools: false color, waveform, vectorscope";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -188,7 +221,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -211,10 +247,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     category: "Equipment",
     subcategory: "Audio",
 
+<<<<<<< HEAD
 
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
     images: [
+=======
+    images: [
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";    images: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
     ]
@@ -233,7 +274,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       { name: "Weight", value: "32 lbs" }
     ],
     features: [
@@ -253,6 +297,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
 },
 
+<<<<<<< HEAD
 
   if (!equipment) {
     return (
@@ -283,12 +328,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
         description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
     
 
+<<<<<<< HEAD
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -300,6 +348,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
   },
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>
       <Header />
@@ -334,6 +384,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
                           className="w-full h-full object-cover"
                         />
                       </div>
+<<<<<<< HEAD
 
 ;
 // Sample data - in a real app this would come from an API;
@@ -412,6 +463,15 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Recording", value: "64-channel USB interface" },;
       { name: "Weight", value: "32 lbs" }
     ];
+=======
+    warranty: "2 years manufacturer warranty",;
+    returnPolicy: "30-day return policy for unused items in original packaging"
+};
+  "audio-mixer-pro": {;
+    id: "audio-mixer-pro",;
+    name: "AudioMixer Pro Digital Mixing Console",,
+  description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";    ];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
       "16 motorized faders with touch-sensitive control";
@@ -508,8 +568,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app";
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
+<<<<<<< HEAD
 
       "Integrated WiFi for wireless control";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ],;
     warranty: "3 years manufacturer warranty",;
     returnPolicy: "21-day return policy for items in original condition";
@@ -525,9 +588,13 @@ export default function EquipmentDetail() {;
   // In a real app, this would fetch from an API;
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
 
+<<<<<<< HEAD
   if (!equipment) {;
 
     return (
+=======
+  if (!equipment) {;    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -561,16 +628,25 @@ if ( {) {
     return (
       <>;
         <Header />;
+<<<<<<< HEAD
         <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
           <div className="container mx - auto">;
             <div className="text - center py - 20">;
               <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;
               <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
+=======
+        <div className="min - h-screen bg - zion - blue py - 12 px-4">;
+          <div className="container mx-auto">;
+            <div className="text - center py-20">;
+              <h1 className="text - 3xl font - bold text - white mb-4">Equipment Not Found</h1>;
+              <p className="text - zion - slate - light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
         </div>;
         <Footer />;
 
+<<<<<<< HEAD
 
   const handleAddToCart = () => {;
     setIsAdding(true);
@@ -601,10 +677,14 @@ if ( {) {
 
   return (
     <>;
+=======
+  return (    <>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+<<<<<<< HEAD
             {/* Left Column - Images */}
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
@@ -839,6 +919,9 @@ if ( {) {
 
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
+=======
+            {/* Left Column - Images */}            <div className="lg:col-span-1">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
                 {/* Category and Brand */}
                 <div className="flex flex-wrap gap-2 mb-3">;
@@ -857,6 +940,7 @@ if ( {) {
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
+<<<<<<< HEAD
 
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
@@ -916,11 +1000,16 @@ if ( {) {
                               ? "text-zion-cyan fill-zion-cyan" ;
                               :"text-zion-slate-light";                          }`}
                               : "text-zion-slate-light"
+=======
+                              : "text-zion-slate-light"
+                          }`}                              : "text-zion-slate-light"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           }`}
                         />;
                       ))}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
+<<<<<<< HEAD
                       {equipment && equipment.rating.toFixed(1)} ({equipment && equipment.reviewCount} reviews);
                     </span>;
                   </div>;
@@ -928,11 +1017,16 @@ if ( {) {
 
 
                 {/* Price */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="text-3xl font-bold text-white mb-4">;
                   {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
                 </div>;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {/* Stock Status */}
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;
@@ -952,6 +1046,7 @@ if ( {) {
                     </div>;
                   )}
 
+<<<<<<< HEAD
 
                     <button 
 
@@ -973,6 +1068,10 @@ if ( {) {
                     <button 
 
 
+=======
+                    <button 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -982,6 +1081,7 @@ if ( {) {
                   </div>
                 </div>
                 {/* Purchase Buttons */}
+<<<<<<< HEAD
                 <div className="space-y-3 mb-6">
 
 
@@ -1096,6 +1196,9 @@ if ( {) {
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
                 ;
                 {/* Purchase Buttons */}
+=======
+                <div className="space-y-3 mb-6">                {/* Purchase Buttons */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-3 mb-6">;
                   <Button ;
                     onClick={handleBuyNow}
@@ -1111,12 +1214,15 @@ if ( {) {
                     variant="outline";
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
                   >;
+<<<<<<< HEAD
                     <ShoppingCart className="h-4 w-4 mr-2" />;
                     Add to Cart;
                   </Button>;
                 </div>;
 
                 {/* Additional Info */}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
 
@@ -1132,10 +1238,15 @@ if ( {) {
                     </div>;
                   </div>;
 
+<<<<<<< HEAD
 
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;
                 {/* Additional Info */}
+=======
+                  {/* Warranty */}
+                  {equipment && equipment.warranty && (;                {/* Additional Info */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
                   {/* Warranty */}
@@ -1149,11 +1260,16 @@ if ( {) {
                     </div>;
                   )}
 
+<<<<<<< HEAD
 
 
                   {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;
                   {/* Return Policy */}
+=======
+                  {/* Return Policy */}
+                  {equipment && equipment.returnPolicy && (;                  {/* Return Policy */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {equipment && equipment.returnPolicy && (;
                         <p className="text-xs">{equipment.warranty}</p>;
                       </div>;
@@ -1161,6 +1277,7 @@ if ( {) {
                   ;
                   {/* Return Policy */}
                   {equipment.returnPolicy && (;
+<<<<<<< HEAD
                     <div className="flex gap-3 text-zion-slate-light">;
                       <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;
@@ -1180,16 +1297,36 @@ if ( {) {
                   </Badge>;
                   {equipment.subcategory && (
                     <Badge variant="outline" className="text - zion - slate - light border - zion - blue - light">;
+=======
+            <div className="lg:col - span-1">;
+              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top-6">;
+                {/* Category and Brand */}
+                <div className="flex flex - wrap gap - 2 mb-3">;
+                  <Badge variant="outline" className="text - zion - slate - light border - zion - blue-light">;
+                    {equipment.category}
+                  </Badge>;
+                  {equipment.subcategory && (
+                    <Badge variant="outline" className="text - zion - slate - light border - zion - blue-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {equipment.subcategory}
                     </Badge>)}
                 </div>;
                 {/* Product Title */}
+<<<<<<< HEAD
                 <h1 className="text - 2xl font - bold text - white mb - 1">{equipment.name}</h1>;
                 <p className="text - zion - cyan mb - 4">Brand: {equipment.brand}</p>;
                 {/* Rating */}
                 {equipment.rating && (
                   <div className="flex items - center gap - 2 mb - 4">;
                     <div className="flex items - center">;
+=======
+                <h1 className="text - 2xl font - bold text - white mb-1">{equipment.name}</h1>;
+                <p className="text - zion - cyan mb-4">Brand: {equipment.brand}</p>;
+                {/* Rating */}
+                {equipment.rating && (
+                  <div className="flex items - center gap - 2 mb-4">;
+                    <div className="flex items-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {[...Array (5)].map ((_, i) => (
                         <Star;
                           key={i}
@@ -1200,11 +1337,16 @@ if ( {) {
                           }`}
                         />))}
                     </div>;
+<<<<<<< HEAD
                     <span className="text - sm text - zion - slate - light">;
+=======
+                    <span className="text - sm text - zion - slate-light">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {equipment.rating.to_fixed (1)} ({equipment.review_count} reviews);
                     </span>;
                   </div>)}
                 {/* Price */}
+<<<<<<< HEAD
                 <div className="text - 3xl font - bold text - white mb - 4">;
                   {equipment.currency}{equipment.price.toLocaleString ()}
                 </div>;
@@ -1221,15 +1363,41 @@ if ( {) {
                     </div>) : (
                     <div className="text - rose - 400 flex items - center gap - 1">;
                       <span className="w - 2 h - 2 bg - rose - 400 rounded - full"></span>;
+=======
+                <div className="text - 3xl font - bold text - white mb-4">;
+                  {equipment.currency}{equipment.price.toLocaleString ()}
+                </div>;
+                {/* Stock Status */}
+                <div className="mb-6">;
+                  {equipment.in_stock ? (
+                    <div className="text - emerald - 400 flex items - center gap-1">;
+                      <span className="w - 2 h - 2 bg - emerald - 400 rounded-full"></span>;
+                      <span > In Stock</span>;
+                      {equipment.expected_shipping && (
+                        <span className="text - zion - slate - light ml - 1 text-sm">;
+                          (Ships in {equipment.expected_shipping});
+                        </span>)}
+                    </div>) : (
+                    <div className="text - rose - 400 flex items - center gap-1">;
+                      <span className="w - 2 h - 2 bg - rose - 400 rounded-full"></span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <span > Out of Stock</span>;
                     </div>)}
                 </div>;
                 {/* Quantity */}
+<<<<<<< HEAD
                 <div className="mb - 6">;
                   <label className="text - sm text - zion - slate - light block mb - 2">Quantity</label>;
                   <div className="flex items - center border border - zion - blue - light rounded - md w - 32">;
                     <button;
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+=======
+                <div className="mb-6">;
+                  <label className="text - sm text - zion - slate - light block mb-2">Quantity</label>;
+                  <div className="flex items - center border border - zion - blue - light rounded - md w-32">;
+                    <button;
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       on_click={() => set_quantity (prev => Math.max (1, prev - 1))}
                       disabled={quantity <= 1 || !equipment.in_stock}
                     >;
@@ -1237,12 +1405,20 @@ if ( {) {
                     </button>;
                     <input;
                       type="number";
+<<<<<<< HEAD
                       className="w - full text - center bg - transparent border - 0 text - white focus:ring - 0";
+=======
+                      className="w - full text - center bg - transparent border - 0 text - white focus:ring-0";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       value={quantity}
                       read_only;
                     />;
                     <button;
+<<<<<<< HEAD
                       className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity - 50";
+=======
+                      className="px - 3 py - 1 text - zion - slate - light hover:text - white disabled:opacity-50";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       on_click={() => set_quantity (prev => prev + 1)}
                       disabled={!equipment.in_stock}
                     >;
@@ -1251,11 +1427,19 @@ if ( {) {
                   </div>;
                 </div>;
                 {/* Purchase Buttons */}
+<<<<<<< HEAD
                 <div className="space - y-3 mb - 6">;
                   <Button;
                     on_click={handleBuyNow}
                     disabled={is_adding || !equipment.in_stock}
                     className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
+=======
+                <div className="space - y-3 mb-6">;
+                  <Button;
+                    on_click={handleBuyNow}
+                    disabled={is_adding || !equipment.in_stock}
+                    className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py-6";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   >;
                     {is_adding ? "Processing..." : "Buy Now"}
                   </Button>;
@@ -1263,13 +1447,20 @@ if ( {) {
                     on_click={handleAddToCart}
                     disabled={is_adding || !equipment.in_stock}
                     variant="outline";
+<<<<<<< HEAD
                     className="w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10";
                   >;
                     <ShoppingCart className="h - 4 w - 4 mr - 2" />;
+=======
+                    className="w - full border - zion - purple text - zion - cyan hover:bg - zion-purple / 10";
+                  >;
+                    <ShoppingCart className="h - 4 w - 4 mr-2" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     Add to Cart;
                   </Button>;
                 </div>;
                 {/* Additional Info */}
+<<<<<<< HEAD
                 <div className="space - y-4 border - t border - zion - blue - light pt - 4">;
                   {/* Shipping */}
                   <div className="flex gap - 3 text - zion - slate - light">;
@@ -1277,15 +1468,32 @@ if ( {) {
                     <div>;
                       <p className="text - white text - sm font - medium">Free Shipping</p>;
                       <p className="text - xs">For orders over $100 within the US</p>;
+=======
+                <div className="space - y-4 border - t border - zion - blue - light pt-4">;
+                  {/* Shipping */}
+                  <div className="flex gap - 3 text - zion - slate-light">;
+                    <Truck className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
+                    <div>;
+                      <p className="text - white text - sm font-medium">Free Shipping</p>;
+                      <p className="text-xs">For orders over $100 within the US</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </div>;
                   </div>;
                   {/* Warranty */}
                   {equipment.warranty && (
+<<<<<<< HEAD
                     <div className="flex gap - 3 text - zion - slate - light">;
                       <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
                       <div>;
                         <p className="text - white text - sm font - medium">Warranty</p>;
                         <p className="text - xs">{equipment.warranty}</p>;
+=======
+                    <div className="flex gap - 3 text - zion - slate-light">;
+                      <Shield className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
+                      <div>;
+                        <p className="text - white text - sm font-medium">Warranty</p>;
+                        <p className="text-xs">{equipment.warranty}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </div>;
                     </div>)}
                   {/* Return Policy */}
@@ -1320,6 +1528,7 @@ if ( {) {
                     </div>
                   )}
                   {equipment.return_policy && (
+<<<<<<< HEAD
                     <div className="flex gap - 3 text - zion - slate - light">;
                       <RotateCcw className="h - 5 w - 5 text - zion - cyan flex - shrink - 0" />;
                       <div>;
@@ -1479,3 +1688,12 @@ if (!equipment) {
   );
 }
 ;
+=======
+                    <div className="flex gap - 3 text - zion - slate-light">;
+                      <RotateCcw className="h - 5 w - 5 text - zion - cyan flex - shrink-0" />;
+                      <div>;
+                        <p className="text - white text - sm font-medium">Returns</p>;
+                        <p className="text-xs">{equipment.return_policy}</p>;
+                      </div>;
+                    </div>)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

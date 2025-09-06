@@ -6,6 +6,7 @@ interface IntegrationState {
 let state: IntegrationState = {
   connections: [],
   logs: [],
+<<<<<<< HEAD
   overrides: [],
   connections: [],
   logs: [],
@@ -18,11 +19,19 @@ export function get_state (): IntegrationState {
 }
 export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
   updater (state);
+=======
+  overrides: [],}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 export function getState(): IntegrationState {;
   return { ...state };
 }
+<<<<<<< HEAD
 
 export function writeState(
   updater: (state: IntegrationState) => void,
@@ -66,3 +75,13 @@ export function reset_state (): void {
   };
 }
 }
+=======
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+  updater(state);
+  return { ...state }
+}    connections: [],
+    logs: [],
+    overrides: [],
+  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

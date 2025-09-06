@@ -13,6 +13,7 @@ interface TemplateSaveFormProps {;
   currentValues?: ContractFormValues;
 }
 
+<<<<<<< HEAD
 
 export function TemplateSaveForm(): any ({;
 
@@ -66,6 +67,9 @@ export function TemplateSaveForm({
           templateData: currentValues
           isDefault: values.isDefault})
 import { useState } from "react",
+=======
+export function TemplateSaveForm(): any ({;import { useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
@@ -78,7 +82,10 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
@@ -89,6 +96,7 @@ interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
   editTemplate?: ContractTemplate | null,
+<<<<<<< HEAD
   currentValues?: ContractFormValues
 
 import { useState } from "react",;
@@ -159,6 +167,9 @@ export function TemplateSaveForm({;
 
   
   };
+=======
+  currentValues?: ContractFormValues  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   
   return (
@@ -178,6 +189,7 @@ export function TemplateSaveForm({;
           )}
 
         />;
+<<<<<<< HEAD
 
 
         <FormField
@@ -411,6 +423,8 @@ export function TemplateSaveForm({;
       </form>;
     </Form>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </FormItem>;          )}
         />;
         ;
@@ -520,3 +534,7 @@ try {
     </Form>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

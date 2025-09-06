@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 import React, { useState } from './react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
@@ -17,6 +23,7 @@ import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
+<<<<<<< HEAD
 
 
   id: number;
@@ -28,6 +35,8 @@ interface DiscussionPost {
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface DiscussionPost {
   id: number,
   author: string,
@@ -35,6 +44,10 @@ interface DiscussionPost {
   time: string,
   title: string,
   body: string
+<<<<<<< HEAD
+=======
+}  body: string
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   body: string
@@ -47,7 +60,10 @@ const initial_posts: DiscussionPost[] = [;
     title: "What AI trends are you most excited for in 2025?",
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   body: string
 }
   {
@@ -58,8 +74,12 @@ const initial_posts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+<<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {
 const initialPosts: DiscussionPost[] = [;
+=======
+export const CommunityDiscussion: React.FC = () => {const initialPosts: DiscussionPost[] = [;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {;
     id: 1,;
     author: "Anna Zhou",;
@@ -73,9 +93,12 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
+<<<<<<< HEAD
 
 
   const handleAddPost = () => {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
       {;
@@ -86,14 +109,20 @@ const initialPosts: DiscussionPost[] = [;
         body: newBody,;
       },;
       ...posts,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -127,6 +156,7 @@ const initialPosts: DiscussionPost[] = [;
             />
             <Textarea
               placeholder="What's on your mind?"
+<<<<<<< HEAD
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
 
 import React, { useState } from "react",;
@@ -313,16 +343,30 @@ export const CommunityDiscussion: React.FC = () => {;
                 variant="secondary";
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
+=======
+              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+            <div className="flex gap - 3 justify-end">;
+              <Button;
+                variant="secondary";
+                size="sm";
+                className="bg - zion - blue text - white hover:bg - zion - blue-dark";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 on_click={() => setShowNew (false)}
               >;
                 Cancel;
               </Button>;
               <Button;
                 size="sm";
+<<<<<<< HEAD
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+=======
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover-scale";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
@@ -363,6 +407,7 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
         </Card>)}
       <div className="flex flex - col gap - 6">;
@@ -412,3 +457,9 @@ export const CommunityDiscussion: React.FC = () => {;
 };
   );
 };
+=======
+  )
+};}
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

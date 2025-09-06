@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs").promises;"const path = require("path");"const { exec } = require("child_process");"const util = require("util");const execAsync = util.promisify(exec);class SimpleMergeResolver { constructor() {" this.projectRoot = path.join(__dirname, "."); this.fixedFiles = []; this.errors = []}" async log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`)} async findConflictedFiles() { try {" const { stdout } = await execAsync("git diff --name-only --diff-filter=U", { cwd: this.projectRoot });" return stdout.trim().split("\n").filter(file => file)} catch (error) {""` await this.log(`Error finding conflicted files: ${error.message}`, "ERROR"); return []} } async resolveFileConflicts(filePath) { try {" const content = await fs.readFile(filePath, "utf8"); / Simple conflict resolution - take the first version (HEAD) let resolvedContent = content; / Remove merge conflict markers and keep HEAD version""`"`
+#!/usr/bin/env node
+const fs = require('fs');
+console.log('🔧 Simple merge resolver - fixing syntax errors...');
+  async log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    }
+
+
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Fix the specific syntax errors we identified
 const files = [
@@ -11,6 +26,16 @@ const files = [
   'pages/index.tsx'
 ];
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
@@ -90,7 +115,72 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
+<<<<<<< HEAD
 
+=======
+}
+});
+}
+});
+
+
+  async resolveFileConflicts(filePath) {
+    try {
+      const content = await fs.readFile(filePath, 'utf8');
+      // Simple conflict resolution - take the first version (HEAD)
+      let resolvedContent = content;
+      // Remove merge conflict markers and keep HEAD version
+      // Remove any remaining conflict markers
+      if (resolvedContent !== content) {
+        await fs.writeFile(filePath, resolvedContent, 'utf8');
+        this.fixedFiles.push(filePath);
+        await this.log(`Resolved conflicts "in": ${filePath}`);
+        return true}
+      return false} catch (error) {
+      this.errors.push({ "file": filePath, "error": error.message });
+      await this.log(`Error resolving ${filePath}: ${error.message}`, 'ERROR');
+      return false}
+  }
+  async resolveAllConflicts() {
+    await this.log('Starting merge conflict resolution...');
+    const conflictedFiles = await this.findConflictedFiles();
+    await this.log(`Found ${conflictedFiles.length} files with conflicts`);
+    for (const file of conflictedFiles) {
+      await this.resolveFileConflicts(file)}
+    await this.log(`Resolved conflicts in ${this.fixedFiles.length} files`);
+    if (this.errors.length > 0) {
+      await this.log(`Encountered ${this.errors.length} "errors": `, 'WARN');
+      this.errors.forEach(error => {
+        })}
+    return this.fixedFiles.length}
+}
+});
+// Run the resolver
+async function main() {
+  const resolver = new SimpleMergeResolver();
+  const fixedCount = await resolver.resolveAllConflicts();
+  if (fixedCount > 0) {
+    } else {
+    }
+}
+if (require.main === module) {
+  main().catch(console.error)}
+module.exports = SimpleMergeResolver;
+
+}
+});
+
+
+
+}
+});
+}
+});
+
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
 #!/usr/bin/env node;
@@ -105,4 +195,22 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+<<<<<<< HEAD
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

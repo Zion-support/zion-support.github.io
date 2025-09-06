@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -10,7 +13,6 @@ export interface Innovative2026AIService {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -24,6 +26,7 @@ export interface Innovative2026AIService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -79,6 +82,12 @@ export interface Innovative2026AIService {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  contactInfo: {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -88,7 +97,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
-=======
     mobile: string;
     email: string;
     address: string;
@@ -104,12 +112,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     tagline: 'Transform data into actionable insights with AI';
     price: '$299';
     period: '/month';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: [
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';
       'Collaborative workspace for teamsMobile app for on-the-go insights'
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: true, icon: '🧠',
     color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
@@ -156,6 +165,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -418,6 +434,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
+<<<<<<< HEAD
   }
 ];
   }
@@ -428,6 +445,15 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     popular: true;
     icon: '🧠';
     color: 'from-blue-600 to-purple-700';
@@ -812,6 +838,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     reviews: 950
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

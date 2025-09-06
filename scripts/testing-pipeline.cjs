@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const { execSync } = require("$1")
 const fs = require("fs")
@@ -32,3 +36,8 @@ const fs = require("fs")
     console.log(`"Failed"`)
 // console.log("=")
 
+<<<<<<< HEAD
+=======
+    console.log(`� Report saved "to"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

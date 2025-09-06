@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -7,6 +8,8 @@ interface CTAButtonProps {href: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export /**
  * CTAButton - Function description
@@ -52,8 +55,13 @@ export function CTAButton({;
   const sizeClasses = {;
     small: "px-4 py-2 text-sm",;
     medium: "px-6 py-3 text-base",;
+<<<<<<< HEAD
     large: "px-8 py-4 text-lg";
   };
+=======
+    large: "px-8 py-4 text-lg"
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   return (;
     <Link;

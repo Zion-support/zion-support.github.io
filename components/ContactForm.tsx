@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -9,17 +10,16 @@ import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 interface FormData {
   name: string;
   email: string;
   company: string;
-<<<<<<< HEAD
-  phone: string;
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   service: string;
   message: string;
 }
@@ -31,41 +31,6 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch {
-      setSubmitStatus('error');
-=======
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -90,13 +55,13 @@ const ContactForm: React.FC = () => {
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form: ', error);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } finally {
       setIsSubmitting(false);
     }
   };
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">
       <h2 className="text-3xl font-bold text-gray-900mb-6text-center">Get In Touch</h2>
@@ -235,6 +200,8 @@ export default ContactForm;
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -263,11 +230,8 @@ export default ContactForm;
       </form>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
   if (isSubmitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -446,6 +410,10 @@ export default ContactForm;
   );
 };
 export default ContactForm;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -18,12 +19,15 @@ import Head from 'next/head';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import React, { ReactNode } from 'react';
 =======
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 React from
   'react'
 import Header from 'react'
   './Header';import Footer from 'react'
   './Footer'
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -121,6 +125,7 @@ function Layout() { return <div>{children}</div> } " ;
 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -130,11 +135,16 @@ function Layout() { return <div>{children}</div> } " ;
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+<<<<<<< HEAD
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -154,6 +164,8 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   keywords?: string;
 }
 
@@ -169,8 +181,6 @@ export default function Layout({
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
@@ -192,6 +202,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -203,3 +214,10 @@ export default Layout;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+main
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

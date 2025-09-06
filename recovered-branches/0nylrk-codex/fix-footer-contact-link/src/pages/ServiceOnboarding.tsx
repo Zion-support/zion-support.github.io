@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,10 +8,31 @@ import { Navigate } from "react-router-dom";
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth();
 
+=======
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceOnboarding() {;
+  const { user, isLoading } = useAuth();
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth();
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceOnboarding() {
+  const { user, isLoading } = useAuth(),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // If not authenticated, redirect to login;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
+<<<<<<< HEAD
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
@@ -57,12 +79,22 @@ export default function ServiceOnboarding() {
 
 
           <ServiceProviderRegistrationForm />;
+=======
+  // If not authenticated, redirect to login
+  if (!isLoading && !user) {
+    return <Navigate to="/login" replace />
+  }
+  return (
+  }
+  return (          <ServiceProviderRegistrationForm />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </div>;
       <Footer />;
 
     </>);
 }
+<<<<<<< HEAD
 
     </>;
   ); export default function ServiceOnboarding () {
@@ -79,3 +111,6 @@ export default function ServiceOnboarding() {
   );
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

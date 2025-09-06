@@ -129,3 +129,8 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
 
+<<<<<<< HEAD
+=======
+  console.log("� Received SIGTERM, shutting down gracefully...")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

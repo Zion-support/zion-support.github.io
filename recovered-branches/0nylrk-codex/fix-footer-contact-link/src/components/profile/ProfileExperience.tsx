@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
 import { Briefcase } from "lucide-react";
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
@@ -35,11 +39,15 @@ import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
+<<<<<<< HEAD
 }
 ;
 export function ProfileExperience({ experience } ProfileExperienceProps) {;
@@ -198,3 +206,6 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
   )
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

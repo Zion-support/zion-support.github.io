@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {
@@ -20,6 +21,16 @@ export function NewsletterSection() {
 }
 
 
+=======
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
   )
 
@@ -30,7 +41,10 @@ export function NewsletterSection() {
 }
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </section>);
 }
     </section>;
@@ -44,3 +58,7 @@ export function NewsletterSection() {
 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

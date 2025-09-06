@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -11,6 +12,8 @@ export function updateState(updates: Partial<SyncState>): void {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     );
@@ -19,6 +22,7 @@ export function updateState(updates: Partial<SyncState>): void {
   return events;export function resetState(): void {
   state = { ...defaultState }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 =======
@@ -100,10 +104,14 @@ export function getEntityId(event: SyncEvent): string {
 export function filterEventsByScope(
   events: SyncEvent[]
   scope: InstanceConfig['scope']
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 
+<<<<<<< HEAD
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
@@ -154,6 +162,9 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export interface SyncMapping {
   id: string;
@@ -182,6 +193,7 @@ export interface SyncLog {
   timestamp: string;
 }
 
+<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -392,6 +404,11 @@ export function formatDuration(startTime: string, endTime?: string): string {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -401,6 +418,7 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -414,13 +432,13 @@ const default_state: SyncState = {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
 }
 }
-<<<<<<< HEAD
-=======
   const entity_id = getEntityId (event);
   const current_version = state.latestVersionByEntityId[entity_id] || 0;
   const is_newer = event.version > current_version;
@@ -428,9 +446,13 @@ const default_state: SyncState = {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -471,7 +493,10 @@ if (return events) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Check condition
 if ( {) {
   $2
@@ -492,12 +517,15 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   return events;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

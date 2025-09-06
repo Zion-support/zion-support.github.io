@@ -2,7 +2,11 @@ export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
   customerId: string;
+<<<<<<< HEAD
   subject: string;
+=======
+  subject: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
@@ -12,6 +16,7 @@ export interface CustomerTicket {;
   updatedAt: Date;
   resolvedAt?: Date;
   customerSatisfaction?: number;
+<<<<<<< HEAD
   tags: string[];
 
   attachments: string[],
@@ -64,17 +69,29 @@ export interface CustomerProfile {
 
 
 }
+=======
+  tags: string[];  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';}
+export interface CustomerProfile {}
+export interface CustomerProfile {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
+<<<<<<< HEAD
 
 
 }
@@ -90,6 +107,9 @@ export interface CustomerServiceMetrics {
     customerSatisfaction: number
   }>
   customer_satisfaction: number;
+=======
+}  customer_satisfaction: number;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
   agent_performance: Record < string, {
@@ -99,6 +119,7 @@ export interface CustomerServiceMetrics {
   }>;
 }
 export interface CustomerServiceRequest {
+<<<<<<< HEAD
   customer_id: string;
 }
 export interface CustomerServiceRequest {
@@ -164,11 +185,19 @@ export interface CustomerServiceRequest {
   preferred_channel?: 'email' | 'chat' | 'phone';
 
 }
+=======
+  customer_id: string;    customerSatisfaction: number
+  }>
+}
+export interface CustomerServiceRequest {
+  customerId: string;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ticketId: string;
 export interface CustomerServiceResponse {
   ticket_id: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
+<<<<<<< HEAD
   estimatedResolutionTime: string;
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
@@ -176,6 +205,9 @@ export interface CustomerServiceResponse {
     this && this.baseUrl = baseUrl
 
 export class AICustomerServiceService {;
+=======
+  estimatedResolutionTime: string;export class AICustomerServiceService {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   private apiKey: string;
 
   private baseUrl: string
@@ -184,6 +216,7 @@ export class AICustomerServiceService {;
     this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+<<<<<<< HEAD
     try {
 
 
@@ -220,6 +253,11 @@ export interface CustomerServiceResponse {
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
+=======
+    try {  }
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+    try {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -234,7 +272,10 @@ export interface CustomerServiceResponse {
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
+<<<<<<< HEAD
           'Authorization': `Bearer ${this && this.apiKey}`}});
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
@@ -279,7 +320,10 @@ export interface CustomerServiceResponse {
         headers: {
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -295,6 +339,7 @@ export interface CustomerServiceResponse {
           timestamp: new Date(msg && msg.timestamp)}))}
 
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Error getting ticket:', error);
       throw error
     }
@@ -327,11 +372,16 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error updating ticket:', error);
     } catch (error) {
+=======
+      console && console.error('Error getting ticket:', error);    } catch (error) {
+      console && console.error('Error updating ticket:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error updating ticket:', error);
       throw error
     }
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
+<<<<<<< HEAD
     try {
 
 
@@ -371,10 +421,14 @@ export interface CustomerServiceResponse {
       const data = await response && response.json();
 
       return {
+=======
+    try {      return {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
+<<<<<<< HEAD
       throw error
     }
   }
@@ -391,11 +445,14 @@ export interface CustomerServiceResponse {
 
       const data = await response && response.json();
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
+<<<<<<< HEAD
       throw error
     }
   }
@@ -415,6 +472,8 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error getting metrics:', error);
     } catch (error) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error getting metrics:', error);
     } catch (error) {
       console && console.error('Error getting metrics:', error);
@@ -424,6 +483,7 @@ export interface CustomerServiceResponse {
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
+<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -433,6 +493,8 @@ export interface CustomerServiceResponse {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -444,6 +506,7 @@ export interface CustomerServiceResponse {
           timestamp: new Date(msg && msg.timestamp)}))}))
 
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Error searching tickets:', error);
     } catch (error) {
       console && console.error('Error searching tickets:', error);
@@ -475,17 +538,26 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
       throw error
+=======
+      console && console.error('Error searching tickets:', error);    } catch (error) {
+      console && console.error('Error searching tickets:', error);
+      console && console.error('Error auto-assigning tickets:', error);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
+<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -499,12 +571,16 @@ export interface CustomerServiceResponse {
     } catch (error) {
       console && console.error('Error generating report:', error);
     } catch (error) {
+=======
+      console && console.error('Error generating report:', error);    } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console && console.error('Error generating report:', error);
       throw error
     }
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
+<<<<<<< HEAD
 
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
@@ -512,6 +588,11 @@ export const aiCustomerServiceService = new AICustomerServiceService(process && 
   id: string,;
   customerId: string,;
   subject: string,;
+=======
+  id: string,;
+  customerId: string,;
+  subject: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -524,6 +605,7 @@ export const aiCustomerServiceService = new AICustomerServiceService(process && 
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
+<<<<<<< HEAD
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
@@ -774,12 +856,18 @@ export const aiCustomerServiceService = new AICustomerServiceService (process.en
 export interface CustomerTicket {;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface CustomerTicket {;
 
 export interface CustomerTicket {;
   id:string,;
   customerId:string,;
+<<<<<<< HEAD
   subject:string,;
+=======
+  subject:string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   status:'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
@@ -854,7 +942,11 @@ export interface CustomerServiceMetrics {;
 ;
 export interface CustomerServiceRequest {;
   customerId:string,;
+<<<<<<< HEAD
   subject:string,;
+=======
+  subject:string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description:string,;
   priority:'low' | 'medium' | 'high' | 'urgent',;
   category:string,;
@@ -939,7 +1031,11 @@ export interface CustomerServiceMetrics {;
 ;
 export interface CustomerServiceRequest {;
   customerId: string,;
+<<<<<<< HEAD
   subject: string,;
+=======
+  subject: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   priority: 'low' | 'medium' | 'high' | 'urgent',;
   category: string,;

@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button";
@@ -12,6 +15,7 @@ import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
+<<<<<<< HEAD
 
 
 
@@ -31,11 +35,14 @@ export function ChatAssistantTrigger() {
       
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error in AI chat:", error);
       return Promise.resolve()
 
@@ -44,6 +51,11 @@ import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
 
+=======
+
+      console.error("Error in AI chat:", error),
+      return Promise.resolve()
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console.error("Error in AI chat:", error),
       return Promise.resolve()
     }
@@ -82,6 +94,7 @@ export function ChatAssistantTrigger() {;
   }
   return (
     <>;
+<<<<<<< HEAD
 
       <Button;
 
@@ -117,6 +130,10 @@ export function ChatAssistantTrigger() {;
     </>;
   );
 }
+=======
+      <Button
+        onClick={() => setIsOpen(true)}        onClick={() => setIsOpen(true)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -126,7 +143,11 @@ export /**
  */
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
+<<<<<<< HEAD
 ;
 
 
 
+=======
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

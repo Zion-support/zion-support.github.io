@@ -103,3 +103,8 @@ const { execSync } = require("child_process")
     this.log(` Report "generated"`)
   this.log(" Starting Error Fixer Automation")
 
+<<<<<<< HEAD
+=======
+      this.log(")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

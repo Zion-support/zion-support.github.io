@@ -38,6 +38,7 @@ export const useApi = <T>(
     }
   }, [execute, options.immediate]);
 
+<<<<<<< HEAD
   return { data, loading, error, execute };
 };
       setLoading(false)};
@@ -47,10 +48,21 @@ export const useApi = <T>(
 };
 };
       setLoading(false)};
+=======
+  return { data, loading, error, execute }
+};      setLoading(false)};
+
+  return { data, loading, error, execute }}
+};
+}
+};
+      setLoading(false)};      setLoading(false)};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   return { data, loading, error, execute }}
 }
 }
+<<<<<<< HEAD
 }
 interface ApiState<T> {
 }import { useState, useEffect } from 'react';
@@ -58,24 +70,37 @@ interface ApiState<T> {
 interface ApiState < T> {
 };import { useState, useEffect } from 'react';
 interface ApiState<T> {
+=======
+}interface ApiState<T> {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   data: T | null;
   loading: boolean;
   error: string | null;
 }
+<<<<<<< HEAD
     data: null
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     loading: true
     error: null
     data: null,
     loading: true,
     error: null,;
   });
+<<<<<<< HEAD
 export function use_api < T>(url: string, options?: RequestInit) {
+=======
+=======export function use_api < T>(url: string, options?: RequestInit) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [state, set_state] = useState < ApiState < T>>({
     data: null,
     loading: true,
     error: null,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     data: null,
     loading: true,
     error: null,;
@@ -91,7 +116,10 @@ export function use_api < T>(url: string, options?: RequestInit) {
         });
       }
 import { useState, useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 interface UseApiProps {
   // Add props here as needed
@@ -126,10 +154,13 @@ export const use_api = <T = any>(
   return { data, loading, error, execute }}
 export default useApi;
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+<<<<<<< HEAD
   }, [execute, options && options.immediate]);
   return { data, loading, error, execute }};
 export default useApi;
 ) => {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < any>(null);
   const execute = useCallback (async (...args: any[]) => {
@@ -150,6 +181,7 @@ export default useApi;
       set_loading (false);
     }
 
+<<<<<<< HEAD
 
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
   }, [execute, options && options.immediate]);
@@ -168,6 +200,9 @@ interface UseApiProps {
   // Add props here as needed
 }
 import { useState, useEffect } from 'react';
+=======
+import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 interface ApiState<T> {
   data: T | null;
@@ -206,9 +241,13 @@ export function useApi<T>(
       execute()}
   }, [execute, options.immediate]);
   return { data, loading, error, execute }};
+<<<<<<< HEAD
 export default useApi;
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 export default function UseApi({ }: UseApiProps) {
+=======
+export default useApi;export default function UseApi({ }: UseApiProps) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div>
       <h1>UseApi</h1>
@@ -216,6 +255,18 @@ export default function UseApi({ }: UseApiProps) {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+origin/automation-improvements-final
+
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 }
 export function useApi<T>(
@@ -241,13 +292,17 @@ export function useApi<T>(
     }
   }, [fetchData, options.immediate]);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 
 
 }
@@ -258,3 +313,5 @@ if ( {) {
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

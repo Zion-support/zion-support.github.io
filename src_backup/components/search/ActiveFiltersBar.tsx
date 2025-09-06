@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-interface SearchFilters {
-  types: string[],
-  category: string,
-  minPrice: number,
-  maxPrice: number,
-  minRating: number,
-  sort: string
 
+<<<<<<< HEAD
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -452,6 +438,8 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 
 export default ActiveFiltersBar; import React from 'react'
@@ -473,4 +461,4 @@ interface ActiveFiltersBarProps {
   className?: string
 }
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -32,3 +32,8 @@ console.log(' Starting master error fixing orchestrator...')
       console.log('⚠  Critical fixes "failed")
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
 
+<<<<<<< HEAD
+=======
+  console.error(' Master error fixing orchestrator failed to "start")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

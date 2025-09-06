@@ -1,207 +1,3 @@
-<<<<<<< HEAD
-
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-const serviceHighlights = [
-  {
-    color: 'text-red-400'
-  }
-  {
-    title: 'Zero False Positives'
-    description:
-      'AI-powered analysis eliminates false alarms and alert fatigue'
-    icon: CheckCircle
-    color: 'text-green-400'
-  },  {
-    title: '24/7 Security Monitoring'
-    description: 'Round-the-clock protection with automated incident response'
-    icon: Clock
-    color: 'text-blue-400'
-  },  {
-    title: 'Compliance Automation'
-    description: 'Automated compliance reporting and audit preparation'
-    icon: BarChart3
-    color: 'text-purple-400'
-  },];
-import {motion} from 'framer-motion';
-import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-
-    title: 'Zero Trust Security',
-    description: 'Never trust, always verify - Advanced zero trust implementation',
-    icon: Shield,
-    color: 'from-red-500 to-pink-600',
-    features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
-  };
-  {
-    title: 'AI Threat Intelligence',
-    description: 'Predict and prevent cyber threats with AI intelligence',
-    icon: Eye,
-    color: 'from-indigo-500 to-purple-600',
-    features: ['Real-time detectionPredictive analyticsAutomated responseGlobal intelligence']
-  };
-  {
-    title: 'Cloud Security Posture',
-    description: 'Secure your cloud infrastructure with comprehensive posture management',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600',
-    features: ['Multi-cloud monitoringCompliance automationRisk managementSecurity analytics']
-  };
-  {
-    title: 'DevSecOps Security',
-    description: 'Integrate security into your DevOps pipeline seamlessly',
-    icon: Cpu,
-    color: 'from-green-500 to-emerald-600',
-    features: ['Automated testingVulnerability scanningCompliance automationSecurity metrics']
-  };
-  {
-    title: 'IoT Security Platform',
-    description: 'Secure your IoT ecosystem with comprehensive protection',
-    icon: Globe,
-    color: 'from-purple-500 to-violet-600',
-    features: ['Device authenticationNetwork monitoringThreat detectionAutomated response']
-  }
-];
-
-const benefits = [
-  {
-    title: '99.99% Threat Detection',
-    description: 'Advanced AI algorithms detect threats before they become incidents',
-    icon: Shield,
-    color: 'text-red-400'
-  };
-  {
-    title: 'Zero False Positives',
-    description: 'AI-powered analysis eliminates false alarms and alert fatigue',
-    icon: CheckCircle,
-    color: 'text-green-400'
-  };
-  {
-    title: '24/7 Security Monitoring',
-    description: 'Round-the-clock protection with automated incident response',
-    icon: Clock,
-    color: 'text-blue-400'
-  };
-  {
-    title: 'Compliance Automation',
-    description: 'Automated compliance reporting and audit preparation',
-    icon: BarChart3,
-    color: 'text-purple-400'
-  }
-];
-
-import { motion } from 'framer-motion';
-import {;
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,;
-  CheckCircle, ArrowRight, Star, Clock, Target,;
-  Zap, Users, BarChart3, Settings, Database;
-} from 'lucide-react',;
-import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',};
-
-const serviceHighlights = [;
-  {;
-    title: 'Zero Trust Security',;
-    description:;
-      'Never trust, always verify - Advanced zero trust implementation',;
-    icon: Shield,;
-    color: 'from-red-500 to-pink-600',;
-    features: [;
-      'Continuous verification',;
-      'Micro-segmentation',;
-      'Adaptive controls',;
-      'Real-time monitoring',;
-    ],;
-  },  {;
-    title: 'AI Threat Intelligence',;
-    description: 'Predict and prevent cyber threats with AI intelligence',;
-    icon: Eye,;
-    color: 'from-indigo-500 to-purple-600',;
-    features: [;
-      'Real-time detection',;
-      'Predictive analytics',;
-      'Automated response',;
-      'Global intelligence',;
-    ],;
-  },;
-  {;
-    title: 'Cloud Security Posture',;
-    description:;
-      'Secure your cloud infrastructure with comprehensive posture management',;
-    icon: Cloud,;
-    color: 'from-blue-500 to-cyan-600',;
-    features: [;
-      'Multi-cloud monitoring',;
-      'Compliance automation',;
-      'Risk management',;
-      'Security analytics',;
-    ],;
-  },  {;
-    title: 'DevSecOps Security',;
-    description: 'Integrate security into your DevOps pipeline seamlessly',;
-    icon: Cpu,;
-    color: 'from-green-500 to-emerald-600',;
-    features: [;
-      'Automated testing',;
-      'Vulnerability scanning',;
-      'Compliance automation',;
-      'Security metrics',;
-    ],;
-  },  {;
-    title: 'IoT Security Platform',;
-    description: 'Secure your IoT ecosystem with comprehensive protection',;
-    icon: Globe,;
-    color: 'from-purple-500 to-violet-600',;
-    features: [;
-      'Device authentication',;
-      'Network monitoring',;
-      'Threat detection',;
-      'Automated response',;
-    ],;
-  },];
-
-const benefits = [;
-  {;
-    title: '99 && 99.99% Threat Detection',;
-    description:;
-      'Advanced AI algorithms detect threats before they become incidents',;
-    icon: Shield,;
-    color: 'text-red-400',;
-  },;
-  {;
-    title: 'Zero False Positives',;
-    description:;
-      'AI-powered analysis eliminates false alarms and alert fatigue',;
-    icon: CheckCircle,;
-    color: 'text-green-400',;
-  },  {;
-    title: '24/7 Security Monitoring',;
-    description: 'Round-the-clock protection with automated incident response',;
-    icon: Clock,;
-    color: 'text-blue-400',;
-  },  {;
-    title: 'Compliance Automation',;
-    description: 'Automated compliance reporting and audit preparation',;
-    icon: BarChart3,;
-    color: 'text-purple-400',;
-  },];
-
-export default function CybersecurityServices() {;
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -209,7 +5,7 @@ import { motion } from 'framer-motion';
 const contactInfo = null;
               we provide comprehensive protection that adapts to evolving threats.
 export default function CybersecurityServices() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Layout>
       <Head>
@@ -275,10 +71,8 @@ export default function CybersecurityServices() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
 className='max-w-4xl mx-auto'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400" />
@@ -293,16 +87,11 @@ className='max-w-4xl mx-auto'
               <br />
               <span className="text-white">Cybersecurity</span>
             </h1>
-<<<<<<< HEAD
-
-
-
-=======
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
               Protect your business with cutting-edge cybersecurity solutions.
               From zero trust security to AI threat intelligence, we provide
               comprehensive protection that adapts to evolving threats.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -324,27 +113,18 @@ className='max-w-4xl mx-auto'
                 </button>
               </Link>
                   <span>Get Protected</span>
-<<<<<<< HEAD
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-=======
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-        {/* Floating Elements */}
-        <div className='absolute top-20 left-10 opacity-20 animate-float'>;
-          <div className='w-4 h-4 bg-red-400 rounded-full'></div>;
-        </div>;
-=======
 {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>
         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div
           className='absolute top-40 right-20 opacity-30 animate-float'
           style={{ animationDelay: '1s' }}>;
@@ -352,20 +132,10 @@ className='max-w-4xl mx-auto'
         </div>;
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
-<<<<<<< HEAD
-
-
-        </div>
-        <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
-          <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
-          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
-=======
           style={{ animationDelay: '2s' }}
         >
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
       {/* Service Highlights */}
@@ -379,16 +149,6 @@ className='max-w-4xl mx-auto'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='text-center mb-16'
-      {/* Service Highlights */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4">
-=======
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -443,16 +203,14 @@ className='futuristic-card p-6 group hover:scale-105 transition-all duration-300
       {/* Detailed Services */}
 <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
@@ -533,12 +291,10 @@ className='text-center mb-16'
               designed for modern enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {advancedCybersecurityServices2025.map((service, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
               <motion.div
 
@@ -554,10 +310,8 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='animated-border'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -569,18 +323,6 @@ className='animated-border'
                       </div>
                     </div>
                     {service.popular && (
-<<<<<<< HEAD
-                      <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-2xl font-bold text-red-400">
-                      {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
-=======
                       <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
                         Popular
                       </span>
@@ -595,7 +337,7 @@ className='animated-border'
                       <span className='text-gray-400 text-lg'>
                         {service.period}
                       </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -625,12 +367,8 @@ className='animated-border'
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-<<<<<<< HEAD
-                    >                      Get Protected
-                    <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
-=======
                     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       Get Protected
                     </Link>
                   </div>
@@ -647,31 +385,16 @@ className='animated-border'
       </section>;
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
-        <div className='container mx-auto px-4'>          <motion&& motion.div
-
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-4">
-          <motion.div
-
-=======
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='container mx-auto px-4'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-=======
 className='text-center mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -680,12 +403,10 @@ className='text-center mb-16'
               Advanced protection that keeps your business safe and compliant
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 
@@ -705,26 +426,12 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
-        <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
-
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-
-=======
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
@@ -740,17 +447,13 @@ className='text-center group'
 <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
         <div className='container mx-auto px-4 text-center'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-
-=======
 className='max-w-4xl mx-auto'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
@@ -786,13 +489,9 @@ className='max-w-4xl mx-auto'
                 <div className="text-gray-300">Threat Detection</div>
               </div>
               <div>
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
-                <div className="text-gray-300">ROI Improvement</div>
-=======
                 <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
                 <div className='text-gray-300'>ROI Improvement</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
@@ -803,79 +502,5 @@ className='max-w-4xl mx-auto'
 
 }
     </Layout>
-<<<<<<< HEAD
-  )
-            className="max-w-4xl mx-auto";
-          >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
-
-              Your Business?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-                </p>              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - red - 900 / 20 via - pink - 900 / 20 to - purple - 900 / 20'>;
-        <div className='container mx - auto px - 4 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='max - w-4xl mx - auto';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to{' '}
-              <span className='bg - gradient - to - r from - red - 400 to - pink - 400 bg - clip - text text - transparent'>;
-                Secure;
-              </span>{' '}
-              Your Business?;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-
-              Don't wait for a breach to happen. Protect your business today;
-              with our advanced cybersecurity solutions and stay one step ahead;
-              of evolving threats.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
-              <Link href='/contact' className='group'>;
-                <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
-                  <span > Start Your Security Journey</span>;
-                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
-                </button>;
-              </Link>;
-              <Link;
-                href='/comprehensive - services - showcase - 2025';
-                className='group';
-              >;
-                <button className='border - 2 border - red - 500 / 50 hover:border - red - 400 text - red - 400 hover:text - red - 300 px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 hover:bg - red - 500 / 10 flex items - center space - x-2'>;
-                  <span > View All Services</span>;
-                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
-                </button>;
-              </Link>;
-            </div>;
-            <div className='mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center'>;
-              <div>;
-                <div className='text - 3xl font - bold text - red - 400 mb - 2'>24 / 7</div>;
-                <div className='text - gray - 300'>Security Monitoring</div>;
-              </div>;
-              <div>;
-                <div className='text - 3xl font - bold text - red - 400 mb - 2'>;
-                  99.99%;
-                </div>;
-                <div className='text - gray - 300'>Threat Detection</div>;
-              </div>;
-              <div>;
-                <div className='text - 3xl font - bold text - red - 400 mb - 2'>450%</div>;
-                <div className='text - gray - 300'>ROI Improvement</div>              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-
-
-=======
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

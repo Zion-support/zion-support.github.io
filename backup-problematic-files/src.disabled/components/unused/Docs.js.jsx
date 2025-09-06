@@ -6,6 +6,6 @@ const Docs.js = ({ className }) => {
       <h1>Docs.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

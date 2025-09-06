@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 class TokenStore {
   private config: any = {};
 
@@ -14,7 +12,7 @@ class TokenStore {
 
 export const tokenStore = new TokenStore();
 export interface TokenConfig {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   tokenName: string;
   tokenSymbol: string;
 
@@ -23,6 +21,7 @@ export interface TokenConfig {
 
 
 export interface TokenConfig {
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -45,6 +44,11 @@ export interface TokenConfig {
 export interface TokenConfig {;
   tokenName: string;
   tokenSymbol: string;
+=======
+
+export interface TokenConfig {
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   decimals: number;
   totalSupply: number;
   issueRate: number;
@@ -52,6 +56,7 @@ export interface TokenConfig {;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,11 +67,15 @@ export interface TokenConfig {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -79,6 +88,12 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -91,6 +106,10 @@ class TokenStore {
     maxIssueAmount: 10000;
   }
 ;
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
@@ -108,15 +127,22 @@ class TokenStore {
     maxIssueAmount: 10000
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-
+=======
   }
 export interface TokenStoreData {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
+export interface TokenStoreData {
+<<<<<<< HEAD
   }
 export interface TokenStoreData {
   };
@@ -129,6 +155,12 @@ export interface TokenStoreData {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  };
+
+export interface TokenStoreData {;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 export const tokenStore = new TokenStore();
@@ -152,6 +184,12 @@ export class TokenStorageManager {
 
   }
 export interface TokenStoreData {
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -159,6 +197,7 @@ export interface TokenStoreData {
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,6 +213,10 @@ function readFromDisk(): TokenStoreData | null {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
@@ -209,6 +252,11 @@ function readFromDisk(): TokenStoreData | null {
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
@@ -219,12 +267,17 @@ export const token_store = new TokenStore ();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     if (!fs.existsSync(STORE_FILE)) return null;
@@ -253,6 +306,7 @@ class InMemoryTokenStore {
     };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 export const tokenStore = new TokenStore();
 
@@ -268,6 +322,19 @@ export const tokenStore = new TokenStore();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   getData(): TokenStoreData {
     return this.data;
@@ -311,6 +378,10 @@ export const tokenStore = {
     return txs.filter(t => t.userId === userId);
   },
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

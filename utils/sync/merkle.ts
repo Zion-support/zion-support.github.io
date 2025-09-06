@@ -1,5 +1,6 @@
 import crypto from "crypto";
 
+<<<<<<< HEAD
 
 // Merkle tree utilities;
 export const merkle = {
@@ -130,3 +131,5 @@ export function verifyMerkleProof(
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+<<<<<<< HEAD
 
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -28,11 +32,14 @@ export interface ApiKey {;
 
 export interface ApiKey {
   id: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+<<<<<<< HEAD
 
   expires_at: string | null,
   is_active: boolean;
@@ -51,13 +58,18 @@ export interface ApiLog {
   created_at: string;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ip_address?: string,
   response_time_ms?: number
 }
 
 export function useApiKeys() {;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -69,6 +81,7 @@ export function useApiKeys() {;
   const getApiUrl = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
+<<<<<<< HEAD
     // such as tests or server side rendering.
 
     const env = (import && import.meta as any)?.env ?? process ;
@@ -129,6 +142,9 @@ export function useApiKeys() {;
         title: "Error fetching API keys",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
   ip_address?: string,
+=======
+    // such as tests or server side rendering.  ip_address?: string,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   response_time_ms?: number;
 }
 export /**
@@ -185,6 +201,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         throw new Error (result.error || 'Failed to fetch API keys');
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
@@ -279,20 +296,31 @@ export function useApiKeys() {;
         };
         body: JSON && JSON.stringify({
           name;
+=======
+        throw new Error (result.error || 'Failed to fetch API keys');      setKeys(result.keys || [])
+    } catch (err) {
+      console.error('Error fetching API keys:', err),
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),
+      toast({          name;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           scopes,
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null
         })
       });
+<<<<<<< HEAD
 
       const result = await response && response.json();
       
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to create API key')
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]);
       // Store the actual key value temporarily so it can be displayed once
+<<<<<<< HEAD
 
       setNewApiKey(result && result.key);
       
@@ -303,6 +331,14 @@ export function useApiKeys() {;
 
 
 
+=======
+      toast({
+        title: "API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({
+        title: "API Key Created"
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
@@ -313,8 +349,13 @@ export function useApiKeys() {;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error fetching API keys",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error fetching API keys",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -349,8 +390,11 @@ export function useApiKeys() {;
         throw new Error(result.error || 'Failed to create API key');
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
       
@@ -360,6 +404,7 @@ export function useApiKeys() {;
       toast({
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
+<<<<<<< HEAD
       
       return result
     } catch (err) {
@@ -498,6 +543,11 @@ if ( {) {
       setLoading(false)
     }
 
+=======
+          } finally {
+      setLoading(false)
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   // Regenerate API key
@@ -509,7 +559,10 @@ if ( {) {
     setNewApiKey(null),
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -525,23 +578,37 @@ if ( {) {
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to regenerate API key')
 
+<<<<<<< HEAD
       }
 ;
+=======
+      };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Add the new key to the list;
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),;
       // Store the actual key value temporarily so it can be displayed once;
       setNewApiKey(result.key),;
       toast({;
+<<<<<<< HEAD
         title: "API Key Created",;
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),;
+=======
+        title: "API Key Created",,
+  description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return result;
     } catch (err) {;
       console.error('Error creating API key:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error creating API key",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error creating API key",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -572,8 +639,11 @@ if ( {) {
         throw new Error(result.error || 'Failed to regenerate API key');
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Update the key in the list
 
       setKeys(prev => prev && prev.map(key => 
@@ -587,6 +657,7 @@ if ( {) {
 
       toast({
         title: "API Key Regenerated"
+<<<<<<< HEAD
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
       ));
       // Store the new key value
@@ -760,15 +831,25 @@ if ( {) {
         title: "Error regenerating API key",
 
       return result
+=======
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      ));
+      // Store the new key value
+      toast({
+        title: "API Key Regenerated"
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (err) {
       console && console.error('Error revoking API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
         variant: "destructive",
         title: "Error regenerating API key",
+<<<<<<< HEAD
         title: "Error revoking API key",
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setLoading(false)
     }
@@ -783,7 +864,10 @@ if ( {) {
     setError(null),
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -797,19 +881,27 @@ if ( {) {
           method: 'GET'
           headers: {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const result = await response && response.json();
       
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to revoke API key')
 
+<<<<<<< HEAD
       }
         throw new Error(result && result.error || 'Failed to fetch API logs')
+=======
+      }        throw new Error(result && result.error || 'Failed to fetch API logs')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
 
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
 
+<<<<<<< HEAD
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);
@@ -894,6 +986,10 @@ if ( {) {
         title: "Error revoking API key",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
       
+=======
+      setLogs(result.logs || []);
+      setTotalLogs(result.count || 0);      
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
 ;
   // Revoke API key;
@@ -950,6 +1046,7 @@ if ( {) {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
 
 
         variant: "destructive",
@@ -960,6 +1057,14 @@ if ( {) {
       setLoading(false)
     }
 
+=======
+        {
+          method: 'GET'
+          headers: {        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   // Fetch API usage logs
@@ -970,12 +1075,16 @@ if ( {) {
     setError(null),
     
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+<<<<<<< HEAD
 
 ;
   // Fetch API usage logs;
@@ -1004,6 +1113,8 @@ if ( {) {
           headers: {
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const result = await response && response.json();
       
       if (!response && response.ok) {
@@ -1012,27 +1123,41 @@ if ( {) {
 
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
+<<<<<<< HEAD
 
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);
 
 ;
+=======
+=======;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
         key.id === keyId ? { ...key, is_active: false } : key;
       )),;
       toast({;
+<<<<<<< HEAD
         title: "API Key Revoked",;
         description: "The API key has been revoked successfully."}),;
+=======
+        title: "API Key Revoked",,
+  description: "The API key has been revoked successfully."}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return result;
     } catch (err) {;
       console.error('Error revoking API key:', err),;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error revoking API key",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error revoking API key",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -1067,17 +1192,22 @@ if ( {) {
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
 
+<<<<<<< HEAD
 
 
       
       
         {
+=======
+      
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           method: 'GET'
           headers: {
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
+<<<<<<< HEAD
       toast({
 
         title: "Error fetching API logs",
@@ -1132,6 +1262,9 @@ if ( {) {
     total_logs;
     loading;
     error;
+=======
+      toast({    error;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     newApiKey;
     fetchApiKeys;
     createApiKey;
@@ -1155,8 +1288,13 @@ if ( {) {
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
       toast({;
         variant: "destructive",;
+<<<<<<< HEAD
         title: "Error fetching API logs",;
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
+=======
+        title: "Error fetching API logs",,
+  description: err instanceof Error ? err.message : 'An unknown error occurred'});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {;
       setLoading(false);
     }
@@ -1174,15 +1312,19 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
     clearNewApiKey: () => setNewApiKey(null);
+<<<<<<< HEAD
     clearNewApiKey: () => setNewApiKey (null);
 
   }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 }
 ;
+<<<<<<< HEAD
 
 
   }
@@ -1640,3 +1782,7 @@ clearNewApiKey: () => setNewApiKey (null)
 ;
   }
 }
+=======
+  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

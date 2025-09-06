@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -7,12 +8,15 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Search, Filter} from "lucide-react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
 import { Search, Filter } from "lucide-react",
 
 interface FraudFiltersProps {
@@ -235,6 +239,9 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       ;
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
+=======
+import { Search, Filter } from "lucide-react",        <SelectTrigger className="w-[180px]">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
         <SelectContent>;
@@ -246,6 +253,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 
+<<<<<<< HEAD
       <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
 
         <SelectTrigger className="w-[180px]">;
@@ -262,6 +270,9 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
 
         <SelectTrigger className="w-[180px]">;
+=======
+      <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;        <SelectTrigger className="w-[180px]">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
         <SelectContent>;
@@ -274,12 +285,18 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
         </SelectContent>;
       </Select>;
 
+<<<<<<< HEAD
       <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
+=======
+      <Button variant="outline" on_click={reset_filters} className="md: w-auto">;
+        <Filter className="h - 4 w - 4 mr-2" /> Reset Filters;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </Button>;
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 export default FraudFilters;
 
@@ -294,3 +311,6 @@ export default FraudFilters;
 };
 
 export default FraudFilters;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

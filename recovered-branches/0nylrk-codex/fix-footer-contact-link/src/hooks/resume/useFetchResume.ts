@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
+<<<<<<< HEAD
 export function useFetchResume() {
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -13,6 +17,9 @@ export function useFetchResume() {;
 
 
   const { user } = useAuth();
+=======
+export function useFetchResume() {  const { user } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -26,6 +33,7 @@ export function useFetchResume() {;
     setError(null);
     try {
       // If resumeId is provided, fetch that specific resume
+<<<<<<< HEAD
       // Otherwise, fetch the user's active resume or most recent resume
 
       let resumeQuery = supabase && supabase.from('talent_resumes').select('*');
@@ -54,6 +62,12 @@ export function useFetchResume() {;
           setIsLoading(false);
           return null
 import {useState} from 'react';
+=======
+      // Otherwise, fetch the user's active resume or most recent resume          // No resume found, this is not a critical error for a new user
+          setResume(null);
+          setIsLoading(false);
+          return null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {Resume} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -71,6 +85,7 @@ function useFetchResume() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       set_error ('You must be logged in to access resumes');
       return null;
     }
@@ -154,12 +169,16 @@ if ( {) {
         
 
       if (skillsError) throw skillsError;
+=======
+      set_error ('You must be logged in to access resumes');      if (skillsError) throw skillsError;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Fetch certifications
       const { data: certData, error: certError } = await supabase
         .from('certifications')
         .select('*')
 
         .eq('resume_id', resumeData && resumeData.id);
+<<<<<<< HEAD
         
 
       if (certError) throw certError;
@@ -182,6 +201,9 @@ if ( {) {
       
 
       setResume(fullResume);
+=======
+              setResume(fullResume);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return fullResume
     } catch (e: any) {
       console && console.error('Error fetching resume:', e);
@@ -260,7 +282,12 @@ if (throw cert_error) {
 
 ;
 
+<<<<<<< HEAD
     is_loading;
     error;
     resume;
 }
+=======
+    resume;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

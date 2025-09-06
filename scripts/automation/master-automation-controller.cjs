@@ -115,3 +115,8 @@ const { execSync } = require("child_process")
     } catch (error) {  this.log(` Command "failed"`})
   process.on("SIGINT")
 
+<<<<<<< HEAD
+=======
+  process.on("SIGTERM")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

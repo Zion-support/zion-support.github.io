@@ -1,6 +1,7 @@
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+<<<<<<< HEAD
 
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
@@ -12,15 +13,29 @@ import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
 // Find a route by path in the complete sitemap
+=======
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
+// Find a route by path in the complete sitemap
+export const findRouteByPath = (path: string): SitemapItem | undefined => {
+  return completeSitemap.find(route => route.path === path)
+};// Find a route by path in the complete sitemap
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
 
+<<<<<<< HEAD
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
+=======
+// Check if a route requires authentication
+export const isProtectedRoute = (path: string): boolean => {
+  const route = findRouteByPath(path),
+  return route?.requiredAuth === true
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
   return route?.requiredAuth === true
@@ -33,6 +48,7 @@ export const canAccessRoute = (
   isAuthenticated: boolean,
 },
 
+<<<<<<< HEAD
 
 return completeSitemap && completeSitemap.find(route => route && route.path === path)
 };
@@ -71,12 +87,28 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   // Split the path into segments
   const segments = path && path.split('/').filter(Boolean);
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+=======
+export const isProtectedRoute = (path: string): boolean => {
+
+  const route = findRouteByPath(path),
+
+  return true
+}
+// Get breadcrumb items for a path
+export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;  const breadcrumbs = [{label: 'Home', path: '/'}];
+  if (path === '/') return breadcrumbs;
+  // Split the path into segments
+  const segments = path && path.split('/').filter(Boolean);export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const breadcrumbs = [{label: 'Home', path: '/'}];
   if (path === '/') return breadcrumbs;
   // Split the path into segments
   const segments = path.split('/').filter(Boolean);
+<<<<<<< HEAD
   const segments = path && path.split('/').filter(Boolean);
   let currentPath = '';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   for (const segment of segments) {
     currentPath += `/${segment}`;
     const route = findRouteByPath(currentPath);
@@ -84,6 +116,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 
       breadcrumbs && breadcrumbs.push({
         label: route && route.label,
+<<<<<<< HEAD
 
         path: currentPath
       })
@@ -102,6 +135,8 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
 
 import { complete_sitemap, SitemapItem } from '@/config / sitemap';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (route.requiredAuth && !isAuthenticated) return false,
   
 
@@ -110,7 +145,10 @@ import { complete_sitemap, SitemapItem } from '@/config / sitemap';
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -185,6 +223,7 @@ if ( {) {
       });
     }
   }
+<<<<<<< HEAD
   return breadcrumbs;
 
 
@@ -193,3 +232,7 @@ if ( {) {
 };
 }
 ;
+=======
+  return breadcrumbs
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -10,8 +13,11 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
+<<<<<<< HEAD
       title: "Total Referrals"
       value: stats.totalReferrals
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
     }
@@ -33,6 +39,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp  } from './lucide-react';
@@ -77,14 +84,31 @@ function ReferralStats() {
         <Card key={i}>;
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
+=======
+=======  ];
+;
+  return (
+    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols-4">;
+      {stat_cards.map ((card, i) => (
+        <Card key={i}>;
+          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb-2">;
+            <CardTitle className="text - sm font-medium">{card.title}</CardTitle>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {card.icon}
           </CardHeader>;
           <CardContent>;
             {is_loading ? (
+<<<<<<< HEAD
               <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
               <>;
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">;
+=======
+              <div className="h - 6 w - 20 bg - muted animate-pulse rounded" />) : (
+              <>;
+                <div className="text - 2xl font-bold">{card.value}</div>;
+                <p className="text - xs text - muted-foreground">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {card.description}
 
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -156,8 +180,11 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
     </div>
   );
 }
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

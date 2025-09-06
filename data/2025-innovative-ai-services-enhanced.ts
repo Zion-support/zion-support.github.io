@@ -1,19 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIService2025 {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -47,12 +53,14 @@ export interface InnovativeAIService2025 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
-=======
     website: string
   },
   realImplementation: boolean;
@@ -102,14 +110,19 @@ export interface InnovativeAIService2025 {
     rating: 4.9;
     reviews: 8
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -128,6 +141,7 @@ export interface InnovativeAIService2025 {
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -136,6 +150,11 @@ export interface InnovativeAIService2025 {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -143,9 +162,12 @@ export interface InnovativeAIService2025 {
     launch_date: '2024 - 03 - 25';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     customers: 156;
 
@@ -153,10 +175,15 @@ export interface InnovativeAIService2025 {
 
     reviews: 89
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface InnovativeAIService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -186,6 +213,7 @@ export interface InnovativeAIService2025 {
   };
   // AI Autonomous Ecosystem Platform
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'ai-autonomous-ecosystem', name: 'AI Autonomous Ecosystem Platform',
     tagline: 'Create self-managing AI systems that evolve independently',
@@ -341,6 +369,17 @@ export interface InnovativeAIService2025 {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    reviews: 89;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -603,23 +642,25 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     customers: 156,;
     rating: 4.8;
     reviews: 89;
+
+
 <<<<<<< HEAD
-  }
-];
-=======
-
-
   }
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     id: 'ai-autonomous-ecosystem',
     name: 'AI Autonomous Ecosystem Platform',
     tagline: 'Create self-managing AI systems that evolve independently',
@@ -901,6 +942,10 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
     reviews: 89
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

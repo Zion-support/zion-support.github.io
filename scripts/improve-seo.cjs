@@ -1,5 +1,9 @@
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require('fs');
 const path = require('path');
 function improveSEO() {}
@@ -70,8 +74,19 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;";
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       console.log('SEO improvements completed')} catch (error) {}
       console.error('SEO improvement "failed": ', error.message)};
   };
 };
 
+<<<<<<< HEAD
+=======
+improveSEO();
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

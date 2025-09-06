@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Loader2 } from 'lucide-react'
-=======
 Spinner.displayName = 'Spinner'
 export default Spinner; import React from 'react'
 
@@ -32,34 +29,11 @@ class ErrorBoundary extends React.Component {
 Spinner && Spinner.displayName = 'Spinner';
 export default Spinner;import React from 'react';
 import { Loader2 } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
-<<<<<<< HEAD
-import React from 'react',;
-import { Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils',;
-export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
-  size?: number | string;
 
-
-
-
-}
-
-const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
-  ({ className, size = 24, ...props }, ref,) => (
-    <Loader2
-      ref = {ref,}
-      {...props}
-<<<<<<< HEAD
-      className = {cn('animate-spin', className),}
-      width = {size,}
-      height = {size,}
-    />
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     />;
   );
@@ -86,11 +60,8 @@ const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
     />)),
 Spinner.display_name = 'Spinner',
 export default Spinner,
-<<<<<<< HEAD
-=======
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 }
 '
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -26,6 +26,7 @@ interface TalentProfileProps {;
 }
 
 export function TalentProfile(): any ({ ;
+<<<<<<< HEAD
 
   profile;
   onRequestHire;
@@ -38,6 +39,8 @@ export function TalentProfile(): any ({ ;
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -63,6 +66,7 @@ export function TalentProfile({
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
 
 export function TalentProfile({ ;
   profile;
@@ -187,6 +191,12 @@ export function TalentProfile({;
   return (
     <div className="container mx-auto px-4 py-8">;
       {/* Profile Header */}
+=======
+  // Create proper skills array for ProfileSkills component
+  const skillsArray = profile.skills?.map(skill => ({
+    name: skill
+    level: 3 // Default level since we don't have this data      {/* Profile Header */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
@@ -197,11 +207,17 @@ export function TalentProfile({;
         reviewCount={profile && profile.rating_count}
       />;
 
+<<<<<<< HEAD
 
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
 
+=======
+      {/* Main content area */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+        {/* Left Column - Skills & Info */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="space-y-8">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
@@ -212,10 +228,15 @@ export function TalentProfile({;
           />;
         </div>;
 
+<<<<<<< HEAD
 
         {/* Right Column - Bio & Projects */}
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
+=======
+        {/* Right Column - Bio & Projects */}
+        <div className="lg:col-span-2 space-y-8">;          {/* Bio Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
             <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
             <div className="prose prose-invert max-w-none">
@@ -223,6 +244,7 @@ export function TalentProfile({;
             </div>
           </div>
 
+<<<<<<< HEAD
 
           
 
@@ -243,6 +265,12 @@ export function TalentProfile({;
             />
           </div>
 import React from './react';
+=======
+          
+
+          
+          import React from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { HireNowCTA } from './HireNowCTA';
@@ -289,7 +317,11 @@ function TalentProfile() {
   })) || [];
 ;
   return (
+<<<<<<< HEAD
     <div className="container mx - auto px - 4 py - 8">;
+=======
+    <div className="container mx - auto px - 4 py-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -300,9 +332,15 @@ function TalentProfile() {
         review_count={profile.rating_count}
       />;
       {/* Main content area */}
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8">;
         {/* Left Column - Skills & Info */}
         <div className="space - y-8">;
+=======
+      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt-8">;
+        {/* Left Column - Skills & Info */}
+        <div className="space-y-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <ProfileSkills skills={skills_array} />;
           <ProfileAvailability availability={availability} />;
           <ProfileContact;
@@ -312,20 +350,35 @@ function TalentProfile() {
           />;
         </div>;
         {/* Right Column - Bio & Projects */}
+<<<<<<< HEAD
         <div className="lg:col - span - 2 space - y-8">;
           {/* Bio Section */}
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;
             <h2 className="text - xl font - bold text - white mb - 4">About {profile.full_name}</h2>;
             <div className="prose prose - invert max - w-none">;
               <p className="text - zion - slate whitespace - pre - wrap">{profile.bio}</p>;
+=======
+        <div className="lg:col - span - 2 space-y-8">;
+          {/* Bio Section */}
+          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
+            <h2 className="text - xl font - bold text - white mb-4">About {profile.full_name}</h2>;
+            <div className="prose prose - invert max-w-none">;
+              <p className="text - zion - slate whitespace - pre-wrap">{profile.bio}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
           {/* Projects Section */}
           <ProfileProjects projects={projects_array} />;
           {/* Ratings Section */}
+<<<<<<< HEAD
           <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6">;
             <h2 className="text - xl font - bold text - white mb - 4 flex items - center">;
               <Star className="mr - 2 h - 5 w - 5 text - yellow - 400" />;
+=======
+          <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p-6">;
+            <h2 className="text - xl font - bold text - white mb - 4 flex items-center">;
+              <Star className="mr - 2 h - 5 w - 5 text - yellow-400" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               Reviews & Ratings;
             </h2>;
             <ProfileRatings;
@@ -336,6 +389,7 @@ function TalentProfile() {
           </div>;
           {/* Hire Now CTA */}
           {is_authenticated && (
+<<<<<<< HEAD
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
               <div className="flex flex - col items - center text - center">;
                 <h3 className="text - xl font - bold text - white mb - 2">Ready to collaborate?</h3>;
@@ -397,6 +451,14 @@ function TalentProfile() {
                     </Button>;
                   )}
                 </div>;
+=======
+            <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb-8">;
+              <div className="flex flex - col items - center text-center">;
+                <h3 className="text - xl font - bold text - white mb-2">Ready to collaborate?</h3>;
+                <p className="text - zion - slate mb - 6 max-w-md">;
+                  Connect with {profile.full_name} for your next project and get started right away.;
+                  {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}                </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </div>;
             </div>;
           )}
@@ -405,6 +467,7 @@ function TalentProfile() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
                 </p>;
@@ -527,3 +590,6 @@ return (</div> </div> {
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -9,8 +9,12 @@ import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 
+<<<<<<< HEAD
   const { fetchInterviews } = useInterviews();
 import React, { useEffect, useState } from "react",
+=======
+  const { fetchInterviews } = useInterviews();import React, { useEffect, useState } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -30,15 +34,22 @@ export function UpcomingInterviewsCard() {
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
 
+<<<<<<< HEAD
 
   useEffect(() => {;
     const loadInterviews = async () => {;
 
       setIsLoading(true);
+=======
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);      setIsLoading(true);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       try {;
         const interviews = await fetchInterviews();
         const now = new Date();
 
+<<<<<<< HEAD
 
 
   useEffect(() => {
@@ -94,11 +105,14 @@ function UpcomingInterviewsCard() {
         setIsLoading(false)
       }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
 
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
 
   if (isLoading) {
     return (
@@ -120,6 +134,8 @@ function UpcomingInterviewsCard() {
                 </div>
               </div>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -149,13 +165,17 @@ export function UpcomingInterviewsCard() {;
             parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
           .slice (0, 3), // Take only the next 3 interviews;
         setUpcomingInterviews (upcoming);
+<<<<<<< HEAD
       } catch (error) {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         console.error ("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading (false);
       }
     }
 
+<<<<<<< HEAD
 
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
@@ -165,6 +185,8 @@ export function UpcomingInterviewsCard() {;
           );
           .sort((a, b) => ;
             parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           );
           .slice(0, 3), // Take only the next 3 interviews;
 
@@ -181,8 +203,12 @@ export function UpcomingInterviewsCard() {;
 
   if (isLoading) {;
 
+<<<<<<< HEAD
     return (
     return (
+=======
+    return (    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -199,6 +225,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
+<<<<<<< HEAD
               </div>;
 
 
@@ -226,6 +253,9 @@ export function UpcomingInterviewsCard() {;
   if (upcomingInterviews.length === 0) {;
     return (;
     return (
+=======
+              </div>;    return (    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -246,8 +276,11 @@ export function UpcomingInterviewsCard() {;
     );
   }
   return (
+<<<<<<< HEAD
 
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -256,6 +289,7 @@ export function UpcomingInterviewsCard() {;
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
+<<<<<<< HEAD
           {upcomingInterviews.map(interview => {
 
             const interviewDate = parseISO(interview.scheduled_date),
@@ -328,6 +362,9 @@ export function UpcomingInterviewsCard() {;
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">;
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>;
+=======
+          {upcomingInterviews.map(interview => {                    </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   )}
                 </Avatar>;
                 <div className="flex-1">;
@@ -336,6 +373,7 @@ export function UpcomingInterviewsCard() {;
                       {interview && interview.title || "Interview"}
                     </p>;
                     {isStartingSoon && (;
+<<<<<<< HEAD
                       <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;
                         Soon;
                       </span>;
@@ -343,6 +381,10 @@ export function UpcomingInterviewsCard() {;
             const interviewDate = parseISO(interview && interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
                     )}
+=======
+                      <span className="text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">;                        Soon;
+                      </span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                   <div className="flex items-center text-sm text-muted-foreground">;
                     <Clock className="h-3 w-3 mr-1" />;
@@ -351,6 +393,7 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
             );
+<<<<<<< HEAD
           })}
 
         </div>;
@@ -512,3 +555,6 @@ return (<img src= {
 }
 }
 ;
+=======
+          })}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

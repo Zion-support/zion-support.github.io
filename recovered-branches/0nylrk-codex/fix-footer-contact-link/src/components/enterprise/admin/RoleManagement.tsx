@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 import React from "react",
 import {
@@ -23,6 +24,8 @@ import {
 
 export function RoleManagement() {
   // Mock team members data
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const teamMembers = [
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -38,14 +41,18 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
+<<<<<<< HEAD
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: 1
       name: "Alex Johnson"
       email: "alex@example.com"
       role: "Admin"
+<<<<<<< HEAD
       permissions: {
 
         view_candidates: true,
@@ -56,11 +63,15 @@ export function RoleManagement() {
         manage_billing: true}},
 
     {
+=======
+      permissions: {    {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       id: 2
       name: "Jamie Smith"
       email: "jamie@example.com"
       role: "Recruiter"
       permissions: {
+<<<<<<< HEAD
 
         view_candidates: true,
         edit_candidates: true,
@@ -83,6 +94,8 @@ export function RoleManagement() {
         view_billing: true,
         manage_billing: false}},
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {
       id: 4
       name: "Taylor Brown"
@@ -90,11 +103,18 @@ export function RoleManagement() {
       role: "Viewer"
       permissions: {
 
+<<<<<<< HEAD
 
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
   };
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+=======
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  },
+  description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   const roleDescriptions: Record<string, string> = {
     "Admin": "Full access to all features and settings";
@@ -173,6 +193,7 @@ import {;
   Tooltip,;
   TooltipContent,;
   TooltipProvider,;
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",;
 
 
@@ -453,6 +474,9 @@ export function RoleManagement() {;
                       handlePermissionChange(member && member.id, "viewBilling", checked);
 
                     }
+=======
+  TooltipTrigger} from "@/components/ui/tooltip",;                    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   />;
                 </TableCell>;
               </TableRow>;
@@ -462,11 +486,15 @@ export function RoleManagement() {;
 
             ))}
 
+<<<<<<< HEAD
           </TableBody>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </Table>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
         view_candidates: true,
@@ -679,3 +707,6 @@ TooltipProvider;
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -3,6 +3,7 @@ import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
 interface SidebarMenuButtonProps extends React && React.ButtonHTMLAttributes<HTMLButtonElement> {;
+<<<<<<< HEAD
 
   className?: string;
   children?: React && React.ReactNode;
@@ -44,11 +45,17 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
     return (
       <Comp
         className={cn(
+=======
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors"
+          "text-muted-foreground hover: text-foreground hover:bg-accent"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string,
   children?: React.ReactNode,
   asChild?: boolean
 }
+<<<<<<< HEAD
 
 
 export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
@@ -99,6 +106,11 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonP
 SidebarMenuButton && SidebarMenuButton.displayName = "SidebarMenuButton";
 
 SidebarMenuButton.displayName = "SidebarMenuButton",
+=======
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover:text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 );
@@ -130,6 +142,7 @@ export const SidebarMenuButton = forward_ref < HTMLButtonElement, SidebarMenuBut
 ;
 SidebarMenuButton.display_name = "SidebarMenuButton";
 ;
+<<<<<<< HEAD
 
         )}
         ref={ref as any}
@@ -142,12 +155,15 @@ SidebarMenuButton.display_name = "SidebarMenuButton";
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ),
 
 SidebarMenuButton.displayName = "SidebarMenuButton",
 );
 
 SidebarMenuButton.displayName = "SidebarMenuButton";
+<<<<<<< HEAD
 import React, { forwardRef } from "react",;
 import { Slot } from "@radix-ui/react-slot",;
 import { cn } from "@/lib/utils",;
@@ -200,3 +216,5 @@ className
 });
 SidebarMenuButton.displayName = "SidebarMenuButton";
 SidebarMenuButton.displayName = "SidebarMenuButton";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

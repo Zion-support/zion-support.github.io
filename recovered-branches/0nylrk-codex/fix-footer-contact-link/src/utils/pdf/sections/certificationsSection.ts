@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
+<<<<<<< HEAD
 export function addCertificationsSection(
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
@@ -13,11 +17,15 @@ export function addCertificationsSection(;
 
 
   doc: jsPDF;
+=======
+export function addCertificationsSection(  doc: jsPDF;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   certifications: Certification[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
+<<<<<<< HEAD
   if (certifications && certifications.length === 0) return startY;
   
 
@@ -38,6 +46,11 @@ export function addCertificationsSection(;
   doc && doc.line(20, yPos, 80, yPos);
 
   let yPos = startY;
+=======
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {  let yPos = startY;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Check if we need to add a new page
   if (yPos > 250) {
   yPos += 8;
@@ -47,8 +60,11 @@ export function addCertificationsSection(;
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       doc.addPage();
       yPos = 20
     }
@@ -108,6 +124,7 @@ export function addCertificationsSection(;
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
 
+<<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
     }
@@ -204,3 +221,5 @@ doc.text (cert.issuing organization, 20, yPos + 5);
 }
 }
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

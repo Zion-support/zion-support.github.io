@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Helmet } from './react - helmet - async';
 
 interface SEOProps {
@@ -36,6 +37,12 @@ import {Helmet} from "react-helmet-async";
 import { Helmet } from "react-helmet-async",
 
 interface SEOProps {
+=======
+import { Helmet } from './react - helmet - async';  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;interface SEOProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   title: string,
   description: string,
   keywords?: string,
@@ -44,6 +51,7 @@ interface SEOProps {
   canonical?: string,
   noindex?: boolean
 }
+<<<<<<< HEAD
 
 export function SEO({;
   title;
@@ -67,6 +75,8 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ogUrl,
   canonical,
   noindex}: SEOProps) {
@@ -74,6 +84,7 @@ export function SEO({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
 
+<<<<<<< HEAD
   return (
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
@@ -105,11 +116,15 @@ export function SEO({;
   ;
   return (;
   return (
+=======
+  return (  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Helmet>;
       <title>{fullTitle}</title>;
       <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
 
+<<<<<<< HEAD
 
 
       {/* Open Graph / Facebook */}
@@ -164,6 +179,10 @@ function SEO() {
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
+=======
+interface SEOProps {;
+  title: string,,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   keywords?: string,;
   ogImage?: string,;
@@ -195,14 +214,19 @@ export function SEO({;
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
+<<<<<<< HEAD
 ;
 
       {/* Twitter */}
+=======
+;      {/* Twitter */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <meta name="twitter:card" content="summary_large_image" />;
       <meta name="twitter:site" content="@lovable_dev" />;
       <meta name="twitter:title" content={fullTitle} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={ogImage} />;
+<<<<<<< HEAD
       ;
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -219,11 +243,14 @@ export function SEO({;
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
 
+<<<<<<< HEAD
 
 
 }
@@ -289,8 +316,14 @@ noindex
 }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
     </Helmet>);
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

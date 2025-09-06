@@ -7,6 +7,7 @@ import ForumPostPage from "../pages/ForumPostPage";
 import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
+<<<<<<< HEAD
 const CommunityRoutes = () => {
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
@@ -18,6 +19,9 @@ import CreatePostPage from "../pages/CreatePostPage";
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 import { Fragment } from "react",
+=======
+const CommunityRoutes = () => {import { Fragment } from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import CommunityPage from "../pages/CommunityPage",
@@ -28,7 +32,12 @@ import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 const CommunityRoutes = () => {
+<<<<<<< HEAD
   return (
+=======
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {;  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <Routes>
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -37,11 +46,16 @@ const CommunityRoutes = () => {
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
 
+<<<<<<< HEAD
 
 
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {;
+=======
+const CommunityRoutes = () => {
+=======const CommunityRoutes = () => {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Routes>;
       {/* Public routes */}
@@ -75,6 +89,7 @@ const CommunityRoutes = () => {;
         }
       />
     </Routes>
+<<<<<<< HEAD
   );
 };
 
@@ -139,12 +154,18 @@ const CommunityRoutes = () =>: any {
         element={
           <ProtectedRoute>;
             <EditPostPage />;
+=======
+  )
+};
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </ProtectedRoute>;
         }
 
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 
       />;
     </Routes>;
@@ -203,3 +224,5 @@ export default CommunityRoutes;
 },;
 export default CommunityRoutes;
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

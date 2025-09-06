@@ -1,11 +1,19 @@
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
+<<<<<<< HEAD
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
+=======
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
@@ -69,10 +77,13 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 }
 ;
 
+<<<<<<< HEAD
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
@@ -108,3 +119,7 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
   )
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

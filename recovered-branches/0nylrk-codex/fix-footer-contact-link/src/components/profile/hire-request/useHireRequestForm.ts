@@ -3,23 +3,30 @@ import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+<<<<<<< HEAD
 import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
 import { useHireRequest } from '@/hooks / useHireRequest';
 import { TalentProfile } from '@/types / talent';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface UseHireRequestFormProps {
   talent: TalentProfile;
   on_close: () => void;
   initialJobTitle?: string;
   user_details?: {
+<<<<<<< HEAD
     name?: string;
 
 
@@ -39,6 +46,13 @@ interface UseHireRequestFormProps {
 }
 export interface FormValues {
   }
+=======
+    name?: string;interface UseHireRequestFormProps {
+  talent: TalentProfile,
+  onClose: () => void,
+  initialJobTitle?: string,
+  userDetails?: {  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export interface FormValues {;
@@ -64,14 +78,21 @@ interface UseHireRequestFormProps {;
     name?: string,;
     email?: string,;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     email?: string,
     id?: string;
 
   }
+<<<<<<< HEAD
 }
     id?: string;
+=======
+}    id?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 ;
@@ -82,6 +103,7 @@ export interface FormValues {;
   timeline: string,;
   budgetMin: number,;
   budgetMax: number;
+<<<<<<< HEAD
 }
 
     email?: string,
@@ -125,12 +147,18 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   });
 
     requesterName: z.string().min(2, "Name is required"),
+=======
+}    requesterName: z.string().min(2, "Name is required"),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     requesterEmail: z.string().email("Valid email is required"),
     projectOverview: z.string().min(10, "Please provide more details about your project"),
     timeline: z.string().min(5, "Please specify your timeline"),
     budgetMin: z.number().min(1, "Budget minimum is required"),
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     budgetMax: z.number().min(1, "Budget maximum is required")
   }).refine(data => data.budgetMax >= data.budgetMin, {
     message: "Maximum budget must be greater than or equal to minimum budget"
@@ -138,6 +166,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
 
   }),
 
+<<<<<<< HEAD
 
   // Initialize the form
   const form = useForm<FormValues>({
@@ -229,6 +258,11 @@ function useHireRequestForm() {
         onClose()
           id: talent.id || "",
           full_name: talent.full_name,
+=======
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema);
+    defaultValues: {          full_name: talent.full_name,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           professional_title: talent.professional_title},
         requester: {
           name: values.requesterName,
@@ -239,6 +273,7 @@ function useHireRequestForm() {
           overview: values.projectOverview,
           timeline: values.timeline,
           budgetMin: values.budgetMin,
+<<<<<<< HEAD
           budgetMax: values.budgetMax
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
@@ -340,6 +375,9 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   }
 }
       }
+=======
+          budgetMax: values.budgetMax      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {
       console && console.error("Error submitting hire request:", error)
           id: talent.id || "";
@@ -371,7 +409,10 @@ if ( {) {
 
       setIsSubmitting(false)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -382,6 +423,7 @@ if ( {) {
     form;
     isSubmitting;
     onSubmit;
+<<<<<<< HEAD
 
 
 
@@ -389,12 +431,24 @@ if ( {) {
 }
   }
 ;
+=======
+  }
+}
+;
+
+  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return {
     form;
     is_submitting;
     on_submit;
   }
+<<<<<<< HEAD
 }
   }
+=======
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;

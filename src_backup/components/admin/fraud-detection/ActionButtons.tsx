@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
-interface ActionButtonsProps {
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
-  return (
-    <div className="flex space-x-2">
-      <Button
-        variant="ghost"
-        size="icon"
-        title="View Details"
-        aria-label="View details"
-        onClick={() => alert("View details (would open a detailed view)")}
-      >
-        <Eye className="h-4 w-4" />
-      </Button>
-      <Button
-=======
 >
         <Eye className="h-4 w-4" />
       </Button>
       <Button
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 };
 '"},;
   );
@@ -34,8 +16,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         title="Send Warning"
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
-<<<<<<< HEAD
-=======
         disabled={status === 'actioned' || status === 'ignored'}
       >
         <Info className="h-4 w-4" />
@@ -64,8 +44,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Button
           variant="ghost"
           size="sm"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
@@ -75,16 +54,15 @@ import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
           size='sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
         </Button>
       )}
-<<<<<<< HEAD
-=======
 
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -166,6 +144,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 import { Button } from '@/components/ui/ button';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/admin/fraud-detection/ActionButtons.tsx
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {
   flag_id: string;
@@ -234,9 +214,8 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 '"},
   );
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 );
 };
 '"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

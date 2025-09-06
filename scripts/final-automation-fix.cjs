@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const fs = require("$1")
 const path = require("$1")
@@ -60,3 +64,8 @@ const { execSync } = require("child_process")
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
 
+<<<<<<< HEAD
+=======
+      this.log(` Final automation fix "failed"`)
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -36,6 +39,7 @@ if (throw error) {
       set_loading (false);
     }
 
+<<<<<<< HEAD
 
   const filteredNotifications = notifications && notifications.filter(notification => {
 
@@ -154,6 +158,12 @@ if (throw error) {
 
     dismissNotification;
 import { useState, useCallback } from 'react',;
+=======
+  const filteredNotifications = notifications && notifications.filter(notification => {    loading;
+    filter;
+    markAsRead;
+    markAllAsRead;import { useState, useCallback } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
 export const useNotificationOperations = (userId?: string): NotificationContextType => {;
@@ -241,6 +251,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     filter,;
     markAsRead,;
     markAllAsRead,;
+<<<<<<< HEAD
     dismissNotification,;
 
 
@@ -250,10 +261,14 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 }
 
     dismiss_notification;
+=======
+    dismissNotification,;    dismiss_notification;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     set_filter;
     fetch_notifications}
 }
 ;
+<<<<<<< HEAD
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -387,3 +402,5 @@ const filteredNotifications = notifications.filter (notification => {
 case 'messages': return notification.type === 'message';
 case 'onboarding': return notification.type === 'onboarding';
 case 'system': 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
 
-const Page = () => {
-  return (
-    <MainLayout
-      title="Services Overview - Zion Tech Group"
-      description="Overview of our services"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Services Overview</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Brain,
   Network,
   Cloud,
@@ -123,11 +99,6 @@ export default Page;
   { number: "50+", label: "Countries Served" },
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
-import Layout from '../components/Layout';
-=======
 import {
   Activity,
   ArrowRight,
@@ -180,7 +151,7 @@ import {
   Zap,
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const serviceCategories = [
   {
@@ -269,29 +240,6 @@ const benefits = [;
 ];
 export default function ServicesOverviewPage() {
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-=======
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -2534,7 +2482,7 @@ class ErrorBoundary extends React.Component {
       </section>
     </PageTransition>
   );
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 import React from "react";
 import Link from "next/link";
@@ -3033,4 +2981,4 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>);
 }
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+

@@ -13,6 +13,7 @@ export * from &quot;./sidebar - menu & quot;
 export type { SafeRef } from &quot;../sidebar.types & quot;
 ;
 
+<<<<<<< HEAD
 import * as React from "react"
 
 // Export all components from the sidebar subcomponents
@@ -40,3 +41,6 @@ export type { SafeRef } from "../sidebar.types"; import * as React from "react" 
 export type { SafeRef } from &quot;../sidebar.types&quot;
 // Also export types 
 export type { SafeRef } from "../sidebar.types"
+=======
+// Export all components from the sidebar subcomponents
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

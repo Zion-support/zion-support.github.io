@@ -1,10 +1,14 @@
 
 
+<<<<<<< HEAD
 import React from "react";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
 
+<<<<<<< HEAD
 
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
@@ -13,6 +17,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -25,14 +31,18 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
+<<<<<<< HEAD
         </TabsList>
 
 
@@ -46,6 +56,9 @@ import {
           <UsageStats />
         </TabsContent>
         
+=======
+        </TabsList>        
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -59,6 +72,7 @@ import {
         </TabsContent>
         
 
+<<<<<<< HEAD
 
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
@@ -116,6 +130,16 @@ export function AdminDashboard() {;
 
 }
 
+=======
+        <TabsContent value="activity" className="space-y-8">
+          <TeamActivity />
+        </TabsContent>
+      </Tabs>          <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
+          <TabsTrigger value="activity">Team Activity</TabsTrigger>;
+        </TabsList>;
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
         ;
         <TabsContent value="team" className="space-y-8">;

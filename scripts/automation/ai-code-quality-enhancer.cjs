@@ -109,6 +109,11 @@ class $1 {}
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)};
 ;
   async analyzeCodeQuality() {}
@@ -720,3 +725,8 @@ if (require.main === module) {}
   enhancer.run()};
 ;
 
+<<<<<<< HEAD
+=======
+module.exports = AICodeQualityEnhancer;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

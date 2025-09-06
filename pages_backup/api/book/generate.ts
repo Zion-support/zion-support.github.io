@@ -1,17 +1,14 @@
+
+
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
 
-
-
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
 
 
-=======
     res.status(405).json({ error: 'Method not allowed' });
     return
   }
@@ -32,20 +29,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ chapters: drafted });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-=======
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export default async /**
  * handler - Function description
  */
@@ -62,6 +53,10 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
@@ -89,6 +84,7 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD
 =======
@@ -97,6 +93,10 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
@@ -104,6 +104,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 <<<<<<< HEAD
 =======
@@ -111,15 +112,23 @@ if ( {) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   res.status(200).json({ chapters: drafted });
 };
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/book/generate.ts
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/book/generate.ts
+=======
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

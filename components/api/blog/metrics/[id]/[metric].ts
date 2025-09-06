@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,12 +23,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { incrementMetric } from '@/utils/data/blogStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   if (typeof id !== 'string' |typeof metric !== 'string')
     return res.status(400).json({ error: 'Invalid params' });
   if (!['views', 'likes', 'shares'].includes(metric))
@@ -41,6 +44,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
@@ -51,6 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,6 +66,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req && req.query;
@@ -69,6 +80,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!post) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ ok: true, metrics: post && post.metrics })
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -81,6 +93,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -123,6 +141,7 @@ function handler() {
   return res.status (200).json ({ ok: true, metrics: post.metrics });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -132,25 +151,27 @@ function handler() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-}
-
-
-
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+}
+
+
+
 }
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
@@ -158,14 +179,20 @@ function handler() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return res.status(200).json({ ok: true, metrics: post.metrics });
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 }
@@ -179,3 +206,6 @@ function handler() {
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

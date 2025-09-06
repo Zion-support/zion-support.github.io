@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
@@ -51,10 +52,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   const state = readState()
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+  const state = readState()
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   } catch (error) {
     console.error("Error:", error);
@@ -66,6 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
+<<<<<<< HEAD
       peers?: Peer[],
       scope?: SyncScope,
       instanceId?: string
@@ -103,35 +119,49 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     if (Array.isArray(peers)) {
       state.config.peers = peers.filter((p) => typeof p.baseUrl === "string" && p.baseUrl.length > 0)
     }
-=======
       peers?: Peer[]
       scope?: SyncScope
       instanceId?: string
     }
 
 
+<<<<<<< HEAD
 >>>>>>> main
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (typeof optIn === "boolean") state.config.optIn = optIn
     if (typeof paused === "boolean") state.config.paused = paused
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
+<<<<<<< HEAD
+    writeState(state)
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
     writeState(state)
 
-
-    writeState(state)
-
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/sync/config.ts
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const state = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })
@@ -201,27 +231,24 @@ if (state.config.instance_id = instance_id, ) {
 }
 ;
 
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/config.ts
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return res.status(200).json({ config: state.config })
     } catch (error) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
   return res.status(405).json({ error: "Method not allowed" })
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/test.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ export default function TestPage() {
 }
 <<<<<<< HEAD:pages_backup/test.tsx
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 import Head from 'next/head';
@@ -65,9 +68,8 @@ export default function TestPage() {;
 }
 import React from 'react'
 import Head from 'next/head'
-=======
 import Head from 'next/head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function TestPage() {
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -91,12 +93,10 @@ origin/main
       </div>
     </>
   )
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -107,3 +107,6 @@ origin/main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

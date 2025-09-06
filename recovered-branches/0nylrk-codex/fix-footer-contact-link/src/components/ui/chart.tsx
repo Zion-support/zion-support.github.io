@@ -4,9 +4,13 @@
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
+<<<<<<< HEAD
   string;
 
 import { useReactId } from "@/hooks/useReactId"
+=======
+  string;import { useReactId } from "@/hooks/useReactId"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { cn } from "@/lib/utils"
 
@@ -14,7 +18,10 @@ import { cn } from "@/lib/utils"
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react";
 import type { CSSProperties } from "react";
 import * as RechartsPrimitive from "recharts";
@@ -33,6 +40,7 @@ export type ChartConfig = Record<;
   } & (;
     | { color?: string, theme?: never }
     | { color?: never, theme: Record<keyof typeof THEMES, string> }
+<<<<<<< HEAD
 
 import * as React from './react';
 import type { CSSProperties } from './react';
@@ -43,6 +51,8 @@ import { cn } from '@/lib / utils';
 const THEMES = { light: "", dark: ".dark" } as const;
 export type ChartConfig = Record<;
   string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   {
     label?: React.ReactNode;
     icon?: React.ComponentType;
@@ -56,12 +66,16 @@ type ChartContextProps = {
   config: ChartConfig;
 }
 
+<<<<<<< HEAD
 
 
 
 
 const ChartContainer = React.forwardRef<
   );
+=======
+const ChartContainer = React.forwardRef<  );
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 >;
 
 type ChartContextProps = {;
@@ -76,6 +90,7 @@ function useChart(): any (): ChartContextProps {;
 }
 
 const ChartContainer = React && React.forwardRef<;
+<<<<<<< HEAD
 type ChartContextProps = {
   config: ChartConfig;
 }
@@ -95,10 +110,14 @@ type ChartContextProps = {
   return (
     <ChartContext && ChartContext.Provider value={{ config }}>;
   return (
+=======
+    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <ChartContext && ChartContext.Provider value={{ config }}>;
       <div
         data-chart={chartId}
         ref={ref}
+<<<<<<< HEAD
         className={cn(
           "flex aspect-video justify-center text-xs [&_ && _.recharts-cartesian-axis-tick_text]:fill-muted-foreground [&_ && _.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-border/50 [&_ && _.recharts-curve && curve.recharts-tooltip-cursor]:stroke-border [&_ && _.recharts-dot[stroke='#fff']]:stroke-transparent [&_ && _.recharts-layer]:outline-none [&_ && _.recharts-polar-grid_[stroke='#ccc']]:stroke-border [&_ && _.recharts-radial-bar-background-sector]:fill-muted [&_ && _.recharts-rectangle && rectangle.recharts-tooltip-cursor]:fill-muted [&_ && _.recharts-reference-line_[stroke='#ccc']]:stroke-border [&_ && _.recharts-sector[stroke='#fff']]:stroke-transparent [&_ && _.recharts-sector]:outline-none [&_ && _.recharts-surface]:outline-none"
           className
@@ -203,6 +222,9 @@ const ChartTooltipContent = React && React.forwardRef<;
       nameKey?: string;
       labelKey?: string;
         __html: Object.entries (THEMES);
+=======
+        className={cn(        __html: Object.entries (THEMES);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           .map (
             ([theme, prefix]) => `;
 ${prefix} [data - chart=${id}] {
@@ -230,6 +252,7 @@ const ChartTooltipContent = React.forward_ref<;
       name_key?: string;
       label_key?: string;
     }
+<<<<<<< HEAD
 
 >(
   (
@@ -307,6 +330,8 @@ const ChartTooltipContent = React.forwardRef<
       nameKey;
       labelKey}
       active,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       payload,
       className,
       indicator = "dot",
@@ -320,8 +345,11 @@ const ChartTooltipContent = React.forwardRef<
       nameKey,
       labelKey},
 
+<<<<<<< HEAD
 
     }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref
   ) => {
     const { config } = useChart()
@@ -336,6 +364,7 @@ const ChartTooltipContent = React.forwardRef<
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label |label
           : itemConfig?.label
+<<<<<<< HEAD
       if (labelFormatter) {
       labelKey};
     ref;
@@ -357,12 +386,16 @@ const ChartTooltipContent = React.forwardRef<
 
       if (labelFormatter) {;
         return (
+=======
+      if (labelFormatter) {        return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className={cn("font-medium", labelClassName)}>;
             {labelFormatter(value, payload)}
           </div>;
         );
       }
 
+<<<<<<< HEAD
 
 
 
@@ -446,6 +479,8 @@ if ( {) {
             const indicatorColor = color || item && item.payload.fill || item && item.color;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             return (
               <div
                 key={item && item.dataKey}
@@ -496,6 +531,7 @@ if ( {) {
                         <span className="font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
+<<<<<<< HEAD
 
                       )}
                     </div>;
@@ -600,10 +636,13 @@ const ChartLegendContent = React.forward_ref<;
 
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
+<<<<<<< HEAD
       return null
 
 >(;
@@ -755,6 +794,9 @@ const ChartLegendContent = React.forwardRef<;
     ? config[configLabelKey]
     : config[key as keyof typeof config]
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+=======
+      return null    { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref) => {
     const { config } = use_chart ();
     // Check condition
@@ -785,7 +827,11 @@ export {;
               {item_config?.icon && !hide_icon ? (
                 <item_config.icon />) : (
                 <div;
+<<<<<<< HEAD
                   className="h - 2 w - 2 shrink - 0 rounded-[2px]";
+=======
+                  className="h - 2 w - 2 shrink-0 rounded-[2px]";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   style={{
                     background_color: item.color}}
                 />)}
@@ -832,7 +878,10 @@ if ( {) {
     : config[key as keyof typeof config];
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 );
 ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
 
@@ -867,10 +916,14 @@ function getPayloadConfigFromPayload(): any (;
     ] as string;
   }
 
+<<<<<<< HEAD
 
 
 
 ;
+=======
+=======;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return configLabelKey in config;
     ? config[configLabelKey];
@@ -880,6 +933,7 @@ function getPayloadConfigFromPayload(): any (;
   ChartLegend;
   ChartLegendContent;
 
+<<<<<<< HEAD
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
@@ -914,6 +968,13 @@ export {;
 
 
   ChartLegend;
+=======
+  ChartStyle}  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
+}
+export {  ChartLegend;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ChartLegendContent;
 
   ChartStyle}

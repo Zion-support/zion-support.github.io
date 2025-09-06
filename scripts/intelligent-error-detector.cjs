@@ -67,3 +67,8 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
 
+<<<<<<< HEAD
+=======
+    this.log("� Error detection completed!", "SUCCESS")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

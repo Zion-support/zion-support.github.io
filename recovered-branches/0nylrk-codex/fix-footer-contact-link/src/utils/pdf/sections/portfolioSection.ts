@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
@@ -11,11 +12,18 @@ export function addPortfolioSection(;
 
 
   doc: jsPDF;
+=======
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(  doc: jsPDF;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
 
   maxProjects: number = 2
+<<<<<<< HEAD
 ): number {
 
   if (projects && projects.length === 0) return startY;
@@ -268,6 +276,9 @@ if ( {) {
 
 
 ;
+=======
+): number {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
     doc.setFontSize(10),;
@@ -275,8 +286,11 @@ if ( {) {
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -359,6 +373,7 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
+<<<<<<< HEAD
 }
 
 import { jsPDF } from 'jspdf',;
@@ -476,3 +491,6 @@ yPos += 4
   return yPos + 5;
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

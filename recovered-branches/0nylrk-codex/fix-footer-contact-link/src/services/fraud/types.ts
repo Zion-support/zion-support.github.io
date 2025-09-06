@@ -8,12 +8,16 @@ export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+<<<<<<< HEAD
 
 
 export interface EmailAnalysisResult extends AnalysisResult {}
@@ -50,3 +54,8 @@ export interface SignupCheckResult extends AnalysisResult {}
 ;
 
 export interface SignupCheckResult extends AnalysisResult {}
+=======
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

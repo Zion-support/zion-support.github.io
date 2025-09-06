@@ -20,7 +20,13 @@ async function checkAutomationStatus() {
     console.log('📋 Checking PM2 processes...');
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+<<<<<<< HEAD
 
+=======
+main
+
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const statusReport = {
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
@@ -33,6 +39,7 @@ async function checkAutomationStatus() {
     
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -50,6 +57,13 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
 
@@ -58,19 +72,23 @@ async function checkAutomationStatus() {
       );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     } catch (error) {
-      
-    } catch (error) {
-      
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch (error) {
-      console.log('⚠️  PM2 not available or no processes running');
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
     } catch (error) {
       
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      
+    } catch (error) {
+      
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -132,10 +150,16 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       statusReport.pm2Processes = [];
     }
 
     // Check automation scripts
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -165,6 +189,12 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
 =======
 
@@ -173,6 +203,7 @@ async function checkAutomationStatus() {
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -200,6 +231,14 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+      'automation/master-orchestrator.cjs',
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -210,6 +249,7 @@ async function checkAutomationStatus() {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -230,6 +270,11 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         name: script,
         exists,
         path: scriptPath
@@ -256,6 +301,11 @@ async function checkAutomationStatus() {
       nodeVersion: process.version,
       platform: process.platform,
     };
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         "name": script,
         exists,
@@ -273,6 +323,7 @@ async function checkAutomationStatus() {
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
+<<<<<<< HEAD
 
     }
 
@@ -282,6 +333,13 @@ async function checkAutomationStatus() {
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 =======
+=======
+ursor/automate-test-improve-and-merge-code-2480
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Check system health
     
     const systemHealth = {
@@ -308,9 +366,7 @@ async function checkAutomationStatus() {
     }
 
     // Save report
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         name: script,
         exists,
         path: scriptPath
@@ -335,18 +391,34 @@ async function checkAutomationStatus() {
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+<<<<<<< HEAD
+=======
+    
+    
+    
+    
+    
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -381,6 +453,7 @@ async function checkAutomationStatus() {
     // Save report
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -416,12 +489,26 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
+<<<<<<< HEAD
+=======
+    
+    
+    
+    
+    
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -438,6 +525,7 @@ async function checkAutomationStatus() {
     console.error('❌ Error checking automation status:', error.message);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -450,11 +538,20 @@ async function checkAutomationStatus() {
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -495,6 +592,21 @@ if (require.main === module) {
 }
 
 module.exports = { checkAutomationStatus };
+=======
+
+
+// Run if called directly
+main
+if (require.main === module) {
+
+
+
+
+
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -506,6 +618,10 @@ const { execSync } = require('child_process')
     console.log(' Status "Report")
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 if (require.main === module) {
   checkAutomationStatus().then(report => {
@@ -515,6 +631,7 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -536,3 +653,13 @@ module.exports = checkAutomationStatus;
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+module.exports = checkAutomationStatus;
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,11 +1,25 @@
 
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 
+=======
+
+
+
+#!/usr/bin/env node;
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if ( {
         ) {
      {
@@ -462,6 +476,10 @@ const path = require('path')
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -533,4 +551,11 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
       console.error('Error loading "history")
+<<<<<<< HEAD
+=======
+      console.error('Error loading "history")
+
+      console.error('Error loading "history")
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 

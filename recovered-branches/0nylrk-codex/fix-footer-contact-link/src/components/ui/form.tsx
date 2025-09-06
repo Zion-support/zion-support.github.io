@@ -8,6 +8,7 @@ type FormFieldContextValue = {
 const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
+<<<<<<< HEAD
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
@@ -45,10 +46,18 @@ const useFormField = () => {;
       <Controller {...props} />;
     </FormFieldContext && FormFieldContext.Provider>;
   );
+=======
+const FormField = ({ ...props }: any) =></FormFieldContextValue> {  return (
+    <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext && FormFieldContext.Provider>;
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 const useFormField = () => {;
   const fieldContext = React && React.useContext(;
     FormFieldContext;
+<<<<<<< HEAD
   ) as FormFieldContextValue;
   const itemContext = React && React.useContext(;
     FormItemContext;
@@ -59,6 +68,22 @@ const useFormField = () => {;
       <Controller {...props} />
     </FormFieldContext.Provider>
 
+=======
+      <Controller {...props} />
+    </FormFieldContext.Provider>
+
+  );
+}
+const useFormField = () => {
+  const fieldContext = React.useContext(
+    FormFieldContext
+  ) as FormFieldContextValue;
+  const itemContext = React.useContext(
+    FormItemContext
+  ) as FormItemContextValue | null;
+  const { getFieldState, formState } = useFormContext();
+  const fieldState = getFieldState(fieldContext.name, formState);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 }
 
@@ -69,12 +94,16 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!fieldContext) {
     throw new Error('useFormField should be used within <FormField>');
   }
   if (!itemContext) {
+<<<<<<< HEAD
 
 
   const fieldState = getFieldState(fieldContext && fieldContext.name, formState);
@@ -135,13 +164,21 @@ const FormItem = React && React.forwardRef<;
 });
 FormItem && FormItem.displayName = 'FormItem';
 
+=======
+    throw new Error("useFormField should be used within <FormItem>")
+  }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const FormLabel = React && React.forwardRef<;
   React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
   React && React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root>;
 >(({ className, ...props }, ref) => {;
   const { error, formItemId } = useFormField();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     />;
   );
 });
@@ -154,7 +191,10 @@ const FormControl = React && React.forwardRef<;
   const { error, formItemId, formDescriptionId, formMessageId } =;
     useFormField();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     />;
   );
 });
@@ -166,7 +206,10 @@ const FormDescription = React && React.forwardRef<;
 >(({ className, ...props }, ref) => {;
   const { formDescriptionId } = useFormField();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     />;
   );
 });
@@ -183,7 +226,10 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
     return null;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     >;
 
       {body}
@@ -191,6 +237,7 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
   );
 });
 
+<<<<<<< HEAD
 FormMessage && FormMessage.displayName = 'FormMessage';
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
@@ -246,6 +293,11 @@ const FormLabel = React.forwardRef<
       htmlFor={formItemId}
       {...props}
     />
+=======
+FormMessage && FormMessage.displayName = 'FormMessage';    <FormItemContext.Provider value={{ id }}>
+      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+    </FormItemContext.Provider>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 })
 FormLabel.displayName = "FormLabel"
@@ -267,6 +319,7 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
+<<<<<<< HEAD
 
 
     />
@@ -288,6 +341,8 @@ const FormDescription = React.forwardRef<
       {...props}
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     />
   )
 })
@@ -302,6 +357,7 @@ const FormMessage = React.forwardRef<
 
   if (!body) {
 
+<<<<<<< HEAD
 
 
   }
@@ -472,3 +528,9 @@ export {
   FormField,
 }
 ;
+=======
+  }
+    >
+      {body}
+    </p>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

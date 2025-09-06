@@ -2,6 +2,7 @@
 import { createNotification  } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 import { createNotification } from './createNotification',
+<<<<<<< HEAD
 import { HireRequestNotificationParams } from './types',
 import {createNotification} from './createNotification';
 import {HireRequestNotificationParams} from './types';
@@ -16,10 +17,14 @@ import { createNotification } from './createNotification',
 import { HireRequestNotificationParams } from './types',
 
 /**
+=======
+import { HireRequestNotificationParams } from './types',/**
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  * Creates a hire request notification for admin and talent
  */
 export async function createHireRequestNotifications({
 
+<<<<<<< HEAD
 
   try {
   const projectInfo = projectType 
@@ -57,12 +62,22 @@ export async function createHireRequestNotifications({
       success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
 
+=======
+  adminId,
+  requesterName,
+
+      success: talentNotification.success && adminNotification.success;
+      talentNotification
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       adminNotification
   talentId,
   adminId,
   requesterName,
+<<<<<<< HEAD
 
   requesterEmail, 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   projectType,
   projectSummary,
   hireRequestId
@@ -104,7 +119,10 @@ export async function createHireRequestNotifications({
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createNotification } from './createNotification',;
 import { HireRequestNotificationParams } from './types',;
 /**;
@@ -152,6 +170,7 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification;
       adminNotification;
+<<<<<<< HEAD
 
     }
   }
@@ -218,4 +237,6 @@ if ( {) {
 
     talentNotification
   }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

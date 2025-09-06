@@ -5,11 +5,17 @@ export const supabase = {
 
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
+<<<<<<< HEAD
     signOut: () => Promise<any>;
   };
 }
 
 
+=======
+    signOut: () => Promise<any>
+};
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Mock Supabase client for development
 export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
   return {
@@ -74,10 +80,17 @@ export const supabase = createSupabaseClient(supabaseConfig);
     });
   });
 }
+<<<<<<< HEAD
   });
 };
 }
 
   });
+=======
+  })
+};
+}
+  })
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 

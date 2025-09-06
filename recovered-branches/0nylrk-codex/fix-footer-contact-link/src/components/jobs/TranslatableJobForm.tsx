@@ -1,21 +1,28 @@
 
 
+<<<<<<< HEAD
 
 
 interface TranslatableJobFormProps {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
@@ -132,6 +139,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       }
     }
 import React, { useState } from "react",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
@@ -142,12 +151,16 @@ import { useTranslation } from "react-i18next",;
 import { useTranslationService } from "@/hooks/useTranslationService",;
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",;
 import { toast } from "@/components/ui/use-toast",;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void,;
   isSubmitting?: boolean;
 }
+<<<<<<< HEAD
 
 export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
   const { t } = useTranslation();
@@ -158,13 +171,18 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
   // Form fields with translations;
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
 
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
     es: "",;
@@ -172,12 +190,16 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     ar: ""}),;
 
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
     es: "",;
     pt: "",;
     ar: ""}),;
+<<<<<<< HEAD
 
   const [budget, setBudget] = useState("");
   const [deadline, setDeadline] = useState("");
@@ -210,11 +232,14 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       deadline});
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Auto translate content when language tab changes;
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
     }
+<<<<<<< HEAD
   };
 
   // Auto translate function;
@@ -248,10 +273,16 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
       if (error) {
+=======
+
+      }
+    }      if (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
+<<<<<<< HEAD
         return
 
 
@@ -318,6 +349,17 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       toast({;
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
+=======
+        return;
+      toast({;
+        title: t('translation.translation_success'),,
+  description: t('translation.content_translated')});
+    } catch (error) {;
+      console.error(`Error translating ${field}:`, error),;
+      toast({;
+        title: t('translation.translation_failed'),,
+  description: error instanceof Error ? error.message : t('translation.unknown_error'),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   },;
@@ -330,7 +372,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -344,6 +389,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       await Promise.all(promises)
     }
 
+<<<<<<< HEAD
 
   },
   };
@@ -355,6 +401,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   
   
   return (
+=======
+  },
+  };
+  },
+    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
@@ -368,18 +420,30 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
+<<<<<<< HEAD
 
     if (!content) {;
       toast({;
         title: t('translation && translation.no_content'),;
         description: t('translation && translation.add_content_first'),;
+=======
+    if (!content) {;
+      toast({;
+        title: t('translation && translation.no_content'),,
+  description: t('translation && translation.add_content_first'),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"}),;
       return;
     }
       if (error) {;
         toast({;
+<<<<<<< HEAD
           title: t('translation && translation.translation_failed'),;
           description: error,;
+=======
+          title: t('translation && translation.translation_failed'),,
+  description: error,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive"}),;
         return;
       }
@@ -391,6 +455,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         setRequirements(translations);
       }
       toast({;
+<<<<<<< HEAD
         title: t('translation && translation.translation_success'),;
         description: t('translation && translation.content_translated')});
     } catch (error) {;
@@ -398,6 +463,15 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       toast({;
         title: t('translation && translation.translation_failed'),;
         description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
+=======
+        title: t('translation && translation.translation_success'),,
+  description: t('translation && translation.content_translated')});
+    } catch (error) {;
+      console && console.error(`Error translating ${field}:`, error);
+      toast({;
+        title: t('translation && translation.translation_failed'),,
+  description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   };
@@ -430,6 +504,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         <div className="space-y-2">;
           <div className="flex justify-between items-center">;
             <label htmlFor="title" className="text-lg font-medium">;
+<<<<<<< HEAD
               {t('jobs && jobs.job_title')}
             </label>;
       }
@@ -461,6 +536,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
               disabled={isTranslating || (!description.en && !description.es && !description.pt && !description.ar)}
               className="flex items-center gap-1";
             >;
+=======
+      }
+    }            >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
               ) : (;
@@ -490,8 +569,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
                     className="w-full";
                     dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
                   />;
+<<<<<<< HEAD
                 </div>;
               </TabsContent>;
+=======
+                </div>;              </TabsContent>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ))}
           </Tabs>;
         </div>;
@@ -501,15 +584,21 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="description" className="text-lg font-medium">;
               {t('jobs && jobs.job_description')}
             </label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('description')}
+<<<<<<< HEAD
 
               disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
               className="flex items-center gap-1";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             >;
               {isTranslating ? (;
                 <Loader2 className="h-4 w-4 animate-spin" />;
@@ -537,8 +626,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
                   onChange={(e) => handleDescriptionChange(e && e.target.value)}
                   placeholder={t('jobs && jobs.description_placeholder')}
                   className="min-h-32 w-full";
+<<<<<<< HEAD
                   dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
                 />;
+=======
+                  dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}                />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </TabsContent>;
             ))}
           </Tabs>;
@@ -549,7 +642,10 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="requirements" className="text-lg font-medium">;
               {t('jobs && jobs.skills_required')}
             </label>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button
               type="button"
               size="sm"
@@ -558,6 +654,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <Input
               id="budget"
               value={budget}
+<<<<<<< HEAD
               onChange={(e) => setBudget(e && e.target.value)}
               placeholder="$1000 - $2000";
               className="w-full";
@@ -937,26 +1034,41 @@ if ( {) {
 
 
         </Button>;
+=======
+              onChange={(e) => setBudget(e && e.target.value)}        </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </div>;
     </form>;
   );
 }
 
+<<<<<<< HEAD
       <div className="pt - 4">;
         <Button;
           type="submit";
           className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan";
+=======
+      <div className="pt-4">;
+        <Button;
+          type="submit";
+          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion-cyan";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           disabled={is_submitting || is_translating}
         >;
           {is_submitting ? (
             <>;
+<<<<<<< HEAD
               <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+=======
+              <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {t ('jobs.submitting')}
             </>) : (
             t ('jobs.post_job_button'))}
         </Button>;
       </div>;
     </form>);
+<<<<<<< HEAD
 }
 
       ;
@@ -967,6 +1079,9 @@ if ( {) {
         <Button;
           type="submit";
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
+=======
+}          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           disabled={isSubmitting || isTranslating}
         >;
           {isSubmitting ? (;
@@ -1031,3 +1146,7 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
 }</Button> </div> </form>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

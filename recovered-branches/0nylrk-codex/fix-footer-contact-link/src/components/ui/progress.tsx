@@ -1,15 +1,23 @@
+<<<<<<< HEAD
 
 
 import {cn} from '@/lib/utils';
+=======
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 
+<<<<<<< HEAD
 
 
 import { cn } from "@/lib/utils"
 
+=======
+import { cn } from "@/lib/utils"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -24,6 +32,7 @@ const Progress = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
+<<<<<<< HEAD
 
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
@@ -31,6 +40,12 @@ const Progress = React && React.forwardRef<;
 import { cn } from "@/lib/utils"
 
 
+=======
+      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+
+import { cn } from "@/lib/utils"
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
 ;
@@ -45,7 +60,10 @@ const Progress = React.forwardRef<;
 
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Progress = React.forwardRef<
@@ -69,11 +87,16 @@ const Progress = React && React.forwardRef<;
   >
     <ProgressPrimitive.Indicator
 
+<<<<<<< HEAD
 
 export { Progress };
 
       className="h-full w-full flex-1 bg-primary transition-all"
 
+=======
+export { Progress };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />;
   </ProgressPrimitive && ProgressPrimitive.Root>;
@@ -116,6 +139,7 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 export { Progress }
 ;
 
+<<<<<<< HEAD
 
 
 
@@ -150,3 +174,5 @@ export { Progress };
 Progress.displayName = ProgressPrimitive.Root.displayName;
 export { Progress }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

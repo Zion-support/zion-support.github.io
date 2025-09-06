@@ -9,6 +9,7 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
+<<<<<<< HEAD
 
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
@@ -67,6 +68,8 @@ if ( {) {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const navigate = useNavigate();
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
@@ -94,21 +97,28 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setIsLoading(true);
       try {;
         if (!user) {;
           console && console.warn("User not authenticated.");
           return;
         }
+<<<<<<< HEAD
 
         const { data, error } = await supabase
           .from("saved_talents")
@@ -133,6 +143,13 @@ export default function SavedTalentsPage() {
 
 
         if (data) {
+=======
+            talent_profile (
+
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);        if (data) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
@@ -140,7 +157,10 @@ export default function SavedTalentsPage() {
               is_verified;
             );
           `;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           );
           .eq("user_id", user && user.id);
 
@@ -174,6 +194,7 @@ if ( {) {
           setSavedTalents (talent_profiles);
         }
 
+<<<<<<< HEAD
 
 
       } catch (error) {
@@ -199,6 +220,9 @@ if ( {) {
             );
           `;
           );
+=======
+      } catch (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         console.error ("Error fetching saved talents:", error);
         toast ({
           title: "Error",
@@ -209,7 +233,10 @@ if ( {) {
         setIsLoading (false);
       }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fetchSavedTalents()
   }, [user]);
   const handleViewProfile = (talentId: string) => {
@@ -224,6 +251,7 @@ if ( {) {
     navigate(`/talent/${talentId}`)
   },
 
+<<<<<<< HEAD
 
 
   const handleRequestHire = (talent: TalentProfile) => {
@@ -255,6 +283,20 @@ if ( {) {
         toast({;
           title: "Error",;
           description: "Failed to load saved talents. Please try again later.",;
+=======
+  const handleRequestHire = (talent: TalentProfile) => {
+    console.log("Request to hire:", talent);    toast({
+      title: "Hire Request Sent"
+      description: `A hire request has been sent to ${talent.full_name}.`})
+
+  },
+
+      } catch (error) {;
+        console.error("Error fetching saved talents:", error),;
+        toast({;
+          title: "Error",,
+  description: "Failed to load saved talents. Please try again later.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
@@ -268,8 +310,13 @@ if ( {) {
   const handleRequestHire = (talent: TalentProfile) => {;
     // // // console.log("Request to hire:", talent),;
     toast({;
+<<<<<<< HEAD
       title: "Hire Request Sent",;
       description: `A hire request has been sent to ${talent.full_name}.`});
+=======
+      title: "Hire Request Sent",,
+  description: `A hire request has been sent to ${talent.full_name}.`});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },;
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {;
     try {;
@@ -286,6 +333,7 @@ if ( {) {
           .eq('user_id', user.id);
           .eq('talent_id', talentId),;
         if (error) {;
+<<<<<<< HEAD
           throw error;
 
 
@@ -332,27 +380,45 @@ if ( {) {
         if (talentError) {
           console.error("Error fetching talent profile:", talentError),
           toast({
+=======
+          throw error;        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        );        }
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        ),          toast({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             title: "Error"
             description: "Failed to update saved talents. Please try again later."
             variant: "destructive"})
           return
         }
         if (talentData) {
+<<<<<<< HEAD
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+=======
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           toast({
             title: "Talent Saved"
             description: "Talent saved to your list."})
         }
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error toggling saved talent:", error);
       console.error("Error toggling saved talent:", error),
+=======
+      console.error("Error toggling saved talent:", error),      console.error("Error toggling saved talent:", error),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Error"
         description: "Failed to update saved talents. Please try again later."
         variant: "destructive"})
 
+<<<<<<< HEAD
 
         if (data) {;
           // Extract talent profiles and convert to TalentProfile type;
@@ -454,10 +520,13 @@ if ( {) {
     }
   }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>;
       <SEO
         title="Saved Talents | Zion AI Marketplace"
+<<<<<<< HEAD
         description="View and manage your saved talents in the Zion AI Marketplace"
 
     },;
@@ -650,6 +719,9 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
 
 ;
+=======
+        description="View and manage your saved talents in the Zion AI Marketplace";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fetchSavedTalents ();
   }, [user]);
 ;
@@ -750,6 +822,7 @@ if ( {) {
         description="View and manage your saved talents in the Zion AI Marketplace";
       />;
       <AppHeader />;
+<<<<<<< HEAD
       <div className="container mx - auto px - 4 py - 8">;
         <h1 className="text - 3xl font - bold mb - 4">Saved Talents</h1>;
         <p className="text - muted - foreground">;
@@ -759,6 +832,17 @@ if ( {) {
           <div className="text - center py - 8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
           <div className="text - center py - 8">No talents saved yet.</div>) : (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
+=======
+      <div className="container mx - auto px - 4 py-8">;
+        <h1 className="text - 3xl font - bold mb-4">Saved Talents</h1>;
+        <p className="text - muted-foreground">;
+          Here are the talents you've saved for future reference.;
+        </p>;
+        {is_loading ? (
+          <div className="text - center py-8">Loading saved talents...</div>) : saved_talents.length === 0 ? (
+          <div className="text - center py-8">No talents saved yet.</div>) : (
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {saved_talents.map ((talent) => (
               <TalentCard;
                 key={talent.id}
@@ -774,6 +858,7 @@ if ( {) {
       </div>;
       <Footer />;
     </>);
+<<<<<<< HEAD
 }
 
         {isLoading ? (;
@@ -811,6 +896,9 @@ if ( {) {
           </div>;
         )}
       </div>;
+=======
+}      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <Footer />;
     </>;
   ),; export default function SavedTalentsPage () {
@@ -844,10 +932,16 @@ is verified) `) if (data) {
 }finally {
   setIsLoading (false) 
 }
+<<<<<<< HEAD
 ;
 
 };
 }, [user]);
+=======
+
+};
+}, [user])
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
   try {
   if (!user) {
@@ -889,3 +983,7 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> <Footer /> </>) 
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

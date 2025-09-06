@@ -1,12 +1,17 @@
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+<<<<<<< HEAD
 export interface TalentProfileData {
 export interface TalentProfileData {
+=======
+export interface TalentProfileData {export interface TalentProfileData {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
+<<<<<<< HEAD
 
   name: string;
   title: string;
@@ -46,6 +51,10 @@ export interface CategorizedSkills {;
   devops: string[];
   platforms: string[];
 
+=======
+  devops: string[];
+  platforms: string[];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export interface EnhancedProfile {
   summary: string,
@@ -55,6 +64,7 @@ export interface EnhancedProfile {
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
+<<<<<<< HEAD
     setError(null)
 
 export interface EnhancedProfile {
@@ -82,6 +92,9 @@ export function useTalentProfileEnhancer() {;
 
 
       if (error) {
+=======
+    setError(null)      if (error) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         throw new Error(error.message)
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -128,6 +141,7 @@ export function useTalentProfileEnhancer() {;
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
+<<<<<<< HEAD
   platforms: string[];
       return null
     } finally {
@@ -157,6 +171,9 @@ export interface CategorizedSkills {
     isGenerating;
     error;
   soft_skills: string[],
+=======
+  platforms: string[];  soft_skills: string[],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   other: string[];
 }
 export interface EnhancedProfile {
@@ -199,8 +216,13 @@ if ( {) {
     is_generating;
     error;
 
+<<<<<<< HEAD
 
 
 
   }
 }
+=======
+  }
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

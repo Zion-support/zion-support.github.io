@@ -369,3 +369,8 @@ security.run().catch(error => {})
     process.exit(1)})};
 ;
 
+<<<<<<< HEAD
+=======
+module.exports = SecurityAutomation;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

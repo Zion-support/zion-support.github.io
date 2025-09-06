@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-export const innovativeMicroSaasSolutions2025 = [
-  {
-
-
-=======
 id: 'ai-powered-customer-feedback-analyzer',
     name: 'AI-Powered Customer Feedback Analyzer',
     description:
@@ -20,9 +13,10 @@ id: 'ai-powered-customer-feedback-analyzer',
       'Multi-language support'
       'API access for custom integrations'
     ]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     pricing: {
       starter: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -43,8 +37,9 @@ id: 'ai-powered-customer-feedback-analyzer',
 <<<<<<< HEAD
 =======
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
         price: 49,
         period: 'month',
         features: [;
@@ -54,10 +49,15 @@ id: 'ai-powered-customer-feedback-analyzer',
           'Standard reports',
         ],
       },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       professional: {
         price: 149
         period: 'month'
@@ -92,11 +92,13 @@ id: 'ai-powered-customer-feedback-analyzer',
       starter: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
         price: 79,
         period: 'month',
         features: [;
@@ -188,7 +190,6 @@ id: 'ai-powered-customer-feedback-analyzer',
     pricing: {
       starter: {
 
-=======
         price: 39,
         period: 'month',
         features: [;
@@ -236,7 +237,6 @@ id: 'ai-powered-customer-feedback-analyzer',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$6.7B',
     target_audience:;
       'Small to medium businesses, enterprise companies, accounting firms, financial departments',
@@ -377,7 +377,6 @@ id: 'ai-powered-customer-feedback-analyzer',
     pricing: {
       starter: {
 
-=======
         price: 59,
         period: 'month',
         features: [;
@@ -428,11 +427,6 @@ id: 'ai-powered-customer-feedback-analyzer',
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
-<<<<<<< HEAD
-      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
-      'Multi-language supportAPI access for custom integrations'
-
-=======
     market_size: '$22.1B',
     target_audience:;
       'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
@@ -446,8 +440,8 @@ id: 'ai-powered-customer-feedback-analyzer',
       'Marketing ROI optimization',
     ],
     integrations: [;
-=======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -456,6 +450,11 @@ id: 'ai-powered-customer-feedback-analyzer',
       'Multi-language supportAPI access for custom integrations'
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'CRM systems',
       'E - commerce platforms',
       'AI-powered demand forecasting with 92.4% accuracy'
@@ -620,6 +619,7 @@ id: 'ai-powered-customer-feedback-analyzer',
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       'CRM systems'
@@ -654,20 +654,26 @@ id: 'ai-powered-customer-feedback-analyzer',
 <<<<<<< HEAD
 =======
 =======
-      'CRM systems',
-      'E-commerce platforms',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'CRM systems',
       'E-commerce platforms',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      'CRM systems',
+      'E-commerce platforms',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -682,6 +688,14 @@ id: 'ai-powered-customer-feedback-analyzer',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
@@ -689,15 +703,18 @@ id: 'ai-powered-customer-feedback-analyzer',
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 =======
-
-
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -708,10 +725,19 @@ id: 'ai-powered-customer-feedback-analyzer',
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
+  },;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -724,6 +750,12 @@ id: 'ai-powered-customer-feedback-analyzer',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -929,6 +961,7 @@ export const innovativeMicroSaasSolutions2025 = [;
     ],;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -937,21 +970,26 @@ export const innovativeMicroSaasSolutions2025 = [;
   }
 ];
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
   }
 ];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

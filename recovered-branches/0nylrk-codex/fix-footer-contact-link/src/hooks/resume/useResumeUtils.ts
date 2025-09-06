@@ -5,14 +5,22 @@ import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined,
+<<<<<<< HEAD
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
+=======
+  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {;
+<<<<<<< HEAD
   console.error(`Error: ${errorMessage}`, e);
 
 import { format } from 'date-fns',
+=======
+  console.error(`Error: ${errorMessage}`, e);import { format } from 'date-fns',
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
 export const formatDateForDB = (date: Date | string | undefined) => {
@@ -20,6 +28,7 @@ export const formatDateForDB = (date: Date | string | undefined) => {
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
+<<<<<<< HEAD
 
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined
@@ -171,3 +180,5 @@ export default UseResumeUtils;
 export default UseResumeUtils;
 
 export default UseResumeUtils;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

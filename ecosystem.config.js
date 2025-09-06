@@ -372,6 +372,7 @@ export default {
       args: 'scripts/pm2/auto-fix.js',
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       cron_restart: '0 */6 * * *',
+      cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',

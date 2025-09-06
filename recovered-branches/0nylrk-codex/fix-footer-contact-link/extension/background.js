@@ -1,5 +1,6 @@
 
 const BASE_URL = 'https: //zionai && zionai.com',
+<<<<<<< HEAD
 
 
 const BASE_URL = 'https: //zionai.com'
@@ -23,6 +24,8 @@ if (return { answer: 'Model key missing' }, ) {
   try {
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
@@ -84,6 +87,7 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
+<<<<<<< HEAD
   }
 
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -133,3 +137,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 }),
 ;
 }),;
+=======
+  }>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -17,6 +17,7 @@ export interface WorkExperience {
 
 export interface WorkExperience {;
   id?: string;
+<<<<<<< HEAD
   company_name: string;
   role_title: string;
   start_date: Date | string;
@@ -33,6 +34,8 @@ export interface WorkExperience {;
 }
 export interface Education {
   id?: string;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   institution: string;
   degree: string;
   field_of_study?: string;
@@ -48,8 +51,12 @@ export interface Education {
   location?: string;
 
 }
+<<<<<<< HEAD
 export interface Skill {
   id?: string;
+=======
+export interface Skill {  id?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   proficiency?: number;
   category?: string;
@@ -60,6 +67,7 @@ export interface Skill {
   years_experience?: number;
 
 }
+<<<<<<< HEAD
 export interface Certification {
   id?: string;
   name: string;
@@ -95,6 +103,12 @@ export interface PortfolioProject {
 }
 export interface Resume {
   id?: string;
+=======
+export interface Certification {  id?: string;
+  name: string;
+  proficiency?: number;
+}  id?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   user_id?: string;
   basic_info: ResumeBasicInfo;
   work_experience: WorkExperience[];
@@ -103,6 +117,7 @@ export interface Resume {
   certifications: Certification[];
   portfolio_projects?: PortfolioProject[];
   is_active: boolean;
+<<<<<<< HEAD
 }
   portfolio_projects?: PortfolioProject[]
 
@@ -110,6 +125,9 @@ export interface Resume {
 }
 export interface ResumeBasicInfo {;
   id?: string,;
+=======
+}  id?: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   title: string,;
   headline?: string,;
   summary?: string;
@@ -178,6 +196,7 @@ export interface Resume {;
   skills: Skill[],;
   certifications: Certification[],;
   portfolio_projects?: PortfolioProject[];
+<<<<<<< HEAD
   portfolio_projects?: PortfolioProject[],
   is_active: boolean;
 }
@@ -187,6 +206,9 @@ export interface Resume {;
 export interface ResumeBasicInfo {;
 
   is_active: boolean;
+=======
+  portfolio_projects?: PortfolioProject[],  is_active: boolean;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 }

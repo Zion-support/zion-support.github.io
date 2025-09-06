@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }
 
@@ -6,12 +7,15 @@ import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
 interface CertificationsSectionProps {
   certifications: Certification[];
 }
+<<<<<<< HEAD
 
 
 
@@ -20,13 +24,18 @@ import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -34,6 +43,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
     }
 
     return format(date, 'MMM yyyy')
@@ -117,6 +127,9 @@ interface CertificationsSectionProps {
   certifications: Certification[];
 }
               )}
+=======
+    }              )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
             <p className="text-sm">{cert.issuing_organization}</p>;
             {cert.credential_url && (;
@@ -129,6 +142,7 @@ interface CertificationsSectionProps {
         ))}
       </div>;
     </div>;
+<<<<<<< HEAD
 export /**
  * CertificationsSection - Function description
  */
@@ -177,6 +191,8 @@ if (return null) {
     </div>);
 }
   ),;}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  if (certifications.length === 0) return null;
 {
   formatDate (cert.issue date) 
@@ -205,3 +221,7 @@ if (return null) {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

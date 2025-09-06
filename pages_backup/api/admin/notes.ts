@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 import { randomUUID } from 'crypto',;
 type Note = {
   id: string
@@ -13,14 +9,10 @@ type Note = {
   authorId: string
   createdAt: number
 }
-<<<<<<< HEAD
-const notesStore: Note[] = []
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   targetType: string;
   targetId: string;
@@ -29,84 +21,8 @@ type Note = {
   createdAt: number;
 };
 
-<<<<<<< HEAD
-const notesStore: Note[] = [];
 
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const isAdmin = req.headers['x-admin'] === 'true'
-  if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
-  if (req.method === 'GET') {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-interface Note {
-  id: string;
-  targetType: string;
-  targetId: string;
-  content: string;
-  author: string;
-  createdAt: string;
-}
-
-let notesStore: Note[] = [];
-
-export function getAllNotes(): Note[] {
-  return notesStore;
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-    if (req.method === 'GET') {
-      const { targetType, targetId } = req.query;
-      if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
-      if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
-      
-      const notes = notesStore
-        .filter((n) => n.targetType === targetType && n.targetId === targetId);
-      res.json({ notes });
-    } else if (req.method === 'POST') {
-      const { targetType, targetId, content, author } = req.body;
-      const note: Note = {
-        id: Date.now().toString(),
-        targetType,
-        targetId,
-        content,
-        author,
-        createdAt: new Date().toISOString()
-      };
-      notesStore.push(note);
-      res.json({ note });
-    } else {
-      res.setHeader('Allow', 'GET, POST');
-      res.status(405).end('Method Not Allowed');
-
-    const authorId = String(req.headers['x-admin-user'] || 'admin');
-    const { targetType, targetId, text } = req.body || {};
-    if (!targetType || !targetId || !text?.trim()) {
-      return res.status(400).json({ error: 'Missing fields' });
-    }
-    const note: Note = {
-      id: randomUUID(),
-      targetType,
-      targetId,
-      text: String(text),
-      authorId,
-      createdAt: Date.now(),
-    };
-    notesStore.push(note);
-    return res.status(200).json({ ok: true, note });
-  }
-
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   if (req.method === 'GET') {
@@ -118,10 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .sort((a, b) => b.createdAt - a.createdAt)
     return res.status(200).json({ notes })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
+main
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin')
@@ -138,8 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
@@ -175,4 +87,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export function getAllNotes(): Note[] {
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

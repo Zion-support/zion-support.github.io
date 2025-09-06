@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 import * as React from "react"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { CSSProperties } from "react"
 import { Sheet, SheetContent } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
@@ -16,7 +19,10 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -26,6 +32,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
   if (props.collapsible === &quot;none&quot;) {
 
   if (props.collapsible === "none") {
+<<<<<<< HEAD
 
 ;
   if (props.collapsible === &quot;none&quot;) {
@@ -136,6 +143,15 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 
 
     >;
+=======
+    return (
+      <div
+        className={cn(
+          "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",        ref={ref}
+        {...props}
+      >;
+        {props.children}    >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {/* This is what handles the sidebar gap on desktop */}
 <div
         className={cn(
@@ -145,13 +161,17 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === &quot;floating&quot; |props.variant === &quot;inset&quot;
             ? &quot;group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]&quot;
             : &quot;group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+<<<<<<< HEAD
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
 
+<<<<<<< HEAD
 
         )}
       />
@@ -172,6 +192,10 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.className
         )}
 <div;
+=======
+          props.className
+        )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         className={cn (
           "duration - 200 relative h - svh w-[--sidebar - width] bg - transparent transition-[width] ease - linear & quot;,
           &quot;group - data-[collapsible = offcanvas]:w - 0&quot;,
@@ -195,6 +219,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       >;
         <div;
           data - sidebar=&quot;sidebar";
+<<<<<<< HEAD
           className="flex h - full w - full flex - col bg - sidebar group - data-[variant = floating]:rounded - lg group - data-[variant = floating]:border group - data-[variant = floating]:shadow & quot;
         >;
           {props.children}
@@ -205,6 +230,9 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       ref={ref}
 
 
+=======
+          className="flex h - full w - full flex - col bg - sidebar group - data-[variant = floating]:rounded - lg group - data-[variant = floating]:border group-data-[variant = floating]:shadow & quot;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
@@ -212,12 +240,16 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         props.className
       )}
       {...props}
     />
   )
+<<<<<<< HEAD
 })
 
 
@@ -249,11 +281,15 @@ export const SidebarInset = React.forwardRef<
 
 
         props.className
+=======
+})        props.className
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )}
       {...props}
     />
   )
 })
+<<<<<<< HEAD
 
       data - sidebar=&quot;rail & quot;
       aria - label=&quot;Toggle Sidebar & quot;
@@ -381,3 +417,5 @@ SidebarInset.displayName = "SidebarInset";)
 }) SidebarInset.displayName = "SidebarInset" 
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

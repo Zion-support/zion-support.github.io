@@ -5,6 +5,7 @@ import { Link  } from './react-router-dom';
 import { use_auth  } from '@/hooks / use_auth';
 import { use_toast  } from '@/hooks / use - toast';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
+<<<<<<< HEAD
 import { Button  } from '@/components / ui / button';
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -65,6 +66,13 @@ export function UserMenu() {;
     }
   }
   if (!user) {;
+=======
+import { Button  } from '@/components / ui / button';import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";  if (!user) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="hidden md: flex items-center space-x-4">;
         <Link to="/login" className="text-zion-slate-light hover:text-white">;
@@ -77,6 +85,7 @@ export function UserMenu() {;
         </Link>;
       </div>;
     );
+<<<<<<< HEAD
   }
   return (
 
@@ -134,6 +143,9 @@ export function UserMenu() {;
   );
 }
   )
+=======
+  }  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useToast } from "@/hooks/use-toast",;
@@ -154,8 +166,13 @@ export function UserMenu() {;
       await logout();
     } catch (error) {;
       toast({;
+<<<<<<< HEAD
         title: "Error signing out",;
         description: "There was an error signing you out. Please try again.";
+=======
+        title: "Error signing out",,
+  description: "There was an error signing you out. Please try again.";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   };
@@ -178,10 +195,14 @@ export function UserMenu() {;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
+<<<<<<< HEAD
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
 
           </Avatar>;
+=======
+            <AvatarImage          </Avatar>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <span className="sr-only">Open user menu</span>;
         </Button>;
       </DropdownMenuTrigger>;
@@ -192,8 +213,12 @@ export function UserMenu() {;
           </div>;
           <div className="text-muted-foreground text-xs leading-none">;
             {user && user.email}
+<<<<<<< HEAD
           </div>;
         </div>;
+=======
+          </div>;        </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <DropdownMenuSeparator />;
         <DropdownMenuItem asChild>;
           <Link to="/dashboard">Dashboard</Link>;
@@ -212,7 +237,10 @@ export function UserMenu() {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -226,13 +254,22 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="hidden md: flex items - center space - x-4">;
         <Link to="/login" className="text - zion - slate - light hover:text - white">;
+=======
+      <div className="hidden md: flex items - center space-x-4">;
+        <Link to="/login" className="text - zion - slate - light hover:text-white">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Login;
         </Link>;
         <Link;
           to="/signup";
+<<<<<<< HEAD
           className="inline - flex items - center justify - center rounded - md text - sm font - medium ring - offset - background transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring disabled:pointer - events - none disabled:opacity - 50 bg - zion - purple text - white hover:bg - zion - purple - light h - 10 px - 4 py - 2";
+=======
+          className="inline - flex items - center justify - center rounded - md text - sm font - medium ring - offset - background transition - colors focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring disabled:pointer - events - none disabled:opacity - 50 bg - zion - purple text - white hover:bg - zion - purple - light h - 10 px - 4 py-2";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         >;
           Register;
         </Link>;
@@ -241,8 +278,13 @@ if ( {) {
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
+<<<<<<< HEAD
         <Button variant="ghost" className="h - 8 w - 8 rounded - full">;
           <Avatar className="h - 8 w - 8">;
+=======
+        <Button variant="ghost" className="h - 8 w - 8 rounded-full">;
+          <Avatar className="h - 8 w-8">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <AvatarImage;
               src={user.avatar_url || ""}
               alt={user.display_name || "User Avatar"}
@@ -251,6 +293,7 @@ if ( {) {
               {user.display_name?.char_at (0).toUpperCase () || "U"}
             </AvatarFallback>;
           </Avatar>;
+<<<<<<< HEAD
           <span className="sr - only">Open user menu</span>;
         </Button>;
       </DropdownMenuTrigger>;
@@ -260,6 +303,17 @@ if ( {) {
             {user.display_name || "User"}
           </div>;
           <div className="text - muted - foreground text - xs leading - none">;
+=======
+          <span className="sr-only">Open user menu</span>;
+        </Button>;
+      </DropdownMenuTrigger>;
+      <DropdownMenuContent align="end">;
+        <div className="grid gap - 2 px - 2 py-2">;
+          <div className="text - sm font - medium leading-none">;
+            {user.display_name || "User"}
+          </div>;
+          <div className="text - muted - foreground text - xs leading-none">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {user.email}
           </div>;
         </div>;
@@ -282,6 +336,7 @@ if ( {) {
     </DropdownMenu>);
 
 }
+<<<<<<< HEAD
 }
 ;
 
@@ -313,3 +368,5 @@ const handleSignOut = async () => {
 }
 ;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

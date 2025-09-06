@@ -6,10 +6,13 @@ interface ResumeStepContentProps {
   onPrevStep: () => void
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: ResumeStepContentProps) => {
   return (
     <>
@@ -69,6 +72,7 @@ import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
 import { EducationForm } from '../forms/EducationForm',;
 import { SkillsForm } from '../forms/SkillsForm',;
 import { CertificationsForm } from '../forms/CertificationsForm',;
+<<<<<<< HEAD
 import { PreviewResume } from '../PreviewResume',;
 interface ResumeStepContentProps {;
   activeTab: string,;
@@ -169,6 +173,9 @@ export const ResumeStepContent = ({;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
           resumeId={resume?.id!}
+=======
+import { PreviewResume } from '../PreviewResume',;          resumeId={resume?.id!}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
@@ -178,12 +185,17 @@ export const ResumeStepContent = ({;
 
       <TabsContent value="education">;
 
+<<<<<<< HEAD
         <EducationForm
         />
+=======
+        <EducationForm        />
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </TabsContent>
       <TabsContent value="education">
         <EducationForm
         <EducationForm 
+<<<<<<< HEAD
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
@@ -194,10 +206,13 @@ export const ResumeStepContent = ({;
 
       <TabsContent value="skills">;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
+<<<<<<< HEAD
           onBack={onPrevStep}
 
         />;
@@ -318,6 +333,9 @@ export const ResumeStepContent = ({
 ;
   ),;
 },; interface ResumeStepContentProps {
+=======
+          onBack={onPrevStep}},; interface ResumeStepContentProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   activeTab: string;
 resume: Resume;
 onNextStep: () => void;
@@ -384,8 +402,14 @@ onPrevStep
         />;
       </TabsContent>;
     </>;
+<<<<<<< HEAD
   );
 
 
 
 };
+=======
+  )
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

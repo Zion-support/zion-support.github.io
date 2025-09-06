@@ -47,6 +47,7 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
+<<<<<<< HEAD
 
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -59,10 +60,17 @@ import {;
   PopoverTrigger,;
 
 } from "@/components/ui/popover";
+=======
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";} from "@/components/ui/popover";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
 
 
   form: UseFormReturn<ContractFormValues>;
@@ -73,6 +81,15 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
   form: UseFormReturn<ContractFormValues>;
 }
+=======
+  form: UseFormReturn<ContractFormValues>;
+}
+
+  form: UseFormReturn<ContractFormValues>;
+}
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <>;
       <FormField
@@ -86,12 +103,19 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
 
       />;
 
 
       <FormField
         control={form && form.control}
+=======
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"      <FormField
+        control={form && form.control}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         name="scopeSummary"
         render={({ field }) => (;
           <FormItem>;
@@ -100,7 +124,10 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </FormItem>)}
       />;
       <FormField;
@@ -112,14 +139,19 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
             <FormControl>;
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
+<<<<<<< HEAD
                 className="min - h-[120px]";
 
                 {...field}
+=======
+                className="min-h-[120px]";                {...field}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               />;
             </FormControl>;
             <FormDescription>;
               Be specific about what is included and any limitations;
             </FormDescription>;
+<<<<<<< HEAD
             <FormMessage />;
 
                 {...field}
@@ -152,17 +184,25 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
           control={form && form.control}
           name="startDate"
           render={({ field }) => (;
+=======
+            <FormMessage />;        <FormField
+          control={form && form.control}
+          name="startDate"          render={({ field }) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -173,8 +213,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                   <Calendar
                     mode="single"
                     selected={field && field.value}
+<<<<<<< HEAD
                     onSelect={field && field.onChange}
                     disabled={(date) => date < new Date()}
+=======
+                    onSelect={field && field.onChange}                    disabled={(date) => date < new Date()}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     initialFocus;
                   />;
                 </PopoverContent>;
@@ -185,14 +229,20 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
         />;
 
+<<<<<<< HEAD
 
         <FormField
           control={form && form.control}
 
+=======
+        <FormField
+          control={form && form.control}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />;
         <FormField;
 
           control={form.control}
+<<<<<<< HEAD
           name="endDate"
           control={form.control}
           name="endDate"
@@ -203,6 +253,9 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
           control={form.control}
           name="endDate";
                   <Calendar
+=======
+          name="endDate"                  <Calendar
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     mode="single"
           control={form.control}
         <FormField
@@ -214,12 +267,15 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -228,8 +284,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
+<<<<<<< HEAD
                     mode="single"
                   <Calendar
+=======
+                    mode="single"                  <Calendar
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     mode="single"
     </>
         />;
@@ -242,12 +302,20 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                     initialFocus;
           </FormItem>)}
       />;
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+=======
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <FormField;
           control={form.control}
           name="start_date";
           render={({ field }) => (
+<<<<<<< HEAD
             <FormItem className="flex flex - col">;
+=======
+            <FormItem className="flex flex-col">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <FormLabel > Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -259,11 +327,19 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                       {field.value ? (
                         format (field.value, "PPP")) : (
                         <span > Pick a date</span>)}
+<<<<<<< HEAD
                       <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
+=======
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p-0" align="start">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Calendar;
                     mode="single";
                     selected={field.value}
@@ -280,7 +356,11 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
           control={form.control}
           name="end_date";
           render={({ field }) => (
+<<<<<<< HEAD
             <FormItem className="flex flex - col">;
+=======
+            <FormItem className="flex flex-col">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <FormLabel > End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger as_child>;
@@ -292,17 +372,26 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                       {field.value ? (
                         format (field.value, "PPP")) : (
                         <span > Pick a date</span>)}
+<<<<<<< HEAD
                       <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                     </Button>;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w - auto p - 0" align="start">;
+=======
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p-0" align="start">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Calendar;
                     mode="single";
                     selected={field.value || undefined}
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
+<<<<<<< HEAD
 
 
                   />;
@@ -325,3 +414,5 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       </div>;
     </>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

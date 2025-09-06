@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     this.reportFile = path.join(this.projectRoot, "health-check-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.log("� Checking file structure");"";    const requiredDirs = ["src", "public", "pages"];";    const requiredFiles = ["package.json", "next.config.js", "tsconfig.json"];""
       "directories": {},""files": {},""issues": [],,"
@@ -37,13 +42,11 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
   }
 
   async checkFileStructure() {
@@ -234,7 +237,11 @@ checker
     console.error('❌ Health check failed:', error.message);
     process.exit(1);
   });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -8,10 +9,13 @@ import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
 
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
@@ -25,17 +29,23 @@ export const useUpdateMilestone = () => {
   const { recordMilestoneActivity } = useRecordActivity(),
 
   
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
     try {
       setIsSubmitting(true),
       
+<<<<<<< HEAD
       
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
+<<<<<<< HEAD
         .eq('id', milestoneId)
 
 
@@ -55,6 +65,11 @@ export const useUpdateMilestone = () => {
         .update({ status: newStatus })
 
       return false
+=======
+        .eq('id', milestoneId)      const { error } = await supabase
+        .from('project_milestones')
+        .update({ status: newStatus })      return false
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsSubmitting(false)
     }
@@ -101,19 +116,25 @@ if (throw error) {
       setIsSubmitting (false);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
     if (!user) return false,
     
 
+<<<<<<< HEAD
 
     try {
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .update(data)
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return {
     updateMilestoneStatus;
     update_milestone;
@@ -193,16 +214,23 @@ export const useUpdateMilestone = () => {;
     updateMilestone;
     isSubmitting;
 
+<<<<<<< HEAD
 
         .eq('id', milestoneId),
 
       
       toast && toast.success("Milestone updated successfully");
+=======
+        .eq('id', milestoneId),
+
+      
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       return true
     } catch (err: any) {
       console && console.error("Error updating milestone:", err);
       toast && toast.error("Failed to update milestone: " + err && err.message),
+<<<<<<< HEAD
       return false
 ;
   const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
@@ -250,3 +278,6 @@ if (throw error) {
 };
 ;
 
+=======
+      return false
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

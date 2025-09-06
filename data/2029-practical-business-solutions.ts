@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -8,9 +9,11 @@
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   id: string;
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface PracticalBusinessSolution2029 {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
@@ -22,8 +25,8 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
     address: string;
   }
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
@@ -71,8 +74,11 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-
 =======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     address: string
   }
 }
@@ -85,12 +91,13 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     price: "$299/month";
     description: "Practical business solution platform that provides real-world solutions for 2029.";
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       "Practical solutions";
       "Business applications";
       "Real-world use cases";
       "Easy integration",
       "Affordable pricing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,17 +116,28 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     realImplementation: true
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+    ];
+    link: "/services/2029-practical-business-solution", category: "Practical Business Solutions 2029"
+    realImplementation: true
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ],
     link: "/services/2029-practical-business-solution";
     category: "Practical Business Solutions 2029";
     realImplementation: true;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     contactInfo: {
 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -130,11 +148,16 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ];    features: [;
       "Practical solutions";
       "Business applications";
       "Real - world use cases";
       "Easy integration";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -161,17 +184,19 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Affordable pricing";
     ];
     link: "/services / 2029 - practical - business - solution", category: "Practical Business Solutions 2029",
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface PracticalBusinessSolution2029 {;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -179,25 +204,33 @@ export interface PracticalBusinessSolution2029 {;
 export interface PracticalBusinessSolution2029 {;
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
     category: "Practical Business Solutions 2029",
     realImplementation: true,
     contactInfo: {
-    }
-  }
 <<<<<<< HEAD
-;
     }
   }
 <<<<<<< HEAD
 ;
 =======
 
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    }
+  }
+
 ];
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -205,6 +238,10 @@ export interface PracticalBusinessSolution2029 {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface PracticalBusinessSolution2029 {;
   };
 
@@ -238,6 +275,10 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Business applications";
       "Real-world use cases";
       "Easy integration";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string,;
   name: string,;
   tagline: string,;
@@ -296,6 +337,10 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Business applications",
       "Real-world use cases",
       "Easy integration",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",
@@ -305,6 +350,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -320,3 +366,16 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+  }
+];
+
+
+
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

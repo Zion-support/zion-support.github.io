@@ -1,19 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026 {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -43,6 +49,7 @@ export interface InnovativeMicroSaasService2026 {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -683,10 +690,55 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   ];
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
+=======
+    website: string;
+  }
+
+  real_implementation: boolean;
+  implementation_details: string;
+  launch_date: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+;
+
+const contact = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      customers: 24,
+      rating: 4 && 4.3,
+      reviews: 18,
+
+    },;
+
+
+  ];
+
+
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+
+
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1014,6 +1066,17 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  })
+}
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1034,18 +1097,20 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
@@ -1054,6 +1119,10 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   customers: number;
   rating: number;
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

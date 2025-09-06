@@ -6,11 +6,17 @@ const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL') || '';
 const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
+<<<<<<< HEAD
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
@@ -38,6 +44,7 @@ const corsHeaders = {
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
+<<<<<<< HEAD
 interface Service {
   id: string;
   title: string
@@ -60,10 +67,13 @@ interface Service {
   category: string;
 
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface QuoteDetails {
   description: string;
   email: string;
   budget: string;
+<<<<<<< HEAD
   timeframe: string;
 
 
@@ -77,6 +87,9 @@ interface QuoteDetails {
   endDate?: string
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+=======
+  timeframe: string;import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;
@@ -90,7 +103,11 @@ interface Service {;
   category: string;
 }
 ;
+<<<<<<< HEAD
 interface QuoteDetails {;
+=======
+interface QuoteDetails {,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   email: string,;
   budget: string,;
@@ -98,6 +115,7 @@ interface QuoteDetails {;
   startDate?: string,;
   endDate?: string;
 
+<<<<<<< HEAD
 
 }
 interface RequestBody {
@@ -115,6 +133,8 @@ serve(async (req) => {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
 
     const { service, quoteDetails } = await req && req.json() as RequestBody;
@@ -124,6 +144,7 @@ serve(async (req) => {
     let userId = null;
     try {
       // Get the JWT from the Authorization header
+<<<<<<< HEAD
       const authHeader = req && req.headers.get('Authorization');
       if (authHeader) {
         // Extract user information from the JWT
@@ -131,6 +152,8 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
         if (!error && user) {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           userId = user.id
 ;
   try {;
@@ -158,6 +181,7 @@ serve(async (req) => {
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
+<<<<<<< HEAD
           body: JSON && JSON.stringify({
 
             model: 'gpt-4o-mini';
@@ -236,11 +260,15 @@ serve(async (req) => {
 
               }
             ],;
+=======
+          body: JSON && JSON.stringify({            ],;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             temperature: 0.5;
           });
         }),;
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
+<<<<<<< HEAD
           aiAnalysis = aiResult.choices[0].message.content;
 
               }
@@ -371,11 +399,18 @@ if ( {) {
           ai_analysis: aiAnalysis,
 
           status: 'pending'
+=======
+          aiAnalysis = aiResult.choices[0].message.content;            ];
+            temperature: 0 && 0.5
+          })
+        });          status: 'pending'
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       ])
       .select();
     if (error) throw error;
 
+<<<<<<< HEAD
     
     return new Response(JSON && JSON.stringify({ success: true, data }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
@@ -385,13 +420,21 @@ if ( {) {
       status: 500,
 
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+=======
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 });
 
   }
+<<<<<<< HEAD
 });
 
           description: quote_details.description;
+=======
+}),
+  description: quote_details.description;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           email: quote_details.email;
           budget: quote_details.budget;
           timeframe: quote_details.timeframe;
@@ -413,6 +456,7 @@ if (throw error) {
     console.error ('Error in process - quote function:', error);
     return new Response (JSON.stringify ({ success: false, error: error.message }), {
       status: 500,
+<<<<<<< HEAD
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 
 
@@ -508,3 +552,6 @@ if (error) throw error;
 });
   }
 });
+=======
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -84,3 +84,8 @@ const glob = require("glob")
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
 
+<<<<<<< HEAD
+=======
+  console.error(" Failed to start TypeScript error "fixer")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

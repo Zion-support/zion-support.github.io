@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,9 +15,13 @@ import { createServerClient } from '../../../utils/supabase/server';
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+import { createServerClient } from '../../../utils/supabase/server';
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       supabase
-=======
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -27,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
 supabase
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -57,6 +62,7 @@ supabase
       ]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -81,6 +87,14 @@ supabase
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
@@ -88,6 +102,7 @@ supabase
 }
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -104,6 +119,10 @@ supabase
 
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -193,6 +212,7 @@ function handler() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -206,3 +226,9 @@ function handler() {
 =======
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

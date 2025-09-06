@@ -16,6 +16,7 @@ const jobOpenings = [{
       "5+ years experience in AI/ML development"
       "Proficiency in Python, TensorFlow, PyTorch"
       "Experience with cloud platforms (AWS, Azure, GCP)"
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 const jobOpenings = [
   {
@@ -33,6 +34,9 @@ const jobOpenings = [
       "Experience with cloud platforms (AWS, Azure, GCP)",
       "Strong problem-solving and communication skills"
     ],
+=======
+import Layout from '../components/Layout';    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"]
   },
   {
@@ -58,11 +62,15 @@ const jobOpenings = [
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
+<<<<<<< HEAD
       "Experience with databases (PostgreSQL, MongoDB)",
 
 
       "Knowledge of cloud deployment and DevOps"
     ],
+=======
+      "Experience with databases (PostgreSQL, MongoDB)",    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Stock options"]
   },
   {
@@ -88,11 +96,15 @@ const jobOpenings = [
       "Bachelor's degree in Computer Science or related field",
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
+<<<<<<< HEAD
       "Experience with containerization (Docker, Kubernetes)",
 
 
       "Strong understanding of security best practices"
     ],
+=======
+      "Experience with containerization (Docker, Kubernetes)",    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Certification support"]
   },
   {
@@ -118,11 +130,15 @@ const jobOpenings = [
       "Bachelor's degree in Cybersecurity or related field",
       "4+ years experience in cybersecurity",
       "Certifications (CISSP, CISM, CEH) preferred",
+<<<<<<< HEAD
       "Experience with security tools and frameworks",
 
 
       "Knowledge of compliance standards (SOC 2, ISO 27001)"
     ],
+=======
+      "Experience with security tools and frameworks",    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Professional development"]
   },
   {
@@ -148,11 +164,15 @@ const jobOpenings = [
       "Bachelor's degree in Computer Science or related field",
       "3+ years experience in DevOps",
       "Proficiency in CI/CD pipelines",
+<<<<<<< HEAD
       "Experience with infrastructure as code (Terraform, CloudFormation)",
 
 
       "Knowledge of monitoring and logging tools"
     ],
+=======
+      "Experience with infrastructure as code (Terraform, CloudFormation)",    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Learning budget"]
   },
   {
@@ -178,11 +198,15 @@ const jobOpenings = [
       "Bachelor's degree in Design or related field",
       "2+ years experience in UX/UI design",
       "Proficiency in Figma, Sketch, Adobe Creative Suite",
+<<<<<<< HEAD
       "Experience with user research and testing",
 
 
       "Strong portfolio demonstrating design skills"
     ],
+=======
+      "Experience with user research and testing",    ],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: ["Competitive salary", "Health insurance", "Remote work", "Design tools budget"]
   }
 ];
@@ -205,6 +229,7 @@ const benefits = [{
     "title": "Professional Growth"
     "description": "Learning opportunities and career development support"
     "icon": ArrowRight
+<<<<<<< HEAD
   }
 ];
 const values = ["Innovation and creativity"
@@ -243,6 +268,8 @@ const values = [
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "Client success focus"
 ];
 export default function TalentPage() {
@@ -258,8 +285,11 @@ const values = [;
 export default function TalentPage() {;
 
   return (
+<<<<<<< HEAD
     <MainLayout,
     title="Careers - Zion Tech Group"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="min-h-screen bg-gray-50">
       <Head>
         <title>Join Our Team - Zion Tech Group</title>
@@ -291,6 +321,7 @@ export default function TalentPage() {;
                 <motion.div
                   key={job.id}
     <Layout 
+<<<<<<< HEAD
       title="Careers - Zion Tech Group"
       description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
       keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect"
@@ -346,13 +377,22 @@ export default function TalentPage() {;
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
             <motion.div,
+=======
+      title="Careers - Zion Tech Group"      description="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group."
+      keywords="careers, jobs, employment, technology careers, AI engineer, developer, cloud architect">;
+      <div className="min-h-screen bg-gray-50">;
+        {/* Hero Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     initial={{ "opacity": 0, "y": 30 }}
               animate={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -377,6 +417,7 @@ export default function TalentPage() {;
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div,
+<<<<<<< HEAD
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -392,6 +433,8 @@ export default function TalentPage() {;
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div,
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -442,8 +485,12 @@ export default function TalentPage() {;
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                     viewport={{ once: true }}
                   >
+=======
+                    viewport={{ once: true }}                  >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
                     </div>
@@ -463,6 +510,7 @@ export default function TalentPage() {;
         {/* Values Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -476,6 +524,10 @@ export default function TalentPage() {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}=======            >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
@@ -533,9 +585,13 @@ export default function TalentPage() {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
         {/* Values Section */}
             <motion.div,
     className="text-center mb-16"
+=======
+        {/* Values Section */}    className="text-center mb-16"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -555,7 +611,10 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value, index) => (
                 <motion.div,
+<<<<<<< HEAD
     key={index}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   className="bg-white p-6 rounded-lg shadow-lg"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -618,6 +677,7 @@ export default function TalentPage() {;
         {/* Job Openings Section */}
         <section id="openings" className="py-20 bg-white">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
             <motion.div,
     className="text-center mb-16"
               initial={{ "opacity": 0, "y": 30 }}
@@ -631,6 +691,10 @@ export default function TalentPage() {;
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}=======            >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Values
               </h2>
@@ -710,9 +774,13 @@ export default function TalentPage() {;
                 <motion&& motion.div
                   key={index}
         </section>;
+<<<<<<< HEAD
         {/* Job Openings Section */}
             <motion.div,
     className="text-center mb-16"
+=======
+        {/* Job Openings Section */}    className="text-center mb-16"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
@@ -835,6 +903,7 @@ export default function TalentPage() {;
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
+<<<<<<< HEAD
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
               whileInView={{ "opacity": 1, "y": 0 }}
@@ -858,6 +927,10 @@ export default function TalentPage() {;
                 <motion.div,
     key={job.id}
               transition={{ duration: 0 && 0.8 }}
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}=======              transition={{ duration: 0 && 0.8 }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
                 Open Positions;
@@ -965,18 +1038,26 @@ export default function TalentPage() {;
       </section>;
     </div>;
         </section>;
+<<<<<<< HEAD
         {/* CTA Section */}
             <motion.div,
     initial={{ "opacity": 0, "y": 30 }}
+=======
+        {/* CTA Section */}    initial={{ "opacity": 0, "y": 30 }}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               whileInView={{ "opacity": 1, "y": 0 }}
               transition={{ "duration": 0 && 0.8 }}
               viewport={{ "once": true }}
             <motion && motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+              viewport={{ once: true }}            >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See the Right Role?
               </h2>
@@ -992,4 +1073,8 @@ export default function TalentPage() {;
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

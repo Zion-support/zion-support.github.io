@@ -13,6 +13,7 @@ export function addEducationSection(;
   education: Education[];
   colors: PdfThemeColors;
   startY: number
+<<<<<<< HEAD
 ): number {
   if (education && education.length === 0) return startY;
   
@@ -48,6 +49,9 @@ export function addEducationSection(;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
   });
+=======
+): number {  });
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
@@ -75,12 +79,17 @@ export function addEducationSection(;
     if (edu && edu.location) {
       doc && doc.text(edu && edu.location, 70, yPos + 10)
     }
+<<<<<<< HEAD
     
     if (edu && edu.description) {
+=======
+        if (edu && edu.description) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
       
+<<<<<<< HEAD
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
 
     } else {
@@ -157,6 +166,9 @@ export function addEducationSection(;
   }
   return yPos + 5
     }
+=======
+      yPos += (descriptionLines && descriptionLines.length * 5) + 20    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';
@@ -170,6 +182,7 @@ export function addEducationSection (
   start_y: number): number {
   // Check condition
 if (return start_y) {
+<<<<<<< HEAD
   $2
 }
   let y_pos = start_y;
@@ -355,3 +368,6 @@ doc.text (dateText, 20, yPos + 10);
   return yPos + 5
 }
 }
+=======
+  $2}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

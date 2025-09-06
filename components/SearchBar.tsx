@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ interface SearchResult {;
   url: string, type: 'service' | 'page' | 'category',;
 }
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -53,7 +56,7 @@ const SearchBar: React.FC = () => {
       url: '/it-services',
       type: 'category',
     },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -203,26 +206,31 @@ const SearchBar: React.FC = () => {
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
-=======
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
+origin/cursor/analyze-improve-and-deploy-application-0a01
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -231,8 +239,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
   className = ''
 }) => {
   const [query, setQuery] = useState('');
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
@@ -262,6 +270,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
 
   const handleClear = () => {
@@ -286,7 +296,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-=======
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -317,39 +326,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setQuery('');
     setResults([]);
     setIsOpen(false);
-<<<<<<< HEAD
-    setSelectedIndex(-1);
-  }, []);
-
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (!isOpen || results.length === 0) return;
-
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setSelectedIndex(prev => (prev + 1) % results.length);
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setSelectedIndex(prev => prev <= 0 ? results.length - 1 : prev - 1);
-        break;
-      case 'Enter':
-        e.preventDefault();
-        if (selectedIndex >= 0 && selectedIndex < results.length) {
-          window.location.href = results[selectedIndex].url;
-          handleResultClick();
-        }
-        break;
-      case 'Escape':
-        setIsOpen(false);
-        setSelectedIndex(-1);
-        break;
-    }
-  }, [isOpen, results, selectedIndex, handleResultClick]);
-
-=======
   }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   return (
     <div className="relative w-full max-w-md">
       <div className="relative">
@@ -400,7 +378,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
               role="option"
               aria-selected={index === selectedIndex}
               tabIndex={-1}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
+origin/cursor/analyze-improve-and-deploy-application-0a01
             >
               <X className="w-4 h-4" />
             </button>
@@ -413,7 +391,12 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

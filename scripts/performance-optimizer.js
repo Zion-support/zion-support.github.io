@@ -1,21 +1,7 @@
 <<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-#!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -42,7 +28,6 @@ class PerformanceOptimizer {
         totalSize += this.getDirectorySize(filePath);
       } else {
         totalSize += stats.size;
-=======
 
 import fs from 'fs';
 import path from 'path';
@@ -165,7 +150,7 @@ function optimizeCSS(content, filePath) {
         const newRule = `${selector} {\n  ${uniqueProperties.join('\n  ')}\n}`;
         optimized = optimized.replace(rule, newRule);
         changes++;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
     });
     return totalSize;
@@ -188,12 +173,17 @@ function optimizeCSS(content, filePath) {
     }
     return recommendations;
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 #!/usr/bin/env node
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 #!/usr/bin/env node
@@ -543,6 +533,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "errors": results.errors.length
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       "details": results
     };
 <<<<<<< HEAD
@@ -712,6 +703,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       recommendations: [
         'Consider implementing code splitting for large components',
         'Use React.memo for expensive components',
@@ -729,11 +722,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   console.log(
     '📊 Performance report generated: performance-optimization-report.json'
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
@@ -753,6 +751,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(utilsDir, { recursive: true });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const scriptPath = path && path.join(this && this.srcDir, 'utils', 'PerformanceMonitor && PerformanceMonitor.js');
     const utilsDir = path && path.dirname(scriptPath);
@@ -814,6 +813,8 @@ module.exports = PerformanceOptimizer;
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const patterns = [
     'src/**/*.{tsx,jsx,ts,js}',
     'pages/**/*.{tsx,jsx,ts,js}',
@@ -837,7 +838,7 @@ module.exports = PerformanceOptimizer;
   for (const pattern of patterns) {
     const files = await glob(pattern, {
       ignore: excludeDirs.map(dir => `**/${dir}/**`),
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     });
 
       console.error('❌ Performance optimization "failed": ', error);

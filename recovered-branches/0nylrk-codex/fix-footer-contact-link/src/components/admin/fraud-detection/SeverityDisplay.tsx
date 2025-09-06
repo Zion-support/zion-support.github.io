@@ -8,6 +8,7 @@ interface SeverityDisplayProps {
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
 
+<<<<<<< HEAD
 }) => {
   return (
 
@@ -34,6 +35,13 @@ interface SeverityDisplayProps {
 };
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {
   return (
+=======
+}) => {  return (
+  severity: string
+}
+
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
@@ -55,7 +63,11 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />;
   );
     />
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
   ),;
 },; interface SeverityDisplayProps {
@@ -63,7 +75,10 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
 }severity 
 }) => {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
       show_icon={true}
@@ -76,6 +91,12 @@ interface SeverityDisplayProps {
   severity: string
 }
 
+<<<<<<< HEAD
 
 };
 };
+=======
+}
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

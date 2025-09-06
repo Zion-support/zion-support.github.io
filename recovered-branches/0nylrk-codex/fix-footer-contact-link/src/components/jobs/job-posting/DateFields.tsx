@@ -4,20 +4,27 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import {
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Popover,
   PopoverContent,
   PopoverTrigger,;
 
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
+<<<<<<< HEAD
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 
@@ -70,14 +77,23 @@ import { cn } from "@/lib/utils",
 
 
 interface DateFieldsProps {
+=======
+
+import { FormControl } from "@/components/ui/form";
+import { cn } from "@/lib/utils";interface DateFieldsProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
   endDate: Date | undefined,
   setEndDate: (date: Date | undefined) => void
+<<<<<<< HEAD
 }
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
   return (
+=======
+}  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -87,6 +103,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
             <FormControl>
               <Button
                 variant={"outline"}
+<<<<<<< HEAD
                 className={cn(
 
 
@@ -102,6 +119,9 @@ export function DateFields(): any ({;
 
                   !startDate && "text-muted-foreground"
                 )}
+=======
+                className={cn(                )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >
                 {startDate ? (
                   format(startDate, "PPP")
@@ -114,8 +134,13 @@ export function DateFields(): any ({;
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="single"
+<<<<<<< HEAD
 
 import React from 'react',;
+=======
+              selected={startDate}
+              onSelect={setStartDate}import React from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { format } from 'date-fns',;
 import { Label } from "@/components/ui/label",;
 import { Button } from "@/components/ui/button",;
@@ -134,7 +159,10 @@ interface DateFieldsProps {;
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
   return (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
@@ -146,6 +174,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 className={cn(
                   "w-full md: w-[240px] pl-3 text-left font-normal",
                   !startDate && "text-muted-foreground",
+<<<<<<< HEAD
                 )}>;
                 {startDate ? (;
                   format(startDate, "PPP");
@@ -170,6 +199,13 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
                 date > new Date();
               }
               initialFocus
+=======
+                )}>;                {startDate ? (;
+                  format(startDate, "PPP");
+                ) : (;
+                  <span>Pick a date</span>;
+                )}              initialFocus
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             />
           </PopoverContent>
         </Popover>
@@ -181,9 +217,13 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
             <FormControl>
               <Button
                 variant={"outline"}
+<<<<<<< HEAD
                 className={cn(
 
                   !endDate && "text-muted-foreground"
+=======
+                className={cn(                  !endDate && "text-muted-foreground"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 )}
               >
                 {endDate ? (
@@ -214,6 +254,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
 
 import React from './react';
 import { format  } from './date - fns';
@@ -268,6 +309,15 @@ function DateFields() {
           </PopoverContent>;
         </Popover>;
       </div>;
+=======
+  );
+    </div>);            />;
+          </PopoverContent>;
+        </Popover>;
+      </div>;
+  );
+    </div>);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div>;
         <Label html_for="expiry_date">Expiry Date (Optional)</Label>;
         <Popover>;
@@ -284,7 +334,11 @@ function DateFields() {
               </Button>;
             </FormControl>;
           </PopoverTrigger>;
+<<<<<<< HEAD
           <PopoverContent className="w - auto p - 0" align="start">;
+=======
+          <PopoverContent className="w - auto p-0" align="start">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Calendar;
               mode="single";
               selected={end_date}
@@ -295,4 +349,8 @@ function DateFields() {
           </PopoverContent>;
         </Popover>;
       </div>;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

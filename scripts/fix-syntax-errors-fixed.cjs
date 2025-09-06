@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 const fs = require("$1")
 const path = require("path")
@@ -20,3 +24,8 @@ const path = require("path")
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
 
+<<<<<<< HEAD
+=======
+      "
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

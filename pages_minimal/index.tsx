@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     <div>;
       <main>;
         <h1>Welcome to Zion Tech Group</h1>;
@@ -5,6 +6,8 @@
         <Link href="/services">View Our Services</Link>;
       </main>;
     </div>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 import React from './react';
 import Link from './next / link';

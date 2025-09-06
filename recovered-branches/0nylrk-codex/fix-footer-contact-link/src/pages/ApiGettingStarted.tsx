@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -18,12 +19,28 @@ function ApiGettingStarted() {
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
 const quickStartJs = `import axios from 'axios';
+=======
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';export function ApiGettingStarted() {
+
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',const quickStartJs = `import axios from 'axios';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
 
+<<<<<<< HEAD
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
@@ -31,6 +48,12 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
 
 
   -H "Authorization: Bearer YOUR_API_KEY"`
+=======
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',
+const response = await axios.get('https://api.zionai.com/v1/jobs', {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
@@ -44,6 +67,7 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
   }
 });
 console.log(response.data),`;
+<<<<<<< HEAD
 }),
 
 // // // console.log(response.data),`,
@@ -69,6 +93,10 @@ console.log(response.data),`;
             Developer Portal
           </a>
           .
+=======
+
+// // // console.log(response.data),`,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </p>
 
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
@@ -134,11 +162,21 @@ console.log(response.data),`;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
             Download Postman Collection
+<<<<<<< HEAD
           </a>
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </Link>
         </div>
       </div>
     </ApiDocsLayout>
+<<<<<<< HEAD
+=======
+  )          </Link>
+        </div>
+      </div>
+    </ApiDocsLayout>
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }
 
@@ -175,7 +213,10 @@ console && console.log(response && response.data),`;
           quotes, and projects. Our RESTful API lets you integrate Zion's features into your ;
           own applications and workflows.;
         </p>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <h2>Authentication</h2>;
         <p>;
           All API requests must include your API key in the Authorization header. ;
@@ -183,7 +224,10 @@ console && console.log(response && response.data),`;
         </p>;
 
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">;
           <h3 className="text-yellow-500 text-sm font-medium mt-0">Important</h3>;
           <p className="text-sm text-yellow-300/90 mb-0">;
@@ -207,7 +251,10 @@ console && console.log(response && response.data),`;
         <p>Here's a simple example of fetching jobs using JavaScript:</p>;
 
         <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <h2>Available APIs</h2>;
         <ul>;
           <li><strong>Jobs API</strong> - Post and retrieve job listings</li>;
@@ -216,6 +263,7 @@ console && console.log(response && response.data),`;
           <li><strong>Projects API</strong> - Manage projects and milestones</li>;
           <li><strong>Webhooks API</strong> - Set up event notifications</li>;
         </ul>;
+<<<<<<< HEAD
 
         <h2>Postman Collection</h2>;
         <p>;
@@ -230,10 +278,13 @@ console && console.log(response && response.data),`;
       </div>;
     </ApiDocsLayout>;
   );
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 ;
 
+<<<<<<< HEAD
 
 export default ApiGettingStarted;
 
@@ -296,6 +347,9 @@ console.log (response.data), `;
             href="#" ;
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
           >;
+=======
+export default ApiGettingStarted;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <a;
             href="#";
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors";
@@ -308,6 +362,7 @@ console.log (response.data), `;
 }
 export default ApiGettingStarted;
 ;
+<<<<<<< HEAD
     </ApiDocsLayout>;
   );}
 ;
@@ -331,4 +386,9 @@ export default ApiGettingStarted;
 }
 
 
+=======
+});
+}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default ApiGettingStarted;

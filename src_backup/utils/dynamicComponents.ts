@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/utils/dynamicComponents.ts
 <<<<<<< HEAD
 =======
@@ -36,6 +37,9 @@ const LoadingSkeleton = () =>
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
@@ -87,7 +91,6 @@ export const DynamicVirtualList = dynamic (
 // Usage examples: // Replace: import Chart from '../components/charts/Chart'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 
-<<<<<<< HEAD
 
 
 );
@@ -115,6 +118,7 @@ const LoadingSkeleton = () => React.createElement(
 
 
 
+<<<<<<< HEAD
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
@@ -152,30 +156,27 @@ const LoadingSkeleton = () => React.createElement(
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/utils/dynamicComponents.ts
+=======
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
 
+<<<<<<< HEAD
 export const DynamicPieChart = dynamic(
   () => import("recharts").then((mod) => ({ default: mod.PieChart })),
   { loading: LoadingSkeleton, ssr: false },
 );
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-export const DynamicBarChart = dynamic(
-  () => import("recharts").then((mod) => ({ default: mod.BarChart })),
-  { loading: LoadingSkeleton, ssr: false },
-);
 
-// TODO: Uncomment when these components are available
-// export const DynamicPDFGenerator = dynamic(
-//   () => import('../components/pdf/PDFGenerator'),
-//   {//     loading: LoadingSpinner,
-//     ssr: false
-//   }
-// );
+main
 
+<<<<<<< HEAD
 // export const DynamicVideoPlayer = dynamic(
 //   () => import('../components/video/VideoPlayer'),
 //   {//     loading: LoadingSkeleton,
@@ -216,10 +217,11 @@ export const DynamicVirtualList = dynamic(
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/utils/dynamicComponents.ts
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
-=======
 // Replace: import Chart from '../components/charts/Chart';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

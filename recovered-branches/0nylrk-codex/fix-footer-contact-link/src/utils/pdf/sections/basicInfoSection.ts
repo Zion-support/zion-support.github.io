@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
@@ -112,6 +113,16 @@ export function addBasicInfoSection(;
     doc && doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines && summaryLines.length * 6) + 10
   }
+=======
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(  doc: jsPDF;
+  basicInfo: ResumeBasicInfo;
+  colors: PdfThemeColors
+): number {
+  // Add header with name and title  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return yPos
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
@@ -156,6 +167,7 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
+<<<<<<< HEAD
 }
 }
 
@@ -210,3 +222,6 @@ yPos += 10;
   return yPos
 }
 }
+=======
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

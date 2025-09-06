@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -13,9 +16,13 @@ import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;
+<<<<<<< HEAD
   handleDownloadResume;
 
 import React from 'react',;
+=======
+  handleDownloadResume;import React from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
@@ -28,6 +35,7 @@ interface SelectResumeSectionProps {;
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -44,6 +52,8 @@ import {ResumePreviewCard} from './ResumePreviewCard';
                 selectedResume?.id === option && option.id 
                   ? 'bg-zion-purple/20 border border-zion-purple' 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -61,6 +71,7 @@ import {ResumePreviewCard} from './ResumePreviewCard';
             />;
           )}
         </>;
+<<<<<<< HEAD
       )}
 
     </div>;
@@ -164,3 +175,6 @@ export function SelectResumeSection({;
     </div>
   )
 }
+=======
+      )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -33,6 +36,7 @@ import {PageViewsChart} from "@/components/analytics/PageViewsChart";
 import {ConversionAnalysisChart} from "@/components/analytics/ConversionAnalysisChart";
 import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
+<<<<<<< HEAD
   const [timeRange, setTimeRange] = useState('30d');
 
 import React, { useState } from "react",
@@ -95,6 +99,15 @@ export default function Analytics() {
           result.push({ date: dateStr, views: 0 })
 
 import React, { useState } from "react",;
+=======
+  const [timeRange, setTimeRange] = useState('30d');    queryKey: ['page-views-trend', timeRange],
+    queryFn: async () => {
+      // Get daily page views for trend chart
+      const { data, error } = await supabase
+        .from('analytics_events')
+        .select('created_at, path')
+        .eq('event_typepage_view')import React, { useState } from "react",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AnalyticsContainer } from "@/components/analytics/AnalyticsContainer",;
@@ -106,7 +119,10 @@ import { ConversionAnalysisChart } from "@/components/analytics/ConversionAnalys
 import { ExportPanel } from "@/components/analytics/ExportPanel",;
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d'),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { data: pageViewTrends } = useQuery({;
     queryKey: ['page-views-trend', timeRange];
     queryFn: async () => {;
@@ -118,6 +134,7 @@ export default function Analytics() {;
       const { data, error } = await supabase;
         .from('analytics_events');
         .select('created_at, path');
+<<<<<<< HEAD
         .eq('event_typepage_view');
         .gte('created_at', startDate && startDate.toISOString());
 
@@ -151,11 +168,15 @@ export default function Analytics() {;
       for (let i = 0, i < days, i++) {;
 
         const date = new Date(),;
+=======
+        .eq('event_typepage_view');        const date = new Date(),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         date.setDate(date.getDate() - i),;
         const dateStr = date.toISOString().split('T')[0],;
         if (viewsByDate[dateStr]) {;
           result.push(viewsByDate[dateStr]);
         } else {;
+<<<<<<< HEAD
           result.push({ date: dateStr, views: 0 });
 
 
@@ -207,15 +228,29 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType]) {;
 
 
+=======
+          result.push({ date: dateStr, views: 0 });        }
+      }
+      return result.sort((a, b) => a.date.localeCompare(b.date))
+    }    queryKey: ['conversion-data', timeRange];
+    queryFn: async () => {;
+      const days = parseInt(timeRange && timeRange.replace('d', ''));
+      const startDate = new Date();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
+<<<<<<< HEAD
 
         
 
 
+=======
+        
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
@@ -239,11 +274,35 @@ export default function Analytics() {;
 
         
 
+<<<<<<< HEAD
 
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
       const { data, error } = await supabase;
+=======
+        conversionsByType[conversionType][date]++
+      });
+      // Get all dates in range
+      const dates = [];
+      for (let i = 0, i < days, i++) {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        dates.push(date.toISOString().split('T')[0])
+      }
+      dates.sort();
+      // Format data for chart
+      return dates.map(date => {
+        const result = { date }
+        Object.keys(conversionsByType).forEach(type => {
+          result[type] = conversionsByType[type][date] |0
+        });
+        return result
+      })
+    }
+  });
+;      const { data, error } = await supabase;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .from('analytics_events');
         .select('created_at, metadata');
         .eq('event_typeconversion');
@@ -264,8 +323,11 @@ export default function Analytics() {;
         if (!conversionsByType[conversionType][date]) {;
           conversionsByType[conversionType][date] = 0;
         }
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         conversionsByType[conversionType][date]++;
       });
 
@@ -276,8 +338,14 @@ export default function Analytics() {;
         date && date.setDate(date && date.getDate() - i);
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
+<<<<<<< HEAD
 
       dates && dates.sort();
+=======
+  });
+
+  return (      dates && dates.sort();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Format data for chart;
       return dates && dates.map(date => {;
@@ -309,9 +377,12 @@ export default function Analytics() {;
 
   }),
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
 
     <AnalyticsContainer>;
@@ -324,6 +395,7 @@ export default function Analytics() {;
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
 
+<<<<<<< HEAD
         />;
         <PageViewsTable />;
       </div>;
@@ -343,6 +415,8 @@ export default function Analytics() {;
     }
   });
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
         <PageViewsChart
           data={pageViewTrends |[]}
@@ -429,8 +503,12 @@ export default function Analytics() {;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
         <ConversionAnalysisChart ;
           data={conversionData || []} ;
+<<<<<<< HEAD
           timeRange={timeRange}
 import React, { useState } from './react';
+=======
+          timeRange={timeRange}import React, { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { AnalyticsContainer } from '@/components / analytics / AnalyticsContainer';
@@ -558,12 +636,17 @@ if ( {) {
   return (
     <AnalyticsContainer>;
       <AnalyticsSummary />;
+<<<<<<< HEAD
       <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb - 6">;
+=======
+      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6 mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <PageViewsChart;
           data={pageViewTrends || []}
           time_range={time_range}
           onTimeRangeChange={setTimeRange}
         />;
+<<<<<<< HEAD
         <PageViewsTable />;
       </div>;
       <div className="mb - 6">;
@@ -638,3 +721,9 @@ return (<AnalyticsContainer> <AnalyticsSummary /> <div className="grid grid-cols
         />;
         <ExportPanel />;
       </div>;
+=======
+          onTimeRangeChange={setTimeRange}
+        />;
+        <ExportPanel />;
+      </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

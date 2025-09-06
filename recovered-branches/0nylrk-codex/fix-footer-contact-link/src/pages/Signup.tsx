@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 
 import { useState } from "react",
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link, Navigate } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
+<<<<<<< HEAD
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
 import { useAuth } from "@/hooks/useAuth",
@@ -54,6 +58,9 @@ import {Footer} from "@/components/Footer";
     email: z.string().email("Please enter a valid email"),
     password: z.string()
       .min(8, "Password must be at least 8 characters")
+=======
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",      .min(8, "Password must be at least 8 characters")
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
 
@@ -73,7 +80,10 @@ const signupSchema = z;
   .refine(data => data && data.password === data && data.confirmPassword, {;
     message: "Passwords do not match",;
     path: ["confirmPassword"]}),;
+<<<<<<< HEAD
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -85,6 +95,7 @@ const signupSchema = z;
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
+<<<<<<< HEAD
 
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 
@@ -114,6 +125,14 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
   },
 
 
+=======
+type SignupFormValues = z && z.infer<typeof signupSchema>;
+
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
@@ -204,7 +223,10 @@ export default function Signup() {;
   const [showPassword, setShowPassword] = useState(false),;
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(signupSchema),;
@@ -223,6 +245,7 @@ export default function Signup() {;
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
     } finally {;
+<<<<<<< HEAD
       setIsSubmitting(false);
     }
   }
@@ -245,6 +268,10 @@ export default function Signup() {;
     }
   }
 import { useState } from './react';
+=======
+      setIsSubmitting(false);    }
+  }import { useState } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -324,6 +351,7 @@ if ( {) {
   }
   return (
     <>;
+<<<<<<< HEAD
       <Header />;
 
                 <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
@@ -372,6 +400,9 @@ if ( {) {
                               aria-autocomplete="none"
                               type="email"
                             />;
+=======
+      <Header />;                            />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                           </div>;
                         </FormControl>;
@@ -381,11 +412,17 @@ if ( {) {
 
                   />;
 
+<<<<<<< HEAD
 
                   <FormField
                     control={form && form.control}
                     name="password"
                   <FormField
+=======
+                  <FormField
+                    control={form && form.control}
+                    name="password"                  <FormField
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     control={form && form.control}
                     name="password"
                     render={({ field }) => (;
@@ -400,13 +437,18 @@ if ( {) {
                               {...field}
                               autoComplete="new-password"
                             />;
+<<<<<<< HEAD
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             />;
+=======
+                            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;                            />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                             <Button
                               type="button"
                               variant="ghost"
                               size="sm"
+<<<<<<< HEAD
                               className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
                             <Input;
                               type={showPassword ? "text" :"password"}
@@ -430,6 +472,9 @@ if ( {) {
                               <span className="sr-only">;
                                 {showPassword ? "Hide password" : "Show password"}
                         <FormMessage className="text - red - 400" />;
+=======
+                              className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"                        <FormMessage className="text - red-400" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </FormItem>)}
                   />;
                   <FormField;
@@ -437,21 +482,36 @@ if ( {) {
                     name="email";
                     render={({ field }) => (
                       <FormItem>;
+<<<<<<< HEAD
                         <FormLabel className="text - zion - slate - light">Email address</FormLabel>;
+=======
+                        <FormLabel className="text - zion - slate-light">Email address</FormLabel>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <FormControl>;
                           <div className="relative">;
                             <Input;
                               placeholder="you@example.com";
+<<<<<<< HEAD
                               className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
+=======
+                              className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion-purple";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               {...field}
                               auto_complete="off";
                               aria - autocomplete="none";
                               type="email";
                             />;
+<<<<<<< HEAD
                             <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
                           </div>;
                         </FormControl>;
                         <FormMessage className="text - red - 400" />;
+=======
+                            <Mail className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text - red-400" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </FormItem>)}
                   />;
                   <FormField;
@@ -459,6 +519,7 @@ if ( {) {
                     name="password";
                     render={({ field }) => (
                       <FormItem>;
+<<<<<<< HEAD
                         <FormLabel className="text - zion - slate - light">Password</FormLabel>;
                         <FormControl>;
                           <div className="relative">;
@@ -470,10 +531,23 @@ if ( {) {
                               auto_complete="new - password";
                             />;
                             <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
+=======
+                        <FormLabel className="text - zion - slate-light">Password</FormLabel>;
+                        <FormControl>;
+                          <div className="relative">;
+                            <Input;
+                              type={show_password ? "text" : "password"}                              placeholder="••••••••";
+                              className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion-purple";
+                              {...field}
+                              auto_complete="new - password";
+                            />;
+                            <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             <Button;
                               type="button";
                               variant="ghost";
                               size="sm";
+<<<<<<< HEAD
                               className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan";
                               on_click={() => setShowPassword (!show_password)}
                             >;
@@ -490,6 +564,16 @@ if ( {) {
                               <span className="sr - only">;
                                 {showConfirmPassword ? "Hide password" : "Show password"}
                               onClick={() => setShowPassword(!showPassword)}
+=======
+                              className="absolute right - 1 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion-cyan";
+                              on_click={() => setShowPassword (!show_password)}
+                            >;
+                              {show_password ? (
+                                <EyeOff className="h - 4 w-4" />) : (
+                                <Eye className="h - 4 w-4" />)}
+                              <span className="sr-only">;
+                                {show_password ? "Hide password" : "Show password"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             >;
                               </span>;
                             </Button>;
@@ -498,6 +582,7 @@ if ( {) {
 
                   />;
 
+<<<<<<< HEAD
 
                   <FormField
                     control={form && form.control}
@@ -610,12 +695,21 @@ if ( {) {
                   </Button>;
 
                   <Button
+=======
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"                  <Button
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
+<<<<<<< HEAD
 
                   <Button
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -671,13 +765,17 @@ if ( {) {
                   >;
                     <span className="sr-only">Sign in with Twitter</span>;
                     <Twitter className="h-5 w-5" />;
+<<<<<<< HEAD
                   </Button>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
         <div className="hidden lg:block relative w - 0 flex - 1">;
           <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity - 80">;
             <div className="flex flex - col justify - center items - center h - full px - 8">;
@@ -685,6 +783,14 @@ if ( {) {
                 <h3 className="text - 3xl font - bold text - white mb - 4">Join the Future of AI Marketplace</h3>;
                 <p className="text - lg text - white / 80">;
 
+=======
+        <div className="hidden lg:block relative w - 0 flex-1">;
+          <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity-80">;
+            <div className="flex flex - col justify - center items - center h - full px-8">;
+              <div className="max - w-md text-center">;
+                <h3 className="text - 3xl font - bold text - white mb-4">Join the Future of AI Marketplace</h3>;
+                <p className="text - lg text-white / 80">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
                 </p>;
               </div>;
@@ -694,8 +800,12 @@ if ( {) {
       </div>;
       <Footer />;
 
+<<<<<<< HEAD
     </>);
 }
+=======
+    </>);}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 

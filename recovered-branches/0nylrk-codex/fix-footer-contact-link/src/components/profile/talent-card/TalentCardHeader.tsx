@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
+<<<<<<< HEAD
 interface TalentCardHeaderProps {;
   fullName: string,;
   professionalTitle: string,;
@@ -24,6 +28,20 @@ export function TalentCardHeader(): any ({ ;
   yearsExperience;
 }: TalentCardHeaderProps) {;
 import React from "react",
+=======
+import React from "react",
+import { BadgeCheck } from "lucide-react",
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {
+
+  fullName: string
+  professionalTitle: string  profilePicture?: string;
+  availabilityType: string,;
+  yearsExperience: number;
+}
+  availabilityType;import React from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
@@ -38,7 +56,10 @@ interface TalentCardHeaderProps {
   availabilityType;
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
+<<<<<<< HEAD
 interface TalentCardHeaderProps {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   fullName: string,
   professionalTitle: string,
   profilePicture?: string,
@@ -51,7 +72,11 @@ interface TalentCardHeaderProps {
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {
+<<<<<<< HEAD
   return (
+=======
+  return (  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     <div className="flex items-start gap-4 mb-4">;
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />;
@@ -59,6 +84,7 @@ interface TalentCardHeaderProps {
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
+<<<<<<< HEAD
 
   return (
 
@@ -217,3 +243,10 @@ yearsExperience
 }/> </div> </div> </div>) 
 }
 ;
+=======
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (;
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
+            )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

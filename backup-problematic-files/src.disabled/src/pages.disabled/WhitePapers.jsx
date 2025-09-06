@@ -6,6 +6,6 @@ const WhitePapers = ({ className }) => {
       <h1>WhitePapers</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

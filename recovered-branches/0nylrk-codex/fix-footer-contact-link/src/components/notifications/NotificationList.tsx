@@ -1,6 +1,9 @@
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -13,9 +16,13 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   loading;
   error;
   notifications;
+<<<<<<< HEAD
   onMarkAsRead;
 
 import React from 'react',;
+=======
+  onMarkAsRead;import React from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
 import { Button } from '@/components/ui/button',;
@@ -30,6 +37,7 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
+<<<<<<< HEAD
 
   loading: boolean
   error: string | null
@@ -232,3 +240,13 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>;
   );
 };
+=======
+  error;
+  notifications;
+  onMarkAsRead;  on_dismiss,
+  on_retry;
+}) => {
+  return (
+    <ScrollArea className="flex - 1 overflow - y-auto max-h-[350px]">;
+      {error ? (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

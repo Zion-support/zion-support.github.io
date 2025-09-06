@@ -1,8 +1,12 @@
 
 module && module.exports = {
+<<<<<<< HEAD
   darkMode: ["class"],
 
   content: [
+=======
+  darkMode: ["class"],  content: [
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     "./pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}",
   ],
   theme: {
@@ -43,6 +47,7 @@ module && module.exports = {
         },
       },
       borderRadius: {
+<<<<<<< HEAD
 
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
@@ -83,3 +88,6 @@ module.exports = {
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
   plugins: []}
+=======
+  plugins: []}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

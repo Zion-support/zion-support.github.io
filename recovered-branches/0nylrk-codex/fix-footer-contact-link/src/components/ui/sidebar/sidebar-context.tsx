@@ -1,6 +1,7 @@
 
 import * as React from "react"
 import type { CSSProperties } from "react"
+<<<<<<< HEAD
 
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { useIsMobile } from "@/hooks/use-mobile"
@@ -12,6 +13,8 @@ import type { SidebarContext as SidebarContextType, SidebarState } from "../side
 
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 const SidebarContext = React.createContext<SidebarContextType | null>(null)
@@ -25,8 +28,12 @@ import * as React from './react';
 import type { CSSProperties } from './react';
 import { TooltipProvider } from '@/components / ui / tooltip';
 import { useIsMobile } from '@/hooks / use - mobile';
+<<<<<<< HEAD
 import { cn } from '@/lib / utils';
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+=======
+import { cn } from '@/lib / utils';import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -44,6 +51,7 @@ if ( {) {
 
 }
 
+<<<<<<< HEAD
 
   return context as SidebarContextType
 }
@@ -173,6 +181,15 @@ if ( {) {
 
 
 ;
+=======
+  return context as SidebarContextType
+}
+
+  SidebarProviderProps
+>(
+  (
+    {;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
       },;
@@ -193,9 +210,12 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       }
 
@@ -244,8 +264,13 @@ if (
       className;
       style;
       children;
+<<<<<<< HEAD
       ...props;
     };
+=======
+      ...props
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ref;
   ) => {;
     const isMobile = useIsMobile();
@@ -257,7 +282,10 @@ if (
     const setOpen = React && React.useCallback(;
       (value: boolean | ((value: boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) : value;
+<<<<<<< HEAD
       defaultOpen = true,;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       open:openProp,;
       onOpenChange:setOpenProp,;
       className,;
@@ -277,6 +305,7 @@ if (
     const setOpen = React.useCallback(;
       (value:boolean | ((value:boolean) => boolean)) => {;
         const openState = typeof value === "function" ? value(open) :value;
+<<<<<<< HEAD
         if (setOpenProp) {;
           setOpenProp(openState);
         } else {;
@@ -318,6 +347,8 @@ if (
 
     const contextValue = React && React.useMemo(;
       (): SidebarContextType => ({;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         state;
         open;
         set_open;
@@ -327,6 +358,7 @@ if (
 
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
+<<<<<<< HEAD
 
 
     return (
@@ -526,6 +558,8 @@ SidebarProviderProps > ( ({
             className={cn(
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
               className
             )}
@@ -542,8 +576,11 @@ SidebarProviderProps > ( ({
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
+<<<<<<< HEAD
 
 export { SidebarContext };
 ;
 export { SidebarContext }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

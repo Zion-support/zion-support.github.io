@@ -1,11 +1,16 @@
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+<<<<<<< HEAD
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+=======
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+<<<<<<< HEAD
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
@@ -16,11 +21,15 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 
 // Initialize Supabase client
+=======
+const supabase = createClient(supabaseUrl, supabaseServiceKey);// Initialize Supabase client
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
+<<<<<<< HEAD
 
   const url = new URL(req && req.url);
   const type = url && url.searchParams.get("type"), // "open" or "click"
@@ -29,18 +38,24 @@ serve(async (req) => {
   const redirectUrl = url && url.searchParams.get("redirect");
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
+<<<<<<< HEAD
   // Parse the URL to get the tracking parameters
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
@@ -52,6 +67,12 @@ serve(async (req) => {
   const redirectUrl = url.searchParams.get("redirect"),
 
 
+=======
+  // Parse the URL to get the tracking parameters  const campaignId = url.searchParams.get("cid"),
+  const userId = url.searchParams.get("uid"),
+  const redirectUrl = url.searchParams.get("redirect"),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -108,6 +129,7 @@ if ( {) {
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
+<<<<<<< HEAD
           headers: {
 
 
@@ -117,23 +139,37 @@ if ( {) {
 
 
             "Expires": "0"}}
+=======
+          headers: {            "Expires": "0"}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       )
     } else if (type === "click") {
       await supabase
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+<<<<<<< HEAD
 
 
         .eq("user_id", userId),
+=======
+        headers: {
+          Location: destination}})
+    }        .eq("user_id", userId),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
 
+<<<<<<< HEAD
 
       return new Response(null, {
         status: 302
             "Content - Type": "image / gif",
+=======
+      return new Response(null, {
+        status: 302
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             "Cache - Control": "no - store, no - cache, must - revalidate, proxy - revalidate";
             "Pragma": "no - cache";
             "Expires": "0"}}
@@ -159,6 +195,7 @@ if ( {) {
     console && console.error("Error tracking email event:", error);
     
 
+<<<<<<< HEAD
 
     console.error("Error tracking email event:", error),
     
@@ -168,13 +205,21 @@ if ( {) {
     console.error("Error tracking email event:", error),
     
         headers: {
+=======
+    console.error("Error tracking email event:", error),
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Location: destination}})
     }
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
     return new Response ("Invalid event type", { status: 400 });
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error ("Error tracking email event:", error);
 ;
@@ -187,6 +232,7 @@ if ( {) {
         status: 302,
         headers: {
           Location: redirect_url}});
+<<<<<<< HEAD
     }
 
     return new Response ("Error processing event", { status: 500 });
@@ -372,4 +418,7 @@ headers: {
   }
 });
   }
+=======
+    }  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });

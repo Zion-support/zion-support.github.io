@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -7,6 +10,7 @@ import { prisma  } from '@/lib / prisma';,
 import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
+<<<<<<< HEAD
 
 import NextAuth from "next-auth",;
 import CredentialsProvider from "next-auth/providers/credentials",;
@@ -16,6 +20,8 @@ import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -79,7 +85,10 @@ if ( {) {
         session.user.role = token.role;
       }
       return session;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   providers: [;
     CredentialsProvider({;
       name: "credentials";
@@ -119,6 +128,7 @@ if ( {) {
         session.user.id = token.sub!;
         session.user.role = token.role;
       }
+<<<<<<< HEAD
       return session;
 
     }},;
@@ -130,3 +140,6 @@ export { handler as GET, handler as POST };
 
 
 
+=======
+      return session;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

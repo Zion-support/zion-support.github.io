@@ -28,9 +28,12 @@ export type PolymorphicComponentProp<
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
 export type SafeRef<T> = React && React.Ref<T>;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed";
 import React from './react';
@@ -70,6 +73,7 @@ export type SidebarContext = {
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
+<<<<<<< HEAD
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
   toggleSidebar: () => void;
@@ -176,3 +180,7 @@ export type SidebarContext = {;
   toggleSidebar: () => void;
 };
 };
+=======
+  setOpenMobile: (open: boolean) => void
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

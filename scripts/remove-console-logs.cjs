@@ -60,6 +60,11 @@ function processFile(filePath) {
     return 0}
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -82,6 +87,10 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
+<<<<<<< HEAD
+=======
+ursor/expand-services-advertise-and-build-project-0033
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
@@ -113,9 +122,20 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
+=======
+ursor/expand-services-advertise-and-build-project-0033
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
 
 if (require.main === module) {
   main().catch(console.error)}
+<<<<<<< HEAD
 
+=======
+
+
+module.exports = { removeConsoleStatements, processFile };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

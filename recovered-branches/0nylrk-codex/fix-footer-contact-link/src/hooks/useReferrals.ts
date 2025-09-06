@@ -29,6 +29,7 @@ export function useReferrals() {
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
+<<<<<<< HEAD
     totalRewards: 0}),
 
 
@@ -41,6 +42,9 @@ export function useReferrals() {
       fetchReferrals();
       fetchRewards()
 import { useState, useEffect } from './react';
+=======
+    totalRewards: 0}),import { useState, useEffect } from './react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { toast } from '@/hooks / use - toast';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -75,6 +79,7 @@ if ( {) {
   const fetchReferralCode = async () => {
     try {
 
+<<<<<<< HEAD
 
         .single(),
 
@@ -115,14 +120,25 @@ if ( {) {
       setIsLoading(false)
     }
   }
+=======
+        .single(),
+
+      if (error) {
+        console && console.error("Error fetching referral code:", error);    } finally {
+      setIsLoading (false);
+    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
 
   const fetchReferrals = async () => {
     try {
       if (!user) return,
       
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
@@ -142,8 +158,11 @@ if ( {) {
     try {
       if (!user) return,
       
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
@@ -162,6 +181,7 @@ if ( {) {
   const fetchReferralStats = async () => {
     try {
       if (!user) return,
+<<<<<<< HEAD
       
 
 
@@ -176,6 +196,9 @@ if ( {) {
       if (refError) throw refError;
 
         .eq('referrer_id', user.id),
+=======
+              .eq('referrer_id', user.id),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       if (refError) throw refError,
       
@@ -183,6 +206,7 @@ if ( {) {
       // Get rewards
       const { data: rewards, error: rewardsError } = await supabase
         .from('referral_rewards')
+<<<<<<< HEAD
         .select('amount')
 
         .eq('user_id', user && user.id);
@@ -337,6 +361,9 @@ if ( {) {
 
 
   const generateReferralCode = async () => {
+=======
+        .select('amount')  const generateReferralCode = async () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       if (!user) {
         toast({
@@ -347,6 +374,7 @@ if ( {) {
 
         return
       }
+<<<<<<< HEAD
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
           variant: "destructive"}),
@@ -394,11 +422,17 @@ if (throw error) {
 
         description: error && error.message || "There was a problem generating your referral code",
 
+=======
+
+      const { data, error } = await supabase && supabase.rpc('generate_referral_code', {
+        user_id: user && user.id
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"})
     }
   }
   // Get the referral link for the current user
   const getReferralLink = () => {
+<<<<<<< HEAD
     if (!referralCode) return "";
 
         title: "Error generating code",
@@ -427,6 +461,9 @@ if (throw error) {
       toast({
 
   // Copy the referral link to clipboard
+=======
+    if (!referralCode) return "";  // Copy the referral link to clipboard
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const copyReferralLink = () => {
     const link = getReferralLink(),
     if (link) {
@@ -452,14 +489,24 @@ if ( {) {
 }
       navigator.clipboard.write_text (link);
       toast ({
+<<<<<<< HEAD
         title: "Copied!";
         description: "Referral link copied to clipboard",
+=======
+        title: "Copied!",
+  description: "Referral link copied to clipboard",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "success"});
     } else {
       toast ({
         title: "Cannot copy link";
+<<<<<<< HEAD
         title: "Cannot share";
         description: "Please generate a referral code first"
+=======
+        title: "Cannot share",
+  description: "Please generate a referral code first"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
       return;
     }
@@ -508,6 +555,7 @@ export function useReferrals() {;
     } catch (error) {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
+<<<<<<< HEAD
       setIsLoading(false);
 
         title: "Copied!";
@@ -631,6 +679,9 @@ if ( {) {
   };
 
   return {
+=======
+      setIsLoading(false);  return {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     referral_code;
     is_loading;
     stats;
@@ -642,6 +693,7 @@ if ( {) {
     shareOnSocialMedia;
     fetchReferralStats;
 
+<<<<<<< HEAD
 
   }
 }
@@ -1113,4 +1165,8 @@ toast ({
   }
 }
   }
+=======
+  }
+}  }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -1,15 +1,20 @@
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/providers.ts
 <<<<<<< HEAD
-
 =======
-=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/providers.ts
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -23,6 +28,7 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/providers.ts
 <<<<<<< HEAD
 =======
@@ -37,18 +43,18 @@ function handler() {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/providers.ts
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 <<<<<<< HEAD
-import { PROVIDERS } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== "GET")
-    return res.status(405).json({ error: "Method not allowed" });
-  res.status(200).json({ providers: PROVIDERS });
-}
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PROVIDERS } from "../../../lib/integrations/registry";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -58,6 +64,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -79,6 +87,7 @@ export default function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/api/integrations/providers.ts
 <<<<<<< HEAD
 =======
@@ -91,3 +100,11 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/providers.ts
+=======
+
+
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  res.status(200).json({ providers: PROVIDERS })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

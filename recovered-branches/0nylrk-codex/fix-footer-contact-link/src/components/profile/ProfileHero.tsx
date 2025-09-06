@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
+<<<<<<< HEAD
 import {cn} from "@/lib/utils";
 interface ProfileHeroProps {;
   name: string,;
@@ -22,6 +26,9 @@ interface ProfileHeroProps {
   title: string
 
   avatarUrl?: string;
+=======
+import {cn} from "@/lib/utils";  avatarUrl?: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   coverImageUrl?: string;
   location?: string;
   rating?: number;
@@ -30,6 +37,7 @@ interface ProfileHeroProps {
   profileType: 'service' | 'talent';
 }
 
+<<<<<<< HEAD
 
 export function ProfileHero(): any ({;
 
@@ -46,6 +54,9 @@ export function ProfileHero(): any ({;
   profileType;
 }: ProfileHeroProps) {;
 interface ProfileHeroProps {
+=======
+export function ProfileHero(): any ({;interface ProfileHeroProps {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string,
   title: string,
   avatarUrl?: string,
@@ -57,6 +68,7 @@ interface ProfileHeroProps {
   profileType: 'service' | 'talent'
 }
 
+<<<<<<< HEAD
 
 
   profileType
@@ -109,6 +121,8 @@ export function ProfileHero({
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
 import { Star } from "lucide-react",;
@@ -156,10 +170,14 @@ export function ProfileHero({;
               {avatarUrl ? (;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
+<<<<<<< HEAD
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
 
 
                   {name.substring(0, 2).toUpperCase()}
+=======
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;                  {name.substring(0, 2).toUpperCase()}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </AvatarFallback>
               )}
             </Avatar>
@@ -168,6 +186,7 @@ export function ProfileHero({;
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge
                   variant="outline"
+<<<<<<< HEAD
                   className={cn(
 
     <div className="w-full overflow-hidden">;
@@ -223,6 +242,12 @@ export function ProfileHero({;
 
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
 
+=======
+                  className={cn(                </Badge>;
+              </div>;
+
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div className="flex flex-wrap items-center gap-3 mt-2">;
                 {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
@@ -234,7 +259,10 @@ export function ProfileHero({;
                     <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
                     {reviewCount && (;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
@@ -254,16 +282,23 @@ export function ProfileHero({;
                   </div>
 
                   </div>;
+<<<<<<< HEAD
                   </div>;
 
 
                 )}
 
 
+=======
+
+                )}
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {aiScore && (;
                   <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
                     AI Match: {aiScore}%;
                   </div>;
+<<<<<<< HEAD
                 )}
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
@@ -336,11 +371,17 @@ function ProfileHero() {
 
                 )}
               </div>;
+=======
+                )}              </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </div>);
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

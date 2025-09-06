@@ -128,3 +128,8 @@ const path = require("path")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
 
+<<<<<<< HEAD
+=======
+  console.error("Master error coordinator "failed")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

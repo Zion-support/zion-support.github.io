@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
 
@@ -27,8 +24,7 @@
   match_percent,
 }
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -82,4 +78,4 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }"
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

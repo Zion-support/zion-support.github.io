@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -12,6 +13,8 @@ export function FloatingCTA() {
   const [isClosed, setIsClosed] = useState(false);
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { useState, useEffect } from "react",
@@ -20,7 +23,10 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {
 
     const handleScroll = () => {
@@ -28,6 +34,7 @@ export function FloatingCTA() {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
+<<<<<<< HEAD
 
 
       if (scrollPosition > threshold && !isClosed) {
@@ -47,12 +54,21 @@ export function FloatingCTA() {
   const handleClose = () => {;
 
     setIsClosed(true);
+=======
+      if (scrollPosition > threshold && !isClosed) {        setIsVisible(true);
+      } else {;
+        setIsVisible(false);
+      }    setIsClosed(true);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsVisible(false);
   }
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     },
 
     window.addEventListener("scroll", handleScroll),
@@ -67,6 +83,7 @@ export function FloatingCTA() {
   },
 
   if (!isVisible) return null,
+<<<<<<< HEAD
 
 
   return (
@@ -96,10 +113,13 @@ export function FloatingCTA() {
       </div>
     </div>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { useState, useEffect } from "react",;
+<<<<<<< HEAD
 import { X } from "lucide-react",;
 export function FloatingCTA() {;
   const [isVisible, setIsVisible] = useState(false),;
@@ -184,6 +204,12 @@ export function FloatingCTA() {;
   );
 
 import { Button  } from '@/components / ui / button';
+=======
+import { X } from "lucide-react",;          </button>;
+        </div>;
+      </div>;
+    </div>;import { Button  } from '@/components / ui / button';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
 import { X  } from './lucide-react';
@@ -224,6 +250,7 @@ if (return null) {
   $2
 }
   return (
+<<<<<<< HEAD
     <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade - in">;
       <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify - between">;
         <div className="mr - 4">;
@@ -237,22 +264,45 @@ if (return null) {
             variant="default";
             size="sm";
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace - nowrap";
+=======
+    <div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md px - 4 z - 50 animate - fade-in">;
+      <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue p - 4 rounded - lg border border - zion - purple shadow - lg flex items - center justify-between">;
+        <div className="mr-4">;
+          <p className="text - white font-medium">Ready to explore Zion?</p>;
+          <p className="text - zion - slate - light text-sm">;
+            Register today to access all features!;
+          </p>;
+        </div>;
+        <div className="flex items - center gap-2">;
+          <Button;
+            variant="default";
+            size="sm";
+            className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple whitespace-nowrap";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             as_child;
           >;
             <Link to="/signup">Register Now</Link>;
           </Button>;
           <button;
             on_click={handle_close}
+<<<<<<< HEAD
             className="text - zion - slate hover: text - white p - 1";
             aria - label="Close";
           >;
             <X className="w - 5 h - 5" />;
+=======
+            className="text - zion - slate hover: text - white p-1";
+            aria - label="Close";
+          >;
+            <X className="w - 5 h-5" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </button>;
         </div>;
       </div>;
     </div>);
 
 }
+<<<<<<< HEAD
 }
 ;
 
@@ -275,3 +325,5 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

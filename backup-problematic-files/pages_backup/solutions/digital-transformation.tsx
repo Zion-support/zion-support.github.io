@@ -31,32 +31,32 @@ import MainLayout from '../../components/layout/MainLayout';
 const transformationSteps = [;
   {;
     step: '01',;
-    title: 'Assessment & Strategy',;
-    description: 'We analyze your current systems, processes, and identify opportunities for digital transformation.',;
+    title: 'Assessment & Strategy',,
+  description: 'We analyze your current systems, processes, and identify opportunities for digital transformation.',;
     icon: Target,;
     duration: '2-4 weeks',;
     features: ['Current state analysis', 'Gap identification', 'ROI projections', 'Strategic roadmap'];
   },;
   {;
     step: '02',;
-    title: 'Technology Integration',;
-    description: 'Implement cutting-edge technologies including AI, cloud solutions, and automation tools.',;
+    title: 'Technology Integration',,
+  description: 'Implement cutting-edge technologies including AI, cloud solutions, and automation tools.',;
     icon: Brain,;
     duration: '4-12 weeks',;
     features: ['AI implementation', 'Cloud migration', 'API integration', 'Data modernization'];
   },;
   {;
     step: '03',;
-    title: 'Process Optimization',;
-    description: 'Streamline workflows and optimize business processes for maximum efficiency.',;
+    title: 'Process Optimization',,
+  description: 'Streamline workflows and optimize business processes for maximum efficiency.',;
     icon: Zap,;
     duration: '6-16 weeks',;
     features: ['Workflow automation', 'Process redesign', 'Performance monitoring', 'Continuous improvement'];
   },;
   {;
     step: '04',;
-    title: 'Training & Support',;
-    description: 'Comprehensive training programs and ongoing support to ensure successful adoption.',;
+    title: 'Training & Support',,
+  description: 'Comprehensive training programs and ongoing support to ensure successful adoption.',;
     icon: Users,;
     duration: '2-8 weeks',;
     features: ['Team training', 'Documentation', 'Change management', '24/7 support'];
@@ -65,26 +65,26 @@ const transformationSteps = [;
 const benefits = [;
   {;
     icon: TrendingUp,;
-    title: 'Increased Efficiency',;
-    description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 40%.',;
+    title: 'Increased Efficiency',,
+  description: 'Automate repetitive tasks and streamline workflows to boost productivity by up to 40%.',;
     metric: '40%';
   },;
   {;
     icon: DollarSign,;
-    title: 'Cost Reduction',;
-    description: 'Reduce operational costs through automation and optimized processes.',;
+    title: 'Cost Reduction',,
+  description: 'Reduce operational costs through automation and optimized processes.',;
     metric: '25%';
   },;
   {;
     icon: BarChart3,;
-    title: 'Better Analytics',;
-    description: 'Gain actionable insights from your data with advanced analytics and reporting.',;
+    title: 'Better Analytics',,
+  description: 'Gain actionable insights from your data with advanced analytics and reporting.',;
     metric: '60%';
   },;
   {;
     icon: Shield,;
-    title: 'Enhanced Security',;
-    description: 'Implement robust security measures to protect your digital assets.',;
+    title: 'Enhanced Security',,
+  description: 'Implement robust security measures to protect your digital assets.',;
     metric: '99 && 99.9%';
   }
 ];
@@ -107,26 +107,26 @@ import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} fro
 export default function DigitalTransformationPage() {;
   const transformationServices = [;
     {}
-      title: "Process Automation",";
-      description: "Streamline operations with intelligent automation",";
+      title: "Process Automation",",
+  description: "Streamline operations with intelligent automation",";
       icon: RefreshCw,;
       features: ["Workflow Automation", "Document Processing", "Task Optimization"]";
     },;
     {}
-      title: "Digital Strategy",";
-      description: "Comprehensive digital transformation roadmap",";
+      title: "Digital Strategy",",
+  description: "Comprehensive digital transformation roadmap",";
       icon: Target,;
       features: ["Strategic Planning", "Technology Assessment", "Change Management"]";
     },;
     {}
-      title: "Technology Integration",";
-      description: "Seamlessly integrate new technologies with existing systems",";
+      title: "Technology Integration",",
+  description: "Seamlessly integrate new technologies with existing systems",";
       icon: Rocket,;
       features: ["System Integration", "API Development", "Data Migration"]";
     },;
     {}
-      title: "Performance Optimization",";
-      description: "Enhance efficiency and drive measurable results",";
+      title: "Performance Optimization",",
+  description: "Enhance efficiency and drive measurable results",";
       icon: TrendingUp,;
       features: ["KPI Tracking", "Performance Analytics", "Continuous Improvement"]";
     }

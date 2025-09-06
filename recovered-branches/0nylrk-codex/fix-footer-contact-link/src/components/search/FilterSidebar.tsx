@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import React from "react";
@@ -7,12 +8,15 @@ import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 import { Filter, X, Star } from "lucide-react",
+<<<<<<< HEAD
 import { FilterOptions } from "@/types/search",
 interface FilterSidebarProps {
   filters: {
@@ -71,16 +75,27 @@ interface FilterSidebarProps {;
     selectedRating: number | null;
   };
   };
+=======
+import { FilterOptions } from "@/types/search",  filters: {;
+    selectedProductTypes: string[],;
+    selectedLocations: string[],;
+    selectedAvailability: string[],;
+    selectedRating: number | null
+};  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
+<<<<<<< HEAD
 
 export function FilterSidebar(): any ({;
 
   filters;
   filterOptions;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onFilterChange;
   onRatingChange;
   onClearFilters;
@@ -162,6 +177,7 @@ export function FilterSidebar(): any ({;
             </div>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
@@ -390,16 +406,24 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
       ;
       {/* Rating Filter */}
       <div className="mb-6">;
+=======
+      </div>      <div className="mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <label className="text-sm font-medium text-zion-slate-light block mb-2">;
           Minimum Rating;
         </label>;
         <div className="flex flex-wrap gap-2">;
+<<<<<<< HEAD
           {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
           {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
+=======
+          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;          {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
+<<<<<<< HEAD
               onClick={() => onRatingChange(rating)}
 
               className={`${;
@@ -413,6 +437,13 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
                 "Any";
               ) : (;
                 <div className="flex items-center">;
+=======
+              onClick={() => onRatingChange(rating)}              }`}
+            >;
+              {rating === null ? (;
+                "Any";
+              ) : (;                <div className="flex items-center">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {[...Array(rating)].map((_, i) => (;
                     <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
                   ))}
@@ -426,6 +457,7 @@ export function FilterSidebar(_{_filters, _filterOptions, _onFilterChange, _onRa
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
 import React from './react';
@@ -603,3 +635,6 @@ function FilterSidebar() {
     </div>
   )
 }
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

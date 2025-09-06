@@ -1,19 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedInnovativeService {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   name: string;
   tagline: string;
@@ -47,9 +53,12 @@ export interface AdvancedInnovativeService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
 
@@ -57,17 +66,20 @@ export interface AdvancedInnovativeService {
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   customers: number;
   rating: number;
   reviews: number;
@@ -76,9 +88,12 @@ export interface AdvancedInnovativeService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   market_advantage: string;
 ;
@@ -88,10 +103,15 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -105,6 +125,7 @@ const contact = {
   website: 'https://ziontechgroup && ziontechgroup.com'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -113,11 +134,13 @@ const contact = {
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   marketAdvantage: string
 }
 
 const contact = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
       'Self-healing DevOps with intelligent automation and predictive maintenance'
     price: '$1,299'
@@ -630,8 +653,8 @@ const contact = null;
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },
 ];
-<<<<<<< HEAD
 
+<<<<<<< HEAD
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
@@ -1160,6 +1183,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 =======
 
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface AdvancedInnovativeService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1190,10 +1215,11 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1204,6 +1230,10 @@ const contact = {
     ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
@@ -1213,6 +1243,7 @@ const contact = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1220,6 +1251,9 @@ const contact = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1733,15 +1767,21 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 
 
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-
-
 =======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+ursor/fix-website-loading-errors-and-merge-6662
+  }
+];
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1832,9 +1872,13 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 67,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     benefits: [;
       '30% improvement in prediction accuracy',
       '50% reduction in modeling time',
@@ -1854,6 +1898,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   },
 ];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development';
     ];
+<<<<<<< HEAD
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
   }
 ];
@@ -1862,13 +1907,14 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 <<<<<<< HEAD
 =======
 =======
-    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-<<<<<<< HEAD
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
+
+
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1879,3 +1925,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
   }
 ];
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

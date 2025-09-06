@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,6 +12,8 @@ interface NoJobsCardProps {;
 
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -27,6 +30,7 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
     </Card>;
   );
 import { Card, CardContent  } from '@/components / ui / card';
+<<<<<<< HEAD
 import { Button  } from '@/components / ui / button';
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
@@ -98,3 +102,6 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
   );
 }
 ;
+=======
+import { Button  } from '@/components / ui / button';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

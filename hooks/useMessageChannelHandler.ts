@@ -2,11 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Type definition for MessageEvent
 interface MessageEvent {
   data: unknown;
@@ -16,6 +20,10 @@ import { useEffect, useCallback } from "react";
 interface Event {
   type: string;
   target: EventTarget | null;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 type EventListener = (event: Event) => void;
@@ -50,6 +58,7 @@ interface MessageChannelHandlerProps {
 
 export function useMessageChannelHandler({
   onMessage,
+<<<<<<< HEAD
   onError,
 <<<<<<< HEAD
 =======
@@ -60,6 +69,13 @@ export function useMessageChannelHandler({
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   onError
+=======
+main
+  onMessage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  onError
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
@@ -77,6 +93,7 @@ export function useMessageChannelHandler({
     };
   }, [handleMessage]);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,3 +121,16 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+
+
+
+
+main
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

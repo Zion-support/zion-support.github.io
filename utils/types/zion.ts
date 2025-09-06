@@ -11,6 +11,7 @@ export interface Branding {;
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
+<<<<<<< HEAD
 
 export interface Branding {;
 
@@ -30,6 +31,8 @@ export interface DeployModules {;
   marketplace: boolean;
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -40,6 +43,7 @@ export interface DeployModules {;
   roadmapWhitepaper: boolean;
   apiDocsWiki: boolean;
   zionBrain: boolean;
+<<<<<<< HEAD
   // Bonus;
 
 
@@ -87,6 +91,9 @@ export interface DeployResult {success: boolean;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  // Bonus;}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 export interface DeployInput {;
   instanceName: string;
@@ -94,7 +101,10 @@ export interface DeployInput {;
   deploymentRegion: string;
   tokenActivation: boolean;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -124,6 +134,7 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 ;
 export interface DeployResult {;
@@ -131,12 +142,15 @@ export interface DeployResult {;
 ;
 export interface DeployResult {;
   success: boolean;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 
 
 
@@ -156,6 +170,8 @@ export interface Branding {
 
 
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface DeployModules {
   marketplace: boolean,
   gpt: boolean,
@@ -208,6 +224,7 @@ export interface DeployResult {
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+<<<<<<< HEAD
   adminKeyConfigured: boolean;
 
 }
@@ -234,3 +251,6 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
   adminKeyConfigured: boolean;
 }
+=======
+  adminKeyConfigured: boolean;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

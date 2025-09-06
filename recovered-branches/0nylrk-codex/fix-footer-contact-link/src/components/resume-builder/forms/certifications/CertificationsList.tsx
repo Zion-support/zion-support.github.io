@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Certification } from "@/types/resume";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -50,11 +51,37 @@ export function CertificationsList({
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
+=======
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Edit, Trash2  } from 'lucide-react';
+import { format } from 'date-fns';
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+interface CertificationsListProps {
+  certifications: Certification[];
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;                  )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>;
               </div>;
               <div className="flex gap-2">;
                 <Button
                   variant="ghost"
+<<<<<<< HEAD
                   size="icon"
                   onClick={() => onEdit(cert)}
                 >;
@@ -65,25 +92,44 @@ export function CertificationsList({
                   size="icon"
 
                       {typeof cert.expiration_date === "string";
+=======
+                  size="icon"                  onClick={() => onEdit(cert)}
+                >;
+                  <Edit className="h-4 w-4" />;
+                </Button>;
+            {cert.credential_url && (                      {typeof cert.expiration_date === "string";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
                     </>)}
                 </p>;
               </div>;
+<<<<<<< HEAD
               <div className="flex gap - 2">;
+=======
+              <div className="flex gap-2">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_edit (cert)}
                 >;
+<<<<<<< HEAD
                   <Edit className="h - 4 w - 4" />;
+=======
+                  <Edit className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Button>;
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_delete (cert.id!)}
                 >;
+<<<<<<< HEAD
                   <Trash2 className="h - 4 w - 4" />;
+=======
+                  <Trash2 className="h - 4 w-4" />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Button>;
               </div>;
             </div>;
@@ -130,3 +176,7 @@ export function CertificationsList({
   )
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

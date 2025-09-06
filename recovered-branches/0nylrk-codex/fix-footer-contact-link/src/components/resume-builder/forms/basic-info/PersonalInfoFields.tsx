@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   FormField,
   FormItem,
@@ -19,6 +20,23 @@ import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 
 
+=======
+
+  FormField,
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Control} from "react-hook-form";
+import {BasicInfoFormData} from "./schema";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   FormField,
   FormItem,
@@ -33,12 +51,16 @@ interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface PersonalInfoFieldsProps {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+<<<<<<< HEAD
 
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
@@ -73,6 +95,8 @@ import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
 interface PersonalInfoFieldsProps {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   control: Control<BasicInfoFormData>;
 }
 
@@ -88,13 +112,18 @@ export /**
  */
 function PersonalInfoFields() {
   return (
+<<<<<<< HEAD
     <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+=======
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <FormField;
         control={control}
         name="full_name";
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Full Name</FormLabel>;
+<<<<<<< HEAD
 
 import { BasicInfoFormData } from "./schema",;
 ;
@@ -137,6 +166,8 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Professional Title</FormLabel>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </FormItem>;
         )}
       />;
@@ -154,6 +185,7 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
 
       />;
 
+<<<<<<< HEAD
 
       <FormField
         control={control}
@@ -164,20 +196,36 @@ export function PersonalInfoFields({ control } PersonalInfoFieldsProps) {;
             <FormControl>;
               <Input type="email" placeholder="john@example && example.com" {...field} />;
             </FormControl>;
+=======
+      <FormField
+        control={control}
+        name="email"        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Email</FormLabel>;
+            <FormControl>;
+              <Input type="email" placeholder="john@example && example.com" {...field} />;            </FormControl>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <FormMessage />;
           </FormItem>;
         )}
 
       />;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <FormField
         control={control}
         name="phone"
         render={({ field }) => (;
           <FormItem>;
+<<<<<<< HEAD
             <FormLabel>Phone</FormLabel>;
       />;
+=======
+            <FormLabel>Phone</FormLabel>;      />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         )}
       />
       <FormField

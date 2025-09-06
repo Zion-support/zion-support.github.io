@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/ card';
@@ -15,6 +16,8 @@ import {
 <<<<<<< HEAD:src_backup/mobile/components/browse/BrowseCards.tsx
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -35,10 +38,14 @@ import {
   DollarSign
 } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/ avatar';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/mobile/components/browse/BrowseCards.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface BrowseItem {
   id: string;
   title: string;
@@ -65,7 +72,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
       prev && prev.includes(id) ? prev && prev.filter(itemId => itemId !== id) : [...prev, id];
     );
   };
-
 
   return (
     <div className='space-y-4 pb-24'>;
@@ -102,7 +108,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   </div>;
                 </div>;
 
-
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item && item.id)}                >;
@@ -129,18 +134,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
 
-
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-=======
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -167,7 +160,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
   const [ savedItems, setSavedItems ] = useState<string[]>([]),
 
-  
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
       prev.includes(id) 
@@ -176,15 +168,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     )
   };
 
-
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
-
-
-
-
 
           <CardContent className="p-0">
             <div className="p-4">
@@ -193,39 +180,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
                       <AvatarImage src={item.image} alt={item.title} />
-<<<<<<< HEAD
-                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
-                    </Avatar>
-                  ) : (
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary font-semibold">JOB</span>
-                    </div>
-                  )}
 
-                  <div>;
-                    <h3 className="font-medium">{item && item.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
-                  </div>;
-                </div>;
-
-
-                <button
-                  className="h-8 w-8 flex items-center justify-center"
-<<<<<<< HEAD
-                  onClick={() => toggleSaved(item && item.id)}
-                >;
-                  {savedItems && savedItems.includes(item && item.id) ? (;
-                    <BookmarkCheck className="h-5 w-5 text-primary" />;
-                  ) : (;
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
-=======
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
 
                 </button>;
@@ -238,7 +193,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
-
 
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
@@ -266,14 +220,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
 
-              
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
-
 
                   )}
                   <div>
@@ -301,7 +253,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     className="text-xs font-normal";
                   >;
 
-=======
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
                       </AvatarFallback>
@@ -335,48 +286,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     variant='outline'
                     className='text-xs font-normal'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {badge}
                   </Badge>
                 ))}
               </div>
-<<<<<<< HEAD
-
-
-                {item.location && (
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    <span>{item.location}</span>
-                  </div>
-                )}
-
-
-                
-
-
-                {item.price && (
-                  <div className="flex items-center gap-1">
-                    <DollarSign className="h-3 w-3" />
-                    <span>{item.price}</span>
-                  </div>
-                )}
-
-
-                
-
-
-                {item.timePosted && (
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    <span>{item.timePosted}</span>
-                  </div>
-                )}
-
-
-
-
-                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
-=======
 <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
@@ -400,105 +314,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
                 {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-
-
-              </div>;
-
-              <p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;
-
-              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>;
-                {item && item.location && (;
-                  <div className='flex items-center gap-1'>;
-                    <MapPin className='h-3 w-3' />;
-                    <span>{item && item.location}</span>;
-                  </div>;
-                )}
-
-                {item && item.price && (;
-                  <div className='flex items-center gap-1'>;
-                    <DollarSign className='h-3 w-3' />;
-                    <span>{item && item.price}</span>;
-                  </div>;
-                )}
-
-                {item && item.timePosted && (;
-                  <div className='flex items-center gap-1'>;
-                    <Clock className='h-3 w-3' />;
-                    <span>{item && item.timePosted}</span>;
-                  </div>;
-                )}
-
-                {item && item.match && (;
-                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5'>                    {item && item.match}% match                {item && item.location && (;
-                  <div className="flex items-center gap-1">;
-                    <MapPin className="h-3 w-3" />;
-                    <span>{item && item.location}</span>;
-                  </div>;
-                )}
-
-                {item && item.price && (;
-                  <div className="flex items-center gap-1">;
-                    <DollarSign className="h-3 w-3" />;
-                    <span>{item && item.price}</span>;
-                  </div>;
-                )}
-
-                {item && item.timePosted && (;
-                  <div className="flex items-center gap-1">;
-                    <Clock className="h-3 w-3" />;
-                    <span>{item && item.timePosted}</span>;
-                  </div>;
-                )}
-
-                {item && item.match && (;
-                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0 && 0.5">;
-                    {item && item.match}% match;
-                  </div>;
-                )}
-              </div>;
-            </div>;
-
-            <div className='border-t border-border p-3 flex justify-end'>;
-              <Button
-                size='sm'
-                onClick={() => onViewDetails(item && item.id)}
-                className='gap-1'              >;
-                View Details <ChevronRight className='h-4 w-4' />              </Button>;
-                View Details <ChevronRight className="h-4 w-4" />;
-                onClick={() => onViewDetails(item && item.id)}
-                className="gap-1";
-              >;
-                View Details <ChevronRight className="h-4 w-4" />;
-              </Button>;
-            </div>;
-          </CardContent>;
-        </Card>;
-
-      ))}
-
-            
-            <div className="border-t border-border p-3 flex justify-end">
-              <Button 
-                size="sm"
-
-
-
-                onClick={() => onViewDetails(item.id)}
-                className="gap-1"
-=======
 <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
                 onClick={() => onViewDetails(item.id)}
                 className='gap-1'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 View Details <ChevronRight className='h-4 w-4' />
               </Button>
@@ -650,18 +477,8 @@ function BrowseCards() {
     </div>);
 }
 
-
       ))}
-<<<<<<< HEAD
-
-    </div>;
-  );
-};
-}
-
-;
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,10 +1,13 @@
 
 
+<<<<<<< HEAD
 
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -18,12 +21,16 @@ export function useJobSuggestions(talentId?: string) {
   const [isLoading, setIsLoading] = useState(true),
   
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
       if (!talentId) return;
       try {
+<<<<<<< HEAD
         setIsLoading(true);
       if (!talentId) return,
       
@@ -75,6 +82,19 @@ export function useJobSuggestions(talentId?: string) {
     }
     fetchSuggestedJobs()
   }, [talentId]);
+=======
+        setIsLoading(true);        // Get job matches with job details
+        const { data, error } = await supabase
+          .from("job_talent_matches")
+          .select(`
+            *,
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)      } finally {
+        setIsLoading (false);
+      }
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       } finally {
         setIsLoading(false)
       }
@@ -84,15 +104,21 @@ export function useJobSuggestions(talentId?: string) {
     fetchSuggestedJobs()
   }, [talentId]),
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       },
       
       const { error } = await supabase
@@ -103,17 +129,24 @@ export function useJobSuggestions(talentId?: string) {
       if (error) throw error,
       
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Update local state
 
       setJobMatches(matches => 
         matches && matches.map(match => 
           match && match.id === matchId 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
 
+<<<<<<< HEAD
 
       ),
       
@@ -126,6 +159,11 @@ export function useJobSuggestions(talentId?: string) {
       ),
       
       // Show appropriate message
+=======
+      ),
+      
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (status === 'applied') {
         toast({
           title: "Application Submitted"
@@ -137,6 +175,7 @@ export function useJobSuggestions(talentId?: string) {
           description: "This job will be removed from your suggestions"
         })
       }
+<<<<<<< HEAD
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
@@ -204,6 +243,15 @@ export function useJobSuggestions(talentId?: string) {;
     }
   }
 ;
+=======
+    } catch (error) {        title: "Error",
+  description: "Failed to update job status"
+        variant: "destructive"})
+    }
+  }
+  // Filter matches by status    }
+  };
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fetchSuggestedJobs ();
   }, [talent_id]);
 ;
@@ -251,8 +299,13 @@ if ( {) {
     } catch (error) {
       console.error ("Error updating job match status:", error);
       toast ({
+<<<<<<< HEAD
         title: "Error";
         description: "Failed to update job status",
+=======
+        title: "Error",
+  description: "Failed to update job status",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     }
   }
@@ -272,11 +325,17 @@ if ( {) {
       viewed_matches;
       applied_matches,
       declined_matches;
+<<<<<<< HEAD
 
 
     }
   }
 }
+=======
+    }
+  }
+}}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 import { useState, useEffect } from "react",;
@@ -311,8 +370,13 @@ export function useJobSuggestions(talentId?:string) {;
       } catch (error) {;
         console.error("Error fetching job matches:", error),;
         toast({;
+<<<<<<< HEAD
           title:"Error",;
           description:"Failed to load job suggestions",;
+=======
+          title:"Error",,
+  description:"Failed to load job suggestions",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           variant:"destructive"}),;
       } finally {;
         setIsLoading(false),;
@@ -347,6 +411,7 @@ export function useJobSuggestions(talentId?:string) {;
       // Show appropriate message;
       if (status === 'applied') {;
         toast({;
+<<<<<<< HEAD
           title:"Application Submitted",;
           description:"You've successfully applied to this job";
         }),;
@@ -354,13 +419,27 @@ export function useJobSuggestions(talentId?:string) {;
         toast({;
           title:"Job Declined",;
           description:"This job will be removed from your suggestions";
+=======
+          title:"Application Submitted",,
+  description:"You've successfully applied to this job";
+        }),;
+      } else if (status === 'declined') {;
+        toast({;
+          title:"Job Declined",,
+  description:"This job will be removed from your suggestions";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }),;
       }
     } catch (error) {;
       console.error("Error updating job match status:", error),;
       toast({;
+<<<<<<< HEAD
         title:"Error",;
         description:"Failed to update job status",;
+=======
+        title:"Error",,
+  description:"Failed to update job status",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant:"destructive"}),;
     }
   },;

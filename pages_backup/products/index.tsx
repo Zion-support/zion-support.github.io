@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/products/index.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ const Page = () => {
 export default Page;
 <<<<<<< HEAD:pages_backup/products/index.tsx
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 class ErrorBoundary extends React.Component {
@@ -490,14 +493,15 @@ export default Index,
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const Index: NextPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/products/index.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

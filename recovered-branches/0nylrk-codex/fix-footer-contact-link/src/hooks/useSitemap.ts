@@ -1,11 +1,15 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
 
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 
+<<<<<<< HEAD
 
 export function useSitemap() {;
 
@@ -31,11 +35,17 @@ type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
 export function useSitemap() {;
   const { user, isAuthenticated } = useAuth();
+=======
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+export function useSitemap() {;  const { user, isAuthenticated } = useAuth();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Get routes that the current user can access
   // Cast userType to UserType or pass undefined if not valid
   const userType = user?.userType && isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined;
   const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
   // Helper function to find a route by path
+<<<<<<< HEAD
   const findRouteByPath = (path: string): SitemapItem | undefined => {
     return accessibleRoutes.find(route => route.path === path)
   }
@@ -61,17 +71,28 @@ export function useSitemap() {;
   }
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
+=======
+  const findRouteByPath = (path: string): SitemapItem | undefined => {    }
+    return true
+  }  function isValidUserType(type: string): boolean {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
   }
   return {
     accessibleRoutes;
     findRouteByPath;
 
+<<<<<<< HEAD
     canAccessRoute
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
 // Define the allowed user types;
+=======
+    canAccessRouteimport {use_auth} from './use_auth';
+import {getAccessibleRoutes} from '@/config / sitemap';
+import type { SitemapItem } from '@/config / sitemap';// Define the allowed user types;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 type UserType = 'employer' | 'buyer' | 'job_seeker' | 'creator' | 'admin';
 ;
 export /**
@@ -127,12 +148,15 @@ if (return false) {
     findRouteByPath;
     canAccessRoute;
 
+<<<<<<< HEAD
 
 
 
   }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
   ;

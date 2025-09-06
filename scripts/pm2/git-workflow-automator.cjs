@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 
 
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
+=======
+            // Simple conflict resolution - take the incoming change
+
+
+            // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
+            // Simple conflict resolution - take the incoming change
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
@@ -116,9 +127,21 @@ if (require.main === module) {
   automator.run();
 }
 
+<<<<<<< HEAD
 module.exports = GitWorkflowAutomator;
 
 '
+=======
+module.exports = GitWorkflowAutomator;'
+
+module.exports = GitWorkflowAutomator;
+
+
+'
+module.exports = GitWorkflowAutomator;'
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"

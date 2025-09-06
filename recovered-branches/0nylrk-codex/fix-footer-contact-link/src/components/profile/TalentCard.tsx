@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
 
 
@@ -56,6 +57,8 @@ import { TalentProfile } from "@/types/talent",;
 
 
 export interface TalentCardProps {;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
@@ -65,17 +68,23 @@ export interface TalentCardProps {;
 }
 
 export function TalentCard(): any ({;
+<<<<<<< HEAD
 
 
 export function TalentCard(): any ({;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -92,7 +101,10 @@ export function TalentCard(): any ({;
     }
   };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -103,10 +115,13 @@ export function TalentCard(): any ({;
 
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
+<<<<<<< HEAD
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
@@ -122,6 +137,7 @@ export function TalentCard(): any ({;
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
+<<<<<<< HEAD
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
               <Button
                 variant="ghost"
@@ -140,6 +156,9 @@ export function TalentCard(): any ({;
             
 
             {/* Location & Availability */}
+=======
+              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;            {/* Location & Availability */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -154,8 +173,11 @@ export function TalentCard(): any ({;
                 </div>;
               )}
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </div>;
         </div>;
@@ -165,13 +187,17 @@ export function TalentCard(): any ({;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
+<<<<<<< HEAD
                 </div>;
               )}
                 <span
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
+<<<<<<< HEAD
               ))}
 
               {(talent && talent.skills?.length || 0) > 5 && (;
@@ -200,6 +226,16 @@ export function TalentCard(): any ({;
 
 
             )}
+=======
+              ))}              )}
+            </div>;
+          </div>;
+        )}                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}            )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           </div>;
 
@@ -217,6 +253,7 @@ export function TalentCard(): any ({;
             <Button
               size="sm"
               variant="ghost"
+<<<<<<< HEAD
               onClick={handleViewProfile}
 
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light">;
@@ -387,6 +424,9 @@ if ( {) {
 
     </Card>;
   );}
+=======
+              onClick={handleViewProfile}  );}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  export interface TalentCardProps {
   talent: TalentProfile;
 onViewProfile: (id: string) => void;
@@ -461,3 +501,7 @@ isAuthenticated: boolean
     </Card>
   )
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src_backup/components/quotes/ExportToCSV.tsx
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.project_summary
       quote.budget_display |
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   quotes: QuoteRequest[];
   filename?: string
 =======
@@ -56,24 +59,13 @@ interface ExportToCSVProps {;
 }
 
 export const ExportToCSV = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         (quote.budget_min && quote.budget_max
           ? `$${quote.budget_min} - $${quote.budget_max}`
           : quote.budget_min
             ? `$${quote.budget_min}`
-<<<<<<< HEAD
-            : 'Not specified')
-      quote.timeline
-      quote.status
-      new Date(quote.created_at).toLocaleDateString()
-    ])
-    // Create CSV content
-    const csvContent = [
-      headers.join()
-<<<<<<< HEAD
-      ...rows.map(row =>
-        row.map(cell =>
 
+<<<<<<< HEAD
 
           // Escape commas and quotes in cell values
           typeof cell === 'string' && (cell.includes() |cell.includes('"'))
@@ -514,6 +506,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             : 'Not specified'),
       quote.timeline,
       quote.status,
@@ -560,7 +554,11 @@ URL.revokeObjectURL(url);
 );
 };
 '"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 ;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

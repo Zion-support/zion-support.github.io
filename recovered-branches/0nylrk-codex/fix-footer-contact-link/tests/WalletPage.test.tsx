@@ -17,6 +17,7 @@ describe ('WalletPage', () => {
     expect (
       screen.getByRole ('heading', { name: /balance / i })).toBeInTheDocument ();
   });
+<<<<<<< HEAD
 });
 
 import { render, screen } from '@testing-library/react',;
@@ -25,6 +26,9 @@ import { vi } from 'vitest',;
 import * as useWalletHook from '@/hooks/useWallet',;
 
 describe('WalletPage', () => {
+=======
+});describe('WalletPage', () => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   it('renders balance heading', () => {
     vi.spyOn(useWalletHook, 'useWallet').mockReturnValue({
       wallet: { user_id: '1', balance: 100, updated_at: '' };
@@ -39,5 +43,9 @@ describe('WalletPage', () => {
       screen.getByRole('heading', { name: /balance/i })
     ).toBeInTheDocument()
   })
+<<<<<<< HEAD
 });
 });
+=======
+});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

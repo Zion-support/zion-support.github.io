@@ -2,11 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -19,24 +22,32 @@ function handler() {
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
     const vendor = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -44,6 +55,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const {
     slug
     name
@@ -55,6 +70,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -69,6 +85,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -79,6 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     about,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const vendor = registerVendor({
       slug;
       name;
@@ -87,12 +110,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       about,  try {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -100,11 +128,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const vendor = registerVendor({
       slug;
       name;
 
+<<<<<<< HEAD
     const vendor = registerVendor({
       slug;
       name;
@@ -118,24 +150,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 <<<<<<< HEAD
 =======
+=======
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0);
+      about;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const vendor = registerVendor({
       slug;
       name;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
       verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -151,6 +192,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -159,12 +202,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -202,6 +251,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
   }
 }
 <<<<<<< HEAD
@@ -211,10 +261,14 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   }
@@ -226,3 +280,10 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+  }
+}
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,116 +1,8 @@
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-  const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',;
-  ];
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
-
-                    /mo;
-                  </span>;
-                </p>;
-              </div>;
-                    /mo;
-                  </span>;
-                </p>;
-              </div>;
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://k6.io / pricing/';
-                target='_blank';
-                rel='noreferrer';
-              >;
-                Grafana k6;
-              </a>;
-              , {' '}
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://www.loadmill.com / pricing';
-                target='_blank';
-                rel='noreferrer';
-              >;
-                Loadmill;
-              </a>;
-              , {' '}
-              <a;
-                className='underline hover:text - cyan - 300';
-                href='https://www.blazemeter.com / pricing';
-                target='_blank';
-                rel='noreferrer';
-              >;
-
-                BlazeMeter;
-              </a>;
-              .;
-            </p>;
-          </div>;
-
-              href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-              className='px-5 py-3 rounded-lg border border-white/20'>;
-              Email: kleber@ziontechgroup && ziontechgroup.com;
-            </a>;
-            <span className='text-gray-400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
-  );
-
-}
-import React from 'react',
-import SEO from '../components/SEO',
-import { Check, ExternalLink } from 'lucide-react',
-export default function ApiPerformanceTestingPage() {
-	const features = [
-		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	],
-	return (
-		<div className="relative isolate">
-			<section className="px-6 lg:px-10 py-16 lg:py-24">
-				<div className="max-w-6xl mx-auto">
-					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">API Performance Testing</h1>
-					<p className="mt-4 text-gray-300 max-w-3xl">Load, latency, reliability and regression testing for APIs with synthetic traffic generation, SLO tracking, distributed load injectors, and CI/CD integration. Benchmark providers, catch performance drift, and ship with confidence.</p>
-					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{[
-							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },
-							{ title: 'SLO Dashboards', desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.' },
-							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' },
-							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
-							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' },
-=======
 	const features = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
@@ -241,8 +133,6 @@ export default function ApiPerformanceTestingPage(req, res) {
 ;
 
 
-<<<<<<< HEAD
-=======
   const features = [
     'k6/Gatling-compatible test runner'
     'SLO-aware latency reports'
@@ -384,4 +274,4 @@ export default function ApiPerformanceTestingPage(req, res) {
       </section>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

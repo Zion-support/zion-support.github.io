@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -22,6 +23,12 @@ import { useState } from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+"use client";
+import { useState } from 'react';
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -33,6 +40,7 @@ const [loading, setLoading] = useState(false);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   const [message, setMessage] = useState('');
@@ -73,6 +81,12 @@ class ErrorBoundary extends React.Component {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -94,6 +108,11 @@ ai: 'Advanced AI capabilities and automation'
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -120,6 +139,7 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Header */}
@@ -152,6 +172,13 @@ ai: 'Advanced AI capabilities and automation',
           </p>
         </div>
         {/* Header */}
+=======
+
+
+        {/* Header */}
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         <div className="text-center mb-12">;
           <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>;
@@ -159,6 +186,7 @@ ai: 'Advanced AI capabilities and automation',
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
+<<<<<<< HEAD
 
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
@@ -179,6 +207,8 @@ ai: 'Advanced AI capabilities and automation',
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -190,12 +220,19 @@ ai: 'Advanced AI capabilities and automation',
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -203,6 +240,7 @@ ai: 'Advanced AI capabilities and automation',
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -217,10 +255,21 @@ ai: 'Advanced AI capabilities and automation',
                 <label className="block text-sm font-medium text-white/90">
                   Vertical
                 </label>
+=======
+
+                />;
+              </div>;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Vertical</label>;
+
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <select
                   id="vertical"
                   name="vertical"
 
+<<<<<<< HEAD
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
                   Domain
@@ -241,6 +290,8 @@ ai: 'Advanced AI capabilities and automation',
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
   }
 ;
@@ -291,10 +342,15 @@ ai: 'Advanced AI capabilities and automation',
                   className="w - full bg - zinc - 900 / 50 border border - white / 20 rounded - lg p - 3 focus:border - blue - 500 focus:ring - 2 focus:ring - blue - 500 / 20 transition - all";
                 >;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -306,9 +362,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                   placeholder="zion && zion.example.com"
                 />;
@@ -316,18 +375,26 @@ ai: 'Advanced AI capabilities and automation',
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -348,23 +415,33 @@ ai: 'Advanced AI capabilities and automation',
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -385,18 +462,27 @@ ai: 'Advanced AI capabilities and automation',
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
               </div>;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="region"
                   name="region"
@@ -405,6 +491,7 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="North America"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -414,6 +501,12 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 />;
               </div>;
             </div>;
@@ -428,6 +521,7 @@ ai: 'Advanced AI capabilities and automation',
               Economic Configuration
             </h2>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">
@@ -507,6 +601,14 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              <div className="space-y-2">;
+                <label className="block text-sm font-medium text-white/90">Token System</label>;
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <select
                   id="tokenSystem"
                   name="tokenSystem"
@@ -569,10 +671,15 @@ ai: 'Advanced AI capabilities and automation',
                 >;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
@@ -580,9 +687,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all">;
                   <option value="ADMIN">Admin Control</option>;
@@ -597,19 +707,27 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="ADMIN">Admin Control</option>;
                   <option value="DAO LITE">DAO - lite</option>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
               </div>;
@@ -636,16 +754,22 @@ ai: 'Advanced AI capabilities and automation',
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;
               Feature Selection;
             </h2>;
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -657,6 +781,12 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <input
               <div className="space - y-2">;
                 <label html_for="country" className="block text - sm font - medium text - white / 90">Country</label>;
@@ -704,6 +834,7 @@ ai: 'Advanced AI capabilities and automation',
                     value={k}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -741,6 +872,8 @@ ai: 'Advanced AI capabilities and automation',
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
             </div>;
           </div>;
@@ -753,18 +886,26 @@ ai: 'Advanced AI capabilities and automation',
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -784,6 +925,10 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
                 <div>;
@@ -797,6 +942,7 @@ ai: 'Advanced AI capabilities and automation',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -806,12 +952,19 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -831,6 +984,10 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
                 <div>;
@@ -844,6 +1001,7 @@ ai: 'Advanced AI capabilities and automation',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -853,12 +1011,19 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -878,6 +1043,10 @@ ai: 'Advanced AI capabilities and automation',
                   </div>
                 </div>
               </label>
+=======
+
+main
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
                 <div>;
@@ -891,6 +1060,7 @@ ai: 'Advanced AI capabilities and automation',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -900,12 +1070,19 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -948,6 +1125,8 @@ ai: 'Advanced AI capabilities and automation',
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 />;
                 <div>;
@@ -1033,32 +1212,46 @@ ai: 'Advanced AI capabilities and automation',
                   </div>;
                   <div className="text - sm text - white / 60">Institutional partnership management</div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </label>;
             </div>;
           </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
             </button>;
             {message && (;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1071,6 +1264,13 @@ ai: 'Advanced AI capabilities and automation',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 }`}
               >
 "use client",;
@@ -1462,6 +1662,7 @@ export default function AdminDeployPage() {;
               }`}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -1471,6 +1672,8 @@ export default function AdminDeployPage() {;
               </div>;
             )}
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   };
 
   return (
@@ -1540,7 +1743,7 @@ export default function AdminDeployPage() {;
             >
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
             </button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </form>
       </div>
@@ -1550,9 +1753,12 @@ export default function AdminDeployPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 }`}>;
                 {message}
               </div>;
@@ -1580,25 +1786,31 @@ export default function AdminDeployPage() {;
               >;
                 {message}
               </div>)}
+
+
+
 <<<<<<< HEAD
-=======
-=======
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {message}
               </div>;
             )}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </form>;
       </div>;
@@ -1648,6 +1860,7 @@ function getFeatureDescription(key: string) {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1662,3 +1875,13 @@ function getFeatureDescription(key: string) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

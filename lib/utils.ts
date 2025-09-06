@@ -28,8 +28,13 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
+<<<<<<< HEAD
     timeout = setTimeout(() => func(..._args), wait);
   };
+=======
+    timeout = setTimeout(() => func(..._args), wait)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -79,16 +84,39 @@ export function slugify(str: string): string {
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
+<<<<<<< HEAD
 }
 export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));,
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 import { type ClassValue, clsx } from 'clsx';,
+=======
+}  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}
+origin/automation-improvements-final
+
+export function formatDate(date: Date | string | number): string {
+
+},
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { twMerge } from 'tailwind-merge';,
 
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
@@ -103,12 +131,16 @@ export function formatDate(date: Date | string | number): string {
 }
 }
 export function formatDate(date: Date | string | number): string {
+=======
+}export function formatDate(date: Date | string | number): string {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric",
     year: "numeric",
 }
 
+<<<<<<< HEAD
 
 
 
@@ -159,3 +191,13 @@ origin/main
 };
 
 }
+=======
+};
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d}
+}
+}
+}
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

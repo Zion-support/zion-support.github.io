@@ -18,6 +18,11 @@ class DependencyMonitor {}
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
@@ -40,6 +45,11 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -59,6 +69,11 @@ class DependencyMonitor {}
       line.includes('→') && !line.includes('Package');
    ;);
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if ( {})
       console.log('Outdated packages "found": ')) {}
      {}
@@ -86,6 +101,11 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       child.on('close', (code) => {}
         if ( {})
           console.log('Package integrity check passed ✓')) {}
@@ -126,3 +146,8 @@ if ( {})
   
   monitor.start().catch(console.error)};
 
+<<<<<<< HEAD
+=======
+module.exports = DependencyMonitor;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

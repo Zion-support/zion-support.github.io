@@ -14,8 +14,8 @@
     "strict": false,
     "noEmit": true,
     "incremental": true,
+    "module": "esnext",
     "esModuleInterop": true,
-    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -25,6 +25,7 @@
         "name": "next"
       }
     ],
+<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
@@ -36,6 +37,9 @@
       "@/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
+=======
+    "strictNullChecks": true
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   },
   "include": [
     "next-env.d.ts",

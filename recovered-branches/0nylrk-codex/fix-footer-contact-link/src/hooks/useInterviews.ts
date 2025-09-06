@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { supabase  } from '@/integrations/supabase/client';
@@ -9,6 +12,7 @@ export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -127,6 +131,19 @@ export function useInterviews() {
 
 
 import { useState } from 'react',;
+=======
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+    if (!user) {
+      toast({    try {
+      // Insert the interview into the database
+      const { data, error: insertError } = await supabase
+        .from('interviews')
+        .insert({      return data
+    } catch (err: any) {
+      console && console.error("Error in requestInterview:", err);
+      setError(err && err.message);
+      return null    } finally {import { useState } from 'react',;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
@@ -140,14 +157,22 @@ export function useInterviews() {;
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {;
     if (!user) {;
       toast({;
+<<<<<<< HEAD
         title: "Authentication required",;
         description: "You must be logged in to request interviews",;
+=======
+        title: "Authentication required",,
+  description: "You must be logged in to request interviews",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
       }),;
       return null;
     }
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Fetch interviews for the current user (as client or talent);
   const fetch_interviews = async (): Promise < Interview[]> => {
     // Check condition
@@ -158,6 +183,7 @@ if ( {) {
       return [];
     }
 
+<<<<<<< HEAD
 
 
 
@@ -166,6 +192,62 @@ if ( {) {
     setError(null),
 
     setIsLoading (true);
+=======
+;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      // Insert the interview into the database;
+      const { data, error: insertError } = await supabase;
+        .from('interviews');
+        .insert({;
+          client_id: interviewRequest.client_id,;
+          talent_id: interviewRequest.talent_id,;
+          scheduled_date: interviewRequest.scheduled_date,;
+          duration_minutes: interviewRequest.duration_minutes,;
+          notes: interviewRequest.notes,;
+          meeting_link: interviewRequest.meeting_link,;
+          meeting_platform: interviewRequest.meeting_platform,;
+          interview_type: interviewRequest.interview_type,;
+          title: interviewRequest.title,;
+          status: 'requested'});
+        .select('*');
+        .single(),;
+      if (insertError) {;
+        console.error("Error requesting interview:", insertError),;
+        setError(insertError.message),;
+        return null;
+      }
+;
+      // Create notification for talent;
+      await createInterviewNotification(;
+        interviewRequest.talent_id,;
+        'interview_requestNew Interview Request',;
+        `You have received an interview request for ${interviewRequest.scheduled_date}`,;
+        data.id;
+      ),;
+      return data;
+    } catch (err: any) {;
+      console.error("Error in requestInterview:", err),;
+      setError(err.message),;
+      return null;
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Fetch interviews for the current user (as client or talent);
+  const fetchInterviews = async (): Promise<Interview[]> => {;
+    if (!user?.id) {;
+      setInterviews([]),;
+      return [];
+    }
+    setIsLoading(true),
+    setError(null),
+
+      setIsLoading (false);
+    }
+  }    setIsLoading (true);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     set_error (null);
 ;
       setIsLoading (false);
@@ -178,6 +260,7 @@ if ( {) {
         .select (`;
           *;
 
+<<<<<<< HEAD
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
 
         .order('scheduled_date', { ascending: true }),
@@ -185,10 +268,14 @@ if ( {) {
 
 
       if (fetchError) {
+=======
+        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)      if (fetchError) {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         console && console.error("Error fetching interviews:", fetchError);
         setError(fetchError && fetchError.message);
         return []
       }
+<<<<<<< HEAD
       // Transform the data to match Interview type
 
           clients:client_id (id, display_name, avatar_url);
@@ -209,6 +296,9 @@ if ( {) {
       const formatted_interviews = data.map ((interview: any): Interview => ({
 
         id: interview.id;
+=======
+      // Transform the data to match Interview type        id: interview.id;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         client_id: interview.client_id;
         talent_id: interview.talent_id;
         scheduled_date: interview.scheduled_date;
@@ -226,6 +316,7 @@ if ( {) {
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
+<<<<<<< HEAD
 
       const formattedInterviews = data && data.map((interview: any): Interview => ({
         id: interview && interview.id;
@@ -308,12 +399,17 @@ if ( {) {
   },
 
 
+=======
+      setInterviews(formattedInterviews);
+      const formattedInterviews = data.map((interview: any): Interview => ({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
     response: InterviewResponse
   ): Promise<boolean> => {
     if (!user?.id) {
+<<<<<<< HEAD
       toast({
 
 
@@ -335,10 +431,20 @@ if ( {) {
 
 
 
+=======
+      toast({        title: "Authentication required",
+        description: "You must be logged in to respond to interviews",
+
+        variant: "destructive"
+    setIsLoading(true),
+    setError(null),
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
+<<<<<<< HEAD
         .update({
 
           status: response && response.status,
@@ -359,10 +465,14 @@ if ( {) {
         setError(updateError && updateError.message);
         return false
       }
+=======
+        .update({      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Get the interview to notify the client
       const { data: interview, error: fetchError } = await supabase
         .from('interviews')
         .select('*')
+<<<<<<< HEAD
         .eq('id', interviewId)
 
     setIsLoading (true);
@@ -546,6 +656,9 @@ if ( {) {
       return false
 
 ;
+=======
+        .eq('id', interviewId);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Check condition
 if ( {) {
   $2
@@ -575,6 +688,7 @@ if ( {) {
       console.error ("Error in respondToInterview:", err);
       set_error (err.message);
       return false;
+<<<<<<< HEAD
 
     } finally {
       setIsLoading (false);
@@ -585,11 +699,18 @@ if ( {) {
   // Helper function to create interview notifications;
 
   const createInterviewNotification = async (
+=======
+    } finally {
+      setIsLoading (false);
+    }
+  }  const createInterviewNotification = async (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     user_id: string;
     type: string;
     title: string;
     message: string;
     related_id: string) => {
+<<<<<<< HEAD
     try {
 
       await createInterviewNotification(
@@ -627,6 +748,9 @@ if ( {) {
       await supabase.from('notifications').insert({
 
     }
+=======
+    try {    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
@@ -703,6 +827,7 @@ if ( {) {
         .single(),;
       if (fetchError) {;
         setError(fetchError.message),;
+<<<<<<< HEAD
         return false;
 
       }
@@ -713,6 +838,9 @@ if ( {) {
       }
 
       // Check if user is part of this interview
+=======
+        return false;      // Check if user is part of this interview
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
@@ -721,12 +849,18 @@ if ( {) {
         ? interview.talent_id
         : interview.client_id;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const notifyUserId = interview && interview.client_id === user && user.id
         ? interview && interview.talent_id
         : interview && interview.client_id;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -747,12 +881,16 @@ if ( {) {
         return false;
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id,
+<<<<<<< HEAD
 
       const notifyUserId = interview && interview.client_id === user && user.id
         ? interview && interview.talent_id
@@ -843,11 +981,14 @@ if ( {) {
 
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return {
     interviews;
     is_loading;
     error;
     request_interview;
+<<<<<<< HEAD
     fetch_interviews;
   },;
   return {;
@@ -1210,3 +1351,6 @@ export function useInterviews() {;
 ;
     respondToInterview;
 }
+=======
+    fetch_interviews;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

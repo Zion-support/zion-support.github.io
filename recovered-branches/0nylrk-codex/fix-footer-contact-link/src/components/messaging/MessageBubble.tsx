@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
   message: Message,
   isUserMessage: boolean
@@ -23,12 +24,17 @@ interface MessageBubbleProps {;
 }
 }
 
+=======
+  message: Message,
+  isUserMessage: boolean
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   message: Message
 
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
+<<<<<<< HEAD
 
 
 
@@ -36,6 +42,16 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       "flex",
 
 
+=======
+    <div className={cn(
+      "flex",
+
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className={cn(
+    <div className={cn(
+      "flex",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       isUserMessage ? "justify-end" : "justify-start"
     )}>
@@ -47,6 +63,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         "max-w-[75%] rounded-lg px-4 py-2",
         isUserMessage 
           ? "bg-zion-purple text-white" 
+<<<<<<< HEAD
 
 
           : "bg-zion-blue-dark text-white"
@@ -68,12 +85,15 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 import React from 'react';
 import {format} from 'date - fns';
@@ -114,6 +134,8 @@ function MessageBubble() {
       </div>;
     </div>);
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React from 'react',;
 import { format } from 'date-fns',;

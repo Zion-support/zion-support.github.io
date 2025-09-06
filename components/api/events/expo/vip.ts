@@ -2,23 +2,31 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const allowlist = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const allowlist = new Set<string>(
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
 const allowlist = new Set < string>(
@@ -46,6 +54,7 @@ function handler() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -53,6 +62,8 @@ function handler() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   [(process && process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean)
 );
 export default async function handler(
@@ -60,6 +71,7 @@ export default async function handler(
   res: NextApiResponse
 
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -79,6 +91,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ) {;
   const address = String(req.query.address || '').toLowerCase();
@@ -90,13 +106,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ allowed: allowlist.has(address) })
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 }
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
@@ -106,17 +129,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ allowed: allowlist.has(address) })
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const address = String(req.query.address |'').toLowerCase();
   if (!address) return res.status(400).json({ allowed: false });
   res.status(200).json({ allowed: allowlist.has(address) });
   res.status(200).json({ allowed: allowlist.has(address) })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

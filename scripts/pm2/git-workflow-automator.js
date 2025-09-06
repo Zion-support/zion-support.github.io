@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -23,6 +24,9 @@
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 / Git Workflow Automation Scriptconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflowAutomator { constructor() { this.repoPath = process.cwd();" this.branch = "main"; } async checkGitStatus() { try {" const status = execSync("git status --porcelain", { encoding: "utf8" });" return status.trim().split("\n").filter(line => line.length > 0); } catch (error) {" console.error("Error checking git status:", error.message); return []; } } async getCurrentBranch() { try {" return execSync("git branch --show-current", { encoding: "utf8" }).trim(); } catch (error) {" console.error("Error getting current branch:", error.message);" return "main"; } } async stageChanges() { try {" execSync("git add .", { stdio: "inherit" });" console.log(" Changes staged successfully"); return true; } catch (error) {" console.error("Error staging changes:", error.message); return false; } } async commitChanges(message) { try {" execSync(`git commit -m "${message}"`, { stdio: "inherit" });" console.log(" Changes committed successfully"); return true; } catch (error) {" console.error("Error committing changes:", error.message); return false; } } async pushChanges() { try { const currentBranch = await this.getCurrentBranch();"` execSync(`git push origin ${currentBranch}`, { stdio: "inherit" });" console.log(" Changes pushed successfully"); return true; } catch (error) {" console.error("Error pushing changes:", error.message); return false; } } async runWorkflow() {" console.log(" Starting Git Workflow Automation."); const changes = await this.checkGitStatus(); if (changes.length === 0) {" console.log(" No changes to commit"); return true; }` console.log(` Found ${changes.length} changes to process`); const staged = await this.stageChanges(); if (!staged) return false;" const committed = await this.commitChanges("Automated commit: App improvements and automation fixes"); if (!committed) return false; const pushed = await this.pushChanges(); if (!pushed) return false;" console.log(" Git workflow completed successfully!"); return true; }}/ Run if called directlyif (require.main === module) { const automator = new GitWorkflowAutomator(); automator.runWorkflow().then(success => { process.exit(success ? 0 : 1); });}module.exports = GitWorkflowAutomator;'"`'"`
 // Git workflow automation for PM2;,
 _console.log('Git workflow automation initialized');
@@ -1815,9 +1819,6 @@ module.exports = GitWorkflowAutomator;
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 const { execSync } = require('child_process');
@@ -1878,15 +1879,12 @@ class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-wo
 ; return recommendations}};
 ;
 // Run git workflow automation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 async function main() {; const automator = new GitWorkflowAutomator();
 ; try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {; automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}};
 ;
 if (require.main = = = module) {; main()};
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 ;
 module.exports = GitWorkflowAutomator;
 =======
@@ -2143,33 +2141,33 @@ if (require.main === module) {
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
-<<<<<<< HEAD
-=======
 }
 
+<<<<<<< HEAD
 module.exports = GitWorkflowAutomator;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> origin/main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+origin/main
+
+main
+
+main
+
 ;
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

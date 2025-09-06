@@ -1,9 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
     .replace(/<<<<<<< [^\n]+[\s\S]*?
     .replace(/^<<<<<<< [^\n]+$/gm, '')
     .replace(/^
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^=======$/gm, '')
+    .replace(/^[^\n]+$/gm, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 // Function to clean common syntax errors
@@ -38,6 +45,7 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
 
   for (const file of files) {
     const filePath = path.join(dir, file);
@@ -45,6 +53,39 @@ function processFile(filePath) {
 
   content = content.replace(/
   content = content.replace(/
+=======
+    
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+// Function to recursively process directory
+function processDirectory(dirPath) {
+  let processedCount = 0;
+// Function to recursively find all files with merge conflicts
+function findConflictedFiles(dir, conflictedFiles = []) {
+  const files = fs.readdirSync(dir);
+
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findConflictedFiles(filePath, conflictedFiles);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+  content = content.replace(/[a-f0-9]+\n?/g, '');
+  content = content.replace(/origin\/[^\n]+\n?/g, '');
+  content = content.replace(/ursor\/[^\n]+\n?/g, '');
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

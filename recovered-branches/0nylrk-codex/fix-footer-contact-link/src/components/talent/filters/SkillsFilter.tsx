@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
+<<<<<<< HEAD
 import { SkillsFilterProps } from "@/types/filters",
 
 
@@ -66,6 +67,12 @@ import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 // Common skills in AI and tech;
+=======
+import { SkillsFilterProps } from "@/types/filters",import { ChevronDown, ChevronUp } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { SkillsFilterProps } from "@/types/filters",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const POPULAR_SKILLS = [;
 import { ChevronDown, ChevronUp } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -90,6 +97,7 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
+<<<<<<< HEAD
 
       </button>;
 
@@ -98,6 +106,8 @@ const POPULAR_SKILLS = [;
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -110,13 +120,17 @@ const POPULAR_SKILLS = [;
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
+<<<<<<< HEAD
       )}
 
     </div>;
@@ -225,3 +239,6 @@ toggleSection
 }
 };
 ;
+=======
+      )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

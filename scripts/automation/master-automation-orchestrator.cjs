@@ -130,3 +130,8 @@ const { execSync, spawn } = require("child_process")
   console.log("\n� Received SIGINT, shutting down gracefully...")
   process.on("SIGTERM")
 
+<<<<<<< HEAD
+=======
+  console.log(")
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

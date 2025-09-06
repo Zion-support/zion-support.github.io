@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -12,6 +13,11 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+#!/usr/bin/env node;
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
     console.log(`[${new Date().toISOString()}] ${message}`);
@@ -22,7 +28,6 @@ const fs = require("fs")";const path = require("path")""
         const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
           "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
           results.issues.push("${pageName}: Missing title tag");"
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -83,10 +88,11 @@ class SEOOptimizer {
           results.issues.push(`${pageName}: Missing title tag`);
         }
         if (!pageAnalysis.hasDescription) {
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           results.issues.push(`${pageName}: Missing meta description`);
           results.issues.push("${pageName}: Missing Open Graph tags");"
         results.issues.push(`Error reading ${file}: ${error.message}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.log("� Checking sitemap");""
       "exists": false,""valid": false,""issues": [],,"
@@ -114,13 +120,11 @@ class SEOOptimizer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
       }
     }
 
@@ -272,7 +276,11 @@ optimizer
     console.error('❌ SEO optimization check failed:', error.message);
     process.exit(1);
   });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

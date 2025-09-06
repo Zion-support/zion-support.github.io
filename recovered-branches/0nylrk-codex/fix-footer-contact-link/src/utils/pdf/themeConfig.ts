@@ -6,6 +6,7 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
 
     ? {
 
+<<<<<<< HEAD
 
   return theme === 'light' 
     ? { ;
@@ -17,12 +18,21 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
         subheading: '#444444',
         accent: '#9b87f5';
 
+=======
+  return theme === 'light' 
+    ? { ;
+
+* Theme configuration for PDF export;
+*/;
+export interface PdfThemeColors {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   background: string;
   text: string;
   heading: string;
     ? {
         background: '#ffffff';
         text: '#000000';
+<<<<<<< HEAD
         heading: '#222222';
         subheading: '#444444'
         accent: '#9b87f5'
@@ -67,4 +77,7 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         accent: '#9b87f5';
 
       }
+=======
+        heading: '#222222';      }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
@@ -15,6 +16,18 @@ export interface CompanyUsageLimits {;
 
 }
 export interface CompanyRecord {id: string;
+=======
+export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
+export interface CompanyUsageLimits {
+  monthlyJobPosts: number,
+  budgetCapUsd: number;    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface CompanyRecord {;
+  id: string;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   name: string;
   slug: string, // e.g. acme;
   logoUrl?: string;
@@ -22,6 +35,7 @@ export interface CompanyRecord {id: string;
   plan: CompanyPlan;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
+<<<<<<< HEAD
   invoices: InvoiceRecord[];
 
 
@@ -85,6 +99,9 @@ export interface CompanyRecord {
 
 }
   logoUrl?: string,;
+=======
+  invoices: InvoiceRecord[];  logoUrl?: string,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   brandColor?: string,;
   plan: CompanyPlan,;
   members: CompanyMember[];

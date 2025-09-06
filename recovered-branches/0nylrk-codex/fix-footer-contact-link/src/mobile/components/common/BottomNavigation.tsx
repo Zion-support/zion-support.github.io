@@ -11,11 +11,15 @@ export function BottomNavigation() {;
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },;
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },;
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },;
+<<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],;
 
 
 
 import React from "react",
+=======
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],;import React from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -30,6 +34,7 @@ export function BottomNavigation() {
     { path: "/mobile/browse", icon: <Search />, label: "Browse" },
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
+<<<<<<< HEAD
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 
   const navItems = [;
@@ -201,3 +206,6 @@ export function BottomNavigation() {;
     </div>
   )
 }
+=======
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

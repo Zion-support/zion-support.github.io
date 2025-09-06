@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
@@ -9,6 +10,8 @@ export async function POST() {
   try {const body = await request.json();
     const { name, email, password } = registerSchema.parse(body);
     // Check if user already exists;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
     // Check condition

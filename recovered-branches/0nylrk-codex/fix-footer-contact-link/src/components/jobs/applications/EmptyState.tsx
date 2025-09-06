@@ -26,8 +26,12 @@ function EmptyState() {
       </CardContent>;
     </Card>);
 
+<<<<<<< HEAD
 }
 export function EmptyState() {
+=======
+}export function EmptyState() {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Card className="bg-muted/30">
       <CardContent className="pt-6 text-center">
@@ -38,6 +42,7 @@ export function EmptyState() {
         <Button className="mt-4" asChild>
           <Link to="/jobs">Browse Jobs</Link>
         </Button>
+<<<<<<< HEAD
       </CardContent>
 
 
@@ -66,6 +71,9 @@ export function EmptyState() {
   );
 }
     </Card>;
+=======
+      </CardContent>    </Card>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   );
 }
     </Card>
@@ -89,4 +97,7 @@ export function EmptyState() {;
   );
 }
 ;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

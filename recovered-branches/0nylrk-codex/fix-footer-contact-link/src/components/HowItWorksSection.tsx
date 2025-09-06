@@ -2,6 +2,7 @@
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
+<<<<<<< HEAD
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
@@ -20,6 +21,11 @@ const steps = [
     icon: Send},
 
 import {GradientHeading} from "./GradientHeading";
+=======
+    title: "Post",
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
+    icon: Send},
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
   {
@@ -38,14 +44,18 @@ const steps = [;
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const steps = [
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
+<<<<<<< HEAD
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
@@ -98,6 +108,12 @@ export function HowItWorksSection() {;
   return (;
 
     <section className="py-20 bg-zion-blue">;
+=======
+    title: "Match"
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities."
+    icon: Search}
+  {    <section className="py-20 bg-zion-blue">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <GradientHeading>How It Works</GradientHeading>;
@@ -105,6 +121,7 @@ export function HowItWorksSection() {;
             A simple four-step process to connect technology providers with clients;
           </p>;
         </div>;
+<<<<<<< HEAD
 
         <div className="relative">;
           {/* Timeline line */}
@@ -112,13 +129,18 @@ export function HowItWorksSection() {;
 
           <div className="space-y-12 md:space-y-0">;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {steps.map((step, index) => (;
               <div;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -126,6 +148,7 @@ export function HowItWorksSection() {;
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
+<<<<<<< HEAD
                     </div>
                   ) : null}
 
@@ -145,6 +168,9 @@ export function HowItWorksSection() {;
                   ) : null}
 
                 </div>;
+=======
+                    </div>                </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
                   <step && step.icon className="w-6 h-6 text-zion-cyan" />;
@@ -164,12 +190,16 @@ export function HowItWorksSection() {;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 }
 
   );
@@ -275,3 +305,6 @@ icon: Handshake
 }
 };
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

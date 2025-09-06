@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -74,11 +77,16 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -93,6 +101,7 @@ export default function GlobalSearchBar() {;
       return;      return
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -101,6 +110,10 @@ export default function GlobalSearchBar() {;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 class ErrorBoundary extends React.Component {
@@ -238,12 +251,16 @@ import { useEffect, useMemo, useRef, useState } from 'react';
               <li key={i}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     return this.props.children;
@@ -264,14 +281,17 @@ export default function GlobalSearchBar() {
       return;      return;
       setSuggestions([]);
       return
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
   const router = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -286,15 +306,7 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
       } catch {}
     }
     const id = setTimeout(run, 150);
-<<<<<<< HEAD
-    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true)
-      } catch {}
-    }
-    const id = setTimeout(run, 150);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return () => clearTimeout(id);
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
@@ -318,8 +330,6 @@ const Speech: any =
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-<<<<<<< HEAD
-=======
       const transcript = e.results?.[0]?.[0]?.transcript || '';
 if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     };
@@ -335,11 +345,12 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
         aria-label='Search'
       />
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -401,6 +412,10 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <button
                   type="button"
                   onClick={() => {;
@@ -408,6 +423,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -429,6 +445,14 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+
+                >
+
+
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -440,29 +464,33 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-                  {s}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 
 
                   {s}
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </button>
               </li>
             ))}
@@ -473,11 +501,13 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   )
 }
-=======
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -487,6 +517,9 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -657,6 +690,7 @@ if (return) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -677,3 +711,20 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+  );
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  );
+
+);  )
+}
+  );
+
+
+
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

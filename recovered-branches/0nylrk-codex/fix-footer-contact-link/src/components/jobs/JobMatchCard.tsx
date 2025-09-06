@@ -74,6 +74,7 @@ interface JobMatchProps {
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
 }
+<<<<<<< HEAD
 
 export function JobMatchCard({ ;
   matchId;
@@ -191,12 +192,15 @@ import React from 'react';
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
 
+<<<<<<< HEAD
 
 
 
@@ -445,3 +449,5 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 ;
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

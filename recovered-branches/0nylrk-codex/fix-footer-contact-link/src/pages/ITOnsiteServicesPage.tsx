@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
@@ -15,6 +16,43 @@ import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+=======
+import {useState, useEffect} from "react";
+import {useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {ITServicePricingTable} from "@/components/services/ITServicePricingTable";
+import {GlobalServiceSection} from "@/components/GlobalServiceSection";
+import {QuoteFormSection} from "@/components/QuoteFormSection";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
+import {PageHero} from "@/components/services/PageSections/PageHero";
+import {CountryTabs} from "@/components/services/PageSections/CountryTabs";
+import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceDetailsSection";
+import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps";
+import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
+import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
+export default function ITOnsiteServicesPage() {;
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  
+  // Check for success parameter in URL
+  const success = searchParams.get("success");
+import { useState, useEffect } from "react",
+import { useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",
+import { QuoteFormSection } from "@/components/QuoteFormSection",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
+import { PageHero } from "@/components/services/PageSections/PageHero",
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams();
@@ -46,7 +84,10 @@ export default function ITOnsiteServicesPage() {
     "Japan",
     "Singapore",
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter((country) =>
@@ -54,6 +95,7 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
 
@@ -65,19 +107,38 @@ export default function ITOnsiteServicesPage() {
     });
 
   const handleCountrySelect = (country: CountryPricing) => {
+=======
+  const handleCountrySelect = (country: CountryPricing) => {
+    setSelectedCountry(country)
+    // Scroll to the service details section
+    setTimeout(() => {
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)  const handleCountrySelect = (country: CountryPricing) => {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     (setSelectedCountry(country),
       // Scroll to the service details section
       setTimeout(() => {
         document
           .getElementById("service-details")
           ?.scrollIntoView({ behavior: "smooth" });
+<<<<<<< HEAD
       }, 100));
   };
 
+=======
+      }, 100))
+};
+
+  }
+
+  },
+  
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
@@ -102,12 +163,19 @@ export default function ITOnsiteServicesPage() {;
   // Check for success parameter in URL;
   const success = searchParams && searchParams.get("success");
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
       toast({;
+<<<<<<< HEAD
         title: "Payment Successful",;
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+=======
+        title: "Payment Successful",,
+  description: "Your IT onsite service request has been received. Our team will contact you shortly."});
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
   }, [success]);
 
@@ -137,6 +205,7 @@ export default function ITOnsiteServicesPage() {;
     // Scroll to the service details section;
     setTimeout(() => {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+<<<<<<< HEAD
     }, 100);
   };
 
@@ -150,10 +219,15 @@ export default function ITOnsiteServicesPage() {;
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs
+=======
+    }, 100)
+};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
+<<<<<<< HEAD
               setSearchQuery={setSearchQuery}
             />
           </div>
@@ -161,6 +235,9 @@ export default function ITOnsiteServicesPage() {;
             />
           </div>
           {/* Service Details Section */}
+=======
+              setSearchQuery={setSearchQuery}          {/* Service Details Section */}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
@@ -295,12 +372,21 @@ if (return 1) {
 ;
   return (
     <AppLayout>;
+<<<<<<< HEAD
       <section className="py - 16 bg - zion - blue">;
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
           {/* Hero Section with Features */}
           <PageHero />;
           {/* Country Selection Tabs */}
           <div className="mb - 12">;
+=======
+      <section className="py - 16 bg - zion-blue">;
+        <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
+          {/* Hero Section with Features */}
+          <PageHero />;
+          {/* Country Selection Tabs */}
+          <div className="mb-12">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <CountryTabs;
               popular_countries={popular_countries}
               filtered_countries={filtered_countries}
@@ -319,10 +405,17 @@ if (return 1) {
           {/* What's Included Section */}
           <ServiceIncludes />;
           {/* Complete Pricing Table */}
+<<<<<<< HEAD
           <div id="pricing - table" className="my - 16">;
             <div className="text - center mb - 8">;
               <h2 className="text - 2xl font - bold text - white mb - 4">Full IT Onsite Services Pricing</h2>;
               <p className="text - zion - slate - light mb - 6">;
+=======
+          <div id="pricing - table" className="my-16">;
+            <div className="text - center mb-8">;
+              <h2 className="text - 2xl font - bold text - white mb-4">Full IT Onsite Services Pricing</h2>;
+              <p className="text - zion - slate - light mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Our per - incident prices include transportation costs and the first hour of onsite service.;
                 Additional hours are billed separately at standard rates.;
               </p>;
@@ -337,9 +430,12 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; //Show success toast if redirected from successful payment useEffect ( () => {
   if (success === "true") {
   toast ({
@@ -378,4 +474,7 @@ if (return 1) {
 }
 ;
 ;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

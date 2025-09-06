@@ -9,8 +9,12 @@ export function ApiWebhooks() {;
 
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
+<<<<<<< HEAD
   "data": {;
 import React from "react",
+=======
+  "data": {;import React from "react",
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -20,6 +24,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 export function ApiWebhooks() {
   // Sample webhook event payload
 
+<<<<<<< HEAD
   const newApplicationPayload = `{
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
@@ -65,6 +70,9 @@ function ApiWebhooks() {
 
   const newHirePayload = `{;
   "event_type": "talent_hired";
+=======
+  const newApplicationPayload = `{  "event_type": "talent_hired";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "created_at": "2023 - 06 - 12T09: 15:22Z";
   "data": {
     "project_id": "project - 123";
@@ -77,6 +85,7 @@ function ApiWebhooks() {
   }
 }`;
 ;
+<<<<<<< HEAD
 
   const quoteReceivedPayload = `{
     "status": "offer_accepted",;
@@ -85,6 +94,8 @@ function ApiWebhooks() {
 }`;
 
   const quoteReceivedPayload = `{;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "event_type": "quote_received";
 
   const quoteReceivedPayload = `{;
@@ -95,7 +106,10 @@ function ApiWebhooks() {
 }`;
 
   const messageReceivedPayload = `{;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {;
@@ -104,11 +118,15 @@ function ApiWebhooks() {
     "sender_id": "user-789";
 
     "recipient_id": "user-012",;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z";
   }
 }`;
+<<<<<<< HEAD
 
   "created_at": "2023 - 06 - 15T11: 30:00Z";
   "data": {
@@ -182,12 +200,15 @@ app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
 ;
   // Handle different event types;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   switch (event_type) {
     case 'new_application':;
       console.log ('New application received:', data.application_id);
       // Process the new application...;
       break;
 
+<<<<<<< HEAD
 
   const webhookHandlerJs = `// Express && Express.js webhook handler example;
 const express = require('express');
@@ -261,11 +282,20 @@ app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
 
 }),`;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
 
+<<<<<<< HEAD
     "application_id": "app-123456",
+=======
+    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
+    "created_at": "2023-06-10T15:42:31Z"
+  }
+}`;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     "job_id": "job-789",
     "talent_id": "talent-456",
     "status": "new",
@@ -275,6 +305,7 @@ app && app.listen(3000, () => {;
   }
 }`,
 
+<<<<<<< HEAD
 
   const newHirePayload = `{
   "event_type": "talent_hired",
@@ -432,6 +463,15 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 
       break,
     
+=======
+  const newHirePayload = `{
+  "event_type": "talent_hired",
+  "created_at": "2023-06-12T09:15:22Z",
+  "data": {  const quoteReceivedPayload = `{
+  "event_type": "quote_received",
+  "created_at": "2023-06-15T11:30:00Z",
+  "data": {    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     case 'talent_hired':
       // // // console.log('Talent hired:', data.talent_id),
@@ -454,12 +494,37 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break,
     
 
+<<<<<<< HEAD
     default:
+=======
+      break;
+      break,
+    
+    case 'talent_hired':
+      // // // console.log('Talent hired:', data.talent_id),
+      // Update your system...
+      break;
+      break,
+    
+    case 'quote_received':
+      // // // console.log('New quote received:', data.quote_id),
+      // Process the quote...
+      break;
+      break,
+    
+    case 'message_received':
+      // // // console.log('New message received:', data.message_id),
+      // Process the message...
+      break;
+      break,
+    
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
 
+<<<<<<< HEAD
 }),
 
 app.listen(3000, () => {
@@ -711,20 +776,39 @@ app.listen (3000, () => {
       // Process the new application...;
       break,;
     ;
+=======
+;
+// Webhook endpoint with signature verification;
+app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
+  const { event_type, data } = req.body,;
+  // Handle different event types;
+  switch (event_type) {;
+    case 'new_application':;
+      // // // console.log('New application received:', data.application_id),;
+      // Process the new application...;
+      break,;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case 'talent_hired':;
       // // // console.log('Talent hired:', data.talent_id),;
       // Update your system...;
       break,;
+<<<<<<< HEAD
     ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case 'quote_received':;
       // // // console.log('New quote received:', data.quote_id),;
       // Process the quote...;
       break,;
+<<<<<<< HEAD
     ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     case 'message_received':;
       // // // console.log('New message received:', data.message_id),;
       // Process the message...;
       break,;
+<<<<<<< HEAD
     ;
     default:;
       // // // console.log('Unknown event type:', event_type),;
@@ -945,3 +1029,20 @@ export default ApiWebhooks;
 
 
 export default ApiWebhooks;
+=======
+    default:;
+      // // // console.log('Unknown event type:', event_type);
+  }
+;
+  // Always return a 200 response quickly;
+  res.status(200).send('Webhook received');
+}),;
+app.listen(3000, () => {;
+  // // // console.log('Webhook server listening on port 3000');
+}),`,;
+  return (;}),
+
+app.listen(3000, () => {
+  // // // console.log('Webhook server listening on port 3000')
+}),`,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

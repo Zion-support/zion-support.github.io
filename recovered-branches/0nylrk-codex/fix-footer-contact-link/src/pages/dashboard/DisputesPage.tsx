@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
@@ -5,6 +6,24 @@ import { Footer } from "@/components/Footer";
 import { DisputeDashboard } from "@/components/disputes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 function DisputesPage() {
+=======
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { DisputeDashboard  } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {DisputeDashboard} from '@/components/disputes';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { DisputeDashboard } from '@/components/disputes',
+import { ProtectedRoute } from '@/components/ProtectedRoute',function DisputesPage() {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <ProtectedRoute>
       <>
@@ -38,6 +57,7 @@ function DisputesPage() {
       <>;
         <SEO;
           title="Dispute Resolution Center | Zion AI Marketplace";
+<<<<<<< HEAD
           description="View and manage disputes between clients and talents";
         />;
         <AppHeader />;
@@ -70,6 +90,8 @@ export default DisputesPage,; <ProtectedRoute> <> <SEO title="Dispute Resolution
 }
 export default DisputesPage;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </ProtectedRoute>);
 }
 

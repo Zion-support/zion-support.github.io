@@ -56,13 +56,19 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
+<<<<<<< HEAD
         title: "Authentication required",;
         description: "Please log in to schedule an interview",;
+=======
+        title: "Authentication required",,
+  description: "Please log in to schedule an interview",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"}),;
       return;
 
     }
     setIsSubmitting(true);
+<<<<<<< HEAD
 
 }
 const formSchema = z.object({
@@ -79,6 +85,8 @@ const formSchema = z.object({
   notes: z.string().optional()}),
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -100,6 +108,7 @@ const formSchema = z.object({
       // Combine date and time
       const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
+<<<<<<< HEAD
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration);
 
@@ -132,12 +141,19 @@ const formSchema = z.object({
 
 
       toast({
+=======
+      // Calculate end time based on duration      toast({
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Failed to schedule interview:", error);
       console.error("Failed to schedule interview:", error),
+=======
+      console.error("Failed to schedule interview:", error),      console.error("Failed to schedule interview:", error),
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
@@ -243,6 +259,7 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 
   const timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
@@ -275,6 +292,8 @@ if ( {) {
           </div>
         </div>
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {;
       // Combine date and time;
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
@@ -293,14 +312,24 @@ if ( {) {
         title: values && values.title;
       });
       toast({;
+<<<<<<< HEAD
         title: "Interview requested",;
         description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+=======
+        title: "Interview requested",,
+  description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       onClose();
     } catch (error) {;
       console && console.error("Failed to schedule interview:", error);
       toast({;
+<<<<<<< HEAD
         title: "Failed to schedule interview",;
         description: "An error occurred while scheduling the interview. Please try again.",;
+=======
+        title: "Failed to schedule interview",,
+  description: "An error occurred while scheduling the interview. Please try again.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -342,6 +371,7 @@ if ( {) {
   ],
   return (
     <Form {...form}>;
+<<<<<<< HEAD
       <form on_submit={form.handle_submit (on_submit)} className="space - y-5">;
         <div className="flex items - center mb - 6">;
           <div className="flex - shrink - 0 h - 12 w - 12 rounded - full overflow - hidden mr - 4">;
@@ -354,6 +384,20 @@ if ( {) {
           <div>;
             <h3 className="text - lg font - medium text - white">{talent.full_name}</h3>;
             <p className="text - sm text - zion - slate - light">{talent.professional_title}</p>;
+=======
+      <form on_submit={form.handle_submit (on_submit)} className="space-y-5">;
+        <div className="flex items - center mb-6">;
+          <div className="flex - shrink - 0 h - 12 w - 12 rounded - full overflow - hidden mr-4">;
+            <img;
+              src={talent.profile_picture_url || "/placeholder.svg"}
+              alt={talent.full_name}
+              className="h - full w - full object-cover";
+            />;
+          </div>;
+          <div>;
+            <h3 className="text - lg font - medium text-white">{talent.full_name}</h3>;
+            <p className="text - sm text - zion - slate-light">{talent.professional_title}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
         <FormField;
@@ -362,6 +406,7 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -524,6 +569,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         className={cn(
                           !field.value && "text-muted-foreground"
                           "w-full pl-3 text-left font-normal"
+=======
+              <FormControl>;
+                <Input placeholder="Brief title for the interview" {...field} />;
+              </FormControl>;
+              <FormMessage />;                          "w-full pl-3 text-left font-normal"
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           !field && field.value && "text-muted-foreground"
                         )}>;
                         {field && field.value ? (;
@@ -538,7 +589,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                   <PopoverContent className="w-auto p-0" align="start">;
                     <Calendar
                       mode="single"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       selected={field && field.value}
                       onSelect={field && field.onChange}
 
@@ -591,8 +645,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   async function onSubmit(values: z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
+<<<<<<< HEAD
         title: "Authentication required",;
         description: "Please log in to schedule an interview",;
+=======
+        title: "Authentication required",,
+  description: "Please log in to schedule an interview",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"}),;
       return;
     }
@@ -616,14 +675,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         title: values.title;
       }),;
       toast({;
+<<<<<<< HEAD
         title: "Interview requested",;
         description: `Your interview request with ${talent.full_name} has been sent.`}),;
+=======
+        title: "Interview requested",,
+  description: `Your interview request with ${talent.full_name} has been sent.`}),;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       onClose();
     } catch (error) {;
       console.error("Failed to schedule interview:", error),;
       toast({;
+<<<<<<< HEAD
         title: "Failed to schedule interview",;
         description: "An error occurred while scheduling the interview. Please try again.",;
+=======
+        title: "Failed to schedule interview",,
+  description: "An error occurred while scheduling the interview. Please try again.",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
@@ -699,8 +768,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
+<<<<<<< HEAD
                       className="p-3 pointer-events-auto";
                     <Calendar;
+=======
+                      className="p-3 pointer-events-auto";                    <Calendar;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       mode="single";
                       selected={field.value}
                       onSelect={field.onChange}
@@ -710,6 +783,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
+<<<<<<< HEAD
                     <Calendar
                       mode="single"
                     />;
@@ -722,6 +796,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
             )}
           />;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           <FormField
             control={form && form.control}
@@ -739,6 +815,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
+<<<<<<< HEAD
               </FormItem>;            )}
           />;
 ;
@@ -749,6 +826,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
@@ -759,7 +838,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <FormField
             control={form && form.control}
             name="duration"
@@ -767,7 +849,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+<<<<<<< HEAD
                   <SelectContent className="max - h-[300px]">;
+=======
+                  <SelectContent className="max-h-[300px]">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
                         {time}
@@ -778,7 +864,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               </FormItem>)}
           />;
         </div>;
+<<<<<<< HEAD
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+=======
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <FormField;
             control={form.control}
             name="duration";
@@ -786,7 +876,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
+<<<<<<< HEAD
                   <FormControl>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <SelectTrigger>;
                       <SelectValue placeholder="Select duration" />;
                     </SelectTrigger>;
@@ -801,6 +894,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />;
 
           />;
+<<<<<<< HEAD
 
 
           <FormField
@@ -846,10 +940,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField
             control={form && form.control}
             name="meetingLink"
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
               </FormItem>)}
@@ -925,24 +1022,38 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   className="h-20";
                   {...field}
                 />;
+=======
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </FormControl>;
               <FormMessage />;
 
         />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isSubmitting}>;
+<<<<<<< HEAD
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>;
+=======
+            {isSubmitting ? "Scheduling..." : "Schedule Interview"}          </Button>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </form>;
     </Form>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             )}
           />
         )}
@@ -951,7 +1062,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   {...field}
             </FormItem>)}
         />;
+<<<<<<< HEAD
         <div className="flex justify - end gap - 4 pt - 4">;
+=======
+        <div className="flex justify - end gap - 4 pt-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Button variant="outline" on_click={on_close} type="button">;
             Cancel;
           </Button>;
@@ -962,10 +1077,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>;
     </Form>);
 }
+<<<<<<< HEAD
 
 }
 ;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; interface InterviewRequestFormProps {
   talent: TalentProfile;
 onClose: () => void;
@@ -1035,4 +1153,7 @@ async function onSubmit (values: z.infer<typeof formSchema>) {
 }
 }
 ;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

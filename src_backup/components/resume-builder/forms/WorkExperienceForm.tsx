@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        success = await updateWorkExperience (editing_id, experience_data);
-      } else {
-        success = await addWorkExperience(resumeId, experienceData)
-      }
-
-
-      setError(err.message || 'An error occurred');
-    };
-  };
-  const handleEdit = (work: WorkExperience) => {;
-
-
-=======
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -59,7 +40,7 @@ import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhance
   };
 
   const handleEdit = (work: WorkExperience) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -348,13 +329,9 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-<<<<<<< HEAD
-                  </div>;
-                  <div className='flex gap-2'>;
-=======
                   </div>
                   <div className="flex gap-2">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
                     <Button
                     setEditingId(null),
                     setEditingId(null),
@@ -379,21 +356,6 @@ export function WorkExperienceForm(): any ({;
               <Button
                 type='button'
                 variant='outline'
-<<<<<<< HEAD
-                onClick={() => {;
-                  if (editingId) {;
-                    setEditingId(null);
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
-                      start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false,;
-                      description: '',;
-                      location: '',;
-                    });
-                  } else {;
-                    onBack();
-=======
                 onClick={() => {
                   if (editingId) {
                     setEditingId(null)
@@ -407,7 +369,7 @@ export function WorkExperienceForm(): any ({;
                     })
                   } else {
                     onBack()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   }
                 }}
               >
@@ -428,92 +390,6 @@ export function WorkExperienceForm(): any ({;
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
-
-              </Button>;
-
-              <div className='flex gap-2'>;
-                <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
-                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type='button' onClick={onComplete}>;
-                    Next;
-                  </Button>;
-                )}
-
-;
-
-
-                </FormItem>)}
-            />;
-            {error && (
-              <Alert variant='destructive'>;
-                <AlertDescription>{error}</AlertDescription>;
-              </Alert>)}
-            <div className='flex justify - between pt - 2'>;
-              <Button;
-                type='button';
-                variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
-                    setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
-                      start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
-                      location: '',
-                    });
-                  } else {
-                    on_back ();
-                  }
-                }}
-              >;
-                {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
-                <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
-                  {editing_id ? 'Update' : 'Add'} Experience;
-                </Button>;
-                {!editing_id && work_experiences.length > 0 && (
-                  <Button type='button' on_click={on_complete}>;
-                    Next;
-                  </Button>)}
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
-
-
-
-      ...work;
-      start_date: formatDateValue(work.start_date),
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
-  };
-
-
-
-    </div>);
-}> {';
-  editing_id ? 'Cancel': 'Back';
-}</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
-}'"  );
-}
-;
-=======
               </div>
             </div>
           </form>
@@ -527,4 +403,4 @@ if ( {) {
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

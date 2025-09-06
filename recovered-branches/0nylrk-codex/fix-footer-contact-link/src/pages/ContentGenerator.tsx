@@ -21,7 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,6 +43,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
+<<<<<<< HEAD
 
   const { user, isLoading } = useAuth();
 
@@ -98,11 +102,14 @@ export default function ContentGenerator() {
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
+<<<<<<< HEAD
 
 
   // Redirect if not logged in
@@ -114,6 +121,8 @@ export default function ContentGenerator() {
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -142,14 +151,18 @@ export default function ContentGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [previewContent, setPreviewContent] = useState<any>(null),;
   const [testEmail, setTestEmail] = useState(''),;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Redirect if not logged in;
   React && React.useEffect(() => {;
     if (!isLoading && !user) {;
       toast && toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator");
     }
+<<<<<<< HEAD
   }, [user, isLoading, navigate]);
 
   const generateContent = async () => {;
@@ -177,12 +190,16 @@ export default function ContentGenerator() {;
         }
       });
       setPreviewContent(data);
+=======
+  }, [user, isLoading, navigate]);      setPreviewContent(data);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;
       console && console.error("Error generating content:", error);
       toast && toast.error("Failed to generate content. Please try again.");
     } finally {;
       setIsGenerating(false);
+<<<<<<< HEAD
     }
 
       }),
@@ -409,6 +426,9 @@ export default function ContentGenerator() {;
   }
   return (
                     <Input
+=======
+    }                    <Input
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
@@ -440,8 +460,11 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
+<<<<<<< HEAD
 
       }),;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if (error) throw error,;
       toast.success(`Test newsletter sent to ${testEmail}!`);
     } catch (error) {;
@@ -463,13 +486,19 @@ export default function ContentGenerator() {;
   }
 ;
   return (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12">;
         <div className="container mx-auto px-4">;
           <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             <div className="lg:col-span-1">;
               <Card className="bg-zion-blue-dark border border-zion-blue-light">;
@@ -495,11 +524,15 @@ export default function ContentGenerator() {;
 
                   <div className="space-y-2">;
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
+<<<<<<< HEAD
                     <Input
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
+<<<<<<< HEAD
 
                       onChange={(e) => setTopic(e && e.target.value)}
                     />;
@@ -508,17 +541,22 @@ export default function ContentGenerator() {;
                   <div className="space-y-2">;
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Textarea
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
 
+<<<<<<< HEAD
                       onChange={(e) => setCustomPrompt(e && e.target.value)}
                     />;
                   </div>;
 
                   {contentType === 'blog' && (;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <>;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
@@ -527,12 +565,16 @@ export default function ContentGenerator() {;
                           id="autoPublish"
                           checked={autoPublish}
                           onCheckedChange={setAutoPublish}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         />;
                       </div>;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
+<<<<<<< HEAD
                           id="includeImage";
 
 
@@ -593,6 +635,19 @@ export default function ContentGenerator() {;
               </Card>;
             </div>;
 
+=======
+                          id="includeImage";                    onClick={generateContent}
+                    disabled={isGenerating}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+                  <Button;
+                    onClick={generateContent}
+                    disabled={isGenerating}
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
+                  >;
+                </CardFooter>;
+              </Card>;
+            </div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <div className="lg:col-span-2">;
               <Card className="bg-zion-blue-dark border border-zion-blue-light h-full">;
                 <CardHeader>;
@@ -607,8 +662,12 @@ export default function ContentGenerator() {;
                       <Loader2 className="h-8 w-8 animate-spin text-zion-purple mb-4" />;
                       <p className="text-zion-slate-light">Generating content...</p>;
                     </div>;
+<<<<<<< HEAD
                   ) : previewContent ? (;
                     contentType === 'blog' ? (;
+=======
+                  ) : previewContent ? (;                    contentType === 'blog' ? (;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <div className="space-y-4">;
                         <Tabs defaultValue="preview" className="w-full">;
                           <TabsList className="bg-zion-blue-light/30 w-full">;
@@ -625,8 +684,12 @@ export default function ContentGenerator() {;
                                 <div
                                   className="prose prose-invert max-w-none"
                                   dangerouslySetInnerHTML={{ 
+<<<<<<< HEAD
                                     __html: previewContent && previewContent.body
                                       .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>");
+=======
+                                    __html: previewContent && previewContent.body                                      .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>");
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
                                       .replace(/\*(.+?)\*/g, "<em>$1</em>");
                                       .replace(/^-\s+(.+)$/gm, "<li>$1</li>");
@@ -644,7 +707,10 @@ export default function ContentGenerator() {;
                               </pre>;
                             </ScrollArea>;
                           </TabsContent>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <TabsContent value="metadata" className="pt-4">;
                             <div className="space-y-4">;
                               <div>;
@@ -661,16 +727,20 @@ export default function ContentGenerator() {;
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>;
                                 <div className="flex flex-wrap gap-2">;
                                   {previewContent && previewContent.tags.map((tag: string, index: number) => (;
+<<<<<<< HEAD
 
                     ) : (;
                       <>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>;
                     )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                     <span
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan">;
                                       {tag}
                                     </span>;
                                   ))}
+<<<<<<< HEAD
 
                                 </div>;
                               </div>;
@@ -687,13 +757,19 @@ export default function ContentGenerator() {;
                                   <h3 className="text-white font-semibold mb-1">Image Prompt</h3>;
                                   <p className="text-zion-slate-light">{previewContent && previewContent.imagePrompt}</p>;
                                 </div>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               )}
                             </div>;
                           </TabsContent>;
                         </Tabs>;
                       </div>;
+<<<<<<< HEAD
                     ) : (;
                       <div className="space-y-4">;
+=======
+                    ) : (;                      <div className="space-y-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <Tabs defaultValue="preview" className="w-full">;
                           <TabsList className="bg-zion-blue-light/30 w-full">;
                             <TabsTrigger value="preview">Preview</TabsTrigger>;
@@ -720,8 +796,12 @@ export default function ContentGenerator() {;
                               <Button
                                 onClick={sendTestNewsletter}
                                 disabled={!testEmail}
+<<<<<<< HEAD
                                 className="bg-zion-blue-light hover:bg-zion-blue text-white">;
                                 Send Test to {testEmail || "your email"}
+=======
+                                className="bg-zion-blue-light hover:bg-zion-blue text-white">;                                Send Test to {testEmail || "your email"}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               </Button>;
                             </div>;
                           </TabsContent>;
@@ -729,8 +809,12 @@ export default function ContentGenerator() {;
                           <TabsContent value="html" className="pt-4">;
                             <ScrollArea className="h-[500px]">;
                               <pre className="bg-zion-blue whitespace-pre-wrap p-4 rounded-md text-zion-slate-light overflow-auto">;
+<<<<<<< HEAD
                                 {previewContent && previewContent.body}
                               </pre>;
+=======
+                                {previewContent && previewContent.body}                              </pre>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             </ScrollArea>;
                           </TabsContent>;
                         </Tabs>;
@@ -741,8 +825,12 @@ export default function ContentGenerator() {;
                       <div className="bg-zion-blue-light/20 p-6 rounded-full mb-4">;
 
                         <svg
+<<<<<<< HEAD
                           xmlns="http://www && www.w3.org/2000/svg"
                                     </span>;
+=======
+                          xmlns="http://www && www.w3.org/2000/svg"                                    </span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                   ))}
                         <svg
                           xmlns="http://www && www.w3.org/2000/svg"
@@ -753,6 +841,7 @@ export default function ContentGenerator() {;
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
+<<<<<<< HEAD
                           strokeLinejoin="round"
                           className="h-8 w-8 text-zion-purple">;
                           <path d="M14 && M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7 && 2V7.5L14.5 2z" />;
@@ -1162,6 +1251,9 @@ if ( {) {
   )
 }
                 </CardContent>;
+=======
+                          strokeLinejoin="round"                </CardContent>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Card>;
             </div>;
           </div>;
@@ -1170,6 +1262,7 @@ if ( {) {
       <Footer />;
 
     </>);
+<<<<<<< HEAD
 }
 
     </>;
@@ -1266,3 +1359,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
+=======
+}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

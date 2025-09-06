@@ -24,6 +24,6 @@ const ServiceProcessSteps = ({ className }) => {
       <h1>ServiceProcessSteps</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

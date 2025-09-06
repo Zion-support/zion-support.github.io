@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 
 import {useState, useEffect} from "react";
 import {Globe} from "lucide-react";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react",
 import { Globe } from "lucide-react",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -13,6 +16,7 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 
+<<<<<<< HEAD
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
@@ -43,31 +47,46 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));
     setTopCountries(top)
 
+<<<<<<< HEAD
 
   }, []),
   
 
 
+=======
+  }, []),
+  
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));
     setTopCountries(top)
   }, []);
   }, []),
+<<<<<<< HEAD
   
   // Handle country selection
+=======
+    // Handle country selection
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null
     onCountryChange(country)
 
+<<<<<<< HEAD
 
   },
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -75,12 +94,18 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
 
+<<<<<<< HEAD
 
 
       <Select 
         onValueChange={handleCountryChange} 
 
 
+=======
+      <Select 
+        onValueChange={handleCountryChange} 
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -90,6 +115,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
+<<<<<<< HEAD
               <SelectItem key={item.country} value={item.country} className="text-white">
 
 import {useState, useEffect} from "react";
@@ -102,10 +128,17 @@ import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
 
+=======
+              <SelectItem key={item.country} value={item.country} className="text-white">import { useState, useEffect } from "react",;
+import { Globe } from "lucide-react",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
   selectedCountry: CountryPricing | null;
 }
+<<<<<<< HEAD
 
 export function CountrySelector(): any ({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
@@ -175,12 +208,15 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
   );
 }
+<<<<<<< HEAD
 import { useState, useEffect } from './react';
 import { Globe } from './lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
@@ -244,6 +280,8 @@ function CountrySelector() {
     </div>);
 }
   ),;}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
 selectedCountry: CountryPricing | null 
@@ -270,3 +308,7 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 }</div> </SelectContent> </Select> </div>) 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -13,6 +13,7 @@ import {ProfileContact} from "@/components/profile/ProfileContact";
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 
 export default function ListingDetail() {;
+<<<<<<< HEAD
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { id } = useParams() as { id?: string };
@@ -56,6 +57,13 @@ export default function ListingDetail() {
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+=======
+  // useParams may be untyped in this environment, so avoid passing a;  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { id } = useParams() as { id?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!listing) {
     return (
       <AppLayout>
@@ -74,12 +82,16 @@ export default function ListingDetail() {
     )
   }
   const handleContact = () => {
+<<<<<<< HEAD
     setIsContactDialogOpen(true)
 
   },
 
 
   return (
+=======
+    setIsContactDialogOpen(true)  return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -119,9 +131,13 @@ export default function ListingDetail() {
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="w-full h-full object-cover"
+<<<<<<< HEAD
                           onError={(e) => {
 
                             const target = e.target as HTMLImageElement,
+=======
+                          onError={(e) => {                            const target = e.target as HTMLImageElement,
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                             target.src = "/placeholder.svg"
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -146,6 +162,7 @@ export default function ListingDetail() {;
 
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
+<<<<<<< HEAD
 
   if (!listing) {;
     return (
@@ -155,6 +172,10 @@ export default function ListingDetail() {;
   if (!listing) {;
     return (;
 
+=======
+  if (!listing) {;
+    return (
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
 
@@ -172,6 +193,7 @@ export default function ListingDetail() {;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </AppLayout>;
     );
   }
@@ -201,6 +223,9 @@ export default function ListingDetail() {;
   return (;
     <AppLayout>;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
+=======
+      </AppLayout>;      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
@@ -211,6 +236,7 @@ export default function ListingDetail() {;
                   {listing && listing.images && listing && listing.images.length > 0 ? (;
                     <img
                       src={listing && listing.images[selectedImageIndex]} 
+<<<<<<< HEAD
                       alt={listing && listing.title} 
 
                       className="w-full h-full object-cover"
@@ -265,12 +291,16 @@ export default function ListingDetail() {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
                       >;
+=======
+                      alt={listing && listing.title}                       >;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         <img;
                           src={image} ;
                           alt={`${listing.title} - image ${index + 1}`} ;
                           className="w-full h-full object-cover";
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
+<<<<<<< HEAD
                             target.src = "/placeholder.svg";
 
                           }}
@@ -316,6 +346,16 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
 
+=======
+                            target.src = "/placeholder.svg";                        />;
+                      </div>;
+                    ))}
+                  </div>;
+                )}              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
+                <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 ;
                 {listing.images && listing.images.length > 1 && (;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
@@ -347,6 +387,7 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>;
                 ;
+<<<<<<< HEAD
                 {/* Features */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -464,6 +505,8 @@ export default function ListingDetail() {;
 
 
             ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -604,8 +647,11 @@ export default function ListingDetail() {;
                           description: "Redirecting to secure checkout..."
                         })
 
+<<<<<<< HEAD
 
                 <div className="space-y-3 mb-8">;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {listing.price !== null ? (;
                     <PaymentButton;
                       amount={listing.price}
@@ -615,6 +661,7 @@ export default function ListingDetail() {;
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                       onPaymentInitiated={() => {;
                         toast({;
+<<<<<<< HEAD
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
@@ -630,6 +677,19 @@ export default function ListingDetail() {;
                         toast({;
                           title: "Payment Processing",;
                           description: "Redirecting to secure checkout...";
+=======
+                          title: "Payment Processing",
+  description: "Redirecting to secure checkout...";
+                        });
+                      }}
+                    />
+                  ) : (                      }}
+                    />
+                  ) : (                      onPaymentInitiated={() => {;
+                        toast({;
+                          title: "Payment Processing",,
+  description: "Redirecting to secure checkout...";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         });
                       }}
                     />;
@@ -642,11 +702,27 @@ export default function ListingDetail() {;
                     </Button>;
                   )}
 
+<<<<<<< HEAD
 
                           const target = e.target as HTMLImageElement,
 
 
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+=======
+                          const target = e.target as HTMLImageElement,
+
+                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button
+                    variant="outline" 
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;                        }}
+                      />;
+                    ) : (;
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
+                        <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
+                      </div>;
+                    )}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <Button
                     variant="outline" 
                     onClick={handleContact}
@@ -656,6 +732,7 @@ export default function ListingDetail() {;
                     Contact Publisher;
                   </Button>;
                 </div>;
+<<<<<<< HEAD
 
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">;
@@ -757,6 +834,8 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -792,14 +871,20 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>;
                       </div>;
                     )}
+<<<<<<< HEAD
 
                     <div>;
                       <p className="font-medium text-white">{listing && listing.author.name}</p>;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">;
                   <div className="flex justify-between mb-2">;
@@ -808,12 +893,17 @@ export default function ListingDetail() {;
                   </div>;
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">ID</span>;
+<<<<<<< HEAD
                     <span className="text-white">{listing && listing.id}</span>;
                     <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>;
+=======
+                    <span className="text-white">{listing && listing.id}</span>;                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing.id}</span>;
+<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
@@ -842,6 +932,8 @@ export default function ListingDetail() {;
     </AppLayout>);
 }
     </AppLayout>);
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
@@ -883,6 +975,9 @@ export default function ListingDetail() {;
   );
 }
 ;
+<<<<<<< HEAD
     </AppLayout>);
 }
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

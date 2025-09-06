@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -10,8 +13,11 @@ export function middleware(request: NextRequest) {;
   }
   return NextResponse.next();
 }
+<<<<<<< HEAD
 
 import { NextResponse } from 'next / server',
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextRequest } from 'next / server',
 export /**
  * middleware - Function description
@@ -25,7 +31,10 @@ if ( {) {
     const role = request.cookies.get ('user_role')?.value || 'talent',
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
+<<<<<<< HEAD
 export const config = {matcher: ['/dashboard/dashboard/']}
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {;
@@ -39,6 +48,7 @@ export function middleware(request: NextRequest) {;
     return res.status(500).json({ error: "Internal server error" });
   }
   return NextResponse.next ();
+<<<<<<< HEAD
 }
   }
 }
@@ -64,10 +74,14 @@ if ( {) {
   return NextResponse.next ();
 }
 export const config = {
+=======
+}export const config = {
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   matcher: ['/dashboard / dashboard/']}
 
 ;
 export const config = {;
+<<<<<<< HEAD
   matcher: ['/dashboard/dashboard/']};
 ;
 export const config = {;
@@ -75,3 +89,6 @@ export const config = {;
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
+=======
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

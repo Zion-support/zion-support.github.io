@@ -2,11 +2,15 @@
 
 export function useResumeEnhancer() {;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
+<<<<<<< HEAD
 export function useResumeEnhancer() {;
 
 export function useResumeEnhancer() {;
@@ -42,6 +46,12 @@ export function useResumeEnhancer() {;
       console && console.error('Enhancement error:', err);
 
       return null
+=======
+export function useResumeEnhancer() {;          context
+        }
+      });
+      if (error) {      return null
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsEnhancing(false)
     }
@@ -50,6 +60,7 @@ export function useResumeEnhancer() {;
     enhanceContent;
     isEnhancing;
 
+<<<<<<< HEAD
     error
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -74,6 +85,9 @@ function useResumeEnhancer() {
           content,
           enhancement_type: type,
           context;
+=======
+    error          context;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
       });
 ;
@@ -98,12 +112,15 @@ if ( {) {
     is_enhancing;
     error;
 
+<<<<<<< HEAD
 
 
 
   }
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 

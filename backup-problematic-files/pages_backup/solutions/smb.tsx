@@ -11,26 +11,26 @@ import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'luci
 export default function SMBSolutionsPage() {;
   const smbServices = [;
     {}
-      title: "Cost-Effective IT",";
-      description: "Affordable technology solutions for small and medium businesses",";
+      title: "Cost-Effective IT",",
+  description: "Affordable technology solutions for small and medium businesses",";
       icon: DollarSign,;
       features: ["Budget-Friendly", "Scalable Solutions", "ROI Focused"]";
     },;
     {}
-      title: "Quick Setup",";
-      description: "Rapid deployment of essential business systems",";
+      title: "Quick Setup",",
+  description: "Rapid deployment of essential business systems",";
       icon: Zap,;
       features: ["Fast Implementation", "Minimal Downtime", "Easy Migration"]";
     },;
     {}
-      title: "Team Collaboration",";
-      description: "Tools and systems to enhance team productivity",";
+      title: "Team Collaboration",",
+  description: "Tools and systems to enhance team productivity",";
       icon: Users,;
       features: ["Communication Tools", "Project Management", "File Sharing"]";
     },;
     {}
-      title: "Business Growth",";
-      description: "Technology solutions that grow with your business",";
+      title: "Business Growth",",
+  description: "Technology solutions that grow with your business",";
       icon: Building2,;
       features: ["Scalable Infrastructure", "Future-Proof", "Growth Support"]";
     }

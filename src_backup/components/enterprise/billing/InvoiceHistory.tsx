@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 Table;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import React from 'react';
 import {
   Table,
@@ -22,7 +18,7 @@ import { toast } from '@/hooks/use-toast';
 import React from "react";
 import {
   Table;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   TableBody;
   TableCell;
   TableHead;
@@ -49,25 +45,22 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
 
 
-<<<<<<< HEAD
-=======
 import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
 export function InvoiceHistory() {
   // Mock invoice data
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const invoices = [
@@ -343,6 +336,8 @@ export function InvoiceHistory() {;
         return <Badge variant="outline">{status}</Badge>;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   );
 
@@ -350,8 +345,7 @@ export function InvoiceHistory() {;
 
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
   );
 
 };";
@@ -363,4 +357,4 @@ export function InvoiceHistory() {;
 }"
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,20 +1,6 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore
-import data from '../../data/roadmap-issues.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/roadmap-issues.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/roadmap-issues.json',
-export default function RoadmapIssuesPage() {
-
-  const items: any[] = (data?.items |[]).slice(0, 60)
-
-=======
   const items: any[] = (data?.items || []).slice(0, 60);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -27,23 +13,7 @@ export default function RoadmapIssuesPage() {
           ))}
         </ul>
       </div>
-<<<<<<< HEAD
-            </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        </ul>;
-      </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

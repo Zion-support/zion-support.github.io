@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,19 +26,27 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ModernLa
 import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
+
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ModernLayoutdynamic from '../components/ModernLayout.dynamic';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 describe('ModernLayoutdynamic', () => {
   test('renders without crashing', () => {
     render(<ModernLayoutdynamic />);
     expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
   test('displays correct content', () => {
     render(<ModernLayoutdynamic />);
@@ -104,6 +113,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ModernLa
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   test('displays correct content', () => {
     render(<ModernLayoutdynamic />);
@@ -120,8 +131,13 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ModernLa
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

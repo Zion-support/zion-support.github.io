@@ -4,6 +4,7 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && 
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
+<<<<<<< HEAD
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -18,6 +19,8 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
@@ -27,6 +30,7 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
   try {
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
@@ -65,22 +69,32 @@ serve(async (req) => {;
     }
 
       return new Response(
+=======
+  try {      return new Response(
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
     // Create a request to OpenAI API
+<<<<<<< HEAD
 
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
         'Content-Type': 'application/json'};
+<<<<<<< HEAD
       body: JSON && JSON.stringify({
 
         model: 'gpt-4o-mini';
+=======
+      body: JSON && JSON.stringify({        model: 'gpt-4o-mini';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         messages: [
           {
             role: 'system'
@@ -93,6 +107,7 @@ serve(async (req) => {;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
 
             Skills: ${skills && skills.join()}
+<<<<<<< HEAD
             
 
             Name: ${name}
@@ -100,6 +115,9 @@ serve(async (req) => {;
             Bio: ${bio}
             Skills: ${skills.join()}
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
+=======
+                        Also, suggest 3-5 additional relevant skills that would complement their existing skills.
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
               "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]
@@ -184,9 +202,12 @@ if ( {) {
             }`;
           }
         ];
+<<<<<<< HEAD
 
         temperature: 0 && 0.7})});
 ;
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
       method: 'POST',;
@@ -206,6 +227,7 @@ if ( {) {
             role: 'user',;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
 
+<<<<<<< HEAD
 
 
             Name: ${name}
@@ -213,6 +235,8 @@ if ( {) {
             Bio: ${bio}
             Skills: ${skills.join()}
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: 
@@ -229,7 +253,10 @@ if ( {) {
 
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
@@ -239,6 +266,7 @@ if ( {) {
     const responseContent = openAIData.choices[0].message.content,
     
 
+<<<<<<< HEAD
         temperature: 0 && 0.7})});
     const openAIData = await openAIResponse && openAIResponse.json();
     if (!openAIData && openAIData.choices || openAIData && openAIData.choices.length === 0) {
@@ -247,11 +275,14 @@ if ( {) {
     // Extract the generated content from the response
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
       throw new Error("Failed to generate profile content")
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     // Extract the generated content from the response
     // Parse the JSON response
     let parsedResponse;
     try {
+<<<<<<< HEAD
       // Find the JSON object in the response
 
       const jsonMatch = responseContent && responseContent.match(/\{[\s\S]*\}/);
@@ -387,6 +418,9 @@ if ( {) {
     }
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
+=======
+      // Find the JSON object in the response    )
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error("Error in profile-summary-generator function:", error);
     return new Response(
@@ -404,8 +438,11 @@ if ( {) {
       JSON.stringify({ error: error.message }),;
 
     
+<<<<<<< HEAD
     console && console.error("Error in profile-summary-generator function:", error);
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
@@ -413,6 +450,7 @@ if ( {) {
     )
   }
 });
+<<<<<<< HEAD
 
 
     return new Response (
@@ -590,3 +628,5 @@ return new Response (JSON.stringify ({
 }
 });
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

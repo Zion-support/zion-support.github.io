@@ -10,6 +10,7 @@ import {;
   TableHeader,;
   TableRow,;
 } from "@/components/ui/table";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import {;
   DropdownMenu,;
@@ -25,6 +26,13 @@ import {;
 
   TableRow,;
 } from "@/components/ui/table";
+=======
+import { Button } from "@/components/ui/button";import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;} from "@/components/ui/table";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -32,6 +40,7 @@ import {
   DropdownMenuItem,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
+<<<<<<< HEAD
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
@@ -55,6 +64,11 @@ export function TenantsList() {;
   useEffect(() => {;
 
     loadTenants();
+=======
+  DropdownMenuTrigger,import { Badge } from "@/components/ui/badge";
+import { toast } from "@/hooks/use-toast";
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";    loadTenants();
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }, []);
 
       setIsLoading(true);
@@ -65,6 +79,7 @@ export function TenantsList() {;
 
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
+<<<<<<< HEAD
 
     } catch (error: any) {;
       console && console.error("Error loading tenants:", error);
@@ -73,12 +88,15 @@ export function TenantsList() {;
         title: "Failed to load tenants",;
         description: error && error.message,;
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       });
     } finally {;
       setIsLoading(false);
     }
 
   };
+<<<<<<< HEAD
 
 import {
   Edit,
@@ -175,6 +193,8 @@ import {
       });
     }
   };
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {
   Edit,
   MoreHorizontal,
@@ -182,6 +202,7 @@ import {
   Power,
   PowerOff,
   Users,
+<<<<<<< HEAD
   RefreshCcw,;
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -316,10 +337,13 @@ export function TenantsList() {;
     }
   };
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const verifyDns = async (tenant: WhitelabelTenant) => {;
     try {;
       // In a real implementation, this would verify DNS records;
       // For now, we'll just mark it as verified;
+<<<<<<< HEAD
       const { error } = await supabase;
         .from("whitelabel_tenants");
         .update({ dns_verified: true });
@@ -346,10 +370,14 @@ export function TenantsList() {;
         description: error && error.message,;
       });
     }
+=======
+      const { error } = await supabase;    }
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   },
 
   return (
+<<<<<<< HEAD
 
     <div className="space-y-4">;
       <div className="flex justify-between items-center">;
@@ -818,3 +846,5 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
   );
 }
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

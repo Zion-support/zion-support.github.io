@@ -52,7 +52,10 @@
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -74,8 +77,13 @@
                 aria - label=&quot;Services menu & quot;
               >;
                 Services;
+<<<<<<< HEAD
                 <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
                   <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+=======
+                <svg className=&quot;ml - 1 w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot; aria - hidden=&quot;true & quot;>;
+                  <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M19 9l - 7 7 - 7-7 & quot; />;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
               </button>;
               <div className=&quot;absolute top - full left - 0 mt - 2 w - 80 bg - black / 95 backdrop - blur - xl border border - white / 20 rounded - xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0 & quot;>;
@@ -89,6 +97,7 @@
                     >;
                       <div className=&quot;flex items - center justify - between & quot;>;
                         <span>{service.name}</span>;
+<<<<<<< HEAD
                         <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
                           <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
                         </svg>;
@@ -99,6 +108,15 @@
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
     >
+=======
+                        <svg className=&quot;w - 4 h - 4 opacity - 0 group - hover / item:opacity - 100 transition - opacity duration - 200 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
+                          <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M9 5l7 7 - 7 7 & quot; />;
+                        </svg>;
+                      </div>;
+                    </Link>))}
+=======role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;    >
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -131,6 +149,7 @@ role=&quot;banner&quot;
                 className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
                 aria-expanded=&quot;false&quot;
                 aria-haspopup=&quot;true&quot;
+<<<<<<< HEAD
                 aria-label=&quot;Services menu&quot;
               </Link>
             ))}
@@ -139,6 +158,13 @@ role=&quot;banner&quot;
             <div className="relative group">
 <div className=&quot;relative group&quot;>
               <button 
+=======
+                aria-label=&quot;Services menu&quot;              </Link>
+            ))}
+;
+            {/* Services Dropdown */}
+            <div className="relative group">              <button 
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
                 aria-haspopup="true"
@@ -170,6 +196,7 @@ role=&quot;banner&quot;
               </div>;
             </div>;
           </nav>;
+<<<<<<< HEAD
           {/* CTA Button */}
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -181,6 +208,9 @@ role=&quot;banner&quot;
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
             <Link
+=======
+          {/* CTA Button */}            <Link
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               aria-label="Get started with Zion Tech Group"
@@ -191,15 +221,24 @@ role=&quot;banner&quot;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
             aria-expanded={isMenuOpen}
+=======
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;            aria-expanded={isMenuOpen}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
+<<<<<<< HEAD
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+=======
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
+                <path strokeLinecap=&quot;round & quot; strokeLinejoin=&quot;round & quot; strokeWidth={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -232,6 +271,16 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
+<<<<<<< HEAD
+=======
+
+                </Link>;
+              ))}
+
+              <div className="px-3 py-2">
+                <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 {services.map((service) => (
                   <Link
                     key={service.name}

@@ -1,11 +1,17 @@
 
 
+<<<<<<< HEAD
 
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 
+=======
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -13,6 +19,7 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react';
@@ -29,11 +36,15 @@ import React, { useState, useEffect } from 'react';
   const [activeTab, setActiveTab] = useState('milestones');
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {;
     async function loadProject() {;
+<<<<<<< HEAD
       if (!projectId) return;
 
       setIsLoading(true);
@@ -54,15 +65,23 @@ import React, { useState, useEffect } from 'react';
       }
     }
   useEffect(() => {;
+=======
+        if (projectData) {;
+          setProject(projectData);
+
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     async function loadProject() {;
       if (!projectId) return,;
       ;
       setIsLoading(true),;
       try {;
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
@@ -92,6 +111,7 @@ import React, { useState, useEffect } from 'react';
 ;
     loadProject(),;
     refetch();
+<<<<<<< HEAD
   }, [projectId, getProjectById, refetch]),;
 
 
@@ -371,12 +391,19 @@ export function ProjectMilestonesContent() {;
           <MilestoneManager 
             projectId={projectId || ''}
             milestones={milestones}
+=======
+  }, [projectId, getProjectById, refetch]),;            milestones={milestones}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
+<<<<<<< HEAD
             paymentTerms={project && project.payment_terms}
             isSubmitting={isSubmitting}
+=======
+            paymentTerms={project && project.payment_terms}            isSubmitting={isSubmitting}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
 import {use_projects} from '@/hooks / use_projects';
@@ -455,9 +482,15 @@ if ( {) {
   $2
 }
     return (
+<<<<<<< HEAD
       <div className="container mx - auto py - 8 px - 4">;
         <div className="flex justify - center items - center h - 64">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - primary"></div>;
+=======
+      <div className="container mx - auto py - 8 px-4">;
+        <div className="flex justify - center items - center h-64">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border-primary"></div>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         </div>;
       </div>);
   }
@@ -482,10 +515,17 @@ if (return, ) {
   }
 ;
   return (
+<<<<<<< HEAD
     <div className="container mx - auto py - 8 px - 4">;
       <ProjectHeader title={project.job?.title || "Untitled Project"} />;
       <div className="flex justify - between items - center my - 6">;
         <h2 className="text - 2xl font - bold">Payment Milestones</h2>;
+=======
+    <div className="container mx - auto py - 8 px-4">;
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />;
+      <div className="flex justify - between items - center my-6">;
+        <h2 className="text - 2xl font-bold">Payment Milestones</h2>;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <ProjectActions;
           project_id={project_id || ''}
           isUnderDispute={isUnderDispute}
@@ -495,7 +535,11 @@ if (return, ) {
         />;
       </div>;
       <Tabs value={active_tab} onValueChange={setActiveTab}>;
+<<<<<<< HEAD
         <TabsList className="mb - 6">;
+=======
+        <TabsList className="mb-6">;
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
           <TabsTrigger value="activity">Activity</TabsTrigger>;
           {is_talent && (
@@ -515,6 +559,7 @@ if (return, ) {
             onUpdateStatus={updateMilestoneStatus}
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
+<<<<<<< HEAD
             refetch={refetch}
 
           />;
@@ -533,6 +578,9 @@ if (return, ) {
             <MilestoneCreator 
 
               onSubmit={handleMilestoneSubmit}
+=======
+            refetch={refetch}              onSubmit={handleMilestoneSubmit}
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
@@ -546,6 +594,7 @@ if (return, ) {
       </Tabs>;
     </div>;
   );
+<<<<<<< HEAD
 }
 
           />;
@@ -570,6 +619,9 @@ if (return, ) {
 }
 
   ),; setIsLoading (true);
+=======
+}  ),; setIsLoading (true);
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 try {
   
 }finally {
@@ -586,8 +638,13 @@ if (isLoading || !project) {
   if (!projectId) return;
 //Ensure all required fields are present const milestoneData = {
   project id: projectId;
+<<<<<<< HEAD
 title: data.title;
 description: data.description || "";
+=======
+title: data.title,
+  description: data.description || "";
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 amount: data.amount;
 status: " pending"as const;
 due date: data.due date ? data.due date.toISOString () : undefined 
@@ -673,3 +730,7 @@ await handleMilestoneCreated ()
   );
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
