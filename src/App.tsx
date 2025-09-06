@@ -9,6 +9,8 @@ import ServiceCard from './components/ServiceCard';
 import Pricing from './pages/Pricing';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import AISolutions from './pages/AISolutions';
+import About from './pages/About';
 
 const Home = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -103,23 +105,6 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
-  <div className="min-h-screen bg-gray-50 py-16">
-    <div className="container mx-auto px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">About Us</h1>
-      <div className="max-w-4xl mx-auto">
-        <p className="text-lg text-gray-600 mb-8">
-          Zion Tech Group is a leading technology company dedicated to delivering innovative 
-          solutions that transform businesses and drive growth in the digital age.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card title="Our Mission" description="To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth." />
-          <Card title="Our Vision" description="To be the global leader in technology solutions, creating a world where every business can leverage technology." />
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -138,6 +123,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
