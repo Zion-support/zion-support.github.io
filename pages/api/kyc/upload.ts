@@ -32,10 +32,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
-    id;
-    kind;
-    filename;
-    uploadedAt};
+    id,
+    kind,
+    filename,
+    uploadedAt
+  };
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
   profile.documents = [...withoutSameKind, doc];

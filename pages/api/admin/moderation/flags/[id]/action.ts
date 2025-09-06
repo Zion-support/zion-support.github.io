@@ -12,10 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string };
     const actionMap: Record<string, ModerationStatus> = {
-      approve: 'approved';
-      remove: 'removed';
-      warn: 'warned';
-      ban: 'banned'};
+      approve: 'approved',
+      remove: 'removed',
+      warn: 'warned',
+      ban: 'banned'
+    };
     const status = actionMap[action];
     if (!status) return res.status(400).json({ error: 'Invalid action' });
     const flag = await updateFlagStatus(id, status, adminNotes);
@@ -23,6 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flag })
   }
 
-  res.setHeader('AllowPOST');
+  res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed')
 }
