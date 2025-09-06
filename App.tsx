@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { JSX, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -59,10 +58,6 @@ interface Testimonial {
   rating: number;
   avatar?: string;
 }
-
-=======
-import React, { JSX } from 'react';
->>>>>>> pr-11992
 export default function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -160,7 +155,6 @@ export default function App(): JSX.Element {
   }
 
   return (
-<<<<<<< HEAD
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -274,15 +268,15 @@ export default function App(): JSX.Element {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className="group p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105"
                   >
-                                               <service.icon className={`w-12 h-12 mb-6 ${
-                             service.color === 'blue' ? 'text-blue-400' :
-                             service.color === 'purple' ? 'text-purple-400' :
-                             service.color === 'green' ? 'text-green-400' :
-                             service.color === 'red' ? 'text-red-400' :
-                             service.color === 'yellow' ? 'text-yellow-400' :
-                             service.color === 'indigo' ? 'text-indigo-400' :
-                             'text-blue-400'
-                           }`} />
+                    <service.icon className={`w-12 h-12 mb-6 ${
+                      service.color === 'blue' ? 'text-blue-400' :
+                      service.color === 'purple' ? 'text-purple-400' :
+                      service.color === 'green' ? 'text-green-400' :
+                      service.color === 'red' ? 'text-red-400' :
+                      service.color === 'yellow' ? 'text-yellow-400' :
+                      service.color === 'indigo' ? 'text-indigo-400' :
+                      'text-blue-400'
+                    }`} />
                     <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                     <p className="text-slate-300 mb-6">{service.description}</p>
                     <ul className="space-y-2 mb-6">
@@ -293,18 +287,18 @@ export default function App(): JSX.Element {
                         </li>
                       ))}
                     </ul>
-                                               <Link
-                             href={service.href}
-                             className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
-                               service.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
-                               service.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
-                               service.color === 'green' ? 'text-green-400 hover:text-green-300' :
-                               service.color === 'red' ? 'text-red-400 hover:text-red-300' :
-                               service.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
-                               service.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
-                               'text-blue-400 hover:text-blue-300'
-                             }`}
-                           >
+                    <Link
+                      href={service.href}
+                      className={`inline-flex items-center font-semibold group-hover:translate-x-1 transition-transform ${
+                        service.color === 'blue' ? 'text-blue-400 hover:text-blue-300' :
+                        service.color === 'purple' ? 'text-purple-400 hover:text-purple-300' :
+                        service.color === 'green' ? 'text-green-400 hover:text-green-300' :
+                        service.color === 'red' ? 'text-red-400 hover:text-red-300' :
+                        service.color === 'yellow' ? 'text-yellow-400 hover:text-yellow-300' :
+                        service.color === 'indigo' ? 'text-indigo-400 hover:text-indigo-300' :
+                        'text-blue-400 hover:text-blue-300'
+                      }`}
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
@@ -394,10 +388,3 @@ export default function App(): JSX.Element {
     </AccessibilityProvider>
   );
 }
-=======
-    <main>
-      <h1>Hello App</h1>
-    </main>
-  )
-}
->>>>>>> pr-11992

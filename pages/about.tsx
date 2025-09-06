@@ -1,7 +1,15 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
+  Brain,
+  Lightbulb,
+  Target,
+  Users,
+  Zap,
+  Shield
+} from 'lucide-react';
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -39,30 +47,34 @@ const AboutPage: React.FC = () => {
       title: "Integrity",
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
-  ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
-export default function AboutPage() {
-  const stats = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
-    { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
-  ],
+    }
+  ];
 
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
+  return (
+    <>
+      <Head>
+        <title>About Us | Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to innovation in technology." />
+      </Head>
+      <SmartHeader />
+      
+      <main className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to innovation, excellence, and delivering cutting-edge solutions that transform businesses.
+            </p>
+          </div>
+        </div>
+      </main>
+      
+      <SmartFooter />
+    </>
+  );
+}
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
