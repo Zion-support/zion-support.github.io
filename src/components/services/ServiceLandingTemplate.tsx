@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface Benefit {
   title: string;
@@ -60,11 +60,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                   {benefit.icon && (
-                    <div className="mb-4 text-blue-600">
-                      {benefit.icon}
-                    </div>
+                    <div className="mb-4 text-blue-600">{benefit.icon}</div>
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {benefit.title}
+                  </h3>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
               ))}

@@ -11,7 +11,7 @@ export function slugify(title: string, separator = "-"): string {
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
     .replace(new RegExp(`${escaped}{2}`, "g"), sep)
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "")
+    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
 }
 
 /**
@@ -23,7 +23,6 @@ export function unslugify(slug: string, separator = "-"): string {
   return slug
     .split(separator)
     .filter(Boolean)
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
 }
-

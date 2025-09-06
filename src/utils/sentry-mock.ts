@@ -14,7 +14,7 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -26,9 +26,9 @@ const mockSentry = {
 
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
-  finishTransaction: noop,  // Error boundary and React integration
-  ErrorBoundary: ({ children }: any,) => children,
-  withErrorBoundary: (component: any,) => component,
+  finishTransaction: noop, // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
 
   // Browser-specific methods
@@ -47,15 +47,22 @@ const mockSentry = {
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
         next(),
   },
-  
+
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
-  
+    requestHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    errorHandler:
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    tracingHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+  },
+
   // Next.js specific
-  withSentryConfig: (config: any,) => config,
+  withSentryConfig: (config: any) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -90,15 +97,15 @@ const mockSentry = {
 
   // Utils
   createTransport: noopReturn,
-  SDK_VERSION: '7.0.0-mock',
+  SDK_VERSION: "7.0.0-mock",
 
   // Constants
   Severity: {
-    Fatal: 'fatal',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info',
-    Debug: 'debug',
+    Fatal: "fatal",
+    Error: "error",
+    Warning: "warning",
+    Info: "info",
+    Debug: "debug",
   },
 };
 

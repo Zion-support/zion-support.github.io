@@ -1,7 +1,7 @@
 export interface OperatorSession {
   id: string;
   name: string;
-  status: 'active' | 'inactive' | 'busy';
+  status: "active" | "inactive" | "busy";
   currentSessions: string[];
   tags: string[];
   createdAt: Date;
@@ -26,7 +26,7 @@ class OperatorManager {
 
   logSupportEvent(event: SupportEvent): void {
     this.events.push(event);
-    console.log('Support event logged:', event);
+    console.log("Support event logged:", event);
   }
 
   getOperatorSessions(): OperatorSession[] {
@@ -40,10 +40,10 @@ class OperatorManager {
 
 const operatorManager = new OperatorManager();
 
-export const tagOperatorSession = (sessionId: string, tag: string) => 
+export const tagOperatorSession = (sessionId: string, tag: string) =>
   operatorManager.tagOperatorSession(sessionId, tag);
 
-export const logSupportEventToOperator = (event: SupportEvent) => 
+export const logSupportEventToOperator = (event: SupportEvent) =>
   operatorManager.logSupportEvent(event);
 
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();

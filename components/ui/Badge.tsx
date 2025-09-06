@@ -12,7 +12,7 @@ interface HTMLElement {
 }
 
 interface HTMLDivElement extends HTMLElement {
-  tagName: 'DIV';
+  tagName: "DIV";
 }
 
 const badgeVariants = cva(
@@ -32,7 +32,7 @@ const badgeVariants = cva(
     defaultVariants: {
       variant: "default",
     },
-  }
+  },
 );
 
 export interface BadgeProps

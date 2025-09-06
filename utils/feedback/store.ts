@@ -10,13 +10,15 @@ export interface FeedbackRecord {
 
 const feedbackData: FeedbackRecord[] = [];
 
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+export async function saveFeedbackFallback(
+  feedback: FeedbackRecord,
+): Promise<void> {
   feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
+  console.log("Feedback saved:", feedback.id);
 }
 
 export function writeAll(rows: any[]): void {
-  console.log('Writing feedback rows:', rows.length);
+  console.log("Writing feedback rows:", rows.length);
   // Implementation would write to database or file
 }
 

@@ -6,12 +6,12 @@ export interface Version {
 }
 
 export function parseVersion(versionString: string): Version {
-  const parts = versionString.split('.').map(Number);
+  const parts = versionString.split(".").map(Number);
   return {
     major: parts[0] || 0,
     minor: parts[1] || 0,
     patch: parts[2] || 0,
-    build: parts[3]
+    build: parts[3],
   };
 }
 
@@ -33,17 +33,28 @@ export function compareVersions(a: Version, b: Version): number {
   return 0;
 }
 
-export function nextVersionFor(currentVersion: string, type: 'major' | 'minor' | 'patch' = 'patch'): string {
+export function nextVersionFor(
+  currentVersion: string,
+  type: "major" | "minor" | "patch" = "patch",
+): string {
   const version = parseVersion(currentVersion);
-  
+
   switch (type) {
-    case 'major':
+    case "major":
       return versionToString({ major: version.major + 1, minor: 0, patch: 0 });
-    case 'minor':
-      return versionToString({ major: version.major, minor: version.minor + 1, patch: 0 });
-    case 'patch':
+    case "minor":
+      return versionToString({
+        major: version.major,
+        minor: version.minor + 1,
+        patch: 0,
+      });
+    case "patch":
     default:
-      return versionToString({ major: version.major, minor: version.minor, patch: version.patch + 1 });
+      return versionToString({
+        major: version.major,
+        minor: version.minor,
+        patch: version.patch + 1,
+      });
   }
 }
 

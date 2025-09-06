@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const About: React.FC = () => {
   return (
@@ -7,13 +7,14 @@ const About: React.FC = () => {
         <h1 className="text-4xl font-bold text-gray-900 mb-8">About Us</h1>
         <div className="prose max-w-none">
           <p className="text-lg text-gray-600 mb-6">
-            Zion Tech is a leading technology company specializing in innovative solutions
-            for businesses of all sizes. We combine cutting-edge technology with deep
-            industry expertise to deliver exceptional results.
+            Zion Tech is a leading technology company specializing in innovative
+            solutions for businesses of all sizes. We combine cutting-edge
+            technology with deep industry expertise to deliver exceptional
+            results.
           </p>
           <p className="text-lg text-gray-600">
-            Our team of experienced professionals is dedicated to helping our clients
-            achieve their technology goals and drive business growth.
+            Our team of experienced professionals is dedicated to helping our
+            clients achieve their technology goals and drive business growth.
           </p>
         </div>
       </div>

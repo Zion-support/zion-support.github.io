@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function OSDeployPage() {
   const [loading, setLoading] = useState(false);
@@ -8,7 +8,7 @@ export default function OSDeployPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
@@ -16,30 +16,30 @@ export default function OSDeployPage() {
   };
 
   const loading = false;
-  const message = '';
-  const messageType = 'success';
+  const message = "";
+  const messageType = "success";
 
   // Mock feature keys and functions
-  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  
+  const FeatureKeys = ["ai", "blockchain", "governance", "treasury"];
+
   const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
-      ai: 'AI Integration',
-      blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
-      treasury: 'Treasury Management'
+      ai: "AI Integration",
+      blockchain: "Blockchain Technology",
+      governance: "Governance System",
+      treasury: "Treasury Management",
     };
     return labels[key] || key;
   };
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-      ai: 'Advanced AI capabilities and automation',
-      blockchain: 'Secure blockchain infrastructure',
-      governance: 'Decentralized governance mechanisms',
-      treasury: 'Automated treasury management'
+      ai: "Advanced AI capabilities and automation",
+      blockchain: "Secure blockchain infrastructure",
+      governance: "Decentralized governance mechanisms",
+      treasury: "Automated treasury management",
     };
-    return descriptions[key] || 'Feature description';
+    return descriptions[key] || "Feature description";
   };
 
   return (
@@ -47,9 +47,12 @@ export default function OSDeployPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">🚀 Launch Your Digital Economy</h1>
+          <h1 className="text-4xl font-bold mb-4">
+            🚀 Launch Your Digital Economy
+          </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Deploy your custom Zion OS instance with advanced features and configurations
+            Deploy your custom Zion OS instance with advanced features and
+            configurations
           </p>
         </div>
 
@@ -57,13 +60,17 @@ export default function OSDeployPage() {
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>
+              <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">
+                ⚙️
+              </span>
               Basic Configuration
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Instance Name *</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Instance Name *
+                </label>
                 <input
                   name="instanceName"
                   type="text"
@@ -74,7 +81,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Vertical</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Vertical
+                </label>
                 <select
                   name="vertical"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -90,7 +99,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Domain</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Domain
+                </label>
                 <input
                   name="domain"
                   type="text"
@@ -100,7 +111,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Subdomain</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Subdomain
+                </label>
                 <input
                   name="subdomain"
                   type="text"
@@ -110,7 +123,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Default Language</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Default Language
+                </label>
                 <input
                   name="defaultLanguage"
                   type="text"
@@ -119,7 +134,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Region</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Region
+                </label>
                 <input
                   name="region"
                   type="text"
@@ -133,13 +150,17 @@ export default function OSDeployPage() {
           {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
+              <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">
+                💰
+              </span>
               Economic Configuration
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Token System</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Token System
+                </label>
                 <select
                   name="tokenSystem"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -151,7 +172,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Governance Type</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Governance Type
+                </label>
                 <select
                   name="governanceType"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -164,7 +187,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Country</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Country
+                </label>
                 <input
                   name="country"
                   type="text"
@@ -174,7 +199,9 @@ export default function OSDeployPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-white/90">Payment Gateway</label>
+                <label className="block text-sm font-medium text-white/90">
+                  Payment Gateway
+                </label>
                 <select
                   name="paymentGateway"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
@@ -192,7 +219,9 @@ export default function OSDeployPage() {
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">
+                🔧
+              </span>
               Feature Selection
             </h2>
 
@@ -212,7 +241,9 @@ export default function OSDeployPage() {
                     <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                       {labelFor(k)}
                     </div>
-                    <div className="text-sm text-white/60">{getFeatureDescription(k)}</div>
+                    <div className="text-sm text-white/60">
+                      {getFeatureDescription(k)}
+                    </div>
                   </div>
                 </label>
               ))}
@@ -222,7 +253,9 @@ export default function OSDeployPage() {
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>
+              <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">
+                🚀
+              </span>
               Additional Features
             </h2>
 
@@ -237,7 +270,9 @@ export default function OSDeployPage() {
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Treasury Management
                   </div>
-                  <div className="text-sm text-white/60">Manage community funds with transparency</div>
+                  <div className="text-sm text-white/60">
+                    Manage community funds with transparency
+                  </div>
                 </div>
               </label>
 
@@ -251,7 +286,9 @@ export default function OSDeployPage() {
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Governance System
                   </div>
-                  <div className="text-sm text-white/60">Local + global decision making</div>
+                  <div className="text-sm text-white/60">
+                    Local + global decision making
+                  </div>
                 </div>
               </label>
 
@@ -265,7 +302,9 @@ export default function OSDeployPage() {
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Content Moderation
                   </div>
-                  <div className="text-sm text-white/60">Automated content and behavior monitoring</div>
+                  <div className="text-sm text-white/60">
+                    Automated content and behavior monitoring
+                  </div>
                 </div>
               </label>
 
@@ -279,7 +318,9 @@ export default function OSDeployPage() {
                   <div className="font-medium text-white group-hover:text-blue-400 transition-colors">
                     Partnership Management
                   </div>
-                  <div className="text-sm text-white/60">Institutional partnership management</div>
+                  <div className="text-sm text-white/60">
+                    Institutional partnership management
+                  </div>
                 </div>
               </label>
             </div>
@@ -291,15 +332,15 @@ export default function OSDeployPage() {
               disabled={loading}
               className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed hover-lift"
             >
-              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
+              {loading ? "Deploying..." : "Deploy Digital Economy"}
             </button>
 
             {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${
-                  messageType === 'success'
-                    ? 'bg-green-900/20 border border-green-500/20 text-green-400'
-                    : 'bg-red-900/20 border border-red-500/20 text-red-400'
+                  messageType === "success"
+                    ? "bg-green-900/20 border border-green-500/20 text-green-400"
+                    : "bg-red-900/20 border border-red-500/20 text-red-400"
                 }`}
               >
                 {message}

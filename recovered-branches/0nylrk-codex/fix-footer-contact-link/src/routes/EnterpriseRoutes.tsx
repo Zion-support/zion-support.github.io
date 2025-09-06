@@ -1,5 +1,5 @@
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
+import { Fragment } from "react";
+import { Route, Routes } from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
 import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
@@ -14,12 +14,12 @@ const EnterpriseRoutes = () => {
       <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
       <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-      
+
       {/* Zion Hire AI Routes */}
       <Route path="/zion-hire-ai" element={<ZionHireAI />} />
       <Route path="/hire-ai" element={<ZionHireAI />} />
     </Routes>
-  )
+  );
 };
 
 export default EnterpriseRoutes;

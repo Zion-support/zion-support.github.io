@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Services: React.FC = () => {
   return (
@@ -8,15 +8,21 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-4">AI Services</h3>
-            <p className="text-gray-600">Cutting-edge AI solutions for your business.</p>
+            <p className="text-gray-600">
+              Cutting-edge AI solutions for your business.
+            </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-4">IT Services</h3>
-            <p className="text-gray-600">Comprehensive IT solutions and support.</p>
+            <p className="text-gray-600">
+              Comprehensive IT solutions and support.
+            </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-xl font-semibold mb-4">Cloud Solutions</h3>
-            <p className="text-gray-600">Scalable cloud infrastructure and services.</p>
+            <p className="text-gray-600">
+              Scalable cloud infrastructure and services.
+            </p>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 export interface JobData {
   id: string;
   title: string;
@@ -6,10 +5,10 @@ export interface JobData {
   skills: string[];
   category: string;
   budget: {
-    min: number,
-    max: number
+    min: number;
+    max: number;
   };
-  deadline: string
+  deadline: string;
 }
 
 export interface TalentProfile {
@@ -19,21 +18,21 @@ export interface TalentProfile {
   bio?: string;
   skills: string[];
   years_experience: number;
-  hourly_rate?: number,
-  availability_type?: string
+  hourly_rate?: number;
+  availability_type?: string;
 }
 
 export interface TalentMatch {
   talent_id: string;
   job_id: string;
   match_score: number;
-  matched_skills: string[],
-  created_at: string
+  matched_skills: string[];
+  created_at: string;
 }
 
 export interface MatchResult {
   talentId: string;
   score: number;
-  matchedSkills: string[],
-  reason?: string
+  matchedSkills: string[];
+  reason?: string;
 }

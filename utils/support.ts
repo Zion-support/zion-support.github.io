@@ -16,7 +16,10 @@ export interface IntentMatch {
   confidence: number;
 }
 
-export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
+export function matchIntent(
+  query: string,
+  articles: HelpArticle[],
+): IntentMatch {
   const queryLower = query.toLowerCase();
   const matchedArticles: string[] = [];
   let confidence = 0;
@@ -24,7 +27,9 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   for (const article of articles) {
     const titleMatch = article.title.toLowerCase().includes(queryLower);
     const contentMatch = article.content.toLowerCase().includes(queryLower);
-    const tagMatch = article.tags.some(tag => tag.toLowerCase().includes(queryLower));
+    const tagMatch = article.tags.some((tag) =>
+      tag.toLowerCase().includes(queryLower),
+    );
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles.push(article.id);
@@ -35,23 +40,33 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   return {
     intentMatched: matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
-    confidence: Math.min(confidence, 1)
+    confidence: Math.min(confidence, 1),
   };
 }
 
-export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
-  return articles.filter(article => article.category === category);
+export function getArticlesByCategory(
+  articles: HelpArticle[],
+  category: string,
+): HelpArticle[] {
+  return articles.filter((article) => article.category === category);
 }
 
-export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
-  return articles.filter(article => article.tags.includes(tag));
+export function getArticlesByTag(
+  articles: HelpArticle[],
+  tag: string,
+): HelpArticle[] {
+  return articles.filter((article) => article.tags.includes(tag));
 }
 
-export function searchArticles(articles: HelpArticle[], query: string): HelpArticle[] {
+export function searchArticles(
+  articles: HelpArticle[],
+  query: string,
+): HelpArticle[] {
   const queryLower = query.toLowerCase();
-  return articles.filter(article => 
-    article.title.toLowerCase().includes(queryLower) ||
-    article.content.toLowerCase().includes(queryLower) ||
-    article.tags.some(tag => tag.toLowerCase().includes(queryLower))
+  return articles.filter(
+    (article) =>
+      article.title.toLowerCase().includes(queryLower) ||
+      article.content.toLowerCase().includes(queryLower) ||
+      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
   );
 }
