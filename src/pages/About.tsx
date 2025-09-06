@@ -1,15 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ContactSection } from "@/components/ContactSection";
-import Link from "next/link";
-export default function About() {
-  const team = null;
-=======
 const About = () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">

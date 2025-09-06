@@ -3,45 +3,45 @@ import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
     {
-      title: "AI & Machine Learning"
-      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics."
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"]
-      icon: "🤖"
+      title: "AI & Machine Learning",
+      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics.",
+      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"],
+      icon: "🤖",
       color: "from-blue-500 to-purple-600"
-    }
+    },
     {
-      title: "Cloud Infrastructure"
-      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs."
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"]
-      icon: "☁️"
+      title: "Cloud Infrastructure",
+      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
+      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
+      icon: "☁️",
       color: "from-green-500 to-blue-600"
-    }
+    },
     {
-      title: "Web Development"
-      description: "Modern, responsive web applications built with the latest technologies and best practices."
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"]
-      icon: "💻"
+      title: "Web Development",
+      description: "Modern, responsive web applications built with the latest technologies and best practices.",
+      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
+      icon: "💻",
       color: "from-purple-500 to-pink-600"
-    }
+    },
     {
-      title: "Mobile Applications"
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences."
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"]
-      icon: "📱"
+      title: "Mobile Applications",
+      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
+      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
+      icon: "📱",
       color: "from-orange-500 to-red-600"
-    }
+    },
     {
-      title: "Cybersecurity"
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance."
-      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"]
-      icon: "🔒"
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
+      icon: "🔒",
       color: "from-red-500 to-orange-600"
-    }
+    },
     {
-      title: "Data Analytics"
-      description: "Turn your data into actionable insights with advanced analytics and visualization tools."
-      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"]
-      icon: "📊"
+      title: "Data Analytics",
+      description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
+      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
+      icon: "📊",
       color: "from-indigo-500 to-purple-600"
     }
   ];
