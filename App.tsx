@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -13,7 +15,9 @@ import PricingPage from './src/pages/Pricing';
 
 
 
+
 export default function App() {
+
 
   return (
     <ErrorBoundary>
@@ -23,7 +27,9 @@ export default function App() {
           <Sidebar />
           <main className="flex-1 lg:ml-80">
             <Routes>
+
               <Route path="/" element={<LandingPage />} />
+
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
@@ -38,6 +44,8 @@ export default function App() {
 
 
 }
+
+
 
 
 
