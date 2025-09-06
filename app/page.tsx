@@ -100,6 +100,90 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ServiceCard
+            title="AI Email Optimizer"
+            href="/services/ai-email-optimizer"
+            description="AI-powered email optimization with smart subject lines and content personalization"
+            bullets={[
+              "40% higher open rates",
+              "Smart content personalization",
+              "Automated A/B testing",
+              "Send time optimization"
+            ]}
+            icon="📧"
+          />
+          <ServiceCard
+            title="AI Social Media Scheduler"
+            href="/services/ai-social-media-scheduler"
+            description="Intelligent social media management with AI content generation and optimal timing"
+            bullets={[
+              "3x more engagement",
+              "AI content generation",
+              "Multi-platform support",
+              "Hashtag optimization"
+            ]}
+            icon="📱"
+          />
+          <ServiceCard
+            title="AI Customer Support"
+            href="/services/ai-customer-support-automation"
+            description="24/7 AI-powered customer support with chatbots and sentiment analysis"
+            bullets={[
+              "95% accuracy rate",
+              "50+ language support",
+              "60% cost reduction",
+              "Smart ticket routing"
+            ]}
+            icon="🎧"
+          />
+          <ServiceCard
+            title="AI Invoice Generator"
+            href="/services/ai-invoice-generator"
+            description="Automated invoicing with AI data extraction and payment processing"
+            bullets={[
+              "10+ hours saved/week",
+              "99% accuracy",
+              "30% faster payments",
+              "Smart categorization"
+            ]}
+            icon="📄"
+          />
+          <ServiceCard
+            title="AI Project Management"
+            href="/services/ai-project-management-suite"
+            description="Intelligent project management with AI task automation and resource optimization"
+            bullets={[
+              "40% productivity boost",
+              "Smart resource allocation",
+              "Risk prediction AI",
+              "Automated scheduling"
+            ]}
+            icon="📋"
+          />
+          <ServiceCard
+            title="AI Healthcare Analytics"
+            href="/services/ai-healthcare-analytics"
+            description="Advanced healthcare AI for predictive diagnostics and clinical decision support"
+            bullets={[
+              "25% better outcomes",
+              "HIPAA compliant",
+              "Predictive diagnostics",
+              "Treatment optimization"
+            ]}
+            icon="🏥"
+          />
+          <ServiceCard
+            title="AI Fintech Solutions"
+            href="/services/ai-fintech-solutions"
+            description="AI-powered financial services including fraud detection and risk assessment"
+            bullets={[
+              "99.9% fraud detection",
+              "40% cost reduction",
+              "Bank-level security",
+              "Algorithmic trading"
+            ]}
+            icon="💳"
+          />
+          <ServiceCard
             title="Micro SaaS Solutions"
             href="/services/micro-saas"
             description="End-to-end product development with billing, auth, analytics and growth optimization"
@@ -111,21 +195,6 @@ export default function HomePage() {
               "API development"
             ]}
             icon="🚀"
-          />
-          <Card
-=======
-          <ServiceCard
-            title="AI Services"
-            href="/services/ai-services"
-            description="Cutting-edge AI solutions for automation, analytics, and intelligent decision making"
-            bullets={[
-              "AI chatbots & assistants",
-              "Machine learning models",
-              "Natural language processing",
-              "Computer vision",
-              "Predictive analytics"
-            ]}
-            icon="🤖"
           />
           <ServiceCard
             title="IT Services"
@@ -140,25 +209,6 @@ export default function HomePage() {
             ]}
             icon="💻"
           />
-          <Card
-            title="Blockchain"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
-            icon="⛓️"
-          />
-          <Card
-            title="Cybersecurity"
-            href="/services/cybersecurity"
-            description="Penetration testing, security audits, compliance and incident response."
-            icon="🔒"
-          />
-          <Card
-            title="Data Analytics"
-            href="/services/data-analytics"
-            description="Business intelligence, predictive analytics and data science solutions."
-            icon="📊"
-          />
-=======
         </div>
       </section>
 
