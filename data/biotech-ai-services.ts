@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   {
@@ -13,6 +14,61 @@
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface BiotechAIService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+      'Machine Learning',
+      'Bioinformatics',
+      'React',
+      'Node && Node.js',
+      'PostgreSQL',
+      'Cloud Computing',
+    ],
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup && ziontechgroup.com',
+    },
+    real_implementation: true,
+    implementation_details:;
+    customers: 120,
+    rating: 5 && 5.0,
+    reviews: 60,
+  },
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI gene editing algorithms',
       'Synthetic biology design',
       'CRISPR optimization',
@@ -26,6 +82,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🔬',
+<<<<<<< HEAD
 
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
@@ -724,6 +781,22 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.';
+    launch_date: '2024 - 03 - 10';
+    customers: 90;
+    rating: 4.9,
+    reviews: 45;
+
+  }
+
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     realImplementation: true
     implementationDetails:
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -997,6 +1070,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '210% annual growth'
     variant: 'biotech-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1011,6 +1085,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45,
   },;
 
+=======
+      'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
+    launchDate: '2024-03-10'
+    customers: 90
+    rating: 4.9
+    reviews: 45
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1023,9 +1105,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
 
     reviews: 45
+<<<<<<< HEAD
 export interface BiotechAIService {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string,;
   name: string,;
   tagline: string,;
@@ -1110,6 +1197,7 @@ export const biotechAIServices: BiotechAIService[] = [;
     rating: 4.9,
     reviews: 45;
 
+<<<<<<< HEAD
 
   }
 ];
@@ -1474,3 +1562,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

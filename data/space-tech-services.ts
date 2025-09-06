@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   {
@@ -15,6 +16,48 @@
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface SpaceTechService {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  text_color: string;
+  link: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
+  category: string;
+  real_service: boolean;
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
+  roi: string;
+  competitors: string[];
+  market_size: string;
+  growth_rate: string;
+  variant: string;
+  contact_info: {
+    mobile: string;
+    email: string;
+    address: string;
+
+    website: string;
+  }
+    trialDays: 30
+    setupTime: '2 weeks'
+    category: 'Space Technology'
+    realService: true
+    technology: [
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -27,6 +70,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🛰️',
+<<<<<<< HEAD
 
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
@@ -725,6 +769,22 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
+    }
+    real_implementation: true,
+    implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
+    launch_date: '2024 - 03 - 10';
+    customers: 500;
+    rating: 4.9,
+    reviews: 250;
+
+  }
+
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     realImplementation: true
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
@@ -998,6 +1058,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1012,6 +1073,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 250,
   },;
 
+=======
+      'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
+    launchDate: '2024-03-10'
+    customers: 500
+    rating: 4.9
+    reviews: 250
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1024,9 +1093,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
 
     reviews: 250
+<<<<<<< HEAD
 export interface SpaceTechService {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string,;
   name: string,;
   tagline: string,;
@@ -1111,6 +1185,7 @@ export const spaceTechServices: SpaceTechService[] = [;
     rating: 4.9,
     reviews: 250;
 
+<<<<<<< HEAD
 
   }
 ];
@@ -1495,3 +1570,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

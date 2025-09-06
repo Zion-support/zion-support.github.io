@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ModernHeader from './ModernHeader';
@@ -126,3 +127,5 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 export default ModernLayout;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

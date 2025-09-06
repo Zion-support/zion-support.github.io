@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -9,7 +12,10 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 interface State {
@@ -18,6 +24,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
@@ -103,27 +110,53 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
+=======
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    this.setState({
+      error,
+      errorInfo
+    });
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+<<<<<<< HEAD
 
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error details:', error);
       console.error('Error info:', errorInfo);
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
 
@@ -269,6 +302,8 @@ export default class ErrorBoundary extends Component<Props, State> {
               </button>;
               <button
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -290,20 +325,27 @@ export default class ErrorBoundary extends Component<Props, State> {
               </button>
               <button 
                 onClick={() => this.setState({ hasError: false })} 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
+<<<<<<< HEAD
 
                 </pre>
               </details>
@@ -347,11 +389,22 @@ main
 
 main
 
+=======
+                </pre>
+              </details>
+            )}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           </div>
-        )
+        </div>
       );
     }
 
+<<<<<<< HEAD
+=======
+    return this.props.children;
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
     return this && this.props.children;
@@ -517,13 +570,20 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 main
 
 main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+export default ErrorBoundary;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
-const fs = require("child_process");
+
+
 const path = require("path");
 class FileRestorer {}
   constructor() {}
@@ -109,5 +109,4 @@ class FileRestorer {}
 if (require.main === module) {}
   const restorer = new FileRestorer();
   restorer.restoreCorruptedFiles().catch(console.error)};
-module.exports = FileRestorer;
-module.exports = FileRestorer;
+

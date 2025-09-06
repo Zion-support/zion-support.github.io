@@ -5,10 +5,14 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
 console.log('==================');
 
 
 
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -69,8 +73,11 @@ const filesToFix = [
 
 let totalFixed = 0;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 for (const file of filesToFix) {
   try {
     if (!fs.existsSync(file)) {
@@ -95,5 +102,8 @@ for (const file of filesToFix) {
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
+<<<<<<< HEAD
 console.log('🎉 Final syntax fix completed!');
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

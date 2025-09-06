@@ -21,76 +21,112 @@ export default function ResearchPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Our Research Focus</h2>
-            <p className="text-gray-300 mb-6">
-              At Zion Tech Group, we're committed to pushing the boundaries of what's possible with AI and technology. 
-              Our research spans multiple domains, from fundamental AI research to practical applications that solve real-world problems.
-            </p>
-            <p className="text-gray-300">
-              We collaborate with leading universities, research institutions, and industry partners to advance the state of the art 
-              in artificial intelligence, machine learning, and emerging technologies.
-            </p>
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-6">Our Research Focus</h2>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Artificial Intelligence</h3>
+                  <p className="text-gray-300">Advanced AI algorithms, machine learning models, and neural network architectures.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+                  <p className="text-gray-300">Quantum algorithms, quantum machine learning, and quantum optimization.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🔗</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Blockchain Technology</h3>
+                  <p className="text-gray-300">Distributed systems, smart contracts, and decentralized applications.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Key Research Areas</h2>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Artificial Intelligence & Machine Learning
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Quantum Computing & Cryptography
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Autonomous Systems & Robotics
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Natural Language Processing
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Computer Vision & Image Processing
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-400 mr-3">•</span>
-                Edge Computing & IoT
-              </li>
-            </ul>
+          <div className="bg-slate-800 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-white mb-6">Research Publications</h2>
+            <div className="space-y-4">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h3 className="text-lg font-semibold text-white mb-1">"Quantum Machine Learning for Financial Optimization"</h3>
+                <p className="text-gray-400 text-sm mb-2">Nature Quantum Information, 2024</p>
+                <p className="text-gray-300 text-sm">Novel quantum algorithms for portfolio optimization and risk management.</p>
+              </div>
+              
+              <div className="border-l-4 border-green-500 pl-4">
+                <h3 className="text-lg font-semibold text-white mb-1">"Autonomous AI Systems for Enterprise Operations"</h3>
+                <p className="text-gray-400 text-sm mb-2">IEEE Transactions on AI, 2024</p>
+                <p className="text-gray-300 text-sm">Self-managing AI systems that adapt to changing business environments.</p>
+              </div>
+              
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h3 className="text-lg font-semibold text-white mb-1">"Decentralized Identity Management on Blockchain"</h3>
+                <p className="text-gray-400 text-sm mb-2">ACM Computing Surveys, 2024</p>
+                <p className="text-gray-300 text-sm">Privacy-preserving identity solutions using zero-knowledge proofs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-slate-800 p-8 rounded-lg mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Research Collaborations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Academic Partnerships</h3>
+              <p className="text-gray-300">Collaborating with leading universities and research institutions worldwide.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏢</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Industry Research</h3>
+              <p className="text-gray-300">Working with Fortune 500 companies on cutting-edge technology solutions.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔬</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Open Source</h3>
+              <p className="text-gray-300">Contributing to open source projects and sharing knowledge with the community.</p>
+            </div>
           </div>
         </div>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Research Publications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Business Automation</h3>
-              <p className="text-gray-300 mb-4">
-                A comprehensive study on the application of AI in business process automation, 
-                published in the Journal of Artificial Intelligence Research.
-              </p>
-              <a href="#" className="text-blue-400 hover:text-blue-300">Read Paper →</a>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">Quantum Machine Learning</h3>
-              <p className="text-gray-300 mb-4">
-                Exploring the intersection of quantum computing and machine learning algorithms 
-                for enhanced computational capabilities.
-              </p>
-              <a href="#" className="text-blue-400 hover:text-blue-300">Read Paper →</a>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">Edge AI Optimization</h3>
-              <p className="text-gray-300 mb-4">
-                Novel approaches to optimizing AI models for edge computing environments, 
-                reducing latency and improving efficiency.
-              </p>
-              <a href="#" className="text-blue-400 hover:text-blue-300">Read Paper →</a>
-            </div>
+          <h2 className="text-3xl font-bold text-white mb-6">Join Our Research Team</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We're always looking for talented researchers and engineers to join our mission of advancing technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/careers"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              View Open Positions
+            </a>
+            <a
+              href="/contact"
+              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </div>

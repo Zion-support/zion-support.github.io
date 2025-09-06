@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve modify/delete conflicts by removing the files
@@ -102,6 +103,13 @@ function resolveContentConflicts() {
         // Remove conflict markers and keep main branch version
         
         // Clean up any remaining conflict markers
+=======
+        content = content.replace(/
+        
+        // Clean up any remaining conflict markers
+        content = content.replace(/
+        content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         
         // Write the cleaned content
         fs.writeFileSync(file, content);
@@ -137,7 +145,12 @@ function resolveAddAddConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep both versions
+<<<<<<< HEAD
           if (parts.length === 2) {
 
 
 
+=======
+        content = content.replace(/
+          const parts = match.split('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

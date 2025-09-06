@@ -1,9 +1,13 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
 
 
@@ -12,6 +16,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -23,17 +29,21 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -42,6 +52,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  log(message) {
+
+class MasterAutomation {}
+  constructor() {}
+    this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
+    this.pm2Processes = ['error-monitor',]
+      'lint-fixer',
+      'build-monitor',
+      'git-automation',
+    ];
+  };
+  log(message) {}
+
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -65,6 +97,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
   async runCommand(command, description) {
 
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -75,6 +108,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     try {
       this.log(`Running: ${description}`);
@@ -84,6 +119,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         stdio: 'pipe',
       });
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -94,6 +130,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -103,6 +141,7 @@ main
         ...options}
 });
 
+<<<<<<< HEAD
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, "logs", "master-automation.log");
@@ -124,6 +163,8 @@ class MasterAutomation {
       });
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return { success: true, stdout, stderr };
     } catch (error) {}
       this.log(`Command failed: ${command} - ${error.message}`);
@@ -213,9 +254,12 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   async runBuildProcess() {
     this.log('🚀 Starting build process...');
@@ -234,9 +278,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       }
     }
@@ -245,23 +292,140 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return { success: true, results };
   }
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 
+=======
+
+      return {}
+        success: false,
+        stdout: error.stdout || '',
+        stderr: error.stderr || error.message};
+    };
+  };
+  async checkPM2Status() {}
+    this.log('Checking PM2 status...');
+    const result = await this.runCommand('pm2 status');
+
+    if (result.success) {}
+      this.log('PM2 status check completed');
+      return true;
+    } else {}
+      this.log('PM2 status check failed');
+      return false;
+    };
+  };
+  async startPM2Processes() {}
+    this.log('Starting PM2 processes...');
+
+    // Start all processes from ecosystem file;
+    const result = await this.runCommand('pm2 start ecosystem.config.cjs');
+
+    if (result.success) {}
+      this.log('PM2 processes started successfully');
+      return true;
+    } else {}
+      this.log('Failed to start PM2 processes');
+      return false;
+    };
+  };
+  async stopPM2Processes() {}
+    this.log('Stopping PM2 processes...');
+
+    for (const processName of this.pm2Processes) {}
+      await this.runCommand(`pm2 stop ${processName}`);
+    };
+    this.log('PM2 processes stopped');
+  };
+  async restartPM2Processes() {}
+    this.log('Restarting PM2 processes...');
+
+    const result = await this.runCommand('pm2 restart ecosystem.config.cjs');
+
+    if (result.success) {}
+      this.log('PM2 processes restarted successfully');
+      return true;
+    } else {}
+      this.log('Failed to restart PM2 processes');
+      return false;
+    };
+  };
+  async getPM2Logs(processName = null, lines = 50) {}
+    this.log(`Getting PM2 logs${processName ? ` for ${processName}` : ''}...`);
+
+    const command = processName;
+      ? `pm2 logs ${processName} --lines ${lines}
+      : `pm2 logs --lines ${lines}`;`
+
+    const result = await this.runCommand(command);
+
+    if (result.success) {}
+      this.log('PM2 logs retrieved successfully');
+      return result.stdout;
+    } else {}
+      this.log('Failed to get PM2 logs');
+      return null;
+    };
+  };
+  async monitorProcesses() {}
+    this.log('Monitoring PM2 processes...');
+
+    const result = await this.runCommand('pm2 jlist');
+
+    if (result.success) {}
+      try {}
+        const processes = JSON.parse(result.stdout);
+        const runningProcesses = processes.filter()
+          p => p.pm2_env && p.pm2_env.status === 'online'
+        );
+
+        this.log(`Found ${runningProcesses.length} running processes`);
+
+        for (const process of runningProcesses) {}
+          this.log()
+            `"Process": ${process.name} - "Status": ${process.pm2_env.status} - "Uptime": ${process.pm2_env.pm_uptime}"
+          );
+        };
+        return runningProcesses;
+      } catch (error) {}
+        this.log(`Error parsing PM2 process "list": ${error.message}`);
+        return [];
+      };
+    } else {}
+      this.log('Failed to get PM2 process list');
+      return [];
+    };
+  };
+  async performHealthCheck() {}
+    this.log('Performing health check...');
+
+    // Check if PM2 is running;
+    const pm2Status = await this.checkPM2Status();
+    if (!pm2Status) {}
+      this.log('PM2 is not running, attempting to start processes...');
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -283,6 +447,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+<<<<<<< HEAD
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -362,6 +527,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       await this.startPM2Processes();
       return;
     }
@@ -371,6 +539,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
+<<<<<<< HEAD
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
@@ -420,6 +589,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
     // Calculate summary
@@ -440,6 +611,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
+<<<<<<< HEAD
   }
   async start() {
 
@@ -461,6 +633,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     // Start PM2 processes
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   };
   async start() {}
     this.log('Master Automation started');
@@ -476,6 +651,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     // Perform initial health check;
     await this.performHealthCheck();
+<<<<<<< HEAD
     // Set up periodic health checks every 30 minutes
     setInterval(async () => {
       await this.performHealthCheck();
@@ -648,6 +824,8 @@ if (require.main === module) {
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Set up periodic health checks every 30 minutes;
     setInterval()
@@ -679,6 +857,7 @@ if (require.main === module) {}
 
   switch (command) {}
     case 'start':
+<<<<<<< HEAD
   }
 
   async generateReport() {
@@ -726,46 +905,62 @@ if (require.main === module) {
         console.error("Master Automation failed: ", error);
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "stop":
       automation.stop().catch(error => {
         console.error("Failed to stop Master Automation: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "restart":
       automation.restartPM2Processes().catch(error => {
         console.error("Failed to restart processes: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "status":
       automation.monitorProcesses().catch(error => {
         console.error("Failed to get status: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     case "report":
       automation.generateReport().catch(error => {
         console.error("Failed to generate report: ", error);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         process.exit(1);
       }
 });
       break;
+<<<<<<< HEAD
     default:
       console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
 
@@ -837,6 +1032,8 @@ class MasterAutomation {
   }
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -850,6 +1047,7 @@ main
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
   async generateReport() {
     this.log('📊 Generating automation report...');
 
@@ -869,6 +1067,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
 
     this.log('✅ Quality checks completed');
@@ -914,7 +1115,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -931,10 +1135,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
     };
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -956,7 +1163,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -972,12 +1182,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
   async start() {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -987,10 +1200,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async start() {
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -1020,10 +1236,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log("Generating daily report.");
       await this.generateReport();
     }, 24 * 60 * 60 * 1000);
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 
   async status() {
@@ -1070,8 +1290,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return status;
   }
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 
@@ -1166,6 +1389,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 // CLI interface
 
+<<<<<<< HEAD
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -1173,16 +1397,21 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -1243,13 +1472,15 @@ if (require.main === module) {}
       break;
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
-
   }
 }
 
 module.exports = MasterAutomation;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     case 'start':
       automation
         .start()
@@ -1274,6 +1505,7 @@ module.exports = MasterAutomation;
           process.exit(1);
         });
       break;
+<<<<<<< HEAD
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 
     default:
@@ -1292,13 +1524,25 @@ module.exports = MasterAutomation;
 
       process.exit(1);
 main
+=======
+
+    default:
+      console.log('Usage: node master-automation.cjs [start|status]');
+
+      process.exit(1);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 }
 
+<<<<<<< HEAD
 main
 
 
+=======
+module.exports = MasterAutomation;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -1306,6 +1550,7 @@ main
   };
 };
 module.exports = MasterAutomation;
+<<<<<<< HEAD
 module.exports = MasterAutomation;
 
 
@@ -1327,3 +1572,6 @@ module.exports = MasterAutomation;
 main
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

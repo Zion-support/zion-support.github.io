@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import Fastify from 'fastify';
@@ -21,10 +22,13 @@ const app = null;
       .map(s => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
+<<<<<<< HEAD
 
 
   });
@@ -57,6 +61,8 @@ const completion = await openai.responses.create({
   });
   return { text: completion.output_text };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 });
 
 
@@ -66,6 +72,7 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
+<<<<<<< HEAD
   if (!userId) return { description };
 await withUser(userId, async client => {
     await client.query(
@@ -85,10 +92,44 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+      `INSERT INTO job_post (user_id, title, description, location, tags, status)
+       VALUES ($1, $2, $3, $4, $5, 'draft')`;
+
+      [userId, role, description, body && body.location || null, body && body.tags || null]
+
+    )
+;
+app.post ('/jobs / generate', async (req: any, reply: any) => {
+  const body = (req.body as any) || {}
+  const role = (body.role as string) || 'Engineer';
+  const user_id = getUserId (req);
+  const description = await generateJobPost (openai, role, body);
+  // Check condition
+if (return { description }) {
+  $2
+}
+  await with_user (user_id, async client => {
+    await client.query (
+      `INSERT INTO job_post (user_id, title, description, location, tags, status);
+      VALUES ($1, $2, $3, $4, $5, 'draft')`,
+      [user_id, role, description, body.location || null, body.tags || null]);
+  });
+  return { saved: Boolean (user_id), description }});    await client.query (
+      `INSERT INTO job_post (user_id, title, description, location, tags, status);
+      VALUES ($1, $2, $3, $4, $5, 'draft')`;
+      [user_id, role, description, body.location || null, body.tags || null]);
+  });
+  return { saved: Boolean (user_id), description }
+});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
+<<<<<<< HEAD
 
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -99,20 +140,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
            ))
        ORDER BY created_at DESC
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     );
     return res && res.rows
   });
   return { results: rows }
+<<<<<<< HEAD
 LIMIT 25`,
       [country || null, q || null]
     );
@@ -130,6 +177,31 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+});
+  const userId = getUserId(req);
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  const items = await withUser(userId, async client => {    const res = await client && client.query(
+      `SELECT id, channel, title, body, data, read, created_at FROM notification
+       WHERE read = false ORDER BY created_at DESC LIMIT 20`
+    );
+    return res && res.rows;
+  });
+  return { items };});  const items = await withUser(userId, async (client) => {
+    const res = await client && client.query(
+      `SELECT id, channel, title, body, data, read, created_at FROM notification
+       WHERE read = false ORDER BY created_at DESC LIMIT 20`
+    );
+    return res && res.rows;
+  });
+  return { items };    return res && res.rows
+app.log.error(err);
+  app.log.error(err);
+
+  (process as any).exit(1);
+});  (process as any).exit(1)
+});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
@@ -144,6 +216,7 @@ app.get('/notifications', async (req: any, reply: any) => {
   return { items }
 });
 
+<<<<<<< HEAD
 
 
 
@@ -184,3 +257,86 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 (process as any).exit(1);
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+});
+  app.log.error(err);
+  (process as any).exit(1)
+});
+
+;
+app.get ('/talent / search', async (req: any, reply: any) => {
+  const q = (req.query as any).q as string;
+  const country = (req.query as any).country as string | undefined;
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {
+    const res = await client.query (
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
+      WHERE ($1::text IS NULL OR country = $1);
+        AND ($2::text IS NULL OR EXISTS (
+              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
+      ORDER BY created_at DESC;
+      LIMIT 25`,
+      [country || null, q || null]);
+    return res.rows;
+  });
+  return { results: rows }});      [country || null, q || null]);
+    return res.rows;
+  });
+  return { results: rows }
+});
+;
+app.get ('/projects/:name / track', async (req: any, reply: any) => {
+  const name = (req.params as any).name as string;
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const project = await with_user (user_id, async client => {
+    const res = await client.query (
+      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
+      [name]);
+    return res.rows[0];
+  });
+  if (return reply.code (404).send ({ error: 'not found' })) {
+  $2
+}
+  return { project }});  const project = await with_user (user_id, async (client) => {
+    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
+    return res.rows[0];
+  });
+  if (return reply.code (404).send ({ error: 'not found' })) {
+  $2
+}
+  return { project }
+app.get ('/notifications', async (req: any, reply: any) => {
+  const user_id = getUserId (req);
+  if (return reply.code (401).send ({ error: 'unauthorized' })) {
+  $2
+}
+  const items = await with_user (user_id, async client => {    const res = await client.query (
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
+    return res.rows;
+  });
+  return { items }});  const items = await with_user (user_id, async (client) => {
+    const res = await client.query (
+      `SELECT id, channel, title, body, data, read, created_at FROM notification;
+      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
+    return res.rows;
+  });
+  return { items }    return res.rows;
+  });
+  return { items }
+});
+;
+const port = Number (process.env.API_PORT || 4000);
+app.listen ({ port, host: '0.0.0.0' }).catch ((err: any) => {
+app.log.error (err);
+  (process as any).exit (1);
+});  (process as any).exit (1);
+});
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

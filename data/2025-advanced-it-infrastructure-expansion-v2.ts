@@ -1,5 +1,11 @@
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
@@ -10,6 +16,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     pricing: '$399 / month',
       'Automated deployment',
       'Self - healing infrastructure',
+<<<<<<< HEAD
 name: 'Autonomous DevOps Platform',
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -18,10 +25,13 @@ name: 'Autonomous DevOps Platform',
       'Automated deployment',
       'Self-healing infrastructure',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Performance optimization',
       'Cost management',
     ],
   },
+<<<<<<< HEAD
     name: 'Quantum Identity Verification',
     description: 'Quantum - powered identity verification',
     category: 'Quantum Computing',
@@ -261,6 +271,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     category: 'Cloud & FinOps',
     pricing: '$499/month',
     features: [
+=======
+  {
+    name: 'Autonomous IT Operations',
+    description: 'AI - powered IT operations automation',
+    category: 'Cloud & FinOps',
+    pricing: '$499 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Incident automation',
       'Predictive maintenance',
       'Resource optimization',
@@ -269,10 +287,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Autonomous Vehicle AI',
+<<<<<<< HEAD
     description: 'AI-powered autonomous vehicle systems',
     category: 'Transportation',
     pricing: '$899/month',
     features: [
+=======
+    description: 'AI - powered autonomous vehicle systems',
+    category: 'Transportation',
+    pricing: '$899 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Vehicle control systems',
       'Safety monitoring',
       'Route optimization',
@@ -281,10 +306,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Blockchain Enterprise Platform',
+<<<<<<< HEAD
     description: 'Enterprise-grade blockchain infrastructure',
     category: 'Financial Services',
     pricing: '$649/month',
     features: [
+=======
+    description: 'Enterprise - grade blockchain infrastructure',
+    category: 'Financial Services',
+    pricing: '$649 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Smart contract management',
       'Consensus mechanisms',
       'Security protocols',
@@ -295,8 +327,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Blockchain Infrastructure',
     description: 'Scalable blockchain infrastructure services',
     category: 'Financial Services',
+<<<<<<< HEAD
     pricing: '$449/month',
     features: [
+=======
+    pricing: '$449 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Node management',
       'Network security',
       'Performance optimization',
@@ -304,11 +341,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
+<<<<<<< HEAD
     name: 'Brain-Computer Interface',
     description: 'Advanced brain-computer interface technology',
     category: 'Healthcare',
     pricing: '$1299/month',
     features: [
+=======
+    name: 'Brain - Computer Interface',
+    description: 'Advanced brain - computer interface technology',
+    category: 'Healthcare',
+    pricing: '$1299 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Neural signal processing',
       'Interface protocols',
       'Safety systems',
@@ -319,8 +364,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Compliance Automation',
     description: 'Automated compliance management platform',
     category: 'Cybersecurity',
+<<<<<<< HEAD
     pricing: '$379/month',
     features: [
+=======
+    pricing: '$379 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Regulatory tracking',
       'Automated reporting',
       'Audit management',
@@ -331,8 +381,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Customer Intelligence Platform',
     description: 'Comprehensive customer intelligence solution',
     category: 'AI & Data',
+<<<<<<< HEAD
     pricing: '$299/month',
     features: [
+=======
+    pricing: '$299 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Customer analytics',
       'Behavior tracking',
       'Segmentation tools',
@@ -343,8 +398,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Data Analytics',
     description: 'Advanced data analytics platform',
     category: 'AI & Data',
+<<<<<<< HEAD
     pricing: '$249/month',
     features: [
+=======
+    pricing: '$249 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Data processing',
       'Visualization tools',
       'Statistical analysis',
@@ -355,9 +415,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'DevOps Automation',
     description: 'Comprehensive DevOps automation platform',
     category: 'Cloud & FinOps',
+<<<<<<< HEAD
     pricing: '$329/month',
     features: [
       'CI/CD pipelines',
+=======
+    pricing: '$329 / month',
+    features: [;
+      'CI / CD pipelines',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Infrastructure as code',
       'Automated testing',
       'Deployment management',
@@ -367,8 +433,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Edge Computing',
     description: 'Edge computing infrastructure platform',
     category: 'Cloud & FinOps',
+<<<<<<< HEAD
     pricing: '$279/month',
     features: [
+=======
+    pricing: '$279 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Edge node management',
       'Latency optimization',
       'Resource distribution',
@@ -377,10 +448,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Industrial Automation AI',
+<<<<<<< HEAD
     description: 'AI-powered industrial automation',
     category: 'Manufacturing',
     pricing: '$599/month',
     features: [
+=======
+    description: 'AI - powered industrial automation',
+    category: 'Manufacturing',
+    pricing: '$599 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Process automation',
       'Quality control',
       'Predictive maintenance',
@@ -391,8 +469,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Interplanetary Communication',
     description: 'Advanced interplanetary communication systems',
     category: 'Space Technology',
+<<<<<<< HEAD
     pricing: '$1499/month',
     features: [
+=======
+    pricing: '$1499 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Deep space communication',
       'Signal processing',
       'Network management',
@@ -403,8 +486,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'IT Asset Management',
     description: 'Comprehensive IT asset management platform',
     category: 'Cloud & FinOps',
+<<<<<<< HEAD
     pricing: '$199/month',
     features: [
+=======
+    pricing: '$199 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Asset tracking',
       'Lifecycle management',
       'Cost optimization',
@@ -413,10 +501,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Marketing AI Platform',
+<<<<<<< HEAD
     description: 'AI-powered marketing automation platform',
     category: 'AI & Data',
     pricing: '$349/month',
     features: [
+=======
+    description: 'AI - powered marketing automation platform',
+    category: 'AI & Data',
+    pricing: '$349 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Campaign automation',
       'Personalization',
       'Performance tracking',
@@ -427,8 +522,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Metaverse Development Studio Pro',
     description: 'Professional metaverse development platform',
     category: 'Metaverse',
+<<<<<<< HEAD
     pricing: '$799/month',
     features: [
+=======
+    pricing: '$799 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       '3D modeling tools',
       'Virtual world creation',
       'User interaction systems',
@@ -439,8 +539,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Metaverse Digital Reality Platform',
     description: 'Advanced metaverse platform infrastructure',
     category: 'Metaverse',
+<<<<<<< HEAD
     pricing: '$649/month',
     features: [
+=======
+    pricing: '$649 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Virtual environment hosting',
       'User management',
       'Content creation tools',
@@ -449,10 +554,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Mobile Web Solutions',
+<<<<<<< HEAD
     description: 'Mobile-first web development platform',
     category: 'Developer Tools',
     pricing: '$179/month',
     features: [
+=======
+    description: 'Mobile - first web development platform',
+    category: 'Developer Tools',
+    pricing: '$179 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Responsive design',
       'Performance optimization',
       'Mobile analytics',
@@ -460,11 +572,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
+<<<<<<< HEAD
     name: 'Multi-Cloud Management',
     description: 'Unified multi-cloud management platform',
     category: 'Cloud & FinOps',
     pricing: '$429/month',
     features: [
+=======
+    name: 'Multi - Cloud Management',
+    description: 'Unified multi - cloud management platform',
+    category: 'Cloud & FinOps',
+    pricing: '$429 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Cloud orchestration',
       'Cost optimization',
       'Security management',
@@ -475,8 +595,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Network Automation',
     description: 'Intelligent network automation platform',
     category: 'Cloud & FinOps',
+<<<<<<< HEAD
     pricing: '$299/month',
     features: [
+=======
+    pricing: '$299 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Network provisioning',
       'Configuration management',
       'Performance optimization',
@@ -485,10 +610,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Neural Finance AI',
+<<<<<<< HEAD
     description: 'AI-powered financial neural networks',
     category: 'Financial Services',
     pricing: '$549/month',
     features: [
+=======
+    description: 'AI - powered financial neural networks',
+    category: 'Financial Services',
+    pricing: '$549 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Neural network training',
       'Financial modeling',
       'Risk assessment',
@@ -497,10 +629,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Orbital Computing',
+<<<<<<< HEAD
     description: 'Space-based computing infrastructure',
     category: 'Space Technology',
     pricing: '$1199/month',
     features: [
+=======
+    description: 'Space - based computing infrastructure',
+    category: 'Space Technology',
+    pricing: '$1199 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Satellite computing',
       'Orbital data processing',
       'Communication systems',
@@ -509,10 +648,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum AI Fusion',
+<<<<<<< HEAD
     description: 'Quantum-AI hybrid computing platform',
     category: 'Quantum Computing',
     pricing: '$899/month',
     features: [
+=======
+    description: 'Quantum - AI hybrid computing platform',
+    category: 'Quantum Computing',
+    pricing: '$899 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'AI integration',
       'Hybrid optimization',
@@ -520,6 +666,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
+<<<<<<< HEAD
     name: 'Quantum Bio-Computing',
     description: 'Quantum biological computing systems',
     category: 'Quantum Computing',
@@ -528,15 +675,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Biological algorithms',
       'Quantum processing',
       'Bio-computing integration',
+=======
+    name: 'Quantum Bio - Computing',
+    description: 'Quantum biological computing systems',
+    category: 'Quantum Computing',
+    pricing: '$1099 / month',
+    features: [;
+      'Biological algorithms',
+      'Quantum processing',
+      'Bio - computing integration',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Performance optimization',
     ],
   },
   {
     name: 'Quantum Compliance Automation',
+<<<<<<< HEAD
     description: 'Quantum-powered compliance automation',
     category: 'Quantum Computing',
     pricing: '$649/month',
     features: [
+=======
+    description: 'Quantum - powered compliance automation',
+    category: 'Quantum Computing',
+    pricing: '$649 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'Compliance automation',
       'Risk assessment',
@@ -545,10 +709,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum Creativity Studio',
+<<<<<<< HEAD
     description: 'Quantum-powered creative platform',
     category: 'Quantum Computing',
     pricing: '$749/month',
     features: [
+=======
+    description: 'Quantum - powered creative platform',
+    category: 'Quantum Computing',
+    pricing: '$749 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'Creative tools',
       'Performance optimization',
@@ -557,10 +728,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum CRM Suite',
+<<<<<<< HEAD
     description: 'Quantum-powered customer relationship management',
     category: 'Quantum Computing',
     pricing: '$599/month',
     features: [
+=======
+    description: 'Quantum - powered customer relationship management',
+    category: 'Quantum Computing',
+    pricing: '$599 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'CRM functionality',
       'Performance optimization',
@@ -571,8 +749,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Quantum Data Center',
     description: 'Quantum computing data center infrastructure',
     category: 'Quantum Computing',
+<<<<<<< HEAD
     pricing: '$1299/month',
     features: [
+=======
+    pricing: '$1299 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum hardware',
       'Cooling systems',
       'Security protocols',
@@ -581,10 +764,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum Encryption Gateway',
+<<<<<<< HEAD
     description: 'Quantum-powered encryption gateway',
     category: 'Quantum Computing',
     pricing: '$799/month',
     features: [
+=======
+    description: 'Quantum - powered encryption gateway',
+    category: 'Quantum Computing',
+    pricing: '$799 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum encryption',
       'Security protocols',
       'Performance optimization',
@@ -593,10 +783,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum Energy Optimization',
+<<<<<<< HEAD
     description: 'Quantum-powered energy optimization',
     category: 'Energy',
     pricing: '$699/month',
     features: [
+=======
+    description: 'Quantum - powered energy optimization',
+    category: 'Energy',
+    pricing: '$699 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'Energy modeling',
       'Optimization tools',
@@ -605,10 +802,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
   {
     name: 'Quantum Financial Intelligence',
+<<<<<<< HEAD
     description: 'Quantum-powered financial intelligence',
     category: 'Quantum Computing',
     pricing: '$849/month',
     features: [
+=======
+    description: 'Quantum - powered financial intelligence',
+    category: 'Quantum Computing',
+    pricing: '$849 / month',
+    features: [;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'Financial modeling',
       'Risk assessment',
@@ -616,6 +820,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
+<<<<<<< HEAD
     name: 'Quantum Identity Verification',
     description: 'Quantum-powered identity verification',
     category: 'Quantum Computing',
@@ -866,13 +1071,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: '$599/month',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    features: [
+      'Identity verification'
+      'Access control'
+      'Threat detection'
+      'Performance monitoring'
+    ]
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
+<<<<<<< HEAD
 ];      'Identity verification_access control_threat detection_performance monitoring';
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
+    ]
+
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     ];
 
   },;
@@ -1334,11 +1562,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 ];
 ;
@@ -1811,6 +2042,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
+<<<<<<< HEAD
 
 
   }
@@ -1820,3 +2052,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

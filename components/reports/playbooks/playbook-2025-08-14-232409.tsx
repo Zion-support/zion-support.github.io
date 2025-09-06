@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 export default function Page() {;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Playbook — Autonomous Delivery</title>;
+<<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
   return (
@@ -14,6 +18,8 @@ export default function Page() {
         <title>Playbook — Autonomous Delivery</title>
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         <meta
           name='description'
           content='A practical step-by-step playbook for reliable autonomous delivery.'
@@ -33,10 +39,16 @@ export default function Page() {
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously && continuously.Explore AutomationsLive Meta Factory24/7A</p>',;
 
 
 
+=======
+
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously && continuously.Explore AutomationsLive Meta Factory24/7A</p>',;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -46,11 +58,16 @@ export default function Page() {
     </div>;
   );export default function Page() {;
 
+<<<<<<< HEAD
 
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>',
 
 
 
+=======
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -69,17 +86,23 @@ export default function Page() {
   return (
 
 export default function Page() {
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function Page() {
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
 
 }
 
+<<<<<<< HEAD
 export default function Page() {
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -96,8 +119,12 @@ export default function Page() {
       </main>;
     </div>;
   );
+<<<<<<< HEAD
 
 
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -157,7 +184,10 @@ function Page() {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <Head>
         <title>Playbook — Autonomous Delivery</title>
         <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
@@ -182,8 +212,17 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
 
 
+=======
+    </div>;
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Playbook — Autonomous Delivery</title>
@@ -198,12 +237,18 @@ function Page() {
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
       </main>
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     </div>
   );
 }
 
 
+=======
+    </div>
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>;
   );
 }
@@ -216,6 +261,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

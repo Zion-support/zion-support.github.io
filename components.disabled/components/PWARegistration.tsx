@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, X, Smartphone, Monitor } from 'lucide-react';
@@ -150,3 +151,5 @@ const PWARegistration: React.FC = () => {
 export default PWARegistration;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

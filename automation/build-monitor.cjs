@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const fs = require('fs');
 const path = require('path');
@@ -30,6 +34,7 @@ const execAsync = promisify(exec);
 
 const execAsync = promisify(exec);
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -39,6 +44,8 @@ const execAsync = promisify(exec);
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -48,12 +55,15 @@ class BuildMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -64,9 +74,12 @@ main
     try {}
       this.log('Starting build process...');
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       execSync('npm run clean', {
         cwd: this.projectRoot,
         stdio: 'ignore',
@@ -79,6 +92,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         timeout: 300000,
       });
 
+<<<<<<< HEAD
 
 
 
@@ -88,6 +102,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
@@ -106,6 +122,7 @@ main
       const endTime = Date.now();
       const duration = endTime - startTime;
 
+<<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -113,6 +130,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
@@ -127,9 +146,12 @@ main
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       this.log(`Build completed successfully in ${buildTime}ms`);
       await this.saveBuildReport();
     } catch (error) {
@@ -140,6 +162,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         error: error.message,
         output: error.stdout || error.stderr,
 
+<<<<<<< HEAD
 
 
 
@@ -149,6 +172,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
@@ -167,9 +192,12 @@ main
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
@@ -197,6 +225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       nodeVersion: process.version,
       platform: process.platform,
 
+<<<<<<< HEAD
 
 
 
@@ -206,6 +235,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return buildResult;
     };
   };
@@ -217,9 +248,12 @@ main
         "timeout": 60000}
 });
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   async reportBuildFailure(error) {
     try {
       const failureReport = {
@@ -237,6 +271,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (_) {}
   }
 
+<<<<<<< HEAD
 
 
 
@@ -246,6 +281,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -336,6 +373,7 @@ main
   async optimizeBuild() {}
     try {}
       this.log('Optimizing build...');
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -348,6 +386,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -412,7 +453,13 @@ if (require.main === module) {}
     process.exit(1);
   }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+});
+};
+module.exports = BuildMonitor;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 }
 const monitor = new BuildMonitor();
@@ -424,6 +471,7 @@ monitor.start().catch(error => {
 };
 });
 };
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -433,4 +481,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 module.exports = BuildMonitor;
 main
+=======
+
+module.exports = BuildMonitor;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

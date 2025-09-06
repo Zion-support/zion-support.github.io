@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -15,7 +19,10 @@ const qualityChecks = [{
       }
     },
   },
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }},
   {
@@ -28,12 +35,15 @@ main
       } catch (error) {
         
       }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }},
   {
@@ -46,12 +56,15 @@ main
       } catch (error) {
         
       }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }},
   {
@@ -67,12 +80,15 @@ main
       [pagesDir, componentsDir].forEach(dir => {
         if (fs.existsSync(dir)) {
           const files = fs
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
@@ -90,14 +106,18 @@ main
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
 
+<<<<<<< HEAD
       
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -107,6 +127,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }},
   {
     "name": 'Import/Export Analysis',
@@ -126,14 +148,18 @@ main
           exportCount += (content.match(/^export\s+/gm) || []).length;
         });
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
+<<<<<<< HEAD
 
 
         
@@ -146,6 +172,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       }
     }},
   {
@@ -180,13 +209,17 @@ main
           });
         });
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
+<<<<<<< HEAD
 
 
         
@@ -197,6 +230,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       }
     }},
 ];
@@ -216,17 +252,17 @@ for (const check of qualityChecks) {
   }
 }
 
-
-
-
 // Generate quality report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": qualityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     status: 'completed',
   })),
   summary: {
@@ -235,18 +271,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -259,6 +299,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -267,6 +310,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -280,6 +324,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -296,6 +342,7 @@ console.log(' Code Quality Checker Starting...\n')
     "name"
             content.match(/^import\s+.*from\s+['"][^'')]
     "status"
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     "status"
@@ -304,4 +351,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+
+    "status"
+    "status"
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

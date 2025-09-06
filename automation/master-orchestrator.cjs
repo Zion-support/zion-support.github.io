@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 #!/usr/bin/env node
 #!/usr/bin/env node
 
@@ -12,6 +13,23 @@
 
 main
 
+=======
+
+// Master Automation Orchestrator (clean version)
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class MasterOrchestrator {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logsDir = path.join(this.projectRoot, 'logs');
+    this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
+    this.startTime = Date.now();
+    this.results = {};
+    try {
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -42,11 +60,15 @@ main
     
     const tasks = [
       ['health', 'node automation/health-check.cjs'],
+<<<<<<< HEAD
     this.log('Starting comprehensive system check...');
 
     const tasks = [['health', 'node automation/health-check.cjs'],
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       ['security', 'node automation/security-scanner.cjs'],
       ['performance', 'node automation/performance-optimizer.cjs'],
       ['codeQuality', 'node automation/code-quality-monitor.cjs'],
@@ -70,11 +92,14 @@ main
     const passed = Object.values(this.results).filter(r => r.success).length;
     const total = Object.keys(this.results).length;
     const durationMs = Date.now() - this.startTime;
+<<<<<<< HEAD
     
 
     
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     const summary = {
       timestamp: new Date().toISOString(),
@@ -270,7 +295,10 @@ class MasterAutomationOrchestrator {
       },
       summary: 'Master automation orchestrator completed successfully',
     };
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       "failed": total - passed,
       "status": passed === total
@@ -285,11 +313,15 @@ main
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
+<<<<<<< HEAD
 
 
     this.log(
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -334,10 +366,157 @@ if (require.main === module) {
 }
 
 module.exports = MasterOrchestrator;
+<<<<<<< HEAD
       summary: 'Master automation orchestrator completed successfully',
 origin/main
     };
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('🚀 Starting Master Automation Orchestrator...');
+
+class MasterAutomationOrchestrator {
+  constructor() {
+      fs.mkdirSync(this.logsDir, { "recursive": true });
+    } catch {}
+  }
+
+  log(message, level = 'INFO') {
+    const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
+    try {
+      fs.appendFileSync(this.logFile, line);
+    } catch {}
+    process.stdout.write(line);
+  }
+
+  runCmd(cmd) {
+    try {
+      const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
+      return { success: true, output: out };
+    } catch (e) {
+      return {
+        "success": false,
+        "error": e.message,
+        "output": e.stdout?.toString?.() || ''};
+    this.logFile = path.join(
+      __dirname,
+      '..',
+      'automation-reports',
+      'master-orchestrator.log'
+    );
+    this.ensureLogDir();
+  }
+
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  }
+
+  async runCommand(command, description) {
+    try {
+      this.log(`🚀 ${description}`);
+      const result = execSync(command, {
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: path.join(__dirname, '..')
+      });
+      this.log(`✅ ${description} - Success`);
+      return { success: true, result };
+    } catch (error) {
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async runLinting() {
+    this.log('🔧 Running linting and code quality checks...');
+
+    const commands = [
+      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
+      { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
+      { cmd: 'npm run test:smoke', desc: 'Run smoke tests' }
+    ];
+
+    for (const { cmd, desc } of commands) {
+      await this.runCommand(cmd, desc);
+    }
+  }
+
+  async runBuildProcess() {
+    this.log('🏗️ Running build process...');
+
+    const commands = [
+      { cmd: 'npm run clean', desc: 'Clean build artifacts' },
+      { cmd: 'npm run build', desc: 'Build application' }
+    ];
+
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        this.log('⚠️ Build failed, attempting to fix...');
+        await this.fixBuildIssues();
+      }
+    }
+  }
+
+  async fixBuildIssues() {
+    this.log('🔧 Attempting to fix build issues...');
+
+    const fixCommands = [
+      { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
+      { cmd: 'node comprehensive-syntax-fix.cjs', desc: 'Fix syntax issues' }
+    ];
+
+    for (const { cmd, desc } of fixCommands) {
+      await this.runCommand(cmd, desc);
+    }
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      'enhanced-automation-suite.cjs'
+    ];
+
+    for (const script of scripts) {
+      const scriptPath = path.join(__dirname, '..', script);
+      if (fs.existsSync(scriptPath)) {
+        await this.runCommand(`node ${script}`, `Running ${script}`);
+      } else {
+        this.log(`⚠️ Script not found: ${script}`);
+      }
+    }
+  }
+
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      status: 'completed',
+      scripts: {
+        linting: 'completed',
+        build: 'completed',
+        automation: 'completed'
+      },
+
+    };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -345,19 +524,29 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             ? 'WARNING'
             : 'CRITICAL'};
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
+<<<<<<< HEAD
     this.log(
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
+    );
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return passed === total;
   }
 }
@@ -370,6 +559,7 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     default:
@@ -397,16 +587,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
 origin/main
+=======
+
+    default:
+      console.log('Usage: node automation/master-orchestrator.cjs check');
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       process.exit(1);
     }
   }
 }
 
+<<<<<<< HEAD
 module.exports = MasterOrchestrator;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -555,6 +754,7 @@ class MasterAutomationOrchestrator {
     }
   }
 }
+<<<<<<< HEAD
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
@@ -565,10 +765,13 @@ origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 
 // Run the orchestrator
@@ -581,3 +784,6 @@ orchestrator.run().catch(console.error);
 main
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

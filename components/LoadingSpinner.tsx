@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', text,
   className = '', }) => {
@@ -11,6 +12,25 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     lg: 'h-12 w-12'
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <div className={`inline-block ${className}`}>
       <div 
@@ -21,6 +41,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
         <span className="sr-only">Loading...</span>
       </div>
     </div>
+<<<<<<< HEAD
   )
 React from, react''
 import { Loader2  } from 'lucide-react'';interface LoadingSpinnerProps {'
@@ -135,3 +156,9 @@ export default function LoadingSpinner() {
 }
 
 
+=======
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   {
@@ -14,6 +15,8 @@
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Centralized API management',
       'Security and access controls',
       'API lifecycle management',
@@ -24,6 +27,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with enterprise systems',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔌',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -35,10 +39,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise IT teams, API development teams, Security teams, Compliance officers',
     trial_days: 30,
     setup_time: '7 - 10 days',
     category: 'Enterprise API Management',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'],
@@ -59,6 +66,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise platform with API gateway, governance engine, and security controls.',
     launch_date: '2025 - 01 - 08',
     customers: 45,
@@ -66,6 +75,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 32,
   },
   {
+<<<<<<< HEAD
 
       'Multi-factor authentication',
       'Single sign-on (SSO)',
@@ -83,6 +93,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Identity governance and administration',
       'Privileged access management',
       'Compliance and audit reporting',
@@ -91,6 +103,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with enterprise systems',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🆔',
 
       'Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP',
@@ -98,6 +111,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: [
       'Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'
     ]
@@ -112,6 +127,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 300',
@@ -144,6 +160,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',
     launch_date: '2025 - 01 - 12',
     customers: 67,
@@ -151,6 +169,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45,
   },
   {
+<<<<<<< HEAD
 
       'AI-powered workflow optimization',
     id: 'enterprise - workflow - automation - platform',
@@ -166,6 +185,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Complex process automation',
       'Enterprise system integration',
       'Workflow analytics and insights',
@@ -175,6 +196,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time monitoring and alerts',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⚙️',
 
       'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow',
@@ -182,6 +204,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: [
       'SAP, Oracle, Salesforce, Workday, Custom enterprise systems'
     ]
@@ -198,6 +222,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 300',
@@ -232,6 +257,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise platform with AI engine, workflow automation, and system integrations.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -239,6 +266,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 26,
   },
   {
+<<<<<<< HEAD
 
     id: 'enterprise - monitoring - and - observability - suite',
     name: 'Enterprise Monitoring & Observability Suite',
@@ -252,6 +280,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Infrastructure monitoring',
       'Application performance monitoring',
       'Business metrics tracking',
@@ -262,6 +292,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration with enterprise systems',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📊',
 
       'Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL',
@@ -269,6 +300,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: [
       'AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'
     ]
@@ -283,6 +316,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
@@ -317,11 +351,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launch_date: '2025 - 01 - 18',
     customers: 56,
     rating: 4 && 4.8,
     reviews: 38,
+<<<<<<< HEAD
 
   },;
 
@@ -330,14 +367,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'Enterprise platform with monitoring engine, observability tools, and alerting system.'
+    launchDate: '2025-01-18'
+    customers: 56
+    rating: 4.8
+    reviews: 38
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -353,31 +401,41 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+];	{
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
 		icon: '🏛️';
 		color: 'from-blue-600 to-indigo-700';
 		textColor: 'text-blue-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-governance-automation';
 		marketPosition: 'Enterprise-grade data governance that automates complex compliance and quality management processes.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		targetAudience: 'Fortune 500 companies, Financial services, Healthcare organizations, Government agencies';
 		trialDays: 45;
 		setupTime: '10-15 days';
 		category: 'Enterprise Data Management';
+<<<<<<< HEAD
 
 		realService: true,
 		technology: ['Python, Apache Atlas, Apache Ranger, React, Node && Node.js, PostgreSQL, Elasticsearch'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		integrations: ['SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems'];
 		useCases: ['Data governance, Compliance automation, Data quality management, Master data management'];
 		roi: 'Reduce compliance costs by 40% and improve data quality by 60%'
@@ -390,11 +448,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Enterprise platform with governance engine, compliance monitoring, and system integrations.';
 		launchDate: '2025-01-05';
 		customers: 23;
+<<<<<<< HEAD
 
 		rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 18
 	}
 	{
@@ -411,22 +472,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '🔌';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-api-governance-platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		marketPosition: 'Enterprise API governance that ensures security, compliance, and operational excellence.';
 		targetAudience: 'Enterprise IT teams, API development teams, Security teams, Compliance officers';
 		trialDays: 30;
 		setupTime: '7-10 days';
 		category: 'Enterprise API Management';
+<<<<<<< HEAD
 
 		realService: true,
 		technology: ['Java, Spring Boot, React, Node && Node.js, PostgreSQL, Redis, Kong'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems'];
 		useCases: ['API governance, Security management, Compliance automation, Developer experience'];
 		roi: 'Improve API security by 80% and reduce governance overhead by 50%'
@@ -439,11 +506,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Enterprise platform with API gateway, governance engine, and security controls.';
 		launchDate: '2025-01-08';
 		customers: 45;
+<<<<<<< HEAD
 
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 32
 	}
 	{
@@ -460,22 +530,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '🆔';
 		color: 'from-purple-600 to-pink-700';
 		textColor: 'text-purple-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-identity-access-management-suite',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		marketPosition: 'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.';
 		targetAudience: 'Enterprise security teams, IT administrators, Compliance officers, HR teams';
 		trialDays: 30;
 		setupTime: '10-15 days';
 		category: 'Enterprise Security';
+<<<<<<< HEAD
 
 		realService: true,
 		technology: ['Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'];
 		useCases: ['Identity management, Access control, Security compliance, User provisioning'];
 		roi: 'Reduce security incidents by 60% and improve compliance by 80%'
@@ -488,11 +564,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Enterprise platform with identity engine, security controls, and compliance monitoring.';
 		launchDate: '2025-01-12';
 		customers: 67;
+<<<<<<< HEAD
 
 		rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 45
 	}
 	{
@@ -509,22 +588,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '⚙️';
 		color: 'from-orange-600 to-red-700';
 		textColor: 'text-orange-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-workflow-automation-platform';
 		marketPosition: 'Enterprise workflow automation that combines AI intelligence with enterprise-grade reliability.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		targetAudience: 'Enterprise operations teams, Process improvement teams, IT teams, Business analysts';
 		trialDays: 30;
 		setupTime: '10-15 days';
 		category: 'Enterprise Automation';
+<<<<<<< HEAD
 
 		realService: true,
 		technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		integrations: ['SAP, Oracle, Salesforce, Workday, Custom enterprise systems'];
 		useCases: ['Process automation, Workflow optimization, Enterprise integration, Operational efficiency'];
 		roi: 'Increase operational efficiency by 40% and reduce process costs by 30%'
@@ -537,11 +622,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Enterprise platform with AI engine, workflow automation, and system integrations.';
 		launchDate: '2025-01-15';
 		customers: 34;
+<<<<<<< HEAD
 
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 26
 	}
 	{
@@ -558,22 +646,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '📊';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-monitoring-and-observability-suite';
 		marketPosition: 'Enterprise monitoring that provides comprehensive visibility and intelligent operations.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		targetAudience: 'DevOps teams, IT operations, SRE teams, Business intelligence teams';
 		trialDays: 30;
 		setupTime: '7-10 days';
 		category: 'Enterprise Monitoring';
+<<<<<<< HEAD
 
 		realService: true,
 		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		integrations: ['AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'];
 		useCases: ['Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'];
 		roi: 'Reduce downtime by 70% and improve incident response time by 80%'
@@ -586,11 +680,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Enterprise platform with monitoring engine, observability tools, and alerting system.';
 		launchDate: '2025-01-18';
 		customers: 56;
+<<<<<<< HEAD
 
 		rating: 4 && 4.8,
 
 		reviews: 38
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+;
+
+	}
+];
+
+	}
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
@@ -776,7 +882,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: 4.8,
   reviews: 38;
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		rating: 4.8
 		reviews: 38
 
@@ -975,6 +1084,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		reviews: 38;
 
 
+<<<<<<< HEAD
 
 	}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -982,6 +1092,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1174,6 +1288,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
+<<<<<<< HEAD
 
 
 	}
@@ -1184,3 +1299,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

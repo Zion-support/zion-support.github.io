@@ -1,11 +1,15 @@
 
 
+<<<<<<< HEAD
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -43,6 +47,10 @@ class ComprehensiveSyntaxFixer {
           
           // Remove merge conflict markers
 
+=======
+
+          content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -297,16 +305,15 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
 const { execSync } = require('child_process');
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
-  }
+          content = content.replace(/
 
+<<<<<<< HEAD
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -336,3 +343,5 @@ class ComprehensiveSyntaxFixer {
           // Remove merge conflict markers
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

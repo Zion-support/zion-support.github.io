@@ -1,19 +1,46 @@
+<<<<<<< HEAD
 
 
   };
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+
+
+  };
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   }
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
       path: '',
@@ -37,6 +64,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       path: '',
+<<<<<<< HEAD
 
       filename: 'legal / jurisdictional - disclosures.md',
 
@@ -44,6 +72,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   ];
 
 ;
@@ -57,22 +87,53 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 export function buildPressRelease(
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
+  type: PressReleaseType,
+  params: {;
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     company_name: string;
 export function buildPressRelease(
 
   type: PressReleaseType,
   params: {;
     companyName: string;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     date: string;
     raiseAmount?: string;
     tokenName?: string;
     anchors?: string[];
   }
 ): string {
+<<<<<<< HEAD
 
   const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
@@ -80,23 +141,31 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
+<<<<<<< HEAD
 
   return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
   const fmt = (d: Date) => d.toISOString().substring(0, 10);
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return [
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
@@ -106,26 +175,41 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+function titleCase(s: string) {
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 function titleCase(s: string) {
 
+<<<<<<< HEAD
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   );}
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces a seed round of ${params.raise_amount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\n_quotes:\n- CEO: "We are thrilled..."\n\n_about ${params.company_name}:\n${boilerplate}`;
@@ -162,9 +246,12 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

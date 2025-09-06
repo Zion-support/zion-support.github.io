@@ -84,6 +84,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+<<<<<<< HEAD
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -109,3 +110,6 @@ main
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 });
 
+=======
+});
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

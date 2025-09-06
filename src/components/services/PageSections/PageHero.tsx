@@ -171,7 +171,7 @@ export function PageHero() {;
 }
   );
 }
-import { GradientHeading } from '@/components / GradientHeading';
+import { GradientHeading } from '@/components/ GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 export /**
  * PageHero - Function description

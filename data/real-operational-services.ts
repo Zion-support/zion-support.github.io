@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export interface RealOperationalService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -12,16 +16,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface RealOperationalService {;
+    address: string;
+  };
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -30,6 +58,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
 export const realOperationalServices: RealOperationalService[] = [
   {
+<<<<<<< HEAD
     address: string
   }
 }
@@ -42,10 +71,22 @@ export const realOperationalServices: RealOperationalService[] = [
     price: "$99/month";
     description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: "operational-intelligence", name: "Operational Intelligence Platform",
+    tagline: "Real-time operational insights and optimization", price: "$99/month",
+    description: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
+    id: 'operational-intelligence'
+    name: 'Operational Intelligence Platform'
+    tagline: 'Real-time operational insights and optimization'
+    price: '$99/month'
+    description:
+      'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     features: [
       "Real-time monitoring";
       "Performance analytics";
       "Operational insights";
+<<<<<<< HEAD
       "Optimization recommendations",
       "Alert system"
     ],
@@ -80,11 +121,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com",
 
 
+=======
+      "Optimization recommendations";
+      "Alert system"
+    ];
+    link: "/services/operational-intelligence", category: "Operational Services",
+    realImplementation: true,
+    contactInfo: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {;
   createContext,;
   useContext,;
@@ -20,10 +21,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-id: string;
+  id: string;
   name: string;
   email: string;
   role: UserRole;
@@ -37,6 +44,7 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
   completeOnboarding: () => void;
 };
 
@@ -51,6 +59,28 @@ id: 'u_001',
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  updateUser: (userData: Partial<User>) => Promise<void>;
+}
+
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
+export const useUser = () => {
+  const context = useContext(UserContext);
+  if (context === undefined) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context;
+};
+
+interface UserProviderProps {
+  children: React.ReactNode;
+}
+
+export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   useEffect(() => {
     // Check for existing user session
@@ -69,6 +99,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -93,3 +124,59 @@ export function useUser() {
   return ctx;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+      // Mock login logic - replace with actual authentication
+      const mockUser: User = {
+        id: '1',
+        name: 'John Doe',
+        email,
+        role: 'client',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      
+      setUser(mockUser);
+      localStorage.setItem('user', JSON.stringify(mockUser));
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const logout = (): void => {
+    setUser(null);
+    localStorage.removeItem('user');
+  };
+
+  const updateUser = async (userData: Partial<User>): Promise<void> => {
+    if (!user) return;
+    
+    const updatedUser = {
+      ...user,
+      ...userData,
+      updatedAt: new Date().toISOString(),
+    };
+    
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
+  const contextValue = useMemo(
+    () => ({
+      user,
+      loading,
+      login,
+      logout,
+      updateUser,
+    }),
+    [user, loading]
+  );
+
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
+};
+
+export default UserProvider;
+export default UserProvider;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

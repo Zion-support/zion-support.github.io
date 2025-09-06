@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 origin/main
 
 
@@ -213,3 +214,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Auto-generated module
 export {};
 
+=======
+// Auto-generated module
+export {};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

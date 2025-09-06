@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export interface EmergingTech2027Service {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -12,16 +16,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface EmergingTech2027Service {;
+    address: string;
+  };
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -30,6 +58,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contactInfo: {
 export const emergingTech2027Services: EmergingTech2027Service[] = [
   {
+<<<<<<< HEAD
     address: string
   }
 }
@@ -42,10 +71,22 @@ export const emergingTech2027Services: EmergingTech2027Service[] = [
     price: "$349/month";
     description: "Advanced platform showcasing emerging technologies and innovations for 2027.";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: "2027-emerging-tech", name: "2027 Emerging Tech Platform",
+    tagline: "Emerging tech for 2027", price: "$349/month",
+    description: "Advanced platform showcasing emerging technologies and innovations for 2027.",
+    id: '2027-emerging-tech'
+    name: '2027 Emerging Tech Platform'
+    tagline: 'Emerging tech for 2027'
+    price: '$349/month'
+    description:
+      'Advanced platform showcasing emerging technologies and innovations for 2027.'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     features: [
       "Emerging technologies";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
       "Advanced features",
       "Expert insights"
     ],
@@ -80,11 +121,46 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com",
 
 
+=======
+      "Advanced features";
+      "Expert insights"
+    ];
+    link: "/services/2027-emerging-tech", category: "Emerging Tech 2027",
+    realImplementation: true,
+    contactInfo: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

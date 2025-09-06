@@ -1,9 +1,12 @@
 
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -28,6 +31,7 @@ if (missing.length > 0) {;}
 ;
 console.log("[pre-build-health-check] OK");
 process.exit(0);
+<<<<<<< HEAD
 main
 main
 #!/usr/bin/env node
@@ -41,6 +45,8 @@ main
 #!/usr/bin/env node
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 // Minimal pre-build health check stub to unblock builds
 try {
@@ -51,10 +57,13 @@ try {
 	process.exit(0);
 }
 
+<<<<<<< HEAD
 origin/chore/fix-build-nav-links
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -65,6 +74,7 @@ try {
 	console.warn('[pre-build] Non-fatal issue:', err?.message || err);
 	process.exit(0);
 }
+<<<<<<< HEAD
 }
 origin/chore/resolve-conflicts-1756215853
 
@@ -78,4 +88,6 @@ origin/chore/fix-build-nav-links
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

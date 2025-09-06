@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -9,6 +10,27 @@ export interface User {
   role: string;
   isAdmin: boolean;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+
+
+// Authentication utilities
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export interface User {
+  id: string;
+  email: string;
+  role: "admin" | "user" | "guest";
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic;
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface User {;
   id: string;
@@ -17,6 +39,7 @@ export interface User {;
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
+<<<<<<< HEAD
   // Mock implementation - replace with actual auth logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
@@ -32,6 +55,8 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
   try {;
@@ -40,8 +65,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     ensureAdmin(user);
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -69,6 +97,7 @@ if ( {) {
     throw error;
   }
 }
+<<<<<<< HEAD
 
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
@@ -87,6 +116,12 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
 
 main
+=======
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -96,11 +131,18 @@ main
   if (authHeader.includes("admin")) {
     return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
+<<<<<<< HEAD
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
 
 main
+=======
+
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+
+  return { id: "user-1", email: "user@zion.os", role: "user" };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export function ensureAdmin(user: User): void {
@@ -110,6 +152,7 @@ export function ensureAdmin(user: User): void {
     throw error;
   }
 }
+<<<<<<< HEAD
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {;
     const user = parseUserFromRequest(req);
@@ -119,11 +162,27 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    ensureAdmin(user);
+
+export async function ensureAdminFromApi(
+  req: NextApiRequest,
+): Promise<{ allowed: boolean }> {
+  try {
+    const user = parseUserFromRequest (req);
+    ensure_admin (user);
+}
+
+  try {
+    ensureAdmin(user);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
+<<<<<<< HEAD
 
 // Additional auth utilities for login;
 
@@ -133,6 +192,8 @@ export interface DemoUser {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   role: "admin" | "user" | "guest";
@@ -188,8 +249,13 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   const cookieHeader = req.headers.cookie || "";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -232,13 +298,17 @@ export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
 if (return null) {
   $2
 }
+<<<<<<< HEAD
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
+<<<<<<< HEAD
 
 
     user,
@@ -252,6 +322,10 @@ main
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -261,12 +335,15 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 
   }
 
+<<<<<<< HEAD
 export function hasRole(session: AuthSession | null, role: string): boolean {
     if (!session || !isAuthenticated(session)) return false;
 
 
   }
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -275,6 +352,7 @@ export function isModerator(session: AuthSession | null): boolean {
 }
 
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -337,3 +415,5 @@ export function getUserFromRequest(req: NextApiRequest): User | null {
   return parseUserFromRequest(req);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 main
+=======
+import React from 'react';
+import Head from 'next/head';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 class ErrorBoundary extends React.Component {
@@ -175,7 +188,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -220,12 +236,16 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -250,10 +270,18 @@ export default function Layout({
         <Footer />
         
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       </div>
     </>
   );
 }
+<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -277,3 +305,5 @@ main
 main
 
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

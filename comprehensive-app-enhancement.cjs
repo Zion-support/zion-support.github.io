@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive App Enhancement...')
@@ -36,5 +39,8 @@ console.log(' Starting Comprehensive App Enhancement...')
       console.log('\n Enhancements "completed")
       console.log('\n� New features "added")
 
+<<<<<<< HEAD
   console.error(' App enhancement "failed")
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

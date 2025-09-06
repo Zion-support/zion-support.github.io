@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -24,12 +25,18 @@ export interface AdvancedAIAutomationService {
     website: string
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  contactInfo: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
@@ -43,11 +50,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 89;
     rating: 4.8,
     reviews: 38;
+<<<<<<< HEAD
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ;
     realImplementation: true
     implementationDetails:
@@ -233,6 +244,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
     mobile: string;
     email: string;
     address: string;
@@ -537,6 +549,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 38
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.'
+    launchDate: '2024-10-01'
+    customers: 89
+    rating: 4.8
+    reviews: 38
+  },];
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';
+    launchDate: '2024-10-01';
+    customers: 89;
+    rating: 4.8
+
+    reviews: 38
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -799,6 +833,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,;
     rating: 4.8;
     reviews: 38;
+<<<<<<< HEAD
 
 
   }
@@ -807,3 +842,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -5,6 +6,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025 {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   tagline: string;
@@ -35,6 +38,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
 
@@ -59,6 +63,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -71,10 +77,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '📦',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -101,9 +110,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -118,6 +130,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 98,
     },
     {
+<<<<<<< HEAD
 
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
@@ -130,6 +143,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -142,6 +157,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance analytics',
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '⚛️',
 
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
@@ -175,6 +191,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -189,6 +207,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 23,
     },
     {
+<<<<<<< HEAD
 
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
@@ -203,6 +222,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -214,6 +235,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🚛',
 
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
@@ -247,6 +269,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -261,6 +285,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 145,
     },
     {
+<<<<<<< HEAD
 
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
@@ -275,6 +300,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -286,6 +313,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance monitoring',
       ],
       popular: false,
+<<<<<<< HEAD
       icon: '⛓️',
 
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
@@ -319,6 +347,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -333,6 +363,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 56,
     },
     {
+<<<<<<< HEAD
 
       id: 'ai - powered - warehouse - automation',
       name: 'AI - Powered Warehouse Automation Platform',
@@ -345,6 +376,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -357,6 +390,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
+<<<<<<< HEAD
       icon: '🏭',
 
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
@@ -390,6 +424,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -399,11 +435,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
+<<<<<<< HEAD
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launchDate: '2025-02-18',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
@@ -411,8 +452,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -428,6 +472,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string,
     website: string
@@ -696,6 +741,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 112
 
+=======
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
+      'Custom algorithmsCompliance tools'
+    ];
+    technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
+    integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
+    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
+    roi: 'Reduce inventory costs by 25%. Improve forecast accuracy by 40%. Cut logistics costs by 30%.'
+    competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
+    marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
+    variant: 'logistics'
+    contactInfo: {
+;
+    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
+    variant: 'ai-supply-chain-enterprise'
+    contactInfo: {
+    reviews: 112
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -773,7 +838,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -954,6 +1022,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 178,;
     rating: 4.8;
     reviews: 112;
+<<<<<<< HEAD
 
 
   }
@@ -962,3 +1031,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

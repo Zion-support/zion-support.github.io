@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
@@ -11,19 +12,25 @@ console.log('🔧 Resolving all merge conflicts...');
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
       console.log(`⚠️  File not found: ${filePath}`);
 
       console.log(`⚠️  File not found: ${filePath}`);
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       return false;
     }
 
     const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
       return false;
     }
 
@@ -106,15 +113,24 @@ main
     console.error(`Error resolving ${filePath}:`, error.message);
 main
 
+=======
+
+    // Check if file has merge conflicts
+    if (!content.includes('
+        const parts = match.split('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return false;
   }
 }
 
 // Function to find all files with merge conflicts
+<<<<<<< HEAD
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 function findFilesWithConflicts() {
   try {
@@ -125,12 +141,15 @@ function findFilesWithConflicts() {
       .filter(file => file.length > 0);
     
     return files;
+<<<<<<< HEAD
 function findConflictedFiles() {
   try {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0);
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
@@ -138,7 +157,10 @@ main
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Main resolution process
 function main() {
   console.log('🔍 Finding files with merge conflicts...');
@@ -183,6 +205,7 @@ function main() {
 
 // Run the resolution
 main();
+<<<<<<< HEAD
 // Main execution
 try {
   const conflictedFiles = findFilesWithConflicts();
@@ -214,3 +237,6 @@ try {
 }
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

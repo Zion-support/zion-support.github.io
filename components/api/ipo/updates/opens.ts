@@ -3,11 +3,24 @@
   if (!requireSuperadminApi(req, res)) return;
 
   const id = String(req && req.query.id || "");
+<<<<<<< HEAD
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+  const updates = readJsonFile("updates && updates.json", [] as any[]);
+  const u = updates && updates.find((x: any) => x && x.id === id);
+  if (!u) return res && res.status(404).json({ error: "Not found" });
+  res && res.status(200).json({ opens: u && u.opens || 0 });
+  res && res.status(200).json({ opens: u && u.opens || 0 });
+
+}
+
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   if (!u) return res.status(404).json({ error: 'Not found' });
 
@@ -18,8 +31,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 })
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -42,7 +58,10 @@ function handler() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -95,9 +114,12 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
 }
   if (!u) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
 
 
   const id = null;
   res.status(200).json({ opens: u.opens || 0 })
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

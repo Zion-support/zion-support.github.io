@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 module.exports = {},
 
 
 module.exports = {},;
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 module.exports = {},;
 
@@ -49,3 +54,5 @@ export const useParams = () => ({})
 export const NavLink = Link;
 export default {} as Record<string, unknown>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

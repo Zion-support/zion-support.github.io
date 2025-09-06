@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+
+interface SearchResult {
+  title: string;
+  description: string;
+  url: string;
+  type: 'service' | 'page' | 'category';
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -27,7 +39,10 @@ const SearchBar: React.FC = () => {
       url: '/it-services',
       type: 'category',
     },
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -176,6 +191,7 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -191,6 +207,8 @@ interface SearchBarProps {
   placeholder?: string;
   className?: string;
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -200,6 +218,31 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
+<<<<<<< HEAD
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
+    }
+    {
+      title: 'Contact Us'
+      description: 'Get in touch with our experts for consultation and quotes'
+      url: '/contact'
+      type: 'page'
+    }
+    {
+      title: 'Pricing'
+      description: 'View our transparent pricing for all services'
+      url: '/pricing'
+      type: 'page'
+    }
+  ];
+    );
+    setResults(filteredResults);
+    setIsOpen(true);
+    setIsLoading(false);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   };
 
   const handleClear = () => {
@@ -224,6 +267,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+<<<<<<< HEAD
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -307,6 +351,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               aria-selected={index === selectedIndex}
               tabIndex={-1}
 origin/cursor/analyze-improve-and-deploy-application-0a01
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             >
               <X className="w-4 h-4" />
             </button>
@@ -318,5 +364,8 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 };
 
 export default SearchBar;
+<<<<<<< HEAD
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
 }) ;
@@ -7,6 +8,10 @@
 
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
 
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,10 +40,13 @@ class ErrorBoundary extends React.Component {
 }</div>) ;
 };
 
+<<<<<<< HEAD
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
   const [hovered, setHovered] = useState<number | null>(null);
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 type Props = {;
@@ -52,16 +60,21 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   const stars = [1, 2, 3, 4, 5];
   return (
+<<<<<<< HEAD
     <div className='flex items-center gap-1'>;
       {stars && stars.map(star => {;
         const active = (hovered ?? value) >= star;
                     onMouseEnter={() => !readOnly && setHovered(star)}        return (
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           <button
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 type Props = any;
   const stars = [1, 2, 3, 4, 5];
@@ -71,19 +84,30 @@ type Props = any;
         const active = (hovered ?? value) >= star;
             onMouseEnter={() => !readOnly && setHovered(star)}
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
 
+<<<<<<< HEAD
 xmlns='http://www.w3.org/2000/svg'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
               width={size}
               height={size}
               view_box='0 0 24 24';
               fill={active ? 'gold' : 'none'}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export default StarRating;
 
               xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +122,7 @@ export default StarRating;
             </svg>;
           </button>);
       })}
+<<<<<<< HEAD
 
     </div>
   );
@@ -105,3 +130,29 @@ export default StarRating;
 
 export default StarRating;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    </div>);
+}
+;
+export default StarRating;              width={size}
+              height={size}
+              view_box="0 0 24 24";
+              fill={active ? 'gold' : 'none'}
+              stroke={active ? 'gold' : 'current_color'}
+              stroke_width="2";
+              stroke_linecap="round";
+              stroke_linejoin="round";
+              className={`drop - shadow ${active ? 'animate - pulse - slow' : ''}`}
+            >;
+              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />;
+            </svg>;
+          </button>);
+      })}
+    </div>);
+}
+;
+export default StarRating;
+
+;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 =======
 
@@ -6,6 +7,9 @@
 const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -21,6 +25,7 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
+<<<<<<< HEAD
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -29,6 +34,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 const fs = require("fs");
 const path = require("path");
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 <<<<<<< HEAD
 =======
@@ -38,20 +45,25 @@ const path = require("path");
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
-    this.reportPath = path.join(this.projectRoot, "health-check-report.json");
+    this.checks = [];
+    this.errors = [];
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   log(message) {
     console.log(`🏥 [Health Check] ${message}`);
 =======
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node
 
 /**
  * Health Check Monitor
  * Monitors application health and provides alerts
  */
+<<<<<<< HEAD
 
 const healthReport = {
     timestamp: new Date().toISOString(),
@@ -405,34 +417,29 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     return recommendations;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   }
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
-  async check() {
-    this.log("Starting health check...");
-    
     try {
-      this.log("Checking project health...");
-      
-      const report = {
-        timestamp: new Date().toISOString(),
-        checks: ["Build status: OK", "Dependencies: OK", "Configuration: OK"],
-        status: "healthy"
-      };
-      
-      fs.writeFileSync(this.reportPath, JSON.stringify(report, null, 2));
-      this.log(`Health check completed. Report saved to: ${this.reportPath}`);
-      
+      this.log(`Running: ${description}`);
+      const output = execSync(command, {
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
+        timeout: 30000
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output };
     } catch (error) {
-      this.log(`Error during health check: ${error.message}`);
-      throw error;
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message };
     }
-  }
-}
 
-if (require.main === module) {
-  const checker = new HealthChecker();
-  checker.check().catch(console.error);
-}
+    } else {
+      this.log('❌ Application health issues detected', 'ERROR');
+    }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 module.exports = HealthChecker;
 =======
@@ -463,3 +470,5 @@ main
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

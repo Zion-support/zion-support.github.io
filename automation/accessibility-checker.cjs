@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class AccessibilityChecker {
   constructor() {
@@ -247,6 +248,16 @@ if (!fs.existsSync(reportsDir)) {
 
 main
 
+=======
+
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+#!/usr/bin/env node
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -364,6 +375,7 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD
 origin/main
 
 origin/main
@@ -386,6 +398,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -396,9 +410,12 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
 module.exports = AccessibilityChecker;
 ursor/automate-test-improve-and-merge-code-59d5
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 module.exports = AccessibilityChecker;
     "status"
@@ -421,6 +438,7 @@ module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = AccessibilityChecker;
@@ -429,3 +447,5 @@ ursor/automate-test-improve-and-merge-code-59d5
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

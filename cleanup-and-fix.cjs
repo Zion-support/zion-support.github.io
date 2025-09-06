@@ -51,6 +51,26 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
+    if (!content.includes('
+      return false;
+    }
+    
+    console.log(`📝 Fixing merge conflicts in: ${filePath}`);
+    
+    // Strategy: Keep the newer version (after ) for most cases
+    content = content.replace(/
+      // For version conflicts, prefer the newer version
+      if (headContent.includes('"') && newContent.includes('"')) {
+        return newContent.trim();
+      }
+      return newContent.trim();
+    });
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -81,3 +101,59 @@ function findConflictedFiles(dir) {
           // Check for merge conflict markers
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
+=======
+            if (content.includes('
+              conflictedFiles.push(fullPath);
+            }
+          } catch (err) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be read
+    }
+  }
+  
+  scanDirectory(dir);
+  return conflictedFiles;
+}
+
+// Main execution
+try {
+  console.log('🗑️  Removing backup files...');
+  const removedCount = removeBackupFiles('.');
+  console.log(`✅ Removed ${removedCount} backup files`);
+  
+  console.log('🔍 Scanning for files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles('.');
+  
+  console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
+  
+  let fixedCount = 0;
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
+  
+  // Verify no more conflicts
+  const remainingConflicts = findConflictedFiles('.');
+  if (remainingConflicts.length === 0) {
+    console.log('🎉 All merge conflicts resolved!');
+  } else {
+    console.log(`⚠️  ${remainingConflicts.length} files still have conflicts:`);
+    remainingConflicts.slice(0, 10).forEach(file => console.log(`   - ${file}`));
+    if (remainingConflicts.length > 10) {
+      console.log(`   ... and ${remainingConflicts.length - 10} more`);
+    }
+  }
+  
+} catch (error) {
+  console.error('❌ Error during cleanup:', error);
+  process.exit(1);
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -12,6 +15,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:;
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
+<<<<<<< HEAD
 
       'Idle detection',
       'Schedule generator',
@@ -52,6 +56,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -68,6 +74,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
 
     color: 'from - indigo - 600 to - violet - 700',
     text_color: 'text - indigo - 300',
@@ -78,6 +85,54 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'Modern alternative to legacy APM add‑ons with focused insights.',
+    target_audience: 'DBA, Backend, Platform',
+    trial_days: 14,
+    setup_time: '30 minutes',
+    category: 'Observability',
+    real_service: true,
+    technology: ['Postgres', 'MySQL', 'OpenTelemetry'],
+    integrations: ['Grafana', 'Datadog'],
+    use_cases: ['Performance tuning', 'Incident prevention'],
+    roi: '20–50% p95 reduction month 1',
+    competitors: ['Percona PMM', 'Datadog APM'],
+    market_size: '$7B DB Ops',
+    growth_rate: '12% CAGR',
+    variant: 'quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Agent + collector with secure export.',
+    launch_date: '2025 - 02 - 12',
+    customers: 18,
+    rating: 4 && 4.5,
+    reviews: 9,
+
+  },;
+
+      'Modern alternative to legacy APM add‑ons with focused insights.'
+    targetAudience: 'DBA, Backend, Platform'
+    trialDays: 14
+    setupTime: '30 minutes'
+    category: 'Observability'
+    realService: true
+    technology: ['Postgres', 'MySQL', 'OpenTelemetry']
+    integrations: ['Grafana', 'Datadog']
+    useCases: ['Performance tuning', 'Incident prevention']
+    roi: '20–50% p95 reduction month 1'
+    competitors: ['Percona PMM', 'Datadog APM']
+    marketSize: '$7B DB Ops'
+    growthRate: '12% CAGR'
+    variant: 'quantum'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Agent + collector with secure export.'
+    launchDate: '2025-02-12'
+    customers: 18
+    rating: 4.5
+    reviews: 9
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -101,6 +156,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 9,
 
   },;
+<<<<<<< HEAD
 
 
 ];	{
@@ -115,6 +171,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+];	{
+		period: '/month',
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
+		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
@@ -134,11 +198,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
 		launchDate: '2025-02-01';
 		customers: 40;
+<<<<<<< HEAD
 
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 18
 	}
 	{
@@ -153,12 +220,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '💸';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -177,11 +247,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.';
 		launchDate: '2025-02-10';
 		customers: 25;
+<<<<<<< HEAD
 
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		reviews: 12
 	}
 	{
@@ -196,12 +269,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		icon: '🗄️';
 		color: 'from-indigo-600 to-violet-700';
 		textColor: 'text-indigo-300';
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
 		setupTime: '30 minutes';
@@ -220,11 +296,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Agent + collector with secure export.';
 		launchDate: '2025-02-12';
 		customers: 18;
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 		reviews: 9
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+;
+
+	}
+];
+
+	}
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
@@ -330,7 +418,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: 4.5,
   reviews: 9;
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 		rating: 4.5
 		reviews: 9
 
@@ -449,6 +540,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		reviews: 9;
 
 
+<<<<<<< HEAD
 
 	}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -456,6 +548,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -568,6 +664,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 18,;
 		rating: 4.5;
 		reviews: 9;
+<<<<<<< HEAD
 
 
 	}
@@ -578,3 +675,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+	}
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 #!/usr/bin/env node
@@ -379,11 +380,15 @@ class AICodeQualityAnalyzer {
       return { success: false, error: error.message };
 
 main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }
   }
 }
 
+<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
 
@@ -395,4 +400,9 @@ const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
 
 main
+=======
+// Run the analyzer
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.run().catch(console.error);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

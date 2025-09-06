@@ -1,16 +1,22 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
  * Orchestrates all automation scripts in a comprehensive workflow;
  */
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const phases = [{
         "name": 'enhanced-orchestrator',
         "script": 'scripts/enhanced-automation-orchestrator.cjs',
@@ -116,10 +122,13 @@ if (require.main === module) {
 
 module.exports = MasterAutomationSuite;
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

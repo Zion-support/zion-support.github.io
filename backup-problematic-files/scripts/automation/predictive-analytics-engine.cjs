@@ -4,8 +4,6 @@
  * Advanced ML-powered prediction system for system failures and optimization;
  */
 
-
-
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -45,5 +43,4 @@ const { execSync } = require('child_process')
       return { "message"}
       "level"
       this.log(` ML model update "failed"`)
-      this.log(` Fatal "error"`)
-      this.log(` Fatal "error"`)
+

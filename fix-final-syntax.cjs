@@ -1,12 +1,16 @@
 
 
+<<<<<<< HEAD
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 
 
 
@@ -15,6 +19,8 @@ const path = require('path');
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -22,20 +28,27 @@ const fixes = [
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*$/gm,
     replacement: 'import { $1 } from \'$2\';'
   },
+<<<<<<< HEAD
   
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   // Fix malformed import statements
   {
     pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*'([^']+)'\s*export\s*default\s*function/g,
     replacement: 'import { $1 } from \'$2\';\n\nexport default function'
   },
+<<<<<<< HEAD
   
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   // Fix missing semicolons after import statements
   {
     pattern: /import\s+([^]+)\s*$/gm,
     replacement: 'import $1;'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons after export statements
 
@@ -43,11 +56,18 @@ const fixes = [
 
   // Fix unterminated string literals
 main
+=======
+
+  // Fix unterminated string literals
+
+  // Fix unterminated string literals
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /export\s+([^]+)\s*$/gm,
     replacement: 'export $1;'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in variable declarations
 
@@ -55,11 +75,18 @@ main
 
   // Fix malformed function declarations
 main
+=======
+
+  // Fix malformed function declarations
+
+  // Fix malformed function declarations
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = $2;'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in function declarations
 
@@ -67,11 +94,18 @@ main
 
   // Fix missing closing brackets and parentheses
 main
+=======
+
+  // Fix missing closing brackets and parentheses
+
+  // Fix missing closing brackets and parentheses
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: 'function $1() {\n'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in arrow functions
 
@@ -79,18 +113,28 @@ main
 
   // Fix malformed JSX attributes
 main
+=======
+
+  // Fix malformed JSX attributes
+
+  // Fix malformed JSX attributes
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: 'const $1 = () => $2;'
   },
+<<<<<<< HEAD
   
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   // Fix missing semicolons in object properties
   {
     pattern: /(\w+):\s*([^,}]+)\s*$/gm,
     replacement: '$1: $2,'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in array elements
 
@@ -98,11 +142,18 @@ main
 
   // Fix malformed return statements
 main
+=======
+
+  // Fix malformed return statements
+
+  // Fix malformed return statements
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /(\w+)\s*$/gm,
     replacement: '$1,'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in return statements
 
@@ -110,11 +161,18 @@ main
 
   // Fix duplicated content (remove duplicate lines)
 main
+=======
+
+  // Fix duplicated content (remove duplicate lines)
+
+  // Fix duplicated content (remove duplicate lines)
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in if statements
 
@@ -122,11 +180,18 @@ main
 
   // Fix missing closing brackets in arrays
 main
+=======
+
+  // Fix missing closing brackets in arrays
+
+  // Fix missing closing brackets in arrays
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
+<<<<<<< HEAD
   
   // Fix missing semicolons in for loops
 
@@ -134,6 +199,12 @@ main
 
   // Fix malformed JSX closing tags
 main
+=======
+
+  // Fix malformed JSX closing tags
+
+  // Fix malformed JSX closing tags
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
@@ -236,6 +307,7 @@ main
     replacement: 'import $1;'
   }
 
+<<<<<<< HEAD
 
 
 
@@ -251,6 +323,12 @@ main
 console.log('🔧 Fixing final syntax errors...');
 
 
+=======
+console.log('🔧 Fixing final syntax errors...');
+
+console.log('🔧 Fixing final syntax errors...');
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Fix specific files with known issues
 const filesToFix = [
     'src/components/SEO.tsx',
@@ -259,15 +337,19 @@ const filesToFix = [
     'src/components/ui/textarea.tsx',
     'src/components/ui/use-toast.ts'
 
+<<<<<<< HEAD
 
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
         return;
 
         
@@ -295,6 +377,20 @@ main
 
     let modified = false;
     
+=======
+
+    }
+
+        return;
+
+        return;
+
+    }
+
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    let modified = false;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -302,16 +398,20 @@ main
         content = newContent;
         modified = true}
     });
+<<<<<<< HEAD
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
   return false}
 
+<<<<<<< HEAD
 function walkDirectory(dir) {
   let fixedCount = 0;
   
@@ -323,6 +423,8 @@ function walkDirectory(dir) {
       const stat = fs.statSync(filePath);
       
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       if (stat.isDirectory()) {
         fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
         if (fixFile(filePath)) {
@@ -332,6 +434,7 @@ function walkDirectory(dir) {
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message)}
 
+<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
 
     let fixes = 0;
@@ -351,28 +454,89 @@ function walkDirectory(dir) {
     let fixes = 0;
 
 
+=======
+    let fixes = 0;
+
+    // Fix textarea.tsx
+    if (filePath.includes('textarea.tsx')) {
+        // Fix malformed className
+        content = content.replace(/className=\{`flex min-h-\[80px\] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: tex t-muted-foreground focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 \$\{className\}`\}/g, 'className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}');
+    }
+
+    // Fix use-toast.ts
+    if (filePath.includes('use-toast.ts')) {
+        // Fix malformed interface
+        content = content.replace(/position\?\: "top-right" \| "top-center" \| "top-left" \| "bottom-right" \| "bottom-center" \| "bottom-left"\}\s*$/g, 'position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";\n}');
+        
+        // Fix malformed function
+        content = content.replace(/const showToast = \(message: string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \};\s*\};\s*$/g, 'const showToast = (message: string, options?: ToastOptions) => {\n    return toast(message, options);\n  };\n\n  return { showToast };\n}');
+    }
+
+    // General fixes
+    content = content.replace(/"""/g, '');
+    content = content.replace(/""""/g, '');
+    content = content.replace(/'"`/g, '');
+    content = content.replace(/`"/g, '');
+    content = content.replace(/`\s*$/gm, '');
+    content = content.replace(/^\s*`\s*$/gm, '');
+
+    // Count fixes
+    const originalContent = fs.readFileSync(filePath, 'utf8');
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Apply all fixes
+    for (const fix of fixes) {
+      content = content.replace(fix.pattern, fix.replacement);
+    }
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax in ${filePath}`);
+      return true;
+    }
+
+    if (fixes > 0) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`✅ Fixed ${fixes} issues in ${filePath}`);
+    } else {
+        console.log(`✨ No issues found in ${filePath}`);
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     return fixes;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Process all files
 let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
 console.log(`   Total fixes applied: ${totalFixes}`);
 
 if (totalFixes > 0) {
+<<<<<<< HEAD
 }
 console.log(`\n📊 Summary:`);
 console.log(`   Files processed: ${filesToFix.length}`);
@@ -417,6 +581,9 @@ console.log(`   Total fixes applied: ${totalFixes}`);
 
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 if (totalFixes > 0) {
 } else {
 }
@@ -466,10 +633,6 @@ function walkDirectory(dir) {
   return fixedCount}
     let fixes = 0;
 
-
-
-
-
 if (totalFixes > 0) {
     
 } else {
@@ -480,10 +643,13 @@ if (totalFixes > 0) {
     
 }
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
     console.log('\n✅ Final syntax error fixing completed!');
 } else {
@@ -503,6 +669,7 @@ const path = require('path')
     "replacement": 'return (\n    <div className="min-h-screen bg-white")
     "replacement"
     "replacement"
+<<<<<<< HEAD
     "replacement"
 
     console.log('\n✅ Final syntax error fixing completed!');
@@ -525,4 +692,6 @@ main
 
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

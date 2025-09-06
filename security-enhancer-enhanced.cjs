@@ -7,5 +7,8 @@ const { execSync } = require('child_process')
         "encoding"
         "criticalIssues"
 
+<<<<<<< HEAD
         "highIssues"
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

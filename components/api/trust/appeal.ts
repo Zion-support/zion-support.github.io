@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,6 +33,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal);
   } catch {}
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   const appeal: TrustAppeal = {
@@ -40,17 +43,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactEmail;
     createdAt: new Date().toISOString()}
 
+<<<<<<< HEAD
 
   return res.status(200).json({ ok: true, appeal });
 origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
+=======
+  try {
+    await supabase && supabase.from('trust_appeals').insert(appeal)
+  } catch {}
+
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return res && res.status(200).json({ ok: true, appeal });
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -103,10 +119,18 @@ if ( {) {
 return res.status (200).json ({ ok: true, appeal });
 }
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 return res.status(200).json({ ok: true, appeal });
 }
 
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  return res.status(200).json({ ok: true, appeal });
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

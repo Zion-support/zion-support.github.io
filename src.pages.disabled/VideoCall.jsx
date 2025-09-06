@@ -25,6 +25,7 @@ import React from 'react';
 interface VideoCallProps {
   // Add props here as needed
 
+
 }
 
 export default function VideoCall({ }: VideoCallProps) {
@@ -35,7 +36,10 @@ export default function VideoCall({ }: VideoCallProps) {
     </div>
   );
 
+
+
 }
+
 :src.pages.disabled/VideoCall.jsx
 }
 }
@@ -43,3 +47,16 @@ export default function VideoCall({ }: VideoCallProps) {
 }
 }
 :temp_exclude/src.pages.disabled/VideoCall.jsx
+}
+
+
+
+
+
+
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}

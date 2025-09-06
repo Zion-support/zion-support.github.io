@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const SecurityHeaders: React.FC = () => {
@@ -50,3 +51,5 @@ const SecurityHeaders: React.FC = () => {
 export default SecurityHeaders;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

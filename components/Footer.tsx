@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,8 @@
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   Phone
   Mail
   MapPin
@@ -28,7 +31,6 @@
 
 import React from 'react;';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
@@ -68,6 +70,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <link.icon className="h-5 w-5" />
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
@@ -303,6 +306,8 @@ const Footer: React.FC = () => {
                 <a href="tel:+13024640950" className=hover:text-blue-400 transition-colors">
                   +1 302 464 0950
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                 </a>
               </div>
               <div className="flex items-center>
@@ -324,6 +329,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* Services */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -359,22 +365,106 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
             </p>
           </div>
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-white">Services</a></li>
-              <li><a href="/solutions" className="text-gray-300 hover:text-white">Solutions</a></li>
-              <li><a href="/research" className="text-gray-300 hover:text-white">Research</a></li>
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+
+
+
+            <h3 className="text-lg font-semibold mb-6>Services</h3>
+            <div className="space-y-4">
+              {Object.entries(services).map(([category, links]) => (
+                <div key={category}>
+                  <h4 className=text-sm font-medium text-blue-400 mb-2">{category}</h4>
+                  <ul className="space-y-1>
+                    {links.slice(0, 3).map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          href={link.href}
+                          className="text-sm text-gray-300 hover:text-white transition-colors"
+                        >
+                          {link.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+            <div className="space-y-3">;
+              <div className="flex items-center text-gray-300">;
+                <Phone className="w-4 h-4 mr-3" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items-center text-gray-300">;
+                <Mail className="w-4 h-4 mr-3" />;
+                <span>kleber@ziontechgroup && ziontechgroup.com</span>;
+              </div>;
+              <div className="flex items-start text-gray-300">;
+                <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;
+                <span>;
+                  364 E Main St STE 1008;
+                  <br />;
+                  Middletown DE 19709;
+                </span>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Services */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Services</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.services.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className="text-gray-300 hover:text-white transition-colors">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+              ))}
+            </ul>;
+          </div>;
+
+
+          {/* Solutions */}
+          <div>;
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
+            <ul className="space-y-2">;
+              {footerLinks && footerLinks.solutions.map((link) => (;
+                <li key={link && link.name}>;
+
+
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              {footerLinks.solutions.map((link) => (
+                <li key={link.name}>
+                  <Link
+          {/* Company */}
+          <div>
+            <h3 className=text-lg font-semibold mb-6">Company</h3>
+            <ul className="space-y-3>
+              {company.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-<<<<<<< HEAD
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -400,6 +490,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
+<<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -447,19 +538,42 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 <<<<<<< HEAD
               <li><a href="/contact" className="text-gray-300 hover:text-white">Contact Us</a></li>
               <li><a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a></li>
+=======
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
+              <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
+              <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</Link></li>
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             </ul>
           </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-300">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 =======
@@ -571,6 +685,8 @@ main
         </div>
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -605,6 +721,7 @@ main
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+<<<<<<< HEAD
               Leading the future of technology with innovative solutions and
               cutting-edge development.
             </p>
@@ -735,10 +852,13 @@ main
             </div>
           </div>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
 
 export default Footer;
@@ -748,3 +868,6 @@ export default Footer;
 =======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

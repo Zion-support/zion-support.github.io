@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
           0
@@ -52,12 +53,15 @@ if ( {) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         content,
         message: 'chore (automation): daily rankings update',
         token,
       });
     }
     return {
+<<<<<<< HEAD
 
 exports.handler = async function() {
   try {
@@ -92,20 +96,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
   $2
 }
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
+<<<<<<< HEAD
 
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2);
     if (owner && repo && token) {
@@ -155,9 +165,27 @@ ursor/fix-website-loading-errors-and-merge-6662
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+=======
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+}
+},
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+},
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

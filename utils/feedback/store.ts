@@ -1,18 +1,28 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface FeedbackRecord {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
 export type FeedbackRecord = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type FeedbackRecord = {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
-  createdAtIso: string;
-  user: { id?: string; role?: string; talentSlug?: string };
+  type: string;
+  message: string;
   rating: number;
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-2533
   comment?: string;
@@ -26,6 +36,8 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   console.log('Feedback saved:', feedback.id);
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export interface FeedbackStats {
@@ -42,14 +54,18 @@ export interface FeedbackStats {
   recent: FeedbackRecord[];
 }
 
+<<<<<<< HEAD
 export function getAllFeedback(): FeedbackRecord[] {;
   return [...feedbackData];
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
+<<<<<<< HEAD
 const feedback_data: FeedbackRecord[] = [];
 ;
 export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
@@ -58,6 +74,16 @@ export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise <
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+
+const feedbackData: FeedbackRecord[] = [];
+
+export async function saveFeedbackFallback(
+  feedback: FeedbackRecord,
+): Promise<void> {
+  feedbackData.push(feedback);
+  console.log("Feedback saved:", feedback.id);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export function writeAll(rows: any[]): void {
@@ -68,6 +94,7 @@ export function writeAll(rows: any[]): void {
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
 }
+<<<<<<< HEAD
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
 }
@@ -92,3 +119,5 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

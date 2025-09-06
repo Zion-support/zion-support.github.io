@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process')
 
@@ -10,6 +11,8 @@ const { execSync } = require('child_process')
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 function run(cmd) {
   return execSync(cmd, { stdio: 'inherit' })
 }

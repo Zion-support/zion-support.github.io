@@ -4,7 +4,11 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1212,8 +1216,6 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
 }`,
   },
 
-
-
 ];
 
 files.forEach(file => {
@@ -1224,7 +1226,11 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
+<<<<<<< HEAD
 main
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

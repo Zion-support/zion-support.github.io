@@ -12,6 +12,24 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    minify: "terser",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          ui: ["framer-motion", "lucide-react"],
+          router: ["react-router-dom"]
+        }
+      }
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     rollupOptions: {
       output: {
         manualChunks: {
@@ -27,10 +45,15 @@ export default defineConfig({
           router: ["react-router-dom"]
 >>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
         },
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
       },
     },
   },
   optimizeDeps: {
+<<<<<<< HEAD
+    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+=======
     include: ['react', 'react-dom', 'react-router-dom'],
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
   },
 });

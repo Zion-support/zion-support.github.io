@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }
@@ -44,6 +45,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+export interface DeployTemplateResult {
+    nodes: []
+    edges: []
+  }
+
+}
+export function getGitStatus() {
+  return {
+    connected: false
+    branch: 'main'
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -89,13 +105,17 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
 
     nodes: [],
     edges: [];
@@ -107,6 +127,8 @@ export function getGitStatus() {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     connected: false,
     branch: 'main';
   };
@@ -118,12 +140,19 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
   createdPaths: string[];
   skippedPaths: string[];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  createdPaths: string[];
+  skippedPaths: string[];
+  createdPaths: string[];
+  skippedPaths: string[];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -137,6 +166,7 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
 
 
   const keepFile = path && path.join(absoluteDir, '.keep');
@@ -157,14 +187,30 @@ export function deployBasicTemplateForPath(
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  } else {
+    skippedPaths.push(keepFile);
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   } else {
     skippedPaths.push(readmeFile);
   }
 
+<<<<<<< HEAD
   return { createdPaths, skippedPaths }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+
+
+  return { createdPaths, skippedPaths };
+
+}
+  return { createdPaths, skippedPaths }
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   created_paths: string[];
@@ -185,6 +231,7 @@ export function ensure_directory (dir_path: string): void {
 ;
 
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -192,3 +239,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return { createdPaths, skippedPaths };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -23,6 +24,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Alternative data analysis',
       'Machine learning models',
       'Real - time scoring',
@@ -35,10 +38,67 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Regulatory compliance',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💳',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    id: 'regtech-compliance-automation-platform'
+    name: 'RegTech Compliance Automation Platform'
+    tagline: 'Automated regulatory compliance and reporting'
+    price: '$699'
+    period: '/month'
+    description:
+      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real-time updates and AI-powered insights.'
+    features: [
+      'Regulatory monitoring'
+      'Automated reporting'
+      'Compliance tracking'
+      'Risk assessment'
+      'Audit trails'
+      'Policy management'
+      'Training modules'
+      'API integration'
+      'Real-time updates'
+      'Performance analytics'
+    ]
+    popular: false
+    icon: '📋'
+    color: 'from-gray-600 via-slate-600 to-zinc-600'
+    textColor: 'text-gray-400'
+    link: 'https://ziontechgroup.com/regtech-compliance-automation-platform'
+    marketPosition:
+      'Leading RegTech platform with comprehensive compliance automation'
+    targetAudience:
+      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies'
+    trialDays: 14
+    setupTime: '7-10 days'
+    category: 'Fintech'
+    realService: true
+    technology: [
+      'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'
+    ]
+    integrations: [
+      'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'
+    ]
+    useCases: [
+      'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'
+    ]
+    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'
+    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
+    marketSize: '$15B RegTech market'
+    growthRate: '40% annual growth'
+    variant: 'fintech'
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -80,6 +140,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 45,
   },
   {
+<<<<<<< HEAD
 
       'Cross-border payments',
       'Real-time settlement',
@@ -98,6 +159,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Smart contracts',
       'Compliance tools',
       'API integration',
@@ -108,6 +171,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '⛓️',
+<<<<<<< HEAD
 
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
@@ -138,6 +202,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -152,6 +218,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 56,
   },
   {
+<<<<<<< HEAD
 
     id: 'quantum - financial - modeling - platform',
     name: 'Quantum Financial Modeling Platform',
@@ -164,6 +231,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quantum algorithms',
       'Portfolio optimization',
       'Risk modeling',
@@ -177,6 +246,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,
     icon: '⚛️',
+<<<<<<< HEAD
 
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
@@ -209,6 +279,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -223,6 +295,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 18,
   },
   {
+<<<<<<< HEAD
 
     id: 'ai - powered - insurance - underwriting',
     name: 'AI - Powered Insurance Underwriting',
@@ -235,6 +308,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI risk assessment',
       'Automated underwriting',
       'Predictive modeling',
@@ -248,6 +323,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
 
     color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
     text_color: 'text - orange - 400',
@@ -280,6 +356,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -294,6 +372,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 78,
   },
   {
+<<<<<<< HEAD
 
     id: 'regtech - compliance - automation - platform',
     name: 'RegTech Compliance Automation Platform',
@@ -306,6 +385,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Regulatory monitoring',
       'Automated reporting',
       'Compliance tracking',
@@ -319,10 +400,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,
     icon: '📋',
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
@@ -335,8 +419,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com'
     }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
@@ -423,6 +510,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growthRate: '40% annual growth'
     variant: 'fintech'
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -438,11 +526,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 
 
+=======
+      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
+    launchDate: '2025-02-12'
+    customers: 89
+    rating: 4.5
+    reviews: 52
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedFintechSolution2025 {
@@ -696,11 +793,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
       website: 'https://ziontechgroup.com'
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     realImplementation: true;
     implementationDetails: 'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.';
     launchDate: '2025-02-12';
     customers: 89;
 
+<<<<<<< HEAD
     rating: 4 && 4.5,
     rating: 4.5;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -710,6 +810,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -787,9 +889,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -798,6 +903,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 89;
     rating: 4.5,
     reviews: 52;
+<<<<<<< HEAD
 
 
 
@@ -809,6 +915,14 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
 
 ;
 
+=======
+  }
+;
+];
+;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -1066,6 +1180,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89,;
     rating: 4.5;
     reviews: 52;
+<<<<<<< HEAD
 
 
   }
@@ -1075,3 +1190,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

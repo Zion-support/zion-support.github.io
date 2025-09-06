@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -22,6 +23,87 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   contactInfo: {
 
+=======
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
+    launchDate: '2026-04-20'
+    customers: 180
+    rating: 4.8
+    reviews: 120
+  }
+      'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
+    launchDate: '2026-04-20',
+    customers: 180,
+    rating: 4.8,
+    reviews: 120,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
+    launchDate: '2026-04-20';
+    customers: 180;
+    rating: 4.8
+
+    reviews: 120
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface EmergingTech2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
@@ -51,11 +133,16 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -64,11 +151,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 180;
     rating: 4.8,
     reviews: 120;
+<<<<<<< HEAD
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -465,6 +555,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     customers: 180,;
     rating: 4.8;
     reviews: 120;
+<<<<<<< HEAD
 
 
   }
@@ -1122,3 +1213,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

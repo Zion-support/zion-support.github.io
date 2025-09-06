@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -8,6 +9,9 @@ id: 'ai-powered-business-intelligence-suite',
     name: 'BusinessIntelligence AI Pro',
     description:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export const advancedAIServices2025 = [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
       'AI-powered data visualization'
@@ -20,10 +24,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
 export const advancedAIServices2025 = [;
   {
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    id: 'ai - powered - business - intelligence - suite',
+    name: 'BusinessIntelligence AI Pro',
+    description:;
+      'Advanced AI - powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
+      'Natural language query processing',
+      'AI - powered data visualization',
+      'Predictive analytics and forecasting',
+      'Automated report generation',
+      'Real - time data monitoring',
+      'Integration with 100+ data sources',
+      'Custom AI model training',
+      'Advanced security and compliance',
+    ],
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     pricing: {
       starter: {
         price: 199
@@ -31,6 +51,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
       professional: {
+<<<<<<< HEAD
 
         price: 499,
         period: 'month',
@@ -60,10 +81,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
 
     market_size: '$27.3B',
     target_audience:;
@@ -125,10 +149,32 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    targetAudience:
+      'Business analysts, data scientists, executives, enterprise businesses'
+    competitiveAdvantage:
+      'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration'
+  }
+  {
+    id: 'intelligent-customer-analytics-platform'
+    name: 'CustomerAnalytics AI'
+    description:
+      'AI-powered customer analytics platform that provides deep insights into customer behavior, preferences, and lifetime value optimization.'
+    features: [
+      'Customer behavior prediction'
+      'Personalization engine'
+      'Churn risk analysis'
+      'Customer segmentation'
+      'Real-time analytics'
+      'Integration with CRM systems'
+      'Advanced reporting and dashboards'
+      'Custom AI model training'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
+<<<<<<< HEAD
 
     market_size: '$15.8B',
     target_audience:;
@@ -636,6 +682,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -661,6 +709,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 
+<<<<<<< HEAD
 
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
@@ -669,6 +718,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    targetAudience:
+      'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
+    competitiveAdvantage:
+    };
+    marketSize: '$173 && 173.5B',
+    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     market_size: '$173.5B',
     target_audience:;
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
@@ -889,14 +952,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
+<<<<<<< HEAD
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    }
+    market_size: '$173.5B',
+    target_audience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+    competitive_advantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
+  }
+];
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 ];
 ;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
+<<<<<<< HEAD
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export const advancedAIServices2025 = [;
   {;
@@ -1128,6 +1206,7 @@ export const advancedAIServices2025 = [;
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
+<<<<<<< HEAD
 
 
   }
@@ -1146,3 +1225,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

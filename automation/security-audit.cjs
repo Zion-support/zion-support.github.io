@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -15,7 +19,10 @@ const securityChecks = [{
       }
     },
   },
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }},
   {
@@ -32,6 +39,7 @@ main
         }
       });
 
+<<<<<<< HEAD
       
 
       
@@ -41,6 +49,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }},
   {
     "name": 'API Security Check',
@@ -57,12 +67,15 @@ main
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
           if (
             content.includes('process.env') &&
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
             !content.includes('// "Security": ')
           ) {
@@ -70,15 +83,19 @@ main
           }
         });
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         console.log(
           `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
         );
       }
     },
   },
+<<<<<<< HEAD
 
 
         
@@ -89,6 +106,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       }
     }},
   {
@@ -112,13 +132,17 @@ main
           }
         });
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
     },
   },
+<<<<<<< HEAD
 
 
         
@@ -129,6 +153,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         
 main
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       }
     }},
   {
@@ -146,12 +173,15 @@ main
       } else {
         
       }
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }},
 ];
@@ -171,17 +201,17 @@ for (const check of securityChecks) {
   }
 }
 
-
-
-
 // Generate security report
 const report = {
   "timestamp": new Date().toISOString(),
   "checks": securityChecks.map(check => ({
     name: check.name,
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     status: 'completed',
   })),
   summary: {
@@ -190,18 +220,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     failed: totalCount - successCount,
   },
 };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -214,6 +248,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -222,6 +259,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -235,6 +273,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -248,6 +288,7 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     "status"
@@ -256,4 +297,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+
+    "status"
+    "status"
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

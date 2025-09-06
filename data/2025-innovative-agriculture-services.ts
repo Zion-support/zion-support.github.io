@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -17,15 +18,32 @@ const contact = {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   {  mobile: '+1 302 464 0950';
@@ -37,6 +55,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 
   id: string, name: string,
   tagline: string, price: string,
@@ -74,6 +93,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
@@ -94,6 +115,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Crop planning optimization',
       'Resource allocation',
       'Real - time adaptation',
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {
   id: string;
@@ -205,10 +227,13 @@ const contact = null;
       'Resource allocation',
       'Real-time adaptation',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Performance analytics',
       'Cost optimization',
       'Efficiency analysis',
       'Regulatory compliance',
+<<<<<<< HEAD
       'Multi-crop support',
     ],
     popular: false,
@@ -232,17 +257,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Multi - crop support',
+    ],
+    popular: false,
+    icon: '⚡',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
+<<<<<<< HEAD
     marketSize: '$9.8B+ quantum agriculture market',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    marketSize: '$9 && 9.8B+ quantum agriculture market',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     growthRate: '380% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 
       'AI-powered contamination detection',
     id: 'ai - powered - food - safety - monitoring',
@@ -258,6 +295,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    color: 'from - blue - 600 to - indigo - 700',
+    text_color: 'text - blue - 400',
+    link: 'https://ziontechgroup.com / quantum - agriculture - optimization',
+    market_position:;
+      'Advanced quantum computing platform for agriculture optimization and resource allocation.',
+    target_audience:;
+      'Large agricultural companies, Food producers, Agricultural research institutions, Government agencies',
+    trial_days: 60,
+    setup_time: '2 months',
+    category: 'Agriculture & Food Technology',
+    real_service: true,
+    technology: [;
+      'Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python',
+    ],
+    integrations: [;
+      'Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms',
+    ],
+    use_cases: [;
+      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
+    ],
+    roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
+    competitors: ['D - Wave, Rigetti, IBM Quantum, Google Quantum'],
+    market_size: '$9.8B+ quantum agriculture market',
+    growth_rate: '380% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+      'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
+    launch_date: '2025 - 01 - 15',
+    customers: 34,
+    rating: 4 && 4.6,
+    reviews: 26,
+  },
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quality monitoring',
       'Safety compliance',
       'Real - time alerts',
@@ -268,6 +343,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance management',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🍎',
 
     color: 'from - red - 600 to - pink - 700',
@@ -338,10 +414,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+<<<<<<< HEAD
 
     market_size: '$15.6B+ food safety market',
     growth_rate: '220% YoY',
@@ -354,11 +433,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 189,
     rating: 4 && 4.7,
     reviews: 145,
   },
   {
+<<<<<<< HEAD
 
       'Blockchain-based tracking',
     id: 'blockchain - food - traceability',
@@ -374,12 +456,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Supply chain transparency',
       'Product authentication',
       'Real - time monitoring',
       'Compliance verification',
       'Performance analytics',
       'Multi - party collaboration',
+<<<<<<< HEAD
     marketSize: '$15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
@@ -410,10 +495,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics',
       'Multi-party collaboration',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'API integration',
       'Mobile app support',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔗',
 
     color: 'from - purple - 600 to - violet - 700',
@@ -455,10 +543,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+<<<<<<< HEAD
 
     market_size: '$18.4B+ food traceability market',
     growth_rate: '320% YoY',
@@ -469,6 +560,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
     launch_date: '2025 - 01 - 26',
     customers: 89,
@@ -476,6 +569,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 67,
   },
   {
+<<<<<<< HEAD
 
       'AI-powered climate control',
     id: 'ai - powered - vertical - farming',
@@ -491,6 +585,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Crop growth monitoring',
       'Environmental optimization',
       'Real - time control',
@@ -501,6 +597,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance management',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🏗️',
 
     color: 'from - orange - 600 to - red - 700',
@@ -577,10 +674,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+<<<<<<< HEAD
 
 
 
@@ -603,10 +703,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
     ];
+<<<<<<< HEAD
     popular: true;
     icon: '🏗️';
     color: 'from-orange-600 to-red-700';
@@ -614,6 +717,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Compliance management'
     ];
     popular: true, icon: '🌾',
@@ -747,6 +852,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launchDate: '2025-02-02';
     customers: 123;
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
@@ -757,6 +863,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
@@ -787,17 +898,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 123;
     rating: 4.6,
     reviews: 89;
+<<<<<<< HEAD
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 ];
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -857,6 +974,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
+<<<<<<< HEAD
     ],;
     popular: true,;
     icon: '🌾',;
@@ -1057,3 +1175,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

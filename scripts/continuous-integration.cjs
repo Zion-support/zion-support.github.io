@@ -1,16 +1,22 @@
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 /**
  * Continuous Integration Automation;
  * Comprehensive CI pipeline with build, test, and quality checks;
  */
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const stages = [{
         "name": 'install-dependencies',
         "command": 'npm install',
@@ -109,10 +115,13 @@ if (require.main === module) {
 
 module.exports = ContinuousIntegration;
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -143,8 +152,11 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
+<<<<<<< HEAD
       console.error('Fatal "error")
 
       console.error('Fatal "error")
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

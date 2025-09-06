@@ -1,6 +1,7 @@
+
+const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
+
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
-const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -22,6 +23,16 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
+    const lib = u && u.protocol === 'https: ' ? https : require('http'),
+    const req = lib && lib.request(url, opts, (res: any) => {
+      let buf = '',
+      res && res.on('data', (d: any) => (buf += d)),
+      res && res.on('end', () => {
+        try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
+
       })
     });
     req && req.on('error', reject);
@@ -116,7 +127,6 @@ main ().catch ((e) => {
 
 
 
-;
 
 
 

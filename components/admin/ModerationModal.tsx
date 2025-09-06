@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,11 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+=======
+
+export type ModerationModalProps = {
+  flag: any | null;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
@@ -30,15 +36,21 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   flag,
   onClose,
   onAction,
@@ -70,8 +82,11 @@ import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -137,8 +152,11 @@ export type ModerationModalProps = {;
               Admin Notes;
             </label>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -175,6 +193,7 @@ export type ModerationModalProps = {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
@@ -236,6 +255,9 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
 
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
@@ -243,9 +265,14 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+<<<<<<< HEAD
 );
 
 
+=======
+  );
+);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
   on_close: () => void;
   on_action: (
@@ -368,8 +395,11 @@ if (return null) {
 
   );
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   );
 
@@ -378,9 +408,12 @@ export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -397,7 +430,11 @@ export default function ModerationModal({
 }: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -491,12 +528,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
-          </button>
-        </div>
+          </button>        </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+);
+}
+  );
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

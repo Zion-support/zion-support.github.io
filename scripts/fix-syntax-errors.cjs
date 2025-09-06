@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 
 
 main
+=======
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 
@@ -83,11 +89,37 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 
+<<<<<<< HEAD
 
 
 
 
     
+=======
+<<<<<<< HEAD
+  fixCommonErrors(content) {
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith("'")) {
+        return match + "'";
+      }
+      return match;
+    });
+    
+    content = content.replace(/"([^"]*?)(?=\n|$)/g, (match, str) => {
+      if (!str.endsWith('"')) {
+        return match + '"';
+      }
+      return match;
+    });
+    
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n/g, '$1;\n');
+    
+    // Fix merge conflict markers
+    content = content.replace(/
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     

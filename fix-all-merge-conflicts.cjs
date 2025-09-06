@@ -3,6 +3,7 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
+<<<<<<< HEAD
     const content = fs.readFileSync(filePath, 'utf8');
     
 ursor/automate-test-improve-and-merge-code-85f4
@@ -17,6 +18,15 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
       // Remove merge conflict markers and keep the content after 
 ursor/fix-lint-push-and-merge-to-main-28da
+=======
+
+    // Check if file has merge conflict markers
+    if (
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -25,13 +35,17 @@ ursor/fix-lint-push-and-merge-to-main-28da
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
+<<<<<<< HEAD
         if (line.includes('
 ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           inConflict = true;
           keepContent = false;
           continue;
         }
 
+<<<<<<< HEAD
         if (line.includes('')) {
           keepContent = true;
           continue;
@@ -39,6 +53,8 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
         if (line.includes('>>>>>>>')) {
 ursor/fix-lint-push-and-merge-to-main-28da
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           inConflict = false;
           keepContent = false;
           continue;

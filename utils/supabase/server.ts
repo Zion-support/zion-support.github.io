@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import { createClient } from "@supabase/supabase-js";
+
+const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL || "https://placeholder.supabase.co";
+const supabaseKey =
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
 const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
@@ -10,11 +23,22 @@ const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || '
 // Supabase server utilities
 import { createClient } from '@supabase/supabase-js';
 
+<<<<<<< HEAD
+=======
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
+
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 
 
+<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
@@ -41,14 +65,22 @@ export function getServerSupabase() {
 }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
 
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { create_client } from '@supabase / supabase - js';
 ;
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
@@ -62,8 +94,11 @@ function getServerSupabase() {
 }
 
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function getServerSupabase() {;
@@ -72,6 +107,7 @@ export function getServerSupabase() {;
 
 
 
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -82,3 +118,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

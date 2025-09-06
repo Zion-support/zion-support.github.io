@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
@@ -9,13 +10,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AutomationStatusPage() {
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 }</div>) import { useEffect, useState } from 'react';
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -28,11 +34,19 @@ export default function AutomationStatusPage() {;
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }, []);
   return (
 
@@ -47,11 +61,20 @@ export default function AutomationStatusPage() {;
       ) : (;
         <div className="text-sm text-gray-500">No status available yet.</div>;
       )}
+<<<<<<< HEAD
 
   }, []);
   return (
 
 
+=======
+    </div>;
+  );
+}
+
+  }, []);
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -79,11 +102,15 @@ function AutomationStatusPage() {
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   );
 }
 
+<<<<<<< HEAD
 
 
 
@@ -91,3 +118,5 @@ function AutomationStatusPage() {
 );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

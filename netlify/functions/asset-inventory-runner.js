@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 function runNode(relPath, args = []) {
@@ -18,6 +21,7 @@ function runNode(relPath, args = []) {
 
 
 exports && exports.handler = async () => {
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -28,13 +32,20 @@ function runNode(relPath, args = []) {
 
 exports.handler = async () => {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
 
+<<<<<<< HEAD
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -63,8 +74,11 @@ function log_step() {
     const { status, stdout, stderr } = fn ();
     if (logs.push (stdout)) {
   $2
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 exports.handler = async () => {
   const logs = [],
@@ -87,7 +101,10 @@ function log_step() {
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
 },
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';
@@ -122,6 +139,7 @@ const { spawn_sync } = require ('child_process';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
+<<<<<<< HEAD
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36
@@ -133,3 +151,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   return { statusCode: 200, body: logs.join('\n') }
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   tagline: string;
@@ -31,6 +34,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string,
     website: string;
@@ -48,20 +52,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   implementationDetails: string;
   launchDate: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   marketAdvantage: string
   capabilities: string[],
   market_advantage: string;
 }
 const contact = {
   mobile: '+1 302 464 0950';
+<<<<<<< HEAD
 
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -74,6 +84,16 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   {;
     id: 'ai-content-generation-platform';
 
+=======
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+}
+;
+export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
+  // AI & Machine Learning Services;
+  {
+    id: 'ai - content - generation - platform';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
@@ -81,12 +101,16 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation';
     marketPosition: 'Leading AI content generation platform with enterprise features',
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
     trialDays: 14;
     setupTime: '1-2 days';
     category: 'AI & Machine Learning';
+<<<<<<< HEAD
 
     realService: true,
     technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL'];
@@ -97,6 +121,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     marketSize: '$8B+ content marketing market';
     growthRate: '180% YoY';
     variant: 'ai-futuristic';
@@ -139,16 +165,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '80% faster content creation40% increase in engagementSEO optimization built - in_multi - language support_brand voice consistency';
     ];
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security';
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Enterprise security teams, Government agencies, Financial institutions';
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Cybersecurity';
+<<<<<<< HEAD
 
     capabilities: [;
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics';
@@ -182,16 +212,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
     realService: true,
     technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
     integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
+<<<<<<< HEAD
 
     use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
     market_size: '$25B+ identity and access management market';
     growth_rate: '140% YoY';
@@ -206,6 +241,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring';
@@ -217,17 +253,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
     id: 'ai - powered - devops - automation';
     name: 'AI - Powered DevOps Automation';
     tagline: 'Intelligent DevOps automation and optimization';
     price: '$899';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-devops-automation';
     marketPosition: 'Leading AI-powered DevOps automation platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'DevOps teams, Software companies, IT departments, Cloud-native businesses';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -272,6 +313,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation';
@@ -283,17 +325,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
     id: 'iot - edge - intelligence - platform';
     name: 'IoT Edge Intelligence Platform';
     tagline: 'Intelligent IoT edge computing and analytics';
     price: '$599';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/iot-edge-intelligence';
     marketPosition: 'Advanced IoT edge computing platform for industrial applications',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -338,6 +385,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Edge data processing_real - time analyticsML at the edge_device management_security features';
@@ -357,12 +405,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.';
     features: [;
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics';
       'HIPAA compliance_integration with PACS systems';
     ];
     popular: true;
+<<<<<<< HEAD
     icon: '🏥';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging';
@@ -370,6 +421,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Research institutions';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -406,6 +459,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support';
@@ -424,10 +478,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Banks, Investment firms, Insurance companies, Fintech startups';
     trialDays: 21;
     setupTime: '3-4 weeks';
     category: 'Financial Technology';
+<<<<<<< HEAD
 
     tagline: 'Intelligent financial risk assessment and mitigation',
     price: '$2, 499';
@@ -451,10 +508,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
     integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
+<<<<<<< HEAD
 
     use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
@@ -469,12 +529,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 134;
     rating: 4 && 4.8;
     reviews: 98;
     benefits: [;
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting';
@@ -486,6 +549,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
     id: 'ai - personalized - learning - platform';
     name: 'AI Personalized Learning Platform';
@@ -498,6 +563,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Mobile learning support_integration with LMS systems';
     ];
     popular: false;
+<<<<<<< HEAD
     icon: '🎓';
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-personalized-learning';
@@ -505,10 +571,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms';
     trialDays: 30;
     setupTime: '2-3 weeks';
     category: 'Education Technology';
+<<<<<<< HEAD
 
     color: 'from - indigo - 600 to - purple - 600';
     text_color: 'text - indigo - 400';
@@ -522,16 +591,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
     realService: true,
     technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
     integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
+<<<<<<< HEAD
 
     use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     market_size: '$15B+ edtech market';
     growth_rate: '200% YoY';
@@ -546,6 +620,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics';
@@ -564,10 +639,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Manufacturing companies, Retail chains, Logistics providers, E-commerce businesses';
     trialDays: 30;
     setupTime: '3-4 weeks';
     category: 'Supply Chain & Logistics';
+<<<<<<< HEAD
 
     tagline: 'Intelligent supply chain management and optimization',
     price: '$1, 899';
@@ -591,16 +669,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
     realService: true,
     technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
     integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
+<<<<<<< HEAD
 
     use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
     market_size: '$22B+ supply chain management market';
     growth_rate: '160% YoY';
@@ -615,6 +698,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility';
     ];
+<<<<<<< HEAD
 
     capabilities: [;
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment';
@@ -633,6 +717,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     targetAudience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities';
     trialDays: 30;
     setupTime: '4-6 weeks';
@@ -679,6 +765,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     benefits: [;
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking';
     ];
+<<<<<<< HEAD
 
 
 
@@ -778,6 +865,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     capabilities: [;
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance';
     ],
@@ -785,6 +874,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 export default comprehensiveInnovativeServices;
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {;
@@ -1926,3 +2016,10 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 
 export default comprehensiveInnovativeServices;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+;
+export default comprehensiveInnovativeServices;
+;
+;
+export default comprehensiveInnovativeServices;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 
 
@@ -15,6 +16,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
 supabase
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+      supabase
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -42,12 +48,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 
+=======
+
+    });
+
+
+  }
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   }
@@ -56,7 +72,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
 
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -144,7 +164,11 @@ function handler() {
   }
 }
 }
+<<<<<<< HEAD
 
 
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

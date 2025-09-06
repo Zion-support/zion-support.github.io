@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const fs = require('fs');
 const path = require('path');
@@ -20,12 +24,15 @@ class ErrorMonitor {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
@@ -183,6 +190,7 @@ if (require.main === module) {}
 });
 };
 module.exports = ErrorMonitor;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = ErrorMonitor;
@@ -191,4 +199,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+
+module.exports = ErrorMonitor;
+module.exports = ErrorMonitor;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

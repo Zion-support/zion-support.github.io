@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const fs = require('fs');
+<<<<<<< HEAD
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
@@ -15,6 +20,8 @@ const fs = require('fs');
 #!/usr/bin/env node
 const fs = require('fs');
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
@@ -25,6 +32,7 @@ class CompleteImprovementSuite {
   constructor() {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
 const fs = require('fs');
 const { exec, execSync } = require('child_process');
 const { promisify } = require('util');
@@ -36,12 +44,30 @@ class CompleteImprovementSuite {
     this.reportsDir = './automation-reports';
     this.projectRoot = process.cwd();
 
+=======
+
+    this.reportsDir = path.join(this.projectRoot, 'improvement-reports');
+    this.ensureDirectories();
+    this.results = {
+      mergeConflicts: { resolved: 0, failed: 0 },
+      syntaxErrors: { fixed: 0, failed: 0 },
+      prsProcessed: { merged: 0, failed: 0 },
+      improvements: { applied: 0, failed: 0 },
+    };
+
+      "mergeConflicts": { resolved: 0, "failed": 0 },
+      "syntaxErrors": { fixed: 0, "failed": 0 },
+      "prsProcessed": { merged: 0, "failed": 0 },
+      "improvements": { applied: 0, "failed": 0 }};
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }
     };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -61,6 +87,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 
@@ -71,7 +99,10 @@ main
   }
 
   log(message) {
+<<<<<<< HEAD
     console.log(`[${new Date().toISOString()}] ${message}`);
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   }
 
@@ -79,9 +110,12 @@ main
     this.log(`🚀 "Starting": ${description}`);
     try {
       const result = execSync(command, {
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         cwd: this.projectRoot,
         encoding: 'utf8',
@@ -89,11 +123,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         "cwd": this.projectRoot,
         "encoding": 'utf8',
@@ -107,19 +144,25 @@ main
   }
 
   async resolveMergeConflicts() {
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase 1: Resolving Merge Conflicts');
     try {
       const files = this.getAllFiles(this.projectRoot, [
         '.tsx',
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase "1": Resolving Merge Conflicts');
 
@@ -151,19 +194,25 @@ main
   }
 
   async fixSyntaxErrors() {
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase 2: Fixing Syntax Errors');
     try {
       const files = this.getAllFiles(path.join(this.projectRoot, 'src'), [
         '.tsx',
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase "2": Fixing Syntax Errors');
 
@@ -192,9 +241,12 @@ main
   }
 
   async applyImprovements() {
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase 3: Applying Improvements');
     const improvements = [
@@ -214,11 +266,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         name: 'Build Optimization',
         action: () => this.createBuildOptimization(),
       },
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase "3": Applying Improvements');
 
@@ -253,9 +308,12 @@ main
   }
 
   async commitAndPush() {
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase 4: Committing and Pushing Changes');
     const commands = [
@@ -265,11 +323,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         desc: 'Committing changes',
       },
       { cmd: 'git push origin main', desc: 'Pushing to main branch' },
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log('🔧 Phase "4": Committing and Pushing Changes');
 
@@ -323,6 +384,7 @@ main
       const content = fs.readFileSync(filePath, 'utf8');
       return (
 
+<<<<<<< HEAD
         content.includes('')
 
 main
@@ -331,11 +393,18 @@ main
 
       );
         content.includes('')
+=======
+        content.includes('
+
+      );
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       );
         content.includes('') ||
         content.includes('') ||
         content.includes('      );
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -343,6 +412,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     } catch (error) {
       return false;
     }
@@ -355,6 +426,7 @@ main
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
+<<<<<<< HEAD
 
 
 main
@@ -363,16 +435,30 @@ main
 
       content = content.replace(/[^\n]+\n/g, '');
 
+=======
+
+        /
+
+        '$1'
+
+      );
+
+      // Clean up any remaining markers
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+<<<<<<< HEAD
           `✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`
       content = content.replace(/[^\n]+\n/g, '');
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
@@ -383,12 +469,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       content = content.replace(/[^\n]+\n/g, '');
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+<<<<<<< HEAD
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           `✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`
         );
@@ -418,11 +509,14 @@ main
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           `✅ Fixed syntax "in": ${path.relative(this.projectRoot, filePath)}`
         );
@@ -440,9 +534,12 @@ main
     const config = {
       "bundleOptimization": {
         treeShaking: true,
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         codeSplitting: true,
         lazyLoading: true,
@@ -459,11 +556,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         userAnalytics: true,
       },
     };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         "codeSplitting": true,
         "lazyLoading": true,
@@ -477,12 +577,15 @@ main
         "errorTracking": true,
         "userAnalytics": true}};
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -497,9 +600,12 @@ main
         'X-XSS-Protection': '1; mode=block',
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
         'Content-Security-Policy':
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           "default-src 'self'; script-src 'self' 'unsafe-inline'",
       },
@@ -509,11 +615,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         xssProtection: true,
       },
     };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
@@ -521,12 +630,15 @@ main
         "sqlInjectionProtection": true,
         "xssProtection": true}};
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
       JSON.stringify(config, null, 2)
@@ -537,9 +649,12 @@ main
     const config = {
       "healthChecks": {
         enabled: true,
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         interval: 60000,
         endpoints: ['/health', '/api/status'],
@@ -554,11 +669,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         responseTimeThreshold: 5000,
       },
     };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         "interval": 60000,
         "endpoints": ['/health', '/api/status']},
@@ -570,12 +688,15 @@ main
         errorThreshold: 10,
         "responseTimeThreshold": 5000}};
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
       JSON.stringify(config, null, 2)
@@ -591,9 +712,12 @@ main
             "cacheGroups": {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
                 name: 'vendors',
                 chunks: 'all',
@@ -609,11 +733,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         },
       },
     };
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
                 "name": 'vendors',
                 "chunks": 'all'}}}}},
@@ -622,12 +749,15 @@ main
           optimizeCss: true,
           "optimizeImages": true}}};
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
       JSON.stringify(config, null, 2)
@@ -637,6 +767,7 @@ main
   async run() {
     this.log('🎯 Starting Complete Improvement Suite');
 
+<<<<<<< HEAD
     // Phase 1: Resolve merge conflicts
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -646,6 +777,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     // Phase "1": Resolve merge conflicts
     await this.resolveMergeConflicts();
 
@@ -664,9 +797,12 @@ main
       "results": this.results,
       "summary": {
         totalMergeConflictsResolved: this.results.mergeConflicts.resolved,
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         totalSyntaxErrorsFixed: this.results.syntaxErrors.fixed,
         totalImprovementsApplied: this.results.improvements.applied,
@@ -676,6 +812,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
+<<<<<<< HEAD
         "totalSyntaxErrorsFixed": this.results.syntaxErrors.fixed,
         "totalImprovementsApplied": this.results.improvements.applied,
         "pushSuccessful": pushSuccess}};
@@ -694,6 +831,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         "pushSuccessful": pushSuccess}};
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     fs.writeFileSync(
       path.join(this.reportsDir, 'complete-improvement-report.json'),
@@ -703,6 +842,7 @@ main
     this.log('🎉 Complete Improvement Suite Finished');
 
     this.log("📊 Summary: ");
+<<<<<<< HEAD
     this.log("📊 "Summary": ");
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -712,14 +852,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
     );
     this.log(
+<<<<<<< HEAD
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       `   - Syntax errors fixed: ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
@@ -727,11 +872,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       `   - Improvements applied: ${finalReport.summary.totalImprovementsApplied}`
     );
     this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`);
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
@@ -745,6 +893,7 @@ main
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
+<<<<<<< HEAD
 main
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -755,6 +904,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -782,6 +933,7 @@ const { execSync } = require('child_process')
                 "name"
                 "chunks"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -792,4 +944,6 @@ origin/automation-improvements-final
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

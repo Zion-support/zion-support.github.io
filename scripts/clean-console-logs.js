@@ -1,14 +1,20 @@
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+
+
+<<<<<<< HEAD
 
 
 
-
-
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
 #!/usr/bin/env node];import { glob } from "glob;""
+<<<<<<< HEAD
 origin/main
 
 main
@@ -130,3 +136,5 @@ main().catch(console.error);
 export { cleanConsoleLogs, processFile };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

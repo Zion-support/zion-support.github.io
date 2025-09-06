@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 export default function Placeholder() {;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export default function Placeholder() {
@@ -21,10 +24,56 @@ export default function Placeholder() {
           <a className='text-blue-600 hover:underline'>Back to Home</a>
         </Link>
       </div>
+<<<<<<< HEAD
 }
 
 
 
+=======
+    </main>;
+  );export default function Placeholder() {
+  return (
+    <main className="min-h-screen p-8">
+      <Head>
+        <title>Reports • Seo • Index.html - Placeholder</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-2xl font-semibold mb-2">Reports • Seo • Index.html</h1>
+        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
+        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
+      </div>
+    </main>;
+  );
+}
+
+}
+    </main>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+
+    <main className="min-h-screen p-8">;
+      <Head>;
+        <title>Reports • Seo • Index && Index.html - Placeholder</title>;
+        <meta name="robots" content="noindex" />;
+      </Head>;
+      <div className="max-w-3xl mx-auto">;
+        <h1 className="text-2xl font-semibold mb-2">Reports • Seo • Index && Index.html</h1>;
+        <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index && index.html</code>.</p>;
+        <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></Link>;
+      </div>;
+    </main>;
+  );
+
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**
@@ -68,7 +117,10 @@ function Placeholder() {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export default function Placeholder() {
   return (
 
@@ -92,7 +144,10 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -104,7 +159,10 @@ export default function Placeholder() {
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </main>
   );
 }
@@ -122,9 +180,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 
 
 
     </main>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

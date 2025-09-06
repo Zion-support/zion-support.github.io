@@ -1,8 +1,11 @@
 {
+<<<<<<< HEAD
 main
 main
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -6906,6 +6909,7 @@ main
     "zion_academy/static/js/script.jsx"
   ],
   "errorList": []
+<<<<<<< HEAD
   "timestamp": "2025-09-03T22:43:17.753Z",
   "fixes": [
     "components/ErrorBoundary.tsx: Remove semicolon after closing brace (2 fixes)",
@@ -6929,4 +6933,6 @@ main
   "totalFixes": 16,
   "totalIssues": 0
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }

@@ -1,10 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 
 function fixFile(filePath) {
 
 
+=======
+function fixFile(filePath) {
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -138,6 +143,7 @@ function fixFilesInDirectory(dirPath) {}
     
     const handleRequestHire = (talentId) => {
         // Handle hire request logic here
+<<<<<<< HEAD
     if (stat.isDirectory()) {}
       fixedCount += fixFilesInDirectory(filePath);
     } else if (file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx')) {}
@@ -229,3 +235,6 @@ walkDir('./pages');
 
 console.log('Remaining syntax error fixing completed!');
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

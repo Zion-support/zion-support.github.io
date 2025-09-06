@@ -1,9 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+  const ip =
+    (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
+    req.socket.remoteAddress ||
+    "unknown";
+
+  const now = Date.now();
+  const key = `rate_limit_${ip}`;
+  const current = rateLimitMap.get(key);
+
+  if (!current || now > current.resetTime) {
+    // Reset or initialize
+    rateLimitMap.set(key, {
+      count: 1,
+      resetTime: now + RATE_LIMIT_WINDOW,
+    });
+    return true;
+  }
+
+  if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
+    res.status(429).json({ error: "Too Many Requests" });
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return false;
   }
 
@@ -12,11 +36,14 @@ main
   return true;
 
 
+<<<<<<< HEAD
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
@@ -90,8 +117,11 @@ export const rateLimiter = new RateLimiter({
 // Express middleware for rate limiting
 export function rateLimit(config: RateLimitConfig) {
   const limiter = new RateLimiter(config);
+<<<<<<< HEAD
 export function rateLimit(options: { windowMs: number; max: number }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (req: any, res: any, next: any) => {
     const info = limiter.isAllowed(req);
     res.set({
@@ -109,8 +139,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     next();
   };
 }
+<<<<<<< HEAD
 
 
+=======
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -175,9 +209,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

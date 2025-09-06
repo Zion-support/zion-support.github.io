@@ -1,17 +1,23 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface KycProfile {
   user_id: string;
 
@@ -19,8 +25,13 @@ export interface KycProfile {
 export interface KycProfile {;
 
   userId: string;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface KycProfile {
+  user_id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -38,6 +49,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     at: string;
     by: string;
     action: string;
+<<<<<<< HEAD
 
     details?: any
 
@@ -70,15 +82,20 @@ if ( {) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -91,6 +108,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
   }
   
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -105,10 +123,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     missing && missing.push('name'),
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
@@ -118,6 +142,9 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -129,6 +156,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   return {
 
+<<<<<<< HEAD
     ok: missing && missing.length === 0,
 
     missing
@@ -142,16 +170,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface KycDocumentMeta {;
 
+=======
+
+export interface KycDocumentMeta {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
+<<<<<<< HEAD
 
 }
 
 export interface KycProfile {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+export interface KycProfile {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -173,7 +210,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     details?: any
   }>;
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+export function generateKycDocumentId(): string {
+  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+export function isKycProfileComplete(profile: KycProfile): boolean {
+  return profile.status === 'approved' && 
+         profile.documents.length > 0 && 
+         profile.fullLegalName.length > 0;
+}
+export function isKycProfileExpired(profile: KycProfile): boolean {
+  if (!profile.expiresAt) return false;
+  return new Date(profile.expiresAt) < new Date();
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
@@ -196,13 +249,30 @@ if ( {) {
 }
     missing.push ('dateOfBirth');
   }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return { ok: missing.length === 0, missing };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

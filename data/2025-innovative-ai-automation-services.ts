@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {
   id: string;
@@ -43,11 +44,14 @@ export interface InnovativeAIAutomationService {
 const contact = null;
 realImplementation: true;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
+<<<<<<< HEAD
 
 
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
@@ -56,14 +60,19 @@ real_implementation: true;
 implementation_details: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launch_date: '2025 - 01 - 25';
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 customers: 156;
 
 rating: 4 && 4.7;
 reviews: 89 
 };
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
@@ -73,6 +82,7 @@ reviews: 89;
 implementation_details: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launch_date: '2025 - 01 - 28';
 customers: 234;
+<<<<<<< HEAD
 
 rating: 4 && 4.8;
 reviews: 167 
@@ -120,6 +130,8 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
       'Compliance and best practices enforcement'
 reviews: 167;
@@ -127,6 +139,7 @@ reviews: 167;
       'Multi - language support (Python, JavaScript, Go, Rust, Java)AI - powered security vulnerability detection_performance optimization recommendations_code quality scoring and metrics_integration with GitHub, GitLab, BitbucketCustom rule engine and policies_real - time feedback and suggestions_team collaboration and review workflows';
       'Compliance and best practices enforcement';
     ];
+<<<<<<< HEAD
 
     popular: true, icon: '🔍',
 
@@ -166,6 +179,8 @@ reviews: 167;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     use_cases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';
@@ -177,18 +192,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Security monitoring, Threat detection, Incident response, Compliance management'];
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
+<<<<<<< HEAD
 
     market_size: '$15.8B+ security monitoring market';
     growth_rate: '95% YoY';
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'default';
     contact_info: contact;
     real_implementation: true;
     implementation_details: 'Real - time security monitoring platform with AI - powered threat detection and automated response capabilities.';
     launch_date: '2025 - 02 - 05';
     customers: 112;
+<<<<<<< HEAD
 
     rating: 4.9;
     reviews: 78;
@@ -205,6 +224,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     use_cases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';
@@ -217,23 +238,29 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
 
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
     customers: 234;
     rating: 4 && 4.8;
     reviews: 167
+<<<<<<< HEAD
 
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -246,14 +273,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 ];
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIAutomationService {;
   id: string,;
@@ -666,6 +699,7 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234,;
     rating: 4.8;
     reviews: 167;
+<<<<<<< HEAD
 
 
   }
@@ -676,3 +710,7 @@ rating: 4.8;
 reviews: 167 
 }];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

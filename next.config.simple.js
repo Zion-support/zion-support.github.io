@@ -1,4 +1,6 @@
 
+/** @type {import ('next').NextConfig} */;
+const next_config = {
 
 
   reactStrictMode: true,
@@ -24,6 +26,7 @@
     ],
     formats: ["image/webp", "image/avif"],
   },
+  // Output configuration
   // Output configuration
   output: 'standalone',
 

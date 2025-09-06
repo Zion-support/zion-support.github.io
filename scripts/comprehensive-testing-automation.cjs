@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -53,6 +56,7 @@ const { execSync } = require('child_process')
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
       { "component": 'PerformanceMonitor', "status"}
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync, spawn } = require('child_process');
@@ -313,3 +317,5 @@ if (require.main === module) {
 
 module.exports = ComprehensiveTestingAutomation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

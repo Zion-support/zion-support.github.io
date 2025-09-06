@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+=======
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -22,6 +32,10 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.setState({
       error,
       errorInfo
@@ -31,6 +45,10 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+=======
+    console.error('Error caught by boundary:', error, errorInfo);
+    // Send error to monitoring service
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
   }
 
   handleRefresh = () => {
@@ -43,7 +61,9 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -107,8 +127,64 @@ class ErrorBoundary extends Component<Props, State> {
                   kleber@ziontechgroup.com
                 </a>
               </p>
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">
+              <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />
+            </div>
+
+            <div className="text-center">
+              <h1 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                Something went wrong
+              </h1>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+
+              <div className="space-y-3">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Refresh Page
+                </button>
+
+                <button
+                  onClick={() => window.location.href = '/'}
+                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </button>
+              </div>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mt-6 text-left">
+                  <summary className="text-sm font-medium text-gray-700 dark:text-gray-300 cursor-pointer">
+                    Error Details (Development)
+                  </summary>
+                  <div className="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-md">
+                    <pre className="text-xs text-red-600 dark:text-red-400 whitespace-pre-wrap">
+                      {this.state.error.toString()}
+                      {this.state.errorInfo?.componentStack}
+                    </pre>
+                  </div>
+                </details>
+              )}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             </div>
           </div>
+=======
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>We're sorry for the inconvenience. Please try refreshing the page.</p>
+          <button onClick={() => window.location.reload()}>
+            Refresh Page
+          </button>
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
         </div>
       );
     }
@@ -117,4 +193,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+<<<<<<< HEAD
+export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

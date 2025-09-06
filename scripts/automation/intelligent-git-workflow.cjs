@@ -1,11 +1,14 @@
 
 
+<<<<<<< HEAD
 
 
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 ;#!/usr/bin/env node;
 /**
@@ -30,10 +33,13 @@ const path = require('path')
       commitMessageTemplate: process.env.COMMIT_MESSAGE_TEMPLATE || 'feat: {type} - {description}'
       mergeStrategy: process.env.MERGE_STRATEGY || 'recursive'
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           conflictType = 'separator';
           continue;
         } else if (line.startsWith('>>>>>>')) {
@@ -471,6 +477,7 @@ class IntelligentGitWorkflow {
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version for now (simple strategy)
           resolvedLines.push(line);
+<<<<<<< HEAD
 ;
       // Write resolved content;
       fs.writeFileSync(filePath, resolvedLines.join('\n'));
@@ -481,6 +488,9 @@ class IntelligentGitWorkflow {
       console.log(`✅ Resolved conflict in ${filePath}`);
 
       
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       // Write resolved content
       await fs.writeFile(file, resolvedLines.join('\n'));
       
@@ -488,6 +498,7 @@ class IntelligentGitWorkflow {
       await this.runGitCommand(`git add ${file}`);
       
       return { resolved: true, method: 'auto_merge' };
+<<<<<<< HEAD
       
 ;
       // Write resolved content;
@@ -499,6 +510,8 @@ class IntelligentGitWorkflow {
       console.log(`✅ Resolved conflict in ${filePath}`);
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     } catch (error) {
       console.log(
@@ -508,6 +521,7 @@ main
     }
   }
 
+<<<<<<< HEAD
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
@@ -546,6 +560,8 @@ main
     } catch (e) {
       // Start fresh if file is corrupted
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   async createPullRequest(sourceBranch, targetBranch = 'main', title = null, description = null) {
     this.log(`📝 Creating pull request from ${sourceBranch} to ${targetBranch}...`);
     
@@ -863,6 +879,7 @@ main
     } catch (error) {
       this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
+<<<<<<< HEAD
   updateWorkflowData() {
     this.workflowData.lastUpdated = new Date().toISOString();
 
@@ -902,6 +919,8 @@ main
       // Start fresh if file is corrupted
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     }
 
@@ -909,6 +928,7 @@ main
     fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
   }
 }
+<<<<<<< HEAD
 ;
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
 
@@ -981,6 +1001,9 @@ class IntelligentGitWorkflow {
         if (this.shouldAutoCommit(changes)) {
           await this.intelligentCommit(changes);
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         }
       }
 
@@ -1330,8 +1353,12 @@ ursor/automate-test-improve-and-merge-code-59d5
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
         } else if (line.startsWith('')) {
 ursor/fix-lint-push-and-merge-to-main-28da
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';
@@ -1401,6 +1428,7 @@ ursor/fix-lint-push-and-merge-to-main-28da
   }
 }
 
+<<<<<<< HEAD
 
 
       await fs.mkdir(path.join(this.projectRoot, 'logs')
@@ -1408,6 +1436,9 @@ ursor/fix-lint-push-and-merge-to-main-28da
 // Run the workflow;      await fs.mkdir(path.join(this.projectRoot, 'logs')
 
 main
+=======
+      await fs.mkdir(path.join(this.projectRoot, 'logs')
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -1429,6 +1460,7 @@ main
       const userEmail = await this.runGitCommand('git config user.email').catch(() => ''
         await this.runGitCommand('git config user.name "AI Git Workflow")
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
+<<<<<<< HEAD
 // Run the workflow
 const workflow = new IntelligentGitWorkflow();
 workflow.runWorkflow().catch(console.error);
@@ -1445,4 +1477,6 @@ workflow.runWorkflow().catch(console.error);
         await this.runGitCommand('git config user.email "ai-workflow@example.com")
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

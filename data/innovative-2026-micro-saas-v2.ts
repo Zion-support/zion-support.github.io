@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface Innovative2026MicroSaasV2 {
 
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export interface Innovative2026MicroSaasV2 {
+  id: string;
+export interface Innovative2026MicroSaasV2 {  id: string;
+
+export interface Innovative2026MicroSaasV2 {
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -15,7 +24,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+    address: string;
+  };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface Innovative2026MicroSaasV2 {;
   id: string,;
@@ -30,6 +46,7 @@ export interface Innovative2026MicroSaasV2 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+<<<<<<< HEAD
     address: string;
   }
 }
@@ -39,16 +56,22 @@ export interface Innovative2026MicroSaasV2 {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     address: string;
   }
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
     address: string;
 
+=======
+    address: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 ;
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
@@ -78,6 +101,7 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 
+<<<<<<< HEAD
 
 
     id: "2026-micro-saas-v2",
@@ -99,12 +123,23 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      email: "kleber@ziontechgroup.com";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -117,6 +152,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
+<<<<<<< HEAD
     address: string
   }
 }
@@ -129,10 +165,22 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     price: "$99/month";
     description: "Enhanced version of the 2026 micro SAAS platform with additional features and improvements.";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    id: "2026-micro-saas-v2", name: "2026 Micro SAAS Platform V2",
+    tagline: "Enhanced micro SAAS solutions", price: "$99/month",
+    description: "Enhanced version of the 2026 micro SAAS platform with additional features and improvements.",
+    id: '2026-micro-saas-v2'
+    name: '2026 Micro SAAS Platform V2'
+    tagline: 'Enhanced micro SAAS solutions'
+    price: '$99/month'
+    description:
+      'Enhanced version of the 2026 micro SAAS platform with additional features and improvements.'
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     features: [
       "Enhanced micro SAAS";
       "Advanced capabilities";
       "Improved performance";
+<<<<<<< HEAD
       "Better integration",
       "Enhanced support"
     ],
@@ -168,10 +216,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      "Better integration";
+      "Enhanced support"
+    ];
+    link: "/services/2026-micro-saas-v2", category: "Innovative 2026 Micro SAAS V2",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+<<<<<<< HEAD
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

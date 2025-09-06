@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
+export interface ModerationFlag {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -12,24 +20,38 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   updatedAt: string;
   adminNotes?: string;
 }
+<<<<<<< HEAD
 
 main
+=======
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
   return flags.find (flag => flag.id === id) || null;
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
@@ -52,6 +74,11 @@ export interface ModerationFlag {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find((flag) => flag.id === id) || null;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 // Mock data storage - replace with actual database
@@ -59,6 +86,7 @@ let flags: ModerationFlag[] = [];
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
+<<<<<<< HEAD
 
 main
 
@@ -101,11 +129,14 @@ let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
+<<<<<<< HEAD
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
   status: ModerationFlag['status'],
@@ -123,10 +154,40 @@ if (return undefined) {
   };
   
   flags.push(flag);
+=======
+
+export async function createFlag(
+  data: Partial<ModerationFlag>,
+): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentId: data.contentId || "",
+    contentType: data.contentType || "post",
+    reason: data.reason || "",
+    userEmail: data.userEmail || "",
+    status: "pending",
+    createdAt: new Date().toISOString(),
+    ...data,
+  };
+
+  flags.push(flag);
+    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
+    reason: data.reason || '',
+    user_email: data.user_email || '',
+    status: 'pending',
+    created_at: new Date ().toISOString (),
+    ...data;
+  }
+;
+  flags.push (flag);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return flag;
 }
 
 export async function updateFlagStatus(
+<<<<<<< HEAD
   id: string, 
   status: ModerationFlag['status'], 
   adminNotes?: string
@@ -138,14 +199,25 @@ export async function updateFlagStatus(
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+  id: string,
+  status: ModerationFlag["status"],
+  adminNotes?: string,
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

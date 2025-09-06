@@ -10,24 +10,28 @@ import {
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 
+export const metadata = {
+  title: 'Contact | Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
+  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
+};
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: '',
-    budget: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -35,22 +39,17 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     // Simulate form submission
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        budget: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      service: '',
+      message: ''
+    });
   };
 
   const contactInfo = [
@@ -88,7 +87,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business? Get in touch with our team of experts.
+            Ready to transform your business? Let's discuss your project and discover how our solutions can accelerate your growth.
           </p>
         </div>
 
@@ -121,7 +120,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   value={formData.name}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your full name"
@@ -137,7 +136,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="your.email@company.com"
@@ -153,7 +152,7 @@ export default function ContactPage() {
                   id="company"
                   name="company"
                   value={formData.company}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Your company name"
                 />
@@ -167,7 +166,7 @@ export default function ContactPage() {
                   id="service"
                   name="service"
                   value={formData.service}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">Select a service</option>
@@ -181,26 +180,6 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                  Budget Range
-                </label>
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">Select budget range</option>
-                  <option value="under-10k">Under $10,000</option>
-                  <option value="10k-50k">$10,000 - $50,000</option>
-                  <option value="50k-100k">$50,000 - $100,000</option>
-                  <option value="100k-500k">$100,000 - $500,000</option>
-                  <option value="over-500k">Over $500,000</option>
-                </select>
-              </div>
-
-              <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
@@ -208,7 +187,7 @@ export default function ContactPage() {
                   id="message"
                   name="message"
                   value={formData.message}
-                  onChange={handleInputChange}
+                  onChange={handleChange}
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"

@@ -2,13 +2,22 @@
 module.exports = {
   content: [
 <<<<<<< HEAD
+<<<<<<< HEAD
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
 =======
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -16,10 +25,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
 >>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
+=======
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -31,7 +44,14 @@ module.exports = {
           700: '#1d4ed8',
         },
 >>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         blue: {
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -55,8 +75,17 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
+          950: '#030712'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+=======
           950: '#030712',
         },
+<<<<<<< HEAD
         'zion-slate-dark': '#1e293b',
         'zion-slate': '#334155',
         'zion-slate-light': '#475569',
@@ -67,10 +96,17 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+=======
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -81,16 +117,103 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
+          '100%': { opacity: '1' }
+=======
+<<<<<<< HEAD
           '100%': { opacity: '1' }
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
+        scaleIn: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' }
+        },
+        bounceIn: {
+          '0%': { transform: 'scale(0.3)', opacity: '0' },
+          '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+          '70%': { transform: 'scale(0.9)', opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
+        'gradient-y': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'center top'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'center bottom'
+          },
+        },
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '400% 400%',
+            'background-position': 'right center'
+          },
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-mesh': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        'gradient-aurora': 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57)',
+      },
+      boxShadow: {
+        'glow': '0 0 20px rgba(59, 130, 246, 0.5)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.6)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.7)',
+        'inner-glow': 'inset 0 0 20px rgba(59, 130, 246, 0.3)',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem'
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem'
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+=======
+          '100%': { opacity: '1' },
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+        },
+<<<<<<< HEAD
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
           '100%': { transform: 'translateY(0px)', opacity: '1' }
@@ -167,8 +290,11 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem'
 >>>>>>> 3318f2d5c61f28687a5ae16b4f86d7fc33cf285c
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       },
     },
   },
   plugins: [],
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 };

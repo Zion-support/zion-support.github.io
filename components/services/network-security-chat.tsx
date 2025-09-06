@@ -12,7 +12,10 @@ const NetworkSecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -25,6 +28,7 @@ const NetworkSecurityChat: NextPage = () => {;
         <meta name="description" content="NetworkSecurityChat service" />{" "}
 
 
+<<<<<<< HEAD
       </Head>;
 
 
@@ -32,6 +36,16 @@ const NetworkSecurityChat: NextPage = () => {;
       </Head>
 
 
+=======
+const NetworkSecurityChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
+      </Head>;
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <main>
         <h1>NetworkSecurityChat</h1>
         <p>Service details coming soon...</p>
@@ -40,8 +54,11 @@ const NetworkSecurityChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <main>;
         <h1>NetworkSecurityChat</h1>;
         <p>Service details coming soon...</p>;
@@ -51,6 +68,7 @@ const NetworkSecurityChat: NextPage = () => {;
   );
 }
 export default NetworkSecurityChat;
+<<<<<<< HEAD
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
 
@@ -61,6 +79,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+        <title>NetworkSecurityChat - Zion Tech Solutions</title>
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -125,8 +150,11 @@ export default NetworkSecurityChat;
 
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
         <title>NetworkSecurityChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   roles: DevRole[];
   userId?: string;
 }
+<<<<<<< HEAD
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -32,6 +42,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+<<<<<<< HEAD
   if (token && adminToken && token === adminToken) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -45,15 +56,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 
+=======
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -70,10 +93,13 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
 
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -242,6 +268,7 @@ if ( {) {
   }
   return identity;
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -251,3 +278,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

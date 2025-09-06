@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function extractClientIp(req: NextApiRequest): string | null {
@@ -13,6 +16,13 @@ export function extractClientIp(req: NextApiRequest): string | null {;
   if (!ip) return null;
   if (ip.startsWith('::ffff:')) return ip.substring(7);
   return ip;
+<<<<<<< HEAD
+=======
+}
+export function getClientIp(req: any): string {
+
+export function getClientIp(req: any): string {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 import type { NextApiRequest } from 'next';
@@ -25,26 +35,35 @@ import type { NextApiRequest } from 'next';
 export function getClientIp(req: any): string {
 
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
 
 
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
   return remoteAddress |'unknown';
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
   // Check IP reputation
@@ -248,7 +267,10 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

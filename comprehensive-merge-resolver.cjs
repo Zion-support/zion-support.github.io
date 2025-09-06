@@ -1,7 +1,10 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -114,7 +117,10 @@ function pushChanges() {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
@@ -143,5 +149,8 @@ if (require.main === module) {
 }
 
 module.exports = { resolveConflicts, commitMerge, pushChanges };
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

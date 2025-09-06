@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -364,6 +368,7 @@ if ( {})
       console.error('Dependency management "failed": ', error);
       process.exit(1)})};
 module.exports = DependencyManager;
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = DependencyManager;
@@ -372,4 +377,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
+=======
+
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

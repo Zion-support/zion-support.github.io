@@ -16,6 +16,7 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
+<<<<<<< HEAD
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
@@ -39,6 +40,11 @@ export default function ReportsIndex() {
         </div>;
         {/* Content Categorizer Component */}
         <ContentCategorizer />;
+=======
+
+
+        {/* Back to Home */}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
         {/* Back to Home */}
@@ -88,12 +94,16 @@ function ReportsIndex() {
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
           >            ← Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             ← Back to home;
           </Link>;
         </div>;
       </main>;
+<<<<<<< HEAD
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
@@ -135,6 +145,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
+=======
+
+  );
+}
+        <div className="mt-12 text-center">
+
+
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,24 +167,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
+<<<<<<< HEAD
 
           >
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             ← Back to home
           </Link>
         </div>
       </main>
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>);
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
     </div>
     </div>
   );
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>;
   );
 }
@@ -186,7 +217,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>);
 }
 
@@ -194,6 +228,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     </div>);
 }
+<<<<<<< HEAD
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

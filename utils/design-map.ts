@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type DesignMapSection = {
   id: string;
   title: string;
@@ -270,6 +271,13 @@ export function getZionDesignMap(): DesignMap {
 
 export type TokenSet = {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export type UIKitKind = "ios" | "android" | "web";
+export type UIKitKind = "ios" | "android" | "web";
+export interface TokenSet {
+
+export interface TokenSet {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -284,6 +292,7 @@ export interface UIKit {;
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+<<<<<<< HEAD
 
 
   tokens: TokenSet;
@@ -309,6 +318,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
     
     return this.props.children;
@@ -362,9 +373,12 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     };
   }
   if (kind === 'chakra') {
@@ -393,9 +407,12 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -458,17 +475,32 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     };
   };
 }
 
+<<<<<<< HEAD
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
   const tokens = await buildTokenSet(fileId);
   return {
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  getDesignSystem(id: string): DesignSystem | null {
+    return this.designSystems.get(id) || null;
+  }
+
+  addComponent(designSystemId: string, component: DesignElement): boolean {
+    const designSystem = this.designSystems.get(designSystemId);
+    if (!designSystem) return false;
+  const tokens = await buildTokenSet(fileId);
+  return {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -649,8 +681,11 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
+<<<<<<< HEAD
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -668,6 +703,7 @@ main
       sm: 8,
       md: 16,
       lg: 24,
+<<<<<<< HEAD
       xl: 32;
     }
   }
@@ -683,6 +719,14 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+      xl: 32,
+      xl: 32,
+}
+  };
+
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     },
   };
 }
@@ -697,6 +741,7 @@ export async function buildUIKit(
     components: {
       button: {
         primary: {
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -757,3 +802,13 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+          backgroundColor: tokens.colors.primary,
+          padding: tokens.spacing.md,
+        },
+      },
+    },
+    tokens,
+  };
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

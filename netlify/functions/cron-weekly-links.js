@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 async function fetchHtml(url) {
@@ -8,6 +9,8 @@ async function fetchHtml(url) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -18,6 +21,7 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
 
 const { upsert_file } = require ('./_lib / github');
 ;
@@ -46,6 +50,8 @@ function extract_links() {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -56,6 +62,7 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
 
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
           }
@@ -82,6 +89,8 @@ exports && exports.handler = async function () {
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -109,6 +118,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 ;
     // Check condition
 if ( {) {
@@ -123,10 +133,13 @@ if ( {) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         token,
       });
     }
     return {
+<<<<<<< HEAD
 
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
@@ -166,6 +179,15 @@ async function fetchHtml(url) {
 };
   return resp.text()
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+};async function fetchHtml(url) {
+  const resp = await fetch(url),
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
+  return resp && resp.text()
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 function extractLinks(html, base) {
 
@@ -177,6 +199,7 @@ function extractLinks(html, base) {
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications'],
     const checked = [],
@@ -185,12 +208,15 @@ exports && exports.handler = async function() {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
+<<<<<<< HEAD
 
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
@@ -289,6 +315,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
+=======
+},
+},
+},
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -346,9 +377,12 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

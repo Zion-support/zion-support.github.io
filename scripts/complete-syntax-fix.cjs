@@ -5,7 +5,11 @@
 const fs = require('fs');
 
 console.log('🔧 Final Syntax Cleanup');
+<<<<<<< HEAD
 console.log('======================');
+=======
+console.log('=');
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {

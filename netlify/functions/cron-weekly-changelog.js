@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 const { upsertFile } = require('./_lib/github');
@@ -28,11 +29,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
@@ -44,20 +48,26 @@ exports && exports.handler = async function () {
     if (!owner || !repo || !token) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       return {
         statusCode: 200,
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
     }
+<<<<<<< HEAD
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const commits = await fetchJson(commitsUrl, token);
     const byAuthor = {}
     const messages = [];
 
+<<<<<<< HEAD
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
@@ -121,12 +131,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  } catch (e) {
+  }
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
+    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+},
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

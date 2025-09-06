@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }
 ];
@@ -10,6 +11,8 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 ;        {/* Why Choose Us */};
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 ];
@@ -40,6 +43,7 @@ export default function ServicesPage() {,
                     {/* Services List */};
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
+<<<<<<< HEAD
 }
 ];
 export default function ServicesPage() {return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};        {/* Why Choose Us */}
@@ -80,12 +84,15 @@ export default function ServicesPage() {
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                       <ul className="space-y-2">,
                         {service.services.map((item, idx) => (,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
                             {item};
                     {/* CTA */};
+<<<<<<< HEAD
                     <Link
                       href={service.href};
                       Explore {service.title};
@@ -96,13 +103,28 @@ export default function ServicesPage() {
 
 
 
+=======
+                    <Link,
+                      href={service.href};
+                      Explore {service.title};
+                      <ArrowRight className="w-4 h-4 ml-2" />,
+                    </Link>,
+                  </div>,
+                </motion.div>,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
               ))};
             </div>,
           </div>,
         </section>,
+<<<<<<< HEAD
 
         {/* Why Choose Us */};
 
+=======
+        {/* Why Choose Us */};
+
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 ];
 ;
@@ -113,11 +135,15 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
 ;        {/* Why Choose Us */}
         {/* Why Choose Us */}
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 ;
   }
+<<<<<<< HEAD
 
 ;
   }
@@ -131,6 +157,8 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
   }
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ],;
 ,;
 export default function ServicesPage() {,;
@@ -143,10 +171,13 @@ export default function ServicesPage() {,;
       <div className="min-h-screen bg-gray-50">,;
         {/* Hero Section */};
                     {/* Header */};
+<<<<<<< HEAD
 
         {/* Hero Section */};
                     {/* Header */};
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         {/* Hero Section */},;
                     {/* Header */},;
                     <div className="flex items-center mb-6">,;
@@ -163,13 +194,19 @@ export default function ServicesPage() {,;
                     {/* Services List */},;
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                     {/* Description */};
                     <p className="text-gray-600 mb-6">{service.description}</p>,;
                     {/* Services List */};
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key:Services:</h4>,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
                       <ul className="space-y-2">,;
                         {service.services.map((item, idx) => (,;
                           <li key={idx} className="flex items-center text-sm text-gray-600">,;
@@ -186,6 +223,12 @@ export default function ServicesPage() {,;
             </div>,;
           </div>,;
         </section>,;
+<<<<<<< HEAD
+=======
+
+
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         {/* Why Choose Us */};
                             {item};
                     {/* CTA */};
@@ -208,6 +251,7 @@ export default function ServicesPage() {,;
         {/* Why Choose Us */};
         {/* Why Choose Us */};
         {/* Why Choose Us */};
+<<<<<<< HEAD
 
         {/* Why Choose Us */};
 
@@ -219,3 +263,6 @@ export default function ServicesPage() {; return (; <Layout; title = "Our Servic
 ;
         {/* Why Choose Us */};
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+        {/* Why Choose Us */};
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

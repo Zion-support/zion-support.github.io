@@ -1,9 +1,12 @@
 
 
+<<<<<<< HEAD
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -34,6 +37,7 @@ main
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+<<<<<<< HEAD
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
@@ -53,6 +57,10 @@ module.exports = {
       name: 'ci-cd-pipeline',
 
 main
+=======
+
+      name: 'bolt-zion-app',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       script: 'npm',
       args: 'run build',
@@ -63,15 +71,19 @@ main
       max_memory_restart: '1G',
       env: {
 
+<<<<<<< HEAD
 
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
+<<<<<<< HEAD
         NODE_ENV: 'production'
 
       },
@@ -85,6 +97,16 @@ main
 
 
 
+=======
+
+      },
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
+      out_file: './logs/ci-cd-out.log',
+      log_file: './logs/ci-cd-combined.log',
+      time: true,    },
+    {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
         NODE_ENV: 'production',
       },
@@ -94,9 +116,12 @@ main
     },
     {
       name: 'auto-fix',
+<<<<<<< HEAD
       name: 'continuous-automation',
 
       name: 'continuous-automation',
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
@@ -107,22 +132,61 @@ main
       max_memory_restart: '1G',
       env: {
 
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+        NODE_ENV: 'development',
+        PM2_PROCESS_NAME: 'auto-commit-fixes',
+        COMMIT_FREQUENCY: 'hourly',
+        AUTO_PUSH: 'false',
+<<<<<<< HEAD
+        NODE_ENV: 'production'
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,
+    },
+    {
+
+        NODE_ENV: 'production',
+      },
+      log_file: 'logs/pm2/preview.log',
+      error_file: 'logs/pm2/preview-error.log',
+      out_file: 'logs/pm2/preview-out.log',
+    },
+    {
+      name: 'auto-fix',
+
+      script: 'node',
+      args: 'scripts/automation/automation-orchestrator.cjs',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
 
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
-        NODE_ENV: 'production'
 
       },
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true
     },
     {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
+
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -131,6 +195,7 @@ main
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
+<<<<<<< HEAD
         NODE_ENV: 'production',
 
       },
@@ -145,42 +210,27 @@ main
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
       cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/comprehensive-automation-error.log',
-      out_file: './logs/comprehensive-automation-out.log',
-      log_file: './logs/comprehensive-automation-combined.log',
-      time: true,
+=======
+
     },
     {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true,    },
-    {
-      name: 'comprehensive-automation',
-      script: 'node',
-      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
-      cwd: '/workspace',
+      name: 'auto-commit-fixes',
+      script: 'scripts/pm2/auto-commit-fixes.js',
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
+
+};
+
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
-      time: true,    },
+
     {
       name: 'marketing-automation',
       script: 'node',
@@ -191,29 +241,27 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
-      time: true,    },
-    {
-      name: 'security-audit',
-      name: 'bolt-zion-app',
+
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
+
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 2 * * *', // Daily at 2 AM
       error_file: './logs/security-audit-error.log',
       out_file: './logs/security-audit-out.log',
       log_file: './logs/security-audit-combined.log',
-      time: true,    },
+
     {
       name: 'test-runner',
       script: 'npm',
@@ -224,18 +272,19 @@ main
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
+
       cron_restart: '0 */4 * * *', // Every 4 hours
       error_file: './logs/test-runner-error.log',
       out_file: './logs/test-runner-out.log',
       log_file: './logs/test-runner-combined.log',
-      time: true,    },
+
     {
       name: 'lint-checker',
       script: 'npm',
       args: 'run lint',
       cwd: '/workspace',
 
+<<<<<<< HEAD
 
 
 
@@ -568,11 +617,14 @@ module.exports = {}
       cwd: '/workspace',
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
 
       cron_restart: '0 2 * * *', // Daily at 2 AM
@@ -646,6 +698,8 @@ main
       max_memory_restart: '500M',
       env: {
         NODE_ENV: 'production',      },
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
@@ -659,6 +713,7 @@ main
       args: "start",
       interpreter: "none",
       cwd: __dirname,
+<<<<<<< HEAD
         NODE_ENV: 'production',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
@@ -670,6 +725,8 @@ main
       out_file: 'logs/pm2/code-quality-monitor-out.log',
     }
   ]
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       watch: false,
       autorestart: true,
@@ -721,6 +778,7 @@ main
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
       time: true
+<<<<<<< HEAD
     }
   ];};
 
@@ -728,4 +786,6 @@ main
 };
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

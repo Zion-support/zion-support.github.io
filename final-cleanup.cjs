@@ -1,10 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
     .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?[^\n]+/g, '')
     .replace(/^<<<<<<< [^\n]+$/gm, '')
     .replace(/^=======$/gm, '')
     .replace(/^[^\n]+$/gm, '');
+=======
+    .replace(/<<<<<<< [^\n]+[\s\S]*?
+    .replace(/^<<<<<<< [^\n]+$/gm, '')
+    .replace(/^
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 // Function to clean common syntax errors
@@ -39,6 +45,7 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     let cleaned = cleanMergeConflicts(content);
     cleaned = cleanSyntaxErrors(cleaned);
+<<<<<<< HEAD
     
     if (cleaned !== content) {
       fs.writeFileSync(filePath, cleaned);
@@ -70,6 +77,15 @@ function findConflictedFiles(dir, conflictedFiles = []) {
   content = content.replace(/[a-f0-9]+\n?/g, '');
   content = content.replace(/origin\/[^\n]+\n?/g, '');
   content = content.replace(/ursor\/[^\n]+\n?/g, '');
+=======
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+  content = content.replace(/
+  content = content.replace(/
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   
   // Clean up any remaining artifacts
   content = content.replace(/\n\s*\n\s*\n/g, '\n\n');

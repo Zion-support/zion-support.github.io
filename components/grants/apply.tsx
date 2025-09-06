@@ -2,11 +2,26 @@
 
 import {useState} from 'react';
 
+<<<<<<< HEAD
 
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+
+const categories: GrantCategory[] = [
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { useState  } from 'react';
 import {useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -19,12 +34,15 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+<<<<<<< HEAD
 
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -33,8 +51,11 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -42,6 +63,7 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -52,16 +74,90 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
+
+import {useState} from 'react';
+import EnhancedLayout from '../../components / layout / EnhancedLayout';
+import {use_router} from 'next / router';
+import type { GrantCategory } from '../../types / grants';
+;
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default /**
+ * ApplyGrantPage - Function description
+ */
+function ApplyGrantPage() {
+  const router = use_router ();
+  const [program, set_program] = useState<'grant' | 'incubator'>('grant');
+  const [project_name, setProjectName] = useState ('');
+  const [team_info, setTeamInfo] = useState ('');
+  const [proposal_summary, setProposalSummary] = useState ('');
+  const [timeline, set_timeline] = useState ('');
+  const [budget_amount, setBudgetAmount] = useState < number>(0);
+  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC');  const [supporting_links, setSupportingLinks] = useState < string>('');  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+  const [supporting_links, setSupportingLinks] = useState < string>('');
+  const [pitchDeckUrl, setPitchDeckUrl] = useState ('');
+  const [region, set_region] = useState ('');
+  const [sector, set_sector] = useState < string>('');
+  const [loading, set_loading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const save = async (submit: boolean) => {
+    try {
+      set_loading (true);
+      set_error (null),
+      const resp = await fetch ('/api / grants', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          program,
+          project_name,
+          team_info,
+          proposal_summary,
+          timeline,
+          budget_amount: Number (budget_amount || 0),
+          budget_currency,
+          supporting_links: supporting_links;
+            .split ('\n');
+            .map (string => s.trim ());
+            .filter (Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit,
+        }),
+      });
+      const data = await resp.json ();
+      if (throw new Error (data?.error || 'Failed')) {
+  $2
+}
+      router.push (`/grants/${data.id}`);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     } catch (e: any) {
       set_error (e.message);
     } finally {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -94,15 +190,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
           budgetAmount: Number(budgetAmount || 0),
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -127,7 +230,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
   }
 
@@ -169,10 +276,105 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button
             disabled={loading}
             onClick={() => save(true)}
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
+          >;
+            Submit for Review;
+          </button>        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+
+  const _save = async (_submit: boolean) => {
+    try {
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json()
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),
+  const save = async (submit: boolean) => {
+    try {
+      setLoading(true);
+      setError(null)
+      const resp = await fetch('/api/grants', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          program
+          projectName
+          teamInfo
+          proposalSummary
+          timeline
+          budgetAmount: Number(budgetAmount |0)
+          budgetCurrency
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map(s => s.trim())
+            .filter(Boolean)
+          pitchDeckUrl
+          region
+          sector: (sector as any) |undefined
+          submit
+        })
+      });
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`);
+    } catch (e: any) {
+      setError(e.message);
+    } finally {
+      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
+          budgetCurrency;
+          supportingLinks: supportingLinks
+            .split('\n')
+            .map((s) => s.trim())
+            .filter(Boolean);
+          pitchDeckUrl;
+          region;
+          sector: (sector as any) |undefined
+          submit})});
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error |'Failed');
+      router.push(`/grants/${data.id}`)
+    } catch (e: any) {
+      setError(e.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  };
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   return (
     <EnhancedLayout>
-<h1 className='text-2xl font-semibold mb-4'>
+      <h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
       <div className='grid gap-4 max-w-3xl'>
@@ -286,7 +488,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
     }
 
@@ -297,9 +502,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -315,8 +523,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-          </button>
-        </div>
+          </button>        </div>
       </div>
     </EnhancedLayout>
   );
@@ -339,6 +546,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   );
 }            </select>
           </label>
@@ -389,13 +600,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </EnhancedLayout>
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   );
 
 );
 }
   );
+<<<<<<< HEAD
 
 }
   );
@@ -404,3 +619,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

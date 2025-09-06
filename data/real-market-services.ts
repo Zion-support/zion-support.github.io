@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -17,15 +18,32 @@ const contact = {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  customers: number;
+  rating: number;
+  reviews: number;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const realMarketServices: RealMarketService[] = [;
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const realMarketServices: RealMarketService[] = [;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   {  mobile: '+1 302 464 0950';
@@ -37,6 +55,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {
   id: string;
@@ -81,6 +100,8 @@ export interface RealMarketService {
 
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     tagline:
       'Centralize model access, control spend, add observability and guardrails'
     price: '$299'
@@ -88,6 +109,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.'
     features: [
+<<<<<<< HEAD
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
@@ -146,16 +168,58 @@ export const realMarketServices: RealMarketService[] = [
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Unified API for multiple LLM providers'
+      'Spend caps, rate limits, and usage alerts'
+      'PII redaction and secrets filtering'
+      'Prompt templates and versioning'
+      'Latency and cost-aware routing'
+      'Batch and streaming inference'
+      'Audit logs and RBAC'
+      'LangChain/LlamaIndex SDK support'
+      'Export to data warehouse'
+    ]
+    popular: true
+    icon: '🧠'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/llm-gateway'
+    marketPosition:
+      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.'
+    targetAudience: 'Product teams, platform engineering, data/AI teams'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
+
+
+export const realMarketServices: RealMarketService[] = [
+  {
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
       'Prompt templates and versioning',
+<<<<<<< HEAD
       'Latency and cost-aware routing',
       'Batch and streaming inference',
       'Audit logs and RBAC',
       'LangChain/LlamaIndex SDK support',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Latency and cost - aware routing',
+      'Batch and streaming inference',
+      'Audit logs and RBAC',
+      'LangChain / LlamaIndex SDK support',
+      'Latency and cost - aware routing',
+      'Batch and streaming inference',
+      'Audit logs and RBAC',
+      'LangChain / LlamaIndex SDK support',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Export to data warehouse',
     ],
     popular: true,
@@ -164,6 +228,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
 
 
+<<<<<<< HEAD
       'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
     targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14,
@@ -212,6 +277,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 61,
   },
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    integrations: [
+      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
+    ]
+    useCases: [
+      'Centralized LLM access, Governance and compliance, Cost optimization'
+    ]
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer']
+    marketSize: '$40B+ GenAI platform market'
+    growthRate: '100% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
 
       'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next && Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
@@ -227,8 +308,11 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     features: [;
       'OpenTelemetry auto - instrumentation',
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -237,6 +321,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Service map and dependency view',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📈',
 
       'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',
@@ -267,11 +352,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 120,
     rating: 4 && 4.7,
     reviews: 73,
   },
   {
+<<<<<<< HEAD
 
       'SPF/DKIM/DMARC configuration checks',
       'Seed-list deliverability tests',
@@ -288,12 +376,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Automated sending warmup schedules',
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
       'Alerts to Slack / Email with remediation steps',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📧',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -320,6 +411,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -334,6 +427,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 44,
   },
   {
+<<<<<<< HEAD
 
     id: 'affiliate - attribution - hub',
     name: 'Affiliate Attribution & Payouts Hub',
@@ -346,6 +440,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'UTM, ref, and coupon tracking',
       'Attribution windows and LTV credit',
       'Fraud detection heuristics',
@@ -354,6 +450,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Webhooks and API access',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🤝',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -363,11 +460,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
     target_audience: 'SaaS and e_commerce teams',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Growth & Monetization',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Next.js, Stripe'],
@@ -382,6 +482,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -396,6 +498,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 29,
   },
   {
+<<<<<<< HEAD
 
     id: 'ai - customer - support - suite',
     name: 'AI Customer Support Suite',
@@ -408,6 +511,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI chat and email drafting',
       'RAG over product docs and tickets',
       'Macros and action tools',
@@ -416,6 +521,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Escalation and SLA policies',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🤖',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -425,17 +531,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Augments existing helpdesks with agent copilots and automation.',
     target_audience: 'Support and success teams',
     trial_days: 14,
     setup_time: '1 day',
     category: 'AI & Data',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Next.js, OpenAI, Vector DB'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Zendesk, Intercom, Freshdesk'],
     use_cases: ['Faster resolution, Deflection via chat, Higher CSAT'],
     roi: 'Reduce handle time 20–40% and raise CSAT 10–20%.',
@@ -458,6 +569,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 21,
   },
   {
+<<<<<<< HEAD
 
     id: 'smb - analytics - starter',
     name: 'SMB Web Analytics Starter',
@@ -470,6 +582,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Traffic and conversion funnels',
       'Source / medium and campaigns',
       'Goals and events tracking',
@@ -478,6 +592,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'GDPR - friendly, IP anonymization',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -493,6 +608,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Google Ads, Meta Ads'],
     use_cases: ['Track campaigns, Monitor conversions, Detect anomalies'],
     roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
@@ -515,6 +632,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 17,
   },
   {
+<<<<<<< HEAD
 
     id: 'cloud - cost - optimizer',
     name: 'Cloud Cost Optimizer',
@@ -528,6 +646,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Idle resource detection',
       'Rightsizing and reservations',
       'Anomaly detection and alerts',
@@ -537,6 +657,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'RBAC and multi - account',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💸',
 
       'Read-only billing access, tagging policy checks, automated recommendation engine.',
@@ -567,11 +688,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 65,
     rating: 4 && 4.6,
     reviews: 48,
   },
   {
+<<<<<<< HEAD
 
     id: 'soc2 - evidence - automation',
     name: 'SOC 2 Evidence Automation',
@@ -585,6 +709,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Automated evidence collectors',
       'Control mapping (AICPA)',
       'Auditor export packs',
@@ -594,6 +720,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Continuous monitoring',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔐',
 
       'Collectors for major SaaS/Cloud, control mapping engine, audit packs.',
@@ -626,12 +753,46 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 42,
     rating: 4 && 4.7,
     reviews: 37,
   },
   {
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Provider selection guide'
+      'Schema and index templates'
+      'ETL/ingestion pipelines'
+      'Embeddings and chunking best practices'
+      'Latency and cost tuning'
+      'Sample RAG app integration'
+    ]
+    popular: false
+    icon: '🧭'
+    color: 'from-sky-600 to-indigo-700'
+    textColor: 'text-sky-400'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    marketPosition:
+      'Accelerator vs DIY; complements vendor docs with turnkey wiring.'
+    targetAudience: 'Data engineers, ML engineers, startups'
+    trialDays: 7
+    setupTime: '1–2 days'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Pinecone, Weaviate, Elastic, OpenAI']
+    integrations: ['Airbyte, Fivetran, Kafka']
+    useCases: ['RAG prototypes, Semantic search, Personalization']
+    roi: 'Ship POCs 3–5x faster.'
+    competitors: ['Native vendor setup, Consultants']
+    marketSize: '$5B vector DB'
+    growthRate: '40% YoY'
+    variant: 'data-futuristic'
+    contactInfo: contact
+    realImplementation: true
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
@@ -648,9 +809,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Provider selection guide',
       'Schema and index templates',
       'ETL/ingestion pipelines',
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'Provider selection guide',
+      'Schema and index templates',
+      'ETL / ingestion pipelines',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
       'Sample RAG app integration',
@@ -662,6 +829,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
     marketPosition:;
+<<<<<<< HEAD
       'Centralized LLM access, Governance and compliance, Cost optimization',
     ],
     roi: 'Reduce AI spend by 20–40% with routing and caps.',
@@ -1044,6 +1212,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/vector-search-starter',
     marketPosition:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
     targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7,
@@ -1060,6 +1230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
 
 
     implementationDetails:
@@ -1095,6 +1266,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    implementationDetails:
+      'Terraform and IaC modules, ETL pipelines, sample notebooks.'
+    launchDate: '2024-08-20'
+    customers: 58
+    rating: 4.6
+    reviews: 41
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -1124,6 +1304,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Jira tickets and Slack alerts',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛡️',
 
     color: 'from - rose - 600 to - orange - 700',
@@ -1152,6 +1333,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
     launch_date: '2024 - 12 - 05',
     customers: 54,
@@ -1179,6 +1362,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 44,
   },
   {
+<<<<<<< HEAD
 
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
@@ -1191,6 +1375,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'DNS record drift detection',
       'TLS and chain changes',
       'Audit log and diffs',
@@ -1238,6 +1424,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 58,
   },
   {
+<<<<<<< HEAD
 
     id: 'status - pages - slo',
     name: 'Status Pages & SLO',
@@ -1250,6 +1437,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Custom components and groups',
       'Incident timelines',
       'SLO and uptime widgets',
@@ -1273,6 +1462,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 27,
   },
   {
+<<<<<<< HEAD
 
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
@@ -1285,6 +1475,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Cron syntax and UI',
       'Retries with jitter',
       'Dead - letter queues',
@@ -1334,6 +1526,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 91,
   },
   {
+<<<<<<< HEAD
 
     id: 'gdpr - dsar - automation',
     name: 'GDPR DSAR Automation',
@@ -1346,6 +1539,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Request intake portal',
       'Identity verification',
       'Connectors to data stores',
@@ -1391,6 +1586,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 18,
   },
   {
+<<<<<<< HEAD
 
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
@@ -1403,12 +1599,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'RUM collection script',
       'Core Web Vitals (LCP / CLS / INP)',
       'Regression detection',
       'Dashboards and alerts',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⚡',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -1435,6 +1634,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Lightweight RUM SDK, vitals aggregation and alerting.',
     launch_date: '2024 - 09 - 08',
     customers: 52,
@@ -1442,6 +1643,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 29,
   },
   {
+<<<<<<< HEAD
 
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
@@ -1454,6 +1656,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Slow query detection',
       'Lock contention analysis',
       'Connection pool saturation',
@@ -1479,6 +1683,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 23,
   },
   {
+<<<<<<< HEAD
 
     id: 'cloud - platform - managed - kubernetes',
     name: 'Managed Kubernetes Platform',
@@ -1491,12 +1696,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'IaC blueprints and GitOps',
       'SSO and RBAC policies',
       'Cost controls and quotas',
       'Backup and restore runbooks',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '☁️',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -1523,6 +1731,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Blueprints, policies, GitOps pipelines and SRE runbooks.',
     launch_date: '2025 - 01 - 10',
     customers: 17,
@@ -1530,6 +1740,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12,
   },
   {
+<<<<<<< HEAD
 
     id: 'rum - analytics - starter',
     name: 'Real User Monitoring (RUM) Analytics Starter',
@@ -1543,6 +1754,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Core Web Vitals (LCP, INP, CLS)',
       'Conversion impact analysis',
       'Geo / device breakdowns',
@@ -1581,6 +1794,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Weekly drift reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⏱️',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -1607,6 +1821,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'SLO definitions, budget math, and actionable ownership routes.',
     launch_date: '2025 - 02 - 18',
     customers: 18,
@@ -1674,6 +1890,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 7,
   },
   {
+<<<<<<< HEAD
 
       'IAB TCF v2 && v2.2 compatible consent',
       'Geo-targeted policies (EEA/UK/US states)',
@@ -1690,12 +1907,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Consent receipts and log exports',
       'Cookie inventory and auto - blocking',
       'Policy pages and versioning',
       'CMP integrations and tag manager hooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛡️',
 
     color: 'from - cyan - 600 to - blue - 700',
@@ -1705,17 +1925,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
     target_audience: 'Marketing ops, legal / compliance, web teams',
     trial_days: 7,
     setup_time: '1 day',
     category: 'Privacy & Compliance',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Next.js, Tag Manager, IAB TCF v2'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],
     use_cases: ['GDPR / CPRA consent management, Audit exports, Region policies'],
     roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',
@@ -1733,6 +1958,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 11,
   },
   {
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2642,6 +2868,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/services/api-backfill-reconciliation',
     marketPosition:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
+    targetAudience: 'Data engineers, platform teams, RevOps'
+    trialDays: 14
+    setupTime: '2 days'
+    category: 'Integration'
+    realService: true
+    technology: ['Node.js, Postgres, Redis, Airflow']
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify']
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust']
+    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.'
+    competitors: ['Fivetran (log-based), custom scripts']
+    marketSize: '$4B data integration'
+    growthRate: '20% YoY'
+    variant: 'integration-futuristic'
+    contactInfo: contact
+    realImplementation: true
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -2650,8 +2894,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realService: true,
     technology: ['Node.js, Postgres, Redis, Airflow'],
     integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
+<<<<<<< HEAD
     useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
     competitors: ['Fivetran (log-based), custom scripts'],
     marketSize: '$4B data integration',
@@ -2661,7 +2909,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true,
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -2669,8 +2920,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.7
     reviews: 9
   }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'api - backfill - reconciliation',
     name: 'API Backfill & Reconciliation',
     tagline:;
@@ -2709,7 +2963,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 9,
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
 
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
@@ -2728,7 +2986,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -2736,7 +2997,10 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     rating: 4.7
     reviews: 9
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
@@ -2747,8 +3011,11 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -2757,6 +3024,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Slack / Jira alerts and reports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📊',
 
     color: 'from - purple - 600 to - pink - 700',
@@ -2775,6 +3043,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Prevent stale dashboards, Catch pipeline regressions, Improve trust',
     ],
     roi: 'Reduce dashboard breaks; improve data - dependent feature velocity.',
@@ -2786,6 +3056,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 13,
   },
   {
+<<<<<<< HEAD
 
     id: 'postgres - index - advisor',
     name: 'Postgres Index Advisor & Tuner',
@@ -2798,6 +3069,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'EXPLAIN plan analysis',
       'Missing / unused index detection',
       'Autovacuum and bloat tuning',
@@ -2825,6 +3098,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 8,
   },
   {
+<<<<<<< HEAD
 
     id: 'gitops - drift - monitor',
     name: 'GitOps Policy & Drift Monitor',
@@ -2838,6 +3112,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Desired vs live diffing',
       'OPA / Conftest policy gates',
       'Auto - PR remediation',
@@ -2846,6 +3122,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - cluster support',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧭',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -2872,6 +3149,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Cluster collectors, policy engine, reconciler workers, and PR bots.',
     launch_date: '2025 - 08 - 22',
     customers: 14,
@@ -2879,6 +3158,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 7,
   },
   {
+<<<<<<< HEAD
 
     id: 'soc2 - readiness - scanner',
     name: 'SOC 2 Readiness Scanner',
@@ -2891,6 +3171,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Control mapping templates',
       'Evidence collectors and checks',
       'Policy and process coverage',
@@ -2927,6 +3209,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],
     integrations: ['Jira, ServiceNow, Slack'],
+<<<<<<< HEAD
 
     use_cases: [;
       'Reduce attack surface, Speed up remediation, Improve visibility',
@@ -2942,6 +3225,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'API collectors, exposure heuristics, ticket routing, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 19,
@@ -2949,6 +3234,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 9,
   },
   {
+<<<<<<< HEAD
 
     id: 'llm - red - team - simulator',
     name: 'LLM Red Team & Jailbreak Simulator',
@@ -2962,6 +3248,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Prompt injection libraries',
       'PII / redaction checks',
       'Safety regression tests',
@@ -2969,6 +3257,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CI gates and reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧪',
 
     color: 'from - rose - 600 to - pink - 700',
@@ -2995,6 +3284,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Scenario libraries, orchestrator, CI integration, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 17,
@@ -3008,6 +3299,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Appeal and review portal',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛑',
 
     color: 'from - red - 600 to - rose - 700',
@@ -3034,6 +3326,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
     launch_date: '2025 - 01 - 21',
     customers: 48,
@@ -3077,6 +3371,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'APIs and dashboards',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🚚',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -3103,6 +3398,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Device registry, stream processors, and feature store for ML.',
     launch_date: '2025 - 01 - 21',
     customers: 21,
@@ -3110,6 +3407,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12,
   },
   {
+<<<<<<< HEAD
 
     id: 'api - security - testing',
     name: 'API Security Testing as a Service',
@@ -3122,6 +3420,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'OWASP API Top 10 checks',
       'Secrets and token leakage detection',
       'CI / CD and PR annotations',
@@ -3129,6 +3429,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Reports and Jira tickets',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🛡️',
 
     color: 'from - slate - 600 to - gray - 700',
@@ -3159,6 +3460,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launch_date: '2025 - 08 - 22',
     customers: 13,
@@ -3166,6 +3469,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 7,
   },
   {
+<<<<<<< HEAD
 
     id: 'cloudflare - turnstile - proxy',
     name: 'Cloudflare Turnstile & Bot Shield Proxy',
@@ -3178,6 +3482,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Turnstile token verification',
       'Reputation and ASN heuristics',
       'IP / device fingerprinting',
@@ -3205,6 +3511,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 8,
   },
   {
+<<<<<<< HEAD
 
     id: 'reverse - etl - lite',
     name: 'Reverse ETL Lite',
@@ -3217,6 +3524,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Warehouse connectors',
       'Field mapping UI',
       'Schedules and retries',
@@ -3224,6 +3533,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Row - level filters',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔄',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -3233,17 +3543,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Affordable, focused alternative to heavy Reverse ETL suites.',
     target_audience: 'Growth, data engineering, RevOps',
     trial_days: 14,
     setup_time: '1 hour',
     category: 'Data & Analytics',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Node.js, Airflow / dbt optional, OAuth'],
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
     use_cases: ['Activation, Lead scoring, Audiences'],
     roi: 'Ship activation in days; lift campaign ROI 10–20%',
@@ -3266,6 +3581,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6,
   },
   {
+<<<<<<< HEAD
 
     id: 'ai - rfp - response - copilot',
     implementationDetails:
@@ -3889,10 +4205,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
+<<<<<<< HEAD
       'Word/PDF export',
     ],
     popular: true,
@@ -3992,6 +4311,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 9,
   },
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Document loaders, chunking, topic maps, structured draft generator.'
+    launchDate: '2025-02-20'
+    customers: 14
+    rating: 4.6
+    reviews: 9
+  }
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
 
     id: 'gpt - eval - harness',
@@ -4003,8 +4339,11 @@ origin/cursor/automate-test-improve-and-merge-code-382a
       'Define tasks and datasets, run multi - model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
     features: [;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Golden sets and prompts',
       'Judge model scoring',
       'Multi - model matrix',
@@ -4012,6 +4351,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CI quality gates',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🧪',
 
     color: 'from - indigo - 600 to - slate - 700',
@@ -4024,6 +4364,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     category: 'AI & Data',
     real_service: true,
     technology: ['OpenAI / Anthropic APIs, Vector DB'],
@@ -4049,6 +4391,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 7,
   },
   {
+<<<<<<< HEAD
 
       'Geo rules (EEA/UK/US states)',
     id: 'gdpr - cookie - consent - edge',
@@ -4064,12 +4407,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Consent receipts & exports',
       'Auto - blocking for tags',
       'Policy page generator',
       'A / B banner tests',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🍪',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -4094,6 +4440,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4108,6 +4456,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12,
   },
   {
+<<<<<<< HEAD
 
     id: 'smart - web - scraper - hub',
     name: 'Smart Web Scraper Hub',
@@ -4120,6 +4469,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Headless rendering & queues',
       'IP rotation and backoff',
       'Robots / politeness guards',
@@ -4127,6 +4478,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Warehouse exports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🕸️',
 
     color: 'from - slate - 600 to - slate - 800',
@@ -4139,6 +4491,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     category: 'Developer Tools',
     real_service: true,
     technology: ['Playwright, Queues, Proxies'],
@@ -4146,6 +4500,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Competitive intel, Price tracking, Research datasets'],
     roi: 'Automate scraping while reducing ban rate and toil',
     competitors: ['ScraperAPI, Bright Data'],
+<<<<<<< HEAD
 
     market_size: '$1.5B data collection',
     growth_rate: '20% YoY',
@@ -4154,6 +4509,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4168,6 +4525,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 5,
   },
   {
+<<<<<<< HEAD
 
     id: 'ecommerce - returns - manager',
     name: 'E‑commerce Returns Manager',
@@ -4181,6 +4539,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Self‑serve returns portal',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Label generation and tracking',
       'Exchange / repair workflows',
       'Return reasons and defect analytics',
@@ -4188,6 +4548,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Warehouse and RMA integrations',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📦',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -4212,6 +4573,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4226,6 +4589,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 24,
   },
   {
+<<<<<<< HEAD
 
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
@@ -4238,6 +4602,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Sequence builder and templates',
       'Reply / booking detection and stops',
       'Inbox rotation and throttling',
@@ -4246,6 +4612,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'CRM sync and webhooks',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📨',
 
     color: 'from - sky - 600 to - indigo - 700',
@@ -4255,11 +4622,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Simpler and more compliant than heavy sales engagement suites for SMBs.',
     target_audience: 'SMB sales and success teams',
     trial_days: 7,
     setup_time: '1 day',
     category: 'Growth & Marketing',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Next.js', 'IMAP / SMTP', 'Calendars'],
@@ -4269,6 +4639,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Lift reply rates by 15–35% and shorten sales cycles.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     competitors: ['Mailshake', 'Lemlist', 'Apollo'],
     market_size: '$6B sales engagement',
     growth_rate: '20% YoY',
@@ -4288,6 +4660,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 33,
   },
   {
+<<<<<<< HEAD
 
     id: 'podcast - transcribe - chapters',
     name: 'Podcast Transcribe & Chapters',
@@ -4301,6 +4674,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'High‑accuracy transcription',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Speaker diarization',
       'Summaries and chaptering',
       'Topic and keyword extraction',
@@ -4308,6 +4683,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Embeds and RSS sync',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🎙️',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -4332,6 +4708,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4346,6 +4724,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 58,
   },
   {
+<<<<<<< HEAD
 
     id: 'freelancer - portfolio - studio',
     name: 'Freelancer Portfolio Studio',
@@ -4359,6 +4738,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Drag‑and‑drop templates',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Case study generator',
       'Contact and booking forms',
       'Testimonials and logos',
@@ -4366,6 +4747,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Custom domains',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🖼️',
 
     color: 'from - pink - 600 to - fuchsia - 700',
@@ -4384,6 +4766,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['Calendly', 'HubSpot', 'GA4'],
     use_cases: ['Showcase work', 'Capture leads', 'Book meetings'],
     roi: 'Increase inbound leads by 10–25% with polished case studies.',
@@ -4406,6 +4790,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 64,
   },
   {
+<<<<<<< HEAD
 
 
       'Contacts and notes',
@@ -4414,10 +4799,45 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Email/SMS nudges',
       'Import/export and tags',
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      'Contacts and notes'
+      'Reminders and tasks'
+      'Simple pipeline stages'
+      'Email/SMS nudges'
+      'Import/export and tags'
+      'Mobile‑friendly UI'
+    ]
+    popular: true
+    icon: '📇'
+    color: 'from-amber-600 to-orange-700'
+    textColor: 'text-amber-300'
+    link: 'https://ziontechgroup.com/local-micro-crm'
+    marketPosition:
+      'Tooled for simplicity; avoids enterprise CRM bloat and costs.'
+    targetAudience: 'Local service businesses'
+    trialDays: 14
+    setupTime: 'Same day'
+    category: 'CRM'
+    realService: true
+    technology: ['Next.js', 'SQLite/Postgres']
+    integrations: ['Gmail/Outlook', 'Twilio']
+    useCases: ['Track customers', 'Follow‑ups', 'Close more deals']
+    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.'
+    competitors: ['HubSpot Starter', 'Pipedrive Essentials']
+    marketSize: '$20B SMB CRM'
+    growthRate: '10% YoY'
+    variant: 'analytics-futuristic' as any
+      'Contacts and notes',
+      'Reminders and tasks',
+      'Simple pipeline stages',
+      'Email / SMS nudges',
+      'Import / export and tags',
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Mobile‑friendly UI',
     ],
     popular: true,
     icon: '📇',
+<<<<<<< HEAD
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
@@ -4814,6 +5234,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true,
     implementationDetails:
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Minimal CRM with reminders and basic pipeline views.'
+    launchDate: '2025-02-03'
+    customers: 320
+    rating: 4.5
+    reviews: 77
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
@@ -4834,6 +5270,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trial_days: 14,
     setup_time: 'Same day',
     category: 'CRM',
+<<<<<<< HEAD
 
     real_service: true,
     technology: ['Next.js', 'SQLite / Postgres'],
@@ -4843,6 +5280,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
     market_size: '$20B SMB CRM',
     growth_rate: '10% YoY',
@@ -4862,6 +5301,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 77,
   },
   {
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4882,6 +5322,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -4894,8 +5336,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
+<<<<<<< HEAD
     marketPosition:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    marketPosition:;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Focused assistant vs. general copy tools; fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,
@@ -4910,6 +5356,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -4934,6 +5381,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails:
+      'Prompting templates, scoring heuristics, and ESP exports.'
+    launchDate: '2025-02-07'
+    customers: 95
+    rating: 4.4
+    reviews: 28
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -4966,6 +5429,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.4,
     reviews: 28,
   },
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
@@ -4987,11 +5451,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
     features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
       'Repo hotspots and ownership',
       'Team scorecards and alerts',
+<<<<<<< HEAD
     icon: '🧩',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -5016,6 +5484,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'Jira / Linear linkage',
+    ],
+    popular: true,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -5030,6 +5503,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 19,
   },
   {
+<<<<<<< HEAD
 
       'Geo/rule‑based banners',
     id: 'privacy - consent - manager - smb',
@@ -5091,6 +5565,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Geo/rule‑based banners',
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Preference center',
       'DSAR intake and workflows',
       'Cookie catalog and scans',
@@ -5098,6 +5574,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Multi‑site management',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '⚖️',
 
     color: 'from - slate - 700 to - slate - 900',
@@ -5113,6 +5590,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     integrations: ['GTM', 'Segment', 'Tag managers'],
     use_cases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
     roi: 'Faster compliance and fewer legal risks.',
@@ -5136,6 +5615,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+<<<<<<< HEAD
 
     id: 'llm-gateway-cost-control', name: 'LLM Gateway & Cost Control',
     tagline: 'Centralize model access, control spend, add observability and guardrails',
@@ -5219,25 +5699,1833 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 
+=======
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface RealMarketService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+const contact = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+},;
+export const realMarketServices: RealMarketService[] = [;
+  {;
+    id: 'llm-gateway-cost-control',;
+    name: 'LLM Gateway & Cost Control',;
+    tagline: 'Centralize model access, control spend, add observability and guardrails',;
+    price: '$299',;
+    period: '/month',;
+    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',;
+    features: [;
+      'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support',;
+      'Export to data warehouse';
+    ],;
+    popular: true,;
+    icon: '🧠',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/llm-gateway',;
+    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI, adds enterprise guardrails and governance.',;
+    targetAudience: 'Product teams, platform engineering, data/AI teams',;
+    trialDays: 14,;
+    setupTime: '1 day',;
+    category: 'AI & Data',;
+    realService: true,;
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],;
+    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'],;
+    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization'],;
+    roi: 'Reduce AI spend by 20–40% with routing and caps.',;
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],;
+    marketSize: '$40B+ GenAI platform market',;
+    growthRate: '100% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',;
+    launchDate: '2024-12-01',;
+    customers: 85,;
+    rating: 4.8,;
+    reviews: 61;
+  },;
+  {;
+    id: 'api-observability-starter',;
+    name: 'API Observability Starter',;
+    tagline: 'Trace, log, and profile your APIs in hours, not weeks',;
+    price: '$149',;
+    period: '/month',;
+    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',;
+    features: [;
+      'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view';
+    ],;
+    popular: true,;
+    icon: '📈',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-400',;
+    link: 'https://ziontechgroup.com/api-observability-starter',;
+    marketPosition: 'Alternative to building in-house, complements Datadog and Grafana Cloud.',;
+    targetAudience: 'Backend engineers, SREs, platform teams',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki'],;
+    integrations: ['Datadog, Grafana Cloud, New Relic'],;
+    useCases: ['Reduce MTTR, Reliability baselines, Capacity planning'],;
+    roi: 'Cut incident time by 30–60%.',;
+    competitors: ['Datadog APM, New Relic APM, Grafana Cloud Traces'],;
+    marketSize: '$18B observability',;
+    growthRate: '25% YoY',;
+    variant: 'monitoring-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',;
+    launchDate: '2024-11-10',;
+    customers: 120,;
+    rating: 4.7,;
+    reviews: 73;
+  },;
+  {;
+    id: 'email-deliverability-warmup',;
+    name: 'Email Deliverability & Warmup Monitor',;
+    tagline: 'Inbox placement, warmup, and sender reputation monitoring',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',;
+    features: [;
+      'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps';
+    ],;
+    popular: true,;
+    icon: '📧',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/email-deliverability-monitor',;
+    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks, alternatives include Mailgun, SendGrid add-ons.',;
+    targetAudience: 'Growth, marketing ops, and platform teams',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Quality & Monitoring',;
+    realService: true,;
+    technology: ['Next.js, DNS, TLS'],;
+    integrations: ['SendGrid, Mailgun, Postmark'],;
+    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup'],;
+    roi: 'Lift email open rate by 10–30% and reduce spam placement.',;
+    competitors: ['SendForensics, Mailgun Deliverability, Folderly'],;
+    marketSize: '$1B+ deliverability tooling',;
+    growthRate: '15% YoY',;
+    variant: 'monitoring-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
     reviews: 36
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
     launch_date: '2025 - 02 - 01';
     customers: 88;
+<<<<<<< HEAD
     rating: 4.6
     reviews: 36
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    rating: 4.6,
+    reviews: 36;
+
+  },;
+  {;
+    id: 'uptime-slo-monitor',;
+    name: 'Uptime & SLO Monitor',;
+    tagline: 'Blackbox checks, SLOs, error budgets and burn-rate alerts',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',;
+    features: [;
+      'Multi-region uptime checksLatency and availability SLIsSLOs and error budgetsBurn-rate alertsPublic status pages';
+    ],;
+    popular: true,;
+    icon: '📈',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/uptime-slo-monitor',;
+    marketPosition: 'Alternatives include Better Uptime and UptimeRobot ($8–$49/mo), SLO-first design and budgets included.',;
+    targetAudience: 'SREs, platform and product teams',;
+    trialDays: 14,;
+    setupTime: '1 hour',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['Node.js, Grafana, Prometheus'],;
+    integrations: ['PagerDuty, Opsgenie, Slack'],;
+    useCases: ['SLO rollout, SLA reporting, Incident readiness'],;
+    roi: 'Reduce alert fatigue and align on product reliability',;
+    competitors: ['Better Uptime, UptimeRobot, Statuspage'],;
+    marketSize: '$18B observability',;
+    growthRate: '25% YoY',;
+    variant: 'monitoring-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Probers, SLI calculators, error-budget math and alerting integrations.',;
+    launchDate: '2024-07-28',;
+    customers: 112,;
+    rating: 4.6,;
+    reviews: 58;
+  },;
+  {;
+    id: 'status-pages-slo',;
+    name: 'Status Pages & SLO',;
+    tagline: 'Customer-facing status pages with SLO metrics baked-in',;
+    price: '$59',;
+    period: '/month',;
+    description: 'Hosted status pages connected to your SLOs and incidents with custom components and history.',;
+    features: [;
+      'Custom components and groupsIncident timelinesSLO and uptime widgetsSubscriptions and webhooks';
+    ],;
+    popular: false,;
+    icon: '📣',;
+    color: 'from-fuchsia-600 to-pink-700',;
+    textColor: 'text-fuchsia-300',;
+    link: 'https://ziontechgroup.com/status-pages-slo',;
+    marketPosition: 'Competes with Atlassian Statuspage ($29–$1200/mo), simpler SLO-native approach.',;
+    targetAudience: 'SaaS, infra and platform teams',;
+    trialDays: 14,;
+    setupTime: '1 hour',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['Next.js, Node.js'],;
+    integrations: ['PagerDuty, Opsgenie, Slack'],;
+    useCases: ['Transparent comms, SLA evidence, Trust building'],;
+    roi: 'Fewer support tickets and faster comms during incidents',;
+    competitors: ['Atlassian Statuspage, Better Stack'],;
+    marketSize: '$1B status',;
+    growthRate: '15% YoY',;
+    variant: 'monitoring-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Static+API hybrid pages, component health, subscriptions.',;
+    launchDate: '2024-06-30',;
+    customers: 49,;
+    rating: 4.5,;
+    reviews: 27;
+  },;
+  {;
+    id: 'serverless-cron-manager',;
+    name: 'Serverless Cron Manager',;
+    tagline: 'Reliable scheduled jobs without servers and with retries',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',;
+    features: [;
+      'Cron syntax and UIRetries with jitterDead-letter queuesSlack alerts';
+    ],;
+    popular: false,;
+    icon: '⏱️',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/serverless-cron-manager',;
+    marketPosition: 'Comparable to EasyCron and CloudWatch Events, adds portable templates and alerts.',;
+    targetAudience: 'Developers, data engineers, SREs',;
+    trialDays: 14,;
+    setupTime: '1 hour',;
+    category: 'Developer Tools',;
+    realService: true,;
+    technology: ['Node.js, Queues, Serverless'],;
+    integrations: ['Slack, Webhook'],;
+    useCases: ['ETL scheduling, Report generation, Cleanup jobs'],;
+    roi: 'Reduce ops toil, no servers to manage',;
+    competitors: ['EasyCron, AWS EventBridge'],;
+    marketSize: '$2B dev tooling',;
+    growthRate: '9% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Job store, scheduler, runners and alerting.',;
+    launchDate: '2024-05-12',;
+    customers: 73,;
+    rating: 4.5,;
+    reviews: 39;
+  },;
+  {;
+    id: 'pdf-render-api',;
+    name: 'PDF Render API',;
+    tagline: 'Pixel-perfect HTML-to-PDF with fonts and headers/footers',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Drop-in PDF render API with template helpers, page numbers, margins and secure asset loading.',;
+    features: [;
+      'Chrome-based rendererCustom fonts and CSSHeaders/footers, page numbersWebhook delivery';
+    ],;
+    popular: true,;
+    icon: '🧾',;
+    color: 'from-slate-600 to-slate-800',;
+    textColor: 'text-slate-300',;
+    link: 'https://ziontechgroup.com/pdf-render-api',;
+    marketPosition: 'Competes with PDFMonkey/DocRaptor ($29–$99/mo). Simple pricing, great output quality.',;
+    targetAudience: 'Developers, ops, finance',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Developer Tools',;
+    realService: true,;
+    technology: ['Puppeteer, Node.js'],;
+    integrations: ['Zapier, Webhook'],;
+    useCases: ['Invoices, Reports, Statements'],;
+    roi: 'Save engineering time, consistent documents',;
+    competitors: ['PDFMonkey, DocRaptor, Gotenberg'],;
+    marketSize: '$1B doc gen',;
+    growthRate: '8% YoY',;
+    variant: 'data-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Headless Chrome workers, queueing and asset sandboxing.',;
+    launchDate: '2024-04-08',;
+    customers: 140,;
+    rating: 4.7,;
+    reviews: 91;
+  },;
+  {;
+    id: 'gdpr-dsar-automation',;
+    name: 'GDPR DSAR Automation',;
+    tagline: 'Automate data subject requests with evidence and workflows',;
+    price: '$399',;
+    period: '/month',;
+    description: 'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor-ready evidence packs.',;
+    features: [;
+      'Request intake portalIdentity verificationConnectors to data storesEvidence packs and exports';
+    ],;
+    popular: true,;
+    icon: '⚖️',;
+    color: 'from-violet-600 to-fuchsia-700',;
+    textColor: 'text-violet-300',;
+    link: 'https://ziontechgroup.com/gdpr-dsar-automation',;
+    marketPosition: 'Alternatives: Transcend/Segment privacy ($500–$3k/mo). Faster time-to-value for SMEs.',;
+    targetAudience: 'Legal, security, IT',;
+    trialDays: 14,;
+    setupTime: '1–2 weeks',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Node.js, IDV, Connectors'],;
+    integrations: ['Snowflake, BigQuery, S3, Postgres'],;
+    useCases: ['Compliance at scale, Reduced manual effort'],;
+    roi: 'Cut DSAR handling cost by 60–80%',;
+    competitors: ['Transcend, OneTrust, Segment Privacy'],;
+    marketSize: '$8B privacy ops',;
+    growthRate: '18% YoY',;
+    variant: 'security-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Ticketing workflows, connectors, redaction and audit logs.',;
+    launchDate: '2024-11-01',;
+    customers: 31,;
+    rating: 4.6,;
+    reviews: 21;
+  },;
+  {;
+    id: 'vendor-risk-automation',;
+    name: 'Vendor Risk Automation',;
+    tagline: 'Questionnaires, evidence collection and continuous monitoring',;
+    price: '$299',;
+    period: '/month',;
+    description: 'Automates vendor questionnaires (SIG Lite/CAIQ), evidence collection and scoring with renewal reminders and issues tracking.',;
+    features: [;
+      'SIG/CAIQ templatesEvidence collection linksRisk scoring and trackingRenewal reminders';
+    ],;
+    popular: false,;
+    icon: '🤝',;
+    color: 'from-teal-600 to-emerald-700',;
+    textColor: 'text-teal-300',;
+    link: 'https://ziontechgroup.com/vendor-risk-automation',;
+    marketPosition: 'Alternatives: Whistic, OneTrust Vendor Risk ($300–$2k/mo). We focus on speed and automation.',;
+    targetAudience: 'Security, procurement and legal',;
+    trialDays: 14,;
+    setupTime: '1–2 weeks',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Next.js, Workflows'],;
+    integrations: ['Slack, Jira, Email'],;
+    useCases: ['Faster reviews, Evidence reuse, Audit readiness'],;
+    roi: 'Shorten vendor onboarding by 30–50%',;
+    competitors: ['Whistic, OneTrust VRM'],;
+    marketSize: '$6B VRM',;
+    growthRate: '16% YoY',;
+    variant: 'neural-quantum',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Questionnaire engine, evidence vault, risk scoring and reminders.',;
+    launchDate: '2024-10-15',;
+    customers: 26,;
+    rating: 4.5,;
+    reviews: 18;
+  },;
+  {;
+    id: 'browser-performance-monitor',;
+    name: 'Browser Performance Monitor',;
+    tagline: 'Core Web Vitals and RUM with actionable diagnostics',;
+    price: '$129',;
+    period: '/month',;
+    description: 'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code-level fixes with dashboards.',;
+    features: [;
+      'RUM collection scriptCore Web Vitals (LCP/CLS/INP)Regression detectionDashboards and alerts';
+    ],;
+    popular: false,;
+    icon: '⚡',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/browser-performance-monitor',;
+    marketPosition: 'Alternatives: SpeedCurve ($99–$439/mo). We bundle diagnostics and dev tips.',;
+    targetAudience: 'Frontend and growth teams',;
+    trialDays: 7,;
+    setupTime: '1 hour',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['JS RUM, Dashboards'],;
+    integrations: ['Slack, Datadog'],;
+    useCases: ['Improve conversions, Perf regressions, SEO gains'],;
+    roi: 'Increase conversion 2–10% with better vitals',;
+    competitors: ['SpeedCurve, Calibre'],;
+    marketSize: '$1B web perf',;
+    growthRate: '11% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Lightweight RUM SDK, vitals aggregation and alerting.',;
+    launchDate: '2024-09-08',;
+    customers: 52,;
+    rating: 4.5,;
+    reviews: 29;
+  },;
+  {;
+    id: 'database-performance-monitor',;
+    name: 'Database Performance Monitor',;
+    tagline: 'Query insights, locks, connection pools and slow query fixes',;
+    price: '$299',;
+    period: '/month',;
+    description: 'Collector agents for Postgres/MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',;
+    features: [;
+      'Slow query detectionLock contention analysisConnection pool saturationAdvisor recommendations';
+    ],;
+    popular: true,;
+    icon: '🗄️',;
+    color: 'from-indigo-600 to-slate-700',;
+    textColor: 'text-indigo-300',;
+    link: 'https://ziontechgroup.com/database-performance-monitor',;
+    marketPosition: 'Competes with pganalyze and PMM ($199–$499/mo). Simpler setup and actionable fixes.',;
+    targetAudience: 'Data and platform engineers',;
+    trialDays: 14,;
+    setupTime: '1–2 days',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['Postgres, MySQL, Agents'],;
+    integrations: ['Grafana, Slack'],;
+    useCases: ['Improve DB latency, Reduce deadlocks, Capacity planning'],;
+    roi: 'Reduce query latency 20–50% in weeks',;
+    competitors: ['pganalyze, Percona PMM'],;
+    marketSize: '$4B DB tooling',;
+    growthRate: '13% YoY',;
+    variant: 'monitoring-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Extension-based metrics collectors and advisors.',;
+    launchDate: '2024-08-01',;
+    customers: 39,;
+    rating: 4.6,;
+    reviews: 23;
+  },;
+  {;
+    id: 'cloud-platform-managed-kubernetes',;
+    name: 'Managed Kubernetes Platform',;
+    tagline: 'Production EKS/GKE/AKS with GitOps, SSO and guardrails',;
+    price: '$1,999',;
+    period: '/month',;
+    description: 'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',;
+    features: [;
+      'IaC blueprints and GitOpsSSO and RBAC policiesCost controls and quotasBackup and restore runbooks';
+    ],;
+    popular: true,;
+    icon: '☁️',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/cloud-platform',;
+    marketPosition: 'Alternatives: Platform9, Rafay (custom pricing). Opinionated, fast time-to-value.',;
+    targetAudience: 'Platform engineering and DevOps',;
+    trialDays: 0,;
+    setupTime: '1–3 weeks',;
+    category: 'Cloud & FinOps',;
+    realService: true,;
+    technology: ['Terraform, Flux/Argo, EKS/GKE/AKS'],;
+    integrations: ['Datadog, Grafana, Vault'],;
+    useCases: ['Standardized platform, Security baseline, Developer velocity'],;
+    roi: 'Ship platforms 3x faster at lower risk',;
+    competitors: ['Platform9, Rafay, DIY'],;
+    marketSize: '$20B platform engineering',;
+    growthRate: '22% YoY',;
+    variant: 'cloud-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Blueprints, policies, GitOps pipelines and SRE runbooks.',;
+    launchDate: '2025-01-10',;
+    customers: 17,;
+    rating: 4.7,;
+    reviews: 12;
+  },;
+  {;
+    id: 'rum-analytics-starter',;
+    name: 'Real User Monitoring (RUM) Analytics Starter',;
+    tagline: 'Measure real user performance, Core Web Vitals and conversion impact',;
+    price: '$59',;
+    period: '/month',;
+    description: 'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',;
+    features: [;
+      'Core Web Vitals (LCP, INP, CLS)Conversion impact analysisGeo/device breakdownsAnomaly alerts to Slack/EmailPrivacy-friendly, cookie-lite';
+    ],;
+    popular: false,;
+    icon: '⚡',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/services/rum-analytics-starter',;
+    marketPosition: 'Comparable to SpeedCurve RUM, Raygun RUM, and New Relic Browser, focused SMB starter with clear insights.',;
+    targetAudience: 'Growth, product, and web teams',;
+    trialDays: 7,;
+    setupTime: '15 minutes',;
+    category: 'Analytics',;
+    realService: true,;
+    technology: ['Edge analytics, JS snippet'],;
+    integrations: ['Slack, Webhooks, BigQuery export'],;
+    useCases: ['Track Core Web Vitals, Optimize pages, Improve conversions'],;
+    roi: 'Lift conversion 2–10% by fixing performance bottlenecks.',;
+    competitors: ['SpeedCurve RUM, New Relic Browser, Raygun RUM'],;
+    marketSize: '$2B+ web analytics',;
+    growthRate: '12% YoY',;
+    variant: 'analytics-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Snippet capture with server-side aggregation and privacy controls.',;
+    launchDate: '2025-02-15',;
+    customers: 26,;
+    rating: 4.6,;
+    reviews: 14;
+  },;
+  {;
+    id: 'accessibility-compliance-auditor',;
+    name: 'Accessibility Compliance Auditor',;
+    tagline: 'Automated WCAG checks with actionable fixes and CI integration',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',;
+    features: [;
+      'axe-core rules and custom checksCI gate on severity thresholdsPage template scanningIssue tracker exportAuditor-ready PDF reports';
+    ],;
+    popular: true,;
+    icon: '♿',;
+    color: 'from-purple-600 to-indigo-700',;
+    textColor: 'text-purple-300',;
+    link: 'https://ziontechgroup.com/services/accessibility-compliance-auditor',;
+    marketPosition: 'Alternative to manual audits, complements Deque axe and Pa11y in CI/CD.',;
+    targetAudience: 'Web, product, and compliance teams',;
+    trialDays: 7,;
+    setupTime: '1 hour',;
+    category: 'Quality & Monitoring',;
+    realService: true,;
+    technology: ['Node.js, Playwright, axe-core'],;
+    integrations: ['GitHub Actions, GitLab CI, Jira'],;
+    useCases: ['Prevent regressions, Improve inclusivity, Audit readiness'],;
+    roi: 'Reduce manual audit time by 50–80%.',;
+    competitors: ['Deque axe Monitor, Siteimprove'],;
+    marketSize: '$1B+ accessibility services',;
+    growthRate: '18% YoY',;
+    variant: 'monitoring-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Headless scans with rulesets, diffing, and gated pipelines.',;
+    launchDate: '2025-02-12',;
+    customers: 31,;
+    rating: 4.7,;
+    reviews: 19;
+  },;
+  {;
+    id: 'api-latency-budget-enforcer',;
+    name: 'API Latency Budget Enforcer',;
+    tagline: 'Guardrails for p95/p99 latency budgets with tickets and alerts',;
+    price: '$119',;
+    period: '/month',;
+    description: 'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',;
+    features: [;
+      'Per-route latency SLOsError budget trackingAuto-ticket creationSlack/PagerDuty alertsWeekly drift reports';
+    ],;
+    popular: false,;
+    icon: '⏱️',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/services/api-latency-budget-enforcer',;
+    marketPosition: 'Bridges observability and execution, complements Datadog SLO and Grafana.',;
+    targetAudience: 'SREs, platform and backend teams',;
+    trialDays: 14,;
+    setupTime: '1 day',;
+    category: 'Observability',;
+    realService: true,;
+    technology: ['OpenTelemetry, Prometheus, Grafana'],;
+    integrations: ['Datadog, Grafana, PagerDuty, Jira'],;
+    useCases: ['Keep latency in check, Manage reliability, Prioritize work'],;
+    roi: 'Cut MTTR by 20–40% via proactive guardrails.',;
+    competitors: ['Datadog SLOs, Nobl9'],;
+    marketSize: '$5B+ reliability tooling',;
+    growthRate: '20% YoY',;
+    variant: 'monitoring-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'SLO definitions, budget math, and actionable ownership routes.',;
+    launchDate: '2025-02-18',;
+    customers: 18,;
+    rating: 4.5,;
+    reviews: 11;
+  },;
+  {;
+    id: 'security-headers-monitor',;
+    name: 'Security Headers & TLS Monitor',;
+    tagline: 'Track HSTS, CSP, TLS config and get hardening playbooks',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',;
+    features: [;
+      'CSP/HSTS header checksTLS version/cipher checksAuto-diff of changesSlack/Email alertsHardening playbooks';
+    ],;
+    popular: true,;
+    icon: '🛡️',;
+    color: 'from-indigo-600 to-slate-700',;
+    textColor: 'text-indigo-300',;
+    link: 'https://ziontechgroup.com/services/security-headers-monitor',;
+    marketPosition: 'Lightweight alternative to manual scans, complements Mozilla Observatory and SSL Labs checks.',;
+    targetAudience: 'Security and platform teams',;
+    trialDays: 7,;
+    setupTime: '20 minutes',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Node.js, TLS, HTTP'],;
+    integrations: ['Slack, Webhooks'],;
+    useCases: ['Prevent misconfigurations, Detect regressions, Improve posture'],;
+    roi: 'Reduce security regressions and audit time.',;
+    competitors: ['Mozilla Observatory, SSL Labs'],;
+    marketSize: '$3B security testing',;
+    growthRate: '16% YoY',;
+    variant: 'security-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Scheduled scans with diffs and playbooks.',;
+    launchDate: '2025-02-20',;
+    customers: 44,;
+    rating: 4.6,;
+    reviews: 22;
+  },;
+  {;
+    id: 'cookie-consent-manager',;
+    name: 'Cookie & Consent Manager',;
+    tagline: 'GDPR/CCPA consent banner, audit trails, and policy generator',;
+    price: '$39',;
+    period: '/month',;
+    description: 'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',;
+    features: [;
+      'Geo-based consent rulesPolicy page generatorAudit log exportAnalytics/script blockingA/B banner testing';
+    ],;
+    popular: false,;
+    icon: '🍪',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/services/cookie-consent-manager',;
+    marketPosition: 'Simple alternative to complex CMPs, transparent pricing for SMBs.',;
+    targetAudience: 'Marketing, legal, and web teams',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Next.js, Edge middleware'],;
+    integrations: ['Google Tag, GTM, Segment'],;
+    useCases: ['Compliance, User trust, Region-based rules'],;
+    roi: 'Accelerate compliance readiness, reduce legal risk.',;
+    competitors: ['Cookiebot, OneTrust CMP'],;
+    marketSize: '$2B privacy tooling',;
+    growthRate: '15% YoY',;
+    variant: 'compliance-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Client + middleware rules with storage & audit.',;
+    launchDate: '2025-02-22',;
+    customers: 21,;
+    rating: 4.5,;
+    reviews: 10;
+  },;
+  {;
+    id: 'backup-policy-auditor',;
+    name: 'Backup Policy Auditor',;
+    tagline: 'Validate backup frequency, retention and recovery objectives',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',;
+    features: [;
+      'RPO/RTO policy checksSnapshot/restore verificationDrift detectionWeekly compliance reportsAuto-ticket workflows';
+    ],;
+    popular: false,;
+    icon: '💾',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/services/backup-policy-auditor',;
+    marketPosition: 'Brings reliability SRE rigor to backups, complements cloud-native backup tools.',;
+    targetAudience: 'SREs, platform and data teams',;
+    trialDays: 14,;
+    setupTime: '2 days',;
+    category: 'Cloud & FinOps',;
+    realService: true,;
+    technology: ['AWS, GCP, Azure, Postgres, MySQL'],;
+    integrations: ['Jira, Slack, Datadog'],;
+    useCases: ['Reduce risk, Improve recovery posture, Governance'],;
+    roi: 'Cut recovery risks dramatically, faster audits.',;
+    competitors: ['Veeam, Clumio, Cloud-native backups'],;
+    marketSize: '$10B backup & DR',;
+    growthRate: '8% YoY',;
+    variant: 'cloud-futuristic' as any,;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Read-only checks, sample restores, and compliance export.',;
+    launchDate: '2025-02-24',;
+    customers: 12,;
+    rating: 4.5,;
+    reviews: 7;
+  },;
+  {;
+    id: 'consent-compliance-kit',;
+    name: 'Consent & Cookie Compliance Kit',;
+    tagline: 'GDPR/CPRA consent banners, geo-targeting, and audit-ready logs',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',;
+    features: [;
+      'IAB TCF v2.2 compatible consentGeo-targeted policies (EEA/UK/US states)Consent receipts and log exportsCookie inventory and auto-blockingPolicy pages and versioningCMP integrations and tag manager hooks';
+    ],;
+    popular: false,;
+    icon: '🛡️',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/services/consent-compliance-kit',;
+    marketPosition: 'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',;
+    targetAudience: 'Marketing ops, legal/compliance, web teams',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Privacy & Compliance',;
+    realService: true,;
+    technology: ['Next.js, Tag Manager, IAB TCF v2'],;
+    integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],;
+    useCases: ['GDPR/CPRA consent management, Audit exports, Region policies'],;
+    roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',;
+    competitors: ['OneTrust, Cookiebot, TrustArc'],;
+    marketSize: '$2B+ privacy tooling',;
+    growthRate: '18% YoY',;
+    variant: 'security-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Embeddable banner, policy config UI, consent log store, export jobs.',;
+    launchDate: '2025-08-22',;
+    customers: 22,;
+    rating: 4.6,;
+    reviews: 11;
+  },;
+  {;
+    id: 'api-backfill-reconciliation',;
+    name: 'API Backfill & Reconciliation',;
+    tagline: 'Recover missed events, dedupe, and reconcile systems with confidence',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',;
+    features: [;
+      'Gap detection and backfill plansIdempotent replay and deduplicationHash-based reconciliation reportsRate-limit aware workersAlerting and failure retriesWarehouse and CRM syncs';
+    ],;
+    popular: false,;
+    icon: '🔁',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/services/api-backfill-reconciliation',;
+    marketPosition: 'Bridges the gap between brittle webhook flows and reliable data pipelines.',;
+    targetAudience: 'Data engineers, platform teams, RevOps',;
+    trialDays: 14,;
+    setupTime: '2 days',;
+    category: 'Integration',;
+    realService: true,;
+    technology: ['Node.js, Postgres, Redis, Airflow'],;
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify'],;
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
+    roi: 'Save weeks of manual cleanup, maintain accurate reporting and billing.',;
+    competitors: ['Fivetran (log-based), custom scripts'],;
+    marketSize: '$4B data integration',;
+    growthRate: '20% YoY',;
+    variant: 'integration-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',;
+    launchDate: '2025-08-22',;
+    customers: 15,;
+    rating: 4.7,;
+    reviews: 9;
+  },;
+  {;
+    id: 'data-quality-sla-monitor',;
+    name: 'Data Quality & Freshness SLAs',;
+    tagline: 'Track freshness, nulls, and schema drift with alerting and SLOs',;
+    price: '$149',;
+    period: '/month',;
+    description: 'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',;
+    features: [;
+      'Freshness and volume checksNull/outlier thresholdsSchema drift detectionLineage visualizationSLOs and error budgetsSlack/Jira alerts and reports';
+    ],;
+    popular: true,;
+    icon: '📊',;
+    color: 'from-purple-600 to-pink-700',;
+    textColor: 'text-purple-300',;
+    link: 'https://ziontechgroup.com/services/data-quality-sla-monitor',;
+    marketPosition: 'Lightweight alternative to full data observability platforms for SMBs.',;
+    targetAudience: 'Analytics, data engineering, product teams',;
+    trialDays: 14,;
+    setupTime: '2 days',;
+    category: 'Data & Analytics',;
+    realService: true,;
+    technology: ['dbt, Airflow, Postgres, BigQuery'],;
+    integrations: ['Snowflake, BigQuery, Redshift, ClickHouse'],;
+    useCases: ['Prevent stale dashboards, Catch pipeline regressions, Improve trust'],;
+    roi: 'Reduce dashboard breaks, improve data-dependent feature velocity.',;
+    competitors: ['Monte Carlo, Bigeye, Great Expectations'],;
+    marketSize: '$1.5B data observability',;
+    growthRate: '30% YoY',;
+    variant: 'data-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Metadata collectors, rules engine, SLA store, and alert webhooks.',;
+    launchDate: '2025-08-22',;
+    customers: 28,;
+    rating: 4.6,;
+    reviews: 13;
+  },;
+  {;
+    id: 'postgres-index-advisor',;
+    name: 'Postgres Index Advisor & Tuner',;
+    tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',;
+    features: [;
+      'EXPLAIN plan analysisMissing/unused index detectionAutovacuum and bloat tuningSafe change windowsRollback and impact reportsAlerts on regressions';
+    ],;
+    popular: false,;
+    icon: '🐘',;
+    color: 'from-indigo-600 to-blue-700',;
+    textColor: 'text-indigo-300',;
+    link: 'https://ziontechgroup.com/services/postgres-index-advisor',;
+    marketPosition: 'Practical tuner for teams without a dedicated DBA.',;
+    targetAudience: 'Backend engineers, SREs, DBAs',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Databases',;
+    realService: true,;
+    technology: ['PostgreSQL, pg_stat_statements, Timescale'],;
+    integrations: ['RDS/Aurora, Cloud SQL, Self-hosted Postgres'],;
+    useCases: ['Lower latency, Reduce CPU/IO, Avoid outages'],;
+    roi: 'Improve query latency by 20–60%, cut cloud costs.',;
+    competitors: ['pganalyze, OtterTune'],;
+    marketSize: '$3B database tooling',;
+    growthRate: '12% YoY',;
+    variant: 'data-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Read-only plan capture, advisor engine, change scripts, and dashboards.',;
+    launchDate: '2025-08-22',;
+    customers: 18,;
+    rating: 4.5,;
+    reviews: 8;
+  },;
+  {;
+    id: 'gitops-drift-monitor',;
+    name: 'GitOps Policy & Drift Monitor',;
+    tagline: 'Detect and correct drift between Git and cluster state with policy gates',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',;
+    features: [;
+      'Desired vs live diffingOPA/Conftest policy gatesAuto-PR remediationSlack/Jira alertsChange history and approvalsMulti-cluster support';
+    ],;
+    popular: false,;
+    icon: '🧭',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/services/gitops-drift-monitor',;
+    marketPosition: 'Complements Argo CD/Flux with governance and auto-remediation workflows.',;
+    targetAudience: 'Platform engineering, DevOps, SRE',;
+    trialDays: 14,;
+    setupTime: '2 days',;
+    category: 'DevOps',;
+    realService: true,;
+    technology: ['Kubernetes, OPA, Argo CD, Flux'],;
+    integrations: ['GitHub, GitLab, Slack, Jira'],;
+    useCases: ['Prevent config drift, Enforce policies, Speed up remediations'],;
+    roi: 'Cut rollbacks and misconfig incidents by 30–50%.',;
+    competitors: ['Argo CD, Flux, Fairwinds Polaris'],;
+    marketSize: '$6B DevOps tooling',;
+    growthRate: '20% YoY',;
+    variant: 'devops-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Cluster collectors, policy engine, reconciler workers, and PR bots.',;
+    launchDate: '2025-08-22',;
+    customers: 14,;
+    rating: 4.6,;
+    reviews: 7;
+  },;
+  {;
+    id: 'soc2-readiness-scanner',;
+    name: 'SOC 2 Readiness Scanner',;
+    tagline: 'Map controls to TSC, auto-collect evidence, and flag gaps',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',;
+    features: [;
+      'Control mapping templatesEvidence collectors and checksPolicy and process coverageGap analysis and tasksExportable auditor reports';
+    ],;
+    popular: true,;
+    icon: '📋',;
+    color: 'from-teal-600 to-emerald-700',;
+    textColor: 'text-teal-300',;
+    link: 'https://ziontechgroup.com/services/soc2-readiness-scanner',;
+    marketPosition: 'Faster SOC 2 preparation for startups, complements evidence automation.',;
+    targetAudience: 'Founders, security leads, compliance managers',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Node.js, OAuth integrations, Evidence store'],;
+    integrations: ['Google Workspace, GitHub, AWS, Azure, GCP'],;
+    useCases: ['Pre-audit gap checks, Faster readiness, Auditor exports'],;
+    roi: 'Cut readiness timelines by 2–4 weeks.',;
+    competitors: ['Vanta, Drata (prep workflows)'],;
+    marketSize: '$3B compliance automation',;
+    growthRate: '22% YoY',;
+    variant: 'security-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Connector checks, control mapping DB, gap scoring and exports.',;
+    launchDate: '2025-08-22',;
+    customers: 24,;
+    rating: 4.7,;
+    reviews: 12;
+  },;
+  {;
+    id: 'cloud-asset-attack-surface',;
+    name: 'Cloud Asset Inventory & Attack Surface',;
+    tagline: 'Continuously map cloud assets, exposures, and internet-facing risks',;
+    price: '$149',;
+    period: '/month',;
+    description: 'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',;
+    features: [;
+      'Multi-cloud asset discoveryPublic exposure detectionOwnership and taggingRisk scoring and SLAsAuto-ticket creation';
+    ],;
+    popular: true,;
+    icon: '☁️',;
+    color: 'from-sky-600 to-blue-700',;
+    textColor: 'text-sky-300',;
+    link: 'https://ziontechgroup.com/services/cloud-asset-attack-surface',;
+    marketPosition: 'Brings CSPM principles to practical SMB workflows.',;
+    targetAudience: 'Security, platform teams',;
+    trialDays: 14,;
+    setupTime: '3 days',;
+    category: 'Security',;
+    realService: true,;
+    technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],;
+    integrations: ['Jira, ServiceNow, Slack'],;
+    useCases: ['Reduce attack surface, Speed up remediation, Improve visibility'],;
+    roi: 'Lower breach likelihood, improved audit readiness.',;
+    competitors: ['Wiz, Prisma Cloud (CSPM)'],;
+    marketSize: '$8B cloud security',;
+    growthRate: '25% YoY',;
+    variant: 'cloud-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'API collectors, exposure heuristics, ticket routing, dashboards.',;
+    launchDate: '2025-08-22',;
+    customers: 19,;
+    rating: 4.5,;
+    reviews: 9;
+  },;
+  {;
+    id: 'llm-red-team-simulator',;
+    name: 'LLM Red Team & Jailbreak Simulator',;
+    tagline: 'Automated adversarial prompts, safety tests, and regression dashboards',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',;
+    features: [;
+      'Prompt injection librariesPII/redaction checksSafety regression testsModel/provider matrixCI gates and reports';
+    ],;
+    popular: false,;
+    icon: '🧪',;
+    color: 'from-rose-600 to-pink-700',;
+    textColor: 'text-rose-300',;
+    link: 'https://ziontechgroup.com/services/llm-red-team-simulator',;
+    marketPosition: 'Proactive LLM safety for production apps, complements guardrails.',;
+    targetAudience: 'AI platform teams, security engineers',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'AI Safety',;
+    realService: true,;
+    technology: ['OpenAI, Anthropic, Garak, OWASP Top 10 for LLMs'],;
+    integrations: ['GitHub Actions, GitLab CI, CircleCI'],;
+    useCases: ['Catch regressions, Improve safety, Document compliance'],;
+    roi: 'Avoid incidents and brand damage due to unsafe responses.',;
+    competitors: ['Lakera, Garak'],;
+    marketSize: '$1B+ LLM safety',;
+    growthRate: '40% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Scenario libraries, orchestrator, CI integration, dashboards.',;
+    launchDate: '2025-08-22',;
+    customers: 17,;
+    rating: 4.6,;
+    reviews: 8;
+  },;
+  {;
+    id: 'affiliate-fraud-detector',;
+    name: 'Affiliate Fraud Detector',;
+    tagline: 'Block coupon abuse, self-referrals, and low-quality traffic at scale',;
+    price: '$129',;
+    period: '/month',;
+    description: 'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',;
+    features: [;
+      'Self-referral detectionDevice and IP risk signalsVelocity and cohort heuristicsPayout hold workflowsAppeal and review portal';
+    ],;
+    popular: false,;
+    icon: '🛑',;
+    color: 'from-red-600 to-rose-700',;
+    textColor: 'text-red-300',;
+    link: 'https://ziontechgroup.com/services/affiliate-fraud-detector',;
+    marketPosition: 'Pairs with attribution hubs to prevent fraud-driven losses.',;
+    targetAudience: 'Growth teams, finance ops',;
+    trialDays: 14,;
+    setupTime: '2 days',;
+    category: 'Growth & Monetization',;
+    realService: true,;
+    technology: ['PythonBayesian modelingdbt'],;
+    integrations: ['GA4Facebook AdsGoogle AdsShopify'],;
+    useCases: ['Budget optimizationChannel ROIExperiment planning'],;
+    roi: 'Improve CAC/LTV ratio 10–30%',;
+    competitors: ['RecastGoogle AttributionRockerbox'],;
+    marketSize: '$12B+ martech analytics',;
+    growthRate: '20% YoY',;
+    variant: 'ai-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Data connectors, identity resolution, MMM fitting, and optimizer UI.',;
+    launchDate: '2025-01-21',;
+    customers: 48,;
+    rating: 4.7,;
+    reviews: 29;
+  },;
+  {;
+    id: 'data-governance-starter',;
+    name: 'Data Governance & Catalog Starter',;
+    tagline: 'Lightweight catalog, lineage, and PII tagging for modern stacks',;
+    price: '$699',;
+    period: '/month',;
+    description: 'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',;
+    features: [;
+      'Automated table/column discoveryColumn-level lineage and impact analysisPII tagging and masking policiesGlossary and ownership workflowsdbt/Snowflake/BigQuery integrations';
+    ],;
+    popular: true,;
+    icon: '🗂️',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-400',;
+    link: 'https://ziontechgroup.com/data-governance-starter',;
+    marketPosition: 'Compared with Alation/Collibra (enterprise). Faster time-to-value for small data teams.',;
+    targetAudience: 'Data Engineering, Analytics, Security & Compliance',;
+    trialDays: 7,;
+    setupTime: '3–7 days',;
+    category: 'Data & Analytics',;
+    realService: true,;
+    technology: ['TypeScriptdbtOpenLineage'],;
+    integrations: ['SnowflakeBigQueryRedshiftDatabricks'],;
+    useCases: ['Self-serve data discoveryCompliance readinessChange impact analysis'],;
+    roi: 'Cut incident resolution time 15–25% via lineage and ownership',;
+    competitors: ['AlationCollibraAtlan'],;
+    marketSize: '$6B+ data governance',;
+    growthRate: '22% YoY',;
+    variant: 'data-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'OpenLineage-based scanners, dbt metadata, and policy engine.',;
+    launchDate: '2025-01-21',;
+    customers: 34,;
+    rating: 4.7,;
+    reviews: 18;
+  },;
+  {;
+    id: 'ecommerce-personalization',;
+    name: 'E‑commerce Personalization Engine',;
+    tagline: 'Real-time recommendations, bundles, and promotions that drive AOV',;
+    price: '$499',;
+    period: '/month',;
+    description: 'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',;
+    features: [;
+      'Session-based and user-based recommendationsBundle and upsell optimizerA/B testing and holdoutsShopify/BigCommerce appsAudience segments and API';
+    ],;
+    popular: true,;
+    icon: '🛒',;
+    color: 'from-pink-600 to-rose-700',;
+    textColor: 'text-pink-300',;
+    link: 'https://ziontechgroup.com/ecommerce-personalization',;
+    marketPosition: 'Alternatives include VWO/Optimizely personalization. Clear SMB pricing and fast setup.',;
+    targetAudience: 'Shopify/BigCommerce merchants and growth teams',;
+    trialDays: 14,;
+    setupTime: '1–3 days',;
+    category: 'Micro SaaS',;
+    realService: true,;
+    technology: ['Next.jsNode.jsPostgreSQL'],;
+    integrations: ['ShopifyBigCommerceSegment'],;
+    useCases: ['AOV growthConversion rate liftRetention'],;
+    roi: '3–10% conversion lift on average',;
+    competitors: ['OptimizelyVWONosto'],;
+    marketSize: '$8B+ CRO & personalization',;
+    growthRate: '14% YoY',;
+    variant: 'micro-saas',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'SDK snippet, event collectors, and real-time model serving.',;
+    launchDate: '2025-01-21',;
+    customers: 120,;
+    rating: 4.6,;
+    reviews: 77;
+  },;
+  {;
+    id: 'iot-fleet-telemetry',;
+    name: 'IoT Fleet Telemetry Platform',;
+    tagline: 'Unified device telemetry, alerts, and predictive maintenance',;
+    price: '$999',;
+    period: '/month',;
+    description: 'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',;
+    features: [;
+      'MQTT/HTTP ingestion and device registryRules engine and alertingAnomaly detection and forecastingGeofencing and trip analyticsAPIs and dashboards';
+    ],;
+    popular: false,;
+    icon: '🚚',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/iot-fleet-telemetry',;
+    marketPosition: 'Complements AWS IoT/Azure IoT. Faster SMB onboarding with ready analytics.',;
+    targetAudience: 'Logistics, Mobility, Field Ops, OEMs',;
+    trialDays: 14,;
+    setupTime: '2–4 weeks',;
+    category: 'IoT & Edge',;
+    realService: true,;
+    technology: ['MQTTTimeseries DBEdge SDK'],;
+    integrations: ['AWS IoTAzure IoTGCP IoT Core*'],;
+    useCases: ['Predictive maintenanceDriver behaviorUtilization'],;
+    roi: 'Reduce downtime 10–20% and fuel costs 3–8%',;
+    competitors: ['ParticleThingsBoardKaa'],;
+    marketSize: '$30B+ IoT platforms',;
+    growthRate: '19% YoY',;
+    variant: 'edge-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Device registry, stream processors, and feature store for ML.',;
+    launchDate: '2025-01-21',;
+    customers: 21,;
+    rating: 4.5,;
+    reviews: 12;
+  },;
+  {;
+    id: 'api-security-testing',;
+    name: 'API Security Testing as a Service',;
+    tagline: 'Automated DAST/SAST for APIs with CI/CD integration',;
+    price: '$399',;
+    period: '/month',;
+    description: 'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',;
+    features: [;
+      'OWASP API Top 10 checksSecrets and token leakage detectionCI/CD and PR annotationsSBOM and dependency riskReports and Jira tickets';
+    ],;
+    popular: false,;
+    icon: '🛡️',;
+    color: 'from-slate-600 to-gray-700',;
+    textColor: 'text-slate-300',;
+    link: 'https://ziontechgroup.com/api-security-testing',;
+    marketPosition: 'Compared with Snyk/42Crunch/Burp Suite. We include actionable PR annotations and auto-fix recipes.',;
+    targetAudience: 'Platform, AppSec, DevSecOps',;
+    trialDays: 7,;
+    setupTime: '1–3 days',;
+    category: 'Security',;
+    realService: true,;
+    technology: ['OWASP ZAPSASTSBOM'],;
+    integrations: ['GitHubGitLabJenkins'],;
+    useCases: ['Shift-left securityRegulatory complianceAudit readiness'],;
+    roi: 'Reduce critical vuln exposure window by 40–60%',;
+    competitors: ['SnykBurp Suite42Crunch'],;
+    marketSize: '$7B+ AppSec tooling',;
+    growthRate: '23% YoY',;
+    variant: 'security-futuristic',;
+    contactInfo: contact,;
+    realImplementation: true,;
+    implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',;
+    launchDate: '2025-08-22',;
+    customers: 13,;
+    rating: 4.5,;
+    reviews: 7;
+  },;
+  {;
+    id: 'cloudflare-turnstile-proxy',;
+    name: 'Cloudflare Turnstile & Bot Shield Proxy',;
+    tagline: 'Kill signup spam and bot abuse without CAPTCHAs',;
+    price: '$39',;
+    period: '/month',;
+    description: 'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',;
+    features: [;
+      'Turnstile token verificationReputation and ASN heuristicsIP/device fingerprintingAdaptive challengesBlock/allow lists and webhooks';
+    ],;
+    popular: false,;
+    icon: '🛡️',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/services/cloudflare-turnstile-proxy',;
+    marketPosition: 'Cheaper and simpler than full WAF for SMB forms and APIs.',;
+    targetAudience: 'Growth, platform, security',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Cloudflare Workers, KV, Turnstile'],;
+    integrations: ['Cloudflare, Next.js, Node proxies'],;
+    useCases: ['Stop signup spam, Block credential stuffing'],;
+    roi: 'Reduce fake signups and abuse by 90%+',;
+    competitors: ['hCaptcha Enterprise, PerimeterX'],;
+    marketSize: '$2B bot mitigation',;
+    growthRate: '16% YoY',;
+    variant: 'security-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',;
+    launchDate: '2025-02-25',;
+    customers: 19,;
+    rating: 4.6,;
+    reviews: 8;
+  },;
+  {;
+    id: 'reverse-etl-lite',;
+    name: 'Reverse ETL Lite',;
+    tagline: 'Sync warehouse data to SaaS apps in minutes',;
+    price: '$99',;
+    period: '/month',;
+    description: 'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',;
+    features: [;
+      'Warehouse connectorsField mapping UISchedules and retriesDry-run and diffsRow-level filters';
+    ],;
+    popular: true,;
+    icon: '🔄',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/services/reverse-etl-lite',;
+    marketPosition: 'Affordable, focused alternative to heavy Reverse ETL suites.',;
+    targetAudience: 'Growth, data engineering, RevOps',;
+    trialDays: 14,;
+    setupTime: '1 hour',;
+    category: 'Data & Analytics',;
+    realService: true,;
+    technology: ['Node.js, Airflow/dbt optional, OAuth'],;
+    integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],;
+    useCases: ['Activation, Lead scoring, Audiences'],;
+    roi: 'Ship activation in days, lift campaign ROI 10–20%',;
+    competitors: ['Hightouch, Census'],;
+    marketSize: '$1B reverse ETL',;
+    growthRate: '30% YoY',;
+    variant: 'data-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Connectors, incremental keys, idempotent upserts, error DLQ.',;
+    launchDate: '2025-02-26',;
+    customers: 12,;
+    rating: 4.5,;
+    reviews: 6;
+  },;
+  {;
+    id: 'ai-rfp-response-copilot',;
+    name: 'AI RFP Response Copilot',;
+    tagline: 'Draft RFP answers from your knowledge base with evidence links',;
+    price: '$129',;
+    period: '/month',;
+    description: 'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',;
+    features: [;
+      'RAG over proposals & policiesSection templates and stylesEvidence citationsGap coverage trackingWord/PDF export';
+    ],;
+    popular: true,;
+    icon: '📝',;
+    color: 'from-violet-600 to-fuchsia-700',;
+    textColor: 'text-violet-300',;
+    link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',;
+    marketPosition: 'Purpose-built for proposal teams, governance and citations built-in.',;
+    targetAudience: 'Sales engineering, proposal teams, compliance',;
+    trialDays: 14,;
+    setupTime: '1 day',;
+    category: 'AI & Data',;
+    realService: true,;
+    technology: ['Embeddings, Vector DB, OpenAI-compatible'],;
+    integrations: ['SharePoint, Google Drive, Confluence'],;
+    useCases: ['Faster RFPs, Better consistency, Higher win rate'],;
+    roi: 'Cut response time 40–60%, improve win rates',;
+    competitors: ['Loopio, RFPIO (assist modules)'],;
+    marketSize: '$1B RFP tooling',;
+    growthRate: '20% YoY',;
+    variant: 'ai-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Document loaders, chunking, topic maps, structured draft generator.',;
+    launchDate: '2025-02-20',;
+    customers: 14,;
+    rating: 4.6,;
+    reviews: 9;
+  },;
+  {;
+    id: 'gpt-eval-harness',;
+    name: 'LLM Evaluation Harness',;
+    tagline: 'Automated evals with golden sets, judges, and regression gates',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',;
+    features: [;
+      'Golden sets and promptsJudge model scoringMulti-model matrixRegression and drift alertsCI quality gates';
+    ],;
+    popular: false,;
+    icon: '🧪',;
+    color: 'from-indigo-600 to-slate-700',;
+    textColor: 'text-indigo-300',;
+    link: 'https://ziontechgroup.com/services/llm-evaluation-harness',;
+    marketPosition: 'Practical evals for product teams shipping AI features.',;
+    targetAudience: 'AI platform, product, QA',;
+    trialDays: 7,;
+    setupTime: '2 hours',;
+    category: 'AI & Data',;
+    realService: true,;
+    technology: ['OpenAI/Anthropic APIs, Vector DB'],;
+    integrations: ['GitHub Actions, GitLab CI'],;
+    useCases: ['Safety, quality, regression control'],;
+    roi: 'Reduce unsafe/low-quality releases and rollbacks',;
+    competitors: ['Humanloop, Arize Phoenix (evals)'],;
+    marketSize: '$1B eval tooling',;
+    growthRate: '35% YoY',;
+    variant: 'ai-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',;
+    launchDate: '2025-02-12',;
+    customers: 16,;
+    rating: 4.5,;
+    reviews: 7;
+  },;
+  {;
+    id: 'gdpr-cookie-consent-edge',;
+    name: 'GDPR Cookie Consent Edge',;
+    tagline: 'Region-aware consent banner with audit receipts and auto-blocking',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',;
+    features: [;
+      'Geo rules (EEA/UK/US states)Consent receipts & exportsAuto-blocking for tagsPolicy page generatorA/B banner tests';
+    ],;
+    popular: true,;
+    icon: '🍪',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/services/gdpr-cookie-consent-edge',;
+    marketPosition: 'CMP-lite for SMBs with transparent pricing and fast setup.',;
+    targetAudience: 'Marketing, legal, web teams',;
+    trialDays: 7,;
+    setupTime: '30 minutes',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Edge middleware, IAB TCF v2'],;
+    integrations: ['GTM, Segment, Google Tag'],;
+    useCases: ['Consent management, Policy pages, Audit logs'],;
+    roi: 'Accelerate compliance and reduce legal risk',;
+    competitors: ['Cookiebot, OneTrust'],;
+    marketSize: '$2B privacy tooling',;
+    growthRate: '18% YoY',;
+    variant: 'security-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Banner + middleware policy, receipts store, export jobs.',;
+    launchDate: '2025-02-18',;
+    customers: 27,;
+    rating: 4.6,;
+    reviews: 12;
+  },;
+  {;
+    id: 'smart-web-scraper-hub',;
+    name: 'Smart Web Scraper Hub',;
+    tagline: 'Rotate, render, and extract with compliance guards and queues',;
+    price: '$89',;
+    period: '/month',;
+    description: 'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',;
+    features: [;
+      'Headless rendering & queuesIP rotation and backoffRobots/politeness guardsDeduplication and diffsWarehouse exports';
+    ],;
+    popular: false,;
+    icon: '🕸️',;
+    color: 'from-slate-600 to-slate-800',;
+    textColor: 'text-slate-300',;
+    link: 'https://ziontechgroup.com/services/smart-web-scraper-hub',;
+    marketPosition: 'Developer-first scraping with operational guardrails.',;
+    targetAudience: 'Data engineering, growth, research',;
+    trialDays: 14,;
+    setupTime: '2 hours',;
+    category: 'Developer Tools',;
+    realService: true,;
+    technology: ['Playwright, Queues, Proxies'],;
+    integrations: ['S3, BigQuery, Postgres'],;
+    useCases: ['Competitive intel, Price tracking, Research datasets'],;
+    roi: 'Automate scraping while reducing ban rate and toil',;
+    competitors: ['ScraperAPI, Bright Data'],;
+    marketSize: '$1.5B data collection',;
+    growthRate: '20% YoY',;
+    variant: 'data-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',;
+    launchDate: '2025-02-22',;
+    customers: 10,;
+    rating: 4.4,;
+    reviews: 5;
+  }
+  ,;
+  {;
+    id: 'ecommerce-returns-manager',;
+    name: 'E‑commerce Returns Manager',;
+    tagline: 'Automate RMAs, labels, and refund workflows for Shopify/Woo',;
+    price: '$149',;
+    period: '/month',;
+    description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',;
+    features: [;
+      'Self‑serve returns portalLabel generation and trackingExchange/repair workflowsReturn reasons and defect analyticsEmail/SMS notificationsWarehouse and RMA integrations';
+    ],;
+    popular: true,;
+    icon: '📦',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/ecommerce-returns-manager',;
+    marketPosition: 'Streamlined alternative to Loop/Returnly with clearer analytics and flexible policies.',;
+    targetAudience: 'DTC brands and marketplaces',;
+    trialDays: 14,;
+    setupTime: '1–3 days',;
+    category: 'E‑commerce',;
+    realService: true,;
+    technology: ['ShopifyWooCommerceStripeShippo'],;
+    integrations: ['ShopifyWooCommerceShippoUPS/FedEx'],;
+    useCases: ['Reduce refundsIncrease exchangesShorten RMA cycle'],;
+    roi: 'Reduce return handling time by 40% and logistics costs by 10–20%.',;
+    competitors: ['LoopReturnlyHappy Returns'],;
+    marketSize: '$9B returns tech',;
+    growthRate: '18% YoY',;
+    variant: 'growth-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Embedded portal, label API wiring, policy engine and analytics.',;
+    launchDate: '2025-02-08',;
+    customers: 52,;
+    rating: 4.6,;
+    reviews: 24;
+  },;
+  {;
+    id: 'automated-email-followups',;
+    name: 'Automated Email Follow‑ups',;
+    tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',;
+    price: '$79',;
+    period: '/month',;
+    description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',;
+    features: [;
+      'Sequence builder and templatesReply/booking detection and stopsInbox rotation and throttlingA/B testing for subject linesWarmup and reputation checksCRM sync and webhooks';
+    ],;
+    popular: true,;
+    icon: '📨',;
+    color: 'from-sky-600 to-indigo-700',;
+    textColor: 'text-sky-300',;
+    link: 'https://ziontechgroup.com/automated-email-followups',;
+    marketPosition: 'Simpler and more compliant than heavy sales engagement suites for SMBs.',;
+    targetAudience: 'SMB sales and success teams',;
+    trialDays: 7,;
+    setupTime: '1 day',;
+    category: 'Growth & Marketing',;
+    realService: true,;
+    technology: ['Next.jsIMAP/SMTPCalendars'],;
+    integrations: ['HubSpotPipedriveGoogle/Outlook'],;
+    useCases: ['Lead nurturingOnboarding nudgesRenewal reminders'],;
+    roi: 'Lift reply rates by 15–35% and shorten sales cycles.',;
+    competitors: ['MailshakeLemlistApollo'],;
+    marketSize: '$6B sales engagement',;
+    growthRate: '20% YoY',;
+    variant: 'growth-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Sequence engine, deliverability checks, reply webhooks.',;
+    launchDate: '2025-02-06',;
+    customers: 78,;
+    rating: 4.5,;
+    reviews: 33;
+  },;
+  {;
+    id: 'podcast-transcribe-chapters',;
+    name: 'Podcast Transcribe & Chapters',;
+    tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',;
+    features: [;
+      'High‑accuracy transcriptionSpeaker diarizationSummaries and chapteringTopic and keyword extractionClip generator for socialEmbeds and RSS sync';
+    ],;
+    popular: true,;
+    icon: '🎙️',;
+    color: 'from-purple-600 to-indigo-700',;
+    textColor: 'text-purple-300',;
+    link: 'https://ziontechgroup.com/podcast-transcribe-chapters',;
+    marketPosition: 'Affordable alternative to Descript/Castmagic focused on speed and SEO.',;
+    targetAudience: 'Podcasters and media teams',;
+    trialDays: 7,;
+    setupTime: 'Same day',;
+    category: 'Creator Tools',;
+    realService: true,;
+    technology: ['ASRNLPFFmpeg'],;
+    integrations: ['Spotify for PodcastersBuzzsproutRiverside'],;
+    useCases: ['SEO, accessibility, repurposing clips'],;
+    roi: 'Cut post‑production time by 50–70% and improve SEO traffic.',;
+    competitors: ['DescriptCastmagicCapsho'],;
+    marketSize: '$2B podcast tooling',;
+    growthRate: '19% YoY',;
+    variant: 'ai-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Batch ASR, diarization, topic modeling, clip renderers.',;
+    launchDate: '2025-02-02',;
+    customers: 140,;
+    rating: 4.7,;
+    reviews: 58;
+  },;
+  {;
+    id: 'freelancer-portfolio-studio',;
+    name: 'Freelancer Portfolio Studio',;
+    tagline: 'Stunning portfolios and case studies with leads tracking',;
+    price: '$19',;
+    period: '/month',;
+    description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',;
+    features: [;
+      'Drag‑and‑drop templatesCase study generatorContact and booking formsTestimonials and logosBasic SEO and analyticsCustom domains';
+    ],;
+    popular: false,;
+    icon: '🖼️',;
+    color: 'from-pink-600 to-fuchsia-700',;
+    textColor: 'text-pink-200',;
+    link: 'https://ziontechgroup.com/freelancer-portfolio-studio',;
+    marketPosition: 'Purpose‑built, simpler than generic site builders for portfolios.',;
+    targetAudience: 'Freelancers and micro‑agencies',;
+    trialDays: 14,;
+    setupTime: '15 minutes',;
+    category: 'Creator Tools',;
+    realService: true,;
+    technology: ['Next.jsFormsSEO'],;
+    integrations: ['CalendlyHubSpotGA4'],;
+    useCases: ['Showcase workCapture leadsBook meetings'],;
+    roi: 'Increase inbound leads by 10–25% with polished case studies.',;
+    competitors: ['WebflowSquarespaceWix'],;
+    marketSize: '$4B creator sites',;
+    growthRate: '11% YoY',;
+    variant: 'growth-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Template presets, CMS‑like editing, lead capture widgets.',;
+    launchDate: '2025-02-04',;
+    customers: 210,;
+    rating: 4.6,;
+    reviews: 64;
+  },;
+  {;
+    id: 'local-micro-crm',;
+    name: 'Local Micro CRM',;
+    tagline: 'Simple contacts, reminders, and pipeline for small shops',;
+    price: '$15',;
+    period: '/month',;
+    description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',;
+    features: [;
+      'Contacts and notesReminders and tasksSimple pipeline stagesEmail/SMS nudgesImport/export and tagsMobile‑friendly UI';
+    ],;
+    popular: true,;
+    icon: '📇',;
+    color: 'from-amber-600 to-orange-700',;
+    textColor: 'text-amber-300',;
+    link: 'https://ziontechgroup.com/local-micro-crm',;
+    marketPosition: 'Tooled for simplicity, avoids enterprise CRM bloat and costs.',;
+    targetAudience: 'Local service businesses',;
+    trialDays: 14,;
+    setupTime: 'Same day',;
+    category: 'CRM',;
+    realService: true,;
+    technology: ['Next.jsSQLite/Postgres'],;
+    integrations: ['Gmail/OutlookTwilio'],;
+    useCases: ['Track customersFollow‑upsClose more deals'],;
+    roi: 'Reduce no‑shows and lost leads, +10–20% revenue lift.',;
+    competitors: ['HubSpot StarterPipedrive Essentials'],;
+    marketSize: '$20B SMB CRM',;
+    growthRate: '10% YoY',;
+    variant: 'analytics-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Minimal CRM with reminders and basic pipeline views.',;
+    launchDate: '2025-02-03',;
+    customers: 320,;
+    rating: 4.5,;
+    reviews: 77;
+  },;
+  {;
+    id: 'subjectline-optimizer-ai',;
+    name: 'Subject Line Optimizer AI',;
+    tagline: 'Generate and score email subjects with live benchmarks',;
+    price: '$29',;
+    period: '/month',;
+    description: 'Create and score subject lines using language models and historical performance data, export to ESPs and run quick A/B tests.',;
+    features: [;
+      'AI suggestions and variantsTone and length tuningPerformance benchmarksESP export and A/B testsSpam words and previewTeam review workflow';
+    ],;
+    popular: false,;
+    icon: '🧪',;
+    color: 'from-cyan-600 to-blue-700',;
+    textColor: 'text-cyan-300',;
+    link: 'https://ziontechgroup.com/subjectline-optimizer-ai',;
+    marketPosition: 'Focused assistant vs. general copy tools, fast iteration for marketers.',;
+    targetAudience: 'Growth and lifecycle marketers',;
+    trialDays: 7,;
+    setupTime: 'Same day',;
+    category: 'AI & Marketing',;
+    realService: true,;
+    technology: ['NLP/LLMESP APIs'],;
+    integrations: ['MailchimpKlaviyoSendGrid'],;
+    useCases: ['Boost open ratesFaster copy iteration'],;
+    roi: 'Improve opens by 5–15% and reduce time‑to‑send.',;
+    competitors: ['Copy.aiJasperHeadline analyzers'],;
+    marketSize: '$3B marketing AI',;
+    growthRate: '24% YoY',;
+    variant: 'ai-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Prompting templates, scoring heuristics, and ESP exports.',;
+    launchDate: '2025-02-07',;
+    customers: 95,;
+    rating: 4.4,;
+    reviews: 28;
+  },;
+  {;
+    id: 'dev-workflow-analytics',;
+    name: 'Developer Workflow Analytics',;
+    tagline: 'Visualize reviews, velocity, and bottlenecks across repos',;
+    price: '$199',;
+    period: '/month',;
+    description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',;
+    features: [;
+      'Cycle time and WIP analysisReview depth and latencyFlaky test detectionRepo hotspots and ownershipTeam scorecards and alertsJira/Linear linkage';
+    ],;
+    popular: true,;
+    icon: '🧩',;
+    color: 'from-emerald-600 to-teal-700',;
+    textColor: 'text-emerald-300',;
+    link: 'https://ziontechgroup.com/dev-workflow-analytics',;
+    marketPosition: 'Actionable insights without surveillance, focused on flow metrics.',;
+    targetAudience: 'Engineering teams and platform leads',;
+    trialDays: 14,;
+    setupTime: '3 days',;
+    category: 'Dev Productivity',;
+    realService: true,;
+    technology: ['GitHub/GitLab APIsCI logs'],;
+    integrations: ['GitHubGitLabJiraLinear'],;
+    useCases: ['Improve code reviewReduce cycle timeStabilize CI'],;
+    roi: 'Shorten cycle time by 10–25% and cut flaky tests.',;
+    competitors: ['LinearBSwarmiaVelocity'],;
+    marketSize: '$5B dev analytics',;
+    growthRate: '21% YoY',;
+    variant: 'analytics-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',;
+    launchDate: '2025-02-09',;
+    customers: 44,;
+    rating: 4.6,;
+    reviews: 19;
+  },;
+  {;
+    id: 'privacy-consent-manager-smb',;
+    name: 'Privacy & Consent Manager (SMB)',;
+    tagline: 'GDPR/CCPA banners, consent logs, DSAR intake and records',;
+    price: '$49',;
+    period: '/month',;
+    description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',;
+    features: [;
+      'Geo/rule‑based bannersPreference centerDSAR intake and workflowsCookie catalog and scansConsent logs and exportsMulti‑site management';
+    ],;
+    popular: true,;
+    icon: '⚖️',;
+    color: 'from-slate-700 to-slate-900',;
+    textColor: 'text-slate-200',;
+    link: 'https://ziontechgroup.com/privacy-consent-manager',;
+    marketPosition: 'Simpler pricing vs OneTrust, ideal for SMB and startups.',;
+    targetAudience: 'SMBs and startups',;
+    trialDays: 14,;
+    setupTime: 'Same day',;
+    category: 'Security & Compliance',;
+    realService: true,;
+    technology: ['Next.jsEdge rules'],;
+    integrations: ['GTMSegmentTag managers'],;
+    useCases: ['Cookie complianceConsent recordsDSAR intake'],;
+    roi: 'Faster compliance and fewer legal risks.',;
+    competitors: ['OneTrustCookieYesDidomi'],;
+    marketSize: '$3B privacy tech',;
+    growthRate: '16% YoY',;
+    variant: 'security-futuristic' as any,;
+    contactInfo: {;
+      mobile: '+1 302 464 0950',;
+      email: 'kleber@ziontechgroup.com',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',;
+      website: 'https://ziontechgroup.com';
+    },;
+    realImplementation: true,;
+    implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',;
+    launchDate: '2025-02-01',;
+    customers: 88,;
+    rating: 4.6;
+    reviews: 36;
+
+
+
+  }
+];
+;
+    rating: 4.6
+    reviews: 36
+  }
+];
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
@@ -7413,6 +9701,7 @@ export const realMarketServices: RealMarketService[] = [;
     customers: 88,;
     rating: 4.6;
     reviews: 36;
+<<<<<<< HEAD
 
 
   }
@@ -7453,3 +9742,7 @@ export const realMarketServices: RealMarketService[] = [;
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

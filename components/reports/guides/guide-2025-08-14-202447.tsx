@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 export default function Page() {;
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
+<<<<<<< HEAD
 import Head from 'next/head';
 export default function Page() {
   return (
@@ -14,6 +18,8 @@ export default function Page() {
         <title>Guide — Cloud Improving Implementation</title>
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'
@@ -37,6 +43,10 @@ export default function Page() {
           dangerouslySetInnerHTML={{
             __html:
 
+<<<<<<< HEAD
+=======
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
           }}
         />;
@@ -46,6 +56,7 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
+<<<<<<< HEAD
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -56,6 +67,12 @@ export default function Page() {
   return (
   return (
 
+=======
+
+export default function Page() {
+
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
@@ -71,12 +88,18 @@ export default function Page() {
       </main>;
     </div>;
   );
+<<<<<<< HEAD
 export default function Page() {
   return (
 }
 
 
 
+=======
+
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -136,9 +159,12 @@ function Page() {
     </div>);
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
           }}
@@ -148,6 +174,14 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
+=======
+  );export default function Page() {
+  return (
+
+export default function Page() {
+  return (
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
     <div className="min-h-screen bg-slate-950 text-white">
@@ -164,7 +198,10 @@ function Page() {
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -198,8 +235,11 @@ export default function Page() {
     </div>
   );
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     </div>;
   );
 }
@@ -232,7 +272,10 @@ export default function Page(req, res) {
 ;
 
 
+<<<<<<< HEAD
 
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

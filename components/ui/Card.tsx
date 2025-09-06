@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -211,3 +212,19 @@ export {
   CardContent,
 };
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+import React from 'react';
+
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

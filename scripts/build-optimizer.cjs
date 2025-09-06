@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
     console.error(' Build optimization "failed")
 
@@ -85,3 +86,14 @@ if (require.main === module) {
 
 module.exports = BuildOptimizer;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+const { execSync } = require('child_process')
+const fs = require('fs')
+// console.log(' Build Optimizer Starting...')
+    console.log('🧹 Cleaning previous builds...')
+    if (fs.existsSync('.next')
+        execSync('rm -rf .next', { "stdio"})
+        execSync('rm -rf out', { "stdio"})
+    execSync('npm run build', { "stdio"})
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -5,6 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const data = readJsonFile('updates.json', [] as any[]);
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
   const data = readJsonFile('updates && updates.json', [] as any[]);
   res && res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -20,6 +21,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+=======
+
+
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -42,8 +50,11 @@ function handler() {
 }
 
 
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 
@@ -61,9 +72,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 
 
 
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

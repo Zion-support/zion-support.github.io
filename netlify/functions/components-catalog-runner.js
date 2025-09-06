@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -13,10 +16,13 @@ function run_node() {
   const abs = path.resolve (__dirname, '..', '..', rel_path);
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 exports.config = {
   schedule: '*/30 * * * *'
 }
@@ -25,24 +31,31 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
+<<<<<<< HEAD
 
 ursor/expand-services-advertise-and-build-project-4b36
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
+<<<<<<< HEAD
 
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
   }
   step('components:catalog', () =>
     runNode('automation/components-catalog && catalog.cjs')
   );
+<<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -50,6 +63,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
@@ -57,11 +74,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 ;
 exports.handler = async () => {
@@ -88,6 +108,7 @@ function step() {
 }  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -107,3 +128,5 @@ exports.handler = async () => {
   return { statusCode: 200, body: logs.join('\n') };
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

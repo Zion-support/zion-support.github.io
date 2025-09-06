@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -20,13 +21,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   const {
     slug
     name
@@ -38,10 +44,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -55,6 +64,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       about,  try {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -62,10 +75,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
+<<<<<<< HEAD
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const vendor = registerVendor({
       slug;
       name;
 
+<<<<<<< HEAD
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
@@ -78,12 +96,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    const vendor = registerVendor({
+      slug;
+      name;
+      servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      teamSize: Number(teamSize || 0);
+      about;
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
+    res && res.status(201).json({ vendor })
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -94,6 +125,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e: any) {
 
 
+=======
+
+    res && res.status(500).json({ error: e && e.message });
+  }    res && res.status(500).json({ error: e && e.message })
+  };
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     verification_docs,
     case_studies,
@@ -132,13 +170,24 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
   }
 }
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+  }
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

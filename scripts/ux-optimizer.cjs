@@ -32,6 +32,7 @@ class UXOptimizer {
 
 const optimizer = new UXOptimizer();
 optimizer.optimize();
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -42,4 +43,6 @@ const path = require('path')
         this.improvements.push('Mobile optimization completed')
             "recommendations"
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

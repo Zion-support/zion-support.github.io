@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 export interface EmergingTechBreakthrough2029 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -13,12 +17,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    address: string;
+  }
+export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
+  [
+    {
+      id: '2029-emerging-tech-breakthrough'
+      name: '2029 Emerging Tech Breakthrough Platform'
+      tagline: 'Emerging tech breakthroughs for 2029'
+      price: '$899/month'
+      description:
+        'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.'
+      features: [
+        'Emerging tech breakthroughs'
+        'Innovation platform'
+        'Future capabilities'
+        'Advanced features'
+        'Expert insights'
+      ]
+      link: '/services/2029-emerging-tech-breakthrough'
+      category: 'Emerging Tech Breakthroughs 2029'
+      realImplementation: true
+      contactInfo: {
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    }
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },
+  ];    features: [
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
+<<<<<<< HEAD
       "Advanced features";
       "Expert insights";
     ];
@@ -27,6 +72,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
 origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface EmergingTechBreakthrough2029 {;
 
@@ -35,6 +82,7 @@ export interface EmergingTechBreakthrough2029 {;
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
+<<<<<<< HEAD
     address: string
   }
 }
@@ -66,6 +114,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    contactInfo: {
+
+
+    }
+  }
+
+];
+
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface EmergingTechBreakthrough2029 {;
   };
 
@@ -99,7 +158,10 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform";
       "Future capabilities";
       "Advanced features";
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string,;
   name: string,;
   tagline: string,;
@@ -130,14 +192,18 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",
     category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -152,3 +218,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+    }
+  }
+;
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 const fs = require('fs');
 const path = require('path');
@@ -92,9 +95,12 @@ walkDir('/workspace/pages');
 walkDir('/workspace/src');
 
 console.log('Final syntax fix completed!');
+<<<<<<< HEAD
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 ursor/automate-test-improve-and-merge-code-59d5
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

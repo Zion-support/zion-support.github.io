@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface AdditionalRealService {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   tagline: string;
@@ -22,6 +26,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
+<<<<<<< HEAD
 
     address: string;
   }
@@ -48,12 +53,15 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
   {
+<<<<<<< HEAD
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -66,6 +74,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  id: string;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   name: string;
   tagline: string;
   price: string;
@@ -77,27 +88,36 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
 }
 
 
 
+=======
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     address: string;
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
 
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 
 
 
@@ -122,6 +142,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       address: "364 E Main St STE 1008 Middletown DE 19709"
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }
   },
   {
@@ -141,6 +163,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     category: "Data & Analytics",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
 
 ursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -191,11 +214,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
 
+<<<<<<< HEAD
 ];
 
 ;
@@ -243,11 +271,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

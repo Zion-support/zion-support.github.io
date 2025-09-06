@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface EnterpriseIt2026ServiceV2 {
+
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 export interface EnterpriseIt2026ServiceV2 {
 
 
 export interface EnterpriseIt2026ServiceV2 {;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 export interface EnterpriseIt2026ServiceV2 {;
@@ -16,6 +23,8 @@ import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {
 export interface EnterpriseIt2026ServiceV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   tagline: string;
@@ -46,6 +55,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
     website: string;
   }
     website: string
@@ -102,6 +112,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -117,6 +129,7 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
@@ -124,11 +137,14 @@ export interface EnterpriseIT2026ServiceV2 {
   
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
     tagline: 'Seamlessly manage and orchestrate across all cloud providers',
@@ -773,12 +789,38 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realImplementation: true,
     implementationDetails:
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
+    launchDate: '2026-05-01'
+    customers: 280
+    rating: 4.9
+    reviews: 180
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
     launchDate: '2026-05-01',
     customers: 280,
     rating: 4.9,
     reviews: 180,
+<<<<<<< HEAD
 
+=======
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.';
+    launchDate: '2026-05-01';
+    customers: 280;
+    rating: 4.9
+
+    reviews: 180
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
@@ -809,9 +851,12 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -822,11 +867,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
 
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+];
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -1265,6 +1314,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
+<<<<<<< HEAD
 
 
   }
@@ -1278,3 +1328,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  }
+];
+  }
+;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

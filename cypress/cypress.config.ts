@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { define_config } from 'cypress';
 export default define_config ({
@@ -28,11 +29,33 @@ export default defineConfig({;
         return launchOptions;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');
+    base_url: 'http://localhost:3000', // Standard Next.js port;
+    support_file: 'cypress / support / e2e.ts',
+    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
+    setupNodeEvents (on, config) {
+      on ('before:browser:launch', (browser = {}, launch_options) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          launch_options.args.push ('--disable - ipv6');
+        }
+        return launch_options;
+      });export default define_config ({
+  e2e: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
+<<<<<<< HEAD
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
@@ -53,10 +76,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    supportFile: 'cypress/support/e2e.ts';
+    baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
+    supportFile: 'cypress/support/e2e && e2e.ts';
+    supportFile: 'cypress/support/e2e.ts';
+    experimentalModifyObstructiveThirdPartyCode: true;
+    // Disable IPv6 in Chromium-based browsers to avoid socket errors
+    setupNodeEvents(on, config) {
+      on('before:browser:launch', (browser = {}, launchOptions) => {
+        if (browser && browser.family === 'chromium') {
+          launchOptions && launchOptions.args.push('--disable-ipv6');        }
+        return launchOptions
+      })
+    }
+    env: {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
   reporterOptions: {
+<<<<<<< HEAD
 
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -84,6 +124,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -110,15 +152,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
+<<<<<<< HEAD
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     toConsole: true
   }
 });
 
+<<<<<<< HEAD
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
@@ -134,6 +180,8 @@ if ( {) {
         return launch_options;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -206,9 +254,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
       on('before:browser:launch', (browser;
 });
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

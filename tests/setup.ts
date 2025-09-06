@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import React from 'react';
 
 interface SetupProps {
@@ -57,6 +60,7 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 main
 
 import '@testing-library/jest-dom'
@@ -70,3 +74,5 @@ afterEach(() => {
 })
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

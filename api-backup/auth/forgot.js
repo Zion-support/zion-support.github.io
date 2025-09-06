@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import React from './react';
 (" ");
+<<<<<<< HEAD
     <div>;
       <h1 > Forgot Password</h1>;
       <p > Password reset functionality would go here.</p>;
@@ -39,3 +40,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+=======
+export default /**
+ * ForgotPassword - Function description
+ */
+function ForgotPassword() {
+  return (
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

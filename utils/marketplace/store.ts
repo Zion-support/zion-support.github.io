@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 // Marketplace data store utilitiesexport interface Project {;
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// Marketplace data store utilities
+
+export interface Project {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   id: string;
   title: string;
@@ -16,6 +22,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: string;
     title: string;
     description: string;
+<<<<<<< HEAD
 
     status: 'pending' | 'in_progress' | 'completed' | 'overdue'
 
@@ -24,20 +31,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
+<<<<<<< HEAD
 
     uploadedAtIso: string
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }>;
   budget?: {
     total: number;
     currency: string;
+<<<<<<< HEAD
 
     type: 'fixed' | 'hourly' | 'milestone'
   }
@@ -55,6 +68,10 @@ export interface Offer {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+export interface Offer {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -68,11 +85,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     milestones?: Array<{
       title: string;
       amount: number;
+<<<<<<< HEAD
 
       dueDate: string
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     }>;
   }
   agreementUrl?: string;
@@ -88,6 +108,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expires_at?: string;
   notes?: string,
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 }
@@ -101,21 +122,29 @@ export interface Application {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+export interface Application {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+<<<<<<< HEAD
 
   notes?: string
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   cover_letter?: string;
   proposed_rate?: number;
   proposed_timeline?: string;
   portfolio_items?: string[];
   notes?: string,
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -129,6 +158,10 @@ export interface Message {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+export interface Message {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   conversationId: string;
   senderId: string;
@@ -140,6 +173,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
+<<<<<<< HEAD
 
   isRead: boolean
 
@@ -157,15 +191,23 @@ export interface Conversation {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  is_read: boolean,
+}
+export interface Conversation {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
+<<<<<<< HEAD
 
   createdAtIso: string
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -175,6 +217,7 @@ class MarketplaceStore {
   private conversations: Map<string, Conversation> = new Map();
   // Project methods
   async createProject(project: Project): Promise<Project> {
+<<<<<<< HEAD
     this.projects.set(project.id, project);
     return project;
   }
@@ -184,6 +227,8 @@ class MarketplaceStore {
 
     return this && this.projects.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
 
@@ -191,13 +236,17 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     if (!project) return null,
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (!project) return null
     const updatedProject = {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
+<<<<<<< HEAD
 
     };
 
@@ -211,22 +260,30 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     return this && this.projects.delete(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getProjectsByClient(clientId: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
 
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
 
     return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
 
     return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getAllProjects(): Promise<Project[]> {
     return Array && Array.from(this && this.projects.values());
@@ -237,19 +294,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return offer;
   }
   async getOffer(id: string): Promise<Offer | null> {
+<<<<<<< HEAD
 
     return this.offers.get(id) |null
 
     return this && this.offers.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
 
     if (!offer) return null
     const updatedOffer = { ...offer, ...updates }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.offers.set(id, updatedOffer);
     const offer = this && this.offers.get(id);
     if (!offer) return null,
@@ -259,27 +322,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return updatedOffer;
   }
   async deleteOffer(id: string): Promise<boolean> {
+<<<<<<< HEAD
 
     return this.offers.delete(id)
 
     return this && this.offers.delete(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getOffersByClient(clientId: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
 
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
 
     return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
 
     return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getAllOffers(): Promise<Offer[]> {
     return Array && Array.from(this && this.offers.values());
@@ -290,19 +362,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return application;
   }
   async getApplication(id: string): Promise<Application | null> {
+<<<<<<< HEAD
 
     return this.applications.get(id) |null
 
     return this && this.applications.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
 
     if (!application) return null
     const updatedApplication = { ...application, ...updates }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.applications.set(id, updatedApplication);
     const application = this && this.applications.get(id);
     if (!application) return null,
@@ -312,27 +390,36 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return updatedApplication;
   }
   async deleteApplication(id: string): Promise<boolean> {
+<<<<<<< HEAD
 
     return this.applications.delete(id)
 
     return this && this.applications.delete(id),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getApplicationsByProject(projectId: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
 
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
 
     return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
 
     return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getAllApplications(): Promise<Application[]> {
     return Array && Array.from(this && this.applications.values());
@@ -343,19 +430,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return message;
   }
   async getMessage(id: string): Promise<Message | null> {
+<<<<<<< HEAD
 
     return this.messages.get(id) |null
 
     return this && this.messages.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
     if (!message) return null
     const updatedMessage = { ...message, ...updates }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.messages.set(id, updatedMessage);
     const message = this && this.messages.get(id);
     if (!message) return null,
@@ -365,6 +458,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return updatedMessage;
   }
   async deleteMessage(id: string): Promise<boolean> {
+<<<<<<< HEAD
 
     return this.messages.delete(id)
 
@@ -372,6 +466,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    return this && this.messages.delete(id),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values())
@@ -379,6 +476,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
   async getMessagesByUser(userId: string): Promise<Message[]> {
+<<<<<<< HEAD
 
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.senderId === userId || m && m.recipientId === userId)
@@ -386,6 +484,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getAllMessages(): Promise<Message[]> {
     return Array && Array.from(this && this.messages.values());
@@ -396,19 +496,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return conversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
+<<<<<<< HEAD
 
     return this.conversations.get(id) |null
 
     return this && this.conversations.get(id) || null,
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
 
     if (!conversation) return null
     const updatedConversation = { ...conversation, ...updates }
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.conversations.set(id, updatedConversation);
     const conversation = this && this.conversations.get(id);
     if (!conversation) return null,
@@ -418,6 +524,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return updatedConversation;
   }
   async deleteConversation(id: string): Promise<boolean> {
+<<<<<<< HEAD
 
     return this.conversations.delete(id)
 
@@ -425,6 +532,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+    return this && this.conversations.delete(id),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
     return Array && Array.from(this && this.conversations.values())
@@ -437,6 +547,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Utility methods
   async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
     // Find existing conversation between these two users
+<<<<<<< HEAD
 
         return conversation
 
@@ -444,6 +555,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -619,6 +732,7 @@ if (return null, ) {
       if (&& conversation.participants.includes (userId2)) {) {
   $2
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
         return conversation,
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -636,15 +750,23 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+        return conversation,
+      }
+    }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
     const message = this && this.messages.get(messageId);
     if (!message) return false;
+<<<<<<< HEAD
 
     message.readAtIso = new Date().toISOString()
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     this.messages.set(messageId, message);
 
     message && message.isRead = true;
@@ -653,11 +775,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return true;
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
+<<<<<<< HEAD
 
       .length
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
     // Create new conversation;
@@ -685,6 +810,7 @@ if (return false) {
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
       .length,
 origin/cursor/automate-test-improve-and-merge-code-382a
@@ -693,11 +819,16 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     )
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      .length,
+  }
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
       project && project.summary.toLowerCase().includes(lowercaseQuery)
     ),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async searchOffers(query: string): Promise<Offer[]> {
@@ -705,13 +836,20 @@ origin/cursor/automate-test-improve-and-merge-code-382a
     )
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+  async searchOffers(query: string): Promise<Offer[]> {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
     ),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
   // Cleanup methods
   async clearAll(): Promise<void> {
@@ -727,6 +865,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     totalOffers: number;
     totalApplications: number;
     totalMessages: number;
+<<<<<<< HEAD
 
     totalConversations: number
 
@@ -742,12 +881,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   }
 }
 // Singleton instance
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
 export async function createProject(project: Project): Promise<Project> {
+<<<<<<< HEAD
 
   return marketplaceStore.createProject(project)
 
@@ -755,22 +897,31 @@ export async function createProject(project: Project): Promise<Project> {
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function getProject(id: string): Promise<Project | null> {
   return marketplaceStore.getProject(id)
 
   return marketplaceStore && marketplaceStore.getProject(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 }
   return marketplaceStore.getProject(id)
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+}
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+  return marketplaceStore && marketplaceStore.updateProject(id, updates);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
   return marketplaceStore.updateProject(id, updates);
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteProject(id: string): Promise<boolean> {
@@ -788,6 +939,14 @@ export async function createOffer(offer: Offer): Promise<Offer> {
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createOffer(offer),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+export async function deleteProject(id: string): Promise<boolean> {
+  return marketplaceStore && marketplaceStore.deleteProject(id),
+}
+export async function createOffer(offer: Offer): Promise<Offer> {
+  return marketplaceStore && marketplaceStore.createOffer(offer),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function getOffer(id: string): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.getOffer(id),
@@ -797,16 +956,23 @@ export async function updateOffer(id: string, updates: Partial<Offer>): Promise<
   return marketplaceStore.getOffer(id)
 
   return marketplaceStore && marketplaceStore.getOffer(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 }
   return marketplaceStore.getOffer(id)
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+  return marketplaceStore && marketplaceStore.updateOffer(id, updates);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
   return marketplaceStore.updateOffer(id, updates);
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteOffer(id: string): Promise<boolean> {
@@ -824,6 +990,14 @@ export async function createApplication(application: Application): Promise<Appli
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createApplication(application),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+export async function deleteOffer(id: string): Promise<boolean> {
+  return marketplaceStore && marketplaceStore.deleteOffer(id),
+}
+export async function createApplication(application: Application): Promise<Application> {
+  return marketplaceStore && marketplaceStore.createApplication(application),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function getApplication(id: string): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.getApplication(id),
@@ -833,16 +1007,23 @@ export async function updateApplication(id: string, updates: Partial<Application
   return marketplaceStore.getApplication(id)
 
   return marketplaceStore && marketplaceStore.getApplication(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 }
   return marketplaceStore.getApplication(id)
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+  return marketplaceStore && marketplaceStore.updateApplication(id, updates);
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
   return marketplaceStore.updateApplication(id, updates);
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteApplication(id: string): Promise<boolean> {
@@ -860,6 +1041,14 @@ export async function createMessage(message: Message): Promise<Message> {
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return marketplaceStore && marketplaceStore.createMessage(message),
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+export async function deleteApplication(id: string): Promise<boolean> {
+  return marketplaceStore && marketplaceStore.deleteApplication(id),
+}
+export async function createMessage(message: Message): Promise<Message> {
+  return marketplaceStore && marketplaceStore.createMessage(message),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function getMessage(id: string): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.getMessage(id),
@@ -869,6 +1058,7 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
   return marketplaceStore.getMessage(id)
 
   return marketplaceStore && marketplaceStore.getMessage(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
 }
   return marketplaceStore.getMessage(id)
@@ -879,20 +1069,117 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return marketplaceStore.updateMessage(id, updates);
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+
+  return marketplaceStore.updateMessage(id, updates);
+}
+export async function deleteMessage(id: string): Promise<boolean> {
+  return marketplaceStore && marketplaceStore.deleteMessage(id),
+}
+// Utility functions
+export function createProjectData(
+  title: string
+  summary: string
+  clientId: string
+  additionalData?: Partial<Project>
+): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+    title
+    summary
+    clientId
+    startDateIso: new Date().toISOString()
+    status: 'DRAFT'
+    timeline: []
+    documents: []
+    ...additionalData
+  }
+    title,
+    summary,
+    clientId,
+    startDateIso: new Date().toISOString(),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additionalData;
+  };
+}
+export function createOfferData(
+  clientId: string
+  talentSlug: string
+  scopeSummary: string
+  paymentTerms: Offer['paymentTerms']
+  additionalData?: Partial<Offer>
+): Omit<Offer, 'id' | 'createdAtIso'> {
+  return {
+    clientId
+    talentSlug
+    startDateIso: new Date().toISOString()
+    scopeSummary
+    paymentTerms
+    status: 'SENT'
+    ...additionalData
+  }
+}
+export function createApplicationData(
+  projectId: string
+  talentSlug: string
+  additionalData?: Partial<Application>
+): Omit<Application, 'id' | 'appliedAtIso'> {
+  return {
+    projectId
+    talentSlug
+    status: 'PENDING'
+    ...additionalData
+  }
+}
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso'> {
+  return {
+    conversationId
+    senderId
+    recipientId
+    body
+    isRead: false
+    ...additionalData
+  }
+}
+export function generateId(prefix: string = 'item'): string {
+}
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  return marketplaceStore && marketplaceStore.updateMessage(id, updates);
+
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 export async function deleteMessage(id: string): Promise<boolean> {
 
   return marketplaceStore.deleteMessage(id)
 
   return marketplaceStore && marketplaceStore.deleteMessage(id),
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }
 // Utility functions
 
 
 
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     conversationId,
     senderId,
     recipientId,
@@ -1046,6 +1333,7 @@ export function createMessageData (
   }
 }
 }
+<<<<<<< HEAD
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
@@ -1128,3 +1416,9 @@ export function getProjectById(id: string): Project | undefined {
   const db = readDb();
   return db.projects.find(p => p.id === id);
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

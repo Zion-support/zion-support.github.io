@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   "timestamp": "2025-09-05T00:20:16.317Z",
   "memory": {
     "rss": 48967680,
@@ -15,16 +18,19 @@
     ".next": {
       "size": 28534499,
       "sizeMB": "27.21"
+<<<<<<< HEAD
   "timestamp": "2025-09-03T22:43:35.522Z",
   "bundleSize": {
     ".next": {
       "size": 29182248,
       "sizeMB": "27.83"
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     },
     "node_modules": {
-      "size": 820676108,
-      "sizeMB": "782.66"
+      "size": 0,
+      "sizeMB": "0.00"
     }
   },
   "fileCounts": {

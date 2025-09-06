@@ -2,6 +2,7 @@
 
 
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
@@ -28,11 +29,14 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
 
 
+<<<<<<< HEAD
 
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -40,46 +44,64 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 
 
+=======
+  return new Promise ( (resolve) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {
+})
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
+<<<<<<< HEAD
 
 
   
 
 }) 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}) ;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
+<<<<<<< HEAD
 if (ms < 1000) return `$ {
   Math.round (ms) 
 }ms`;
 }
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 };
 
 
+<<<<<<< HEAD
 
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
 default: return Laptop;
-
-};
+}
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
+<<<<<<< HEAD
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -103,38 +125,52 @@ else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 else score += 25
 }
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 else score += 25 
 
 };
 
 
+<<<<<<< HEAD
 
 else score += 25 
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
-  isLoading ? 'animate-spin': '' 
-}` 
+  isLoading ? 'animate-spin': ''
+}`
 }/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {
-  /* Expanded View */ 
+  /* Expanded View */
 }<AnimatePresence> {
-  isExpanded && (<motion.div </div>) 
-}</div> </div> </div>) ) 
-}</div> </div>) 
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>) 
+  isExpanded && (<motion.div </div>)
+}</div> </div> </div>) )
+}</div> </div>)
+}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)
 }{
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>) 
-}</div> </div> </div> </motion.div>) 
-}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>) 
-};
+  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)
+}</div> </div> </div> </motion.div>)
+}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
+}
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
+<<<<<<< HEAD
 
+=======
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
@@ -287,9 +323,12 @@ export default PerformanceMonitor;
 }
 
 }
+<<<<<<< HEAD
 
 
 
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

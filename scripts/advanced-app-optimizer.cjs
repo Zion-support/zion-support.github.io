@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -312,7 +315,10 @@ if (require.main === module) {;
 }
 ;
 module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
  * Comprehensive optimization for the Zion Tech Group application;
  */
@@ -341,6 +347,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
+<<<<<<< HEAD
  * Comprehensive optimization for the application;
  */;
 const fs = require("fs")
@@ -1226,4 +1233,6 @@ if (require.main === module) {
 module.exports = AdvancedAppOptimizer
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

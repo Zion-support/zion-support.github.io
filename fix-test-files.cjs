@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 
 
 
 main
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}

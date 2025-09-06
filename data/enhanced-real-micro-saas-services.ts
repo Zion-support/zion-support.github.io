@@ -1,6 +1,7 @@
 
 
 
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface MicroSaasService {
@@ -2030,6 +2031,8 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 export const getServicesByCategory = null;
 name: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 tagline: string;
 price: string;
 period: string;
@@ -2053,6 +2056,7 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 name: string;
@@ -2079,6 +2083,8 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export interface MicroSaasService {
@@ -4253,8 +4259,44 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
+<<<<<<< HEAD
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// Service categories
+export const serviceCategories = [
+  'AllAI & Enterprise Automation',
+  'Quantum AI & BiotechAI & Cybersecurity',
+  'Quantum AI & FinanceAI & Supply Chain',
+  'Quantum AI & ClimateAI & Manufacturing',
+  'Quantum AI & HealthcareAI & Logistics',
+  'Quantum AI & EnergyAI & Education',
+  'Quantum AI & CybersecurityAI & Marketing',
+  'Quantum AI & ResearchAI & Legal Services',
+  'Quantum AI & Autonomous VehiclesAI & Real Estate',
+  'Quantum AI & CyberneticsQuantum AI & Space Technology',
+  // ADDITIONAL INNOVATIVE CATEGORIES
+  'AI & Content CreationAI & Customer Service',
+  'AI & Sales AutomationAI & Data Analytics',
+  'AI & HR TechAI & Market Research',
+  'AI & Video ProductionAI & SEO',
+  'AI & BlockchainAI & IoT',
+  'AI & Machine LearningQuantum Computing & AI',
+  'Quantum Finance & TradingQuantum Technology',
+  'Autonomous ManufacturingAutonomous Systems',
+  'Quantum CybersecuritySpace Technology & Aerospace',
+  'Metaverse & VR/ARMetaverse & Virtual Reality',
+  'Biomedical AINeural Technology',
+  'Blockchain & DeFiEdge Computing & IoT',
+  'Manufacturing & Industry 4.0Cybersecurity & Privacy',
+  'Healthcare & BiotechnologyFinancial Technology',
+  'Financial Technology & TradingEnergy & Sustainability',
+  'IoT & Smart CitiesClimate Technology',
+  'Robotics & AutomationAgriculture & Food Tech'
+];
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
@@ -4278,7 +4320,10 @@ export const serviceCategories = [
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -4347,9 +4392,12 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
 ;
+<<<<<<< HEAD
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

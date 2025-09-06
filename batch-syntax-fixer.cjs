@@ -17,6 +17,7 @@
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
 
+<<<<<<< HEAD
 
 
 ursor/fix-lint-push-and-merge-to-main-28da
@@ -24,6 +25,8 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

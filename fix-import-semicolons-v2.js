@@ -33,6 +33,9 @@ files.for_each ((file) => {
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+
       (match) => {
         return match.replace(";", ";");
       }

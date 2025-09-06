@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -88,6 +89,10 @@ for (const file of conflictedFiles) {
 const fs = require('fs');
 const path = require('path');
 main
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 const { execSync } = require('child_process');
 
 console.log('Resolving merge conflicts...');
@@ -160,6 +165,7 @@ contentConflicts.forEach(file => {
   }
 });
 
+<<<<<<< HEAD
 if (resolveMergeConflicts()) {
     console.log('Ready to commit merge resolution');
 } else {
@@ -174,3 +180,5 @@ console.log('\n🎉 Merge conflict resolution completed!');
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

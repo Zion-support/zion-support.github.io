@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 main
 React from
   'react'
@@ -5,6 +6,11 @@ import Header from 'react'
   './Header';import Footer from 'react'
   './Footer'
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+import React from 'react';
+import Head from 'next/head';
+import React, { ReactNode } from 'react';
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -100,13 +106,17 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
 
 main
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
+<<<<<<< HEAD
   keywords?: string;
 }
 
@@ -148,3 +158,22 @@ main
 
 main
 
+=======
+}
+
+export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        {children}
+      </div>
+    </>
+  );
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

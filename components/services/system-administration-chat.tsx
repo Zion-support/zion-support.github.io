@@ -1,5 +1,28 @@
 
 
+<<<<<<< HEAD
+=======
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const SystemAdministrationChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <meta
+          name="description"
+          content="SystemAdministrationChat service"
+        />{" "}
+      <main>
+        <h1>SystemAdministrationChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+      </Head>;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <main>;
         <h1>SystemAdministrationChat</h1>;
         <p>Service details coming soon...</p>;
@@ -12,8 +35,11 @@ export default SystemAdministrationChat;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -33,9 +59,12 @@ const SystemAdministrationChat: NextPage = () => {
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -106,7 +135,10 @@ export default SystemAdministrationChat;
 
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

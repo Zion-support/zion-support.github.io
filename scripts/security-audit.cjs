@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -499,3 +500,7 @@ if (require.main === module) {
 
 module.exports = SecurityAuditor;
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

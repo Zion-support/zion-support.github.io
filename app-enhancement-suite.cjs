@@ -10,7 +10,10 @@ class AppEnhancementSuite {
   log(message) {
     console.log(message);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -31,7 +34,10 @@ class AppEnhancementSuite {
 
   createSecurityEnhancements() {
     this.log('🔒 Creating Security Enhancements');
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     // Create security headers configuration
     const securityConfig = {
@@ -41,6 +47,7 @@ class AppEnhancementSuite {
         'X-XSS-Protection': '1; mode=block';
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
         'Content-Security-Policy':
+<<<<<<< HEAD
 
   
   createPerformanceOptimizations() {
@@ -64,10 +71,14 @@ class AppEnhancementSuite {
       },
 
 
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
+<<<<<<< HEAD
           "default-src 'self'; script-src 'self' 'unsafe-inline'";
       };
       validation: {
@@ -77,6 +88,8 @@ class AppEnhancementSuite {
       };
     };
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json');
@@ -89,7 +102,10 @@ ursor/automate-test-improve-and-merge-code-59d5
   createMonitoringScripts() {
     this.log('📊 Creating Monitoring Scripts');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     const monitoringLines = [
       '#!/usr/bin/env node';
       '';
@@ -160,6 +176,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       'const monitor = new AppMonitor();';
       'monitor.monitorAppHealth().catch(console.error);';
       '';
+<<<<<<< HEAD
     const monitoringLines = ['#!/usr/bin/env node',
       '',
       "const fs = require('fs');",
@@ -230,6 +247,8 @@ ursor/automate-test-improve-and-merge-code-59d5
       'monitor.monitorAppHealth().catch(console.error);',
       '',
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     ];
     const monitoringScript = monitoringLines.join('\n');
@@ -247,6 +266,7 @@ ursor/automate-test-improve-and-merge-code-59d5
     this.createMonitoringScripts();
 
     const report = {
+<<<<<<< HEAD
 
 
 
@@ -260,6 +280,10 @@ ursor/automate-test-improve-and-merge-code-59d5
 
     const securityHeaders = {
 
+=======
+
+    const securityHeaders = {}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -267,10 +291,14 @@ ursor/automate-test-improve-and-merge-code-59d5
       'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
 
       'Content-Security-Policy': "default-src 'self''
+<<<<<<< HEAD
       timestamp: new Date().toISOString();
       enhancements: this.enhancements;
       status: 'completed';
 ursor/automate-test-improve-and-merge-code-59d5
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     };
 
     // Write enhancement report
@@ -280,10 +308,13 @@ ursor/automate-test-improve-and-merge-code-59d5
     );
 
     // Security headers are already configured in createSecurityEnhancements
+<<<<<<< HEAD
       'Content-Security-Policy': "default-src 'self'"
     };
     this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.enhancements.push('Security headers configuration created');
   }
@@ -318,6 +349,7 @@ ursor/automate-test-improve-and-merge-code-59d5
       path.join(this.projectRoot, 'health-check-config.json');
       JSON.stringify(healthCheckConfig, null, 2)
     );
+<<<<<<< HEAD
       "timestamp": new Date().toISOString(),
       "status": "healthy",
       "checks": {
@@ -341,6 +373,8 @@ ursor/automate-test-improve-and-merge-code-59d5
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     this.enhancements.push('Health check endpoint created');
   }

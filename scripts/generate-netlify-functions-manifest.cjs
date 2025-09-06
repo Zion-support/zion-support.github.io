@@ -22,6 +22,7 @@ const path = require("path")";const outDir = path.resolve(process.cwd(), "automa
 const manifest = { "functions": [], "generatedAt": new Date().toISOString() };";try {;}
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log("["netlify":manifest] wrote", manifestPath)} catch (e) {  console.log("["netlify":manifest] skipped (write failed)")}";process.exit(0);
+<<<<<<< HEAD
 main
 main
 #!/usr/bin/env node
@@ -41,4 +42,6 @@ fs.writeFileSync(outFile, JSON.stringify(manifest, null, 2));
 console.log('[netlify:manifest] wrote', outFile);
 origin/chore/fix-build-nav-links
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 

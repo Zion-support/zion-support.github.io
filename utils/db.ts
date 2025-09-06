@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 function getFilePath(fileName: string): string {
@@ -20,12 +21,21 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  }
+  return default_value;
+}
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -35,7 +45,10 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export interface QueryResult<T = any> {
   rows: T[];
   rowCount: number;
@@ -70,19 +83,41 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
+<<<<<<< HEAD
 origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
     }
   } catch (error) {
     console.error('Error reading file:', error);
+<<<<<<< HEAD
 
   }
   return defaultValue;
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+  }
+  return defaultValue;
+}
+
+// Default database configuration
+const defaultConfig: DatabaseConfig = {
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '5432'),
+  database: process.env.DB_NAME || 'zion_tech_group',
+  username: process.env.DB_USER || 'postgres',
+  password: process.env.DB_PASSWORD || 'password',
+  ssl: process.env.DB_SSL === 'true'
+};
+// Singleton database instance
+export const db = new DatabaseManager(defaultConfig);
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -94,16 +129,20 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   items.push (item);
   writeJsonFile < T[]>(file_name, items);
 }
+<<<<<<< HEAD
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -116,3 +155,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+import fs from 'fs';
+import path from 'path';
+
+}
+}
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

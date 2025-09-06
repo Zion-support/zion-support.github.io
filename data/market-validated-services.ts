@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { ServiceVariant } from '../types/service-variants';
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   id: string;
   name: string;
   tagline: string;
@@ -23,6 +26,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     address: string;
     website?: string;
   }
+<<<<<<< HEAD
 
 ;
 const contact_info = {
@@ -48,12 +52,15 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
       'Slack / Teams / Widget channels',
     ],
     category: 'AI & Assistants',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / ai - assistant',
     variant: 'ai - futuristic',
@@ -61,12 +68,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 1200,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
       'Eval datasets/versioning',
     id: 'ai - evals - observability',
@@ -82,11 +92,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Policy and toxicity checks',
       'Latency and cost KPIs',
       'Prompt / version diff and alerts',
     ],
     category: 'AI & MLOps',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / ai - evals',
     variant: 'quantum - holographic',
@@ -94,12 +107,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 600,
     trial_days: 14,
     setup_time: '1 hour',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
       'Hybrid vector+BM25 + reranker',
     id: 'agentic - rag - platform',
@@ -114,11 +130,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Chunking strategies + citations',
       'Toolformer - style agents',
       'Eval suite and drift monitoring',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / agentic - rag',
     variant: 'quantum - matrix',
@@ -126,11 +145,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 900,
     trial_days: 14,
     setup_time: '2 hours',
     contact_info,
   },
+<<<<<<< HEAD
 
       'Auth/Z misconfig checks',
   // Security and APIs;
@@ -147,16 +169,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'OWASP Top 10 tests',
       'CI gate',
       'Fix guidance',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / api - security - scanner',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
@@ -165,6 +192,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info,
   },
   {
+<<<<<<< HEAD
 
       'OTel traces/metrics/logs',
     id: 'api - observability',
@@ -179,16 +207,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'SLOs & error budgets',
       'Alerting',
       'Dashboards',
     ],
     category: 'Enterprise IT - Observability',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / api - observability',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
@@ -196,6 +229,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '40 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 
   // Cloud and Infra;
   {
@@ -210,17 +244,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
       'Anomaly detection',
     ],
     category: 'Enterprise IT - FinOps',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / cloud - cost - optimizer',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
@@ -229,6 +268,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
@@ -241,12 +281,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
       'SLA / SLO dashboards',
     ],
     category: 'Enterprise IT - Data',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / database - performance - monitor',
     variant: 'neural - quantum',
@@ -254,12 +297,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 560,
     trial_days: 14,
     setup_time: '45 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
@@ -300,12 +346,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
       'Incident runbooks',
     ],
     category: 'Enterprise IT - SRE',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / uptime - slo - monitor',
     variant: 'quantum - cyberpunk',
@@ -313,12 +362,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 1100,
     trial_days: 14,
     setup_time: '25 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'tls - certificate - monitor',
     name: 'TLS Certificate Monitor',
@@ -331,17 +383,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
       'Inventory export',
     ],
     category: 'Enterprise IT - Security',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / tls - certificate - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
@@ -350,6 +407,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
@@ -362,17 +420,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
       'Export & audit',
     ],
     category: 'Enterprise IT - Networking',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / domain - dns - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
@@ -380,6 +443,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '15 minutes',
     contact_info,
   },
+<<<<<<< HEAD
 
       'HTML/Markdown to PDF',
       'Headers/footers',
@@ -398,10 +462,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Watermarks',
       'Async webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / pdf - render - api',
     variant: 'holographic - matrix',
@@ -409,12 +476,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 1300,
     trial_days: 7,
     setup_time: '10 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
@@ -427,12 +497,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
       'Alerts & webhooks',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / browser - performance - monitor',
     variant: 'quantum - holographic',
@@ -440,12 +513,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 760,
     trial_days: 14,
     setup_time: '20 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'feature - flags - edge',
     name: 'Feature Flags at the Edge',
@@ -458,12 +534,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
       'SDKs & audit',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / feature - flags - edge',
     variant: 'quantum - holographic',
@@ -471,12 +550,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 430,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
@@ -517,12 +599,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Control mapping',
       'Evidence collection',
       'Change tracking',
       'Export & auditor access',
     ],
     category: 'Enterprise IT - Compliance',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / soc2 - evidence - automation',
     variant: 'holographic - neural',
@@ -530,12 +615,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 310,
     trial_days: 7,
     setup_time: '1 day',
     contact_info,
   },
   {
+<<<<<<< HEAD
 
     id: 'vendor - risk - automation',
     name: 'Vendor Risk Automation',
@@ -576,12 +664,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
       'Forwarding rules',
     ],
     category: 'Micro SaaS',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / webhook - relay - replay',
     variant: 'cyberpunk - holographic',
@@ -589,12 +680,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     customers: 1650,
     trial_days: 14,
     setup_time: '10 minutes',
     contact_info,
   },
   {
+<<<<<<< HEAD
     id: 'audit-log-vault'
     name: 'Audit Log Vault'
     tagline: 'Tamper-evident logs with retention and export'
@@ -717,6 +811,25 @@ export interface MarketValidatedService {
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'Managed vector DB'
+      'Ingestion pipelines'
+      'Metadata filters'
+      'Access controls'
+    ]
+    category: 'AI & Search'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    variant: 'quantum'
+    rating: 4.6
+    customers: 410
+    trialDays: 14
+    setupTime: '2 hours'
+    contactInfo
+  }
+];import { ServiceVariant  } from "../types/service-variants";
+
+export interface MarketValidatedService {
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -727,15 +840,35 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+      'WORM retention',
+      'Export APIs',
+      'Fine - grained access',
+      'Tamper evidence',
+    ],
+    category: 'Enterprise IT - Security',
+    customers: 420,
+    trial_days: 14,
+    setup_time: '30 minutes',
+    contact_info,
+  },
+    customers: 380,
+    trial_days: 7,
+    setup_time: '1 hour',
+    contact_info,
+  },
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
       'Access controls',
     ],
     category: 'AI & Search',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com / vector - search - starter',
 
@@ -756,6 +889,11 @@ export interface MarketValidatedService {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+export interface MarketValidatedService {
+export interface MarketValidatedService {;
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 	id: string;
 	name: string;
 	tagline: string;
@@ -769,6 +907,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 	rating?: number;
 	customers?: number;
 	trialDays?: number;
+<<<<<<< HEAD
 	setupTime?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
 	contactInfo: {
@@ -790,3 +929,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const contactInfo = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}}
+
+
+  mobile: "+1 302 464 0950",
+	email: "kleber@ziontechgroup && ziontechgroup.com",
+	address: "364 E Main St STE 1008 Middletown DE 19709";
+  website: "https://ziontechgroup && ziontechgroup.com";,
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

@@ -12,7 +12,10 @@ const UiUxDesignChat: NextPage = () => {
   return (
     <div>
       <Head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -25,6 +28,7 @@ const UiUxDesignChat: NextPage = () => {;
         <meta name="description" content="UiUxDesignChat blog post" />{" "}
 
 
+<<<<<<< HEAD
       </Head>;
 
 
@@ -32,6 +36,16 @@ const UiUxDesignChat: NextPage = () => {;
       </Head>
 
 
+=======
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+
+      </Head>;
+
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Blog content coming soon...</p>
@@ -40,8 +54,11 @@ const UiUxDesignChat: NextPage = () => {;
     </div>
       </Head>;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       <main>;
         <h1>UiUxDesignChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -51,6 +68,7 @@ const UiUxDesignChat: NextPage = () => {;
   );
 }
 export default UiUxDesignChat;
+<<<<<<< HEAD
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
 
@@ -61,6 +79,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -125,8 +150,11 @@ export default UiUxDesignChat;
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <title>UiUxDesignChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

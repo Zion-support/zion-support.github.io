@@ -6,6 +6,7 @@ module.exports = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 <<<<<<< HEAD
@@ -36,3 +37,6 @@ main
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+=======
+
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

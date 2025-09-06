@@ -1,13 +1,19 @@
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   {
 
     id: 'ai-model-1'
@@ -57,6 +63,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: "visiontech";
     aiScore: 94
   }
+<<<<<<< HEAD
     id: "ai-model-1";
     title: "GPT-4 API Integration Package";
     description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
@@ -69,12 +76,15 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: "ai-solutions";
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
 
+<<<<<<< HEAD
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -102,6 +112,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     type: 'product', // Use a valid type from the SearchSuggestion interface
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -221,6 +233,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     rating: 4.8,
     reviewCount: 36,
     featured: true,
+<<<<<<< HEAD
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,;
@@ -236,6 +249,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
     location: "Global",
 
+=======
+    location: "Global",
+
+    location: "Global",
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
     availability: "Immediate",
     aiScore: 94
@@ -257,10 +275,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Enterprise AI solutions',;
   ];
 
+<<<<<<< HEAD
     type: 'product', // Use a valid type from the SearchSuggestion interface
   }));};  ];
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     "AI models",
     "GPT integration",
     "Machine learning",
@@ -273,13 +294,17 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
+<<<<<<< HEAD
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
@@ -296,6 +321,10 @@ export const generateFilterOptions = () => {
 const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+    ...new Set(MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.category)),
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
   ].sort();
   const locations = [
     ...new Set(
@@ -330,8 +359,11 @@ export const MAX_PRICE = Math && Math.max(
 export const MIN_PRICE = Math && Math.min(
   ...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0)
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 );
 reviewCount: 58;
 featured: true;
@@ -349,16 +381,29 @@ aiScore: 94
 }];
 //Generate search suggestions based on existing listings ];
   return {
+<<<<<<< HEAD
 },
 
 
+=======
+ratingOptions: [1, 2, 3, 4, 5]
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
+
+
+};export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
+export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
 
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       avatar_url: "https://images.unsplash.com / photo - 1600180758890 - 6b94519a8ba6?auto = format & fit = crop & w=100 & h=100"}
     images: ["https://images.unsplash.com / photo - 1624355834900 - 99cd2071585b?auto = format & fit = crop & w=800 & h=500"];
     created_at: "2023 - 12 - 10T16:45:00.000Z";
@@ -413,6 +458,7 @@ export const generateFilterOptions = () =>: any {
   ].sort ();
 ;
     product_types: product_types.map (type => ({
+<<<<<<< HEAD
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -435,6 +481,8 @@ export const generateFilterOptions = () =>: any {
     productTypes: productTypes.map(type => ({
 
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       label: type,
       value: type,
     })),
@@ -446,6 +494,7 @@ export const generateFilterOptions = () =>: any {
       label: item,
       value: item,
     })),
+<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5],
   };
 };
@@ -458,18 +507,35 @@ export const MIN_PRICE = Math.min(
 );
 reviewCount: 58;
 
+=======
+    rating_options: [1, 2, 3, 4, 5],
+  }
+}
+;
+export const MAX_PRICE = Math.max (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+export const MIN_PRICE = Math.min (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+review_count: 58;
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 featured: true;
 location: "Global";
 availability: "Immediate";
 aiScore: 98 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 featured: true;
 location: "Global";
 availability: "Immediate";
 ai_score: 98;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 rating: 4.8;
 review_count: 32;
 location: "North America";
@@ -513,12 +579,16 @@ locations: locations.map (location => ({
 availability_options: availability.map (item => ({
   label: item, value: item;
 }) );
+<<<<<<< HEAD
 
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 rating_options: [1, 2, 3, 4, 5];
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
+<<<<<<< HEAD
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -527,6 +597,13 @@ ratingOptions: [1, 2, 3, 4, 5]
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 
 
+=======
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+ratingOptions: [1, 2, 3, 4, 5] 
+
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -698,6 +775,7 @@ export const generateFilterOptions = () => {;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 
 
   productTypes: productTypes.map (type => ({
@@ -713,3 +791,6 @@ ratingOptions: [1, 2, 3, 4, 5]
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295

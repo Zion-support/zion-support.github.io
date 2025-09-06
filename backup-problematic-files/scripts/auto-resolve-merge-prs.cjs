@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -44,6 +46,8 @@ function resolveConflictsFiles() {}
     const content = fs.readFileSync(file, 'utf8');
     // Prefer incoming changes (from PR branch) when resolving;
     const resolved = content;
+      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, incoming) => incoming);
+      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   // If there are staged changes, commit;
@@ -53,6 +57,7 @@ function resolveConflictsFiles() {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
+  
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
@@ -106,5 +111,4 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-});
 });
