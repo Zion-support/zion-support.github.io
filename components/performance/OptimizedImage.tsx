@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import Image from 'next / image';
 ;interface OptimizedImageProps {
+=======
+import React from "react";
+import Image from "next/image";
+
+interface OptimizedImageProps {
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
   src: string;
   alt: string;
   width: number;
@@ -15,10 +22,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '',
+  className = "",
   priority = false,
   quality = 75,
-  sizes = '100vw'
+  sizes = "100vw",
 }) => {
   // Check condition
 if ( {) {
@@ -46,7 +53,11 @@ export default OptimizedImage;
       quality={quality}
       style={style}
 
+<<<<<<< HEAD
 quality={quality}
       style={style}
   );
 }
+=======
+export default OptimizedImage;
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

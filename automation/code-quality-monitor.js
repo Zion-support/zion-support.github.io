@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; ); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -19,13 +56,21 @@ class CodeQualityMonitor {
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+>>>>>>> main
 #!/usr/bin/env node;
+<<<<<<< HEAD
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
 
+=======
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+;
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -35,14 +80,110 @@ class CodeQualityMonitor {;
       performance: 0;
       lastUpdated: new Date().toISOString();
     ;
+<<<<<<< HEAD
     this.logFile = path.join(__dirname, "logs", "code-quality.log")
+=======
+    this.logFile = path.join(__dirname, "logs", "code-quality.log");
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 };
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
+<<<<<<< HEAD
     fs.appendFileSync(this.logFile, logMessage);    // TypeScript check
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+    fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+  async runQualityChecks() {
+    this.log('Running code quality checks...');
+    const results = {
+      "timestamp": new Date().toISOString(),
+      "lint": { status: 'unknown', "issues": 0, "errors": 0, "warnings": 0 },
+      "typeCheck": { status: 'unknown', "errors": 0 },
+      "testCoverage": { status: 'unknown', "percentage": 0 },
+      "codeComplexity": { status: 'unknown', "score": 0 },
+      "qualityScore": 0};
+    // ESLint check
+    try {
+      execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
+      results.lint.status = 'pass';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      this.log('ESLint: PASS');
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+      this.log('"ESLint": PASS');
+    } catch (error) {
+      results.lint.status = 'fail';
+      const output = error.stdout || error.message;
+      results.lint.errors = (output.match(/error/gi) || []).length;
+      results.lint.warnings = (output.match(/warning/gi) || []).length;
+      results.lint.issues = results.lint.errors + results.lint.warnings;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN');
+    }
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+      this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN');
+    }
+    // TypeScript check
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
     try {
       execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() });
       results.typeCheck.status = 'pass';
@@ -112,8 +253,41 @@ if (require.main === module) {
   monitor.run().catch(console.error);
 }
 module.exports = CodeQualityMonitor;
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;module.exports = CodeQualityMonitor;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor
+=======
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+=======
+module.exports = CodeQualityMonitor;
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 };
 ;
   async analyzeCodeQuality() {;
@@ -149,9 +323,20 @@ class CodeQualityMonitor {,
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
+<<<<<<< HEAD
 
 }
 },
+=======
+,
+  log(message) {,
+    const timestamp = new Date().toISOString(),
+    const logMessage = `[${timestamp}] ${message}\n`,
+    console.log(message),
+    fs.appendFileSync(this.logFile, logMessage),
+  };
+,
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
   async analyzeCodeQuality() {,
     try {,
       this.log("Starting code quality analysis..."),
@@ -164,6 +349,7 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -171,6 +357,16 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
       return this.metrics
     } catch (error) {,      this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
+=======
+      return this.metrics,
+    } catch (error) {,
+<<<<<<< HEAD
+      this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
+      return null,
+    };
+=======
+      this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
       return null
     },
 
@@ -227,3 +423,38 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+=======
+module.exports = CodeQualityMonitor;
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> main
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+module.exports = CodeQualityMonitor;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class CodeQualityMonitor { constructor() { this.logFile = path.join(__dirname,'logs','code-quality-monitor.log'); this.reportFile = path.join(__dirname,'reports','code-quality.json'); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} async runQualityChecks() { this.log('Running code quality checks...'); const results = { timestamp: new Date().toISOString(),lint: { status: 'unknown',issues: 0,errors: 0,warnings: 0 },typeCheck: { status: 'unknown',errors: 0 },testCoverage: { status: 'unknown',percentage: 0 },codeComplexity: { status: 'unknown',score: 0 },qualityScore: 0,}; try { execSync('yarn lint',{ stdio: 'pipe',cwd: process.cwd() }); results.lint.status = 'pass'; this.log('ESLint: PASS')} catch (error) { results.lint.status = 'fail'; const output = error.stdout || error.message; results.lint.errors = (output.match(/error/gi) || []).length; results.lint.warnings = (output.match(/warning/gi) || []).length; results.lint.issues = results.lint.errors + results.lint.warnings; this.log(`ESLint: ${results.lint.issues} issues found`,'WARN')} try { execSync('npx tsc --noEmit',{ stdio: 'pipe',cwd: process.cwd() }); results.typeCheck.status = 'pass'; this.log('TypeScript: PASS')} catch (error) { results.typeCheck.status = 'fail'; const output = error.stdout || error.message; results.typeCheck.errors = (output.match(/error TS/g) || []).length; this.log(`TypeScript: ${results.typeCheck.errors} errors found`,'WARN')} try { if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) { const coverage = execSync('yarn test --coverage --silent',{ stdio: 'pipe',encoding: 'utf8',cwd: process.cwd(),}); const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/); if (coverageMatch) { results.testCoverage.percentage = parseFloat(coverageMatch[1]); results.testCoverage.status = 'pass'} } } catch (error) { this.log('Test coverage check failed or no tests found','WARN')} results.qualityScore = this.calculateQualityScore(results); fs.writeFileSync(this.reportFile,JSON.stringify(results,null,2)); this.log(`Code quality report generated: ${this.reportFile}`); return results} calculateQualityScore(results) { let score = 100; if (results.lint.status === 'fail') { score -= Math.min(results.lint.errors * 5,30); score -= Math.min(results.lint.warnings * 2,20)} if (results.typeCheck.status === 'fail') { score -= Math.min(results.typeCheck.errors * 3,25)} if (results.testCoverage.percentage > 80) { score += 5} else if (results.testCoverage.percentage < 50) { score -= 10} return Math.max(0,Math.min(100,score))} async run() { this.log('Starting Code Quality Monitor...'); try { const results = await this.runQualityChecks(); this.log( `Code quality check completed. Quality score: ${results.qualityScore}/100` ); if (results.qualityScore < 70) { this.log('Code quality is below threshold. Review needed.','WARN')} } catch (error) { this.log(`Error in code quality monitor: ${error.message}`,'ERROR')} } } if (require.main === module) { const monitor = new CodeQualityMonitor(); monitor.run().catch(console.error)} module.exports = CodeQualityMonitor;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

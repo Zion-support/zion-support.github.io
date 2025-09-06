@@ -1,8 +1,13 @@
+<<<<<<< HEAD
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
+=======
+import React, { createContext, useContext, ReactNode } from "react";
+
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
@@ -11,12 +16,15 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;}
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -31,6 +39,17 @@ const AccessibilityContext = createContext<;
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
+=======
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById("live-region");
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 
   children,
 }) => {;
@@ -44,6 +63,7 @@ interface AccessibilityProviderProps {;
       {children}
     </AccessibilityContext.Provider>
   );
+<<<<<<< HEAD
   return context;
 }
 ;
@@ -68,3 +88,16 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
     toggleHighContrast,
     toggleLargeText,
     toggleReducedMotion,
+=======
+};
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
+  }
+  return context;
+};
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { JSX } from 'react';
+=======
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
 import React from 'react';
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
@@ -123,3 +131,31 @@ export default function App() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+export default function App() {
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
+export default function App(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>
+  );
+}
+=======
+>>>>>>> main
+>>>>>>> afa49d7080af1fc4e06af0651d4252587e5bd5d3
