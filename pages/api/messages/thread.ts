@@ -19,12 +19,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
-      conversationId;
+      conversationId,
       senderId: user.id, recipientId,
-      body;
-      linkUrl;
-      attachmentBase64;
-      attachmentName;
+      body,
+      linkUrl,
+      attachmentBase64,
+      attachmentName,
       context});
     res.status(200).json({ conversation, message })
   } else {

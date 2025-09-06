@@ -54,12 +54,14 @@ const v1: ApiDocsSpec = {
           responseBodySchema: { type: 'object', properties: { access_token: { type: 'string' }, refresh_token: { type: 'string' } } },
           samples: [
       
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'` }
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json()),`
-      };
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODEredirect_uri':'https://app.partner.com/callback'}).json()` }
-    ];
-          versions: ['v1']}]};
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/oauth/token -H 'Content-Type: application/json' -d '{"code":"AUTH_CODE","redirect_uri":"https://app.partner.com/callback"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/oauth/token', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ code: 'AUTH_CODE', redirect_uri: 'https://app.partner.com/callback' }) }).then(r => r.json())` },
+            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/oauth/token', json={'code':'AUTH_CODE','redirect_uri':'https://app.partner.com/callback'}).json()` }
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
     {
       id: 'talent', title: 'Talent Profiles',
       endpoints: [
@@ -72,16 +74,17 @@ const v1: ApiDocsSpec = {
           params: {
        talentId: 'The UUID of the talent' 
     },
-    responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } };
+    responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } },
           samples: [
       
-            { language: 'curl', code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
+            { language: 'curl', code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/talent/123', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/talent/123', headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
     {
       id: 'jobs', title: 'Job Listings',
       endpoints: [
@@ -93,16 +96,17 @@ const v1: ApiDocsSpec = {
           query: {
        q: 'Search text', status: 'open|closed' 
     },
-    responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } };
+    responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } },
           samples: [
       
-            { language: 'curl', code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),`
-      };
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineerstatus':'open'}, headers={'Authorization':'Bearer <token>'}).json()` }
-    ];
-          versions: ['v1']}]};
+            { language: 'curl', code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/jobs?q=engineer&status=open', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
+            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/jobs', params={'q':'engineer','status':'open'}, headers={'Authorization':'Bearer <token>'}).json()` }
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
     {
       id: 'quotes', title: 'Quotes + Milestones',
       endpoints: [
@@ -111,16 +115,18 @@ const v1: ApiDocsSpec = {
           description: 'Create a quote with milestones.', path: '/v1/quotes',
           method: 'POST', visibility: 'partner',
           auth: ['jwt'],
-          requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } }, required: ['jobIdmilestones']
-    };
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, status: { type: 'string' } } };
+          requestBodySchema: { type: 'object', properties: { jobId: { type: 'string' }, milestones: { type: 'array', items: { type: 'object', properties: { title: { type: 'string' }, amount: { type: 'number' } } } } },           required: ['jobId', 'milestones']
+        },
+          responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, status: { type: 'string' } } },
           samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'`
-      };
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json()),`
-      };
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123milestones':[{'title':'Designamount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` }];
-          versions: ['v1']}]};
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/quotes -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"jobId":"JOB123","milestones":[{"title":"Design","amount":1000}]}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/quotes', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId: 'JOB123', milestones: [{ title: 'Design', amount: 1000 }] }) }).then(r => r.json())` },
+            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/quotes', json={'jobId':'JOB123','milestones':[{'title':'Design','amount':1000}]}, headers={'Authorization':'Bearer <token>'}).json()` }
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
     {
       id: 'messages', title: 'Messages',
       endpoints: [
@@ -129,10 +135,11 @@ const v1: ApiDocsSpec = {
           description: 'Send a message between users.', path: '/v1/messages',
           method: 'POST', visibility: 'public',
           auth: ['jwt'],
-          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['tobody']
-    };
-          responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } };
-          samples: [
+          requestBodySchema: { type: 'object', properties: { to: { type: 'string' }, body: { type: 'string' } }, required: ['to', 'body']
+        }
+      ],
+      responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } },
+      samples: [
       
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'`
       };

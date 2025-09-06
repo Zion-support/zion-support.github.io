@@ -35,8 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const offer: Offer = {
         id: uuidv4(), createdAtIso: new Date().toISOString(),
         clientId: client.id, talentSlug,
-        startDateIso;
-        scopeSummary;
+        startDateIso,
+        scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms, agreementUrl,
         status: "SENT"};
 
@@ -58,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         // Create a project upon acceptance
         const project: Project = {
           id: uuidv4(),
-          title: `Project with ${existing.talentSlug}`;
+          title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary, clientId: existing.clientId,
           talentSlug: existing.talentSlug, startDateIso: existing.startDateIso,
           status: "ACTIVE", timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
@@ -68,8 +68,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   id: uuidv4(), name: "Agreement",
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
-            : [];
-          notes: []};
+            : [],
+          notes: []
+        };
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);

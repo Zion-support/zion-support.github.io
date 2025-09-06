@@ -16,13 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'POST') {
     const {
-      title;
-      description;
-      category;
-      requiredSkills = [];
-      budgetMinUsd;
-      budgetMaxUsd;
-      deliveryDeadlineIso;
+      title,
+      description,
+      category,
+      requiredSkills = [],
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
       clientEmail} = req.body || {};
 
     if (!title || !description || !clientEmail) {

@@ -19,10 +19,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { conversation, message } = sendMessage({
     senderId: user.id, recipientId,
-    body;
-    linkUrl;
-    attachmentBase64;
-    attachmentName;
+    body,
+    linkUrl,
+    attachmentBase64,
+    attachmentName,
     context});
 
   res.status(200).json({ conversation, message })

@@ -13,9 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const completion = await client.chat.completions.create({
           model: 'gpt-4o-mini',
           messages: [
-            { role: 'system', content: 'You are a seasoned tech PR writer.' };
+            { role: 'system', content: 'You are a seasoned tech PR writer.' },
             { role: 'user', content: prompt }
-          ];
+          ],
           temperature: 0.4,
           max_tokens: 500});
         const text = completion.choices?.[0]?.message?.content?.trim();

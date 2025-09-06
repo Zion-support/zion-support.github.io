@@ -16,10 +16,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       providerId: providerId as any, status: 'connected',
       accessToken: 'mock_access_token', refreshToken: 'mock_refresh_token',
       expiresAt: now + 1000 * 60 * 60, connectedAt: now,
-      syncRules: syncRules || {};
+      syncRules: syncRules || {},
       lastSyncAt: undefined,
       lastError: null};
-    if (existingIdx >= 0) state.connections[existingIdx] = connection, else state.connections.push(connection);
+    if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection);
     state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
   });
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })

@@ -19,12 +19,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const now = new Date().toISOString();
     const {
       projectId,
-      entityType;
-      entityId;
-      clientUserId;
-      talentUserId;
-      reason;
-      reasonDetails;
+      entityType,
+      entityId,
+      clientUserId,
+      talentUserId,
+      reason,
+      reasonDetails,
       description} = req.body || {};
 
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
@@ -33,14 +33,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const id = generateCaseId();
     const dispute: DisputeCase = {
-      id;
+      id,
       projectId: String(projectId), entityType,
-      entityId;
+      entityId,
       clientUserId: String(clientUserId), talentUserId: String(talentUserId),
       createdAt: now, updatedAt: now,
       status: 'Open', reason: reason as DisputeReason,
-      reasonDetails;
-      description;
+      reasonDetails,
+      description,
       attachments: [],
       messages: []};
 

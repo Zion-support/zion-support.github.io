@@ -5,7 +5,8 @@ import { getFraudStore, newEvent } from '../../../utils/fraud/store';
 import { extractClientIp } from '../../../utils/ip';
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'],
+const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -32,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
 
     // Privacy opt-out check for content analysis
-    let gpt: GptClassification | undefined = undefined,
+    let gpt: GptClassification | undefined = undefined;
     if (content && userId) {
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
@@ -42,15 +43,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       gpt = await classifyWithGPT(content, source)
     }
 
-    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE'), if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS',
+    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
+    if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
 
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
 
     const stored: Omit<StoredFraudRecord, 'id'> = {
-      ...event;
-      heuristic;
-      gpt;
+      ...event,
+      heuristic,
+      gpt,
       autoHidden: !!autoHide,
       status: 'PENDING'};
 
@@ -68,7 +70,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
-      gpt;
+      gpt,
       autoHidden: saved.autoHidden,
       createdAt: saved.createdAt})
   } catch (e: any) {

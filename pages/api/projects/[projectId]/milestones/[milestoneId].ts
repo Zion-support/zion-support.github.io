@@ -29,7 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
-      const status: string = body.status,
+      const status: string = body.status;
       const allowed =
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||

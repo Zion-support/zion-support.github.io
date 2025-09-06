@@ -45,9 +45,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
     daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled',
-        treasury: tokenActivation ? `${provisionId}-treasury` : null;
-        governanceMode;
-        votingDashboard: '/dao'};
+        treasury: tokenActivation ? `${provisionId}-treasury` : null,
+        governanceMode,
+        votingDashboard: '/dao'
+      },
       assets: {
       
         whitepaper: '/whitepaper', roadmap: '/roadmap',
@@ -55,25 +56,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           pdf: '/book/manifesto.pdf',
           trailerScript: '/trailer/script'
     },
-    summit: '/summit'};
+    summit: '/summit'
+  },
       publicPages: [
-        '/about/manifesto/constitution/partners/academy/marketplace/dao';
+        '/about/manifesto/constitution/partners/academy/marketplace/dao',
         `/nation/${defaultLanguage || 'en'}`]};
 
     const deployLog = {
-      provisionId;
-      instanceName;
+      provisionId,
+      instanceName,
       region: deploymentRegion, language: defaultLanguage || 'en',
-      governanceMode;
-      tokenActivation;
-      branding;
-      modules;
-      bonusModules;
+      governanceMode,
+      tokenActivation,
+      branding,
+      modules,
+      bonusModules,
       createdAt: now,
       version: 'Zion OS v1.0.0'};
 
     const operator = {
-      activeModulesSummary: summarizeModules(modules, bonusModules);
+      activeModulesSummary: summarizeModules(modules, bonusModules),
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
 
     const access = {

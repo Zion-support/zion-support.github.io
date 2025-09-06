@@ -33,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const token = await at.toJwt();
 
     return res.status(200).json({
-      token;
+      token,
       url: LIVEKIT_HOST})
   } catch (err: any) {
     console.error('Token error', err);

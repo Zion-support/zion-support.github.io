@@ -38,10 +38,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
 
     return res.status(200).json({
-      total_signups;
-      total_visits;
-      total_profile_completions;
-      total_job_creations;
+      total_signups,
+      total_visits,
+      total_profile_completions,
+      total_job_creations,
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
       currency: 'USD'})
   } catch (e: any) {

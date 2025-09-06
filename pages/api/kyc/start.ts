@@ -35,11 +35,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile = existing || {
-    userId;
-    role;
-    fullLegalName;
-    businessName;
-    businessRegistrationNumber;
+    userId,
+    role,
+    fullLegalName,
+    businessName,
+    businessRegistrationNumber,
     documents: [], status: 'in_progress',
     amlStatus: 'unknown', createdAt: now,
     lastUpdatedAt: now,

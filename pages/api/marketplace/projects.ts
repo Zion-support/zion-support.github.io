@@ -47,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (!name) return bad(res, "Missing name");
         const doc: ProjectDocument = {
           id: uuidv4(), name,
-          url;
+          url,
           uploadedAtIso: new Date().toISOString()};
         project.documents.push(doc);
         saveProject(project);

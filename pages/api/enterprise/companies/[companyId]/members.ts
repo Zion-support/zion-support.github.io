@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email, role } = req.body || {};
     if (!name || !email) return res.status(400).json({ error: 'name and email required' });
-    const r: EnterpriseRole = role || 'viewer',
+    const r: EnterpriseRole = role || 'viewer';
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member)
   }
