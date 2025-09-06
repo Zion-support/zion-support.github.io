@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -99,6 +102,12 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 >>>>>>> main
 #!/usr/bin/env node;
 <<<<<<< HEAD
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+;
+=======
+<<<<<<< HEAD
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
@@ -113,6 +122,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -134,9 +144,12 @@ class CodeQualityMonitor {;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   }
   async runQualityChecks() {
     this.log('Running code quality checks...');
@@ -480,7 +493,10 @@ module.exports = CodeQualityMonitor;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 ;
   async analyzeCodeQuality() {;
@@ -517,22 +533,30 @@ class CodeQualityMonitor {,
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 }
 }
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
 <<<<<<< HEAD
+    fs.appendFileSync(this.logFile, logMessage),
+  };
+=======
+<<<<<<< HEAD
 =======
     fs.appendFileSync(this.logFile, logMessage),
   };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -547,6 +571,10 @@ class CodeQualityMonitor {,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
 <<<<<<< HEAD
+      return this.metrics,
+    } catch (error) {,
+=======
+<<<<<<< HEAD
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -557,12 +585,16 @@ class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, main
 =======
       return this.metrics,
     } catch (error) {,
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 <<<<<<< HEAD
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
     };
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),
       return null
     },
@@ -678,4 +710,7 @@ module.exports = CodeQualityMonitor;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

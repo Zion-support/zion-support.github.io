@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1517,9 +1520,13 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const scanner = new S
 ;
 export default SecurityScanner;
 <<<<<<< HEAD
+>>>>>>> main
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 };
 ;
@@ -1670,6 +1677,9 @@ export default SecurityScanner;
         this.vulnerabilities.push(`${vulnCount} vulnerabilities found`),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         this.log(`Found ${vulnCount} vulnerabilities`, "WARN"),
       } else {,
         this.log("✓ No vulnerabilities found"),
@@ -1678,7 +1688,10 @@ export default SecurityScanner;
       this.log(`Security audit failed: ${error.message}`, "ERROR"),
     };
   };
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
   async checkSecrets() {,
     try {,
@@ -1693,9 +1706,13 @@ export default SecurityScanner;
           /secret\s*[:=]\s*["'][^"']+["']/gi,
           /password\s*[:=]\s*["'][^"']+["']/gi,
 <<<<<<< HEAD
+          /token\s*[:=]\s*["'][^"']+["']/gi,
+=======
+<<<<<<< HEAD
 =======
           /token\s*[:=]\s*["'][^"']+["']/gi,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         ],
 ,
         secretPatterns.forEach(pattern => {,
@@ -1709,6 +1726,9 @@ export default SecurityScanner;
         this.vulnerabilities.push(`${secretCount} potential secrets found`),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         this.log(`Found ${secretCount} potential secrets`, "WARN"),
       } else {,
         this.log("✓ No exposed secrets found"),
@@ -1717,7 +1737,10 @@ export default SecurityScanner;
       this.log(`Secret check failed: ${error.message}`, "ERROR"),
     };
   };
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
   getSourceFiles() {,
     const files = [],
@@ -1733,13 +1756,19 @@ export default SecurityScanner;
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
             walkDir(fullPath),
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath),
           };
         }),
       };
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
       walkDir(srcDir),
     };
@@ -1750,21 +1779,33 @@ export default SecurityScanner;
   async generateReport() {,
     const report = {,
 <<<<<<< HEAD
+      timestamp: new Date().toISOString(),
+      vulnerabilities: this.vulnerabilities,
+      recommendations: [,
+=======
+<<<<<<< HEAD
 =======
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: [,
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         "Run npm audit fix to address vulnerabilities",
         "Review and remove any hardcoded secrets",
         "Use environment variables for sensitive data",
         "Implement proper authentication and authorization",
+<<<<<<< HEAD
+        "Regularly update dependencies",
+      ],
+    };
+=======
 <<<<<<< HEAD
 =======
         "Regularly update dependencies",
       ],
     };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
     const reportFile = path.join(__dirname, "reports", "security-report.json"),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
@@ -1782,6 +1823,9 @@ export default SecurityScanner;
       this.log("=" * 50),
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       this.log(`🎯 Security Scanner completed. Issues found: ${this.vulnerabilities.length}`),
       this.vulnerabilities.forEach(vuln => this.log(`  ⚠️  ${vuln}`)),
 ,
@@ -1790,7 +1834,10 @@ export default SecurityScanner;
     };
   };
 };
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ,
 // Main execution,
 if (import.meta.url === `file: //${process.argv[1]}`) {,
@@ -1799,6 +1846,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default SecurityScanner,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
@@ -1894,4 +1943,7 @@ export default SecurityScanner;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

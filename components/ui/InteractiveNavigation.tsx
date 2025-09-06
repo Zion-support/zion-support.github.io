@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+=======
+<<<<<<< HEAD
 ;
 
 
@@ -11,6 +16,7 @@ interface NavigationItem {
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 interface NavItem {
   label: string;
@@ -24,6 +30,12 @@ interface InteractiveNavigationProps {
   className?: string;
 }
 
+<<<<<<< HEAD
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items,
+  className = "",
+}) => {
+=======
 <<<<<<< HEAD
 interface NavigationItem {;
   name: string, href: string,;
@@ -154,6 +166,7 @@ export default Component}
 export default Component}
 =======
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -163,7 +176,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
   };
 
   return (
-    <nav className={'bg-white shadow-lg ' + className}>
+    <nav className={"bg-white shadow-lg " + className}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-bold text-blue-600">
@@ -263,4 +276,7 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, cl
 };
 
 export default InteractiveNavigation;
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

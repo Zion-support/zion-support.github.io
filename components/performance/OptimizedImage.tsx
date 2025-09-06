@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+import React from "react";
+import Image from "next/image";
+=======
+<<<<<<< HEAD
 import Image from 'next / image';
 ;
 =======
 import React from 'react';
 import Image from 'next/image';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface OptimizedImageProps {
@@ -25,10 +30,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '',
+  className = "",
   priority = false,
   quality = 75,
-  sizes = '100vw'
+  sizes = "100vw",
 }) => {
 <<<<<<< HEAD
   // Check condition
@@ -75,4 +80,7 @@ quality={quality}
 };
 
 export default OptimizedImage;
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

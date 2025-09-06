@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import React, { createContext, useContext, ReactNode } from "react";
+=======
+<<<<<<< HEAD
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -13,6 +16,7 @@ interface AccessibilityContextType {
   toggleReducedMotion: () => void;
 =======
 import React, { createContext, useContext, ReactNode } from 'react';
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
@@ -20,12 +24,19 @@ interface AccessibilityContextType {
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
 
 interface AccessibilityProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children,
+}) => {
+=======
 <<<<<<< HEAD
 
 const AccessibilityContext = createContext<;
@@ -53,8 +64,9 @@ interface AccessibilityProviderProps {;
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
 =======
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   const announceToScreenReader = (message: string) => {
-    const liveRegion = document.getElementById('live-region');
+    const liveRegion = document.getElementById("live-region");
     if (liveRegion) {
       liveRegion.textContent = message;
     }
@@ -104,8 +116,13 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
+    throw new Error(
+      "useAccessibility must be used within an AccessibilityProvider",
+    );
   }
   return context;
 };
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

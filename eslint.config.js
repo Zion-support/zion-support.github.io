@@ -1,70 +1,43 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 <<<<<<< HEAD
-<<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-<<<<<<< HEAD
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import globals from 'globals';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
-import next from '@next/eslint-plugin-next';
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-<<<<<<< HEAD
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 
 export default [
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 <<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       '.next/**',
       'out/**',
@@ -74,13 +47,17 @@ export default [
       'src.disabled/**',
       'src.pages.disabled/**',
 =======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'coverage/**',
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'scripts/**',
       'automation/**',
+<<<<<<< HEAD
+=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       'backup-problematic-files/**',
       'src.disabled/**',
       'components.disabled/**',
@@ -137,11 +114,100 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js'
+      '*.js',
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+      'tools/**',
+      'utils/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'recovered-branches/**',
+      'services-broken.tsx',
+      'services/**',
+      'setupTests.ts',
+      'solutions.disabled/**',
+      'src.broken/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'vite.config-backup.ts',
+      'vite.config.ts',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_backup/**',
+      'pages_backup_before_cleanup/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'pages_minimal/**',
+      'playwright.config.ts',
+      'pm2-automation/**',
+      'providers/**',
+      'public/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled.full/**',
+      'pages.disabled_auto/**',
+      'out/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'components/**',
+      'content-hub.tsx',
+      'contracts.disabled/**',
+      'cypress.config.ts',
+      'cypress/**',
+      'dao/**',
+      'data.disabled/**',
+      'data/**',
+      'deployments/**',
+      'fix_typescript_syntax_errors.jsx',
+      'fix_utils_files.ts',
+      'hooks.disabled/**',
+      'hooks/**',
+      'jest.config.jsx',
+      'jest.config.ts',
+      'jest.setup.jsx',
+      'lib.broken/**',
+      'lib.disabled/**',
+      'lib/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'middleware.security.ts',
+      'middleware/**',
+      'netlify/**',
+      'next-env.d.ts',
+      '.next/**',
+      'App.smoke.test.tsx',
+      'App.test.ts',
+      'App.test.tsx',
+      'App.tsx',
+      'AppMinimal.test.tsx',
+      'ai-optimization-backups/**',
+      'api-documentation.tsx',
+      'api.disabled.temp/**',
+      'api.tsx',
+      'apps.backup/**',
+      'apps/**',
+      'automation.tsx',
+      'automation_backup/**',
+      'blockchain-solutions.tsx',
+      'blog/**',
+      'browserstack.config.ts',
+      'case-studies.tsx',
+      'component-library.tsx',
+      'components.disabled_full/**'
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -160,616 +226,7 @@ export default [
         afterAll: 'readonly',
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
-      parser: tsparser,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       parser: typescriptParser,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
-=======
-  {
-    ignores: [
-      "node_modules/",
-      ".next/",
-      "out/",
-      "dist/",
-      "build/",
-      "coverage/",
-      "*.config.js",
-      "*.config.cjs",
-      "*.config.mjs",
-      "scripts/",
-      "automation/",
-      "pm2-automation/",
-      "pages.disabled/",
-      "pages.disabled_auto/",
-      "pages.disabled_full/",
-      "pages.corrupted.*/",
-      "pages.broken/",
-      "pages.bak/",
-      "pages.blog.disabled/",
-      "pages._archive_corrupted/",
-      "pages._quarantine/",
-      "pages-disabled/",
-      "pages-quarantine/",
-      "pages.__backup/",
-      "pages-backup/",
-      "tests.disabled/",
-      "components.disabled/",
-      "zion-os.disabled/",
-      "zion_academy/",
-      "temp_backup/",
-      "temp_broken_files/",
-      "test_build/",
-      "temp_exclude/",
-      "zion-os/",
-      "zion-website/",
-      "zion-ai-assistant/",
-      "types/",
-      "utils/",
-      "ultimate-*.cjs",
-      "*.test.js",
-      "*.test.ts",
-      "*.test.tsx",
-      "*.spec.js",
-      "*.spec.ts",
-      "*.spec.tsx",
-    ],
-  },
-  js.configs.recommended,
-  {
-    files: ["src/**/*.{js,jsx,ts,tsx}"],
-    languageOptions: {
-      parser: tsparser,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import next from '@next/eslint-plugin-next';
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-
-export default [
-  js.configs.recommended,
-  {
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    languageOptions: {
-<<<<<<< HEAD
-      parser: tsparser,
-=======
-      parser: typescriptParser,
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.js'],
-    languageOptions: {
-      globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        exports: 'readonly',
-      },
-    },
-<<<<<<< HEAD
-=======
-  },
-];
-=======
-<<<<<<< HEAD
-=======
-      },
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-export default [{
-    "ignores": [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      'coverage/',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-<<<<<<< HEAD
-=======
-      '.prettierrc.js',
-      '.eslintrc.*',
-      '*.min.js',
-      '*.bundle.js',
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-      'scripts/',
-      'automation/',
-      'automation_backup/',
-      'data_backup/',
-      'pm2-automation/',
-      '__tests__/',
-      'pages.disabled/',
-      'pages.corrupted.*/',
-      'pages.broken/',
-      'pages.bak/',
-      'pages.blog.disabled/',
-      'pages._archive_corrupted/',
-      'pages._quarantine/',
-      'pages-disabled/',
-      'pages-quarantine/',
-      'pages.__backup/',
-      'pages-backup/',
-<<<<<<< HEAD
-      'src.pages.disabled/',
-      'src.pages.disabled/**/*',
-      'src_backup_temp/',
-      'src_backup_temp/**/*',
-      'temp_backup/',
-      'temp_backup/**/*',
-      'pages_backup/',
-      'pages_backup/**/*',
-      'pages_backup_conflicts/',
-      'pages_backup_conflicts/**/*',
-      'pages_backup_before_cleanup/',
-      'pages_backup_before_cleanup/**/*',
-      'pages_backup_conflict/',
-      'pages_backup_conflict/**/*',
-      'pages_disabled/',
-      'pages_disabled/**/*',
-      'pages.disabled_auto/',
-      'pages.disabled_auto/**/*',
-      'pages.disabled_full/',
-      'pages.disabled_full/**/*',
-      'pages.old/',
-      'pages.old/**/*',
-      'pages.broken/',
-      'pages.broken/**/*',
-      'pages.corrupted.1756905863/',
-      'pages.corrupted.1756905863/**/*',
-      'pages.disabled.full/',
-      'pages.disabled.full/**/*',
-      'pages_api.disabled/',
-      'pages_api.disabled/**/*',
-      'src.disabled/',
-      'src.disabled/**/*',
-      'components.disabled/',
-      'components.disabled/**/*',
-      'types.disabled/',
-      'types.disabled/**/*',
-      'contracts.disabled/',
-      'contracts.disabled/**/*',
-      'solutions.disabled/',
-      'solutions.disabled/**/*',
-      'zion-os.disabled/',
-      'zion-os.disabled/**/*',
-      'src_backup_temp/',
-      'src_backup_temp/**/*',
-      'temp-backup/',
-      'temp-backup/**/*',
-      'tests.disabled/',
-      'tests.disabled/**/*',
-      'data.disabled/',
-      'data.disabled/**/*',
-      'lib.broken/',
-      'lib.broken/**/*',
-      'lib.disabled/',
-      'lib.disabled/**/*',
-      'api-disabled/',
-      'api-disabled/**/*',
-      'api.disabled/',
-      'api.disabled/**/*',
-      'broken_files_backup/',
-      'broken_files_backup/**/*',
-      'corrupted-files-backup/',
-      'corrupted-files-backup/**/*',
-      'cypress_backup/',
-      'cypress_backup/**/*',
-      'middleware/',
-      'middleware/**/*',
-      'zion_academy/',
-      'zion_academy/**/*',
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-<<<<<<< HEAD
-      '*.spec.tsx',
-      '*.report.json',
-      'temp_*/',
-      'test_build/',
-      'tests.disabled/',
-      'src.disabled/',
-      'components.disabled/',
-      'types.disabled/',
-      'contracts.disabled/',
-      'solutions.disabled/',
-      'zion-os.disabled/',
-      'src_backup_temp/',
-      'temp-backup/',
-      'tests/',
-      'supabase/',
-      'public/',
-      'server/',
-      'services/',
-      'components.disabled_full/',
-      'data.disabled/',
-      'database/',
-      'lib.broken/',
-      'lib.disabled/',
-      'lib/',
-      'lint-target/',
-      'netlify/',
-      'pages-backup/',
-      'pages._quarantine/',
-      'pages.disabled_full/',
-      'pages.old/',
-      'api-disabled/',
-      'api.disabled/',
-      'api/',
-      'broken_files_backup/',
-      'corrupted-files-backup/',
-      'cypress_backup/',
-      'middleware/',
-      'pages_backup/',
-      'pages_backup_before_cleanup/',
-      'pages_backup_conflicts/',
-      'pages_backup_conflict/',
-      'pages_disabled/',
-      'pages.disabled_auto/',
-      'pages.disabled_full/',
-      'pages.old/',
-      'pages.broken/',
-      'pages.corrupted.1756905863/',
-      'pages.disabled.full/',
-      'pages_api.disabled/',
-      'pages.disabled_auto/',
-      'pages.disabled_full/',
-      'pages_backup_conflicts/',
-      'pages_backup_before_cleanup/',
-      'pages_backup_conflict/',
-      'pages_backup/',
-      'pages_api.disabled/',
-      'pages.disabled_auto/',
-      'pages.disabled_full/',
-      'pages.old/',
-      'pages.broken/',
-      'pages.corrupted.1756905863/',
-      'pages.disabled.full/'
-    ]
-  },
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      },
-    },
-    plugins: {
-      "@typescript-eslint": tseslint,
-      react,
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "react-hooks/exhaustive-deps": "warn",
-      "no-undef": "off",
-      "no-unused-vars": "off",
-      "no-console": "warn",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off"
-    },
-    settings: {
-      react: {
-        version: "detect"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      }
-    }
-  },
-  {
-    files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
-    ],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: "script",
-      globals: {
-        ...globals.node,
-<<<<<<< HEAD
-      },
-    },
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-    rules: {
-      'no-console': 'off',
-    },
-  },
-<<<<<<< HEAD
-];
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> origin/main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
-=======
-        console: "readonly",
-        process: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        Buffer: "readonly",
-        global: "readonly"
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-undef': 'error'
-    }
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-];
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-        vi: 'readonly',
-        Deno: 'readonly',
-        React: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        exports: 'readonly'
-      },
-      parserOptions: {
-=======
-      '*.spec.tsx'
-    ]
-  },
-  {
-    "files": ['**/*.{js,jsx}'],
-    "languageOptions": {
-      ecmaVersion: 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-        "document": 'readonly',
-        "navigator": 'readonly',
-        "localStorage": 'readonly',
-        "sessionStorage": 'readonly',
-        "console": 'readonly',
-        "setTimeout": 'readonly',
-        "setInterval": 'readonly',
-        "clearTimeout": 'readonly',
-        "clearInterval": 'readonly',
-        "requestAnimationFrame": 'readonly',
-        "cancelAnimationFrame": 'readonly',
-        "fetch": 'readonly',
-        "URL": 'readonly',
-        "URLSearchParams": 'readonly',
-        "Blob": 'readonly',
-        "CustomEvent": 'readonly',
-        "Intl": 'readonly',
-        "performance": 'readonly',
-        "caches": 'readonly',
-        "Notification": 'readonly',
-        "ServiceWorker": 'readonly',
-        "ServiceWorkerRegistration": 'readonly',
-        "PushSubscription": 'readonly',
-        "NotificationPermission": 'readonly',
-        "process": 'readonly',
-        "global": 'readonly',
-        "jest": 'readonly',
-        "describe": 'readonly',
-        "it": 'readonly',
-        "test": 'readonly',
-        "expect": 'readonly',
-        "vi": 'readonly',
-        "Deno": 'readonly',
-        "React": 'readonly',
-        "require": 'readonly',
-        "module": 'readonly',
-        "__dirname": 'readonly',
-        "__filename": 'readonly',
-        "exports": 'readonly'
-      },
-      "parserOptions": {
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-<<<<<<< HEAD
-    plugins: {
-      react,
-      'react-hooks': reactHooks
-    },
-    rules: {
-=======
-    "plugins": {
-      react,
-      'react-hooks': reactHooks
-    },
-    "rules": {
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    "files": ['**/*.{ts,tsx}'],
-    "languageOptions": {
-      parser: tsparser,
-      "ecmaVersion": 2021,
-      "sourceType": 'module',
-      "globals": {
-        window: 'readonly',
-<<<<<<< HEAD
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        fetch: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        Blob: 'readonly',
-        CustomEvent: 'readonly',
-        Intl: 'readonly',
-        performance: 'readonly',
-        caches: 'readonly',
-        Notification: 'readonly',
-        ServiceWorker: 'readonly',
-        ServiceWorkerRegistration: 'readonly',
-        PushSubscription: 'readonly',
-        NotificationPermission: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        jest: 'readonly',
-=======
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
-import next from '@next/eslint-plugin-next';
-=======
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-
-export default [
-  ...compat.extends('next/core-web-vitals'),
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -804,9 +261,9 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-<<<<<<< HEAD
-      'react': react,
+      react,
       'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -823,6 +280,10 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
+<<<<<<< HEAD
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+=======
 <<<<<<< HEAD
       'no-trailing-spaces': 'error',
       'indent': 'off',
@@ -945,6 +406,7 @@ export default [
       'jsx-a11y/no-access-key': 'warn',
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     },
     settings: {
       react: {
@@ -954,6 +416,9 @@ export default [
   },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   {
     files: ['**/*.js'],
     languageOptions: {
@@ -973,6 +438,8 @@ export default [
       'no-console': 'off',
     },
   },
+<<<<<<< HEAD
+=======
 =======
       react,
       'react-hooks': reactHooks,
@@ -988,10 +455,6 @@ export default [
     },
   },
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 ];
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
