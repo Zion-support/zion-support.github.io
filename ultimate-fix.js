@@ -1,23 +1,34 @@
-<<<<<<< HEAD
-}});
-;
-console.log(`Fixed ${fixedCount} files`);
-};
-});
-;
-console.log(`Fixed ${fixedCount} files`);
-=======
+// Ultimate fix script for resolving syntax errors
+const fs = require('fs');
+const path = require('path');
 
-;
+let fixedCount = 0;
+
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix common syntax errors
+    content = content.replace(/,\s*;/g, ';');
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    fs.writeFileSync(filePath, content);
+    fixedCount++;
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-<<<<<<< HEAD
-}),
-,
-console.log(`Fixed ${fixedCount} files`),
+}
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-}),;
-,;
-console.log(`Fixed ${fixedCount} files`),;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+// Process files
+const files = [
+  'test-next.js',
+  'test-utils.jsx',
+  'utils/messageChannelHandler.ts',
+  'utils/test-utils.tsx'
+];
+
+files.forEach(fixSyntaxErrors);
+
+console.log(`Fixed ${fixedCount} files`);
