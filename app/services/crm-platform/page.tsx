@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your CRM?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful CRM platform that streamlines your sales process and drives revenue growth.
+          Let&apos;s create a powerful CRM platform that streamlines your sales process and drives revenue growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

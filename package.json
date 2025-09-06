@@ -2,17 +2,22 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
+<<<<<<< HEAD
     "build": "vite build",
+=======
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
+    "build:netlify": "node scripts/build-with-error-handling.js",
+>>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
+    "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "next lint",
-    "lint:fix": "eslint . --fix",
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -262,6 +267,10 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@babel/core": "^7.28.4",
+>>>>>>> main
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -295,8 +304,12 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@reduxjs/toolkit": "^2.9.0",
-    "@sendgrid/mail": "^8.1.5",
     "@stripe/stripe-js": "^7.9.0",
+    "@sendgrid/mail": "^8.1.5",
+<<<<<<< HEAD
+    "@stripe/stripe-js": "^7.9.0",
+=======
+>>>>>>> main
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -304,7 +317,6 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
-    "@types/mongodb": "^4.0.6",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -334,7 +346,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^14.2.5",
+    "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -362,6 +374,9 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/react": "^4.10.2",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -377,12 +392,6 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
-    "@types/next": "^8.0.7",
-    "@types/node": "^18.0.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
-    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -407,7 +416,12 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4"
+=======
+    "vite": "^7.1.4",
+    "web-vitals": "^5.1.0"
+>>>>>>> main
   },
   "engines": {
     "node": ">=18.0.0",
@@ -434,4 +448,8 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

@@ -608,7 +608,7 @@ export default function ITServicesPage() {
               </h2>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
-                we'll help you build a robust, secure, and scalable IT environment.
+                we&apos;ll help you build a robust, secure, and scalable IT environment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link 

@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     "target": "ES2020",
     "lib": [
       "dom",
@@ -12,6 +16,13 @@
       "es2021",
       "es2022"
     ],
+<<<<<<< HEAD
+=======
+=======
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
+>>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -30,6 +41,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -40,7 +52,31 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"]
+    }
+>>>>>>> main
   },
+<<<<<<< HEAD
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+=======
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
+<<<<<<< HEAD
+=======
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
+>>>>>>> main
 }

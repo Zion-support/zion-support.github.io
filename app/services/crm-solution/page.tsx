@@ -237,7 +237,7 @@ function ContactSection() {
         Ready to Transform Your Sales Process?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your CRM needs and create an intelligent solution that
+        Let&apos;s discuss your CRM needs and create an intelligent solution that
         drives sales growth and customer satisfaction.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,13 +21,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> origin/main
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Minimal type declarations for offline development;
 // React stubs;
 declare module 'react' {;
@@ -90,23 +77,5 @@ declare module 'zod' {  export type infer<T> = ;
 export default useEffect;
 export default useRef;
 declare module 'react' {; export type FC<P = any> = props: anyP ; export type ReactNode = ; export interface ChangeEvent<T = any> { target: T } export interface FormEvent<T = any> {} export interface KeyboardEvent<T = any> {}; export interface RefObject<T> { current: 'T' }; export type RefCallback<T> = value: anyT void; export type Ref<T> = RefObject<T> | RefCallback<T> | null; export type LegacyRef<T> = Ref<T> export function useRef<T = any>(initial: T): { current: T }; const react: '; export default react'} declare module 'react/jsx-runtime' {; export {}} declare namespace JSX {; interface Element {;,} } interface IntrinsicElements {; [elemName: 'string]: ;' } }} declare module 'react-dom' {; export function reactDom: '; export default reactDom'} declare module 'react-router-dom' { export function useNavigate(): ; export const Link: '; export const Routes: ; export const Navigate: ; const rr: ; export default rr'} declare module 'react-hook-form' { export function useForm<T = any>(...args: 'unknown[]): ; const rhf: ; export default rhf'} declare module '@hookform/resolvers/zod' {; export function zodResolver(...args: 'unknown[]):' } declare module '@tanstack/react-query' { export function useMutation<T = any>(...args: 'unknown[]): ; const rq: ; export default rq'} declare module 'jspdf' {; export class jsPDF {; constructor(...args: 'unknown[]); [key: string]: ;',} } declare module 'path' {; const path: '; export default path'} declare module 'jspdf-autotable' {; const autotable: '; export default autotable'} declare module 'zod' { export type infer<T> = ; const z: ; export { z }; export default z;,} export default useEffect; export default useRef;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> main
 declare module 'react' {; export type FC<P = any> = props: anyP ; export type ReactNode = ; export interface ChangeEvent<T = any> { target: T } export interface FormEvent<T = any> {} export interface KeyboardEvent<T = any> {}; export interface RefObject<T> { current: T }; export type RefCallback<T> = value: anyT void; export type Ref<T> = RefObject<T> | RefCallback<T> | null; export type LegacyRef<T> = Ref<T>; export function useRef<T = any>(initial: T): { current: T }; const react: ; export default react} declare module 'react/jsx-runtime' {; export {}} declare namespace JSX {; interface Element {,} interface IntrinsicElements {; [elemName: string]: }} declare module 'react-dom' {; export function reactDom: ; export default reactDom} declare module 'react-router-dom' { export function useNavigate(): ; export const Link: ; export const Routes: ; export const Navigate: ; const rr: ; export default rr} declare module 'react-hook-form' { export function useForm<T = any>(...args: unknown[]): ; const rhf: ; export default rhf} declare module '@hookform/resolvers/zod' {; export function zodResolver(...args: unknown[]): } declare module '@tanstack/react-query' { export function useMutation<T = any>(...args: unknown[]): ; const rq: ; export default rq} declare module 'jspdf' {; export class jsPDF {; constructor(...args: unknown[]); [key: string]: ,} } declare module 'path' {; const path: ; export default path} declare module 'jspdf-autotable' {; const autotable: ; export default autotable} declare module 'zod' { export type infer<T> = ; const z: ; export { z }; export default z,} export default useEffect; export default useRef;
->>>>>>> main
->>>>>>> origin/main
 declare module 'react' {; export type FC<P = any> = props: anyP ; export type ReactNode = ; export interface ChangeEvent<T = any> { target: T } export interface FormEvent<T = any> {} export interface KeyboardEvent<T = any> {}; export interface RefObject<T> { current: T }; export type RefCallback<T> = value: anyT void; export type Ref<T> = RefObject<T> | RefCallback<T> | null; export type LegacyRef<T> = Ref<T>; export function useRef<T = any>(initial: T): { current: T }; const react: ; export default react} declare module 'react/jsx-runtime' {; export {}} declare namespace JSX {; interface Element {,} interface IntrinsicElements {; [elemName: string]: }} declare module 'react-dom' {; export function reactDom: ; export default reactDom} declare module 'react-router-dom' { export function useNavigate(): ; export const Link: ; export const Routes: ; export const Navigate: ; const rr: ; export default rr} declare module 'react-hook-form' { export function useForm<T = any>(...args: unknown[]): ; const rhf: ; export default rhf} declare module '@hookform/resolvers/zod' {; export function zodResolver(...args: unknown[]): } declare module '@tanstack/react-query' { export function useMutation<T = any>(...args: unknown[]): ; const rq: ; export default rq} declare module 'jspdf' {; export class jsPDF {; constructor(...args: unknown[]); [key: string]: ,} } declare module 'path' {; const path: ; export default path} declare module 'jspdf-autotable' {; const autotable: ; export default autotable} declare module 'zod' { export type infer<T> = ; const z: ; export { z }; export default z,} export default useEffect; export default useRef;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-<<<<<<< HEAD
-=======
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

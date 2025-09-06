@@ -239,7 +239,7 @@ function ContactSection() {
         Ready to Transform Your Customer Support?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your support needs and create an AI-powered solution that
+        Let&apos;s discuss your support needs and create an AI-powered solution that
         delivers exceptional customer experiences.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

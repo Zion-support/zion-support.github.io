@@ -7,7 +7,11 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+<<<<<<< HEAD
     host: true
+=======
+    host: true,
+>>>>>>> main
   },
   build: {
     outDir: "dist",
@@ -16,6 +20,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
@@ -33,3 +38,20 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
+=======
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+>>>>>>> main

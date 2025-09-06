@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your PM Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful project management platform that streamlines your team's workflow and boosts productivity.
+          Let&apos;s create a powerful project management platform that streamlines your team&apos;s workflow and boosts productivity.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

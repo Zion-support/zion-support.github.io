@@ -233,7 +233,7 @@ function ContactSection() {
         Ready to Transform Your HR Operations?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your HR needs and create an AI-powered solution that
+        Let&apos;s discuss your HR needs and create an AI-powered solution that
         optimizes your workforce and improves employee satisfaction.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
