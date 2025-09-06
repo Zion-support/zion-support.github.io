@@ -1,10 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -12,7 +11,7 @@ const Header = () => {
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
-  ]
+  ];
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -65,37 +64,7 @@ const Header = () => {
         )}
       </nav>
     </header>
-  )
-}
-;
-export default Header;
-=======
-import React from 'react';
-
-export const Header: React.FC = () => {
-  return (
-    <header className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-gray-800">Zion Tech Group</h1>
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-600 hover:text-gray-800">Home</a>
-            <a href="/about" className="text-gray-600 hover:text-gray-800">About</a>
-            <a href="/services" className="text-gray-600 hover:text-gray-800">Services</a>
-            <a href="/contact" className="text-gray-600 hover:text-gray-800">Contact</a>
-          </nav>
-          <div className="md:hidden">
-            <button className="text-gray-600 hover:text-gray-800">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
   );
 };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default Header;
