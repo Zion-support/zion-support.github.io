@@ -21,28 +21,12 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
-=======
-      "@/*": ["./*"]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"]
     },
     "allowSyntheticDefaultImports": true
   },

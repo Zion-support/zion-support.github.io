@@ -260,7 +260,10 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "automation:performance": "node automation/performance-optimizer.cjs",
+    "automation:improve": "node automation/app-improvement-suite.cjs",
+    "automation:all": "npm run automation:start && npm run automation:performance && npm run automation:improve"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -321,15 +324,11 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
-<<<<<<< HEAD
+    "dotenv": "^17.2.2",
     "ethers": "^6.15.0",
     "events": "^3.3.0",
-    "firebase-admin": "^13.5.0",
-=======
-    "dotenv": "^17.2.2",
-    "events": "^3.3.0",
     "fastify": "^5.6.0",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+    "firebase-admin": "^13.5.0",
     "framer-motion": "^10.16.16",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",

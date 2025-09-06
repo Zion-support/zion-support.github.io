@@ -1,43 +1,32 @@
-// SEO Meta Tags Configuration
-export const defaultSEO = {
-  title: 'Zion Tech Group - AI-Powered Business Solutions',
-  description: 'Transform your business with our comprehensive suite of AI-powered solutions, cloud platforms, cybersecurity, and micro SaaS services.',
-  keywords: 'AI, artificial intelligence, cloud computing, cybersecurity, micro SaaS, business automation, Zion Tech Group',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    title: 'Zion Tech Group - AI-Powered Business Solutions',
-    description: 'Transform your business with our comprehensive suite of AI-powered solutions.',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI-Powered Business Solutions',
-      },
-    ],
+export const seoConfig = {
+  "title": "Zion Tech Group - Leading-Edge Technology Solutions",
+  "description": "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions. Enterprise-grade technology for the modern world.",
+  "keywords": "AI, quantum computing, cybersecurity, business intelligence, technology solutions",
+  "openGraph": {
+    "title": "Zion Tech Group - Leading-Edge Technology Solutions",
+    "description": "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions.",
+    "type": "website",
+    "url": "https://ziontechgroup.com",
+    "image": "https://ziontechgroup.com/og-image.jpg"
   },
-  twitter: {
-    handle: '@ziontechgroup',
-    site: '@ziontechgroup',
-    cardType: 'summary_large_image',
-  },
-  additionalMetaTags: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1',
-    },
-    {
-      name: 'theme-color',
-      content: '#1e40af',
-    },
-    {
-      name: 'msapplication-TileColor',
-      content: '#1e40af',
-    },
-  ],
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Zion Tech Group - Leading-Edge Technology Solutions",
+    "description": "Transform your business with cutting-edge AI, quantum computing, and cybersecurity solutions.",
+    "image": "https://ziontechgroup.com/twitter-image.jpg"
+  }
 };
 
-export default defaultSEO;
+export const generateMetadata = (page = {}) => ({
+  title: page.title || seoConfig.title,
+  description: page.description || seoConfig.description,
+  keywords: page.keywords || seoConfig.keywords,
+  openGraph: {
+    ...seoConfig.openGraph,
+    ...page.openGraph
+  },
+  twitter: {
+    ...seoConfig.twitter,
+    ...page.twitter
+  }
+});
