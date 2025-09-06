@@ -1,14 +1,15 @@
-import React, { useState, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
+
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Button from './components/Button'
+import Card from './components/Card'
+import ServiceCard from './components/ServiceCard'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import About from './pages/About'
+import Services from './pages/ServicesPage'
+import Contact from './pages/Contact'
+
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -68,46 +69,31 @@ const HomePage = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
+
         </div>
       </div>
     </div>
   </div>
-);
+)
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-                
-                {/* Service pages */}
-                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/services/cloud-migration" element={<CloudMigration />} />
-                <Route path="/services/devops" element={<DevOps />} />
-                <Route path="/services/mobile-development" element={<MobileDevelopment />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <PerformanceMonitor />
-        </div>
-      </Router>
-    </ErrorBoundary>
-  );
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
+
 }
 
 export default App;

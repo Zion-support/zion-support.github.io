@@ -1,3 +1,4 @@
+
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
@@ -372,9 +373,11 @@ export default function MicroSaaSPage() {
       </section>
 
       <CTASection />
+
     </div>
   );
 }
+
 
 function ServiceCard({ title, description, features, price, icon }: { 
   title: string; 
@@ -405,9 +408,11 @@ function ServiceCard({ title, description, features, price, icon }: {
       >
         Get Started
       </a>
+
     </div>
   );
 }
+
 
 function ProcessStep({ step, title, description }: { 
   step: string; 
@@ -504,6 +509,7 @@ function Plan({ name, price, features, popular }: {
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-3">✓</span> {feature}
+
           </li>
         ))}
       </ul>
@@ -512,7 +518,9 @@ function Plan({ name, price, features, popular }: {
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular 
             ? 'bg-blue-600 text-white hover:bg-blue-700' 
+
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+
         }`}
       >
         Get Started
@@ -520,6 +528,7 @@ function Plan({ name, price, features, popular }: {
     </div>
   );
 }
+
 
 function CTASection() {
   return (
@@ -530,6 +539,7 @@ function CTASection() {
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         Let's discuss your idea and create a custom solution that drives real business value. 
         Our team of experts is ready to help you launch your next successful micro SaaS product.
+
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
@@ -545,10 +555,14 @@ function CTASection() {
           Email Us
         </a>
       </div>
+
       <div className="mt-6 text-sm text-gray-600">
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+
       </div>
     </div>
   );
 }
+
 }
+

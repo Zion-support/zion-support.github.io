@@ -9,8 +9,13 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: 'Zion Tech Group' })).toBeInTheDocument();
   });
 
+
   test('displays correct content', () => {
     render(<App />);
     expect(screen.getByText('Leading AI & Technology Solutions for a Smarter Future')).toBeInTheDocument();
   });
 });
+
+});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-4b36

@@ -1,61 +1,45 @@
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlow: boolean;
-}
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isSlow: false
-  });
+
+export const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-      
-      const memory = (performance as any).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0; // MB
-      
-      const isSlow = loadTime > 3000 || memoryUsage > 50; // 3s or 50MB threshold
-      
-      setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(performance.now()),
-        memoryUsage: Math.round(memoryUsage * 100) / 100,
-        isSlow
-      });
-    };
-
-    // Measure performance after component mounts
-    const timer = setTimeout(measurePerformance, 1000);
-    
-    return () => clearTimeout(timer);
+    // Only show in development mode
+    if (import.meta.env.DEV) {
+      setIsVisible(true);
+    }
   }, []);
 
-  // Only show in development or if performance is poor
-  if (process.env.NODE_ENV !== 'development' && !metrics.isSlow) {
-    return null;
-  }
+  if (!isVisible) return null;
 
   return (
-    <div className={`fixed top-4 right-4 z-50 p-3 rounded-lg text-xs font-mono ${
-      metrics.isSlow 
-        ? 'bg-red-100 text-red-800 border border-red-300' 
-        : 'bg-green-100 text-green-800 border border-green-300'
-    }`}>
-      <div className="font-semibold mb-1">Performance</div>
-      <div>Load: {metrics.loadTime}ms</div>
-      <div>Memory: {metrics.memoryUsage}MB</div>
-      {metrics.isSlow && <div className="text-red-600 font-semibold">⚠️ Slow</div>}
+    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
+      <div className="p-4 border-b border-gray-700">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-white flex items-center">
+            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
+            Performance Monitor
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <p className="text-gray-400 text-sm">
+          Performance monitoring is active. This component will be enhanced with detailed metrics in future updates.
+        </p>
+      </div>
     </div>
   );
 };
 
+
 export default PerformanceMonitor;
+

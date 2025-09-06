@@ -83,7 +83,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-orange-500">📦</span>,
     default:
       return <span className="text-gray-500">📣</span>
-<<<<<<< HEAD
+
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -120,10 +120,7 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-orange-500">📦</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 interface NotificationItemProps {
@@ -144,17 +141,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-<<<<<<< HEAD
+
   }
   },
 
-=======
 
-  },
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
@@ -166,10 +157,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       className={cn(;
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -235,11 +225,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               >
                 onClick={handleClick}
               >;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
@@ -259,19 +246,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-<<<<<<< HEAD
+
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
-=======
 
-
-                onClick={(e) => {
-                onClick={(e) => {
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -310,19 +290,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-<<<<<<< HEAD
+
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
-=======
 
-
-                onClick={(e) => {
-                onClick={(e) => {
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   e.stopPropagation(),
                   onDismiss(notification.id)
                 }}
@@ -547,10 +520,9 @@ if ( {) {
           </Tooltip>;
         </TooltipProvider>;
       </div>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

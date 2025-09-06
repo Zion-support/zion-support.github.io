@@ -1,5 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+import { GradientHeading } from '../components/GradientHeading';
+import { Card, CardContent } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
+
 import { 
   Users, 
   Target, 
@@ -7,6 +14,7 @@ import {
   Globe, 
   Lightbulb, 
   Shield,
+
   Phone,
   Mail,
   MapPin
@@ -32,10 +40,12 @@ const About: React.FC = () => {
       description: 'Certified professionals in AWS, Azure, and GCP platforms.',
       image: '/api/placeholder/300/300'
     }
+
   ];
 
   const values = [
     {
+
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with technology.'
@@ -55,10 +65,12 @@ const About: React.FC = () => {
       title: 'Collaboration',
       description: 'We work closely with our clients as partners in their success.'
     }
+
   ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
+
     { number: '50+', label: 'Countries Served' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
@@ -202,9 +214,56 @@ const About: React.FC = () => {
             >
               View Our Services
             </Link>
+
           </div>
-        </div>
-      </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+              <p className="text-xl text-gray-600">
+                The talented individuals behind our success
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={index} className="p-6 text-center">
+                  <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-12 w-12 text-gray-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                  <Badge variant="secondary" className="mb-3">{member.role}</Badge>
+                  <p className="text-gray-600">{member.bio}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's discuss how we can help transform your business with technology.
+            </p>
+            <div className="space-x-4">
+              <Button size="lg" variant="secondary">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+import { GradientHeading } from '../components/GradientHeading';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Card, CardContent } from '../components/ui/card';
+import { useToast } from '../components/ui/use-toast';
+import { Mail, MessageSquare, MapPin, Phone, Send } from 'lucide-react';
+
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
+
     phone: '',
     service: '',
     message: ''
@@ -288,6 +298,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
