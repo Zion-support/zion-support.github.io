@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export function Button({ 
+  children, 
+  variant = 'default', 
+  size = 'md', 
+  asChild = false, 
+  className = "", 
+  onClick, 
+  type = 'button', 
+  disabled = false 
+}) {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React from 'react';';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -21,6 +46,18 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -38,6 +75,24 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
   if (asChild) {
   }
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <button
+      className={classes}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 }
 
@@ -56,3 +111,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 '
 
 '
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

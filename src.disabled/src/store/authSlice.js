@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react"; ); export default function Authslice() {}; return null} }
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
 import _React from "react"; ); export default function Authslice() {}; return null} }
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -22,4 +25,13 @@ export default function Authslice() {};
 }
 import React from "react"; ); export default function Authslice() {}; return null} }
 const React from "react"; ); export default function Authslice() { return; }; return null} }""
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+import React from "react"; ); export default function Authslice() {}; return null} }
+const React from "react"; ); export default function Authslice() { return; }; return null} }""
+import _React from "react"; ); export default function Authslice() {}; return null} }
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

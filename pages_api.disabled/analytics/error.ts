@@ -40,11 +40,17 @@ export default function handler("req": NextApiReques t, "res": NextApiRespons e)
 }
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string} }; errorInfo: { componentStack: string}; url: 'string; timestamp: number; userAgent: string;' } export default function handler(req: 'NextApiReques t',res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: 'dat a.error.message',name: 'dat a.error.name',url: 'dat a.url',timestamp: new Date(data.timestamp).toISOString(),userAgent: 'dat a.userAgent',stack: 'dat a.error.stack',componentStack: 'dat a.errorInfo.componentStack',}); res.status(200).json({ success: 'tru e',message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 =======
@@ -57,6 +63,7 @@ import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { err
 
 =======
 
+<<<<<<< HEAD
 =======
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
@@ -88,8 +95,24 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
 import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
-import { NextApiRequest,NextApiResponse } from 'next'; interface ErrorData { error: { message: string; stack?: string; name: string}; errorInfo: { componentStack: string}; url: string; timestamp: number; userAgent: string} export default function handler(req: NextApiReques t,res: NextApiRespons e) { if (req.method !== 'POST') { return res.status(405).json({ error: 'Method not allowed' })} try { const data: ErrorDat a = req.body; if (!data.error || !data.error.message || !data.url) { return res.status(400).json({ error: 'Invalid error data format' })} console.error('Client Error: ',{ message: dat a.error.message,name: dat a.error.name,url: dat a.url,timestamp: new Date(data.timestamp).toISOString(),userAgent: dat a.userAgent,stack: dat a.error.stack,componentStack: dat a.errorInfo.componentStack,}); res.status(200).json({ success: tru e,message: 'Error logged successfully',timestamp: Dat e.now(),})} catch (error) { console.error('Error processing error data: ',error); res.status(500).json({ error: 'Internal server error' })} }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class UltimateAutomationFactory {; constructor() {; this && this.logsDir = path && path.join(process && process.cwd(), 'logs'); this && this.ensureLogsDir()};
 ; ensureLogsDir() {; if (!fs && fs.existsSync(this && this.logsDir)) {; fs && fs.mkdirSync(this && this.logsDir, { recursive: true })}};
@@ -31,6 +32,8 @@ class UltimateAutomationFactory {;
     this.ensureLogsDir();
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
@@ -119,6 +122,7 @@ class UltimateAutomationFactory {;
 };
 ;
 // CLI interface;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -259,6 +263,9 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 ,
 export default UltimateAutomationFactory,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {exec_sync} from 'child_process';
 ;
 class UltimateAutomationFactory { constructor () { this.logs_dir = path.join (process.cwd (), 'logs'); this.ensureLogsDir ()}
@@ -295,15 +302,22 @@ if ( {) {
 export default UltimateAutomationFactory;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -443,3 +457,6 @@ export default UltimateAutomationFactory;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

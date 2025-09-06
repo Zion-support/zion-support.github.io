@@ -6,15 +6,29 @@ const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('=====================================');
 =======
 console.log('==');
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.log('==');
+=======
+console.log('=====================================');
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38,11 +52,15 @@ function removeMergeConflictMarkers(content) {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+<<<<<<< HEAD
 =======
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -124,6 +142,10 @@ function processFile(filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
@@ -183,8 +205,12 @@ function findFilesWithConflicts() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
             files.push(fullPath);
           }
         } catch (error) {
@@ -205,7 +231,10 @@ function findFilesWithConflicts() {
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -229,7 +258,12 @@ function findFilesWithConflicts() {
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Main execution
 async function main() {

@@ -7,6 +7,11 @@ import React from 'react';
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
 import ServiceCard from './src/components/ServiceCard';
@@ -58,6 +63,7 @@ export default function App() {
       features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
     },
   ];
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 <<<<<<< HEAD
@@ -80,6 +86,9 @@ export default function App(): JSX.Element {
     </main>
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
@@ -152,3 +161,34 @@ export default function App(): JSX.Element {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
 }
+=======
+
+export default function App() {
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+export default function App(): React.JSX.Element {
+=======
+export default function App(): JSX.Element {
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+>>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
+>>>>>>> main
+  return (
+    <main>
+      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>
+  );
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main

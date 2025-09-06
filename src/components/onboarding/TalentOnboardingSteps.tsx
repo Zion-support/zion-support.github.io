@@ -20,20 +20,29 @@ function TalentOnboardingSteps() {
       label: "Complete your profile",
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
+<<<<<<< HEAD
       action: "Update",
     },
+=======
+      action: "Update"},
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     {
       id: "skills",
       label: "Add your top skills",
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
+<<<<<<< HEAD
       action: "Add Skills",
     },
+=======
+      action: "Add Skills"},
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     {
       id: "availability",
       label: "Set your availability",
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
+<<<<<<< HEAD
       action: "Set",
     },
     {
@@ -44,6 +53,10 @@ function TalentOnboardingSteps() {
       action: "View Matches",
     },
   ];
+=======
+      action: "Set"},
+    {
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
       id: "match",
       label: "Receive your first job match",

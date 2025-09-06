@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -8,6 +16,15 @@ class BuildMonitor {
   constructor() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -155,8 +172,12 @@ class BuildMonitor {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -177,6 +198,15 @@ class BuildMonitor {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -242,8 +272,12 @@ class BuildMonitor {
 =======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -265,6 +299,15 @@ class BuildMonitor {
       }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       
@@ -284,8 +327,12 @@ class BuildMonitor {
 =======
       
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -487,6 +534,15 @@ const monitor = new BuildMonitor();
 if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -499,8 +555,12 @@ if (require.main === module) {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -528,9 +588,20 @@ if (require.main === module) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = BuildMonitor;
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+<<<<<<< HEAD
+=======
+=======
+
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -665,4 +736,21 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+  monitor.run().catch(console.error)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+module.exports = BuildMonitor;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+module.exports = BuildMonitor;
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

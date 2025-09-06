@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 
+<<<<<<< HEAD
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
@@ -22,6 +23,12 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: "Too Many Requests" });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     return false;
   }
 
@@ -31,6 +38,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
 
@@ -196,3 +204,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

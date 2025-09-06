@@ -385,7 +385,10 @@ if ( {})
       process.exit(1)})};
 module.exports = ErrorPreventionSystem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
@@ -393,4 +396,9 @@ module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
 module.exports = ErrorPreventionSystem;
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

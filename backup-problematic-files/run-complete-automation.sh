@@ -71,10 +71,14 @@ echo "🔒 Phase 3: Security & Performance"
 echo "====="
 
 # Security scan
+<<<<<<< HEAD
 <<<<<<< HEAD:run-complete-automation.sh
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 =======
+=======
+<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
@@ -122,7 +126,14 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/run-complete-automation.sh
+=======
+=======
+run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+
+>>>>>>> main:run-complete-automation.sh
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 

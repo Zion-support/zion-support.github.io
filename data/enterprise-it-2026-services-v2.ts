@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface EnterpriseIt2026ServiceV2 {
+=======
 
+<<<<<<< HEAD
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+export interface EnterpriseIt2026ServiceV2 {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -34,6 +49,15 @@ export interface EnterpriseIt2026ServiceV2 {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+    website: string;
+  }
+
+  {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -49,11 +73,20 @@ export interface EnterpriseIT2026ServiceV2 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+<<<<<<< HEAD
+=======
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 }
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
@@ -80,6 +113,40 @@ export interface EnterpriseIT2026ServiceV2 {
 
     reviews: 180
   }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+
+export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
+  // Zero Trust Network Architecture
+  {
+
+    id: 'zero-trust-network-architecture-pro', name: 'Zero Trust Network Architecture Pro',
+    tagline: 'Never trust, always verify - comprehensive zero trust security',
+    price: '$1,199',
+    period: '/month',
+    description: 'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
+    features: [
+      'Identity verificationDevice trust scoringContinuous monitoringMicro-segmentationLeast privilege accessReal-time threat detectionCompliance frameworksAdvanced analytics';
+      'API for integrationEnterprise deployment'
+    ];
+    popular: true, icon: '🔒',
+    color: 'from-red-600 to-orange-700', textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/zero-trust-network-architecture',
+    marketPosition: 'Competitive with Palo Alto Networks ($1000+/month), Cisco ($800+/month), and Fortinet ($600+/month). Our advantage: Zero trust focus, better pricing, and comprehensive security features.',
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Fortune 500 companies',
+    trialDays: 21, setupTime: '2 weeks',
+    category: 'Cybersecurity & Networking', realService: true,
+    technology: ['Zero TrustNetwork SecurityReactNode.jsPostgreSQLAWS'], integrations: ['Active DirectoryLDAPSAMLOAuthCustom identity systems'],
+    useCases: ['Network securityAccess controlThreat preventionComplianceRisk managementSecurity monitoring'], roi: 'Average customer sees 400% ROI through enhanced security and reduced breach risks.',
+    competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper'], marketSize: '$67.8B market',
+    growthRate: '220% annual growth', variant: 'security-futuristic',
+    contactInfo: {
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 180
       website: 'https://ziontechgroup.com';
@@ -90,7 +157,14 @@ export interface EnterpriseIT2026ServiceV2 {
     customers: 280;
     rating: 4.9,
     reviews: 180;
+<<<<<<< HEAD
 ];
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
   id: string,;
@@ -529,7 +603,16 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280,;
     rating: 4.9;
     reviews: 180;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
+<<<<<<< HEAD
   }
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

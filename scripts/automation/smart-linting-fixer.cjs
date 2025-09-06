@@ -12,6 +12,10 @@ console.log(' Starting smart linting fixer...')
       "summary"
       "status"
 <<<<<<< HEAD
+<<<<<<< HEAD
   console.error(' Smart linting fixer failed to "start")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(' Smart linting fixer failed to "start")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

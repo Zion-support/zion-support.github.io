@@ -8,11 +8,14 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+<<<<<<< HEAD
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion']
   },
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
@@ -27,6 +30,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
   },
+<<<<<<< HEAD
   async headers() {
     return [
       {
@@ -48,6 +52,8 @@ const nextConfig = {
       }
     ]
   },
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -90,6 +96,22 @@ const nextConfig = {
         aggregateTimeout: 300,
       };
     }
+<<<<<<< HEAD
+=======
+
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+          }
+        }
+      }
+    }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     
     // Exclude apps directory from compilation
     config.module.rules.push({
@@ -99,7 +121,41 @@ const nextConfig = {
     });
     
     return config;
+<<<<<<< HEAD
   }
 };
 
 module.exports = nextConfig;
+=======
+  },
+  
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff"
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY"
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block"
+          },
+          {
+            key: "Referrer-Policy",
+            value: "origin-when-cross-origin"
+          }
+        ]
+      }
+    ]
+  }
+};
+
+export default nextConfig;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

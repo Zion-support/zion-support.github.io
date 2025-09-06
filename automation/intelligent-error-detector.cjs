@@ -8,6 +8,9 @@ class IntelligentErrorDetector {
   constructor() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.projectRoot = process.cwd();
     this.errors = [];
     this.fixes = [];
@@ -196,6 +199,7 @@ class IntelligentErrorDetector {
       fixesApplied: this.fixes.length,
       errors: this.errors,
       fixes: this.fixes
+<<<<<<< HEAD
 =======
     this.errorPatterns = {
       syntax: /SyntaxError|ParseError|Unexpected token/gi,
@@ -394,65 +398,22 @@ class IntelligentErrorDetector {
       ),
       details: errors,
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     };
-
-    const reportFile = path.join(
-      __dirname,
-      'reports',
-      'error-detection-report.json'
-    );
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`Error report generated: ${reportFile}`);
-  }
-
-  async suggestFixes(errors) {
-    const suggestions = [];
-
-    if (errors.syntax.length > 0) {
-      suggestions.push(
-        'Run ESLint with --fix to automatically fix syntax errors'
-      );
-    }
-
-    if (errors.type.length > 0) {
-      suggestions.push('Review TypeScript configuration and type definitions');
-    }
-
-    if (errors.module.length > 0) {
-      suggestions.push('Check module imports and dependencies');
-    }
-
-    if (errors.import.length > 0) {
-      suggestions.push('Verify import paths and module resolution');
-    }
-
-    if (errors.build.length > 0) {
-      suggestions.push('Review build configuration and dependencies');
-    }
-
-    if (errors.runtime.length > 0) {
-      suggestions.push('Add proper error handling and validation');
-    }
-
-    if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes: '),
-      suggestions.forEach((suggestion, index) => {
-        this.log(`   ${index + 1}. ${suggestion}`);
-      });
-    }
   }
 }
 
-// Run if called directly
 if (require.main === module) {
-    const detector = new IntelligentErrorDetector(),
-    detector.detectErrors().catch(console.error)
-  }
+  const detector = new IntelligentErrorDetector();
+  detector.run().catch(console.error);
+}
 
 module.exports = IntelligentErrorDetector;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
     this.errorPatterns = {
       synta: x: /SyntaxError|ParseError|Unexpected token/gi,
@@ -709,5 +670,8 @@ if (require.main === module) {
 
 module.exports = IntelligentErrorDetector;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

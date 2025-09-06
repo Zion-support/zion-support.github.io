@@ -1,127 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-        
-      }
-    }},
-  {
-    "name": 'Keyboard Navigation Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let interactiveElements = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          const buttons = (content.match(/<button[^>]*>/g) || []).length;
-          const links = (content.match(/<a[^>]*>/g) || []).length;
-          const inputs = (content.match(/<input[^>]*>/g) || []).length;
-          interactiveElements += buttons + links + inputs;
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'ARIA Labels Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let ariaElements = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Focus Management Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let focusElements = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
-            .length;
-        });
-
-        
-      }
-    }},
-  {
-    "name": 'Screen Reader Support Check',
-    "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
-      if (fs.existsSync(pagesDir)) {
-        const pages = fs
-          .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let srElements = 0;
-
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          srElements += (
-            content.match(/role=|aria-label=|aria-describedby=/g) || []
-          ).length;
-        });
-
-        
-      }
-    }},
-];
-
-// Run accessibility checks
-let successCount = 0;
-let totalCount = a11yChecks.length;
-
-for (const check of a11yChecks) {
-  try {
-    
-    check.action();
-    
-    successCount++;
-  } catch (error) {
-    
-  }
-}
-
-
-
-
-// Generate accessibility report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": a11yChecks.map(check => ({
-    name: check.name,
-    "status": 'completed'})),
-  "summary": {
-    total: totalCount,
-    "successful": successCount,
-    "failed": totalCount - successCount}};
-
-const reportsDir = path.join(process.cwd(), 'automation-reports');
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { "recursive": true });
-}
-
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -243,10 +127,21 @@ if (require.main === module) {
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -411,6 +306,148 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
+=======
+<<<<<<< HEAD
+console.log('♿ Running accessibility check...');
+console.log('✅ Accessibility check completed');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+#!/usr/bin/env node
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        
+      }
+    }},
+  {
+    "name": 'Keyboard Navigation Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let interactiveElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          const buttons = (content.match(/<button[^>]*>/g) || []).length;
+          const links = (content.match(/<a[^>]*>/g) || []).length;
+          const inputs = (content.match(/<input[^>]*>/g) || []).length;
+          interactiveElements += buttons + links + inputs;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'ARIA Labels Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let ariaElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Focus Management Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let focusElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
+            .length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Screen Reader Support Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let srElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          srElements += (
+            content.match(/role=|aria-label=|aria-describedby=/g) || []
+          ).length;
+        });
+
+        
+      }
+    }},
+];
+
+// Run accessibility checks
+let successCount = 0;
+let totalCount = a11yChecks.length;
+
+for (const check of a11yChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
+
+
+
+
+// Generate accessibility report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": a11yChecks.map(check => ({
+    name: check.name,
+    "status": 'completed'})),
+  "summary": {
+    total: totalCount,
+    "successful": successCount,
+    "failed": totalCount - successCount}};
+
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });
+}
+
+=======
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -528,8 +565,36 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -537,6 +602,17 @@ const reportFile = path.join(
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -549,10 +625,14 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -565,12 +645,15 @@ console.log('♿ Accessibility Checker Starting...\n')
     "status"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 module.exports = AccessibilityChecker;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -591,4 +674,20 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+=======
+=======
+module.exports = AccessibilityChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

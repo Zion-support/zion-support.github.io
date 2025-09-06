@@ -1,5 +1,124 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+;
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class PerformanceOptimizer {
+  constructor() {
+    this.optimizations = [];
+    this.logFile = path.join(__dirname, '..', 'logs', 'performance-optimizer.log');
+    this.ensureLogDirectory();
+  }
+
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+
+  async optimizePerformance() {
+    try {
+      this.log('Starting performance optimization...');
+      
+      // Analyze bundle size
+      const bundleAnalysis = this.analyzeBundleSize();
+      
+      // Optimize images
+      const imageOptimization = this.optimizeImages();
+      
+      // Check for unused dependencies
+      const dependencyAnalysis = this.analyzeDependencies();
+      
+      // Generate optimization report
+      const report = {
+        timestamp: new Date().toISOString(),
+        bundleSize: bundleAnalysis,
+        imageOptimization: imageOptimization,
+        dependencies: dependencyAnalysis,
+        recommendations: this.generateRecommendations()
+      };
+      
+      this.saveReport(report);
+      this.log('Performance optimization completed');
+      return report;
+    } catch (error) {
+      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      return null;
+    }
+  }
+
+  analyzeBundleSize() {
+    try {
+      // Check if dist directory exists
+      const distPath = path.join(__dirname, '..', 'dist');
+      if (!fs.existsSync(distPath)) {
+        return { error: 'Build directory not found. Run npm run build first.' };
+      }
+
+      const files = this.getFilesRecursively(distPath);
+      let totalSize = 0;
+      let gzippedSize = 0;
+      
+      files.forEach(file => {
+        const stats = fs.statSync(file);
+        totalSize += stats.size;
+        
+        // Estimate gzipped size (roughly 30% of original)
+        gzippedSize += Math.floor(stats.size * 0.3);
+      });
+
+      return {
+        totalSize: this.formatBytes(totalSize),
+        gzippedSize: this.formatBytes(gzippedSize),
+        fileCount: files.length,
+        recommendations: this.getBundleRecommendations(totalSize, files.length)
+      };
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
+  getFilesRecursively(dir) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files = files.concat(this.getFilesRecursively(fullPath));
+      } else {
+        files.push(fullPath);
+      }
+    });
+    
+    return files;
+  }
+
+  formatBytes(bytes) {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
   }
@@ -134,6 +253,7 @@ class PerformanceOptimizer {
       caching: null,
       overall: { status: 'unknown', score: 0 }
     };
+<<<<<<< HEAD
   }
 
   async runCommand(command, description) {
@@ -422,6 +542,9 @@ class PerformanceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
 
   getBundleRecommendations(totalSize, fileCount) {
@@ -608,6 +731,10 @@ class PerformanceOptimizer {
 
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
@@ -923,4 +1050,11 @@ monitor.runBundleAnalysis()
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+optimizer.run().catch(console.error);
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

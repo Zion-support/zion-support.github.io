@@ -111,9 +111,13 @@ class ErrorPreventionOrchestrator {}
     return new Promise((resolve, reject) => {;}
       const child = spawn(command, args, { "stdio": 'inherit' };);
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -158,7 +162,12 @@ switch (command) {}
     orchestrator.logs();
     break;
 <<<<<<< HEAD
+<<<<<<< HEAD
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
     process.exit(1)};
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

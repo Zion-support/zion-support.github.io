@@ -365,8 +365,9 @@ class AutoFixOrchestrator {
       
       // Fix common file structure issues
       content = content.replace(/^[<>=]{7}.*$/gm, ''); // Remove git merge conflict markers
+      content = content.replace(/>>>>>>>.*$/gm, '');
       content = content.replace(/<<<<<<<.*$/gm, '');
-      content = content.replace(/.*$/gm, '');
+      content = content.replace(/=======.*$/gm, '');
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);

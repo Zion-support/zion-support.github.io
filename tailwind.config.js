@@ -4,11 +4,19 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
+=======
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -69,6 +77,7 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -79,6 +88,8 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       },
       keyframes: {
         fadeIn: {
@@ -142,6 +153,7 @@ module.exports = {
           },
         },
       },
+<<<<<<< HEAD
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -164,6 +176,8 @@ module.exports = {
         '3xl': '1600px',
         '4xl': '2000px',
       },
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     },
   },
   plugins: [
@@ -171,4 +185,8 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

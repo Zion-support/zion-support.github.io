@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 const { execSync } = require('child_process');
@@ -162,6 +165,7 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
+<<<<<<< HEAD
 });
 
 const { execSync } = require('child_process');
@@ -319,4 +323,12 @@ if (resolveMergeConflicts()) {
 }
 console.log('\n🎉 Merge conflict resolution completed!');
 
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

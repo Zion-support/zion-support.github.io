@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   return NextResponse.next();
+<<<<<<< HEAD
 =======
 
   // Security headers
@@ -19,11 +23,12 @@ export function middleware(request: NextRequest) {
   return response;
     return response;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 
-return response;
-}
 export const config = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
@@ -35,3 +40,9 @@ export const config = {
 }
 ;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+};
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

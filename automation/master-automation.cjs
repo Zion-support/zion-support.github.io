@@ -1,12 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -14,17 +27,26 @@ const { promisify } = require("util");
 
 const execAsync = promisify(exec);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -32,8 +54,22 @@ class MasterAutomation {
   }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   log(message) {
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 class MasterAutomation {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'master-automation.log');
@@ -45,11 +81,15 @@ class MasterAutomation {}
   };
   log(message) {}
 <<<<<<< HEAD
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -58,6 +98,8 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -81,6 +123,7 @@ class MasterAutomation {}
     const logFile = path.join(this.logsDir, 'master-automation.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
+<<<<<<< HEAD
 
   async runCommand(command, description) {
   async runCommand(command, description) {
@@ -89,6 +132,17 @@ class MasterAutomation {}
 
 
   async runCommand(command, description) {
+=======
+  async runCommand(command, description) {
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -98,13 +152,26 @@ class MasterAutomation {}
       });
 
 
+<<<<<<< HEAD
     try {
       const { stdout, stderr } = await execAsync(command, { 
         cwd: process.cwd(), 
         timeout: 30000, 
         ...options 
       });
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;`
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -143,10 +210,13 @@ class MasterAutomation {
       this.log(`Command failed: ${command} - ${error.message}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -232,6 +302,7 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
+<<<<<<< HEAD
       this.log(`✅ ${description} completed successfully`);
       return { success: true, output };
     } catch (error) {
@@ -239,6 +310,8 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -259,6 +332,10 @@ class MasterAutomation {
       if (!result.success) {
         this.log(`❌ Build process failed at: ${step.description}`, 'error');
         return { success: false, results };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       }
     }
@@ -267,19 +344,32 @@ class MasterAutomation {
     return { success: true, results };
   }
 
+<<<<<<< HEAD
       }
     } else {
       this.log("Failed to get PM2 process list");
       return [];
     }
   }
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       return {}
         success: false,
         stdout: error.stdout || '',
@@ -395,12 +485,16 @@ class MasterAutomation {
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -535,6 +629,9 @@ class MasterAutomation {
     };
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -1192,6 +1289,10 @@ class MasterAutomation {
     this.log('✅ Build process completed successfully');
     return { success: true, results };
   }
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -1205,6 +1306,7 @@ class MasterAutomation {
     for (const check of checks) {
       const result = await this.runCommand(check.command, check.description);
       results.push({ ...check, result });
+<<<<<<< HEAD
     }
 
     this.log('✅ Quality checks completed');
@@ -1250,6 +1352,76 @@ class MasterAutomation {
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
+<<<<<<< HEAD
+=======
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+
+    this.log('✅ Quality checks completed');
+    return { success: true, results };
+  }
+
+  async runAutomationScripts() {
+    this.log('🤖 Running automation scripts...');
+
+    const scripts = [
+      {
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
+      },
+      {
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
+      },
+      {
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
+      },
+    ];
+
+    const results = [];
+    for (const script of scripts) {
+      const result = await this.runCommand(script.command, script.description);
+      results.push({ ...script, result });
+    }
+
+    this.log('✅ Automation scripts completed');
+    return { success: true, results };
+  }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -1266,6 +1438,35 @@ class MasterAutomation {
       },
     };
 
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    if (runningProcesses < expectedProcesses) {}
+      this.log()
+        `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
+      );
+      await this.restartPM2Processes();
+    } else {}
+      this.log('All processes are running normally');
+    };
+  };
+  async generateReport() {}
+    this.log('Generating automation report...');
+    const report = {}
+      "timestamp": new Date().toISOString(),
+      "processes": await this.monitorProcesses(),
+      "logs": {}
+        errorMonitor: await this.getPM2Logs('error-monitor', 20),
+        "lintFixer": await this.getPM2Logs('lint-fixer', 20),
+        "buildMonitor": await this.getPM2Logs('build-monitor', 20),
+        "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
+    const reportFile = path.join(__dirname, "logs", "automation-report.json");
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1281,6 +1482,25 @@ class MasterAutomation {
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved to: ${reportFile}`);
+    return report;
+  }
+<<<<<<< HEAD
+
+  async start() {
+=======
+  async start() {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -1288,10 +1508,109 @@ class MasterAutomation {
   }
 
   async start() {
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    this.log("Master Automation started");
+    // Ensure logs directory exists
+    const logsDir = path.join(__dirname, "logs");
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+    // Start PM2 processes
+  };
+  async start() {}
+    this.log('Master Automation started');
+    // Ensure logs directory exists;
+    const logsDir = path.join(__dirname, 'logs');
+    if (!fs.existsSync(logsDir)) {}
+      fs.mkdirSync(logsDir, { "recursive": true }
+});
+    };
+    // Start PM2 processes;
+    await this.startPM2Processes();
+    // Perform initial health check;
+    await this.performHealthCheck();
+    // Set up periodic health checks every 30 minutes
+    setInterval(async () => {
+      await this.performHealthCheck();
+    }, 30 * 60 * 1000);
+    // Set up daily report generation
+    setInterval(async () => {
+      this.log("Generating daily report.");
+      await this.generateReport();
+    }, 24 * 60 * 60 * 1000);
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();
     this.log('🏁 Master Automation completed');
     return report;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+  }
+
+  async status() {
+    this.log('📊 Checking automation status...');
+
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
   }
 
   async status() {
@@ -1339,13 +1658,110 @@ class MasterAutomation {
   }
 }
 
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+  }
+  async status() {
+    this.log('📊 Checking automation status...');
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
 // CLI interface
+
+
+<<<<<<< HEAD
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+// CLI interface
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
 =======
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    case "start":
+      automation.start().catch(error => {
+        console.error("Master Automation failed: ", error);
+    // Set up periodic health checks every 30 minutes;
+    setInterval()
+      async () => {}
+        await this.performHealthCheck();
+      },
+      30 * 60 * 1000;
+    );
+    // Set up daily report generation;
+    setInterval()
+      async () => {}
+        this.log('Generating daily report...');
+        await this.generateReport();
+      },
+      24 * 60 * 60 * 1000;
+    );
+  };
+  async stop() {}
+    this.log('Stopping Master Automation...');
+    await this.stopPM2Processes();
+    this.log('Master Automation stopped');
+  };
+};
+// Handle command line arguments;
+if (require.main === module) {}
+  const automation = new MasterAutomation();
+  const command = process.argv[2];
+  switch (command) {}
+    case 'start':
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       automation
         .start()
         .then(report => {
@@ -1406,6 +1822,11 @@ module.exports = MasterAutomation;
         });
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
@@ -1422,7 +1843,11 @@ module.exports = MasterAutomation;
       console.log('Usage: node master-automation.cjs [start|status]');
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       process.exit(1);
+<<<<<<< HEAD
       break;
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
 }
 
@@ -1432,6 +1857,23 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 module.exports = MasterAutomation;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+module.exports = MasterAutomation;
+
+
+    default: 
+      console.log('Usage: node master-automation.cjs [start|status]');
+      process.exit(1);
+      break;
+  }
+}
+module.exports = MasterAutomation;
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -1442,6 +1884,20 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+module.exports = MasterAutomation;
+
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
 =======
 module.exports = MasterAutomation;
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
@@ -1449,7 +1905,11 @@ module.exports = MasterAutomation;
 =======
 module.exports = MasterAutomation;
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 module.exports = MasterAutomation;
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

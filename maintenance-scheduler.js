@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:corrupted_backup/maintenance-scheduler.js
+=======
+<<<<<<< HEAD:maintenance-scheduler.js
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:maintenance-scheduler.js
@@ -13,8 +18,12 @@
 =======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/maintenance-scheduler.js
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:maintenance-scheduler.js
+=======
+>>>>>>> main:corrupted_backup/maintenance-scheduler.js
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const fs = require("fs"); const { execSync } = require("child_process"); class $1 { constructor() { this.tasks = [ { name: "Security Audit",command: "npm audit",frequency: "daily" },{ name: "Dependency Updates",command: "npm outdated",frequency: "weekly" },{ name: "Code Quality Check",command: "node code-quality-checker.js",frequency: "daily" },{ name: "Performance Analysis",command: "node performance-analyzer.js",frequency: "weekly" } ],} ; runDailyMaintenance() {  this.tasks; .filter(task => task.frequency === "daily"); .forEach(task => { try {  execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} ; runWeeklyMaintenance() {  this.tasks; .filter(task => task.frequency === "weekly"); .forEach(task => { try {  execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else { }
 const fs = require("fs");
 const { execSync } = require("child_process");
@@ -61,6 +70,13 @@ if (arg === "daily") {
 <<<<<<< HEAD
 =======
 const fs = require("fs"); const { execSync } = require("child_process"); class $1 { constructor() { this.tasks = [ { name: "Security Audit",command: "npm audit",frequency: "daily" },{ name: "Dependency Updates",command: "npm outdated",frequency: "weekly" },{ name: "Code Quality Check",command: "node code-quality-checker.js",frequency: "daily" },{ name: "Performance Analysis",command: "node performance-analyzer.js",frequency: "weekly" } ],} ; runDailyMaintenance() { console.log("Running daily maintenance tasks..."); this.tasks; .filter(task => task.frequency === "daily"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} ; runWeeklyMaintenance() { console.log("Running weekly maintenance tasks..."); this.tasks; .filter(task => task.frequency === "weekly"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else { console.log("Usage: node maintenance-scheduler.js [daily|weekly]")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:maintenance-scheduler.js
+const fs = require("fs"); const { execSync } = require("child_process"); class $1 { constructor() { this.tasks = [ { name: "Security Audit",command: "npm audit",frequency: "daily" },{ name: "Dependency Updates",command: "npm outdated",frequency: "weekly" },{ name: "Code Quality Check",command: "node code-quality-checker.js",frequency: "daily" },{ name: "Performance Analysis",command: "node performance-analyzer.js",frequency: "weekly" } ],} ; runDailyMaintenance() { console.log("Running daily maintenance tasks..."); this.tasks; .filter(task => task.frequency === "daily"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} ; runWeeklyMaintenance() { console.log("Running weekly maintenance tasks..."); this.tasks; .filter(task => task.frequency === "weekly"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else { console.log("Usage: node maintenance-scheduler.js [daily|weekly]")}
+const fs = require("fs"); const { execSync } = require("child_process"); class $1 { constructor() { this.tasks = [ { name: "Security Audit",command: "npm audit",frequency: "daily" },{ name: "Dependency Updates",command: "npm outdated",frequency: "weekly" },{ name: "Code Quality Check",command: "node code-quality-checker.js",frequency: "daily" },{ name: "Performance Analysis",command: "node performance-analyzer.js",frequency: "weekly" } ],} ; runDailyMaintenance() { console.log("Running daily maintenance tasks..."); this.tasks; .filter(task => task.frequency === "daily"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} ; runWeeklyMaintenance() { console.log("Running weekly maintenance tasks..."); this.tasks; .filter(task => task.frequency === "weekly"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else { console.log("Usage: node maintenance-scheduler.js [daily|weekly]")}
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 <<<<<<< HEAD
@@ -85,6 +101,10 @@ const fs = require("fs"); const { execSync } = require("child_process"); class $
 =======
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/maintenance-scheduler.js
+<<<<<<< HEAD
 =======
 const fs = require("fs"); const { execSync } = require("child_process"); class $1 { constructor() { this.tasks = [ { name: "Security Audit",command: "npm audit",frequency: "daily" },{ name: "Dependency Updates",command: "npm outdated",frequency: "weekly" },{ name: "Code Quality Check",command: "node code-quality-checker.js",frequency: "daily" },{ name: "Performance Analysis",command: "node performance-analyzer.js",frequency: "weekly" } ],} ; runDailyMaintenance() { console.log("Running daily maintenance tasks..."); this.tasks; .filter(task => task.frequency === "daily"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} ; runWeeklyMaintenance() { console.log("Running weekly maintenance tasks..."); this.tasks; .filter(task => task.frequency === "weekly"); .forEach(task => { try { console.log(``Running: ${task.name}``); execSync(task.command,{ stdio: "inherit" })} catch (error) { console.error(`Failed: ${task.name}`,error.message)} })} } ; const scheduler = new MaintenanceScheduler(); const arg = process.argv[2]; if (arg === "daily") { scheduler.runDailyMaintenance()} else if (arg === "weekly") { scheduler.runWeeklyMaintenance()} else { console.log("Usage: node maintenance-scheduler.js [daily|weekly]")}
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:maintenance-scheduler.js
+=======
+>>>>>>> main:corrupted_backup/maintenance-scheduler.js
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -9,6 +9,10 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/automation-improvements-final
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -28,7 +32,16 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -63,6 +76,16 @@ export function Logo({ customLogo, customColor }) {}
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>";
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Link>;
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     </Link>;
 <<<<<<< HEAD
 >>>>>>> main
@@ -70,11 +93,16 @@ export function Logo({ customLogo, customColor }) {}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 =======
 >>>>>>> origin/main
 import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
@@ -92,6 +120,9 @@ export function Logo({ customLogo, customColor }) {
 
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     </Link>;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -133,6 +164,16 @@ import { Link } from 'react-router-dom'
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE'
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+export function Logo({ customLogo, customColor }) {
+  const logoColor = customColor || '#22D3EE';
+
+  return (
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 export function Logo({ customLogo, customColor }) {;
   const logoColor = customColor || '#22D3EE';
@@ -211,6 +252,11 @@ origin/automation-improvements-final
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
       </div>
     </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,6 +280,10 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 }
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   );
 <<<<<<< HEAD
 }
@@ -245,6 +295,10 @@ import _React from 'react'; import { Link } from 'react-router-dom'; export func
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 ,
@@ -330,4 +384,15 @@ origin/automation-improvements-final
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+,
+import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
+=======
+}
+>>>>>>> origin/main
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -11,6 +11,9 @@ export default {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 
@@ -22,7 +25,11 @@ module.exports = {;
 module && module.exports = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = {apps:[;
 
 
@@ -33,6 +40,7 @@ module.exports = {apps:[;
 
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
+<<<<<<< HEAD
 =======
 module.exports = {;
 module && module.exports = {;
@@ -52,6 +60,8 @@ module.exports = {;
       name:'error-fixer',;
       script:'automation/lint-error-fixer.cjs',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -60,6 +70,7 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
 <<<<<<< HEAD
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
@@ -69,15 +80,24 @@ module.exports = {;
       out_file:'./logs/error-fixer-out.log',;
       log_file:'./logs/error-fixer-combined.log',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      error_file:'./logs/error-fixer-error && error.log',;
+      out_file:'./logs/error-fixer-out && out.log',;
+      log_file:'./logs/error-fixer-combined && combined.log',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
 <<<<<<< HEAD
+<<<<<<< HEAD
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
 =======
       script:'automation/intelligent-orchestrator.cjs',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -87,6 +107,7 @@ module.exports = {;
         NODE_ENV:'production';
       },;
 <<<<<<< HEAD
+<<<<<<< HEAD
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
@@ -95,21 +116,33 @@ module.exports = {;
       out_file:'./logs/orchestrator-out.log',;
       log_file:'./logs/orchestrator-combined.log',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      error_file:'./logs/orchestrator-error && error.log',;
+      out_file:'./logs/orchestrator-out && out.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'automation-dashboard',;
 <<<<<<< HEAD
+<<<<<<< HEAD
       script:'automation/automation-dashboard && dashboard.cjs',;
 =======
       script:'automation/automation-dashboard.cjs',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      script:'automation/automation-dashboard && dashboard.cjs',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       args:'start',;
       instances:1,;
       autorestart:true,;
       watch:false,;
       max_memory_restart:'1G',;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       env:{;
         NODE_ENV:'production';
@@ -119,6 +152,7 @@ module.exports = {;
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
       log_file:'./logs/dashboard-combined && combined.log',;
+<<<<<<< HEAD
 =======
       env:{;
         NODE_ENV:'production',;
@@ -128,15 +162,21 @@ module.exports = {;
       out_file:'./logs/dashboard-out.log',;
       log_file:'./logs/dashboard-combined.log',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'code-quality-monitor',;
 <<<<<<< HEAD
+<<<<<<< HEAD
       script:'automation/code-quality-monitor && monitor.cjs',;
 =======
       script:'automation/code-quality-monitor.cjs',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      script:'automation/code-quality-monitor && monitor.cjs',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -144,6 +184,7 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
 <<<<<<< HEAD
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
@@ -153,15 +194,24 @@ module.exports = {;
       out_file:'./logs/code-quality-out.log',;
       log_file:'./logs/code-quality-combined.log',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      error_file:'./logs/code-quality-error && error.log',;
+      out_file:'./logs/code-quality-out && out.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     },;
     {;
       name:'performance-optimizer',;
 <<<<<<< HEAD
+<<<<<<< HEAD
       script:'automation/performance-optimizer && optimizer.cjs',;
 =======
       script:'automation/performance-optimizer.cjs',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      script:'automation/performance-optimizer && optimizer.cjs',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -170,10 +220,14 @@ module.exports = {;
         NODE_ENV:'production';
       },;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       error_file:'./logs/performance-error && error.log',;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
 
+<<<<<<< HEAD
 =======
       error_file:'./logs/performance-error.log',;
       out_file:'./logs/performance-out.log',;
@@ -260,6 +314,8 @@ module.exports = {apps:[;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       time:true;
     }
   ];
@@ -267,6 +323,13 @@ module.exports = {apps:[;
         NODE_ENV: 'production'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
       },
       error_file: './logs/performance-error && error.log',
@@ -274,6 +337,7 @@ module.exports = {apps:[;
       log_file: './logs/performance-combined && combined.log',
 
       time: true
+<<<<<<< HEAD
 =======
 module.exports = {
   apps: [{
@@ -390,6 +454,31 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
+=======
+=======
+    }
+  ]
+
+
+=======
+
+=======
+
+
+
+=======
+=======
+
+}
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> main
+export default {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   apps: [;
     {
 
@@ -734,6 +823,10 @@ module.exports = {
 
     }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps: [{
@@ -750,8 +843,18 @@ module && module.exports = {
 
 
 
+<<<<<<< HEAD
 =======
 =======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
@@ -765,6 +868,7 @@ module && module.exports = {
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+<<<<<<< HEAD
 =======
       },
       time: true
@@ -968,6 +1072,12 @@ export default {
       out_file: 'logs/pm2/syntax-fixer-out.log'
     }
   ]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = {
   apps: [{
     name: "ziontechgroup-site"
@@ -1286,6 +1396,8 @@ module && module.exports = {
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: "ziontechgroup - site",
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     script: "npm",
@@ -1317,6 +1429,10 @@ module && module.exports = {
       PORT: 3000;
     },
     max_memory_restart: "1G",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -1325,6 +1441,7 @@ module && module.exports = {
   }];
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1338,4 +1455,19 @@ module && module.exports = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    node_args: "--max-old-space-size=1024",
+    error_file: "./logs/err.log",
+    out_file: "./logs/out.log",
+    log_file: "./logs/combined.log",
+    time: true
+  }]
+};
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

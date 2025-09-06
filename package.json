@@ -65,6 +65,8 @@
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
+    "pm2:reload": "pm2 reload all",
+    "pm2:delete": "pm2 delete all",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
     "pm2:monit": "pm2 monit",
@@ -89,7 +91,7 @@
     "quality:analyze": "node scripts/automation/ai-code-quality-analyzer.cjs",
     "quality:fix": "npm run lint:fix && npm run type-check",
     "security:scan": "node scripts/automation/ai-security-intelligence.cjs",
-    "security:audit": "node scripts/security-audit.cjs",
+    "security:audit": "node scripts/security-audit.js",
     "performance:analyze": "node scripts/automation/ai-performance-predictor.cjs",
     "performance:optimize": "node scripts/automation/advanced-performance-optimizer.cjs",
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
@@ -136,7 +138,7 @@
     "syntax:start:continuous": "node automation/syntax-fix-launcher.js start continuous",
     "syntax:stop": "node automation/syntax-fix-launcher.js stop",
     "syntax:status": "node automation/syntax-fix-launcher.js status",
-    "syntax:quick-fix": "node automation/syntax-fix-launcher.cjs quick-fix",
+    "syntax:quick-fix": "node automation/syntax-fix-launcher.js quick-fix",
     "syntax:build-check": "node automation/syntax-fix-launcher.js build-check",
     "syntax:monitor": "node automation/syntax-error-monitor.js",
     "syntax:monitor:watch": "node automation/syntax-error-monitor.js --watch",
@@ -181,8 +183,8 @@
     "automation:log-analyzer": "node scripts/intelligent/log-analyzer.js",
     "automation:resource-optimizer": "node scripts/intelligent/resource-optimizer.js",
     "security:fix": "npm audit fix --force",
-    "sitemap": "node scripts/generate-sitemap-enhanced.js",
-    "sitemap:generate": "node scripts/generate-sitemap-enhanced.js",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "sitemap:generate": "node scripts/generate-sitemap.js",
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -200,13 +202,12 @@
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-    "perf:monitor": "node scripts/performance-monitor.cjs",
-    "perf:audit": "npm run perf:monitor",
-    "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "perf:monitor": "node scripts/performance-monitor.js",
+    "perf:audit": "npm run build:analyze",
+    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
-    "automation:code-quality-legacy": "node automation/code-quality.cjs",
     "format:check": "prettier --check .",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
@@ -244,7 +245,7 @@
     "build:production": "NODE_ENV=production npm run build",
     "error:detect": "node automation/intelligent-error-detector.cjs",
     "automation:enhanced": "node automation/enhanced-master-automation-orchestrator.cjs",
-    "optimize:images": "node scripts/optimize-images.cjs",
+    "optimize:images": "node scripts/optimize-images.js",
     "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "test:accessibility": "npx jest --testPathPatterns=accessibility",
     "test:performance": "npx jest --testPathPatterns=performance",
@@ -256,16 +257,13 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
-    "security:headers": "node scripts/security-headers.js",
-    "automation:ultimate": "node automation/ultimate-automation-suite.cjs",
-    "automation:fix": "node simple-automation-fixer.cjs",
-    "test:a11y": "node scripts/accessibility-tests.js"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
+    "@babel/core": "^7.28.4",
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -299,9 +297,14 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^2.3.0",
     "@sendgrid/mail": "^8.1.5",
+=======
+    "@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -337,7 +340,7 @@
     "import-fresh": "^3.3.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^14.2.5",
+    "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -348,16 +351,25 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.8.2",
-    "sharp": "^0.34.3",
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^15.7.3",
     "react-is": "^19.1.1",
+    "react-router-dom": "^7.8.2",
+    "sharp": "^0.34.3",
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
+<<<<<<< HEAD
     "tailwindcss-animate": "^1.0.7"
+=======
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.1.0",
+    "web-vitals": "^5.1.0"
+  },
+  "optionalDependencies": {
+    "@esbuild/linux-x64": "^0.25.9"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   },
   "devDependencies": {
     "@axe-core/cli": "^4.10.2",
@@ -366,6 +378,7 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@esbuild/linux-x64": "^0.25.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@netlify/plugin-nextjs": "^5.12.1",
@@ -380,8 +393,8 @@
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
-    "eslint": "^9.35.0",
     "axe-core": "^4.10.3",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -400,12 +413,27 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
+<<<<<<< HEAD
     "typescript": "^5.9.2"
+=======
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "web-vitals": "^5.1.0"
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
   },
+<<<<<<< HEAD
+=======
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"

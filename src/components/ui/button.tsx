@@ -1,13 +1,30 @@
+import React from "react";
+import Link from "next/link";
+
+interface ButtonProps {
+  children: React.ReactNode;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  disabled?: boolean;
+  style?: React.CSSProperties;
+}
+
+const Button: React.FC<ButtonProps> = ({
   children,
   href,
-  on_click,
+  onClick,
   type = "button",
   variant = "primary",
   size = "md",
-  class_name = "",
+  className = "",
   disabled = false,
-  style
+  style,
 }) => {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -60,6 +77,9 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses =
     "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+=======
+  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200";
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
   const sizeClasses = {
     sm: "px-3 py-1.5 text-sm",
@@ -70,14 +90,19 @@ const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
     secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+<<<<<<< HEAD
     outline:
       "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",
+=======
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   };
 
   const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
   const content = <>{children}</>;
 
+<<<<<<< HEAD
   if (href) {;
 
     return (
@@ -108,17 +133,37 @@ if ( {) {
       <Link href={href} className={classes} style={style}>;
         {content}
       </Link>);
+=======
+  if (href) {
+    return (
+      <Link href={href} className={classes} style={style}>
+        {content}
+      </Link>
+    );
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   }
+
   return (
-    <button;
+    <button
       type={type}
       className={classes}
-      on_click={on_click}
+      onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
 
     </button>;
+=======
+      style={style}
+    >
+      {content}
+    </button>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   );
 };
 
 export { Button };
+<<<<<<< HEAD
 export default Button;
+=======
+export default Button;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

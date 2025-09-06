@@ -2,8 +2,18 @@ import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeTog
 });'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 </ModeToggle>'
 =======
+=======
+<<<<<<< HEAD
+</ModeToggle>'
+=======
+<<<<<<< HEAD
+</ModeToggle>'
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 </ModeToggle>'
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======

@@ -1,15 +1,49 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+async function optimizeImages() {
+  const imagesDir = path.join(__dirname, 'public', 'images');
+  
+  if (fs.existsSync(imagesDir)) {
+    const files = fs.readdirSync(imagesDir);
+    
+    for (const file of files) {
+      if (file.match(/\.(jpg|jpeg|png|webp)$/i)) {
+        const inputPath = path.join(imagesDir, file);
+        const outputPath = path.join(imagesDir, `optimized-${file}`);
+        
+        await sharp(inputPath)
+          .resize(800, 600, { fit: 'inside', withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toFile(outputPath);
+      }
+    }
+  }
+}
+
+optimizeImages();
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 async function optimizeImages() {}
   const publicDir = path.join(process.cwd(), 'public;';);
   const images = [];
@@ -92,6 +126,7 @@ async function run() {
 run().catch((e)=>{ console.error(e); process.exit(1); });
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
 =======
 
 async function optimizeImages() {
@@ -116,3 +151,6 @@ async function optimizeImages() {
 
 optimizeImages();
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
