@@ -1,1 +1,20 @@
+<<<<<<< HEAD
 },
+=======
+// Content Security Policy configuration,
+export const cspConfig = {,
+  directives: {,
+    defaultSrc: ["'self],
+    styleSrc: ["'self'", unsafe-inline'", "https: //fonts.googleapis.com],
+    fontSrc: ["'self", https: //fonts.gstatic.com"],
+    imgSrc: ["'self', "data:", https: "],
+    scriptSrc: ["self'],
+    connectSrc: ["'self"],
+    frameSrc: ['none'"],
+    objectSrc: ["none'],
+    baseUri: ["'self"],
+    formAction: ['self'"],
+    upgradeInsecureRequests: []
+  };
+};
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663

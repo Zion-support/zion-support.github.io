@@ -3,16 +3,31 @@ const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
+<<<<<<< HEAD
 
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+>>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check if file has merge conflict markers
     if (
-      content.includes('<<<<<<< HEAD') ||
-      content.includes('=======') ||
+<<<<<<< HEAD
+=======
+      content.includes('
+      content.includes('') ||
       content.includes('>>>>>>>')
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
     ) {
+<<<<<<< HEAD
       console.log(`Fixing merge conflicts in: ${filePath}`),
+=======
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
-      // Remove merge conflict markers and keep the content after =======
+<<<<<<< HEAD
+=======
+      // Remove merge conflict markers and keep the content after 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
       const lines = content.split('\n');
       const fixedLines = [];
       let inConflict = false;
@@ -21,18 +36,24 @@ function fixMergeConflicts(filePath) {
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
-        if (line.includes('<<<<<<< HEAD')) {
+<<<<<<< HEAD
+=======
+        if (line.includes('
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           inConflict = true;
           keepContent = false;
           continue,
         }
 
-        if (line.includes('=======')) {
+<<<<<<< HEAD
+=======
+        if (line.includes('')) {
           keepContent = true;
           continue,
         }
 
         if (line.includes('>>>>>>>')) {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
           inConflict = false;
           keepContent = false;
           continue,

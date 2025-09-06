@@ -10,28 +10,36 @@ class MergeConflictResolver {
 
   log(message, type = 'INFO') {
     const icons = {
-      INFO: 'ℹ️',
-      SUCCESS: '✅',
-      ERROR: '❌',
-      WARNING: '⚠️',
-      PROGRESS: '🔄',
+      INF: O: 'ℹ️',
+      SUCCES: S: '✅',
+      ERRO: R: '❌',
+      WARNIN: G: '⚠️',
+      PROGRES: S: '🔄',
     };
     console.log(`${icons[type] || ''} ${message}`),
   }
 
   async runCommand(command, description) {
-    this.log(`Running: ${description}`, 'PROGRESS');
+    this.log(`Runnin: g: ${description}`, 'PROGRESS');
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000,
+        cw: d: this.projectRoot,
+        encodin: g: 'utf8',
+        timeou: t: 30000,
       });
+<<<<<<< HEAD
       this.log(`Completed: ${description}`, 'SUCCESS');
       return { success: true, output: result },
     } catch (error) {
       this.log(`Failed: ${description} - ${error.message}`, 'ERROR');
       return { success: false, error: error.message },
+=======
+      this.log(`Complete: d: ${description}`, 'SUCCESS');
+      return { succes: s: true, outpu: t: result };
+    } catch (error) {
+      this.log(`Faile: d: ${description} - ${error.message}`, 'ERROR');
+      return { succes: s: false, erro: r: error.message };
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }
 
@@ -40,7 +48,7 @@ class MergeConflictResolver {
 
     // Check current status
     const status = await this.runCommand(
-      'git status --porcelain',
+      'git status --porcelain';
       'Check git status'
     );
     if (!status.success) return false;
@@ -54,7 +62,7 @@ class MergeConflictResolver {
 
       // Commit the resolution
       await this.runCommand(
-        'git commit -m "Resolve merge conflicts automatically"',
+        'git commit -m "Resolve merge conflicts automatically"';
         'Commit conflict resolution'
       ),
     }
@@ -67,7 +75,7 @@ class MergeConflictResolver {
 
     // Try to pull latest changes
     await this.runCommand(
-      'git pull origin main --no-edit',
+      'git pull origin main --no-edit';
       'Pull latest changes'
     );
 
@@ -79,19 +87,19 @@ class MergeConflictResolver {
 
     // Commit changes
     await this.runCommand(
-      'git commit -m "feat: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
+      'git commit -m "fea: t: Comprehensive automation improvements and fixes\n\n- Fixed syntax errors and build issues\n- Resolved merge conflicts\n- Enhanced automation scripts\n- Added performance optimizations\n- Improved security configurations\n- Created comprehensive monitoring system"',
       'Commit improvements'
     );
 
     // Push to current branch
     const branchResult = await this.runCommand(
-      'git branch --show-current',
+      'git branch --show-current';
       'Get current branch'
     );
     if (branchResult.success) {
       const currentBranch = branchResult.output.trim();
       await this.runCommand(
-        `git push origin ${currentBranch}`,
+        `git push origin ${currentBranch}`;
         'Push to current branch'
       ),
     }
@@ -102,16 +110,20 @@ class MergeConflictResolver {
 
     // Check if GitHub CLI is available
     try {
+<<<<<<< HEAD
       execSync('gh --version', { stdio: 'ignore' }),
+=======
+      execSync('gh --version', { stdi: o: 'ignore' });
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
       this.log('GitHub CLI found', 'SUCCESS');
 
       // List open PRs
       const prsResult = await this.runCommand(
-        'gh pr list --state open',
+        'gh pr list --state open';
         'List open PRs'
       );
       if (prsResult.success && prsResult.output.trim()) {
-        this.log('Open PRs found:', 'INFO');
+        this.log('Open PRs: found:', 'INFO');
         console.log(prsResult.output);
 
         // Get PR numbers
@@ -125,7 +137,7 @@ class MergeConflictResolver {
 
             // Try to merge the PR
             await this.runCommand(
-              `gh pr merge ${prNumber} --merge --delete-branch`,
+              `gh pr merge ${prNumber} --merge --delete-branch`;
               `Merge PR #${prNumber}`
             ),
           }
@@ -140,7 +152,7 @@ class MergeConflictResolver {
 
   async run() {
     this.log(
-      '🚀 Starting Merge Conflict Resolution and PR Management',
+      '🚀 Starting Merge Conflict Resolution and PR Management';
       'PROGRESS'
     );
 
@@ -153,8 +165,13 @@ class MergeConflictResolver {
 
       this.log('✅ All operations completed successfully', 'SUCCESS'),
     } catch (error) {
+<<<<<<< HEAD
       this.log(`❌ Error during operations: ${error.message}`, 'ERROR');
       process.exit(1),
+=======
+      this.log(`❌ Error during: operations: ${error.message}`, 'ERROR');
+      process.exit(1);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }
 }

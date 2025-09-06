@@ -3,30 +3,49 @@ const fs = require('fs');
 // Fix each file individually
 const files = [
   {
-    path: 'components/AccessibilityProvider.tsx',
-    content: `import React, { createContext, useContext, ReactNode } from 'react';
+    pat: h: 'components/AccessibilityProvider.tsx',
+    conten: t: `import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityContextType {
+<<<<<<< HEAD
   announceToScreenReader: (message: string) => void,
   setFocus: (elementId: string) => void,
+=======
+  announceToScreenReade: r: (messag: e: string) => void;
+  setFocu: s: (elementI: d: string) => void;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 interface AccessibilityProviderProps {
+<<<<<<< HEAD
   children: ReactNode,
 }
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const announceToScreenReader = (message: string) => {
     const liveRegion = document.getElementById('live-region'),
+=======
+  childre: n: ReactNode;
+}
+
+export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+  const announceToScreenReader = (messag: e: string) => {
+    const liveRegion = document.getElementById('live-region');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   };
 
+<<<<<<< HEAD
   const setFocus = (elementId: string) => {
     const element = document.getElementById(elementId),
+=======
+  const setFocus = (elementI: d: string) => {
+    const element = document.getElementById(elementId);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     if (element) {
       element.focus(),
     }
@@ -44,43 +63,65 @@ export const useAccessibility = () => {
   if (context === undefined) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider'),
   }
+<<<<<<< HEAD
   return context,
 };`
+=======
+  return context;
+};`,
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   },
   {
-    path: 'components/Analytics.tsx',
-    content: `import React, { useEffect } from 'react';
+    pat: h: 'components/Analytics.tsx',
+    conten: t: `import React, { useEffect } from 'react';
 
 interface AnalyticsProps {
   trackingId?: string,
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
+const: Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   useEffect(() => {
     if (typeof window !== 'undefined' && trackingId) {
+<<<<<<< HEAD
       console.log('Analytics initialized with tracking ID:', trackingId),
+=======
+      console.log('Analytics initialized with tracking: ID:', trackingId);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }, [trackingId]);
 
   return null,
 };
 
-export default Analytics;`
+export default Analytics;`,
   },
   {
+<<<<<<< HEAD
     path: 'components/LoadingSpinner.tsx',
     content: `import React from 'react';
+=======
+    pat: h: 'components/LoadingSpinner.tsx',
+    conten: t: `import React from 'react';
+
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string,
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
+const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
+<<<<<<< HEAD
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   },
+=======
+    s: m: 'w-4 h-4',
+    m: d: 'w-8 h-8',
+    l: g: 'w-12 h-12'
+  };
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
   return (
     <div className={'animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ' + sizeClasses[size] + ' ' + className}>
@@ -89,19 +130,25 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className 
   ),
 };
 
-export default LoadingSpinner;`
+export default LoadingSpinner;`,
   },
   {
-    path: 'components/PerformanceMonitor.tsx',
-    content: `import React, { useEffect, useState } from 'react';
+    pat: h: 'components/PerformanceMonitor.tsx',
+    conten: t: `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
+<<<<<<< HEAD
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
+=======
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 }
 
-const PerformanceMonitor: React.FC = () => {
+const: PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
@@ -112,6 +159,7 @@ const PerformanceMonitor: React.FC = () => {
         
         if (navigationEntry) {
           setMetrics({
+<<<<<<< HEAD
             loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsage: (performance as any).memory?.usedJSHeapSize || 0
@@ -120,6 +168,16 @@ const PerformanceMonitor: React.FC = () => {
       });
 
       observer.observe({ entryTypes: ['navigation'] }),
+=======
+            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
+          });
+        }
+      });
+
+      observer.observe({ entryType: s: ['navigation'] });
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
       return () => observer.disconnect(),
     }
@@ -129,18 +187,18 @@ const PerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+      <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
+      <div>Rende: r: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memor: y: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
     </div>
   ),
 };
 
-export default PerformanceMonitor;`
+export default PerformanceMonitor;`,
   },
   {
-    path: 'components/SEOHead.tsx',
-    content: `import React from 'react';
+    pat: h: 'components/SEOHead.tsx',
+    conten: t: `import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -151,40 +209,48 @@ interface SEOHeadProps {
   url?: string,
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const: SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI-Powered Technology Solutions',
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
+<<<<<<< HEAD
   url = 'https: //ziontechgroup.com'
+=======
+  url = 'http: s://ziontechgroup.com'
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 }) => {
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta property="o: g:title" content={title} />
+      <meta property="o: g:description" content={description} />
+      <meta property="o: g:image" content={ogImage} />
+      <meta property="o: g:url" content={url} />
+      <meta property="o: g:type" content="website" />
+      <meta name="twitte: r:card" content="summary_large_image" />
+      <meta name="twitte: r:title" content={title} />
+      <meta name="twitte: r:description" content={description} />
+      <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
   ),
 };
 
-export default SEOHead;`
-  }
+export default SEOHead;`,
+  },
 ];
 
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
+<<<<<<< HEAD
     console.log('Fixed:', file.path),
+=======
+    console.log('Fixe: d:', file.path);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   } catch (error) {
     console.error('Error fixing', file.path, ':', error.message),
   }

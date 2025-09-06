@@ -3,71 +3,57 @@
 const fs = require('fs');
 const path = require('path');
 
-
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common syntax errors
-    // Remove extra commas and semicolons
-    content = content.replace(/;/g, ';');
-    content = content.replace(/,(\s*[;}])/g, '$1');
-    content = content.replace(/,(\s*\/\/)/g, '$1');
-    content = content.replace(/,(\s*\/\*)/g, '$1');
+    content = content
+      // Remove extra commas and semicolons
+      .replace(/,;/g, ';')
+      .replace(/,\s*;/g, ';')
+      .replace(/,\s*$/gm, '')
+      .replace(/;\s*$/gm, ';')
+      // Fix object syntax
+      .replace(/,(\s*[}\]])/g, '$1')
+      // Fix function parameters
+      .replace(/,\s*\)/g, ')')
+      // Fix JSX attributes
+      .replace(/,(\s*[>}])/g, '$1')
+      // Fix CSS class names
+      .replace(/:\s*([a-zA-Z-]+)\s*{/g, ':$1 {')
+      .replace(/:\s*not-([a-zA-Z-]+)/g, ':not-$1')
+      // Fix hover states
+      .replace(/hover:\s*([a-zA-Z-]+)/g, 'hover:$1')
+      // Fix focus states
+      .replace(/focus:\s*([a-zA-Z-]+)/g, 'focus:$1')
+      // Fix group hover
+      .replace(/group-hover:\s*([a-zA-Z-]+)/g, 'group-hover:$1')
+      // Fix missing imports
+      .replace(/^import\s+React[^;]*;\s*$/gm, (match) => {
+        if (!match.includes('{')) {
+          return match.replace('React', 'React, { useState, useEffect }');
+        }
+        return match;
+      })
+      // Fix missing export
+      .replace(/^const\s+(\w+):\s*React\.FC[^;]*$/gm, (match, name) => {
+        if (!content.includes(`export default ${name}`)) {
+          return match + `\n\nexport default ${name};`;
+        }
+        return match;
+      });
     
-    // Fix JSX syntax issues
-    content = content.replace(/,(\s*<)/g, '$1');
-    content = content.replace(/,(\s*{)/g, '$1');
-    content = content.replace(/,(\s*})/g, '$1');
-    
-    // Fix object syntax
-    content = content.replace(/,(\s*})/g, '$1');
-    content = content.replace(/,(\s*])/g, '$1');
-    
-    // Fix function parameters
-    content = content.replace(/,(\s*\))/g, '$1');
-    
-    // Fix class names with spaces
-    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
-    
-    // Fix hover states
-    content = content.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
-    
-    // Fix focus states
-    content = content.replace(/focus:\s+([a-zA-Z-]+)/g, 'focus:$1');
-    
-    // Fix group hover
-    content = content.replace(/group-hover:\s+([a-zA-Z-]+)/g, 'group-hover:$1');
-    
-    // Fix not-sr-only
-    content = content.replace(/not-sr-only/g, 'not-sr-only');
-    
-    // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
-      content = "import React from 'react';\n" + content;
-    }
-    
-    // Fix missing export
-    if (content.includes('const ') && !content.includes('export default') && !content.includes('export ')) {
-      const componentName = content.match(/const\s+([A-Z][a-zA-Z0-9]*)/);
-      if (componentName) {
-        content += `\n\nexport default ${componentName[1]};`;
-      }
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dir) {
+function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
@@ -76,7 +62,7 @@ function fixFilesInDirectory(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      fixedCount += fixFilesInDirectory(filePath);
+      fixedCount += findAndFixFiles(filePath);
     } else if (file.match(/\.(tsx?|jsx?)$/)) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
@@ -87,22 +73,11 @@ function fixFilesInDirectory(dir) {
   return fixedCount;
 }
 
-// Main execution
 console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixFiles('/workspace/components');
+console.log(`Fixed ${fixedCount} files in components directory`);
 
-const componentsDir = path.join(__dirname, 'components');
-const hooksDir = path.join(__dirname, 'hooks');
+const hooksFixedCount = findAndFixFiles('/workspace/hooks');
+console.log(`Fixed ${hooksFixedCount} files in hooks directory`);
 
-let totalFixed = 0;
-
-if (fs.existsSync(componentsDir)) {
-  console.log('Fixing components directory...');
-  totalFixed += fixFilesInDirectory(componentsDir);
-}
-
-if (fs.existsSync(hooksDir)) {
-  console.log('Fixing hooks directory...');
-  totalFixed += fixFilesInDirectory(hooksDir);
-}
-
-console.log(`Fixed ${totalFixed} files`);
+console.log('Syntax error fixes completed!');

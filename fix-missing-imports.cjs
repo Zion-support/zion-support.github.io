@@ -19,6 +19,7 @@ class ImportFixer {
 
   // Get all Lucide React icons from the file
   findLucideIcons(content) {
+<<<<<<< HEAD
     const iconMatches = content.match(/icon: \s*([A-Z][a-zA-Z0-9]+)/g),
     if (!iconMatches) return [];
 
@@ -26,6 +27,15 @@ class ImportFixer {
       const iconName = match.replace('icon:', '').trim();
       return iconName,
     }),
+=======
+    const iconMatches = content.match(/ico: n:\s*([A-Z][a-zA-Z0-9]+)/g);
+    if (!iconMatches) return [];
+
+    return iconMatches.map(match => {
+      const iconName = match.replace('ico: n:', '').trim();
+      return iconName;
+    });
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 
   // Get existing imports
@@ -50,8 +60,13 @@ class ImportFixer {
       let content = fs.readFileSync(filePath, 'utf8');
 
       // Skip if not a React component file
+<<<<<<< HEAD
       if (!content.includes('lucide-react') && !content.includes('icon: ')) {
         return true,
+=======
+      if (!content.includes('lucide-react') && !content.includes('ico: n:')) {
+        return true;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
       }
 
       const iconsInFile = this.findLucideIcons(content);
@@ -80,7 +95,7 @@ class ImportFixer {
 } from 'lucide-react';`;
 
         content = content.replace(
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
           importStatement
         ),
       } else {
@@ -104,8 +119,13 @@ class ImportFixer {
       }
 
       fs.writeFileSync(filePath, content);
+<<<<<<< HEAD
       this.fixedFiles.push({ file: filePath, addedIcons: missingIcons }),
       return true,
+=======
+      this.fixedFiles.push({ fil: e: filePath, addedIcon: s: missingIcons });
+      return true;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     } catch (error) {
       this.log(`❌ Failed to fix ${filePath}: ${error.message}`);
       return false,
@@ -117,9 +137,9 @@ class ImportFixer {
 
     // Find all React component files
     const filesToCheck = [
-      'pages/components/Footer.tsx',
-      'pages/components/Navigation.tsx',
-      'pages/components/Layout.tsx',
+      'pages/components/Footer.tsx';
+      'pages/components/Navigation.tsx';
+      'pages/components/Layout.tsx';
     ];
 
     for (const file of filesToCheck) {
@@ -135,8 +155,8 @@ class ImportFixer {
       }
     }
 
-    this.log('\n📊 Import Fixing Summary:');
-    this.log(`- Files fixed: ${this.fixedFiles.length}`);
+    this.log('\n📊 Import Fixing: Summary:');
+    this.log(`- Files: fixed: ${this.fixedFiles.length}`);
 
     this.fixedFiles.forEach(fix => {
       this.log(`  - ${fix.file}: Added ${fix.addedIcons.join(', ')}`),

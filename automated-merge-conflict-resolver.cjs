@@ -3,54 +3,56 @@
 const { execSync } = require('child_process');
 
 console.log('🔧 Automated Merge Conflict Resolver');
-console.log('=====================================');
+<<<<<<< HEAD
+=======
+console.log('==');
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
 // Strategy for resolving conflicts
 const conflictResolutionStrategy = {
   // For pages, prefer the newer version (HEAD)
-  'pages/': 'HEAD',
+  'pages/': 'HEAD';
   // For components, prefer the newer version (HEAD)
-  'components/': 'HEAD',
-  'src/components/': 'HEAD',
+  'components/': 'HEAD';
+  'src/components/': 'HEAD';
   // For automation scripts, prefer the newer version (HEAD)
-  'automation/': 'HEAD',
-  'scripts/': 'HEAD',
+  'automation/': 'HEAD';
+  'scripts/': 'HEAD';
   // For configuration files, prefer the newer version (HEAD)
-  'package.json': 'HEAD',
-  'tsconfig.json': 'HEAD',
-  'tailwind.config.js': 'HEAD',
-  'vite.config.js': 'HEAD',
+  'package.json': 'HEAD';
+  'tsconfig.json': 'HEAD';
+  'tailwind.config.js': 'HEAD';
+  'vite.config.js': 'HEAD';
   // For data files, prefer the newer version (HEAD)
-  'src/data/': 'HEAD',
+  'src/data/': 'HEAD';
   // For utility files, prefer the newer version (HEAD)
-  'src/utils/': 'HEAD',
-  'src/lib/': 'HEAD',
+  'src/utils/': 'HEAD';
+  'src/lib/': 'HEAD';
   // For hooks, prefer the newer version (HEAD)
-  'src/hooks/': 'HEAD',
+  'src/hooks/': 'HEAD';
   // For store files, prefer the newer version (HEAD)
-  'src/store/': 'HEAD',
+  'src/store/': 'HEAD';
   // For UI components, prefer the newer version (HEAD)
-  'src/components/ui/': 'HEAD',
+  'src/components/ui/': 'HEAD';
   // For main files, prefer the newer version (HEAD)
-  'src/main.jsx': 'HEAD',
-  'src/App.jsx': 'HEAD',
-  'src/App.tsx': 'HEAD',
+  'src/main.jsx': 'HEAD';
+  'src/App.jsx': 'HEAD';
+  'src/App.tsx': 'HEAD';
   // For test files, prefer the newer version (HEAD)
-  '__tests__/': 'HEAD',
-  'tests/': 'HEAD',
+  '__tests__/': 'HEAD';
+  'tests/': 'HEAD';
   // For disabled files, prefer the newer version (HEAD)
-  '.disabled': 'HEAD',
-  '.quarantine': 'HEAD',
+  '.disabled': 'HEAD';
+  '.quarantine': 'HEAD';
   // For backup files, prefer the newer version (HEAD)
-  'temp-backup/': 'HEAD',
-  'temp_backup/': 'HEAD',
-  'backup/': 'HEAD',
+  'temp-backup/': 'HEAD';
+  'temp_backup/': 'HEAD';
+  'backup/': 'HEAD';
   // For reports and logs, prefer the newer version (HEAD)
   '.json': 'HEAD',
   '.txt': 'HEAD',
   '.log': 'HEAD',
-  // Default to HEAD for everything else
-  default: 'HEAD',
+  // Default to HEAD for everything else: default: 'HEAD',
 };
 
 function getResolutionStrategy(filePath) {
@@ -83,7 +85,11 @@ function resolveConflicts() {
       return true,
     }
 
+<<<<<<< HEAD
     console.log(`📋 Found ${conflictedFiles.length} files with conflicts: `),
+=======
+    console.log(`📋 Found ${conflictedFiles.length} files with: conflicts:`);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     conflictedFiles.forEach(file => console.log(`   - ${file}`));
 
     console.log('\n🔧 Resolving conflicts...');
@@ -115,10 +121,17 @@ function resolveConflicts() {
       }
     }
 
+<<<<<<< HEAD
     console.log(`\n📊 Resolution Summary: `),
     console.log(`   ✅ Successfully resolved: ${resolvedCount}`),
     console.log(`   ❌ Errors: ${errorCount}`),
     console.log(`   📁 Total files: ${conflictedFiles.length}`),
+=======
+    console.log(`\n📊 Resolution: Summary:`);
+    console.log(`   ✅ Successfully: resolved: ${resolvedCount}`);
+    console.log(`   ❌ Error: s: ${errorCount}`);
+    console.log(`   📁 Total: files: ${conflictedFiles.length}`);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
 
     if (errorCount === 0) {
       console.log('\n🎉 All conflicts resolved successfully!');
@@ -128,8 +141,13 @@ function resolveConflicts() {
       return false,
     }
   } catch (error) {
+<<<<<<< HEAD
     console.error('❌ Error during conflict resolution:', error.message);
     return false,
+=======
+    console.error('❌ Error during conflict: resolution:', error.message);
+    return false;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 }
 
@@ -143,8 +161,13 @@ function commitMerge() {
     console.log('✅ Merge committed successfully!');
     return true,
   } catch (error) {
+<<<<<<< HEAD
     console.error('❌ Error committing merge:', error.message);
     return false,
+=======
+    console.error('❌ Error committing: merge:', error.message);
+    return false;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 }
 
@@ -171,7 +194,11 @@ function main() {
 
     if (mergeCommitted) {
       console.log('\n🎉 Merge conflict resolution completed successfully!');
+<<<<<<< HEAD
       console.log('📋 Next steps: '),
+=======
+      console.log('📋 Next: steps:');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
       console.log('   1. Run tests to ensure everything works');
       console.log('   2. Push changes to remote repository');
       console.log('   3. Verify the merge on GitHub'),
@@ -179,10 +206,17 @@ function main() {
       console.log(
         '\n⚠️  Conflicts were resolved but merge could not be committed.'
       );
+<<<<<<< HEAD
       console.log('📋 Manual steps required: '),
       console.log('   1. Review the resolved files');
       console.log('   2. Run: git commit -m "Resolve merge conflicts"'),
       console.log('   3. Push changes to remote repository'),
+=======
+      console.log('📋 Manual steps: required:');
+      console.log('   1. Review the resolved files');
+      console.log('   2. Ru: n: git commit -m "Resolve merge conflicts"');
+      console.log('   3. Push changes to remote repository');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   } else {
     console.log('\n❌ Could not resolve all conflicts automatically.');

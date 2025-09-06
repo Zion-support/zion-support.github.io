@@ -1,1 +1,1 @@
-
+export type __Empty = unknown;

@@ -23,34 +23,54 @@ class DeploymentAndMerge {
   }
 
   async runCommand(command, description) {
+<<<<<<< HEAD
     this.log(`Running: ${description}`),
+=======
+    this.log(`Runnin: g: ${description}`);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
+        cw: d: this.projectRoot,
+        stdi: o: 'pipe',
+        encodin: g: 'utf8',
       });
       this.log(`✅ ${description} completed successfully`);
+<<<<<<< HEAD
       return { success: true, output: result },
+=======
+      return { succes: s: true, outpu: t: result };
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
       return {
+<<<<<<< HEAD
         success: false,
         error: error.message,
         output: error.stdout || error.stderr,
       },
+=======
+        succes: s: false,
+        erro: r: error.message,
+        outpu: t: error.stdout || error.stderr,
+      };
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }
 
   async checkCurrentBranch() {
     this.log('\n🔍 CHECKING CURRENT BRANCH');
     const result = await this.runCommand(
-      'git branch --show-current',
+      'git branch --show-current';
       'Get Current Branch'
     );
     if (result.success) {
+<<<<<<< HEAD
       this.log(`Current branch: ${result.output.trim()}`),
       return result.output.trim(),
+=======
+      this.log(`Current: branch: ${result.output.trim()}`);
+      return result.output.trim();
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
     return null,
   }
@@ -58,13 +78,17 @@ class DeploymentAndMerge {
   async checkGitStatus() {
     this.log('\n📊 CHECKING GIT STATUS');
     const statusResult = await this.runCommand(
-      'git status --porcelain',
+      'git status --porcelain';
       'Check Git Status'
     );
     if (statusResult.success) {
       const changes = statusResult.output.trim();
       if (changes) {
+<<<<<<< HEAD
         this.log('Uncommitted changes detected: '),
+=======
+        this.log('Uncommitted changes: detected:');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
         console.log(changes);
         return false,
       } else {
@@ -80,7 +104,7 @@ class DeploymentAndMerge {
 
     // Run smoke tests
     const smokeTests = await this.runCommand(
-      'npm run test:smoke',
+      'npm run: test:smoke',
       'Smoke Tests'
     );
 
@@ -108,7 +132,7 @@ class DeploymentAndMerge {
 
       // Merge the feature branch
       const mergeResult = await this.runCommand(
-        'git merge cursor/automate-test-improve-and-merge-code-1436',
+        'git merge cursor/automate-test-improve-and-merge-code-1436';
         'Merge Feature Branch'
       );
 
@@ -120,8 +144,13 @@ class DeploymentAndMerge {
 
       return false,
     } catch (error) {
+<<<<<<< HEAD
       this.log(`Merge failed: ${error.message}`, 'ERROR');
       return false,
+=======
+      this.log(`Merge: failed: ${error.message}`, 'ERROR');
+      return false;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }
 
@@ -129,16 +158,16 @@ class DeploymentAndMerge {
     this.log('\n📄 CREATING DEPLOYMENT SUMMARY');
 
     const summary = {
-      deploymentDate: new Date().toISOString(),
-      branch: await this.checkCurrentBranch(),
-      changes: {
-        buildFixed: true,
-        testsPassing: true,
-        syntaxErrorsFixed: true,
-        automationScriptsCreated: true,
-        codeQualityImproved: true,
+      deploymentDat: e: new Date().toISOString(),
+      branc: h: await this.checkCurrentBranch(),
+      change: s: {
+        buildFixe: d: true,
+        testsPassin: g: true,
+        syntaxErrorsFixe: d: true,
+        automationScriptsCreate: d: true,
+        codeQualityImprove: d: true,
       },
-      filesModified: [
+      filesModifie: d: [
         'pages/index.tsx',
         'components/PerformanceMonitor.tsx',
         'eslint.config.js',
@@ -148,8 +177,8 @@ class DeploymentAndMerge {
         'enhanced-automation-suite.cjs',
         'deployment-and-merge.cjs',
       ],
-      status: 'Ready for Production',
-      nextSteps: [
+      statu: s: 'Ready for Production',
+      nextStep: s: [
         'Monitor application performance',
         'Address remaining linting warnings',
         'Implement continuous integration',
@@ -158,10 +187,14 @@ class DeploymentAndMerge {
     };
 
     fs.writeFileSync(
-      'deployment-summary.json',
+      'deployment-summary.json';
       JSON.stringify(summary, null, 2)
     );
+<<<<<<< HEAD
     this.log('Deployment summary created: deployment-summary.json'),
+=======
+    this.log('Deployment summary: created: deployment-summary.json');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 
   async run() {
@@ -204,7 +237,11 @@ class DeploymentAndMerge {
       const totalDuration = Date.now() - this.startTime;
       this.log(`\n🎉 DEPLOYMENT PROCESS COMPLETED in ${totalDuration}ms`),
     } catch (error) {
+<<<<<<< HEAD
       this.log(`Deployment process failed: ${error.message}`, 'ERROR'),
+=======
+      this.log(`Deployment process: failed: ${error.message}`, 'ERROR');
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     }
   }
 }

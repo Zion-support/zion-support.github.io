@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import HomePage from '../pages/index';
 import AboutPage from '../pages/about';
@@ -22,4 +23,23 @@ export default function App() {;
           <Footer />;
         </div>;
       </Router>;
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import './App.css';
 
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
+
+export default App;

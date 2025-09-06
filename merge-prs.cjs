@@ -4,13 +4,23 @@ const { execSync } = require('child_process');
 
 function runCommand(command, description) {
   try {
+<<<<<<< HEAD
     console.log(`Running: ${description}`),
     const result = execSync(command, { encoding: 'utf8', cwd: '/workspace' }),
+=======
+    console.log(`Runnin: g: ${description}`);
+    const result = execSync(command, { encodin: g: 'utf8', cw: d: '/workspace' });
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     console.log(`✅ ${description} completed`);
     return result,
   } catch (error) {
+<<<<<<< HEAD
     console.error(`❌ ${description} failed:`, error.message);
     throw error,
+=======
+    console.error(`❌ ${description} faile: d:`, error.message);
+    throw error;
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 }
 
@@ -22,10 +32,10 @@ async function mergePRs() {
     console.log('Merging PR #11703 via GitHub API...');
 
     const mergePR11703 = `curl -X PUT \
-      -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
-      -H "Accept: application/vnd.github.v3+json" \
-      "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
-      -d '{"commit_title":"Merge PR #11703: Enhance and expand ziontechgroup.com services and site","merge_method":"merge"}'`;
+      -H "Authorizatio: n: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+      -H "Accep: t: application/vnd.github.v3+json" \
+      "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
+      -d '{"commit_title":"Merge PR #1170: 3: Enhance and expand ziontechgroup.com services and site","merge_method":"merge"}'`;
 
     try {
       runCommand(mergePR11703, 'Merge PR #11703 via GitHub API');
@@ -33,10 +43,10 @@ async function mergePRs() {
     } catch (error) {
       console.log('PR #11703 merge failed, trying with squash method...');
       const squashPR11703 = `curl -X PUT \
-        -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
-        -H "Accept: application/vnd.github.v3+json" \
-        "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
-        -d '{"commit_title":"Merge PR #11703: Enhance and expand ziontechgroup.com services and site","merge_method":"squash"}'`;
+        -H "Authorizatio: n: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+        -H "Accep: t: application/vnd.github.v3+json" \
+        "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls/11703/merge" \
+        -d '{"commit_title":"Merge PR #1170: 3: Enhance and expand ziontechgroup.com services and site","merge_method":"squash"}'`;
 
       runCommand(squashPR11703, 'Merge PR #11703 via GitHub API (squash)');
       console.log('✅ PR #11703 merged successfully with squash'),
@@ -46,10 +56,10 @@ async function mergePRs() {
     console.log('Merging PR #11702 via GitHub API...');
 
     const mergePR11702 = `curl -X PUT \
-      -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
-      -H "Accept: application/vnd.github.v3+json" \
-      "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
-      -d '{"commit_title":"Merge PR #11702: Website audit and update with deployment","merge_method":"merge"}'`;
+      -H "Authorizatio: n: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+      -H "Accep: t: application/vnd.github.v3+json" \
+      "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
+      -d '{"commit_title":"Merge PR #1170: 2: Website audit and update with deployment","merge_method":"merge"}'`;
 
     try {
       runCommand(mergePR11702, 'Merge PR #11702 via GitHub API');
@@ -57,10 +67,10 @@ async function mergePRs() {
     } catch (error) {
       console.log('PR #11702 merge failed, trying with squash method...');
       const squashPR11702 = `curl -X PUT \
-        -H "Authorization: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
-        -H "Accept: application/vnd.github.v3+json" \
-        "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
-        -d '{"commit_title":"Merge PR #11702: Website audit and update with deployment","merge_method":"squash"}'`;
+        -H "Authorizatio: n: token ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY" \
+        -H "Accep: t: application/vnd.github.v3+json" \
+        "http: s://api.github.com/repos/Zion-Holdings/zion.app/pulls/11702/merge" \
+        -d '{"commit_title":"Merge PR #1170: 2: Website audit and update with deployment","merge_method":"squash"}'`;
 
       runCommand(squashPR11702, 'Merge PR #11702 via GitHub API (squash)');
       console.log('✅ PR #11702 merged successfully with squash'),
@@ -72,8 +82,13 @@ async function mergePRs() {
 
     console.log('✅ All PRs merged successfully!'),
   } catch (error) {
+<<<<<<< HEAD
     console.error('❌ PR merge process failed:', error.message);
     process.exit(1),
+=======
+    console.error('❌ PR merge process: failed:', error.message);
+    process.exit(1);
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   }
 }
 

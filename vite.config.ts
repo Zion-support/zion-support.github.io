@@ -9,11 +9,19 @@ export default defineConfig({
       jsxRuntime: 'automatic'
     }),
     splitVendorChunkPlugin()
+<<<<<<< HEAD
   ];
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     };
+=======
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src')
+    },
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
     extensions: ['.js.jsx.ts.tsx']
   },
   build: {
@@ -25,6 +33,7 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['reactreact-dom'],
           'ui-vendor': [
+<<<<<<< HEAD
             '@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar@radix-ui/react-checkbox';
             '@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu@radix-ui/react-hover-card';
             '@radix-ui/react-label@radix-ui/react-menubar@radix-ui/react-navigation-menu@radix-ui/react-popover';
@@ -36,6 +45,19 @@ export default defineConfig({
           'utils-vendor': ['clsxtailwind-mergeclass-variance-authority'];
           'icons-vendor': ['lucide-react'];
           'state-vendor': ['@reduxjs/toolkitreact-redux'];
+=======
+            '@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar@radix-ui/react-checkbox',
+            '@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu@radix-ui/react-hover-card',
+            '@radix-ui/react-label@radix-ui/react-menubar@radix-ui/react-navigation-menu@radix-ui/react-popover',
+            '@radix-ui/react-progress@radix-ui/react-radio-group@radix-ui/react-scroll-area@radix-ui/react-select',
+            '@radix-ui/react-separator@radix-ui/react-slider@radix-ui/react-slot@radix-ui/react-switch',
+            '@radix-ui/react-tabs@radix-ui/react-toast@radix-ui/react-toggle@radix-ui/react-tooltip'
+          ],
+          'animation-vendor': ['framer-motion'],
+          'utils-vendor': ['clsxtailwind-mergeclass-variance-authority'],
+          'icons-vendor': ['lucide-react'],
+          'state-vendor': ['@reduxjs/toolkitreact-redux'],
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
           'router-vendor': ['react-router-dom']
         };
         chunkFileNames: 'js/[name]-[hash].js',
@@ -76,11 +98,19 @@ export default defineConfig({
   optimizeDeps: {
     include: [
       'reactreact-domreact-router-domframer-motion',
+<<<<<<< HEAD
       'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar';
       '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu';
       '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group';
       '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider';
       '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast';
+=======
+      'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider',
+      '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast',
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
       '@radix-ui/react-tooltip'
     ];
     exclude: ['@radix-ui/react-icons'],
@@ -115,7 +145,11 @@ export default defineConfig({
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+<<<<<<< HEAD
   };
+=======
+  },
+>>>>>>> ccdd1b4701657f2e5447560df8faa58943638663
   envPrefix: ['VITE_ZION_'],
   experimental: {
     renderBuiltUrl(filename, { hostType }) {
