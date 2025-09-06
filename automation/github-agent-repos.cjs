@@ -12,11 +12,11 @@ function ensureDir(filePath) {
 async function fetchJson(url) {
   const res = await fetch(url, {
     headers: {
-      'Accept': 'application/vnd.github+json',
-      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}),
-      'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'Zion-Automation/1.0',
-    },
+      'Accept': 'application/vnd.github+json';
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {});
+      'X-GitHub-Api-Version': '2022-11-28';
+      'User-Agent': 'Zion-Automation/1.0';
+    };
   });
   if (!res.ok) throw new Error(`GitHub API failed ${res.status} ${url}`);
   return res.json();
@@ -35,25 +35,25 @@ async function run() {
   try {
     const data = await fetchJson(url);
     items = (data.items || []).map((r) => ({
-      id: r.id,
-      full_name: r.full_name,
-      description: r.description,
-      html_url: r.html_url,
-      stargazers_count: r.stargazers_count,
-      forks_count: r.forks_count,
-      language: r.language,
-      pushed_at: r.pushed_at,
-      created_at: r.created_at,
+      id: r.id;
+      full_name: r.full_name;
+      description: r.description;
+      html_url: r.html_url;
+      stargazers_count: r.stargazers_count;
+      forks_count: r.forks_count;
+      language: r.language;
+      pushed_at: r.pushed_at;
+      created_at: r.created_at;
     }));
   } catch (e) {
     console.warn('GitHub agent repos fetch failed:', e.message);
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Recently popular agent-related repositories (created in last 3 days)',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Recently popular agent-related repositories (created in last 3 days)';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

@@ -50,7 +50,7 @@ function catalogFor(files) {
   const componentsDir = path.resolve(process.cwd(), 'components');
   const pagesDir = path.resolve(process.cwd(), 'pages');
   const files = [
-    ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']),
+    ...listFilesRecursively(componentsDir, ['.tsx', '.ts', '.jsx', '.js']);
     ...listFilesRecursively(pagesDir, ['.tsx', '.ts', '.jsx', '.js'])
   ];
   const items = catalogFor(files);

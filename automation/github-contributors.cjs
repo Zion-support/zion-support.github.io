@@ -14,11 +14,11 @@ function ensureDir(filePath) {
 async function fetchJson(url) {
   const res = await fetch(url, {
     headers: {
-      'Accept': 'application/vnd.github+json',
-      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {}),
-      'X-GitHub-Api-Version': '2022-11-28',
-      'User-Agent': 'Zion-Automation/1.0',
-    },
+      'Accept': 'application/vnd.github+json';
+      ...(GITHUB_TOKEN ? { Authorization: `Bearer ${GITHUB_TOKEN}` } : {});
+      'X-GitHub-Api-Version': '2022-11-28';
+      'User-Agent': 'Zion-Automation/1.0';
+    };
   });
   if (!res.ok) throw new Error(`GitHub API failed ${res.status} ${url}`);
   return res.json();
@@ -30,21 +30,21 @@ async function run() {
   try {
     const data = await fetchJson(url);
     items = (data || []).map((c) => ({
-      login: c.login || c.name,
-      contributions: c.contributions,
-      avatar_url: c.avatar_url,
-      html_url: c.html_url,
-      type: c.type || 'User',
+      login: c.login || c.name;
+      contributions: c.contributions;
+      avatar_url: c.avatar_url;
+      html_url: c.html_url;
+      type: c.type || 'User';
     }));
   } catch (e) {
     console.warn('Contributors fetch failed:', e.message);
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'Recent contributors for this repository',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'Recent contributors for this repository';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

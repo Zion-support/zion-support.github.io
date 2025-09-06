@@ -31,12 +31,12 @@ async function main() {
       const text = en[key];
       const langName = lng === 'pt' ? 'Portuguese' : lng === 'es' ? 'Spanish' : 'Arabic';
       const completion = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
+        model: 'gpt-4o-mini';
         messages: [
-          { role: 'system', content: 'Translate UI labels precisely. Output only the translated text.' },
-          { role: 'user', content: `Translate into ${langName}: ${text}` },
-        ],
-        temperature: 0.1,
+          { role: 'system', content: 'Translate UI labels precisely. Output only the translated text.' };
+          { role: 'user', content: `Translate into ${langName}: ${text}` };
+        ];
+        temperature: 0.1;
       });
       const translated = completion.choices?.[0]?.message?.content?.trim();
       if (translated) cur[key] = translated;

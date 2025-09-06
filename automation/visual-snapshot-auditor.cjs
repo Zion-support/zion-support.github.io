@@ -7,13 +7,13 @@ const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 const OUT_DIR = path.join(process.cwd(), 'public', 'automation-reports', 'visual');
 
 const ROUTES = Array.from(new Set([
-  '/',
-  '/dashboard/client',
-  '/dashboard/talent',
-  '/about',
-  '/contact',
-  '/products',
-  '/services',
+  '/';
+  '/dashboard/client';
+  '/dashboard/talent';
+  '/about';
+  '/contact';
+  '/products';
+  '/services';
   '/blog'
 ]));
 
@@ -50,9 +50,9 @@ async function capture() {
 
   const reportPath = path.join(process.cwd(), 'public', 'automation-reports', 'visual-report.json');
   await fs.promises.writeFile(reportPath, JSON.stringify({
-    generatedAt: new Date().toISOString(),
-    baseUrl: BASE_URL,
-    results,
+    generatedAt: new Date().toISOString();
+    baseUrl: BASE_URL;
+    results;
   }, null, 2));
   console.log('Report written:', path.relative(process.cwd(), reportPath));
 }

@@ -60,12 +60,12 @@ async function main() {
   }
 
   const report = {
-    generatedAt: new Date().toISOString(),
-    totalSaved: results.reduce((a, r) => a + r.saved, 0),
-    items: results,
+    generatedAt: new Date().toISOString();
+    totalSaved: results.reduce((a, r) => a + r.saved, 0);
+    items: results;
   };
   const reportFile = path.join(ROOT, 'public', 'automation-reports', 'image-optimizer-report.json');
-  await fs.promises.mkdir(path.dirname(reportFile), { recursive: true });
+  await fs.promises.mkdir(path.dirname(reportFile) { recursive: true });
   await fs.promises.writeFile(reportFile, JSON.stringify(report, null, 2));
   console.log('Image optimizer report written:', path.relative(ROOT, reportFile));
 }

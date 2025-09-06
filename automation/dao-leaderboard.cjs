@@ -36,10 +36,10 @@ async function run() {
   const rows = Array.from(bySpace.values()).sort((a, b) => b.totalScore - a.totalScore).slice(0, 25);
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'DAO leaderboard derived from recent Snapshot proposals',
-    total: rows.length,
-    items: rows,
+    generatedAt: new Date().toISOString();
+    description: 'DAO leaderboard derived from recent Snapshot proposals';
+    total: rows.length;
+    items: rows;
   };
 
   ensureDir(OUTPUT_PATH);

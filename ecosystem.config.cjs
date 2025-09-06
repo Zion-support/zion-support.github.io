@@ -1,7 +1,6 @@
 module.exports = {
   apps: [
     {
-<<<<<<< HEAD
       name: 'ci-cd-pipeline',
       script: 'npm',
       args: 'run build',
@@ -11,13 +10,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
       out_file: './logs/ci-cd-out.log',
       log_file: './logs/ci-cd-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'continuous-automation',
@@ -29,13 +28,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
       out_file: './logs/automation-out.log',
       log_file: './logs/automation-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'comprehensive-automation',
@@ -47,13 +46,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
       out_file: './logs/comprehensive-automation-out.log',
       log_file: './logs/comprehensive-automation-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'marketing-automation',
@@ -65,13 +64,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */12 * * *', // Every 12 hours
       error_file: './logs/marketing-automation-error.log',
       out_file: './logs/marketing-automation-out.log',
       log_file: './logs/marketing-automation-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'security-audit',
@@ -83,13 +82,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 2 * * *', // Daily at 2 AM
       error_file: './logs/security-audit-error.log',
       out_file: './logs/security-audit-out.log',
       log_file: './logs/security-audit-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'test-runner',
@@ -101,13 +100,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */4 * * *', // Every 4 hours
       error_file: './logs/test-runner-error.log',
       out_file: './logs/test-runner-out.log',
       log_file: './logs/test-runner-combined.log',
-      time: true,
+      time: true
     },
     {
       name: 'lint-checker',
@@ -119,19 +118,15 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'production'
       },
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
-<<<<<<< HEAD
-      time: true,
+      time: true
     },
-  ],
-};
-=======
-=======
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
@@ -186,9 +181,75 @@ module.exports = {
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+      time: true
+    },
+    {
+      name: "performance-optimizer",
+      script: "automation/performance-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */2 * * *", // Every 2 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/performance-optimizer-error.log",
+      out_file: "automation/logs/performance-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "seo-optimizer",
+      script: "automation/seo-optimizer.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */6 * * *", // Every 6 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/seo-optimizer-error.log",
+      out_file: "automation/logs/seo-optimizer-out.log",
+      time: true
+    },
+    {
+      name: "health-check",
+      script: "automation/health-check.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "*/5 * * * *", // Every 5 minutes
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/health-check-error.log",
+      out_file: "automation/logs/health-check-out.log",
+      time: true
+    },
+    {
+      name: "security-scanner",
+      script: "automation/security-scanner.cjs",
+      interpreter: "node",
+      cwd: __dirname,
+      watch: false,
+      autorestart: true,
+      max_restarts: 5,
+      env: {
+        NODE_ENV: "production"
+      },
+      cron_restart: "0 */4 * * *", // Every 4 hours
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/security-scanner-error.log",
+      out_file: "automation/logs/security-scanner-out.log",
       time: true
     }
   ]
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4

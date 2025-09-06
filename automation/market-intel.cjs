@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
+ 
 const fs = require('fs');
 const path = require('path');
 
@@ -7,9 +7,9 @@ const OpenAI = require('openai');
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const SOURCES = [
-  'https://news.ycombinator.com/',
-  'https://www.reddit.com/r/MachineLearning/',
-  'https://www.techmeme.com/',
+  'https://news.ycombinator.com/';
+  'https://www.reddit.com/r/MachineLearning/';
+  'https://www.techmeme.com/';
 ];
 
 async function fetchText(url) {

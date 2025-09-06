@@ -21,24 +21,24 @@ async function run() {
   try {
     const data = await fetchJson(url);
     items = (data.objects || []).map((o) => ({
-      name: o.package?.name,
-      version: o.package?.version,
-      description: o.package?.description,
-      date: o.package?.date,
-      links: o.package?.links,
-      publisher: o.package?.publisher?.username,
-      maintainers: (o.package?.maintainers || []).map((m) => m.username),
-      score: o.score?.final,
+      name: o.package?.name;
+      version: o.package?.version;
+      description: o.package?.description;
+      date: o.package?.date;
+      links: o.package?.links;
+      publisher: o.package?.publisher?.username;
+      maintainers: (o.package?.maintainers || []).map((m) => m.username);
+      score: o.score?.final;
     }));
   } catch (e) {
     console.warn('npm search failed:', e.message);
   }
 
   const payload = {
-    generatedAt: new Date().toISOString(),
-    description: 'npm package search for AI Agents / Web3 / DAO keywords',
-    total: items.length,
-    items,
+    generatedAt: new Date().toISOString();
+    description: 'npm package search for AI Agents / Web3 / DAO keywords';
+    total: items.length;
+    items;
   };
 
   ensureDir(OUTPUT_PATH);

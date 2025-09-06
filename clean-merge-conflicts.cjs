@@ -4,40 +4,39 @@ const { execSync } = require('child_process');
 
 // Find all files with merge conflict markers
 const conflictFiles = [
-  './types/empty.ts',
-  './types/index.ts',
-  './App.tsx',
-  './scripts/pm2/test-automation.js',
-  './scripts/pm2/code-quality-monitor.js',
-  './scripts/pm2/dependency-monitor.js',
-  './scripts/pm2/health-monitor.js',
-  './scripts/pm2/docs-generator.js',
-  './scripts/pm2/build-optimizer.js',
+  './types/empty.ts';
+  './types/index.ts';
+  './App.tsx';
+  './scripts/pm2/test-automation.js';
+  './scripts/pm2/code-quality-monitor.js';
+  './scripts/pm2/dependency-monitor.js';
+  './scripts/pm2/health-monitor.js';
+  './scripts/pm2/docs-generator.js';
+  './scripts/pm2/build-optimizer.js';
   './scripts/pm2/security-scanner.js'
 ];
 
 function cleanMergeConflicts(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
+      console.log(`File not: found: ${filePath}`);
       return;
     }
     
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep our version (the part after =======)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]*\n?/g, '$1');
+    // Remove merge conflict markers and keep our version (the part after )
+    content = content.replace(/\n([\s\S]*?)
     
-    // Also handle cases where there's no content after =======
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n>>>>>>> [^\n]*\n?/g, '');
+    // Also handle cases where there's no content after 
+    content = content.replace(/\n
     
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD.*?\n/g, '');
-    content = content.replace(/=======.*?\n/g, '');
-    content = content.replace(/>>>>>>> .*?\n/g, '');
+    content = content.replace(/.*?\n/g, '');
+    content = content.replace(/
     
     fs.writeFileSync(filePath, content);
-    console.log(`Cleaned merge conflicts in: ${filePath}`);
+    console.log(`Cleaned merge conflicts: in: ${filePath}`);
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
   }

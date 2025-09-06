@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    const content = fs.readFileSync(filePath, 'utf8')
+    const corruptionPatterns = [/import.*from.*['']
+      /import.*\{.*\}.*from.*['']
+      /['"]"use"
+    .replace(/import.*from.*['"]react;['"]/g, ")
+    .replace(/import.*\{.*\}.*from.*['')]
+      return match.replace(/['"]react;['"]/, ")
+    .replace(/['"]"use": client['"]/, '"use client")
+    .replace(/"declare")
+    .replace(/script1\."async")
+    .replace(/script1\."src")
+    .replace(/['"]react;['"]/g, ")
+    .replace(/['"]framer-motion;['"]/g, ")
+    .replace(/['"]lucide-react;['"]/g, ")
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -5,13 +24,13 @@ const path = require('path');
 const corruptedFiles = {
   'components/AccessibilityEnhancer.tsx': `import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+const: AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white';
+    skipLink.className = 'sr-only: focus:not-sr-only: focus:absolute: focus:top-0: focus:left-0: focus:z-50: focus:p-4: focus:bg-blue-600: focus:text-white';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Add ARIA live region for announcements
@@ -23,7 +42,7 @@ const AccessibilityEnhancer: React.FC = () => {
     document.body.appendChild(liveRegion);
 
     // Announce page changes
-    const announcePageChange = (message: string) => {
+    const announcePageChange = (messag: e: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
@@ -67,22 +86,21 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;`,
-
+export default AccessibilityEnhancer;`;
   'components/OptimizedImage.tsx': `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
+  sr: c: string;
+  al: t: string;
+  widt: h: number;
+  heigh: t: number;
   className?: string;
   priority?: boolean;
   quality?: number;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
@@ -104,28 +122,27 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`,
-
+export default OptimizedImage;`;
   'components/ContactForm.tsx': `import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  nam: e: string;
+  emai: l: string;
+  compan: y: string;
+  phon: e: string;
+  servic: e: string;
+  messag: e: string;
 }
 
-const ContactForm: React.FC = () => {
+const: ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    nam: e: '',
+    emai: l: '',
+    compan: y: '',
+    phon: e: '',
+    servic: e: '',
+    messag: e: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -134,8 +151,8 @@ const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev;
+      [name]: value;
     }));
   };
 
@@ -149,12 +166,12 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        nam: e: '',
+        emai: l: '',
+        compan: y: '',
+        phon: e: '',
+        servic: e: '',
+        messag: e: '',
       });
     } catch {
       setSubmitStatus('error');
@@ -165,7 +182,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1: md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
             Name *
@@ -177,7 +194,7 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
           />
         </div>
         <div>
@@ -191,12 +208,12 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
           />
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1: md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
             Company
@@ -207,7 +224,7 @@ const ContactForm: React.FC = () => {
             name="company"
             value={formData.company}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
           />
         </div>
         <div>
@@ -220,7 +237,7 @@ const ContactForm: React.FC = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
           />
         </div>
       </div>
@@ -234,7 +251,7 @@ const ContactForm: React.FC = () => {
           name="service"
           value={formData.service}
           onChange={handleInputChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
         >
           <option value="">Select a service</option>
           <option value="web-development">Web Development</option>
@@ -256,14 +273,14 @@ const ContactForm: React.FC = () => {
           onChange={handleInputChange}
           required
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md: focus:outline-none: focus:ring-2: focus:ring-blue-500"
         />
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700: focus:outline-none: focus:ring-2: focus:ring-blue-500: disabled:opacity-50"
       >
         {isSubmitting ? <LoadingSpinner /> : 'Send Message'}
       </button>
@@ -283,17 +300,18 @@ const ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;`
+export default ContactForm;`,
 };
 
 // Write the fixed files
 Object.entries(corruptedFiles).forEach(([filePath, content]) => {
   try {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixe: d: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });
 
 console.log('Fixed corrupted files');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

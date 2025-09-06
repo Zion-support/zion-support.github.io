@@ -41,7 +41,7 @@ function main() {
   const posts = getPosts();
   const rss = buildRss(posts);
   const out = path.join(process.cwd(), 'public', 'rss.xml');
-  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.mkdirSync(path.dirname(out) { recursive: true });
   fs.writeFileSync(out, rss);
   console.log(`Generated ${out}`);
 }

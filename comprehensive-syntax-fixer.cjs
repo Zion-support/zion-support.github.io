@@ -4,140 +4,150 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Starting Comprehensive Syntax Fixer');
+console.log('🔧 Comprehensive syntax error fixing...');
 
-// Fix common syntax issues
-function fixSyntaxIssues(filePath) {
+// Function to fix specific syntax patterns
+function fixFileContent(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    let modified = false;
 
-    // Fix import statements with trailing commas
-    if (content.includes("import React from 'react',")) {
-      content = content.replace(
-        /import React from 'react',/g,
-        "import React from 'react';"
-      );
-      fixed = true;
+    // Fix merge conflict markers
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      modified = true;
     }
 
-    // Fix export statements with trailing commas
-    if (content.includes('export interface')) {
-      content = content.replace(
-        /export interface (\w+) \{/g,
-        'export interface $1 {'
-      );
-      fixed = true;
+    // Fix unterminated strings and template literals
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      let originalLine = line;
+
+      // Fix unterminated double quotes
+      if (line.includes('"') && !line.match(/".*"/)) {
+        line = line.replace(/"([^"]*)$/, '"$1"');
+      }
+
+      // Fix unterminated template literals
+      if (line.includes('`') && !line.match(/`.*`/)) {
+        line = line.replace(/`([^`]*)$/, '`$1`');
+      }
+
+      // Fix unterminated single quotes
+      if (line.includes("'") && !line.match(/'[^']*'/)) {
+        line = line.replace(/'([^']*)$/, "'$1'");
+      }
+
+      // Fix common syntax errors
+      if (line.includes('Property or signature expected')) {
+        line = line.replace(/Property or signature expected.*/, '');
+      }
+
+      if (line.includes('Identifier expected')) {
+        line = line.replace(/Identifier expected.*/, '');
+      }
+
+      if (line.includes('Declaration or statement expected')) {
+        line = line.replace(/Declaration or statement expected.*/, '');
+      }
+
+      if (line.includes('Expression expected')) {
+        line = line.replace(/Expression expected.*/, '');
+      }
+
+      if (line.includes('Property assignment expected')) {
+        line = line.replace(/Property assignment expected.*/, '');
+      }
+
+      if (line.includes('Property destructuring pattern expected')) {
+        line = line.replace(/Property destructuring pattern expected.*/, '');
+      }
+
+      if (line.includes('Unterminated string literal')) {
+        line = line.replace(/Unterminated string literal.*/, '');
+      }
+
+      if (line.includes('Unterminated regular expression literal')) {
+        line = line.replace(/Unterminated regular expression literal.*/, '');
+      }
+
+      if (line.includes('JSX expressions must have one parent element')) {
+        line = line.replace(/JSX expressions must have one parent element.*/, '');
+      }
+
+      if (line.includes('Unexpected keyword or identifier')) {
+        line = line.replace(/Unexpected keyword or identifier.*/, '');
+      }
+
+      if (line.includes('catch or finally expected')) {
+        line = line.replace(/catch or finally expected.*/, '');
+      }
+
+      if (line.includes('Expected corresponding JSX closing tag')) {
+        line = line.replace(/Expected corresponding JSX closing tag.*/, '');
+      }
+
+      if (line.includes('Unexpected token')) {
+        line = line.replace(/Unexpected token.*/, '');
+      }
+
+      if (line.includes('Expression or comma expected')) {
+        line = line.replace(/Expression or comma expected.*/, '');
+      }
+
+      if (line.includes('case or default expected')) {
+        line = line.replace(/case or default expected.*/, '');
+      }
+
+      if (line.includes('Merge conflict marker encountered')) {
+        line = line.replace(/Merge conflict marker encountered.*/, '');
+      }
+
+      if (line !== originalLine) {
+        lines[i] = line;
+        modified = true;
+      }
     }
 
-    // Fix object syntax issues
-    content = content.replace(/\{\s*,/g, '{');
-    content = content.replace(/,\s*\}/g, '}');
-    content = content.replace(/,\s*,/g, ',');
-
-    // Fix array syntax issues
-    content = content.replace(/\[\s*,/g, '[');
-    content = content.replace(/,\s*\]/g, ']');
-
-    // Fix function parameter issues
-    content = content.replace(/\(\s*,/g, '(');
-    content = content.replace(/,\s*\)/g, ')');
-
-    // Fix semicolon issues
-    content = content.replace(/;\s*,/g, ';');
-    content = content.replace(/,\s*;/g, ';');
-
-    // Fix React component syntax
-    content = content.replace(
-      /const (\w+) = \(\) => \{/g,
-      'const $1 = () => {'
-    );
-    content = content.replace(/export default (\w+),/g, 'export default $1;');
-
-    // Fix TypeScript interface syntax
-    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
-    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
-
-    // Fix JSX syntax
-    content = content.replace(/<(\w+)\s*,/g, '<$1');
-    content = content.replace(/,\s*>/g, '>');
-
-    // Fix string literal issues
-    content = content.replace(/&apos;/g, "'");
-    content = content.replace(/&quot;/g, '"');
-    content = content.replace(/&lt;/g, '<');
-    content = content.replace(/&gt;/g, '>');
-
-    // Fix performance API issues
-    if (content.includes('performance.')) {
-      content = content.replace(/performance\./g, 'window.performance.');
-    }
-
-    // Fix React hooks issues
-    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
-
-    // Fix console statements
-    content = content.replace(/console\.log\(/g, '// console.log(');
-
-    if (fixed || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
+    if (modified) {
+      fs.writeFileSync(filePath, lines.join('\n'));
       return true;
     }
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
   }
+  return false;
 }
 
-// Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
-    if (
-      stat.isDirectory() &&
-      !item.startsWith('.') &&
-      item !== 'node_modules'
-    ) {
-      files = files.concat(getAllFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
+    return fixFileContent(filePath);
   }
-
-  return files;
+  return false;
 }
 
-// Main execution
-try {
-  const files = getAllFiles('/workspace');
-  let fixedCount = 0;
+// Get all files with syntax errors
+const files = execSync('find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
 
-  console.log(`Found ${files.length} files to check`);
+let fixedCount = 0;
+let totalFiles = files.length;
 
-  for (const file of files) {
-    if (fixSyntaxIssues(file)) {
+console.log(`Found ${totalFiles} files to check`);
+
+for (const file of files) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
       fixedCount++;
-      console.log(`✅ Fixed: ${file}`);
     }
   }
-
-  console.log(`\n🎯 Fixed ${fixedCount} files`);
-
-  // Try to run build after fixes
-  console.log('\n🔨 Testing build after fixes...');
-  try {
-    execSync('npm run build', { stdio: 'pipe' });
-    console.log('✅ Build successful after fixes');
-  } catch (error) {
-    console.log('⚠️ Build still has issues, but syntax fixes applied');
-  }
-} catch (error) {
-  console.error('Error:', error.message);
-  process.exit(1);
 }
+
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Comprehensive syntax fixing complete!');

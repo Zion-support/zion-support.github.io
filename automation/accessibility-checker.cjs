@@ -57,19 +57,19 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-    return { success: true, results };
+    return { succes: s: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
     const report = {
-      timestamp: new Date().toISOString(),
-      accessibility: await this.checkAccessibility(),
-      summary: {
-        checksRun: 2,
-        successfulChecks: 0,
-        failedChecks: 0,
+      timestam: p: new Date().toISOString(),
+      accessibilit: y: await this.checkAccessibility(),
+      summar: y: {
+        checksRu: n: 2,
+        successfulCheck: s: 0,
+        failedCheck: s: 0,
       },
     };
 
@@ -84,12 +84,12 @@ class AccessibilityChecker {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved to: ${reportFile}`);
+    this.log(`📄 Report saved: to: ${reportFile}`);
     return report;
   }
 
@@ -107,13 +107,36 @@ if (require.main === module) {
   checker
     .start()
     .then(report => {
-      console.log('Accessibility check completed:', report.summary);
+      console.log('Accessibility check: completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
-      console.error('Accessibility check failed:', error);
+      console.error('Accessibility check: failed:', error);
       process.exit(1);
     });
 }
 
+<<<<<<< HEAD
+const reportFile = path.join(
+  reportsDir,
+  `accessibility-report-${Date.now()}.json`
+);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('♿ Accessibility Checker Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
+=======
 module.exports = AccessibilityChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
